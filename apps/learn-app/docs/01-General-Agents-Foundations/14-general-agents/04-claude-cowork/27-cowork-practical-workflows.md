@@ -56,10 +56,10 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "1.0.0"
+version: "1.1.0"
 
 # Legacy compatibility (Docusaurus)
 prerequisites:
@@ -95,13 +95,13 @@ teaching_guide:
 
 # Cowork in Action: Practical Workflows
 
-Setup is complete. Now let's see what Claude Cowork can actually _do_. These workflows demonstrate how agentic AI transforms knowledge work: from hours of manual clicking to minutes of conversation.
+Setup is complete. Now let's see what Claude Cowork can actually _do_. These workflows demonstrate how agentic AI transforms knowledge work, turning hours of manual clicking into minutes of conversation.
 
 ---
 
 ## Workflow 1: Organizing the Downloads Folder
 
-**The Problem:** Your Downloads folder is a graveyard. Hundreds of files accumulated over months: installers you forgot about, PDFs you meant to read, images scattered everywhere, duplicates taking up space. Organizing it manually would take hours.
+**The Problem:** Your Downloads folder is a graveyard. Hundreds of files accumulated over months (installers you forgot about, PDFs you meant to read, images scattered everywhere, duplicates taking up space). Organizing it manually would take hours.
 
 **The Cowork Solution:**
 
@@ -166,7 +166,7 @@ Setup is complete. Now let's see what Claude Cowork can actually _do_. These wor
 
 **Result:** A complete weekly report in 3 minutes instead of 2 hours.
 
-**The business value:** This isn't just saving time: it's ensuring consistency. Every report follows the same format, every calculation is accurate, and you can review for insights rather than getting lost in spreadsheet mechanics.
+**The business value:** This isn't just saving time; it's ensuring consistency. Every report follows the same format, every calculation is accurate, and you can review for insights rather than getting lost in spreadsheet mechanics.
 
 ---
 
@@ -251,7 +251,21 @@ To design effective Cowork workflows for your work:
 
 ### Scheduled and Recurring Tasks
 
-Cowork now supports scheduled tasks -- you can set up workflows to run automatically on a schedule. For example: "Run this report every Monday morning" or "Organize my Downloads folder every Friday." This turns one-time workflows into ongoing automation, so the tasks you design above don't just run once -- they become persistent processes that keep working for you.
+The workflows you design above don't have to be one-time operations. Cowork supports three scheduling modes, each suited to different needs:
+
+| Mode                         | Runs on         | Machine required?                        | Best for                                           |
+| ---------------------------- | --------------- | ---------------------------------------- | -------------------------------------------------- |
+| **Cloud scheduled tasks**    | Anthropic cloud | No (runs even when your computer is off) | Reliable recurring work against a fresh repo clone |
+| **Desktop scheduled tasks**  | Your machine    | Yes (app must be open)                   | Tasks needing access to local files and tools      |
+| **`/loop` (session-scoped)** | Your machine    | Yes (session must be open)               | Quick polling during active work                   |
+
+**Examples:** "Run this report every Monday morning" (cloud task), "Organize my Downloads folder every Friday" (desktop task), or "Check this dashboard every 5 minutes until the build passes" (`/loop`).
+
+Desktop tasks support hourly, daily, weekday, and weekly frequencies with configurable permission modes. Cloud tasks run on Anthropic infrastructure and continue even if your computer is off. Either way, the workflows you design become persistent processes that keep working for you.
+
+### Cloud and Remote Sessions (Code Tab)
+
+The Code tab supports remote sessions that run on Anthropic-managed cloud infrastructure. They continue even if you close the app, shut down your computer, or switch devices. You can monitor remote sessions from claude.ai/code or the Claude mobile app. Note that Cowork itself runs locally on your machine; remote/cloud sessions are a Code tab feature. For Cowork tasks that must run when your computer is off, use cloud scheduled tasks instead.
 
 ---
 
@@ -266,7 +280,7 @@ Track the impact of Cowork workflows to understand their value:
 | **Weekly finance report**  | 2 hours every Monday | 5 minutes            | 24x time savings          |
 | **Research synthesis**     | 3+ days              | 30 minutes           | 144x faster               |
 
-The key insight: Cowork doesn't just speed up tasks: it makes tasks feasible that you'd otherwise skip or do poorly. Organizing a Downloads folder, synthesizing 65 documents, or generating formatted reports from raw data: these are tasks that often don't get done because they're too time-consuming manually.
+The key insight: Cowork doesn't just speed up tasks; it makes tasks feasible that you'd otherwise skip or do poorly. Organizing a Downloads folder, synthesizing 65 documents, or generating formatted reports from raw data are tasks that often don't get done because they're too time-consuming manually.
 
 ---
 

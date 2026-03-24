@@ -162,11 +162,13 @@ We'll add two servers using simple commands.
 
 ```bash
 # 1) Playwright MCP (browse the web)
-claude mcp add --transport stdio playwright npx @playwright/mcp@latest
+claude mcp add playwright --transport stdio -- npx -y @playwright/mcp@latest
 
 # 2) Context7 MCP (get up-to-date docs)
-claude mcp add --transport stdio context7 npx @upstash/context7-mcp
+claude mcp add context7 --transport stdio -- npx -y @upstash/context7-mcp
 ```
+
+Note the `--` separator before the command and the `-y` flag on `npx`. The separator tells Claude Code where your flags end and the server command begins. The `-y` flag tells npx to auto-confirm package installation without prompting.
 
 **What's happening**: You're telling Claude Code about two external helpers it can use. Each command registers an MCP server that Claude can invoke when relevant.
 
@@ -260,13 +262,13 @@ An open standard that allows Claude Code to safely access external tools, APIs, 
 
 Using the stdio transport (current standard in 2026):
 ```bash
-claude mcp add --transport stdio <name> <command>
+claude mcp add <name> --transport stdio -- <command>
 ````
 
-Example—Playwright:
+Example (Playwright):
 
 ```bash
-claude mcp add --transport stdio playwright npx @playwright/mcp@latest
+claude mcp add playwright --transport stdio -- npx -y @playwright/mcp@latest
 ```
 
 Verify installation:
@@ -284,10 +286,10 @@ claude mcp list
 
 **Best Practices (from official docs)**
 
-1. Use allow-list configuration—only approve servers you trust
+1. Use allow-list configuration: only approve servers you trust
 2. Test MCP servers in isolated projects before production
-3. Keep servers updated: `claude mcp update --all`
-4. Never store secrets in MCP commands—use environment variables
+3. Periodically reinstall servers to pick up new versions
+4. Never store secrets in MCP commands: use environment variables
 
 **Official Resources**
 
@@ -311,8 +313,8 @@ Here's a powerful mental model from Anthropic:
 
 | Component  | Role                           | Analogy                             |
 | ---------- | ------------------------------ | ----------------------------------- |
-| **Skills** | The "How-To" — expertise packs | Teaching Claude a specific workflow |
-| **MCP**    | The "With-What" — data pipes   | Connecting skills to live data      |
+| **Skills** | The "How-To" (expertise packs) | Teaching Claude a specific workflow |
+| **MCP**    | The "With-What" (data pipes)   | Connecting skills to live data      |
 
 **Skills are Expertise Packs**: They encode your procedures, your quality criteria, your domain knowledge. "How to analyze financial statements according to our Q4 risk framework."
 
@@ -324,13 +326,13 @@ Here's a powerful mental model from Anthropic:
 
 ### What MCP Unlocks
 
-| Task                                   | Without MCP                                               | With MCP                                                                      |
-| -------------------------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| **Browse Amazon for products**         | Can't—no web access. You do the shopping.                 | Playwright MCP: Claude navigates, extracts prices/reviews, summarizes results |
-| **Check React docs for latest API**    | Uses training data (outdated). May hallucinate.           | Context7 MCP: Fetches current docs. Real examples. Live citations.            |
-| **Query your production database**     | Can't—no database access. You run queries, paste results. | Database MCP: Claude executes queries safely, analyzes results                |
-| **Post updates to your Slack channel** | Can't—no API access. You copy-paste manually.             | Slack MCP: Claude sends messages, threads, reactions automatically            |
-| **Analyze a GitHub repo structure**    | Can't—no GitHub access. You clone locally.                | GitHub MCP: Claude clones, analyzes, answers questions about code             |
+| Task                                   | Without MCP                                                | With MCP                                                                      |
+| -------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **Browse Amazon for products**         | Can't: no web access. You do the shopping.                 | Playwright MCP: Claude navigates, extracts prices/reviews, summarizes results |
+| **Check React docs for latest API**    | Uses training data (outdated). May hallucinate.            | Context7 MCP: Fetches current docs. Real examples. Live citations.            |
+| **Query your production database**     | Can't: no database access. You run queries, paste results. | Database MCP: Claude executes queries safely, analyzes results                |
+| **Post updates to your Slack channel** | Can't: no API access. You copy-paste manually.             | Slack MCP: Claude sends messages, threads, reactions automatically            |
+| **Analyze a GitHub repo structure**    | Can't: no GitHub access. You clone locally.                | GitHub MCP: Claude clones, analyzes, answers questions about code             |
 
 **The pattern**: Without MCP, you're the bottleneck. With MCP, Claude Code becomes your autonomous partner.
 
@@ -342,11 +344,11 @@ Here's a powerful mental model from Anthropic:
 
 ## How Claude Code Manages MCP Tools
 
-When you add MCP servers, Claude Code doesn't just connect to them—it **intelligently manages** how tool definitions are loaded.
+When you add MCP servers, Claude Code doesn't just connect to them. It **intelligently manages** how tool definitions are loaded.
 
 ### The Challenge: Tool Definition Overhead
 
-Each MCP server comes with tool definitions—descriptions of what each tool does, its parameters, and expected outputs. With multiple servers, these definitions can consume significant context:
+Each MCP server comes with tool definitions: descriptions of what each tool does, its parameters, and expected outputs. With multiple servers, these definitions can consume significant context:
 
 - Playwright MCP: ~5,000-8,000 tokens of tool definitions
 - Context7 MCP: ~3,000-5,000 tokens
@@ -356,7 +358,7 @@ Each MCP server comes with tool definitions—descriptions of what each tool doe
 
 ### The Solution: MCP Tool Search (Built-In)
 
-Since January 2026, Claude Code 2.1.7+ includes **MCP Tool Search**—automatic lazy loading that defers tool definitions until needed.
+Claude Code includes **MCP Tool Search** by default: automatic lazy loading that defers tool definitions until needed.
 
 **How it works:**
 
@@ -368,8 +370,6 @@ Since January 2026, Claude Code 2.1.7+ includes **MCP Tool Search**—automatic 
 **Result**: ~85% automatic reduction in MCP overhead.
 
 ### Control and Configuration
-
-**Requirements:** Claude Code 2.1.7+ (auto-updates by default)
 
 **Control it manually:**
 
@@ -401,7 +401,11 @@ Or set in `settings.json`:
 
 **For most users**: You don't need to do anything. Tool Search works automatically.
 
-**For power users**: Lesson 13 shows how to achieve even greater efficiency (98% reduction) through compilation—and how skills can intelligently guide which approach to use.
+**For power users**: Lesson 13 shows how to achieve even greater efficiency (98% reduction) through compilation, and how skills can intelligently guide which approach to use.
+
+:::tip Project-Level MCP Configuration
+Instead of running `claude mcp add` on every developer's machine, you can create a `.mcp.json` file in your project root. This file defines MCP servers for the entire project and can be committed to version control, so every team member gets the same servers automatically. The CLI approach taught here is best for learning; `.mcp.json` is better for team projects.
+:::
 
 #### 💬 AI Colearning Prompt
 
@@ -451,7 +455,7 @@ MCP is powerful, but it's not the right tool for everything. This section shows 
 - **Check before installing**: Read source code on GitHub, verify maintainer reputation, check recent commits
 
 **Example wrong**: `claude mcp add mystery-tool some-random-npm-package`  
-**Example right**: `claude mcp add playwright npx @playwright/mcp@latest` (widely used, verified source)
+**Example right**: `claude mcp add playwright --transport stdio -- npx -y @playwright/mcp@latest` (widely used, verified source)
 
 **Don't build custom MCP servers before you understand the basics:**
 
@@ -498,7 +502,7 @@ MCP extends Claude Code's reach from your local filesystem to the entire world o
 
 But what if you need even more control?
 
-**Lesson 13: Compiling MCP to Skills** teaches advanced optimization—achieving 98% token reduction through compilation. You'll learn how skills can intelligently guide Claude on when to use Tool Search vs compiled patterns, combining the subagent orchestration you learned in Lesson 11 with MCP's external access.
+**Lesson 13: Compiling MCP to Skills** teaches advanced optimization, achieving 98% token reduction through compilation. You'll learn how skills can intelligently guide Claude on when to use Tool Search vs compiled patterns, combining the subagent orchestration you learned in Lesson 11 with MCP's external access.
 
 ---
 
@@ -510,26 +514,25 @@ Let's explore MCP integration through hands-on practice with external system acc
 
 > "I've successfully added the Playwright MCP for web browsing. Show me 3 specific web testing tasks I could accomplish with this MCP right now. For each task, give me the exact prompt I should use and explain what Playwright will do."
 
-**What you're learning:** Discovering MCP capability boundaries—what becomes possible with external access that wasn't possible with filesystem alone.
+**What you're learning:** Discovering MCP capability boundaries: what becomes possible with external access that wasn't possible with filesystem alone.
 
 **🎯 Practice Building Workflows:**
 
 > "I need to test [describe your specific web application or research goal]. Walk me through building a complete workflow using Playwright MCP (for web browsing) and Context7 MCP (for documentation). Include: which MCP handles which part, exact prompts I should use, and how to verify everything works."
 
-**What you're learning:** Multi-MCP orchestration—combining external capabilities into coherent workflows. This is the "data pipes" concept from the architecture.
+**What you're learning:** Multi-MCP orchestration: combining external capabilities into coherent workflows. This is the "data pipes" concept from the architecture.
 
 **🧪 Troubleshoot Integration Issues:**
 
 > "I'm trying to add an MCP server and it's not working. I ran [paste your installation command]. The error says [paste error message]. Walk me through troubleshooting: What's the most likely cause? What should I check? Give me 3 diagnostic commands to run with expected outputs."
 
-**What you're learning:** MCP debugging methodology—the systematic approach to integration problems. This skill transfers to any external system connection.
+**What you're learning:** MCP debugging methodology: the systematic approach to integration problems. This skill transfers to any external system connection.
 
 **🛡️ Establish Security Boundaries:**
 
 > "The lesson emphasizes MCP security. I'm nervous about giving Claude Code external access. Help me establish safe boundaries: What types of MCP servers should I avoid as a beginner? What permissions are risky? How do I audit what an MCP server can access? Create an MCP safety checklist I can follow."
 
-**What you're learning:** Security-first thinking for AI external access—essential for production use where trust and verification matter.
-
+**What you're learning:** Security-first thinking for AI external access, essential for production use where trust and verification matter.
 
 ## Flashcards Study Aid
 

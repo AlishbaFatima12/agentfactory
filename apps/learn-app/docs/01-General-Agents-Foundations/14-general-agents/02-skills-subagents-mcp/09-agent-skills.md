@@ -170,6 +170,22 @@ Brief bullets, not transcription.
 
 That's a complete skill. No scripts required. No complex setup. Just clear instructions in a format Claude can read.
 
+:::caution Skills with Side Effects
+If your skill performs actions with real-world consequences (deploying code, sending messages, committing to git), add `disable-model-invocation: true` to the YAML frontmatter:
+
+```yaml
+---
+name: "deploy-production"
+description: "Deploy the current branch to production..."
+disable-model-invocation: true
+---
+```
+
+Without this flag, Claude may auto-trigger the skill whenever your conversation matches its description. For a deploy skill, that means an accidental production deployment. With the flag set, only you can invoke it (by typing `/deploy-production`).
+
+A related field, `user-invocable: false`, hides a skill from the `/` menu entirely. Use this for background-knowledge skills that should inform Claude's behavior without appearing as commands.
+:::
+
 ---
 
 ## The Fast Way: Let Claude Build Your Skill
@@ -425,9 +441,19 @@ What's different? Should we update the skill to match my real style?
 
 ---
 
+:::note Commands and Skills Are Now the Same System
+If you encounter references to `.claude/commands/` files (in older tutorials or this book's later chapters), those work the same way as skills. A file at `.claude/commands/deploy.md` and a skill at `.claude/skills/deploy/SKILL.md` both create a `/deploy` command. The commands directory was merged into the skills system, so you only need to learn one approach.
+:::
+
+:::tip Skill Budget: When Skills Get Excluded
+If you install many skills, Claude may not discover all of them. Skill descriptions share a character budget (roughly 2% of the context window). When the budget fills up, some skills are silently excluded.
+
+Run `/context` to check if any skills were dropped. If you see a warning about excluded skills, consider removing unused ones or shortening descriptions.
+:::
+
 ## The Bigger Picture
 
-Skills you create now become building blocks for larger systems. In Part 6, you'll build **Custom Agents** using SDKs: and skills you create here integrate directly into those agents. **Skills are reusable intellectual property** that compound in value.
+Skills you create now become building blocks for larger systems. In Part 6, you'll build **Custom Agents** using SDKs, and skills you create here integrate directly into those agents. **Skills are reusable intellectual property** that compound in value.
 
 ---
 
@@ -462,7 +488,6 @@ Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that tak
 > "I work on [describe your project type]. Help me identify 3-5 skills I should create that would work together. For each skill, suggest: what it does, when it activates, and how it complements the others."
 
 **What you're learning:** How to think in skill ecosystems, not isolated tools. Skills that complement each other create more value than skills that work alone.
-
 
 ## Flashcards Study Aid
 

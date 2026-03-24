@@ -1,8 +1,8 @@
 deck:
   id: "ch14-browser-integration-chrome"
   title: "Browser Integration: Claude in Chrome"
-  description: "Flashcards covering Claude's Chrome browser integration setup, capabilities, the five-step browser loop, speed considerations, security practices, and when to choose browser automation versus file-based workflows."
-  tags: ["browser-automation", "chrome-extension", "cowork", "web-workflows", "security"]
+  description: "Flashcards covering Claude's browser integration setup (Chrome and Edge), capabilities, the five-step browser loop, speed considerations, security practices, and when to choose browser automation versus file-based workflows."
+  tags: ["browser-automation", "chrome-extension", "edge", "cowork", "web-workflows", "security"]
   version: 2
 
 cards:
@@ -128,8 +128,8 @@ cards:
 
   - id: "ch14-browser-integration-chrome-017"
     type: recall
-    front: "Which Claude models are available for browser automation on Pro versus Max or Team Premium accounts?"
-    back: "Pro: Haiku 4.5 only.\nMax/Team Premium/Enterprise: Haiku 4.5, Sonnet 4.5, or Opus 4.5."
+    front: "Which Claude models are available for browser automation on Pro versus Max or Teams accounts?"
+    back: "Pro: Haiku 4.5 only.\nMax/Teams/Enterprise: Haiku 4.5, Sonnet 4.6, or Opus 4.6."
     tags: ["model-availability", "setup"]
     difficulty: "basic"
 

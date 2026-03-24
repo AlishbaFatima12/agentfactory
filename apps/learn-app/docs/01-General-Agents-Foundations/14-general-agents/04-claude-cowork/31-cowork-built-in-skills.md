@@ -60,10 +60,10 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "1.0.0"
+version: "1.1.0"
 
 teaching_guide:
   lesson_type: "hands-on"
@@ -117,12 +117,16 @@ Built-in Skills are domain-specific capabilities Anthropic has developed and opt
 
 These Skills are pre-installed: you don't need to create or configure them. They're automatically available when working with these file types in Cowork.
 
-The Skills library continues to grow. Beyond the four document-focused Skills detailed in this lesson, Cowork now includes:
+The Skills library continues to grow. Beyond the four document-focused Skills detailed in this lesson, Cowork includes additional capabilities:
 
-- **canvas-design**; Create and edit visual designs and diagrams directly in Cowork
-- **skill-creator**; Build custom Skills from within Cowork itself (a meta-skill for creating new Skills without leaving the interface)
+- **canvas-design**: Create and edit visual designs and diagrams directly in Cowork
+- **skill-creator**: Build custom Skills from within Cowork itself (a meta-skill for creating new Skills without leaving the interface)
 
-An open-source community is also building and sharing Skills at [github.com/anthropics/skills](https://github.com/anthropics/skills), which means the Skills ecosystem extends well beyond Anthropic's built-in offerings.
+You can also browse and install third-party Skills through the Plugin system (click **+** > **Plugins** > **Add plugin** in the desktop app). An open-source community builds and shares Skills at [github.com/anthropics/skills](https://github.com/anthropics/skills), extending the ecosystem beyond Anthropic's built-in offerings.
+
+:::tip Skills Ecosystem
+The Skills available in Cowork change as the platform evolves. Use the **+** > **Slash commands** menu in the desktop app to see what Skills are currently available in your session, including built-in, project, and plugin-provided Skills.
+:::
 
 ---
 
@@ -309,7 +313,7 @@ An open-source community is also building and sharing Skills at [github.com/anth
 - Built-in capabilities don't cover your use case
 - You want to encode expertise that applies across document types
 
-**Skills within the Plugin architecture:** Skills are now one component within Cowork's Plugin system. A Plugin can bundle multiple Skills; both built-in and custom; together with Connectors and slash commands into a complete workflow package. For example, a "Legal Review" Plugin might combine the built-in docx Skill with a custom contract-analysis Skill and a court-filing Connector. See Lesson 29 for how Plugins, Skills, and Connectors fit together.
+**Skills within the Plugin architecture:** Skills are now one component within Cowork's Plugin system. A Plugin can bundle multiple Skills (both built-in and custom) together with Connectors and slash commands into a complete workflow package. For example, a "Legal Review" Plugin might combine the built-in docx Skill with a custom contract-analysis Skill and a court-filing Connector. See Lesson 29 for how Plugins, Skills, and Connectors fit together.
 
 ### Cross-App Orchestration
 
@@ -386,7 +390,7 @@ The key insight: individual Skills handle format mechanics, but cross-app orches
 
 **Design a Cross-App Workflow:**
 
-> "I work with [describe your document types; e.g., Excel reports, Word proposals, PDF contracts, PowerPoint decks]. Design a workflow where Claude chains two or more built-in Skills together: read data from one format, process it, and output in another. Include the exact prompt I would use and explain which Skills handle which step."
+> "I work with [describe your document types, e.g., Excel reports, Word proposals, PDF contracts, PowerPoint decks]. Design a workflow where Claude chains two or more built-in Skills together: read data from one format, process it, and output in another. Include the exact prompt I would use and explain which Skills handle which step."
 
 **What you're learning:** Cross-app orchestration design; understanding how to chain built-in Skills across document formats to eliminate the manual copy-paste-reformat cycle. This is where built-in Skills create the most time savings.
 

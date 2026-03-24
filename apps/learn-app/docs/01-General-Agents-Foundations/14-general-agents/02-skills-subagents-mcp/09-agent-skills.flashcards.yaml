@@ -110,3 +110,25 @@ cards:
     tags: ["strategic-value"]
     difficulty: "advanced"
     why: "Transforms one-time effort into persistent, growing organizational assets"
+
+  - id: "ch14-09-building-skills-015"
+    type: thinking
+    front: "Why should skills with side effects (deploy, commit, send-message) set disable-model-invocation: true?"
+    back: "Because without this flag, Claude may auto-trigger the skill whenever the conversation matches its description. For a deploy skill, this could mean an accidental production deployment. The flag ensures only the user can invoke it explicitly."
+    tags: ["side-effects", "safety"]
+    difficulty: "intermediate"
+    why: "Auto-activation is helpful for formatting skills but dangerous for skills with real-world consequences"
+
+  - id: "ch14-09-building-skills-016"
+    type: recall
+    front: "What is the relationship between .claude/commands/ and .claude/skills/?"
+    back: "They are now the same system. A file at .claude/commands/deploy.md and a skill at .claude/skills/deploy/SKILL.md both create a /deploy command."
+    tags: ["commands-merge"]
+    difficulty: "basic"
+
+  - id: "ch14-09-building-skills-017"
+    type: recall
+    front: "What command checks if any skills were excluded due to context budget limits?"
+    back: "The /context command."
+    tags: ["skill-budget"]
+    difficulty: "basic"

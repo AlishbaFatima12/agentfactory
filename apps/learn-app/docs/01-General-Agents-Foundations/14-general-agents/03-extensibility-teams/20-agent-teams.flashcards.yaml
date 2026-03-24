@@ -109,3 +109,24 @@ cards:
   tags:
   - agent-teams
   - hooks
+- id: ch14-20-agent-teams-015
+  difficulty: basic
+  front: What minimum Claude Code version is required for Agent Teams?
+  back: v2.1.32 or later.
+  tags:
+  - agent-teams
+  - setup
+- id: ch14-20-agent-teams-016
+  difficulty: intermediate
+  front: Which terminals do NOT support Agent Teams split-pane mode?
+  back: VS Code's integrated terminal, Windows Terminal, and Ghostty. Use tmux or iTerm2 instead.
+  tags:
+  - agent-teams
+  - split-panes
+- id: ch14-20-agent-teams-017
+  difficulty: intermediate
+  front: Name four known limitations of Agent Teams.
+  back: 'No session resumption for in-process teammates, one team per session, no nested teams, and the lead agent is fixed at creation.'
+  tags:
+  - agent-teams
+  - limitations

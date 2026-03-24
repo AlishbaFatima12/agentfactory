@@ -79,6 +79,25 @@ Every error becomes a rule. Review relevant sections before starting work.
 - Minimal "Try With AI" sections → Quality degradation
 - Multi-line description in agent YAML → Tool parsing breaks
 - Adding `import` for non-existent components → Build failure (Flashcards/Quiz are NOT React components)
+- Describing Cowork as "cloud VM" → Cowork runs LOCALLY on Desktop app. Grep for "cloud VM" after any Cowork edits.
+- Review agents flagging correct content as "wrong" → Always verify findings against actual files before planning
+- Adding Ch 18 content to Ch 14 → .claude/rules/, context:fork, allowed-tools, $ARGUMENTS, plan mode, CI/CD -p, session management belong in Ch 18
+- Spawning reviewers without chapter boundary context → Reviewers suggest adding everything to whatever chapter they're reviewing
+
+---
+
+### 2026-03-24 Chapter 14/18: Reviewer Overreach and Cowork Misdescription
+
+**Error**: Review agents compared Ch 14 mechanically against official docs and flagged 27 issues. 8 were wrong. Also described Cowork as running in a "cloud VM" based on one doc sentence.
+
+**What went wrong**:
+
+- Reviewers had no context about Ch 18's scope, so they suggested adding Ch 18 topics to Ch 14
+- Reviewers flagged content as "missing" that was intentionally scoped at foundations level
+- Agents latched onto one official doc sentence ("autonomous background agent in a cloud VM") without understanding the full product
+- Multiple rounds of fixes needed because the initial plan was built on unverified findings
+
+**Rule**: (1) Every review prompt must include what OTHER chapters cover as a "do NOT suggest" list. (2) After any review round, verify findings against actual file content before planning. (3) Always grep for "cloud VM" after Cowork content generation. (4) Cowork = local Desktop app, not cloud.
 
 ---
 

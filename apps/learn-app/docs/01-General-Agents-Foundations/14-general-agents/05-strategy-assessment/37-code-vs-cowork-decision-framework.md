@@ -1,9 +1,9 @@
 ---
 slug: /General-Agents-Foundations/general-agents/code-vs-cowork-decision-framework
 title: "Code vs. Cowork: A Decision Framework"
-sidebar_position: 32
+sidebar_position: 37
 chapter: 14
-lesson: 32
+lesson: 37
 duration_minutes: 16
 chapter_type: Concept
 running_example_id: decision-framework
@@ -52,7 +52,7 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2025-01-22"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
 version: "1.0.0"
@@ -65,7 +65,7 @@ teaching_guide:
     - "The simple rule; 'Code for code, Cowork for documents'; covers 80% of decisions; the framework handles the remaining 20%"
     - "Skills are portable across both interfaces because they encode expertise, not interface-specific behavior"
     - "Hybrid workflows (Development + Documentation, Analysis + Presentation) are where professionals get the most value"
-    - "Code and Cowork will converge into a unified interface; invest in patterns (agentic reasoning, Skill design) not interface-specific habits"
+    - "Code and Cowork are converging (desktop app and web surfaces already demonstrate this); invest in patterns (agentic reasoning, Skill design) not interface-specific habits"
   misconceptions:
     - "Students think they must choose one interface exclusively; most real workflows benefit from using both at different stages"
     - "Students assume Code is harder and Cowork is easier; they serve different purposes, and neither is inherently more difficult"
@@ -271,16 +271,13 @@ The Skill encodes expertise. The interface provides the mechanism. This separati
 
 ## The Convergence Path
 
-Looking forward, Code and Cowork will converge:
+Code and Cowork are converging, and the evidence is already visible:
 
-**Current state:** Two separate interfaces optimized for different use cases.
+**Where we started:** Two separate interfaces optimized for different use cases.
 
-**Coming:** Unified interface where you can:
+**What's happening now:** Claude Code runs in the terminal, VS Code, JetBrains, a desktop app, a web browser, and an iOS app. The desktop app lets you review diffs visually, schedule tasks, and run sessions without touching a terminal. The web interface requires no local setup at all. These surfaces blur the boundary between "Code" (terminal) and "Cowork" (desktop).
 
-- Switch between terminal and desktop modes
-- Use all Skills consistently
-- Share context across modes
-- Have unified settings and configuration
+**Where it's heading:** A unified experience where terminal power and visual convenience coexist in every surface.
 
 **Implication:** Don't invest heavily in learning interface-specific patterns that won't transfer. Focus on:
 
@@ -317,17 +314,21 @@ Start: What's your primary task?
 
 ## Interface Capability Comparison
 
-| Capability                    | Claude Code          | Claude Cowork                |
-| ----------------------------- | -------------------- | ---------------------------- |
-| **Read/write files**          | ✓                    | ✓                            |
-| **Run commands**              | ✓ (terminal)         | ✓ (limited)                  |
-| **Git operations**            | ✓ native             | ✗                            |
-| **Document Skills**           | Basic                | Full (docx, xlsx, pptx, pdf) |
-| **Browser integration**       | ✗                    | ✓                            |
-| **Connectors**                | Via MCP              | Native Connectors            |
-| **Custom Skills**             | ✓                    | ✓                            |
-| **Terminal comfort required** | Yes                  | No                           |
-| **Best for**                  | Software development | Document workflows           |
+| Capability                    | Claude Code (terminal/IDE) | Claude Code (web/desktop app) | Claude Cowork                |
+| ----------------------------- | -------------------------- | ----------------------------- | ---------------------------- |
+| **Read/write files**          | ✓                          | ✓                             | ✓                            |
+| **Run commands**              | ✓ (terminal)               | ✓ (remote session)            | ✓ (limited)                  |
+| **Git operations**            | ✓ native                   | ✓                             | ✗                            |
+| **Document Skills**           | Basic                      | Basic                         | Full (docx, xlsx, pptx, pdf) |
+| **Browser integration**       | ✗                          | ✗                             | ✓                            |
+| **Connectors**                | Via MCP                    | Via MCP                       | Native Connectors            |
+| **Custom Skills**             | ✓                          | ✓                             | ✓                            |
+| **Terminal comfort required** | Yes                        | No                            | No                           |
+| **Best for**                  | Software development       | Development without setup     | Document workflows           |
+
+:::note Claude Code runs in more places than the terminal
+Claude Code is available in VS Code, JetBrains, a standalone desktop app, a web browser, and an iOS app. The web and desktop app surfaces provide the same Claude Code capabilities without requiring terminal comfort, which changes the "Code = terminal only" assumption from earlier in this chapter.
+:::
 
 ---
 
@@ -352,7 +353,7 @@ Start: What's your primary task?
 - Use each interface for its strengths
 - Build a Skills library that works in both
 - Design workflows that switch between interfaces at natural boundaries
-- Look forward to the unified interface
+- Watch the convergence trend as more surfaces appear
 
 ---
 
@@ -370,7 +371,7 @@ The differences are:
 - Optimizations (code vs. documents)
 - Specific features (git vs. docx)
 
-**Start with the simple rule:** Code for code, Cowork for documents. Refine from there based on your experience. As the interfaces converge, this decision will become less important anyway.
+**Start with the simple rule:** Code for code, Cowork for documents. Refine from there based on your experience. As the interfaces continue converging (the desktop app and web surfaces already bridge the gap), this decision matters less over time.
 
 ---
 
@@ -398,8 +399,7 @@ The differences are:
 
 ## What's Next
 
-You've completed the Cowork content. The remaining lessons cover the business side: how to monetize your Skills (Lesson 33) and a chapter quiz (Lesson 36) that tests your understanding of both Claude Code and Claude Cowork.
-
+You've completed the Cowork content. The remaining lessons cover the business side: how to monetize your Skills (Lesson 38) and a chapter quiz (Lesson 41) that tests your understanding of both Claude Code and Claude Cowork.
 
 ## Flashcards Study Aid
 

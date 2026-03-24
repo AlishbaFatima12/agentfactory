@@ -80,3 +80,24 @@ cards:
     back: "All project-level settings and configuration reset to defaults"
     tags: ["claude-directory"]
     difficulty: "basic"
+
+  - id: "ch14-14-settings-hierarchy-011"
+    type: recall
+    front: "What is the full five-level precedence order for Claude Code settings?"
+    back: "Managed > CLI args > Local > Project > User (highest to lowest priority)."
+    tags: ["precedence", "advanced"]
+    difficulty: "intermediate"
+
+  - id: "ch14-14-settings-hierarchy-012"
+    type: recall
+    front: "What command opens the interactive settings menu inside Claude Code?"
+    back: "The /config command."
+    tags: ["commands", "settings"]
+    difficulty: "basic"
+
+  - id: "ch14-14-settings-hierarchy-013"
+    type: recall
+    front: "What is the correct format for specifying a model in Claude Code settings?"
+    back: "Use short aliases like sonnet, opus, or haiku (not dated IDs like claude-sonnet-4-5-20250929)."
+    tags: ["settings", "model"]
+    difficulty: "basic"

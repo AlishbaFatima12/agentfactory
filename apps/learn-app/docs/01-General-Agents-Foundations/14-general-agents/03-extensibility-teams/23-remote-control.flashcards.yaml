@@ -33,7 +33,7 @@ cards:
 - id: ch14-23-remote-control-004
   difficulty: basic
   front: Which subscription plans support Remote Control?
-  back: Pro and Max plans only. Team, Enterprise, and API keys are not supported.
+  back: All plans (Pro, Max, Team, Enterprise). On Team and Enterprise plans, an admin must enable it first. API keys are not supported.
   tags:
   - remote-control
   - subscription
@@ -99,3 +99,17 @@ cards:
   tags:
   - remote-control
   - limitations
+- id: ch14-23-remote-control-013
+  difficulty: basic
+  front: What are the three ways to start a Remote Control session?
+  back: '`claude remote-control` (server mode), `claude --remote-control` or `claude --rc` (interactive session with RC enabled), and `/rc` (from within an existing session).'
+  tags:
+  - remote-control
+  - commands
+- id: ch14-23-remote-control-014
+  difficulty: basic
+  front: How do you give a Remote Control session a custom name visible in claude.ai/code?
+  back: 'Use the --name flag: `claude --remote-control --name "refactor-auth"`'
+  tags:
+  - remote-control
+  - commands

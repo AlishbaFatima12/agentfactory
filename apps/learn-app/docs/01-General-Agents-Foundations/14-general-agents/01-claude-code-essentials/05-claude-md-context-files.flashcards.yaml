@@ -1,9 +1,9 @@
 deck:
   id: "ch14-05-claude-md"
   title: "CLAUDE.md Context Files"
-  description: "Persistent project context with CLAUDE.md, LLM statelessness, the AGENTS.md universal standard, and the Three Roles collaboration framework."
+  description: "Persistent project context with CLAUDE.md, LLM statelessness, the AGENTS.md universal standard, /init generation, /memory diagnostics, and the Three Roles collaboration framework."
   tags: ["claude-md", "context", "agents-md", "stateless", "three-roles"]
-  version: 1
+  version: 2
 
 cards:
   - id: "ch14-05-claude-md-001"
@@ -90,8 +90,8 @@ cards:
 
   - id: "ch14-05-claude-md-012"
     type: recall
-    front: "What four things must be true for CLAUDE.md to auto-load in a new session?"
-    back: "1. Named exactly CLAUDE.md (case-sensitive)\n2. In the project root\n3. Claude Code session restarted\n4. File has content (not empty)"
+    front: "What five things must be true for CLAUDE.md to auto-load in a new session?"
+    back: "1. Named exactly CLAUDE.md (case-sensitive)\n2. In the project root\n3. Claude Code session restarted\n4. File has content (not empty)\n5. Confirmed via `/memory` command"
     tags: ["claude-md", "troubleshooting"]
     difficulty: "basic"
 
@@ -110,3 +110,31 @@ cards:
     tags: ["claude-md", "productivity"]
     difficulty: "advanced"
     why: "How does this principle apply beyond CLAUDE.md to other aspects of AI-native development?"
+
+  - id: "ch14-05-claude-md-015"
+    type: recall
+    front: "What is the fastest way to generate an initial CLAUDE.md file?"
+    back: "Type `/init` inside a Claude Code session. Claude analyzes your codebase and generates a CLAUDE.md with build commands, test instructions, and project conventions."
+    tags: ["claude-md", "init", "generation"]
+    difficulty: "basic"
+
+  - id: "ch14-05-claude-md-016"
+    type: recall
+    front: "What is the recommended maximum length for a CLAUDE.md file?"
+    back: "Under 200 lines. If it grows beyond that, use `@path/to/file` imports to split it into focused modules."
+    tags: ["claude-md", "size", "best-practices"]
+    difficulty: "intermediate"
+
+  - id: "ch14-05-claude-md-017"
+    type: recall
+    front: "What does the `/memory` command do in Claude Code?"
+    back: "Shows which CLAUDE.md files and rules are currently loaded into the session, helping diagnose context-loading issues."
+    tags: ["memory", "troubleshooting", "diagnostics"]
+    difficulty: "intermediate"
+
+  - id: "ch14-05-claude-md-018"
+    type: recall
+    front: "How do you keep a large CLAUDE.md modular using imports?"
+    back: "Use `@path/to/file` syntax (e.g., `@docs/conventions.md`) to import content from other files, keeping each file focused and under 200 lines."
+    tags: ["claude-md", "imports", "modularity"]
+    difficulty: "intermediate"

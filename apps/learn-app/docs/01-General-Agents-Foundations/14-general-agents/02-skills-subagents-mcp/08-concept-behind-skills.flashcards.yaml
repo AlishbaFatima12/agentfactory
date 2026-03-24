@@ -45,10 +45,25 @@ cards:
 
   - id: "ch14-08-concept-behind-skills-006"
     type: recall
-    front: "What are the three sources of encoded expertise for skills?"
-    back: "Foundational skills, partner skills, and enterprise/custom skills."
+    front: "What are the four sources of encoded expertise for skills?"
+    back: "Bundled skills (ship with Claude Code), foundational skills, partner skills, and enterprise/custom skills."
     tags: ["skill-sources"]
     difficulty: "basic"
+
+  - id: "ch14-08-concept-behind-skills-016"
+    type: recall
+    front: "Name three bundled skills that ship with every Claude Code installation."
+    back: "Any three of: /batch (parallel codebase changes), /claude-api (API reference), /debug (session troubleshooting), /loop (repeated prompts), /simplify (code quality review)."
+    tags: ["bundled-skills"]
+    difficulty: "basic"
+
+  - id: "ch14-08-concept-behind-skills-017"
+    type: thinking
+    front: "Why is skills portability across AI tools significant for the 'skills as strategic assets' argument?"
+    back: "Because skills follow the Agent Skills open standard (agentskills.io), they work across Claude Code, OpenAI Codex, Goose, and other tools. This means your investment in skill creation is not locked to a single vendor, increasing the long-term value of skills as intellectual property."
+    tags: ["portability", "strategic-assets"]
+    difficulty: "intermediate"
+    why: "Vendor independence transforms skills from tool-specific shortcuts into portable organizational assets"
 
   - id: "ch14-08-concept-behind-skills-007"
     type: recall

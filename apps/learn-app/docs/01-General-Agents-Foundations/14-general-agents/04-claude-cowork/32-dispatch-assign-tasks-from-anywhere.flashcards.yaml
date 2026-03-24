@@ -1,0 +1,112 @@
+deck:
+  id: "ch14-dispatch-assign-tasks"
+  title: "Dispatch: Assign Tasks from Anywhere"
+  description: "Flashcards covering Dispatch setup, mobile-to-desktop task delegation, task routing, persistent context, multi-step tasks, and safety considerations."
+  tags: [dispatch, cowork, mobile, remote-delegation, task-routing]
+  version: 1
+
+cards:
+  - id: "ch14-dispatch-001"
+    type: recall
+    front: "What is Dispatch in the context of Claude Cowork?"
+    back: "A persistent conversation thread in the Cowork tab that lets you assign tasks to Claude from any device (including your phone) and have them execute autonomously on your desktop computer."
+    tags: [dispatch, definition]
+    difficulty: "basic"
+
+  - id: "ch14-dispatch-002"
+    type: recall
+    front: "What four things do you need before using Dispatch for the first time?"
+    back: "Claude Desktop app (latest version) on macOS or Windows\nClaude mobile app (latest version) on iOS or Android\nPro or Max subscription plan\nBoth devices signed into the same Claude account"
+    tags: [dispatch, setup]
+    difficulty: "basic"
+
+  - id: "ch14-dispatch-003"
+    type: thinking
+    front: "Why does Dispatch use a single persistent thread instead of allowing multiple parallel conversations?"
+    back: "BECAUSE a single thread means Claude retains full context from every prior task (files created, preferences learned, prior decisions), THEREFORE it can build on previous work without re-explanation, acting more like a real assistant with a continuous memory."
+    why: "How would the experience change if Dispatch reset context after each task?"
+    tags: [dispatch, persistent-context]
+    difficulty: "intermediate"
+
+  - id: "ch14-dispatch-004"
+    type: recall
+    front: "How does Dispatch decide whether a task runs in a Code session or stays in Cowork?"
+    back: "Development work (fixing bugs, running tests, updating dependencies, opening PRs) routes to a Code session. Knowledge work (research, writing documents, organizing files, generating reports) stays in Cowork. Claude decides the routing automatically based on the task content."
+    tags: [dispatch, task-routing]
+    difficulty: "basic"
+
+  - id: "ch14-dispatch-005"
+    type: thinking
+    front: "Why is it critical that your desktop computer stays awake for Dispatch tasks to execute?"
+    back: "BECAUSE Dispatch tasks execute on your local desktop using Cowork's file access and tools, a sleeping computer cannot run the Claude app or access local files, THEREFORE tasks queue but do not execute until the desktop is active again."
+    why: "What alternative would solve this limitation for tasks that do not need local file access?"
+    tags: [dispatch, limitations]
+    difficulty: "intermediate"
+
+  - id: "ch14-dispatch-006"
+    type: recall
+    front: "How does Dispatch notify you when a task finishes or needs your approval?"
+    back: "Push notifications on your mobile device. You can approve or deny permission requests directly from the notification without going to your desktop."
+    tags: [dispatch, notifications]
+    difficulty: "basic"
+
+  - id: "ch14-dispatch-007"
+    type: thinking
+    front: "Why does the lesson recommend testing with low-stakes tasks before sending Dispatch tasks that modify important files?"
+    back: "BECAUSE instructions from your phone trigger real file operations on your computer (creating, moving, deleting files), a poorly worded task could cause unintended changes to important data, THEREFORE testing with a simple file creation first verifies the workflow without risking anything valuable."
+    why: "What specific wording mistake could cause a Dispatch task to delete files you wanted to keep?"
+    tags: [dispatch, safety]
+    difficulty: "intermediate"
+
+  - id: "ch14-dispatch-008"
+    type: thinking
+    front: "What makes Dispatch different from simply using a remote desktop app to control your computer from your phone?"
+    back: "BECAUSE Dispatch delegates outcomes rather than mirroring your screen, you describe what you want done and Claude handles the implementation autonomously, THEREFORE you do not need to manually click through every step from your phone, which would be slow and error-prone on a small screen."
+    why: "In what scenario would remote desktop still be preferable to Dispatch?"
+    tags: [dispatch, mental-model]
+    difficulty: "advanced"
+
+  - id: "ch14-dispatch-009"
+    type: recall
+    front: "What capabilities does Dispatch inherit from your Cowork environment?"
+    back: "Plugins, connectors, file access permissions, and computer use (if enabled). No separate mobile setup is needed for these capabilities."
+    tags: [dispatch, plugins, connectors]
+    difficulty: "intermediate"
+
+  - id: "ch14-dispatch-010"
+    type: thinking
+    front: "Why is task specificity more important in Dispatch messages than in interactive Cowork sessions?"
+    back: "BECAUSE Dispatch is fire-and-forget delegation where you may not be available for follow-up questions, vague instructions force Claude to guess at your intent, THEREFORE including specific input sources, output format, and save location ensures Claude can execute the full task without clarification."
+    why: "How would you rewrite 'handle my emails' to be specific enough for Dispatch?"
+    tags: [dispatch, task-design]
+    difficulty: "advanced"
+
+  - id: "ch14-dispatch-011"
+    type: recall
+    front: "What visual indicator shows that a Code session was spawned by Dispatch?"
+    back: "A Dispatch badge appears on the session in the Code tab sidebar."
+    tags: [dispatch, code-sessions]
+    difficulty: "basic"
+
+  - id: "ch14-dispatch-012"
+    type: thinking
+    front: "When would you choose interactive Cowork over Dispatch for a file organization task?"
+    back: "BECAUSE interactive Cowork lets you review proposals and steer mid-execution, tasks requiring judgment calls (like which files to keep vs delete) benefit from real-time oversight, THEREFORE choose interactive Cowork when the task needs your input during execution, and Dispatch when a clear specification is enough."
+    why: "What type of file organization task would be safe to Dispatch without oversight?"
+    tags: [dispatch, interaction-modes]
+    difficulty: "advanced"
+
+  - id: "ch14-dispatch-013"
+    type: recall
+    front: "On which subscription plans is Dispatch available?"
+    back: "Pro and Max plans only. It is not available on free, Team, or Enterprise plans."
+    tags: [dispatch, plans]
+    difficulty: "basic"
+
+  - id: "ch14-dispatch-014"
+    type: thinking
+    front: "How does persistent context in Dispatch change the way you design follow-up tasks?"
+    back: "BECAUSE Claude remembers prior tasks, file locations, and your preferences, follow-up tasks can reference previous work without restating context ('add a section to the meeting-prep.md file' instead of specifying the full path and contents again), THEREFORE each task builds on the last, reducing instruction overhead."
+    why: "What happens to this accumulated context if you start a new regular Cowork session instead of continuing in Dispatch?"
+    tags: [dispatch, persistent-context, task-design]
+    difficulty: "advanced"

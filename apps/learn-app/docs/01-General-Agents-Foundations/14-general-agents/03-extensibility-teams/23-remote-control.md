@@ -146,6 +146,22 @@ This command supports two optional flags:
 - `--verbose` -- show detailed connection and session logs
 - `--sandbox` / `--no-sandbox` -- enable or disable filesystem and network isolation during the session
 
+### From an Interactive Session with Remote Control Enabled
+
+Start a normal interactive Claude Code session with Remote Control active from the start:
+
+```bash
+claude --remote-control
+```
+
+Or the shorthand:
+
+```bash
+claude --rc
+```
+
+This combines the convenience of an interactive session (you can type normally in the terminal) with Remote Control already enabled. You can also add `--name "refactor-auth"` to give the session a descriptive title visible in claude.ai/code.
+
 ### From an Existing Session
 
 Already deep into a conversation and realize you need to leave? Use the slash command:
@@ -174,7 +190,7 @@ Once a Remote Control session is active, connect from any device in three ways:
 
 The conversation stays in sync across all connected devices. You can send messages from your terminal, browser, and phone interchangeably.
 
-**Subscription requirement**: Remote Control requires a Pro or Max plan. It is not available on Team or Enterprise plans, and API keys are not supported. If you are not on a supported plan, the command will not work.
+**Subscription requirement**: Remote Control is available on all plans (Pro, Max, Team, and Enterprise). On Team and Enterprise plans, an admin must enable it before individual users can access it. API keys are not supported. If you are not on a supported plan or your admin has not enabled it, the command will not work.
 
 ---
 
@@ -339,9 +355,9 @@ This gives you: isolated branch work (worktree) + persistent process (tmux) + mo
 
 **What it looks like**: You run `claude remote-control` and get an error, or the session starts but no remote device can connect.
 
-**Why it happens**: Remote Control requires a Pro or Max plan. It does not work with API keys, Team plans, or Enterprise plans. You also need to be logged in via `/login`.
+**Why it happens**: Remote Control requires a paid plan. It does not work with API keys. On Team and Enterprise plans, an admin must enable Remote Control before individual users can access it. You also need to be logged in via `/login`.
 
-**Fix**: Verify your subscription tier. Run `claude` and use `/login` to authenticate through claude.ai. Make sure you have accepted the workspace trust dialog by running `claude` in your project directory at least once.
+**Fix**: Verify your subscription tier. On Team or Enterprise plans, check with your admin that Remote Control is enabled. Run `claude` and use `/login` to authenticate through claude.ai. Make sure you have accepted the workspace trust dialog by running `claude` in your project directory at least once.
 
 ---
 

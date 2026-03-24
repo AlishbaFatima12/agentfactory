@@ -139,9 +139,9 @@ Claude Code settings exist at three levels, from general to specific:
 
 ```json
 {
-  "model": "claude-sonnet-4-5-20250929",
+  "model": "sonnet",
   "outputStyle": "Concise",
-  "includeCoAuthoredBy": true
+  "attribution": true
 }
 ```
 
@@ -238,7 +238,7 @@ You always prefer verbose output and specific model settings.
 {
   "model": "opus",
   "outputStyle": "Verbose",
-  "includeCoAuthoredBy": true
+  "attribution": true
 }
 ```
 
@@ -303,6 +303,10 @@ This means:
 - **Local settings** override both project and user settings
 - **Project settings** override user settings
 - **User settings** are the fallback when nothing more specific exists
+
+:::note The Full Picture
+The complete precedence chain is actually five levels: **Managed > CLI args > Local > Project > User**. Managed settings are deployed by IT teams in enterprise environments (they cannot be overridden). CLI arguments (flags you pass when launching `claude`) sit above local settings. For day-to-day work, the three levels above are what matter. You will encounter the full chain in enterprise contexts or when using advanced CLI flags.
+:::
 
 ### Visual Hierarchy
 
@@ -412,9 +416,13 @@ This lesson teaches you that **settings exist and how the hierarchy works**. You
 
 **Detailed settings configuration** (what specific settings do, how to change them, team policies) is **Part 4 content** (Spec-Driven Development, team workflows). For now, just know:
 
-- ✅ Settings exist at three levels
-- ✅ Precedence is: local > project > user
-- ✅ This hierarchy enables team collaboration + personal customization
+- Settings exist at three levels (plus Managed and CLI args in enterprise/advanced contexts)
+- Precedence is: local > project > user
+- This hierarchy enables team collaboration + personal customization
+
+:::tip Quick Settings Access
+When you are ready to adjust settings, type `/config` inside Claude Code. This opens an interactive menu for managing settings without manually editing JSON files.
+:::
 
 That's enough to understand when you encounter `.claude/settings.json` references in documentation.
 

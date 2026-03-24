@@ -167,7 +167,7 @@ Run this command in Claude Code right now:
 │                                                                                      │
 │   Code intelligence                                                                  │
 │   ❯ typescript-lsp - TypeScript/JavaScript language server                          │
-│     python-lsp - Python language server (Pyright)                                   │
+│     pyright-lsp - Python language server (Pyright)                                  │
 │     rust-analyzer-lsp - Rust language server                                        │
 │     gopls-lsp - Go language server                                                  │
 │                                                                                      │
@@ -234,16 +234,18 @@ After installing **commit-commands**, make a small change to any file, then run:
 
 **That's it!** You just extended Claude Code with one command.
 
+**Tip**: If a newly installed plugin's commands don't appear, run `/reload-plugins` to pick up changes without restarting Claude Code.
+
 ---
 
 ## What's in the Official Marketplace?
 
-| Category                  | Plugins                                                          | What They Do                                          |
-| ------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------- |
-| **Code intelligence**     | `typescript-lsp`, `python-lsp`, `rust-analyzer-lsp`, `gopls-lsp` | Jump to definitions, find references, see type errors |
-| **External integrations** | `github`, `gitlab`, `slack`, `linear`, `notion`, `figma`         | Connect to external services                          |
-| **Development workflows** | `commit-commands`, `pr-review-toolkit`, `plugin-dev`             | Git workflows, PR reviews, plugin creation            |
-| **Output styles**         | `explanatory-output-style`, `learning-output-style`              | Customize how Claude responds                         |
+| Category                  | Plugins                                                                       | What They Do                                          |
+| ------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------- |
+| **Code intelligence**     | `typescript-lsp`, `pyright-lsp`, `rust-analyzer-lsp`, `gopls-lsp`, and 7 more | Jump to definitions, find references, see type errors |
+| **External integrations** | `github`, `gitlab`, `slack`, `linear`, `notion`, `figma`                      | Connect to external services                          |
+| **Development workflows** | `commit-commands`, `pr-review-toolkit`, `plugin-dev`                          | Git workflows, PR reviews, plugin creation            |
+| **Output styles**         | `explanatory-output-style`, `learning-output-style`                           | Customize how Claude responds                         |
 
 ### Code Intelligence Plugins
 
@@ -260,9 +262,16 @@ These use the [Language Server Protocol](https://microsoft.github.io/language-se
 | Plugin              | Binary Required              |
 | ------------------- | ---------------------------- |
 | `typescript-lsp`    | `typescript-language-server` |
-| `python-lsp`        | `pyright-langserver`         |
+| `pyright-lsp`       | `pyright-langserver`         |
 | `rust-analyzer-lsp` | `rust-analyzer`              |
 | `gopls-lsp`         | `gopls`                      |
+| `clangd-lsp`        | `clangd`                     |
+| `csharp-lsp`        | `csharp-ls`                  |
+| `jdtls-lsp`         | `jdtls`                      |
+| `kotlin-lsp`        | `kotlin-language-server`     |
+| `lua-lsp`           | `lua-language-server`        |
+| `intelephense-lsp`  | `intelephense`               |
+| `sourcekit-lsp`     | `sourcekit-lsp`              |
 
 ### External Integration Plugins
 
@@ -312,11 +321,27 @@ Go to the **Installed** tab.
 /plugin enable plugin-name@marketplace-name
 ```
 
+### Update a Plugin
+
+```
+claude plugin update plugin-name@marketplace-name
+```
+
+### Validate a Plugin
+
+Before distributing, check your plugin's manifest and structure:
+
+```
+claude plugin validate ./path-to-plugin
+```
+
 ### Completely Remove
 
 ```
 /plugin uninstall plugin-name@marketplace-name
 ```
+
+**Auto-updates**: Plugins installed from official marketplaces auto-update at startup by default. You always get the latest version without manual intervention.
 
 ---
 
@@ -382,12 +407,17 @@ my-plugin/
 ├── .claude-plugin/
 │   └── plugin.json          # Required manifest
 ├── skills/                   # Your SKILL.md files
+├── commands/                 # Legacy slash commands (use skills/ for new work)
 ├── agents/                   # Your subagent definitions
 ├── hooks/
 │   └── hooks.json           # Your hook configurations
 ├── .mcp.json                # Your MCP server configs
 └── README.md
 ```
+
+:::tip Legacy commands/ directory
+Some existing plugins use a `commands/` directory for slash commands. This is the older format; new plugins should use `skills/` instead. You may still encounter `commands/` in plugins you install.
+:::
 
 **Critical**: Components go at the **root level**, not inside `.claude-plugin/`. The `.claude-plugin/` folder only contains the manifest.
 
@@ -470,7 +500,7 @@ You _could_ share plugins without a marketplace: just tell someone to clone your
 
 Yes. Options include:
 
-1. **Official Anthropic marketplace**: Submit a PR to get your plugin listed for everyone
+1. **Official Anthropic marketplace**: Submit through the in-app forms at [claude.ai/settings/plugins/submit](https://claude.ai/settings/plugins/submit) or [platform.claude.com/plugins/submit](https://platform.claude.com/plugins/submit)
 2. **Team/company marketplaces**: Ask the maintainer to add your plugin to their `marketplace.json`
 3. **Your own marketplace**: List your plugin plus others you find useful
 
@@ -565,7 +595,6 @@ You can now discover, install, and **create** plugins: the complete lifecycle. L
 > "I have a plugin ready. Help me create a marketplace.json file, push it to GitHub, and show me how others can install my plugin."
 
 **What you're learning:** Plugin distribution: sharing your work with teammates or the broader community through marketplace catalogs.
-
 
 ## Flashcards Study Aid
 

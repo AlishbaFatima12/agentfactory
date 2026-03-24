@@ -11,9 +11,12 @@ Claude Code uses a three-level settings hierarchy (user → project → local) w
 ### Critical Patterns
 
 - Three file locations: `~/.claude/settings.json` (user), `.claude/settings.json` (project), `.claude/settings.local.json` (local)
-- Precedence order: local > project > user (most specific wins)
+- Day-to-day precedence: local > project > user (most specific wins)
+- Full five-level precedence: Managed > CLI args > Local > Project > User (Managed and CLI args are advanced/enterprise contexts)
 - Commit `.claude/settings.json` to version control; add `.claude/settings.local.json` to `.gitignore`
 - Use user level for personal preferences, project level for team standards, local level for temporary experiments
+- Use `/config` inside Claude Code for interactive settings management (no manual JSON editing needed)
+- Model names use short aliases: `sonnet`, `opus`, `haiku` (not dated model IDs)
 
 ### Common Mistakes
 

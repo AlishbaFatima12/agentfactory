@@ -66,9 +66,9 @@ cards:
 
   - id: "ch14-safety-limitations-009"
     type: recall
-    front: "What has the Unified UI delivered so far, and what is still coming?"
-    back: "Delivered: Code tab in Claude Desktop alongside Chat and Cowork.\nStill coming: Seamless mode switching and consistent settings across all interfaces."
-    tags: ["roadmap", "unified-ui"]
+    front: "Name four features that have shipped since Cowork launched."
+    back: "Remote/cloud sessions (continue when laptop is closed)\nEnhanced scheduling (cloud, desktop, /loop)\nPlugin Manager UI (browse and install without terminal)\nSession sharing (Team/Enterprise and Pro/Max)\nComputer Use research preview on macOS"
+    tags: ["roadmap", "shipped-features"]
     difficulty: "intermediate"
 
   - id: "ch14-safety-limitations-010"

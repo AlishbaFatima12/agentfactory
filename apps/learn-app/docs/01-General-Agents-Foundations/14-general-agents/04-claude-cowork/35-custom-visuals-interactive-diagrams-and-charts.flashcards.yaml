@@ -1,0 +1,119 @@
+deck:
+  id: "ch14-custom-visuals-interactive-diagrams"
+  title: "Custom Visuals: Interactive Diagrams and Charts"
+  description: "Flashcards covering custom visual generation in Claude chat, interaction and export options, iterative refinement, data visualization, platform limitations, and the relationship between chat visuals and Cowork workflows."
+  tags: [custom-visuals, diagrams, charts, data-visualization, export, artifacts]
+  version: 1
+
+cards:
+  - id: "ch14-custom-visuals-001"
+    type: recall
+    front: "What technology does Claude use to render custom visuals inline in conversations?"
+    back: "HTML (the same building blocks as web pages), making visuals interactive rather than static images."
+    tags: [custom-visuals, technology]
+    difficulty: "basic"
+
+  - id: "ch14-custom-visuals-002"
+    type: recall
+    front: "What are the three ways to preserve a custom visual before closing the conversation?"
+    back: "Copy as Image (static PNG)\nDownload (SVG or HTML file)\nSave as Artifact (persistent, shareable)"
+    tags: [export, preservation]
+    difficulty: "basic"
+
+  - id: "ch14-custom-visuals-003"
+    type: thinking
+    front: "Why are custom visuals described as 'ephemeral by default' and what risk does this create?"
+    back: "BECAUSE custom visuals live only inside the conversation and are not automatically saved, closing the chat without exporting means the visual is permanently lost, THEREFORE students must build a habit of downloading or saving as artifact before ending the conversation."
+    why: "How does this ephemeral nature compare to artifacts, which are persistent and shareable from the start?"
+    tags: [ephemeral, artifacts, preservation]
+    difficulty: "intermediate"
+
+  - id: "ch14-custom-visuals-004"
+    type: recall
+    front: "On which platforms do custom visuals render interactively?"
+    back: "Claude web chat (claude.ai) and the Claude Desktop app only. They do NOT render in Cowork sessions, mobile apps (iOS/Android), or API responses."
+    tags: [platform-availability]
+    difficulty: "basic"
+
+  - id: "ch14-custom-visuals-005"
+    type: thinking
+    front: "Why is iterating in small steps (one or two changes per prompt) recommended over requesting five changes at once?"
+    back: "BECAUSE each change can interact with others in unexpected ways, verifying one or two changes at a time lets you catch misinterpretations before they compound, THEREFORE producing a more predictable refinement path and reducing the need to start over."
+    why: "What would you do if a multi-change iteration went wrong and you could not tell which change caused the problem?"
+    tags: [iteration, refinement, best-practices]
+    difficulty: "intermediate"
+
+  - id: "ch14-custom-visuals-006"
+    type: recall
+    front: "What is the four-step core workflow for custom visuals?"
+    back: "Generate (prompt Claude to create the visual)\nInteract (click, hover, expand full screen)\nIterate (refine with follow-up prompts)\nExport (download as SVG/HTML or save as artifact)"
+    tags: [workflow, core-concepts]
+    difficulty: "basic"
+
+  - id: "ch14-custom-visuals-007"
+    type: thinking
+    front: "Custom visuals do not render in Cowork. How do you use them in a Cowork-centered workflow?"
+    back: "BECAUSE visuals only render in chat, you generate and refine them in Claude web or desktop chat first, then download the SVG or HTML file and use Cowork to integrate the exported file into documents, reports, or presentations, THEREFORE combining chat's visual generation strength with Cowork's file operation strength."
+    why: "Why is this division of labor (chat for visuals, Cowork for files) more effective than trying to do everything in one tool?"
+    tags: [cowork-integration, workflow]
+    difficulty: "advanced"
+
+  - id: "ch14-custom-visuals-008"
+    type: recall
+    front: "What happens when you share a conversation containing custom visuals with someone who opens it on mobile?"
+    back: "They see the raw HTML text instead of the rendered interactive visual, because custom visuals only render on web and desktop."
+    tags: [sharing, platform-availability]
+    difficulty: "intermediate"
+
+  - id: "ch14-custom-visuals-009"
+    type: thinking
+    front: "Why does specifying exact interactive behaviors ('clickable nodes revealing 2-sentence descriptions') produce better visuals than vague requests ('make it interactive')?"
+    back: "BECAUSE Claude must decide what interactivity means when the request is vague, different interpretations can produce hover effects, click-to-expand, drag behaviors, or toggles, THEREFORE specifying the exact behavior gives Claude a concrete target and produces output matching your intention on the first attempt."
+    why: "How does this principle connect to the broader Cowork lesson about giving specific instructions rather than vague ones?"
+    tags: [prompt-design, specificity]
+    difficulty: "intermediate"
+
+  - id: "ch14-custom-visuals-010"
+    type: recall
+    front: "Which Claude model is recommended for complex multi-component visualizations?"
+    back: "Claude Opus. Sonnet handles simpler diagrams well, but Opus produces the most sophisticated visualizations."
+    tags: [model-selection, best-practices]
+    difficulty: "basic"
+
+  - id: "ch14-custom-visuals-011"
+    type: thinking
+    front: "Why should you ask Claude to explain its visual after generating it, before investing in refinement?"
+    back: "BECAUSE Claude's interpretation of your prompt may not match your intent, asking it to walk through what each element represents catches misinterpretations early, THEREFORE saving multiple rounds of refinement that would have been built on a flawed foundation."
+    why: "How is this similar to reviewing a proposal before executing, one of the four Cowork workflow patterns?"
+    tags: [verification, iteration]
+    difficulty: "advanced"
+
+  - id: "ch14-custom-visuals-012"
+    type: recall
+    front: "What is the difference between a custom visual and an artifact in Claude?"
+    back: "Custom visuals are ephemeral and inline (they live in the conversation and disappear when you close it). Artifacts are persistent and shareable from the start. You can convert a visual into an artifact by asking Claude to save it as one."
+    tags: [visuals-vs-artifacts, core-concepts]
+    difficulty: "intermediate"
+
+  - id: "ch14-custom-visuals-013"
+    type: thinking
+    front: "You generated a data chart in Claude chat and want to include it in a weekly report that Cowork assembles. What is your workflow?"
+    back: "BECAUSE the chart only renders in chat, you first download it as SVG (for static inclusion) or HTML (for interactive inclusion), then in a Cowork session you instruct Claude to insert the downloaded file into the report document, THEREFORE bridging the platform gap by using export as the handoff mechanism."
+    why: "When would you choose SVG over HTML for this export, and vice versa?"
+    tags: [practical-workflow, export, cowork-integration]
+    difficulty: "advanced"
+
+  - id: "ch14-custom-visuals-014"
+    type: recall
+    front: "Name three types of interactive elements Claude can build into custom visuals."
+    back: "Clickable nodes (revealing descriptions)\nHover tooltips (showing exact values)\nToggles or sliders (switching views or adjusting parameters)"
+    tags: [interactivity, visual-types]
+    difficulty: "basic"
+
+  - id: "ch14-custom-visuals-015"
+    type: thinking
+    front: "Why is 'export early' a recommended habit when working with custom visuals?"
+    back: "BECAUSE each iteration replaces the previous version and there is no undo, exporting before refining further creates a checkpoint you can return to if a subsequent change produces unwanted results, THEREFORE making the refinement process reversible."
+    why: "How does this compare to version control in software development?"
+    tags: [export, best-practices, iteration]
+    difficulty: "intermediate"

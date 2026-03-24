@@ -135,7 +135,7 @@ prerequisites:
 | **SessionStart**     | When Claude Code starts  | Load environment variables, show project info                |
 | **SessionEnd**       | When session closes      | Cleanup, save logs                                           |
 
-There are also advanced events (`Stop`, `SubagentStop`, `PermissionRequest`, `Notification`) for specialized workflows.
+Claude Code supports over 20 hook events beyond these five. You may encounter `Stop` (when Claude finishes responding), `Notification` (when Claude needs your attention), `PermissionRequest` (when a permission dialog appears), `SubagentStart`/`SubagentStop` (for subagent lifecycle), and others for compaction, config changes, and worktrees. Chapter 18 covers advanced hook events in depth.
 
 ---
 
@@ -433,6 +433,23 @@ echo "Blocked: dangerous command" >&2
 exit 2
 ```
 
+:::note PreToolUse Permission Decisions
+For `PreToolUse` hooks that make permission decisions, the official docs use a structured `hookSpecificOutput` object containing fields like `permissionDecision` and `additionalContext`. The simple format above works for basic allow/block logic; see the [official hooks reference](https://docs.anthropic.com/en/docs/claude-code/hooks) for the full schema when building permission-aware hooks.
+:::
+
+---
+
+## Beyond Command Hooks
+
+This lesson teaches `"type": "command"` hooks, where the hook runs a shell script. Claude Code actually supports four hook types:
+
+1. **`command`** runs a shell command (what you learned above).
+2. **`http`** sends the event data as a POST request to a URL endpoint, useful for team-wide audit services and cloud integrations.
+3. **`prompt`** evaluates a single-turn LLM prompt, letting a hook use AI judgment rather than deterministic logic.
+4. **`agent`** spawns a subagent with tool access to verify conditions, combining hook triggers with full agent capabilities.
+
+The `prompt` and `agent` types represent a significant shift: hooks can now make AI-powered decisions, not just rule-based ones. Chapter 18 covers these advanced hook types in detail.
+
 ---
 
 ## Combining Multiple Hooks
@@ -531,7 +548,6 @@ Lesson 16 introduces **Plugins**:pre-packaged bundles of skills, hooks, agents, 
 > "My hook isn't running. Help me debug: How do I test the script manually? How do I check if settings.json is correct? What does claude --debug show?"
 
 **What you're learning:** Hook debugging methodology: the systematic approach when automation doesn't work. This skill saves significant debugging time.
-
 
 ## Flashcards Study Aid
 

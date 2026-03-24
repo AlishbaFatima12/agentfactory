@@ -116,13 +116,13 @@ By using **Gemini's free tier** or **DeepSeek's competitive API**, you get ongoi
 
 Before setup, decide which backend suits you. All three options provide identical Claude Code functionality:
 
-| Factor | OpenRouter | Gemini | DeepSeek |
-| :--- | :--- | :--- | :--- |
-| **Available Models** | 5+ free options | Gemini 2.5 Flash | DeepSeek Chat/Reasoner |
-| **Free Tier** | Daily request limits per model | Daily request limits | Token-based (~$0.028-$0.42/M tokens) |
-| **Speed** | Very Fast | Very Fast | Fast |
-| **Setup Complexity** | Manual, most transparent | Easiest (few steps) | Slightly more involved |
-| **Reasoning Models** | Available (Qwen, Llama) | Native support | Native support |
+| Factor               | OpenRouter                     | Gemini               | DeepSeek                             |
+| :------------------- | :----------------------------- | :------------------- | :----------------------------------- |
+| **Available Models** | 5+ free options                | Gemini 2.5 Flash     | DeepSeek Chat/Reasoner               |
+| **Free Tier**        | Daily request limits per model | Daily request limits | Token-based (~$0.028-$0.42/M tokens) |
+| **Speed**            | Very Fast                      | Very Fast            | Fast                                 |
+| **Setup Complexity** | Manual, most transparent       | Easiest (few steps)  | Slightly more involved               |
+| **Reasoning Models** | Available (Qwen, Llama)        | Native support       | Native support                       |
 
 ---
 
@@ -230,6 +230,7 @@ Leave `"api_key": "$OPENROUTER_API_KEY"` exactly as written. The router reads yo
 ### Set Your API Key
 
 **Run PowerShell as Administrator:**
+
 1. Search "PowerShell" in Windows Start menu
 2. **Right-click** on "Windows PowerShell"
 3. Click **"Run as administrator"**
@@ -256,7 +257,7 @@ You should see your API key displayed ✅
 ### Verify Setup
 
 ```powershell
-claude --version     # Should show: Claude Code v2.x.x
+claude --version     # Should show: X.X.XX (Claude Code)
 ccr version          # Should show version number
 echo $env:OPENROUTER_API_KEY  # Should show your key
 ```
@@ -342,7 +343,7 @@ source ~/.zshrc
 ### Verify Setup
 
 ```bash
-claude --version          # Should show: Claude Code v2.x.x
+claude --version          # Should show: X.X.XX (Claude Code)
 ccr version               # Should show version number
 echo $OPENROUTER_API_KEY # Should show your key
 ```
@@ -432,7 +433,7 @@ Run `echo $SHELL` to see which shell you use. If it shows `/bin/zsh`, use `~/.zs
 ### Verify Setup
 
 ```bash
-claude --version          # Should show: Claude Code v2.x.x
+claude --version          # Should show: X.X.XX (Claude Code)
 ccr version               # Should show version number
 echo $OPENROUTER_API_KEY # Should show your key
 ```
@@ -452,6 +453,7 @@ echo $OPENROUTER_API_KEY # Should show your key
 ::windows
 
 **PowerShell 1** - Start router FIRST:
+
 ```powershell
 ccr start
 ```
@@ -459,6 +461,7 @@ ccr start
 Leave this window running. You'll see a warning message: that's normal!
 
 **PowerShell 2** - Open a NEW PowerShell window and run:
+
 ```powershell
 cd C:\your\project\folder
 ccr code
@@ -473,12 +476,14 @@ ccr code
 ::macos
 
 **Terminal 1** - Start router FIRST:
+
 ```bash
 ccr start
 # Wait for: ✅ Service started successfully
 ```
 
 **Terminal 2** - THEN use Claude:
+
 ```bash
 cd ~/your-project
 ccr code
@@ -489,12 +494,14 @@ ccr code
 ::linux
 
 **Terminal 1** - Start router FIRST:
+
 ```bash
 ccr start
 # Wait for: ✅ Service started successfully
 ```
 
 **Terminal 2** - THEN use Claude:
+
 ```bash
 cd ~/your-project
 ccr code
@@ -598,10 +605,7 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude"
       "name": "gemini",
       "api_base_url": "https://generativelanguage.googleapis.com/v1beta/models/",
       "api_key": "$GOOGLE_API_KEY",
-      "models": [
-        "gemini-2.5-flash-lite",
-        "gemini-2.0-flash"
-      ],
+      "models": ["gemini-2.5-flash-lite", "gemini-2.0-flash"],
       "transformer": {
         "use": ["gemini"]
       }
@@ -630,6 +634,7 @@ Leave `"api_key": "$GOOGLE_API_KEY"` exactly as written. Do NOT replace it with 
 ### Step 4: Set Your API Key
 
 **Run PowerShell as Administrator:**
+
 1. Search "PowerShell" in Windows Start menu
 2. **Right-click** on "Windows PowerShell"
 3. Click **"Run as administrator"**
@@ -656,7 +661,7 @@ You should see your API key displayed ✅
 ### Verify Setup
 
 ```powershell
-claude --version     # Should show: Claude Code v2.x.x
+claude --version     # Should show: X.X.XX (Claude Code)
 ccr version          # Should show version number
 echo $env:GOOGLE_API_KEY  # Should show your key
 ```
@@ -739,7 +744,7 @@ source ~/.zshrc
 ### Verify Setup
 
 ```bash
-claude --version     # Should show: Claude Code v2.x.x
+claude --version     # Should show: X.X.XX (Claude Code)
 ccr version          # Should show version number
 echo $GOOGLE_API_KEY # Should show your key
 ```
@@ -826,7 +831,7 @@ Run `echo $SHELL` to see your shell. If it shows `/bin/zsh`, use `~/.zshrc` inst
 ### Verify Setup
 
 ```bash
-claude --version     # Should show: Claude Code v2.x.x
+claude --version     # Should show: X.X.XX (Claude Code)
 ccr version          # Should show version number
 echo $GOOGLE_API_KEY # Should show your key
 ```
@@ -846,6 +851,7 @@ echo $GOOGLE_API_KEY # Should show your key
 ::windows
 
 **PowerShell 1** - Start router FIRST:
+
 ```powershell
 ccr start
 ```
@@ -853,6 +859,7 @@ ccr start
 Leave this window running. You'll see a warning message: that's normal!
 
 **PowerShell 2** - Open a NEW PowerShell window and run:
+
 ```powershell
 cd C:\your\project\folder
 ccr code
@@ -867,12 +874,14 @@ ccr code
 ::macos
 
 **Terminal 1** - Start router FIRST:
+
 ```bash
 ccr start
 # Wait for: ✅ Service started successfully
 ```
 
 **Terminal 2** - THEN use Claude:
+
 ```bash
 cd ~/your-project
 ccr code
@@ -883,12 +892,14 @@ ccr code
 ::linux
 
 **Terminal 1** - Start router FIRST:
+
 ```bash
 ccr start
 # Wait for: ✅ Service started successfully
 ```
 
 **Terminal 2** - THEN use Claude:
+
 ```bash
 cd ~/your-project
 ccr code
@@ -936,10 +947,7 @@ If you already completed the **Gemini Setup** above, you already have Node.js an
       "name": "deepseek",
       "api_base_url": "https://api.deepseek.com/v1",
       "api_key": "$DEEPSEEK_API_KEY",
-      "models": [
-        "deepseek-chat",
-        "deepseek-reasoner"
-      ],
+      "models": ["deepseek-chat", "deepseek-reasoner"],
       "transformer": {
         "use": ["openai"]
       }
@@ -1170,7 +1178,6 @@ Once your free setup is working, try these prompts to verify everything works:
 ---
 
 That's it. Proceed to **Lesson 05** to learn about teaching Claude your way of working.
-
 
 ## Flashcards Study Aid
 
