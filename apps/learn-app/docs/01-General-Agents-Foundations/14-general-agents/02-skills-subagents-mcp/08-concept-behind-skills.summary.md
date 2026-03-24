@@ -6,11 +6,11 @@
 - **Models provide intelligence**: reasoning, analysis, synthesis, generation
 - **Code provides execution**: APIs, file system, Python analysis, output generation
 - Together: an intelligent agent that can execute (Claude Code)
-- **Missing piece**: Domain expertise—the knowledge that makes generic capability specifically useful
+- **Missing piece**: Domain expertise: the knowledge that makes generic capability specifically useful
 
 ### The Expertise Gap
 - AI agents are brilliant but lack specialized, practical knowledge
-- The bottleneck isn't intelligence—it's access to domain expertise
+- The bottleneck isn't intelligence: it's access to domain expertise
 - Dr. Claude analogy: knows medicine in theory, never done surgery at THIS hospital
 - Solution: give Claude access to expertise it doesn't have (via skills)
 
@@ -45,13 +45,13 @@
 Brilliant doctor who graduated top of class but has never done surgery at THIS hospital. Knows theory, lacks practical expertise for specific context.
 
 ### Phone Apps
-100 apps installed, but phone doesn't run all 100 at once. Apps stay closed until needed. Skills work the same—available when relevant, dormant otherwise.
+100 apps installed, but phone doesn't run all 100 at once. Apps stay closed until needed. Skills work the same: available when relevant, dormant otherwise.
 
 ### Computing Stack
 You don't build processors (models) or operating systems (runtimes). You build applications (skills) that encode domain expertise.
 
 ## Key Insight
-The agent infrastructure is mature. Claude Code exists. What's missing is YOUR expertise in a format Claude can access. Skills open the "applications layer" for everyone—including non-technical domain experts.
+The agent infrastructure is mature. Claude Code exists. What's missing is YOUR expertise in a format Claude can access. Skills open the "applications layer" for everyone: including non-technical domain experts.
 
 ## Connection to Other Lessons
 - **Lesson 07**: WHY you'd encode personal procedures → skills as individual benefit

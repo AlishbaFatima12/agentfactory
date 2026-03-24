@@ -4,7 +4,7 @@ title: "Principle 7: Observability"
 chapter: 17
 lesson: 7
 duration_minutes: 25
-description: "Seeing what AI agents are doing—why observability is essential for trust and effective collaboration"
+description: "Seeing what AI agents are doing,why observability is essential for trust and effective collaboration"
 keywords:
   [
     "observability",
@@ -90,7 +90,7 @@ teaching_guide:
 
 # Principle 7: Observability
 
-You ask an AI system to refactor a database query. It says it's done. You run the application. It crashes. You check the query—it looks completely different from what you expected. When did it change? What steps did it take? What files did it modify? You have no idea. You're flying blind.
+You ask an AI system to refactor a database query. It says it's done. You run the application. It crashes. You check the query,it looks completely different from what you expected. When did it change? What steps did it take? What files did it modify? You have no idea. You're flying blind.
 
 This is the observability problem: **if you can't see what the AI is doing, you can't debug problems, build trust, or improve the collaboration**.
 
@@ -167,7 +167,7 @@ Reading src/auth/login.js...
 
 Without rationale, you see changes but not the intent. With rationale, you can evaluate whether the approach makes sense.
 
-> **Warning: AI Rationalization**: AI can sound confident even when wrong. It will give plausible-sounding explanations for broken code. Never trust the rationale alone—always verify with actual results (tests, output, behavior). If the rationale says "this will work" but the tests fail, trust the tests.
+> **Warning: AI Rationalization**: AI can sound confident even when wrong. It will give plausible-sounding explanations for broken code. Never trust the rationale alone,always verify with actual results (tests, output, behavior). If the rationale says "this will work" but the tests fail, trust the tests.
 
 ### Pillar 3: Result Visibility (What Was the Outcome?)
 
@@ -296,7 +296,7 @@ Two files changed. That looks right.
 
 **Step 2: Check if tests were run.**
 
-Look at the session conversation or activity log. Was there a `npm test` or similar verification step? If you see the change was made and Claude immediately said "Done!" without running tests—that's the warning pattern: EDIT → COMPLETE with no VERIFY.
+Look at the session conversation or activity log. Was there a `npm test` or similar verification step? If you see the change was made and Claude immediately said "Done!" without running tests,that's the warning pattern: EDIT → COMPLETE with no VERIFY.
 
 **Step 3: Read the actual diff.**
 
@@ -308,7 +308,7 @@ You discover: Claude added validation to the `onSubmit` handler but the form use
 
 **Step 4: The root cause.** Claude didn't understand the form's validation pattern. It wrote correct validation logic in the wrong location. If it had run the form and tested submission, this would have been caught immediately.
 
-**The lesson**: The 2-Minute Audit (git diff + test run) would have caught this before you shipped it. Observability isn't extra work—it's the work that prevents rework.
+**The lesson**: The 2-Minute Audit (git diff + test run) would have caught this before you shipped it. Observability isn't extra work,it's the work that prevents rework.
 
 ## Designing for Observability: Building Transparent Workflows
 
@@ -504,7 +504,7 @@ cat .claude/activity-logs/prompts.jsonl | jq 'select(.error != null)'
 cat .claude/activity-logs/prompts.jsonl | jq 'select(.tool_result.success == false)'
 ```
 
-> **Log Query Cheat Sheet**: The error filter above is your superpower. When something goes wrong, run that one command first—it cuts through hundreds of log lines to show you exactly what failed.
+> **Log Query Cheat Sheet**: The error filter above is your superpower. When something goes wrong, run that one command first,it cuts through hundreds of log lines to show you exactly what failed.
 
 **3. Test Results**
 
@@ -541,7 +541,7 @@ logAIAction("EDIT", { file: "src/auth/login.js", changes: "+5 -1" });
 
 ## Why Observability Enables Trust
 
-Trust isn't given—it's earned through transparency. When you can see what AI is doing:
+Trust isn't given,it's earned through transparency. When you can see what AI is doing:
 
 - You understand its decisions
 - You can correct mistakes early
@@ -560,7 +560,7 @@ After every AI task, spend exactly 2 minutes on this checklist:
 | **2. AI summary** | (review AI's final message) | Does its summary match the diff?             |
 | **3. Quick test** | `npm test` or equivalent    | Do tests still pass?                         |
 
-**The catch**: If the git diff doesn't match the AI's summary, you've found a "silent failure"—the AI said it did X but actually did Y. These are the dangerous bugs.
+**The catch**: If the git diff doesn't match the AI's summary, you've found a "silent failure",the AI said it did X but actually did Y. These are the dangerous bugs.
 
 **Time investment**: 2 minutes per task. **Payoff**: Catches problems before they compound into hours of debugging.
 
@@ -570,7 +570,7 @@ Make this automatic. Every task ends with this audit. No exceptions.
 
 > "If you can't see what the agent is doing, you can't fix it when it goes wrong."
 
-Both interfaces provide observability through different mechanisms. **Claude Code's advantage** is raw terminal transparency—you see every command and every output. **Cowork's advantage** is the three-panel layout (chat, progress, artifacts) designed for simultaneous visibility.
+Both interfaces provide observability through different mechanisms. **Claude Code's advantage** is raw terminal transparency,you see every command and every output. **Cowork's advantage** is the three-panel layout (chat, progress, artifacts) designed for simultaneous visibility.
 
 **The principle is the same**: Regardless of interface, you need visibility into what the agent is doing. Without it, agents are black boxes. With it, they're debuggable systems you can trust and improve.
 
@@ -596,7 +596,7 @@ Help me analyze:
 Then, help me understand: What patterns should I look for in logs to identify successful vs problematic AI sessions?
 ```
 
-**What you're learning**: How to read and interpret AI activity logs. You're developing the skill of understanding agent behavior through observation—essential for debugging and building trust.
+**What you're learning**: How to read and interpret AI activity logs. You're developing the skill of understanding agent behavior through observation,essential for debugging and building trust.
 
 ### Prompt 2: Designing Observable Workflows
 

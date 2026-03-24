@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/worktrees
 sidebar_position: 22
 title: "Worktrees: Parallel Agent Isolation"
-description: "Create isolated working copies for parallel Claude Code sessions that cannot interfere with each other — branching, merging, and cleanup in one command"
+description: "Create isolated working copies for parallel Claude Code sessions that cannot interfere with each other; branching, merging, and cleanup in one command"
 keywords:
   [
     worktrees,
@@ -67,7 +67,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (worktree creation, lifecycle management, subagent isolation, recovery) — within B1 limit of 10"
+  assessment: "4 concepts (worktree creation, lifecycle management, subagent isolation, recovery); within B1 limit of 10"
 
 differentiation:
   extension_for_advanced: "Configure WorktreeCreate/WorktreeRemove hooks for non-git VCS integration"
@@ -90,21 +90,21 @@ teaching_guide:
   session_group: 8
   session_title: "Worktrees and Remote Sessions"
   key_points:
-    - "Worktrees create complete isolated copies of the repository — separate files, separate branch, separate git index"
+    - "Worktrees create complete isolated copies of the repository; separate files, separate branch, separate git index"
     - "The base branch gotcha: worktrees branch from the default remote (origin/main), NOT the current branch"
     - "Cleanup is destructive: removing a worktree deletes unpushed commits permanently (recoverable only via git reflog within 30 days)"
     - "Subagent isolation: worktree gives each subagent its own copy of the repo, preventing file conflicts in parallel work"
   misconceptions:
-    - "Students think worktrees are just new branches — they are complete directory copies with independent working trees"
-    - "Students assume worktrees branch from the current branch — they branch from the default remote branch"
-    - "Students think removing a worktree is safe if they committed — commits on the worktree branch are deleted if not pushed to remote"
+    - "Students think worktrees are just new branches; they are complete directory copies with independent working trees"
+    - "Students assume worktrees branch from the current branch; they branch from the default remote branch"
+    - "Students think removing a worktree is safe if they committed; commits on the worktree branch are deleted if not pushed to remote"
   discussion_prompts:
     - "When would you want multiple Claude sessions editing the same codebase simultaneously? What could go wrong without isolation?"
     - "Why does Claude branch worktrees from the default remote instead of the current branch? What problems does this prevent?"
   teaching_tips:
-    - "Have students create a worktree, make a change, exit without pushing, and observe the cleanup prompt — the 'destructive cleanup' lesson is more impactful when experienced"
+    - "Have students create a worktree, make a change, exit without pushing, and observe the cleanup prompt; the 'destructive cleanup' lesson is more impactful when experienced"
     - "Use the --worktree vs manual git worktree add comparison table as a quick decision exercise"
-    - "The base branch gotcha is the most common source of confusion — demonstrate it explicitly before students encounter it"
+    - "The base branch gotcha is the most common source of confusion; demonstrate it explicitly before students encounter it"
   assessment_quick_check:
     - "What directory does claude --worktree feature-auth create, and what branch name does it use?"
     - "What happens to unpushed commits when you choose to remove a worktree on exit?"

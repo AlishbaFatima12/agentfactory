@@ -62,20 +62,20 @@ teaching_guide:
   session_group: 9
   session_title: "External Integration and Responsible Use"
   key_points:
-    - "Dedicated workspaces are the primary security boundary — granting access to the wrong folder is the highest-risk mistake a new user can make"
-    - "Prompt injection is content in files that manipulates Claude's behavior — students must understand this is a real attack vector, not theoretical"
+    - "Dedicated workspaces are the primary security boundary; granting access to the wrong folder is the highest-risk mistake a new user can make"
+    - "Prompt injection is content in files that manipulates Claude's behavior; students must understand this is a real attack vector, not theoretical"
     - "General memory (launched September-October 2025) captures preferences and key facts across sessions, but detailed session replay and structured knowledge repositories are not yet available"
     - "The approval workflow is the safety net: read the plan, review file lists, check for red flags before clicking approve"
   misconceptions:
-    - "Students assume Claude remembers nothing between sessions — general memory (launched September 2025 for Team/Enterprise, October 2025 for Pro/Max) captures preferences and key facts automatically, but detailed session content is not replayed"
-    - "Students think prompt injection only applies to hackers — any file from an untrusted source (email attachment, downloaded template) can contain injection attempts"
-    - "Students believe current limitations mean Cowork is not production-ready — it is highly capable within its current scope, and limitations are being actively addressed"
+    - "Students assume Claude remembers nothing between sessions; general memory (launched September 2025 for Team/Enterprise, October 2025 for Pro/Max) captures preferences and key facts automatically, but detailed session content is not replayed"
+    - "Students think prompt injection only applies to hackers; any file from an untrusted source (email attachment, downloaded template) can contain injection attempts"
+    - "Students believe current limitations mean Cowork is not production-ready; it is highly capable within its current scope, and limitations are being actively addressed"
   discussion_prompts:
     - "What files on your computer would you never want Claude to access, and how would you organize your workspace to prevent accidental exposure?"
     - "If Cowork had Knowledge Bases today, how would that change the way you structure your work across sessions?"
-    - "Have you ever granted an app too many permissions and regretted it — what lesson does that teach about Cowork folder access?"
+    - "Have you ever granted an app too many permissions and regretted it; what lesson does that teach about Cowork folder access?"
   teaching_tips:
-    - "Use the prompt injection example ('Ignore all previous instructions...') as a live demonstration — show students how content in a file could manipulate behavior"
+    - "Use the prompt injection example ('Ignore all previous instructions...') as a live demonstration; show students how content in a file could manipulate behavior"
     - "Have students create the project-context.md workaround from the 'No Project Support' section to experience the limitation and its mitigation firsthand"
     - "Walk through the 'Red flags' checklist (deleting unmentioned files, modifying too many files, operations on unapproved folders) as a practical safety audit exercise"
     - "Use the 'When to Wait vs Proceed' section to help students self-assess whether Cowork fits their current needs"
@@ -249,7 +249,7 @@ If your tools are covered by the Connectors Directory, integration is one-click.
 
 ### Delivered: Unified UI
 
-The Claude Desktop app now includes three tabs — Chat, Cowork, and Code — in a single application. Skills transfer across all tabs.
+The Claude Desktop app now includes three tabs; Chat, Cowork, and Code; in a single application. Skills transfer across all tabs.
 
 **Still coming:** Deeper integration with seamless mode switching and fully consistent settings across all interfaces.
 
@@ -280,7 +280,7 @@ The Claude Desktop app now includes three tabs — Chat, Cowork, and Code — in
 
 ## When to Wait vs. Proceed
 
-**Available now — proceed if you need:**
+**Available now; proceed if you need:**
 
 - General memory (preferences and conventions across sessions)
 - 50+ Connectors and Plugins for workflow automation
@@ -288,7 +288,7 @@ The Claude Desktop app now includes three tabs — Chat, Cowork, and Code — in
 - Browser integration for web-based workflows
 - macOS or Windows desktop environment
 
-**Not yet available — wait if you need:**
+**Not yet available; wait if you need:**
 
 - Structured, searchable knowledge repositories (Knowledge Bases coming)
 - Team collaboration features (on the roadmap)
@@ -300,7 +300,7 @@ The Claude Desktop app now includes three tabs — Chat, Cowork, and Code — in
 - Build Skills that work across Code and Cowork tabs
 - Design workflows with team-shareable components in mind
 
-**The key insight:** Learning Cowork patterns now builds transferable expertise. The mental model — agentic AI, filesystem access, Skills, approval workflows, Plugins — persists across updates. Investing in current capabilities is not wasted even as new features arrive.
+**The key insight:** Learning Cowork patterns now builds transferable expertise. The mental model; agentic AI, filesystem access, Skills, approval workflows, Plugins; persists across updates. Investing in current capabilities is not wasted even as new features arrive.
 
 ## Try With AI
 
@@ -308,13 +308,13 @@ The Claude Desktop app now includes three tabs — Chat, Cowork, and Code — in
 
 > "Review the Cowork tasks we completed in Lessons 25-28. For each one, identify: (1) What folder access did we grant? Was it the minimum necessary? (2) Did we review the execution plan before approving? (3) Were there any red flags we should have caught? Create a personal safety checklist based on what we learned."
 
-**What you're learning:** Safety reflection — turning the abstract safety principles from this lesson into concrete habits based on your actual Cowork experience. A personal checklist is more effective than a generic one because it addresses your real workflow.
+**What you're learning:** Safety reflection; turning the abstract safety principles from this lesson into concrete habits based on your actual Cowork experience. A personal checklist is more effective than a generic one because it addresses your real workflow.
 
 **Plan Around Current and Coming Features:**
 
 > "Based on what Cowork can do today (general memory, 50+ connectors, Plugins, built-in Skills) and what's coming (Knowledge Bases, collaboration), design a two-phase workflow: Phase 1 uses what's available now, Phase 2 prepares for what's coming. What should I automate now? What should I prepare for but wait on? What document organization would make Knowledge Bases most effective when they arrive?"
 
-**What you're learning:** Capability-based planning — making decisions based on what's available versus what's coming, rather than waiting for a perfect future state. This is the same skill you'll use when evaluating any evolving AI platform.
+**What you're learning:** Capability-based planning; making decisions based on what's available versus what's coming, rather than waiting for a perfect future state. This is the same skill you'll use when evaluating any evolving AI platform.
 
 ## Flashcards Study Aid
 

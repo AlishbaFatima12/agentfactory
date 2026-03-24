@@ -68,24 +68,24 @@ teaching_guide:
   session_group: 3
   session_title: "Implementation and Judgment"
   key_points:
-    - "SDD is a power tool, not a universal solution — the decision heuristic (files_affected > 5, requirements_unclear, learning_new_tech) gives students a quick classification method"
-    - "The lightweight spec pattern (constraints + success criteria only) is the 80/20 solution for borderline cases — 80% of spec value with 20% of overhead"
+    - "SDD is a power tool, not a universal solution: the decision heuristic (files_affected > 5, requirements_unclear, learning_new_tech) gives students a quick classification method"
+    - "The lightweight spec pattern (constraints + success criteria only) is the 80/20 solution for borderline cases: 80% of spec value with 20% of overhead"
     - "Four legitimate SDD critiques (waterfall, double review, diminishing returns, overhead) each have specific counterpoints students should be able to articulate"
     - "Judgment develops through feedback loops: tracking when specs helped vs when they were overhead"
   misconceptions:
-    - "Students think they must use full SDD for everything after this chapter — this lesson explicitly teaches when to skip it"
-    - "Students confuse exploratory prototyping with production development — exploration discovers requirements, SDD turns them into reliable implementation"
-    - "Students think the 'just waterfall' critique is valid — SDD tasks are atomic and reversible (git revert), unlike months-long waterfall commitments"
+    - "Students think they must use full SDD for everything after this chapter: this lesson explicitly teaches when to skip it"
+    - "Students confuse exploratory prototyping with production development: exploration discovers requirements, SDD turns them into reliable implementation"
+    - "Students think the 'just waterfall' critique is valid: SDD tasks are atomic and reversible (git revert), unlike months-long waterfall commitments"
   discussion_prompts:
-    - "Think of your last three projects — for each, would SDD have helped or been overkill? Apply the decision heuristic."
+    - "Think of your last three projects: for each, would SDD have helped or been overkill? Apply the decision heuristic."
     - "Is there a scenario where you'd START with vibe coding and SWITCH to SDD mid-project? What would trigger that switch?"
   teaching_tips:
-    - "The two comparison tables (when SDD excels vs when overkill) work well as a classroom sorting exercise — give students scenarios to classify"
-    - "Have students apply the pseudocode heuristic to 5 real tasks — this builds the instant classification skill"
-    - "The lightweight spec pattern is the most practically useful takeaway for students who feel SDD is 'too much' — show them the minimal version"
-    - "Address the critiques proactively — students who are skeptical will appreciate that the chapter acknowledges legitimate concerns"
+    - "The two comparison tables (when SDD excels vs when overkill) work well as a classroom sorting exercise: give students scenarios to classify"
+    - "Have students apply the pseudocode heuristic to 5 real tasks: this builds the instant classification skill"
+    - "The lightweight spec pattern is the most practically useful takeaway for students who feel SDD is 'too much': show them the minimal version"
+    - "Address the critiques proactively: students who are skeptical will appreciate that the chapter acknowledges legitimate concerns"
   assessment_quick_check:
-    - "Apply the decision heuristic to this scenario: 'Fix a CSS alignment bug on one page' — SDD, skip, or lightweight spec?"
+    - "Apply the decision heuristic to this scenario: 'Fix a CSS alignment bug on one page': SDD, skip, or lightweight spec?"
     - "What's included in a lightweight spec and when should you upgrade it to a full specification?"
     - "Give the counterpoint to the critique that SDD is just waterfall"
 ---
@@ -110,7 +110,7 @@ The four-phase workflow adds overhead: research time, specification writing, int
 | **Team coordination**           | Spec serves as contract between implementers |
 | **Legacy modernization**        | Captures original intent before rebuilding   |
 
-**The pattern:** These scenarios share a characteristic—complexity that exceeds working memory. You can't hold a 15-file refactor in your head. You can't remember all the assumptions you made while exploring an unfamiliar library. The specification becomes external memory that preserves decisions across sessions and collaborators.
+**The pattern:** These scenarios share a characteristic,complexity that exceeds working memory. You can't hold a 15-file refactor in your head. You can't remember all the assumptions you made while exploring an unfamiliar library. The specification becomes external memory that preserves decisions across sessions and collaborators.
 
 ### Large Refactors: The Specification as Anchor
 
@@ -120,7 +120,7 @@ With a spec, you define the end state upfront. Each task references that spec. W
 
 ### Unclear Requirements: Research Reveals Structure
 
-When requirements are fuzzy, SDD's research phase transforms vague goals into concrete specifications. The research isn't just about finding code patterns—it's about discovering what questions you didn't know to ask.
+When requirements are fuzzy, SDD's research phase transforms vague goals into concrete specifications. The research isn't just about finding code patterns,it's about discovering what questions you didn't know to ask.
 
 A developer approaching "add real-time collaboration" without SDD might jump straight to WebSocket code. With SDD, the research phase reveals: What conflict resolution strategy? What persistence model? What happens offline? By the time you write the spec, you understand the problem well enough to solve it.
 
@@ -128,7 +128,7 @@ A developer approaching "add real-time collaboration" without SDD might jump str
 
 Learning a new library through vibe coding means sequential trial and error. You try something, it fails, you search for examples, try again. Each failure teaches one lesson.
 
-SDD's parallel research pattern changes this. You spawn subagents to investigate different aspects simultaneously: one explores authentication patterns, another investigates pagination, a third examines error handling. Research that takes hours sequentially completes in minutes—and you have a comprehensive spec before writing any application code.
+SDD's parallel research pattern changes this. You spawn subagents to investigate different aspects simultaneously: one explores authentication patterns, another investigates pagination, a third examines error handling. Research that takes hours sequentially completes in minutes,and you have a comprehensive spec before writing any application code.
 
 ## When SDD Is Overkill
 
@@ -141,7 +141,7 @@ The same overhead that pays dividends on complex tasks wastes time on simple one
 | **Exploratory prototyping**      | You're discovering requirements; vibe coding is faster |
 | **Production incidents**         | Need immediate action, not spec documents              |
 
-**The pattern:** These scenarios share a characteristic—the solution is either obvious or unknowable. When you know exactly what to change, specifying it first adds no information. When you're exploring to discover what's possible, specifying upfront constrains discovery.
+**The pattern:** These scenarios share a characteristic,the solution is either obvious or unknowable. When you know exactly what to change, specifying it first adds no information. When you're exploring to discover what's possible, specifying upfront constrains discovery.
 
 ### Bug Fixes: Match Effort to Impact
 
@@ -151,7 +151,7 @@ A null pointer exception in line 47 of a utility function doesn't need a specifi
 
 ### Exploratory Prototyping: Discovering the Problem
 
-Sometimes you don't know what you're building until you build something. A creative exploration—"What if we visualized this data differently?"—benefits from rapid iteration, not upfront specification.
+Sometimes you don't know what you're building until you build something. A creative exploration,"What if we visualized this data differently?",benefits from rapid iteration, not upfront specification.
 
 Vibe coding serves exploration. You try an approach, see what happens, adjust. The "specification" emerges from what you learn. Formalizing too early constrains the creative process.
 
@@ -178,10 +178,10 @@ ELSE:
 
 **The variables:**
 
-- **files_affected > 5** — Changes across multiple files compound complexity. Coordination costs rise.
-- **requirements_unclear** — If you can't explain the deliverable in one paragraph, research phase adds value.
-- **learning_new_tech** — Unfamiliar territory benefits from parallel research.
-- **single_file AND bug_fix** — Known problem, contained scope, obvious solution.
+- **files_affected > 5:** Changes across multiple files compound complexity. Coordination costs rise.
+- **requirements_unclear:** If you can't explain the deliverable in one paragraph, research phase adds value.
+- **learning_new_tech:** Unfamiliar territory benefits from parallel research.
+- **single_file AND bug_fix:** Known problem, contained scope, obvious solution.
 
 Most tasks fall into the "judgment call" category. That's where the lightweight spec pattern helps.
 
@@ -207,13 +207,13 @@ That's it. No reference architecture analysis. No multi-phase implementation pla
 
 **Why this works:** Constraints prevent scope creep. Success criteria define done. These two elements provide 80% of specification value with 20% of the overhead.
 
-**When to expand:** If writing the lightweight spec reveals complexity—"Wait, how DO we handle the existing data?"—that's your signal. Convert to a full specification with research phase and interview. The lightweight spec became the seed for comprehensive planning.
+**When to expand:** If writing the lightweight spec reveals complexity,"Wait, how DO we handle the existing data?",that's your signal. Convert to a full specification with research phase and interview. The lightweight spec became the seed for comprehensive planning.
 
-**When to ship as-is:** If the lightweight spec feels sufficient—constraints are clear, success criteria are unambiguous—proceed directly to implementation. The spec exists for reference without the full ceremony.
+**When to ship as-is:** If the lightweight spec feels sufficient,constraints are clear, success criteria are unambiguous,proceed directly to implementation. The spec exists for reference without the full ceremony.
 
 ## The Judgment Skill
 
-Experienced practitioners develop intuition for when spec ceremony pays off. This intuition isn't mystical—it's pattern recognition from feedback loops.
+Experienced practitioners develop intuition for when spec ceremony pays off. This intuition isn't mystical,it's pattern recognition from feedback loops.
 
 **Building judgment requires:**
 

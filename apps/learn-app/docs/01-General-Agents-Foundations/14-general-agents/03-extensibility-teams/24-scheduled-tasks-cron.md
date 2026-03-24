@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/scheduled-tasks-cron
 sidebar_position: 24
 title: "Scheduled Tasks: The Loop Skill and Cron Tools"
-description: "Schedule recurring checks, one-time reminders, and background polling with /loop and Claude Code's cron tools — session-scoped task automation without leaving the terminal"
+description: "Schedule recurring checks, one-time reminders, and background polling with /loop and Claude Code's cron tools; session-scoped task automation without leaving the terminal"
 keywords:
   [
     scheduled tasks,
@@ -69,7 +69,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (/loop syntax, cron tool lifecycle, session scope constraints, jitter/expiry behavior) — within B1 limit of 10"
+  assessment: "4 concepts (/loop syntax, cron tool lifecycle, session scope constraints, jitter/expiry behavior); within B1 limit of 10"
 
 differentiation:
   extension_for_advanced: "Compose /loop with Remote Control (Lesson 23) for mobile-monitored recurring checks, or with Agent Teams (Lesson 20) for multi-agent polling workflows"
@@ -91,20 +91,20 @@ teaching_guide:
   session_group: 8
   session_title: "Scheduled Tasks and Remote Sessions"
   key_points:
-    - "/loop is the quickest path to recurring prompts — one line, no cron syntax needed"
+    - "/loop is the quickest path to recurring prompts; one line, no cron syntax needed"
     - "Tasks are session-scoped: they die when you exit Claude Code, by design"
-    - "Tasks fire between turns, not mid-response — they queue at low priority and wait for Claude to be idle"
+    - "Tasks fire between turns, not mid-response; they queue at low priority and wait for Claude to be idle"
     - "The 3-day expiry and 50-task limit are safety bounds, not bugs"
   misconceptions:
-    - "Students think scheduled tasks persist across restarts — they do not, use Desktop scheduled tasks or GitHub Actions for persistence"
-    - "Students expect seconds-precision timing — seconds are rounded up to the nearest minute (cron granularity)"
-    - "Students assume tasks fire exactly on time — jitter adds up to 10% of the period (capped at 15 minutes) for recurring tasks"
+    - "Students think scheduled tasks persist across restarts; they do not, use Desktop scheduled tasks or GitHub Actions for persistence"
+    - "Students expect seconds-precision timing; seconds are rounded up to the nearest minute (cron granularity)"
+    - "Students assume tasks fire exactly on time; jitter adds up to 10% of the period (capped at 15 minutes) for recurring tasks"
   discussion_prompts:
     - "Why would Anthropic make scheduled tasks session-scoped instead of persistent? What problems does that avoid?"
     - "When would you choose /loop over a GitHub Actions cron schedule, and vice versa?"
   teaching_tips:
-    - "The comparison table (IS vs IS NOT) is the anchor of this lesson — students who internalize session scope avoid all major frustration"
-    - "Have students run /loop 1m tell me the time as a live demo — watching it fire in real time makes the concept concrete"
+    - "The comparison table (IS vs IS NOT) is the anchor of this lesson; students who internalize session scope avoid all major frustration"
+    - "Have students run /loop 1m tell me the time as a live demo; watching it fire in real time makes the concept concrete"
     - "The /loop + Remote Control combo is a powerful hook for students who completed Lesson 23"
   assessment_quick_check:
     - "What happens to your scheduled tasks when you exit Claude Code?"

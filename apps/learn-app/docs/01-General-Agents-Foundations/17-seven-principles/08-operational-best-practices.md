@@ -96,7 +96,7 @@ You've learned what General Agents are and experienced Claude Code firsthand. Bu
 
 Picture this scenario. You open Claude Code with a vague task in mind. You type a prompt. Claude responds. You add more context. Claude does something unexpected. You correct it. Claude tries again. Your context fills up. Quality degrades. You're twenty minutes in, frustrated, with nothing to show.
 
-This isn't Claude's failure—it's a workflow failure. The most productive Claude Code users follow specific operational patterns that prevent this frustration before it starts. Now that you've learned the seven principles, this lesson shows you how to apply them as concrete operational habits.
+This isn't Claude's failure,it's a workflow failure. The most productive Claude Code users follow specific operational patterns that prevent this frustration before it starts. Now that you've learned the seven principles, this lesson shows you how to apply them as concrete operational habits.
 
 Think of this as the driving manual after studying automotive engineering. You understand the theory; now here's how to operate the machine.
 
@@ -119,7 +119,7 @@ Before Claude changes anything, it needs to understand what exists. Plan Mode en
 
 Enter Plan Mode by pressing `Shift+Tab` or clicking the toggle in the interface. In this mode, Claude will read files and gather context but won't make any edits. It's reconnaissance.
 
-> **Teacher's Tip**: Plan Mode is Principle 6 (Constraints and Safety) in action—it's a read-only constraint. If you're working on mission-critical files, stay in Plan Mode until you're 100% sure of the approach.
+> **Teacher's Tip**: Plan Mode is Principle 6 (Constraints and Safety) in action,it's a read-only constraint. If you're working on mission-critical files, stay in Plan Mode until you're 100% sure of the approach.
 
 Your prompt in Plan Mode might be:
 
@@ -139,15 +139,15 @@ Based on what you found, create an implementation plan for adding
 user authentication. List the files you'll change and what each change does.
 ```
 
-Claude produces a structured plan. Review it. Use `Ctrl+G` (or `Cmd+G` on Mac) to edit the plan if something looks wrong. This is where you catch misunderstandings—before any code is written.
+Claude produces a structured plan. Review it. Use `Ctrl+G` (or `Cmd+G` on Mac) to edit the plan if something looks wrong. This is where you catch misunderstandings,before any code is written.
 
 The key insight: **course correction is cheap during planning, expensive during implementation**.
 
 ### Phase 3: Implement
 
-With a reviewed plan, switch to Normal Mode (`Shift+Tab` again). Now Claude can make changes. But it's not improvising—it's executing an agreed plan, one step at a time.
+With a reviewed plan, switch to Normal Mode (`Shift+Tab` again). Now Claude can make changes. But it's not improvising,it's executing an agreed plan, one step at a time.
 
-After each significant step, Claude should verify. Did the change work? Do tests pass? Is the behavior correct? This is Principle 3 (Verification as Core Step) in action—the same trust-through-testing approach you learned in Lesson 3.
+After each significant step, Claude should verify. Did the change work? Do tests pass? Is the behavior correct? This is Principle 3 (Verification as Core Step) in action,the same trust-through-testing approach you learned in Lesson 3.
 
 ### Phase 4: Commit
 
@@ -173,11 +173,11 @@ But here's the rule of thumb: **if you're unsure whether to plan, you should pla
 
 ## Course Correction and Reversibility
 
-Claude Code sessions are experiments. Not every experiment succeeds. The key is recognizing when to change direction—and having the tools to do so cleanly.
+Claude Code sessions are experiments. Not every experiment succeeds. The key is recognizing when to change direction,and having the tools to do so cleanly.
 
 ### The Escape Key
 
-When Claude is mid-response and you see it heading somewhere unproductive, press `Esc`. Claude stops immediately. Your context is preserved. You haven't lost anything—you've just prevented wasted tokens.
+When Claude is mid-response and you see it heading somewhere unproductive, press `Esc`. Claude stops immediately. Your context is preserved. You haven't lost anything,you've just prevented wasted tokens.
 
 Use `Esc` liberally. It's not an emergency brake; it's a steering wheel. See Claude starting to refactor code you didn't ask about? `Esc`. See Claude exploring files that aren't relevant? `Esc`. See a response that's going to be too long? `Esc`.
 
@@ -185,9 +185,9 @@ Use `Esc` liberally. It's not an emergency brake; it's a steering wheel. See Cla
 
 Claude Code creates checkpoints automatically before every tool use that modifies your system. These are snapshots you can return to.
 
-Press `Esc` twice (or use `/rewind`) to open the checkpoint menu. You'll see a list of recent states. Select one, and Claude restores your session to that point. All the files, all the context, all the conversation—rolled back.
+Press `Esc` twice (or use `/rewind`) to open the checkpoint menu. You'll see a list of recent states. Select one, and Claude restores your session to that point. All the files, all the context, all the conversation,rolled back.
 
-> **The Time Machine Combo**: Single `Esc` is your steering wheel (stops Claude mid-response). Double `Esc` (press twice) or `/rewind` opens the checkpoint menu—your time machine to go back before you steered wrong. Together, they mean you can never truly get lost.
+> **The Time Machine Combo**: Single `Esc` is your steering wheel (stops Claude mid-response). Double `Esc` (press twice) or `/rewind` opens the checkpoint menu,your time machine to go back before you steered wrong. Together, they mean you can never truly get lost.
 
 This transforms how you work with Claude. You can try risky approaches knowing you can always rewind. You can explore multiple solutions and keep the best one. Checkpoints make experimentation safe.
 
@@ -311,7 +311,7 @@ Claude becomes a requirements analyst. It asks about:
 - What happens when notification delivery fails?
 - Should notifications be batched or immediate?
 
-Each question surfaces a decision you need to make. By the time the interview is complete, you have a clear specification—and Claude has the context to implement it correctly.
+Each question surfaces a decision you need to make. By the time the interview is complete, you have a clear specification,and Claude has the context to implement it correctly.
 
 ### The Golden Reset (Fresh Session Trick)
 
@@ -321,7 +321,7 @@ After the interview, you have two choices:
 
 2. **Start fresh with the spec**: Copy the specification from the interview into a new session. Claude gets the clean, refined requirements without the exploratory noise.
 
-Option 2 often produces better results—we call it the **Golden Reset**. The specification is signal-dense. A fresh context window means Claude's full attention on implementation rather than remembering conversation tangents.
+Option 2 often produces better results,we call it the **Golden Reset**. The specification is signal-dense. A fresh context window means Claude's full attention on implementation rather than remembering conversation tangents.
 
 > **Pro tip**: The Golden Reset is the most effective way to avoid Principle 7 (Observability) issues where you can't tell which part of a messy conversation caused a bug. Clean spec → clean session → clean code.
 
@@ -363,7 +363,7 @@ The failed attempts taught you what Claude needed to know. A fresh prompt with t
 
 **Why it fails**: Claude is optimized to produce confident, plausible responses. Plausibility isn't correctness. Without verification, errors propagate.
 
-**The fix**: Every claim needs verification criteria. Did the code compile? Do tests pass? Did you actually run it? "It looks right" isn't verification—running it and observing the result is.
+**The fix**: Every claim needs verification criteria. Did the code compile? Do tests pass? Did you actually run it? "It looks right" isn't verification,running it and observing the result is.
 
 ### 5. The Infinite Exploration Spiral
 
@@ -371,7 +371,7 @@ The failed attempts taught you what Claude needed to know. A fresh prompt with t
 
 **Why it fails**: Open-ended exploration has no natural stopping point. Each discovered file suggests more files to read. Context fills with research, leaving no room for action.
 
-**The fix**: Scope exploration narrowly ("Find where authentication is configured—just that, nothing else"). Better yet, use subagents for research: they explore in their own context and return only findings. Your main session stays clean.
+**The fix**: Scope exploration narrowly ("Find where authentication is configured,just that, nothing else"). Better yet, use subagents for research: they explore in their own context and return only findings. Your main session stays clean.
 
 ## Quick Reference: Principles to Implementation
 
@@ -397,13 +397,13 @@ Productive Claude Code sessions share common patterns:
 
 2. **Course correct freely** using `Esc` to stop, checkpoints to revert, and `/rewind` to try different approaches.
 
-3. **Configure permissions** to match your trust level—tight for unfamiliar work, loose (with sandbox) for autonomous operation.
+3. **Configure permissions** to match your trust level,tight for unfamiliar work, loose (with sandbox) for autonomous operation.
 
 4. **Use the interview pattern** for complex features, having Claude ask questions before implementing.
 
 5. **Recognize failure patterns** before they waste your time: kitchen sink sessions, correction loops, bloated CLAUDE.md, trust-without-verification, and infinite exploration.
 
-These aren't rules to memorize—they're habits to build. With practice, they become automatic, and the frustrating sessions become rare.
+These aren't rules to memorize,they're habits to build. With practice, they become automatic, and the frustrating sessions become rare.
 
 ## Try With AI
 
@@ -452,11 +452,11 @@ What should always require approval?
 When might I want to use sandbox mode?
 ```
 
-**What you're learning**: Permission configuration is personal—it depends on what you do and what risks matter to you. Designing your own configuration forces you to think about trust levels and operational patterns in your specific domain.
+**What you're learning**: Permission configuration is personal,it depends on what you do and what risks matter to you. Designing your own configuration forces you to think about trust levels and operational patterns in your specific domain.
 
 ### Safety Note
 
-The `--dangerously-skip-permissions` flag exists for sandboxed environments only. Never use it on your main development machine or with access to production systems. Similarly, permissive allowlists should be built gradually—start with read-only commands (ls, cat, grep) and add write commands only after you've observed how Claude uses them in your specific workflows. When in doubt, keep the permission prompt active; the few seconds it takes to approve an action is always cheaper than recovering from an unintended one.
+The `--dangerously-skip-permissions` flag exists for sandboxed environments only. Never use it on your main development machine or with access to production systems. Similarly, permissive allowlists should be built gradually,start with read-only commands (ls, cat, grep) and add write commands only after you've observed how Claude uses them in your specific workflows. When in doubt, keep the permission prompt active; the few seconds it takes to approve an action is always cheaper than recovering from an unintended one.
 
 
 ## Flashcards Study Aid

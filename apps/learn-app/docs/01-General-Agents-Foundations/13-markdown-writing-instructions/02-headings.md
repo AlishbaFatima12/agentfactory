@@ -51,21 +51,21 @@ teaching_guide:
   session_title: "Markdown as AI Communication"
   key_points:
     - "Hash symbol count = heading level is the entire syntax, but the hierarchy principle (no skipping levels) is what matters for AI parsing"
-    - "Only ONE Level 1 heading per document — this is the most common beginner mistake and breaks AI's document structure parsing"
+    - "Only ONE Level 1 heading per document; this is the most common beginner mistake and breaks AI's document structure parsing"
     - "The folder analogy (Level 1 = Main Folder, Level 2 = Subfolders, Level 3 = Files) is the best mental model for heading hierarchy"
-    - "This lesson starts the Task Tracker spec that carries through Lessons 3-5 — students must save their file"
+    - "This lesson starts the Task Tracker spec that carries through Lessons 3-5; students must save their file"
   misconceptions:
-    - "Students skip heading levels for visual effect (# to ### directly) — explain this breaks both AI parsing and screen reader accessibility"
-    - "Students use multiple Level 1 headings thinking each major section needs one — only the document title gets Level 1"
-    - "Students think heading levels are just about font size — they create semantic structure that AI uses to understand section relationships"
+    - "Students skip heading levels for visual effect (# to ### directly); explain this breaks both AI parsing and screen reader accessibility"
+    - "Students use multiple Level 1 headings thinking each major section needs one; only the document title gets Level 1"
+    - "Students think heading levels are just about font size; they create semantic structure that AI uses to understand section relationships"
   discussion_prompts:
     - "If you opened a textbook and every chapter title was the same size as every section title, how would you navigate it? What does that tell you about heading hierarchy?"
     - "Why would an AI generate worse code from a spec with broken heading hierarchy vs a properly structured one?"
   teaching_tips:
-    - "Draw the folder analogy on a whiteboard — a file explorer tree mapped to heading levels clicks immediately for visual learners"
-    - "Have students spot errors in the 'Wrong Hierarchy Example' before revealing the answer — this builds diagnostic skill"
-    - "Emphasize the space-after-hash rule: #Heading (wrong) vs # Heading (correct) — same pattern recurs with lists in Lesson 3"
-    - "Remind students to save their Task Tracker file — they'll build on it for three more lessons"
+    - "Draw the folder analogy on a whiteboard; a file explorer tree mapped to heading levels clicks immediately for visual learners"
+    - "Have students spot errors in the 'Wrong Hierarchy Example' before revealing the answer; this builds diagnostic skill"
+    - "Emphasize the space-after-hash rule: #Heading (wrong) vs # Heading (correct); same pattern recurs with lists in Lesson 3"
+    - "Remind students to save their Task Tracker file; they'll build on it for three more lessons"
   assessment_quick_check:
     - "Ask students how many Level 1 headings a document should have and why"
     - "Show a heading structure with one skipped level and ask students to identify and fix the error"
@@ -113,7 +113,7 @@ Here's how it works:
 - **Level 2 (`##`)**: Main sections (Problem, Features, Installation, etc.)
 - **Level 3 (`###`)**: Subsections within a main section
 - **Level 4 (`####`)**: Deep technical details like constraints, edge cases, or exceptions within a subsection
-- **Level 5-6 (`#####`, `######`)**: Deep nesting (avoid in specifications — if you need these, your document structure is probably too complex)
+- **Level 5-6 (`#####`, `######`)**: Deep nesting (avoid in specifications; if you need these, your document structure is probably too complex)
 
 ### Example: A Simple Specification
 
@@ -154,13 +154,13 @@ Both a human skimming the page and an AI parsing the file can instantly find any
 
 > **Explore with your AI**: "I'm learning about markdown heading hierarchy. Can you explain why skipping heading levels (like going from # directly to ###) creates problems for AI agents parsing specifications? Use an analogy from organizing physical files or folders to help me understand."
 
-> **Bonus prompt**: "Show me how you see this document structure as a JSON tree — I want to visualize how you parse the headings."
+> **Bonus prompt**: "Show me how you see this document structure as a JSON tree; I want to visualize how you parse the headings."
 
 ---
 
 ## Concept 2: Following Proper Hierarchy
 
-Headings must follow a logical **hierarchy** — you can't skip levels.
+Headings must follow a logical **hierarchy**; you can't skip levels.
 
 Think of headings like organizing folders on your computer:
 
@@ -174,7 +174,7 @@ Main Folder (Level 1)
       └── Family Photos (Level 3)
 ```
 
-You go from broad to specific. You don't put "Vacation Photos" directly under "Main Folder" — it belongs under "Photos Folder" first.
+You go from broad to specific. You don't put "Vacation Photos" directly under "Main Folder"; it belongs under "Photos Folder" first.
 
 ### Correct Hierarchy Example
 
@@ -212,7 +212,7 @@ This doesn't make sense without a parent section.
 
 **This is wrong because:**
 - We jumped from Level 1 directly to Level 3 (skipped Level 2)
-- The hierarchy is broken — readers don't know what "Step 1" belongs to
+- The hierarchy is broken; readers don't know what "Step 1" belongs to
 - Even if it renders visually, it breaks the AI's logical map of your document (and hurts accessibility for screen readers)
 
 **The fix:** Always include Level 2 before Level 3:
@@ -226,7 +226,7 @@ This doesn't make sense without a parent section.
 ```
 
 :::info[Expert Insight]
-Proper heading hierarchy isn't just a style preference—it's essential for accessibility and machine parsing. Screen readers use heading levels to help visually impaired users navigate documents. AI agents use the hierarchy to understand document structure and relationships between sections. When you skip levels, both humans using assistive technology and AI parsing tools lose critical structural information. This is why professional documentation standards enforce strict heading hierarchy.
+Proper heading hierarchy isn't just a style preference: it's essential for accessibility and machine parsing. Screen readers use heading levels to help visually impaired users navigate documents. AI agents use the hierarchy to understand document structure and relationships between sections. When you skip levels, both humans using assistive technology and AI parsing tools lose critical structural information. This is why professional documentation standards enforce strict heading hierarchy.
 :::
 
 ---
@@ -299,7 +299,7 @@ After you write your specification structure, check these:
 >
 > [paste your structure]
 >
-> Check if my heading hierarchy is correct—did I skip any levels? Suggest whether any sections need subsections. Then tell me: is this structure clear enough for you to implement from, or would you need more information?"
+> Check if my heading hierarchy is correct: did I skip any levels? Suggest whether any sections need subsections. Then tell me: is this structure clear enough for you to implement from, or would you need more information?"
 
 ---
 
@@ -362,15 +362,15 @@ Always include the intermediate level.
 
 When you write a specification with clear headings, AI agents can:
 
-1. **Parse the structure** — "This document has 4 main sections"
-2. **Find specific information** — "The features are in the Features section"
-3. **Validate completeness** — "Does this spec include a Problem section?"
-4. **Generate better code** — "The features list tells me what functions to create"
+1. **Parse the structure**; "This document has 4 main sections"
+2. **Find specific information**; "The features are in the Features section"
+3. **Validate completeness**; "Does this spec include a Problem section?"
+4. **Generate better code**; "The features list tells me what functions to create"
 
 Good headings make your specifications easier for AI to understand, which means better code generation.
 
 :::info[Expert Insight]
-When AI agents parse your specification, headings serve as navigation landmarks. The AI can quickly locate "Features," "Installation," or "Expected Output" sections without reading every word. This speeds up processing and improves accuracy. In professional development, well-structured specifications significantly reduce implementation time because both humans and AI can find information instantly — reducing rework and clarification cycles that slow teams down.
+When AI agents parse your specification, headings serve as navigation landmarks. The AI can quickly locate "Features," "Installation," or "Expected Output" sections without reading every word. This speeds up processing and improves accuracy. In professional development, well-structured specifications significantly reduce implementation time because both humans and AI can find information instantly; reducing rework and clarification cycles that slow teams down.
 :::
 
 ---
@@ -381,7 +381,7 @@ Now let's validate your Task Tracker App heading structure with AI feedback.
 
 ### Setup
 
-Use any AI assistant you have access to — ChatGPT, Claude, Gemini, or another tool.
+Use any AI assistant you have access to; ChatGPT, Claude, Gemini, or another tool.
 
 ### Exercise
 

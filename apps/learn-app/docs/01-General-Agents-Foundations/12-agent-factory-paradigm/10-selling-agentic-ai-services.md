@@ -72,28 +72,28 @@ teaching_guide:
   session_group: 4
   session_title: "SDD, Synthesis, and Enterprise Sales"
   key_points:
-    - "The Gen AI Paradox (80%+ adoption but no material earnings impact) is the market gap you're selling into — enterprises are frustrated and ready for solutions that deliver measurable outcomes"
-    - "The four value propositions (Enabler, Implementer, Custom Developer, Disruptor) map directly to Lesson 6's Snakes and Ladders competitive layers — connect them explicitly"
-    - "70%+ of enterprises prefer outcome-based pricing over time-and-materials — this is a fundamental shift from selling hours to selling results"
+    - "The Gen AI Paradox (80%+ adoption but no material earnings impact) is the market gap you're selling into; enterprises are frustrated and ready for solutions that deliver measurable outcomes"
+    - "The four value propositions (Enabler, Implementer, Custom Developer, Disruptor) map directly to Lesson 6's Snakes and Ladders competitive layers; connect them explicitly"
+    - "70%+ of enterprises prefer outcome-based pricing over time-and-materials; this is a fundamental shift from selling hours to selling results"
     - "The buying power shift from IT to business units (CFO, COO, CEO) means you must speak business language, not just technical language"
   misconceptions:
-    - "Students think 'selling' means aggressive cold-calling — this lesson teaches consultative selling (understanding the business problem first, then proposing solutions)"
-    - "Students assume they need to be a large company to sell to enterprises — McKinsey notes that small, specialized companies already play key roles in the agentic ecosystem"
-    - "Students think the $400B opportunity means easy money — the lesson explicitly warns about the 20-30% market compression that happens simultaneously"
-    - "Students confuse the four value propositions with a progression — you pick one based on your capabilities, not climb through all four"
+    - "Students think 'selling' means aggressive cold-calling; this lesson teaches consultative selling (understanding the business problem first, then proposing solutions)"
+    - "Students assume they need to be a large company to sell to enterprises; McKinsey notes that small, specialized companies already play key roles in the agentic ecosystem"
+    - "Students think the $400B opportunity means easy money; the lesson explicitly warns about the 20-30% market compression that happens simultaneously"
+    - "Students confuse the four value propositions with a progression; you pick one based on your capabilities, not climb through all four"
   discussion_prompts:
-    - "If you had to pitch a Digital FTE solution to a CFO in 60 seconds, what three things would you say — and what would you deliberately NOT say?"
-    - "Why do you think 80% of enterprises are running AI pilots but seeing no earnings impact — what's going wrong between pilot and production?"
-    - "Robert Herjavec says 'the ability to sell' is the most important skill — as a technologist, how does that make you feel?"
+    - "If you had to pitch a Digital FTE solution to a CFO in 60 seconds, what three things would you say; and what would you deliberately NOT say?"
+    - "Why do you think 80% of enterprises are running AI pilots but seeing no earnings impact; what's going wrong between pilot and production?"
+    - "Robert Herjavec says 'the ability to sell' is the most important skill; as a technologist, how does that make you feel?"
   teaching_tips:
-    - "Open with the Robert Herjavec quote — it challenges the 'I'm a builder, not a seller' identity that many students hold"
-    - "The four audience-tailored pitches (CFO, COO, CIO, CEO) make an excellent role-play exercise — pair students and have them practice delivering one pitch each"
-    - "Walk through the five objection-handling scripts — these are immediately useful templates students can adapt for real conversations"
-    - "Connect this lesson back to Lesson 6 explicitly: Lesson 6 = WHAT to build, Lesson 10 = HOW to sell it — the chapter's arc goes from paradigm to market"
+    - "Open with the Robert Herjavec quote; it challenges the 'I'm a builder, not a seller' identity that many students hold"
+    - "The four audience-tailored pitches (CFO, COO, CIO, CEO) make an excellent role-play exercise; pair students and have them practice delivering one pitch each"
+    - "Walk through the five objection-handling scripts; these are immediately useful templates students can adapt for real conversations"
+    - "Connect this lesson back to Lesson 6 explicitly: Lesson 6 = WHAT to build, Lesson 10 = HOW to sell it; the chapter's arc goes from paradigm to market"
   assessment_quick_check:
     - "Ask students to name which of the four value propositions fits their current capabilities and why"
     - "Ask: 'What is the Gen AI Paradox and why does it create an opportunity for you?'"
-    - "Have students write a one-sentence pitch tailored to a CFO (cost focus) vs a CEO (strategic focus) — the difference should be clear"
+    - "Have students write a one-sentence pitch tailored to a CFO (cost focus) vs a CEO (strategic focus); the difference should be clear"
 
 # Generation metadata
 source: "McKinsey 2025 Survey, Robert Herjavec sales philosophy"
@@ -116,9 +116,9 @@ In the previous lesson, you saw how Digital FTEs become specialized team members
 
 > **"Any small business's problems can be solved by one thing: sales. And what skill makes a founder successful? The ability to sell."**
 >
-> — Robert Herjavec, Shark Tank
+>; Robert Herjavec, Shark Tank
 
-Robert Herjavec—the "Nice Shark" on ABC's Emmy Award-winning Shark Tank and a self-made entrepreneur worth hundreds of millions of dollars—built his entire philosophy around a simple truth: **Great salespeople are made, not born, and no one achieves success in life without knowing how to sell.**
+Robert Herjavec: the "Nice Shark" on ABC's Emmy Award-winning Shark Tank and a self-made entrepreneur worth hundreds of millions of dollars: built his entire philosophy around a simple truth: **Great salespeople are made, not born, and no one achieves success in life without knowing how to sell.**
 
 This isn't just about closing deals. As Herjavec puts it: "We are each our own greatest asset, and in order to achieve our goals, we need to be able to communicate with others, position ourselves, and even look the part."
 
@@ -128,7 +128,7 @@ If you're an agentic AI developer or Digital FTE professional, you might be thin
 
 The most brilliant AI solution in the world is worthless if you can't convince enterprises to buy it. The most revolutionary Digital FTE technology means nothing if you can't articulate its value to a CFO, COO, or CEO.
 
-This guide will teach you how to sell—not by becoming someone you're not, but by understanding your buyers, speaking their language, and demonstrating value in terms they care about.
+This guide will teach you how to sell: not by becoming someone you're not, but by understanding your buyers, speaking their language, and demonstrating value in terms they care about.
 
 Because here's the reality: You're entering one of the most lucrative markets in technology history. But so is everyone else. The winners won't be those with the best technology. **The winners will be those who can sell.**
 
@@ -153,11 +153,11 @@ The technology services industry is at a crossroads. According to a landmark McK
 
 But here's the critical insight: this transformation presents both a massive threat and an even bigger opportunity. Traditional technology services could face a **20 to 30 percent contraction** as enterprises use AI to bring more work in-house. Yet, if approached strategically, agentic AI could unlock **$100 billion to $400 billion in incremental spending** by the end of the decade.
 
-For agentic AI developers and Digital FTE professionals, understanding this landscape isn't just helpful—it's essential for survival and success.
+For agentic AI developers and Digital FTE professionals, understanding this landscape isn't just helpful: it's essential for survival and success.
 
 ---
 
-## Part 1: The Market Landscape—What the Data Tells Us
+## Part 1: The Market Landscape: What the Data Tells Us
 
 ### The Current State of Enterprise AI
 
@@ -179,7 +179,7 @@ McKinsey's 2025 survey reveals exactly where enterprises stand:
 
 Here's a crucial insight: **more than three-quarters of organizations report using gen AI in at least one business function, yet a similar share have reported seeing no material impact on earnings.**
 
-This is called the "Gen AI Paradox"—broad adoption with limited bottom-line results.
+This is called the "Gen AI Paradox": broad adoption with limited bottom-line results.
 
 Why does this matter for you? Because it creates a massive opportunity. Enterprises are frustrated with AI tools that promise everything but deliver little measurable value. They're ready for solutions that actually work.
 
@@ -287,7 +287,7 @@ This is critical: **the buying power is shifting from IT departments to business
 - Business Unit Leaders who want competitive advantage
 - Chief Human Resource Officers who want workforce transformation
 
-This means you need consultative selling and domain knowledge—understanding the business problems before proposing solutions.
+This means you need consultative selling and domain knowledge: understanding the business problems before proposing solutions.
 
 ---
 
@@ -390,7 +390,7 @@ McKinsey outlines **five foundational capabilities** that will distinguish leadi
 - Back claims with domain-specific credentials
 - Develop repeatable agentic use cases
 
-**Warning:** Avoid overindexing on experimental copilots without scalable solutions or commercial models—this limits enterprise adoption.
+**Warning:** Avoid overindexing on experimental copilots without scalable solutions or commercial models: this limits enterprise adoption.
 
 ### Capability 2: Build Proprietary Solutions to Orchestrate, Adapt, and Scale
 
@@ -438,7 +438,7 @@ Build cross-functional squads including:
 
 These teams build and iterate agentic prototypes directly with clients.
 
-**Warning:** Avoid positioning AI as a "horizontal capability." Domain specificity is a critical success factor. Also, traditional sequential delivery slows adoption—use agile development instead.
+**Warning:** Avoid positioning AI as a "horizontal capability." Domain specificity is a critical success factor. Also, traditional sequential delivery slows adoption: use agile development instead.
 
 ### Capability 4: Redesign Operating Model and Talent
 
@@ -506,7 +506,7 @@ This ensures scalable, governed adoption across clients.
 
 ## Part 7: The Partnership Imperative
 
-You're not selling alone. In the agentic era, **small, specialized companies already play key roles**—you need partnerships from day one:
+You're not selling alone. In the agentic era, **small, specialized companies already play key roles**:you need partnerships from day one:
 
 | Partner Type                      | What They Provide     | Why You Need Them          |
 | --------------------------------- | --------------------- | -------------------------- |
@@ -515,7 +515,7 @@ You're not selling alone. In the agentic era, **small, specialized companies alr
 | Vertical specialists              | Domain expertise      | Industry access            |
 | SaaS vendors                      | Workflow integration  | Cross-functional solutions |
 
-**The new reality**: Enterprises expect interoperable agents that work across their SaaS ecosystem. A finance agent that pulls data from ERP, analyzes it, and triggers HR actions—all automatically. You can't build that alone.
+**The new reality**: Enterprises expect interoperable agents that work across their SaaS ecosystem. A finance agent that pulls data from ERP, analyzes it, and triggers HR actions: all automatically. You can't build that alone.
 
 ---
 
@@ -593,7 +593,7 @@ Based on enterprise investment priorities, focus on these areas:
 
 ---
 
-## Part 9: Making Your Case—The Sales Conversation
+## Part 9: Making Your Case: The Sales Conversation
 
 ### Tailoring Your Message by Audience
 
@@ -603,7 +603,7 @@ Based on enterprise investment priorities, focus on these areas:
 
 **For the COO (Operations Focus):**
 
-> "Our agentic solutions handle routine processes—call center coverage, ticket routing, claims processing—at 90%+ accuracy, freeing your teams for strategic work. One client reduced resolution time by 50% in the first quarter."
+> "Our agentic solutions handle routine processes: call center coverage, ticket routing, claims processing: at 90%+ accuracy, freeing your teams for strategic work. One client reduced resolution time by 50% in the first quarter."
 
 **For the CIO/CTO (Technology Focus):**
 
@@ -611,7 +611,7 @@ Based on enterprise investment priorities, focus on these areas:
 
 **For the CEO (Strategic Focus):**
 
-> "The agentic era is reshaping competition. Companies that master human-agent operating models will dominate their industries. We help you move from AI experiments to enterprise transformation—not just cost savings, but new capabilities and competitive advantage."
+> "The agentic era is reshaping competition. Companies that master human-agent operating models will dominate their industries. We help you move from AI experiments to enterprise transformation: not just cost savings, but new capabilities and competitive advantage."
 
 ### The ROI Framework
 
@@ -642,11 +642,11 @@ Structure your pitch around these three value drivers:
 
 **"We tried AI before and it didn't work."**
 
-> "You're not alone—more than three-quarters of companies report no material earnings impact from gen AI. The difference with agentic AI is that it doesn't just assist with tasks—it completes entire workflows autonomously. We focus on measurable outcomes, not experiments. Can I show you a case study with quantified results?"
+> "You're not alone: more than three-quarters of companies report no material earnings impact from gen AI. The difference with agentic AI is that it doesn't just assist with tasks: it completes entire workflows autonomously. We focus on measurable outcomes, not experiments. Can I show you a case study with quantified results?"
 
 **"We're worried about replacing jobs."**
 
-> "Our research shows that enterprises believe 15-30% of current work can be handled by agents—not 100%. The goal is augmentation, not replacement. Your people shift from execution tasks like monitoring and processing to enablement activities like strategy and stakeholder engagement. We include change management in our approach."
+> "Our research shows that enterprises believe 15-30% of current work can be handled by agents: not 100%. The goal is augmentation, not replacement. Your people shift from execution tasks like monitoring and processing to enablement activities like strategy and stakeholder engagement. We include change management in our approach."
 
 **"We don't have the budget."**
 
@@ -654,7 +654,7 @@ Structure your pitch around these three value drivers:
 
 **"Our systems are too complex."**
 
-> "Integration complexity is the number one challenge enterprises face—we've built our entire practice around solving it. We have pre-built connectors for major enterprise systems and a methodology specifically for legacy environments. Let's map your architecture and identify the most practical path forward."
+> "Integration complexity is the number one challenge enterprises face: we've built our entire practice around solving it. We have pre-built connectors for major enterprise systems and a methodology specifically for legacy environments. Let's map your architecture and identify the most practical path forward."
 
 **"How do we ensure security and compliance?"**
 
@@ -757,7 +757,7 @@ The organizations that win will have:
 
 ## Conclusion: The Moment of Truth
 
-The technology services industry faces a defining moment. The traditional model—selling hours of work—is being disrupted by AI that can do much of that work autonomously. Companies that don't adapt will see their core business contract by 20-30%.
+The technology services industry faces a defining moment. The traditional model: selling hours of work: is being disrupted by AI that can do much of that work autonomously. Companies that don't adapt will see their core business contract by 20-30%.
 
 But for those who embrace the transformation, the opportunity is unprecedented. McKinsey estimates **$100 billion to $400 billion in new spending** on agentic AI services by the end of the decade. That's on top of the existing technology services market.
 
@@ -769,7 +769,7 @@ The winners will be those who:
 - **Create new commercial models**, not just hourly rates
 - **Transform organizations**, not just implement tools
 
-Enterprises are actively looking for partners to guide their agentic journeys. They want providers who can solve the integration complexity, fill the expertise gap, and ensure security—all while delivering clear, quantifiable value.
+Enterprises are actively looking for partners to guide their agentic journeys. They want providers who can solve the integration complexity, fill the expertise gap, and ensure security: all while delivering clear, quantifiable value.
 
 The question isn't whether this transformation will happen. It's whether you'll be the partner that helps enterprises succeed.
 
@@ -779,7 +779,7 @@ The $400 billion opportunity is waiting. What will you build?
 
 ## Try With AI: Develop Your Enterprise Sales Strategy
 
-Use your AI companion to develop a concrete sales strategy for your Digital FTE offerings. Work through these three prompts sequentially—each builds on the previous and targets different skills.
+Use your AI companion to develop a concrete sales strategy for your Digital FTE offerings. Work through these three prompts sequentially: each builds on the previous and targets different skills.
 
 ### Prompt 1: Value Proposition Assessment
 
@@ -801,7 +801,7 @@ Which one fits me best? What capabilities would I need to strengthen?
 Be specific about the gaps between my current state and the requirements.
 ```
 
-**What you're learning:** How to honestly assess your positioning. This connects to Lesson 6's Snakes and Ladders framework—finding the competitive layer where you can actually win.
+**What you're learning:** How to honestly assess your positioning. This connects to Lesson 6's Snakes and Ladders framework: finding the competitive layer where you can actually win.
 
 ### Prompt 2: Tailored Sales Pitch Development
 
@@ -827,7 +827,7 @@ For each pitch:
 Make these feel natural, not scripted. A real conversation, not a presentation.
 ```
 
-**What you're learning:** Consultative selling—speaking to what buyers actually care about. This applies the six enterprise selection factors, especially "line of business-focused delivery."
+**What you're learning:** Consultative selling: speaking to what buyers actually care about. This applies the six enterprise selection factors, especially "line of business-focused delivery."
 
 ### Prompt 3: Outcome-Based Pricing Design
 

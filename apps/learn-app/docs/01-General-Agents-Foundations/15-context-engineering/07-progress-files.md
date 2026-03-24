@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: "Long-Horizon Work: Progress Files and Session Architecture"
-description: "How to work on complex projects that span multiple sessions using progress files, task decomposition, and session protocols that prevent lost work—applicable to any professional domain"
+description: "How to work on complex projects that span multiple sessions using progress files, task decomposition, and session protocols that prevent lost work,applicable to any professional domain"
 keywords:
   [
     "progress files",
@@ -85,23 +85,23 @@ teaching_guide:
   session_group: 3
   session_title: "Long-Horizon Work and Memory Systems"
   key_points:
-    - "The harness architecture replaces continuous conversation with session-independent work coordinated through a shared progress file — each session reads state from the file, not from conversation history"
-    - "The Decisions Made section is the most undervalued part of the progress file — without it, teams revisit settled decisions and lose consistency across sessions"
-    - "Task decomposition follows the 10-15 rule: for a 5-hour project, aim for 10-15 tasks each completable in 30-90 minutes — fewer is too coarse, more creates overhead"
-    - "Session protocols (5-step initialization, 2-step exit) are the discipline that makes multi-session work reliable — consistency prevents context-reconstruction delays"
+    - "The harness architecture replaces continuous conversation with session-independent work coordinated through a shared progress file: each session reads state from the file, not from conversation history"
+    - "The Decisions Made section is the most undervalued part of the progress file: without it, teams revisit settled decisions and lose consistency across sessions"
+    - "Task decomposition follows the 10-15 rule: for a 5-hour project, aim for 10-15 tasks each completable in 30-90 minutes: fewer is too coarse, more creates overhead"
+    - "Session protocols (5-step initialization, 2-step exit) are the discipline that makes multi-session work reliable: consistency prevents context-reconstruction delays"
   misconceptions:
-    - "Students think --continue is sufficient for multi-session work — sessions accumulate context rot after 3-4 days, making the harness architecture necessary for anything spanning more than a few days"
-    - "Students create vague tasks like 'do the research' that never complete — emphasize concrete, verifiable task descriptions with clear completion criteria"
-    - "Students skip the session exit protocol because they plan to continue tomorrow — the gap between sessions causes forgotten decisions, lost progress, and duplicated work"
-    - "Students see progress files as extra overhead rather than a time-saving tool — the 30 minutes spent maintaining the file saves 30+ minutes of context reconstruction per session"
+    - "Students think --continue is sufficient for multi-session work: sessions accumulate context rot after 3-4 days, making the harness architecture necessary for anything spanning more than a few days"
+    - "Students create vague tasks like 'do the research' that never complete: emphasize concrete, verifiable task descriptions with clear completion criteria"
+    - "Students skip the session exit protocol because they plan to continue tomorrow: the gap between sessions causes forgotten decisions, lost progress, and duplicated work"
+    - "Students see progress files as extra overhead rather than a time-saving tool: the 30 minutes spent maintaining the file saves 30+ minutes of context reconstruction per session"
   discussion_prompts:
-    - "Think of your last multi-day project — how much time did you spend re-establishing context at each work session? What would a progress file have saved you?"
+    - "Think of your last multi-day project: how much time did you spend re-establishing context at each work session? What would a progress file have saved you?"
     - "What decisions have you revisited or reversed because you forgot the reasoning behind the original choice?"
   teaching_tips:
-    - "The opening scenario (closing the laptop after 90 minutes) resonates with everyone — ask students to share their own experience with losing context between sessions"
-    - "Have students decompose a real project during the lesson, not a hypothetical — the domain-specific examples (legal, marketing, research, consulting, software) help each student find their starting point"
-    - "The 5-session lab is the core learning experience — emphasize that the retrospective at the end is where the real insight happens, when students see their actual context reconstruction times"
-    - "Walk through the Decisions Made format with a real example — the 'rationale + alternatives considered' structure prevents the 'why did we do this?' problem"
+    - "The opening scenario (closing the laptop after 90 minutes) resonates with everyone: ask students to share their own experience with losing context between sessions"
+    - "Have students decompose a real project during the lesson, not a hypothetical: the domain-specific examples (legal, marketing, research, consulting, software) help each student find their starting point"
+    - "The 5-session lab is the core learning experience: emphasize that the retrospective at the end is where the real insight happens, when students see their actual context reconstruction times"
+    - "Walk through the Decisions Made format with a real example: the 'rationale + alternatives considered' structure prevents the 'why did we do this?' problem"
   assessment_quick_check:
     - "What are the five required sections of a progress file and what purpose does each serve?"
     - "Decompose a simple project into 5 tasks that meet the concrete, verifiable, completable criteria"
@@ -110,23 +110,23 @@ teaching_guide:
 
 # Long-Horizon Work: Progress Files and Session Architecture
 
-You're working on something substantial. Not a quick task you can finish in one sitting—a real project that matters. Maybe it's a multi-phase contract review. A marketing campaign launch spanning several weeks. A comprehensive literature review for your research. A consulting engagement with multiple deliverables. You've estimated five hours of work, but life happens. You close the laptop after ninety minutes, promising to continue tomorrow.
+You're working on something substantial. Not a quick task you can finish in one sitting,a real project that matters. Maybe it's a multi-phase contract review. A marketing campaign launch spanning several weeks. A comprehensive literature review for your research. A consulting engagement with multiple deliverables. You've estimated five hours of work, but life happens. You close the laptop after ninety minutes, promising to continue tomorrow.
 
 Tomorrow arrives. You open Claude Code. Where were you? What decisions did you make? Which aspects did you complete? What's left?
 
-Without a system, you spend the first thirty minutes re-establishing context—re-reading documents, re-explaining the goal, hoping Claude picks up where you left off. Sometimes it does. Often it doesn't. Work gets repeated. Decisions get forgotten. Progress feels like walking up an escalator going down.
+Without a system, you spend the first thirty minutes re-establishing context,re-reading documents, re-explaining the goal, hoping Claude picks up where you left off. Sometimes it does. Often it doesn't. Work gets repeated. Decisions get forgotten. Progress feels like walking up an escalator going down.
 
 This lesson introduces the architecture for long-horizon work: **progress files** that persist state across sessions, **task decomposition** that turns vague goals into trackable deliverables, and **session protocols** that ensure every session starts informed and ends with work preserved.
 
 ## The Problem with Long Conversations
 
-Lesson 6 taught you when to `/compact` versus `/clear`. But compaction and session resumption only help within a single narrative—a conversation that grows, gets compressed, and continues.
+Lesson 6 taught you when to `/compact` versus `/clear`. But compaction and session resumption only help within a single narrative,a conversation that grows, gets compressed, and continues.
 
 Real projects don't work that way.
 
 Real projects span multiple days, interrupted by meetings, sleep, weekends, and the hundred other demands on your attention. Each interruption creates a session boundary. Each session boundary creates a continuity problem.
 
-Claude Code offers `--continue` to resume the most recent session, but sessions accumulate context rot (Lesson 2). After 3-4 days, resumed sessions become convoluted—too many tangents, too much noise. You need a different architecture.
+Claude Code offers `--continue` to resume the most recent session, but sessions accumulate context rot (Lesson 2). After 3-4 days, resumed sessions become convoluted,too many tangents, too much noise. You need a different architecture.
 
 ## The Harness Architecture
 
@@ -148,7 +148,7 @@ One session, one agent, one conversation. Context accumulates until it overflows
                                       ← [Coding Agent Session N]
 ```
 
-The progress file becomes the coordination mechanism. Each session reads it to understand state, does work, then writes back to it. Sessions don't need to share context—they share the file.
+The progress file becomes the coordination mechanism. Each session reads it to understand state, does work, then writes back to it. Sessions don't need to share context,they share the file.
 
 ## The Two-Agent Mental Model
 
@@ -244,7 +244,7 @@ Let's break down why each section matters.
 - [x] Stakeholder feedback incorporated (Session 3)
 ```
 
-The session markers aren't just for tracking. They help future-you understand the project arc. If something goes wrong in Session 5, you can trace back: "The stakeholder feedback was Session 3—what else changed then?"
+The session markers aren't just for tracking. They help future-you understand the project arc. If something goes wrong in Session 5, you can trace back: "The stakeholder feedback was Session 3,what else changed then?"
 
 ### In Progress
 
@@ -267,7 +267,7 @@ Don't just mark things "in progress." Annotate them. What's done within this tas
 - [ ] Final recommendations (waiting on: decision on budget allocation approach)
 ```
 
-Blocked items need specific blockers. "Blocked on information" is useless. "Blocked on Q4 market data from finance team" is actionable—you can follow up with them.
+Blocked items need specific blockers. "Blocked on information" is useless. "Blocked on Q4 market data from finance team" is actionable,you can follow up with them.
 
 ### Decisions Made
 
@@ -292,7 +292,7 @@ This is the most undervalued section.
   - Alternatives considered: Appendix only (rejected: too buried), separate report (rejected: fragments the narrative)
 ```
 
-Why does this matter? Because in Session 7, you'll look at your deliverable and think "Why did we organize by business unit? Should we reorganize by timeline?" Without the decision log, you'll have to research the tradeoffs again—or worse, restructure and introduce inconsistency.
+Why does this matter? Because in Session 7, you'll look at your deliverable and think "Why did we organize by business unit? Should we reorganize by timeline?" Without the decision log, you'll have to research the tradeoffs again,or worse, restructure and introduce inconsistency.
 
 The decision log is your institutional memory. It answers "why did we do it this way?" when you've forgotten.
 
@@ -310,7 +310,7 @@ The decision log is your institutional memory. It answers "why did we do it this
   - Plan: Schedule interviews; incorporate feedback in revision cycle
 ```
 
-Known issues aren't failures—they're conscious acknowledgments of limitations. You know about them, you've assessed their impact, you have a plan. This prevents the "surprise" of discovering problems you actually knew about but forgot.
+Known issues aren't failures,they're conscious acknowledgments of limitations. You know about them, you've assessed their impact, you have a plan. This prevents the "surprise" of discovering problems you actually knew about but forgot.
 
 ### Session Log
 
@@ -329,7 +329,7 @@ The session log is narrative context. When the progress file sections give you f
 
 ## Task Decomposition: The Art of Granular Work
 
-The harness architecture only works if your tasks are granular enough to complete within a session. "Complete the market analysis" isn't a task—it's a project. You need decomposition.
+The harness architecture only works if your tasks are granular enough to complete within a session. "Complete the market analysis" isn't a task,it's a project. You need decomposition.
 
 **Bad decomposition:**
 
@@ -683,7 +683,7 @@ You've lost one session's work, not four. The progress file from the previous se
 
 **Step 1: Choose a Real Project**
 
-Pick something that matters to you—a real work deliverable or personal project. It should require approximately 5 hours of work. Choose from your professional domain:
+Pick something that matters to you,a real work deliverable or personal project. It should require approximately 5 hours of work. Choose from your professional domain:
 
 **Legal Projects:**
 - Multi-phase contract review with redlines and negotiation memo
@@ -871,9 +871,9 @@ Prevention: Every decision goes in the Decisions Made section. Every time.
 
 The harness architecture scales beyond solo work.
 
-**Team coordination:** Multiple team members can use the same progress file, with session logs attributed to individuals. The file becomes a lightweight standup replacement—everyone reads current state, no meeting required.
+**Team coordination:** Multiple team members can use the same progress file, with session logs attributed to individuals. The file becomes a lightweight standup replacement,everyone reads current state, no meeting required.
 
-**Handoffs:** When you need to hand work to someone else, the progress file is the handoff document. They don't need to understand your conversation history—they read the file.
+**Handoffs:** When you need to hand work to someone else, the progress file is the handoff document. They don't need to understand your conversation history,they read the file.
 
 **Context for AI:** Future AI sessions don't share your memory. The progress file IS the memory. Every session's Claude starts fresh but informed.
 
@@ -900,7 +900,7 @@ For each task, specify:
 Challenge me if my project is too vague to decompose properly.
 ```
 
-**What you're learning:** Task decomposition is a skill that transfers across domains. Most people start too coarse ("complete the analysis") or too fine ("format page 3"). This prompt trains the middle ground—tasks granular enough to track but substantial enough to matter. You're learning to think in completable units regardless of your professional context.
+**What you're learning:** Task decomposition is a skill that transfers across domains. Most people start too coarse ("complete the analysis") or too fine ("format page 3"). This prompt trains the middle ground,tasks granular enough to track but substantial enough to matter. You're learning to think in completable units regardless of your professional context.
 
 ### Prompt 2: Progress File Audit
 
@@ -936,7 +936,7 @@ I'm starting a new session on [project name]. Execute the full initialization pr
 Format the output as a "Session Briefing" I can scan in 30 seconds.
 ```
 
-**What you're learning:** Consistency in session starts. By having Claude execute the same protocol every time, you build muscle memory. Eventually, you'll internalize the checklist. Until then, let the prompt be your checklist. You're learning that good processes can be encoded as prompts—whether you're resuming a legal brief, a marketing plan, or a software feature.
+**What you're learning:** Consistency in session starts. By having Claude execute the same protocol every time, you build muscle memory. Eventually, you'll internalize the checklist. Until then, let the prompt be your checklist. You're learning that good processes can be encoded as prompts,whether you're resuming a legal brief, a marketing plan, or a software feature.
 
 
 ## Flashcards Study Aid

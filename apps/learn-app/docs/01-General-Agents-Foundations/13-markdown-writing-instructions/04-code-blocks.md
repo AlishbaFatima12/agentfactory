@@ -61,21 +61,21 @@ teaching_guide:
   session_group: 2
   session_title: "Lists, Code Blocks & Specification Detail"
   key_points:
-    - "Code blocks eliminate specification ambiguity — showing exact expected output prevents AI from guessing format (the 4-greeting example makes this vivid)"
-    - "Language tags (```python, ```bash, ```text) directly affect AI code generation — wrong tags cause wrong language output"
+    - "Code blocks eliminate specification ambiguity; showing exact expected output prevents AI from guessing format (the 4-greeting example makes this vivid)"
+    - "Language tags (```python, ```bash, ```text) directly affect AI code generation; wrong tags cause wrong language output"
     - "Inline code (single backtick) vs fenced blocks (triple backtick) serve different purposes: references within text vs standalone multi-line examples"
-    - "Showing edge cases in code blocks (like empty state) hints AI to handle those scenarios — if you don't show it, AI may not build it"
+    - "Showing edge cases in code blocks (like empty state) hints AI to handle those scenarios; if you don't show it, AI may not build it"
   misconceptions:
-    - "Students confuse when to use inline code vs fenced blocks — inline is for short references in sentences (`pip install`), fenced is for multi-line examples"
-    - "Students think language tags are optional cosmetic formatting — they directly affect how AI interprets and generates code"
-    - "Students forget closing triple backticks — everything after becomes part of the code block, silently breaking the rest of the document"
+    - "Students confuse when to use inline code vs fenced blocks; inline is for short references in sentences (`pip install`), fenced is for multi-line examples"
+    - "Students think language tags are optional cosmetic formatting; they directly affect how AI interprets and generates code"
+    - "Students forget closing triple backticks; everything after becomes part of the code block, silently breaking the rest of the document"
   discussion_prompts:
     - "If you tell an AI 'the program should greet the user,' how many different outputs could it generate? How does showing exact expected output in a code block change that?"
     - "Why might tagging a Python code block as ```text cause an AI to generate lower quality code?"
   teaching_tips:
-    - "Start with the opening example showing 4 possible greetings — this immediately demonstrates why code blocks matter for precise specifications"
-    - "Have students physically locate the backtick key on their keyboard — many beginners struggle to find it (usually below Escape or left of 1)"
-    - "The Lists vs Code Blocks comparison image connects back to Lesson 3 — use it to show the 'right tool for the job' principle"
+    - "Start with the opening example showing 4 possible greetings; this immediately demonstrates why code blocks matter for precise specifications"
+    - "Have students physically locate the backtick key on their keyboard; many beginners struggle to find it (usually below Escape or left of 1)"
+    - "The Lists vs Code Blocks comparison image connects back to Lesson 3; use it to show the 'right tool for the job' principle"
     - "Emphasize the edge case pro-tip: showing what 'empty' looks like in a code block is a specification technique students will use repeatedly"
   assessment_quick_check:
     - "Ask students when to use inline code vs a fenced code block with an example of each"
@@ -98,6 +98,7 @@ When you're writing a specification that says:
 > "The program should greet the user and show the current time."
 
 An AI agent could generate code that prints:
+
 - "Hello"
 - "Hello World"
 - "Hello! Time: 2:30pm"
@@ -117,11 +118,11 @@ Code blocks let you show expected output, code examples, and command syntax dire
 
 ### Lists vs Code Blocks
 
-In the previous lesson, you learned lists for organizing content. Code blocks serve a different purpose — they preserve exact formatting. Here's the key distinction:
+In the previous lesson, you learned lists for organizing content. Code blocks serve a different purpose; they preserve exact formatting. Here's the key distinction:
 
 ![Side-by-side comparison showing unordered lists (left panel: bullet points using dash syntax for features and independent items) versus fenced code blocks (right panel: triple backticks for showing code examples and command output). Demonstrates when to use each format based on content type.](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-3/chapter-10/lists-vs-code-blocks-distinction.png)
 
-**Lists** organize ideas into readable bullet points or numbered steps. **Code blocks** preserve exact formatting — every space, every character appears exactly as you type it. Use lists to describe *what* the software does; use code blocks to show *what it looks like* when running.
+**Lists** organize ideas into readable bullet points or numbered steps. **Code blocks** preserve exact formatting; every space, every character appears exactly as you type it. Use lists to describe _what_ the software does; use code blocks to show _what it looks like_ when running.
 
 ---
 
@@ -162,6 +163,7 @@ When writing documentation that shows code block syntax (like this lesson), use 
 Here's a specification for a task list app:
 
 **In your README.md:**
+
 ```text
 When the user views tasks, they should see:
 ```
@@ -180,6 +182,7 @@ The AI agent sees this and knows: "The output must show task number, description
 ### Example: Showing Program Code
 
 **In your spec:**
+
 ```python
 def add(a, b):
     return a + b
@@ -192,7 +195,7 @@ This shows the AI: "This is what the code should look like."
 
 #### 💬 AI Colearning Prompt
 
-> **Explore with your AI**: "I'm learning about code blocks in markdown. Can you show me what happens when I specify expected output in my specification vs when I don't? Create two versions of a spec for a greeting program—one with a code block showing exact output format, one without. Then explain which would produce more consistent results."
+> **Explore with your AI**: "I'm learning about code blocks in markdown. Can you show me what happens when I specify expected output in my specification vs when I don't? Create two versions of a spec for a greeting program: one with a code block showing exact output format, one without. Then explain which would produce more consistent results."
 
 ---
 
@@ -240,6 +243,7 @@ AI agents are sensitive to language tags. If you tag Python code as `text`, the 
 ### Why Language Tags Matter
 
 Language tags help:
+
 1. **Readers** understand what they're looking at
 2. **AI agents** know what language to generate
 3. **Code viewers** apply correct syntax highlighting
@@ -289,7 +293,7 @@ print(greet("Alice"))
 The `python` tag makes it clear this is Python code to implement.
 
 :::info[Expert Insight]
-Language tags do more than just enable syntax highlighting. They tell AI agents which language interpreter to use, which libraries might be available, and which syntax rules apply. When you tag a block as `python`, the AI knows to generate modern Python 3 syntax. When you tag it as `bash`, the AI knows these are shell commands. This prevents the AI from mixing syntaxes or generating code for the wrong language—a common error when language context is ambiguous.
+Language tags do more than just enable syntax highlighting. They tell AI agents which language interpreter to use, which libraries might be available, and which syntax rules apply. When you tag a block as `python`, the AI knows to generate modern Python 3 syntax. When you tag it as `bash`, the AI knows these are shell commands. This prevents the AI from mixing syntaxes or generating code for the wrong language: a common error when language context is ambiguous.
 :::
 
 ---
@@ -302,11 +306,11 @@ Use **inline code** for short code references within regular text - like variabl
 
 Wrap your code reference in single backtick characters:
 
-````text
+```text
 Install the package with `pip install requests` command.
 The `app.py` file contains the main function.
 Set the `DEBUG` variable to `True` for testing.
-````
+```
 
 **What it renders as:**
 
@@ -317,6 +321,7 @@ Set the `DEBUG` variable to `True` for testing.
 ### When to Use Inline Code
 
 Use single backticks for:
+
 - Command names: `python`, `git`, `npm`
 - Variable names: `user_name`, `total_count`
 - File names: `README.md`, `app.py`
@@ -340,24 +345,26 @@ Notice the difference: backticks visually separate code from prose, so readers n
 >
 > 'Run pip install requests to install dependencies, then edit config.py with your API key, and run python weather.py to start the app.'
 >
-> Rewrite this with proper inline code formatting using backticks. Then explain why the formatted version is clearer. What happens if I don't format command names—how does that affect readability?"
+> Rewrite this with proper inline code formatting using backticks. Then explain why the formatted version is clearer. What happens if I don't format command names: how does that affect readability?"
 
 ---
 
 ## Fenced vs Inline: Which to Use?
 
-| Feature | Syntax | Use Case |
-|---------|--------|----------|
-| **Inline Code** | `` `code` `` | Variable names, file names, short commands in a sentence |
-| **Fenced Block** | ` ``` ` | Multi-line code, program output, or implementation examples |
+| Feature          | Syntax       | Use Case                                                    |
+| ---------------- | ------------ | ----------------------------------------------------------- |
+| **Inline Code**  | `` `code` `` | Variable names, file names, short commands in a sentence    |
+| **Fenced Block** | ` ``` `      | Multi-line code, program output, or implementation examples |
 
 ### Use Fenced Code Blocks (triple backticks) when:
+
 - Showing multiple lines of code
 - Displaying expected program output
 - Sharing code examples to implement
 - Showing error messages
 
 ### Use Inline Code (single backticks) when:
+
 - Mentioning commands in a sentence
 - Referring to variable or function names
 - Listing file names
@@ -396,7 +403,7 @@ Fill in the "Expected Output" section with a fenced code block showing what the 
 
 **What you should write in your spec:**
 
-`````text
+````text
 ## Expected Output
 
 When the user runs `python tracker.py`, they should see:
@@ -427,7 +434,7 @@ When the task list is empty:
 Your Tasks:
 No tasks yet. Use option 1 to add a task.
 ```
-`````
+````
 
 :::tip[Pro-Tip: Show Edge Cases]
 Including edge cases (like empty states) in your code blocks gives the AI a hint to handle these scenarios in the generated code. If you don't show what "empty" looks like, the AI might not handle it gracefully.
@@ -479,7 +486,7 @@ Check your updated specification:
 
 ### Mistake 1: Forgetting Closing Backticks
 
-**Wrong** (missing closing backticks — everything after becomes part of the code block):
+**Wrong** (missing closing backticks; everything after becomes part of the code block):
 
 ````text
 ```python
@@ -612,7 +619,6 @@ From **Prompt 1**: Your AI confirms your code block syntax is correct
 From **Prompt 2**: Your AI can parse your specification and understand output format, language, and commands
 
 From **Prompt 3**: Your AI generates Python code matching your expected output
-
 
 ## Flashcards Study Aid
 

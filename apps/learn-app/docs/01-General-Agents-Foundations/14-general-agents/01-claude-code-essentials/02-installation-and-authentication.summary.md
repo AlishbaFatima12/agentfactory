@@ -4,17 +4,17 @@ Claude Code installation bridges the gap from understanding the paradigm (Lesson
 
 ### Key Mental Models
 
-- **Platform-Specific Installation**: Each platform (Windows/macOS/Linux) has a recommended primary method optimized for that environment—reducing decision fatigue from evaluating all options
-- **Authentication Economics**: Three cost models exist: Claude App (subscription), Console API (pay-per-use), Enterprise (dedicated capacity)—your usage patterns and organizational requirements determine which to use
+- **Platform-Specific Installation**: Each platform (Windows/macOS/Linux) has a recommended primary method optimized for that environment: reducing decision fatigue from evaluating all options
+- **Authentication Economics**: Three cost models exist: Claude App (subscription), Console API (pay-per-use), Enterprise (dedicated capacity): your usage patterns and organizational requirements determine which to use
 - **Safety Boundaries**: Claude Code has your permissions. Start sessions in project directories (not system directories) and review commands before approving
 
 ### Critical Patterns
 
-- **All platforms**: Native install (recommended) — `curl -fsSL https://claude.ai/install.sh | bash` (macOS/Linux/WSL) or `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell). Auto-updates in background.
+- **All platforms**: Native install (recommended); `curl -fsSL https://claude.ai/install.sh | bash` (macOS/Linux/WSL) or `irm https://claude.ai/install.ps1 | iex` (Windows PowerShell). Auto-updates in background.
 - **Windows**: Requires WSL or Git for Windows (Claude Code needs bash). Native install → WSL → Git Bash
 - **macOS**: Native install (recommended) → Homebrew (`brew install --cask claude-code`) → npm (deprecated fallback)
 - **Linux/WSL**: Native install (recommended) → npm (deprecated fallback)
-- **npm**: Deprecated — use native install instead. Native install requires no Node.js dependency
+- **npm**: Deprecated; use native install instead. Native install requires no Node.js dependency
 - Verify installation with `claude --version` before proceeding to authentication
 - Select authentication based on your account type:
   - Method 1: Claude App (Pro/Max/Team subscription) - most common, unified access
@@ -24,10 +24,10 @@ Claude Code installation bridges the gap from understanding the paradigm (Lesson
 
 ### Common Mistakes
 
-- Running Claude Code in system directories (~/Library, /etc, C:\Windows) instead of project folders—Claude Code can modify files where you run it
-- Windows users: Trying to run Claude Code without WSL or Git for Windows—Claude Code requires a bash shell, the installer alone isn't enough
+- Running Claude Code in system directories (~/Library, /etc, C:\Windows) instead of project folders: Claude Code can modify files where you run it
+- Windows users: Trying to run Claude Code without WSL or Git for Windows: Claude Code requires a bash shell, the installer alone isn't enough
 - Console API users: Not setting usage limits at console.anthropic.com/settings/limits, leading to unexpected bills
-- Approving commands without review, especially `sudo` or administrative operations—Claude Code asks for approval, but you're responsible for understanding what you approve
+- Approving commands without review, especially `sudo` or administrative operations: Claude Code asks for approval, but you're responsible for understanding what you approve
 - Alpine Linux users: Forgetting to install libgcc/libstdc++ and configure `USE_BUILTIN_RIPGREP=0`, causing runtime errors
 
 ### Connections

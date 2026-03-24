@@ -56,22 +56,22 @@ teaching_guide:
   session_group: 3
   session_title: "Skills Architecture and Hands-On Practice"
   key_points:
-    - "The description field in YAML frontmatter is the single most important line — it determines when Claude activates the skill automatically"
+    - "The description field in YAML frontmatter is the single most important line; it determines when Claude activates the skill automatically"
     - "The description formula (action verb + input type + output type + trigger conditions) gives students a repeatable pattern for every skill they build"
     - "The co-learning cycle (AI as Teacher suggesting improvements, Student as Teacher specifying constraints) is the Three Roles Framework applied to skill creation"
-    - "skill-creator is a meta-skill — a skill that creates other skills — and most students should use it rather than writing SKILL.md from scratch"
+    - "skill-creator is a meta-skill; a skill that creates other skills; and most students should use it rather than writing SKILL.md from scratch"
   misconceptions:
-    - "Students write descriptions that are too vague ('helps with notes') or too narrow ('summarizes Zoom meetings from marketing') — walk through the good vs bad examples explicitly"
-    - "Students think the first version of a skill should be perfect — the co-learning cycle section explicitly teaches that iteration is the expected workflow"
-    - "Students skip YAML frontmatter and write only the markdown body — emphasize that without frontmatter, Claude cannot discover or auto-activate the skill"
+    - "Students write descriptions that are too vague ('helps with notes') or too narrow ('summarizes Zoom meetings from marketing'); walk through the good vs bad examples explicitly"
+    - "Students think the first version of a skill should be perfect; the co-learning cycle section explicitly teaches that iteration is the expected workflow"
+    - "Students skip YAML frontmatter and write only the markdown body; emphasize that without frontmatter, Claude cannot discover or auto-activate the skill"
   discussion_prompts:
-    - "You mapped a personal procedure in Lesson 07 — what was hardest about translating your implicit knowledge into explicit written instructions?"
-    - "The lesson shows AI suggesting SEO considerations and word count targets — when should you accept AI suggestions vs override with your own constraints?"
-    - "If you shared your skill with 10 classmates, what would break first — the instructions, the description, or the examples?"
+    - "You mapped a personal procedure in Lesson 07; what was hardest about translating your implicit knowledge into explicit written instructions?"
+    - "The lesson shows AI suggesting SEO considerations and word count targets; when should you accept AI suggestions vs override with your own constraints?"
+    - "If you shared your skill with 10 classmates, what would break first; the instructions, the description, or the examples?"
   teaching_tips:
-    - "Have students write a description BEFORE reading the formula, then rewrite it using the formula — the before/after comparison is powerful"
-    - "The blog-planner example in Step 2 is complete and copy-pasteable — use it as a live demo, then have students modify it for their own domain"
-    - "Run the co-learning cycle live: have a student share their skill, then ask Claude to review it in front of the class — the suggestions are always insightful"
+    - "Have students write a description BEFORE reading the formula, then rewrite it using the formula; the before/after comparison is powerful"
+    - "The blog-planner example in Step 2 is complete and copy-pasteable; use it as a live demo, then have students modify it for their own domain"
+    - "Run the co-learning cycle live: have a student share their skill, then ask Claude to review it in front of the class; the suggestions are always insightful"
     - "Pair students for the refinement section: one plays 'AI as Teacher' (suggesting improvements) while the other plays 'Student as Teacher' (specifying constraints)"
   assessment_quick_check:
     - "Write a one-sentence skill description using the formula: action verb + input + output + trigger conditions"
@@ -101,7 +101,7 @@ You've experienced skills in action. You've mapped a procedure worth encoding. N
 
 ![skills-strategic-value](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-05/skills-strategic-value.png)
 
-This lesson takes you from understanding skills to creating them. By the end, you'll have a working skill in your `.claude/skills/` folder—and know how to use Claude itself to create more.
+This lesson takes you from understanding skills to creating them. By the end, you'll have a working skill in your `.claude/skills/` folder: and know how to use Claude itself to create more.
 
 :::tip Markdown Refresher
 Skills are written in Markdown with YAML frontmatter. If you're not comfortable with headings, bullet points, code blocks, or YAML syntax, take 15 minutes to review **Chapter 13: Markdown for AI-Native Development** before continuing. You'll write better skills with that foundation.
@@ -118,7 +118,7 @@ Every skill lives in a folder. The folder contains one required file: `SKILL.md`
 └── SKILL.md    ← This is what you create
 ```
 
-That's it. A skill can be a single markdown file. The simplicity is intentional—anyone can create one.
+That's it. A skill can be a single markdown file. The simplicity is intentional: anyone can create one.
 
 ### The Two Parts of SKILL.md
 
@@ -176,7 +176,7 @@ That's a complete skill. No scripts required. No complex setup. Just clear instr
 
 Here's the power move: use Claude to create skills for you.
 
-Remember the Skills Lab you downloaded in Lesson 07? It includes a `skill-creator` skill—a meta-skill for creating other skills.
+Remember the Skills Lab you downloaded in Lesson 07? It includes a `skill-creator` skill: a meta-skill for creating other skills.
 
 From the skills lab directory:
 
@@ -207,7 +207,7 @@ Use the skill-creator to build this into a proper skill.
 
 The skill-creator guides you through understanding your procedure, writing effective descriptions, and generating a complete SKILL.md file. **This is how most people should create skills.**
 
-The rest of this lesson teaches you what's happening under the hood—useful for refining skills and understanding why they work.
+The rest of this lesson teaches you what's happening under the hood: useful for refining skills and understanding why they work.
 
 ---
 
@@ -427,12 +427,12 @@ What's different? Should we update the skill to match my real style?
 
 ## The Bigger Picture
 
-Skills you create now become building blocks for larger systems. In Part 6, you'll build **Custom Agents** using SDKs—and skills you create here integrate directly into those agents. **Skills are reusable intellectual property** that compound in value.
+Skills you create now become building blocks for larger systems. In Part 6, you'll build **Custom Agents** using SDKs: and skills you create here integrate directly into those agents. **Skills are reusable intellectual property** that compound in value.
 
 ---
 
 :::tip Ready to Practice?
-Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that take you from writing your first skills to building complete skill suites — with one-click exercise downloads and step-by-step guidance.
+Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that take you from writing your first skills to building complete skill suites; with one-click exercise downloads and step-by-step guidance.
 :::
 
 ---
@@ -443,7 +443,7 @@ Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that tak
 
 > "I have a procedure I want to encode as a skill: [describe your procedure from Lesson 07]. Walk me through creating a SKILL.md file. Help me write: (1) an effective description that triggers at the right times, (2) clear instructions Claude can follow, (3) quality criteria that match my standards, (4) an example input/output."
 
-**What you're learning:** The complete skill creation workflow—from procedure to SKILL.md. This is the hands-on application of Lesson 08's architecture.
+**What you're learning:** The complete skill creation workflow: from procedure to SKILL.md. This is the hands-on application of Lesson 08's architecture.
 
 **Use Skill-Creator:**
 

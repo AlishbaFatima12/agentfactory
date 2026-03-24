@@ -62,23 +62,23 @@ teaching_guide:
   session_group: 10
   session_title: "Practical Skills and the Code-vs-Cowork Decision"
   key_points:
-    - "The simple rule — 'Code for code, Cowork for documents' — covers 80% of decisions; the framework handles the remaining 20%"
+    - "The simple rule; 'Code for code, Cowork for documents'; covers 80% of decisions; the framework handles the remaining 20%"
     - "Skills are portable across both interfaces because they encode expertise, not interface-specific behavior"
     - "Hybrid workflows (Development + Documentation, Analysis + Presentation) are where professionals get the most value"
-    - "Code and Cowork will converge into a unified interface — invest in patterns (agentic reasoning, Skill design) not interface-specific habits"
+    - "Code and Cowork will converge into a unified interface; invest in patterns (agentic reasoning, Skill design) not interface-specific habits"
   misconceptions:
-    - "Students think they must choose one interface exclusively — most real workflows benefit from using both at different stages"
-    - "Students assume Code is harder and Cowork is easier — they serve different purposes, and neither is inherently more difficult"
-    - "Students believe Skills created in one interface only work there — Skills work across both Code and Cowork because they encode expertise, not interface specifics"
+    - "Students think they must choose one interface exclusively; most real workflows benefit from using both at different stages"
+    - "Students assume Code is harder and Cowork is easier; they serve different purposes, and neither is inherently more difficult"
+    - "Students believe Skills created in one interface only work there; Skills work across both Code and Cowork because they encode expertise, not interface specifics"
   discussion_prompts:
-    - "Walk through a recent project you completed — at which stages would Claude Code have been better, and at which stages would Cowork have been better?"
+    - "Walk through a recent project you completed; at which stages would Claude Code have been better, and at which stages would Cowork have been better?"
     - "If Code and Cowork merge into one unified interface next year, which skills you learned in this chapter will still matter and which become irrelevant?"
     - "For someone in your role, what is the one hybrid workflow pattern (from the three listed in the lesson) that would save you the most time?"
   teaching_tips:
-    - "Use the Decision Tree at the end of the lesson as an interactive exercise — read scenarios aloud and have students trace through the tree to reach a decision"
-    - "Have students fill in the Interface Capability Comparison table from memory before revealing it — this surfaces misconceptions about what each interface can do"
+    - "Use the Decision Tree at the end of the lesson as an interactive exercise; read scenarios aloud and have students trace through the tree to reach a decision"
+    - "Have students fill in the Interface Capability Comparison table from memory before revealing it; this surfaces misconceptions about what each interface can do"
     - "Walk through all three Detailed Scenarios (web app, business report, data science) and ask students which most resembles their work"
-    - "Emphasize the 'Convergence Path' section to reduce anxiety about choosing wrong — the underlying mental models transfer regardless"
+    - "Emphasize the 'Convergence Path' section to reduce anxiety about choosing wrong; the underlying mental models transfer regardless"
   assessment_quick_check:
     - "State the simple rule for choosing between Code and Cowork in one sentence."
     - "Name one scenario where using both interfaces together is better than using either alone."
@@ -252,7 +252,7 @@ Claude Cowork: Create user guide and setup instructions
 Claude Cowork: Package everything for distribution
 ```
 
-**Key insight:** The interfaces aren't competitors—they're tools for different parts of the same workflow.
+**Key insight:** The interfaces aren't competitors: they're tools for different parts of the same workflow.
 
 ---
 
@@ -380,25 +380,25 @@ The differences are:
 
 > "Review the tasks I've done this week. Categorize them: Which would have been better in Claude Code? Which in Claude Cowork? Which would benefit from using both? Create a personal decision guide."
 
-**What you're learning:** Personal workflow analysis—understanding your own patterns and which tools optimize them. Self-awareness about your work makes tool selection automatic.
+**What you're learning:** Personal workflow analysis: understanding your own patterns and which tools optimize them. Self-awareness about your work makes tool selection automatic.
 
 \*\*💡 Design a Hybrid Workflow:"
 
 > "Think of a project I'm working on. Design a workflow that uses both Claude Code and Claude Cowork. Where would I switch between interfaces? What would each handle? Why is this split optimal?"
 
-**What you're learning:** Workflow design—thinking through how to combine tools effectively. The best workflows use each tool for what it's best at.
+**What you're learning:** Workflow design: thinking through how to combine tools effectively. The best workflows use each tool for what it's best at.
 
 \*\*🏗️ Create Portable Skills:"
 
 > "Design a Skill for my domain that would work well in both Claude Code and Claude Cowork. What expertise should it encode? How would I use it differently in each interface? Write the SKILL.md."
 
-**What you're learning:** Skill portability—creating expertise that transfers across contexts. This investment pays off in both interfaces today and in the unified interface of tomorrow.
+**What you're learning:** Skill portability: creating expertise that transfers across contexts. This investment pays off in both interfaces today and in the unified interface of tomorrow.
 
 ---
 
 ## What's Next
 
-You've completed the Cowork content. The remaining lessons cover the business side—how to monetize your Skills (Lesson 33) and a chapter quiz (Lesson 36) that tests your understanding of both Claude Code and Claude Cowork.
+You've completed the Cowork content. The remaining lessons cover the business side: how to monetize your Skills (Lesson 33) and a chapter quiz (Lesson 36) that tests your understanding of both Claude Code and Claude Cowork.
 
 
 ## Flashcards Study Aid

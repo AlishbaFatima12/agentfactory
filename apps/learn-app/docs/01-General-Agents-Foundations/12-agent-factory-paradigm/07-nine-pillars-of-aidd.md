@@ -57,27 +57,27 @@ teaching_guide:
   session_group: 3
   session_title: "Business Strategy and Development Methodology"
   key_points:
-    - "Maya's story is the proof point — one developer, one week, production-ready platform. This isn't about working harder but about system completeness across all nine pillars"
-    - "The nine pillars form an integrated SYSTEM, not a menu — removing even two pillars creates gaps that force you back to specialist silos"
-    - "M-Shaped developer (deep in 2-4 domains) replaces T-Shaped as the ideal — AI augmentation makes this achievable for the first time"
-    - "Each pillar maps directly to book sections: Pillars 1-3 (Parts 2-3), Pillar 7 (Parts 3-4), Pillars 8-9 (Parts 5-7) — show students the learning path ahead"
+    - "Maya's story is the proof point; one developer, one week, production-ready platform. This isn't about working harder but about system completeness across all nine pillars"
+    - "The nine pillars form an integrated SYSTEM, not a menu; removing even two pillars creates gaps that force you back to specialist silos"
+    - "M-Shaped developer (deep in 2-4 domains) replaces T-Shaped as the ideal; AI augmentation makes this achievable for the first time"
+    - "Each pillar maps directly to book sections: Pillars 1-3 (Parts 2-3), Pillar 7 (Parts 3-4), Pillars 8-9 (Parts 5-7); show students the learning path ahead"
   misconceptions:
-    - "Students think they need to master all nine pillars simultaneously — the 18-month learning pathway shows progressive adoption: foundations (1-3), integration (4-6), orchestration (7-9)"
-    - "Students confuse M-Shaped with generalist — M-Shaped means DEEP expertise in 2-4 domains, not shallow knowledge of everything"
-    - "Students think 'Markdown as Programming Language' (Pillar 2) is literal — it means Markdown specifications become executable inputs for AI agents, not that Markdown replaces Python"
-    - "Students assume pillar mastery means memorizing everything — AI augmentation means you maintain professional-level output without memorizing every API"
+    - "Students think they need to master all nine pillars simultaneously; the 18-month learning pathway shows progressive adoption: foundations (1-3), integration (4-6), orchestration (7-9)"
+    - "Students confuse M-Shaped with generalist; M-Shaped means DEEP expertise in 2-4 domains, not shallow knowledge of everything"
+    - "Students think 'Markdown as Programming Language' (Pillar 2) is literal; it means Markdown specifications become executable inputs for AI agents, not that Markdown replaces Python"
+    - "Students assume pillar mastery means memorizing everything; AI augmentation means you maintain professional-level output without memorizing every API"
   discussion_prompts:
-    - "Which of the nine pillars do you already use in your workflow, even informally — and which ones represent the biggest gap?"
+    - "Which of the nine pillars do you already use in your workflow, even informally; and which ones represent the biggest gap?"
     - "If you could only master 6 of the 9 pillars, which 3 would you skip and what problems would that create?"
-    - "What 2-4 domains would make up YOUR ideal M-shaped profile — and do those domains actually reinforce each other?"
+    - "What 2-4 domains would make up YOUR ideal M-shaped profile; and do those domains actually reinforce each other?"
   teaching_tips:
-    - "Open with Maya's story and ask: 'What made this possible — is she a 10x engineer?' Then reveal it's the system, not the person"
-    - "Don't try to teach all nine pillars in equal depth — highlight Pillars 1, 2, and 7 as the foundation and briefly survey the rest"
-    - "The M-Shaped developer profiles (Vertical SaaS Builder, Platform Engineer, AI Product Developer) make good discussion anchors — ask students which profile resonates"
+    - "Open with Maya's story and ask: 'What made this possible; is she a 10x engineer?' Then reveal it's the system, not the person"
+    - "Don't try to teach all nine pillars in equal depth; highlight Pillars 1, 2, and 7 as the foundation and briefly survey the rest"
+    - "The M-Shaped developer profiles (Vertical SaaS Builder, Platform Engineer, AI Product Developer) make good discussion anchors; ask students which profile resonates"
     - "The historical parallels (Cloud, Agile, Mobile-First) help students see the pattern: complete adoption wins, partial adoption struggles"
   assessment_quick_check:
-    - "Ask students to name 5 of the 9 pillars from memory — they don't need all 9 yet but should recall the most impactful ones"
-    - "Ask: 'What is the difference between an M-Shaped and a T-Shaped developer?' — tests understanding of multi-domain depth"
+    - "Ask students to name 5 of the 9 pillars from memory; they don't need all 9 yet but should recall the most impactful ones"
+    - "Ask: 'What is the difference between an M-Shaped and a T-Shaped developer?'; tests understanding of multi-domain depth"
     - "Have students identify which pillar solves THIS problem: 'My AI-generated code works but I can't verify it's correct' (answer: Pillar 6, TDD)"
 
 # Generation metadata
@@ -97,7 +97,7 @@ She wrote her specification in Markdown, using a structured framework that made 
 
 One developer. One week. A production-ready platform.
 
-This isn't a story about Maya being a 10x engineer or working 80-hour weeks. It's about **system completeness**. Maya didn't work harder—she worked within a complete system that eliminated the historical barriers requiring specialist silos. She achieved what previously required entire teams not through superhuman effort, but through the **Nine Pillars of AI-Driven Development**.
+This isn't a story about Maya being a 10x engineer or working 80-hour weeks. It's about **system completeness**. Maya didn't work harder: she worked within a complete system that eliminated the historical barriers requiring specialist silos. She achieved what previously required entire teams not through superhuman effort, but through the **Nine Pillars of AI-Driven Development**.
 
 In this lesson, you'll learn what makes AI-Driven Development (AIDD) fundamentally different from traditional development, the nine enabling pillars that make it possible, and the new type of developer profile this system enables.
 
@@ -107,21 +107,21 @@ In this lesson, you'll learn what makes AI-Driven Development (AIDD) fundamental
 
 Before exploring the pillars, we need to define what AIDD actually is. **AI-Driven Development (AIDD) is a specification-first methodology that transforms developers into specification engineers and system architects.**
 
-Instead of writing code line by line, you write specifications—clear descriptions of what you want to build, how it should behave, and what quality standards it must meet. AI agents then generate, test, and refine the implementation while you focus on design, architecture, and validation.
+Instead of writing code line by line, you write specifications: clear descriptions of what you want to build, how it should behave, and what quality standards it must meet. AI agents then generate, test, and refine the implementation while you focus on design, architecture, and validation.
 
 This transformation is defined by nine core characteristics:
 
-1. **Specification-Driven**: Requirements and design come first—you define what to build, not how to code it
+1. **Specification-Driven**: Requirements and design come first: you define what to build, not how to code it
 2. **AI-Augmented**: Agents handle implementation details while you focus on architecture and validation
 3. **Agent-Orchestrated**: Multiple specialized agents work in concert on different aspects of your system
 4. **Quality-Gated**: Automated validation at every step ensures generated code meets requirements
-5. **Version-Controlled**: All artifacts—specs, code, tests, and documentation—are tracked and reviewable
+5. **Version-Controlled**: All artifacts: specs, code, tests, and documentation: are tracked and reviewable
 6. **Human-Verified**: You remain the decision maker, validating and guiding AI output
 7. **Iteratively-Refined**: Continuous improvement loops where feedback enhances both code and specifications
 8. **Documentation-Embedded**: Knowledge is captured alongside code, eliminating drift between docs and implementation
-9. **Production-Ready**: Professional standards from day one—no throwaway prototypes, no technical debt accumulation
+9. **Production-Ready**: Professional standards from day one: no throwaway prototypes, no technical debt accumulation
 
-These nine characteristics distinguish AIDD from traditional development. But how do you actually achieve these characteristics in practice? That's where the **Nine Enabling Pillars** come in—the concrete technologies, tools, and practices that make AIDD possible.
+These nine characteristics distinguish AIDD from traditional development. But how do you actually achieve these characteristics in practice? That's where the **Nine Enabling Pillars** come in: the concrete technologies, tools, and practices that make AIDD possible.
 
 ### Why Now: The Convergence That Made AIDD Possible
 
@@ -136,7 +136,7 @@ This wasn't possible five years ago. AIDD emerged from the convergence of multip
 - **DevOps automation** that handles deployment complexity
 - **Universal development environments** that standardize across platforms
 
-These revolutions didn't just add new capabilities—they fundamentally changed what's possible for individual developers and small teams. The nine pillars represent the integrated system that harnesses these capabilities.
+These revolutions didn't just add new capabilities: they fundamentally changed what's possible for individual developers and small teams. The nine pillars represent the integrated system that harnesses these capabilities.
 
 ---
 
@@ -148,7 +148,7 @@ The nine pillars are concrete technologies and practices that remove specific ba
 
 **What it is**: Command-line AI assistants like Claude Code, Gemini CLI, and similar tools that function as autonomous development partners. Unlike web-based chat interfaces, these agents run in your terminal, access your codebase directly, and execute commands on your behalf.
 
-**Barrier it removes**: Working alone at your keyboard—reading documentation, debugging in isolation, making architectural decisions solo. AI CLI agents provide a tireless partner who can read your entire codebase, suggest implementations, write tests, and explain complex code.
+**Barrier it removes**: Working alone at your keyboard: reading documentation, debugging in isolation, making architectural decisions solo. AI CLI agents provide a tireless partner who can read your entire codebase, suggest implementations, write tests, and explain complex code.
 
 **Key tools**: Claude Code (Anthropic), Gemini Code Assist, GitHub Copilot CLI
 
@@ -166,9 +166,9 @@ The nine pillars are concrete technologies and practices that remove specific ba
 
 ### Pillar 3: MCP Standard (Model Context Protocol)
 
-**What it is**: A universal protocol that allows AI agents to connect to any MCP-compliant tool, database, or service. Think of it as USB for AI—one standard interface that works everywhere.
+**What it is**: A universal protocol that allows AI agents to connect to any MCP-compliant tool, database, or service. Think of it as USB for AI: one standard interface that works everywhere.
 
-**Barrier it removes**: Tool integration complexity. Before MCP, each AI integration required custom code. MCP standardizes this—once a tool supports MCP, any MCP-capable AI agent can use it immediately.
+**Barrier it removes**: Tool integration complexity. Before MCP, each AI integration required custom code. MCP standardizes this: once a tool supports MCP, any MCP-capable AI agent can use it immediately.
 
 **Key tools**: MCP protocol specification (Anthropic), MCP server implementations for databases, APIs, cloud services, and monitoring systems.
 
@@ -176,7 +176,7 @@ The nine pillars are concrete technologies and practices that remove specific ba
 
 ### Pillar 4: AI-First IDEs
 
-**What it is**: Development environments like Zed and Cursor designed from the ground up with AI as a core workflow component—not bolt-on features added to legacy editors.
+**What it is**: Development environments like Zed and Cursor designed from the ground up with AI as a core workflow component: not bolt-on features added to legacy editors.
 
 **Barrier it removes**: Friction between human and AI workflows. Traditional IDEs were designed for human developers working alone; AI-first IDEs reimagine the entire experience around human-AI collaboration.
 
@@ -186,7 +186,7 @@ The nine pillars are concrete technologies and practices that remove specific ba
 
 ### Pillar 5: Linux Universal Dev Environment
 
-**What it is**: Bash shell standardization across all platforms—WSL2 on Windows, native terminals on Mac and Linux, cloud development environments—creating one consistent command-line interface everywhere.
+**What it is**: Bash shell standardization across all platforms: WSL2 on Windows, native terminals on Mac and Linux, cloud development environments: creating one consistent command-line interface everywhere.
 
 **Barrier it removes**: Platform fragmentation. Windows, Mac, and Linux developers no longer live in different worlds. The same Bash commands work everywhere, meaning AI agents can write shell scripts once that run on any machine or in the cloud.
 
@@ -198,7 +198,7 @@ The nine pillars are concrete technologies and practices that remove specific ba
 
 **What it is**: A development methodology where you write tests before implementation code. Tests define expected behavior; code is written to pass those tests.
 
-**Barrier it removes**: Fear of breaking things while moving fast, especially with AI-generated code. You can't manually verify every line an AI writes—but you can verify that it passes comprehensive tests.
+**Barrier it removes**: Fear of breaking things while moving fast, especially with AI-generated code. You can't manually verify every line an AI writes: but you can verify that it passes comprehensive tests.
 
 **Key tools**: pytest (Python), Jest (JavaScript), JUnit (Java), and testing frameworks across languages
 
@@ -206,7 +206,7 @@ The nine pillars are concrete technologies and practices that remove specific ba
 
 ### Pillar 7: Specification-Driven Development
 
-**What it is**: A professional methodology where Markdown specifications are the source of truth for all development work. Claude Code's native capabilities—CLAUDE.md as the project constitution, subagents for research, structured interviews for refinement, and the Tasks system for implementation—provide the complete SDD workflow.
+**What it is**: A professional methodology where Markdown specifications are the source of truth for all development work. Claude Code's native capabilities: CLAUDE.md as the project constitution, subagents for research, structured interviews for refinement, and the Tasks system for implementation: provide the complete SDD workflow.
 
 **Barrier it removes**: Ad-hoc development chaos and requirements drift. SDD creates a standardized format for specifications that both humans can read and AI agents can execute.
 
@@ -248,9 +248,9 @@ Or take Pillar 1 (AI Coding Agents). They're far more effective with:
 - Pillar 6 (TDD) ensuring generated code is correct
 - Pillar 3 (MCP) giving them access to tools
 
-Remove any single pillar, and the system still works—but with significant gaps. Remove several pillars, and you're back to traditional development with its specialist silos and coordination overhead.
+Remove any single pillar, and the system still works: but with significant gaps. Remove several pillars, and you're back to traditional development with its specialist silos and coordination overhead.
 
-The integration is what creates the system effect. Maya didn't use nine independent tools—she used nine integrated pillars that amplified each other.
+The integration is what creates the system effect. Maya didn't use nine independent tools: she used nine integrated pillars that amplified each other.
 
 ---
 
@@ -266,11 +266,11 @@ These nine pillars don't just make you faster. They fundamentally change what ki
 
 **Generalist**: Shallow knowledge across many domains. You can work in frontend, backend, DevOps, and design, but none at production depth. Useful for early prototyping but struggles with complex systems.
 
-**M-Shaped**: Deep expertise in 2-4 complementary domains. You design APIs, implement frontends, deploy to cloud, and integrate ML models—all at a professional level, often in the same week. This was practically impossible before AI augmentation.
+**M-Shaped**: Deep expertise in 2-4 complementary domains. You design APIs, implement frontends, deploy to cloud, and integrate ML models: all at a professional level, often in the same week. This was practically impossible before AI augmentation.
 
 ### Why M-Shaped Was Nearly Impossible
 
-Traditional development required separate specialists because mastering multiple domains was cognitively overwhelming. You couldn't be an expert backend developer AND an expert DevOps engineer AND an expert frontend architect—there simply weren't enough hours to learn, practice, and maintain mastery across domains.
+Traditional development required separate specialists because mastering multiple domains was cognitively overwhelming. You couldn't be an expert backend developer AND an expert DevOps engineer AND an expert frontend architect: there simply weren't enough hours to learn, practice, and maintain mastery across domains.
 
 Each pillar removes a specific barrier that made M-shaped development nearly impossible:
 
@@ -284,7 +284,7 @@ Each pillar removes a specific barrier that made M-shaped development nearly imp
 - **Pillar 8 (Composable Skills)**: Leverage pre-built domain expertise
 - **Pillar 9 (Universal Cloud Deployment)**: Deploy without operations specialist bottleneck
 
-The key insight: These pillars work together. You don't memorize every DevOps pattern—you use AI agents (Pillar 1), natural language specs (Pillar 2), and SDD (Pillar 7) to maintain professional-level work even when you're not the domain expert.
+The key insight: These pillars work together. You don't memorize every DevOps pattern: you use AI agents (Pillar 1), natural language specs (Pillar 2), and SDD (Pillar 7) to maintain professional-level work even when you're not the domain expert.
 
 ### Real M-Shaped Profiles in Action
 
@@ -315,7 +315,7 @@ M-Shaped development is transformative, but it's not limitless:
 
 **Domain Depth Still Matters**: AI augmentation accelerates learning and fills knowledge gaps, but it doesn't replace years of specialized experience in critical areas. Security expertise, regulatory compliance, safety-critical systems, and advanced research domains still require deep, earned expertise.
 
-**Domain Compatibility Varies**: Some domain combinations naturally reinforce each other—frontend + backend + DevOps creates a cohesive full-stack capability. ML + backend + data engineering builds on similar foundations. But other combinations remain challenging (machine learning research + legal compliance).
+**Domain Compatibility Varies**: Some domain combinations naturally reinforce each other: frontend + backend + DevOps creates a cohesive full-stack capability. ML + backend + data engineering builds on similar foundations. But other combinations remain challenging (machine learning research + legal compliance).
 
 **Organizational Context Matters**: Even if you can span multiple domains effectively, your organization's structure, culture, and risk tolerance shapes how you apply M-shaped capabilities. Large enterprises may still require specialist verification and formal handoffs.
 
@@ -331,7 +331,7 @@ You might be thinking: "Do I really need all nine pillars? Can't I start with a 
 
 Here's the reality: **Partial adoption creates gaps; complete adoption creates advantage.**
 
-A developer who masters six of nine pillars is competent. But the three missing pillars become bottlenecks. Maybe they excel at cloud infrastructure and AI orchestration but struggle with quality automation—their deployments are fast but fragile. Or they're brilliant at full-stack development but weak on operations—their applications work beautifully until production traffic hits.
+A developer who masters six of nine pillars is competent. But the three missing pillars become bottlenecks. Maybe they excel at cloud infrastructure and AI orchestration but struggle with quality automation: their deployments are fast but fragile. Or they're brilliant at full-stack development but weak on operations: their applications work beautifully until production traffic hits.
 
 | Aspect                   | 6/9 Pillars                              | 9/9 Pillars                              |
 | ------------------------ | ---------------------------------------- | ---------------------------------------- |
@@ -344,9 +344,9 @@ The nine pillars aren't a menu where you pick favorites. They're an integrated s
 
 This pattern isn't new. We've seen it before:
 
-**Cloud Computing (2010s)**: Companies that treated it as "just another hosting option" struggled. Those who embraced the full paradigm—elastic scaling, infrastructure-as-code, distributed architectures—gained 10x advantages.
+**Cloud Computing (2010s)**: Companies that treated it as "just another hosting option" struggled. Those who embraced the full paradigm: elastic scaling, infrastructure-as-code, distributed architectures: gained 10x advantages.
 
-**Agile (2000s-2010s)**: Teams that adopted the ceremonies but not the principles found themselves doing "Agile theater"—the rituals without the results. Teams that embraced complete transformation shipped features 3-5x faster.
+**Agile (2000s-2010s)**: Teams that adopted the ceremonies but not the principles found themselves doing "Agile theater": the rituals without the results. Teams that embraced complete transformation shipped features 3-5x faster.
 
 **Mobile-First (2010-2015)**: Companies that treated mobile as "responsive web design" faced existential threats from competitors who built mobile-native experiences.
 
@@ -361,7 +361,7 @@ You're not becoming nine separate experts. You're becoming one integrated profes
 - **Months 13-18**: Advanced orchestration (pillars 7-9: SDD, Composable Skills, Cloud deployment)
 - **Year 2+**: Mastery and specialization depth
 
-Traditional mastery required thousands of solo hours per skill. AI changes the equation—AI as coding partner accelerates learning by 3-5x, integrated tooling reduces context-switching, and cross-pollination means skills reinforce each other.
+Traditional mastery required thousands of solo hours per skill. AI changes the equation: AI as coding partner accelerates learning by 3-5x, integrated tooling reduces context-switching, and cross-pollination means skills reinforce each other.
 
 ---
 
@@ -437,9 +437,9 @@ Be strategic—choose domains that actually compound, not just random skills I'm
 
 You now understand the complete system: what AIDD is (nine characteristics), how it works (nine enabling pillars), and what it enables (M-shaped developers capable of end-to-end development).
 
-But understanding the system isn't enough—you need to see it in action. In the next lesson, we'll explore how these pillars come together in real development workflows, showing you concrete examples of specification-driven development from idea to deployment.
+But understanding the system isn't enough: you need to see it in action. In the next lesson, we'll explore how these pillars come together in real development workflows, showing you concrete examples of specification-driven development from idea to deployment.
 
-The paradigm shift isn't about using individual AI tools better—it's about orchestrating a complete system where human creativity and AI capabilities merge into something neither can achieve alone. Maya's one-week platform wasn't magic; it was the system working as designed. Your journey is learning to work within that same system.
+The paradigm shift isn't about using individual AI tools better: it's about orchestrating a complete system where human creativity and AI capabilities merge into something neither can achieve alone. Maya's one-week platform wasn't magic; it was the system working as designed. Your journey is learning to work within that same system.
 
 ## Flashcards Study Aid
 

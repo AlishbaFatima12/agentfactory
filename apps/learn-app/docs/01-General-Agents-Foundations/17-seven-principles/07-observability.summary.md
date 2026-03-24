@@ -1,6 +1,6 @@
 ### Core Concept
 
-You cannot debug what you cannot see. Observability—visibility into what the AI is doing, why it's doing it, and what happened—transforms AI from an unpredictable black box into a debuggable system. Without it, you're guessing; with it, you're engineering.
+You cannot debug what you cannot see. Observability,visibility into what the AI is doing, why it's doing it, and what happened,transforms AI from an unpredictable black box into a debuggable system. Without it, you're guessing; with it, you're engineering.
 
 ### Key Mental Models
 
@@ -35,6 +35,6 @@ You cannot debug what you cannot see. Observability—visibility into what the A
 
 ### Connections
 
-- **Builds on**: Principle 6 (Constraints)—observability validates that safety constraints are working
-- **Leads to**: Lesson 9 (Putting It Together)—observability enables the Director's Mindset by making AI actions transparent
+- **Builds on**: Principle 6 (Constraints),observability validates that safety constraints are working
+- **Leads to**: Lesson 9 (Putting It Together),observability enables the Director's Mindset by making AI actions transparent
 - **Synergy with P3**: Observability for AI behavior is equivalent to verification for code

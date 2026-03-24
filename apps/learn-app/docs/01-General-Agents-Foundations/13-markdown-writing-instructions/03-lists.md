@@ -62,19 +62,19 @@ teaching_guide:
   session_group: 2
   session_title: "Lists, Code Blocks & Specification Detail"
   key_points:
-    - "The 'Does order matter?' question is the entire decision framework for list types — make students internalize this before teaching syntax"
+    - "The 'Does order matter?' question is the entire decision framework for list types; make students internalize this before teaching syntax"
     - "Unordered lists signal independent items (AI can implement in any order); ordered lists signal dependencies (AI must follow sequence)"
-    - "Nested lists (2-space indent) handle sub-requirements without creating more headings — prevents heading bloat in specifications"
+    - "Nested lists (2-space indent) handle sub-requirements without creating more headings; prevents heading bloat in specifications"
   misconceptions:
-    - "Students use numbered lists for features because numbering 'looks more organized' — emphasize that numbers imply required sequence to AI agents"
-    - "Students forget the space after dash or number — same syntax pattern as forgetting the space after # in Lesson 2, worth calling out as recurring"
-    - "Students think unordered means 'less important' than ordered — it means 'no required sequence,' which is different from priority"
+    - "Students use numbered lists for features because numbering 'looks more organized'; emphasize that numbers imply required sequence to AI agents"
+    - "Students forget the space after dash or number; same syntax pattern as forgetting the space after # in Lesson 2, worth calling out as recurring"
+    - "Students think unordered means 'less important' than ordered; it means 'no required sequence,' which is different from priority"
   discussion_prompts:
     - "Think about your morning routine. Which steps must happen in order (shower before dress) and which can happen in any order (check phone, eat breakfast)? How would you list each type?"
     - "If an AI sees a numbered list of features, what might it do differently than if it sees bullet points for the same features?"
   teaching_tips:
-    - "Start with the opening paragraph-vs-list comparison — it mirrors Lesson 1's structured vs unstructured theme and reinforces the chapter's core idea"
-    - "Use the installation steps example to show why sequence matters — ask 'what happens if you run the program before installing Python?'"
+    - "Start with the opening paragraph-vs-list comparison; it mirrors Lesson 1's structured vs unstructured theme and reinforces the chapter's core idea"
+    - "Use the installation steps example to show why sequence matters; ask 'what happens if you run the program before installing Python?'"
     - "The side-by-side examples (Features with bullets vs Setup with numbers) are a strong whiteboard moment for visual comparison"
     - "Connect the nested list tip to Lesson 2: headings create major sections, nested lists add detail within them"
   assessment_quick_check:
@@ -93,7 +93,7 @@ version: "1.0.1"
 
 # Lists - Organizing Ideas
 
-Headings gave your document a skeleton. Now you need to fill it in — and that's where **lists** come in.
+Headings gave your document a skeleton. Now you need to fill it in; and that's where **lists** come in.
 
 Imagine you're giving someone installation instructions in paragraph form:
 
@@ -250,10 +250,10 @@ If you see this error, try these steps in order:
 4. If still failing, delete venv folder and recreate it
 ```
 
-The sequence matters here too — you check Python first, then location, then reinstall, then venv.
+The sequence matters here too; you check Python first, then location, then reinstall, then venv.
 
 :::info[Expert Insight]
-Notice how ordered lists communicate dependencies. In the installation example, step 2 depends on step 1 completing successfully. This dependency chain is critical for AI agents—they know they can't run the program before installing packages, and can't install packages before verifying Python exists. Clear sequencing prevents AI from generating incorrect workflows where steps run out of order.
+Notice how ordered lists communicate dependencies. In the installation example, step 2 depends on step 1 completing successfully. This dependency chain is critical for AI agents: they know they can't run the program before installing packages, and can't install packages before verifying Python exists. Clear sequencing prevents AI from generating incorrect workflows where steps run out of order.
 :::
 
 ---
@@ -459,15 +459,15 @@ Installation steps must be in the right sequence.
 
 When you use lists correctly in specifications, AI agents can:
 
-1. **Identify distinct items** — "This app has 5 features"
-2. **Understand dependencies** — "Step 2 requires Step 1 to complete first"
-3. **Generate appropriate code** — "Create 5 functions, one for each feature"
-4. **Follow sequences** — "Set up installation script with these 4 steps in order"
+1. **Identify distinct items**; "This app has 5 features"
+2. **Understand dependencies**; "Step 2 requires Step 1 to complete first"
+3. **Generate appropriate code**; "Create 5 functions, one for each feature"
+4. **Follow sequences**; "Set up installation script with these 4 steps in order"
 
-Lists turn vague intentions into countable, trackable requirements — exactly what AI needs to generate accurate code.
+Lists turn vague intentions into countable, trackable requirements; exactly what AI needs to generate accurate code.
 
 :::info[Expert Insight]
-Professional specifications use list type as semantic information. When AI sees an unordered list under "Features," it knows these are parallel capabilities that can be developed independently—perfect for parallel development or modular architecture. When it sees ordered lists under "Installation," it knows to generate sequential scripts or documentation. This semantic clarity reduces miscommunication and speeds up development.
+Professional specifications use list type as semantic information. When AI sees an unordered list under "Features," it knows these are parallel capabilities that can be developed independently: perfect for parallel development or modular architecture. When it sees ordered lists under "Installation," it knows to generate sequential scripts or documentation. This semantic clarity reduces miscommunication and speeds up development.
 :::
 
 ---
@@ -482,7 +482,7 @@ When AI reviews your lists, apply the 4-step framework from Lesson 1: check agai
 
 ### Setup
 
-Use any AI assistant you have access to — ChatGPT, Claude, Gemini, or another tool.
+Use any AI assistant you have access to; ChatGPT, Claude, Gemini, or another tool.
 
 ### Exercise
 

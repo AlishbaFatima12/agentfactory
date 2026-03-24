@@ -9,13 +9,13 @@ slides:
 
 # Chapter 15: Effective Context Engineering with General Agents
 
-You've learned how to use Claude Code and Cowork. You know the tools—CLAUDE.md, Skills, Subagents, Hooks, MCP. Now comes a harder question: **Why do some agents work brilliantly while others fail?**
+You've learned how to use Claude Code and Cowork. You know the tools,CLAUDE.md, Skills, Subagents, Hooks, MCP. Now comes a harder question: **Why do some agents work brilliantly while others fail?**
 
 Two engineers build contract review agents. Same model. Same basic architecture. One sells for $2,000/month. The other can't give it away. What's different?
 
 **The answer: context quality.**
 
-This chapter introduces **Context Engineering**—the quality control discipline for Digital FTE manufacturing. Just as Toyota has systematic practices ensuring every car meets specification, context engineering ensures your Digital FTEs deliver consistent, sellable value.
+This chapter introduces **Context Engineering:** the quality control discipline for Digital FTE manufacturing. Just as Toyota has systematic practices ensuring every car meets specification, context engineering ensures your Digital FTEs deliver consistent, sellable value.
 
 ## 📚 Teaching Aid
 

@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/business-strategy-with-ai
 sidebar_position: 35
 title: "Business Strategy with AI: 10 MBA Frameworks in Your Terminal"
-description: "Apply Harvard, Wharton, and Stanford MBA frameworks — Porter's Five Forces, disruption analysis, financial statement reading, leadership coaching — to your own business using Claude and the StratArts plugin"
+description: "Apply Harvard, Wharton, and Stanford MBA frameworks; Porter's Five Forces, disruption analysis, financial statement reading, leadership coaching; to your own business using Claude and the StratArts plugin"
 keywords:
   [
     business strategy,
@@ -77,7 +77,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 5
-  assessment: "5 concepts (Five Forces, disruption theory, BMC, financial statements, leadership framework) — within B1 limit of 10. Students learn business concepts, not new tool mechanics."
+  assessment: "5 concepts (Five Forces, disruption theory, BMC, financial statements, leadership framework); within B1 limit of 10. Students learn business concepts, not new tool mechanics."
 
 differentiation:
   extension_for_advanced: "Run a full strategy brief combining all 10 frameworks for a real business or startup idea"
@@ -99,21 +99,21 @@ teaching_guide:
   session_group: 11
   session_title: "Business Strategy and Assessment"
   key_points:
-    - "Claude is not just a coding tool — it applies MBA-level business frameworks with the depth of a trained consultant"
+    - "Claude is not just a coding tool; it applies MBA-level business frameworks with the depth of a trained consultant"
     - "The 10 frameworks are grouped into analytical (deep), strategic (medium), and leadership (medium) tiers"
-    - "StratArts plugin provides structured, repeatable business analysis — better than one-shot prompts"
-    - "Financial statement literacy is the single most transferable business skill — every professional benefits"
+    - "StratArts plugin provides structured, repeatable business analysis; better than one-shot prompts"
+    - "Financial statement literacy is the single most transferable business skill; every professional benefits"
   misconceptions:
-    - "Students think AI business analysis replaces domain expertise — it augments expert judgment, it does not substitute for industry knowledge"
-    - "Students may treat AI-generated strategy as final — all AI strategy output needs validation against real market data"
-    - "Students confuse TAM (total addressable market) with realistic revenue — SOM is what matters for planning"
+    - "Students think AI business analysis replaces domain expertise; it augments expert judgment, it does not substitute for industry knowledge"
+    - "Students may treat AI-generated strategy as final; all AI strategy output needs validation against real market data"
+    - "Students confuse TAM (total addressable market) with realistic revenue; SOM is what matters for planning"
   discussion_prompts:
     - "If Claude can produce an MBA-quality Five Forces analysis, what does that mean for the value of an MBA degree?"
     - "What are the limitations of AI-generated business strategy? Where does human judgment remain irreplaceable?"
   teaching_tips:
-    - "Have students analyze an industry they know well first — they can evaluate the AI's output quality when they have domain knowledge"
+    - "Have students analyze an industry they know well first; they can evaluate the AI's output quality when they have domain knowledge"
     - "The financial statements section works best with a real public company (Apple, Tesla, a local company they know)"
-    - "Frame the StratArts install as 'adding a business advisor to your team' — connects back to the Digital FTE concept from Lesson 33"
+    - "Frame the StratArts install as 'adding a business advisor to your team'; connects back to the Digital FTE concept from Lesson 33"
   assessment_quick_check:
     - "Name Porter's Five Forces without looking"
     - "What is the difference between TAM, SAM, and SOM?"

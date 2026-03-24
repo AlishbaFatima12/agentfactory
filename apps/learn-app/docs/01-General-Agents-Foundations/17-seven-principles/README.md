@@ -9,36 +9,36 @@ slides:
 
 # Chapter 17: The Seven Principles of General Agent Problem Solving
 
-You've learned the tools—Claude Code, CLAUDE.md, Skills, Subagents. You've learned context engineering. But here's what separates productive sessions from frustrating ones: **workflow discipline**.
+You've learned the tools,Claude Code, CLAUDE.md, Skills, Subagents. You've learned context engineering. But here's what separates productive sessions from frustrating ones: **workflow discipline**.
 
 Two people use Claude Code for the same task. One finishes in 20 minutes with clean commits. The other spends an hour in correction loops, ends up with a polluted context, and starts over. Same AI. Same capabilities. What's different?
 
 **The answer: principles.**
 
-This chapter teaches the **Seven Principles of General Agent Problem Solving**—the operational patterns that make AI collaboration reliable rather than random. These aren't abstract theories; they're the habits that turn Claude from a novelty into a production tool.
+This chapter teaches the **Seven Principles of General Agent Problem Solving:** the operational patterns that make AI collaboration reliable rather than random. These aren't abstract theories; they're the habits that turn Claude from a novelty into a production tool.
 
 ## From Chaos to System
 
-Early Claude Code users discover a frustrating pattern: sometimes it works brilliantly, sometimes it fails mysteriously. The difference isn't luck—it's whether you're following principles that align with how AI agents actually work.
+Early Claude Code users discover a frustrating pattern: sometimes it works brilliantly, sometimes it fails mysteriously. The difference isn't luck,it's whether you're following principles that align with how AI agents actually work.
 
 The Seven Principles emerged from analyzing thousands of successful and failed AI sessions. They answer questions like: Why does Claude sometimes go in circles? Why do long sessions degrade? Why do some prompts work and others don't?
 
 Each principle addresses a specific failure mode:
-- **Bash is the Key** — Why Claude can do things, not just say things
-- **Code as Universal Interface** — Why precise requests get precise results
-- **Verification as Core Step** — Why "looks right" isn't good enough
-- **Small, Reversible Decomposition** — Why big changes create big problems
-- **Persisting State in Files** — Why Claude forgets (and how to fix it)
-- **Constraints and Safety** — Why guardrails enable autonomy
-- **Observability** — Why you need to see what Claude is doing
+- **Bash is the Key:** Why Claude can do things, not just say things
+- **Code as Universal Interface:** Why precise requests get precise results
+- **Verification as Core Step:** Why "looks right" isn't good enough
+- **Small, Reversible Decomposition:** Why big changes create big problems
+- **Persisting State in Files:** Why Claude forgets (and how to fix it)
+- **Constraints and Safety:** Why guardrails enable autonomy
+- **Observability:** Why you need to see what Claude is doing
 
 ## Prerequisites
 
 This chapter builds directly on:
 
-- **Chapter 14** — You learned Claude Code's core capabilities: CLAUDE.md for persistent memory (Lesson 5), Skills (Lesson 7-8), and Subagent orchestration (Lesson 9)
-- **Chapter 15** — You learned context engineering: why context quality determines agent reliability, and the Tasks system for persistent state
-- **Chapter 16** — You learned Spec-Driven Development: the four-phase workflow that structures AI collaboration
+- **Chapter 14:** You learned Claude Code's core capabilities: CLAUDE.md for persistent memory (Lesson 5), Skills (Lesson 7-8), and Subagent orchestration (Lesson 9)
+- **Chapter 15:** You learned context engineering: why context quality determines agent reliability, and the Tasks system for persistent state
+- **Chapter 16:** You learned Spec-Driven Development: the four-phase workflow that structures AI collaboration
 
 The Seven Principles provide the **conceptual framework** that explains _why_ these capabilities work together effectively.
 
@@ -85,4 +85,4 @@ By the end of this chapter, you'll be able to:
 | 10     | Principles Exercises            | 17 hands-on exercises across 8 modules with capstone projects   |
 | 11     | Chapter Quiz                    | Assessment of principle understanding                           |
 
-Remember the thesis: **General Agents BUILD Custom Agents.** The Seven Principles are HOW you direct those agents reliably—transforming from a typist who types prompts into a director who orchestrates outcomes.
+Remember the thesis: **General Agents BUILD Custom Agents.** The Seven Principles are HOW you direct those agents reliably,transforming from a typist who types prompts into a director who orchestrates outcomes.

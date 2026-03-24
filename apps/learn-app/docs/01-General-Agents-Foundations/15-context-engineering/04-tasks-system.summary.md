@@ -1,6 +1,6 @@
 ### Core Concept
 
-Tasks are filesystem-backed persistent state—your plan lives on disk in `~/.claude/tasks/`, not in context. This decouples your roadmap from your conversation, letting you `/clear` aggressively without losing the project plan.
+Tasks are filesystem-backed persistent state,your plan lives on disk in `~/.claude/tasks/`, not in context. This decouples your roadmap from your conversation, letting you `/clear` aggressively without losing the project plan.
 
 ### Key Mental Models
 
@@ -11,14 +11,14 @@ Tasks are filesystem-backed persistent state—your plan lives on disk in `~/.cl
 ### Critical Patterns
 
 - Phase 1 Plan: Create tasks at session start when context is fresh with proper `blockedBy` dependencies
-- Phase 2 Clear: When context fills (60-80%), run `/clear`—your plan survives on disk
+- Phase 2 Clear: When context fills (60-80%), run `/clear`,your plan survives on disk
 - Phase 3 Execute: Press `Ctrl+T` or ask "What's next?" to see unblocked tasks and continue
 - Cross-session coordination: Use `CLAUDE_CODE_TASK_LIST_ID=project-name` to share task state between terminals
 
 ### Common Mistakes
 
-- Treating context as the only place to store your plan—you'll lose it when you need to clear
-- Not using dependency relationships—tasks complete in wrong order or overlap
+- Treating context as the only place to store your plan,you'll lose it when you need to clear
+- Not using dependency relationships,tasks complete in wrong order or overlap
 - Forgetting the Writer/Reviewer pattern: shared task lists enable multi-session handoffs without stepping on each other
 
 ### Connections

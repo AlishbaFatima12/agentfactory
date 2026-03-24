@@ -75,23 +75,23 @@ teaching_guide:
   session_group: 1
   session_title: "Getting Started with Claude Code"
   key_points:
-    - "Four installation methods exist but native install (curl/bash) is now recommended over npm — students should not default to npm"
-    - "Claude.ai subscription auth vs Console API auth have different billing models — this choice affects cost management for the rest of the course"
-    - "The two-path structure (Lesson 2 paid vs Lesson 3 free) means students can be split — ensure both groups converge at Lesson 4"
+    - "Four installation methods exist but native install (curl/bash) is now recommended over npm; students should not default to npm"
+    - "Claude.ai subscription auth vs Console API auth have different billing models; this choice affects cost management for the rest of the course"
+    - "The two-path structure (Lesson 2 paid vs Lesson 3 free) means students can be split; ensure both groups converge at Lesson 4"
     - "Security section (file access, command execution, sandbox mode) sets safety habits that prevent costly mistakes in later lessons"
   misconceptions:
-    - "Students think they need Node.js for all installation methods — native install requires no dependencies on macOS/Linux"
+    - "Students think they need Node.js for all installation methods; native install requires no dependencies on macOS/Linux"
     - "Students confuse Claude.ai subscription auth with Console API auth and try to paste API keys into the browser flow"
-    - "Students assume 'claude doctor' is only for broken installs — it is useful for verifying a working setup too"
+    - "Students assume 'claude doctor' is only for broken installs; it is useful for verifying a working setup too"
   discussion_prompts:
     - "Why do you think Anthropic offers both subscription-based and pay-per-use authentication? Which model fits your usage pattern?"
     - "What security risks come with giving an AI tool file system access, and how does the approval workflow mitigate them?"
     - "If you had to install Claude Code on a locked-down corporate machine, which method would you try first and why?"
   teaching_tips:
-    - "Do a live install demo — the decision trees in the lesson map directly to real student confusion about which method to pick"
-    - "Have students run 'claude doctor' immediately after install — it catches 90% of configuration issues before they snowball"
-    - "Walk through the Console API key creation flow on-screen — students consistently skip the 'set usage limits' step and get surprised by bills"
-    - "Pair Lesson 2 students with Lesson 3 students at Lesson 4 to compare experiences — this reinforces the backend abstraction concept"
+    - "Do a live install demo; the decision trees in the lesson map directly to real student confusion about which method to pick"
+    - "Have students run 'claude doctor' immediately after install; it catches 90% of configuration issues before they snowball"
+    - "Walk through the Console API key creation flow on-screen; students consistently skip the 'set usage limits' step and get surprised by bills"
+    - "Pair Lesson 2 students with Lesson 3 students at Lesson 4 to compare experiences; this reinforces the backend abstraction concept"
   assessment_quick_check:
     - "Ask each student to run 'claude --version' and share their output"
     - "Have students explain the difference between Claude.ai auth and Console API auth in one sentence"
@@ -159,7 +159,7 @@ Claude Code installation has been simplified with official installers for each p
 ::::os-tabs
 
 ::windows
-**⚠️ Important**: Claude Code requires a bash-compatible shell to run. On Windows, you need **either WSL or Git for Windows** installed—the installer downloads Claude Code, but it runs inside a bash shell.
+**⚠️ Important**: Claude Code requires a bash-compatible shell to run. On Windows, you need **either WSL or Git for Windows** installed: the installer downloads Claude Code, but it runs inside a bash shell.
 
 **Decision Tree**:
 
@@ -261,7 +261,7 @@ claude --version
 X.X.XX (Claude Code)
 ```
 
-(Your version number will differ—Claude Code auto-updates frequently.)
+(Your version number will differ: Claude Code auto-updates frequently.)
 
 #### 💬 AI Colearning Prompt
 
@@ -330,11 +330,11 @@ claude --version
 X.X.XX (Claude Code)
 ```
 
-(Your version number will differ—Claude Code auto-updates frequently.)
+(Your version number will differ: Claude Code auto-updates frequently.)
 
 #### 🎓 Expert Insight
 
-> Claude Code auto-updates itself, so you get the latest features without manual intervention. If you use Homebrew for other tools, `brew install --cask claude-code` integrates Claude Code into your existing workflow—but the native installer works equally well.
+> Claude Code auto-updates itself, so you get the latest features without manual intervention. If you use Homebrew for other tools, `brew install --cask claude-code` integrates Claude Code into your existing workflow: but the native installer works equally well.
 
 ::linux
 **Decision Tree**:
@@ -403,7 +403,7 @@ claude --version
 X.X.XX (Claude Code)
 ```
 
-(Your version number will differ—Claude Code auto-updates frequently.)
+(Your version number will differ: Claude Code auto-updates frequently.)
 
 ::::
 
@@ -492,7 +492,7 @@ Use this command if you encounter issues during installation or authentication.
 
 #### 🎓 Expert Insight
 
-> In AI-native development, terminal comfort is a skill multiplier. The 5 minutes you invest learning basic terminal commands unlocks 10x productivity with AI tools. You're not becoming a "terminal expert"—you're removing the friction between intent and execution.
+> In AI-native development, terminal comfort is a skill multiplier. The 5 minutes you invest learning basic terminal commands unlocks 10x productivity with AI tools. You're not becoming a "terminal expert": you're removing the friction between intent and execution.
 
 ---
 
@@ -567,11 +567,11 @@ What type of Claude access do you have?
     └─ Method 3: Enterprise Authentication
 ```
 
-**If you have both subscription and Console API**: Use Method 1 (Claude App)—it's simpler and provides unified access.
+**If you have both subscription and Console API**: Use Method 1 (Claude App): it's simpler and provides unified access.
 
 #### 🎓 Expert Insight
 
-> In AI-native development, authentication isn't just about access—it's about resource management. Claude.ai (subscription) vs Console API (pay-per-use) vs Enterprise (dedicated capacity) represents different cost models and usage patterns. Understanding your workflow determines which path saves money.
+> In AI-native development, authentication isn't just about access: it's about resource management. Claude.ai (subscription) vs Console API (pay-per-use) vs Enterprise (dedicated capacity) represents different cost models and usage patterns. Understanding your workflow determines which path saves money.
 
 ---
 
@@ -621,7 +621,7 @@ claude "Hello! Can you confirm Claude Code is working?"
 
 > **Ask your AI**: "I just installed Claude Code. Create a simple 'Hello World' workflow that: (a) shows me Claude can read a file, (b) proposes a small change, (c) explains what it did. Use a safe test file."
 
-**Expected Outcome**: Confidence that Claude Code can read, propose changes, and explain actions—plus understanding of the approval workflow.
+**Expected Outcome**: Confidence that Claude Code can read, propose changes, and explain actions: plus understanding of the approval workflow.
 
 ---
 

@@ -1,10 +1,10 @@
 ### Core Concept
 
-Plugins are bundled packages that combine multiple Claude Code capabilities—skills, agents, hooks, commands, and MCP—into single installable units. Check marketplaces before building custom solutions; reuse is strategic, reinvention is waste.
+Plugins are bundled packages that combine multiple Claude Code capabilities: skills, agents, hooks, commands, and MCP: into single installable units. Check marketplaces before building custom solutions; reuse is strategic, reinvention is waste.
 
 ### Key Mental Models
 
-- **Composition Over Creation**: Existing plugins solve common workflow needs (design, testing, document processing)—leverage community intelligence before building custom
+- **Composition Over Creation**: Existing plugins solve common workflow needs (design, testing, document processing): leverage community intelligence before building custom
 - **Bundled Intelligence**: A plugin's manifest declares its components, allowing one install to add skills, agents, hooks, commands, and MCP together
 - **Marketplace-First Discovery**: Start with Anthropic's skills repository (`anthropics/claude-plugins-official`) and custom marketplaces before considering custom development
 

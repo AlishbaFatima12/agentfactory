@@ -67,22 +67,22 @@ teaching_guide:
   session_group: 1
   session_title: "Foundation Principles"
   key_points:
-    - "Verification is continuous, not final — the Generate → Verify → Generate → Verify loop catches errors before they compound"
+    - "Verification is continuous, not final: the Generate → Verify → Generate → Verify loop catches errors before they compound"
     - "Trust zones (1-4) give students a framework: start strict, accelerate with evidence, but NEVER fully trust critical systems like payments or security"
-    - "Verification vs validation are different questions: 'did we build it right' vs 'did we build the right thing' — AI can pass all tests but solve the wrong problem"
+    - "Verification vs validation are different questions: 'did we build it right' vs 'did we build the right thing': AI can pass all tests but solve the wrong problem"
     - "The 80/20 rule makes verification practical: 3 minutes of automated checks (lint + type-check + tests + grep) catches 90% of issues"
   misconceptions:
-    - "Students think verification means 'running tests at the end' — emphasize the continuous loop where each generation is immediately verified"
-    - "Students trust AI more after seeing it produce correct output a few times — Zone 4 (Critical) areas never earn full trust regardless of track record"
-    - "Students think they need to understand every line of code to verify it — the red flags cheat sheet (secrets, silent errors, missing validation) catches the most dangerous issues in 30 seconds"
+    - "Students think verification means 'running tests at the end': emphasize the continuous loop where each generation is immediately verified"
+    - "Students trust AI more after seeing it produce correct output a few times: Zone 4 (Critical) areas never earn full trust regardless of track record"
+    - "Students think they need to understand every line of code to verify it: the red flags cheat sheet (secrets, silent errors, missing validation) catches the most dangerous issues in 30 seconds"
   discussion_prompts:
-    - "Have you ever deployed AI-generated code without testing it? What happened — and which trust zone were you operating in?"
+    - "Have you ever deployed AI-generated code without testing it? What happened: and which trust zone were you operating in?"
     - "Why should payment processing ALWAYS stay in Zone 4, even if the AI gets it right 100 times in a row?"
   teaching_tips:
-    - "The CSV parser before/after example is the perfect opening — students feel the pain of the unverified version and the relief of the verified one"
+    - "The CSV parser before/after example is the perfect opening: students feel the pain of the unverified version and the relief of the verified one"
     - "Draw the trust zones diagram on the whiteboard and have students classify their own AI interactions into zones"
-    - "The risk assessment matrix is the most practical takeaway — have students create one for their own work domain"
-    - "The verification vs validation distinction catches students off guard — use the CSV parser organized-by-date-vs-size example to make it concrete"
+    - "The risk assessment matrix is the most practical takeaway: have students create one for their own work domain"
+    - "The verification vs validation distinction catches students off guard: use the CSV parser organized-by-date-vs-size example to make it concrete"
   assessment_quick_check:
     - "Explain the difference between verification and validation with an example"
     - "Name the four trust zones and give an example task for each"
@@ -91,17 +91,17 @@ teaching_guide:
 
 # Principle 3: Verification as Core Step
 
-You've probably experienced this: An AI tool generates code that looks correct. You accept it, commit it, deploy it. Then—usually at the worst possible moment—you discover it doesn't actually work. Maybe it handles only the happy path and crashes on edge cases. Maybe it uses an API incorrectly. Maybe it has a subtle bug that only appears under load.
+You've probably experienced this: An AI tool generates code that looks correct. You accept it, commit it, deploy it. Then,usually at the worst possible moment,you discover it doesn't actually work. Maybe it handles only the happy path and crashes on edge cases. Maybe it uses an API incorrectly. Maybe it has a subtle bug that only appears under load.
 
 The problem wasn't that the AI failed. The problem was that **you skipped verification**.
 
-Verification is the step where you confirm that AI-generated work actually does what you intend. It's not a nice-to-have—it's the core step that makes agentic workflows reliable. Without verification, you're not collaborating with an intelligent system; you're hoping it gets things right.
+Verification is the step where you confirm that AI-generated work actually does what you intend. It's not a nice-to-have,it's the core step that makes agentic workflows reliable. Without verification, you're not collaborating with an intelligent system; you're hoping it gets things right.
 
 This lesson explores why verification matters, how to integrate it into your workflow, and how to calibrate your trust based on evidence.
 
 ## The Trust Problem: Why AI Output Requires Verification
 
-AI systems are confident—even when they're wrong. They'll generate incorrect API calls with the same certainty as correct ones. They'll miss edge cases while handling the main scenario perfectly. They'll make assumptions that don't match your context.
+AI systems are confident,even when they're wrong. They'll generate incorrect API calls with the same certainty as correct ones. They'll miss edge cases while handling the main scenario perfectly. They'll make assumptions that don't match your context.
 
 ### The Confidence Trap
 
@@ -286,7 +286,7 @@ Not all verification is equal. Different tasks require different approaches.
 **Example**:
 
 ```bash
-# Syntax check only—doesn't verify correctness
+# Syntax check only,doesn't verify correctness
 python -m py_compile generated_file.py
 npm run type-check
 ```

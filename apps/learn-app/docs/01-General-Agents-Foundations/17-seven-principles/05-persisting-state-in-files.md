@@ -59,22 +59,22 @@ teaching_guide:
   session_group: 2
   session_title: "Workflow Principles"
   key_points:
-    - "AI is stateless between sessions — CLAUDE.md is the 'handshake' that gives every session the same project knowledge automatically"
+    - "AI is stateless between sessions: CLAUDE.md is the 'handshake' that gives every session the same project knowledge automatically"
     - "The ROI table (10 min re-explaining x 20 sessions = 3+ hours wasted vs 20 min writing CLAUDE.md once) makes the economic case concrete"
     - "State hierarchy (ephemeral → session → project → permanent) helps students decide WHAT to persist and WHERE"
-    - "ADRs capture the 'why' behind decisions — six months later, neither you nor the AI will remember why you chose PostgreSQL without one"
+    - "ADRs capture the 'why' behind decisions: six months later, neither you nor the AI will remember why you chose PostgreSQL without one"
   misconceptions:
-    - "Students think CLAUDE.md is just a README — it's specifically formatted for AI consumption with conventions, patterns, and constraints that override generic AI behavior"
-    - "Students try to put everything in CLAUDE.md — the 200-line golden rule prevents context overload; link to separate files for domain-specific context"
-    - "Students persist ephemeral state like 'currently debugging login bug' — this clutter makes the file less useful; only persist state that survives across sessions"
+    - "Students think CLAUDE.md is just a README: it's specifically formatted for AI consumption with conventions, patterns, and constraints that override generic AI behavior"
+    - "Students try to put everything in CLAUDE.md: the 200-line golden rule prevents context overload; link to separate files for domain-specific context"
+    - "Students persist ephemeral state like 'currently debugging login bug': this clutter makes the file less useful; only persist state that survives across sessions"
   discussion_prompts:
     - "How many times this week did you re-explain something to an AI that you could have written in a context file once?"
-    - "If you left your project for six months and came back, what decisions would you struggle to remember — and how would ADRs help?"
+    - "If you left your project for six months and came back, what decisions would you struggle to remember: and how would ADRs help?"
   teaching_tips:
-    - "The 'without persistence vs with persistence' ASCII diagram is the best visual — draw the contrast between knowledge lost vs knowledge accumulated"
-    - "Have students create a real CLAUDE.md for their current project during class — the exercise is immediately practical"
-    - "The session journal pattern (AI writes its own notes) is a powerful advanced technique — demo it live if time allows"
-    - "Emphasize that context files must be updated IN THE SAME COMMIT as code changes — tie it back to Principle 4 (atomic changes)"
+    - "The 'without persistence vs with persistence' ASCII diagram is the best visual: draw the contrast between knowledge lost vs knowledge accumulated"
+    - "Have students create a real CLAUDE.md for their current project during class: the exercise is immediately practical"
+    - "The session journal pattern (AI writes its own notes) is a powerful advanced technique: demo it live if time allows"
+    - "Emphasize that context files must be updated IN THE SAME COMMIT as code changes: tie it back to Principle 4 (atomic changes)"
   assessment_quick_check:
     - "Name the four levels of the state hierarchy and give an example of what belongs at each level"
     - "What goes in a CLAUDE.md file vs what should NOT go in one?"
@@ -217,7 +217,7 @@ src/
 
 Every Claude Code session reads this automatically. No more repeating conventions.
 
-> **The Handshake**: When Claude Code sees CLAUDE.md, it doesn't just read it—it treats your project-specific conventions as context that takes precedence over generic patterns. Think of it as a handshake between you and the AI: "These are MY rules for THIS project."
+> **The Handshake**: When Claude Code sees CLAUDE.md, it doesn't just read it,it treats your project-specific conventions as context that takes precedence over generic patterns. Think of it as a handshake between you and the AI: "These are MY rules for THIS project."
 
 ### Other Context Files
 
@@ -314,7 +314,7 @@ Someone opening this project for the first time can:
 4. Read code to understand implementation
 5. Read tests to understand expected behavior
 
-AI can do the same—giving it complete context without you explaining anything.
+AI can do the same,giving it complete context without you explaining anything.
 
 ## Practical State Persistence Patterns
 
@@ -404,7 +404,7 @@ React, Redux, PostgreSQL
 
 But you migrated to MongoDB six months ago.
 
-**Fix**: Treat context files like code—update them in the *same commit* as your code changes. Renamed a function? Update CLAUDE.md in that commit. Changed the tech stack? Update the context file before merging. This ties directly to Principle 4 (Atomic Changes): one logical change, one commit, documentation included.
+**Fix**: Treat context files like code,update them in the *same commit* as your code changes. Renamed a function? Update CLAUDE.md in that commit. Changed the tech stack? Update the context file before merging. This ties directly to Principle 4 (Atomic Changes): one logical change, one commit, documentation included.
 
 ### Anti-Pattern 2: Over-Documenting Trivia
 
@@ -414,7 +414,7 @@ But you migrated to MongoDB six months ago.
 ## We use double quotes for strings
 ```
 
-These are formatting conventions—let your linter handle them. Context files should capture meaningful decisions, not trivia.
+These are formatting conventions,let your linter handle them. Context files should capture meaningful decisions, not trivia.
 
 ### Anti-Pattern 3: Scattered Knowledge
 
@@ -426,7 +426,7 @@ Some decisions in Slack, some in email, some in tickets, some in people's heads.
 
 Pasting entire library documentation, full API references, or every possible convention into CLAUDE.md.
 
-**The problem**: AI has a limited context window. Stuffing too much in means the AI might miss the important parts—or run out of room for your actual conversation.
+**The problem**: AI has a limited context window. Stuffing too much in means the AI might miss the important parts,or run out of room for your actual conversation.
 
 **Golden Rule**: Keep context files dense but concise. Link to external docs instead of pasting them. Summarize the parts you actually use. If your CLAUDE.md is longer than 200 lines, ask yourself what can be moved to separate files that AI reads only when relevant.
 
@@ -461,7 +461,7 @@ With state persistence:
 - Onboarding is self-service
 - Decisions are preserved
 
-The difference is dramatic. With good state persistence, your AI collaboration gets better over time. Each session benefits from all previous documentation. You're not starting fresh—you're continuing an ongoing conversation.
+The difference is dramatic. With good state persistence, your AI collaboration gets better over time. Each session benefits from all previous documentation. You're not starting fresh,you're continuing an ongoing conversation.
 
 ## This Principle in Both Interfaces
 
@@ -472,14 +472,14 @@ Files are the durable layer that both General Agents share. The specific file ty
 | **Context file** | CLAUDE.md (explicit, you create it) | Could use CLAUDE.md if working in folder with one |
 | **Progress tracking** | Request explicit progress.md files | Progress visible in right panel during session |
 | **Artifacts** | All outputs are files in filesystem | Artifacts panel shows generated files |
-| **Session persistence** | Files persist, chat history doesn't | Same—files are the durable layer |
+| **Session persistence** | Files persist, chat history doesn't | Same,files are the durable layer |
 | **Handoff** | Document approach in files for next session | Save outputs for future reference |
 
-**In Cowork**: Ask Cowork to maintain a `progress.md` file tracking what's been completed. Create a `context.md` file before starting complex projects. These files serve the same purpose as CLAUDE.md—they persist knowledge that would otherwise be lost between sessions.
+**In Cowork**: Ask Cowork to maintain a `progress.md` file tracking what's been completed. Create a `context.md` file before starting complex projects. These files serve the same purpose as CLAUDE.md,they persist knowledge that would otherwise be lost between sessions.
 
-**Non-coder tip**: Start every Cowork session with: *"Before answering any questions, please read 'project_brief.docx' in my files."* This simple prompt gives Cowork the same "memory" that CLAUDE.md gives Claude Code. The principle is universal—only the file format changes.
+**Non-coder tip**: Start every Cowork session with: *"Before answering any questions, please read 'project_brief.docx' in my files."* This simple prompt gives Cowork the same "memory" that CLAUDE.md gives Claude Code. The principle is universal,only the file format changes.
 
-**The meta-insight**: Both interfaces are stateless. The AI doesn't remember you. But files do. The more you invest in persistent context files, the smarter every future session becomes—regardless of which interface you use.
+**The meta-insight**: Both interfaces are stateless. The AI doesn't remember you. But files do. The more you invest in persistent context files, the smarter every future session becomes,regardless of which interface you use.
 
 ## Try With AI
 
@@ -552,11 +552,11 @@ For each area, tell me:
 Then, help me create the missing pieces one by one.
 ```
 
-**What you're learning**: How to design a project for maximum reproducibility. You're learning to create a self-documenting codebase where knowledge persists and compounds—making collaboration with humans and AI more effective.
+**What you're learning**: How to design a project for maximum reproducibility. You're learning to create a self-documenting codebase where knowledge persists and compounds,making collaboration with humans and AI more effective.
 
 ### Safety Note
 
-Never persist sensitive data (API keys, passwords, tokens, personal information) in context files like CLAUDE.md. These files are committed to version control and visible to anyone with repository access. Use environment variables (`.env` files in `.gitignore`) for secrets. If you accidentally commit a secret, rotate it immediately—removing it from git history is not enough.
+Never persist sensitive data (API keys, passwords, tokens, personal information) in context files like CLAUDE.md. These files are committed to version control and visible to anyone with repository access. Use environment variables (`.env` files in `.gitignore`) for secrets. If you accidentally commit a secret, rotate it immediately,removing it from git history is not enough.
 
 
 ## Flashcards Study Aid

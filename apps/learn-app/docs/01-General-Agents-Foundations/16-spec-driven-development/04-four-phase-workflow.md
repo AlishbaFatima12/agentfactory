@@ -69,22 +69,22 @@ teaching_guide:
   session_group: 1
   session_title: "Why Specifications Matter"
   key_points:
-    - "Four phases (Research → Specification → Refinement → Implementation) form the backbone of every subsequent lesson in this chapter — students must internalize this sequence"
-    - "The spec as 'source of truth that survives session restarts' is the central insight — conversations vanish, spec.md persists"
-    - "Phase gates replace approval fatigue — you review at transitions, not during every file edit"
+    - "Four phases (Research → Specification → Refinement → Implementation) form the backbone of every subsequent lesson in this chapter: students must internalize this sequence"
+    - "The spec as 'source of truth that survives session restarts' is the central insight: conversations vanish, spec.md persists"
+    - "Phase gates replace approval fatigue: you review at transitions, not during every file edit"
     - "Skip any phase and you get a specific failure: skip research = assumption-based spec, skip refinement = mid-implementation pivots"
   misconceptions:
-    - "Students think SDD is slower than vibe coding — the one-hour comparison table shows SDD produces more durable artifacts even in the same timeframe"
-    - "Students confuse 'specification' with 'to-do list' — the spec includes constraints, success criteria, and architecture, not just tasks"
-    - "Students expect to run all four phases in one session — SDD is designed so the spec persists across sessions"
+    - "Students think SDD is slower than vibe coding: the one-hour comparison table shows SDD produces more durable artifacts even in the same timeframe"
+    - "Students confuse 'specification' with 'to-do list': the spec includes constraints, success criteria, and architecture, not just tasks"
+    - "Students expect to run all four phases in one session: SDD is designed so the spec persists across sessions"
   discussion_prompts:
     - "If you had to stop working mid-project and hand it to someone else tomorrow, what would they need? How does that compare to what a spec provides?"
-    - "When have you experienced 'approval fatigue' — reviewing every small AI output instead of reviewing a plan once?"
+    - "When have you experienced 'approval fatigue': reviewing every small AI output instead of reviewing a plan once?"
   teaching_tips:
     - "Draw the four-phase diagram on the whiteboard and keep it visible throughout Lessons 5-8 as each phase gets its own deep-dive"
-    - "The Vibe Coding vs SDD comparison table is the key persuasion moment — linger on 'what persists' row"
+    - "The Vibe Coding vs SDD comparison table is the key persuasion moment: linger on 'what persists' row"
     - "Use the 'one hour' comparison to counter the 'SDD is slow' objection before students raise it"
-    - "Point out that Lessons 5-8 each cover one phase in detail — this lesson is the map, not the territory"
+    - "Point out that Lessons 5-8 each cover one phase in detail: this lesson is the map, not the territory"
   assessment_quick_check:
     - "Name the four SDD phases in order and state the deliverable of each"
     - "What happens if you skip the Refinement phase and go straight from Specification to Implementation?"
@@ -115,7 +115,7 @@ Phase 4: Implementation (Task Delegation)
     ↓ Atomic tasks with commits
 ```
 
-Each phase has a clear deliverable. Each transition is a checkpoint where you can review, adjust, or stop. Unlike vibe coding—where you're constantly course-correcting during implementation—SDD front-loads the thinking so implementation becomes execution of a well-understood plan.
+Each phase has a clear deliverable. Each transition is a checkpoint where you can review, adjust, or stop. Unlike vibe coding,where you're constantly course-correcting during implementation,SDD front-loads the thinking so implementation becomes execution of a well-understood plan.
 
 ### Phase 1: Research (Parallel Subagents)
 
@@ -127,7 +127,7 @@ Each phase has a clear deliverable. Each transition is a checkpoint where you ca
 - Another analyzes your existing codebase
 - A third researches best practices for your specific challenge
 
-**Why parallel matters**: Each subagent operates with fresh context. They don't pollute each other's thinking. Research that would take hours sequentially becomes minutes in parallel. Different agents may discover conflicting approaches—that's valuable information for your specification.
+**Why parallel matters**: Each subagent operates with fresh context. They don't pollute each other's thinking. Research that would take hours sequentially becomes minutes in parallel. Different agents may discover conflicting approaches,that's valuable information for your specification.
 
 ### Phase 2: Specification (Written Artifact)
 
@@ -167,7 +167,7 @@ Each phase has a clear deliverable. Each transition is a checkpoint where you ca
 3. Commits with an atomic message
 4. Returns control
 
-The main agent orchestrates, tracking progress and handling blockers. If a task fails, only that subagent's context is affected—the overall project state is preserved in git commits.
+The main agent orchestrates, tracking progress and handling blockers. If a task fails, only that subagent's context is affected,the overall project state is preserved in git commits.
 
 **Why delegation matters**: Context isolation prevents accumulated errors. Atomic commits enable rollback. The spec serves as the contract that keeps every subagent aligned.
 
@@ -190,18 +190,18 @@ The sequence isn't arbitrary. Each phase depends on what comes before:
 
 ## The Key Insight: Planning vs Execution
 
-Traditional AI coding blurs planning and execution. You prompt, see code, adjust, prompt again—planning and execution interleaved in a single conversation.
+Traditional AI coding blurs planning and execution. You prompt, see code, adjust, prompt again,planning and execution interleaved in a single conversation.
 
 SDD separates them completely:
 
 | Aspect                 | Vibe Coding                          | SDD                             |
 | ---------------------- | ------------------------------------ | ------------------------------- |
 | **When you review**    | During coding (approval fatigue)     | At phase gates (focused review) |
-| **What persists**      | Nothing—conversation lost on restart | Spec.md survives sessions       |
+| **What persists**      | Nothing,conversation lost on restart | Spec.md survives sessions       |
 | **How you correct**    | Edit generated code                  | Edit spec, regenerate code      |
 | **Context management** | Single accumulating context          | Fresh context per task          |
 
-**Review at phase gates, not during coding.** After research, you review findings. After specification, you review the plan. After refinement, you confirm decisions. During implementation, Claude executes the agreed plan—you don't need to approve every file edit because the spec already captured your intent.
+**Review at phase gates, not during coding.** After research, you review findings. After specification, you review the plan. After refinement, you confirm decisions. During implementation, Claude executes the agreed plan,you don't need to approve every file edit because the spec already captured your intent.
 
 ## The Spec as Source of Truth
 
@@ -222,7 +222,7 @@ Tomorrow's Claude can read today's spec and understand:
 - What constraints exist
 - What success looks like
 
-The specification captures accumulated decisions. Without it, every new session starts from scratch—you're explaining the same context repeatedly instead of building on documented decisions.
+The specification captures accumulated decisions. Without it, every new session starts from scratch,you're explaining the same context repeatedly instead of building on documented decisions.
 
 ## Comparison: One Hour of Vibe Coding vs One Hour of SDD
 
@@ -233,7 +233,7 @@ Consider what happens when you invest one hour in each approach:
 - You prompt Claude, get code, find issues, prompt again
 - Each iteration loses context from earlier iterations
 - After an hour, you have working code that might not fit your architecture
-- Session ends—knowledge about your decisions disappears
+- Session ends,knowledge about your decisions disappears
 - Tomorrow: Start over, re-explaining context
 
 **One hour of SDD:**
@@ -243,7 +243,7 @@ Consider what happens when you invest one hour in each approach:
 - 15 minutes: Refinement phase resolves ambiguities
 - 5 minutes: Implementation begins with clear direction
 - After an hour, you have a spec and partial implementation
-- Session ends—spec preserves all decisions
+- Session ends,spec preserves all decisions
 - Tomorrow: Continue from documented state
 
 The one-hour outcomes look different. Vibe coding produces code faster initially. SDD produces more durable artifacts. For a quick script, vibe coding wins. For a system you'll maintain for months, SDD's documentation pays dividends.
@@ -254,7 +254,7 @@ The one-hour outcomes look different. Vibe coding produces code faster initially
 
 ### Task
 
-Think of a real task you need to accomplish with Claude Code—something you'd normally tackle through conversation. Map it to the four phases:
+Think of a real task you need to accomplish with Claude Code,something you'd normally tackle through conversation. Map it to the four phases:
 
 **Phase 1 (Research):** What would you want subagents to investigate?
 
@@ -278,11 +278,11 @@ Think of a real task you need to accomplish with Claude Code—something you'd n
 - What's the logical sequence?
 - Which tasks could run in parallel?
 
-You don't need to execute this yet—Lessons 5-8 cover each phase in detail. The goal is to start thinking in phases rather than jumping straight to implementation.
+You don't need to execute this yet,Lessons 5-8 cover each phase in detail. The goal is to start thinking in phases rather than jumping straight to implementation.
 
 ## Try With AI
 
-**Running Example:** Throughout this chapter, you'll write "Personal AI Employees in 2026"—a research report for CTOs. This lesson maps that task to the four phases.
+**Running Example:** Throughout this chapter, you'll write "Personal AI Employees in 2026",a research report for CTOs. This lesson maps that task to the four phases.
 
 **Prompt 1: Phase Mapping**
 

@@ -36,14 +36,14 @@ By the end of this chapter, you'll be able to:
 
 ## Chapter Structure
 
-1. **The CLAUDE.md Configuration Hierarchy** — three levels, user vs project scope, @import syntax, .claude/rules/ directory, /memory command
-2. **Path-Specific Rules with Glob Patterns** — YAML frontmatter path scoping, glob syntax (\*\*/\*.test.tsx), token efficiency, decision framework
-3. **Custom Skills with Frontmatter** — context: fork, allowed-tools, argument-hint; skills vs CLAUDE.md decision framework
-4. **Plan Mode vs Direct Execution** — when to use each, the Explore subagent, combining modes, the exam's decision tree
-5. **Iterative Refinement Techniques** — concrete I/O examples, test-driven iteration, interview pattern, single message vs sequential
-6. **Claude Code in CI/CD Pipelines** — the `-p` flag, `--output-format json` + `--json-schema`, CLAUDE.md as CI context, avoiding duplicate comments
-7. **Multi-Pass Review Architecture** — self-review limitations, per-file + cross-file passes, session context isolation, confidence self-reporting
-8. **Session Management — Resume, Fork, and Recovery** — named sessions, fork_session, /compact, informing resumed sessions about changes
+1. **The CLAUDE.md Configuration Hierarchy:** three levels, user vs project scope, @import syntax, .claude/rules/ directory, /memory command
+2. **Path-Specific Rules with Glob Patterns:** YAML frontmatter path scoping, glob syntax (\*\*/\*.test.tsx), token efficiency, decision framework
+3. **Custom Skills with Frontmatter:** context: fork, allowed-tools, argument-hint; skills vs CLAUDE.md decision framework
+4. **Plan Mode vs Direct Execution:** when to use each, the Explore subagent, combining modes, the exam's decision tree
+5. **Iterative Refinement Techniques:** concrete I/O examples, test-driven iteration, interview pattern, single message vs sequential
+6. **Claude Code in CI/CD Pipelines:** the `-p` flag, `--output-format json` + `--json-schema`, CLAUDE.md as CI context, avoiding duplicate comments
+7. **Multi-Pass Review Architecture:** self-review limitations, per-file + cross-file passes, session context isolation, confidence self-reporting
+8. **Session Management. Resume, Fork, and Recovery:** named sessions, fork_session, /compact, informing resumed sessions about changes
 
 ## Prerequisites
 
@@ -60,9 +60,9 @@ By the end of this chapter, you'll be able to:
 
 ## Certification Exam Coverage
 
-This chapter covers **Claude Certified Architect — Foundations** exam domains:
+This chapter covers **Claude Certified Architect. Foundations** exam domains:
 
-- **Domain 3** (20%): Task Statements 3.1-3.6 — CLAUDE.md hierarchy, custom skills, path rules, plan mode, iterative refinement, CI/CD
-- **Domain 4** (20%): Task Statement 4.6 — Multi-pass review architecture
+- **Domain 3** (20%): Task Statements 3.1-3.6. CLAUDE.md hierarchy, custom skills, path rules, plan mode, iterative refinement, CI/CD
+- **Domain 4** (20%): Task Statement 4.6. Multi-pass review architecture
 - Directly covers Sample Questions 6, 10, 11, 12
 - Covers exam Scenarios 2 (Code Generation) and 5 (Claude Code for CI)

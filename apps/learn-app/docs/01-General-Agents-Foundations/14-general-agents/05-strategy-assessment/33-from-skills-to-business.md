@@ -66,22 +66,22 @@ teaching_guide:
   session_group: 11
   session_title: "Business Models and Industry Landscape"
   key_points:
-    - "Skills are intellectual property that can be sold repeatedly — this is fundamentally different from selling time as a consultant"
+    - "Skills are intellectual property that can be sold repeatedly; this is fundamentally different from selling time as a consultant"
     - "The Digital FTE model is the core value proposition: 24/7 availability, 90-95% cost savings per task, instant scaling"
-    - "Four revenue models exist (subscription, success fee, license, marketplace) — students should identify which fits their domain"
-    - "Students can start monetizing NOW with Skill licenses, done-for-you services, and consulting — they do not need Part 6 to begin"
+    - "Four revenue models exist (subscription, success fee, license, marketplace); students should identify which fits their domain"
+    - "Students can start monetizing NOW with Skill licenses, done-for-you services, and consulting; they do not need Part 6 to begin"
   misconceptions:
-    - "Students think they need to build a full production agent (Part 6) before they can make money — Skill licenses and consulting are available immediately"
-    - "Students confuse the Digital FTE cost comparison with replacing all employees — Digital FTEs handle specific repetitive tasks, not entire job roles"
-    - "Students assume the marketplace model is the easiest path — it requires volume and discoverability, while consulting and licensing offer faster first revenue"
+    - "Students think they need to build a full production agent (Part 6) before they can make money; Skill licenses and consulting are available immediately"
+    - "Students confuse the Digital FTE cost comparison with replacing all employees; Digital FTEs handle specific repetitive tasks, not entire job roles"
+    - "Students assume the marketplace model is the easiest path; it requires volume and discoverability, while consulting and licensing offer faster first revenue"
   discussion_prompts:
     - "What expertise do you have that people currently pay consultants for, and how would you encode it into a SKILL.md that could be sold repeatedly?"
-    - "Looking at the four revenue models, which one matches your risk tolerance and current network — and why?"
-    - "The Digital FTE table shows 90-95% cost savings per task — what pushback would a skeptical buyer give, and how would you respond?"
+    - "Looking at the four revenue models, which one matches your risk tolerance and current network; and why?"
+    - "The Digital FTE table shows 90-95% cost savings per task; what pushback would a skeptical buyer give, and how would you respond?"
   teaching_tips:
-    - "Use the Digital FTE comparison table as a discussion anchor — have students calculate cost savings for a task from their own domain using the same format"
+    - "Use the Digital FTE comparison table as a discussion anchor; have students calculate cost savings for a task from their own domain using the same format"
     - "Walk through the 30-Day Roadmap week by week and ask students to name their specific opportunity, task, and first potential customer"
-    - "Distinguish the three 'you can sell today' models from the 'you need Part 6' capabilities — this prevents students from feeling they cannot act yet"
+    - "Distinguish the three 'you can sell today' models from the 'you need Part 6' capabilities; this prevents students from feeling they cannot act yet"
     - "Reference the Agent Factory workflow diagram (Expertise -> Specification -> Claude Code -> Agent + Skills -> Revenue) and have students map their own domain into it"
   assessment_quick_check:
     - "Name the four revenue models for AI agents from this lesson."
@@ -98,7 +98,7 @@ prerequisites:
 
 You've learned to build Skills, MCP integrations, and subagents. But here's the key: **these are products, not just tools.**
 
-Every Skill is intellectual property. The question isn't whether your work has value—it's how you capture that value.
+Every Skill is intellectual property. The question isn't whether your work has value: it's how you capture that value.
 
 ---
 
@@ -175,7 +175,7 @@ You can start making money at step 3 (run the Skills yourself) before deploying 
 
 ## The Marketplace Opportunity
 
-The OpenAI Apps marketplace (chatgpt.com/apps) has 800M+ users and no traditional sales friction. No 6-month sales cycles, no procurement, single-click adoption. Publish a great Skill with clear positioning, and the platform handles distribution. This is the "App Store moment" for AI—just as mobile apps created winners, AI agent marketplaces will too.
+The OpenAI Apps marketplace (chatgpt.com/apps) has 800M+ users and no traditional sales friction. No 6-month sales cycles, no procurement, single-click adoption. Publish a great Skill with clear positioning, and the platform handles distribution. This is the "App Store moment" for AI: just as mobile apps created winners, AI agent marketplaces will too.
 
 ---
 
@@ -220,25 +220,25 @@ You don't need Part 6 to make money. Skills + MCP integrations = immediate consu
 
 > "What domain can I encode into a Skill? What questions do people ask repeatedly? What tasks do others find difficult?"
 
-**What you're learning:** Expertise mining—recognizing what you know that others would pay for. The first step in any monetization strategy.
+**What you're learning:** Expertise mining: recognizing what you know that others would pay for. The first step in any monetization strategy.
 
 **💰 Calculate the Value:**
 
 > "Pick one task. How much does it cost in human time? If an agent could do it for 10% of that cost, what are monthly/yearly savings?"
 
-**What you're learning:** Value quantification—translating capability into dollars. This skill makes the business case for every AI product you build.
+**What you're learning:** Value quantification: translating capability into dollars. This skill makes the business case for every AI product you build.
 
 **🏗️ Design the Product:**
 
 > "Which revenue model fits? What do I need to build (Skills, MCP, hosting)?"
 
-**What you're learning:** Product design thinking—matching technical capabilities to business models. The connection between what you build and how it generates revenue.
+**What you're learning:** Product design thinking: matching technical capabilities to business models. The connection between what you build and how it generates revenue.
 
 ---
 
 ## What's Next
 
-Part 6 teaches you to build production Custom Agents with SDKs. You'll go from Skills (expertise packs) to full agents with guardrails and deployment. The business models here apply directly to those agents—but Custom Agents give you more control, reliability, and scalability.
+Part 6 teaches you to build production Custom Agents with SDKs. You'll go from Skills (expertise packs) to full agents with guardrails and deployment. The business models here apply directly to those agents: but Custom Agents give you more control, reliability, and scalability.
 
 Your journey from learner to builder to business owner begins now.
 

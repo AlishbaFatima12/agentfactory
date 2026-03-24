@@ -69,22 +69,22 @@ teaching_guide:
   session_title: "Deep-Dive into SDD Phases"
   key_points:
     - "The four-part template (Reference Architecture, Current Architecture, Implementation Plan, Checklist) is the spec structure students will use throughout the book"
-    - "Constraints are more important than requirements — they prevent Claude from making reasonable but wrong choices specific to your project"
+    - "Constraints are more important than requirements: they prevent Claude from making reasonable but wrong choices specific to your project"
     - "Success criteria must be testable: ask 'How would I know if this failed?' to convert vague goals into measurable outcomes"
-    - "Checklist items must be atomic enough to delegate to a subagent — the 'junior developer test' (one sentence explanation) is the litmus test"
+    - "Checklist items must be atomic enough to delegate to a subagent: the 'junior developer test' (one sentence explanation) is the litmus test"
   misconceptions:
-    - "Students confuse specs with to-do lists — the Reference Architecture and Current Architecture sections capture WHY decisions were made, not just WHAT to build"
-    - "Students write HOW specs instead of WHAT specs — emphasize the 'describe behavior, not implementation' distinction with the HashMap vs user-lookup example"
-    - "Students think constraints are optional — without constraints, Claude optimizes for the general case which is almost never your specific case"
+    - "Students confuse specs with to-do lists: the Reference Architecture and Current Architecture sections capture WHY decisions were made, not just WHAT to build"
+    - "Students write HOW specs instead of WHAT specs: emphasize the 'describe behavior, not implementation' distinction with the HashMap vs user-lookup example"
+    - "Students think constraints are optional: without constraints, Claude optimizes for the general case which is almost never your specific case"
   discussion_prompts:
-    - "Look at the 'vague spec vs explicit constraints' table — for your current project, what wrong choice would Claude reasonably make without constraints?"
+    - "Look at the 'vague spec vs explicit constraints' table: for your current project, what wrong choice would Claude reasonably make without constraints?"
     - "Why might prescribing implementation details in a spec actually produce worse code than describing behavior?"
-    - "What's a success criterion you've used before that was actually unmeasurable — and how would you rewrite it?"
+    - "What's a success criterion you've used before that was actually unmeasurable: and how would you rewrite it?"
   teaching_tips:
-    - "The Offline-First Sync example is the centerpiece — walk through each section showing how it answers Claude's potential questions"
+    - "The Offline-First Sync example is the centerpiece: walk through each section showing how it answers Claude's potential questions"
     - "Use the vague vs explicit comparison tables as pair exercises: students rewrite vague versions into explicit ones"
     - "The Addy Osmani quote (PRD thinking + SRS precision) is a useful anchor for students with software engineering background"
-    - "Spend extra time on the anti-patterns section — students learn more from what NOT to do than from templates"
+    - "Spend extra time on the anti-patterns section: students learn more from what NOT to do than from templates"
   assessment_quick_check:
     - "Name the four parts of the specification template and explain what each prevents"
     - "Convert this vague success criterion into a measurable one: 'The system should be fast and reliable'"
@@ -95,7 +95,7 @@ teaching_guide:
 
 A spec is a contract between you and Claude. Vague contracts produce vague results.
 
-In the previous lesson, you learned how to spawn parallel subagents to research a problem from multiple angles. Now that you have research findings, you need to capture them in a document that Claude can execute flawlessly. This is where most developers fail—not because they lack research, but because they write specs that leave too much to interpretation.
+In the previous lesson, you learned how to spawn parallel subagents to research a problem from multiple angles. Now that you have research findings, you need to capture them in a document that Claude can execute flawlessly. This is where most developers fail,not because they lack research, but because they write specs that leave too much to interpretation.
 
 Consider this: when you hand a specification to a human developer, they ask clarifying questions. When you hand the same specification to Claude, it makes assumptions. Every assumption is a potential bug. Every ambiguity becomes a decision made without your input. The goal of specification writing is to answer questions before they're asked.
 
@@ -171,7 +171,7 @@ Constraints are often more important than requirements. They prevent Claude from
 
 ### 2. Measurable Success Criteria (Not "Fast", Not "Good")
 
-Every success criterion must be testable. If you can't write a test for it, it's not a criterion—it's a wish.
+Every success criterion must be testable. If you can't write a test for it, it's not a criterion,it's a wish.
 
 | Vague Criteria              | Measurable Criteria                                                               |
 | --------------------------- | --------------------------------------------------------------------------------- |

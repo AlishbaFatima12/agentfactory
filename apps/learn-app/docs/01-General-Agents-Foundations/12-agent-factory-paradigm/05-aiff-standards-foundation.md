@@ -59,26 +59,26 @@ teaching_guide:
   session_group: 2
   session_title: "Agent Capabilities and Standards"
   key_points:
-    - "AAIF is the governance body (like USB Implementers Forum), NOT a technology — students must distinguish the organization from the five standards it governs"
-    - "MCP solves the M×N integration problem — without MCP, 3 AI platforms × 5 tools = 15 custom integrations; with MCP, each tool writes one server"
+    - "AAIF is the governance body (like USB Implementers Forum), NOT a technology; students must distinguish the organization from the five standards it governs"
+    - "MCP solves the M×N integration problem; without MCP, 3 AI platforms × 5 tools = 15 custom integrations; with MCP, each tool writes one server"
     - "The three MCP primitives (Resources=eyes, Tools=hands, Prompts=playbooks) are the building blocks students will use when building Digital FTEs in Parts 5-7"
-    - "Progressive disclosure in Skills (L1: metadata → L2: full instructions → L3: scripts) reduces token usage by 80-98% — this connects directly to Lesson 2's context window constraint"
+    - "Progressive disclosure in Skills (L1: metadata → L2: full instructions → L3: scripts) reduces token usage by 80-98%; this connects directly to Lesson 2's context window constraint"
   misconceptions:
-    - "Students confuse AAIF (the foundation/governance body) with MCP (the protocol) — AAIF governs MCP, AGENTS.md, goose, Skills, and MCP Apps as separate standards"
-    - "Students think AGENTS.md is the same as README.md — README answers 'What is this project?' while AGENTS.md answers 'How should I behave in this project?'"
-    - "Students think goose competes with Claude Code — both are General Agents, but goose is open source so you can study its architecture to build your own Custom Agents"
-    - "Students mix up MCP Tools and Skills — MCP Tools are actions (send email), Skills are expertise (how to handle payment scenarios)"
+    - "Students confuse AAIF (the foundation/governance body) with MCP (the protocol); AAIF governs MCP, AGENTS.md, goose, Skills, and MCP Apps as separate standards"
+    - "Students think AGENTS.md is the same as README.md; README answers 'What is this project?' while AGENTS.md answers 'How should I behave in this project?'"
+    - "Students think goose competes with Claude Code; both are General Agents, but goose is open source so you can study its architecture to build your own Custom Agents"
+    - "Students mix up MCP Tools and Skills; MCP Tools are actions (send email), Skills are expertise (how to handle payment scenarios)"
   discussion_prompts:
-    - "Why did competitors like OpenAI, Anthropic, and Block agree to share their technologies under one foundation — what do they each gain?"
+    - "Why did competitors like OpenAI, Anthropic, and Block agree to share their technologies under one foundation; what do they each gain?"
     - "If you were building a Digital SDR that needed to work across multiple client CRMs, which AAIF standards would matter most and why?"
   teaching_tips:
-    - "Open with the 'Does it work with ChatGPT?' sales scenario — this immediately makes portability feel like a real business problem, not abstract standards talk"
-    - "The USB analogy is the anchor for this entire lesson — draw the parallel: proprietary chargers (pre-USB) = custom AI integrations (pre-MCP)"
-    - "Walk through the MCP Architecture diagram (Host→Client→Server) carefully — students will implement this pattern in Part 6, so invest time here"
-    - "The AGENTS.md hierarchy rule (nearest file wins) is practical knowledge — show a monorepo example where frontend and backend have different conventions"
+    - "Open with the 'Does it work with ChatGPT?' sales scenario; this immediately makes portability feel like a real business problem, not abstract standards talk"
+    - "The USB analogy is the anchor for this entire lesson; draw the parallel: proprietary chargers (pre-USB) = custom AI integrations (pre-MCP)"
+    - "Walk through the MCP Architecture diagram (Host→Client→Server) carefully; students will implement this pattern in Part 6, so invest time here"
+    - "The AGENTS.md hierarchy rule (nearest file wins) is practical knowledge; show a monorepo example where frontend and backend have different conventions"
   assessment_quick_check:
     - "Ask students to match each standard to its purpose: MCP=connectivity, AGENTS.md=adaptability, Skills=expertise, goose=architecture"
-    - "Ask: 'What is the difference between an MCP Resource and an MCP Tool?' — Resources are read-only (eyes), Tools change state (hands)"
+    - "Ask: 'What is the difference between an MCP Resource and an MCP Tool?'; Resources are read-only (eyes), Tools change state (hands)"
     - "Have students explain progressive disclosure in Skills and why it matters for context windows"
 ---
 
@@ -88,13 +88,13 @@ You've built a Digital Sales Development Representative (SDR) that qualifies lea
 
 What do you say?
 
-Before December 9, 2025, you'd face an uncomfortable choice: rebuild for their platform, or lose the deal. Your expertise—the qualification logic, the CRM integrations, the follow-up workflows—was locked to one vendor.
+Before December 9, 2025, you'd face an uncomfortable choice: rebuild for their platform, or lose the deal. Your expertise: the qualification logic, the CRM integrations, the follow-up workflows: was locked to one vendor.
 
 **AAIF changes this equation entirely.**
 
-The Agentic AI Foundation is a Linux Foundation initiative announced December 9, 2025. It provides neutral governance for the open standards that power AI agents—ensuring your Digital FTEs are portable investments, not platform prisoners.
+The Agentic AI Foundation is a Linux Foundation initiative announced December 9, 2025. It provides neutral governance for the open standards that power AI agents: ensuring your Digital FTEs are portable investments, not platform prisoners.
 
-On that date, something unprecedented happened: OpenAI, Anthropic, and Block—companies that compete fiercely for AI market share—came together under the Linux Foundation to donate their core technologies to neutral governance. They were joined by Amazon Web Services, Google, Microsoft, Bloomberg, and Cloudflare as platinum members.
+On that date, something unprecedented happened: OpenAI, Anthropic, and Block: companies that compete fiercely for AI market share: came together under the Linux Foundation to donate their core technologies to neutral governance. They were joined by Amazon Web Services, Google, Microsoft, Bloomberg, and Cloudflare as platinum members.
 
 As Jim Zemlin, Executive Director of the Linux Foundation, stated:
 
@@ -111,7 +111,7 @@ Before USB became a standard, every device had proprietary connectors. Your phon
 Then USB standardized device connections:
 - Any USB device works with any USB port
 - Manufacturers compete on device quality, not connector lock-in
-- Consumers buy with confidence—their investment is portable
+- Consumers buy with confidence: their investment is portable
 
 **AAIF is the USB Implementers Forum for AI agents.**
 
@@ -132,7 +132,7 @@ The economic logic is identical: standards create larger markets, which benefit 
 
 AAIF launched with five projects that together form a complete foundation for portable AI agents:
 
-### 1. Model Context Protocol (MCP) — From Anthropic
+### 1. Model Context Protocol (MCP); From Anthropic
 
 **The Problem It Solves:** Your Digital SDR needs CRM access. Your Digital Accountant needs database connections. Your Digital Legal Assistant needs document repositories. Before MCP, you'd write custom integration code for each combination of agent and tool.
 
@@ -147,9 +147,9 @@ ChatGPT → HubSpot:    Another different custom code
 
 Three AI platforms × two CRMs = six custom integrations. Add Pipedrive, Zoho, Freshsales, calendar, email, database? The combinations explode. This is the **M×N problem**: M different AI models connecting to N different tools requires M×N custom integrations.
 
-**What MCP Enables:** One standard protocol for all agent-to-tool connections. Write an MCP server once, and any MCP-compatible agent can use it—Claude, ChatGPT, Gemini, goose, or your Custom Agents.
+**What MCP Enables:** One standard protocol for all agent-to-tool connections. Write an MCP server once, and any MCP-compatible agent can use it: Claude, ChatGPT, Gemini, goose, or your Custom Agents.
 
-**MCP enables the "Act" power**. Without MCP, your Digital FTE can reason brilliantly about what to do—but it can't actually do it. It can plan the perfect follow-up email, but it can't send it. With MCP, your Digital Sales Agent connects to CRM systems, email platforms, calendars, and databases.
+**MCP enables the "Act" power**. Without MCP, your Digital FTE can reason brilliantly about what to do: but it can't actually do it. It can plan the perfect follow-up email, but it can't send it. With MCP, your Digital Sales Agent connects to CRM systems, email platforms, calendars, and databases.
 
 **Three Universal Primitives:**
 
@@ -197,11 +197,11 @@ As Mike Krieger, Chief Product Officer at Anthropic, stated:
 
 ---
 
-### 2. AGENTS.md — From OpenAI
+### 2. AGENTS.md; From OpenAI
 
 **The Problem It Solves:** You're deploying your Digital SDR to 100 clients. Each has different coding conventions, different build systems, different security requirements. Does each deployment require custom configuration?
 
-**What AGENTS.md Enables:** A standard Markdown file that teaches AI agents local rules. Your Digital FTE reads each client's AGENTS.md and immediately understands their environment—zero customization needed.
+**What AGENTS.md Enables:** A standard Markdown file that teaches AI agents local rules. Your Digital FTE reads each client's AGENTS.md and immediately understands their environment: zero customization needed.
 
 **Why AGENTS.md Exists: Humans ≠ Agents**
 
@@ -257,13 +257,13 @@ company/
 
 ---
 
-### 3. goose — From Block
+### 3. goose; From Block
 
 **The Problem It Solves:** MCP tells agents how to connect. AGENTS.md tells them how to behave. But what does a production agent implementing both actually look like?
 
-**What goose Enables:** A reference architecture for building production agents. Not a demo—the same technology where 75% of Block engineers save 8-10+ hours every week. Apache 2.0 licensed, so you can study the source code.
+**What goose Enables:** A reference architecture for building production agents. Not a demo: the same technology where 75% of Block engineers save 8-10+ hours every week. Apache 2.0 licensed, so you can study the source code.
 
-**Why Reference Implementations Matter:** When you build Custom Agents (Part 6), you'll face questions: How should I structure MCP client connections? How do I handle streaming responses? What's the right way to manage conversation context? You could solve these from first principles. Or you could study how goose solved them—then adapt those patterns to your needs.
+**Why Reference Implementations Matter:** When you build Custom Agents (Part 6), you'll face questions: How should I structure MCP client connections? How do I handle streaming responses? What's the right way to manage conversation context? You could solve these from first principles. Or you could study how goose solved them: then adapt those patterns to your needs.
 
 **goose in the Agent Maturity Model:** General Agents like Claude Code and goose serve as Incubator-stage tools where you explore and prototype. Custom Agents (built with SDKs) emerge in the Specialist stage when requirements crystallize for production. goose is an Incubator-stage agent, but it's **open source**, making it your blueprint for understanding how to build Specialists.
 
@@ -275,11 +275,11 @@ company/
 
 **Key Architecture Patterns:**
 
-1. **Local-First Execution:** Your code and data stay local. For enterprise clients with sensitive IP, this isn't optional—it's required.
+1. **Local-First Execution:** Your code and data stay local. For enterprise clients with sensitive IP, this isn't optional: it's required.
 
 2. **MCP-Native Design:** Adding capabilities means connecting MCP servers. No custom integration code. Every capability follows the same pattern.
 
-3. **Multi-Model Support:** Support for Claude, GPT-4, Gemini, Ollama. You can even configure different models for different tasks—cheaper model for simple operations, premium model for complex reasoning.
+3. **Multi-Model Support:** Support for Claude, GPT-4, Gemini, Ollama. You can even configure different models for different tasks: cheaper model for simple operations, premium model for complex reasoning.
 
 **goose vs Claude Code:** Both are General Agents validating the same standards.
 
@@ -295,11 +295,11 @@ company/
 
 ---
 
-### 4. Agent Skills — Packaging Expertise
+### 4. Agent Skills; Packaging Expertise
 
-**The Problem It Solves:** You've spent years mastering financial analysis, or legal document review, or sales qualification. That expertise lives in your head—tacit knowledge that makes you valuable but can't scale. Every time a client asks you to do what you're expert at, you trade time for money. You're the bottleneck.
+**The Problem It Solves:** You've spent years mastering financial analysis, or legal document review, or sales qualification. That expertise lives in your head: tacit knowledge that makes you valuable but can't scale. Every time a client asks you to do what you're expert at, you trade time for money. You're the bottleneck.
 
-**What Skills Enable:** Agent Skills let you package that expertise. Remember the Matrix? Trinity needs to fly a helicopter. She doesn't know how. Tank loads the skill. Seconds later: "Let's go." That's what you're building. Your domain expertise—years of pattern recognition, decision frameworks, workflow optimization—encoded into portable skills that any AI agent can load when needed.
+**What Skills Enable:** Agent Skills let you package that expertise. Remember the Matrix? Trinity needs to fly a helicopter. She doesn't know how. Tank loads the skill. Seconds later: "Let's go." That's what you're building. Your domain expertise: years of pattern recognition, decision frameworks, workflow optimization: encoded into portable skills that any AI agent can load when needed.
 
 **The SKILL.md Format:**
 
@@ -332,7 +332,7 @@ description: Analyze financial statements and generate investment reports. Use w
 
 **Progressive Disclosure: The Token Efficiency Secret**
 
-Loading everything upfront wastes tokens. If an agent loaded all 50 available skills at startup—full instructions, templates, examples—you'd burn through your context window before doing any actual work.
+Loading everything upfront wastes tokens. If an agent loaded all 50 available skills at startup: full instructions, templates, examples: you'd burn through your context window before doing any actual work.
 
 The solution is **progressive disclosure**: loading only what's needed, when it's needed.
 
@@ -354,8 +354,8 @@ Level 3: When Actually Needed
 
 | Standard | Purpose | Physical Metaphor |
 |----------|---------|-------------------|
-| **MCP** | Connectivity — how agents talk to tools | The agent's **hands** |
-| **Skills** | Expertise — what agents know how to do | The agent's **training** |
+| **MCP** | Connectivity; how agents talk to tools | The agent's **hands** |
+| **Skills** | Expertise; what agents know how to do | The agent's **training** |
 
 **Example: Digital SDR Processing Stripe Payments**
 
@@ -376,11 +376,11 @@ The MCP server gives the agent *access* to Stripe. The skill gives the agent *ex
 
 ---
 
-### 5. MCP Apps Extension — Agent Interfaces
+### 5. MCP Apps Extension; Agent Interfaces
 
 **The Problem It Solves:** Your Digital SDR can qualify leads, update CRM, and schedule meetings. But users interact with it through... chat? Chat is powerful, but it has limits: Data visualizations become text descriptions. Forms become one-question-at-a-time conversations. Complex tables become formatting puzzles. Your competitor's SDR shows buttons, charts, and real-time pipeline views. Yours describes them in paragraphs.
 
-**What MCP Apps Extension Enables:** On November 21, 2025, the MCP community announced the **MCP Apps Extension (SEP-1865)**—allowing MCP servers to deliver interactive user interfaces directly to host applications. Buttons, forms, charts, dashboards—not just chat.
+**What MCP Apps Extension Enables:** On November 21, 2025, the MCP community announced the **MCP Apps Extension (SEP-1865)**:allowing MCP servers to deliver interactive user interfaces directly to host applications. Buttons, forms, charts, dashboards: not just chat.
 
 **The Evolution:**
 
@@ -499,7 +499,7 @@ Learning these standards isn't optional if you're serious about the Agent Factor
 - Your expertise compounds across every agent you build
 - Provider switches are configuration changes, not rewrites
 
-The skills you develop in this lesson—understanding MCP, AGENTS.md, goose, Skills, and how they fit together—pay dividends across every Digital FTE you create.
+The skills you develop in this lesson: understanding MCP, AGENTS.md, goose, Skills, and how they fit together: pay dividends across every Digital FTE you create.
 
 ---
 
@@ -546,7 +546,7 @@ Help me create an AGENTS.md that covers:
 Make it specific enough that an AI agent could follow it precisely without asking clarifying questions.
 ```
 
-**What you're learning:** Specification writing. Good AGENTS.md files are precise and actionable—skills that transfer to writing specs for Digital FTEs. You're learning to encode knowledge that scales.
+**What you're learning:** Specification writing. Good AGENTS.md files are precise and actionable: skills that transfer to writing specs for Digital FTEs. You're learning to encode knowledge that scales.
 
 ### Prompt 3: Skills + MCP Integration Design
 
