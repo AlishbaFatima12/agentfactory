@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/full-skill-library-capstone
 sidebar_position: 15
-title: "Full Banking Agent — Skill Library Build and Capstone"
+title: "Full Banking Agent: Skill Library Build and Capstone"
 description: "Build the complete 17-skill banking plugin, set up 8 scheduled operational tasks, execute a comprehensive cross-pillar capstone scenario producing a 10-slide Board Risk Report, and validate the system with 11 cross-domain queries"
 keywords:
   [
@@ -34,7 +34,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can execute a full cross-pillar scenario for a GBP 4.2B bank — calculating ECL movement, capital dashboard, liquidity ratios, AML metrics, and integrated stress test — and produce a 10-slide Board Risk Report summarising all findings"
+    measurable_at_this_level: "Student can execute a full cross-pillar scenario for a GBP 4.2B bank (calculating ECL movement, capital dashboard, liquidity ratios, AML metrics, and integrated stress test) and produce a 10-slide Board Risk Report summarising all findings"
 
   - name: "Articulate the Five Principles of Banking Domain AI"
     proficiency_level: "B2"
@@ -65,26 +65,26 @@ cognitive_load:
     - "Skill library build using Cowork: structuring domain knowledge into reusable skills via the native skill creation workflow"
     - "Scheduled operational tasks: daily, monthly, quarterly cycles for automated regulatory monitoring"
     - "Board Risk Report: assembling cross-pillar analysis into executive communication"
-  assessment: "3 new concepts at B2 level — within the B2 limit of 10. This capstone integrates all prior concepts rather than introducing many new ones. The cognitive challenge is synthesis across 14 prior lessons into a coherent operational system."
+  assessment: "3 new concepts at B2 level: within the B2 limit of 10. This capstone integrates all prior concepts rather than introducing many new ones. The cognitive challenge is synthesis across 14 prior lessons into a coherent operational system."
 
 differentiation:
   extension_for_advanced: "Add a ninth scheduled task: a weekly model performance monitor that compares predicted PDs against observed default rates (back-testing). Design the skill that would automate this and specify what threshold of PD deviation should trigger a model review."
   remedial_for_struggling: "Focus on Exercise 18 (Board Risk Report) Phase 1 (ECL Movement) and Phase 2 (Capital Dashboard). If you can produce these two dashboards with correct numbers, you have demonstrated the core cross-pillar competence."
 ---
 
-# Full Banking Agent — Skill Library Build and Capstone
+# Full Banking Agent: Skill Library Build and Capstone
 
 In Lessons 1 through 14, you progressed from understanding the three regulatory pillars to calculating ECL, capital ratios, and liquidity metrics, then connected the pillars through cross-pillar integration and validated data integrity through reconciliation. This capstone lesson brings everything together. You will build four banking skills from scratch, set up six scheduled operational tasks, execute a comprehensive cross-pillar scenario, and produce the deliverable that every banking risk function ultimately serves: the Board Risk Report.
 
 This is a 90-minute lesson structured in three parts: skill library build (25 minutes), capstone scenario execution (50 minutes), and chapter summary (15 minutes).
 
-## Part 1: Skill Library Build — Exercise 17
+## Part 1: Skill Library Build: Exercise 17
 
 **Duration**: 25 minutes
 
 ### Building Skills in Cowork
 
-You have completed 14 lessons of banking regulation. Now you package that knowledge into reusable skills that your AI assistant can invoke on demand. In Cowork, you create skills through the native skill creation workflow — describing the persona, decision logic, and validation criteria in the skill instructions form.
+You have completed 14 lessons of banking regulation. Now you package that knowledge into reusable skills that your AI assistant can invoke on demand. In Cowork, you create skills through the native skill creation workflow: describing the persona, decision logic, and validation criteria in the skill instructions form.
 
 Build these four skills:
 
@@ -134,7 +134,7 @@ Create the skill for AML typology identification. The instructions should specif
 
 ### Setting Up 8 Scheduled Tasks
 
-After building the skills, configure these operational tasks using Cowork's `/schedule` feature. Each task runs automatically at the specified frequency — the router loads the correct skills and jurisdiction overlays.
+After building the skills, configure these operational tasks using Cowork's `/schedule` feature. Each task runs automatically at the specified frequency: the router loads the correct skills and jurisdiction overlays.
 
 | Task                        | Frequency                | Skills Used                         | Output                                                           |
 | --------------------------- | ------------------------ | ----------------------------------- | ---------------------------------------------------------------- |
@@ -213,7 +213,7 @@ Test the skill library with these queries. Each should produce a correct, comple
 
 ---
 
-## Part 2: Capstone Scenario — Exercise 18: Board Risk Report
+## Part 2: Capstone Scenario: Exercise 18: Board Risk Report
 
 **Duration**: 50 minutes
 
@@ -258,9 +258,9 @@ Analyse: What is driving the GBP 14M increase? Is it stage migration, PD deterio
 | CET1 ratio          | 4.5%    | 7.0% (+ CCB) | 10.8%         | Above buffer  |
 | Tier 1 ratio        | 6.0%    | 8.5%         | ? (calculate) |               |
 | Total Capital ratio | 8.0%    | 10.5%        | ? (calculate) |               |
-| Leverage ratio      | 3.0%    | —            | 4.6%          | Above minimum |
+| Leverage ratio      | 3.0%    |:            | 4.6%          | Above minimum |
 
-The CET1 ratio has moved from 11.2% to 10.8% — a 40bp decline. What caused it? (The GBP 14M ECL increase, post-tax at 75%, reduces retained earnings by GBP 10.5M.)
+The CET1 ratio has moved from 11.2% to 10.8%: a 40bp decline. What caused it? (The GBP 14M ECL increase, post-tax at 75%, reduces retained earnings by GBP 10.5M.)
 
 ### Phase 3: Liquidity Dashboard
 
@@ -297,7 +297,7 @@ Apply the adverse scenario (GDP -0.8%, unemployment 6.5%, probability 35%) combi
 
 Does the bank breach the combined buffer under the adverse + AML fine scenario? What management actions are available?
 
-### Phase 6: Board Risk Report — 10 Slides
+### Phase 6: Board Risk Report: 10 Slides
 
 Assemble your analysis into a 10-slide Board Risk Report:
 
@@ -316,19 +316,19 @@ Assemble your analysis into a 10-slide Board Risk Report:
 
 ---
 
-## Part 3: Chapter Summary — Five Principles of Banking Domain AI
+## Part 3: Chapter Summary: Five Principles of Banking Domain AI
 
 This chapter covered three regulatory pillars, 18 exercises, and a full cross-pillar capstone. Five principles emerged from this work.
 
 **Principle 1: Model governance applies to AI models.** The same regulatory framework (SR 11-7 in the US, SS1/23 in the UK) that governs traditional risk models applies to AI models used in banking. An AI agent that calculates ECL or stages assets is a model, and it requires validation, back-testing, documentation, and approval just like a statistical model.
 
-**Principle 2: SICR assessment is irreducibly human.** The AI can compute PDs, identify DPD thresholds, and flag qualitative indicators. But the decision of whether a significant increase in credit risk has occurred — particularly for facilities like A004 (job loss, no DPD) and A006 (property decline, no rating change) — requires professional judgment that cannot be fully automated. The agent assists; the human decides.
+**Principle 2: SICR assessment is irreducibly human.** The AI can compute PDs, identify DPD thresholds, and flag qualitative indicators. But the decision of whether a significant increase in credit risk has occurred (particularly for facilities like A004 (job loss, no DPD) and A006 (property decline, no rating change)) requires professional judgment that cannot be fully automated. The agent assists; the human decides.
 
-**Principle 3: AML is a legal obligation, not a data exercise.** Filing a SAR is a legal act with criminal consequences for failure. The tipping-off prohibition is a criminal offence. The agent can gather data, screen transactions, and identify typologies, but it must never file a SAR, communicate suspicion to customers, or make risk acceptance decisions. These boundaries are not optional features — they are legal requirements.
+**Principle 3: AML is a legal obligation, not a data exercise.** Filing a SAR is a legal act with criminal consequences for failure. The tipping-off prohibition is a criminal offence. The agent can gather data, screen transactions, and identify typologies, but it must never file a SAR, communicate suspicion to customers, or make risk acceptance decisions. These boundaries are not optional features: they are legal requirements.
 
 **Principle 4: The Basel IV output floor reshapes the industry.** The 72.5% output floor means that IRB banks can no longer achieve dramatically lower RWA than SA banks for the same portfolio. This compresses the capital advantage of IRB models, changes the economics of low-risk lending (mortgages, sovereigns), and means that the capital calculation you did in Exercise 10 becomes increasingly relevant even for IRB banks.
 
-**Principle 5: Pillar interaction is where insight lives.** A bank that reports ECL, capital, and AML separately gets three answers. A bank that traces the cascade — provision increase reduces CET1, which tightens the buffer, which constrains the dividend, which signals market concern, which increases funding costs, which compresses NII — gets one integrated answer. The banking plugin's router exists specifically to make this integration automatic rather than manual.
+**Principle 5: Pillar interaction is where insight lives.** A bank that reports ECL, capital, and AML separately gets three answers. A bank that traces the cascade (provision increase reduces CET1, which tightens the buffer, which constrains the dividend, which signals market concern, which increases funding costs, which compresses NII) gets one integrated answer. The banking plugin's router exists specifically to make this integration automatic rather than manual.
 
 ## Try With AI
 
@@ -362,7 +362,7 @@ key decision rules, input/output specification, and validation
 criteria that I can paste into the skill creation form.
 ```
 
-**What you are learning:** Building skills from your own expertise is the expert interview approach from Chapter 26. By structuring what you learned in Lessons 3-10 into reusable Cowork skills, you transform knowledge into operational capability. The skill does not replace your judgment — it packages your analytical framework so that routine calculations are automated and edge cases are flagged for human review.
+**What you are learning:** Building skills from your own expertise is the expert interview approach from Chapter 26. By structuring what you learned in Lessons 3-10 into reusable Cowork skills, you transform knowledge into operational capability. The skill does not replace your judgment: it packages your analytical framework so that routine calculations are automated and edge cases are flagged for human review.
 
 ### Prompt 2: Adapt
 
@@ -391,7 +391,7 @@ Then produce a 10-slide Board Risk Report outline with the key
 message for each slide.
 ```
 
-**What you are learning:** The Board Risk Report is the ultimate cross-pillar deliverable. It forces you to integrate ECL, capital, liquidity, and AML into a single narrative that a non-technical board member can understand. The integrated stress test (adverse macro combined with AML fine) demonstrates why cross-pillar analysis matters — a bank that stress-tests ECL and AML separately misses the compounding effect of simultaneous shocks.
+**What you are learning:** The Board Risk Report is the ultimate cross-pillar deliverable. It forces you to integrate ECL, capital, liquidity, and AML into a single narrative that a non-technical board member can understand. The integrated stress test (adverse macro combined with AML fine) demonstrates why cross-pillar analysis matters: a bank that stress-tests ECL and AML separately misses the compounding effect of simultaneous shocks.
 
 ### Prompt 3: Apply
 
@@ -414,7 +414,7 @@ For principle 5, trace a specific cascade: a GBP 50M fraud
 discovery through all three pillars, quantifying each impact.
 ```
 
-**What you are learning:** The five principles are the lasting takeaways from this chapter. Technical skills — ECL calculation, capital ratios, AML screening — can be looked up and re-learned. But the principles shape how you think about banking AI: what must be automated, what must remain human, and where the integration of multiple regulatory views creates insight that no single pillar can provide.
+**What you are learning:** The five principles are the lasting takeaways from this chapter. Technical skills (ECL calculation, capital ratios, AML screening) can be looked up and re-learned. But the principles shape how you think about banking AI: what must be automated, what must remain human, and where the integration of multiple regulatory views creates insight that no single pillar can provide.
 
 ## Flashcards Study Aid
 

@@ -1,8 +1,8 @@
-# Prospect Intelligence and ICP Calibration — Summary
+# Prospect Intelligence and ICP Calibration; Summary
 
 ## Core Concept
 
-An ICP built from closed-won deal analysis replaces gut instinct with measurable dimensions. By analysing 20 historical deals, you extract the patterns that top reps know implicitly — employee size sweet spots, trigger events, buyer personas — and encode them into a configuration file that every rep and every agent command can use. The ICP is a calibration instrument: you validate it by scoring known deals and adjust when scores contradict outcomes.
+An ICP built from closed-won deal analysis replaces gut instinct with measurable dimensions. By analysing 20 historical deals, you extract the patterns that top reps know implicitly: employee size sweet spots, trigger events, buyer personas: and encode them into a configuration file that every rep and every agent command can use. The ICP is a calibration instrument: you validate it by scoring known deals and adjust when scores contradict outcomes.
 
 ## Key Mental Models
 
@@ -14,7 +14,7 @@ An ICP built from closed-won deal analysis replaces gut instinct with measurable
 
 ## Critical Patterns
 
-- The persona-icp skill auto-activates from ICP-related prompts — no explicit invocation needed
+- The persona-icp skill auto-activates from ICP-related prompts: no explicit invocation needed
 - When validating, check two things immediately: (1) employee range should encompass 18 of 20 deals, (2) high-priority timing signals should map to the trigger events from the analysis
 - ICP gaps surface when a technographic signal is too narrow (e.g., "legacy TMS" misses companies with modern stacks that still need workflow automation)
 - Prospect ranking by Total = Fit + Timing + Data Availability reveals that data-rich prospects in secondary geographies can outrank data-poor prospects in primary markets
@@ -22,9 +22,9 @@ An ICP built from closed-won deal analysis replaces gut instinct with measurable
 ## Common Mistakes
 
 - Building an ICP from assumption rather than closed-won data ("mid-size 3PL, growing fast" is Farah's intuition, not a calibrated profile)
-- Not widening the ICP when known deals score below 60 — the deals are correct, the ICP definition is wrong
+- Not widening the ICP when known deals score below 60: the deals are correct, the ICP definition is wrong
 - Treating the ICP as a finished document rather than a calibration instrument that improves with every scoring cycle
-- Ignoring data availability differences across markets — trusting a thin Karachi brief as much as a rich London brief
+- Ignoring data availability differences across markets: trusting a thin Karachi brief as much as a rich London brief
 
 ## Connections
 

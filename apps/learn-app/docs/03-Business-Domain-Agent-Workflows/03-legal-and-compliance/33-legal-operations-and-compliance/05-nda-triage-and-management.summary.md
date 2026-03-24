@@ -1,4 +1,4 @@
-# NDA Triage and Management — Summary
+# NDA Triage and Management; Summary
 
 ## Core Concept
 

@@ -19,14 +19,14 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch35-persistent-agents-schedule-003"
-    front: "What does the /schedule command do — and why is it significant?"
-    back: "/schedule configures an agent to run automatically at a defined cadence (daily, weekly, monthly) with specified scope and alert recipients. It transforms a one-time manual skill invocation into a running system component — the difference between a tool and a continuous employee."
+    front: "What does the /schedule command do: and why is it significant?"
+    back: "/schedule configures an agent to run automatically at a defined cadence (daily, weekly, monthly) with specified scope and alert recipients. It transforms a one-time manual skill invocation into a running system component: the difference between a tool and a continuous employee."
     tags: ["schedule-command", "automation"]
     difficulty: "basic"
 
   - id: "ch35-persistent-agents-schedule-004"
     front: "What does the Procurement Calendar Agent do 60 days before a contract expiry?"
-    back: "The agent calculates the exact notice deadline date from the contract register and alerts the category manager to confirm the non-renewal notice has been sent. If no decision has been made, it issues a CRITICAL escalation to the CPO — because missing the notice deadline typically extends the contract for another full term."
+    back: "The agent calculates the exact notice deadline date from the contract register and alerts the category manager to confirm the non-renewal notice has been sent. If no decision has been made, it issues a CRITICAL escalation to the CPO: because missing the notice deadline typically extends the contract for another full term."
     tags: ["procurement-calendar-agent", "notice-deadline"]
     difficulty: "intermediate"
 
@@ -44,7 +44,7 @@ cards:
 
   - id: "ch35-persistent-agents-schedule-007"
     front: "What escalation design principle prevents CPO alert fatigue?"
-    back: "The threshold between a hot alert and a weekly digest should be calibrated to the point of operational consequence — the event requiring the CPO to act now, not at the next review. Too sensitive creates alert fatigue (important signals get muted); too insensitive means critical signals arrive too late."
+    back: "The threshold between a hot alert and a weekly digest should be calibrated to the point of operational consequence: the event requiring the CPO to act now, not at the next review. Too sensitive creates alert fatigue (important signals get muted); too insensitive means critical signals arrive too late."
     tags: ["alert-fatigue", "escalation-design"]
     difficulty: "intermediate"
 
@@ -56,13 +56,13 @@ cards:
 
   - id: "ch35-persistent-agents-schedule-009"
     front: "Why does an expedited freight spike detected by the Logistics Intelligence Agent involve other agents too?"
-    back: "Expedited freight spikes are usually caused by upstream issues — a vendor delivering late, a demand spike, or production schedule change. The Logistics Intelligence Agent flags the spike; the Vendor Health Monitor and Invoice Reconciliation Agent are needed to identify the root cause. The five agents are a system, not independent tools."
+    back: "Expedited freight spikes are usually caused by upstream issues: a vendor delivering late, a demand spike, or production schedule change. The Logistics Intelligence Agent flags the spike; the Vendor Health Monitor and Invoice Reconciliation Agent are needed to identify the root cause. The five agents are a system, not independent tools."
     tags: ["agent-integration", "expedited-freight"]
     difficulty: "intermediate"
 
   - id: "ch35-persistent-agents-schedule-010"
-    front: "What do none of the five agents do — and what does this mean for procurement teams?"
-    back: "None of the five agents makes a final decision. They surface information that requires human judgment. The Vendor Health Monitor does not decide how to respond to a financial distress signal — it ensures the CPO has the information within two hours, not two weeks. Agents remove latency; humans make the calls."
+    front: "What do none of the five agents do: and what does this mean for procurement teams?"
+    back: "None of the five agents makes a final decision. They surface information that requires human judgment. The Vendor Health Monitor does not decide how to respond to a financial distress signal: it ensures the CPO has the information within two hours, not two weeks. Agents remove latency; humans make the calls."
     tags: ["agent-limitations", "human-judgment"]
     difficulty: "basic"
 
@@ -73,7 +73,7 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch35-persistent-agents-schedule-012"
-    front: "What data feeds the Vendor Health Monitor's watch list — and where does this data originate?"
+    front: "What data feeds the Vendor Health Monitor's watch list: and where does this data originate?"
     back: "The vendor classification register built in Lesson 3 (Exercise 1). The agent monitors all Tier 1 (Strategic) and Tier 4 (Bottleneck) vendors from that register, plus any vendors on a manually added watch list. This connects the capstone classification work to the agent deployment in a direct data dependency."
     tags: ["vendor-health-monitor", "classification-register"]
     difficulty: "intermediate"

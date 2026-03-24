@@ -1,4 +1,4 @@
-# Legal Ops Agents: Intake and Monitoring — Summary
+# Legal Ops Agents: Intake and Monitoring; Summary
 
 ## Core Concept
 

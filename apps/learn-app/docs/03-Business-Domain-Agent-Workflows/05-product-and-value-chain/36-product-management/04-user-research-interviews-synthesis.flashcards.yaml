@@ -44,7 +44,7 @@ cards:
 
   - id: "ch36-04-user-research-interviews-synthesis-007"
     front: "What is the difference between a behavioral finding and a stated preference finding?"
-    back: "Behavioral: 'Participants spent 45-90 minutes reformatting exported data in Excel before sharing reports — all five described this as unavoidable.' Stated preference: 'Users want better export options.' The first is evidence; the second is the users' proposed solution."
+    back: "Behavioral: 'Participants spent 45-90 minutes reformatting exported data in Excel before sharing reports: all five described this as unavoidable.' Stated preference: 'Users want better export options.' The first is evidence; the second is the users' proposed solution."
     tags: ["behavioral-finding", "stated-preference", "difference"]
     difficulty: "intermediate"
 
@@ -56,7 +56,7 @@ cards:
 
   - id: "ch36-04-user-research-interviews-synthesis-009"
     front: "What is the NEVER DO rule for interview questions in the /interview skill spec?"
-    back: "NEVER ask leading questions ('Would you find it useful if...'), NEVER mention your feature idea before exploring the problem space, NEVER use hypothetical questions as primary evidence, NEVER fill silence — wait at least 5 seconds, NEVER draw conclusions from fewer than 5 interviews."
+    back: "NEVER ask leading questions ('Would you find it useful if...'), NEVER mention your feature idea before exploring the problem space, NEVER use hypothetical questions as primary evidence, NEVER fill silence: wait at least 5 seconds, NEVER draw conclusions from fewer than 5 interviews."
     tags: ["interview-questions", "/interview-skill", "never"]
     difficulty: "intermediate"
 

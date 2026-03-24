@@ -1,9 +1,9 @@
 ---
-title: "I — Foundations"
+title: "I: Foundations"
 sidebar_position: 0
 ---
 
-# Section I — Foundations
+# Section I: Foundations
 
 ### Chapters 25, 26, 27: How to Think About Enterprise AI Agents Before Building Them
 

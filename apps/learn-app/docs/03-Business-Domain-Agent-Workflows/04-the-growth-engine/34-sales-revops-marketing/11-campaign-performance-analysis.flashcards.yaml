@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch34-11-performance-analysis-001"
     front: "What is the difference between observation-only reporting and actionable analysis?"
-    back: "Observation says 'CTR is 0.72%.' Actionable analysis says 'CTR is above the local Pakistan benchmark of 0.65% — the real problem is that 43% of downloads come from non-ICP contacts.'"
+    back: "Observation says 'CTR is 0.72%.' Actionable analysis says 'CTR is above the local Pakistan benchmark of 0.65%: the real problem is that 43% of downloads come from non-ICP contacts.'"
     difficulty: "intermediate"
     tags: ["actionable-analysis"]
 
@@ -52,7 +52,7 @@ cards:
 
   - id: "ch34-11-performance-analysis-008"
     front: "LogiFlow avoids the AI conversation and leads with compliance. How does NexaFlow exploit this positioning gap?"
-    back: "NexaFlow positions AI automation as the differentiator LogiFlow lacks and frames itself as 'purpose-built for growing 3PLs, not retrofitted enterprise software' — countering LogiFlow's enterprise-and-compliance angle."
+    back: "NexaFlow positions AI automation as the differentiator LogiFlow lacks and frames itself as 'purpose-built for growing 3PLs, not retrofitted enterprise software': countering LogiFlow's enterprise-and-compliance angle."
     difficulty: "intermediate"
     tags: ["competitive-positioning"]
 
@@ -71,7 +71,7 @@ cards:
 
   - id: "ch34-11-performance-analysis-011"
     front: "Why is Wednesday's sales-marketing alignment meeting critical for scoring accuracy?"
-    back: "Sales provides feedback on which HOT leads actually converted to meetings and which were dead ends. This feedback corrects the scoring model and ICP calibration — without it, marketing optimises for volume while sales complains about quality."
+    back: "Sales provides feedback on which HOT leads actually converted to meetings and which were dead ends. This feedback corrects the scoring model and ICP calibration: without it, marketing optimises for volume while sales complains about quality."
     difficulty: "intermediate"
     why: "What happens to lead scoring accuracy over time without a sales feedback loop?"
     tags: ["sales-marketing-alignment"]
@@ -104,7 +104,7 @@ cards:
 
   - id: "ch34-11-performance-analysis-016"
     front: "NexaFlow's cost per HOT lead is $520, above the $500 target. Why might this not require immediate action?"
-    back: "The $20 overage is marginal and within normal variance. The more important metric is whether those HOT leads are ICP-matched — a $520 ICP-matched lead is more valuable than a $380 non-ICP lead."
+    back: "The $20 overage is marginal and within normal variance. The more important metric is whether those HOT leads are ICP-matched: a $520 ICP-matched lead is more valuable than a $380 non-ICP lead."
     difficulty: "advanced"
     why: "When should you prioritise lead quality metrics over cost metrics?"
     tags: ["cost-metrics"]

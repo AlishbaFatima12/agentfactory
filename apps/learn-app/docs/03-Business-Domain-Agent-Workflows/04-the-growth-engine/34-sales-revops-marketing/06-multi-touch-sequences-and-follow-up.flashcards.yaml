@@ -20,7 +20,7 @@ cards:
 
   - id: "ch34-06-sequences-003"
     front: "Why does each touch in a 6-touch sequence need to add something new rather than repeating the same message?"
-    back: "Repetition signals that the sender has nothing more to offer. Each new value-add (case study, data point, diagnostic question) earns attention cumulatively — because the prospect replies when the accumulated value exceeds the cost of responding."
+    back: "Repetition signals that the sender has nothing more to offer. Each new value-add (case study, data point, diagnostic question) earns attention cumulatively: because the prospect replies when the accumulated value exceeds the cost of responding."
     difficulty: "intermediate"
     why: "At which touch in the Meridian sequence does new value become hardest to generate, and what does that tell you?"
     tags: ["sequence-value"]
@@ -39,7 +39,7 @@ cards:
 
   - id: "ch34-06-sequences-006"
     front: "A sequence's Touch 5 recycles a data point from Touch 2 instead of adding new research. Why is this a signal to intervene?"
-    back: "Recycled personalisation tells the prospect the sender has run out of things to say and is letting a machine keep talking. The fix is adding fresh research — a new LinkedIn post, conference talk, or mutual connection — not deleting the touch."
+    back: "Recycled personalisation tells the prospect the sender has run out of things to say and is letting a machine keep talking. The fix is adding fresh research: a new LinkedIn post, conference talk, or mutual connection: not deleting the touch."
     difficulty: "advanced"
     why: "How would you decide whether to enhance Touch 5 with new research or end the sequence at Touch 4?"
     tags: ["personalisation-decay"]
@@ -52,7 +52,7 @@ cards:
 
   - id: "ch34-06-sequences-008"
     front: "How does a sales sequence differ from a marketing sequence in personalisation depth?"
-    back: "A sales sequence references one specific person's situation — swapping the name breaks every touch. A marketing sequence addresses a segment with shared experiences and works for any member of that segment."
+    back: "A sales sequence references one specific person's situation: swapping the name breaks every touch. A marketing sequence addresses a segment with shared experiences and works for any member of that segment."
     difficulty: "intermediate"
     tags: ["sales-vs-marketing"]
 
@@ -76,7 +76,7 @@ cards:
 
   - id: "ch34-06-sequences-012"
     front: "Why is sending Sarah Chen the same generic nurture email that 500 trial users receive a mistake?"
-    back: "It signals you did not do the research that earned her attention. A marketing sequence sent to a researched prospect contradicts the personalisation the relationship was built on — because it reveals that the earlier personalised outreach was a one-time effort, not ongoing attention."
+    back: "It signals you did not do the research that earned her attention. A marketing sequence sent to a researched prospect contradicts the personalisation the relationship was built on: because it reveals that the earlier personalised outreach was a one-time effort, not ongoing attention."
     difficulty: "advanced"
     why: "What would Sarah conclude about NexaFlow's research capabilities if she received a generic email after four personalised touches?"
     tags: ["sales-vs-marketing"]

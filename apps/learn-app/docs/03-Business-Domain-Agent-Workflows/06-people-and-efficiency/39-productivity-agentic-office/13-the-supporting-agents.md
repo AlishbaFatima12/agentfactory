@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/productivity-agentic-office/the-supporting-agents
 sidebar_position: 13
 title: "The Supporting Agents"
-description: "Deploy the three supporting agents — Memory Keeper, Meeting Intelligence, and Work Tracker — and configure the weekly maintenance cadence that keeps your agentic office accurate and self-sustaining"
+description: "Deploy the three supporting agents: Memory Keeper, Meeting Intelligence, and Work Tracker , and configure the weekly maintenance cadence that keeps your agentic office accurate and self-sustaining"
 keywords:
   [
     "memory keeper agent",
@@ -46,7 +46,7 @@ skills:
     measurable_at_this_level: "Student can trace a delegation from T+0 through confirmation, midpoint check-in, and overdue protocol stages; identify which stage a given delegation is at; and draft the appropriate follow-up message calibrated to the delegatee's profile"
 
 learning_objectives:
-  - objective: "Describe the purpose and primary triggers of each of the three supporting agents — Memory Keeper, Meeting Intelligence, and Work Tracker — and explain how their outputs feed into the Chief of Staff's daily digest"
+  - objective: "Describe the purpose and primary triggers of each of the three supporting agents, Memory Keeper, Meeting Intelligence, and Work Tracker , and explain how their outputs feed into the Chief of Staff's daily digest"
     proficiency_level: "B1"
     bloom_level: "Understand"
     assessment_method: "Student can draw the information flow from each supporting agent to the Chief of Staff and label what type of data each agent contributes"
@@ -56,12 +56,12 @@ learning_objectives:
     bloom_level: "Apply"
     assessment_method: "Student produces a correctly structured agent_integrations YAML block with all required fields populated for all three agents"
 
-  - objective: "Trace a delegation through the full Work Tracker lifecycle — from T+0 creation through confirmation window, midpoint check-in, and overdue protocol — and produce the appropriate follow-up message at each stage"
+  - objective: "Trace a delegation through the full Work Tracker lifecycle, from T+0 creation through confirmation window, midpoint check-in, and overdue protocol , and produce the appropriate follow-up message at each stage"
     proficiency_level: "B2"
     bloom_level: "Apply"
     assessment_method: "Student applies the correct protocol for each stage using a specific delegation from the case study; message tone is calibrated (support, not reprimand)"
 
-  - objective: "Explain the weekly maintenance cadence sequence and rationale — why Memory Keeper runs before Chief of Staff, why Work Tracker audit precedes Meeting Intelligence audit and week-close"
+  - objective: "Explain the weekly maintenance cadence sequence and rationale: why Memory Keeper runs before Chief of Staff, why Work Tracker audit precedes Meeting Intelligence audit and week-close"
     proficiency_level: "B2"
     bloom_level: "Analyze"
     assessment_method: "Student produces the full Monday–Friday agent schedule with time and rationale for each, and can explain one dependency that would break if the order were changed"
@@ -69,40 +69,40 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Trigger-based vs scheduled agents — the difference between the Chief of Staff's fixed-schedule model and the supporting agents' event-driven model"
-    - "Memory Keeper propose-then-confirm pattern — why every work.local.md update requires user confirmation"
-    - "Delegation lifecycle stages — T+0 through confirmation, midpoint check-in, and three-stage overdue protocol"
-    - "Weekly maintenance cadence — the ordered sequence of Monday and Friday agent tasks"
-  assessment: "4 concepts at B1-B2 level. The trigger-based vs scheduled distinction builds on the Chief of Staff lesson and the broader agents-vs-skills distinction. The propose-then-confirm pattern is familiar from the Memory Keeper's operating rule in Lesson 4. The delegation lifecycle extends Lesson 7 (Delegation as a Discipline) into a managed, tracked protocol. The weekly cadence is the culminating concept — it connects all four agents into a coherent operating rhythm."
+    - "Trigger-based vs scheduled agents: the difference between the Chief of Staff's fixed-schedule model and the supporting agents' event-driven model"
+    - "Memory Keeper propose-then-confirm pattern: why every work.local.md update requires user confirmation"
+    - "Delegation lifecycle stages, T+0 through confirmation, midpoint check-in, and three-stage overdue protocol"
+    - "Weekly maintenance cadence: the ordered sequence of Monday and Friday agent tasks"
+  assessment: "4 concepts at B1-B2 level. The trigger-based vs scheduled distinction builds on the Chief of Staff lesson and the broader agents-vs-skills distinction. The propose-then-confirm pattern is familiar from the Memory Keeper's operating rule in Lesson 4. The delegation lifecycle extends Lesson 7 (Delegation as a Discipline) into a managed, tracked protocol. The weekly cadence is the culminating concept ; it connects all four agents into a coherent operating rhythm."
 
 differentiation:
-  extension_for_advanced: "Design a custom trigger for the Memory Keeper that is not in the default list — for example, detecting when a new tool or system is mentioned in a conversation and proposing a terminology entry for it, or detecting when a project deadline is mentioned in passing and proposing to update the project's status in work.local.md. What would the trigger condition look like? What would the proposed entry contain? How would you prevent false positives (triggering on every mention of a known term)?"
-  remedial_for_struggling: "Focus on just one agent first: configure the Memory Keeper and test it by mentioning Dr. Sana Mirza in a conversation where she is not yet in work.local.md. Does it propose the right entry? Does the entry format match what you learned in Lesson 4? Once the Memory Keeper is working, add the Work Tracker. Meeting Intelligence is the most complex — save it for last."
+  extension_for_advanced: "Design a custom trigger for the Memory Keeper that is not in the default list, for example, detecting when a new tool or system is mentioned in a conversation and proposing a terminology entry for it, or detecting when a project deadline is mentioned in passing and proposing to update the project's status in work.local.md. What would the trigger condition look like? What would the proposed entry contain? How would you prevent false positives (triggering on every mention of a known term)?"
+  remedial_for_struggling: "Focus on just one agent first: configure the Memory Keeper and test it by mentioning Dr. Sana Mirza in a conversation where she is not yet in work.local.md. Does it propose the right entry? Does the entry format match what you learned in Lesson 4? Once the Memory Keeper is working, add the Work Tracker. Meeting Intelligence is the most complex, save it for last."
 
 teaching_guide:
   key_points:
-    - "The three supporting agents are invisible infrastructure — you do not interact with them directly most of the time. They run on triggers (memory and work events) or fixed weekly schedules, and their outputs flow to the Chief of Staff rather than directly to you"
-    - "The Memory Keeper's propose-then-confirm rule is non-negotiable — an agent that modifies the organisational memory without confirmation is a liability, not an asset. The confirmation step also trains the user to review what is being captured"
-    - "The Work Tracker's overdue protocol is explicitly calibrated for support, not reprimand — the tone at every stage is 'any blockers I can help with?' not 'why haven't you done this?' This distinction is operational: reprimand tones damage relationships; support tones preserve them while still surfacing the issue"
-    - "The weekly maintenance cadence is ordered by dependency — Memory Keeper runs first because the Chief of Staff's brief depends on current memory; Work Tracker runs before Meeting Intelligence's weekly audit because the delegation audit informs the meeting efficiency analysis"
+    - "The three supporting agents are invisible infrastructure; you do not interact with them directly most of the time. They run on triggers (memory and work events) or fixed weekly schedules, and their outputs flow to the Chief of Staff rather than directly to you"
+    - "The Memory Keeper's propose-then-confirm rule is non-negotiable: an agent that modifies the organisational memory without confirmation is a liability, not an asset. The confirmation step also trains the user to review what is being captured"
+    - "The Work Tracker's overdue protocol is explicitly calibrated for support, not reprimand: the tone at every stage is 'any blockers I can help with?' not 'why haven't you done this?' This distinction is operational: reprimand tones damage relationships; support tones preserve them while still surfacing the issue"
+    - "The weekly maintenance cadence is ordered by dependency, Memory Keeper runs first because the Chief of Staff's brief depends on current memory; Work Tracker runs before Meeting Intelligence's weekly audit because the delegation audit informs the meeting efficiency analysis"
   misconceptions:
     - "The supporting agents will catch everything automatically. Correction: agents catch what they are configured to catch, and what appears in conversations. Context that exists only in email, in physical meetings, or in Slack channels without MCP integration will not be detected. The agents reduce the manual maintenance burden; they do not eliminate it."
-    - "The Memory Keeper applying updates automatically would be more efficient. Correction: efficiency is not the goal — accuracy is. Automatic memory updates that are wrong are worse than no updates at all, because wrong context produces wrong outputs from every other agent. The confirmation step is the quality gate."
+    - "The Memory Keeper applying updates automatically would be more efficient. Correction: efficiency is not the goal, accuracy is. Automatic memory updates that are wrong are worse than no updates at all, because wrong context produces wrong outputs from every other agent. The confirmation step is the quality gate."
   discussion_prompts:
-    - "The Memory Keeper proposes an update to work.local.md after every meeting. What would happen to the system if users stopped confirming these proposals — either because they found them irrelevant, or because the volume was too high? What does this tell you about calibrating how often the Memory Keeper fires?"
-    - "The Work Tracker is designed so that reliability patterns inform better delegation practice, not blame. But you are the one receiving these patterns — how do you decide whether to raise a consistent pattern with a team member? At what point does operational data become a performance conversation?"
+    - "The Memory Keeper proposes an update to work.local.md after every meeting. What would happen to the system if users stopped confirming these proposals, either because they found them irrelevant, or because the volume was too high? What does this tell you about calibrating how often the Memory Keeper fires?"
+    - "The Work Tracker is designed so that reliability patterns inform better delegation practice, not blame. But you are the one receiving these patterns: how do you decide whether to raise a consistent pattern with a team member? At what point does operational data become a performance conversation?"
   teaching_tips:
-    - "The information flow diagram (Work Tracker → Chief of Staff, Meeting Intelligence → Memory Keeper, Memory Keeper → Chief of Staff) is the lesson's core architecture insight. Draw it if you are teaching this live — it makes the dependency chain immediately visible."
-    - "The delegation lifecycle is familiar to any professional who manages people or projects. The T+0 / T+24hr / T+48hr progression maps directly to what good managers do manually — the agent just makes it systematic and removes the cognitive load of tracking it."
+    - "The information flow diagram (Work Tracker → Chief of Staff, Meeting Intelligence → Memory Keeper, Memory Keeper → Chief of Staff) is the lesson's core architecture insight. Draw it if you are teaching this live ; it makes the dependency chain immediately visible."
+    - "The delegation lifecycle is familiar to any professional who manages people or projects. The T+0 / T+24hr / T+48hr progression maps directly to what good managers do manually: the agent just makes it systematic and removes the cognitive load of tracking it."
 ---
 
 # The Supporting Agents
 
-The Chief of Staff is the visible agent — the one you interact with daily. It delivers the digest at 07:00, answers workplace questions in real time, and surfaces whatever has breached a threshold. It is the face of the agentic office.
+The Chief of Staff is the visible agent: the one you interact with daily. It delivers the digest at 07:00, answers workplace questions in real time, and surfaces whatever has breached a threshold. It is the face of the agentic office.
 
 The three supporting agents are the ones that keep the system healthy. They run on triggers rather than schedules: a meeting ends, and the Meeting Intelligence Agent proposes a synthesis. A new person is mentioned, and the Memory Keeper proposes an entry. A delegation goes unconfirmed for 24 hours, and the Work Tracker sends a follow-up.
 
-You will not notice these agents most of the time. That is by design. A well-configured agentic office runs quietly in the background — surfacing what matters, maintaining what degrades, and alerting only when attention is genuinely required.
+You will not notice these agents most of the time. That is by design. A well-configured agentic office runs quietly in the background, surfacing what matters, maintaining what degrades, and alerting only when attention is genuinely required.
 
 This lesson introduces each of the three supporting agents, shows you how to configure them, and establishes the weekly maintenance cadence that makes the system self-sustaining.
 
@@ -110,47 +110,47 @@ This lesson introduces each of the three supporting agents, shows you how to con
 
 ### Purpose
 
-Maintain `work.local.md` as the single source of organisational truth. After every significant interaction — a meeting, a decision, a new person encountered, a new project started, a new term introduced — the Memory Keeper proposes updates to the relevant layer of `work.local.md`. The key word is _proposes_: the Memory Keeper never applies changes without your confirmation.
+Maintain `work.local.md` as the single source of organisational truth. After every significant interaction: a meeting, a decision, a new person encountered, a new project started, a new term introduced: the Memory Keeper proposes updates to the relevant layer of `work.local.md`. The key word is _proposes_: the Memory Keeper never applies changes without your confirmation.
 
 ### How It Works: Trigger-Based Operation
 
 | Trigger                                          | Response                                                                                                      |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| New person mentioned who is not in work.local.md | "I noticed you mentioned [Name] — they're not in workplace memory yet. Want me to add them?"                  |
-| New project name or codename used                | "I noticed you referenced [Project] — I don't have a record of this project. Shall I create a project entry?" |
-| New terminology used                             | "You used the term '[Term]' — I don't have a definition for this. Want me to add it?"                         |
+| New person mentioned who is not in work.local.md | "I noticed you mentioned [Name], they're not in workplace memory yet. Want me to add them?"                  |
+| New project name or codename used                | "I noticed you referenced [Project], I don't have a record of this project. Shall I create a project entry?" |
+| New terminology used                             | "You used the term '[Term]', I don't have a definition for this. Want me to add it?"                         |
 | Meeting completed                                | Proposes updates to project status, decision log, action log, people entries                                  |
 | Decision made                                    | "You made a decision about [topic]. I'll add this to the decision log. Confirm?"                              |
 
-The Memory Keeper activates on these events without waiting to be asked. Its proposal is specific — it drafts the entry it would add, not just a request for information.
+The Memory Keeper activates on these events without waiting to be asked. Its proposal is specific ; it drafts the entry it would add, not just a request for information.
 
 ### Sample Memory Update Proposal
 
 Here is what a Memory Keeper proposal looks like after Monday's Executive Weekly (17 March 2026):
 
 ```
-MEMORY UPDATE PROPOSAL — 17 March 2026
+MEMORY UPDATE PROPOSAL, 17 March 2026
 ════════════════════════════════════════════════════════════
 Based on today's Executive Weekly, I propose these updates to work.local.md:
 
 1. UPDATE: Project Nighthawk status
    Current:  "Facility agreement negotiations stalled"
-   Proposed: "Escalation in progress — formal letter by Zia by Wed 19 March"
+   Proposed: "Escalation in progress, formal letter by Zia by Wed 19 March"
 
-2. UPDATE: Decision log — add D-003
+2. UPDATE: Decision log, add D-003
    "Islamabad expansion deferred; trigger: Nighthawk resolved; Date: 17 March 2026"
 
 3. UPDATE: Delegation log
-   "Omar Farooq — Analytics ROI brief — due Monday 24 March"
+   "Omar Farooq, Analytics ROI brief, due Monday 24 March"
 
 4. NEW: Action item
-   "Nighthawk formal letter — Zia Khan — due Wed 19 March"
+   "Nighthawk formal letter, Zia Khan, due Wed 19 March"
 
 Confirm to apply all? (Y/N) or specify which updates to apply.
 ════════════════════════════════════════════════════════════
 ```
 
-Four proposed updates, all from a single 30-minute meeting. The Memory Keeper surfaces what changed and proposes how to record it — you confirm, reject, or modify. This is the difference between a workplace memory that reflects what actually happened and one that gradually diverges from reality.
+Four proposed updates, all from a single 30-minute meeting. The Memory Keeper surfaces what changed and proposes how to record it; you confirm, reject, or modify. This is the difference between a workplace memory that reflects what actually happened and one that gradually diverges from reality.
 
 ### Weekly Maintenance (Monday 06:30)
 
@@ -166,7 +166,7 @@ Every Monday morning, 15 minutes before the week-ahead brief, the Memory Keeper 
 The maintenance check runs before the Chief of Staff brief so that the brief is working with current information.
 
 :::caution The Propose-Then-Confirm Rule
-The Memory Keeper NEVER applies updates to work.local.md without user confirmation. This rule is absolute. An agent that modifies organisational memory autonomously is a liability — wrong context produces wrong outputs from every downstream agent. The confirmation step is the quality gate that keeps the system accurate.
+The Memory Keeper NEVER applies updates to work.local.md without user confirmation. This rule is absolute. An agent that modifies organisational memory autonomously is a liability, wrong context produces wrong outputs from every downstream agent. The confirmation step is the quality gate that keeps the system accurate.
 :::
 
 ## Agent 3: The Meeting Intelligence Agent
@@ -185,7 +185,7 @@ The Meeting Intelligence Agent watches your Google Calendar via MCP. When a sign
 4. Checks the decision log for prior meetings with this group
 5. Delivers a prep brief using the before/during/after structure
 
-The brief is delivered to your configured channel before the meeting starts — a standing meeting prep that requires no action from you.
+The brief is delivered to your configured channel before the meeting starts: a standing meeting prep that requires no action from you.
 
 The prep brief quality standard:
 
@@ -198,18 +198,18 @@ The prep brief quality standard:
 
 After the meeting ends, the Meeting Intelligence Agent delivers a structured synthesis:
 
-- Decisions made (named attribution — not "the group decided")
+- Decisions made (named attribution, not "the group decided")
 - Actions assigned (with owner, deadline, and confirmation expectation)
 - Deferred items (flagged for the next meeting agenda)
 - Proposed `work.local.md` updates (routed through Memory Keeper for confirmation)
 - Draft distribution message (to send notes to attendees)
 
-The 2-hour window is deliberate — long enough to allow the meeting to properly end, short enough that the notes are still fresh and actionable.
+The 2-hour window is deliberate, long enough to allow the meeting to properly end, short enough that the notes are still fresh and actionable.
 
 ### Weekly Meeting Audit (Friday 17:00)
 
 ```
-WEEKLY MEETING AUDIT — Week of 17 March 2026
+WEEKLY MEETING AUDIT. Week of 17 March 2026
 ════════════════════════════════════════════════════════════
 MEETINGS THIS WEEK:           3 attended
 DECISIONS MADE:               4 decisions (Nighthawk escalation; Islamabad deferral;
@@ -218,19 +218,19 @@ ACTIONS ASSIGNED:             7 actions; 3 completed from last week's actions
 OPEN ACTIONS FROM PRIOR WEEKS: 2 still open (Analytics brief; BSI ISO renewal)
 
 RECURRING MEETING HEALTH:
-  Executive Weekly (Mon 09:00): Producing decisions — on track
-  Chapter Review (Fri 14:00):   Producing decisions — on track
-  Banker Workshop prep (monthly): Status update only — consider async digest instead
+  Executive Weekly (Mon 09:00): Producing decisions, on track
+  Chapter Review (Fri 14:00):   Producing decisions, on track
+  Banker Workshop prep (monthly): Status update only, consider async digest instead
 
 RECOMMENDATION:
   Banker Workshop prep call could be replaced with a written brief circulated
-  Tuesday before the Saturday workshop. No decisions made in last 4 occurrences —
+  Tuesday before the Saturday workshop. No decisions made in last 4 occurrences,
   primarily status updates that could be handled asynchronously.
 ════════════════════════════════════════════════════════════
 ```
 
 :::info Recurring Meeting Efficiency Rule
-The Meeting Intelligence Agent flags any recurring meeting where fewer than 2 decisions were made in the last 4 occurrences, or where the meeting primarily delivers status updates. This is a recommendation, not a directive — some meetings that look like status updates are relationship maintenance that serves a real operational purpose. Check `work.local.md` culture notes before acting on the recommendation.
+The Meeting Intelligence Agent flags any recurring meeting where fewer than 2 decisions were made in the last 4 occurrences, or where the meeting primarily delivers status updates. This is a recommendation, not a directive, some meetings that look like status updates are relationship maintenance that serves a real operational purpose. Check `work.local.md` culture notes before acting on the recommendation.
 :::
 
 ## Agent 4: The Work Tracker
@@ -239,15 +239,15 @@ The Meeting Intelligence Agent flags any recurring meeting where fewer than 2 de
 
 Own the task and delegation lifecycle from capture to completion. Ensure every delegated task has a clear owner, deadline, and follow-up. Surface what is overdue, at risk, or stalled. Produce a daily work snapshot that feeds into the Chief of Staff's digest.
 
-### Daily Pull (06:50 — Before Digest Assembly)
+### Daily Pull (06:50: Before Digest Assembly)
 
 Every morning at 06:50, the Work Tracker pulls open tasks from your task management tool and `work.local.md` action log. It sorts them:
 
 1. 🔴 Overdue (date passed, not complete)
 2. 🟡 Due today
 3. Due this week
-4. Delegated — awaiting confirmation >24 hours (🔴 unconfirmed)
-5. Delegated — in progress
+4. Delegated, awaiting confirmation >24 hours (🔴 unconfirmed)
+5. Delegated, in progress
 6. Backlog
 
 This snapshot is delivered to the Chief of Staff for inclusion in the 07:00 digest.
@@ -266,7 +266,7 @@ The Work Tracker manages every delegation from creation through completion.
 **At T+24hrs (If No Confirmation):**
 
 ```
-Hi Omar — just checking you received my message about the Analytics ROI
+Hi Omar, just checking you received my message about the Analytics ROI
 brief for the investor deck. Can you confirm you're able to take this on
 by Friday 21 March? Let me know if anything needs adjusting.
 ```
@@ -283,13 +283,13 @@ The tone is always: "can you confirm?" Not: "why haven't you responded?" The mes
 | 5–14 days     | Weekly            |
 | >14 days      | Bi-weekly         |
 
-Check-in message: brief, specific, "Any blockers I can help with?" — not a progress demand.
+Check-in message: brief, specific, "Any blockers I can help with?" , not a progress demand.
 
 **Overdue Protocol:**
 
 ```
 Day 1 late:
-"Hi Ayesha — the Chapter 38 data analysis was due yesterday.
+"Hi Ayesha: the Chapter 38 data analysis was due yesterday.
 Any blockers? Happy to help."
 
 Day 3 late:
@@ -297,28 +297,28 @@ Day 3 late:
 AgentFactory review schedule. Can we confirm a new delivery date by EOD?"
 
 Day 7 late:
-[Flag in digest with escalation recommendation — prompt user to decide:
+[Flag in digest with escalation recommendation, prompt user to decide:
 re-route / take back / escalate to Ayesha's manager?]
 ```
 
-The Work Tracker does not make the re-route or escalation decision — it surfaces the situation and asks the user to decide. Escalating to a person's manager is a relationship decision, not an agent decision.
+The Work Tracker does not make the re-route or escalation decision ; it surfaces the situation and asks the user to decide. Escalating to a person's manager is a relationship decision, not an agent decision.
 
 ### Weekly Delegation Audit (Friday 16:00)
 
 ```
-DELEGATION AUDIT — Week of 17 March 2026
+DELEGATION AUDIT. Week of 17 March 2026
 ════════════════════════════════════════════════════════════
 DELEGATIONS THIS WEEK:      4 created
 COMPLETED ON TIME:          2 (50%)
-COMPLETED LATE:             1 — average 2 days late
-STILL OPEN:                 1 (Omar — Analytics ROI brief — due 21 March)
+COMPLETED LATE:             1, average 2 days late
+STILL OPEN:                 1 (Omar, Analytics ROI brief, due 21 March)
 CANCELLED / RE-ROUTED:      0
 
 RELIABILITY PATTERNS:
-Omar Farooq:  3 delegations this quarter — 2/3 on time.
+Omar Farooq:  3 delegations this quarter, 2/3 on time.
               Pattern: confirms quickly, delivers slightly late
               when scope is unclear at point of delegation.
-Ayesha Raza:  2 delegations this quarter — first as new hire.
+Ayesha Raza:  2 delegations this quarter, first as new hire.
               Pattern: insufficient data; check back next quarter.
 
 DELEGATION BRIEF QUALITY (self-assessment):
@@ -334,7 +334,7 @@ capacity or reliability.
 ```
 
 :::info Reliability Patterns, Not Blame
-The Work Tracker surfaces reliability patterns that inform better delegation practice — not individual performance assessments. "Omar is consistently 1-2 days late when scope is unclear" is actionable information about how to write better delegation briefs. It is not a performance record. Never share these patterns with anyone other than the person managing the delegations without explicit instruction.
+The Work Tracker surfaces reliability patterns that inform better delegation practice, not individual performance assessments. "Omar is consistently 1-2 days late when scope is unclear" is actionable information about how to write better delegation briefs. It is not a performance record. Never share these patterns with anyone other than the person managing the delegations without explicit instruction.
 :::
 
 ## How the Four Agents Work Together
@@ -360,7 +360,7 @@ Chief of Staff (07:00 + 06:45 Mon + 17:30 Fri)
   → Digest + week-ahead brief + week-close summary
 ```
 
-The Chief of Staff is the orchestration layer — the visible output surface. The other three agents are the intelligence feeds that keep the orchestration accurate. Without the Memory Keeper, context decays. Without the Work Tracker, tasks fall through the cracks. Without the Meeting Intelligence Agent, decisions made in meetings are never recorded in the system.
+The Chief of Staff is the orchestration layer: the visible output surface. The other three agents are the intelligence feeds that keep the orchestration accurate. Without the Memory Keeper, context decays. Without the Work Tracker, tasks fall through the cracks. Without the Meeting Intelligence Agent, decisions made in meetings are never recorded in the system.
 
 The key insight: **the system maintains itself. You approve the updates.**
 
@@ -370,14 +370,14 @@ The weekly cadence is not arbitrary. The sequence is ordered by dependency:
 
 | Time      | Agent                           | Task                     | Reason for Timing                                                        |
 | --------- | ------------------------------- | ------------------------ | ------------------------------------------------------------------------ |
-| Mon 06:30 | Memory Keeper                   | Weekly maintenance check | Must run before Chief of Staff brief — briefs need current context       |
+| Mon 06:30 | Memory Keeper                   | Weekly maintenance check | Must run before Chief of Staff brief, briefs need current context       |
 | Mon 06:45 | Chief of Staff                  | Week-ahead brief         | After Memory Keeper; 15 min before digest                                |
 | Mon 07:00 | Chief of Staff (+ Work Tracker) | Daily digest             | After brief; Work Tracker daily pull at 06:50 feeds in                   |
 | Fri 16:00 | Work Tracker                    | Weekly delegation audit  | Must run before Meeting Intelligence weekly audit                        |
 | Fri 17:00 | Meeting Intelligence            | Weekly meeting audit     | After delegation audit; meeting efficiency analysis uses delegation data |
 | Fri 17:30 | Chief of Staff                  | Week-close summary       | After both audits; synthesises the full week                             |
 
-If you reverse any of these — running the Chief of Staff brief before Memory Keeper maintenance, or running the week-close before the delegation audit — you get outputs based on stale or incomplete data.
+If you reverse any of these, running the Chief of Staff brief before Memory Keeper maintenance, or running the week-close before the delegation audit; you get outputs based on stale or incomplete data.
 
 ## Configure the Supporting Agents
 
@@ -410,8 +410,8 @@ agent_integrations:
   work_tracker:
     daily_pull_time: "06:50"
     overdue_threshold_days: 7 # Days in progress without update = stale
-    delegation_confirmation_window: 24 # Hours — then send follow-up
-    delegation_unconfirmed_flag: 48 # Hours — then flag RED in digest
+    delegation_confirmation_window: 24 # Hours; then send follow-up
+    delegation_unconfirmed_flag: 48 # Hours; then flag RED in digest
     weekly_delegation_audit: "Friday 16:00"
     escalation_path: "digest flag → explicit message → user decides on COO-level"
 ```
@@ -422,7 +422,7 @@ agent_integrations:
 **Time:** 30 minutes
 **Goal:** Configure all three supporting agents and verify each produces the expected trigger response
 
-### Step 1 — Add Agent Configurations to work.local.md (15 minutes)
+### Step 1: Add Agent Configurations to work.local.md (15 minutes)
 
 Copy the YAML configuration above into your `work.local.md` agent_integrations section, adjusting times and thresholds to match your professional context.
 
@@ -432,21 +432,21 @@ For each agent, consider one calibration decision:
 - **Meeting Intelligence:** Are all your meetings worth a 30-minute prep brief? Add specific meeting types to a `skip_prep_for` list if you have recurring 5-minute standups that do not need this treatment.
 - **Work Tracker:** Is 24 hours the right confirmation window for your delegatees? Some cultures expect confirmation within 4 hours (fast-paced teams); some work on 48-72 hour norms (cross-timezone or academic contexts).
 
-### Step 2 — Test the Memory Keeper Trigger (5 minutes)
+### Step 2: Test the Memory Keeper Trigger (5 minutes)
 
 Open a new Cowork conversation. Mention Dr. Sana Mirza as if she is new to the context:
 
 ```
-I had an introductory call with Sana today — she's joining as Head of Curriculum.
+I had an introductory call with Sana today, she's joining as Head of Curriculum.
 PhD from Aga Khan University in Learning Sciences. She'll be taking ownership
 of the PHM framework. I need to introduce her to Omar carefully.
 ```
 
-Does the Memory Keeper propose an entry? Review the proposed format — does it match the structure you learned in Lesson 4 (role, contact preferences, current focus, communication style)?
+Does the Memory Keeper propose an entry? Review the proposed format, does it match the structure you learned in Lesson 4 (role, contact preferences, current focus, communication style)?
 
 If the Memory Keeper does not fire, check that the `auto_propose_triggers` section includes "new person mentioned" and that the agent is active.
 
-### Step 3 — Simulate a Work Tracker Delegation Alert (5 minutes)
+### Step 3: Simulate a Work Tracker Delegation Alert (5 minutes)
 
 Create a test delegation in your conversation:
 
@@ -470,9 +470,9 @@ does not confirm?
 
 Verify the response matches the T+0 → T+24hr → T+48hr lifecycle.
 
-### Step 4 — Review the Weekly Maintenance Cadence (5 minutes)
+### Step 4: Review the Weekly Maintenance Cadence (5 minutes)
 
-Write out your own weekly cadence — the same six-item schedule from the lesson table, adjusted to your timezone and preferred times. Ask:
+Write out your own weekly cadence: the same six-item schedule from the lesson table, adjusted to your timezone and preferred times. Ask:
 
 - Is there a reason to shift any timing? (e.g. if you work Sunday-Thursday, the Monday/Friday framing may need adjustment)
 - Does the Memory Keeper run early enough to inform the week-ahead brief?
@@ -491,17 +491,17 @@ Use these prompts in Cowork or your preferred AI assistant.
 I want to test whether the Memory Keeper agent is correctly configured.
 
 Here is the scenario: I am Zia Khan. In a conversation, I mention:
-"I had a call this afternoon with Bilal Ahmed — he runs the PIAIC
+"I had a call this afternoon with Bilal Ahmed; he runs the PIAIC
 Lahore chapter. Sharp guy, very data-driven. I might bring him in to
 help with the AgentFactory curriculum review. He prefers async
-communication — long voice notes."
+communication, long voice notes."
 
 Acting as the Memory Keeper agent, what would you propose to add to
 work.local.md? Show me the complete proposed entry in the correct format.
 Then ask: "Confirm to apply? Or would you like to modify the entry?"
 ```
 
-**What you are learning:** The Memory Keeper's value is not in capturing information you consciously decide to record — it is in capturing information that passes through a conversation and would otherwise be forgotten. Bilal Ahmed is not a P1 project; he is someone who might become relevant. That is exactly the kind of context that decays without active maintenance, and exactly what the Memory Keeper is designed to catch.
+**What you are learning:** The Memory Keeper's value is not in capturing information you consciously decide to record; it is in capturing information that passes through a conversation and would otherwise be forgotten. Bilal Ahmed is not a P1 project; he is someone who might become relevant. That is exactly the kind of context that decays without active maintenance, and exactly what the Memory Keeper is designed to catch.
 
 **Adapt**: Configure the Work Tracker's delegation lifecycle for your own team dynamics.
 
@@ -524,7 +524,7 @@ Given this context, recommend:
 Then draft the work_tracker YAML configuration block for my context.
 ```
 
-**What you are learning:** The default thresholds (24 hours confirmation, 7 days stale) are calibrated for a professional working at Panaversity's pace. Your context may differ significantly — and a miscalibrated Work Tracker either creates noise (too aggressive) or misses issues (too lenient). Thinking through your own thresholds forces you to articulate your delegation norms explicitly, often for the first time.
+**What you are learning:** The default thresholds (24 hours confirmation, 7 days stale) are calibrated for a professional working at Panaversity's pace. Your context may differ significantly , and a miscalibrated Work Tracker either creates noise (too aggressive) or misses issues (too lenient). Thinking through your own thresholds forces you to articulate your delegation norms explicitly, often for the first time.
 
 **Apply**: Design the weekly maintenance cadence for a role with a different rhythm.
 
@@ -551,7 +551,7 @@ Design the weekly maintenance cadence:
 Justify each timing choice based on the role context.
 ```
 
-**What you are learning:** The cadence in the lesson is a default, not a universal. The logic — Memory Keeper before Chief of Staff, Work Tracker before Meeting Intelligence before week-close — is universal. The specific times are not. Adapting the cadence to a different role's rhythm is an exercise in understanding the dependencies, not just copying the schedule.
+**What you are learning:** The cadence in the lesson is a default, not a universal. The logic, Memory Keeper before Chief of Staff, Work Tracker before Meeting Intelligence before week-close: is universal. The specific times are not. Adapting the cadence to a different role's rhythm is an exercise in understanding the dependencies, not just copying the schedule.
 :::
 
 ## Flashcards Study Aid

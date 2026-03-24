@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/three-level-context-system
 sidebar_position: 4
 title: "The Three-Level Context System"
-description: "Understand how enterprise platforms enforce context hierarchies through platform, organisation, and plugin levels — and apply the diagnostic sequence to identify why a SKILL.md instruction may not be honoured"
+description: "Understand how enterprise platforms enforce context hierarchies through platform, organisation, and plugin levels: and apply the diagnostic sequence to identify why a SKILL.md instruction may not be honoured"
 keywords:
   [
     "three-level context",
@@ -27,7 +27,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Information Literacy"
-    measurable_at_this_level: "Student can describe the three levels of the three-level context hierarchy — platform, organisation, and plugin — name who sets each level, and explain the override direction (higher levels silently override lower levels)"
+    measurable_at_this_level: "Student can describe the three levels of the three-level context hierarchy (platform, organisation, and plugin) name who sets each level, and explain the override direction (higher levels silently override lower levels)"
 
   - name: "Diagnose SKILL.md Override Behaviour"
     proficiency_level: "B1"
@@ -65,7 +65,7 @@ cognitive_load:
     - "Platform context (Anthropic-set, immutable)"
     - "Organisation context (admin-set, governs all plugins)"
     - "Plugin context as SKILL.md (knowledge worker-set, operates within higher constraints)"
-  assessment: "3 concepts at A2-B1 level — well within the 5-7 cognitive limit for this tier. Students have completed L01-L03 and understand the plugin package structure (SKILL.md, connectors, commands, agents, manifest). This lesson adds the governance hierarchy that sits above those components, building on established vocabulary without requiring new vocabulary from scratch."
+  assessment: "3 concepts at A2-B1 level: well within the 5-7 cognitive limit for this tier. Students have completed L01-L03 and understand the plugin package structure (SKILL.md, connectors, commands, agents, manifest). This lesson adds the governance hierarchy that sits above those components, building on established vocabulary without requiring new vocabulary from scratch."
 
 differentiation:
   extension_for_advanced: "Consider a regulated industry where you work or know well. Map out what you would expect to find at each of the three context levels: what would Anthropic likely constrain at platform level, what would your organisation's administrator configure at organisation level, and what would a domain expert author at plugin level? Identify one scenario where an organisation-level policy might conflict with what a knowledge worker wants to achieve, and describe how you would work through that conflict."
@@ -77,41 +77,41 @@ teaching_guide:
   session_title: "Context and Governance"
   key_points:
     - "The three-level hierarchy runs in one direction: platform overrides organisation, organisation overrides plugin. Lower levels cannot override higher levels."
-    - "Silent override is a feature, not a bug. The agent does not announce when a SKILL.md instruction has been superseded — it simply behaves as the higher level requires. Knowledge workers must understand this before they encounter it in practice."
+    - "Silent override is a feature, not a bug. The agent does not announce when a SKILL.md instruction has been superseded: it simply behaves as the higher level requires. Knowledge workers must understand this before they encounter it in practice."
     - "The diagnostic sequence mirrors the hierarchy: when an agent does not do what the SKILL.md says, check platform constraints first, then organisation policies, then the SKILL.md itself. Starting with the SKILL.md is the most common error."
     - "Plugin-level constraints can only be more restrictive than higher levels, not more permissive. The SKILL.md can narrow the agent's behaviour; it cannot expand it beyond what the organisation or platform allows."
     - "The knowledge worker's practical implication: before rewriting a SKILL.md instruction, confirm the behaviour is actually possible within higher-level constraints."
   misconceptions:
     - "Students almost universally assume that if they write a SKILL.md instruction, it will be followed. The lesson must make vivid that this is conditional on higher-level permissions. Use the concrete scenario of a compliance logging requirement to ground this."
-    - "Students may expect the agent to tell them when an override has occurred — 'I cannot do that because your organisation has a policy.' Clarify that overrides are silent: the agent simply does not do the thing, without explanation. This is counterintuitive and important."
+    - "Students may expect the agent to tell them when an override has occurred: 'I cannot do that because your organisation has a policy.' Clarify that overrides are silent: the agent simply does not do the thing, without explanation. This is counterintuitive and important."
     - "Students may think platform-level constraints are about model capability ('the AI can't do this'). Clarify that platform-level constraints are policy decisions made by Anthropic, not technical limitations of the model."
     - "Students may believe they can appeal to a higher authority to change organisation-level policies. Clarify the role boundaries: the knowledge worker configures within the boundaries the admin sets. Changing those boundaries requires working with the administrator, not the SKILL.md."
   discussion_prompts:
-    - "Think about a rule your organisation has that applies to everyone regardless of their role — a data handling policy, a compliance requirement, a reporting obligation. How would that rule appear at the organisation context level? What would it prevent an agent from doing, even if a knowledge worker tried to instruct otherwise?"
+    - "Think about a rule your organisation has that applies to everyone regardless of their role: a data handling policy, a compliance requirement, a reporting obligation. How would that rule appear at the organisation context level? What would it prevent an agent from doing, even if a knowledge worker tried to instruct otherwise?"
     - "If an agent in your domain ignored a SKILL.md instruction you were confident was correctly written, what would your first diagnostic step be? Why does it matter to check platform and organisation levels before assuming the SKILL.md has an error?"
   teaching_tips:
-    - "Open the lesson with the scenario rather than the framework. Students who encounter the problem first — 'why is my agent ignoring this instruction?' — absorb the three-level explanation more readily than those who receive the framework in the abstract."
+    - "Open the lesson with the scenario rather than the framework. Students who encounter the problem first ('why is my agent ignoring this instruction?') absorb the three-level explanation more readily than those who receive the framework in the abstract."
     - "The silent override is the most counterintuitive element. Spend time on it. Students who work through the compliance logging example typically understand the mechanism more concretely than those who receive only the conceptual explanation."
     - "Frame the diagnostic sequence as a professional skill, not a debugging workaround. Senior professionals who work with AI agents will run this diagnostic regularly. Building the habit now prevents hours of unnecessary SKILL.md revision later."
-    - "The new employee analogy is useful for the remedial path but can be introduced for the whole group: every professional operates within a hierarchy of constraints — professional standards, firm policies, individual discretion. The three context levels are the same structure applied to AI agents."
+    - "The new employee analogy is useful for the remedial path but can be introduced for the whole group: every professional operates within a hierarchy of constraints: professional standards, firm policies, individual discretion. The three context levels are the same structure applied to AI agents."
   assessment_checks:
     - question: "What are the three levels of Cowork's context hierarchy?"
       expected_response: "Platform context (set by Anthropic, applies to all Claude deployments), organisation context (set by the Cowork administrator, applies to all plugins in the organisation), and plugin context (the SKILL.md itself, set by the knowledge worker)"
     - question: "What does 'silent override' mean?"
-      expected_response: "When a higher context level constrains a behaviour, the agent does not announce that a SKILL.md instruction has been overridden — it simply behaves as the higher level requires. The knowledge worker sees the outcome but receives no explanation."
+      expected_response: "When a higher context level constrains a behaviour, the agent does not announce that a SKILL.md instruction has been overridden: it simply behaves as the higher level requires. The knowledge worker sees the outcome but receives no explanation."
     - question: "A knowledge worker rewrites their SKILL.md three times, but the agent still will not produce formatted compliance reports sent directly to an external system. What is the most likely explanation?"
-      expected_response: "The output routing behaviour is probably constrained at the organisation level — the administrator has set a policy requiring all compliance-related outputs to be reviewed before external transmission. Rewriting the SKILL.md cannot override an organisation-level policy. The knowledge worker should speak to their administrator."
+      expected_response: "The output routing behaviour is probably constrained at the organisation level: the administrator has set a policy requiring all compliance-related outputs to be reviewed before external transmission. Rewriting the SKILL.md cannot override an organisation-level policy. The knowledge worker should speak to their administrator."
     - question: "In what order should you run the diagnostic when a SKILL.md instruction is not being followed?"
       expected_response: "Platform level first (is this something no Cowork deployment can do?), organisation level second (has the administrator set a policy that restricts this?), SKILL.md last (is there an error in the instruction itself?)."
 ---
 
 # The Three-Level Context System
 
-In Lesson 3, you established what the plugin infrastructure looks like — the manifest (plugin.json), the connector declarations (.mcp.json), and the settings that configure the deployment environment. You also saw that permission boundaries are enforced by the Cowork runtime: if the SKILL.md were to instruct the agent to access data outside its configured scope, the attempt would fail silently.
+In Lesson 3, you established what the plugin infrastructure looks like: the manifest (plugin.json), the connector declarations (.mcp.json), and the settings that configure the deployment environment. You also saw that permission boundaries are enforced by the Cowork runtime: if the SKILL.md were to instruct the agent to access data outside its configured scope, the attempt would fail silently.
 
-That single observation — that a SKILL.md instruction can be overridden without announcement — points to something larger than any single component. There is a hierarchy of contexts in which every Cowork plugin operates, and understanding that hierarchy is what allows you to diagnose why an agent behaves differently from what the SKILL.md describes. Without this understanding, the diagnostic for unexpected agent behaviour almost always starts in the wrong place.
+That single observation: that a SKILL.md instruction can be overridden without announcement: points to something larger than any single component. There is a hierarchy of contexts in which every Cowork plugin operates, and understanding that hierarchy is what allows you to diagnose why an agent behaves differently from what the SKILL.md describes. Without this understanding, the diagnostic for unexpected agent behaviour almost always starts in the wrong place.
 
-Anthropic's enterprise admin controls establish organisation-wide policies that govern all plugins — including skill provisioning, audit requirements, and access controls. This creates the hierarchical policy system that this lesson examines.
+Anthropic's enterprise admin controls establish organisation-wide policies that govern all plugins: including skill provisioning, audit requirements, and access controls. This creates the hierarchical policy system that this lesson examines.
 
 This lesson explains the three-level context system, what each level controls, and how to run the diagnostic correctly when an agent does not do what you expect.
 
@@ -135,11 +135,11 @@ Cowork's context system operates at three levels, each set by a different author
 
 ### Level 1: Platform Context
 
-Platform context is set by Anthropic and applies to every Claude deployment, everywhere. It defines the model's fundamental capabilities, its safety properties, and its hard constraints — the behaviours that apply regardless of what any organisation or knowledge worker instructs.
+Platform context is set by Anthropic and applies to every Claude deployment, everywhere. It defines the model's fundamental capabilities, its safety properties, and its hard constraints: the behaviours that apply regardless of what any organisation or knowledge worker instructs.
 
 The knowledge worker does not configure platform context. There is no access to it, no ability to modify it, and in most circumstances, no need to think about it. Its practical relevance is narrow but important: certain behaviours are not possible in any Cowork plugin, regardless of what the SKILL.md instructs. When an agent consistently refuses to perform an action that seems straightforward, and the refusal does not trace to an organisation-level policy, the behaviour may be a platform-level constraint.
 
-Platform-level constraints are not technical limitations of the model. They are policy decisions. The model is capable of many things that Anthropic has chosen not to allow in production deployments. Knowing that the distinction exists — between "the model cannot do this" and "Anthropic has decided this is not permitted" — is sufficient for the knowledge worker's diagnostic purposes.
+Platform-level constraints are not technical limitations of the model. They are policy decisions. The model is capable of many things that Anthropic has chosen not to allow in production deployments. Knowing that the distinction exists, between "the model cannot do this" and "Anthropic has decided this is not permitted", is sufficient for the knowledge worker's diagnostic purposes.
 
 ### Level 2: Organisation Context
 
@@ -147,7 +147,7 @@ Organisation context is set by the Cowork administrator and applies to all plugi
 
 The compliance analyst's situation almost certainly traces to this level. When a financial services firm deploys Cowork, the administrator configures organisation-wide policies that reflect the firm's regulatory obligations. One such policy might be that all outputs from compliance-related agents must route through an internal review queue before reaching any external system. This policy applies to every compliance plugin in the organisation, regardless of what individual SKILL.md files instruct.
 
-The knowledge worker configures the SKILL.md within the boundaries the administrator has set — not instead of them. If the administrator has established that compliance outputs require internal review before external transmission, no instruction in the SKILL.md can route outputs directly to an external system. The plugin context operates inside the organisation context, not alongside it.
+The knowledge worker configures the SKILL.md within the boundaries the administrator has set; not instead of them. If the administrator has established that compliance outputs require internal review before external transmission, no instruction in the SKILL.md can route outputs directly to an external system. The plugin context operates inside the organisation context, not alongside it.
 
 This matters practically because organisation-level policies are often set for legitimate reasons that the knowledge worker may not be fully aware of: regulatory requirements, legal obligations, audit commitments, or risk management decisions made at a level above the operational deployment of any individual plugin.
 
@@ -163,9 +163,9 @@ The direction of this relationship is one-way and unconditional: higher levels c
 
 The most counterintuitive property of the three-level system is that overrides are silent.
 
-When a SKILL.md instruction conflicts with an organisation-level policy, the agent does not announce it. It does not say "I cannot follow this instruction because your organisation has configured a policy that prevents it." It simply behaves in accordance with the higher-level constraint and produces its output accordingly. From the knowledge worker's perspective, the agent appears to be ignoring a clearly written instruction — with no explanation and no error message.
+When a SKILL.md instruction conflicts with an organisation-level policy, the agent does not announce it. It does not say "I cannot follow this instruction because your organisation has configured a policy that prevents it." It simply behaves in accordance with the higher-level constraint and produces its output accordingly. From the knowledge worker's perspective, the agent appears to be ignoring a clearly written instruction: with no explanation and no error message.
 
-This is consistent with how hierarchical policy systems work in enterprise environments. The organisation context is not visible to the knowledge worker at the plugin level by design. Surfacing internal governance policies through agent responses would create its own complications — disclosing the structure of compliance constraints, audit requirements, or permission models to every user who asked the agent a question that happened to touch on a restricted behaviour.
+This is consistent with how hierarchical policy systems work in enterprise environments. The organisation context is not visible to the knowledge worker at the plugin level by design. Surfacing internal governance policies through agent responses would create its own complications: disclosing the structure of compliance constraints, audit requirements, or permission models to every user who asked the agent a question that happened to touch on a restricted behaviour.
 
 The practical implication is that the knowledge worker must understand the three-level system before encountering a silent override in production. An analyst who does not know that organisation context exists will spend significant time revising a SKILL.md that is not the source of the problem.
 
@@ -179,9 +179,9 @@ When an agent does not follow a SKILL.md instruction, the diagnostic runs in the
 | **2. Organisation level** | Has the administrator set a policy that governs this behaviour?    | Speak with your administrator. The constraint may be modifiable; it may be regulatory.   |
 | **3. Plugin level**       | Is there an error or ambiguity in the SKILL.md instruction itself? | Revise the instruction. This is the only level the knowledge worker can modify directly. |
 
-The sequence matters because starting at step 3 — which is the most natural starting point for a knowledge worker — wastes time when the constraint is actually at step 1 or step 2. The compliance analyst who rewrote her SKILL.md three times was running the diagnostic from step 3. Had she started at step 2, she would have recognised the organisation-level policy within minutes and had a productive conversation with her administrator about whether the constraint was mandatory or configurable.
+The sequence matters because starting at step 3 (which is the most natural starting point for a knowledge worker) wastes time when the constraint is actually at step 1 or step 2. The compliance analyst who rewrote her SKILL.md three times was running the diagnostic from step 3. Had she started at step 2, she would have recognised the organisation-level policy within minutes and had a productive conversation with her administrator about whether the constraint was mandatory or configurable.
 
-Running the diagnostic correctly also produces better conversations with administrators and IT teams. "The agent is not following my SKILL.md instruction" is a less useful report than "I believe this behaviour is constrained at the organisation level — specifically, I think there may be a policy preventing direct output to external systems. Can you confirm whether that's the case and whether there's a way to configure an exception for compliance reports reviewed by a qualified solicitor?"
+Running the diagnostic correctly also produces better conversations with administrators and IT teams. "The agent is not following my SKILL.md instruction" is a less useful report than "I believe this behaviour is constrained at the organisation level: specifically, I think there may be a policy preventing direct output to external systems. Can you confirm whether that's the case and whether there's a way to configure an exception for compliance reports reviewed by a qualified solicitor?"
 
 ## Adding Constraints vs Removing Constraints
 
@@ -189,7 +189,7 @@ One further point that prevents a common misconception: the knowledge worker can
 
 What the SKILL.md cannot do is remove or override restrictions established at higher levels. A knowledge worker cannot write a SKILL.md instruction that bypasses an organisation-level audit requirement, expands the agent's data access beyond the configured permission scope, or removes a platform-level safety constraint. Attempts to do so are silently overridden, and the agent continues to operate under the higher-level constraint.
 
-The practical read on this: when debugging unexpected behaviour, if the agent is doing something more restrictive than the SKILL.md requires, the cause may be at a higher level. If the agent is failing to do something the SKILL.md instructs, the cause is almost certainly at a higher level. If the agent is doing something the SKILL.md explicitly prohibits, the cause is in the SKILL.md — that is the one case where the plugin level is the relevant diagnostic stop.
+The practical read on this: when debugging unexpected behaviour, if the agent is doing something more restrictive than the SKILL.md requires, the cause may be at a higher level. If the agent is failing to do something the SKILL.md instructs, the cause is almost certainly at a higher level. If the agent is doing something the SKILL.md explicitly prohibits, the cause is in the SKILL.md: that is the one case where the plugin level is the relevant diagnostic stop.
 
 ## Try With AI
 
@@ -219,7 +219,7 @@ one example of something the knowledge worker can still customise within
 that constraint.
 ```
 
-**What you're learning:** The three-level system becomes concrete when you map it to your own domain. By working through each level with a specific use case in mind, you build the diagnostic intuition needed to recognise which level is responsible for unexpected agent behaviour — before you spend time revising a SKILL.md that is not the source of the problem.
+**What you're learning:** The three-level system becomes concrete when you map it to your own domain. By working through each level with a specific use case in mind, you build the diagnostic intuition needed to recognise which level is responsible for unexpected agent behaviour: before you spend time revising a SKILL.md that is not the source of the problem.
 
 ### Prompt 2: Diagnostic Practice
 
@@ -246,7 +246,7 @@ Based on your analysis, what should the knowledge worker do next — and
 what should they say to their administrator to have a productive conversation?
 ```
 
-**What you're learning:** Running the diagnostic as a structured exercise, rather than encountering it for the first time in production, builds the pattern recognition needed to identify override behaviour quickly. The healthcare scenario is representative of how organisation-level policies appear in regulated industries — mandatory review gates that apply regardless of what individual SKILL.md files instruct.
+**What you're learning:** Running the diagnostic as a structured exercise, rather than encountering it for the first time in production, builds the pattern recognition needed to identify override behaviour quickly. The healthcare scenario is representative of how organisation-level policies appear in regulated industries: mandatory review gates that apply regardless of what individual SKILL.md files instruct.
 
 ### Prompt 3: Domain Research
 
@@ -266,7 +266,7 @@ Present your findings as a table: Regulatory Requirement | Expected
 Organisation-Level Constraint | How It Appears to the Knowledge Worker.
 ```
 
-**What you're learning:** Organisation-level constraints in regulated industries are not arbitrary — they reflect specific regulatory obligations that the administrator is implementing on behalf of the organisation. Understanding the regulatory landscape in your domain helps you anticipate which constraints are likely to be in place and which may be modifiable through a conversation with your administrator versus which are mandatory and non-negotiable.
+**What you're learning:** Organisation-level constraints in regulated industries are not arbitrary: they reflect specific regulatory obligations that the administrator is implementing on behalf of the organisation. Understanding the regulatory landscape in your domain helps you anticipate which constraints are likely to be in place and which may be modifiable through a conversation with your administrator versus which are mandatory and non-negotiable.
 
 ## Flashcards Study Aid
 

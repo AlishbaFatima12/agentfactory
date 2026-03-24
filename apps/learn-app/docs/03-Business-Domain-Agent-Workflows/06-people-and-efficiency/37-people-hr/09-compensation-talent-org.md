@@ -41,7 +41,7 @@ skills:
     category: "Soft"
     bloom_level: "Evaluate"
     digcomp_area: "Communication"
-    measurable_at_this_level: "Student can distinguish between a succession conversation that builds commitment and one that creates legal or relational risk — and can structure the former using the OPENING / MIDDLE / CLOSE pattern from the skill"
+    measurable_at_this_level: "Student can distinguish between a succession conversation that builds commitment and one that creates legal or relational risk , and can structure the former using the OPENING / MIDDLE / CLOSE pattern from the skill"
 
   - name: "Diagnose Org Structure Issues Using Span-of-Control Analysis"
     proficiency_level: "B1"
@@ -66,7 +66,7 @@ learning_objectives:
     bloom_level: "Apply"
     assessment_method: "Student uses /org-planning to map the current and proposed org structure, identifies any span-of-control violations in the proposed state, and recommends an adjustment"
 
-  - objective: "Explain the correct succession conversation structure — acknowledging potential without making promotion commitments"
+  - objective: "Explain the correct succession conversation structure, acknowledging potential without making promotion commitments"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
     assessment_method: "Student can identify the specific phrases that create legal or relational risk in a succession conversation and rewrite them using the conditional pathway language from the lesson"
@@ -74,40 +74,40 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Compensation percentile bands — 25th/50th/75th/90th and what each signals for hiring and retention"
-    - "Six-dimension talent assessment — the structured framework /match uses to evaluate internal candidates"
-    - "Readiness classification — READY NOW through NOT A FIT and the development planning each classification implies"
-    - "Internal mobility imperative — the cost case for assessing internally before posting externally"
-    - "Span-of-control benchmarks — healthy ratios and what violations signal about org health"
+    - "Compensation percentile bands, 25th/50th/75th/90th and what each signals for hiring and retention"
+    - "Six-dimension talent assessment: the structured framework /match uses to evaluate internal candidates"
+    - "Readiness classification, READY NOW through NOT A FIT and the development planning each classification implies"
+    - "Internal mobility imperative: the cost case for assessing internally before posting externally"
+    - "Span-of-control benchmarks, healthy ratios and what violations signal about org health"
   assessment: "Five concepts across a 50-minute lesson is manageable because they are tightly sequenced: the cost case (why) motivates the comp analysis (what we pay), which motivates the talent assessment (who is ready), which motivates the succession conversation (what to say), which motivates the org restructure (what changes). Each concept unlocks the next."
 
 differentiation:
   extension_for_advanced: "Build a succession map for your organisation's top five roles. For each role, identify the current role-holder's estimated tenure, the internal candidates at each readiness level, and the estimated development investment required to close each gap. Calculate the cost differential between developing the READY IN 12 MONTHS candidate and making an external hire. Present this as a board-ready succession risk register."
-  remedial_for_struggling: "Focus on a single succession scenario: one role, one internal candidate. Run /match for that candidate, review the six-dimension output one dimension at a time, and decide whether you would recommend a succession conversation. The six-dimension framework is the core skill — once you can apply it to one candidate, the rest is repetition."
+  remedial_for_struggling: "Focus on a single succession scenario: one role, one internal candidate. Run /match for that candidate, review the six-dimension output one dimension at a time, and decide whether you would recommend a succession conversation. The six-dimension framework is the core skill, once you can apply it to one candidate, the rest is repetition."
 
 teaching_guide:
   key_points:
-    - "The three skills — /comp-analysis, /match, /org-planning — are sequential, not parallel: benchmarking informs what you can offer; talent assessment determines who is ready; org planning models what happens when they move"
-    - "The internal mobility imperative is not idealism — it is arithmetic. Industry research suggests external hiring typically costs several times more, and the productivity gap adds further cost. Make this calculation explicit."
+    - "The three skills, /comp-analysis, /match, /org-planning: are sequential, not parallel: benchmarking informs what you can offer; talent assessment determines who is ready; org planning models what happens when they move"
+    - "The internal mobility imperative is not idealism; it is arithmetic. Industry research suggests external hiring typically costs several times more, and the productivity gap adds further cost. Make this calculation explicit."
     - "The six dimensions are not all equal: critical skills and motivation are the most predictive. A candidate who is technically DEVELOPING but highly motivated with a clear experience gap is a fundamentally different case from one who is technically DEVELOPING and ambivalent."
-    - "The CONFIDENTIAL label is mandatory on all /match outputs — talent assessments must not be shared with the assessed employee without HR and manager review"
+    - "The CONFIDENTIAL label is mandatory on all /match outputs, talent assessments must not be shared with the assessed employee without HR and manager review"
   misconceptions:
     - "Tenure equals readiness. Correction: /match explicitly prohibits basing a readiness assessment on years in role. Two years doing the right projects beats five years doing the same thing. Evidence of next-level behaviour is what the readiness indicators dimension measures."
-    - "The succession conversation is about telling someone they are going to be promoted. Correction: it is about building a development pathway and testing motivation — with no commitment. The NEVER SAY / ALWAYS SAY pattern in /match is not just politeness; specific promotion promises create employment law exposure in most jurisdictions."
+    - "The succession conversation is about telling someone they are going to be promoted. Correction: it is about building a development pathway and testing motivation, with no commitment. The NEVER SAY / ALWAYS SAY pattern in /match is not just politeness; specific promotion promises create employment law exposure in most jurisdictions."
     - "Org planning only matters in large-scale restructures. Correction: even a single internal promotion changes reporting lines and may create a span-of-control violation in the role the promoted person leaves. /org-planning makes this visible before it happens."
   discussion_prompts:
     - "Think of a time when your organisation hired externally for a role that could have been filled internally. What barriers prevented the internal assessment? Which of those barriers does the /match workflow address?"
     - "What is the difference between a manager who says 'we are investing in your development' and one who says 'if your performance continues on this trajectory, a leadership role becomes realistic in 12 months'? Which is more useful to the employee, and why?"
   teaching_tips:
-    - "The worked example — Zara and Ahmed, Team Lead Data Engineering — maps directly to the Part Seven scenario in the course spec. Use both names consistently and let the contrast (strong match vs. developing pipeline) drive the teaching."
-    - "Walk through the succession conversation script word by word. Ask students to identify which phrases they would be uncomfortable saying — those are usually the most important ones to practise."
+    - "The worked example, Zara and Ahmed, Team Lead Data Engineering, maps directly to the Part Seven scenario in the course spec. Use both names consistently and let the contrast (strong match vs. developing pipeline) drive the teaching."
+    - "Walk through the succession conversation script word by word. Ask students to identify which phrases they would be uncomfortable saying, those are usually the most important ones to practise."
 ---
 
 # Compensation, Talent & Org Planning
 
-The EdTech company in Karachi has a problem that most growing companies recognise: a Team Lead, Data Engineering vacancy has opened, and the instinct is to post it externally. Bilal Ahmed's performance review last quarter — which the team ran using `/performance-review` — raised the question of whether he is on a leadership track. Meanwhile, Zara Hussain, a Senior Data Engineer who has been with the company for three years, led the data warehouse migration project last year and has been quietly mentoring two junior engineers. The Head of Analytics, Omar Farooq, has a gut sense that Zara might be ready. But a gut sense is not a succession plan.
+The EdTech company in Karachi has a problem that most growing companies recognise: a Team Lead, Data Engineering vacancy has opened, and the instinct is to post it externally. Bilal Ahmed's performance review last quarter, which the team ran using `/performance-review`, raised the question of whether he is on a leadership track. Meanwhile, Zara Hussain, a Senior Data Engineer who has been with the company for three years, led the data warehouse migration project last year and has been quietly mentoring two junior engineers. The Head of Analytics, Omar Farooq, has a gut sense that Zara might be ready. But a gut sense is not a succession plan.
 
-The question is not "should we hire externally?" The question is "have we properly assessed internally first?" External hiring, according to industry research, typically costs several times more than an internal promotion. A new external hire often takes many months to reach full productivity. And if Zara is passed over for a role she could have filled, she will probably start updating her CV — taking three years of institutional knowledge with her.
+The question is not "should we hire externally?" The question is "have we properly assessed internally first?" External hiring, according to industry research, typically costs several times more than an internal promotion. A new external hire often takes many months to reach full productivity. And if Zara is passed over for a role she could have filled, she will probably start updating her CV, taking three years of institutional knowledge with her.
 
 This lesson brings together three skills that work in sequence: `/comp-analysis` to benchmark what the role should pay and whether a promotion offer would be internally equitable, `/match` to systematically assess Zara and a second internal candidate against the role requirements across six dimensions, and `/org-planning` to model what happens to the team structure when someone moves up.
 
@@ -119,7 +119,7 @@ Before reaching for the job boards, the arithmetic of internal mobility deserves
 | ----------------------- | -------------------------------------------- | ------------------------------------- |
 | Recruiting cost         | Agency fees, advertising, sourcing time      | Minimal (internal process)            |
 | Time to fill            | Typically weeks to months                    | Immediate (or defined transition)     |
-| Productivity ramp       | Research suggests many months to full output | Shorter — context already held        |
+| Productivity ramp       | Research suggests many months to full output | Shorter, context already held        |
 | Cultural integration    | Requires active management                   | Already embedded                      |
 | Institutional knowledge | Starts from zero                             | Accumulated                           |
 | Retention signal        | Neutral                                      | Strongly positive for remaining staff |
@@ -130,21 +130,21 @@ The internal mobility assessment is not just good HR practice. It is a retention
 
 ## Benchmarking Compensation with `/comp-analysis`
 
-Before assessing candidates, you need to know what the role should pay. A promotion that lands Zara at an uncompetitive salary is a short-term win and a medium-term retention risk. And a salary that creates an internal equity problem — where Zara suddenly earns significantly more than peers with similar scope — creates a different set of problems.
+Before assessing candidates, you need to know what the role should pay. A promotion that lands Zara at an uncompetitive salary is a short-term win and a medium-term retention risk. And a salary that creates an internal equity problem: where Zara suddenly earns significantly more than peers with similar scope, creates a different set of problems.
 
 `/comp-analysis` provides percentile bands across four reference points:
 
 | Percentile | Signal                                                   |
 | ---------- | -------------------------------------------------------- |
-| **25th**   | Below market — retention risk for strong performers      |
-| **50th**   | Market median — competitive for most candidates          |
-| **75th**   | Above market — attracts and retains strong performers    |
-| **90th**   | Top of market — appropriate for critical or scarce roles |
+| **25th**   | Below market, retention risk for strong performers      |
+| **50th**   | Market median, competitive for most candidates          |
+| **75th**   | Above market, attracts and retains strong performers    |
+| **90th**   | Top of market, appropriate for critical or scarce roles |
 
 ### Worked Example: Team Lead, Data Engineering (Karachi)
 
 ```
-/comp-analysis Team Lead, Data Engineering — Karachi, Pakistan
+/comp-analysis Team Lead, Data Engineering, Karachi, Pakistan
 
 Role context: EdTech company, ~250 employees. Role manages 2-3 engineers,
 reports to Head of Analytics. Requires Spark, Airflow, dbt expertise plus
@@ -154,7 +154,7 @@ people management responsibility. Pakistan market.
 A benchmarking output would look like:
 
 ```
-## Compensation Analysis: Team Lead, Data Engineering — Karachi, Pakistan
+## Compensation Analysis: Team Lead, Data Engineering: Karachi, Pakistan
 
 ### Market Benchmarks (Pakistan EdTech/Tech sector)
 | Percentile | Monthly Base (PKR) | Annual Total Comp |
@@ -170,14 +170,14 @@ Note: Verify current figures against local salary surveys before use.
 ### Band Analysis
 Current salary (Zara Hussain as Senior Data Engineer): 200,000 PKR/month
 Proposed promotion salary: 270,000 PKR/month
-→ Position: 62nd percentile — competitive; above median; no internal equity flag
+→ Position: 62nd percentile, competitive; above median; no internal equity flag
    for this band.
 
 ### Recommendations
 - 270,000 PKR/month is a credible offer at the 62nd percentile
 - Internal equity: check against other Team Lead equivalents in the org
 - Consider a 3-month performance-in-role review with a pre-agreed salary
-  step to 290,000 PKR if targets are met — reduces initial cost while
+  step to 290,000 PKR if targets are met, reduces initial cost while
   maintaining motivation
 ```
 
@@ -238,13 +238,13 @@ Role requirements:
 
 Candidates:
 
-Candidate 1: Zara Hussain — Senior Data Engineer, 3 years at the company
+Candidate 1: Zara Hussain, Senior Data Engineer, 3 years at the company
   - Led the data warehouse migration project (30TB, 6-month delivery)
   - Mentors two junior engineers informally; well-regarded by peers
   - External stakeholder communication is a known development area
   - In last performance review, expressed interest in a leadership role
 
-Candidate 2: Ahmed Malik — Data Engineer, 2 years at the company
+Candidate 2: Ahmed Malik, Data Engineer, 2 years at the company
   - High potential; technically strong; fast learner
   - No formal management experience; early in career for this level
   - Unusually strong stakeholder communication skills for his experience
@@ -274,16 +274,16 @@ ROLE REQUIREMENTS:
   Readiness: READY IN 6 MONTHS
 
   Critical requirements:
-    DEMONSTRATED Technical leadership: led data warehouse migration — 30TB
+    DEMONSTRATED Technical leadership: led data warehouse migration, 30TB
       delivery, on time, peer-endorsed project ownership
     DEMONSTRATED Data infrastructure: 3 years on Spark/Airflow/dbt stack;
       project-level expertise confirmed
     DEVELOPING  People management: informal mentoring of 2 engineers is a
-      positive signal; no formal management yet — EXPERIENCE GAP
+      positive signal; no formal management yet, EXPERIENCE GAP
 
   Important requirements:
     DEVELOPING  Stakeholder comms: identified as development area in review;
-      gap is real but manageable with structured coaching — SKILL GAP
+      gap is real but manageable with structured coaching, SKILL GAP
     DEVELOPING  Strategic thinking: not yet evidenced at org level; shows
       at project level
 
@@ -308,45 +308,45 @@ ROLE REQUIREMENTS:
 
 --- CANDIDATE: Ahmed Malik ---------------------------------------
   Current role: Data Engineer, 2 years
-  Fit assessment: DEVELOPING — not ready now; strong pipeline
+  Fit assessment: DEVELOPING, not ready now; strong pipeline
   Readiness: READY IN 12 MONTHS
 
   Critical requirements:
     DEMONSTRATED Data infrastructure: technically strong on stack; 2 years
       of solid delivery
     DEVELOPING  Technical leadership: early signals positive; not yet
-      demonstrated at project level — EXPERIENCE GAP
+      demonstrated at project level, EXPERIENCE GAP
     ABSENT      People management: too early in career for this role now;
       no evidence of readiness
 
   Important requirements:
-    DEMONSTRATED Stakeholder comms: unusually strong for his experience —
+    DEMONSTRATED Stakeholder comms: unusually strong for his experience,
       genuine differentiating asset
     LIMITED     Strategic thinking: not yet applicable at his level
 
   Development gap: Experience gaps across leadership and management dimensions;
     timeline to bridge: 12-18 months with structured investment
   Career intent: Interested in growth; not specifically in people leadership
-    — motivation alignment needs exploration
-  Retention risk: MEDIUM — growing; will need a development signal soon
+   , motivation alignment needs exploration
+  Retention risk: MEDIUM, growing; will need a development signal soon
 
   RECOMMENDATION: Not for this role now. Invest in the pipeline.
     Have a development conversation: acknowledge his trajectory, explain
     the timing honestly, assign one junior engineer for informal mentoring,
     and set a 12-month checkpoint. His stakeholder skills are a genuine
-    asset — consider a Business Analyst rotation to develop complementary skills.
+    asset, consider a Business Analyst rotation to develop complementary skills.
 -----------------------------------------------------------------
 
 OVERALL RECOMMENDATION:
   Assess Zara for this role before posting externally. Her management
-  experience gap is an EXPERIENCE GAP, not a SKILL GAP or MINDSET GAP —
+  experience gap is an EXPERIENCE GAP, not a SKILL GAP or MINDSET GAP,
   bridgeable with structured support in 6 months. Retaining and developing
   Zara costs less and carries less risk than an external hire. Ahmed is a
   strong pipeline investment; make that visible to him with a development plan.
 ================================================================
 ```
 
-:::note Assessments inform decisions — they are not decisions
+:::note Assessments inform decisions; they are not decisions
 The `/match` output is a structured analysis, not a hiring decision. HR and the hiring manager review it together, consider factors the assessment may not capture (team dynamics, business timing, candidate conversations), and make the final call. Never share a talent assessment with the employee being assessed without HR and manager review.
 :::
 
@@ -382,7 +382,7 @@ Proposed state:
   Head of Analytics (Omar Farooq): 2 direct reports
     - Team Lead, Data Engineering (Zara Hussain): 2 direct reports
         - Data Engineer (Ahmed Malik)
-        - [Backfill: Junior Data Engineer — to be hired]
+        - [Backfill: Junior Data Engineer, to be hired]
     - Data Analyst (position)
 
 Check: span of control, IC-to-manager ratio, structural risks
@@ -391,7 +391,7 @@ Check: span of control, IC-to-manager ratio, structural risks
 **Sample output:**
 
 ```
-## Org Planning: Data Engineering Team — Proposed Restructure
+## Org Planning: Data Engineering Team: Proposed Restructure
 
 ### Current State
 Omar Farooq (Head of Analytics)
@@ -402,21 +402,21 @@ Span of control: 3 | IC-to-manager ratio: 3:1
 
 ### Proposed State
 Omar Farooq (Head of Analytics)
-├── Zara Hussain (Team Lead, Data Engineering) — NEW ROLE
+├── Zara Hussain (Team Lead, Data Engineering), NEW ROLE
 │   ├── Ahmed Malik (Data Engineer)
-│   └── [Junior Data Engineer — backfill hire]
+│   └── [Junior Data Engineer, backfill hire]
 └── [Data Analyst]
 Span of control (Omar): 2 | IC-to-manager ratio (org): improving
 
 ### Benchmark Analysis
 | Metric | Healthy Range | Proposed State | Assessment |
 |--------|---------------|----------------|------------|
-| Span of control (Omar) | 5–8 reports | 2 reports | ⚠️ Narrow — consider scope expansion |
-| Span of control (Zara) | 5–8 reports | 2 reports | ⚠️ Narrow — plan for growth |
+| Span of control (Omar) | 5–8 reports | 2 reports | ⚠️ Narrow, consider scope expansion |
+| Span of control (Zara) | 5–8 reports | 2 reports | ⚠️ Narrow, plan for growth |
 | IC-to-manager ratio | 6:1–10:1 | 2:1 initially | ⚠️ Top-heavy until backfill hired |
 
 ### Structural Risks
-1. Omar's span drops to 2 direct reports — below healthy minimum
+1. Omar's span drops to 2 direct reports, below healthy minimum
    → Consider whether Data Analyst should also report to Zara, or add scope
 2. Zara managing 2 engineers is a light load for a Team Lead role
    → Backfill hire and growth plan should be concurrent with promotion
@@ -436,7 +436,7 @@ Span of control (Omar): 2 | IC-to-manager ratio (org): improving
 **Plugin commands:** `/comp-analysis`, `/match`, `/org-planning`
 **Goal:** Identify the highest-priority succession risk in your organisation and produce a structured internal assessment for the most viable internal candidate
 
-### Step 1 — Map Your Succession-Critical Roles
+### Step 1: Map Your Succession-Critical Roles
 
 Identify three to five roles in your organisation (real or scenario-based) where an unexpected vacancy would create significant operational risk. For each role, note:
 
@@ -445,7 +445,7 @@ Identify three to five roles in your organisation (real or scenario-based) where
 - Estimated tenure remaining (low / medium / high certainty)
 - Known internal candidates (name, current role, rough assessment of readiness)
 
-### Step 2 — Benchmark Compensation for the Highest-Priority Role
+### Step 2: Benchmark Compensation for the Highest-Priority Role
 
 For the role you assess as highest-priority, run `/comp-analysis`:
 
@@ -458,7 +458,7 @@ Internal candidate context: [Current salary if known; equity considerations]
 
 Review the percentile bands. Identify where a promotion offer would land, and whether any internal equity issues arise.
 
-### Step 3 — Run `/match` for Two Candidates
+### Step 3: Run `/match` for Two Candidates
 
 For the highest-priority role, assess two internal candidates:
 
@@ -485,7 +485,7 @@ Candidate 2: [Name] — [Current role, years in role]
 
 Review the six-dimension output for each candidate. Identify the readiness classification and the primary development gap for each.
 
-### Step 4 — Model the Structural Impact
+### Step 4: Model the Structural Impact
 
 If your strongest candidate were promoted, what changes in the org structure?
 
@@ -497,7 +497,7 @@ Proposed structure: [describe proposed reporting lines]
 Check: span of control, single points of failure, backfill requirements
 ```
 
-### Step 5 — Draft a Succession Recommendation
+### Step 5: Draft a Succession Recommendation
 
 Write a one-page succession recommendation covering:
 
@@ -528,13 +528,13 @@ Critical requirements: Technical leadership, Spark/Airflow/dbt expertise,
 people management of 2-3 engineers
 Important requirements: Stakeholder communication, strategic thinking
 
-Candidate 1: Zara Hussain — Senior Data Engineer, 3 years
+Candidate 1: Zara Hussain, Senior Data Engineer, 3 years
 - Led the data warehouse migration project
 - Mentors two junior engineers informally
 - Development area: external stakeholder communication
 - Expressed leadership interest in last review
 
-Candidate 2: Ahmed Malik — Data Engineer, 2 years
+Candidate 2: Ahmed Malik, Data Engineer, 2 years
 - High potential, technically strong
 - No management experience; early in career for this level
 - Unusually strong stakeholder skills
@@ -547,7 +547,7 @@ MONTHS / DEVELOPING / NOT A FIT. For the strongest candidate, design a
 3-step development plan.
 ```
 
-**What you are learning:** The six-dimension framework forces a structured assessment that surfaces the type of gap (experience, skill, or mindset) — not just whether a gap exists — because each gap type requires a different intervention.
+**What you are learning:** The six-dimension framework forces a structured assessment that surfaces the type of gap (experience, skill, or mindset) , not just whether a gap exists, because each gap type requires a different intervention.
 
 **Adapt**: Apply the assessment to a role in your own organisation.
 
@@ -569,7 +569,7 @@ type for each development area (experience gap / skill gap / mindset gap).
 Recommend one specific development action for the most critical gap.
 ```
 
-**What you are learning:** Moving from a textbook scenario to your actual organisation's people reveals how much contextual knowledge HR holds — and how a structured framework helps surface and communicate that knowledge more consistently.
+**What you are learning:** Moving from a textbook scenario to your actual organisation's people reveals how much contextual knowledge HR holds , and how a structured framework helps surface and communicate that knowledge more consistently.
 
 **Apply**: Design a succession plan for a critical role.
 
@@ -578,13 +578,13 @@ I need to design a succession plan for a role that is critical to my
 organisation.
 
 Role: [Title]
-Why critical: [What makes this role hard to replace — key relationships,
+Why critical: [What makes this role hard to replace, key relationships,
 unique skills, institutional knowledge held]
-Current holder: [Context — tenure, estimated longevity in role]
+Current holder: [Context, tenure, estimated longevity in role]
 
 Internal candidates (at any readiness level):
 [Candidate 1]: [Brief profile]
-[Candidate 2]: [Brief profile — or "no current internal candidates"]
+[Candidate 2]: [Brief profile , or "no current internal candidates"]
 
 Please:
 1. Classify each candidate's readiness
@@ -592,10 +592,10 @@ Please:
 3. Identify whether external hiring needs to run in parallel with
    internal development
 4. Propose the structure for a succession conversation with the
-   strongest internal candidate — what to say and what not to say
+   strongest internal candidate: what to say and what not to say
 ```
 
-**What you are learning:** Succession planning is not a one-time assessment — it is an ongoing programme. This prompt produces a plan that can be revisited quarterly as candidates develop and circumstances change.
+**What you are learning:** Succession planning is not a one-time assessment; it is an ongoing programme. This prompt produces a plan that can be revisited quarterly as candidates develop and circumstances change.
 :::
 
 ## Flashcards Study Aid

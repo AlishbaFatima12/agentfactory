@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/ifrs9-macro-pma
 sidebar_position: 5
 title: "Macroeconomic Scenarios and Post-Model Adjustments"
-description: "Complete the IFRS 9 picture with macroeconomic scenario design, probability-weighted ECL calculation, and Post-Model Adjustments — the management overlays that capture what models cannot"
+description: "Complete the IFRS 9 picture with macroeconomic scenario design, probability-weighted ECL calculation, and Post-Model Adjustments: the management overlays that capture what models cannot"
 keywords:
   [
     "macroeconomic scenarios",
@@ -29,7 +29,7 @@ skills:
     category: "Technical"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can design base, upside, and adverse scenarios with probability weights, calculate the ECL under each scenario, and compute the probability-weighted ECL — demonstrating understanding of why the weighted ECL differs from the base case ECL"
+    measurable_at_this_level: "Student can design base, upside, and adverse scenarios with probability weights, calculate the ECL under each scenario, and compute the probability-weighted ECL: demonstrating understanding of why the weighted ECL differs from the base case ECL"
 
   - name: "Explain When and Why PMAs Are Necessary and Describe Their Governance Requirements"
     proficiency_level: "B1"
@@ -61,9 +61,9 @@ cognitive_load:
     - "Scenario probability weights and the sum-to-one constraint"
     - "Probability-weighted ECL calculation"
     - "Non-linearity: expected loss is NOT the loss under the expected scenario"
-    - "Post-Model Adjustments (PMAs) — management overlays for model limitations"
+    - "Post-Model Adjustments (PMAs): management overlays for model limitations"
     - "PMA governance (documentation, committee approval, time-limiting, quarterly review)"
-  assessment: "6 concepts at B1 level — within the 7-10 cognitive limit for this tier. The lesson divides into two clear blocks (scenarios, then PMAs) with worked examples in each, distributing cognitive load across the lesson."
+  assessment: "6 concepts at B1 level: within the 7-10 cognitive limit for this tier. The lesson divides into two clear blocks (scenarios, then PMAs) with worked examples in each, distributing cognitive load across the lesson."
 
 differentiation:
   extension_for_advanced: "Research how banks handled the Covid-19 pandemic in their IFRS 9 models. What macroeconomic scenarios did they design? How large were the PMAs? How did ECL provisions spike in Q1-Q2 2020 and then partially reverse in later quarters? The pandemic is the most significant test of IFRS 9 since its adoption."
@@ -72,20 +72,20 @@ differentiation:
 
 # Macroeconomic Scenarios and Post-Model Adjustments
 
-In Lessons 3 and 4, you built the three components of the ECL formula — PD, LGD, and EAD — and calculated facility-level ECL. But those calculations assumed a single set of economic conditions. IFRS 9 requires something more: banks must estimate ECL under multiple macroeconomic scenarios and calculate a probability-weighted average. And when the models still fall short — when they cannot capture an emerging risk, a structural change, or a once-in-a-generation event — banks must apply Post-Model Adjustments.
+In Lessons 3 and 4, you built the three components of the ECL formula: PD, LGD, and EAD: and calculated facility-level ECL. But those calculations assumed a single set of economic conditions. IFRS 9 requires something more: banks must estimate ECL under multiple macroeconomic scenarios and calculate a probability-weighted average. And when the models still fall short: when they cannot capture an emerging risk, a structural change, or a once-in-a-generation event: banks must apply Post-Model Adjustments.
 
-This lesson completes the IFRS 9 picture. After this lesson, you will have every component needed to calculate a full IFRS 9 ECL from raw data to final provision — and you will understand why the number your model produces is almost never the number that appears in the financial statements.
+This lesson completes the IFRS 9 picture. After this lesson, you will have every component needed to calculate a full IFRS 9 ECL from raw data to final provision: and you will understand why the number your model produces is almost never the number that appears in the financial statements.
 
 ## Why Multiple Scenarios?
 
-IFRS 9 paragraph 5.5.17 requires that the ECL measurement reflect "an unbiased and probability-weighted amount that is determined by evaluating a range of possible outcomes." A single-scenario ECL — even a "most likely" scenario — is not compliant because it fails to capture the asymmetric distribution of credit losses.
+IFRS 9 paragraph 5.5.17 requires that the ECL measurement reflect "an unbiased and probability-weighted amount that is determined by evaluating a range of possible outcomes." A single-scenario ECL (even a "most likely" scenario) is not compliant because it fails to capture the asymmetric distribution of credit losses.
 
-The key insight is **non-linearity**: credit losses do not increase linearly with economic deterioration. A 10% decline in GDP does not produce twice the losses of a 5% decline — it may produce three or four times the losses, because default rates accelerate and recovery rates collapse simultaneously. This means:
+The key insight is **non-linearity**: credit losses do not increase linearly with economic deterioration. A 10% decline in GDP does not produce twice the losses of a 5% decline: it may produce three or four times the losses, because default rates accelerate and recovery rates collapse simultaneously. This means:
 
 :::info The Non-Linearity Principle
 **The expected credit loss is NOT the credit loss under the expected scenario.**
 
-If the base case ECL is $45M and the adverse case ECL is $78M, the probability-weighted ECL will always be higher than $45M — even if the base case has the highest probability weight. This is because the adverse scenario's impact is disproportionately large.
+If the base case ECL is $45M and the adverse case ECL is $78M, the probability-weighted ECL will always be higher than $45M: even if the base case has the highest probability weight. This is because the adverse scenario's impact is disproportionately large.
 :::
 
 ## Designing Macroeconomic Scenarios
@@ -122,7 +122,7 @@ A bank designs four scenarios for its 2025 year-end ECL calculation:
 | Adverse  | -1.0%      | 6.5%         | -10%            | 30%                |
 | Severe   | -3.5%      | 9.0%         | -25%            | 15%                |
 
-**Probability weights must sum to 1.0** (100%). The weights reflect the bank's assessment of the likelihood of each scenario — not an objective probability, but an informed judgment that must be documented and approved by the credit committee.
+**Probability weights must sum to 1.0** (100%). The weights reflect the bank's assessment of the likelihood of each scenario; not an objective probability, but an informed judgment that must be documented and approved by the credit committee.
 
 ## Calculating Probability-Weighted ECL
 
@@ -144,7 +144,7 @@ A commercial real estate portfolio produces the following ECL under each scenari
 
 **Probability-Weighted ECL = $67.35M**
 
-Notice: the base case ECL is $45M, but the probability-weighted ECL is $67.35M — **49% higher**. This is the non-linearity effect in practice. The adverse and severe scenarios contribute disproportionately because their ECL amounts are much larger than the base case. Even though the base case has the highest probability weight (40%), the tail scenarios pull the weighted average significantly above the most likely outcome.
+Notice: the base case ECL is $45M, but the probability-weighted ECL is $67.35M: **49% higher**. This is the non-linearity effect in practice. The adverse and severe scenarios contribute disproportionately because their ECL amounts are much larger than the base case. Even though the base case has the highest probability weight (40%), the tail scenarios pull the weighted average significantly above the most likely outcome.
 
 This is why IFRS 9 requires multiple scenarios. A bank reporting only the base case ECL of $45M would be understating its expected losses by $22.35M.
 
@@ -162,7 +162,7 @@ This sensitivity demonstrates why probability weights are among the most scrutin
 
 ## Post-Model Adjustments (PMAs)
 
-Even with multiple scenarios, ECL models cannot capture everything. Models are built on historical data and statistical relationships. When something happens that is outside the model's historical experience — a pandemic, a geopolitical shock, a structural industry change — the model output must be adjusted.
+Even with multiple scenarios, ECL models cannot capture everything. Models are built on historical data and statistical relationships. When something happens that is outside the model's historical experience (a pandemic, a geopolitical shock, a structural industry change) the model output must be adjusted.
 
 **Post-Model Adjustments (PMAs)** are management overlays applied on top of the model ECL to capture risks that the model cannot quantify. They are the bridge between what the model says and what management believes the actual expected loss to be.
 
@@ -178,14 +178,14 @@ Even with multiple scenarios, ECL models cannot capture everything. Models are b
 
 ### PMA Governance: The Audit Focus
 
-PMAs are the single most scrutinised element of IFRS 9 reporting. Because PMAs represent **management override** of quantitative models, they are inherently subjective — and auditors treat them with heightened scepticism. Every PMA must satisfy strict governance requirements:
+PMAs are the single most scrutinised element of IFRS 9 reporting. Because PMAs represent **management override** of quantitative models, they are inherently subjective: and auditors treat them with heightened scepticism. Every PMA must satisfy strict governance requirements:
 
 | Governance Requirement   | What It Means                                                                                                      |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | **Documented rationale** | Written explanation of why the model output is insufficient and what the PMA corrects                              |
-| **Committee approval**   | Approved by the credit committee or equivalent senior management body — not by the modelling team alone            |
+| **Committee approval**   | Approved by the credit committee or equivalent senior management body; not by the modelling team alone            |
 | **Quantified impact**    | Specific dollar amount, with methodology for calculation (not "approximately $10-20M")                             |
-| **Time-limited**         | Every PMA must have an expiry date or review trigger — PMAs are temporary adjustments, not permanent model changes |
+| **Time-limited**         | Every PMA must have an expiry date or review trigger: PMAs are temporary adjustments, not permanent model changes |
 | **Quarterly review**     | Re-assessed every reporting period; removed when the underlying issue is resolved or incorporated into the model   |
 | **Back-testing**         | Where possible, compared against actual outcomes to validate the adjustment was appropriate                        |
 
@@ -199,9 +199,9 @@ During Q1 2020, banks globally applied Covid-19 PMAs because:
 
 1. No ECL model had been calibrated for a global pandemic with simultaneous lockdowns
 2. Macroeconomic scenarios designed in December 2019 did not include a pandemic scenario
-3. Government support schemes (furlough, payment holidays) obscured true credit quality — borrowers on payment holidays were technically current but potentially distressed
+3. Government support schemes (furlough, payment holidays) obscured true credit quality: borrowers on payment holidays were technically current but potentially distressed
 
-Major banks applied PMAs of $1-10 billion on top of their model-calculated ECL. As the pandemic progressed and models were recalibrated to include pandemic data, these PMAs were gradually released — but the process took 18-24 months.
+Major banks applied PMAs of $1-10 billion on top of their model-calculated ECL. As the pandemic progressed and models were recalibrated to include pandemic data, these PMAs were gradually released; but the process took 18-24 months.
 
 ## Putting It All Together: The Complete IFRS 9 ECL
 
@@ -218,7 +218,7 @@ After five lessons, you now have all the components for a complete IFRS 9 ECL ca
 | 7    | Post-Model Adjustments                            | This lesson | Management judgment |
 | 8    | **Final reported ECL = Weighted ECL + PMA**       | This lesson | Combined output     |
 
-The `/bank-ecl` command chains steps 1-6 automatically. Step 7 (PMAs) requires professional judgment that the agent cannot automate — it can draft the PMA documentation using the `ifrs9-scenarios` skill, but the quantum and rationale must come from management.
+The `/bank-ecl` command chains steps 1-6 automatically. Step 7 (PMAs) requires professional judgment that the agent cannot automate: it can draft the PMA documentation using the `ifrs9-scenarios` skill, but the quantum and rationale must come from management.
 
 ## Exercise 2: GCC Corporate Portfolio
 
@@ -240,7 +240,7 @@ Apply macroeconomic scenario analysis and PMA design to this GCC-region corporat
 1. Calculate the upside ECL for each borrower (Base ECL x 0.70).
 2. Calculate the probability-weighted ECL for each borrower.
 3. Sum to get the portfolio-level probability-weighted ECL.
-4. Design a PMA for the Oil & Gas sector — Gulf Petrochemicals has $120M exposure and oil prices have dropped 25% in the last quarter. The base case macro scenarios were calibrated with oil at $80/barrel; current price is $60/barrel. Estimate the PMA amount and document the rationale.
+4. Design a PMA for the Oil & Gas sector: Gulf Petrochemicals has $120M exposure and oil prices have dropped 25% in the last quarter. The base case macro scenarios were calibrated with oil at $80/barrel; current price is $60/barrel. Estimate the PMA amount and document the rationale.
 5. Calculate the final reported ECL (probability-weighted ECL + PMA).
 
 ## Using the Banking Plugin
@@ -274,7 +274,7 @@ The agent routes through `ifrs9-scenarios` to produce a probability-weighted ECL
 | Governance requirements | Specifies approval, time-limiting, and review schedule | Committee approval, expiry date, and quarterly review are all present |
 
 :::note Your output will vary
-The specific ECL amounts and PMA quantum depend on your portfolio data, scenario weights, and the identified model limitation. The teaching point is the non-linearity principle (weighted ECL > base case ECL) and PMA governance discipline — verify the structure and governance completeness, not specific numbers.
+The specific ECL amounts and PMA quantum depend on your portfolio data, scenario weights, and the identified model limitation. The teaching point is the non-linearity principle (weighted ECL > base case ECL) and PMA governance discipline: verify the structure and governance completeness, not specific numbers.
 :::
 
 Priya reviews the scenario weights against her bank's latest economic outlook and validates the PMA quantum by cross-checking the sub-portfolio exposure against her internal concentration report.
@@ -302,7 +302,7 @@ principle. Why is the expected credit loss NOT the
 credit loss under the expected scenario?
 ```
 
-**What you are learning:** The non-linearity principle is the reason IFRS 9 requires multiple scenarios. By calculating and explaining the difference between the base case and weighted ECL, you build the ability to communicate IFRS 9 provisioning decisions to non-technical stakeholders — a critical professional skill for credit risk officers and finance directors.
+**What you are learning:** The non-linearity principle is the reason IFRS 9 requires multiple scenarios. By calculating and explaining the difference between the base case and weighted ECL, you build the ability to communicate IFRS 9 provisioning decisions to non-technical stakeholders: a critical professional skill for credit risk officers and finance directors.
 
 ### Prompt 2: Adapt
 
@@ -327,7 +327,7 @@ Explain why this PMA would be the primary focus of the
 external audit engagement.
 ```
 
-**What you are learning:** PMAs are where professional judgment meets quantitative modelling. By designing a PMA yourself, you develop the ability to bridge the gap between what models produce and what the financial statements should reflect. This is the highest-value skill in IFRS 9 practice — it requires both technical knowledge (what the model misses) and governance awareness (how to document management judgment defensibly).
+**What you are learning:** PMAs are where professional judgment meets quantitative modelling. By designing a PMA yourself, you develop the ability to bridge the gap between what models produce and what the financial statements should reflect. This is the highest-value skill in IFRS 9 practice: it requires both technical knowledge (what the model misses) and governance awareness (how to document management judgment defensibly).
 
 ### Prompt 3: Apply
 
@@ -350,7 +350,7 @@ probability weights? What stops a bank from using
 optimistic weights to report lower provisions?
 ```
 
-**What you are learning:** Probability weight selection is one of the most contentious areas in IFRS 9 reporting. By calculating ECL under different weight schemes, you see how material the weight choice is — and why regulatory and audit scrutiny focuses on whether banks are assigning appropriate probabilities to adverse scenarios. This prepares you for the professional judgment required in real ECL reporting.
+**What you are learning:** Probability weight selection is one of the most contentious areas in IFRS 9 reporting. By calculating ECL under different weight schemes, you see how material the weight choice is: and why regulatory and audit scrutiny focuses on whether banks are assigning appropriate probabilities to adverse scenarios. This prepares you for the professional judgment required in real ECL reporting.
 
 ## Flashcards Study Aid
 
@@ -358,4 +358,4 @@ optimistic weights to report lower provisions?
 
 ---
 
-Continue to [Lesson 6: Basel III/IV Capital Adequacy — CET1, Tier 1, Total Capital →](./06-basel-capital-ratios.md)
+Continue to [Lesson 6: Basel III/IV Capital Adequacy: CET1, Tier 1, Total Capital →](./06-basel-capital-ratios.md)

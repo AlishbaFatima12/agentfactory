@@ -20,7 +20,7 @@ cards:
 
   - id: "ch36-13-metrics-okrs-product-analytics-003"
     front: "What is the difference between L1 and L2 metrics?"
-    back: "L1 metrics are standing health indicators that paint a complete picture of product health — they are always monitored. L2 metrics are diagnostic — they answer 'why is an L1 metric moving?' and are used for investigation, not for a standing dashboard."
+    back: "L1 metrics are standing health indicators that paint a complete picture of product health: they are always monitored. L2 metrics are diagnostic: they answer 'why is an L1 metric moving?' and are used for investigation, not for a standing dashboard."
     tags: ["difference", "metrics"]
     difficulty: "intermediate"
 
@@ -44,7 +44,7 @@ cards:
 
   - id: "ch36-13-metrics-okrs-product-analytics-007"
     front: "What sections does /metrics-review produce?"
-    back: "Summary (2-3 sentences on overall health), metric scorecard (current/previous/change/target/status), trend analysis, bright spots, areas of concern, and recommended actions. Every recommended action should be specific — 'investigate further' is not an action."
+    back: "Summary (2-3 sentences on overall health), metric scorecard (current/previous/change/target/status), trend analysis, bright spots, areas of concern, and recommended actions. Every recommended action should be specific: 'investigate further' is not an action."
     tags: ["/metrics-review-produce", "sections", "metrics-review"]
     difficulty: "basic"
 
@@ -68,12 +68,12 @@ cards:
 
   - id: "ch36-13-metrics-okrs-product-analytics-011"
     front: "What does /metrics-review need from you if no analytics tool is connected via MCP?"
-    back: "The metrics and their current values (pasted as a table or described), comparison data from the previous period and targets, and context on recent events — launches, incidents, campaigns, or seasonality that might explain changes."
+    back: "The metrics and their current values (pasted as a table or described), comparison data from the previous period and targets, and context on recent events: launches, incidents, campaigns, or seasonality that might explain changes."
     tags: ["analytics-tool", "connected-via", "metrics-review"]
     difficulty: "intermediate"
 
   - id: "ch36-13-metrics-okrs-product-analytics-012"
-    front: "What is the NEVER DO rule for metric reviews — what must every metric have?"
-    back: "Every metric must have a comparison. A raw number without context — previous period, target, or benchmark — is not information. '521 active teams' means nothing. '521 active teams (prior: 498, target: 550, status: at risk)' is a data point."
+    front: "What is the NEVER DO rule for metric reviews: what must every metric have?"
+    back: "Every metric must have a comparison. A raw number without context: previous period, target, or benchmark: is not information. '521 active teams' means nothing. '521 active teams (prior: 498, target: 550, status: at risk)' is a data point."
     tags: ["metric-reviews", "never", "rule"]
     difficulty: "advanced"

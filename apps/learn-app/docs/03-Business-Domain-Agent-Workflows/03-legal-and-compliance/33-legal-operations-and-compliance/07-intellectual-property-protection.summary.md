@@ -1,4 +1,4 @@
-# Intellectual Property Protection — Summary
+# Intellectual Property Protection; Summary
 
 ## Core Concept
 

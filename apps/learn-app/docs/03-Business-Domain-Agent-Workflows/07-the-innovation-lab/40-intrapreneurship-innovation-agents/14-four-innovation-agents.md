@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/intrapreneurship-innovation-agents/four-innovation-agents
 sidebar_position: 14
 title: "Four Innovation Agents"
-description: "Deploy four persistent innovation agents — Idea Generator, Customer Intelligence, Business Model Architect, and Fundraising Readiness — configure their weekly automated tasks, and integrate them into a continuous intelligence rhythm for your venture"
+description: "Deploy four persistent innovation agents: Idea Generator, Customer Intelligence, Business Model Architect, and Fundraising Readiness: configure their weekly automated tasks, and integrate them into a continuous intelligence rhythm for your venture"
 keywords:
   [
     "innovation agents",
@@ -29,7 +29,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Information-Processing"
-    measurable_at_this_level: "Student can describe each of the 4 agents by purpose, weekly automated output, trigger-based output, and on-demand capabilities — and explain how agents differ from on-demand skills"
+    measurable_at_this_level: "Student can describe each of the 4 agents by purpose, weekly automated output, trigger-based output, and on-demand capabilities , and explain how agents differ from on-demand skills"
 
   - name: "Configure Persistent Agents to Monitor a Venture's Innovation Metrics"
     proficiency_level: "B1"
@@ -42,7 +42,7 @@ learning_objectives:
   - objective: "Distinguish between on-demand skills and persistent agents, and explain the value of each for innovation work"
     proficiency_level: "B1"
     bloom_level: "Understand"
-    assessment_method: "Student produces a table comparing skills vs. agents on: activation mechanism, output frequency, context awareness, and use case — with a specific example for each row"
+    assessment_method: "Student produces a table comparing skills vs. agents on: activation mechanism, output frequency, context awareness, and use case, with a specific example for each row"
 
   - objective: "Describe the weekly automated deliverable and primary on-demand use case for each of the 4 innovation agents"
     proficiency_level: "B1"
@@ -52,47 +52,47 @@ learning_objectives:
   - objective: "Configure the Monday Innovation Brief and Customer Signal Digest for a specific venture using innov.local.md context"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces a Monday Innovation Brief and Customer Signal Digest where the ideas and customer signals are specific to their venture's stage and open assumptions — not generic innovation advice"
+    assessment_method: "Student produces a Monday Innovation Brief and Customer Signal Digest where the ideas and customer signals are specific to their venture's stage and open assumptions, not generic innovation advice"
 
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Persistent agent concept — runs continuously vs. invoked on-demand"
-    - "Weekly automated briefs — scheduled intelligence that surfaces decisions before you ask"
-    - "Trigger-based activation — agent activates when specific events occur (new validation data, burn rate change)"
-    - "Four agent specialisations — Idea Generator, Customer Intelligence, Business Model Architect, Fundraising Readiness"
+    - "Persistent agent concept, runs continuously vs. invoked on-demand"
+    - "Weekly automated briefs, scheduled intelligence that surfaces decisions before you ask"
+    - "Trigger-based activation, agent activates when specific events occur (new validation data, burn rate change)"
+    - "Four agent specialisations, Idea Generator, Customer Intelligence, Business Model Architect, Fundraising Readiness"
   assessment: "4 concepts at B1, all building on 13 prior lessons. Students have used all 10 skills by this point; this lesson shows how agents orchestrate and schedule those skills continuously. The cognitive load is low because the concepts build directly on known skills."
 
 differentiation:
-  extension_for_advanced: "Configure the Fundraising Readiness Agent for your venture by populating the fundraising section of innov.local.md. Then run the readiness checklist against your current data room status. Which items are not started? What is your readiness score (N/16)? What would you need to do in the next 4 weeks to reach 12/16 — the recommended threshold for starting active fundraising?"
-  remedial_for_struggling: "Start with just the Idea Generator. Ask it for a Monday Innovation Brief for your venture. Compare the three unsolicited ideas to ideas you would have generated yourself. Where does the agent add value? Where does it miss your specific context? This comparison teaches you what agent context-loading does and why innov.local.md matters — before you tackle the more complex agents."
+  extension_for_advanced: "Configure the Fundraising Readiness Agent for your venture by populating the fundraising section of innov.local.md. Then run the readiness checklist against your current data room status. Which items are not started? What is your readiness score (N/16)? What would you need to do in the next 4 weeks to reach 12/16: the recommended threshold for starting active fundraising?"
+  remedial_for_struggling: "Start with just the Idea Generator. Ask it for a Monday Innovation Brief for your venture. Compare the three unsolicited ideas to ideas you would have generated yourself. Where does the agent add value? Where does it miss your specific context? This comparison teaches you what agent context-loading does and why innov.local.md matters, before you tackle the more complex agents."
 
 teaching_guide:
   key_points:
     - "Skills are reactive (you invoke them); agents are proactive (they run weekly and surface decisions before you ask)"
-    - "All 4 agents read from innov.local.md — without a populated context file, agent outputs are generic and less useful"
-    - "The Monday Innovation Brief's most valuable element is the Uncomfortable Question — a provocation the team should sit with, not a task to add to the sprint"
+    - "All 4 agents read from innov.local.md, without a populated context file, agent outputs are generic and less useful"
+    - "The Monday Innovation Brief's most valuable element is the Uncomfortable Question: a provocation the team should sit with, not a task to add to the sprint"
     - "The Fundraising Readiness Agent's pre-pitch ritual (48-hour investor brief) is the highest-value on-demand output for any team approaching a fundraising process"
-    - "For intrapreneurs, the Fundraising Readiness Agent becomes the Business Case Readiness Agent — the investor pipeline becomes a stakeholder alignment tracker"
+    - "For intrapreneurs, the Fundraising Readiness Agent becomes the Business Case Readiness Agent: the investor pipeline becomes a stakeholder alignment tracker"
   misconceptions:
     - "Agents replace the founder's judgment. Correction: agents surface information and intelligence that the founder needs to make better decisions. They do not make decisions. The Monday Innovation Brief presents ideas with evidence; the founder decides which to pursue."
-    - "The Financial Health Review only matters when things are bad. Correction: the monthly review matters most when things appear to be going well — it catches stale assumptions and upcoming runway cliffs before they become emergencies."
-    - "You need to be actively fundraising to use the Fundraising Readiness Agent. Correction: maintaining fundraising readiness continuously (not just when you need money) means you can move quickly when a warm introduction arrives — fundraising readiness has a 3–6 month build time."
+    - "The Financial Health Review only matters when things are bad. Correction: the monthly review matters most when things appear to be going well ; it catches stale assumptions and upcoming runway cliffs before they become emergencies."
+    - "You need to be actively fundraising to use the Fundraising Readiness Agent. Correction: maintaining fundraising readiness continuously (not just when you need money) means you can move quickly when a warm introduction arrives, fundraising readiness has a 3–6 month build time."
   discussion_prompts:
-    - "You receive a Monday Innovation Brief with 3 unsolicited ideas. One of them — if it works — would be a significant pivot from your current direction. How do you decide whether to take it seriously or dismiss it?"
-    - "Your Customer Intelligence Agent surfaces a pattern: 2 of your 3 pilots are using the product less than last week. This is not yet a problem, but it is a signal. What do you do — and how does the agent's output change what you do vs. what you would have done without it?"
+    - "You receive a Monday Innovation Brief with 3 unsolicited ideas. One of them; if it works, would be a significant pivot from your current direction. How do you decide whether to take it seriously or dismiss it?"
+    - "Your Customer Intelligence Agent surfaces a pattern: 2 of your 3 pilots are using the product less than last week. This is not yet a problem, but it is a signal. What do you do , and how does the agent's output change what you do vs. what you would have done without it?"
   teaching_tips:
-    - "Walk through the Monday Innovation Brief format item by item. The Uncomfortable Question is often the most powerful element — ask students to generate an uncomfortable question for the AP venture."
+    - "Walk through the Monday Innovation Brief format item by item. The Uncomfortable Question is often the most powerful element, ask students to generate an uncomfortable question for the AP venture."
     - "Contrast the Fundraising Readiness Checklist with the typical founder approach of 'I'll prepare when I get a meeting'. The checklist makes visible how long preparation actually takes."
 ---
 
 # Four Innovation Agents
 
-Every tool in the Innovation OS so far has been on-demand: you invoke `/discovery` when you need synthesis; you invoke `/pitch` when you need a narrative; you invoke `/sprint` when you need a sprint plan. This is reactive intelligence — useful when you know what question to ask.
+Every tool in the Innovation OS so far has been on-demand: you invoke `/discovery` when you need synthesis; you invoke `/pitch` when you need a narrative; you invoke `/sprint` when you need a sprint plan. This is reactive intelligence, useful when you know what question to ask.
 
 The four innovation agents work differently. They run continuously, monitor your venture's key indicators, and surface the decisions that need attention before you ask. Each Monday, your Idea Generator delivers unsolicited provocations. Your Customer Intelligence agent synthesises last week's feedback without being prompted. Your Business Model Architect flags when validated data contradicts the canvas. Your Fundraising Readiness agent tracks the investor pipeline and prepares you for every meeting 48 hours in advance.
 
-This is the shift from reactive to proactive intelligence — from answering your questions to asking questions you have not thought to ask.
+This is the shift from reactive to proactive intelligence, from answering your questions to asking questions you have not thought to ask.
 
 :::note From the Prior 13 Lessons
 This lesson orchestrates everything. The Idea Generator builds on `/idea`. The Customer Intelligence agent builds on `/discovery`. The Business Model Architect builds on `/canvas` and `/financials`. The Fundraising Readiness agent builds on `/pitch`. You have used all 10 commands. Now meet the four agents that run them continuously.
@@ -115,14 +115,14 @@ Skills are tools. Agents are team members with standing briefs.
 
 ## Agent 1: The Idea Generator
 
-**Purpose:** Maintain a steady flow of fresh ideas into the venture's innovation pipeline. Prevent ideation from becoming a bottleneck — where the team only thinks about new directions when forced to by a crisis.
+**Purpose:** Maintain a steady flow of fresh ideas into the venture's innovation pipeline. Prevent ideation from becoming a bottleneck: where the team only thinks about new directions when forced to by a crisis.
 
-**Weekly task — Monday Innovation Brief:**
+**Weekly task. Monday Innovation Brief:**
 
-Every Monday, the Idea Generator loads your `innov.local.md`, identifies the current stage and open assumptions, searches for relevant market signals from the past week, and delivers three unsolicited ideas — small provocations to keep thinking fresh without requiring a formal brainstorm.
+Every Monday, the Idea Generator loads your `innov.local.md`, identifies the current stage and open assumptions, searches for relevant market signals from the past week, and delivers three unsolicited ideas, small provocations to keep thinking fresh without requiring a formal brainstorm.
 
 ```
-MONDAY INNOVATION BRIEF — Week of [Date]
+MONDAY INNOVATION BRIEF. Week of [Date]
 ════════════════════════════════════════════════════════════
 THIS WEEK'S 3 UNSOLICITED IDEAS:
 (Stage: MVP | Assumptions being tested: A-004, A-005)
@@ -136,7 +136,7 @@ Effort to test: 1 week spike to assess API availability for top 3 ERPs
 Assumption it would test: A-007 (ERP integration feasibility)
 
 IDEA 2: CFO WhatsApp nudge for at-risk vendors
-What: Proactively flag when a vendor payment is overdue based on PO date —
+What: Proactively flag when a vendor payment is overdue based on PO date,
       notify CFO via WhatsApp before vendor calls.
 Why now: Pilot 1 CFO mentioned a vendor dispute this week; early warning
          could prevent that category of friction entirely.
@@ -153,7 +153,7 @@ Assumption it would test: A-006 (CFO approval fatigue for small invoices)
 THIS WEEK'S MARKET SIGNAL:
 A regional bank has announced an SME finance digitisation programme
 that will require AP audit trails from their SME lending clients.
-This is a potential distribution partnership — financial institutions
+This is a potential distribution partnership, financial institutions
 as a sales channel. Worth tracking.
 
 UNCOMFORTABLE QUESTION:
@@ -172,30 +172,30 @@ or a feature gap we are not seeing?
 
 **Purpose:** Maintain a continuous feedback loop between customers and the team. Ensure no customer signal goes unsynthesised. Update customer profiles and assumption statuses in `innov.local.md` as new data arrives.
 
-**Weekly task — Customer Signal Digest:**
+**Weekly task, Customer Signal Digest:**
 
-Every Monday, the Customer Intelligence agent synthesises all customer signals from the past week — NPS responses, support tickets, direct messages, usage data, interview notes, sales call notes, and churn events.
+Every Monday, the Customer Intelligence agent synthesises all customer signals from the past week, NPS responses, support tickets, direct messages, usage data, interview notes, sales call notes, and churn events.
 
 ```
-CUSTOMER SIGNAL DIGEST — Week of [Date]
+CUSTOMER SIGNAL DIGEST. Week of [Date]
 ════════════════════════════════════════════════════════════
 CUSTOMER HEALTH SNAPSHOT:
   Active customers:    3 | Healthy (>70% usage): 2 | At risk (<50% usage): 1
-  NPS this week:       8.5 (2 responses) — stable vs. last week
+  NPS this week:       8.5 (2 responses), stable vs. last week
   Churn this week:     0 customers ($0 MRR impact)
 
 TOP 3 THEMES FROM CUSTOMER FEEDBACK:
-  THEME 1: Approval fatigue for small invoices — 2 mentions this week
+  THEME 1: Approval fatigue for small invoices, 2 mentions this week
   Evidence: Pilot 2 CFO: "I get 40 WhatsApp notifications a day. Most are
             under $500. I just want to auto-approve those."
-  Implication: A-006 (approval fatigue) is likely VALIDATED — needs a sprint.
+  Implication: A-006 (approval fatigue) is likely VALIDATED, needs a sprint.
 
-  THEME 2: ERP re-entry still manual — 2 mentions this week
+  THEME 2: ERP re-entry still manual, 2 mentions this week
   Evidence: Both Pilots 1 and 3 manually re-enter approved invoices into
             Xero. One mentioned "this takes 20 minutes a day."
   Implication: ERP integration may be a retention risk, not just a feature request.
 
-  THEME 3: New finance staff onboarding friction — 1 mention
+  THEME 3: New finance staff onboarding friction, 1 mention
   Evidence: Pilot 3 new hire took 3 days to become proficient independently.
   Implication: Onboarding assumption A-008 may need revision upward.
 
@@ -207,11 +207,11 @@ ASSUMPTION UPDATES THIS WEEK:
 CUSTOMER AT RISK:
   Pilot 3 (Regional Manufacturer): Usage dropped from 67% to 52% this week.
   Likely related to the 3 new staff hires and onboarding friction noted above.
-  Recommended action: Founder calls the CFO today — not to sell, to listen.
+  Recommended action: Founder calls the CFO today, not to sell, to listen.
 
 NEW CUSTOMER INSIGHT THIS WEEK:
   Finance teams treat WhatsApp as an approval tool and email as the
-  record of invoice receipt. They want both channels — WhatsApp for
+  record of invoice receipt. They want both channels, WhatsApp for
   speed; email for the audit trail they can forward to their accountant.
   Our current system only covers one side of this.
 ════════════════════════════════════════════════════════════
@@ -221,7 +221,7 @@ NEW CUSTOMER INSIGHT THIS WEEK:
 
 ## Agent 3: Business Model Architect
 
-**Purpose:** Maintain the Business Model Canvas and financial model as living documents that reflect current validated state — not the original vision. After every significant validation event, propose specific canvas updates. Provide regular health assessments.
+**Purpose:** Maintain the Business Model Canvas and financial model as living documents that reflect current validated state , not the original vision. After every significant validation event, propose specific canvas updates. Provide regular health assessments.
 
 **Trigger-based:** The Business Model Architect activates when new validation data arrives. It does not wait for you to ask. When the Customer Intelligence agent identifies a theme that affects a canvas block, the Business Model Architect proposes a canvas version update.
 
@@ -234,15 +234,15 @@ Proposed: Tiered pricing — $500/month (mid-market, >$5M revenue);
 Evidence: Pilot 1 CFO (SME) mentioned price sensitivity at $500/month.
           Two LOI conversations stalled on price point. Tiered pricing
           could accelerate SME pipeline without cannibalising mid-market.
-Status:   PROPOSED — approve to update canvas to v1.4
+Status:   PROPOSED, approve to update canvas to v1.4
 ```
 
-**Monthly task — Financial Health Review (first Monday of the month):**
+**Monthly task, Financial Health Review (first Monday of the month):**
 
 ```
 MONTHLY FINANCIAL HEALTH REVIEW — [Month/Year]
 ════════════════════════════════════════════════════════════
-HEADLINE: 🟢 HEALTHY — Unit economics strong; runway comfortable
+HEADLINE: 🟢 HEALTHY, Unit economics strong; runway comfortable
 
 UNIT ECONOMICS:
   CAC (measured):     $275  vs. target $300    🟢
@@ -276,9 +276,9 @@ RECOMMENDED ACTIONS:
 
 ## Agent 4: Fundraising Readiness
 
-**Purpose:** Ensure the founding team is always fundraising-ready — not scrambling when a warm introduction arrives, but prepared with a current pitch narrative, data room, and investor pipeline.
+**Purpose:** Ensure the founding team is always fundraising-ready, not scrambling when a warm introduction arrives, but prepared with a current pitch narrative, data room, and investor pipeline.
 
-**Continuous monitoring — Readiness Score:**
+**Continuous monitoring, Readiness Score:**
 
 The Fundraising Readiness Agent evaluates readiness against a 16-item checklist whenever `fundraising.current_round` is populated in `innov.local.md`:
 
@@ -310,10 +310,10 @@ Recommendation: Minimum threshold (12/16) reached. Can begin active
 outreach but address team bios and Q&A prep before first investor meeting.
 ```
 
-**Weekly task (during active fundraising) — Investor Pipeline Update:**
+**Weekly task (during active fundraising), Investor Pipeline Update:**
 
 ```
-INVESTOR PIPELINE — Week of [Date]
+INVESTOR PIPELINE. Week of [Date]
 ════════════════════════════════════════════════════════════
 HEADLINE: 4 investors in active process | 1 at diligence | 2 at intro meeting
 
@@ -326,14 +326,14 @@ PIPELINE STATUS:
 AT RISK: None >14 days without contact
 
 THIS WEEK'S PRIORITY:
-  1. Send data room to Vertex Capital (diligence started — time-sensitive)
+  1. Send data room to Vertex Capital (diligence started, time-sensitive)
   2. Schedule follow-up call with Angel X (strong signal from intro meeting)
 ════════════════════════════════════════════════════════════
 ```
 
 **On-demand tasks:**
 
-**Pre-pitch ritual (48 hours before any investor meeting):** The agent generates a personalised investor brief — their portfolio, known investment thesis, past questions from public sources, and the 5 most likely hard questions for this specific investor. This prevents the avoidable mistake of pitching to an investor whose portfolio includes your direct competitor without knowing it.
+**Pre-pitch ritual (48 hours before any investor meeting):** The agent generates a personalised investor brief; their portfolio, known investment thesis, past questions from public sources, and the 5 most likely hard questions for this specific investor. This prevents the avoidable mistake of pitching to an investor whose portfolio includes your direct competitor without knowing it.
 
 **Pitch practice feedback:** When you share a transcript of your verbal pitch, the agent identifies what was strongest, what was weakest, what investors will not believe without more evidence, and the one thing to fix before the next practice.
 
@@ -349,18 +349,18 @@ My venture context is loaded in innov.local.md (AP automation SaaS;
 MVP stage; 3 paying pilots; $500/month each; 6 LOIs; raising $500K seed).
 
 Generate:
-1. Monday Innovation Brief (Idea Generator) — 3 unsolicited ideas,
+1. Monday Innovation Brief (Idea Generator), 3 unsolicited ideas,
    1 market signal, 1 uncomfortable question
-2. Customer Signal Digest (Customer Intelligence) — using the pilot
+2. Customer Signal Digest (Customer Intelligence), using the pilot
    feedback from our exercises as the week's customer signals
-3. Financial Health Review (Business Model Architect) — using unit
+3. Financial Health Review (Business Model Architect), using unit
    economics from Lesson 9
-4. Fundraising Readiness Score (Fundraising Readiness) — using the
+4. Fundraising Readiness Score (Fundraising Readiness), using the
    pitch deck and Q&A from Lesson 12
 ```
 
 :::note For Intrapreneurs
-The four agents translate directly to the intrapreneurship context with one key adaptation — the Fundraising Readiness Agent becomes the **Business Case Readiness Agent**:
+The four agents translate directly to the intrapreneurship context with one key adaptation: the Fundraising Readiness Agent becomes the **Business Case Readiness Agent**:
 
 | Fundraising Agent Element  | Business Case Agent Equivalent                                                  |
 | -------------------------- | ------------------------------------------------------------------------------- |
@@ -371,7 +371,7 @@ The four agents translate directly to the intrapreneurship context with one key 
 | Readiness score            | Gates: business case approved → pilot approved → scale approved                 |
 | Pre-meeting investor brief | Pre-meeting stakeholder brief: what they care about, likely objections, the ask |
 
-The Monday Innovation Brief and Customer Signal Digest work identically — internal users are customers; their feedback goes into the same digest structure.
+The Monday Innovation Brief and Customer Signal Digest work identically, internal users are customers; their feedback goes into the same digest structure.
 :::
 
 ## Try With AI
@@ -379,7 +379,7 @@ The Monday Innovation Brief and Customer Signal Digest work identically — inte
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Generate the Monday Innovation Brief for the AP venture:
+**Reproduce:** Generate the Monday Innovation Brief for the AP venture:
 
 ```
 Generate a Monday Innovation Brief for the AP automation venture.
@@ -395,9 +395,9 @@ Output:
 - 1 uncomfortable question the team should sit with
 ```
 
-**What you are learning:** The Monday Innovation Brief is valuable because it arrives whether or not you would have asked. The uncomfortable question is the most powerful element — it surfaces the thing the team is avoiding. Notice whether the ideas generated are specific to the AP venture context or generic.
+**What you are learning:** The Monday Innovation Brief is valuable because it arrives whether or not you would have asked. The uncomfortable question is the most powerful element ; it surfaces the thing the team is avoiding. Notice whether the ideas generated are specific to the AP venture context or generic.
 
-**Adapt** — Generate a Customer Signal Digest from hypothetical feedback data:
+**Adapt:** Generate a Customer Signal Digest from hypothetical feedback data:
 
 ```
 Generate a Customer Signal Digest based on this week's customer feedback
@@ -414,9 +414,9 @@ Synthesise into: health snapshot, top 3 themes, assumption updates,
 at-risk customers, and one new customer insight.
 ```
 
-**What you are learning:** The digest forces you to interpret multiple signals simultaneously. Notice how the usage drop in Pilot 2 and the pricing objection from the LOI prospect might be related — or might not be. The agent's job is to surface the pattern; your job is to decide whether it is signal or noise.
+**What you are learning:** The digest forces you to interpret multiple signals simultaneously. Notice how the usage drop in Pilot 2 and the pricing objection from the LOI prospect might be related , or might not be. The agent's job is to surface the pattern; your job is to decide whether it is signal or noise.
 
-**Apply** — Use your venture's innov.local.md for a Financial Health Review:
+**Apply:** Use your venture's innov.local.md for a Financial Health Review:
 
 ```
 Based on my innov.local.md, generate a Monthly Financial Health Review.
@@ -432,7 +432,7 @@ Include: unit economics with RAG status, current state, runway alert,
 canvas health, and 2–3 recommended actions.
 ```
 
-**What you are learning:** The monthly review reveals which assumptions in your financial model are measured vs. assumed. Every metric marked ASSUMED is a number you are betting on without evidence. The review makes those bets visible — before they become expensive surprises.
+**What you are learning:** The monthly review reveals which assumptions in your financial model are measured vs. assumed. Every metric marked ASSUMED is a number you are betting on without evidence. The review makes those bets visible, before they become expensive surprises.
 :::
 
 ## Flashcards Study Aid
@@ -441,4 +441,4 @@ canvas health, and 2–3 recommended actions.
 
 ---
 
-Continue to [Lesson 15: Capstone — Build Your Innovation OS →](./15-capstone-build-innovation-os.md)
+Continue to [Lesson 15: Capstone: Build Your Innovation OS →](./15-capstone-build-innovation-os.md)

@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/mcp-dependency
 sidebar_position: 7
-title: "Delegated Calculation — Guardrail 4"
-description: "Learn why a Finance Domain Agent must never calculate internally — it writes assumptions to the model via the IDFA plugin, the spreadsheet engine calculates deterministically, and the agent reads back results that are mathematically certain"
+title: "Delegated Calculation: Guardrail 4"
+description: "Learn why a Finance Domain Agent must never calculate internally: it writes assumptions to the model via the IDFA plugin, the spreadsheet engine calculates deterministically, and the agent reads back results that are mathematically certain"
 keywords:
   [
     "Delegated Calculation",
@@ -70,30 +70,30 @@ cognitive_load:
     - "Deterministic output versus agent estimate"
     - "What-if analysis via delegated calculation"
     - "Goal-seeking via iterative model interaction"
-  assessment: "5 new concepts at B1 level. Students already understand Named Ranges (L04), LaTeX verification (L05), and Intent Notes (L06). The IDFA plugin was introduced in the chapter prerequisites. This lesson applies a familiar interaction pattern to a new constraint — the prohibition on internal calculation."
+  assessment: "5 new concepts at B1 level. Students already understand Named Ranges (L04), LaTeX verification (L05), and Intent Notes (L06). The IDFA plugin was introduced in the chapter prerequisites. This lesson applies a familiar interaction pattern to a new constraint: the prohibition on internal calculation."
 
 differentiation:
   extension_for_advanced: "After completing the goal-seeking exercise, run a three-variable sensitivity analysis: change Inp_Rev_Y1, Inp_Rev_Growth, and Inp_COGS_Efficiency simultaneously. Report a 2x2 sensitivity table for two variables while holding the third constant. All results must come from the model."
   remedial_for_struggling: "Focus on the single what-if workflow only. Ask Claude to change Inp_Rev_Y1 to $12M and read back Gross_Profit_Y1. Verify it equals $4,800,000. If the agent writes the assumption and reads back the result without computing it itself, you have the core concept."
 ---
 
-# Delegated Calculation — Guardrail 4
+# Delegated Calculation: Guardrail 4
 
-In Lesson 6, you learned to attach Intent Notes that document the business purpose of every AI-generated formula. Now you reach the guardrail that governs how the agent interacts with the model itself. The CFO walks into your office: "What if we lose the Johnson account — that is $2M off Year 1 Revenue. What happens to Year 3 margins?" In the old world, you open Excel, change a cell, trace the impacts manually, re-check the formulas, and report back an hour later. With IDFA and the IDFA plugin, you give the agent the question. The agent writes the new assumption. The spreadsheet engine calculates. The agent reads back the answer. Every number comes from the model. Nothing is estimated.
+In Lesson 6, you learned to attach Intent Notes that document the business purpose of every AI-generated formula. Now you reach the guardrail that governs how the agent interacts with the model itself. The CFO walks into your office: "What if we lose the Johnson account: that is $2M off Year 1 Revenue. What happens to Year 3 margins?" In the old world, you open Excel, change a cell, trace the impacts manually, re-check the formulas, and report back an hour later. With IDFA and the IDFA plugin, you give the agent the question. The agent writes the new assumption. The spreadsheet engine calculates. The agent reads back the answer. Every number comes from the model. Nothing is estimated.
 
-This distinction — between an agent that _reports what the model calculated_ and an agent that _reports what it calculated internally_ — is the most consequential guardrail in IDFA. In finance, these are categorically different. One is audit-valid. The other is an opinion.
+This distinction (between an agent that _reports what the model calculated_ and an agent that _reports what it calculated internally_) is the most consequential guardrail in IDFA. In finance, these are categorically different. One is audit-valid. The other is an opinion.
 
 ## The Rule
 
-**Guardrail 4 — Delegated Calculation:** An AI agent operating on an IDFA-compliant model is prohibited from performing calculations internally. It must delegate all arithmetic to the spreadsheet engine — writing assumptions, letting Excel recalculate, and reading back the results.
+**Guardrail 4 (Delegated Calculation:** An AI agent operating on an IDFA-compliant model is prohibited from performing calculations internally. It must delegate all arithmetic to the spreadsheet engine) writing assumptions, letting Excel recalculate, and reading back the results.
 
-The agent provides the reasoning. The spreadsheet engine provides the mathematics. The result is not the agent's estimate — it is the model's deterministic output.
+The agent provides the reasoning. The spreadsheet engine provides the mathematics. The result is not the agent's estimate: it is the model's deterministic output.
 
 ## Why This Guardrail Exists
 
 Consider what happens without it. You ask the agent: "What is Year 2 Gross Profit if COGS improves to 58%?" The agent knows the formula. It knows Revenue_Y2 is $11M. It calculates internally: $11,000,000 minus ($11,000,000 times 0.58) equals $4,620,000. It reports this number confidently.
 
-The problem: the model might have a different Revenue_Y2. Perhaps another assumption changed since the agent last read the model. Perhaps the revenue growth formula includes a rounding convention. Perhaps there is a conditional override the agent does not know about. The agent's internal arithmetic is based on its understanding of the model — which may be incomplete, outdated, or wrong in ways neither the agent nor the user can detect.
+The problem: the model might have a different Revenue_Y2. Perhaps another assumption changed since the agent last read the model. Perhaps the revenue growth formula includes a rounding convention. Perhaps there is a conditional override the agent does not know about. The agent's internal arithmetic is based on its understanding of the model: which may be incomplete, outdated, or wrong in ways neither the agent nor the user can detect.
 
 When the agent delegates calculation to the spreadsheet engine, none of this matters. It writes the COGS assumption. Excel recalculates every dependent cell using the actual formulas in the actual model. The agent reads back the result. The number is mathematically certain because it came from the deterministic calculation engine, not from the agent's reasoning.
 
@@ -117,17 +117,17 @@ The agent writes to Named Ranges, never to cell coordinates. The spreadsheet eng
 
 Every interaction follows the same three-step pattern:
 
-**Step 1 — The agent reasons about the correct input:**
+**Step 1: The agent reasons about the correct input:**
 
-The agent determines what assumption to change based on the user's question. This is where the agent's intelligence matters — understanding the business context, selecting the right Named Range, choosing the right value.
+The agent determines what assumption to change based on the user's question. This is where the agent's intelligence matters: understanding the business context, selecting the right Named Range, choosing the right value.
 
-**Step 2 — The agent writes the input and the spreadsheet engine recalculates:**
+**Step 2: The agent writes the input and the spreadsheet engine recalculates:**
 
-You ask Claude to change an assumption. Claude writes the new value to the Named Range in the model and triggers a recalculation. The agent does not calculate anything — it writes a value to a Named Range and lets the spreadsheet engine do the rest.
+You ask Claude to change an assumption. Claude writes the new value to the Named Range in the model and triggers a recalculation. The agent does not calculate anything: it writes a value to a Named Range and lets the spreadsheet engine do the rest.
 
-**Step 3 — The agent reads back the result:**
+**Step 3: The agent reads back the result:**
 
-Claude reads the affected outputs from the model and reports them to you. The numbers it reports are the model's deterministic outputs — not estimates, not approximations, not internal arithmetic.
+Claude reads the affected outputs from the model and reports them to you. The numbers it reports are the model's deterministic outputs; not estimates, not approximations, not internal arithmetic.
 
 This separation is absolute. The agent never performs arithmetic on financial data. It reasons about what inputs to change and what outputs to read. The spreadsheet engine handles every calculation between those two points.
 
@@ -156,7 +156,7 @@ Here is what this looks like in Cowork:
 
 Every number came from the spreadsheet engine. The agent added zero arithmetic. If a CFO asks "where did these numbers come from?", the answer is: the model calculated them. Not the agent. Not an estimate. The model.
 
-:::warning Common Mistake — Never Calculate Then Write
+:::warning Common Mistake: Never Calculate Then Write
 
 The most dangerous violation of Guardrail 4 is calculating a result internally and then writing it to the model as if Excel produced it.
 
@@ -174,57 +174,57 @@ What-if answers the question "what happens if I change this input?" Goal-seeking
 
 **The question:** "What Year 1 Revenue do I need for Year 3 Gross Profit to equal exactly $5,500,000?"
 
-The agent cannot solve this algebraically and report the answer — that would be internal calculation. Instead, it iterates through the model:
+The agent cannot solve this algebraically and report the answer: that would be internal calculation. Instead, it iterates through the model:
 
 > **You:** What Year 1 Revenue do I need for Year 3 Gross Profit to equal exactly $5,500,000? Show me each iteration.
 >
 > **Claude:** I'll iterate through the model to find the answer. Let me start with $11M and adjust from there.
 >
 > **Iteration 1:** Setting Inp_Rev_Y1 to $11,000,000...
-> → Reading Gross_Profit_Y3 from the model: $5,589,100 — too high.
+> → Reading Gross_Profit_Y3 from the model: $5,589,100: too high.
 >
 > **Iteration 2:** Setting Inp_Rev_Y1 to $10,800,000...
-> → Reading Gross_Profit_Y3 from the model: $5,473,728 — too low.
+> → Reading Gross_Profit_Y3 from the model: $5,473,728: too low.
 >
 > **Iteration 3:** Setting Inp_Rev_Y1 to $10,850,000...
-> → Reading Gross_Profit_Y3 from the model: $5,502,610 — close.
+> → Reading Gross_Profit_Y3 from the model: $5,502,610: close.
 >
 > **Iteration 4:** Setting Inp_Rev_Y1 to $10,845,000...
-> → Reading Gross_Profit_Y3 from the model: $5,499,726 — closer.
+> → Reading Gross_Profit_Y3 from the model: $5,499,726: closer.
 >
 > **Iteration 5:** Setting Inp_Rev_Y1 to $10,846,000...
-> → Reading Gross_Profit_Y3 from the model: $5,500,303 — within tolerance.
+> → Reading Gross_Profit_Y3 from the model: $5,500,303: within tolerance.
 >
-> Year 1 Revenue of approximately $10,846,000 produces Year 3 Gross Profit of $5,500,303 — within $303 of the $5,500,000 target.
+> Year 1 Revenue of approximately $10,846,000 produces Year 3 Gross Profit of $5,500,303: within $303 of the $5,500,000 target.
 
-Every intermediate result came from the model. The agent used binary search logic to converge on the answer, but every data point was a deterministic model output. The final answer is not the agent's estimate — it is the input that the model confirms produces the target output.
+Every intermediate result came from the model. The agent used binary search logic to converge on the answer, but every data point was a deterministic model output. The final answer is not the agent's estimate: it is the input that the model confirms produces the target output.
 
 ## The Business Bottom Line
 
 The CFO asks: "What if COGS improves 2% faster than planned?" Without IDFA and the IDFA plugin, an analyst opens the model, changes a cell, traces the downstream impacts, double-checks the formulas, and reports back. That takes time, and the analyst's interpretation of the model may introduce errors.
 
-With IDFA and the IDFA plugin: the agent writes the new COGS efficiency assumption to the model. The spreadsheet engine recalculates every dependent cell. The agent reads back Gross Profit for all three years. The CFO has a verified answer in seconds — and every number traces back to the model's deterministic calculation engine.
+With IDFA and the IDFA plugin: the agent writes the new COGS efficiency assumption to the model. The spreadsheet engine recalculates every dependent cell. The agent reads back Gross Profit for all three years. The CFO has a verified answer in seconds: and every number traces back to the model's deterministic calculation engine.
 
 Agent reasoning plus spreadsheet mathematics equals mathematical certainty. That is Guardrail 4.
 
 ## Capability Preview
 
-The workflows you practiced in this lesson — Deterministic What-If and Strategic Goal-Seeking — are Capabilities 2 and 4 of the five Finance Domain Agent capabilities you will validate in the capstone (Lesson 11). In the capstone, you will run formal capability tests that verify the agent delegates every calculation to the model, never reporting a number before reading it from the model.
+The workflows you practiced in this lesson (Deterministic What-If and Strategic Goal-Seeking) are Capabilities 2 and 4 of the five Finance Domain Agent capabilities you will validate in the capstone (Lesson 11). In the capstone, you will run formal capability tests that verify the agent delegates every calculation to the model, never reporting a number before reading it from the model.
 
 ## Exercise: Full What-If Workflow
 
 Using the Gross Profit Waterfall model built in earlier lessons (or the IDFA SKILL.md reference values), complete the following in Cowork:
 
-**Part 1 — What-If:**
+**Part 1: What-If:**
 
 1. Ask Claude: "Change Year 1 Revenue to $12M and show me all three years of Gross Profit."
 2. Confirm the results: GP Y1 = $4,800,000, GP Y2 = $5,412,000, GP Y3 = $6,098,400
-3. Verify: every number Claude reported came from the model — none from its own arithmetic
+3. Verify: every number Claude reported came from the model: none from its own arithmetic
 
-**Part 2 — Goal-Seeking:**
+**Part 2: Goal-Seeking:**
 
 1. Ask Claude: "Find the Year 1 Revenue needed for Year 3 Gross Profit to equal $5,500,000. Show me each iteration."
-2. Watch Claude iterate — writing assumptions, reading back results, adjusting, and repeating
+2. Watch Claude iterate: writing assumptions, reading back results, adjusting, and repeating
 3. Verify: the final answer was found through iteration, not algebraic solving
 4. Document how many iterations it took to converge
 
@@ -236,7 +236,7 @@ Using the Gross Profit Waterfall model built in earlier lessons (or the IDFA SKI
 
 ---
 
-**Prompt 1 — What-If Scenario:**
+**Prompt 1: What-If Scenario:**
 
 ```
 What if Year 1 Revenue is $12M instead of $10M? Show me the impact
@@ -248,7 +248,7 @@ internally — every result must come from the model.
 
 ---
 
-**Prompt 2 — Goal-Seeking:**
+**Prompt 2: Goal-Seeking:**
 
 ```
 Find the Year 1 Revenue needed for Year 3 Gross Profit to equal
@@ -257,11 +257,11 @@ read back the result, adjust, repeat — until you converge on the
 answer. Show me each iteration.
 ```
 
-**What you are learning:** Goal-seeking forces the agent to use the model as a calculator rather than solving the problem analytically. The agent must iterate — write an input, read the output, adjust, repeat. Each iteration produces a deterministic model result. The final answer is the input that the model confirms produces the target.
+**What you are learning:** Goal-seeking forces the agent to use the model as a calculator rather than solving the problem analytically. The agent must iterate: write an input, read the output, adjust, repeat. Each iteration produces a deterministic model result. The final answer is the input that the model confirms produces the target.
 
 ---
 
-**Prompt 3 — Multi-Variable Sensitivity:**
+**Prompt 3: Multi-Variable Sensitivity:**
 
 ```
 What happens to the three-year Gross Profit total if Revenue grows
@@ -270,7 +270,7 @@ instead of 1%? Change both assumptions and read back all results
 from the model. Compare to the base case.
 ```
 
-**What you are learning:** Multi-variable scenarios are where internal calculation becomes most dangerous — the compounding interactions between variables make mental arithmetic unreliable. By delegating everything to the spreadsheet engine, the agent handles complexity without introducing estimation error. The model calculates the compound effects; the agent reports them.
+**What you are learning:** Multi-variable scenarios are where internal calculation becomes most dangerous: the compounding interactions between variables make mental arithmetic unreliable. By delegating everything to the spreadsheet engine, the agent handles complexity without introducing estimation error. The model calculates the compound effects; the agent reports them.
 
 ---
 
@@ -278,4 +278,4 @@ from the model. Compare to the base case.
 
 <Flashcards />
 
-**Next:** [Lesson 8: Retrofitting Existing Models](./08-retrofitting-existing-models.md) — where you learn to convert legacy coordinate-based models to IDFA compliance using the five-phase retrofitting process.
+**Next:** [Lesson 8: Retrofitting Existing Models](./08-retrofitting-existing-models.md): where you learn to convert legacy coordinate-based models to IDFA compliance using the five-phase retrofitting process.

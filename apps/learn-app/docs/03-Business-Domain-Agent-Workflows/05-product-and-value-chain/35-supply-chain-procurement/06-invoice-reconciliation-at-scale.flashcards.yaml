@@ -13,14 +13,14 @@ cards:
     difficulty: "basic"
 
   - id: "ch35-invoice-reconciliation-at-scale-002"
-    front: "What does Stage 1 do — and what does it NOT do?"
+    front: "What does Stage 1 do: and what does it NOT do?"
     back: "Stage 1 extracts, validates, and flags issues that should stop processing. It does NOT match or classify. Matching is Stage 2's job."
     tags: ["stage-1", "document-intelligence"]
     difficulty: "basic"
 
   - id: "ch35-invoice-reconciliation-at-scale-003"
     front: "Why does a bank detail change on an invoice require immediate processing halt?"
-    back: "Bank detail substitution is the primary invoice fraud vector. Attackers intercept vendor email and substitute payment details. Verification must use a phone number from the vendor master — never from the invoice — before any payment proceeds."
+    back: "Bank detail substitution is the primary invoice fraud vector. Attackers intercept vendor email and substitute payment details. Verification must use a phone number from the vendor master: never from the invoice: before any payment proceeds."
     tags: ["stage-1", "fraud-detection"]
     difficulty: "basic"
 
@@ -32,7 +32,7 @@ cards:
 
   - id: "ch35-invoice-reconciliation-at-scale-005"
     front: "In the Meridian Office Supplies example, what were the three payment outcomes and amounts?"
-    back: "£765 approved immediately (18 confirmed toner units at matched price). £255 held pending GR confirmation (6 unconfirmed units). £145 disputed — £100 for paper price variance (5.5%, outside ±3% tolerance) and £45 for unauthorised delivery charge not in the PO."
+    back: "£765 approved immediately (18 confirmed toner units at matched price). £255 held pending GR confirmation (6 unconfirmed units). £145 disputed; £100 for paper price variance (5.5%, outside ±3% tolerance) and £45 for unauthorised delivery charge not in the PO."
     tags: ["meridian-example", "partial-payment"]
     difficulty: "intermediate"
 
@@ -44,7 +44,7 @@ cards:
 
   - id: "ch35-invoice-reconciliation-at-scale-007"
     front: "What are the three Stage 4 pattern types that escalate beyond routine exception handling?"
-    back: "1. Same exception type from same vendor more than 3 times in 30 days — vendor billing system problem. 2. Price variance on same line item for more than 2 consecutive invoices — contract non-compliance. 3. GR pending rate above 15% from one vendor — warehouse confirmation process gap."
+    back: "1. Same exception type from same vendor more than 3 times in 30 days: vendor billing system problem. 2. Price variance on same line item for more than 2 consecutive invoices: contract non-compliance. 3. GR pending rate above 15% from one vendor: warehouse confirmation process gap."
     tags: ["stage-4", "pattern-monitoring"]
     difficulty: "intermediate"
 
@@ -56,7 +56,7 @@ cards:
 
   - id: "ch35-invoice-reconciliation-at-scale-009"
     front: "Why must duplicate invoices be auto-rejected rather than routed for approval?"
-    back: "A duplicate is either a billing error (same invoice submitted twice) or a fraud attempt. Neither requires human approval — the legitimate invoice already exists. Auto-rejection with vendor notification resolves the error and creates an audit trail without burdening the AP team."
+    back: "A duplicate is either a billing error (same invoice submitted twice) or a fraud attempt. Neither requires human approval: the legitimate invoice already exists. Auto-rejection with vendor notification resolves the error and creates an audit trail without burdening the AP team."
     tags: ["stage-2", "duplicate-detection"]
     difficulty: "basic"
 
@@ -68,13 +68,13 @@ cards:
 
   - id: "ch35-invoice-reconciliation-at-scale-011"
     front: "A FastFreight invoice comes in at 8.5% above PO price. Your freight tolerance is ±10%. What are Stage 2 and Stage 4's separate responses?"
-    back: "Stage 2: classify as PRICE VARIANCE within tolerance → auto-approve with Finance flag. Stage 4: if FastFreight has shown this same variance pattern more than 3 times in 30 days, escalate as systematic issue. Each invoice individually auto-approves — but the pattern indicates a pricing model change, not routine variability."
+    back: "Stage 2: classify as PRICE VARIANCE within tolerance → auto-approve with Finance flag. Stage 4: if FastFreight has shown this same variance pattern more than 3 times in 30 days, escalate as systematic issue. Each invoice individually auto-approves: but the pattern indicates a pricing model change, not routine variability."
     tags: ["pattern-monitoring", "tolerance", "freight"]
     difficulty: "advanced"
     why: "What is the difference between a tolerance rule working correctly and a vendor exploiting tolerance to hide a systematic price increase?"
 
   - id: "ch35-invoice-reconciliation-at-scale-012"
-    front: "Why does the /invoice-reconcile skill that you run manually and the invoice-reconciliation-agent perform the same steps — and what is the key difference?"
-    back: "Both run the same four-stage workflow: extraction, three-way match, exception routing, audit logging. The difference is scale and initiation — you trigger /invoice-reconcile for each invoice manually; the agent monitors the AP inbox and runs the workflow automatically for every incoming invoice."
+    front: "Why does the /invoice-reconcile skill that you run manually and the invoice-reconciliation-agent perform the same steps: and what is the key difference?"
+    back: "Both run the same four-stage workflow: extraction, three-way match, exception routing, audit logging. The difference is scale and initiation: you trigger /invoice-reconcile for each invoice manually; the agent monitors the AP inbox and runs the workflow automatically for every incoming invoice."
     tags: ["agent", "automation", "workflow"]
     difficulty: "intermediate"

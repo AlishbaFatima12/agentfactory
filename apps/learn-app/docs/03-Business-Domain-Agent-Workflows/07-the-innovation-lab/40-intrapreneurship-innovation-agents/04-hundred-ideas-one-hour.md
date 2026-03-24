@@ -49,7 +49,7 @@ learning_objectives:
   - objective: "Run a 100-idea sprint across all 10 categories for a given HMW problem statement"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces a numbered list of 100 ideas with at least 8 distinct ideas per category — none are duplicates, and at least 5 are non-obvious (crazy, contrarian, or analogy categories)"
+    assessment_method: "Student produces a numbered list of 100 ideas with at least 8 distinct ideas per category, none are duplicates, and at least 5 are non-obvious (crazy, contrarian, or analogy categories)"
 
   - objective: "Score a set of ideas using the DVF framework and select the highest-potential idea with a documented rationale"
     proficiency_level: "B1"
@@ -59,52 +59,52 @@ learning_objectives:
   - objective: "Identify the top 5 objections to a selected idea and specify the proof required to overcome each"
     proficiency_level: "B1"
     bloom_level: "Evaluate"
-    assessment_method: "Student produces a pressure test with 5 specific objections — not generic ('could fail') but targeted ('AI accuracy may not reach 90% on handwritten invoices') — each with a specific test or evidence type that would overcome it"
+    assessment_method: "Student produces a pressure test with 5 specific objections, not generic ('could fail') but targeted ('AI accuracy may not reach 90% on handwritten invoices'): each with a specific test or evidence type that would overcome it"
 
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "100-idea sprint — quantity before quality; best ideas emerge in the second half"
-    - "10 idea categories — structured taxonomy that prevents creative homogeneity"
-    - "DVF framework — Desirability, Viability, Feasibility as a three-dimensional scoring lens"
-    - "Why Now? test — timing validity; what changed to make this possible or urgent today"
-    - "Pressure testing — adversarial evaluation before committing to an idea"
+    - "100-idea sprint, quantity before quality; best ideas emerge in the second half"
+    - "10 idea categories, structured taxonomy that prevents creative homogeneity"
+    - "DVF framework, Desirability, Viability, Feasibility as a three-dimensional scoring lens"
+    - "Why Now? test, timing validity; what changed to make this possible or urgent today"
+    - "Pressure testing, adversarial evaluation before committing to an idea"
   assessment: "5 concepts at B1 level is within cognitive limits. Each concept serves a distinct stage of the ideation pipeline (generate → structure → filter → validate timing → stress-test), so the progression is natural scaffolding rather than parallel load."
 
 differentiation:
-  extension_for_advanced: "After the DVF shortlist, apply the 'Why Now?' test to all 10 shortlisted ideas — not just the selected one. Are there ideas ranked lower on DVF that score higher on timing? What does that tell you about which idea to build first versus which to build later?"
+  extension_for_advanced: "After the DVF shortlist, apply the 'Why Now?' test to all 10 shortlisted ideas , not just the selected one. Are there ideas ranked lower on DVF that score higher on timing? What does that tell you about which idea to build first versus which to build later?"
   remedial_for_struggling: "Focus on the two categories that are hardest to generate: Contrarian and Crazy/10x. For Contrarian, ask: 'What does everyone in this industry believe that I could challenge?' For Crazy/10x, ask: 'If I had $1 billion and 5 years, what would I build?' The other 8 categories will flow more naturally once you unlock these two."
 
 teaching_guide:
   key_points:
-    - "The best ideas appear in the second half of the sprint — early ideas are the obvious ones everyone already thought of"
-    - "DVF scoring is not a formula — it requires judgment, and the discussion of where to place an idea is as valuable as the final score"
-    - "Pressure testing is not pessimism — it is the act of finding the objections before your investor, competitor, or customer does"
-    - "The 100-idea sprint does not replace customer discovery — it is powered by it. The problem statement comes from L03."
-    - "AI removes the constraint of cognitive bandwidth in brainstorming — but the entrepreneur must still make the final judgment call"
+    - "The best ideas appear in the second half of the sprint, early ideas are the obvious ones everyone already thought of"
+    - "DVF scoring is not a formula ; it requires judgment, and the discussion of where to place an idea is as valuable as the final score"
+    - "Pressure testing is not pessimism; it is the act of finding the objections before your investor, competitor, or customer does"
+    - "The 100-idea sprint does not replace customer discovery; it is powered by it. The problem statement comes from L03."
+    - "AI removes the constraint of cognitive bandwidth in brainstorming , but the entrepreneur must still make the final judgment call"
   misconceptions:
-    - "More ideas means the best idea will appear. Correction: volume is necessary but not sufficient — the structure of the 10 categories matters as much as quantity. Without category discipline, 100 ideas are just 100 variations on the same 5 ideas."
+    - "More ideas means the best idea will appear. Correction: volume is necessary but not sufficient: the structure of the 10 categories matters as much as quantity. Without category discipline, 100 ideas are just 100 variations on the same 5 ideas."
     - "The highest DVF score wins. Correction: DVF is a filter, not a formula. An idea can score YELLOW on all three and still be the best choice because of founder-specific advantages, timing, or strategic context."
-    - "Pressure testing means you are trying to kill the idea. Correction: the goal is to discover the assumptions hiding inside the idea before you commit resources. A strong idea survives pressure testing — it does not disappear under it."
+    - "Pressure testing means you are trying to kill the idea. Correction: the goal is to discover the assumptions hiding inside the idea before you commit resources. A strong idea survives pressure testing ; it does not disappear under it."
   discussion_prompts:
     - "In the 100-idea sprint output, which category surprised you most? Was it the Crazy/10x ideas (unexpectedly grounded?) or the Boring ideas (unexpectedly hard to generate?)?"
     - "The devil's advocate pressure test surfaces objections. What is the difference between an objection that reveals a fatal flaw and an objection that reveals an untested assumption?"
   teaching_tips:
-    - "Have students predict the shortlist before running DVF — then compare. The gap between intuition and structured scoring reveals cognitive biases in idea selection."
-    - "Use the AP automation example to show how Incumbent Ideas (what SAP or Oracle would do) reveals moat requirements — the intrapreneur version of this is 'what would our IT department do if it noticed this gap?'"
+    - "Have students predict the shortlist before running DVF; then compare. The gap between intuition and structured scoring reveals cognitive biases in idea selection."
+    - "Use the AP automation example to show how Incumbent Ideas (what SAP or Oracle would do) reveals moat requirements: the intrapreneur version of this is 'what would our IT department do if it noticed this gap?'"
 ---
 
 # Hundred Ideas, One Hour
 
 In Lesson 3, you defined the problem worth solving. You interviewed CFOs, synthesised their frustrations into a ranked pain map, and arrived at a crisp "How Might We" statement: how might we give CFOs the confidence to face their auditor without AP anxiety?
 
-That problem statement is now your creative brief. The next step — ideation — is where most innovation teams underperform. In a typical brainstorm, the same 10-15 ideas surface every time. The creative range of the session is bounded by the diversity of the room and the willingness to say things that sound strange. AI removes these constraints. Given a clear problem statement, it can generate ideas across every dimension — incremental and radical, technical and non-technical, feature-level and business model level — faster than any team.
+That problem statement is now your creative brief. The next step, ideation: is where most innovation teams underperform. In a typical brainstorm, the same 10-15 ideas surface every time. The creative range of the session is bounded by the diversity of the room and the willingness to say things that sound strange. AI removes these constraints. Given a clear problem statement, it can generate ideas across every dimension, incremental and radical, technical and non-technical, feature-level and business model level, faster than any team.
 
-The 100-idea sprint is not just about volume. It is about structure. Without categories, 100 ideas become 10 ideas repeated with slightly different wording. With 10 categories, you explore 10 fundamentally different lenses on the same problem — and the best ideas, almost always, are in the second half.
+The 100-idea sprint is not just about volume. It is about structure. Without categories, 100 ideas become 10 ideas repeated with slightly different wording. With 10 categories, you explore 10 fundamentally different lenses on the same problem , and the best ideas, almost always, are in the second half.
 
 ## Why Brainstorms Underperform
 
-The academic literature on group brainstorming is unequivocal: unstructured group brainstorming consistently produces fewer and lower-quality ideas than the same number of people working alone, then sharing. The culprits are well-understood — production blocking (you cannot say your idea while someone else is talking), evaluation apprehension (fear of judgment), and social loafing (assuming others are doing the hard thinking).
+The academic literature on group brainstorming is unequivocal: unstructured group brainstorming consistently produces fewer and lower-quality ideas than the same number of people working alone, then sharing. The culprits are well-understood, production blocking (you cannot say your idea while someone else is talking), evaluation apprehension (fear of judgment), and social loafing (assuming others are doing the hard thinking).
 
 The 100-idea sprint sidesteps all three mechanisms. The AI has no social pressure and no evaluation apprehension. It does not run out of ideas when the obvious ones are exhausted. And the 10-category structure forces it into creative territory that group brainstorms never reach.
 
@@ -116,7 +116,7 @@ The 100-idea sprint sidesteps all three mechanisms. The AI has no social pressur
 | Stops at 20-30 ideas            | Discipline to reach 100                          |
 | No filter for follow-on action  | DVF scoring creates an actionable shortlist      |
 
-The insight embedded in the 100-idea target: your first 50 ideas are not bad ideas — they are the ideas you were already carrying. The second 50 are where original thinking begins.
+The insight embedded in the 100-idea target: your first 50 ideas are not bad ideas; they are the ideas you were already carrying. The second 50 are where original thinking begins.
 
 ## The 10 Categories
 
@@ -135,28 +135,28 @@ The sprint structure divides 100 ideas across 10 categories, 10 per category:
 | **Partnership**  | Who could solve this if they combined forces?                   | Surfaces distribution leverage and complementary assets        |
 | **Incumbent**    | What would the market leader do if they noticed this?           | Defines the competitive response and required differentiation  |
 
-The Crazy and Contrarian categories feel uncomfortable. They are supposed to. The point is not to generate implementable ideas — it is to expand the solution space before collapsing back to a shortlist. Ideas that survive from these categories are often the ones that become category-defining businesses.
+The Crazy and Contrarian categories feel uncomfortable. They are supposed to. The point is not to generate implementable ideas; it is to expand the solution space before collapsing back to a shortlist. Ideas that survive from these categories are often the ones that become category-defining businesses.
 
 ## DVF: The Three-Dimensional Filter
 
-Once you have 100 ideas, you need a systematic filter that is faster than "does this feel right?". DVF — Desirability, Viability, Feasibility — gives you three independent lenses:
+Once you have 100 ideas, you need a systematic filter that is faster than "does this feel right?". DVF, Desirability, Viability, Feasibility, gives you three independent lenses:
 
-**Desirability** — Would customers pay for this today?
+**Desirability:** Would customers pay for this today?
 - GREEN: Clear willingness to pay; customer is already spending on an adjacent solution
 - YELLOW: Pain is real but payment behaviour is not established
 - RED: Nice to have; customers tolerate the problem without urgency
 
-**Viability** — Could this become a significant revenue business?
+**Viability:** Could this become a significant revenue business?
 - GREEN: Clear path to scale; large addressable market; strong unit economics
 - YELLOW: Uncertain scale; niche market or unclear monetisation at volume
 - RED: Too small a market; unit economics problematic at scale
 
-**Feasibility** — Can a small team build an MVP in under three months?
+**Feasibility:** Can a small team build an MVP in under three months?
 - GREEN: Core technology is available; team has or can access required skills
 - YELLOW: Three to six month MVP; one significant technical risk
 - RED: Requires proprietary technology or hardware; more than six months to first test
 
-The shortlist targets ideas with at least two GREEN scores and no RED scores. But DVF is a filter, not a formula. Exceptional founder-specific advantages — deep domain knowledge, existing customer relationships, proprietary data — can override a YELLOW score.
+The shortlist targets ideas with at least two GREEN scores and no RED scores. But DVF is a filter, not a formula. Exceptional founder-specific advantages, deep domain knowledge, existing customer relationships, proprietary data, can override a YELLOW score.
 
 ### The "Why Now?" Test
 
@@ -172,15 +172,15 @@ Valid "Why Now?" answers:
 - Demographic shift (new generation in the workforce)
 - Market gap (incumbent exited, raised prices, lost trust)
 
-If you cannot answer "Why Now?" for an idea, it may be a genuinely good idea with bad timing — or an idea that someone already tried and it did not work. Either way, timing is one of the most critical variables in venture success.
+If you cannot answer "Why Now?" for an idea, it may be a genuinely good idea with bad timing , or an idea that someone already tried and it did not work. Either way, timing is one of the most critical variables in venture success.
 
-For the AP automation example: the "Why Now?" is clear. WhatsApp Business API became production-ready, LLMs brought invoice OCR accuracy to commercial viability, and mid-market CFOs — newly remote — now manage AP processes through messaging apps by default rather than by exception.
+For the AP automation example: the "Why Now?" is clear. WhatsApp Business API became production-ready, LLMs brought invoice OCR accuracy to commercial viability, and mid-market CFOs, newly remote, now manage AP processes through messaging apps by default rather than by exception.
 
 ## Using `/idea` for the 100-Idea Sprint
 
 **Worked example.** You have your HMW problem statement from Lesson 3:
 
-> "How might we give mid-market CFOs the confidence to face their auditor without AP anxiety — knowing that every invoice, approval, and payment is documented, searchable, and defensible?"
+> "How might we give mid-market CFOs the confidence to face their auditor without AP anxiety, knowing that every invoice, approval, and payment is documented, searchable, and defensible?"
 
 You open Cowork and type:
 
@@ -188,7 +188,7 @@ You open Cowork and type:
 /idea
 Idea generation sprint.
 Problem statement: "How might we give CFOs the confidence to face
-their auditor without AP anxiety — knowing that every invoice,
+their auditor without AP anxiety, knowing that every invoice,
 approval, and payment is documented, searchable, and defensible?"
 Constraint: Must work with or alongside WhatsApp.
 
@@ -205,24 +205,24 @@ Generate 100 ideas across these categories:
 - Incumbent ideas (10): what the market leader would do if they noticed this
 
 Format: numbered list, 10 per category, one sentence each.
-No self-censorship — include obvious, impossible, and strange ideas.
+No self-censorship, include obvious, impossible, and strange ideas.
 ```
 
 **Condensed sample output** (Product and Contrarian categories shown):
 
 ```
-IDEA SPRINT — AP Automation / CFO Audit Confidence
+IDEA SPRINT, AP Automation / CFO Audit Confidence
 ════════════════════════════════════════════════════════════
 PRODUCT IDEAS (how the product could work):
 1.  WhatsApp-native approval workflow that logs every CFO response
     as a timestamped, immutable audit record
 2.  AI invoice matching that highlights discrepancies before
-    they reach the approval step — not after
+    they reach the approval step, not after
 3.  Real-time AP dashboard that CFOs can share a live read-only
     link with their auditor during audit week
 4.  Automated vendor payment remittance emails that generate
     a paper trail without manual entry
-5.  Invoice intake via forwarded email — no portal login required
+5.  Invoice intake via forwarded email; no portal login required
 6.  "AP health score" dashboard widget: percentage of invoices
     approved with full documentation vs. exceptions
 7.  Audit mode: one-click export of every transaction, approval
@@ -230,30 +230,30 @@ PRODUCT IDEAS (how the product could work):
 8.  Anomaly alerting: flag invoices that arrive from new vendors
     or deviate from historical patterns before approval
 9.  Approval delegation workflow for when the CFO is travelling
-    — backup approver with full audit chain maintained
+   , backup approver with full audit chain maintained
 10. Mobile push notification for urgent approvals with one-tap
     respond from the phone without opening a dashboard
 
 CONTRARIAN IDEAS (the exact opposite of obvious):
 71. Remove the approval step entirely for invoices under $500
-    from approved vendors — automate payment, log for audit
+    from approved vendors, automate payment, log for audit
 72. Make the audit trail visible to the vendor too: mutual
     transparency as the product's moat
-73. Charge by the invoice (not subscription) — align cost
+73. Charge by the invoice (not subscription), align cost
     to value for low-volume customers
-74. Build for the auditor, not the CFO — sell auditor productivity
+74. Build for the auditor, not the CFO, sell auditor productivity
     tools that happen to require the CFO's data
 75. Start with the vendor side: give vendors a portal to submit
     invoices in structured format, removing the CFO's OCR problem
 76. Zero onboarding: connect to CFO's existing email account,
     parse invoices automatically, require no behaviour change
-77. Offer "AP-as-a-service" — outsource the entire AP function
+77. Offer "AP-as-a-service", outsource the entire AP function
     with AI + human oversight; no software purchase
 78. Make failure visible: real-time dashboard of invoices
-    NOT processed on time — accountability as the product
+    NOT processed on time, accountability as the product
 79. Reverse the approval flow: auto-approve, with rejection
     as the exception (reversal of the current model)
-80. Partner with accounting firms to white-label the tool —
+80. Partner with accounting firms to white-label the tool,
     make auditors the salesforce
 ════════════════════════════════════════════════════════════
 ```
@@ -275,19 +275,19 @@ Then: recommend one idea with a two-paragraph case for why.
 **Sample shortlist output (two examples):**
 
 ```
-SHORTLIST — Top 10 AP Automation Ideas
+SHORTLIST, Top 10 AP Automation Ideas
 ════════════════════════════════════════════════════════════
 IDEA 1 (Product #1): WhatsApp-native approval with immutable audit log
-  Desirability: 🟢 HIGH — directly solves the #1 pain from discovery
-  Feasibility:  🟢 HIGH — WhatsApp Business API; 3-person team feasible
-  Viability:    🟢 HIGH — SaaS model; repeatable per customer; scales
+  Desirability: 🟢 HIGH, directly solves the #1 pain from discovery
+  Feasibility:  🟢 HIGH, WhatsApp Business API; 3-person team feasible
+  Viability:    🟢 HIGH, SaaS model; repeatable per customer; scales
   Rationale: Solves the core emotional job (audit confidence) via the
   channel CFOs already use; no behaviour change required.
 
 IDEA 5 (Contrarian #75): Start with vendor-side structured submission
-  Desirability: 🟡 MEDIUM — vendors want faster payment; less certain on fees
-  Feasibility:  🟡 MEDIUM — requires vendor adoption; two-sided market risk
-  Viability:    🟢 HIGH — platform model once vendor side reaches density
+  Desirability: 🟡 MEDIUM, vendors want faster payment; less certain on fees
+  Feasibility:  🟡 MEDIUM, requires vendor adoption; two-sided market risk
+  Viability:    🟢 HIGH, platform model once vendor side reaches density
   Rationale: Eliminates OCR problem at source; stronger long-term moat;
   but requires two-sided adoption strategy which complicates early sales.
 ════════════════════════════════════════════════════════════
@@ -300,7 +300,7 @@ Case: [Two-paragraph rationale based on discovery data]
 
 Once you have selected an idea, you do not immediately move to building it. You try to kill it.
 
-Pressure testing is not pessimism — it is the act of finding the objections before your investor, competitor, or customer does. Every objection the devil's advocate raises is a hidden assumption inside the idea. The pressure test converts your selected idea into the foundation for the assumption map in Lesson 5.
+Pressure testing is not pessimism; it is the act of finding the objections before your investor, competitor, or customer does. Every objection the devil's advocate raises is a hidden assumption inside the idea. The pressure test converts your selected idea into the foundation for the assumption map in Lesson 5.
 
 ```
 /idea
@@ -316,7 +316,7 @@ to prove to overcome it?
 **Sample pressure test output:**
 
 ```
-PRESSURE TEST — AP Automation SaaS
+PRESSURE TEST, AP Automation SaaS
 ════════════════════════════════════════════════════════════
 OBJECTION 1: AI accuracy may not reach 90%+ on real invoice formats
   (especially handwritten, non-standard, multi-language formats)
@@ -324,7 +324,7 @@ OBJECTION 1: AI accuracy may not reach 90%+ on real invoice formats
   from 3 pilot customers before committing to V1 build.
 
 OBJECTION 2: CFOs may not have authority to purchase without CEO
-  sign-off — lengthening the sales cycle to 3-6 months
+  sign-off, lengthening the sales cycle to 3-6 months
   To overcome: In next 5 discovery conversations, ask directly:
   "If this existed today, could you approve the purchase yourself?"
 
@@ -338,7 +338,7 @@ OBJECTION 4: Enterprise ERP systems may require native integration
   To overcome: Test whether 3 pilots will sign without ERP integration
   in the first 8 weeks; if all require it, reprioritise roadmap.
 
-OBJECTION 5: Market may be winner-takes-all — if a large incumbent
+OBJECTION 5: Market may be winner-takes-all; if a large incumbent
   (SAP, Oracle, BILL) enters with the same feature, we cannot compete
   To overcome: Design for a customer segment the incumbents ignore
   (companies below $50M revenue) and move fast enough to own the
@@ -346,7 +346,7 @@ OBJECTION 5: Market may be winner-takes-all — if a large incumbent
 ════════════════════════════════════════════════════════════
 ```
 
-Each objection in the pressure test becomes an assumption in Lesson 5. The pressure test is not the end of ideation — it is the handoff to hypothesis.
+Each objection in the pressure test becomes an assumption in Lesson 5. The pressure test is not the end of ideation; it is the handoff to hypothesis.
 
 :::note For Intrapreneurs
 The **Incumbent Ideas** category (ideas 91-100) is especially relevant if you are innovating inside an existing organisation. Your own company is the incumbent. Ask: what would your organisation do with this problem if it noticed it? The answers reveal two things: which internal capabilities you could leverage (distribution, customer relationships, data) and which internal obstacles you would face (organisational inertia, competing priorities, "not invented here" resistance). The intrapreneur version of the pressure test adds a sixth objection: "Our existing IT systems cannot support this without a 12-month integration project." What is the minimum viable version that avoids that dependency?
@@ -354,13 +354,13 @@ The **Incumbent Ideas** category (ideas 91-100) is especially relevant if you ar
 
 ## Exercise: Idea Generation Sprint
 
-**Type:** Design Thinking — Ideate
+**Type:** Design Thinking, Ideate
 **Time:** 40 minutes
 **Goal:** Generate 100 ideas for the problem you defined in Lesson 3; shortlist to 10; select one and pressure-test it
 
 **From Exercise 2 (Lesson 3), you have:** a discovery synthesis, a pain ranking matrix, and a primary HMW problem statement. This exercise uses that HMW as the input.
 
-**Step 1 — Confirm your HMW statement (5 minutes).**
+**Step 1, Confirm your HMW statement (5 minutes).**
 
 Retrieve your primary HMW statement from Lesson 3. If you produced multiple variants, identify the one that:
 - References a specific customer (not "users" or "people")
@@ -369,7 +369,7 @@ Retrieve your primary HMW statement from Lesson 3. If you produced multiple vari
 
 If your original HMW was weak, revise it now using the format: "How might we [verb] [specific customer] so that [desired outcome]?"
 
-**Step 2 — 100-idea sprint using `/idea` (20 minutes).**
+**Step 2, 100-idea sprint using `/idea` (20 minutes).**
 
 Open Cowork and type:
 
@@ -394,7 +394,7 @@ Generate 100 ideas across:
 Format: numbered list, 10 per category, one sentence each.
 ```
 
-**Step 3 — Shortlist with DVF (10 minutes).**
+**Step 3, Shortlist with DVF (10 minutes).**
 
 ```
 /idea
@@ -409,9 +409,9 @@ one-sentence rationale.
 Then recommend one idea with a two-paragraph case.
 ```
 
-Review the shortlist. Does the recommendation align with your customer discovery data from Lesson 3? If the AI's top-ranked idea does not match what you heard from customers, adjust — your discovery data takes precedence.
+Review the shortlist. Does the recommendation align with your customer discovery data from Lesson 3? If the AI's top-ranked idea does not match what you heard from customers, adjust; your discovery data takes precedence.
 
-**Step 4 — Pressure-test the selected idea (5 minutes).**
+**Step 4, Pressure-test the selected idea (5 minutes).**
 
 ```
 /idea
@@ -433,13 +433,13 @@ The selected idea and its pressure test are the direct inputs to Lesson 5 (The A
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Run the chapter's worked example:
+**Reproduce:** Run the chapter's worked example:
 
 ```
 /idea
 Idea generation sprint.
 Problem: "How might we give mid-market CFOs the confidence to face
-their auditor without AP anxiety — knowing that every invoice,
+their auditor without AP anxiety, knowing that every invoice,
 approval, and payment is documented, searchable, and defensible?"
 Constraint: Must work with or alongside WhatsApp.
 
@@ -458,9 +458,9 @@ Generate 100 ideas across:
 Format: numbered list, 10 per category, one sentence each.
 ```
 
-**What you are learning:** The 100-idea sprint reveals that most of the first 50 ideas are obvious. Notice which categories produce genuine surprises — Contrarian and Analogy tend to uncover the non-obvious ideas. The structure of the output (10 categories × 10 ideas) matters as much as the total volume.
+**What you are learning:** The 100-idea sprint reveals that most of the first 50 ideas are obvious. Notice which categories produce genuine surprises, Contrarian and Analogy tend to uncover the non-obvious ideas. The structure of the output (10 categories × 10 ideas) matters as much as the total volume.
 
-**Adapt** — Modify for a different industry:
+**Adapt:** Modify for a different industry:
 
 ```
 /idea
@@ -474,9 +474,9 @@ background, manages everything on WhatsApp and a paper notebook.
 Generate 100 ideas across all 10 categories. Format as above.
 ```
 
-**What you are learning:** Notice how the Incumbent Ideas category changes when the incumbent is a spreadsheet (Excel) rather than enterprise software. Contrarian ideas for a small business customer look very different from those for a CFO — the constraints and the objections are fundamentally different.
+**What you are learning:** Notice how the Incumbent Ideas category changes when the incumbent is a spreadsheet (Excel) rather than enterprise software. Contrarian ideas for a small business customer look very different from those for a CFO: the constraints and the objections are fundamentally different.
 
-**Apply** — Generate ideas for your own venture:
+**Apply:** Generate ideas for your own venture:
 
 ```
 /idea
@@ -490,7 +490,7 @@ Then apply DVF scoring, shortlist to 10, and recommend one
 with a two-paragraph case for why.
 ```
 
-**What you are learning:** Running the sprint on your own problem forces you to evaluate whether your HMW statement is specific enough. If the output ideas are generic, the problem statement is generic — revise it until the ideas are targeted.
+**What you are learning:** Running the sprint on your own problem forces you to evaluate whether your HMW statement is specific enough. If the output ideas are generic, the problem statement is generic, revise it until the ideas are targeted.
 :::
 
 ## Flashcards Study Aid

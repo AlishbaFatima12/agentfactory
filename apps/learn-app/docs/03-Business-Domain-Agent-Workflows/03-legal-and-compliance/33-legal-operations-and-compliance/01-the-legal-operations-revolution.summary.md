@@ -1,4 +1,4 @@
-# The Legal Operations Revolution — Summary
+# The Legal Operations Revolution; Summary
 
 ## Core Concept
 

@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/exercises-ifrs9
 sidebar_position: 12
-title: "Exercises — IFRS 9 Deep Practice"
+title: "Exercises: IFRS 9 Deep Practice"
 description: "Two extended IFRS 9 exercises: a retail mortgage stage assessment across 8 facilities with full ECL computation, and a GCC corporate ECL model with three macroeconomic scenarios and regional adjustments"
 keywords:
   [
@@ -59,20 +59,20 @@ cognitive_load:
   concepts_list:
     - "Portfolio-level ECL aggregation across multiple facilities with different stages"
     - "GCC-specific macro adjustments: regional PD multipliers reflecting oil price and GDP sensitivity"
-  assessment: "2 new concepts at B2 level — within the B2 limit of 10. The exercises primarily apply and synthesize concepts from Lessons 3-5 (staging, ECL formula, PD/LGD/EAD, macro scenarios). The cognitive challenge is integration and execution at portfolio scale, not learning new domain knowledge."
+  assessment: "2 new concepts at B2 level: within the B2 limit of 10. The exercises primarily apply and synthesize concepts from Lessons 3-5 (staging, ECL formula, PD/LGD/EAD, macro scenarios). The cognitive challenge is integration and execution at portfolio scale, not learning new domain knowledge."
 
 differentiation:
-  extension_for_advanced: "For Exercise 9, add a fourth scenario (severe downside: oil at $35, GDP -2.0%, PD multiplier 2.20, weight 10% — redistribute from other scenarios). Recalculate the probability-weighted ECL and determine whether the incremental ECL from the fourth scenario is material."
-  remedial_for_struggling: "Focus on Exercise 8 facilities A001, A003, A005, and A008 — these represent the clearest Stage 1, 2, and 3 classifications. If you can stage these four correctly and calculate their ECL, you have the core staging skill."
+  extension_for_advanced: "For Exercise 9, add a fourth scenario (severe downside: oil at $35, GDP -2.0%, PD multiplier 2.20, weight 10%: redistribute from other scenarios). Recalculate the probability-weighted ECL and determine whether the incremental ECL from the fourth scenario is material."
+  remedial_for_struggling: "Focus on Exercise 8 facilities A001, A003, A005, and A008: these represent the clearest Stage 1, 2, and 3 classifications. If you can stage these four correctly and calculate their ECL, you have the core staging skill."
 ---
 
-# Exercises — IFRS 9 Deep Practice
+# Exercises: IFRS 9 Deep Practice
 
 In Lessons 3 through 5, you learned IFRS 9 staging, the ECL formula, PD/LGD/EAD components, and macroeconomic scenario weighting. In Lesson 11, you saw how IFRS 9 interacts with Basel capital. Now you apply all of that knowledge to two extended exercises that mirror real-world portfolio assessment work: a UK retail mortgage stage assessment and a GCC corporate ECL model.
 
-These exercises require you to make judgments — not just calculations. Staging decisions involve qualitative assessment of borrower circumstances. ECL models involve parameter choices that change the answer materially. The banking plugin's `ifrs9-staging` and `ifrs9-ecl` skills can assist with computation, but you drive the classification decisions and parameter selections.
+These exercises require you to make judgments; not just calculations. Staging decisions involve qualitative assessment of borrower circumstances. ECL models involve parameter choices that change the answer materially. The banking plugin's `ifrs9-staging` and `ifrs9-ecl` skills can assist with computation, but you drive the classification decisions and parameter selections.
 
-## Exercise 8: IFRS 9 Stage Assessment — Retail Mortgage Portfolio
+## Exercise 8: IFRS 9 Stage Assessment: Retail Mortgage Portfolio
 
 **Jurisdiction**: United Kingdom (PRA regulated)
 **Duration**: 35 minutes
@@ -97,14 +97,14 @@ You are the credit risk analyst for a UK building society. The following 8 mortg
 
 | Parameter           | Stage 1 | Stage 2 | Stage 3 |
 | ------------------- | ------- | ------- | ------- |
-| PD (12-month)       | 0.8%    | —       | —       |
-| PD (lifetime)       | —       | 12%     | 55%     |
+| PD (12-month)       | 0.8%    | (      |)       |
+| PD (lifetime)       |:       | 12%     | 55%     |
 | LGD (LTV up to 80%) | 25%     | 25%     | 25%     |
 | LGD (LTV above 80%) | 40%     | 40%     | 40%     |
 
 ### Your Tasks
 
-**Step 1: Stage each facility.** For each of the 8 facilities, determine whether it belongs in Stage 1, Stage 2, or Stage 3. Document your reasoning — which SICR triggers are present? Consider both quantitative indicators (DPD, PD/rating movement) and qualitative indicators (employment status, property values, hardship notification).
+**Step 1: Stage each facility.** For each of the 8 facilities, determine whether it belongs in Stage 1, Stage 2, or Stage 3. Document your reasoning: which SICR triggers are present? Consider both quantitative indicators (DPD, PD/rating movement) and qualitative indicators (employment status, property values, hardship notification).
 
 :::info SICR Assessment Guidance
 
@@ -149,7 +149,7 @@ Select the correct LGD based on the facility's LTV (25% for LTV up to 80%, 40% f
 
 ---
 
-## Exercise 9: Corporate ECL Model — GCC
+## Exercise 9: Corporate ECL Model: GCC
 
 **Jurisdiction**: Gulf Cooperation Council (multi-jurisdiction: KSA, UAE, Bahrain)
 **Duration**: 55 minutes
@@ -314,7 +314,7 @@ Using the GCC corporate ECL model results, answer:
    is required?
 ```
 
-**What you are learning:** Sensitivity analysis reveals concentration risk — which borrower, sector, or scenario drives the most ECL volatility. PMA design bridges the gap between what the model captures and what professional judgment identifies as missing. The governance documentation requirement (approval, time-limiting, back-testing) ensures PMAs are not arbitrary adjustments but disciplined overlays.
+**What you are learning:** Sensitivity analysis reveals concentration risk: which borrower, sector, or scenario drives the most ECL volatility. PMA design bridges the gap between what the model captures and what professional judgment identifies as missing. The governance documentation requirement (approval, time-limiting, back-testing) ensures PMAs are not arbitrary adjustments but disciplined overlays.
 
 ## Flashcards Study Aid
 

@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/supply-chain-procurement/supplier-risk-five-dimensions
 sidebar_position: 7
-title: "Supplier Risk — Five Dimensions"
-description: "Monitor strategic suppliers across five risk dimensions — financial, operational, compliance, geopolitical, and Tier 2 — using the /supplier-risk skill and vendor-health-monitor agent to detect disruptions before they reach your production line"
+title: "Supplier Risk; Five Dimensions"
+description: "Monitor strategic suppliers across five risk dimensions: financial, operational, compliance, geopolitical, and Tier 2: using the /supplier-risk skill and vendor-health-monitor agent to detect disruptions before they reach your production line"
 keywords:
   [
     "supplier risk",
@@ -63,53 +63,53 @@ learning_objectives:
 cognitive_load:
   new_concepts: 6
   concepts_list:
-    - "Five risk dimensions — financial, operational, compliance, geopolitical, Tier 2"
-    - "Risk rating change rules — escalation when any dimension hits red, elevation when two yellows"
-    - "Tier 2 supplier mapping — the most dangerous gap in most procurement risk programmes"
-    - "Overall risk rating — composite view derived from five dimension ratings"
-    - "Vendor Health Monitor agent — continuous monitoring, not periodic review"
-    - "Weekly executive brief — one-page CPO summary of all strategic vendor risk"
-  assessment: "6 concepts at B1-B2 level — within limit. The five dimensions are the core scaffold; Tier 2 and the agent are extensions. The worked KIFTL example ties all concepts together before the exercise asks students to apply independently."
+    - "Five risk dimensions: financial, operational, compliance, geopolitical, Tier 2"
+    - "Risk rating change rules: escalation when any dimension hits red, elevation when two yellows"
+    - "Tier 2 supplier mapping: the most dangerous gap in most procurement risk programmes"
+    - "Overall risk rating: composite view derived from five dimension ratings"
+    - "Vendor Health Monitor agent: continuous monitoring, not periodic review"
+    - "Weekly executive brief: one-page CPO summary of all strategic vendor risk"
+  assessment: "6 concepts at B1-B2 level: within limit. The five dimensions are the core scaffold; Tier 2 and the agent are extensions. The worked KIFTL example ties all concepts together before the exercise asks students to apply independently."
 
 differentiation:
   extension_for_advanced: "Design a Tier 2 mapping programme for an organisation with 20 strategic suppliers. How would you prioritise which Tier 1 suppliers get full Tier 2 mapping first? What data would you request from each Tier 1 vendor? How would you handle a Tier 1 supplier who refuses to share Tier 2 information?"
-  remedial_for_struggling: "Focus on two things: the five dimension names and what makes each turn red. If you can look at a supplier's situation and say 'this dimension is amber because...' for each of the five, you have the core monitoring skill. The Tier 2 concept can come later — it is an extension of the financial and operational dimensions."
+  remedial_for_struggling: "Focus on two things: the five dimension names and what makes each turn red. If you can look at a supplier's situation and say 'this dimension is amber because...' for each of the five, you have the core monitoring skill. The Tier 2 concept can come later: it is an extension of the financial and operational dimensions."
 
 teaching_guide:
   key_points:
-    - "Risk rating escalates if ANY single dimension hits red — you do not average across dimensions"
+    - "Risk rating escalates if ANY single dimension hits red: you do not average across dimensions"
     - "Tier 2 is the most dangerous gap because it is invisible unless you ask for it specifically"
-    - "Absence of data does not mean low risk — unknown Tier 2 = UNASSESSED, not LOW"
+    - "Absence of data does not mean low risk: unknown Tier 2 = UNASSESSED, not LOW"
     - "The vendor-health-monitor agent automates monitoring; it does not replace human judgment on escalations"
   misconceptions:
     - "Low overall risk means the supplier is fine. Correction: an overall MEDIUM rating can hide a single RED dimension. Always read the dimension breakdown, not just the headline."
-    - "Tier 2 risk is the supplier's problem. Correction: when a Tier 2 failure halts your Tier 1 supplier's production and your production line stops, it is absolutely your problem — regardless of where in the chain it originated."
+    - "Tier 2 risk is the supplier's problem. Correction: when a Tier 2 failure halts your Tier 1 supplier's production and your production line stops, it is absolutely your problem: regardless of where in the chain it originated."
     - "Monthly monitoring is sufficient. Correction: financial and operational signals can move fast. A credit rating downgrade or an OTD collapse can happen between monthly checks. Weekly news scans for strategic vendors are the minimum."
   discussion_prompts:
-    - "Think of a supply disruption your organisation has experienced. Was the root cause visible in advance? Which of the five risk dimensions would have signalled it — if someone had been watching?"
+    - "Think of a supply disruption your organisation has experienced. Was the root cause visible in advance? Which of the five risk dimensions would have signalled it: if someone had been watching?"
     - "Your most strategic vendor refuses to share information about their own suppliers (Tier 2). How do you manage Tier 2 risk without their co-operation?"
   teaching_tips:
-    - "Use the KIFTL/KSA example as the spine of the lesson — the Tier 2 cascade is the most memorable concept and the most likely to generate 'that has happened to us' reactions."
+    - "Use the KIFTL/KSA example as the spine of the lesson: the Tier 2 cascade is the most memorable concept and the most likely to generate 'that has happened to us' reactions."
     - "Emphasise that UNASSESSED is a risk rating, not an absence of a rating. Many teams treat unknown = fine. This is how supply chain crises happen."
 ---
 
-# Supplier Risk — Five Dimensions
+# Supplier Risk; Five Dimensions
 
-You receive an email on a Tuesday morning. Your production manager has flagged that Karachi Industrial Fasteners Ltd — KIFTL, your sole-source supplier for M8 and M10 stainless steel fasteners — has missed its fourth delivery in eight weeks. The OTD rate is now 81%. Your stock covers twelve more days of production. No backup supplier is qualified.
+You receive an email on a Tuesday morning. Your production manager has flagged that Karachi Industrial Fasteners Ltd; KIFTL, your sole-source supplier for M8 and M10 stainless steel fasteners: has missed its fourth delivery in eight weeks. The OTD rate is now 81%. Your stock covers twelve more days of production. No backup supplier is qualified.
 
 A procurement colleague who reads the Pakistan trade press notices something that did not make it into any risk report: Karachi Steel & Alloys, KIFTL's primary raw material supplier, announced restructuring proceedings three weeks ago. KIFTL has been struggling to secure enough steel to maintain their production schedule. This information was publicly available. Nobody in your organisation was looking for it.
 
-This lesson teaches the five-dimension risk framework that catches these signals — financial, operational, compliance, geopolitical, and Tier 2 — and the `/supplier-risk` skill that automates continuous monitoring across all of them.
+This lesson teaches the five-dimension risk framework that catches these signals: financial, operational, compliance, geopolitical, and Tier 2: and the `/supplier-risk` skill that automates continuous monitoring across all of them.
 
 ## The Five Risk Dimensions
 
-Supplier risk is not one thing. A vendor can be financially sound but operationally deteriorating. A vendor can be operationally excellent but operating in a country whose trade environment is changing. A vendor can have clean financials and good delivery performance while their sub-supplier — invisible to you — is in financial distress. Comprehensive risk monitoring requires five separate dimensions.
+Supplier risk is not one thing. A vendor can be financially sound but operationally deteriorating. A vendor can be operationally excellent but operating in a country whose trade environment is changing. A vendor can have clean financials and good delivery performance while their sub-supplier: invisible to you: is in financial distress. Comprehensive risk monitoring requires five separate dimensions.
 
 ### Dimension 1: Financial Risk
 
 Financial risk answers the question: could this supplier stop operating?
 
-For publicly listed companies, the signals are quarterly earnings trends, revenue direction, debt ratios, and analyst commentary. For private companies — which represent the majority of most supplier bases — the signals are statutory filings (Companies House in the UK, SECP in Pakistan, equivalent registries in other jurisdictions), credit rating changes from agencies like Creditsafe or Dun & Bradstreet, payment behaviour (are they paying their own suppliers on time?), and news of redundancies or restructuring.
+For publicly listed companies, the signals are quarterly earnings trends, revenue direction, debt ratios, and analyst commentary. For private companies: which represent the majority of most supplier bases: the signals are statutory filings (Companies House in the UK, SECP in Pakistan, equivalent registries in other jurisdictions), credit rating changes from agencies like Creditsafe or Dun & Bradstreet, payment behaviour (are they paying their own suppliers on time?), and news of redundancies or restructuring.
 
 | Risk Level | Signal                                                                                       |
 | ---------- | -------------------------------------------------------------------------------------------- |
@@ -123,12 +123,12 @@ For publicly listed companies, the signals are quarterly earnings trends, revenu
 
 Operational risk answers the question: is this supplier delivering as contracted right now?
 
-Unlike financial risk — which requires external data — operational risk data lives in your own ERP system, updated continuously with every delivery received and every quality check completed.
+Unlike financial risk: which requires external data: operational risk data lives in your own ERP system, updated continuously with every delivery received and every quality check completed.
 
 Key operational indicators:
 
 - **OTD rate**: 13-week rolling average and trend direction (flat at 92% is different from declining from 97% to 87% in six weeks)
-- **Quality rejection rate**: 13-week rolling average — and pattern analysis (same day of week, same product line, increasing partial deliveries)
+- **Quality rejection rate**: 13-week rolling average: and pattern analysis (same day of week, same product line, increasing partial deliveries)
 - **Lead time variance**: increasing variance indicates capacity strain even when OTD is still above threshold
 
 | Risk Level | Signal                                                                         |
@@ -137,7 +137,7 @@ Key operational indicators:
 | 🟡 MEDIUM  | Declining trend even if still above threshold; increasing partial deliveries   |
 | 🟢 LOW     | Stable; above threshold; no adverse trend                                      |
 
-For KIFTL, the operational risk picture is clear: OTD at 81% and declining, four late deliveries in eight weeks, and a pattern where most late deliveries occur on Monday despatch (suggesting capacity strain on production scheduling). This is not an isolated miss — it is a systemic pattern.
+For KIFTL, the operational risk picture is clear: OTD at 81% and declining, four late deliveries in eight weeks, and a pattern where most late deliveries occur on Monday despatch (suggesting capacity strain on production scheduling). This is not an isolated miss: it is a systemic pattern.
 
 ### Dimension 3: Regulatory and Compliance Risk
 
@@ -169,7 +169,7 @@ For KIFTL, the geopolitical dimension flags a currency exposure: PKR has weakene
 
 Tier 2 risk answers the question: are your Tier 1 supplier's own suppliers creating risk that will cascade to you?
 
-This is the most dangerous dimension — and the most neglected. You have no direct relationship with Tier 2 suppliers. They do not appear in your procurement system. Their financial health, operational performance, and compliance status are invisible to you unless you specifically ask your Tier 1 suppliers to disclose them.
+This is the most dangerous dimension: and the most neglected. You have no direct relationship with Tier 2 suppliers. They do not appear in your procurement system. Their financial health, operational performance, and compliance status are invisible to you unless you specifically ask your Tier 1 suppliers to disclose them.
 
 For every Tier 1 Strategic vendor, the risk framework requires:
 
@@ -178,10 +178,10 @@ For every Tier 1 Strategic vendor, the risk framework requires:
 - Geographic concentration analysis (all Tier 2 suppliers in the same region = concentration risk)
 - Annual financial health check for critical Tier 2 suppliers
 
-If this mapping does not exist: the rating is **UNASSESSED** — not LOW. An unknown Tier 2 is not a low-risk Tier 2.
+If this mapping does not exist: the rating is **UNASSESSED**: not LOW. An unknown Tier 2 is not a low-risk Tier 2.
 
 :::caution The Tier 2 Cascade
-The KIFTL crisis illustrates the Tier 2 problem precisely. KIFTL's operational risk (declining OTD) was visible in your ERP data. But the _cause_ of the decline was Karachi Steel & Alloys — a Tier 2 supplier — entering financial restructuring. If you had a Tier 2 map for KIFTL, you would have flagged KSA's distress three weeks before the delivery failures began. Instead, you learned about it from a colleague who happened to read the trade press.
+The KIFTL crisis illustrates the Tier 2 problem precisely. KIFTL's operational risk (declining OTD) was visible in your ERP data. But the _cause_ of the decline was Karachi Steel & Alloys: a Tier 2 supplier: entering financial restructuring. If you had a Tier 2 map for KIFTL, you would have flagged KSA's distress three weeks before the delivery failures began. Instead, you learned about it from a colleague who happened to read the trade press.
 :::
 
 ## The Overall Risk Rating
@@ -190,7 +190,7 @@ The overall rating is not an average of the five dimensions. The rules are:
 
 - **ESCALATE** to HIGH if ANY single dimension reaches 🔴
 - **ELEVATE** to MEDIUM-HIGH if TWO or more dimensions reach 🟡 simultaneously
-- **REDUCE** the overall rating only after confirmed remediation — vendor assurance alone is not sufficient evidence
+- **REDUCE** the overall rating only after confirmed remediation: vendor assurance alone is not sufficient evidence
 
 For KIFTL at assessment date:
 
@@ -198,9 +198,9 @@ For KIFTL at assessment date:
 - Operational: 🔴 HIGH (OTD 81%, declining trend)
 - Compliance: 🟢 LOW (certifications current)
 - Geopolitical: 🟡 MEDIUM (currency movement)
-- Tier 2: 🟡 MEDIUM (KSA in restructuring — now mapped)
+- Tier 2: 🟡 MEDIUM (KSA in restructuring: now mapped)
 
-Overall: 🔴 HIGH — because operational risk has reached red.
+Overall: 🔴 HIGH: because operational risk has reached red.
 
 ## Using `/supplier-risk`
 
@@ -277,9 +277,9 @@ If Tier 2 data has not been collected for this vendor, the output will flag `TIE
 
 ## The Vendor Health Monitor Agent
 
-Running `/supplier-risk` on demand is useful for investigations. But strategic suppliers require continuous monitoring — not just when you remember to check. The `vendor-health-monitor` agent automates this.
+Running `/supplier-risk` on demand is useful for investigations. But strategic suppliers require continuous monitoring: not just when you remember to check. The `vendor-health-monitor` agent automates this.
 
-The agent runs on a defined schedule, monitoring your configured list of strategic vendors across all five dimensions. When a signal crosses a configured threshold — a credit rating downgrade, an OTD drop below the corrective action threshold, a news item flagging restructuring — the agent generates an alert and routes it to the configured owner.
+The agent runs on a defined schedule, monitoring your configured list of strategic vendors across all five dimensions. When a signal crosses a configured threshold: a credit rating downgrade, an OTD drop below the corrective action threshold, a news item flagging restructuring: the agent generates an alert and routes it to the configured owner.
 
 Configure the agent through `supply-chain.local.md`:
 
@@ -316,7 +316,7 @@ The weekly brief is a one-page traffic light summary: each strategic vendor on a
 **Plugin commands:** `/supplier-risk`, `/vendor-assess`
 **Goal:** Deploy a Tier 1 supplier risk monitoring system for your top 10 strategic vendors
 
-### Step 1 — Define Your Risk Framework
+### Step 1; Define Your Risk Framework
 
 Before running any assessments, calibrate the five dimensions for your organisation. In `supply-chain.local.md`, configure:
 
@@ -328,7 +328,7 @@ Before running any assessments, calibrate the five dimensions for your organisat
 
 Use the threshold structure from the example above as your starting template, then adjust for your industry and vendor base.
 
-### Step 2 — Run Initial Risk Assessments
+### Step 2; Run Initial Risk Assessments
 
 For each of your top 10 vendors by strategic importance:
 
@@ -340,9 +340,9 @@ For each of your top 10 vendors by strategic importance:
 
 Score each vendor across all five dimensions. Create a 5×5 risk matrix plotting all 10 vendors on likelihood of disruption (horizontal axis) vs. impact if disrupted (vertical axis).
 
-### Step 3 — Identify Your Highest-Risk Relationship
+### Step 3; Identify Your Highest-Risk Relationship
 
-From the risk matrix, identify the vendor in the highest-risk quadrant — high likelihood combined with high impact. For this vendor:
+From the risk matrix, identify the vendor in the highest-risk quadrant: high likelihood combined with high impact. For this vendor:
 
 - What is the single most important risk reduction action available?
 - What would it cost to implement?
@@ -350,18 +350,18 @@ From the risk matrix, identify the vendor in the highest-risk quadrant — high 
 
 Present this as a business case: investment in risk reduction versus cost of failure.
 
-### Step 4 — Configure the Vendor Health Monitor Agent
+### Step 4; Configure the Vendor Health Monitor Agent
 
 For your 10 strategic vendors, configure:
 
 - Which web sources to scan (trade press, financial databases, news feeds)
 - Notification frequency and format
-- Alert thresholds per vendor — vendors with recent near-misses should have tighter thresholds than stable vendors
+- Alert thresholds per vendor: vendors with recent near-misses should have tighter thresholds than stable vendors
 - Escalation path for each vendor: who is the category manager, and who is the CPO-level escalation contact
 
-### Step 5 — Design the Weekly Risk Brief
+### Step 5; Design the Weekly Risk Brief
 
-Design the weekly risk review format for your CPO — one page maximum:
+Design the weekly risk review format for your CPO: one page maximum:
 
 ```
 /supplier-risk type:"weekly-executive-brief"
@@ -393,7 +393,7 @@ Assess TechComponents across all five risk dimensions and recommend
 the three most urgent actions.
 ```
 
-**What you are learning:** The five-dimension framework forces structured thinking across every risk type simultaneously — not just the operational signals that are most visible.
+**What you are learning:** The five-dimension framework forces structured thinking across every risk type simultaneously: not just the operational signals that are most visible.
 
 **Adapt**: Modify the scenario to match your organisation.
 

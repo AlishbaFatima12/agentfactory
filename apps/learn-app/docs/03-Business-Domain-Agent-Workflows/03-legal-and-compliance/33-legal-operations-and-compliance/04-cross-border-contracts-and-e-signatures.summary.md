@@ -1,4 +1,4 @@
-# Cross-Border Contracts and E-Signatures — Summary
+# Cross-Border Contracts and E-Signatures; Summary
 
 ## Core Concept
 

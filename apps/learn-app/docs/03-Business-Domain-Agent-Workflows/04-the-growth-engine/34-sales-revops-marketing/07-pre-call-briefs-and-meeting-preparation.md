@@ -74,15 +74,15 @@ cognitive_load:
   assessment: "7 concepts at B1 level. Context Loss is the key new diagnostic concept, discovered through hands-on experimentation. The rest build on the research briefs from L02 and outreach from L06."
 
 differentiation:
-  extension_for_advanced: "Build pre-call briefs for three different call types — discovery, demo, and executive review — for the same prospect. Compare how the question sets, objection handling, and success criteria differ across call types. Which brief requires the most prospect-specific research?"
+  extension_for_advanced: "Build pre-call briefs for three different call types: discovery, demo, and executive review: for the same prospect. Compare how the question sets, objection handling, and success criteria differ across call types. Which brief requires the most prospect-specific research?"
   remedial_for_struggling: "Focus on building one pre-call brief for a discovery call and evaluating whether the discovery questions reference the prospect's specific situation. If you can distinguish a tailored question from a generic one, you have the core skill."
 ---
 
 # Pre-Call Briefs and Meeting Preparation
 
-In Lesson 6, you built a 6-touch outreach sequence for Sarah Chen at Meridian Logistics. Assume Touch 2 worked — Sarah replied and agreed to a 30-minute discovery call next Tuesday. What do you walk in with?
+In Lesson 6, you built a 6-touch outreach sequence for Sarah Chen at Meridian Logistics. Assume Touch 2 worked; Sarah replied and agreed to a 30-minute discovery call next Tuesday. What do you walk in with?
 
-Ahmed, a NexaFlow rep, opens the CRM, reads a one-line note — "met at expo, interested in automation" — and wings it. He spends the first ten minutes of every discovery call asking questions he could have answered before dialling. By the time he reaches the prospect's actual pain points, the meeting is half over. Farah, NexaFlow's top closer, walks into every call with a one-page brief: who she is talking to, what she already knows, what questions to lead with, what objections to anticipate, and what a successful call looks like. She does not waste the prospect's time confirming information that is already available. She starts the conversation where the research left off.
+Ahmed, a NexaFlow rep, opens the CRM, reads a one-line note: "met at expo, interested in automation": and wings it. He spends the first ten minutes of every discovery call asking questions he could have answered before dialling. By the time he reaches the prospect's actual pain points, the meeting is half over. Farah, NexaFlow's top closer, walks into every call with a one-page brief: who she is talking to, what she already knows, what questions to lead with, what objections to anticipate, and what a successful call looks like. She does not waste the prospect's time confirming information that is already available. She starts the conversation where the research left off.
 
 This lesson gives every rep Farah's brief. You will build pre-call briefs, generate a competitive battlecard, process a call transcript, and discover what happens when the agent loses the context you built across earlier lessons.
 
@@ -93,12 +93,12 @@ Farah always knows five things before a call:
 | Element                    | What It Contains                                                                   | Why It Matters                                                                 |
 | -------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | **Quick Context**          | Prospect name, role, company, relevant news, relationship history                  | You do not open with "So, tell me about your company" when you already know    |
-| **Call Goal**              | One sentence: what outcome makes this call successful                              | Without a goal, the call meanders — you leave without a next step              |
+| **Call Goal**              | One sentence: what outcome makes this call successful                              | Without a goal, the call meanders: you leave without a next step              |
 | **Discovery Questions**    | 4-6 questions tailored to the prospect's situation                                 | Generic questions get generic answers. Specific questions get real pain points |
 | **Anticipated Objections** | 2-3 likely pushbacks with prepared responses                                       | The first objection should not be the first time you think about it            |
 | **Success Criteria**       | What "yes" looks like: a follow-up meeting, a technical review, a pilot commitment | If you cannot define success before the call, you cannot recognise it during   |
 
-Ahmed skips all five. He relies on charm and improvisation. It works with warm prospects who are already interested. It fails with every prospect who needs to be convinced — which is most of them.
+Ahmed skips all five. He relies on charm and improvisation. It works with warm prospects who are already interested. It fails with every prospect who needs to be convinced: which is most of them.
 
 ## Building the Meridian Pre-Call Brief
 
@@ -120,7 +120,7 @@ consolidation diagnostic.
 | Section                      | Intent                                     | What to Verify                                                                |
 | ---------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------- |
 | Quick Context                | Prospect summary with relationship history | References your outreach sequence and the prospect's response                 |
-| Call Goal                    | One-sentence success definition            | Specific and measurable — not "have a good conversation"                      |
+| Call Goal                    | One-sentence success definition            | Specific and measurable: not "have a good conversation"                      |
 | Discovery Questions (4-6)    | Questions tailored to prospect's situation | Each question references data from your research brief, not generic discovery |
 | Anticipated Objections (2-3) | Likely pushbacks with prepared responses   | Responses are specific to the prospect's context, not boilerplate             |
 | Success Criteria             | What "yes" looks like                      | Concrete next step (e.g., schedule diagnostic, confirm pilot)                 |
@@ -131,11 +131,11 @@ The brief quality depends on the research you feed in. The teaching point is the
 
 ### Evaluating the Brief
 
-Read through the discovery questions. Are they good? Check whether each question references specific details from your research brief — the prospect's recent acquisition, their public filings, their LinkedIn activity, their technology challenges. Questions that reference prospect-specific data signal a research-informed brief. Questions like "tell me about your current workflow" signal a generic call sheet.
+Read through the discovery questions. Are they good? Check whether each question references specific details from your research brief: the prospect's recent acquisition, their public filings, their LinkedIn activity, their technology challenges. Questions that reference prospect-specific data signal a research-informed brief. Questions like "tell me about your current workflow" signal a generic call sheet.
 
-The best discovery questions also serve double duty — they qualify the opportunity while demonstrating that you did the research. A question about how many active SKUs run across both WMS platforms simultaneously qualifies the technical scope AND shows you understand their post-acquisition integration challenge.
+The best discovery questions also serve double duty: they qualify the opportunity while demonstrating that you did the research. A question about how many active SKUs run across both WMS platforms simultaneously qualifies the technical scope AND shows you understand their post-acquisition integration challenge.
 
-Discovery questions have a hard limit of 5 total, structured in this order: 1 opening question, 2-3 depth questions, 1 qualification question. The brief must only use data from the input provided — no substitution, no fabrication. If information is missing, output "UNKNOWN" rather than inventing plausible details.
+Discovery questions have a hard limit of 5 total, structured in this order: 1 opening question, 2-3 depth questions, 1 qualification question. The brief must only use data from the input provided: no substitution, no fabrication. If information is missing, output "UNKNOWN" rather than inventing plausible details.
 
 ## Adding a Competitive Battlecard
 
@@ -151,14 +151,14 @@ consolidation.
 
 | Section                | Intent                                          | What to Verify                                                     |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------------------------ |
-| Differentiation matrix | Feature/capability comparison table             | Claims are verifiable — pricing, features, coverage                |
+| Differentiation matrix | Feature/capability comparison table             | Claims are verifiable: pricing, features, coverage                |
 | Where we win           | NexaFlow's advantages over the competitor       | Advantages are relevant to THIS prospect's situation               |
-| Where they win         | Competitor's genuine strengths                  | Honest assessment — not dismissive of competitor                   |
+| Where they win         | Competitor's genuine strengths                  | Honest assessment: not dismissive of competitor                   |
 | Talk tracks            | Conversation guides for the meeting             | Reference the specific prospect's needs, not generic sales pitches |
 | Where we lose          | Scenarios where competitor is the better choice | Acknowledges real disadvantages                                    |
 
 :::note Your output will vary
-Competitive intelligence from an agent is a starting point, not a script. Verify pricing, feature claims, and partnership status against current public sources before using any claim in a meeting. The teaching point is integrating competitive positioning INTO the pre-call brief — you walk in prepared for two conversations: the one you plan and the one the prospect redirects to.
+Competitive intelligence from an agent is a starting point, not a script. Verify pricing, feature claims, and partnership status against current public sources before using any claim in a meeting. The teaching point is integrating competitive positioning INTO the pre-call brief: you walk in prepared for two conversations: the one you plan and the one the prospect redirects to.
 :::
 
 Now integrate this into your pre-call brief. The battlecard tells you where NexaFlow has an advantage and where to acknowledge a competitor's strength honestly. Walking into the call with both the brief and the battlecard means you are prepared for the conversation the prospect controls, not just the one you planned.
@@ -169,7 +169,7 @@ Review every claim in the battlecard before using it in a meeting. Competitive i
 
 ## Discovering Context Loss
 
-You researched Sarah Chen thoroughly in Lesson 2. The research brief covered the BrightPath acquisition, WMS challenges, and LinkedIn activity. But what happens when a different prospect — one you researched three weeks ago — comes up for a call?
+You researched Sarah Chen thoroughly in Lesson 2. The research brief covered the BrightPath acquisition, WMS challenges, and LinkedIn activity. But what happens when a different prospect: one you researched three weeks ago: comes up for a call?
 
 Try building a brief for Pinnacle Analytics, a prospect from your Lesson 3 scoring exercise. Do not feed the research brief from Lesson 2 into the prompt:
 
@@ -199,10 +199,10 @@ DISCOVERY QUESTIONS
 
 Those questions could be asked to anyone. "Tell me about your current workflow" is the discovery-call equivalent of "So, tell me about yourself" on a first date. The brief contains no reference to Pinnacle's specific situation, no mention of the research you did three weeks ago, and no connection to the scoring data from Lesson 3.
 
-This is **Context Loss** — the agent produced a generic brief because it did not have access to the research you built earlier. The research brief exists. You created it. But you did not feed it into this prompt, and the agent does not remember work from previous sessions.
+This is **Context Loss**: the agent produced a generic brief because it did not have access to the research you built earlier. The research brief exists. You created it. But you did not feed it into this prompt, and the agent does not remember work from previous sessions.
 
 :::warning Context Loss
-You have discovered a new agent error type. In Lesson 1, you identified **Hallucinated Data**. In Lesson 3, **Miscalibrated Scoring**. In Lesson 5, **Compliance Gap**. In Lesson 6, **Over-Automation**. Now: **Context Loss** — the agent operates without context that exists elsewhere in your workflow, producing generic output instead of personalised intelligence.
+You have discovered a new agent error type. In Lesson 1, you identified **Hallucinated Data**. In Lesson 3, **Miscalibrated Scoring**. In Lesson 5, **Compliance Gap**. In Lesson 6, **Over-Automation**. Now: **Context Loss**: the agent operates without context that exists elsewhere in your workflow, producing generic output instead of personalised intelligence.
 
 The diagnostic question: **"Did the follow-up reference the research brief?"** If the answer is no, you have detected Context Loss. The fix is always the same: feed the prior research into the current prompt. The agent does not remember. You manage the memory.
 :::
@@ -229,9 +229,9 @@ The lesson: agent context degrades across sessions. Always feed the research bri
 
 Take your top three prospects from the Lesson 3 scoring exercise. Build a pre-call brief for each, with a different call type:
 
-**Brief 1 — Discovery Call** (Meridian Logistics, already built above)
+**Brief 1; Discovery Call** (Meridian Logistics, already built above)
 
-**Brief 2 — Demo Call:**
+**Brief 2; Demo Call:**
 
 ```
 Prepare me for a product demo call with Ahmed Rashid at Gulf
@@ -244,7 +244,7 @@ planning in Excel. Ahmed is VP of Operations, reports to CEO
 directly. Score: Fit 36, Timing 28, Engagement 25 (total 89).
 ```
 
-**Brief 3 — Follow-Up Call:**
+**Brief 3; Follow-Up Call:**
 
 ```
 Prepare me for a follow-up call with Priya Nair at DataForge
@@ -277,7 +277,7 @@ The pre-call brief anticipated three objections for Meridian. These are the most
 
 This is a timing objection, not a rejection. Farah does not argue with it. She reframes the diagnostic as something that saves time rather than consuming it:
 
-> "I hear you — post-acquisition is the worst time to start something new. The diagnostic is designed for exactly this situation. It takes 2 hours, not 2 weeks. What you get is a consolidation readiness map that your team can execute on their own timeline. Most teams tell us the diagnostic itself reduces planning load because it maps overlap they would otherwise spend weeks discovering."
+> "I hear you: post-acquisition is the worst time to start something new. The diagnostic is designed for exactly this situation. It takes 2 hours, not 2 weeks. What you get is a consolidation readiness map that your team can execute on their own timeline. Most teams tell us the diagnostic itself reduces planning load because it maps overlap they would otherwise spend weeks discovering."
 
 The key: do not pitch when the prospect says "not now." Show that the ask is small and the output is valuable regardless of timing.
 
@@ -285,9 +285,9 @@ The key: do not pitch when the prospect says "not now." Show that the ask is sma
 
 This is a competitive objection. Farah does not attack the incumbent. She positions the diagnostic as vendor-neutral:
 
-> "That makes sense — and the diagnostic is not about replacing anyone. It maps the overlap between your two WMS platforms and flags data conflicts. If extending your current vendor is the right path, the diagnostic confirms that. If it is not, you will know before committing. Either way, the output is yours."
+> "That makes sense: and the diagnostic is not about replacing anyone. It maps the overlap between your two WMS platforms and flags data conflicts. If extending your current vendor is the right path, the diagnostic confirms that. If it is not, you will know before committing. Either way, the output is yours."
 
-The key: when the prospect already has a vendor, compete on insight, not features. The diagnostic gives Meridian something their current vendor cannot — an independent assessment.
+The key: when the prospect already has a vendor, compete on insight, not features. The diagnostic gives Meridian something their current vendor cannot: an independent assessment.
 
 **"We're not ready to buy."**
 
@@ -299,7 +299,7 @@ The key: reduce perceived commitment. The prospect says "not ready to buy" becau
 
 ## Processing a Call Transcript
 
-The discovery call with Sarah went well. Now capture what happened. The `/call-summary` command processes a call transcript — either pulled automatically from a connector like Fireflies or Gong, or pasted manually from your notes.
+The discovery call with Sarah went well. Now capture what happened. The `/call-summary` command processes a call transcript: either pulled automatically from a connector like Fireflies or Gong, or pasted manually from your notes.
 
 **If you have a call recording connector (Fireflies, Gong, Otter):**
 
@@ -344,7 +344,7 @@ discovery call with Sarah Chen:
 The summary quality depends on the call notes you provide. The teaching point is the _loop_: the pre-call brief set the goal, the call achieved (or didn't achieve) it, and the summary captures the commitments and generates the follow-up. If the follow-up references specific conversation points, the loop is working. If it reads like a generic template, you need to provide richer call notes.
 :::
 
-The `/call-summary` output connects the brief to the follow-up. The pre-call brief set the goal. The call achieved it (or uncovered why it couldn't). The summary captures the commitments and generates the follow-up — closing the loop from preparation to execution.
+The `/call-summary` output connects the brief to the follow-up. The pre-call brief set the goal. The call achieved it (or uncovered why it couldn't). The summary captures the commitments and generates the follow-up: closing the loop from preparation to execution.
 
 ## What You Built
 
@@ -353,7 +353,7 @@ The `/call-summary` output connects the brief to the follow-up. The pre-call bri
 3. A call summary with action items from `/call-summary`, including a draft follow-up email
 4. Objection handling responses for 3 common objections, grounded in prospect-specific context
 5. The **Context Loss** error type, discovered by building a brief without feeding prior research
-6. The principle: always feed prior context into brief prompts — the agent does not remember across sessions
+6. The principle: always feed prior context into brief prompts: the agent does not remember across sessions
 
 ## Flashcards Study Aid
 
@@ -384,7 +384,7 @@ differentiation matrix and talk tracks for the Meridian
 meeting.
 ```
 
-**What you are learning:** You are practising the complete pre-call preparation workflow — brief plus competitive positioning — in a single prompt. Evaluate whether the discovery questions reference Meridian's specific situation (BrightPath, WMS consolidation, Q3 timeline) or could be asked to any logistics company. Tailored questions are the difference between a brief that earns trust and a generic call sheet that wastes the prospect's time.
+**What you are learning:** You are practising the complete pre-call preparation workflow: brief plus competitive positioning: in a single prompt. Evaluate whether the discovery questions reference Meridian's specific situation (BrightPath, WMS consolidation, Q3 timeline) or could be asked to any logistics company. Tailored questions are the difference between a brief that earns trust and a generic call sheet that wastes the prospect's time.
 
 **Prompt 2: Adapt the Brief for a Different Call Type**
 
@@ -410,7 +410,7 @@ How does the question set change from discovery to demo?
 Which questions from the discovery brief no longer apply?
 ```
 
-**What you are learning:** Different call types require different preparation. Discovery questions qualify the opportunity. Demo questions validate technical fit. Follow-up questions remove specific blockers. Building briefs for multiple call types with the same prospect shows how the question set evolves as the prospect moves through the pipeline. The brief that worked for discovery would be wrong for a demo — and using it signals that you are not paying attention to where the conversation is.
+**What you are learning:** Different call types require different preparation. Discovery questions qualify the opportunity. Demo questions validate technical fit. Follow-up questions remove specific blockers. Building briefs for multiple call types with the same prospect shows how the question set evolves as the prospect moves through the pipeline. The brief that worked for discovery would be wrong for a demo: and using it signals that you are not paying attention to where the conversation is.
 
 **Prompt 3: Build a Brief for Your Next Real Meeting**
 
@@ -432,4 +432,4 @@ summary missed? Are there commitments I made verbally
 that the summary did not capture?
 ```
 
-**What you are learning:** Applying the brief-to-call-to-summary workflow to your own pipeline. The comparison between generated action items and actual commitments reveals the gap between what the agent captures and what you committed to in conversation. Some commitments are explicit ("I will send the report today"). Others are implicit ("Let me look into that for you"). The agent captures explicit commitments reliably. Implicit ones — the ones that damage trust when you forget them — require your own notes.
+**What you are learning:** Applying the brief-to-call-to-summary workflow to your own pipeline. The comparison between generated action items and actual commitments reveals the gap between what the agent captures and what you committed to in conversation. Some commitments are explicit ("I will send the report today"). Others are implicit ("Let me look into that for you"). The agent captures explicit commitments reliably. Implicit ones: the ones that damage trust when you forget them: require your own notes.

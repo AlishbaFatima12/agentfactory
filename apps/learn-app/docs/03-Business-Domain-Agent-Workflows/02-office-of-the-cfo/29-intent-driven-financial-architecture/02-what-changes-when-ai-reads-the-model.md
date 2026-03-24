@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/what-changes-when-ai-reads-the-model
 sidebar_position: 2
 title: "What Changes When AI Reads the Model"
-description: "Discover the core distinction between Coordinate-First and Logic-First financial modelling by comparing how Claude analyses the same Gross Profit formula written two ways — coordinate references versus Named Ranges — and why the quality gap in AI analysis translates directly into a business capability gap"
+description: "Discover the core distinction between Coordinate-First and Logic-First financial modelling by comparing how Claude analyses the same Gross Profit formula written two ways (coordinate references versus Named Ranges) and why the quality gap in AI analysis translates directly into a business capability gap"
 keywords:
   [
     "coordinate-first",
@@ -35,7 +35,7 @@ skills:
     category: "Applied"
     bloom_level: "Understand"
     digcomp_area: "Digital Literacy"
-    measurable_at_this_level: "Student can describe the specific differences in AI output — confidence, business context, actionability — when the same formula is expressed as coordinate references versus Named Ranges"
+    measurable_at_this_level: "Student can describe the specific differences in AI output (confidence, business context, actionability) when the same formula is expressed as coordinate references versus Named Ranges"
 
   - name: "Identify Agent Capability Gaps from Model Architecture"
     proficiency_level: "A2"
@@ -53,7 +53,7 @@ learning_objectives:
   - objective: "Describe the quality gap in AI output when analysing coordinate-based versus Named Range formulas, using the dimensions of confidence, business context, and actionability"
     proficiency_level: "A2"
     bloom_level: "Understand"
-    assessment_method: "Student can compare two AI responses — one from a coordinate formula, one from a Named Range formula — and identify which provides business insight versus mechanical description"
+    assessment_method: "Student can compare two AI responses (one from a coordinate formula, one from a Named Range formula) and identify which provides business insight versus mechanical description"
 
   - objective: "Explain why model architecture determines agent capability, and identify which IDFA capabilities (Intent Synthesis, What-If, Goal-Seeking) become possible only with Logic-First design"
     proficiency_level: "A2"
@@ -63,12 +63,12 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Coordinate-First modelling — defining business logic by cell location"
-    - "Logic-First modelling — defining business logic by Named Range labels"
-    - "The AI analysis quality gap — hedged descriptions versus confident business analysis"
-    - "Agent capability gap equals business capability gap — architecture determines what agents can do"
-    - "Capability preview — Intent Synthesis, What-If, and Goal-Seeking require Logic-First design"
-  assessment: "5 concepts at A2 level — within the 5-7 cognitive limit for this tier. Students enter from Lesson 1 with a clear understanding of Formula Rot and why coordinate formulas are problematic; this lesson adds the positive case for Logic-First design through direct comparison."
+    - "Coordinate-First modelling: defining business logic by cell location"
+    - "Logic-First modelling: defining business logic by Named Range labels"
+    - "The AI analysis quality gap: hedged descriptions versus confident business analysis"
+    - "Agent capability gap equals business capability gap: architecture determines what agents can do"
+    - "Capability preview: Intent Synthesis, What-If, and Goal-Seeking require Logic-First design"
+  assessment: "5 concepts at A2 level: within the 5-7 cognitive limit for this tier. Students enter from Lesson 1 with a clear understanding of Formula Rot and why coordinate formulas are problematic; this lesson adds the positive case for Logic-First design through direct comparison."
 
 differentiation:
   extension_for_advanced: "Take a real financial model you work with. Find one formula and write it in both coordinate and Named Range form. Ask Claude to analyse each version. Compare the responses against the quality dimensions in this lesson (confidence, business context, actionability). Does the pattern hold?"
@@ -79,28 +79,28 @@ teaching_guide:
   session_group: 1
   session_title: "The Logic-First Paradigm"
   key_points:
-    - "The same Gross Profit calculation written two ways produces categorically different AI analysis — not incrementally different, categorically different"
+    - "The same Gross Profit calculation written two ways produces categorically different AI analysis; not incrementally different, categorically different"
     - "Coordinate formulas force the agent to infer intent from position; Named Range formulas encode intent in the formula itself"
     - "The quality gap has three measurable dimensions: confidence (hedged vs definitive), business context (mechanical vs analytical), and actionability (description vs recommendation)"
-    - "Agent capability gap equals business capability gap — coordinate models waste tokens on inference; IDFA models let agents spend tokens on insight"
+    - "Agent capability gap equals business capability gap: coordinate models waste tokens on inference; IDFA models let agents spend tokens on insight"
   misconceptions:
-    - "Students may think Named Ranges are just cosmetic — a readability improvement for humans. The lesson must demonstrate that Named Ranges change what the AI agent can do, not just how the formula looks"
-    - "Students may assume the AI is 'smarter' on Named Range models. The AI is the same — the model gives it more information to work with"
-    - "Students may think converting to Named Ranges is the whole IDFA methodology. Named Range Priority is Guardrail 1 of four — later lessons cover LaTeX Verification, Intent Notes, and Delegated Calculation"
+    - "Students may think Named Ranges are just cosmetic: a readability improvement for humans. The lesson must demonstrate that Named Ranges change what the AI agent can do, not just how the formula looks"
+    - "Students may assume the AI is 'smarter' on Named Range models. The AI is the same: the model gives it more information to work with"
+    - "Students may think converting to Named Ranges is the whole IDFA methodology. Named Range Priority is Guardrail 1 of four: later lessons cover LaTeX Verification, Intent Notes, and Delegated Calculation"
   discussion_prompts:
     - "Think about a time you inherited a spreadsheet from a colleague. How long did it take to understand what the formulas were doing? Would Named Ranges have changed that experience?"
     - "If an AI agent gives you a hedged answer about a formula ('this appears to subtract something from something'), would you trust that analysis in a board presentation? What about a definitive answer that names the business rule?"
   teaching_tips:
-    - "The side-by-side comparison is the core of this lesson — ensure students read both AI responses carefully and notice the qualitative difference, not just the length difference"
+    - "The side-by-side comparison is the core of this lesson: ensure students read both AI responses carefully and notice the qualitative difference, not just the length difference"
     - "The business bottom line connects model architecture to real costs. If students are sceptical about Named Ranges, the token-spend argument often resonates: coordinate models make agents do inference work that IDFA models eliminate"
-    - "Preview the five capabilities lightly — students should know What-If and Intent Synthesis are coming, but this lesson does not teach them"
+    - "Preview the five capabilities lightly: students should know What-If and Intent Synthesis are coming, but this lesson does not teach them"
   assessment_checks:
     - question: "Write the Gross Profit formula in coordinate form and in Named Range form."
       expected_response: "Coordinate: =B14-(B14*$C$3). Named Range: =Revenue_Y1 - (Revenue_Y1 * COGS_Pct_Y1). The coordinate version references cell positions; the Named Range version reads as a business rule."
     - question: "What three dimensions distinguish the AI analysis of a coordinate formula from the AI analysis of a Named Range formula?"
-      expected_response: "Confidence (hedged guesses vs definitive statements), business context (mechanical cell descriptions vs business rule explanations), and actionability (what-the-formula-does vs what-you-can-do-with-it — including what-if suggestions)."
+      expected_response: "Confidence (hedged guesses vs definitive statements), business context (mechanical cell descriptions vs business rule explanations), and actionability (what-the-formula-does vs what-you-can-do-with-it: including what-if suggestions)."
     - question: "Why does agent capability gap equal business capability gap?"
-      expected_response: "When an agent spends tokens inferring what a formula means from cell positions, it cannot spend those tokens on business analysis, what-if scenarios, or audit recommendations. The model architecture determines what the agent can do — and what the agent can do determines what the business gets from its AI investment."
+      expected_response: "When an agent spends tokens inferring what a formula means from cell positions, it cannot spend those tokens on business analysis, what-if scenarios, or audit recommendations. The model architecture determines what the agent can do: and what the agent can do determines what the business gets from its AI investment."
 ---
 
 # What Changes When AI Reads the Model
@@ -109,7 +109,7 @@ teaching_guide:
 
 In Lesson 1, you saw Formula Rot from the inside: coordinate references that break silently, logic that diffuses across dozens of cells, and a reverse-engineering burden that grows every time the model changes hands. You understand the problem. Now you will see what changes when the problem is solved.
 
-This lesson puts two analysts in the same room with the same model and the same question. One analyst's model uses coordinate references. The other analyst's model has been converted to Named Ranges. Both ask Claude the same question: "Explain the Gross Profit formula." The answers they receive are not incrementally different. They are categorically different — in confidence, in business context, and in actionability. That gap is the reason IDFA exists, and it is the gap that every remaining lesson in this chapter works to close.
+This lesson puts two analysts in the same room with the same model and the same question. One analyst's model uses coordinate references. The other analyst's model has been converted to Named Ranges. Both ask Claude the same question: "Explain the Gross Profit formula." The answers they receive are not incrementally different. They are categorically different: in confidence, in business context, and in actionability. That gap is the reason IDFA exists, and it is the gap that every remaining lesson in this chapter works to close.
 
 ---
 
@@ -139,7 +139,7 @@ Here is a Gross Profit formula for Year 1. It calculates the same number in both
 =Revenue_Y1 - (Revenue_Y1 * COGS_Pct_Y1)
 ```
 
-Read both formulas aloud. The coordinate version sounds like a grid reference: "B14 minus B14 times C3." The Named Range version sounds like a business rule: "Revenue Year 1 minus Revenue Year 1 times COGS Percentage Year 1." The same calculation. The same answer. A fundamentally different level of information available to anyone — or anything — reading it.
+Read both formulas aloud. The coordinate version sounds like a grid reference: "B14 minus B14 times C3." The Named Range version sounds like a business rule: "Revenue Year 1 minus Revenue Year 1 times COGS Percentage Year 1." The same calculation. The same answer. A fundamentally different level of information available to anyone (or anything) reading it.
 
 ## What the Agent Sees
 
@@ -161,7 +161,7 @@ Now the same question on the Named Range model:
 
 > "Year 1 Gross Profit is calculated as Revenue minus the product of Revenue and COGS Percentage. The business rule: Gross Profit equals Revenue after subtracting Cost of Goods Sold, where COGS is expressed as a percentage of Revenue. At current assumptions (Revenue of $11,000,000 and COGS Percentage of 59%), Gross Profit is $4,510,000. A 1-percentage-point reduction in COGS Percentage would increase Gross Profit by $110,000."
 
-No hedging. No "appears to." The agent names the business rule, states the assumptions, calculates a sensitivity, and offers a what-if scenario — because the formula told it everything it needed to know.
+No hedging. No "appears to." The agent names the business rule, states the assumptions, calculates a sensitivity, and offers a what-if scenario, because the formula told it everything it needed to know.
 
 ## Three Dimensions of the Quality Gap
 
@@ -173,7 +173,7 @@ The difference between these two responses is not random. It follows a pattern w
 | **Business context** | Mechanical: describes cell references and values              | Analytical: names the business rule, identifies assumptions, explains the logic |
 | **Actionability**    | Descriptive: tells you what the formula does                  | Prescriptive: suggests what-if scenarios and quantifies impact of changes       |
 
-This is not a matter of prompt engineering. You cannot prompt your way out of a coordinate model. The information the agent needs — the business intent behind the formula — is either in the formula or it is not. No prompt can create intent that was never encoded.
+This is not a matter of prompt engineering. You cannot prompt your way out of a coordinate model. The information the agent needs (the business intent behind the formula) is either in the formula or it is not. No prompt can create intent that was never encoded.
 
 ## Why This Is a Business Problem, Not a Technical One
 
@@ -187,13 +187,13 @@ A finance team using coordinate models gets descriptions of their spreadsheets. 
 
 ## What Becomes Possible
 
-When every formula reads as a business rule, capabilities emerge that coordinate models cannot support. The full IDFA methodology — which you will build across the remaining lessons in this chapter — unlocks five Finance Domain Agent capabilities. This lesson previews the first three:
+When every formula reads as a business rule, capabilities emerge that coordinate models cannot support. The full IDFA methodology (which you will build across the remaining lessons in this chapter) unlocks five Finance Domain Agent capabilities. This lesson previews the first three:
 
 **Intent Synthesis.** Because Named Range formulas encode business rules, the agent can synthesise the _intent_ of an entire model section. Instead of reporting "cells D14 through D18 contain formulas referencing column B and C," the agent reports: "The Gross Profit section calculates margin after COGS for each projection year, with COGS expressed as a percentage of Revenue that decreases from 59% to 54% over the five-year forecast, reflecting an assumption of improving cost efficiency at scale."
 
-**Deterministic What-If.** Because assumptions are isolated in Named Ranges, the agent can identify every assumption driving a result and propose what-if scenarios. "What if Revenue grows 15% instead of 10%?" is a question the agent can answer precisely — because it knows which Named Range controls revenue growth and which formulas depend on it.
+**Deterministic What-If.** Because assumptions are isolated in Named Ranges, the agent can identify every assumption driving a result and propose what-if scenarios. "What if Revenue grows 15% instead of 10%?" is a question the agent can answer precisely, because it knows which Named Range controls revenue growth and which formulas depend on it.
 
-**Strategic Goal-Seeking.** Because the relationship between assumptions and outputs is explicit, the agent can work backwards: "What COGS Percentage would you need to achieve a 45% Gross Margin?" The agent identifies the assumption to change, the output to target, and the value that achieves the goal — all from the Named Range structure.
+**Strategic Goal-Seeking.** Because the relationship between assumptions and outputs is explicit, the agent can work backwards: "What COGS Percentage would you need to achieve a 45% Gross Margin?" The agent identifies the assumption to change, the output to target, and the value that achieves the goal: all from the Named Range structure.
 
 These capabilities are not theoretical. You will build and test each one in later lessons. For now, the point is architectural: they require Logic-First design. A coordinate model cannot support Intent Synthesis because the intent was never encoded. A coordinate model cannot support precise What-If because the assumptions are not isolated. Architecture enables capability.
 
@@ -227,7 +227,7 @@ Explain what this formula calculates, what business rule it encodes,
 and what would happen if the inputs changed by 10%.
 ```
 
-Run the prompt twice — once with the coordinate version, once with the Named Range version.
+Run the prompt twice: once with the coordinate version, once with the Named Range version.
 
 **Step 4.** Document the difference. Use the three dimensions from this lesson:
 
@@ -257,7 +257,7 @@ and (c) how useful it is for suggesting what-if scenarios.
 Explain your ratings.
 ```
 
-**What you are learning:** This prompt forces the AI to articulate exactly where the information gap lies. The ratings make the quality difference quantitative rather than impressionistic — and the explanations reveal that the gap is architectural (information encoded in the formula), not about AI capability.
+**What you are learning:** This prompt forces the AI to articulate exactly where the information gap lies. The ratings make the quality difference quantitative rather than impressionistic: and the explanations reveal that the gap is architectural (information encoded in the formula), not about AI capability.
 
 ### Prompt 2: Business Analysis from Named Ranges
 
@@ -279,7 +279,7 @@ Provide a business analysis of this model. Include:
 4. One question a board member might ask about these projections
 ```
 
-**What you are learning:** With Named Range formulas, the agent moves beyond mechanical description into genuine business analysis. It can identify assumptions, infer trends, flag risks, and anticipate stakeholder questions — because the business logic is readable, not hidden in cell coordinates. This is what "analysis mode" looks like.
+**What you are learning:** With Named Range formulas, the agent moves beyond mechanical description into genuine business analysis. It can identify assumptions, infer trends, flag risks, and anticipate stakeholder questions, because the business logic is readable, not hidden in cell coordinates. This is what "analysis mode" looks like.
 
 ### Prompt 3: What-If on Both Formats
 
@@ -306,7 +306,7 @@ After answering both, explain why one version let you give a more
 complete and confident answer than the other.
 ```
 
-**What you are learning:** What-If analysis is a core Finance Domain Agent capability — and it depends entirely on model architecture. This prompt demonstrates that the agent can answer the same question on both models, but the Named Range version produces a precise, assumption-aware answer while the coordinate version forces the agent to guess which cells control growth. Architecture determines capability.
+**What you are learning:** What-If analysis is a core Finance Domain Agent capability: and it depends entirely on model architecture. This prompt demonstrates that the agent can answer the same question on both models, but the Named Range version produces a precise, assumption-aware answer while the coordinate version forces the agent to guess which cells control growth. Architecture determines capability.
 
 ## Flashcards Study Aid
 

@@ -63,18 +63,18 @@ differentiation:
 
 teaching_guide:
   key_points:
-    - "The central insight — operations is an intelligence function — is the thesis that makes all 14 lessons coherent as a system rather than 14 unrelated exercises"
+    - "The central insight, operations is an intelligence function: is the thesis that makes all 14 lessons coherent as a system rather than 14 unrelated exercises"
     - "The dependency chain (ops.local.md → vendor audit → contracts → compliance → audit → agents → intelligence brief) is the architecture students should be able to describe from memory"
-    - "Human judgment is not being replaced — the quality of information available when judgments are made is being improved"
-    - "The quick-reference tables are designed for active use, not just review — encourage students to bookmark this lesson"
+    - "Human judgment is not being replaced: the quality of information available when judgments are made is being improved"
+    - "The quick-reference tables are designed for active use, not just review, encourage students to bookmark this lesson"
   misconceptions:
     - "Completing all exercises means the organisation is now operating well. Correction: the exercises built the intelligence layer. Operating well requires applying that intelligence through ongoing human judgment."
-    - "The four agents automate the operations function. Correction: the agents monitor for conditions that require human action — they flag, they do not decide."
+    - "The four agents automate the operations function. Correction: the agents monitor for conditions that require human action; they flag, they do not decide."
   discussion_prompts:
     - "Which of the 14 capabilities built in this chapter would have the most immediate impact on your organisation? What would change in the first 30 days?"
     - "The chapter argues that better information in the hands of the same people produces better decisions. Can you think of a case where this might not be true?"
   teaching_tips:
-    - "Ask students to take the Try With AI exercise cold — without looking back at earlier lessons — to test retention and integration."
+    - "Ask students to take the Try With AI exercise cold, without looking back at earlier lessons, to test retention and integration."
     - "The quick-reference section is intentionally comprehensive. Walk students through how to use it as a decision tool, not just a list."
 ---
 
@@ -82,17 +82,17 @@ teaching_guide:
 
 You began this chapter with a COO's observation: operations teams spend a disproportionate amount of their time managing the consequences of invisible problems. Problems that were always visible, if anyone had been watching.
 
-Over fourteen lessons, you built the watching infrastructure. Every vendor in the portfolio is now visible, evaluated, and tracked. Every critical process is documented, owned, and version-controlled. Every compliance obligation is mapped to a control, an owner, and an evidence location. Every significant risk is scored, prioritised, and connected to an escalation threshold. Four persistent agents are watching the portfolio continuously — not because humans cannot manage it, but because the volume and frequency of what needs watching exceeds what any team can sustain manually.
+Over fourteen lessons, you built the watching infrastructure. Every vendor in the portfolio is now visible, evaluated, and tracked. Every critical process is documented, owned, and version-controlled. Every compliance obligation is mapped to a control, an owner, and an evidence location. Every significant risk is scored, prioritised, and connected to an escalation threshold. Four persistent agents are watching the portfolio continuously, not because humans cannot manage it, but because the volume and frequency of what needs watching exceeds what any team can sustain manually.
 
 ## The Central Insight
 
-Operations is not primarily an administrative function. It is an intelligence function — its job is to make the invisible visible.
+Operations is not primarily an administrative function. It is an intelligence function; its job is to make the invisible visible.
 
 Vendor spend that nobody has totalled. Process steps that live in three people's heads rather than in a document. Compliance obligations that were tracked when they were introduced but whose controls have since drifted. Risks that everyone is vaguely aware of but nobody has formally quantified. Change impacts that seemed obvious to the team that requested the change and invisible to every other team it affected.
 
 When the invisible becomes visible, decisions improve. The CFO who knows the full vendor portfolio finds the savings that were always there. The COO who knows the process gaps closes them before they cause failures. The Compliance Officer who knows every obligation ensures every one is met. The Change Manager who maps every impact prevents the downstream failure that nobody anticipated.
 
-The two-plugin architecture — official Operations plugin for standard workflows, custom Operations Intelligence plugin for the gaps — does not run the organisation. It makes the organisation visible to the people who run it.
+The two-plugin architecture, official Operations plugin for standard workflows, custom Operations Intelligence plugin for the gaps, does not run the organisation. It makes the organisation visible to the people who run it.
 
 ## What This Chapter Built
 
@@ -115,7 +115,7 @@ The two-plugin architecture — official Operations plugin for standard workflow
 
 ## What Does Not Change
 
-Operations still requires judgment — and no amount of intelligence infrastructure changes that.
+Operations still requires judgment , and no amount of intelligence infrastructure changes that.
 
 Deciding whether to exit a vendor relationship despite long history. Choosing how to communicate a difficult change to a team that will resist it. Making the call to rollback a system change at midnight when costs are mounting. Determining which compliance risk to accept and which to remediate immediately. These are judgment calls. They belong to people, not to plugins.
 
@@ -130,7 +130,7 @@ Better information, in the hands of the same people, produces better decisions. 
 | Command           | Use                                                                         | Lesson(s) |
 | ----------------- | --------------------------------------------------------------------------- | --------- |
 | `/vendor-review`  | Vendor portfolio audit, SLA scorecards, renewal calendar, vendor comparison | L02, L03  |
-| `/process-doc`    | Process documentation — SOPs, RACI matrices, flowcharts, gap analysis       | L05       |
+| `/process-doc`    | Process documentation, SOPs, RACI matrices, flowcharts, gap analysis       | L05       |
 | `/runbook`        | Operational runbook creation and maintenance                                | L05       |
 | `/change-request` | Change impact assessment, communications plan, rollback design              | L06       |
 | `/status-report`  | Status reports with KPIs, risk summary, and action items                    | L11, L13  |
@@ -148,7 +148,7 @@ Better information, in the hands of the same people, produces better decisions. 
 
 ---
 
-## Quick Reference: Auto-Skills (Natural Language Only — Never Slash Commands)
+## Quick Reference: Auto-Skills (Natural Language Only: Never Slash Commands)
 
 | Auto-Skill             | Trigger Keywords                                          | Use                                              | Lesson |
 | ---------------------- | --------------------------------------------------------- | ------------------------------------------------ | ------ |
@@ -272,7 +272,7 @@ Tasks:
 
 ```
 Review your completed ops.local.md configuration file. For your specific
-organisation — given its size, industry, jurisdiction, and regulatory profile:
+organisation, given its size, industry, jurisdiction, and regulatory profile:
 
 1. Which two plugin commands will you use most frequently, and why?
 2. Which of the four agents is most critical to configure first?
@@ -282,7 +282,7 @@ organisation — given its size, industry, jurisdiction, and regulatory profile:
    for your organisation in the next 30 days?
 ```
 
-**What you are learning:** The value of an operations intelligence layer depends entirely on your organisation's specific profile. This prompt forces you to apply the chapter's frameworks to your actual context — which is where the real operational work happens.
+**What you are learning:** The value of an operations intelligence layer depends entirely on your organisation's specific profile. This prompt forces you to apply the chapter's frameworks to your actual context, which is where the real operational work happens.
 
 **Apply**: Extend to a new situation the lesson didn't cover directly.
 
@@ -291,9 +291,9 @@ A colleague at a similar organisation has asked you to recommend whether
 they should adopt the two-plugin operations architecture from Chapter 38.
 
 They have three concerns:
-1. "We already use a GRC tool for compliance — is there overlap with
+1. "We already use a GRC tool for compliance: is there overlap with
    the compliance tracking auto-skill?"
-2. "We run change management through ServiceNow — does /change-request
+2. "We run change management through ServiceNow, does /change-request
    conflict with that?"
 3. "We don't have time to build ops.local.md from scratch. Can we still
    get value from the plugins without it?"
@@ -304,7 +304,7 @@ existing tool. For concern 3, explain the minimum viable ops.local.md and
 what capability the organisation loses by skipping full configuration.
 ```
 
-**What you are learning:** Real adoption decisions involve existing tooling, integration questions, and minimum viable configurations. This prompt tests whether you can translate the chapter's architecture into practical advice for an organisation with pre-existing operational systems — the real-world adoption context.
+**What you are learning:** Real adoption decisions involve existing tooling, integration questions, and minimum viable configurations. This prompt tests whether you can translate the chapter's architecture into practical advice for an organisation with pre-existing operational systems: the real-world adoption context.
 :::
 
 ## Flashcards Study Aid

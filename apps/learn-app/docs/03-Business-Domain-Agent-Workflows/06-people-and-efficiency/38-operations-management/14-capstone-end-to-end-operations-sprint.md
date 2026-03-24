@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/operations-management/capstone-end-to-end-operations-sprint
 sidebar_position: 14
-title: "Capstone — End-to-End Operations Sprint"
-description: "Deploy a complete operations intelligence layer in one working day — running the full suite of official and custom plugin commands across nine phases, culminating in a COO-ready intelligence brief for your chosen scenario"
+title: "Capstone: End-to-End Operations Sprint"
+description: "Deploy a complete operations intelligence layer in one working day: running the full suite of official and custom plugin commands across nine phases, culminating in a COO-ready intelligence brief for your chosen scenario"
 keywords:
   [
     "operations capstone",
@@ -28,14 +28,14 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can run all nine sprint phases in sequence — vendor audit through agent deployment — and produce a coherent intelligence brief synthesising all nine outputs, demonstrating mastery of the full operations intelligence toolkit"
+    measurable_at_this_level: "Student can run all nine sprint phases in sequence, vendor audit through agent deployment , and produce a coherent intelligence brief synthesising all nine outputs, demonstrating mastery of the full operations intelligence toolkit"
 
   - name: "Apply Quality Gate Criteria to AI-Generated Operational Artefacts"
     proficiency_level: "C1"
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Information-Literacy"
-    measurable_at_this_level: "Student can evaluate each sprint phase output against the quality standard established in its source lesson — identifying gaps before proceeding to the next phase"
+    measurable_at_this_level: "Student can evaluate each sprint phase output against the quality standard established in its source lesson, identifying gaps before proceeding to the next phase"
 
   - name: "Select and Adapt Operations Workflows for Scenario-Specific Contexts"
     proficiency_level: "C1"
@@ -48,9 +48,9 @@ learning_objectives:
   - objective: "Complete all nine sprint phases using the appropriate official and custom plugin commands, producing a verified artefact at the end of each phase"
     proficiency_level: "C1"
     bloom_level: "Create"
-    assessment_method: "Student submits completed sprint outputs for all nine phases plus the final intelligence brief — evaluated against the quality rubric at the end of this lesson"
+    assessment_method: "Student submits completed sprint outputs for all nine phases plus the final intelligence brief, evaluated against the quality rubric at the end of this lesson"
 
-  - objective: "Apply the quality gate criteria from each source lesson to evaluate each phase's output before proceeding — catching gaps rather than accumulating them"
+  - objective: "Apply the quality gate criteria from each source lesson to evaluate each phase's output before proceeding, catching gaps rather than accumulating them"
     proficiency_level: "C1"
     bloom_level: "Evaluate"
     assessment_method: "Student identifies at least two instances across the sprint where the AI output required correction or supplementation based on the quality gate criteria"
@@ -63,39 +63,39 @@ learning_objectives:
 cognitive_load:
   new_concepts: 2
   concepts_list:
-    - "End-to-end sequencing — the dependencies between sprint phases mean that artefacts from earlier phases feed later ones; mistakes compound if not caught at the quality gate"
-    - "Scenario-specific adaptation — the same framework produces different outputs in different organisational contexts; student must adjust emphasis and focus to the chosen scenario"
-  assessment: "2 new concepts for this capstone. The domain knowledge is fully established across Lessons 1-13. The capstone challenges are sequencing (not re-teaching content) and judgment about scenario adaptation — which requires synthesis-level thinking but not new conceptual acquisition."
+    - "End-to-end sequencing: the dependencies between sprint phases mean that artefacts from earlier phases feed later ones; mistakes compound if not caught at the quality gate"
+    - "Scenario-specific adaptation: the same framework produces different outputs in different organisational contexts; student must adjust emphasis and focus to the chosen scenario"
+  assessment: "2 new concepts for this capstone. The domain knowledge is fully established across Lessons 1-13. The capstone challenges are sequencing (not re-teaching content) and judgment about scenario adaptation, which requires synthesis-level thinking but not new conceptual acquisition."
 
 differentiation:
-  extension_for_advanced: "After completing the full sprint, write a 'second-order assessment': given everything you built, what is the single most important investment the organisation should make in its operations function in the next 12 months — and what is the evidence from the sprint that supports that recommendation? The sprint reveals the gaps; the second-order assessment turns those gaps into strategic recommendations."
+  extension_for_advanced: "After completing the full sprint, write a 'second-order assessment': given everything you built, what is the single most important investment the organisation should make in its operations function in the next 12 months , and what is the evidence from the sprint that supports that recommendation? The sprint reveals the gaps; the second-order assessment turns those gaps into strategic recommendations."
   remedial_for_struggling: "If 90 minutes is too short for a complete sprint, complete phases 1-4 (vendor audit, process documentation, change assessment, compliance map) in 60 minutes. These four phases cover the core of the chapter's operational intelligence. Phases 5-9 add depth but the first four phases demonstrate the essential workflow."
 
 teaching_guide:
   key_points:
-    - "The capstone is the proof of learning — if students can run the full sprint from a standing start, they have the skill; if they cannot get through it without revisiting the lesson materials, they have knowledge but not yet mastery"
-    - "Quality gates after each phase are the discipline that makes the sprint coherent — without them, the intelligence brief at the end synthesises whatever was produced rather than what should have been produced"
-    - "Scenario choice is pedagogically significant — different scenarios stress different parts of the operations toolkit. Subsidiary acquisition stresses vendor management and compliance; ERP migration stresses change management and process documentation; regulatory change stresses compliance and audit preparation."
-    - "The cross-scenario connections in the final brief are the test of synthesis capability — a student who can only report what each phase produced has not yet synthesised; a student who can identify that the change management risk is connected to a compliance obligation is demonstrating intelligence, not just reporting"
+    - "The capstone is the proof of learning; if students can run the full sprint from a standing start, they have the skill; if they cannot get through it without revisiting the lesson materials, they have knowledge but not yet mastery"
+    - "Quality gates after each phase are the discipline that makes the sprint coherent, without them, the intelligence brief at the end synthesises whatever was produced rather than what should have been produced"
+    - "Scenario choice is pedagogically significant, different scenarios stress different parts of the operations toolkit. Subsidiary acquisition stresses vendor management and compliance; ERP migration stresses change management and process documentation; regulatory change stresses compliance and audit preparation."
+    - "The cross-scenario connections in the final brief are the test of synthesis capability: a student who can only report what each phase produced has not yet synthesised; a student who can identify that the change management risk is connected to a compliance obligation is demonstrating intelligence, not just reporting"
   misconceptions:
-    - "The capstone is a speed test. Correction: the capstone is a quality test that happens under time pressure. Speed matters because real operational situations require decisions without unlimited preparation time — but the quality gates exist precisely to ensure that time pressure does not produce low-quality artefacts."
+    - "The capstone is a speed test. Correction: the capstone is a quality test that happens under time pressure. Speed matters because real operational situations require decisions without unlimited preparation time , but the quality gates exist precisely to ensure that time pressure does not produce low-quality artefacts."
     - "All scenarios require the same emphasis across all phases. Correction: a subsidiary acquisition scenario should spend more time on vendor management (inheriting an unknown vendor portfolio) and compliance (new jurisdictional obligations). An ERP migration scenario should spend more time on change management and process documentation. Students choosing the scenario choose the emphasis."
-    - "The intelligence brief is just the last step. Correction: the intelligence brief is the purpose of the entire sprint — it is what makes the nine phases coherent rather than nine isolated exercises. Every sprint phase produces an input to the brief. The brief synthesises them into a decision."
+    - "The intelligence brief is just the last step. Correction: the intelligence brief is the purpose of the entire sprint; it is what makes the nine phases coherent rather than nine isolated exercises. Every sprint phase produces an input to the brief. The brief synthesises them into a decision."
   discussion_prompts:
     - "Before starting the sprint, read through all nine phases and identify the three quality gates where you are most likely to have to stop and correct the AI output. What does that tell you about where the operations intelligence toolkit is most dependent on human judgment?"
     - "After completing the sprint, look at the intelligence brief you produced. Which section required the most iteration? What does that reveal about where your operational judgment is strongest versus where you are still building it?"
   teaching_tips:
-    - "Set a timer — the 90-minute constraint is part of the learning. Real operational situations do not allow unlimited preparation time. Students who discover they need 3 hours for the sprint have found an important learning: which phases take longer than expected and why."
-    - "The scenario table is not decoration — students who pick the scenario that matches their domain will produce a better brief. A finance professional should pick subsidiary acquisition. A technology manager should pick ERP migration. A compliance officer should pick regulatory change. The connection to real-world context accelerates skill acquisition."
+    - "Set a timer: the 90-minute constraint is part of the learning. Real operational situations do not allow unlimited preparation time. Students who discover they need 3 hours for the sprint have found an important learning: which phases take longer than expected and why."
+    - "The scenario table is not decoration: students who pick the scenario that matches their domain will produce a better brief. A finance professional should pick subsidiary acquisition. A technology manager should pick ERP migration. A compliance officer should pick regulatory change. The connection to real-world context accelerates skill acquisition."
 ---
 
-# Capstone — End-to-End Operations Sprint
+# Capstone: End-to-End Operations Sprint
 
 The COO has asked you to build the operations intelligence layer from scratch in one working day. You are the newly appointed Operations Manager at a 200-person professional services firm. The organisation has no systematic vendor tracking, no current SOP library, an unmapped compliance obligation landscape, a change process that approves changes but does not track them, and no operational metrics framework.
 
 By end of day, the COO wants: a vendor audit with a renewal calendar, two critical SOPs, a compliance obligation map, an audit-ready evidence assessment, an operational risk register, an incident post-mortem for the last major incident, a metrics framework, four deployed agents, and an intelligence brief synthesising everything into a single, decision-ready document.
 
-This sprint exercises everything from Lessons 3-13. Not as a test of memory — as a test of operational execution. You will choose your scenario, run nine phases in sequence, apply a quality gate after each phase, and synthesise the outputs into a COO-ready intelligence brief.
+This sprint exercises everything from Lessons 3-13. Not as a test of memory, as a test of operational execution. You will choose your scenario, run nine phases in sequence, apply a quality gate after each phase, and synthesise the outputs into a COO-ready intelligence brief.
 
 The intelligence layer you build in 90 minutes is not hypothetical. It is the pattern you will use every time you enter a new operational role.
 
@@ -105,15 +105,15 @@ This capstone requires **both** the **Operations** plugin (official) and the **O
 
 ## Choose Your Scenario
 
-The sprint framework is the same for all three scenarios. What changes is the operational context — which shapes the data you use, the risks you prioritise, and the focus of your final brief.
+The sprint framework is the same for all three scenarios. What changes is the operational context, which shapes the data you use, the risks you prioritise, and the focus of your final brief.
 
 | Scenario | Context | Primary Stresses | Best For |
 | -------- | ------- | ---------------- | -------- |
 | **A: Subsidiary Acquisition** | Your firm has just acquired a 40-person consultancy. You inherit their vendor portfolio (22 vendors, unknown state), their processes (partially documented), and their compliance obligations (two additional jurisdictions). You have 90 days to integrate. | Vendor management, compliance mapping, risk assessment | Finance professionals, M&A specialists, operations generalists |
-| **B: ERP Migration** | The firm is migrating from a legacy ERP system to a modern platform over the next 6 months. This is the largest change in the organisation's history — 47 vendors have integration dependencies, 12 SOPs reference the old system, and the migration has already slipped three weeks. | Change management, process documentation, incident readiness | Technology managers, project managers, IT operations professionals |
+| **B: ERP Migration** | The firm is migrating from a legacy ERP system to a modern platform over the next 6 months. This is the largest change in the organisation's history, 47 vendors have integration dependencies, 12 SOPs reference the old system, and the migration has already slipped three weeks. | Change management, process documentation, incident readiness | Technology managers, project managers, IT operations professionals |
 | **C: Regulatory Change** | The FCA has issued new guidance on client money handling that affects 8 of your compliance obligations. You have 60 days to demonstrate compliance. Three of the affected obligations are currently PARTIAL. One is GAP. | Compliance mapping, audit preparation, risk register | Compliance officers, risk managers, finance professionals in regulated industries |
 
-**Choose your scenario now.** Read its context carefully — it will shape the data you use in every phase.
+**Choose your scenario now.** Read its context carefully ; it will shape the data you use in every phase.
 
 ## The Sprint Map
 
@@ -133,28 +133,28 @@ The sprint framework is the same for all three scenarios. What changes is the op
 **Total: 90 minutes.** Set a timer. The time pressure is intentional.
 
 :::caution Quality Gates
-After each phase, evaluate your output against the quality gate criteria before proceeding. Mistakes compound in a sprint — a vendor audit that misses a key renewal creates a risk register gap in Phase 6, which creates an incomplete brief in the final synthesis. Catch problems at their phase, not at the end.
+After each phase, evaluate your output against the quality gate criteria before proceeding. Mistakes compound in a sprint: a vendor audit that misses a key renewal creates a risk register gap in Phase 6, which creates an incomplete brief in the final synthesis. Catch problems at their phase, not at the end.
 :::
 
 ---
 
-## Phase 1 — Vendor Audit (15 minutes)
+## Phase 1: Vendor Audit (15 minutes)
 
 **Commands:** `/vendor-review` + `/contract`
 **Source lessons:** L03 (vendor portfolio) + L04 (contract analysis)
 
-**Step 1A — Portfolio audit:**
+**Step 1A, Portfolio audit:**
 
 ```
 /vendor-review
 Run a vendor portfolio audit for our organisation.
 
-[SCENARIO A: Include the inherited subsidiary vendors — 22 vendors,
+[SCENARIO A: Include the inherited subsidiary vendors, 22 vendors,
 unknown renewal dates, two jurisdictions. Total combined spend approx
 £480,000/yr. Highlight any duplicate vendor categories where both
 companies have separate contracts for the same capability.]
 
-[SCENARIO B: Focus on vendors with ERP integration dependencies —
+[SCENARIO B: Focus on vendors with ERP integration dependencies,
 at least 10 vendors who integrate with the current system. Flag
 renewal risk: any vendor whose contract expires during the 6-month
 migration window.]
@@ -169,7 +169,7 @@ Output: portfolio audit with spend-by-category, immediate attention
 items, rationalisation opportunities, and renewal calendar.
 ```
 
-**Step 1B — Contract analysis for top 3 vendors:**
+**Step 1B, Contract analysis for top 3 vendors:**
 
 ```
 /contract
@@ -187,7 +187,7 @@ For each contract, identify:
 - Any clauses that create financial risk
 ```
 
-**Quality gate — Phase 1:**
+**Quality gate, Phase 1:**
 
 - Does the portfolio audit flag the correct number of renewals in the next 90 days?
 - Does the contract analysis identify all three types of obligation (SLA, data, financial risk)?
@@ -197,26 +197,26 @@ For each contract, identify:
 
 ---
 
-## Phase 2 — Process Documentation (10 minutes)
+## Phase 2: Process Documentation (10 minutes)
 
 **Commands:** `/process-doc` + `/runbook`
 **Source lesson:** L05
 
-**Step 2A — Create two critical SOPs:**
+**Step 2A, Create two critical SOPs:**
 
 ```
 /process-doc
 Create a Tier 1 SOP for [choose one critical process from your scenario]:
 
-[SCENARIO A: Client data handover process — transferring client
+[SCENARIO A: Client data handover process, transferring client
 records from the acquired company to our systems. This is Tier 1
 because it has GDPR implications if done incorrectly.]
 
-[SCENARIO B: ERP migration rollback procedure — the steps to execute
+[SCENARIO B: ERP migration rollback procedure: the steps to execute
 if the migration must be reversed mid-deployment. This is Tier 1
 because it has business continuity implications.]
 
-[SCENARIO C: Client money handling procedure — the process for
+[SCENARIO C: Client money handling procedure: the process for
 segregating client funds in compliance with FCA requirements. Tier 1.]
 
 Include: purpose, scope, prerequisites, step-by-step procedure with
@@ -232,11 +232,11 @@ Create an operational runbook for [second critical process]:
 — the process for reviewing, approving, and integrating each of the 22
 inherited vendors into the approved vendor list.]
 
-[SCENARIO B: Change window coordination — the process for scheduling
+[SCENARIO B: Change window coordination: the process for scheduling
 and coordinating the weekly ERP migration deployment windows, including
 communications, validation steps, and rollback triggers.]
 
-[SCENARIO C: Compliance evidence collection process — the procedure
+[SCENARIO C: Compliance evidence collection process: the procedure
 for gathering, storing, and refreshing evidence for FCA-regulated
 obligations during the 60-day remediation window.]
 
@@ -244,16 +244,16 @@ Include: trigger conditions, required inputs, step-by-step procedure,
 expected outputs, failure conditions and responses.
 ```
 
-**Quality gate — Phase 2:**
+**Quality gate, Phase 2:**
 
 - Does the SOP include specific roles in the RACI (not "the team")?
-- Are embedded controls present — steps that prevent the process from proceeding incorrectly, not just instructions to "check"?
+- Are embedded controls present, steps that prevent the process from proceeding incorrectly, not just instructions to "check"?
 - Does the runbook include explicit trigger conditions and failure responses?
 - Would someone who had never done this process before be able to follow these instructions without asking questions?
 
 ---
 
-## Phase 3 — Change Assessment (10 minutes)
+## Phase 3: Change Assessment (10 minutes)
 
 **Command:** `/change-request`
 **Source lesson:** L06
@@ -262,15 +262,15 @@ expected outputs, failure conditions and responses.
 /change-request
 Submit a change request and impact assessment for:
 
-[SCENARIO A: Consolidating vendor contracts — migrating the acquired
+[SCENARIO A: Consolidating vendor contracts, migrating the acquired
 company's CRM platform users (18 staff) onto our existing Salesforce
 instance. Timeline: 4 weeks. Classification: MAJOR.]
 
-[SCENARIO B: ERP migration — deploying the first module (finance) of
+[SCENARIO B: ERP migration, deploying the first module (finance) of
 the new ERP platform. Timeline: this coming weekend. Classification:
 CRITICAL. System downtime expected: 12 hours Saturday.]
 
-[SCENARIO C: Updating the client money handling procedure — implementing
+[SCENARIO C: Updating the client money handling procedure, implementing
 new account segregation controls required by the FCA guidance update.
 Timeline: 3 weeks. Classification: MAJOR.]
 
@@ -282,17 +282,17 @@ For the change above, produce:
 - Risk classification and approval authority required
 ```
 
-**Quality gate — Phase 3:**
+**Quality gate, Phase 3:**
 
-- Is the impact assessment complete — does it list specific systems, specific staff groups, and specific data affected?
+- Is the impact assessment complete, does it list specific systems, specific staff groups, and specific data affected?
 - Does the communications plan identify who receives communications (not just "stakeholders")?
-- Does the rollback plan describe specific steps — not just "reverse the change"?
+- Does the rollback plan describe specific steps , not just "reverse the change"?
 - Is the risk classification and approval authority level correct for the change's impact?
 - For Scenario B: does the CRITICAL classification trigger the appropriate approval authority?
 
 ---
 
-## Phase 4 — Compliance Map (10 minutes)
+## Phase 4: Compliance Map (10 minutes)
 
 **Command:** Natural language prompt (compliance-tracking auto-skill activates from keywords)
 **Source lesson:** L07
@@ -301,7 +301,7 @@ For the change above, produce:
 Map our compliance obligations for a 200-person UK professional
 services firm.
 
-[SCENARIO A: Include two jurisdictions — UK (primary) and Pakistan
+[SCENARIO A: Include two jurisdictions, UK (primary) and Pakistan
 (subsidiary operations). Primary frameworks: UK GDPR, Companies Act,
 employment law, AML. Pakistan additions: PDPA (if enacted in your
 scenario), SECP requirements for the Pakistan entity.]
@@ -322,16 +322,16 @@ current status (CURRENT/PARTIAL/GAP), evidence required, next review date.
 Format as a compliance obligation map table.
 ```
 
-**Quality gate — Phase 4:**
+**Quality gate, Phase 4:**
 
-- Does the map include all obligation types — regulatory, contractual (from Phase 1 contracts), and standards-based?
+- Does the map include all obligation types, regulatory, contractual (from Phase 1 contracts), and standards-based?
 - Does each obligation have a named owner (not a department)?
 - Are the CURRENT/PARTIAL/GAP statuses assigned based on actual evidence state, not optimistic assumptions?
 - For Scenario C: are the three PARTIAL and one GAP obligations correctly identified with specific remediation requirements?
 
 ---
 
-## Phase 5 — Audit Preparation (10 minutes)
+## Phase 5: Audit Preparation (10 minutes)
 
 **Command:** `/audit`
 **Source lesson:** L08
@@ -342,7 +342,7 @@ Prepare for a mock internal audit of our highest-risk compliance area.
 
 [SCENARIO A: The FCA (or ICO for UK GDPR) is reviewing our data
 handling practices for the newly acquired subsidiary. The most
-vulnerable area is the data transfer process — we may have transferred
+vulnerable area is the data transfer process; we may have transferred
 personal data across from the subsidiary without adequate GDPR controls.]
 
 [SCENARIO B: An internal IT audit is reviewing the ERP migration
@@ -364,17 +364,17 @@ For the audit above:
    do before the audit to strengthen our position
 ```
 
-**Quality gate — Phase 5:**
+**Quality gate, Phase 5:**
 
 - Are the three audit risk areas specific to the scenario (not generic "IT audit risks")?
 - Does the evidence gap analysis identify specific documents, records, or controls that are missing?
 - Are the mock auditor questions the kind of questions an experienced auditor would actually ask?
-- Do the suggested responses sound defensible — or do they sound like they are avoiding the question?
+- Do the suggested responses sound defensible , or do they sound like they are avoiding the question?
 - Would we pass this mock audit, or are there areas where the honest answer is "we cannot demonstrate this control is effective"?
 
 ---
 
-## Phase 6 — Risk Register (10 minutes)
+## Phase 6: Risk Register (10 minutes)
 
 **Command:** Natural language prompt (risk-assessment auto-skill activates from "risk", "risk register", "mitigation")
 **Source lesson:** L09
@@ -411,17 +411,17 @@ Include at least 10 risks. Flag any risk above your configured
 threshold (residual score >12 = HIGH).
 ```
 
-**Quality gate — Phase 6:**
+**Quality gate, Phase 6:**
 
 - Does the risk register include BOTH inherent AND residual scores?
 - Are the current controls described specifically (not "we have a policy")?
 - Are mitigation actions assigned to named owners with deadlines?
-- Does the register include leading indicators — measures that will warn if a risk is increasing before it materialises?
+- Does the register include leading indicators, measures that will warn if a risk is increasing before it materialises?
 - For Scenario-specific risks: are the highest-rated risks actually the scenario's most material risks?
 
 ---
 
-## Phase 7 — Incident Post-Mortem (10 minutes)
+## Phase 7: Incident Post-Mortem (10 minutes)
 
 **Command:** `/incident`
 **Source lesson:** L10
@@ -437,7 +437,7 @@ This is a potential GDPR personal data breach. Date: last week.
 No client harm confirmed but notification obligation assessment required.]
 
 [SCENARIO B: During a trial run of the ERP migration on a test
-environment, the rollback procedure failed — the rollback took 6 hours
+environment, the rollback procedure failed: the rollback took 6 hours
 instead of the planned 2 hours because a database restore script had
 an error. The production go-live is this weekend. Date: 3 days ago.]
 
@@ -451,22 +451,22 @@ Post-mortem requirements:
 1. Timeline reconstruction (what happened, when, who knew)
 2. Five Whys root cause analysis (go to at least WHY 4)
 3. Contributing factors (beyond the immediate cause)
-4. Corrective actions (specific, owned, with deadlines — not "improve the process")
+4. Corrective actions (specific, owned, with deadlines, not "improve the process")
 5. Lessons for the operations team
 6. For Scenario A/C: assess whether FCA/ICO notification is required
 ```
 
-**Quality gate — Phase 7:**
+**Quality gate, Phase 7:**
 
-- Does the Five Whys reach a systemic root cause — not a symptom?
+- Does the Five Whys reach a systemic root cause , not a symptom?
 - Are the corrective actions specific (e.g., "write and test a rollback script for the specific database version") rather than vague ("improve rollback procedures")?
 - Does the timeline reconstruction identify the earliest point where the incident could have been prevented?
 - For Scenarios A and C: does the post-mortem include a notification assessment with a clear recommendation?
-- Would this post-mortem prevent the incident from occurring again — or would the same conditions produce the same incident?
+- Would this post-mortem prevent the incident from occurring again , or would the same conditions produce the same incident?
 
 ---
 
-## Phase 8 — Metrics Framework (10 minutes)
+## Phase 8: Metrics Framework (10 minutes)
 
 **Commands:** `/metrics` + `/status-report`
 **Source lesson:** L11
@@ -503,16 +503,16 @@ Green/Amber/Red thresholds, owner, and leading vs. lagging designation.
 Then produce the metrics dashboard for the current period.
 ```
 
-**Quality gate — Phase 8:**
+**Quality gate, Phase 8:**
 
 - Does the framework include leading indicators (metrics that warn of future problems) as well as lagging indicators (metrics that measure past performance)?
-- Are the Red thresholds specific enough to trigger escalation — or are they vague enough to allow indefinite Amber status?
+- Are the Red thresholds specific enough to trigger escalation , or are they vague enough to allow indefinite Amber status?
 - Do the scenario-specific metrics actually measure the scenario's primary risks (not generic operational metrics relabelled)?
-- Is the data source for each metric achievable — or does it require a system integration that does not yet exist?
+- Is the data source for each metric achievable , or does it require a system integration that does not yet exist?
 
 ---
 
-## Phase 9 — Agent Deployment (5 minutes)
+## Phase 9: Agent Deployment (5 minutes)
 
 **Commands:** Agent configuration (custom Operations Intelligence plugin)
 **Source lesson:** L12
@@ -539,7 +539,7 @@ Compliance Monitor:
 
 Change Tracker:
 - Monitor the change log, starting with the change assessed in Phase 3
-- PIR requirements: Major/Critical — 4 weeks; Significant — 6 weeks
+- PIR requirements: Major/Critical, 4 weeks; Significant, 6 weeks
 - Schedule: Friday 16:00
 
 For each agent: confirm configuration, confirm first run schedule,
@@ -547,42 +547,42 @@ and produce the first simulated check output based on the data from
 this sprint.
 ```
 
-**Quality gate — Phase 9:**
+**Quality gate, Phase 9:**
 
 - Are all four agents configured with data sources that reference the actual artefacts built in this sprint (Phase 1 vendor data, Phase 2 SOPs, Phase 4 compliance map, Phase 3 change log)?
-- Does each agent confirm escalation contacts — or will alerts go into a void?
+- Does each agent confirm escalation contacts , or will alerts go into a void?
 - Does the simulated first check produce at least one meaningful alert per agent?
-- Are the agents monitoring the scenario's specific risks — or are they configured with generic defaults?
+- Are the agents monitoring the scenario's specific risks , or are they configured with generic defaults?
 
 ---
 
-## Final Brief — Operations Intelligence Brief (Synthesis, Running Throughout)
+## Final Brief: Operations Intelligence Brief (Synthesis, Running Throughout)
 
-The final brief synthesises all nine sprint phases into a single, COO-ready document. Do not leave this entirely to the end — begin the synthesis as you complete each phase by noting the most important output from each.
+The final brief synthesises all nine sprint phases into a single, COO-ready document. Do not leave this entirely to the end, begin the synthesis as you complete each phase by noting the most important output from each.
 
 ```
 Synthesise the operations intelligence layer I have built during this sprint.
 
 SPRINT OUTPUTS:
-Phase 1 — Vendor audit: [describe top findings — renewals, risks, contract obligations]
-Phase 2 — Process documentation: [describe SOPs created and gap analysis]
-Phase 3 — Change assessment: [describe the change, classification, key risks]
-Phase 4 — Compliance map: [describe obligation count, status distribution, key gaps]
-Phase 5 — Audit preparation: [describe audit risks and evidence gaps]
-Phase 6 — Risk register: [describe top 3 risks, inherent and residual scores]
-Phase 7 — Incident post-mortem: [describe root cause, corrective actions]
-Phase 8 — Metrics framework: [describe metrics, current RAG status]
-Phase 9 — Agent deployment: [confirm all four agents configured]
+Phase 1: Vendor audit: [describe top findings, renewals, risks, contract obligations]
+Phase 2: Process documentation: [describe SOPs created and gap analysis]
+Phase 3: Change assessment: [describe the change, classification, key risks]
+Phase 4: Compliance map: [describe obligation count, status distribution, key gaps]
+Phase 5: Audit preparation: [describe audit risks and evidence gaps]
+Phase 6: Risk register: [describe top 3 risks, inherent and residual scores]
+Phase 7: Incident post-mortem: [describe root cause, corrective actions]
+Phase 8: Metrics framework: [describe metrics, current RAG status]
+Phase 9: Agent deployment: [confirm all four agents configured]
 
 SCENARIO CONTEXT: [State your scenario A, B, or C and its key constraints]
 
 CROSS-PHASE CONNECTIONS TO SURFACE:
-[Identify at least two connections across phases — e.g., a vendor risk from Phase 1
+[Identify at least two connections across phases, e.g., a vendor risk from Phase 1
 that appears in the risk register in Phase 6; or a compliance gap from Phase 4 that
 connects to the audit risk in Phase 5]
 
 Produce:
-1. Executive summary (max 1 page — COO reads this only)
+1. Executive summary (max 1 page, COO reads this only)
 2. Sprint summary table (phase → key output → status)
 3. Cross-phase intelligence (connections across the sprint)
 4. Top 3 recommended actions (specific, owned, time-bound)
@@ -609,15 +609,15 @@ After completing the sprint, evaluate your work against these quality criteria:
 
 **What to evaluate across the sprint:**
 
-- Does the **vendor audit cover the full portfolio** — not just the most prominent vendors?
-- Do the **SOPs meet the quality standard** — specific roles, embedded controls, specific steps that can be followed without interpretation?
-- Is the **change impact assessment at the correct classification level** — CRITICAL changes require different approval authority than STANDARD changes?
-- Does the **compliance map include all three obligation types** — regulatory, contractual (from the contracts in Phase 1), and standards-based?
-- Does the **risk register have both inherent AND residual scores** — is the difference between them explained by the current controls?
-- Does the **post-mortem reach the systemic root cause** — WHY 4 or WHY 5, not WHY 1 or WHY 2?
-- Does the **metrics framework include leading indicators** — not just lagging metrics that measure what already happened?
-- Are all **four agents configured with data from this specific sprint** — not with generic defaults?
-- Does the **final intelligence brief synthesise** the nine phases into a coherent story — or does it list nine phase outputs without connecting them?
+- Does the **vendor audit cover the full portfolio** , not just the most prominent vendors?
+- Do the **SOPs meet the quality standard:** specific roles, embedded controls, specific steps that can be followed without interpretation?
+- Is the **change impact assessment at the correct classification level:** CRITICAL changes require different approval authority than STANDARD changes?
+- Does the **compliance map include all three obligation types:** regulatory, contractual (from the contracts in Phase 1), and standards-based?
+- Does the **risk register have both inherent AND residual scores:** is the difference between them explained by the current controls?
+- Does the **post-mortem reach the systemic root cause:** WHY 4 or WHY 5, not WHY 1 or WHY 2?
+- Does the **metrics framework include leading indicators** , not just lagging metrics that measure what already happened?
+- Are all **four agents configured with data from this specific sprint:** not with generic defaults?
+- Does the **final intelligence brief synthesise** the nine phases into a coherent story , or does it list nine phase outputs without connecting them?
 
 ## Sprint-to-Lesson Map
 
@@ -658,7 +658,7 @@ After completing all three phases, write a 1-paragraph executive summary
 connecting the key findings.
 ```
 
-**What you are learning:** Running a condensed three-phase sprint on a simple organisation builds the sequencing muscle — you are practicing the dependencies (vendor data from Phase 1 feeds the risk register in Phase 6; compliance obligations from Phase 4 connect to risks in Phase 6) before attempting the full nine-phase sprint with a more complex scenario.
+**What you are learning:** Running a condensed three-phase sprint on a simple organisation builds the sequencing muscle; you are practicing the dependencies (vendor data from Phase 1 feeds the risk register in Phase 6; compliance obligations from Phase 4 connect to risks in Phase 6) before attempting the full nine-phase sprint with a more complex scenario.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -673,10 +673,10 @@ Which scenario most closely matches my organisation's current situation?
 What should I emphasise in each phase for my specific context?
 Which phases will take longer for my organisation than the time estimate?
 Are there any phases where my organisation's data is likely to be
-incomplete — and what can I substitute?
+incomplete , and what can I substitute?
 ```
 
-**What you are learning:** Choosing the right scenario requires judgment about your organisation's current risk profile. An organisation in the middle of a system migration is already living Scenario B. An organisation under regulatory scrutiny is already in Scenario C. Starting from the right scenario produces a sprint whose outputs are directly usable — not exercises.
+**What you are learning:** Choosing the right scenario requires judgment about your organisation's current risk profile. An organisation in the middle of a system migration is already living Scenario B. An organisation under regulatory scrutiny is already in Scenario C. Starting from the right scenario produces a sprint whose outputs are directly usable, not exercises.
 
 **Apply**: Extend to a new situation the lesson didn't cover directly.
 
@@ -697,7 +697,7 @@ Based on the sprint outputs, produce a 12-month operational roadmap that:
 [Paste your sprint's final intelligence brief here]
 ```
 
-**What you are learning:** The sprint produces a diagnosis. The roadmap is the treatment plan. Moving from "here is what is wrong" to "here is what we will build" is the most important leap in an Operations Manager's role — it requires synthesising the sprint's findings, prioritising across competing demands, and committing to a direction. The intelligence brief makes this possible; the roadmap makes it actionable.
+**What you are learning:** The sprint produces a diagnosis. The roadmap is the treatment plan. Moving from "here is what is wrong" to "here is what we will build" is the most important leap in an Operations Manager's role ; it requires synthesising the sprint's findings, prioritising across competing demands, and committing to a direction. The intelligence brief makes this possible; the roadmap makes it actionable.
 :::
 
 ## Flashcards Study Aid

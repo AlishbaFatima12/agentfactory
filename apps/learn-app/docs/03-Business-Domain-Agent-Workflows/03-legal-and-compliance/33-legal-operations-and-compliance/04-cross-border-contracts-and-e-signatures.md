@@ -157,7 +157,7 @@ Client is Dubai mainland. Delivery in Riyadh.
 | Holistic Risk Summary                          | Cross-border-aware recommendation with negotiation priority                 | Should prioritise regulatory requirements across all three jurisdictions |
 
 :::note Your output will vary
-The specific clause analysis and redline language depend on the contract text and your playbook configuration. Focus on whether the agent correctly identifies issues at the jurisdictional intersections — the problems that exist because three frameworks apply simultaneously. A single-jurisdiction review would miss these intersection risks.
+The specific clause analysis and redline language depend on the contract text and your playbook configuration. Focus on whether the agent correctly identifies issues at the jurisdictional intersections: the problems that exist because three frameworks apply simultaneously. A single-jurisdiction review would miss these intersection risks.
 :::
 
 ### Mapping the Pitfalls
@@ -180,13 +180,13 @@ The arbitration clause was GREEN because all three jurisdictions are New York Co
 
 :::info PayGulf Comparison
 
-PayGulf Technologies — a DFSA-regulated cross-border payment platform based in DIFC, Dubai — faces a more layered version of the same cross-border challenge. When PayGulf contracts with a Saudi merchant for payment processing services, the analysis does not stop at three overlapping commercial frameworks. It adds regulatory overlay complexity that commercial contracts between non-regulated entities do not encounter.
+PayGulf Technologies: a DFSA-regulated cross-border payment platform based in DIFC, Dubai: faces a more layered version of the same cross-border challenge. When PayGulf contracts with a Saudi merchant for payment processing services, the analysis does not stop at three overlapping commercial frameworks. It adds regulatory overlay complexity that commercial contracts between non-regulated entities do not encounter.
 
-SAMA (Saudi Arabian Monetary Authority) outsourcing regulations require that any outsourcing arrangement involving a regulated payment function must include contractual provisions granting the regulator audit access rights over the outsourced activity. This goes beyond standard commercial terms — a clause that satisfies normal commercial due diligence may fail SAMA's outsourcing requirements entirely. The agent must load the SAMA outsourcing overlay alongside Saudi commercial law and flag any missing regulatory audit provisions as RED.
+SAMA (Saudi Arabian Monetary Authority) outsourcing regulations require that any outsourcing arrangement involving a regulated payment function must include contractual provisions granting the regulator audit access rights over the outsourced activity. This goes beyond standard commercial terms: a clause that satisfies normal commercial due diligence may fail SAMA's outsourcing requirements entirely. The agent must load the SAMA outsourcing overlay alongside Saudi commercial law and flag any missing regulatory audit provisions as RED.
 
-The DFSA itself adds a second regulatory layer. Material outsourcing arrangements by DFSA-regulated firms may require notification to the DFSA before execution, depending on the nature and scale of the arrangement. Fatima Al-Rashidi, PayGulf's GC, must assess whether each new merchant contract constitutes a material outsourcing arrangement under DFSA rules — a judgment call that the agent surfaces but cannot make.
+The DFSA itself adds a second regulatory layer. Material outsourcing arrangements by DFSA-regulated firms may require notification to the DFSA before execution, depending on the nature and scale of the arrangement. Fatima Al-Rashidi, PayGulf's GC, must assess whether each new merchant contract constitutes a material outsourcing arrangement under DFSA rules: a judgment call that the agent surfaces but cannot make.
 
-The result: a cross-border contract review for PayGulf loads DIFC law (primary governing law), Saudi commercial law (counterparty jurisdiction), and SAMA outsourcing regulations (sector-specific regulatory overlay) — three regulatory frameworks instead of two. The five-pitfall checklist still applies, but each pitfall is evaluated against an additional regulatory dimension that purely commercial contracts do not require. When Fatima reviews the agent's output, she is checking not only commercial risk but regulatory compliance across two financial regulators with different reporting obligations.
+The result: a cross-border contract review for PayGulf loads DIFC law (primary governing law), Saudi commercial law (counterparty jurisdiction), and SAMA outsourcing regulations (sector-specific regulatory overlay): three regulatory frameworks instead of two. The five-pitfall checklist still applies, but each pitfall is evaluated against an additional regulatory dimension that purely commercial contracts do not require. When Fatima reviews the agent's output, she is checking not only commercial risk but regulatory compliance across two financial regulators with different reporting obligations.
 
 :::
 
@@ -221,7 +221,7 @@ Both parties have agreed to all terms. Route for execution.
 | Post-execution steps         | Lists obligation extraction, calendar reminders, and vendor-check enablement  | Confirm obligations are identified for ongoing monitoring                                          |
 
 :::note Your output will vary
-The specific entity names, schedule lists, and routing instructions depend on the contract you upload and your connector configuration. Focus on whether the agent performs all five pre-signature checks and provides a clear execution path. The teaching point is the pre-signature verification workflow — not the specific details in any single output.
+The specific entity names, schedule lists, and routing instructions depend on the contract you upload and your connector configuration. Focus on whether the agent performs all five pre-signature checks and provides a clear execution path. The teaching point is the pre-signature verification workflow: not the specific details in any single output.
 :::
 
 ### With and Without the DocuSign Connector

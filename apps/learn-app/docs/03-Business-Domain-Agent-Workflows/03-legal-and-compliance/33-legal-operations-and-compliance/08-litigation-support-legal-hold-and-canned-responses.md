@@ -73,9 +73,9 @@ differentiation:
 
 ## When Disputes Become Real
 
-In Lesson 5, you triaged NDAs into Tier 1/2/3. A Tier 3 NDA — one with RED flags like residuals clauses or asymmetric injunctive relief — sometimes surfaces issues that escalate to litigation. This lesson covers what happens when a dispute becomes real, and how the `/respond` command handles both litigation holds and the seven categories of routine legal correspondence that consume most legal ops time.
+In Lesson 5, you triaged NDAs into Tier 1/2/3. A Tier 3 NDA: one with RED flags like residuals clauses or asymmetric injunctive relief: sometimes surfaces issues that escalate to litigation. This lesson covers what happens when a dispute becomes real, and how the `/respond` command handles both litigation holds and the seven categories of routine legal correspondence that consume most legal ops time.
 
-Every legal function hopes to avoid litigation. Most cannot. When a dispute escalates from commercial negotiation to formal proceedings — or when proceedings become reasonably foreseeable — the organisation's obligations change fundamentally. Document preservation obligations attach. Communication protocols tighten. The stakes shift from commercial compromise to legal exposure that can dwarf the original contract value.
+Every legal function hopes to avoid litigation. Most cannot. When a dispute escalates from commercial negotiation to formal proceedings: or when proceedings become reasonably foreseeable: the organisation's obligations change fundamentally. Document preservation obligations attach. Communication protocols tighten. The stakes shift from commercial compromise to legal exposure that can dwarf the original contract value.
 
 Litigation support is the set of processes by which a legal department prepares for, manages, and responds to disputes. The Legal Plugin's `/respond` command, combined with the `/brief` command for legal research, provides structured workflow support for the two most operationally demanding phases of dispute preparation: legal hold management and document discovery support.
 
@@ -140,7 +140,7 @@ These are attorney functions protected by legal professional privilege and gover
 
 | Section                 | Intent                                                                                       | What to Verify                                                                                                                          |
 | ----------------------- | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Hold initiation header  | Matter reference, trigger event, instructing attorney, DRAFT status                          | Confirm the hold is marked DRAFT pending attorney approval — the agent never distributes without attorney sign-off                      |
+| Hold initiation header  | Matter reference, trigger event, instructing attorney, DRAFT status                          | Confirm the hold is marked DRAFT pending attorney approval: the agent never distributes without attorney sign-off                      |
 | Preservation notice     | Formal notice for custodian distribution with scope, date range, and obligations             | Check that the scope matches what you provided and includes an explicit "if in doubt, PRESERVE IT" instruction                          |
 | Recommended custodians  | Departments and individuals who should receive the notice                                    | Should identify all departments with potential access to in-scope materials, including departed employees whose data needs preservation |
 | IT suspension request   | Request to suspend automated deletion policies within hold scope                             | Should cover email, chat, code repositories, document storage, and backup rotation                                                      |
@@ -157,13 +157,13 @@ The agent produces the operational infrastructure -- the notice, the custodian l
 
 :::info PayGulf Comparison
 
-When PayGulf Technologies receives a legal claim, Fatima Al-Rashidi's litigation hold workflow includes steps that DataFlow's Priya Sharma does not face. A DFSA-regulated entity operates under notification obligations that attach the moment material litigation becomes reasonably foreseeable — not just preservation obligations, but regulatory reporting obligations.
+When PayGulf Technologies receives a legal claim, Fatima Al-Rashidi's litigation hold workflow includes steps that DataFlow's Priya Sharma does not face. A DFSA-regulated entity operates under notification obligations that attach the moment material litigation becomes reasonably foreseeable: not just preservation obligations, but regulatory reporting obligations.
 
-The DFSA requires regulated firms to notify the regulator of any material litigation or regulatory action that could affect the firm's ability to meet its regulatory obligations or that could cause significant reputational harm. The threshold for "material" is a judgment call that Fatima must make — and it is a judgment the agent cannot make for her. The agent flags the question: "This matter may trigger DFSA notification requirements under GEN Rule 11.10. Attorney assessment required." Fatima then evaluates whether the claim's value, nature, or potential reputational impact crosses the materiality threshold.
+The DFSA requires regulated firms to notify the regulator of any material litigation or regulatory action that could affect the firm's ability to meet its regulatory obligations or that could cause significant reputational harm. The threshold for "material" is a judgment call that Fatima must make: and it is a judgment the agent cannot make for her. The agent flags the question: "This matter may trigger DFSA notification requirements under GEN Rule 11.10. Attorney assessment required." Fatima then evaluates whether the claim's value, nature, or potential reputational impact crosses the materiality threshold.
 
-The preservation scope also expands for a regulated payment processor. A standard litigation hold preserves documents, emails, and code related to the disputed matter. PayGulf's hold must also encompass regulatory compliance records — DFSA filings, AML transaction monitoring logs, sanctions screening records, and payment system audit trails — that a non-regulated company would not maintain or need to preserve. If the claim involves payment processing failures, PCI DSS compliance documentation and card scheme incident reports become part of the hold scope. These are records that standard commercial preservation templates do not cover.
+The preservation scope also expands for a regulated payment processor. A standard litigation hold preserves documents, emails, and code related to the disputed matter. PayGulf's hold must also encompass regulatory compliance records; DFSA filings, AML transaction monitoring logs, sanctions screening records, and payment system audit trails: that a non-regulated company would not maintain or need to preserve. If the claim involves payment processing failures, PCI DSS compliance documentation and card scheme incident reports become part of the hold scope. These are records that standard commercial preservation templates do not cover.
 
-If the claim involves cross-border payment data, a further complication arises: PCI DSS data retention rules may conflict with the litigation hold. PCI DSS requires that cardholder data not be stored beyond business necessity, while the litigation hold requires preservation of all potentially relevant materials. Fatima must determine how to satisfy both requirements simultaneously — typically by isolating payment data under restricted access controls that satisfy PCI DSS while preserving it for litigation purposes. The agent identifies the conflict; Fatima designs the resolution.
+If the claim involves cross-border payment data, a further complication arises: PCI DSS data retention rules may conflict with the litigation hold. PCI DSS requires that cardholder data not be stored beyond business necessity, while the litigation hold requires preservation of all potentially relevant materials. Fatima must determine how to satisfy both requirements simultaneously: typically by isolating payment data under restricted access controls that satisfy PCI DSS while preserving it for litigation purposes. The agent identifies the conflict; Fatima designs the resolution.
 
 :::
 
@@ -187,15 +187,15 @@ Beyond litigation holds, the `/respond` command handles seven categories of rout
 
 The agent stops the templated response and routes to an attorney when any of these conditions are detected:
 
-- **Potential litigation** — the inquiry suggests the sender is considering legal action
-- **Regulator inquiry** — the communication comes from a regulatory body
-- **Binding commitments** — the response would create contractual obligations
-- **Criminal liability** — the situation involves potential criminal exposure
-- **Media attention** — the matter involves or may attract press coverage
-- **Unprecedented situation** — no template exists for this type of inquiry
+- **Potential litigation**: the inquiry suggests the sender is considering legal action
+- **Regulator inquiry**: the communication comes from a regulatory body
+- **Binding commitments**: the response would create contractual obligations
+- **Criminal liability**: the situation involves potential criminal exposure
+- **Media attention**: the matter involves or may attract press coverage
+- **Unprecedented situation**: no template exists for this type of inquiry
 
 :::note Prediction Moment
-Before running `/respond type:"discovery-hold"` for the DataFlow scenario, predict: what sections will the template include? What will it refuse to include — and why? The governance boundary means the agent will produce the operational infrastructure but will not touch litigation strategy.
+Before running `/respond type:"discovery-hold"` for the DataFlow scenario, predict: what sections will the template include? What will it refuse to include: and why? The governance boundary means the agent will produce the operational infrastructure but will not touch litigation strategy.
 :::
 
 ## Flashcards Study Aid

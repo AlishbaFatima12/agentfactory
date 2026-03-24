@@ -109,7 +109,7 @@ any new timing signals.
 | Scoring impact        | Before/after scores with classification shift | Score change is driven by the new signals, not random         |
 
 :::note Your output will vary
-The enrichment report depends on what the agent finds via web research and your demo-data.md content. The teaching point is the _structure_ — confirmed fields, changed fields, new signals, scoring impact — and the concept that timing signals drive classification shifts. Expect at least one changed field and one new signal for each prospect.
+The enrichment report depends on what the agent finds via web research and your demo-data.md content. The teaching point is the _structure_: confirmed fields, changed fields, new signals, scoring impact: and the concept that timing signals drive classification shifts. Expect at least one changed field and one new signal for each prospect.
 :::
 
 Read the report in three layers. First, the **confirmed fields** -- Sarah Chen is still VP Operations at Meridian Logistics in Leeds. You do not need to update those records. Second, the **changed fields** -- employee count grew from 380 to 420, and they opened a Manchester depot. These are real changes that affect scoring. Third, the **new signals** -- a partnership announcement, new hiring, and a LinkedIn post about automation pilot results. These are the timing signals that were sitting in the market unseen while the CRM record gathered dust.
@@ -135,7 +135,7 @@ baseline. Pull current data from all available sources.
 | Classification shift  | CULTIVATE → higher classification                      | Shift is driven by timing, not fit changes             |
 
 :::note Your output will vary
-The teaching point is that enrichment reveals timing signals that were invisible when you scored the prospect in L03. A prospect sitting at CULTIVATE can jump to WARM or HOT when new signals appear — contract wins, promotions, hiring surges, RFPs. The specific numbers differ, but the pattern is consistent: timing is the most volatile dimension.
+The teaching point is that enrichment reveals timing signals that were invisible when you scored the prospect in L03. A prospect sitting at CULTIVATE can jump to WARM or HOT when new signals appear: contract wins, promotions, hiring surges, RFPs. The specific numbers differ, but the pattern is consistent: timing is the most volatile dimension.
 :::
 
 Five months ago, TransGulf was a 95-person freight forwarder with no buying signals. Today they have won a government contract, promoted their operations director to COO, grown by 47%, and posted an RFP for warehouse management software. Their timing score jumped from 12 to 32. The classification moved from CULTIVATE to WARM -- and with an active RFP, this prospect deserves immediate attention despite the low engagement score.

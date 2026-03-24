@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/nigeria-sovereign-sukuk
 sidebar_position: 12
-title: "Nigeria Sovereign Sukuk — African Infrastructure Finance"
+title: "Nigeria Sovereign Sukuk: African Infrastructure Finance"
 description: "Examine Nigeria as Africa's most active sovereign sukuk issuer, apply IFRS to sovereign sukuk from issuer, investor, and contractor perspectives, explore the CBN Non-Interest Banking Framework, and complete a comprehensive FGN sovereign sukuk exercise demonstrating that Islamic finance structures only affect parties to the Shariah contract"
 keywords:
   [
@@ -39,7 +39,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Information Literacy"
-    measurable_at_this_level: "Student can explain the principle that Islamic finance structures change the financing side of a transaction but do not automatically change the accounting for every party in the commercial ecosystem — specifically that a road contractor accounts under IFRS 15 identically whether the government finances via sukuk or conventional bonds"
+    measurable_at_this_level: "Student can explain the principle that Islamic finance structures change the financing side of a transaction but do not automatically change the accounting for every party in the commercial ecosystem: specifically that a road contractor accounts under IFRS 15 identically whether the government finances via sukuk or conventional bonds"
 
   - name: "Draft CBN Regulatory Returns for Sukuk Portfolio"
     proficiency_level: "B1"
@@ -49,10 +49,10 @@ skills:
     measurable_at_this_level: "Student can draft the CBN Non-Interest Banking Framework quarterly regulatory return disclosures for a sukuk investment portfolio, including classification by structure type, maturity profile, credit quality assessment, and compliance with concentration limits"
 
 learning_objectives:
-  - objective: "Apply IFRS 9 to sovereign ijarah sukuk from three perspectives — issuer (derecognition analysis and liability classification), investor (SPPI test and ECL staging), and contractor (IFRS 15 independence from financing structure)"
+  - objective: "Apply IFRS 9 to sovereign ijarah sukuk from three perspectives: issuer (derecognition analysis and liability classification), investor (SPPI test and ECL staging), and contractor (IFRS 15 independence from financing structure)"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 9 Steps 1, 2, and 4 — FGN issuer derecognition analysis, Jaiz Bank investor classification with ECL staging, and Julius Berger contractor IFRS 15 analysis demonstrating independence from sukuk structure"
+    assessment_method: "Student completes Exercise 9 Steps 1, 2, and 4: FGN issuer derecognition analysis, Jaiz Bank investor classification with ECL staging, and Julius Berger contractor IFRS 15 analysis demonstrating independence from sukuk structure"
 
   - objective: "Explain why Islamic finance structures only affect the accounting of parties to the Shariah contract, using the contractor independence principle as the key illustration"
     proficiency_level: "B1"
@@ -62,7 +62,7 @@ learning_objectives:
   - objective: "Draft a professional briefing note on the African sovereign sukuk market, covering the five most active issuers, typical structures, accounting frameworks, and key risks"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 9 Step 5 — producing a briefing note covering Nigeria, Senegal, Ivory Coast, South Africa, and Egypt with structure types, frameworks, and risk analysis"
+    assessment_method: "Student completes Exercise 9 Step 5: producing a briefing note covering Nigeria, Senegal, Ivory Coast, South Africa, and Egypt with structure types, frameworks, and risk analysis"
 
 cognitive_load:
   new_concepts: 5
@@ -72,44 +72,44 @@ cognitive_load:
     - "ECL staging for sovereign sukuk (sovereign credit risk)"
     - "Contractor accounting independence from financing structure"
     - "African sovereign sukuk landscape"
-  assessment: "5 concepts at B1 level. Students enter with sukuk issuer and investor accounting from product lessons and jurisdiction experience from Malaysia (L9), Saudi Arabia (L10), and UK (L11). This lesson introduces a frontier market context (Nigeria) and the critical principle that Islamic finance structures only affect parties to the Shariah contract — a concept with broad applicability beyond the Nigeria exercise."
+  assessment: "5 concepts at B1 level. Students enter with sukuk issuer and investor accounting from product lessons and jurisdiction experience from Malaysia (L9), Saudi Arabia (L10), and UK (L11). This lesson introduces a frontier market context (Nigeria) and the critical principle that Islamic finance structures only affect parties to the Shariah contract: a concept with broad applicability beyond the Nigeria exercise."
 
 differentiation:
-  extension_for_advanced: "Research the infrastructure financing gap in Africa — estimated at $100 billion annually. Write a one-page analysis of whether sovereign sukuk can meaningfully contribute to closing this gap, considering: the size of African sukuk issuance to date, the investor base for African sovereign sukuk, currency risk challenges, and the comparison with conventional infrastructure bonds and multilateral development finance."
+  extension_for_advanced: "Research the infrastructure financing gap in Africa: estimated at $100 billion annually. Write a one-page analysis of whether sovereign sukuk can meaningfully contribute to closing this gap, considering: the size of African sukuk issuance to date, the investor base for African sovereign sukuk, currency risk challenges, and the comparison with conventional infrastructure bonds and multilateral development finance."
   remedial_for_struggling: "Focus on the contractor independence principle in Exercise 9 Step 4. The core idea is simple: Julius Berger builds a road. The government pays Julius Berger for building the road. How the government raises the money to pay (sukuk, bonds, tax revenue, or anything else) does not change Julius Berger's accounting. Julius Berger applies IFRS 15 to its construction contract identically in all cases. If you understand this, you understand the scope boundary of Islamic finance accounting."
 
 teaching_guide:
   lesson_type: "core"
   session_group: 3
-  session_title: "Jurisdiction Deep-Dives — Nigeria"
+  session_title: "Jurisdiction Deep-Dives: Nigeria"
   key_points:
-    - "Nigeria is Africa's most active sovereign sukuk issuer — the FGN has issued multiple tranches of ijarah sukuk backed by federal road infrastructure"
-    - "The CBN Non-Interest Banking Framework governs all Islamic banking operations in Nigeria — Jaiz Bank is the reference case as Nigeria's first fully-fledged non-interest bank"
+    - "Nigeria is Africa's most active sovereign sukuk issuer: the FGN has issued multiple tranches of ijarah sukuk backed by federal road infrastructure"
+    - "The CBN Non-Interest Banking Framework governs all Islamic banking operations in Nigeria: Jaiz Bank is the reference case as Nigeria's first fully-fledged non-interest bank"
     - "The contractor independence principle is the most transferable concept in this lesson: Islamic finance structures affect only the parties to the Shariah contract, not the entire commercial ecosystem"
-    - "African sovereign sukuk address a real infrastructure gap — estimated at $100 billion annually — using asset-backed structures that align with Islamic finance principles"
+    - "African sovereign sukuk address a real infrastructure gap (estimated at $100 billion annually) using asset-backed structures that align with Islamic finance principles"
   misconceptions:
-    - "Students may assume the sukuk structure affects all parties in the transaction — it does not; the road contractor's IFRS 15 accounting is identical whether financing is via sukuk or conventional bonds"
-    - "Students may think Nigerian Islamic banking uses AAOIFI for financial reporting — Nigeria uses IFRS; AAOIFI is referenced for Shariah product structuring only"
-    - "Students may assume sovereign sukuk has zero credit risk — sovereign sukuk carries sovereign credit risk; ECL staging depends on the sovereign rating, and Nigerian sovereign risk is not negligible"
+    - "Students may assume the sukuk structure affects all parties in the transaction: it does not; the road contractor's IFRS 15 accounting is identical whether financing is via sukuk or conventional bonds"
+    - "Students may think Nigerian Islamic banking uses AAOIFI for financial reporting: Nigeria uses IFRS; AAOIFI is referenced for Shariah product structuring only"
+    - "Students may assume sovereign sukuk has zero credit risk: sovereign sukuk carries sovereign credit risk; ECL staging depends on the sovereign rating, and Nigerian sovereign risk is not negligible"
   discussion_prompts:
     - "If the FGN issues ijarah sukuk backed by road assets, does the FGN genuinely transfer ownership of the roads to the sukuk SPV? If not (because the purchase undertaking at face value keeps the risk with the FGN), is this 'asset-based' rather than 'asset-backed'? What are the implications for investors?"
     - "Africa has a $100 billion annual infrastructure financing gap. Can sovereign sukuk meaningfully contribute to closing it, or is the market still too small and the investor base too narrow?"
   teaching_tips:
-    - "The contractor independence principle (Step 4) is the lesson's most important transferable concept — it applies far beyond Nigeria and far beyond sukuk"
+    - "The contractor independence principle (Step 4) is the lesson's most important transferable concept: it applies far beyond Nigeria and far beyond sukuk"
     - "Use the FGN road sukuk as a concrete example students can visualise: roads are being built with sukuk money, but the road builder's accounting is identical to any government construction contract"
-    - "The African landscape briefing (Step 5) broadens perspective beyond Nigeria — this is the moment to show that Islamic finance in Africa is not a single-country story"
+    - "The African landscape briefing (Step 5) broadens perspective beyond Nigeria: this is the moment to show that Islamic finance in Africa is not a single-country story"
   assessment_checks:
     - question: "Does the road contractor need to know that the FGN is financing the project via sukuk rather than conventional bonds?"
-      expected_response: "No. The contractor (Julius Berger) accounts for its construction work under IFRS 15, identically regardless of how the government raises the funds. The contractor has a construction contract with the FGN. Whether the FGN raises the money through ijarah sukuk, conventional bonds, tax revenue, or multilateral loans does not change the contractor's IFRS 15 revenue recognition, cost allocation, or disclosure. Islamic finance structures change the financing side of a transaction; they do not automatically change the accounting for every party in the commercial ecosystem around that transaction. Only the parties to the Shariah contract — the FGN (issuer), the SPV, and the sukuk investors — account for the Islamic finance aspects."
+      expected_response: "No. The contractor (Julius Berger) accounts for its construction work under IFRS 15, identically regardless of how the government raises the funds. The contractor has a construction contract with the FGN. Whether the FGN raises the money through ijarah sukuk, conventional bonds, tax revenue, or multilateral loans does not change the contractor's IFRS 15 revenue recognition, cost allocation, or disclosure. Islamic finance structures change the financing side of a transaction; they do not automatically change the accounting for every party in the commercial ecosystem around that transaction. Only the parties to the Shariah contract (the FGN (issuer), the SPV, and the sukuk investors) account for the Islamic finance aspects."
     - question: "What ECL stage would you assign to FGN sovereign sukuk held by Jaiz Bank?"
-      expected_response: "The ECL stage depends on the sovereign credit quality. Nigerian sovereign credit risk is not negligible — Nigeria is typically rated sub-investment grade by major rating agencies. For a newly originated FGN sukuk with no significant credit deterioration since initial recognition, Stage 1 (12-month ECL) would apply. However, if Nigeria's sovereign rating deteriorates significantly, the sukuk would move to Stage 2 (lifetime ECL). The 12-month ECL for Stage 1 sovereign sukuk uses the sovereign probability of default as the PD input. For sub-investment grade sovereigns, this produces a measurable (not negligible) ECL provision, unlike AAA-rated sovereign sukuk where the Stage 1 provision is typically minimal."
+      expected_response: "The ECL stage depends on the sovereign credit quality. Nigerian sovereign credit risk is not negligible: Nigeria is typically rated sub-investment grade by major rating agencies. For a newly originated FGN sukuk with no significant credit deterioration since initial recognition, Stage 1 (12-month ECL) would apply. However, if Nigeria's sovereign rating deteriorates significantly, the sukuk would move to Stage 2 (lifetime ECL). The 12-month ECL for Stage 1 sovereign sukuk uses the sovereign probability of default as the PD input. For sub-investment grade sovereigns, this produces a measurable (not negligible) ECL provision, unlike AAA-rated sovereign sukuk where the Stage 1 provision is typically minimal."
 ---
 
-# Nigeria Sovereign Sukuk — African Infrastructure Finance
+# Nigeria Sovereign Sukuk: African Infrastructure Finance
 
-In Lesson 11, you examined UK Islamic banking — IFRS under PRA/FCA regulation with HMRC tax equivalence. Now you turn to Africa's most active sovereign sukuk issuer: Nigeria. This lesson introduces a frontier market context and teaches a principle with broad applicability: Islamic finance structures change the financing side of a transaction, but they do not automatically change the accounting for every party in the commercial ecosystem.
+In Lesson 11, you examined UK Islamic banking: IFRS under PRA/FCA regulation with HMRC tax equivalence. Now you turn to Africa's most active sovereign sukuk issuer: Nigeria. This lesson introduces a frontier market context and teaches a principle with broad applicability: Islamic finance structures change the financing side of a transaction, but they do not automatically change the accounting for every party in the commercial ecosystem.
 
-Nigeria's Debt Management Office (DMO) has issued multiple tranches of sovereign sukuk — N100 billion (2017), N100 billion (2018), and subsequent tranches including N250 billion (2021) — to finance road infrastructure across the country. The ijarah structure uses federal road assets as the underlying. Jaiz Bank, Nigeria's first fully-fledged non-interest bank, is both a primary market investor and a reference case for the Central Bank of Nigeria's Non-Interest Banking Framework. The construction contractors building the roads — including Julius Berger Nigeria PLC — account for their work under IFRS 15, without any adjustment for the sukuk financing structure. This last point is the lesson's most transferable concept.
+Nigeria's Debt Management Office (DMO) has issued multiple tranches of sovereign sukuk: N100 billion (2017), N100 billion (2018), and subsequent tranches including N250 billion (2021): to finance road infrastructure across the country. The ijarah structure uses federal road assets as the underlying. Jaiz Bank, Nigeria's first fully-fledged non-interest bank, is both a primary market investor and a reference case for the Central Bank of Nigeria's Non-Interest Banking Framework. The construction contractors building the roads: including Julius Berger Nigeria PLC: account for their work under IFRS 15, without any adjustment for the sukuk financing structure. This last point is the lesson's most transferable concept.
 
 ## The Nigerian Islamic Finance Framework
 
@@ -118,14 +118,14 @@ Nigeria's Debt Management Office (DMO) has issued multiple tranches of sovereign
 | **Primary standard**          | IFRS as adopted in Nigeria (FRCN oversight)                        |
 | **Banking regulator**         | Central Bank of Nigeria (CBN)                                      |
 | **Islamic banking framework** | CBN Non-Interest Banking Framework (2011)                          |
-| **Capital markets**           | SEC Nigeria — Islamic capital market guidelines                    |
-| **AAOIFI role**               | Shariah product structuring guidance only — IFRS governs reporting |
-| **Sovereign sukuk**           | Debt Management Office (DMO) programme — ijarah structure          |
-| **Reference institution**     | Jaiz Bank — first fully-fledged non-interest bank                  |
+| **Capital markets**           | SEC Nigeria: Islamic capital market guidelines                    |
+| **AAOIFI role**               | Shariah product structuring guidance only: IFRS governs reporting |
+| **Sovereign sukuk**           | Debt Management Office (DMO) programme: ijarah structure          |
+| **Reference institution**     | Jaiz Bank: first fully-fledged non-interest bank                  |
 
 The CBN Non-Interest Banking Framework governs all non-interest (Islamic) banking operations in Nigeria. It requires compliance with AAOIFI Shariah Standards for product structuring while mandating IFRS for financial reporting. This means Nigerian Islamic banks have the same financial reporting framework as conventional Nigerian banks, with additional Shariah governance requirements.
 
-## Sovereign Sukuk — The Infrastructure Financing Tool
+## Sovereign Sukuk: The Infrastructure Financing Tool
 
 Africa has an estimated infrastructure financing gap of $100 billion annually. Sovereign sukuk has emerged as a financing tool across the continent, with Nigeria, Senegal, Ivory Coast, South Africa, and Egypt all exploring or issuing sukuk to fund infrastructure.
 
@@ -133,13 +133,13 @@ The FGN sukuk programme uses the **ijarah structure**:
 
 1. FGN identifies federal road infrastructure assets
 2. Assets are transferred to a sukuk SPV (special purpose vehicle)
-3. SPV issues sukuk certificates to investors — proceeds flow to FGN
-4. FGN leases the road assets back from the SPV — rental payments = sukuk distributions
+3. SPV issues sukuk certificates to investors: proceeds flow to FGN
+4. FGN leases the road assets back from the SPV: rental payments = sukuk distributions
 5. At maturity, FGN repurchases the assets (purchase undertaking at face value)
 
-:::info Sovereign Sukuk Derecognition — The Purchase Undertaking Effect
+:::info Sovereign Sukuk Derecognition: The Purchase Undertaking Effect
 
-The FGN provides a **purchase undertaking at face value** — a promise to repurchase the road assets at maturity for the original transfer price, regardless of the assets' current condition or value.
+The FGN provides a **purchase undertaking at face value**: a promise to repurchase the road assets at maturity for the original transfer price, regardless of the assets' current condition or value.
 
 **IFRS 9 derecognition question:** Has the FGN transferred substantially all the risks and rewards of the road assets to the SPV?
 
@@ -147,11 +147,11 @@ The FGN provides a **purchase undertaking at face value** — a promise to repur
 
 **Conclusion:** Failed derecognition. The road assets remain on the FGN's balance sheet. The sukuk proceeds are recognised as a **financial liability**.
 
-This is the standard treatment for most sovereign ijarah sukuk globally — the assets stay on the issuer's balance sheet, and the sukuk is a financial liability.
+This is the standard treatment for most sovereign ijarah sukuk globally: the assets stay on the issuer's balance sheet, and the sukuk is a financial liability.
 
 :::
 
-## Investor Accounting — Jaiz Bank
+## Investor Accounting: Jaiz Bank
 
 Jaiz Bank holds FGN sovereign sukuk in its non-interest banking portfolio. Under the CBN framework, Jaiz applies IFRS for financial reporting:
 
@@ -177,7 +177,7 @@ Cr: Income from Sukuk Investments           N 325,000,000
 
 **Output:**
 
-Income label: "Income from Sukuk Investments" — never "Interest Income" or "Bond Interest."
+Income label: "Income from Sukuk Investments": never "Interest Income" or "Bond Interest."
 
 ## The Contractor Independence Principle
 
@@ -207,10 +207,10 @@ This principle applies broadly: a supplier to an Islamic bank does not adjust it
 
 :::info Exercise Requirements
 
-**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Plugin:** Islamic Finance Domain Agents (install once: see Lesson 3)
 :::
 
-## Practice Exercise 9: FGN Sovereign Sukuk — N300B Ijarah (45 min)
+## Practice Exercise 9: FGN Sovereign Sukuk: N300B Ijarah (45 min)
 
 **What you will build:** A multi-perspective analysis of a sovereign sukuk transaction from issuer, investor, regulator, contractor, and market perspectives.
 
@@ -220,19 +220,19 @@ This principle applies broadly: a supplier to an Islamic bank does not adjust it
 
 1. **FGN issuer accounting (IFRS derecognition of road assets).** Ask your AI assistant:
 
-   _"Jurisdiction: Nigeria. Framework: IFRS as adopted in Nigeria. The FGN is the originator and issuer. (1) Does the FGN derecognise the road assets transferred to the sukuk SPV? Apply the IFRS 9 derecognition analysis — has the FGN transferred substantially all risks and rewards of the roads? (2) Does the purchase undertaking at par undermine derecognition? (3) How should the sukuk proceeds be classified — financial liability or other? (4) Generate the journal entries for: sukuk issuance, semi-annual distribution, and maturity repurchase."_
+   _"Jurisdiction: Nigeria. Framework: IFRS as adopted in Nigeria. The FGN is the originator and issuer. (1) Does the FGN derecognise the road assets transferred to the sukuk SPV? Apply the IFRS 9 derecognition analysis (has the FGN transferred substantially all risks and rewards of the roads? (2) Does the purchase undertaking at par undermine derecognition? (3) How should the sukuk proceeds be classified) financial liability or other? (4) Generate the journal entries for: sukuk issuance, semi-annual distribution, and maturity repurchase."_
 
 2. **Jaiz Bank investor accounting (IFRS 9 + CBN framework).** Ask:
 
-   _"Jaiz Bank holds N5 billion of the sukuk. Jaiz applies IFRS under CBN Non-Interest Banking Framework. (1) Classify under IFRS 9 — SPPI test. (2) Generate initial recognition entry. (3) Semi-annual distribution entry. (4) Year-end expected credit loss provision — what Stage would you assign to a FGN sukuk? Justify based on Nigerian sovereign credit quality."_
+   _"Jaiz Bank holds N5 billion of the sukuk. Jaiz applies IFRS under CBN Non-Interest Banking Framework. (1) Classify under IFRS 9 (SPPI test. (2) Generate initial recognition entry. (3) Semi-annual distribution entry. (4) Year-end expected credit loss provision) what Stage would you assign to a FGN sukuk? Justify based on Nigerian sovereign credit quality."_
 
 3. **CBN regulatory returns for sukuk portfolio.** Ask:
 
    _"The CBN Non-Interest Banking Framework requires Jaiz Bank to submit quarterly returns on its sukuk portfolio. Draft the CBN non-interest banking regulatory return disclosures: (1) Classification by structure type (ijarah, musharakah, etc.); (2) Maturity profile; (3) Credit quality assessment; (4) Income earned in the quarter; (5) Compliance with CBN investment concentration limits."_
 
-4. **Contractor perspective — Julius Berger (IFRS 15 independence from sukuk structure).** Ask:
+4. **Contractor perspective: Julius Berger (IFRS 15 independence from sukuk structure).** Ask:
 
-   _"The sukuk proceeds fund road construction across six states. The construction is contracted to Julius Berger Nigeria PLC. From Julius Berger's perspective as a Nigerian IFRS contractor: (1) Is this an IFRS 15 construction contract — over-time or point-in-time revenue recognition? (2) What distinguishes an istisna'a construction contract from a conventional IFRS 15 contract for accounting purposes? (3) Does Julius Berger need to know the sukuk structure? Or does the sukuk structure only affect the government's accounting, not the contractor's?"_
+   _"The sukuk proceeds fund road construction across six states. The construction is contracted to Julius Berger Nigeria PLC. From Julius Berger's perspective as a Nigerian IFRS contractor: (1) Is this an IFRS 15 construction contract: over-time or point-in-time revenue recognition? (2) What distinguishes an istisna'a construction contract from a conventional IFRS 15 contract for accounting purposes? (3) Does Julius Berger need to know the sukuk structure? Or does the sukuk structure only affect the government's accounting, not the contractor's?"_
 
 5. **African sovereign sukuk landscape briefing note.** Ask:
 
@@ -242,7 +242,7 @@ This principle applies broadly: a supplier to an Islamic bank does not adjust it
 
 :::tip The Scope Boundary of Islamic Finance Accounting
 
-Exercise Step 4 teaches a principle worth remembering for all future Islamic finance work: **the Shariah contract defines the accounting scope**. Only parties to the Islamic finance contract adjust their accounting for the Islamic structure. Everyone else in the commercial ecosystem — contractors, suppliers, landlords, service providers — accounts normally under their applicable framework. When in doubt about whether Islamic finance accounting applies to a particular party, ask: "Is this party a signatory to the Shariah contract?" If not, standard IFRS applies without Islamic modification.
+Exercise Step 4 teaches a principle worth remembering for all future Islamic finance work: **the Shariah contract defines the accounting scope**. Only parties to the Islamic finance contract adjust their accounting for the Islamic structure. Everyone else in the commercial ecosystem (contractors, suppliers, landlords, service providers) accounts normally under their applicable framework. When in doubt about whether Islamic finance accounting applies to a particular party, ask: "Is this party a signatory to the Shariah contract?" If not, standard IFRS applies without Islamic modification.
 
 :::
 
@@ -284,7 +284,7 @@ This analysis addresses the most contested issue in global
 sukuk structuring.
 ```
 
-**What you are learning:** The asset-based vs asset-backed distinction is the most debated structural question in global sukuk markets. Most sovereign sukuk globally are asset-based — the purchase undertaking means the investor's real exposure is to the sovereign, not to the specific assets. Understanding this distinction prepares you for advisory work on sukuk structuring and for the potential impact of AAOIFI Draft Standard 62 on existing sukuk programmes.
+**What you are learning:** The asset-based vs asset-backed distinction is the most debated structural question in global sukuk markets. Most sovereign sukuk globally are asset-based: the purchase undertaking means the investor's real exposure is to the sovereign, not to the specific assets. Understanding this distinction prepares you for advisory work on sukuk structuring and for the potential impact of AAOIFI Draft Standard 62 on existing sukuk programmes.
 
 ### Prompt 2: Adapt
 
@@ -317,7 +317,7 @@ Conclude with a general rule for determining the scope
 boundary of Islamic finance accounting.
 ```
 
-**What you are learning:** The contractor independence principle is not specific to Nigeria or to sukuk — it is a general scope boundary rule for all Islamic finance accounting. By applying it to three different scenarios across three jurisdictions, you internalise the rule: ask "Is this party a signatory to the Shariah contract?" If not, standard accounting applies without Islamic modification. This prevents the common error of over-applying Islamic accounting to parties who are not part of the Islamic finance arrangement.
+**What you are learning:** The contractor independence principle is not specific to Nigeria or to sukuk: it is a general scope boundary rule for all Islamic finance accounting. By applying it to three different scenarios across three jurisdictions, you internalise the rule: ask "Is this party a signatory to the Shariah contract?" If not, standard accounting applies without Islamic modification. This prevents the common error of over-applying Islamic accounting to parties who are not part of the Islamic finance arrangement.
 
 ### Prompt 3: Apply
 
@@ -352,7 +352,7 @@ Conclude with a recommendation: should the fund allocate
 why not?
 ```
 
-**What you are learning:** African sovereign sukuk represents a frontier investment opportunity that combines Islamic finance principles with infrastructure development needs. By evaluating the portfolio from a London-based fund perspective, you develop the cross-border investment analysis skills that institutional Islamic fund managers need — including currency risk, sovereign credit assessment, and liquidity analysis that go beyond simple IFRS 9 classification.
+**What you are learning:** African sovereign sukuk represents a frontier investment opportunity that combines Islamic finance principles with infrastructure development needs. By evaluating the portfolio from a London-based fund perspective, you develop the cross-border investment analysis skills that institutional Islamic fund managers need: including currency risk, sovereign credit assessment, and liquidity analysis that go beyond simple IFRS 9 classification.
 
 ## Flashcards Study Aid
 

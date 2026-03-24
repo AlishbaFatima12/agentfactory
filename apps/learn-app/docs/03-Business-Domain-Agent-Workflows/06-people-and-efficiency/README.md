@@ -1,13 +1,13 @@
 ---
-title: "VI — People & Efficiency"
+title: "VI: People & Efficiency"
 sidebar_position: 0
 ---
 
-# Section VI — People & Efficiency
+# Section VI: People & Efficiency
 
 ### Chapters 37–39: Preserving Institutional Memory and Building the Agentic Office
 
-Section VI addresses the infrastructure that determines whether an organisation can execute consistently at scale: its people systems, its operational processes, and the productivity environment in which all knowledge work happens. Three chapters with distinct but complementary purposes — HR builds the knowledge layer, Operations builds the process layer, and Productivity integrates them into a coherent agentic office.
+Section VI addresses the infrastructure that determines whether an organisation can execute consistently at scale: its people systems, its operational processes, and the productivity environment in which all knowledge work happens. Three chapters with distinct but complementary purposes, HR builds the knowledge layer, Operations builds the process layer, and Productivity integrates them into a coherent agentic office.
 
 | #   | Chapter                                 | Key Focus                                                                 |
 | --- | --------------------------------------- | ------------------------------------------------------------------------- |

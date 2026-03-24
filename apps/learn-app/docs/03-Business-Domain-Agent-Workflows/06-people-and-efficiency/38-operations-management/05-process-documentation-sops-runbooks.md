@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/operations-management/process-documentation-sops-runbooks
 sidebar_position: 5
-title: "Process Documentation — SOPs and Runbooks"
-description: "Use /process-doc and /runbook to create process documentation that survives the people who wrote it — SOPs for governance, runbooks for operations, both structured to prevent the three-stage decay cycle"
+title: "Process Documentation: SOPs and Runbooks"
+description: "Use /process-doc and /runbook to create process documentation that survives the people who wrote it: SOPs for governance, runbooks for operations, both structured to prevent the three-stage decay cycle"
 keywords:
   [
     "process documentation",
@@ -47,7 +47,7 @@ learning_objectives:
   - objective: "Use /process-doc to create a complete SOP with RACI, numbered steps, embedded controls, error handling, and Document Control"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces an SOP for a given process where every step has a named role (not 'the team'), every step does exactly one thing, and controls are embedded at specific risk points — not listed generically"
+    assessment_method: "Student produces an SOP for a given process where every step has a named role (not 'the team'), every step does exactly one thing, and controls are embedded at specific risk points, not listed generically"
 
   - objective: "Use /runbook to create an operational runbook with exact procedures, expected results, and escalation paths"
     proficiency_level: "B1"
@@ -62,44 +62,44 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Three-stage documentation failure — how SOPs decay from current to divergent to harmful"
-    - "SOP vs runbook distinction — governance format (SOP) vs execution format (runbook), different audiences and purposes"
-    - "RACI matrix — the four roles (Responsible, Accountable, Consulted, Informed) that clarify ownership without ambiguity"
-    - "Document Control — the version, date, author, and review date fields that determine whether a document is trustworthy or stale"
-  assessment: "4 concepts at B1-B2 level is appropriate. The SOP vs runbook distinction is the highest-load concept because it requires judgment about audience and purpose. The others are structural — RACI and Document Control are templates that, once understood, are mechanical to apply."
+    - "Three-stage documentation failure: how SOPs decay from current to divergent to harmful"
+    - "SOP vs runbook distinction, governance format (SOP) vs execution format (runbook), different audiences and purposes"
+    - "RACI matrix: the four roles (Responsible, Accountable, Consulted, Informed) that clarify ownership without ambiguity"
+    - "Document Control: the version, date, author, and review date fields that determine whether a document is trustworthy or stale"
+  assessment: "4 concepts at B1-B2 level is appropriate. The SOP vs runbook distinction is the highest-load concept because it requires judgment about audience and purpose. The others are structural, RACI and Document Control are templates that, once understood, are mechanical to apply."
 
 differentiation:
   extension_for_advanced: "Run a process gap analysis on one of your core operational processes using /process-doc with a gap-analysis approach. Describe the current process and at least three known failure points. Map each gap to its root cause (missing control / missing step / unclear ownership / system gap) and produce a prioritised remediation plan. Then write the version-updated SOP that fixes the gaps."
-  remedial_for_struggling: "Focus on the SOP quality test: read the SOP you produced and ask — could someone who has never done this process before follow it without asking a single clarifying question? If not, find the first step where they would have to ask, and fix that step first. Clarity before completeness."
+  remedial_for_struggling: "Focus on the SOP quality test: read the SOP you produced and ask, could someone who has never done this process before follow it without asking a single clarifying question? If not, find the first step where they would have to ask, and fix that step first. Clarity before completeness."
 
 teaching_guide:
   key_points:
-    - "Process documents fail not because they are poorly written at creation — they fail because nobody owns the maintenance. Document Control is the operational mechanism that assigns that ownership."
+    - "Process documents fail not because they are poorly written at creation; they fail because nobody owns the maintenance. Document Control is the operational mechanism that assigns that ownership."
     - "The SOP vs runbook distinction is practical, not theoretical: SOPs govern, runbooks execute. An SOP tells you what the process is and who is responsible. A runbook tells you exactly how to run it today."
     - "The RACI matrix resolves the most common process failure mode: ambiguous ownership. 'Everyone is responsible' means no one is."
     - "The engineer review test is the quality gate: if someone who knows the systems but does not know this specific process cannot follow the SOP without asking questions, the SOP is not done."
   misconceptions:
-    - "Runbooks are only for IT. Correction: any recurring operational task — month-end close, onboarding a new vendor, running a payroll cycle — benefits from a runbook. The format originated in IT but the principle applies to any procedure that must be executed reliably by different people at different times."
-    - "A detailed process narrative is equivalent to an SOP. Correction: a narrative describes a process. An SOP governs it — it includes named roles, numbered steps, explicit controls, error handling, and document control. The difference matters when an auditor asks who is responsible for a control."
-    - "Once written, an SOP is complete. Correction: an SOP is complete when it is first written. It becomes a liability when it diverges from reality. The review date in Document Control is not optional — it is the mechanism that keeps the document trustworthy."
+    - "Runbooks are only for IT. Correction: any recurring operational task, month-end close, onboarding a new vendor, running a payroll cycle, benefits from a runbook. The format originated in IT but the principle applies to any procedure that must be executed reliably by different people at different times."
+    - "A detailed process narrative is equivalent to an SOP. Correction: a narrative describes a process. An SOP governs it ; it includes named roles, numbered steps, explicit controls, error handling, and document control. The difference matters when an auditor asks who is responsible for a control."
+    - "Once written, an SOP is complete. Correction: an SOP is complete when it is first written. It becomes a liability when it diverges from reality. The review date in Document Control is not optional; it is the mechanism that keeps the document trustworthy."
   discussion_prompts:
-    - "Think of a process your organisation (or a hypothetical one) runs regularly — say, the month-end financial close. Is that process documented? If yes: when was the document last updated? If no: could a new team member execute it reliably from day one?"
+    - "Think of a process your organisation (or a hypothetical one) runs regularly, say, the month-end financial close. Is that process documented? If yes: when was the document last updated? If no: could a new team member execute it reliably from day one?"
     - "If a long-serving employee left tomorrow, which processes would become risky because the knowledge lives only in their head? That is your SOP backlog."
   teaching_tips:
-    - "Start with the three-stage failure narrative — it is immediately recognisable to anyone who has inherited a process document that no longer reflects reality. This motivates the Document Control discipline."
+    - "Start with the three-stage failure narrative; it is immediately recognisable to anyone who has inherited a process document that no longer reflects reality. This motivates the Document Control discipline."
     - "The SOP vs runbook distinction is best illustrated with the same process: the monthly payment run. The SOP covers who is responsible, what the controls are, and what the approval chain looks like. The runbook covers the exact SAP transaction codes, the exact steps to execute the bank file, and what to do if the bank portal is down."
     - "Teach the RACI matrix as a disambiguation tool, not a bureaucratic requirement. For any step where two people might think they are responsible, a RACI makes one of them accountable."
 ---
 
-# Process Documentation — SOPs and Runbooks
+# Process Documentation: SOPs and Runbooks
 
 The SOP existed. It was created two years ago during an ERP implementation, when the consultant who set up the system wrote down how to run the month-end financial close. It was thorough: 13 steps, named roles, system references. Three people were given copies. It was filed in a shared drive folder called "Finance Procedures."
 
-Six months later, the ERP was upgraded. Steps 4 and 7 changed. The approval threshold was raised from £5,000 to £10,000. A new reconciliation requirement was added. Nobody updated the SOP. The consultant was gone. The Finance Manager who had been at the company remembered the old process and knew to follow the new one. New team members read the SOP and followed it, making errors at steps 4 and 7. The error rate was not obvious — it was just an occasional discrepancy that someone fixed quietly each month.
+Six months later, the ERP was upgraded. Steps 4 and 7 changed. The approval threshold was raised from £5,000 to £10,000. A new reconciliation requirement was added. Nobody updated the SOP. The consultant was gone. The Finance Manager who had been at the company remembered the old process and knew to follow the new one. New team members read the SOP and followed it, making errors at steps 4 and 7. The error rate was not obvious ; it was just an occasional discrepancy that someone fixed quietly each month.
 
 Two years later, an auditor asked for the process documentation for month-end close. The organisation produced the SOP. The auditor compared it to the actual process. The differences were significant enough to constitute a control failure.
 
-This is not a story about negligence. It is a story about the three-stage documentation failure — and why process documentation is not a one-time task.
+This is not a story about negligence. It is a story about the three-stage documentation failure , and why process documentation is not a one-time task.
 
 :::tip Plugin Setup Reminder
 This exercise requires the **Operations** plugin (official) and the
@@ -115,21 +115,21 @@ Process documents decay predictably. Understanding the decay cycle is the first 
 | Stage                   | What Happens                                | Why It Happens                                                                 | Consequence                                                                    |
 | ----------------------- | ------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | **Stage 1: Creation**   | Document reflects current reality           | Process documented at audit, onboarding, or implementation                     | Document is accurate and useful                                                |
-| **Stage 2: Divergence** | Process changes; document does not          | System upgrades, team changes, policy updates — none trigger a document update | Document becomes partially wrong                                               |
+| **Stage 2: Divergence** | Process changes; document does not          | System upgrades, team changes, policy updates, none trigger a document update | Document becomes partially wrong                                               |
 | **Stage 3: Harm**       | Document describes a process nobody follows | Accumulated divergence makes the document unreliable                           | New employees follow the document and make errors; auditors find discrepancies |
 
-The transition from Stage 1 to Stage 2 is not a failure of intent — it is a failure of design. Nobody updates the SOP when a system changes because nobody owns that update as a named, time-bound task. Document Control is the mechanism that assigns that ownership. Without a review date and a named reviewer, the SOP has no maintenance process, only a maintenance aspiration.
+The transition from Stage 1 to Stage 2 is not a failure of intent; it is a failure of design. Nobody updates the SOP when a system changes because nobody owns that update as a named, time-bound task. Document Control is the mechanism that assigns that ownership. Without a review date and a named reviewer, the SOP has no maintenance process, only a maintenance aspiration.
 
-## SOP vs Runbook — The Distinction That Matters
+## SOP vs Runbook: The Distinction That Matters
 
-The most common process documentation mistake is using the wrong format for the wrong purpose. SOPs and runbooks address the same operational domain — recurring processes — but they serve different audiences and perform different functions.
+The most common process documentation mistake is using the wrong format for the wrong purpose. SOPs and runbooks address the same operational domain, recurring processes , but they serve different audiences and perform different functions.
 
 | Dimension            | SOP (Standard Operating Procedure)                                                  | Runbook                                                   |
 | -------------------- | ----------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| **Primary purpose**  | Governance — who is responsible, what the controls are, what approvals are required | Execution — exactly how to perform the task, step by step |
+| **Primary purpose**  | Governance, who is responsible, what the controls are, what approvals are required | Execution, exactly how to perform the task, step by step |
 | **Primary audience** | Management, auditors, compliance reviewers, new employees                           | The person doing the work today                           |
 | **Format emphasis**  | RACI, controls, error handling, document control                                    | Exact commands/actions, expected results, failure modes   |
-| **Level of detail**  | Policy-level — describes what must happen                                           | Procedure-level — describes exactly how to make it happen |
+| **Level of detail**  | Policy-level, describes what must happen                                           | Procedure-level, describes exactly how to make it happen |
 | **When referenced**  | Process design, audit, onboarding, scope disputes                                   | Active task execution                                     |
 | **Created with**     | `/process-doc`                                                                      | `/runbook`                                                |
 
@@ -139,9 +139,9 @@ Many processes need both. The monthly supplier payment run needs an SOP (who app
 
 ## Creating SOPs with `/process-doc`
 
-The `/process-doc` command produces process documentation from a description. You describe the process — or paste existing documentation — and the command structures it into a complete SOP.
+The `/process-doc` command produces process documentation from a description. You describe the process , or paste existing documentation , and the command structures it into a complete SOP.
 
-**What makes an SOP trustworthy — the quality standards:**
+**What makes an SOP trustworthy: the quality standards:**
 
 | Quality Standard           | Requirement                                                               |
 | -------------------------- | ------------------------------------------------------------------------- |
@@ -149,7 +149,7 @@ The `/process-doc` command produces process documentation from a description. Yo
 | **Single action per step** | Each numbered step does exactly one thing                                 |
 | **Embedded controls**      | Controls at the specific risk points, not listed generically at the start |
 | **Error handling**         | Explicit guidance for each step that can fail                             |
-| **Document Control**       | Version, date, author, and review date — the maintenance contract         |
+| **Document Control**       | Version, date, author, and review date: the maintenance contract         |
 
 **Worked example.** You want to document the monthly supplier payment run. You type:
 
@@ -164,7 +164,7 @@ Context:
 - Inputs: approved purchase orders, vendor invoices, bank details
 - Approvals: invoices >£10,000 require CFO approval before payment
 - Key risk: paying wrong account (invoice redirection fraud)
-- Control requirement: four-eyes review — AP Clerk prepares, Finance Manager approves
+- Control requirement: four-eyes review, AP Clerk prepares, Finance Manager approves
 
 Produce a complete SOP with: Purpose, Scope, RACI matrix, numbered process
 steps with named roles, embedded controls at risk points, error handling
@@ -175,17 +175,17 @@ for each step that can fail, and Document Control section.
 
 | SOP Element          | What to Verify                                                                                                                                   |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **RACI matrix**      | Every role (R, A, C, I) is populated for every step — no empty cells                                                                             |
+| **RACI matrix**      | Every role (R, A, C, I) is populated for every step; no empty cells                                                                             |
 | **Step structure**   | Each step has one action, one owner, and one output                                                                                              |
 | **Controls**         | Controls appear inside the steps where the risk occurs, not as a separate generic list                                                           |
-| **Error handling**   | Every step that can fail has explicit guidance — not "escalate to manager" but "escalate to Finance Manager within 1 business day; hold payment" |
+| **Error handling**   | Every step that can fail has explicit guidance, not "escalate to manager" but "escalate to Finance Manager within 1 business day; hold payment" |
 | **Document Control** | Version number, effective date, author, and next review date are all present                                                                     |
 
 **What to evaluate:**
 
 - Does every step name a job title, not a person's name or "the team"?
 - Can you tell, for every step, exactly who does it, what system they use, and what output they produce?
-- Are the controls embedded at the specific risk points — not just listed in an introduction paragraph?
+- Are the controls embedded at the specific risk points , not just listed in an introduction paragraph?
 - Would someone following this SOP know what to do if a step fails?
 
 ## Creating Runbooks with `/runbook`
@@ -214,12 +214,12 @@ expected results and failure actions for each step, verification steps,
 troubleshooting table, rollback procedure, and escalation paths.
 ```
 
-**What to expect:** Exact commands, expected results, explicit failure handling, and escalation paths — documentation that can be executed at 2am under pressure by an engineer who has not done this specific failover before.
+**What to expect:** Exact commands, expected results, explicit failure handling, and escalation paths, documentation that can be executed at 2am under pressure by an engineer who has not done this specific failover before.
 
 | Runbook Element      | What to Verify                                                                                                                                              |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Prerequisites**    | All access, tools, and permissions required are listed as checkboxes before step 1                                                                          |
-| **Step precision**   | Each step gives the exact action — not "update the load balancer" but "remove prod-web-01 from the target group" with the exact console path or CLI command |
+| **Step precision**   | Each step gives the exact action, not "update the load balancer" but "remove prod-web-01 from the target group" with the exact console path or CLI command |
 | **Expected results** | Every step has a stated expected outcome so the engineer knows if it worked                                                                                 |
 | **Failure actions**  | Every step with a failure mode has explicit guidance on what to do next                                                                                     |
 | **Verification**     | The runbook ends with checks that confirm the procedure completed successfully                                                                              |
@@ -233,8 +233,8 @@ After producing a process document with either command, apply this test before u
 
 Each question is a documentation gap. The most common gaps are:
 
-- Steps that assume knowledge not in the document ("update the approval record" — where? in what system? how?)
-- Controls that describe intent but not mechanism ("verify bank details" — against what? where is the Vendor Master? what counts as a match?)
+- Steps that assume knowledge not in the document ("update the approval record", where? in what system? how?)
+- Controls that describe intent but not mechanism ("verify bank details", against what? where is the Vendor Master? what counts as a match?)
 - Error handling that escalates without specifying to whom, how, or within what timeframe
 
 The test catches gaps that the author cannot see because they already know the answers.
@@ -255,7 +255,7 @@ and known issues]
 Known failure points:
 - Customer dispute resolution averages 45 days (target: 14 days)
 - Credit checks skipped for repeat customers with outstanding balances
-- Revenue recognition errors in month-end close — approximately 2-3 per quarter
+- Revenue recognition errors in month-end close, approximately 2-3 per quarter
 
 Produce: A gap analysis mapping each known issue to the specific process step
 where it occurs, the root cause category (missing control / missing step /
@@ -270,10 +270,10 @@ unclear ownership / system gap), and a prioritised remediation plan.
 **Goal:** Produce an SOP with complete RACI and Document Control, a runbook for a recurring IT or operational task, and apply the quality test to both
 
 :::note Keep This File
-The SOP library you build here feeds directly into Lesson 6 (Change Management). When you map the impact of a change, the first question is: which documented processes does this change affect? Keep your process documentation in this Cowork session — Lesson 6 will reference it when building change impact assessments.
+The SOP library you build here feeds directly into Lesson 6 (Change Management). When you map the impact of a change, the first question is: which documented processes does this change affect? Keep your process documentation in this Cowork session, Lesson 6 will reference it when building change impact assessments.
 :::
 
-### Step 1 — Choose Your Two Processes
+### Step 1: Choose Your Two Processes
 
 Select one process for SOP documentation and one for a runbook. Recommendations:
 
@@ -291,7 +291,7 @@ Select one process for SOP documentation and one for a runbook. Recommendations:
 - End-of-month financial reporting generation
 - Any procedure that must be executed reliably by different people, possibly under time pressure
 
-### Step 2 — Run /process-doc for the SOP
+### Step 2: Run /process-doc for the SOP
 
 ```
 /process-doc
@@ -301,7 +301,7 @@ Context:
 - Organisation: 200-person UK professional services firm
 - Team involved: [describe the team and roles]
 - Frequency: [daily / weekly / monthly / as triggered]
-- Systems used: [name the systems — ERP, CRM, etc.]
+- Systems used: [name the systems, ERP, CRM, etc.]
 - Key approvals required: [describe the approval structure]
 - Key risks: [describe the 2-3 highest-risk points in the process]
 - Regulatory requirements: [any compliance requirements this process must satisfy]
@@ -309,7 +309,7 @@ Context:
 Produce an SOP with:
 1. Purpose and Scope
 2. RACI matrix covering every major step
-3. Numbered steps — one action per step, named role, system, output
+3. Numbered steps: one action per step, named role, system, output
 4. Controls embedded at each of the risk points I identified
 5. Error handling for every step that can fail
 6. Document Control section (version, effective date, author, review date)
@@ -317,28 +317,28 @@ Produce an SOP with:
 
 **What to evaluate:**
 
-- Does every step in the RACI have a specific job title in the Responsible column — not "Finance", not "the team", but "AP Clerk" or "Finance Manager"?
+- Does every step in the RACI have a specific job title in the Responsible column, not "Finance", not "the team", but "AP Clerk" or "Finance Manager"?
 - Does every step do exactly one thing? If a step contains "and then" or "also", it needs to be split.
-- Are controls embedded at the specific risk points you identified — not just mentioned in the introduction?
-- Is error handling present for every step that can go wrong — and does it specify who to escalate to, how, and within what timeframe?
+- Are controls embedded at the specific risk points you identified , not just mentioned in the introduction?
+- Is error handling present for every step that can go wrong , and does it specify who to escalate to, how, and within what timeframe?
 - Does the Document Control section include a next review date? If not, the SOP has no maintenance contract.
 
-### Step 3 — Run /runbook for the Operational Procedure
+### Step 3: Run /runbook for the Operational Procedure
 
 ```
 /runbook
 Create a runbook for [your chosen operational procedure].
 
 Context:
-- When this is used: [trigger — e.g., on-call alert, monthly schedule, ad-hoc request]
-- Who runs it: [role — e.g., on-call engineer, finance admin]
+- When this is used: [trigger, e.g., on-call alert, monthly schedule, ad-hoc request]
+- Who runs it: [role, e.g., on-call engineer, finance admin]
 - Systems involved: [name systems, versions, access required]
 - Expected duration: [how long the procedure normally takes]
 - What can go wrong: [describe the 2-3 most likely failure modes]
 
 Produce a runbook with:
 1. Prerequisites checklist (access, tools, data needed before starting)
-2. Exact step-by-step procedure — each step with expected result and failure action
+2. Exact step-by-step procedure: each step with expected result and failure action
 3. Verification checklist at the end
 4. Troubleshooting table for the most common failure modes
 5. Rollback procedure if something goes wrong
@@ -349,17 +349,17 @@ Produce a runbook with:
 
 - Could someone unfamiliar with the procedure follow it without asking a single clarifying question? (This is the definitive quality test)
 - Does every step have an expected result? Without it, the operator does not know if the step succeeded.
-- Does every step with a failure mode have explicit guidance — not "escalate if something goes wrong" but "if [specific symptom], then [specific action]"?
+- Does every step with a failure mode have explicit guidance, not "escalate if something goes wrong" but "if [specific symptom], then [specific action]"?
 - Is the rollback procedure realistic? Does it describe exactly how to undo the procedure, or does it say "revert to previous state" without specifying how?
 - Are escalation contacts named (role plus contact method), not just described by function?
 
-### Step 4 — Apply the Engineer Review Test
+### Step 4: Apply the Engineer Review Test
 
 Find a colleague (or imagine one) who knows your systems but has not performed this specific process. Walk through the SOP and runbook with them:
 
 1. Read each step aloud and ask: "Could you execute this step right now, with only what is written?"
 2. Mark every step where they would need to ask a clarifying question
-3. Return to `/process-doc` or `/runbook` with those specific gaps: "The following steps are unclear — rewrite them with the additional detail needed to eliminate ambiguity"
+3. Return to `/process-doc` or `/runbook` with those specific gaps: "The following steps are unclear, rewrite them with the additional detail needed to eliminate ambiguity"
 
 **Deliverable:** A completed SOP (with RACI and Document Control), a completed runbook (with prerequisites, exact steps, and escalation paths), and a list of gaps found in the engineer review test with the updated versions addressing each gap.
 
@@ -383,19 +383,19 @@ Produce: Purpose, Scope, RACI matrix, numbered steps with one action per step,
 controls at each risk point, error handling, and Document Control.
 ```
 
-**What you are learning:** Expense approval is a good learning process because most people are familiar with it from the employee side, making it easy to check whether the SOP captures reality. Pay attention to how the RACI distributes responsibility — and whether the controls are embedded at the right steps or listed generically at the start.
+**What you are learning:** Expense approval is a good learning process because most people are familiar with it from the employee side, making it easy to check whether the SOP captures reality. Pay attention to how the RACI distributes responsibility , and whether the controls are embedded at the right steps or listed generically at the start.
 
 **Adapt**: Modify the scenario to match your organisation.
 
 ```
 I need to document a process that currently exists only in the head of our
-[role — e.g., Office Manager / Finance Lead / IT Administrator].
+[role, e.g., Office Manager / Finance Lead / IT Administrator].
 
 Process: [describe what the process does and when it runs]
-Who is involved: [roles and what they do — approximate is fine]
+Who is involved: [roles and what they do, approximate is fine]
 Systems used: [which tools, platforms, or systems are involved]
 Known failure points: [what sometimes goes wrong]
-Regulatory or audit requirement: [if any — e.g., SOX, ISO 27001, GDPR]
+Regulatory or audit requirement: [if any, e.g., SOX, ISO 27001, GDPR]
 
 Produce an SOP and a companion runbook. For the SOP: full RACI, controls
 at risk points, error handling, Document Control. For the runbook: exact
@@ -423,7 +423,7 @@ Produce:
 Use the previous SOP as the baseline: [describe or paste the old version]
 ```
 
-**What you are learning:** Updating an existing SOP is the most common documentation task — and the one most often skipped because it feels less urgent than creating a new one. This prompt tests whether you can produce a version-controlled update, a change notification, and a Document Control record — the complete maintenance workflow, not just the document itself.
+**What you are learning:** Updating an existing SOP is the most common documentation task , and the one most often skipped because it feels less urgent than creating a new one. This prompt tests whether you can produce a version-controlled update, a change notification, and a Document Control record: the complete maintenance workflow, not just the document itself.
 :::
 
 ## Flashcards Study Aid
@@ -432,4 +432,4 @@ Use the previous SOP as the baseline: [describe or paste the old version]
 
 ---
 
-Continue to [Lesson 6: Change Management — Impact and Rollback →](./06-change-management-impact-rollback.md)
+Continue to [Lesson 6: Change Management: Impact and Rollback →](./06-change-management-impact-rollback.md)

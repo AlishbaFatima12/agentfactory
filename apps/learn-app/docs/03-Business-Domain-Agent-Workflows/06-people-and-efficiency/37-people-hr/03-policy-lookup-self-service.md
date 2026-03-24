@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/people-hr/policy-lookup-self-service
 sidebar_position: 3
-title: "Policy Lookup — Self-Service Policy Synthesis"
-description: "Transform scattered, jargon-heavy HR policies into plain-language summaries that employees can actually use — using the /policy-lookup skill to synthesise, explain, and verify policy content"
+title: "Policy Lookup: Self-Service Policy Synthesis"
+description: "Transform scattered, jargon-heavy HR policies into plain-language summaries that employees can actually use: using the /policy-lookup skill to synthesise, explain, and verify policy content"
 keywords:
   [
     "people and hr",
@@ -27,7 +27,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Content-Creation"
-    measurable_at_this_level: "Student can take a complex HR policy document and use /policy-lookup to produce a plain-language summary that is accurate, complete, and written for the intended audience — then verify the output against the source policy"
+    measurable_at_this_level: "Student can take a complex HR policy document and use /policy-lookup to produce a plain-language summary that is accurate, complete, and written for the intended audience; then verify the output against the source policy"
 
   - name: "Evaluate AI-Generated Policy Summaries for Accuracy and Completeness"
     proficiency_level: "B1"
@@ -57,46 +57,46 @@ learning_objectives:
   - objective: "Build a 20-question FAQ knowledge base by identifying high-frequency policy questions and synthesising plain-language answers"
     proficiency_level: "B1"
     bloom_level: "Create"
-    assessment_method: "Student produces a structured FAQ document with 20 entries, each containing question, plain-language answer, policy citation, and escalation path — verified against source policies for accuracy"
+    assessment_method: "Student produces a structured FAQ document with 20 entries, each containing question, plain-language answer, policy citation, and escalation path, verified against source policies for accuracy"
 
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Policy synthesis — transforming legal/formal policy language into plain-language summaries"
-    - "Source citation — linking every summary back to the specific policy document and section"
-    - "Verification framework — systematic checking of AI-generated policy summaries against source documents"
-    - "FAQ knowledge base — structured question-answer pairs that power employee self-service"
-  assessment: "4 concepts at B1 level — comfortably within cognitive limits. The lesson builds from problem (why policies fail) to tool (/policy-lookup) to practice (verification) to deliverable (FAQ knowledge base). Each concept builds directly on the previous one."
+    - "Policy synthesis, transforming legal/formal policy language into plain-language summaries"
+    - "Source citation, linking every summary back to the specific policy document and section"
+    - "Verification framework, systematic checking of AI-generated policy summaries against source documents"
+    - "FAQ knowledge base, structured question-answer pairs that power employee self-service"
+  assessment: "4 concepts at B1 level, comfortably within cognitive limits. The lesson builds from problem (why policies fail) to tool (/policy-lookup) to practice (verification) to deliverable (FAQ knowledge base). Each concept builds directly on the previous one."
 
 differentiation:
-  extension_for_advanced: "Analyse your organisation's HR ticket data from the last 90 days. Categorise tickets by policy topic, identify the top 20 by volume, and calculate the time cost of answering each one manually. Use this data to prioritise your FAQ knowledge base entries by ROI — which entries save the most HR team time per month?"
+  extension_for_advanced: "Analyse your organisation's HR ticket data from the last 90 days. Categorise tickets by policy topic, identify the top 20 by volume, and calculate the time cost of answering each one manually. Use this data to prioritise your FAQ knowledge base entries by ROI, which entries save the most HR team time per month?"
   remedial_for_struggling: "Focus on two things: running /policy-lookup with a single policy topic and checking the output against the source. If you can verify that a summary is accurate and complete for one policy, you have the core skill. Build from there."
 
 teaching_guide:
   key_points:
-    - "The problem is not missing policies — it is policies that employees cannot find or understand"
-    - "/policy-lookup synthesises, it does not replace — the source policy remains authoritative"
-    - "Every summary must cite its source document and section — unsourced summaries are useless"
+    - "The problem is not missing policies; it is policies that employees cannot find or understand"
+    - "/policy-lookup synthesises, it does not replace: the source policy remains authoritative"
+    - "Every summary must cite its source document and section, unsourced summaries are useless"
     - "The FAQ knowledge base built here is the foundation for the HR Knowledge Base Agent in Lesson 4"
   misconceptions:
-    - "AI-generated policy summaries are automatically accurate. Correction: /policy-lookup is only as accurate as the policy information you provide. Always verify the output against the source policy — the skill can miss exceptions, use outdated figures, or oversimplify nuances."
-    - "Plain language means less information. Correction: plain language means the same information written so that any employee can understand it on first reading. Nothing should be omitted — only reformulated."
+    - "AI-generated policy summaries are automatically accurate. Correction: /policy-lookup is only as accurate as the policy information you provide. Always verify the output against the source policy: the skill can miss exceptions, use outdated figures, or oversimplify nuances."
+    - "Plain language means less information. Correction: plain language means the same information written so that any employee can understand it on first reading. Nothing should be omitted, only reformulated."
     - "One summary fits all audiences. Correction: a policy summary for new joiners may need more context than one for managers. Consider your audience when reviewing /policy-lookup output."
   discussion_prompts:
-    - "Think about the last time you needed to find a company policy. How long did it take? Where did you eventually find the answer — in a document, or by asking someone?"
+    - "Think about the last time you needed to find a company policy. How long did it take? Where did you eventually find the answer, in a document, or by asking someone?"
     - "What are the risks of an employee acting on an AI-generated policy summary that contains an error? How does source citation mitigate that risk?"
   teaching_tips:
-    - "Start with the parental leave example — it is emotionally resonant and practically complex. Every student has either needed this information or knows someone who has."
+    - "Start with the parental leave example; it is emotionally resonant and practically complex. Every student has either needed this information or knows someone who has."
     - "Have students compare the raw policy language with the /policy-lookup output side by side. The contrast makes the value of synthesis immediately obvious."
 ---
 
-# Policy Lookup — Self-Service Policy Synthesis
+# Policy Lookup: Self-Service Policy Synthesis
 
-Sarah Okonkwo has been on the People team at a 200-person technology company in London for three years. This morning, for the fifteenth time this quarter, she received the same Slack message: "Hi Sarah, what's our parental leave policy?" The answer exists. It is in the employee handbook — page 34, Schedule 3, paragraph 14, buried in language written by employment lawyers for employment lawyers. The relevant section reads: "Employees who satisfy the qualifying conditions set out in paragraph 12(a) shall be entitled to Ordinary Maternity Leave of twenty-six (26) weeks commencing on a date notified in accordance with paragraph 13, followed by Additional Maternity Leave of up to twenty-six (26) weeks, of which the first thirteen (13) weeks shall be remunerated at the Statutory Maternity Pay rate then in force."
+Sarah Okonkwo has been on the People team at a 200-person technology company in London for three years. This morning, for the fifteenth time this quarter, she received the same Slack message: "Hi Sarah, what's our parental leave policy?" The answer exists. It is in the employee handbook, page 34, Schedule 3, paragraph 14, buried in language written by employment lawyers for employment lawyers. The relevant section reads: "Employees who satisfy the qualifying conditions set out in paragraph 12(a) shall be entitled to Ordinary Maternity Leave of twenty-six (26) weeks commencing on a date notified in accordance with paragraph 13, followed by Additional Maternity Leave of up to twenty-six (26) weeks, of which the first thirteen (13) weeks shall be remunerated at the Statutory Maternity Pay rate then in force."
 
 The employee who asked does not need paragraph 14 of Schedule 3. They need three things: how much time they get, how much they are paid during that time, and what they need to do to arrange it. This is a two-minute answer that takes Sarah fifteen minutes because she has to locate the policy, translate the legal language, check whether anything has changed since the last time she answered this question, and write a response that is accurate without being incomprehensible.
 
-Sarah answers this question — and dozens like it — because employees cannot help themselves. The policies exist, but they are scattered across a shared drive, an HRIS system, a Confluence wiki, and several PDFs that may or may not be current. Even when employees find the right document, the language is impenetrable. So they ask Sarah. And Sarah's calendar fills up with information routing — answering questions that have written answers — while the work that genuinely needs her judgment waits.
+Sarah answers this question , and dozens like it, because employees cannot help themselves. The policies exist, but they are scattered across a shared drive, an HRIS system, a Confluence wiki, and several PDFs that may or may not be current. Even when employees find the right document, the language is impenetrable. So they ask Sarah. And Sarah's calendar fills up with information routing, answering questions that have written answers, while the work that genuinely needs her judgment waits.
 
 ## Why Employees Cannot Find Policies
 
@@ -108,14 +108,14 @@ The policy communication problem has three layers, and understanding them matter
 | **Legal language**    | Policies are written for legal defensibility, not comprehension     | "Employees satisfying qualifying conditions under paragraph 12(a)" instead of "all full-time employees" |
 | **Staleness**         | Summaries and FAQs fall out of date when underlying policies change | Intranet FAQ still shows last year's statutory sick pay rate                                            |
 
-**Scattered sources** mean employees do not know where to look. They search the intranet, find nothing, and message HR. `/policy-lookup` does not solve the scattering — your policies still live where they live — but it eliminates the consequence: instead of the employee searching five systems, they ask a question in plain language and get an answer with a source citation.
+**Scattered sources** mean employees do not know where to look. They search the intranet, find nothing, and message HR. `/policy-lookup` does not solve the scattering; your policies still live where they live , but it eliminates the consequence: instead of the employee searching five systems, they ask a question in plain language and get an answer with a source citation.
 
 **Legal language** means employees find the policy but cannot extract the answer. A 40-page employee handbook is technically complete but practically useless for someone who just wants to know how many days of holiday they have. `/policy-lookup` transforms the legal language into a plain-language summary that preserves the substance without the jargon.
 
-**Staleness** means even good summaries become dangerous. The intranet FAQ says statutory sick pay is one rate; the actual rate changed in April. `/policy-lookup` synthesises from the policy information you provide at the time you ask, so the summary reflects whatever you feed it — but this means you must feed it current policy data, not last year's handbook.
+**Staleness** means even good summaries become dangerous. The intranet FAQ says statutory sick pay is one rate; the actual rate changed in April. `/policy-lookup` synthesises from the policy information you provide at the time you ask, so the summary reflects whatever you feed it , but this means you must feed it current policy data, not last year's handbook.
 
 :::caution Summaries Are Not Policy
-A `/policy-lookup` summary is a translation aid, not a policy document. The source policy remains authoritative. Every summary must cite the specific document and section it was synthesised from, so that any employee — or their manager, or a lawyer — can trace the summary back to the governing text. Unsourced summaries are worse than no summary at all, because they create a false sense of certainty.
+A `/policy-lookup` summary is a translation aid, not a policy document. The source policy remains authoritative. Every summary must cite the specific document and section it was synthesised from, so that any employee , or their manager, or a lawyer, can trace the summary back to the governing text. Unsourced summaries are worse than no summary at all, because they create a false sense of certainty.
 :::
 
 ## How `/policy-lookup` Works
@@ -140,7 +140,7 @@ In both modes, the output follows the same structure:
 
 Sarah wants to stop answering the parental leave question manually. She will use `/policy-lookup` to create a reusable plain-language summary.
 
-**Step 1 — Invoke the skill with the policy details:**
+**Step 1, Invoke the skill with the policy details:**
 
 ```
 /policy-lookup parental leave
@@ -155,7 +155,7 @@ Our parental leave policy (UK jurisdiction, 200-person technology company):
 - Right to return to same role (or equivalent after 26+ weeks)
 ```
 
-**Step 2 — Review the output.** The skill should return something structured like this:
+**Step 2, Review the output.** The skill should return something structured like this:
 
 ```
 ## Policy: Parental Leave
@@ -179,12 +179,12 @@ give HR at least 8 weeks' notice before your planned leave start date.
 - Holiday continues to accrue
 - Pension contributions continue (based on full salary)
 - You may work up to 10 Keeping in Touch (KIT) days without ending
-  your leave — paid at your normal daily rate
+  your leave, paid at your normal daily rate
 
 ### Exceptions / Special Cases
 - Adoption leave follows the same entitlements as maternity leave
 - Shared Parental Leave may allow you to split leave between partners
-  — speak to HR for details
+ , speak to HR for details
 - If your role is made redundant during leave, you have priority for
   suitable alternative roles
 
@@ -196,7 +196,7 @@ Your manager for practical team-level planning
 Employee Handbook, Section 7: Family Leave | Last updated: [date]
 ```
 
-**Step 3 — Verify the output against your source policy.**
+**Step 3. Verify the output against your source policy.**
 
 | What to Verify          | How to Check                                           | What to Do If Wrong                                       |
 | ----------------------- | ------------------------------------------------------ | --------------------------------------------------------- |
@@ -208,7 +208,7 @@ Employee Handbook, Section 7: Family Leave | Last updated: [date]
 | **Source citation**     | Verify the document name, section number, and date     | Correct to match your actual handbook structure           |
 
 :::note Your output will vary
-The exact wording, structure, and level of detail will depend on how much policy information you provide. The teaching point is the verification process: every figure, every entitlement, every exception must be checked against the source policy before you share the summary with employees. `/policy-lookup` synthesises — it does not guarantee accuracy.
+The exact wording, structure, and level of detail will depend on how much policy information you provide. The teaching point is the verification process: every figure, every entitlement, every exception must be checked against the source policy before you share the summary with employees. `/policy-lookup` synthesises ; it does not guarantee accuracy.
 :::
 
 ## Exercise: Build a 20-Question Policy FAQ Knowledge Base
@@ -220,7 +220,7 @@ The exact wording, structure, and level of detail will depend on how much policy
 
 This FAQ knowledge base becomes the foundation for the HR Knowledge Base Agent you will build in Lesson 4.
 
-### Step 1 — Identify the 20 Most-Asked Questions
+### Step 1: Identify the 20 Most-Asked Questions
 
 Think about the questions employees ask HR most frequently. If you work in HR, pull from your experience or your ticketing system. If you are learning HR operations, use this starter list and adapt it to a company you know:
 
@@ -234,7 +234,7 @@ Think about the questions employees ask HR most frequently. If you work in HR, p
 
 Write your 20 questions in a numbered list before proceeding.
 
-### Step 2 — Synthesise Plain-Language Answers
+### Step 2: Synthesise Plain-Language Answers
 
 For each of your 20 questions, run `/policy-lookup` with the relevant policy information:
 
@@ -251,13 +251,13 @@ Must include: what they are entitled to, the process, who to contact
 
 For each output, verify:
 
-- **Accuracy** — Does the summary match your actual policy?
-- **Plain language** — Would a new joiner understand this on first reading?
-- **Completeness** — Does it answer the full question, including common edge cases?
-- **Source citation** — Does it reference the specific policy document and section?
-- **Escalation** — Does it direct complex or personal cases to a named HR contact?
+- **Accuracy:** Does the summary match your actual policy?
+- **Plain language:** Would a new joiner understand this on first reading?
+- **Completeness:** Does it answer the full question, including common edge cases?
+- **Source citation:** Does it reference the specific policy document and section?
+- **Escalation:** Does it direct complex or personal cases to a named HR contact?
 
-### Step 3 — Structure as FAQ Entries
+### Step 3: Structure as FAQ Entries
 
 Format each verified answer as a structured FAQ entry:
 
@@ -266,14 +266,14 @@ Format each verified answer as a structured FAQ entry:
 
 A: [Your verified plain-language answer from /policy-lookup]
 
-Policy reference: [Document name, section, page — e.g. Employee Handbook, Section 7.2]
+Policy reference: [Document name, section, page, e.g. Employee Handbook, Section 7.2]
 Contact for complex cases: [Name, email, phone]
 Last verified: [Date you checked this answer against the source policy]
 ```
 
-### Step 4 — Quality-Check Five Entries
+### Step 4: Quality-Check Five Entries
 
-Select the five most critical entries (those covering entitlements with financial or legal implications — parental leave, sick pay, notice periods, benefits, expenses). For each one:
+Select the five most critical entries (those covering entitlements with financial or legal implications, parental leave, sick pay, notice periods, benefits, expenses). For each one:
 
 1. Read the source policy text
 2. Read your FAQ entry
@@ -281,10 +281,10 @@ Select the five most critical entries (those covering entitlements with financia
 4. Check that the escalation contact is current
 5. Verify the source citation points to the correct document and section
 
-**Deliverable:** A 20-entry FAQ knowledge base document with plain-language answers, source citations, escalation contacts, and verification dates. Save this document — you will use it as the knowledge source for the HR Knowledge Base Agent in Lesson 4.
+**Deliverable:** A 20-entry FAQ knowledge base document with plain-language answers, source citations, escalation contacts, and verification dates. Save this document; you will use it as the knowledge source for the HR Knowledge Base Agent in Lesson 4.
 
 :::note Keep This File
-The FAQ knowledge base you build here is the foundation for the HR Knowledge Base Agent in Lesson 4. Keep it in your working files — you will configure the agent to answer employee questions using these entries.
+The FAQ knowledge base you build here is the foundation for the HR Knowledge Base Agent in Lesson 4. Keep it in your working files; you will configure the agent to answer employee questions using these entries.
 :::
 
 ## Try With AI
@@ -309,7 +309,7 @@ understand. Include: what they are entitled to, what they need to do,
 and who to contact. Cite the source as "Employee Handbook, Section 4.3."
 ```
 
-**What you are learning:** Translating a structured policy into a summary that preserves every entitlement and process step while removing jargon — the core skill that `/policy-lookup` automates.
+**What you are learning:** Translating a structured policy into a summary that preserves every entitlement and process step while removing jargon: the core skill that `/policy-lookup` automates.
 
 **Adapt**: Apply this to your own organisation's policies.
 
@@ -329,7 +329,7 @@ employees are likely to ask about?
 [Paste your policy here]
 ```
 
-**What you are learning:** Applying policy synthesis to your own organisation's documents reveals gaps — policies that are ambiguous, incomplete, or silent on common scenarios.
+**What you are learning:** Applying policy synthesis to your own organisation's documents reveals gaps, policies that are ambiguous, incomplete, or silent on common scenarios.
 
 **Apply**: Audit a policy for communication gaps.
 
@@ -340,7 +340,7 @@ Review the following policy summary and identify:
 2. Any common employee questions this summary does NOT answer
 3. Any figures or rates that may be time-sensitive (e.g. statutory
    rates that change annually)
-4. Whether the escalation path is clear — does the employee know
+4. Whether the escalation path is clear, does the employee know
    exactly who to contact and how?
 
 Rate the summary on a scale of 1-5 for: accuracy, clarity,
@@ -350,7 +350,7 @@ what specific improvement would raise it.
 [Paste a policy summary you have created]
 ```
 
-**What you are learning:** Evaluating the quality of a policy summary — not just producing one — is the skill that ensures employees receive accurate, complete information. This audit framework applies to any AI-generated content, not just HR policies.
+**What you are learning:** Evaluating the quality of a policy summary , not just producing one: is the skill that ensures employees receive accurate, complete information. This audit framework applies to any AI-generated content, not just HR policies.
 :::
 
 ## Flashcards Study Aid

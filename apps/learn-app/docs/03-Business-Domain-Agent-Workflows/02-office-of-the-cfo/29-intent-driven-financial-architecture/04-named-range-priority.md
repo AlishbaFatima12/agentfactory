@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/named-range-priority
 sidebar_position: 4
-title: "Named Range Priority — Guardrail 1"
-description: "Build the GP Waterfall Calculation layer using zero coordinate references — every formula reads as a plain-English business rule that survives row insertions, team handovers, and AI interpretation without a single cell click"
+title: "Named Range Priority: Guardrail 1"
+description: "Build the GP Waterfall Calculation layer using zero coordinate references: every formula reads as a plain-English business rule that survives row insertions, team handovers, and AI interpretation without a single cell click"
 keywords:
   [
     "Named Range",
@@ -38,7 +38,7 @@ skills:
     category: "Applied"
     bloom_level: "Analyze"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can identify layer isolation violations — hardcoded constants in the Calculation layer, direct Assumptions-to-Output references — and correct them by moving values to the appropriate layer"
+    measurable_at_this_level: "Student can identify layer isolation violations (hardcoded constants in the Calculation layer, direct Assumptions-to-Output references) and correct them by moving values to the appropriate layer"
 
   - name: "Agent-Assisted Formula Compliance Verification"
     proficiency_level: "A2"
@@ -78,9 +78,9 @@ differentiation:
   remedial_for_struggling: "Focus on the first four formulas only (Revenue_Y1 through Revenue_Y3 and COGS_Pct_Y1). Build them one at a time with Claude, confirming each formula passes the compliance test before moving to the next. The pattern is identical for the remaining eight."
 ---
 
-# Named Range Priority — Guardrail 1
+# Named Range Priority: Guardrail 1
 
-In Lesson 3, you built the Assumptions layer of the GP Waterfall — every input lives in one place, every input has a Named Range, and no calculations exist in that layer. Now you build the Calculation layer. The rule is absolute: no cell addresses. Every formula must read as a sentence.
+In Lesson 3, you built the Assumptions layer of the GP Waterfall: every input lives in one place, every input has a Named Range, and no calculations exist in that layer. Now you build the Calculation layer. The rule is absolute: no cell addresses. Every formula must read as a sentence.
 
 This is Guardrail 1 of the Intent-Driven Financial Architecture, and it has a simple compliance test. Select any formula in the Calculation layer. If you can understand what it calculates without clicking on any referenced cell, it passes. If you need to navigate to understand it, it fails. That single test separates formulas that survive team handovers, row insertions, and AI interpretation from formulas that silently break the moment someone edits a row above them.
 
@@ -98,7 +98,7 @@ To understand this formula, you must click B14, then C14, then F8. You are readi
 =Revenue_Y2 - (Revenue_Y2 * COGS_Pct_Y2)
 ```
 
-No clicking required. The formula is the business rule. Revenue Year 2 minus Revenue Year 2 times COGS Percentage Year 2. Anyone reading it — a colleague, an auditor, or an AI agent — understands the intent immediately.
+No clicking required. The formula is the business rule. Revenue Year 2 minus Revenue Year 2 times COGS Percentage Year 2. Anyone reading it (a colleague, an auditor, or an AI agent) understands the intent immediately.
 
 ## The Twelve GP Waterfall Formulas
 
@@ -121,7 +121,7 @@ Revenue_Y2 = Revenue_Y1 * (1 + Inp_Rev_Growth)
 Revenue_Y3 = Revenue_Y2 * (1 + Inp_Rev_Growth)
 ```
 
-Year 1 revenue equals the base input. Year 2 revenue equals Year 1 grown by the growth rate. Year 3 follows the same pattern. Read each formula aloud — it is a complete English sentence.
+Year 1 revenue equals the base input. Year 2 revenue equals Year 1 grown by the growth rate. Year 3 follows the same pattern. Read each formula aloud: it is a complete English sentence.
 
 **COGS Percentage (3 formulas)**
 
@@ -174,7 +174,7 @@ COGS_Y1 = Revenue_Y1 * 0.60
 
 This formula has zero coordinate references. It uses a Named Range for revenue. It looks compliant. It is not.
 
-The value `0.60` is a hardcoded constant — an assumption hiding inside the Calculation layer. This violates layer isolation. If someone changes the COGS percentage assumption in the Assumptions layer, this formula will not update. You now have two sources of truth, and the model will produce wrong answers silently.
+The value `0.60` is a hardcoded constant: an assumption hiding inside the Calculation layer. This violates layer isolation. If someone changes the COGS percentage assumption in the Assumptions layer, this formula will not update. You now have two sources of truth, and the model will produce wrong answers silently.
 
 **The fix:** Move `0.60` to the Assumptions layer as `Inp_COGS_Pct_Y1`. Then write:
 
@@ -203,7 +203,7 @@ Excel will reject a name with spaces. If you try to create one, you will get an 
 
 Continue the spreadsheet from L03 where you created the Assumptions layer with Named Ranges.
 
-### Step 1 — Prompt Cowork to Build the Calculation Layer
+### Step 1: Prompt Cowork to Build the Calculation Layer
 
 Open the spreadsheet in Cowork and type:
 
@@ -224,7 +224,7 @@ Variable_Dimension convention (e.g., Revenue_Y1, COGS_Pct_Y2,
 Gross_Profit_Y3).
 ```
 
-### Step 2 — Apply the Compliance Test
+### Step 2: Apply the Compliance Test
 
 The formulas are in the spreadsheet, but you need to verify they follow Guardrail 1. Ask Cowork:
 
@@ -239,9 +239,9 @@ Summarise: total formulas checked, total using Named Ranges only,
 total with coordinate references.
 ```
 
-Read each formula Cowork reports. Apply the compliance test from the lesson: can you understand what it calculates without clicking any cell? For example, `Revenue_Y2 = Revenue_Y1 * (1 + Inp_Rev_Growth)` passes — you can read it as a sentence. If any formula contains a coordinate reference, ask Cowork to rewrite it using the correct Named Range.
+Read each formula Cowork reports. Apply the compliance test from the lesson: can you understand what it calculates without clicking any cell? For example, `Revenue_Y2 = Revenue_Y1 * (1 + Inp_Rev_Growth)` passes: you can read it as a sentence. If any formula contains a coordinate reference, ask Cowork to rewrite it using the correct Named Range.
 
-### Step 3 — Verify the Numbers
+### Step 3: Verify the Numbers
 
 Ask Cowork to show the calculated values:
 
@@ -259,19 +259,19 @@ Compare against the expected results:
 | **COGS $**       | 6,000,000  | 6,490,000  | 7,018,000  |
 | **Gross Profit** | 4,000,000  | 4,510,000  | 5,082,000  |
 
-If the numbers match, the Calculation layer is correct and compliant. If any number differs, ask Cowork which formula produced the unexpected value — the Named Range notation will make the error readable.
+If the numbers match, the Calculation layer is correct and compliant. If any number differs, ask Cowork which formula produced the unexpected value: the Named Range notation will make the error readable.
 
 :::note Keep This File
-Save this spreadsheet — you will add Intent Notes to these formulas in Lesson 6, and use it for what-if analysis in Lesson 7.
+Save this spreadsheet: you will add Intent Notes to these formulas in Lesson 6, and use it for what-if analysis in Lesson 7.
 :::
 
 ## Why This Matters: Silent Breakage Elimination
 
-In a coordinate-based model, inserting a row above your formulas shifts every cell reference. The formula `=B14-C14` becomes `=B15-C15` — and if Excel's automatic adjustment guesses wrong, or if a mixed reference like `$F$8` does not shift when it should, the model produces wrong numbers without any error message.
+In a coordinate-based model, inserting a row above your formulas shifts every cell reference. The formula `=B14-C14` becomes `=B15-C15`: and if Excel's automatic adjustment guesses wrong, or if a mixed reference like `$F$8` does not shift when it should, the model produces wrong numbers without any error message.
 
-Named Range formulas are immune to this. `Revenue_Y2` always points to the cell named `Revenue_Y2`, regardless of where that cell sits in the grid. Insert rows, delete columns, move entire sections — the formula still resolves correctly. Formula maintenance drops to near zero because there is nothing positional to maintain.
+Named Range formulas are immune to this. `Revenue_Y2` always points to the cell named `Revenue_Y2`, regardless of where that cell sits in the grid. Insert rows, delete columns, move entire sections: the formula still resolves correctly. Formula maintenance drops to near zero because there is nothing positional to maintain.
 
-This is why Guardrail 1 is the foundation of IDFA. The other three guardrails — LaTeX Verification, Intent Notes, and Delegated Calculation — all assume that formulas are already Named Range compliant. Without Guardrail 1, the others cannot function.
+This is why Guardrail 1 is the foundation of IDFA. The other three guardrails (LaTeX Verification, Intent Notes, and Delegated Calculation) all assume that formulas are already Named Range compliant. Without Guardrail 1, the others cannot function.
 
 ## Try With AI
 
@@ -281,7 +281,7 @@ Use these prompts in Cowork or your preferred AI assistant. You should have the 
 
 :::
 
-**Prompt 1 — Rewrite coordinate formulas to Named Range equivalents:**
+**Prompt 1: Rewrite coordinate formulas to Named Range equivalents:**
 
 ```
 I have a legacy financial model section with these formulas:
@@ -301,7 +301,7 @@ any cell).
 
 **What you are learning:** How to translate coordinate formulas into Named Range equivalents. This is the core conversion skill you will need in L08 when you retrofit entire legacy models. Claude maps each coordinate to its business meaning, then reconstructs the formula using that meaning as the reference.
 
-**Prompt 2 — Compliance check for coordinate violations:**
+**Prompt 2: Compliance check for coordinate violations:**
 
 ```
 Scan every formula in my Calculation layer (cells [your range]).
@@ -315,9 +315,9 @@ Summarise: total formulas checked, total PASS, total FAIL.
 If any FAIL, show what Named Range should replace each coordinate.
 ```
 
-**What you are learning:** How to use an AI agent as a compliance auditor. In a real finance team, this prompt runs after every model edit session. The agent checks every formula against Guardrail 1 in seconds — a task that would take a human analyst minutes per formula in a large model.
+**What you are learning:** How to use an AI agent as a compliance auditor. In a real finance team, this prompt runs after every model edit session. The agent checks every formula against Guardrail 1 in seconds: a task that would take a human analyst minutes per formula in a large model.
 
-**Prompt 3 — Naming convention review:**
+**Prompt 3: Naming convention review:**
 
 ```
 Review all Named Ranges in this workbook. For each one, check:
@@ -331,7 +331,7 @@ Review all Named Ranges in this workbook. For each one, check:
 List any naming violations and suggest corrections.
 ```
 
-**What you are learning:** How to enforce naming discipline across an entire workbook. Naming conventions are what make Named Range formulas readable as English sentences. Without consistent conventions, `Rev1` and `Revenue_Y1` might coexist in the same model — creating confusion that Named Ranges were supposed to eliminate.
+**What you are learning:** How to enforce naming discipline across an entire workbook. Naming conventions are what make Named Range formulas readable as English sentences. Without consistent conventions, `Rev1` and `Revenue_Y1` might coexist in the same model: creating confusion that Named Ranges were supposed to eliminate.
 
 ## Flashcards Study Aid
 
@@ -339,4 +339,4 @@ List any naming violations and suggest corrections.
 
 ---
 
-**Next:** [Lesson 5: LaTeX Verification — Guardrail 2](./05-latex-verification.md) — where you learn to verify complex formulas (WACC, NPV, Terminal Value) in mathematical notation before committing them to the model.
+**Next:** [Lesson 5: LaTeX Verification (Guardrail 2](./05-latex-verification.md)) where you learn to verify complex formulas (WACC, NPV, Terminal Value) in mathematical notation before committing them to the model.

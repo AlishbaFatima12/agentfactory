@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/intrapreneurship-innovation-agents/chapter-summary-quick-reference
 sidebar_position: 16
 title: "Chapter Summary and Quick Reference"
-description: "Complete reference for Chapter 40 — the Innovation OS as a unified system, all 10 commands, all 4 agents, and the DLA Stack framework table"
+description: "Complete reference for Chapter 40: the Innovation OS as a unified system, all 10 commands, all 4 agents, and the DLA Stack framework table"
 keywords:
   [
     "innovation OS",
@@ -40,17 +40,17 @@ learning_objectives:
 cognitive_load:
   new_concepts: 0
   concepts_list: []
-  assessment: "No new concepts. This lesson is pure reference — all concepts were introduced in Lessons 1-15."
+  assessment: "No new concepts. This lesson is pure reference, all concepts were introduced in Lessons 1-15."
 
 differentiation:
   extension_for_advanced: "Return to this page after your first real innovation project. Which commands did you use most? Which DLA stage did you spend the most time in? Use the quick reference as a retrospective lens on your own process."
-  remedial_for_struggling: "If you are still unclear on when to use which command, re-read the DLA flow diagram and command map in Lesson 2. The key question is always: which uncertainty am I reducing right now — problem, solution, or delivery?"
+  remedial_for_struggling: "If you are still unclear on when to use which command, re-read the DLA flow diagram and command map in Lesson 2. The key question is always: which uncertainty am I reducing right now, problem, solution, or delivery?"
 
 teaching_guide:
   key_points:
-    - "This lesson is a reference document, not a teaching lesson — there is nothing new to learn here"
+    - "This lesson is a reference document, not a teaching lesson, there is nothing new to learn here"
     - "The central insight bears repeating: AI eliminates execution overhead without replacing judgment"
-    - "Intrapreneurs should re-read the intrapreneurship note — it clarifies the translation from startup language to enterprise language"
+    - "Intrapreneurs should re-read the intrapreneurship note ; it clarifies the translation from startup language to enterprise language"
   misconceptions: []
   discussion_prompts:
     - "After working through all 16 lessons: which part of the Innovation OS did you find most valuable? Which felt like overhead? What does that tell you about where your execution bottlenecks actually are?"
@@ -62,34 +62,34 @@ teaching_guide:
 
 ## The Central Insight
 
-Innovation has always been about converting uncertainty into validated opportunity faster than competitors. The DLA Stack — Design Thinking, Lean Startup, Agile — is the best methodology for doing this. What has changed is the cost of each step.
+Innovation has always been about converting uncertainty into validated opportunity faster than competitors. The DLA Stack, Design Thinking, Lean Startup, Agile: is the best methodology for doing this. What has changed is the cost of each step.
 
 Design Thinking's customer synthesis used to take weeks. It now takes hours. Lean Startup's assumption mapping used to require expert facilitation. It now takes one session. Building a Business Model Canvas used to require a workshop. The first draft now takes twenty minutes. Writing an investor deck used to require a specialist. The narrative architecture now takes one afternoon.
 
-**AI does not make the decisions.** It does not tell you whether your idea is good, whether your customer insight is accurate, or whether your financial model is believable. Those judgments remain the entrepreneur's or intrapreneur's responsibility. What AI does is eliminate the execution overhead that kept most good ideas from being properly explored — the hours spent on synthesis, structuring, and first drafts that should have been spent on thinking, testing, and building.
+**AI does not make the decisions.** It does not tell you whether your idea is good, whether your customer insight is accurate, or whether your financial model is believable. Those judgments remain the entrepreneur's or intrapreneur's responsibility. What AI does is eliminate the execution overhead that kept most good ideas from being properly explored: the hours spent on synthesis, structuring, and first drafts that should have been spent on thinking, testing, and building.
 
 The entrepreneur who uses the Innovation OS can explore five ideas in the time their competitor explores one. They can synthesise ten customer interviews in an afternoon. They can build and stress-test a financial model before the meeting where they need to defend it. They can walk into an investor conversation with a pitch deck that has been through thirty iterations, not three.
 
 ## What This Chapter Built
 
-1. **The DLA Stack** — Design Thinking, Lean Startup, and Agile as a unified Innovation OS
-2. **Customer discovery** — interview guide generation, synthesis, JTBD mapping
-3. **Hundred ideas, one hour** — idea generation sprint, DVF scoring, pressure testing
-4. **The assumption map** — explicit, risk-scored, with test designs
-5. **MVP scoping** — minimum feature set with success/failure criteria
-6. **Build-Measure-Learn analysis** — validated learning from pilot data
-7. **Business Model Canvas** — construction, stress-testing, alternative models
-8. **Unit economics** — CAC, LTV, payback, breakeven
-9. **Financial modelling** — 18-month model with scenarios and sensitivity analysis
-10. **Pitch deck narrative architecture** — 9 slides with emotional engineering
-11. **Competitive intelligence and market sizing** — bottom-up methodology
-12. **Go-to-market strategy** — ICP, channel, sales process, 90-day calendar
-13. **Four innovation agents** — Idea Generator, Customer Intelligence, Business Model Architect, Fundraising Readiness
-14. **`innov.local.md`** — the innovation context configuration that makes every command specific to your venture
+1. **The DLA Stack:** Design Thinking, Lean Startup, and Agile as a unified Innovation OS
+2. **Customer discovery:** interview guide generation, synthesis, JTBD mapping
+3. **Hundred ideas, one hour:** idea generation sprint, DVF scoring, pressure testing
+4. **The assumption map:** explicit, risk-scored, with test designs
+5. **MVP scoping:** minimum feature set with success/failure criteria
+6. **Build-Measure-Learn analysis:** validated learning from pilot data
+7. **Business Model Canvas:** construction, stress-testing, alternative models
+8. **Unit economics:** CAC, LTV, payback, breakeven
+9. **Financial modelling:** 18-month model with scenarios and sensitivity analysis
+10. **Pitch deck narrative architecture:** 9 slides with emotional engineering
+11. **Competitive intelligence and market sizing:** bottom-up methodology
+12. **Go-to-market strategy:** ICP, channel, sales process, 90-day calendar
+13. **Four innovation agents:** Idea Generator, Customer Intelligence, Business Model Architect, Fundraising Readiness
+14. **`innov.local.md`:** the innovation context configuration that makes every command specific to your venture
 
 ## For Intrapreneurs
 
-Everything in this chapter applies inside an organisation as well as outside one. The intrapreneur faces the same challenges as the entrepreneur — uncertain customer needs, unproven assumptions, limited resources, the need to persuade stakeholders — but with the additional challenge of operating within an existing organisation's constraints, politics, and risk appetite.
+Everything in this chapter applies inside an organisation as well as outside one. The intrapreneur faces the same challenges as the entrepreneur, uncertain customer needs, unproven assumptions, limited resources, the need to persuade stakeholders , but with the additional challenge of operating within an existing organisation's constraints, politics, and risk appetite.
 
 The difference is the audience: the intrapreneur's investor deck is a business case for the innovation committee. Their "customers" are often internal users or existing external customers. Their "funding" is headcount and budget allocation. Their "product-market fit" is internal adoption. The tools are the same; the context is different. `innov.local.md` should reflect this: if you are an intrapreneur, your "investors" are your leadership team, your "market" is your organisation's existing customer base, and your "unfair advantage" is the organisational knowledge, relationships, and distribution you already have.
 
@@ -134,10 +134,10 @@ The difference is the audience: the intrapreneur's investor deck is a business c
 
 | Agent | Weekly Automated Tasks | On-Demand Capabilities |
 | ----- | ---------------------- | ---------------------- |
-| Idea Generator | Monday Innovation Brief — 3 new ideas based on market signals | Idea generation sprint, adjacent possibility exploration, devil's advocate analysis |
-| Customer Intelligence | Customer Signal Digest — new patterns from discovery or pilot data | Interview synthesis, persona updates, competitive signal alerts |
-| Business Model Architect | Monthly Financial Health Review — CAC, LTV, runway status | Canvas stress-test, unit economics update, revenue model exploration |
-| Fundraising Readiness | Investor Pipeline tracking — next actions and data room gaps | Pitch narrative review, hard questions prep, investor research brief |
+| Idea Generator | Monday Innovation Brief, 3 new ideas based on market signals | Idea generation sprint, adjacent possibility exploration, devil's advocate analysis |
+| Customer Intelligence | Customer Signal Digest, new patterns from discovery or pilot data | Interview synthesis, persona updates, competitive signal alerts |
+| Business Model Architect | Monthly Financial Health Review, CAC, LTV, runway status | Canvas stress-test, unit economics update, revenue model exploration |
+| Fundraising Readiness | Investor Pipeline tracking, next actions and data room gaps | Pitch narrative review, hard questions prep, investor research brief |
 
 ### DLA Stage → Command Map
 
@@ -157,7 +157,7 @@ DESIGN THINKING ──► LEAN STARTUP ──► AGILE
 
 | Resource | Where to Find It |
 | -------- | ---------------- |
-| DLA Stack integration | Search "Design Thinking Lean Startup Agile integration" — multiple synthesis articles available |
+| DLA Stack integration | Search "Design Thinking Lean Startup Agile integration", multiple synthesis articles available |
 | Build-Measure-Learn | Eric Ries, *The Lean Startup* (2011) |
 | Business Model Canvas | Alexander Osterwalder, *Business Model Generation* (2010) |
 | Jobs-to-be-Done | Clayton Christensen, *The Innovator's Dilemma* (1997) |

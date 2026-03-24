@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/people-hr/hr-knowledge-base-agent
 sidebar_position: 4
-title: "The HR Knowledge Base Agent — 24/7 Employee Self-Service"
+title: "The HR Knowledge Base Agent: 24/7 Employee Self-Service"
 description: "Deploy an always-on HR agent that answers policy questions instantly, escalates individual situations gracefully, and eliminates the Sunday-night HR panic for employees and administrators alike"
 keywords:
   [
@@ -41,7 +41,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Communication"
-    measurable_at_this_level: "Student can design escalation responses that are warm, specific, and point to a named HR contact — rather than generic deflections that leave employees without a clear next step"
+    measurable_at_this_level: "Student can design escalation responses that are warm, specific, and point to a named HR contact, rather than generic deflections that leave employees without a clear next step"
 
 learning_objectives:
   - objective: "Explain the two query types the knowledge-base-agent handles and why the distinction determines the agent's response"
@@ -62,41 +62,41 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Type 1 vs Type 2 queries — the fundamental classification that drives the agent's response logic"
-    - "Warm handoff protocol — how to escalate with specificity and empathy rather than generic deflection"
-    - "Knowledge base configuration — how the agent knows what it knows"
-    - "Weekly report cycle — how the agent surfaces knowledge gaps to the HR team"
-  assessment: "4 concepts at B1 level — appropriate for Lesson 4. The query classification concept is counterintuitive enough to be genuinely new (most people think of HR agents purely as answering machines) but grounded in concrete examples that make the distinction immediately clear."
+    - "Type 1 vs Type 2 queries: the fundamental classification that drives the agent's response logic"
+    - "Warm handoff protocol: how to escalate with specificity and empathy rather than generic deflection"
+    - "Knowledge base configuration: how the agent knows what it knows"
+    - "Weekly report cycle: how the agent surfaces knowledge gaps to the HR team"
+  assessment: "4 concepts at B1 level, appropriate for Lesson 4. The query classification concept is counterintuitive enough to be genuinely new (most people think of HR agents purely as answering machines) but grounded in concrete examples that make the distinction immediately clear."
 
 differentiation:
-  extension_for_advanced: "Map your organisation's complete HR query landscape using three months of HR ticket data. Categorise every ticket as Type 1 (has a written answer) or Type 2 (requires HR judgment). Calculate the potential time saving if Type 1 queries were handled by the agent. Use this data to build the business case for deployment — total hours, cost per hour, and the HR capacity unlocked for Type 2 and strategic work."
-  remedial_for_struggling: "Focus on just two things: the difference between a Type 1 and Type 2 query, and what a good warm handoff looks like. Run five test queries — three obvious policy questions and two clear individual-situation questions — and confirm the agent handles each correctly. If you can get those right, you understand the core design principle."
+  extension_for_advanced: "Map your organisation's complete HR query landscape using three months of HR ticket data. Categorise every ticket as Type 1 (has a written answer) or Type 2 (requires HR judgment). Calculate the potential time saving if Type 1 queries were handled by the agent. Use this data to build the business case for deployment, total hours, cost per hour, and the HR capacity unlocked for Type 2 and strategic work."
+  remedial_for_struggling: "Focus on just two things: the difference between a Type 1 and Type 2 query, and what a good warm handoff looks like. Run five test queries: three obvious policy questions and two clear individual-situation questions , and confirm the agent handles each correctly. If you can get those right, you understand the core design principle."
 
 teaching_guide:
   key_points:
-    - "The most important design decision is what the agent REFUSES to answer — not what it answers"
-    - "Every individual situation gets a warm handoff — every time, without exception"
-    - "The weekly report is the mechanism that keeps the knowledge base current — the agent teaches HR what employees are asking"
-    - "The FAQ database from Lesson 3 is the knowledge source for this deployment — the lessons are directly linked"
+    - "The most important design decision is what the agent REFUSES to answer, not what it answers"
+    - "Every individual situation gets a warm handoff: every time, without exception"
+    - "The weekly report is the mechanism that keeps the knowledge base current: the agent teaches HR what employees are asking"
+    - "The FAQ database from Lesson 3 is the knowledge source for this deployment: the lessons are directly linked"
   misconceptions:
-    - "The agent should try to help with individual situations before escalating. Correction: any attempt to adjudicate an individual situation — even a well-intentioned one — exposes the organisation to risk and often makes the situation worse. The agent should escalate immediately, warmly, and with a named contact."
+    - "The agent should try to help with individual situations before escalating. Correction: any attempt to adjudicate an individual situation, even a well-intentioned one, exposes the organisation to risk and often makes the situation worse. The agent should escalate immediately, warmly, and with a named contact."
     - "A more comprehensive knowledge base is always better. Correction: a knowledge base with 200 poorly verified entries is worse than one with 20 well-verified ones. Every entry must be accurate. Quality over quantity."
-    - "The agent replaces the need to update policies. Correction: the agent surfaces policy gaps but does not fix them. When the weekly report flags recurring queries the agent cannot answer well, that is a signal to update the policy — not to tweak the agent's response."
+    - "The agent replaces the need to update policies. Correction: the agent surfaces policy gaps but does not fix them. When the weekly report flags recurring queries the agent cannot answer well, that is a signal to update the policy, not to tweak the agent's response."
   discussion_prompts:
-    - "Have you ever tried to find a company policy at an inconvenient time — late at night, on a weekend, or when you were already stressed? What was that experience like? What would it have meant to have an instant, accurate answer?"
-    - "What are the risks of an HR agent attempting to adjudicate an individual situation — even a simple-seeming one? Walk through a specific scenario where a well-meaning agent response could make things worse."
+    - "Have you ever tried to find a company policy at an inconvenient time, late at night, on a weekend, or when you were already stressed? What was that experience like? What would it have meant to have an instant, accurate answer?"
+    - "What are the risks of an HR agent attempting to adjudicate an individual situation, even a simple-seeming one? Walk through a specific scenario where a well-meaning agent response could make things worse."
   teaching_tips:
-    - "The Sunday-night sick-day scenario in the opening is emotionally resonant — lean into it. Every student has either been in that situation or managed someone who has."
+    - "The Sunday-night sick-day scenario in the opening is emotionally resonant, lean into it. Every student has either been in that situation or managed someone who has."
     - "Walk through the five query examples slowly. The contrast between Type 1 and Type 2 responses is where the lesson lands. Do not rush past the warm handoff examples."
 ---
 
-# The HR Knowledge Base Agent — 24/7 Employee Self-Service
+# The HR Knowledge Base Agent: 24/7 Employee Self-Service
 
 It is 11pm on a Sunday. Fatima is a junior analyst at the EdTech company in Karachi. She has a stomach bug and knows she will not make it in tomorrow. She needs to know three things: does she need to notify her manager tonight or can it wait until morning? Does she need to log the absence somewhere? And will this day come out of her annual leave balance or is it sick leave?
 
-None of these questions require human judgment. All three answers exist in the company handbook. But the handbook is a 60-page PDF in a shared drive she has never navigated, and the person who knows where to find the answers — the HR team — has been offline since 5pm. So Fatima does what most employees do in this situation: she sends a message to her manager at 11pm, apologises three times, and hopes she got the process right.
+None of these questions require human judgment. All three answers exist in the company handbook. But the handbook is a 60-page PDF in a shared drive she has never navigated, and the person who knows where to find the answers: the HR team, has been offline since 5pm. So Fatima does what most employees do in this situation: she sends a message to her manager at 11pm, apologises three times, and hopes she got the process right.
 
-The HR Knowledge Base Agent exists to make that scenario unnecessary. Deployed in Slack or Microsoft Teams, it answers Fatima's three questions in under ten seconds, cites the policy section, and tells her exactly what to do. It does this consistently, accurately, and at whatever time the employee asks — because it never switches off. The HR team finds out about Fatima's absence through the normal notification channel, not through a stressed 11pm Slack message that neither party needed to send.
+The HR Knowledge Base Agent exists to make that scenario unnecessary. Deployed in Slack or Microsoft Teams, it answers Fatima's three questions in under ten seconds, cites the policy section, and tells her exactly what to do. It does this consistently, accurately, and at whatever time the employee asks, because it never switches off. The HR team finds out about Fatima's absence through the normal notification channel, not through a stressed 11pm Slack message that neither party needed to send.
 
 ## The Two Query Types
 
@@ -104,10 +104,10 @@ The Knowledge Base Agent's design is built around a single, critical distinction
 
 | Query Type                        | Definition                                                     | Agent Response                                           |
 | --------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------- |
-| **Type 1 — Policy**               | Has a written, policy-governed answer                          | Answer directly, cite source, provide escalation contact |
-| **Type 2 — Individual situation** | Requires HR judgment about a specific employee's circumstances | Refuse to adjudicate; warm handoff to named HR contact   |
+| **Type 1, Policy**               | Has a written, policy-governed answer                          | Answer directly, cite source, provide escalation contact |
+| **Type 2, Individual situation** | Requires HR judgment about a specific employee's circumstances | Refuse to adjudicate; warm handoff to named HR contact   |
 
-This distinction is not about what the agent _can_ answer. It is about what the agent _should_ answer. An agent capable enough to explain the parental leave policy is also capable of saying something that sounds plausible about a performance dispute or a sickness absence concern — and that is precisely the danger. The moment an agent attempts to adjudicate an individual situation, it moves from information routing (safe, valuable) to HR decision-making (risky, outside its scope, potentially harmful).
+This distinction is not about what the agent _can_ answer. It is about what the agent _should_ answer. An agent capable enough to explain the parental leave policy is also capable of saying something that sounds plausible about a performance dispute or a sickness absence concern , and that is precisely the danger. The moment an agent attempts to adjudicate an individual situation, it moves from information routing (safe, valuable) to HR decision-making (risky, outside its scope, potentially harmful).
 
 **The design principle:** Every individual situation gets a warm handoff. Every time. Without exception.
 
@@ -135,7 +135,7 @@ Does a written policy answer this question exactly?
 
 ### What Each Type Looks Like in Practice
 
-**Type 1 examples — answer directly:**
+**Type 1 examples, answer directly:**
 
 - "How many days of annual leave do I have?"
 - "What is the sick pay policy for the first three days?"
@@ -143,7 +143,7 @@ Does a written policy answer this question exactly?
 - "What are the core working hours?"
 - "Where do I find my payslip?"
 
-**Type 2 examples — warm handoff:**
+**Type 2 examples, warm handoff:**
 
 - "My manager has asked me to do something I am not comfortable with."
 - "I think I am being treated unfairly compared to a colleague."
@@ -153,11 +153,11 @@ Does a written policy answer this question exactly?
 
 The Type 2 queries share a common feature: they describe a situation involving a specific person's circumstances. The right answer depends on facts the agent does not have access to, on employment law nuances that require qualified judgment, and on conversations that need to happen with a human being, not a text interface.
 
-## Five Query Examples — Full Response Walkthrough
+## Five Query Examples: Full Response Walkthrough
 
 The following examples show how the knowledge-base-agent handles queries across the full classification spectrum. These are drawn from the EdTech company in Karachi, configured with Pakistan employment law defaults.
 
-**Query 1 — Type 1 (simple policy):**
+**Query 1, Type 1 (simple policy):**
 
 ```
 Employee: How do I report a sick day?
@@ -173,13 +173,13 @@ it being issued.
 Log your absence in the HR system (Workday) under My Time → Absence when
 you return, or ask your manager to log it on your behalf.
 
-Your sick leave balance is separate from your annual leave — a sick day does
+Your sick leave balance is separate from your annual leave: a sick day does
 not reduce your annual leave entitlement.
 
-📋 Source: Employee Handbook, Section 4.2 — Absence Notification Process
+📋 Source: Employee Handbook, Section 4.2, Absence Notification Process
 ```
 
-**Query 2 — Type 1 (policy with entitlement figures):**
+**Query 2, Type 1 (policy with entitlement figures):**
 
 ```
 Employee: How much annual leave do I have?
@@ -189,17 +189,17 @@ annual leave per year, plus all Pakistan public holidays observed at your
 work location.
 
 If you joined mid-year, your entitlement is pro-rated from your start date.
-You can see your current balance — including days taken, days remaining, and
-any approved future leave — in Workday under My Time → Leave Balances.
+You can see your current balance, including days taken, days remaining, and
+any approved future leave, in Workday under My Time → Leave Balances.
 
 Holiday requests are approved by your manager in Workday. The policy asks for
 at least two weeks' notice for leave of three days or more.
 
-📋 Source: Employee Handbook, Section 5.1 — Annual Leave Entitlement
+📋 Source: Employee Handbook, Section 5.1, Annual Leave Entitlement
 Contact for queries: hr@company.com
 ```
 
-**Query 3 — Type 1 (policy that requires escalation contact even in a general answer):**
+**Query 3, Type 1 (policy that requires escalation contact even in a general answer):**
 
 ```
 Employee: What happens to my salary during maternity leave?
@@ -214,16 +214,16 @@ To qualify, you must have been employed for at least three months
 before your expected delivery date and notify HR at least six weeks
 in advance of your planned leave start date.
 
-📋 Source: Employee Handbook, Section 5.4 — Maternity Leave
+📋 Source: Employee Handbook, Section 5.4, Maternity Leave
 For your specific entitlement calculation (which depends on your salary
-and employment start date): contact Aisha Butt, HR Business Partner —
+and employment start date): contact Aisha Butt, HR Business Partner,
 aisha.butt@company.com | 021-XXXXXXXX
 
 ⚠️ Note: Statutory rates change annually. If you are planning maternity
 leave, please confirm the current rates with HR.
 ```
 
-**Query 4 — Type 2 (individual situation — immediate warm handoff):**
+**Query 4, Type 2 (individual situation, immediate warm handoff):**
 
 ```
 Employee: My manager gave me a poor performance rating that I don't think is
@@ -238,20 +238,20 @@ HR Business Partner: Aisha Butt
 📞 021-XXXXXXXX
 
 Aisha can walk you through the company's review process, explain the basis
-for your rating, and outline your options — including the formal feedback
+for your rating, and outline your options, including the formal feedback
 process if you want to raise a concern.
 
 Your concerns are taken seriously here. Please don't hesitate to reach out.
 ```
 
-**Query 5 — Type 2 with distress signal (warm handoff + EAP referral):**
+**Query 5, Type 2 with distress signal (warm handoff + EAP referral):**
 
 ```
 Employee: I've been really struggling lately. My manager is putting pressure on
 me that I don't think is right and it's affecting my mental health.
 
 Agent: I'm sorry to hear you're going through a difficult time. What you're
-describing — pressure that is affecting your mental health — is important and
+describing, pressure that is affecting your mental health: is important and
 deserves proper support.
 
 Please reach out to:
@@ -265,22 +265,22 @@ Employee Assistance Programme (EAP):
 The EAP provides counselling and emotional support, completely independently
 of your employer.
 
-You can speak to HR, the EAP, or both — whatever feels right for you.
+You can speak to HR, the EAP, or both, whatever feels right for you.
 You do not have to manage this alone.
 ```
 
 :::note Your output will vary
-The exact wording of agent responses depends on how your knowledge base is configured and the specific policy information loaded. The teaching point is the classification — Type 1 responses answer directly with source citation, and Type 2 responses escalate warmly to a named contact. Neither the citation nor the named contact is optional.
+The exact wording of agent responses depends on how your knowledge base is configured and the specific policy information loaded. The teaching point is the classification, Type 1 responses answer directly with source citation, and Type 2 responses escalate warmly to a named contact. Neither the citation nor the named contact is optional.
 :::
 
 ## The Weekly Report
 
-The knowledge-base-agent generates a weekly report for the HR team. This report is the feedback loop that keeps the knowledge base current — the agent tells HR what employees are asking, where the knowledge base has gaps, and which query categories are growing.
+The knowledge-base-agent generates a weekly report for the HR team. This report is the feedback loop that keeps the knowledge base current: the agent tells HR what employees are asking, where the knowledge base has gaps, and which query categories are growing.
 
 **Sample weekly report:**
 
 ```
-HR KNOWLEDGE BASE AGENT — WEEKLY REPORT
+HR KNOWLEDGE BASE AGENT, WEEKLY REPORT
 Week ending: [Date] | Prepared for: HR Team
 
 QUERY VOLUME
@@ -290,16 +290,16 @@ Escalated to HR (Type 2):       12  (13%)
 Unable to answer (gap):          3  (3%)
 
 TOP QUERY CATEGORIES
-1. Annual leave — 23 queries (27% above last week)
+1. Annual leave, 23 queries (27% above last week)
    Most common: "How do I book leave during Eid?" → suggest adding
    Eid leave booking guidance to FAQ
 
-2. Remote working — 18 queries
+2. Remote working, 18 queries
    Most common: "Can I work from home on Fridays permanently?"
    → existing policy is ambiguous on long-term arrangements;
    flagging for policy clarification
 
-3. Expense claims — 14 queries
+3. Expense claims, 14 queries
    Most common: "How long does reimbursement take?"
    → add processing timeline to FAQ (currently not documented)
 
@@ -326,7 +326,7 @@ RECOMMENDED ACTIONS
 □ Add reference request process to FAQ
 ```
 
-The weekly report transforms the agent from a static Q&A tool into a dynamic signal — it tells HR which policies are generating confusion, which questions employees are afraid to ask a person, and where the handbook has gaps. HR teams that review this report regularly find it more useful than a year of helpdesk ticket analysis.
+The weekly report transforms the agent from a static Q&A tool into a dynamic signal ; it tells HR which policies are generating confusion, which questions employees are afraid to ask a person, and where the handbook has gaps. HR teams that review this report regularly find it more useful than a year of helpdesk ticket analysis.
 
 ## Exercise: Deploy and Test the Knowledge Base Agent
 
@@ -335,7 +335,7 @@ The weekly report transforms the agent from a static Q&A tool into a dynamic sig
 **Plugin:** `knowledge-base-agent` (deploy from hr-operations plugin)
 **Goal:** Deploy the agent with your FAQ knowledge base, test query handling across both types, and identify gaps for the next iteration
 
-### Step 1 — Load Your FAQ Knowledge Base
+### Step 1: Load Your FAQ Knowledge Base
 
 The knowledge base you built in Lesson 3 is the foundation for this deployment. Open Cowork, deploy the `knowledge-base-agent` from the hr-operations plugin, and configure it with your 20-entry FAQ database.
 
@@ -343,9 +343,9 @@ In the agent configuration, also specify:
 
 - HR contact name and email (for warm handoffs)
 - EAP contact details (for queries with distress signals)
-- Jurisdiction (Pakistan / UK / other — affects statutory rate defaults)
+- Jurisdiction (Pakistan / UK / other, affects statutory rate defaults)
 
-### Step 2 — Test with Policy Queries
+### Step 2: Test with Policy Queries
 
 Run these five queries against the deployed agent and evaluate each response:
 
@@ -359,7 +359,7 @@ Run these five queries against the deployed agent and evaluate each response:
 
 For each: does the agent answer accurately? Does it cite the policy source? Does it include an escalation contact?
 
-### Step 3 — Test with Individual-Situation Queries
+### Step 3: Test with Individual-Situation Queries
 
 Run these three queries and confirm the agent escalates correctly:
 
@@ -371,7 +371,7 @@ Run these three queries and confirm the agent escalates correctly:
 
 For each: does the agent refuse to adjudicate? Is the handoff warm and specific (named contact)?
 
-### Step 4 — Evaluate Response Quality
+### Step 4: Evaluate Response Quality
 
 Rate each of your eight test responses on four dimensions:
 
@@ -384,7 +384,7 @@ Rate each of your eight test responses on four dimensions:
 
 Any response scoring below 4/5 on any dimension: identify the gap (wrong FAQ entry? missing contact? tone too formal?) and fix it.
 
-### Step 5 — Identify Knowledge Gaps
+### Step 5: Identify Knowledge Gaps
 
 After testing, ask the agent three questions it is unlikely to find in your FAQ:
 
@@ -392,7 +392,7 @@ After testing, ask the agent three questions it is unlikely to find in your FAQ:
 2. A question about a process that exists but was not in your FAQ
 3. A question where your policy is genuinely ambiguous
 
-Document the gaps. These become your FAQ iteration list — the signal that tells you where the knowledge base needs expanding before deployment to employees.
+Document the gaps. These become your FAQ iteration list: the signal that tells you where the knowledge base needs expanding before deployment to employees.
 
 **Deliverable:** A deployed knowledge-base-agent configuration with your FAQ knowledge base loaded, a documented test matrix (8 queries + ratings), and a gap list for the next FAQ iteration.
 
@@ -410,8 +410,8 @@ Use these prompts in Cowork or your preferred AI assistant.
 ```
 I am testing an HR Knowledge Base Agent. For each of the following
 queries, tell me:
-1. Query type: TYPE 1 (policy — answer directly) or TYPE 2
-   (individual situation — warm handoff)
+1. Query type: TYPE 1 (policy, answer directly) or TYPE 2
+   (individual situation, warm handoff)
 2. Why you classified it that way
 3. The appropriate response (either a policy answer or a warm handoff)
 
@@ -451,7 +451,7 @@ Contact: [Your HR contact email and phone]
 EAP: [Your EAP contact details if applicable]
 ```
 
-**What you are learning:** The quality of a warm handoff response — its warmth, specificity, and clarity — directly affects whether the employee follows through. A generic "contact HR for help" response is much less effective than a response that names a person, explains why they are the right contact, and encourages the employee to reach out.
+**What you are learning:** The quality of a warm handoff response; its warmth, specificity, and clarity, directly affects whether the employee follows through. A generic "contact HR for help" response is much less effective than a response that names a person, explains why they are the right contact, and encourages the employee to reach out.
 
 **Apply**: Design the weekly report structure for your organisation.
 
@@ -467,7 +467,7 @@ Include:
 - Knowledge gaps: queries the agent could not answer well
 - Recommended actions: maximum 5, prioritised
 
-Design the format to make patterns immediately visible — if a query
+Design the format to make patterns immediately visible; if a query
 category is growing, it should be obvious at a glance. If the agent
 is failing on a particular topic, that should stand out.
 
@@ -475,7 +475,7 @@ After designing the template, explain: what would you look for in this
 report to identify a policy that needs updating?
 ```
 
-**What you are learning:** The weekly report is the feedback loop that keeps the knowledge base useful over time. An agent without a review loop will degrade — correct today, wrong next April when the statutory sick pay rate changes. Designing the report format first makes you think about what signals matter before the agent generates noise.
+**What you are learning:** The weekly report is the feedback loop that keeps the knowledge base useful over time. An agent without a review loop will degrade, correct today, wrong next April when the statutory sick pay rate changes. Designing the report format first makes you think about what signals matter before the agent generates noise.
 :::
 
 ## Flashcards Study Aid
@@ -484,4 +484,4 @@ report to identify a policy that needs updating?
 
 ---
 
-Continue to [Lesson 5: Onboarding — The First 90 Days →](./05-onboarding-first-90-days.md)
+Continue to [Lesson 5: Onboarding. The First 90 Days →](./05-onboarding-first-90-days.md)

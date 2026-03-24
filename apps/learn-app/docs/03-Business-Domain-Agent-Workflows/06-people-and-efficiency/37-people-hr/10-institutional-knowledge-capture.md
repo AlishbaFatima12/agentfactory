@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/people-hr/institutional-knowledge-capture
 sidebar_position: 10
-title: "Capturing Institutional Knowledge — Before It Walks Out the Door"
+title: "Capturing Institutional Knowledge: Before It Walks Out the Door"
 description: "Identify which employees carry knowledge that cannot be replaced by hiring, and use the /knowledge skill to run structured capture programmes before their departure makes that knowledge permanent loss"
 keywords:
   [
@@ -57,47 +57,47 @@ learning_objectives:
   - objective: "Use /knowledge to generate a structured capture plan including a three-session interview guide and knowledge article templates"
     proficiency_level: "B1"
     bloom_level: "Create"
-    assessment_method: "Student produces a capture plan with session topics, interview questions for each session, and the expected knowledge article outputs — reviewed for completeness against the SKILL.md criteria"
+    assessment_method: "Student produces a capture plan with session topics, interview questions for each session, and the expected knowledge article outputs, reviewed for completeness against the SKILL.md criteria"
 
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Tacit vs explicit knowledge — the two forms that organisations accumulate, and why only one is at risk of permanent loss"
-    - "Knowledge risk classification — HIGH/MEDIUM/LOW scoring across five factors"
-    - "Proactive vs reactive capture — annual audits vs departure-triggered urgency"
-    - "Three-session interview structure — client relationships, methodology, institutional context"
-    - "Knowledge article format — the structured output that makes captured knowledge searchable and verifiable"
-  assessment: "5 concepts at B2 level — this is the chapter's 'aha' lesson. The cognitive load is intentionally higher than earlier lessons because the concepts are genuinely new to most practitioners. The lesson opens with an emotionally resonant scenario (the aha moment) and builds each concept on the previous one. The risk scoring model provides a concrete anchor for what would otherwise feel abstract."
+    - "Tacit vs explicit knowledge: the two forms that organisations accumulate, and why only one is at risk of permanent loss"
+    - "Knowledge risk classification, HIGH/MEDIUM/LOW scoring across five factors"
+    - "Proactive vs reactive capture, annual audits vs departure-triggered urgency"
+    - "Three-session interview structure, client relationships, methodology, institutional context"
+    - "Knowledge article format: the structured output that makes captured knowledge searchable and verifiable"
+  assessment: "5 concepts at B2 level. This is the chapter's 'aha' lesson. The cognitive load is intentionally higher than earlier lessons because the concepts are genuinely new to most practitioners. The lesson opens with an emotionally resonant scenario (the aha moment) and builds each concept on the previous one. The risk scoring model provides a concrete anchor for what would otherwise feel abstract."
 
 differentiation:
-  extension_for_advanced: "Conduct a full knowledge risk audit for your organisation: score every employee with three or more years of tenure using the five-factor model, and map the results to a risk matrix. Identify the three highest-risk knowledge holders. For each, calculate the potential cost of knowledge loss — replacement hiring cost plus the time the successor will spend making avoidable mistakes in the first year. Use this analysis to make the business case for a proactive annual knowledge capture programme."
+  extension_for_advanced: "Conduct a full knowledge risk audit for your organisation: score every employee with three or more years of tenure using the five-factor model, and map the results to a risk matrix. Identify the three highest-risk knowledge holders. For each, calculate the potential cost of knowledge loss, replacement hiring cost plus the time the successor will spend making avoidable mistakes in the first year. Use this analysis to make the business case for a proactive annual knowledge capture programme."
   remedial_for_struggling: "Focus on the distinction between tacit and explicit knowledge and on running /knowledge for one high-risk employee. If you can correctly classify one employee as HIGH risk and produce a capture plan with at least two interview sessions, you have the core skill. The three-session structure and the knowledge article format will become clearer after you work through the exercise with a concrete example."
 
 teaching_guide:
   key_points:
-    - "The aha moment: most organisations do not have a knowledge transfer problem — they have a knowledge loss problem that becomes visible only after the person leaves"
-    - "High-risk does NOT mean important — it means sole holder, undocumented, and no successor. Distribute the awareness."
-    - "Proactive capture is dramatically more effective than reactive capture — interview a person who is still engaged, not one who is already mentally out the door"
-    - "The 'what we should NOT try again' question is often the most valuable knowledge captured — institutional memory of failure prevents the organisation from repeating expensive mistakes"
+    - "The aha moment: most organisations do not have a knowledge transfer problem; they have a knowledge loss problem that becomes visible only after the person leaves"
+    - "High-risk does NOT mean important ; it means sole holder, undocumented, and no successor. Distribute the awareness."
+    - "Proactive capture is dramatically more effective than reactive capture, interview a person who is still engaged, not one who is already mentally out the door"
+    - "The 'what we should NOT try again' question is often the most valuable knowledge captured, institutional memory of failure prevents the organisation from repeating expensive mistakes"
   misconceptions:
-    - "Writing a handover document is the same as knowledge capture. Correction: a handover document covers what is in progress and where things are. Knowledge capture extracts the unwritten understanding — the 'why' behind decisions, the relationship context, the early warning signs — that a handover document does not touch."
-    - "Knowledge capture is only needed when someone is leaving. Correction: proactive capture — annual knowledge reviews for high-risk holders — is far more effective. An employee who is still engaged gives richer, more honest answers than one who is already mentally out the door."
+    - "Writing a handover document is the same as knowledge capture. Correction: a handover document covers what is in progress and where things are. Knowledge capture extracts the unwritten understanding: the 'why' behind decisions, the relationship context, the early warning signs that a handover document does not touch."
+    - "Knowledge capture is only needed when someone is leaving. Correction: proactive capture, annual knowledge reviews for high-risk holders: is far more effective. An employee who is still engaged gives richer, more honest answers than one who is already mentally out the door."
     - "The departing employee's account is reliable and complete. Correction: the /knowledge skill explicitly warns against treating the departing employee's account as the complete truth. Cross-reference with documentation and other stakeholders wherever possible."
   discussion_prompts:
-    - "Think about someone at your organisation — or one you have worked at — who left and took knowledge that genuinely hurt the organisation's ability to operate. What was that knowledge? Could it have been captured? What would have needed to happen?"
+    - "Think about someone at your organisation , or one you have worked at, who left and took knowledge that genuinely hurt the organisation's ability to operate. What was that knowledge? Could it have been captured? What would have needed to happen?"
     - "What is the difference between documenting a process and capturing how that process actually works in practice? Why does that gap exist in most organisations?"
   teaching_tips:
-    - "The David Okafor worked example is the lesson's anchor — walk through it slowly. The risk scoring, the capture plan, the interview questions, and the knowledge article all flow from this single scenario."
-    - "Have students resist the urge to label everything HIGH risk. The scoring model forces prioritisation — everything cannot be HIGH. That discipline is part of the learning."
+    - "The David Okafor worked example is the lesson's anchor, walk through it slowly. The risk scoring, the capture plan, the interview questions, and the knowledge article all flow from this single scenario."
+    - "Have students resist the urge to label everything HIGH risk. The scoring model forces prioritisation; everything cannot be HIGH. That discipline is part of the learning."
 ---
 
-# Capturing Institutional Knowledge — Before It Walks Out the Door
+# Capturing Institutional Knowledge: Before It Walks Out the Door
 
-Omar Farooq, Head of Analytics at the EdTech company in Karachi, learned about the institutional knowledge problem the hard way. When a Senior Project Manager named Layla resigned after eight years, the company sent around an email congratulating her on her next chapter and asking colleagues to sign her card. Her last day came and went. Three months later, a client called to say the new project manager had missed something important — a standing agreement that Layla had negotiated informally two years earlier, the kind of arrangement that existed in email threads nobody had filed and in a relationship that nobody else had the context to maintain.
+Omar Farooq, Head of Analytics at the EdTech company in Karachi, learned about the institutional knowledge problem the hard way. When a Senior Project Manager named Layla resigned after eight years, the company sent around an email congratulating her on her next chapter and asking colleagues to sign her card. Her last day came and went. Three months later, a client called to say the new project manager had missed something important: a standing agreement that Layla had negotiated informally two years earlier, the kind of arrangement that existed in email threads nobody had filed and in a relationship that nobody else had the context to maintain.
 
-The knowledge had not disappeared. It had evaporated. Slowly and invisibly, over the eight years Layla had been there, the organisation had loaded critical understanding into one person's memory — her read on the client's real decision-makers, her institutional sense of when to escalate and when to absorb, the unwritten rules she had learned by getting them wrong first. None of it was in any document. None of it survived her departure.
+The knowledge had not disappeared. It had evaporated. Slowly and invisibly, over the eight years Layla had been there, the organisation had loaded critical understanding into one person's memory, her read on the client's real decision-makers, her institutional sense of when to escalate and when to absorb, the unwritten rules she had learned by getting them wrong first. None of it was in any document. None of it survived her departure.
 
-This lesson is about recognising when that process is happening and stopping it — not just when someone resigns, but before they ever think about leaving.
+This lesson is about recognising when that process is happening and stopping it , not just when someone resigns, but before they ever think about leaving.
 
 ## The Two Forms of Organisational Knowledge
 
@@ -105,8 +105,8 @@ Every organisation accumulates knowledge in two distinct forms. Understanding th
 
 | Form                   | Definition                                             | Where it lives                            | At risk of permanent loss?            |
 | ---------------------- | ------------------------------------------------------ | ----------------------------------------- | ------------------------------------- |
-| **Explicit knowledge** | Written, formalised, and codable                       | Documents, databases, policies, processes | Low — it can be found and transferred |
-| **Tacit knowledge**    | Unwritten understanding accumulated through experience | People's heads                            | High — it leaves when they leave      |
+| **Explicit knowledge** | Written, formalised, and codable                       | Documents, databases, policies, processes | Low ; it can be found and transferred |
+| **Tacit knowledge**    | Unwritten understanding accumulated through experience | People's heads                            | High ; it leaves when they leave      |
 
 Explicit knowledge is findable, even if hard to find. The policy exists; the process is documented; the org chart is current. Tacit knowledge is different: it is the understanding of _how things actually work_ that is not in any document and may never have been articulated.
 
@@ -128,7 +128,7 @@ Not all knowledge departure risk is equal. The `/knowledge` skill uses a five-fa
 
 Score each factor on a 1–3 scale, then sum for a total score:
 
-| Factor                      | 1 — Low Risk             | 2 — Medium Risk       | 3 — High Risk             |
+| Factor                      | 1, Low Risk             | 2, Medium Risk       | 3, High Risk             |
 | --------------------------- | ------------------------ | --------------------- | ------------------------- |
 | **Tenure**                  | Less than 2 years        | 2–5 years             | 5+ years                  |
 | **Role criticality**        | Support function         | Specialist            | Leadership or sole expert |
@@ -144,7 +144,7 @@ Score each factor on a 1–3 scale, then sum for a total score:
 
 ### Worked Example: David Okafor
 
-David Okafor is Head of Client Services at a technology company in London. He joined 12 years ago as an account manager and has spent the last five years managing the firm's three largest clients — together, they represent 60% of recurring revenue. He is the company's primary relationship contact for all three. His knowledge of these relationships — the real decision-makers, the relationship history, the unwritten agreements — is held by almost no one else. He has just announced he is leaving in six weeks.
+David Okafor is Head of Client Services at a technology company in London. He joined 12 years ago as an account manager and has spent the last five years managing the firm's three largest clients, together, they represent 60% of recurring revenue. He is the company's primary relationship contact for all three. His knowledge of these relationships: the real decision-makers, the relationship history, the unwritten agreements: is held by almost no one else. He has just announced he is leaving in six weeks.
 
 **Risk scoring for David Okafor:**
 
@@ -156,7 +156,7 @@ David Okafor is Head of Client Services at a technology company in London. He jo
 | Successor readiness (no successor named)           | 3     | No named successor; interim coverage only           |
 | Client/revenue impact (60% of recurring revenue)   | 3     | Direct and existential                              |
 
-**Total: 15/15 — HIGH RISK**
+**Total: 15/15, HIGH RISK**
 
 This is the highest possible risk score. Six weeks is not enough time to capture 12 years of client relationship knowledge fully. The correct response is immediate escalation to senior leadership and the maximum capture effort the timeline allows.
 
@@ -164,18 +164,18 @@ This is the highest possible risk score. Six weeks is not enough time to capture
 
 | Mode          | Trigger                                       | Time available     | Quality of capture                       | Priority                |
 | ------------- | --------------------------------------------- | ------------------ | ---------------------------------------- | ----------------------- |
-| **Reactive**  | Employee resignation confirmed                | Notice period only | Lower — employee is mentally disengaging | Urgent but compromised  |
-| **Proactive** | Annual knowledge review for high-risk holders | Unlimited          | Higher — employee is fully engaged       | Systematic and thorough |
+| **Reactive**  | Employee resignation confirmed                | Notice period only | Lower, employee is mentally disengaging | Urgent but compromised  |
+| **Proactive** | Annual knowledge review for high-risk holders | Unlimited          | Higher, employee is fully engaged       | Systematic and thorough |
 
-Reactive capture is what most organisations do: they wait until someone announces they are leaving, then scramble. This produces worse outcomes than proactive capture for two reasons. First, the time available is fixed (whatever the notice period is) and usually insufficient for high-risk holders. Second, a departing employee's quality of engagement declines as their last day approaches — they are mentally transitioning, emotionally focused elsewhere, and often working longer hours as they try to hand over responsibilities.
+Reactive capture is what most organisations do: they wait until someone announces they are leaving, then scramble. This produces worse outcomes than proactive capture for two reasons. First, the time available is fixed (whatever the notice period is) and usually insufficient for high-risk holders. Second, a departing employee's quality of engagement declines as their last day approaches; they are mentally transitioning, emotionally focused elsewhere, and often working longer hours as they try to hand over responsibilities.
 
-Proactive capture — scheduled annually for employees who score HIGH risk — extracts knowledge while the holder is fully engaged, has time to think carefully, and is not emotionally attached to the outcome. The knowledge is richer, more honest, and more thoroughly verified.
+Proactive capture, scheduled annually for employees who score HIGH risk, extracts knowledge while the holder is fully engaged, has time to think carefully, and is not emotionally attached to the outcome. The knowledge is richer, more honest, and more thoroughly verified.
 
 **A proactive capture programme looks like this:**
 
 - **Annual knowledge audit:** For every employee with a HIGH or MEDIUM risk score, schedule one knowledge capture session per year as part of normal HR operations
 - **Output ownership:** The knowledge articles are reviewed and owned by the manager, not just filed somewhere
-- **Trigger for full capture:** If a proactive review reveals knowledge is particularly concentrated and undocumented, escalate to a full capture programme immediately — do not wait for the resignation
+- **Trigger for full capture:** If a proactive review reveals knowledge is particularly concentrated and undocumented, escalate to a full capture programme immediately, do not wait for the resignation
 
 ## The Three-Session Interview Structure
 
@@ -187,35 +187,35 @@ For HIGH-risk knowledge holders, `/knowledge` recommends three sessions of 60–
 | **Session 2** | Methodology and process              | Where does reality differ from documentation? What are the early warning signs? What decisions do you make vs escalate? |
 | **Session 3** | Institutional context                | What would you tell your replacement? What should we not try again? What are you most worried we'll get wrong?          |
 
-The sequence is intentional. Session 1 starts with concrete, relational knowledge (easiest to articulate). Session 2 moves to procedural knowledge (requires more reflection). Session 3 ends with the deepest tacit knowledge — the institutional wisdom that often surprises even the employee themselves when they try to articulate it.
+The sequence is intentional. Session 1 starts with concrete, relational knowledge (easiest to articulate). Session 2 moves to procedural knowledge (requires more reflection). Session 3 ends with the deepest tacit knowledge: the institutional wisdom that often surprises even the employee themselves when they try to articulate it.
 
-### Sample Session 1 — Client Relationships
+### Sample Session 1: Client Relationships
 
 Using David Okafor as the subject, here is how Session 1 unfolds:
 
 **Opening (5 minutes):**
 
-> "David, the goal of these sessions is to make sure the knowledge you have built up over 12 years here does not simply disappear when you leave. We want what is in your head, not what is in our documents. There are no wrong answers. This is not a performance assessment — it is institutional learning."
+> "David, the goal of these sessions is to make sure the knowledge you have built up over 12 years here does not simply disappear when you leave. We want what is in your head, not what is in our documents. There are no wrong answers. This is not a performance assessment; it is institutional learning."
 
 **Core questions:**
 
-> "Walk me through each of the three major clients. For each one: who are the real decision-makers — not just the named contacts, but the people whose opinion actually counts when a decision gets made?"
+> "Walk me through each of the three major clients. For each one: who are the real decision-makers , not just the named contacts, but the people whose opinion actually counts when a decision gets made?"
 
 > "What has gone wrong in each of these relationships and how was it recovered? What should the next person know about the relationship history?"
 
 > "What are the unwritten rules with each client? Things that are not in any contract but have become the real operating norms?"
 
-> "What does each client actually care about most? Not what the scope document says — what makes each one feel that the relationship is working?"
+> "What does each client actually care about most? Not what the scope document says: what makes each one feel that the relationship is working?"
 
 > "Who else in our organisation has important relationships with these clients that the new account manager needs to know about and manage?"
 
 **Sample response from David:**
 
-> "With Whitmore Group — they're the largest account — the named contact is their CTO, but the person you actually need to keep happy is their VP of Engineering, James. James doesn't approve anything directly, but if James is unhappy the CTO hears about it within 48 hours. We learned this in year two when we shipped something the CTO loved but James thought was the wrong approach. Six months of difficult conversations. Every time we present to Whitmore now, I send James a draft the week before so he can flag concerns before the formal meeting. That's not in any document."
+> "With Whitmore Group, they're the largest account: the named contact is their CTO, but the person you actually need to keep happy is their VP of Engineering, James. James doesn't approve anything directly, but if James is unhappy the CTO hears about it within 48 hours. We learned this in year two when we shipped something the CTO loved but James thought was the wrong approach. Six months of difficult conversations. Every time we present to Whitmore now, I send James a draft the week before so he can flag concerns before the formal meeting. That's not in any document."
 
 This is institutional knowledge. It is specific, it is actionable, and it is completely inaccessible to anyone who was not in those conversations. After each session, `/knowledge` structures these responses into knowledge articles.
 
-## Using `/knowledge` — The Worked Example
+## Using `/knowledge`: The Worked Example
 
 With Omar Farooq coordinating, the EdTech company invokes `/knowledge` to generate a capture plan for David Okafor:
 
@@ -228,11 +228,11 @@ Departure date: In 6 weeks
 Risk classification: HIGH (score: 15/15)
 
 Critical knowledge areas:
-1. Whitmore Group relationship — sole contact; unwritten operating norms
-2. Foresight Capital relationship — 8-year history; complex stakeholder map
-3. Delta Education relationship — recently troubled; recovery in progress
-4. Delivery methodology — how actual delivery differs from documented process
-5. Internal stakeholder map — who needs managing to deliver for these clients
+1. Whitmore Group relationship, sole contact; unwritten operating norms
+2. Foresight Capital relationship, 8-year history; complex stakeholder map
+3. Delta Education relationship, recently troubled; recovery in progress
+4. Delivery methodology: how actual delivery differs from documented process
+5. Internal stakeholder map, who needs managing to deliver for these clients
 
 Successor: Not yet named; interim coverage from senior account manager
 Time available: 6 weeks notice period
@@ -241,7 +241,7 @@ Time available: 6 weeks notice period
 **Sample output:**
 
 ```
-TASK:          Knowledge Capture Plan — David Okafor
+TASK:          Knowledge Capture Plan, David Okafor
 DOCUMENT TYPE: Knowledge Capture Plan
 JURISDICTION:  UK
 CONFIGURATION: Loaded: hr.local.md
@@ -252,35 +252,35 @@ KNOWLEDGE CAPTURE PLAN: David Okafor
 Role: Head of Client Services | Tenure: 12 years | Risk: HIGH
 
 KEY KNOWLEDGE AREAS (ranked by risk):
-  1. Client relationships (Whitmore, Foresight, Delta) — sole holder;
+  1. Client relationships (Whitmore, Foresight, Delta), sole holder;
      unwritten norms; revenue critical; undocumented
-  2. Delivery methodology — reality vs documentation; internal stakeholders
-  3. Institutional context — what has been tried; what should not be repeated;
+  2. Delivery methodology, reality vs documentation; internal stakeholders
+  3. Institutional context: what has been tried; what should not be repeated;
      the next 12 months if David were staying
 
 CAPTURE METHOD: Interview-based (3 sessions × 90 minutes)
 
 SESSIONS:
-  Session 1: Client Relationships — 90 min — Week 1
+  Session 1: Client Relationships, 90 min. Week 1
     Outputs: 3 × Client Relationship Profile (Whitmore, Foresight, Delta)
 
-  Session 2: Delivery Methodology — 90 min — Week 2-3
+  Session 2: Delivery Methodology, 90 min. Week 2-3
     Outputs: Delivery Methodology Supplement (reality vs documentation)
              Internal Stakeholder Map
 
-  Session 3: Institutional Context — 90 min — Week 4
+  Session 3: Institutional Context, 90 min. Week 4
     Outputs: Institutional Context Guide
              "What I Would Do in the Next 12 Months" (if staying)
              Final: Handover Summary for incoming account manager
 
-INTERVIEW GUIDE — SESSION 1 (Client Relationships):
-  Opening: [Goal framing — 5 minutes]
+INTERVIEW GUIDE, SESSION 1 (Client Relationships):
+  Opening: [Goal framing, 5 minutes]
   Core questions:
-    — Walk me through each client: who are the real decision-makers?
-    — What has gone wrong in each relationship and how was it recovered?
-    — What are the unwritten rules?
-    — What does each client actually care about most?
-    — Who else internally holds important relationships with these clients?
+   , Walk me through each client: who are the real decision-makers?
+   . What has gone wrong in each relationship and how was it recovered?
+   . What are the unwritten rules?
+   . What does each client actually care about most?
+   , Who else internally holds important relationships with these clients?
   Closing: Is there client knowledge we have not covered?
 ================================================================
 ```
@@ -290,7 +290,7 @@ INTERVIEW GUIDE — SESSION 1 (Client Relationships):
 After each session, the notes are structured into knowledge articles using this format:
 
 ```
-KNOWLEDGE ARTICLE: Whitmore Group — Stakeholder Map and Operating Norms
+KNOWLEDGE ARTICLE: Whitmore Group, Stakeholder Map and Operating Norms
 ================================================================
 Author:    David Okafor | Captured by: HR Business Partner
 Date:      [Date] | Reviewed by: VP Client Services | Status: DRAFT
@@ -308,7 +308,7 @@ that followed the Q3 2022 delivery.
 
 WHEN IT APPLIES
 Every major proposal, roadmap change, or scope adjustment that goes to
-CTO level. Also applies to incident communications — James gets a copy.
+CTO level. Also applies to incident communications, James gets a copy.
 
 EXCEPTIONS AND EDGE CASES
 Commercial/pricing conversations are CTO-only; James is not involved
@@ -317,11 +317,11 @@ and should not receive pricing information.
 RELATED CONTACTS
 David Whitmore (CTO): [contact details]
 James Hargreaves (VP Engineering): [contact details]
-Alice Park (Project Sponsor — approves budgets): [contact details]
+Alice Park (Project Sponsor, approves budgets): [contact details]
 
 RELATED DOCUMENTS
-Whitmore Group — Contract and Scope: [location]
-Whitmore Group — Account History 2018-2024: [location]
+Whitmore Group, Contract and Scope: [location]
+Whitmore Group, Account History 2018-2024: [location]
 
 CONFIDENCE LEVEL
 HIGH: This is how it works. David has operated this way for 5+ years.
@@ -329,7 +329,7 @@ HIGH: This is how it works. David has operated this way for 5+ years.
 ```
 
 :::note Your output will vary
-The specific interview questions, capture plan structure, and knowledge article content will vary based on the employee's role, knowledge domains, and departure timeline. The teaching point is the process: risk assessment first, then session structure, then structured articles — not ad hoc documentation in the last week before departure.
+The specific interview questions, capture plan structure, and knowledge article content will vary based on the employee's role, knowledge domains, and departure timeline. The teaching point is the process: risk assessment first, then session structure, then structured articles, not ad hoc documentation in the last week before departure.
 :::
 
 ## Exercise: Knowledge Capture Sprint
@@ -339,7 +339,7 @@ The specific interview questions, capture plan structure, and knowledge article 
 **Plugin command:** `/knowledge`
 **Goal:** Identify your highest-risk knowledge holder, generate a capture plan, and structure a sample knowledge article from a simulated interview
 
-### Step 1 — Identify Three Knowledge Holders at Risk
+### Step 1: Identify Three Knowledge Holders at Risk
 
 For your organisation (real or hypothetical), identify three employees whose departure would represent significant institutional knowledge loss. For each, score using the five-factor model:
 
@@ -355,7 +355,7 @@ For your organisation (real or hypothetical), identify three employees whose dep
 
 Select your highest-scoring employee for the rest of this exercise.
 
-### Step 2 — Generate a Knowledge Capture Plan
+### Step 2: Generate a Knowledge Capture Plan
 
 Invoke `/knowledge` with the details of your highest-risk employee:
 
@@ -364,7 +364,7 @@ Invoke `/knowledge` with the details of your highest-risk employee:
 
 Employee: [Name and role]
 Tenure: [Years]
-Departure timeline: [Resignation announced / no departure planned — proactive]
+Departure timeline: [Resignation announced / no departure planned, proactive]
 Critical knowledge areas: [List the top 3 knowledge areas at risk]
 Successor: [Named / Not yet identified]
 Time available: [Notice period, or for proactive: unlimited]
@@ -377,7 +377,7 @@ Review the output for:
 - Is the session structure appropriate for the risk level (HIGH = 3 sessions)?
 - Do the interview questions go deep enough? Add follow-up questions where needed.
 
-### Step 3 — Conduct a Simulated Interview (20 minutes)
+### Step 3: Conduct a Simulated Interview (20 minutes)
 
 With a colleague (one plays the departing employee, one plays the interviewer): run a 20-minute simulated Session 1 using the interview guide from Step 2.
 
@@ -390,7 +390,7 @@ Note-taker format:
 - **What are the exceptions?** (when does the standard approach NOT work)
 - **Who else should know this?**
 
-### Step 4 — Structure the Captured Knowledge
+### Step 4: Structure the Captured Knowledge
 
 Take your interview notes and invoke `/knowledge` to structure them into articles:
 
@@ -426,10 +426,10 @@ Departure date: In 6 weeks
 Risk level: HIGH
 
 Critical knowledge areas:
-1. Three major client relationships — he is the sole contact; no written
+1. Three major client relationships; he is the sole contact; no written
    record of stakeholder maps, relationship history, or unwritten norms
-2. Delivery methodology — how actual delivery differs from what's documented
-3. Internal stakeholder management — who needs managing to deliver for clients
+2. Delivery methodology: how actual delivery differs from what's documented
+3. Internal stakeholder management, who needs managing to deliver for clients
 
 Successor: Not yet named; senior account manager covering interim
 
@@ -440,7 +440,7 @@ Please produce:
    out of each session
 ```
 
-**What you are learning:** The capture plan — risk classification, session structure, interview questions, expected outputs — is the entire knowledge capture workflow. By generating and reviewing it for a concrete case, you learn what a complete plan looks like and can apply the same structure to your own organisation's highest-risk holders.
+**What you are learning:** The capture plan, risk classification, session structure, interview questions, expected outputs: is the entire knowledge capture workflow. By generating and reviewing it for a concrete case, you learn what a complete plan looks like and can apply the same structure to your own organisation's highest-risk holders.
 
 **Adapt**: Score your own organisation's knowledge risk.
 
@@ -461,13 +461,13 @@ For the highest-risk employee: what are the top three knowledge areas I
 should capture first if they announced tomorrow that they were leaving?
 ```
 
-**What you are learning:** The risk scoring model forces you to look at your organisation's knowledge landscape systematically. Most practitioners have never done this — they know intuitively that "we'd be in trouble if X left" but have never quantified it. Scoring multiple employees reveals patterns: where knowledge is dangerously concentrated, and where proactive capture is most urgent.
+**What you are learning:** The risk scoring model forces you to look at your organisation's knowledge landscape systematically. Most practitioners have never done this; they know intuitively that "we'd be in trouble if X left" but have never quantified it. Scoring multiple employees reveals patterns: where knowledge is dangerously concentrated, and where proactive capture is most urgent.
 
 **Apply**: Design a proactive knowledge capture programme.
 
 ```
 I want to design a proactive knowledge capture programme for my
-organisation — one that does not wait for resignations to start.
+organisation: one that does not wait for resignations to start.
 
 Context:
 - We have [N] employees total, approximately [X] with 5+ years tenure
@@ -481,14 +481,14 @@ Please design a programme that includes:
    of knowledge (relational vs procedural vs contextual)?
 3. Output: Where should knowledge articles live? Who owns them?
    How are they kept current?
-4. Prioritisation: How do we decide where to start — which employees
+4. Prioritisation: How do we decide where to start, which employees
    and which knowledge areas first?
 
 End with the single most important thing to get right in the first
 90 days of running this programme.
 ```
 
-**What you are learning:** The difference between a reactive and proactive knowledge capture programme is the difference between damage limitation and genuine institutional memory building. Designing the programme structure before a crisis forces you to think about cadence, ownership, and infrastructure — the things that determine whether knowledge articles get created and actually used, or created and filed away.
+**What you are learning:** The difference between a reactive and proactive knowledge capture programme is the difference between damage limitation and genuine institutional memory building. Designing the programme structure before a crisis forces you to think about cadence, ownership, and infrastructure: the things that determine whether knowledge articles get created and actually used, or created and filed away.
 :::
 
 ## Flashcards Study Aid

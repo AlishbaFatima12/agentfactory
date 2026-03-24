@@ -84,20 +84,20 @@ teaching_guide:
   session_group: 1
   session_title: "Claude in Excel General Capabilities (continued)"
   key_points:
-    - "Scenario testing with Claude is non-destructive — Ctrl+Z reverts all changes, preserving the base case while allowing rapid what-if exploration"
-    - "Combined scenario impacts are rarely additive — two changes that each reduce profit by 10% compound rather than sum, and Claude shows the actual combined effect"
-    - "Formula errors propagate through dependency chains — the visible error in a summary cell often originates three sheets away, and Claude traces the full chain in seconds"
-    - "The text-number mismatch is the most common invisible error in financial models imported from accounting systems — numbers formatted as text are silently excluded from SUM"
-    - "Model quality is proportional to specification quality — a vague prompt produces a vague model, a specific one with named tabs, line items, and linkage requirements produces a working starting point"
+    - "Scenario testing with Claude is non-destructive: Ctrl+Z reverts all changes, preserving the base case while allowing rapid what-if exploration"
+    - "Combined scenario impacts are rarely additive: two changes that each reduce profit by 10% compound rather than sum, and Claude shows the actual combined effect"
+    - "Formula errors propagate through dependency chains: the visible error in a summary cell often originates three sheets away, and Claude traces the full chain in seconds"
+    - "The text-number mismatch is the most common invisible error in financial models imported from accounting systems: numbers formatted as text are silently excluded from SUM"
+    - "Model quality is proportional to specification quality: a vague prompt produces a vague model, a specific one with named tabs, line items, and linkage requirements produces a working starting point"
   misconceptions:
-    - "Students may think scenario testing requires building a separate scenario manager — Claude modifies input cells directly and Ctrl+Z reverts the changes"
-    - "Students may assume all formula errors have the same root cause — each error type (#REF!, #VALUE!, #DIV/0!, #N/A) has a distinct cause and a distinct diagnostic approach"
-    - "Students may think Claude builds a finished model — it builds the structure and formula architecture, which the professional then validates and refines"
+    - "Students may think scenario testing requires building a separate scenario manager: Claude modifies input cells directly and Ctrl+Z reverts the changes"
+    - "Students may assume all formula errors have the same root cause: each error type (#REF!, #VALUE!, #DIV/0!, #N/A) has a distinct cause and a distinct diagnostic approach"
+    - "Students may think Claude builds a finished model: it builds the structure and formula architecture, which the professional then validates and refines"
   discussion_prompts:
     - "Think of a time you inherited a model with an error. How long did it take to trace the source? What would have changed if you could ask Claude to trace it in thirty seconds?"
     - "When you run scenarios for a board presentation, do you build separate scenario tabs or overwrite the base case? What are the risks of each approach?"
   teaching_tips:
-    - "The concept boxes are essential preparation — ensure students read each one before attempting the skill it supports"
+    - "The concept boxes are essential preparation: ensure students read each one before attempting the skill it supports"
     - "Exercise 4 (three-statement model) is the longest exercise in this lesson; encourage students to complete Part A before moving to Parts B and C"
   assessment_checks:
     - question: "What is the difference between a one-way and a two-way sensitivity table?"
@@ -110,7 +110,7 @@ teaching_guide:
 
 # Scenarios, Errors, and Model Building
 
-In Lesson 2, you used Claude in Excel to comprehend inherited workbooks — tracing formula dependencies, mapping model logic, and understanding structures you did not build. Now you will use that same general intelligence for three additional capabilities: testing financial scenarios without breaking formulas, diagnosing formula errors from symptom to source, and building complete model structures from plain-language descriptions.
+In Lesson 2, you used Claude in Excel to comprehend inherited workbooks: tracing formula dependencies, mapping model logic, and understanding structures you did not build. Now you will use that same general intelligence for three additional capabilities: testing financial scenarios without breaking formulas, diagnosing formula errors from symptom to source, and building complete model structures from plain-language descriptions.
 
 These three skills cover the remaining general workbook capabilities before you move to the Cowork finance plugins in Lessons 4 through 6. Together with model comprehension from Lesson 2, they form the foundation layer of Claude in Excel: the intelligence that works on any workbook, requires no configuration, and is always active.
 
@@ -128,13 +128,13 @@ Before Claude in Excel, you chose between overwriting the base case (fast but de
 >
 > A **one-way table** varies one input across a range (e.g., EBITDA margin from 15% to 25%). A **two-way table** varies two inputs simultaneously (e.g., a grid of EBITDA margin and revenue growth combinations).
 >
-> Sensitivity analysis does not predict which scenario will occur. It shows which inputs your conclusion depends on most — so you know where to focus your analysis and how to present uncertainty honestly.
+> Sensitivity analysis does not predict which scenario will occur. It shows which inputs your conclusion depends on most: so you know where to focus your analysis and how to present uncertainty honestly.
 
 ---
 
 ### The CFO's Downside Scenario
 
-The CFO needs three scenarios for the budget review: revenue growth of 7% (versus 12% base), gross margin compression of 150 basis points, and a capex increase of $5M — all simultaneously.
+The CFO needs three scenarios for the budget review: revenue growth of 7% (versus 12% base), gross margin compression of 150 basis points, and a capex increase of $5M: all simultaneously.
 
 **She types:** "Model a downside scenario: change revenue growth (B8) to 7%, reduce gross margin % (B14) by 1.5 percentage points from its current value, and increase Year 1 capex (C22) by 5. Tell me the impact on Year 3 free cash flow and the updated EBITDA for each year."
 
@@ -156,7 +156,7 @@ Notice what happened in this exchange. The CFO specified exact cells and exact c
 >
 > A DCF estimates what a business is worth today based on the cash it will generate in the future. The core concept: a dollar received in five years is worth less than a dollar received today because today's dollar can be invested and grow.
 >
-> **Key components:** **Free Cash Flow** is the cash the business generates after operating costs and capital expenditure. **Discount Rate**, or WACC (Weighted Average Cost of Capital), is the required return of investors — a higher rate produces a lower valuation. **Terminal Value** captures the value of all cash flows beyond the projection period, usually five to ten years.
+> **Key components:** **Free Cash Flow** is the cash the business generates after operating costs and capital expenditure. **Discount Rate**, or WACC (Weighted Average Cost of Capital), is the required return of investors: a higher rate produces a lower valuation. **Terminal Value** captures the value of all cash flows beyond the projection period, usually five to ten years.
 >
 > **Why sensitivity matters:** A DCF is highly sensitive to the discount rate. A 1 percentage point increase in WACC typically reduces the equity value by 10 to 20 percent. This is why every professional DCF includes a sensitivity table showing value at different WACC and terminal growth rate combinations. You will explore WACC in detail in Lesson 5.
 
@@ -171,7 +171,7 @@ Notice what happened in this exchange. The CFO specified exact cells and exact c
 3. Count the downstream effects. Were any surprising?
 4. Undo. Then run a two-input scenario simultaneously. Note how the combined impact differs from the sum of the individual impacts.
 
-**The discipline to build:** Complex models have non-linear interactions. Two changes that each reduce profit by 10% do not combine for a 20% reduction — they compound. Claude shows you the actual combined impact.
+**The discipline to build:** Complex models have non-linear interactions. Two changes that each reduce profit by 10% do not combine for a 20% reduction: they compound. Claude shows you the actual combined impact.
 
 **Target time:** 25 minutes.
 
@@ -183,15 +183,15 @@ Excel formula errors are among the most time-consuming problems in financial mod
 
 > **CONCEPT BOX: Common Excel Formula Errors**
 >
-> **#REF!** — A formula points to a cell or range that no longer exists. Usually caused by deleting rows or columns that were referenced, or by OFFSET formulas broken when the worksheet structure changed.
+> **#REF!**: A formula points to a cell or range that no longer exists. Usually caused by deleting rows or columns that were referenced, or by OFFSET formulas broken when the worksheet structure changed.
 >
-> **#VALUE!** — A formula tries to perform a mathematical operation on something that is not a number. Most common cause: a cell looks like a number but is formatted as text (left-aligned instead of right-aligned).
+> **#VALUE!**: A formula tries to perform a mathematical operation on something that is not a number. Most common cause: a cell looks like a number but is formatted as text (left-aligned instead of right-aligned).
 >
-> **#DIV/0!** — Division by zero. Common in ratio calculations where a denominator is blank or zero in a forecast period.
+> **#DIV/0!**: Division by zero. Common in ratio calculations where a denominator is blank or zero in a forecast period.
 >
-> **#N/A** — A lookup formula (VLOOKUP, XLOOKUP, MATCH) cannot find the value it is searching for. Often a formatting mismatch between the lookup value and the lookup range.
+> **#N/A**: A lookup formula (VLOOKUP, XLOOKUP, MATCH) cannot find the value it is searching for. Often a formatting mismatch between the lookup value and the lookup range.
 >
-> **Circular Reference** — A formula refers, directly or indirectly, to its own cell. Some advanced models deliberately use circular references (e.g., interest expense depending on debt, which depends on cash, which depends on profit) — but this must be enabled explicitly via iterative calculation settings and carefully documented.
+> **Circular Reference** (A formula refers, directly or indirectly, to its own cell. Some advanced models deliberately use circular references (e.g., interest expense depending on debt, which depends on cash, which depends on profit)) but this must be enabled explicitly via iterative calculation settings and carefully documented.
 
 ---
 
@@ -201,7 +201,7 @@ A valuation model that has worked correctly for three months suddenly shows `#RE
 
 **He types:** "There is a #REF! error in cell F45 (DCF equity value). Trace the source."
 
-**Claude:** "F45 traces back through F35 (Terminal Value) to F34 (Year 5 EBITDA) to Assumptions!C8. Cell Assumptions!C8 now returns #REF! — its formula is =OFFSET(C7, 1, 0), which was correct before the new row was inserted. Inserting a row above row 7 shifted the OFFSET reference to point to a row that now contains the new line item, not the EBITDA growth rate.
+**Claude:** "F45 traces back through F35 (Terminal Value) to F34 (Year 5 EBITDA) to Assumptions!C8. Cell Assumptions!C8 now returns #REF!: its formula is =OFFSET(C7, 1, 0), which was correct before the new row was inserted. Inserting a row above row 7 shifted the OFFSET reference to point to a row that now contains the new line item, not the EBITDA growth rate.
 
 **Fix:** Update Assumptions!C8 to reference the EBITDA growth rate cell directly (the cell that now contains the rate after the row insertion), or adjust the OFFSET formula to account for the new row offset."
 
@@ -213,7 +213,7 @@ A controller's SUM formula returns $3,421 when manually adding the column gives 
 
 **She types:** "The SUM in G42 should total G2:G41 but is returning $3,421 instead of approximately $18,350. What is happening?"
 
-**Claude:** "7 cells (G8, G13, G17, G22, G25, G31, G38) contain numbers formatted as text — they are left-aligned, which is Excel's indicator. These 7 cells sum to $14,929. SUM ignores text-formatted values, explaining the $14,929 shortfall. Fix: select those 7 cells, go to Data, then Text to Columns, then Finish. This forces Excel to re-evaluate them as numbers. The text formatting likely came from a data import — accounting system exports frequently format numeric fields as text."
+**Claude:** "7 cells (G8, G13, G17, G22, G25, G31, G38) contain numbers formatted as text (they are left-aligned, which is Excel's indicator. These 7 cells sum to $14,929. SUM ignores text-formatted values, explaining the $14,929 shortfall. Fix: select those 7 cells, go to Data, then Text to Columns, then Finish. This forces Excel to re-evaluate them as numbers. The text formatting likely came from a data import) accounting system exports frequently format numeric fields as text."
 
 This error is invisible to manual inspection. The cells display numbers. They look correct. But SUM silently excludes them because Excel treats them as text. Claude identifies the exact cells, quantifies the shortfall, and explains both the fix and the likely origin.
 
@@ -230,7 +230,7 @@ This error is invisible to manual inspection. The cells display numbers. They lo
 
 ## Building Model Structures from Description
 
-Claude in Excel can draft a financial model structure — tabs, row labels, formula architecture, cell linkages — from a plain-language description. This is not automation of the analytical judgment. It is elimination of the structural setup work that precedes it.
+Claude in Excel can draft a financial model structure (tabs, row labels, formula architecture, cell linkages) from a plain-language description. This is not automation of the analytical judgment. It is elimination of the structural setup work that precedes it.
 
 ---
 
@@ -262,17 +262,17 @@ Claude in Excel can draft a financial model structure — tabs, row labels, form
 
 **What you need:** Claude in Excel open in a blank workbook.
 
-**Part A — Commission the structure (25 min):** Type to Claude:
+**Part A: Commission the structure (25 min):** Type to Claude:
 
 "Build a two-year financial model for a small retail business: (1) Assumptions tab: revenue Year 1 $500,000, revenue growth 15%, gross margin 45%, operating expenses 30% of revenue, tax rate 20%, capex Year 1 $20,000 and Year 2 $15,000, depreciation rate 20% of opening fixed assets, debtor days 45. (2) P&L tab: revenue, COGS, gross profit, gross margin %, operating expenses, EBITDA, depreciation, EBIT, tax, net income. (3) Cash flow tab: net income, add back depreciation, change in debtors, capex, net cash flow, closing cash balance. Use blue cells for inputs, black for formulas."
 
 Review what Claude builds. Check: are formulas referencing the Assumptions tab? Does gross profit equal revenue multiplied by gross margin? Does depreciation reduce EBIT correctly?
 
-**Part B — Interrogate it (15 min):** Ask: "What is gross margin % in Year 2?" Then: "If I increase the revenue growth rate to 20%, what happens to net income in Year 2?" Then: "How does the debtor days assumption affect the model?"
+**Part B: Interrogate it (15 min):** Ask: "What is gross margin % in Year 2?" Then: "If I increase the revenue growth rate to 20%, what happens to net income in Year 2?" Then: "How does the debtor days assumption affect the model?"
 
-**Part C — Break it deliberately (10 min):** Overtype one formula cell with a hard-coded number. Ask Claude: "Is there any cell in this model that should be a formula but appears to be hard-coded?"
+**Part C: Break it deliberately (10 min):** Overtype one formula cell with a hard-coded number. Ask Claude: "Is there any cell in this model that should be a formula but appears to be hard-coded?"
 
-**The discipline to build:** The quality of the model Claude builds is proportional to the specificity of your instruction. A vague prompt produces a vague model. A specific one — with named tabs, explicit line items, and stated linkage requirements — produces a working starting point.
+**The discipline to build:** The quality of the model Claude builds is proportional to the specificity of your instruction. A vague prompt produces a vague model. A specific one (with named tabs, explicit line items, and stated linkage requirements) produces a working starting point.
 
 **Target time:** 50 minutes.
 
@@ -300,7 +300,7 @@ Then suggest which input I should focus my analysis on — the one
 where a small change produces the largest swing in net income.
 ```
 
-**What you're learning:** Scenario analysis is not just about running numbers — it is about identifying which assumptions your conclusion depends on most. The gap between the sum of individual impacts and the combined impact reveals non-linear interactions in the model. Identifying the highest-sensitivity input tells you where to focus your analytical effort.
+**What you're learning:** Scenario analysis is not just about running numbers: it is about identifying which assumptions your conclusion depends on most. The gap between the sum of individual impacts and the combined impact reveals non-linear interactions in the model. Identifying the highest-sensitivity input tells you where to focus your analytical effort.
 
 ### Prompt 2: Error Chain Diagnosis
 
@@ -321,7 +321,7 @@ After diagnosing both, tell me: should I fix them in a specific
 order, or are they independent?
 ```
 
-**What you're learning:** Formula errors rarely exist in isolation. Understanding the dependency chain teaches you to diagnose errors structurally rather than cell by cell. Predicting whether fixes cascade builds the mental model of how Excel's calculation engine propagates changes — a skill that transfers to any complex spreadsheet work.
+**What you're learning:** Formula errors rarely exist in isolation. Understanding the dependency chain teaches you to diagnose errors structurally rather than cell by cell. Predicting whether fixes cascade builds the mental model of how Excel's calculation engine propagates changes: a skill that transfers to any complex spreadsheet work.
 
 ### Prompt 3: Model Specification Writing
 
@@ -343,7 +343,7 @@ usable model, or are there ambiguities that would cause Claude
 to make assumptions I might not want?
 ```
 
-**What you're learning:** The specification is the primary skill in model building with AI. A well-written specification produces a model you can validate; a vague one produces a model you must rebuild. Practising specification writing before commissioning the build trains the habit of front-loading precision — a pattern that applies to every AI-assisted workflow, not just financial modelling.
+**What you're learning:** The specification is the primary skill in model building with AI. A well-written specification produces a model you can validate; a vague one produces a model you must rebuild. Practising specification writing before commissioning the build trains the habit of front-loading precision: a pattern that applies to every AI-assisted workflow, not just financial modelling.
 
 ## Flashcards Study Aid
 

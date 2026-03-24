@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/cross-domain-capstones
 sidebar_position: 14
 title: "Cross-Domain Capstones"
-description: "Integrate all five CA/CPA practice domains in two capstone exercises — a full new client onboarding workflow and a three-session annual audit cycle from planning through to the audit opinion"
+description: "Integrate all five CA/CPA practice domains in two capstone exercises: a full new client onboarding workflow and a three-session annual audit cycle from planning through to the audit opinion"
 keywords:
   [
     "capstone exercise",
@@ -37,14 +37,14 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can orchestrate a complete new client onboarding — from document intake through risk assessment, analytical review, engagement scoping, fee estimation, Cowork skill creation, and client meeting preparation — integrating capabilities from all five CA/CPA domains into a single coherent workflow"
+    measurable_at_this_level: "Student can orchestrate a complete new client onboarding (from document intake through risk assessment, analytical review, engagement scoping, fee estimation, Cowork skill creation, and client meeting preparation) integrating capabilities from all five CA/CPA domains into a single coherent workflow"
 
   - name: "Execute Multi-Session Audit Cycle"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can run a complete annual audit cycle across three distinct sessions — planning (analytical procedures, materiality, significant accounts), fieldwork (revenue testing, PPE verification, documentation), and completion (misstatement evaluation, management letter, audit opinion) — producing self-contained deliverables at each stage"
+    measurable_at_this_level: "Student can run a complete annual audit cycle across three distinct sessions (planning (analytical procedures, materiality, significant accounts), fieldwork (revenue testing, PPE verification, documentation), and completion (misstatement evaluation, management letter, audit opinion)) producing self-contained deliverables at each stage"
 
   - name: "Evaluate Professional Judgment Boundaries in AI-Augmented Engagements"
     proficiency_level: "B2"
@@ -54,20 +54,20 @@ skills:
     measurable_at_this_level: "Student can identify which steps in a cross-domain workflow involve professional judgment (risk acceptance, materiality decisions, audit opinion formation) versus execution (data extraction, calculation, document formatting) and explain why the judgment steps cannot be delegated to AI"
 
 learning_objectives:
-  - objective: "Orchestrate a complete new client onboarding workflow that integrates document classification, risk assessment, analytical review, engagement scoping, fee estimation, Cowork skill creation, and client communication — drawing on capabilities from all five CA/CPA practice domains"
+  - objective: "Orchestrate a complete new client onboarding workflow that integrates document classification, risk assessment, analytical review, engagement scoping, fee estimation, Cowork skill creation, and client communication: drawing on capabilities from all five CA/CPA practice domains"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes Exercise 22 — producing a client profile, engagement risk assessment, analytical review, engagement letter, Cowork skills, engagement file structure, and client meeting agenda for a new textile exporter client"
+    assessment_method: "Student completes Exercise 22: producing a client profile, engagement risk assessment, analytical review, engagement letter, Cowork skills, engagement file structure, and client meeting agenda for a new textile exporter client"
 
-  - objective: "Execute a three-session annual audit cycle — from planning analytical procedures and materiality calculation through fieldwork testing and documentation to misstatement evaluation, management letter drafting, and audit opinion formation — with explicit session boundaries producing self-contained deliverables at each stage"
+  - objective: "Execute a three-session annual audit cycle (from planning analytical procedures and materiality calculation through fieldwork testing and documentation to misstatement evaluation, management letter drafting, and audit opinion formation) with explicit session boundaries producing self-contained deliverables at each stage"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes Exercise 23 across three sessions — producing an audit plan (Session 1), test documentation with conclusions (Session 2), and a management letter with draft audit opinion (Session 3)"
+    assessment_method: "Student completes Exercise 23 across three sessions: producing an audit plan (Session 1), test documentation with conclusions (Session 2), and a management letter with draft audit opinion (Session 3)"
 
   - objective: "Distinguish between steps where AI executes work (data extraction, calculation, document drafting) and steps where the CA/CPA exercises professional judgment (engagement acceptance, materiality determination, audit opinion formation), and articulate why this boundary defines professional liability"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student can identify the professional judgment steps in both exercises and explain the liability implications — particularly that the audit opinion in Exercise 23 Step 10 is the most legally significant document a CA/CPA signs"
+    assessment_method: "Student can identify the professional judgment steps in both exercises and explain the liability implications: particularly that the audit opinion in Exercise 23 Step 10 is the most legally significant document a CA/CPA signs"
 
 cognitive_load:
   new_concepts: 5
@@ -77,7 +77,7 @@ cognitive_load:
     - "Multi-session exercise with session boundaries (planning/fieldwork/completion)"
     - "Audit opinion formation as professional judgment (ISA 700)"
     - "AI-augmented practice narrative for client communication"
-  assessment: "5 concepts at B2 level. Students arrive having completed all five domain lessons (L02-L06), all plugin and extension lessons (L07-L09), and four practice labs (L10-L13). No new tools or capabilities are introduced — these capstones integrate what students already know. The cognitive challenge is orchestration across domains, not learning new material."
+  assessment: "5 concepts at B2 level. Students arrive having completed all five domain lessons (L02-L06), all plugin and extension lessons (L07-L09), and four practice labs (L10-L13). No new tools or capabilities are introduced: these capstones integrate what students already know. The cognitive challenge is orchestration across domains, not learning new material."
 
 differentiation:
   extension_for_advanced: "After completing Exercise 23, compare your audit opinion to the ISA 700 illustrative examples in the Handbook of International Quality Management, Auditing, Review, Other Assurance, and Related Services Pronouncements. Identify which paragraphs of your draft would need modification if the financial statements contained a material misstatement that management refused to correct. Draft the modified opinion paragraph for a qualified opinion under ISA 705."
@@ -88,35 +88,35 @@ teaching_guide:
   session_group: 5
   session_title: "Cross-Domain Integration"
   key_points:
-    - "These capstones are integration exercises, not new material — every capability used here was taught in L02-L13"
-    - "Exercise 22 tests breadth (all 5 domains in one workflow); Exercise 23 tests depth (one domain — assurance — across the full engagement lifecycle)"
+    - "These capstones are integration exercises, not new material: every capability used here was taught in L02-L13"
+    - "Exercise 22 tests breadth (all 5 domains in one workflow); Exercise 23 tests depth (one domain (assurance) across the full engagement lifecycle)"
     - "The multi-session structure of Exercise 23 mirrors real audit practice where planning, fieldwork, and completion are distinct phases separated by days or weeks"
-    - "The professional judgment boundary is the thread connecting both exercises — in Exercise 22 it is engagement acceptance; in Exercise 23 it is the audit opinion"
+    - "The professional judgment boundary is the thread connecting both exercises: in Exercise 22 it is engagement acceptance; in Exercise 23 it is the audit opinion"
   misconceptions:
-    - "Students may try to complete Exercise 23 in a single session — the session boundaries exist because real audits have natural stopping points, and the exercise teaches students to save state and resume"
-    - "Students may assume the AI writes the audit opinion — the AI drafts the language in ISA 700 format, but the professional judgment about whether the financial statements are free from material misstatement is the CA/CPA's responsibility"
-    - "Students may skip the skill creation step in Exercise 22, treating it as optional — it is the step that converts a one-time engagement setup into a reusable practice asset"
+    - "Students may try to complete Exercise 23 in a single session: the session boundaries exist because real audits have natural stopping points, and the exercise teaches students to save state and resume"
+    - "Students may assume the AI writes the audit opinion: the AI drafts the language in ISA 700 format, but the professional judgment about whether the financial statements are free from material misstatement is the CA/CPA's responsibility"
+    - "Students may skip the skill creation step in Exercise 22, treating it as optional: it is the step that converts a one-time engagement setup into a reusable practice asset"
   discussion_prompts:
     - "In Exercise 22 Step 8, you explain your AI-augmented approach to the client. How would you respond if the client asked: 'If AI is doing the audit work, why am I paying professional fees?'"
     - "Exercise 23 separates planning, fieldwork, and completion into distinct sessions. In traditional practice, these phases can overlap. What are the advantages of keeping them distinct when working with AI agents?"
   teaching_tips:
-    - "Position Exercise 22 as the breadth test and Exercise 23 as the depth test — students who complete both have demonstrated full cross-domain capability"
-    - "For Exercise 23, emphasise the STOP HERE markers — they are pedagogical, not arbitrary. Each session produces a deliverable that stands on its own"
-    - "The key learning paragraphs at the end of each exercise are the most important pedagogical moments — they articulate the professional judgment boundary that defines what it means to be a CA/CPA in an AI-augmented practice"
+    - "Position Exercise 22 as the breadth test and Exercise 23 as the depth test: students who complete both have demonstrated full cross-domain capability"
+    - "For Exercise 23, emphasise the STOP HERE markers: they are pedagogical, not arbitrary. Each session produces a deliverable that stands on its own"
+    - "The key learning paragraphs at the end of each exercise are the most important pedagogical moments: they articulate the professional judgment boundary that defines what it means to be a CA/CPA in an AI-augmented practice"
   assessment_checks:
     - question: "Why does Exercise 22 include building Cowork skills as part of new client onboarding?"
-      expected_response: "Because onboarding is when you gather the most detailed information about a client — business model, revenue recognition method, jurisdiction-specific tax rules, audit risk areas. Encoding this information in Cowork skills immediately converts a one-time information-gathering exercise into a reusable practice asset. Every subsequent engagement for this client benefits from the encoded knowledge, and the skills improve with each interaction."
+      expected_response: "Because onboarding is when you gather the most detailed information about a client: business model, revenue recognition method, jurisdiction-specific tax rules, audit risk areas. Encoding this information in Cowork skills immediately converts a one-time information-gathering exercise into a reusable practice asset. Every subsequent engagement for this client benefits from the encoded knowledge, and the skills improve with each interaction."
     - question: "In Exercise 23, what is the professional judgment that only the CA/CPA can exercise?"
-      expected_response: "The critical professional judgment is in Step 8 — evaluating whether identified misstatements, individually and in aggregate, are material to the financial statements. This determines the audit opinion. The AI agent can compile misstatements, calculate their aggregate effect, and draft the opinion language in ISA 700 format. But the decision about whether the accounts are 'true and fair' — and the professional liability that attaches to signing that opinion — belongs to the CA/CPA."
+      expected_response: "The critical professional judgment is in Step 8: evaluating whether identified misstatements, individually and in aggregate, are material to the financial statements. This determines the audit opinion. The AI agent can compile misstatements, calculate their aggregate effect, and draft the opinion language in ISA 700 format. But the decision about whether the accounts are 'true and fair', and the professional liability that attaches to signing that opinion: belongs to the CA/CPA."
 ---
 
 # Cross-Domain Capstones
 
 > _"The engagement partner who signs the audit opinion carries the professional liability for every judgment in the file. AI produces the evidence. The CA/CPA forms the conclusion."_
 
-In Lessons 10 through 13, you worked through domain-specific practice labs — building workflows for accounting and reporting, tax and advisory, assurance, management accounting, and GRC. Each lab exercised capabilities within a single domain. Real CA/CPA practice does not operate in silos. A new client engagement touches every domain simultaneously: you assess risk (assurance), review the financials (accounting), scope tax advisory, evaluate governance, and plan management reporting — all before the engagement letter is signed.
+In Lessons 10 through 13, you worked through domain-specific practice labs (building workflows for accounting and reporting, tax and advisory, assurance, management accounting, and GRC. Each lab exercised capabilities within a single domain. Real CA/CPA practice does not operate in silos. A new client engagement touches every domain simultaneously: you assess risk (assurance), review the financials (accounting), scope tax advisory, evaluate governance, and plan management reporting) all before the engagement letter is signed.
 
-These two capstone exercises test your ability to integrate across all five domains. Exercise 22 tests breadth — connecting every domain in a single new client onboarding workflow. Exercise 23 tests depth — running the complete annual audit cycle from planning through to the signed opinion across three study sessions. Together, they represent the culmination of every capability you have built in this chapter.
+These two capstone exercises test your ability to integrate across all five domains. Exercise 22 tests breadth (connecting every domain in a single new client onboarding workflow. Exercise 23 tests depth) running the complete annual audit cycle from planning through to the signed opinion across three study sessions. Together, they represent the culmination of every capability you have built in this chapter.
 
 :::info Downloadable Resources
 **New client onboarding workflow recipe**: A reusable workflow specification for Exercise 22: [`workflow-recipes/`](https://github.com/panaversity/ca-cpa-practice-agents/tree/main/workflow-recipes) in the companion repository.
@@ -126,15 +126,15 @@ These two capstone exercises test your ability to integrate across all five doma
 
 ---
 
-## Exercise 22: New Client Onboarding — Full Engagement Setup (60 min)
+## Exercise 22: New Client Onboarding: Full Engagement Setup (60 min)
 
-**What you will build:** A complete new client engagement file — from raw documents through to a client meeting agenda — for a textile exporter seeking its first bank-required audit.
+**What you will build:** A complete new client engagement file (from raw documents through to a client meeting agenda) for a textile exporter seeking its first bank-required audit.
 
 **Requirements:** Cowork with `finance@knowledge-work-plugins` and `financial-analysis@financial-services-plugins` installed. 60 minutes.
 
-**New client profile:** Alpha Textiles (Pvt) Ltd — a Pakistani private limited company. Textile exporter, 3 years operating, PKR 320M revenue. The company requires its first external audit because its bank is demanding audited financial statements before approving a working capital facility. The client has provided: three years of management accounts, the Memorandum and Articles of Association, the shareholder register, and a brief business overview from the CEO.
+**New client profile:** Alpha Textiles (Pvt) Ltd: a Pakistani private limited company. Textile exporter, 3 years operating, PKR 320M revenue. The company requires its first external audit because its bank is demanding audited financial statements before approving a working capital facility. The client has provided: three years of management accounts, the Memorandum and Articles of Association, the shareholder register, and a brief business overview from the CEO.
 
-### Step 1 — Document Intake and Classification
+### Step 1: Document Intake and Classification
 
 Place all client documents in `/inputs/new-client-alpha/`. Then ask your AI assistant:
 
@@ -150,9 +150,9 @@ profile covering:
 (e) Any immediate risks or issues visible from the documents
 ```
 
-**What this draws on:** The accounting and financial reporting domain (Lesson 2) — financial statement analysis and metric extraction.
+**What this draws on:** The accounting and financial reporting domain (Lesson 2): financial statement analysis and metric extraction.
 
-### Step 2 — Engagement Risk Assessment
+### Step 2: Engagement Risk Assessment
 
 ```
 Perform an engagement acceptance risk assessment for this client
@@ -169,9 +169,9 @@ Statements). Assess:
 Produce an engagement risk rating: Low / Moderate / High.
 ```
 
-**What this draws on:** The assurance domain (Lesson 4) — ISA-based risk assessment methodology.
+**What this draws on:** The assurance domain (Lesson 4). ISA-based risk assessment methodology.
 
-### Step 3 — Financial Analytical Review
+### Step 3: Financial Analytical Review
 
 Run the plugin commands to generate structured financial analysis:
 
@@ -194,7 +194,7 @@ accounts. Identify:
 
 **What this draws on:** The management accounting domain (Lesson 5) and the Cowork plugin commands (Lesson 7).
 
-### Step 4 — Engagement Scope and Fee Proposal
+### Step 4: Engagement Scope and Fee Proposal
 
 ```
 Based on the client profile, risk assessment, and analytical review,
@@ -210,9 +210,9 @@ propose:
     in the engagement letter
 ```
 
-**What this draws on:** Cross-domain integration — combining risk assessment (assurance), financial analysis (accounting), and advisory scoping (tax and advisory).
+**What this draws on:** Cross-domain integration: combining risk assessment (assurance), financial analysis (accounting), and advisory scoping (tax and advisory).
 
-### Step 5 — Draft the Engagement Letter
+### Step 5: Draft the Engagement Letter
 
 ```
 Draft the engagement letter for the audit of financial statements
@@ -228,7 +228,7 @@ Follow the standard format required under ISA 210 and adapt for
 Pakistani professional standards (ICAP requirements).
 ```
 
-### Step 6 — Build Client-Specific Cowork Skills
+### Step 6: Build Client-Specific Cowork Skills
 
 Using the information gathered in Steps 1-4:
 
@@ -248,7 +248,7 @@ Draft the following Cowork skills for this client:
 
 **What this draws on:** The extension-building methodology (Lessons 8-9) and domain knowledge from Lessons 2-6.
 
-### Step 7 — Create the Engagement File Structure
+### Step 7: Create the Engagement File Structure
 
 ```
 Create the standard engagement file folder structure at
@@ -262,7 +262,7 @@ Create the standard engagement file folder structure at
 Populate the permanent file with the documents provided.
 ```
 
-### Step 8 — Produce the Client Meeting Agenda
+### Step 8: Produce the Client Meeting Agenda
 
 ```
 Produce a 90-minute client kick-off meeting agenda. The meeting is
@@ -290,9 +290,9 @@ with the CEO and Finance Manager. Sections:
 
 ---
 
-## Exercise 23: The Annual Audit Cycle — Planning to Completion (75 min across 3 sessions)
+## Exercise 23: The Annual Audit Cycle: Planning to Completion (75 min across 3 sessions)
 
-**What you will build:** The complete annual audit cycle for a manufacturing company — from planning analytical procedures through to the independent auditor's report.
+**What you will build:** The complete annual audit cycle for a manufacturing company: from planning analytical procedures through to the independent auditor's report.
 
 **Requirements:** Cowork with all plugins installed. This exercise runs across three sessions of 25 minutes each. Sessions can be spread across different study periods.
 
@@ -300,11 +300,11 @@ with the CEO and Finance Manager. Sections:
 
 ---
 
-### Session 1 — Audit Planning (25 min)
+### Session 1: Audit Planning (25 min)
 
 **Goal:** Produce an audit planning memorandum with analytical procedures, materiality calculation, significant accounts, and audit strategy.
 
-#### Step 1 — Planning Analytical Procedures
+#### Step 1: Planning Analytical Procedures
 
 ```
 I am planning the external audit of [entity] for the year ended
@@ -317,7 +317,7 @@ sheet lines. Identify any change greater than 10% or PKR 5M that
 requires an explanation before testing begins.
 ```
 
-#### Step 2 — Calculate Materiality
+#### Step 2: Calculate Materiality
 
 ```
 Calculate planning materiality for this entity using three
@@ -332,7 +332,7 @@ materiality at 75% of planning materiality. Set a clearly trivial
 threshold at 5% of planning materiality.
 ```
 
-#### Step 3 — Identify Significant Accounts
+#### Step 3: Identify Significant Accounts
 
 ```
 Based on the financial statements, identify the accounts that are
@@ -342,7 +342,7 @@ to management judgment or estimation). These are the accounts that
 require substantive audit procedures.
 ```
 
-#### Step 4 — Produce the Audit Plan
+#### Step 4: Produce the Audit Plan
 
 ```
 Produce an audit planning memorandum at
@@ -356,25 +356,25 @@ Produce an audit planning memorandum at
 - Staffing plan with seniority levels and estimated hours
 ```
 
-:::warning STOP HERE — End of Session 1
+:::warning STOP HERE: End of Session 1
 Save your working papers. You have produced a complete audit planning memorandum. Close Cowork and resume when you are ready for fieldwork.
 
-**What you have:** An audit plan with analytical procedures, materiality thresholds, significant accounts, and procedures for each. This is a self-contained deliverable — it stands on its own as the planning phase record.
+**What you have:** An audit plan with analytical procedures, materiality thresholds, significant accounts, and procedures for each. This is a self-contained deliverable: it stands on its own as the planning phase record.
 
 **When you resume:** Open your working papers from `/working-papers/` and proceed to Session 2.
 :::
 
 ---
 
-### Session 2 — Audit Fieldwork (25 min)
+### Session 2: Audit Fieldwork (25 min)
 
 **Goal:** Execute substantive testing on revenue and PPE, and document results with conclusions.
 
-#### Step 5 — Revenue Testing
+#### Step 5: Revenue Testing
 
 Apply the revenue audit procedures from Exercise 15 to the specific revenue lines in the Exercise 9 financial statements. Run the sampling and vouching procedures, testing revenue transactions against supporting documentation.
 
-#### Step 6 — Property, Plant and Equipment Testing
+#### Step 6: Property, Plant and Equipment Testing
 
 ```
 Produce the audit procedures for property, plant and equipment:
@@ -386,7 +386,7 @@ Produce the audit procedures for property, plant and equipment:
 - Agree the closing net book value to the trial balance
 ```
 
-#### Step 7 — Document the Results
+#### Step 7: Document the Results
 
 ```
 For each area tested, produce the audit conclusion working paper:
@@ -398,8 +398,8 @@ For each area tested, produce the audit conclusion working paper:
 - The auditor's conclusion on whether the balance is fairly stated
 ```
 
-:::warning STOP HERE — End of Session 2
-Save your test documentation. You have completed fieldwork for revenue and PPE — the two substantive testing areas.
+:::warning STOP HERE: End of Session 2
+Save your test documentation. You have completed fieldwork for revenue and PPE: the two substantive testing areas.
 
 **What you have:** Completed working papers with test procedures, sample selections, results, exceptions (if any), and conclusions for each audit area. This is a self-contained deliverable.
 
@@ -408,11 +408,11 @@ Save your test documentation. You have completed fieldwork for revenue and PPE �
 
 ---
 
-### Session 3 — Audit Completion (25 min)
+### Session 3: Audit Completion (25 min)
 
 **Goal:** Evaluate misstatements, draft the management letter, and form the audit opinion.
 
-#### Step 8 — Evaluate Misstatements
+#### Step 8: Evaluate Misstatements
 
 ```
 Compile the schedule of identified misstatements from all audit
@@ -427,7 +427,7 @@ and in combination — is material to the financial statements.
 
 **Professional judgment moment:** This is the step where the CA/CPA's judgment matters most. The AI compiles and calculates. The CA/CPA decides whether the aggregate effect of misstatements is such that the financial statements are no longer true and fair. This decision determines the audit opinion.
 
-#### Step 9 — Draft the Management Letter
+#### Step 9: Draft the Management Letter
 
 ```
 Based on the audit findings, draft a management letter at
@@ -441,7 +441,7 @@ Use the 5-C format from Exercise 17 (Condition, Criteria, Cause,
 Consequence, Corrective action).
 ```
 
-#### Step 10 — Draft the Audit Opinion
+#### Step 10: Draft the Audit Opinion
 
 ```
 Draft the Independent Auditor's Report for these financial
@@ -457,13 +457,13 @@ Assume the financial statements give a true and fair view with no
 material misstatements.
 ```
 
-**The professional boundary:** The audit opinion is the most legally significant document a CA/CPA signs in professional practice. No AI agent writes the audit opinion — the CA/CPA forms it. The agent produces the draft language following the prescribed ISA 700 format. The professional judgment is in Step 8: deciding whether identified misstatements are material, and whether their aggregate effect is such that the accounts are no longer true and fair. This is the judgment for which the CA/CPA holds professional liability. Every other step in this exercise exists to support and inform that judgment.
+**The professional boundary:** The audit opinion is the most legally significant document a CA/CPA signs in professional practice. No AI agent writes the audit opinion: the CA/CPA forms it. The agent produces the draft language following the prescribed ISA 700 format. The professional judgment is in Step 8: deciding whether identified misstatements are material, and whether their aggregate effect is such that the accounts are no longer true and fair. This is the judgment for which the CA/CPA holds professional liability. Every other step in this exercise exists to support and inform that judgment.
 
 **Check your work:** Across three sessions you should have produced: an audit planning memorandum (Session 1), test documentation with conclusions for revenue and PPE (Session 2), a misstatement schedule, a management letter, and a draft audit opinion (Session 3). The opinion should flow logically from the evidence gathered in Sessions 1 and 2 and the evaluation performed in Session 3.
 
 :::tip Global Perspective
 **IFRS / ISA**: The audit report format follows ISA 700 (Forming an Opinion and Reporting on Financial Statements), used in 130+ jurisdictions. Key audit matters follow ISA 701.
-**US GAAP / PCAOB**: US listed company audits follow PCAOB AS 3101 (The Auditor's Report on an Audit of Financial Statements). The format differs from ISA 700 — notably the critical audit matters section replaces key audit matters.
+**US GAAP / PCAOB**: US listed company audits follow PCAOB AS 3101 (The Auditor's Report on an Audit of Financial Statements). The format differs from ISA 700: notably the critical audit matters section replaces key audit matters.
 **UK FRS / FRC**: UK audits follow ISA (UK) 700 with FRC-specific modifications, including the viability statement review and the Section 172 statement assessment required for qualifying companies.
 :::
 
@@ -493,7 +493,7 @@ Produce the workflow as a numbered sequence showing how the domains
 connect.
 ```
 
-**What you are learning:** Cross-domain integration is not about doing five things separately — it is about designing the information flow between domains so each step builds on the previous. The workflow design forces you to think about dependencies: the risk assessment (assurance) requires the client profile (accounting), and the fee proposal requires both.
+**What you are learning:** Cross-domain integration is not about doing five things separately: it is about designing the information flow between domains so each step builds on the previous. The workflow design forces you to think about dependencies: the risk assessment (assurance) requires the client profile (accounting), and the fee proposal requires both.
 
 ### Prompt 2: Session Boundary Design
 
@@ -515,7 +515,7 @@ stands on its own — a student should be able to stop after any
 session and have something complete.
 ```
 
-**What you are learning:** Multi-session exercise design teaches you to identify natural stopping points in professional workflows. The constraint that each session must produce a self-contained deliverable mirrors real practice — audit planning files, fieldwork papers, and completion files are each reviewed independently. Designing your own session boundaries develops your ability to decompose complex professional workflows into manageable, reviewable stages.
+**What you are learning:** Multi-session exercise design teaches you to identify natural stopping points in professional workflows. The constraint that each session must produce a self-contained deliverable mirrors real practice: audit planning files, fieldwork papers, and completion files are each reviewed independently. Designing your own session boundaries develops your ability to decompose complex professional workflows into manageable, reviewable stages.
 
 ### Prompt 3: Professional Judgment Boundary Analysis
 
@@ -539,7 +539,7 @@ This analysis should help me understand where I add value that AI
 cannot replace.
 ```
 
-**What you are learning:** The professional judgment boundary is not abstract — it is specific to each workflow. By analysing your own exercise output, you map exactly where AI execution ends and professional responsibility begins. The critical insight is that professional liability attaches to judgment decisions, not execution steps. Understanding this boundary is how you articulate your value proposition in an AI-augmented practice.
+**What you are learning:** The professional judgment boundary is not abstract: it is specific to each workflow. By analysing your own exercise output, you map exactly where AI execution ends and professional responsibility begins. The critical insight is that professional liability attaches to judgment decisions, not execution steps. Understanding this boundary is how you articulate your value proposition in an AI-augmented practice.
 
 ## Flashcards Study Aid
 

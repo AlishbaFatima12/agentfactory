@@ -4,4 +4,4 @@
 - **Command(s) used**: `/brief` (verification test after configuring product.local.md)
 - **Artifact produced**: A complete `product.local.md` for InsightFlow with Product Identity, Vision and Strategy, Personas, Engineering Team, and Stakeholder Map sections filled.
 - **Quality criteria**: The Personas section is the highest-leverage configuration. A precise primary persona description (including goal, frustration, and "10/10 week") produces qualitatively different output from a generic role description.
-- **Next lesson**: Lesson 3 uses the configured product.local.md context with the custom `/brief` command to frame the workflow automation problem — the first artifact in the progressive exercise chain.
+- **Next lesson**: Lesson 3 uses the configured product.local.md context with the custom `/brief` command to frame the workflow automation problem: the first artifact in the progressive exercise chain.

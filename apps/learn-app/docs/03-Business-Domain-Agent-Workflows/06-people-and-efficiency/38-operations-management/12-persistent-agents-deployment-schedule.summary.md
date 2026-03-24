@@ -1,4 +1,4 @@
-# Lesson 12 Summary — Persistent Agents: Deployment and Schedule
+# Lesson 12 Summary: Persistent Agents: Deployment and Schedule
 
 ## What This Lesson Covers
 
@@ -15,11 +15,11 @@ Lessons 3-11 built the operational data layer: vendor register, contract obligat
 
 ## The Critical Distinction: Official vs. Custom Plugin
 
-The official Operations plugin is designed for on-demand use — you invoke commands when you want output. The custom Operations Intelligence plugin provides the persistent automation layer: agents that run without being invoked and deliver alerts without being asked. No official plugin has persistent agents.
+The official Operations plugin is designed for on-demand use; you invoke commands when you want output. The custom Operations Intelligence plugin provides the persistent automation layer: agents that run without being invoked and deliver alerts without being asked. No official plugin has persistent agents.
 
 ## The Alert Quality Standard
 
-Every agent alert must contain a specific recommended action. Status alone ("contract renewing soon") is insufficient. A quality alert specifies what to do, by when, who must act, and when escalation occurs. The Vendor Watchdog's renewal alert includes service description, annual value, renewal date, notice period, notice deadline, named owner, required action, and escalation rule — giving the recipient everything they need to act without seeking additional information.
+Every agent alert must contain a specific recommended action. Status alone ("contract renewing soon") is insufficient. A quality alert specifies what to do, by when, who must act, and when escalation occurs. The Vendor Watchdog's renewal alert includes service description, annual value, renewal date, notice period, notice deadline, named owner, required action, and escalation rule, giving the recipient everything they need to act without seeking additional information.
 
 ## Agent Interdependencies
 
@@ -29,7 +29,7 @@ The four agents form a coordinated network with defined interaction chains:
 - **Change Tracker → Process Health:** Changes closed in the change log trigger Process Health cross-referencing to identify SOPs that reference the changed system
 - **Vendor Watchdog → Risk Register:** SLA breaches flagged by the Vendor Watchdog should generate operational risk entries (manual update to the risk register built in Lesson 9)
 
-Agents alert; humans act. No agent updates status automatically — particularly for compliance obligations, where automated status changes create audit liability.
+Agents alert; humans act. No agent updates status automatically, particularly for compliance obligations, where automated status changes create audit liability.
 
 ## Configuration Requirements
 

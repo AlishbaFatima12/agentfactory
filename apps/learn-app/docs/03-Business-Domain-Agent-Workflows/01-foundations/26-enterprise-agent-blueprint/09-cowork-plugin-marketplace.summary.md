@@ -1,5 +1,5 @@
 ### Core Concept
-The Cowork Plugin Marketplace is a distribution mechanism for generalisable domain expertise. Knowledge workers who have built a production SKILL.md encoding general domain best practice can publish it as a vertical skill pack or connector package. Subscribing organisations receive a starting point that requires customisation with their own institutional knowledge — not a finished product. The economics are attractive: the marginal cost of each additional subscriber is effectively zero.
+The Cowork Plugin Marketplace is a distribution mechanism for generalisable domain expertise. Knowledge workers who have built a production SKILL.md encoding general domain best practice can publish it as a vertical skill pack or connector package. Subscribing organisations receive a starting point that requires customisation with their own institutional knowledge; not a finished product. The economics are attractive: the marginal cost of each additional subscriber is effectively zero.
 
 ### Key Mental Models
 - **Vertical Skill Pack**: A domain-specific SKILL.md template encoding general best practice (e.g., contract triage for English law, financial research for equity analysis) without any organisation-specific context. Subscriber must add: jurisdiction settings, clause standards, escalation routing, institutional conventions.
@@ -8,14 +8,14 @@ The Cowork Plugin Marketplace is a distribution mechanism for generalisable doma
 - **Architecture vs Institutional Knowledge**: The marketplace distributes architecture and general practice; the subscribing organisation provides institutional specificity. The marketplace does not replace the knowledge worker inside the subscribing organisation.
 
 ### Critical Patterns
-- The marketplace solves the discovery and deployment problem — without it, a well-designed SKILL.md stops at the organisation that built it
-- Selling general domain best practice does not mean selling competitive advantage — publishable knowledge is knowledge a competitor could independently arrive at from public sources and professional training
-- Both categories (skill packs and connector packages) require subscriber customisation — the marketplace provides the scaffold, not the finished agent
-- The economics connect to the Marketplace monetisation model from Chapter 25 Lesson 5 — the model is most attractive when domain expertise is valuable across many organisations but not dependent on any single organisation's proprietary context
+- The marketplace solves the discovery and deployment problem: without it, a well-designed SKILL.md stops at the organisation that built it
+- Selling general domain best practice does not mean selling competitive advantage: publishable knowledge is knowledge a competitor could independently arrive at from public sources and professional training
+- Both categories (skill packs and connector packages) require subscriber customisation: the marketplace provides the scaffold, not the finished agent
+- The economics connect to the Marketplace monetisation model from Chapter 25 Lesson 5: the model is most attractive when domain expertise is valuable across many organisations but not dependent on any single organisation's proprietary context
 
 ### Common Mistakes
-- Assuming published expertise is proprietary competitive advantage — publishable knowledge by definition is not proprietary
-- Expecting marketplace plugins to be deployment-ready without customisation — both categories require significant institutional knowledge to be added by the subscriber
+- Assuming published expertise is proprietary competitive advantage: publishable knowledge by definition is not proprietary
+- Expecting marketplace plugins to be deployment-ready without customisation: both categories require significant institutional knowledge to be added by the subscriber
 - Failing the transferability test by not distinguishing general best practice (publishable) from firm-specific context (not publishable)
 
 ### Connections

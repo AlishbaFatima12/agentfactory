@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch36-06-feature-specifications-001"
     front: "What are the two failure modes for feature specifications?"
-    back: "The Vague Spec (under-specified — engineers make product decisions) and the Over-Specified Spec (over-specified — PM makes engineering decisions). The craft is in the middle: complete on what matters, silent on what doesn't."
+    back: "The Vague Spec (under-specified: engineers make product decisions) and the Over-Specified Spec (over-specified; PM makes engineering decisions). The craft is in the middle: complete on what matters, silent on what doesn't."
     tags: ["failure-modes", "feature-specifications"]
     difficulty: "intermediate"
 
@@ -26,7 +26,7 @@ cards:
 
   - id: "ch36-06-feature-specifications-004"
     front: "What is the first of the four acceptance criteria rules?"
-    back: "Independently testable — each AC must be verifiable on its own without another AC being true first."
+    back: "Independently testable: each AC must be verifiable on its own without another AC being true first."
     tags: ["acceptance-criteria", "criteria-rules"]
     difficulty: "basic"
 
@@ -38,7 +38,7 @@ cards:
 
   - id: "ch36-06-feature-specifications-006"
     front: "What is the 'behavior not implementation' AC rule?"
-    back: "ACs must describe what must be true from the user's perspective, not how to achieve it. 'Export completes within 10 seconds' is behavior. 'Use async job queue with Redis' is implementation — it belongs in an engineering ticket, not a spec."
+    back: "ACs must describe what must be true from the user's perspective, not how to achieve it. 'Export completes within 10 seconds' is behavior. 'Use async job queue with Redis' is implementation: it belongs in an engineering ticket, not a spec."
     tags: ["behavior", "implementation", "rule"]
     difficulty: "intermediate"
 
@@ -56,7 +56,7 @@ cards:
 
   - id: "ch36-06-feature-specifications-009"
     front: "When is a spec over-specified?"
-    back: "When it tells engineers how to implement something — database schema, component names, algorithm choice. The spec should answer every product question and none of the engineering questions."
+    back: "When it tells engineers how to implement something: database schema, component names, algorithm choice. The spec should answer every product question and none of the engineering questions."
     tags: ["spec-over-specified", "over-specified"]
     difficulty: "basic"
 
@@ -74,7 +74,7 @@ cards:
 
   - id: "ch36-06-feature-specifications-012"
     front: "What is the signal that a spec is over-specified?"
-    back: "If the spec mentions database schema, API endpoints, service names, or algorithm choices in the acceptance criteria — these are implementation details that belong in engineering tickets, not the spec."
+    back: "If the spec mentions database schema, API endpoints, service names, or algorithm choices in the acceptance criteria: these are implementation details that belong in engineering tickets, not the spec."
     tags: ["signal", "spec", "over-specified"]
     difficulty: "intermediate"
 

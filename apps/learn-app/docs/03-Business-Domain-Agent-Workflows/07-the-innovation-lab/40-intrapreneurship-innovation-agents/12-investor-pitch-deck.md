@@ -29,21 +29,21 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Content-Creation"
-    measurable_at_this_level: "Student can produce a 9-slide narrative where each slide has a specific headline, supporting content from their own venture data, a 30-second verbal script, and an identified emotional job — with no banned phrases and every claim sourced"
+    measurable_at_this_level: "Student can produce a 9-slide narrative where each slide has a specific headline, supporting content from their own venture data, a 30-second verbal script, and an identified emotional job, with no banned phrases and every claim sourced"
 
   - name: "Prepare Honest Answers for the 15 Hardest Investor Questions"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can identify the 15 most likely challenging questions for their specific venture, produce honest answers (not spin), and identify any question for which they currently lack a good answer — with a plan to get one before the pitch"
+    measurable_at_this_level: "Student can identify the 15 most likely challenging questions for their specific venture, produce honest answers (not spin), and identify any question for which they currently lack a good answer, with a plan to get one before the pitch"
 
   - name: "Write a 100-Word Executive Summary for an Investor Introduction"
     proficiency_level: "B1"
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Content-Creation"
-    measurable_at_this_level: "Student can write a one-paragraph summary containing problem, solution, traction, ask, and differentiation — with no generic phrases and all traction figures drawn from real data"
+    measurable_at_this_level: "Student can write a one-paragraph summary containing problem, solution, traction, ask, and differentiation, with no generic phrases and all traction figures drawn from real data"
 
 learning_objectives:
   - objective: "Build a 9-slide investor pitch narrative using the Hook-to-Vision arc, with each slide engineered for a specific investor emotion"
@@ -64,50 +64,50 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "9-slide narrative arc — the Hook-to-Vision emotional journey"
-    - "Emotional engineering — the investor feeling engineered per slide"
-    - "Pitch quality standards — banned phrases and sourcing rules"
-    - "Traction hierarchy — evidence ranked from most to least convincing"
-  assessment: "4 concepts at B2 is within limits. Students arrive with canvas (L08), financials (L09), market data (L10), and GTM (L11) — the raw material for each slide already exists. The lesson teaches assembly and narrative, not new data creation."
+    - "9-slide narrative arc: the Hook-to-Vision emotional journey"
+    - "Emotional engineering: the investor feeling engineered per slide"
+    - "Pitch quality standards, banned phrases and sourcing rules"
+    - "Traction hierarchy, evidence ranked from most to least convincing"
+  assessment: "4 concepts at B2 is within limits. Students arrive with canvas (L08), financials (L09), market data (L10), and GTM (L11): the raw material for each slide already exists. The lesson teaches assembly and narrative, not new data creation."
 
 differentiation:
   extension_for_advanced: "After writing your 9-slide narrative, research one specific angel investor or early-stage VC whose portfolio suggests they would be interested in your venture. Use /pitch to generate a personalised investor brief. Then practise the verbal pitch out loud and paste the transcript back into Cowork for critique. How does the written narrative change when you speak it aloud?"
-  remedial_for_struggling: "Start with Slides 2 and 5 only — the Problem and the Traction. These are the most important slides in any early-stage pitch. If you can make an investor feel the problem viscerally (Slide 2) and believe you are already solving it with evidence (Slide 5), you have the core of a fundable story. Add the other 7 slides once these two are strong."
+  remedial_for_struggling: "Start with Slides 2 and 5 only: the Problem and the Traction. These are the most important slides in any early-stage pitch. If you can make an investor feel the problem viscerally (Slide 2) and believe you are already solving it with evidence (Slide 5), you have the core of a fundable story. Add the other 7 slides once these two are strong."
 
 teaching_guide:
   key_points:
-    - "A pitch deck is a narrative device, not a product document — the goal of each slide is to produce a specific emotion in the investor, not to convey information"
-    - "Every claim must have a source — customer data, pilot results, or your own metrics. Unsourced claims read as wishful thinking to experienced investors"
+    - "A pitch deck is a narrative device, not a product document: the goal of each slide is to produce a specific emotion in the investor, not to convey information"
+    - "Every claim must have a source, customer data, pilot results, or your own metrics. Unsourced claims read as wishful thinking to experienced investors"
     - "The traction hierarchy matters: revenue trumps LOIs, which trump waitlists, which trump interviews. Know exactly where you sit and compensate accordingly with team strength"
     - "L12 comes after L10 (market) and L11 (GTM) because the Slide 4 (Market) requires your bottom-up sizing data, and Slide 5 (Traction) requires your GTM evidence"
-    - "For intrapreneurs, the business case follows the same 9-slide logic — the investor becomes the innovation committee and the ask becomes budget + headcount"
+    - "For intrapreneurs, the business case follows the same 9-slide logic: the investor becomes the innovation committee and the ask becomes budget + headcount"
   misconceptions:
     - "A longer pitch deck is more convincing. Correction: the standard is 9-12 slides. More slides dilute the narrative and test investor patience. Every extra slide must earn its place by advancing the story."
-    - "Conservative projections build credibility. Correction: investors know all projections are optimistic. Say 'base case', 'conservative scenario', or 'base assumption' — never 'conservative projections'. Present three scenarios and own your assumptions."
+    - "Conservative projections build credibility. Correction: investors know all projections are optimistic. Say 'base case', 'conservative scenario', or 'base assumption'; never 'conservative projections'. Present three scenarios and own your assumptions."
     - "Strong financials can compensate for weak traction. Correction: at seed stage, traction is the financial model. Show real evidence (even 3 paying customers at $500/month) over elaborate spreadsheet models based on assumed numbers."
   discussion_prompts:
-    - "Think of a product or service you have seen pitched that you found unconvincing. What emotional response did the pitch fail to produce — and at which slide did you mentally check out?"
+    - "Think of a product or service you have seen pitched that you found unconvincing. What emotional response did the pitch fail to produce , and at which slide did you mentally check out?"
     - "Why do investors react negatively to 'no direct competition'? What does this phrase actually signal about the founder's market knowledge?"
   teaching_tips:
     - "Read the banned phrases list aloud before reviewing student pitches. Students recognise their own writing in the examples."
-    - "Use the AP traction slide as a benchmark: 3 paying pilots, specific adoption rates, a verbatim CFO quote, and 6 LOIs. Ask students to locate each item in the traction hierarchy — it makes the hierarchy concrete rather than abstract."
+    - "Use the AP traction slide as a benchmark: 3 paying pilots, specific adoption rates, a verbatim CFO quote, and 6 LOIs. Ask students to locate each item in the traction hierarchy ; it makes the hierarchy concrete rather than abstract."
 ---
 
 # Investor Pitch Deck
 
 You have built the canvas, modelled the unit economics, sized the market, and designed the go-to-market strategy. You know the business. The next challenge is telling the story.
 
-A great investor pitch deck is not a product demo with financials appended. It is a narrative arc — a story that takes investors from "this problem exists" to "this team will capture this opportunity" to "investing now is the right decision." Every slide has one job: to produce a specific emotion in the investor so they arrive at the Ask in the right frame of mind.
+A great investor pitch deck is not a product demo with financials appended. It is a narrative arc: a story that takes investors from "this problem exists" to "this team will capture this opportunity" to "investing now is the right decision." Every slide has one job: to produce a specific emotion in the investor so they arrive at the Ask in the right frame of mind.
 
 In this lesson you will build the 9-slide pitch narrative for the AP automation venture, learn the pitch quality standards that distinguish professional from amateur decks, prepare for the 15 hardest questions you will face, and write the one-paragraph executive summary for investor email introductions. You have the data. Now you tell the story.
 
 :::note From the Last Three Lessons
-You arrive at this lesson with: the Business Model Canvas (L08), unit economics and the 24-month financial model (L09), your bottom-up market sizing and competitive landscape (L10), and your ICP, channel strategy, and GTM traction (L11). Every piece of slide content already exists — this lesson is about assembly, narrative, and emotional engineering.
+You arrive at this lesson with: the Business Model Canvas (L08), unit economics and the 24-month financial model (L09), your bottom-up market sizing and competitive landscape (L10), and your ICP, channel strategy, and GTM traction (L11). Every piece of slide content already exists. This lesson is about assembly, narrative, and emotional engineering.
 :::
 
 ## Narrative Architecture: The 9-Slide Structure
 
-The best pitch decks follow a consistent narrative arc. Each slide has a headline, supporting content, a 30-second verbal script, and an emotional job — what should the investor feel after this slide?
+The best pitch decks follow a consistent narrative arc. Each slide has a headline, supporting content, a 30-second verbal script, and an emotional job: what should the investor feel after this slide?
 
 | Slide | Name           | Emotional Job                               |
 | ----- | -------------- | ------------------------------------------- |
@@ -121,7 +121,7 @@ The best pitch decks follow a consistent narrative arc. Each slide has a headlin
 | 8     | The Ask        | Clarity; investor knows what they're buying |
 | 9     | The Vision     | Ambition; this could be very large          |
 
-The sequence matters. Problem must precede Solution — investors who hear the solution before feeling the problem ask "so what?" The Ask comes second-to-last because investors need conviction before they can evaluate the terms. Vision closes because it gives investors a reason to stay in the deal through the hard years.
+The sequence matters. Problem must precede Solution, investors who hear the solution before feeling the problem ask "so what?" The Ask comes second-to-last because investors need conviction before they can evaluate the terms. Vision closes because it gives investors a reason to stay in the deal through the hard years.
 
 ## Pitch Quality Standards
 
@@ -135,17 +135,17 @@ Before writing a single slide, internalise these standards. They separate decks 
 | "In our 3 pilots, adoption was 71–89%..."              | "Our product has strong adoption" |
 | "According to our bottom-up model: $180M SAM..."       | "The market is $2B"               |
 
-**Banned phrases** — these are red flags for experienced investors:
+**Banned phrases:** these are red flags for experienced investors:
 
-- "Massive market opportunity" — give the specific number
-- "Disruptive technology" — explain the specific disruption mechanism
-- "First mover advantage" — explain what makes the advantage durable
-- "Proprietary AI" — what specifically is proprietary?
-- "Conservative projections" — say "base case"; all projections are optimistic
-- "We just need 1% of the market" — this is not a strategy; it is bad arithmetic
-- "No direct competition" — if there is no competition, there is no market
+- "Massive market opportunity", give the specific number
+- "Disruptive technology", explain the specific disruption mechanism
+- "First mover advantage", explain what makes the advantage durable
+- "Proprietary AI": what specifically is proprietary?
+- "Conservative projections", say "base case"; all projections are optimistic
+- "We just need 1% of the market". This is not a strategy; it is bad arithmetic
+- "No direct competition"; if there is no competition, there is no market
 
-**Traction hierarchy** — present your strongest evidence first:
+**Traction hierarchy:** present your strongest evidence first:
 
 1. Revenue + growth rate (paying customers, MRR, month-over-month)
 2. Pilot results with specific metrics (adoption rate, retention, NPS)
@@ -182,31 +182,31 @@ SLIDE 2: THE PROBLEM
  Slide content:
   • Journey map: invoice → WhatsApp photo → Excel → WhatsApp approval → payment
   • Pain stats from discovery: "3–5 reconciliation errors/month (9/10 CFOs)"
-  • Quote: "My auditor visits are the most stressful two weeks of my year —
-    and 80% of the stress is AP-related." — CFO, $20M manufacturer
+  • Quote: "My auditor visits are the most stressful two weeks of my year,
+    and 80% of the stress is AP-related.": CFO, $20M manufacturer
  Say out loud:
   "This is how accounts payable works in a typical $10M company.
-  An invoice arrives — sometimes by email, sometimes on WhatsApp, sometimes
+  An invoice arrives, sometimes by email, sometimes on WhatsApp, sometimes
   on paper. Someone photographs it, puts it in a WhatsApp group for approval,
   and eventually someone enters it into Excel. Three to five of these invoices
   are wrong, duplicated, or unmatched every single month. And the CFO finds
-  out at month-end — or worse, when the auditor does."
+  out at month-end , or worse, when the auditor does."
  Emotional job: Problem recognition; empathy with the customer
 
 SLIDE 3: THE SOLUTION
- Headline: "AP automation that works inside WhatsApp — not instead of it"
+ Headline: "AP automation that works inside WhatsApp, not instead of it"
  Slide content:
   • Product screenshot: WhatsApp approval message from the platform
   • Three capabilities: AI invoice matching (91% accuracy); WhatsApp approval
     workflow; real-time AP dashboard
-  • Key differentiator: "Designed for the market — works with the tools
+  • Key differentiator: "Designed for the market, works with the tools
     finance teams actually use"
  Say out loud:
   "We built something different. Instead of asking CFOs to change their
-  behaviour — to abandon WhatsApp and use a new portal — we put the
+  behaviour, to abandon WhatsApp and use a new portal; we put the
   approval workflow inside WhatsApp. The invoice arrives, our AI matches
   it to the purchase order at 91% accuracy, and the CFO gets a WhatsApp
-  message: 'Vendor A, $85,000, 94% confidence match — APPROVE or REJECT.'
+  message: 'Vendor A, $85,000, 94% confidence match, APPROVE or REJECT.'
   One tap. Full audit trail. No new behaviour required."
  Emotional job: Relief; "finally, something that makes sense"
 
@@ -218,10 +218,10 @@ SLIDE 4: THE MARKET
   • TAM: [N] companies with $1M+ revenue in your geography → $[X]B+ market
   • SAM (serviceable): mid-market segment ($5M–$50M revenue) → $[X]M
   • SOM (5-year target): [N] customers → $[X]M ARR
-  • Market timing: [2–3 specific forces making now the right time —
+  • Market timing: [2–3 specific forces making now the right time,
     regulatory change, technology shift, behaviour change, cost inflection]
  Say out loud:
-  "There are [N] companies in the mid-market we are targeting — companies
+  "There are [N] companies in the mid-market we are targeting, companies
   large enough to have a finance team but not large enough to have deployed
   enterprise ERP with built-in AP automation. Our serviceable market is $[X]M.
   We are building toward $[X]M ARR in five years — [N] customers at $[X] per year.
@@ -233,11 +233,11 @@ SLIDE 5: TRACTION
  Slide content:
   • 3 pilots at $500/month
   • 89% and 71% invoice adoption (Pilots 1 and 2); 45% baseline (Pilot 3)
-  • Quote: "I would be comfortable showing this to my auditor" — all 3 CFOs
+  • Quote: "I would be comfortable showing this to my auditor", all 3 CFOs
   • 6 LOIs from warm conversations (pipeline)
  Say out loud:
   "We have not been building in a vacuum. Three companies are paying us
-  $500 a month today — before we have raised a single dollar of
+  $500 a month today, before we have raised a single dollar of
   institutional capital. Two of those companies have more than 70% of their
   invoices running through our system. All three CFOs told us they would be
   comfortable showing this to their auditor. That is the metric we optimised for.
@@ -255,7 +255,7 @@ SLIDE 6: BUSINESS MODEL
   "The economics are unusual. It costs us $275 to acquire a customer
   who is worth $36,000 in gross profit over their lifetime at 15% annual
   churn. That 131:1 ratio is strong even by SaaS standards. We break even
-  at 10 customers — about five months from now. The $500K we are raising
+  at 10 customers, about five months from now. The $500K we are raising
   does not buy us survival. It buys us acceleration: a sales hire, an ML
   engineer to push matching accuracy from 91% to 97%, and the ERP integrations
   that open the enterprise market."
@@ -268,7 +268,7 @@ SLIDE 7: THE TEAM
   • Technical co-founder credentials
   • Advisors if relevant
  Say out loud:
-  [Personalise — no template; this must be authentic to your specific
+  [Personalise; no template; this must be authentic to your specific
    background and what makes you the right person for this problem]
  Emotional job: Trust; these people can do this
 
@@ -282,7 +282,7 @@ SLIDE 8: THE ASK
  Say out loud:
   "We are raising $500K on a SAFE note at a $3M valuation cap.
   This capital buys us 18 months and 50 customers. With 50 customers
-  at $6K–$7K ARR each, we are at approximately $360K ARR — the right
+  at $6K–$7K ARR each, we are at approximately $360K ARR: the right
   size for a Series A at a credible multiple. We are not optimising for
   a large seed. We are optimising for a clean, fast path to Series A."
  Emotional job: Clarity; this investor knows exactly what they are buying
@@ -292,12 +292,12 @@ SLIDE 9: THE VISION
  Slide content:
   • Vision: the financial operating system for the mid-market
   • Path: AP → procurement → expense management → financial close
-  • Comparable: what Xero did for SME accounting — we do for the mid-market
+  • Comparable: what Xero did for SME accounting; we do for the mid-market
  Say out loud:
   "We are starting with AP because it is the most painful problem and the
   fastest path to revenue. But the vision is larger. Every document that
-  moves through a finance function — every purchase order, every expense
-  claim, every bank statement — is today a manual, error-prone process in
+  moves through a finance function: every purchase order, every expense
+  claim, every bank statement: is today a manual, error-prone process in
   mid-market companies globally. We are building the financial operating
   system for the mid-market. AP is the first module. The market is the
   entire finance function of hundreds of thousands of companies who have
@@ -307,12 +307,12 @@ SLIDE 9: THE VISION
 ```
 
 :::note Your content will vary
-The market slide numbers, team slide content, and some traction details should come from your own research and venture data. The structure, emotional engineering, and verbal script approach are what to carry forward — not the specific numbers.
+The market slide numbers, team slide content, and some traction details should come from your own research and venture data. The structure, emotional engineering, and verbal script approach are what to carry forward , not the specific numbers.
 :::
 
 ## Hard Questions Preparation
 
-Investors — especially experienced ones — will probe your weakest points. The worst thing you can do is be surprised by a question you should have anticipated. The second-worst thing is to spin rather than answer honestly. Investors have heard every spin; what builds trust is directness about what you know and do not know.
+Investors, especially experienced ones, will probe your weakest points. The worst thing you can do is be surprised by a question you should have anticipated. The second-worst thing is to spin rather than answer honestly. Investors have heard every spin; what builds trust is directness about what you know and do not know.
 
 Use `/pitch` to generate the 15 hardest questions for your specific venture and investor type:
 
@@ -321,7 +321,7 @@ Use `/pitch` to generate the 15 hardest questions for your specific venture and 
 I am pitching to [angel investors / early-stage VCs] for a $500K seed round
 in AP automation SaaS.
 What are the 15 hardest questions they are likely to ask?
-For each question: give me the honest, direct answer I should give —
+For each question: give me the honest, direct answer I should give,
 not the spin. If I don't have a good answer, tell me what I need to do
 before the pitch to have one.
 ```
@@ -330,19 +330,19 @@ before the pitch to have one.
 
 | Question                                                       | Honest answer                                                                                                                                      |
 | -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "Why hasn't a large ERP vendor already built this?"            | "They have — for enterprise. For mid-market, the ROI doesn't justify the integration cost. That's the gap."                                        |
+| "Why hasn't a large ERP vendor already built this?"            | "They have, for enterprise. For mid-market, the ROI doesn't justify the integration cost. That's the gap."                                        |
 | "What's your current churn?"                                   | "We have 3 pilots active; none have churned. Too early to measure annual churn. Our retention assumption is 85% annual; ask me again in 6 months." |
 | "Why WhatsApp? What happens when they switch to Teams?"        | "WhatsApp has >2 billion users and is dominant in the geographies we're targeting. Our architecture works with any messaging platform."            |
-| "How does your AI matching work at 91% accuracy?"              | "Pattern matching on historical PO data. Accuracy improves with volume. At 91%, 9% still needs human review — which we surface in the dashboard."  |
+| "How does your AI matching work at 91% accuracy?"              | "Pattern matching on historical PO data. Accuracy improves with volume. At 91%, 9% still needs human review, which we surface in the dashboard."  |
 | "What's your CAC at scale? Your $275 assumes founder selling." | "Correct. Sustainable CAC is modelled at $1,200 with a market-rate sales team. LTV:CAC at that rate is still 30:1."                                |
 
 :::tip The 15-question exercise
-Do not try to generate the hardest questions yourself. You will avoid the most uncomfortable ones. Ask the AI to find them — specifically instructing it to include questions about your weakest points. A question you have not prepared for in an investor meeting is a question that can kill a deal.
+Do not try to generate the hardest questions yourself. You will avoid the most uncomfortable ones. Ask the AI to find them, specifically instructing it to include questions about your weakest points. A question you have not prepared for in an investor meeting is a question that can kill a deal.
 :::
 
 ## Executive Summary
 
-Every investor introduction requires a one-paragraph summary — for forwarded emails, warm introduction notes, and investor databases. This summary must work in isolation: the reader should understand the venture, believe it is fundable, and want a meeting.
+Every investor introduction requires a one-paragraph summary, for forwarded emails, warm introduction notes, and investor databases. This summary must work in isolation: the reader should understand the venture, believe it is fundable, and want a meeting.
 
 **Executive Summary for AP Automation SaaS:**
 
@@ -351,14 +351,14 @@ Every investor introduction requires a one-paragraph summary — for forwarded e
 Write a one-paragraph (100-word) executive summary for the AP automation
 venture for the top of an investor email introduction.
 Include: problem, solution, traction, ask, and what makes this worth
-their time. Make it specific — no generic claims.
+their time. Make it specific; no generic claims.
 Context: 3 paying pilots at $500/month; 91% AI matching accuracy;
 6 LOIs; raising $500K on a SAFE note at $3M cap.
 ```
 
 **Sample output:**
 
-> Mid-market companies ($5M–$50M revenue) manage accounts payable through informal WhatsApp approvals and Excel reconciliation, generating 3–5 errors per month and creating audit exposure. We have built an AP automation platform that works inside WhatsApp — no behaviour change required — with AI invoice matching at 91% accuracy and a real-time audit dashboard. Three companies are paying us $500/month today; two have processed 70%+ of their invoices through the system; all three CFOs say they would be comfortable showing the output to their auditor. We have 6 additional LOIs. We are raising $500K on a SAFE note at a $3M cap to go from 3 customers to 50 in 18 months.
+> Mid-market companies ($5M–$50M revenue) manage accounts payable through informal WhatsApp approvals and Excel reconciliation, generating 3–5 errors per month and creating audit exposure. We have built an AP automation platform that works inside WhatsApp; no behaviour change required, with AI invoice matching at 91% accuracy and a real-time audit dashboard. Three companies are paying us $500/month today; two have processed 70%+ of their invoices through the system; all three CFOs say they would be comfortable showing the output to their auditor. We have 6 additional LOIs. We are raising $500K on a SAFE note at a $3M cap to go from 3 customers to 50 in 18 months.
 
 This summary is 120 words. It contains no banned phrases. Every claim is specific. An investor reading this knows exactly what to evaluate.
 
@@ -369,12 +369,12 @@ The "pitch deck" for an intrapreneur is a business case for the innovation commi
 | ---------------- | --------------------------------------------------------- |
 | Hook             | Why this matters to the organisation, and why now         |
 | Problem          | Internal pain: cost, risk, or missed opportunity          |
-| Solution         | Your proposed approach — specific, not generic            |
+| Solution         | Your proposed approach, specific, not generic            |
 | Market           | Internal opportunity size (volume of transactions, users) |
 | Traction         | Pilot results, internal champions, early adoption data    |
-| Business Model   | Cost reduction or revenue impact — specific numbers       |
+| Business Model   | Cost reduction or revenue impact, specific numbers       |
 | Team             | Your cross-functional coalition and their commitments     |
-| Ask              | Budget and headcount request — specific and justified     |
+| Ask              | Budget and headcount request, specific and justified     |
 | Vision           | What this enables for the organisation in 3–5 years       |
 
 The executive summary becomes the email to your innovation committee sponsor. The hardest questions become the objections from the CFO, Legal, and IT during the approval process.
@@ -388,19 +388,19 @@ The executive summary becomes the email to your innovation committee sponsor. Th
 
 From the exercises in Lessons 8 through 11, you have: your Business Model Canvas, unit economics, bottom-up market sizing, and GTM strategy. This exercise assembles those components into a pitch narrative.
 
-**Step 1 — Narrative architecture (40 minutes).**
+**Step 1, Narrative architecture (40 minutes).**
 
 ```
 /pitch
 Write my investor pitch deck narrative.
-Venture: [Your idea — with context from all prior exercises]
-Raise: [Amount and instrument — e.g. $500K on a SAFE]
-Investor type: [Angel / VC / Corporate — be specific about stage and sector]
+Venture: [Your idea, with context from all prior exercises]
+Raise: [Amount and instrument, e.g. $500K on a SAFE]
+Investor type: [Angel / VC / Corporate, be specific about stage and sector]
 Stage: [Pre-seed / Seed]
-Key traction points: [What you have — customers, revenue, pilots, LOIs, interviews]
+Key traction points: [What you have, customers, revenue, pilots, LOIs, interviews]
 
 For each of the 9 slides:
-1. Headline (the memorable one-sentence statement — no banned phrases)
+1. Headline (the memorable one-sentence statement; no banned phrases)
 2. Slide content (data points and evidence from my actual venture)
 3. What I say out loud (30 seconds)
 4. The emotional job (what should the investor feel after this slide?)
@@ -412,7 +412,7 @@ After receiving the output, review each slide against the quality standards:
 - Are any banned phrases present? Replace them.
 - Where in the traction hierarchy do you sit? Is the traction slide honest about this?
 
-**Step 2 — The hardest questions (20 minutes).**
+**Step 2. The hardest questions (20 minutes).**
 
 ```
 /pitch
@@ -425,20 +425,20 @@ the pitch to get one.
 
 Highlight the 3 questions where your current answer is weakest. These are the gaps to close before any real investor meeting.
 
-**Step 3 — Executive summary (15 minutes).**
+**Step 3, Executive summary (15 minutes).**
 
 ```
 /pitch
 Write a one-paragraph (100-word) executive summary for my venture
 for the top of an investor email introduction.
 Include: problem, solution, traction, ask, and what makes this
-worth their time. Make it specific — no generic claims.
+worth their time. Make it specific; no generic claims.
 Context: [Your actual traction numbers and raise details]
 ```
 
-**Step 4 — Pitch practice (15 minutes).**
+**Step 4, Pitch practice (15 minutes).**
 
-Speak your 3-minute pitch out loud — not silently read it. Then paste a summary of what you said back into Cowork:
+Speak your 3-minute pitch out loud, not silently read it. Then paste a summary of what you said back into Cowork:
 
 ```
 /pitch
@@ -452,7 +452,7 @@ what I said (roughly):
 4. What did I leave out that I should have included?
 ```
 
-**Deliverable:** 9-slide pitch deck narrative, 15 Q&A preparation answers, one-paragraph executive summary, pitch practice feedback. Save all four — you will use the pitch narrative in Lesson 14 (Fundraising Readiness Agent) and the full venture context in Lesson 15 (Capstone).
+**Deliverable:** 9-slide pitch deck narrative, 15 Q&A preparation answers, one-paragraph executive summary, pitch practice feedback. Save all four; you will use the pitch narrative in Lesson 14 (Fundraising Readiness Agent) and the full venture context in Lesson 15 (Capstone).
 
 :::note Keep This File
 The pitch narrative and Q&A answers you produce here are inputs to the Fundraising Readiness Agent in Lesson 14 and to the innov.local.md fundraising section in Lesson 15. Keep them in your Cowork session.
@@ -463,7 +463,7 @@ The pitch narrative and Q&A answers you produce here are inputs to the Fundraisi
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Run the chapter's worked example:
+**Reproduce:** Run the chapter's worked example:
 
 ```
 /pitch
@@ -483,7 +483,7 @@ For each of 9 slides: headline, slide content, verbal script (30 sec), emotional
 
 **What you are learning:** Notice how the verbal script is different from the slide content. The slide is a prompt; the speech is the pitch. Investors remember what you said, not what was on the slides.
 
-**Adapt** — Modify for a different venture and investor type:
+**Adapt:** Modify for a different venture and investor type:
 
 ```
 /pitch
@@ -491,23 +491,23 @@ Write a 9-slide pitch narrative for:
 Venture: [A different B2B SaaS idea in a domain you know]
 Raise: [$X on a SAFE / convertible note]
 Investor type: [Corporate strategic investor in the same industry]
-Stage: [Pre-seed — limited traction so far]
+Stage: [Pre-seed, limited traction so far]
 Traction: [What you would realistically have at this stage]
 For each slide: headline, content, verbal script, emotional job.
 Note: Because traction is limited, compensate with team strength
 and insight quality on Slides 2 and 7.
 ```
 
-**What you are learning:** Corporate strategic investors evaluate differently from VCs — they care more about strategic fit and less about financial returns. Notice how the market sizing and vision slides change for a corporate audience.
+**What you are learning:** Corporate strategic investors evaluate differently from VCs; they care more about strategic fit and less about financial returns. Notice how the market sizing and vision slides change for a corporate audience.
 
-**Apply** — Write the pitch for your own venture:
+**Apply:** Write the pitch for your own venture:
 
 ```
 /pitch
 Write the 9-slide investor pitch narrative for my venture.
 Problem: [Your problem statement from L03]
 Solution: [Your solution hypothesis from L06]
-Traction: [Your actual traction — be honest about what you have]
+Traction: [Your actual traction, be honest about what you have]
 Market: [Your bottom-up market size from L10]
 Business model: [Your unit economics from L09]
 Raise: [Target amount and instrument]
@@ -516,7 +516,7 @@ No banned phrases. Every claim must reference a specific source
 (customer data, pilot results, or your own metrics).
 ```
 
-**What you are learning:** The moment you try to fill in "Traction" honestly, you discover your strongest and weakest evidence. Where you reach for vague language is where you need more data — or a more honest framing of what you actually know.
+**What you are learning:** The moment you try to fill in "Traction" honestly, you discover your strongest and weakest evidence. Where you reach for vague language is where you need more data , or a more honest framing of what you actually know.
 :::
 
 ## Flashcards Study Aid

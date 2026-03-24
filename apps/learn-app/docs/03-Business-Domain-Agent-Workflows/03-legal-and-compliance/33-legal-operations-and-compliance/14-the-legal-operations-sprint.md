@@ -1,7 +1,7 @@
 ---
 sidebar_position: 14
 title: "The Legal Operations Sprint"
-description: "Run the complete legal operations engine end-to-end — build a negotiation playbook, review three contracts, triage NDAs, assess compliance risk, prepare a meeting brief with e-signature routing, process a DSAR, and produce the legal ops dashboard — assembling every plugin command, skill, and jurisdiction overlay from Lessons 1 through 13 into a timed capstone sprint"
+description: "Run the complete legal operations engine end-to-end: build a negotiation playbook, review three contracts, triage NDAs, assess compliance risk, prepare a meeting brief with e-signature routing, process a DSAR, and produce the legal ops dashboard: assembling every plugin command, skill, and jurisdiction overlay from Lessons 1 through 13 into a timed capstone sprint"
 keywords:
   [
     "legal operations sprint",
@@ -29,14 +29,14 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can run the complete legal operations engine — playbook validation, contract review sprint, NDA triage calibration, compliance assessment, meeting prep with e-signature routing, DSAR response, and legal ops dashboard — in a single timed session, connecting every stage's output to the next"
+    measurable_at_this_level: "Student can run the complete legal operations engine: playbook validation, contract review sprint, NDA triage calibration, compliance assessment, meeting prep with e-signature routing, DSAR response, and legal ops dashboard: in a single timed session, connecting every stage's output to the next"
 
   - name: "Diagnose Legal AI Output Errors Under Time Pressure"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can identify miscalibrated thresholds, missing jurisdiction overlays, context loss between pipeline stages, and hallucinated regulatory references during live sprint execution — not in post-hoc review but while running the exercises"
+    measurable_at_this_level: "Student can identify miscalibrated thresholds, missing jurisdiction overlays, context loss between pipeline stages, and hallucinated regulatory references during live sprint execution: not in post-hoc review but while running the exercises"
 
   - name: "Adapt the Legal Operations Engine to a New Organisation"
     proficiency_level: "B2"
@@ -46,10 +46,10 @@ skills:
     measurable_at_this_level: "Student can reconfigure the legal operations engine for a different organisation, identifying which components transfer directly, which need playbook recalibration, and which require jurisdiction-specific overlay changes"
 
 learning_objectives:
-  - objective: "Complete the full legal operations sprint — playbook validation through dashboard production — producing connected outputs at every stage"
+  - objective: "Complete the full legal operations sprint: playbook validation through dashboard production: producing connected outputs at every stage"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes the sprint and produces: a validated playbook, 3 reviewed contracts, a calibrated NDA triage system, a compliance assessment with risk matrix, a meeting brief with e-signature routing, a DSAR acknowledgement, and a legal ops dashboard — all connected through the Noor Technologies pipeline"
+    assessment_method: "Student completes the sprint and produces: a validated playbook, 3 reviewed contracts, a calibrated NDA triage system, a compliance assessment with risk matrix, a meeting brief with e-signature routing, a DSAR acknowledgement, and a legal ops dashboard: all connected through the Noor Technologies pipeline"
 
   - objective: "Identify and correct at least 3 legal AI output errors during live sprint execution"
     proficiency_level: "B2"
@@ -66,7 +66,7 @@ cognitive_load:
   concepts_list:
     - "Sprint execution under time pressure (assembling known components against the clock)"
     - "Legal operations engine transferability (what is universal vs organisation-specific)"
-  assessment: "2 new concepts only. This is the capstone — every other concept was taught in L01-L13. Low new concept count is intentional. The challenge is synthesis and execution speed, not new learning."
+  assessment: "2 new concepts only. This is the capstone: every other concept was taught in L01-L13. Low new concept count is intentional. The challenge is synthesis and execution speed, not new learning."
 
 differentiation:
   extension_for_advanced: "Complete ALL 8 exercises including the full pipeline capstone. Then run the sprint for your own organisation with real contracts, real NDAs, and real compliance requirements. Document what you would change about the legal operations engine for your jurisdiction and practice area."
@@ -77,7 +77,7 @@ differentiation:
 
 Thirteen lessons. Playbook configuration, contract review, NDA triage, compliance assessment, IP monitoring, litigation hold, meeting prep, vendor management, process agents, DSAR workflows, employment law, and cross-border practice. Every piece of the legal operations engine is built. This sprint proves it works.
 
-No new concepts in this lesson. Every command, every skill, every jurisdiction overlay appeared in Lessons 1 through 13. What changes here is the mode of operation. In prior lessons you ran individual components and evaluated their output in isolation. In this sprint you assemble the complete engine and run it against Noor Technologies' full legal operations queue — contracts, NDAs, compliance questions, meeting prep, data subject requests, and the dashboard that ties it all together. The clock is running. Errors compound across stages. Your job is to execute, evaluate, and correct in real time.
+No new concepts in this lesson. Every command, every skill, every jurisdiction overlay appeared in Lessons 1 through 13. What changes here is the mode of operation. In prior lessons you ran individual components and evaluated their output in isolation. In this sprint you assemble the complete engine and run it against Noor Technologies' full legal operations queue: contracts, NDAs, compliance questions, meeting prep, data subject requests, and the dashboard that ties it all together. The clock is running. Errors compound across stages. Your job is to execute, evaluate, and correct in real time.
 
 :::tip Minimum Viable Capstone
 If you have 30 minutes instead of 45, complete Exercises 1, 2, 3, and 7. These four cover the core loop: validate your playbook, review contracts, triage NDAs, and produce a dashboard. The remaining exercises deepen specific areas but are not required to demonstrate the end-to-end workflow.
@@ -106,7 +106,7 @@ that were actually accepted during negotiation, the playbook
 thresholds have drifted — identify which dimension is miscalibrated.
 ```
 
-**What to look for:** Every executed contract should produce a review consistent with the actual negotiation outcome. If the playbook flags the TextileCloud limitation of liability as RED when your team accepted it as reasonable for the deal size — your liability threshold is too aggressive for mid-market SaaS vendors. That is playbook miscalibration: the configuration penalises a position that your organisation actually accepts in practice.
+**What to look for:** Every executed contract should produce a review consistent with the actual negotiation outcome. If the playbook flags the TextileCloud limitation of liability as RED when your team accepted it as reasonable for the deal size: your liability threshold is too aggressive for mid-market SaaS vendors. That is playbook miscalibration: the configuration penalises a position that your organisation actually accepts in practice.
 
 **If calibration has drifted:** Edit the offending section in `legal.local.md`. Re-run. Confirm the three executed contracts now produce reviews that match your actual risk tolerance without loosening criteria so broadly that genuinely problematic contracts also pass.
 
@@ -118,7 +118,7 @@ thresholds have drifted — identify which dimension is miscalibrated.
 
 Three contracts arrived this morning. Ayesha needs them reviewed by end of business. Fifteen minutes each.
 
-**Contract A — SaaS Vendor Agreement (Noor is the customer):**
+**Contract A; SaaS Vendor Agreement (Noor is the customer):**
 
 ```
 /review-contract
@@ -130,7 +130,7 @@ data processed in EU/UK only. Business unit wants to sign by Friday.
 
 Evaluate: What is the overall risk rating? How many RED items? What is the single most important redline given the Friday deadline?
 
-**Contract B — Consulting Services Agreement:**
+**Contract B; Consulting Services Agreement:**
 
 ```
 /review-contract
@@ -140,9 +140,9 @@ Consultant will access Noor's product roadmap and customer data.
 Governing law: DIFC.
 ```
 
-Evaluate: What IP ownership issues does the agent flag? The limitation of liability cap is AED 18,000 (10% of fees) — how does the agent classify this?
+Evaluate: What IP ownership issues does the agent flag? The limitation of liability cap is AED 18,000 (10% of fees): how does the agent classify this?
 
-**Contract C — Partnership Agreement:**
+**Contract C; Partnership Agreement:**
 
 ```
 /review-contract
@@ -163,9 +163,9 @@ Evaluate: The contract has no limitation of liability clause at all. Using the a
 
 Noor Technologies receives approximately 25 NDA requests per month. Currently all go to Ayesha, taking 30-45 minutes each. Your task: configure and test a triage system that routes standard NDAs for auto-approval while escalating non-standard ones.
 
-**Step 1 — Configure your triage criteria** in `legal.local.md` using the template from Lesson 5. Define Tier 1/2/3 thresholds.
+**Step 1; Configure your triage criteria** in `legal.local.md` using the template from Lesson 5. Define Tier 1/2/3 thresholds.
 
-**Step 2 — Run `/triage-nda` on 5 test NDAs:**
+**Step 2; Run `/triage-nda` on 5 test NDAs:**
 
 ```
 Triage these 5 NDAs against Noor Technologies' playbook:
@@ -217,7 +217,7 @@ From the output, build the risk matrix:
 
 Populate for the top 4 risks identified. Any risk scoring 15+ (Severity x Likelihood) requires an immediate mitigation plan.
 
-**What to evaluate:** Does the agent reference the correct Saudi regulations? If it cites PDPL Article numbers, verify that they exist. Hallucinated regulatory references in compliance assessments are dangerous — they create false confidence in regulatory compliance.
+**What to evaluate:** Does the agent reference the correct Saudi regulations? If it cites PDPL Article numbers, verify that they exist. Hallucinated regulatory references in compliance assessments are dangerous: they create false confidence in regulatory compliance.
 
 **Deliverable:** Compliance assessment with 5x5 risk matrix and priority actions for top risks.
 
@@ -227,7 +227,7 @@ Populate for the top 4 risks identified. Any risk scoring 15+ (Severity x Likeli
 
 Noor Technologies has a contract negotiation meeting tomorrow with Gulf Payments about the API integration contract (Contract B from Exercise 2). Prepare the meeting brief and, after the negotiation, route the agreed contract for execution.
 
-**Step 1 — Meeting briefing:**
+**Step 1; Meeting briefing:**
 
 ```
 Prepare a meeting briefing for tomorrow's contract negotiation:
@@ -244,7 +244,7 @@ Attendees: Ayesha Malik (GC), Bilal Ahmad (Legal Ops),
 
 Evaluate: Does the briefing include specific preparation for each RED/YELLOW item? Does it suggest fallback positions? Does it reference relevant precedents from your playbook?
 
-**Step 2 — Post-negotiation e-signature routing:**
+**Step 2; Post-negotiation e-signature routing:**
 
 After the negotiation, the parties agreed on revised terms. Route the contract for execution:
 
@@ -272,7 +272,7 @@ At 14:32 today, the following email arrived at `privacy@noortechnologies.com`:
 
 > _"Dear Data Protection Officer, Under the Pakistan Personal Data Protection Act, I am requesting access to all personal data your company holds about me. My name is Tariq Hassan. I was a client of your Enterprise ERP plan from March 2023 to January 2025. My email addresses were t.hassan@meridiantextiles.pk (work) and tariqhassan@gmail.com (personal). Please confirm receipt. Regards, Tariq Hassan."_
 
-**Step 1 — Acknowledge immediately:**
+**Step 1; Acknowledge immediately:**
 
 ```
 /respond type:"DSAR-acknowledgement"
@@ -285,7 +285,7 @@ At 14:32 today, the following email arrived at `privacy@noortechnologies.com`:
 
 Review the draft: Does it state the response deadline? Does it handle the two email addresses?
 
-**Step 2 — Data discovery:**
+**Step 2; Data discovery:**
 
 ```
 /respond type:"DSAR-data-discovery"
@@ -298,7 +298,7 @@ Review the draft: Does it state the response deadline? Does it handle the two em
 
 The agent drafts discovery requests to each system owner. Note which systems hold data and which retention policies apply.
 
-**Step 3 — Draft the response** covering all identified data categories, processing purposes, legal basis, and retention periods. Route for Ayesha's review before sending.
+**Step 3; Draft the response** covering all identified data categories, processing purposes, legal basis, and retention periods. Route for Ayesha's review before sending.
 
 **Deliverable:** DSAR acknowledgement within statutory window and documented discovery-to-response workflow.
 
@@ -308,7 +308,7 @@ The agent drafts discovery requests to each system owner. Note which systems hol
 
 You have built a playbook, reviewed contracts, triaged NDAs, assessed compliance, prepared meetings, routed signatures, and processed DSARs. This exercise ties them together into the dashboard Ayesha needs to run the legal function strategically.
 
-**Step 1 — Compliance calendar check:**
+**Step 1; Compliance calendar check:**
 
 ```
 /compliance-calendar
@@ -320,7 +320,7 @@ vendor contracts. Flag:
 - Contracts approaching auto-renewal that should be renegotiated
 ```
 
-**Step 2 — Compliance calendar:**
+**Step 2; Compliance calendar:**
 
 ```
 Configure a compliance calendar for Noor Technologies:
@@ -330,7 +330,7 @@ Include: Filing deadlines, renewal dates, audit schedules
 Escalation: 30-day warning → 14-day alert → 7-day escalation to GC
 ```
 
-**Step 3 — Legal spend report:**
+**Step 3; Legal spend report:**
 
 ```
 Generate a legal spend summary for Noor Technologies Q1 2026:
@@ -340,7 +340,7 @@ Flag: Any category exceeding budget by >10%
 Include: Trend vs prior quarter
 ```
 
-**Step 4 — Weekly GC briefing.** Combine the three outputs into a 1-page briefing for Ayesha:
+**Step 4; Weekly GC briefing.** Combine the three outputs into a 1-page briefing for Ayesha:
 
 - 5-minute read maximum
 - RAG status per category (contracts, compliance, spend)
@@ -355,13 +355,13 @@ Include: Trend vs prior quarter
 
 End-to-end contract lifecycle. A new vendor agreement arrives at Noor Technologies. Run every stage:
 
-1. **Intake** — Contract Intake Agent classifies and routes (Lesson 10)
-2. **Review** — `/review-contract` with jurisdiction overlay
-3. **Triage decision** — Tier classification determines routing
-4. **Negotiate** — Meeting briefing for negotiation session
-5. **Execute** — `/signature-request` to route for signatures
-6. **Post-execution** — `/compliance-calendar` adds to obligation tracking
-7. **Dashboard** — Contract appears in compliance calendar
+1. **Intake**; Contract Intake Agent classifies and routes (Lesson 10)
+2. **Review**; `/review-contract` with jurisdiction overlay
+3. **Triage decision**; Tier classification determines routing
+4. **Negotiate**; Meeting briefing for negotiation session
+5. **Execute**; `/signature-request` to route for signatures
+6. **Post-execution**; `/compliance-calendar` adds to obligation tracking
+7. **Dashboard**; Contract appears in compliance calendar
 
 **Time target:** 60 minutes for the full lifecycle.
 
@@ -389,7 +389,7 @@ The division of labour that runs through every lesson: the agent reviews, triage
 
 **Principle 2: The playbook is the product.** The Legal Plugin out of the box is a capable tool. The Legal Plugin configured with a mature, validated, institution-specific negotiation playbook is a competitive advantage. Every hour spent refining the playbook makes every subsequent review more accurate.
 
-**Principle 3: Process-level agents eliminate coordination overhead.** The document tools reduce time per task. The process agents — Contract Intake, Regulatory Monitoring, Compliance Calendar, DSAR Management — eliminate the chasing, tracking, escalating, and reporting that consumes legal operations capacity.
+**Principle 3: Process-level agents eliminate coordination overhead.** The document tools reduce time per task. The process agents; Contract Intake, Regulatory Monitoring, Compliance Calendar, DSAR Management: eliminate the chasing, tracking, escalating, and reporting that consumes legal operations capacity.
 
 **Principle 4: Jurisdiction-aware analysis is non-negotiable for cross-border work.** A contract review that ignores governing law differences produces advice that is technically correct for the wrong jurisdiction. The overlay system ensures every analysis reflects the applicable legal framework.
 
@@ -411,13 +411,13 @@ The division of labour that runs through every lesson: the agent reviews, triage
 | `/legal-response`        | DSAR, legal holds, routine responses | Draft from template library           |
 | `/signature-request`     | E-signature routing via DocuSign     | Pre-flight checklist + routing        |
 
-### Agent Factory Legal Ops Extension — Agent (1)
+### Agent Factory Legal Ops Extension; Agent (1)
 
 | Agent             | Capability                                            |
 | ----------------- | ----------------------------------------------------- |
 | `contract-intake` | Classification, routing, SLA tracking, post-execution |
 
-### Agent Factory Legal Ops Extension — Skills (6)
+### Agent Factory Legal Ops Extension; Skills (6)
 
 | Skill                   | Capability                                             |
 | ----------------------- | ------------------------------------------------------ |
@@ -441,7 +441,7 @@ The division of labour that runs through every lesson: the agent reviews, triage
 
 ### How the Router Skill Works
 
-When you ask a legal question involving a specific jurisdiction, the **legal-global-router** skill auto-activates. It identifies the jurisdiction from your query, loads the appropriate overlay (uk-law.md, eu-law.md, etc.), and routes to the correct product skill or Anthropic command. For domain-specific research — IP, regulatory monitoring, legal spend, DSAR — the router activates the appropriate extension skill with jurisdiction context. For contract review, NDA triage, and compliance checks, the router loads the overlay and then defers to Anthropic's built-in commands. You do not need to invoke the router explicitly; it activates from trigger phrases in your natural-language prompts.
+When you ask a legal question involving a specific jurisdiction, the **legal-global-router** skill auto-activates. It identifies the jurisdiction from your query, loads the appropriate overlay (uk-law.md, eu-law.md, etc.), and routes to the correct product skill or Anthropic command. For domain-specific research; IP, regulatory monitoring, legal spend, DSAR: the router activates the appropriate extension skill with jurisdiction context. For contract review, NDA triage, and compliance checks, the router loads the overlay and then defers to Anthropic's built-in commands. You do not need to invoke the router explicitly; it activates from trigger phrases in your natural-language prompts.
 
 ### MCP Connectors (8)
 

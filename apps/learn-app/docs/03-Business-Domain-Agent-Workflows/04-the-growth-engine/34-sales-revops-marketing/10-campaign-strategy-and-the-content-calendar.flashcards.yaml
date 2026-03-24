@@ -64,7 +64,7 @@ cards:
 
   - id: "ch34-10-campaign-strategy-010"
     front: "A campaign's LinkedIn follower growth target is 300. Is this a leading indicator or a vanity metric?"
-    back: "Vanity metric — it measures awareness, not pipeline quality or revenue impact."
+    back: "Vanity metric: it measures awareness, not pipeline quality or revenue impact."
     difficulty: "basic"
     tags: ["vanity-metrics"]
 

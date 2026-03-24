@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/operations-management/audit-preparation-evidence-mock-review
 sidebar_position: 8
-title: "Audit Preparation — Evidence and Mock Review"
+title: "Audit Preparation: Evidence and Mock Review"
 description: "Prepare for regulatory and certification audits by building a structured evidence inventory, running a mock review before the real one, and responding to audit findings in a way that demonstrates governance maturity"
 keywords:
   [
@@ -64,22 +64,22 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Audit types — internal, external, regulatory, customer, certification, and their different preparation requirements"
-    - "Evidence inventory — cataloguing what evidence is needed, where it is, and whether it is audit-ready"
-    - "Mock audit — simulating auditor questions before the real review to surface evidence and answer gaps"
-    - "Audit response maturity — the difference between defensive responses that damage relationships and specific, accountable responses that demonstrate governance"
-  assessment: "4 concepts at B1/B2 level is appropriate. Students arrive from L07 with a compliance map — the conceptual foundation is already in place. The new learning is procedural (how to prepare) and communicative (how to respond). The mock audit concept requires the most attention as it is counter-intuitive: students must adopt the auditor's adversarial perspective on their own controls."
+    - "Audit types, internal, external, regulatory, customer, certification, and their different preparation requirements"
+    - "Evidence inventory, cataloguing what evidence is needed, where it is, and whether it is audit-ready"
+    - "Mock audit, simulating auditor questions before the real review to surface evidence and answer gaps"
+    - "Audit response maturity: the difference between defensive responses that damage relationships and specific, accountable responses that demonstrate governance"
+  assessment: "4 concepts at B1/B2 level is appropriate. Students arrive from L07 with a compliance map: the conceptual foundation is already in place. The new learning is procedural (how to prepare) and communicative (how to respond). The mock audit concept requires the most attention as it is counter-intuitive: students must adopt the auditor's adversarial perspective on their own controls."
 
 differentiation:
-  extension_for_advanced: "After completing the exercise, draft a board-level audit readiness brief that summarises the firm's current posture across all audit types (regulatory, ISO, internal), identifies the top two risks for each type, and proposes a 12-month audit calendar with preparation milestones. A board brief requires aggregating across audit contexts — a harder synthesis than preparing for a single audit."
-  remedial_for_struggling: "Focus on two things: (1) the evidence inventory — for each obligation the auditor will review, can you locate the specific document that proves the control is working? (2) The audit response structure — finding, our response (acknowledge), root cause, action, owner, date. If you can produce those two outputs for your highest-risk obligation, you have the core skill."
+  extension_for_advanced: "After completing the exercise, draft a board-level audit readiness brief that summarises the firm's current posture across all audit types (regulatory, ISO, internal), identifies the top two risks for each type, and proposes a 12-month audit calendar with preparation milestones. A board brief requires aggregating across audit contexts: a harder synthesis than preparing for a single audit."
+  remedial_for_struggling: "Focus on two things: (1) the evidence inventory, for each obligation the auditor will review, can you locate the specific document that proves the control is working? (2) The audit response structure, finding, our response (acknowledge), root cause, action, owner, date. If you can produce those two outputs for your highest-risk obligation, you have the core skill."
 
 teaching_guide:
   key_points:
-    - "The audit that reveals you cannot locate your own evidence is harder to recover from than the audit that reveals a control gap — evidence availability is as important as evidence existence"
+    - "The audit that reveals you cannot locate your own evidence is harder to recover from than the audit that reveals a control gap, evidence availability is as important as evidence existence"
     - "Mock audits surface the difference between knowing a control exists and being able to demonstrate it to a sceptical external reviewer"
     - "Defensive audit responses damage the relationship; specific, accountable, evidenced responses demonstrate governance maturity"
-    - "The /audit command flows directly from L07 — the compliance map is the input, not a new starting point"
+    - "The /audit command flows directly from L07: the compliance map is the input, not a new starting point"
   misconceptions:
     - "Audit preparation means polishing documents. Correction: audit preparation means confirming that the evidence that already exists is locatable, current, and demonstrates what it is supposed to demonstrate. Polished documents without substance will not survive a mock audit."
     - "A good audit response argues the finding. Correction: arguing with audit findings signals defensiveness and damages the regulatory relationship. A good response acknowledges the finding, explains the root cause honestly, and commits to specific corrective action."
@@ -88,15 +88,15 @@ teaching_guide:
     - "An auditor asks: 'Show me your evidence for the AML PEP screening obligation.' What would you say if the answer is 'the provider contract lapsed and we are manually screening'? Is there a way to answer that honestly while demonstrating governance maturity?"
     - "What is the worst audit response you can imagine? What makes it bad? Now rewrite it using the finding/response/root cause/action/owner/date structure."
   teaching_tips:
-    - "Role-play the mock audit yourself with a student as the auditee. Ask the same question three ways — first as a friendly reviewer, then as a sceptical regulator, then as someone who has already found a gap and is probing further. The same evidence looks different under different questioning styles."
-    - "The /audit command flows from L07's compliance map — frame this lesson explicitly as 'what happens next after you have mapped your obligations.' Students who skipped L07 will struggle because they lack the compliance map input."
+    - "Role-play the mock audit yourself with a student as the auditee. Ask the same question three ways, first as a friendly reviewer, then as a sceptical regulator, then as someone who has already found a gap and is probing further. The same evidence looks different under different questioning styles."
+    - "The /audit command flows from L07's compliance map, frame this lesson explicitly as 'what happens next after you have mapped your obligations.' Students who skipped L07 will struggle because they lack the compliance map input."
 ---
 
-# Audit Preparation — Evidence and Mock Review
+# Audit Preparation: Evidence and Mock Review
 
-You have the compliance map. You know which obligations are CURRENT and which are not. Six weeks from now, the FCA supervisory team arrives. The question is not whether you have done the work — it is whether you can demonstrate it.
+You have the compliance map. You know which obligations are CURRENT and which are not. Six weeks from now, the FCA supervisory team arrives. The question is not whether you have done the work; it is whether you can demonstrate it.
 
-This is the distinction most organisations miss. Evidence existence is not the same as evidence availability. The ISO 27001 surveillance auditor does not accept "we have a risk assessment" — they ask to see it, dated, signed, and reviewed by the named owner in the previous 12 months. The FCA reviewer does not accept "we take client suitability seriously" — they ask to see a suitability assessment for a specific client, the complaint log for the past year, and the training records showing every relevant staff member completed the required training. Evidence that exists in a folder nobody can locate on audit day is, for practical purposes, absent.
+This is the distinction most organisations miss. Evidence existence is not the same as evidence availability. The ISO 27001 surveillance auditor does not accept "we have a risk assessment"; they ask to see it, dated, signed, and reviewed by the named owner in the previous 12 months. The FCA reviewer does not accept "we take client suitability seriously"; they ask to see a suitability assessment for a specific client, the complaint log for the past year, and the training records showing every relevant staff member completed the required training. Evidence that exists in a folder nobody can locate on audit day is, for practical purposes, absent.
 
 The second failure is unpreparedness for the questions auditors actually ask. Internal audit teams often brief only the team lead. Nobody else knows what scope the auditor has declared, what questions to expect, or how to answer without accidentally creating new findings. The result is a three-hour audit that produces six findings, four of which were caused not by genuine control gaps but by unprepared team members giving incomplete or inconsistent answers.
 
@@ -118,7 +118,7 @@ Different audits have different preparation requirements. Knowing which type you
 | **Customer**      | Your client reviewing your controls     | Information security; data handling; SLA performance        | SLA data; security attestations; data flow maps        |
 | **Certification** | BSI (ISO 27001), QSA (PCI), SOC auditor | Conformance with standard                                   | Evidence pack aligned to standard controls; NC history |
 
-A regulatory audit (FCA supervisory visit) has the highest stakes — enforcement action, fines, and licence conditions are potential outcomes. A certification audit (ISO 27001 surveillance) has moderate stakes but failure means losing the certification. Customer audits have commercial stakes — a poor result can trigger contract suspension or renegotiation. Preparation depth should reflect these stakes.
+A regulatory audit (FCA supervisory visit) has the highest stakes, enforcement action, fines, and licence conditions are potential outcomes. A certification audit (ISO 27001 surveillance) has moderate stakes but failure means losing the certification. Customer audits have commercial stakes: a poor result can trigger contract suspension or renegotiation. Preparation depth should reflect these stakes.
 
 ## From Compliance Map to Preparation Plan
 
@@ -135,8 +135,8 @@ The FCA has indicated they will review:
 - SM&CR governance (annual certification)
 
 Using the compliance map I built in Lesson 7:
-- OBL-REG-001 (COBS): CURRENT — evidence assembled
-- OBL-REG-002 (SM&CR): REVIEW NEEDED — certification cycle due
+- OBL-REG-001 (COBS): CURRENT, evidence assembled
+- OBL-REG-002 (SM&CR): REVIEW NEEDED, certification cycle due
 - Client SLAs (OBL-CTR-001/002): CURRENT / PARTIAL
 
 Generate: a week-by-week 6-week preparation plan, an evidence
@@ -153,66 +153,66 @@ AUDIT PREPARATION PLAN: FCA Supervisory Visit
 ════════════════════════════════════════════════════════════
 Audit type:    Regulatory
 Auditor:       Financial Conduct Authority
-Date:          [Date — 6 weeks from today]
+Date:          [Date, 6 weeks from today]
 Focus areas:   Client suitability; complaint handling; SM&CR governance
 Time to prepare: 6 weeks
 
 WEEK-BY-WEEK PREPARATION TIMELINE:
 
 Weeks 1–2: Evidence gathering and gap assessment
-  — Collect all suitability assessments from past 12 months (CCO)
-  — Pull complaint log, response times, and outcome analysis (Operations)
-  — Initiate SM&CR annual certification process (CEO/HR)
-  — Verify AML PEP screening status — this is NOT in scope but
+ , Collect all suitability assessments from past 12 months (CCO)
+ , Pull complaint log, response times, and outcome analysis (Operations)
+ , Initiate SM&CR annual certification process (CEO/HR)
+ . Verify AML PEP screening status. This is NOT in scope but
     auditors have discretion to expand; resolve before visit (MLRO)
 
 Week 3: Evidence review and gap closure
-  — Review suitability assessment quality; identify any
+ , Review suitability assessment quality; identify any
     assessments that would not withstand scrutiny (CCO review)
-  — Complaint log: verify all responses meet required timelines;
+ , Complaint log: verify all responses meet required timelines;
     investigate any outliers (Operations)
-  — SM&CR: complete certification; update FCA register (CCO/HR)
+ , SM&CR: complete certification; update FCA register (CCO/HR)
 
-Week 4: Mock audit — client suitability
-  — Run mock audit: simulated FCA questions on suitability
+Week 4: Mock audit, client suitability
+ , Run mock audit: simulated FCA questions on suitability
     process, documentation standard, and outlier cases (CCO)
-  — Close any gaps identified in mock
+ , Close any gaps identified in mock
 
-Week 5: Mock audit — complaints and SM&CR; staff briefing
-  — Run mock audit: complaint handling and SM&CR governance
-  — Brief all staff who may be interviewed: scope, their role,
+Week 5: Mock audit, complaints and SM&CR; staff briefing
+ , Run mock audit: complaint handling and SM&CR governance
+ , Brief all staff who may be interviewed: scope, their role,
     what to say when asked about their area
 
 Final week: Final checks and logistics
-  — Confirm evidence pack is complete and accessible
-  — Rehearse opening statement: our approach, what we have prepared
-  — Confirm logistics (meeting room, document access, attendees)
+ , Confirm evidence pack is complete and accessible
+ , Rehearse opening statement: our approach, what we have prepared
+ , Confirm logistics (meeting room, document access, attendees)
 
 EVIDENCE INVENTORY (by focus area):
 
 | Area                  | Evidence Required                  | Location         | Age    | Status  |
 | --------------------- | ---------------------------------- | ---------------- | ------ | ------- |
 | Client suitability    | 12 months of suitability assessments| SharePoint/CRM  | Current| Ready   |
-| Suitability — training| Staff training records              | HR system        | Current| Ready   |
+| Suitability, training| Staff training records              | HR system        | Current| Ready   |
 | Complaint handling    | Complaint log + response records   | CRM              | Current| Ready   |
-| Complaint — outcomes  | Root cause analysis for complaints | CCO folder       | [date] | Verify  |
-| SM&CR — register      | FCA approved persons register      | FCA Portal       | N/A    | In progress|
-| SM&CR — certification | Annual certification records       | HR system        | Overdue| Gap     |
+| Complaint, outcomes  | Root cause analysis for complaints | CCO folder       | [date] | Verify  |
+| SM&CR, register      | FCA approved persons register      | FCA Portal       | N/A    | In progress|
+| SM&CR, certification | Annual certification records       | HR system        | Overdue| Gap     |
 
 GAPS TO CLOSE BEFORE AUDIT:
   Priority 1 (close by Week 3):
-    SM&CR annual certification — initiate immediately; overdue
+    SM&CR annual certification, initiate immediately; overdue
     Owner: CEO/HR | Deadline: Week 3
   Priority 2 (close by Week 4):
-    Complaint root cause analysis documentation — ensure all
+    Complaint root cause analysis documentation, ensure all
     complaints have documented outcomes and root cause analysis
     Owner: Operations Manager | Deadline: Week 4
 
 BRIEFING REQUIRED:
-  — CCO: scope, suitability process, complaint handling approach
-  — HR: SM&CR certification process and record location
-  — Operations Manager: complaint log, SLA performance data
-  — All Directors: their specific SM&CR responsibilities and statements
+ , CCO: scope, suitability process, complaint handling approach
+ , HR: SM&CR certification process and record location
+ , Operations Manager: complaint log, SLA performance data
+ , All Directors: their specific SM&CR responsibilities and statements
 ════════════════════════════════════════════════════════════
 ```
 
@@ -271,7 +271,7 @@ Q2: "Show me three suitability assessments from the past 6 months."
 Ideal answer: Present three assessments from CRM with required
   fields completed, adviser signature, and outcome documentation.
 
-Evidence: CRM records — 3 sample assessments
+Evidence: CRM records, 3 sample assessments
 
 Gap: Two of the 12 assessments reviewed show incomplete outcome
   documentation (no written rationale for the recommendation).
@@ -285,7 +285,7 @@ Action: Remediate the 2 affected records; add mandatory fields
 ```
 
 :::caution Mock Findings Are Real Findings
-Any gap identified in the mock audit that is not closed before the actual audit is a real finding. The mock audit's value is only realised if the gaps it surfaces are acted on. A mock audit that produces findings that are then filed and ignored is worse than no mock audit — it creates a paper trail showing the organisation was aware of the gap.
+Any gap identified in the mock audit that is not closed before the actual audit is a real finding. The mock audit's value is only realised if the gaps it surfaces are acted on. A mock audit that produces findings that are then filed and ignored is worse than no mock audit ; it creates a paper trail showing the organisation was aware of the gap.
 :::
 
 ## Writing Audit Responses
@@ -295,7 +295,7 @@ When audit findings arrive, your response is being read as evidence of governanc
 | Defensive Response (damaging)                    | Mature Response (demonstrates governance)                           |
 | ------------------------------------------------ | ------------------------------------------------------------------- |
 | "We disagree with this finding."                 | Acknowledges the finding factually without argument                 |
-| "This has never caused a problem in practice."   | Identifies the root cause — why did this gap exist?                 |
+| "This has never caused a problem in practice."   | Identifies the root cause: why did this gap exist?                 |
 | "We will address this in our next review cycle." | States the specific corrective action, named owner, and target date |
 | "Our team is highly experienced in this area."   | Describes what evidence of completion will be provided              |
 
@@ -318,7 +318,7 @@ completion date, evidence of completion.
 **What to expect:** A structured response that acknowledges the finding without argument, explains root cause honestly, and commits to a specific corrective action with a named owner and date.
 
 ```
-AUDIT RESPONSE: SM&CR Annual Certification — MAJOR Finding
+AUDIT RESPONSE: SM&CR Annual Certification, MAJOR Finding
 ════════════════════════════════════════════════════════════
 
 Finding: SM&CR annual certification records were not current at
@@ -335,7 +335,7 @@ when they left the firm in [month]. The oversight was identified
 during our pre-audit compliance review but could not be remediated
 before the supervisory visit date.
 
-Action taken: Certification process initiated [date — within week
+Action taken: Certification process initiated [date, within week
 of identification]. All Certified Persons have been contacted and
 are completing the process. CEO has signed the Statements of
 Responsibilities update.
@@ -355,7 +355,7 @@ Confirmation letter to FCA upon completion.
 
 **What makes this response mature:** It acknowledges the finding without argument. It identifies the specific root cause (calendar not transferred after personnel change). It describes both immediate action (already taken) and systemic remediation (calendar now in system, not individual). The root cause explanation is plausible and demonstrates the organisation understood why it happened.
 
-## Exercise: Prepare for the FCA Supervisory Visit (Exercise 4 — Part 2)
+## Exercise: Prepare for the FCA Supervisory Visit (Exercise 4, Part 2)
 
 **Type:** Audit preparation
 **Time:** 40 minutes
@@ -363,10 +363,10 @@ Confirmation letter to FCA upon completion.
 **Goal:** A six-week audit preparation plan with evidence inventory, a mock audit on the highest-risk area, and a draft audit response for a hypothetical finding
 
 :::note Input Required from Lesson 7
-This exercise uses the compliance obligation map from Lesson 7 as its foundation. If you have not completed Lesson 7, complete it before continuing — the preparation plan is built from the compliance map, not from scratch.
+This exercise uses the compliance obligation map from Lesson 7 as its foundation. If you have not completed Lesson 7, complete it before continuing: the preparation plan is built from the compliance map, not from scratch.
 :::
 
-### Step 1 — Define the Audit Scope
+### Step 1: Define the Audit Scope
 
 Use the following scenario. The FCA has notified your firm of a supervisory visit in 6 weeks. Focus areas declared: client suitability procedures, complaint handling, and SM&CR governance. Your compliance map from Lesson 7 shows:
 
@@ -375,7 +375,7 @@ Use the following scenario. The FCA has notified your firm of a supervisory visi
 - **AML PEP screening** (OBL-AML-001): URGENT (resolved or in progress from L07)
 - **Client incident notification** (OBL-CTR-002): PARTIAL
 
-### Step 2 — Generate the Preparation Plan
+### Step 2: Generate the Preparation Plan
 
 ```
 /audit
@@ -386,7 +386,7 @@ handling, and SM&CR governance.
 Key compliance map status:
 - COBS suitability: CURRENT (evidence assembled)
 - SM&CR certification: REVIEW NEEDED (overdue by 3 weeks)
-- AML PEP screening: URGENT (resolving — new provider contracted)
+- AML PEP screening: URGENT (resolving, new provider contracted)
 - Client incident notification SLA: PARTIAL (1 breach last quarter)
 
 Generate a week-by-week 6-week preparation plan with:
@@ -396,13 +396,13 @@ Generate a week-by-week 6-week preparation plan with:
 4. Pre-visit logistics checklist
 ```
 
-### Step 3 — Run the Mock Audit
+### Step 3: Run the Mock Audit
 
 Using the highest-risk area from your preparation plan (likely SM&CR or complaint handling), run a mock audit:
 
 ```
 /audit
-Run a mock FCA review of [your highest-risk area — SM&CR or
+Run a mock FCA review of [your highest-risk area, SM&CR or
 complaint handling].
 
 Simulate 4 questions an FCA reviewer would ask, covering:
@@ -419,7 +419,7 @@ For each question, provide:
 - Corrective action if a gap exists
 ```
 
-### Step 4 — Draft an Audit Response
+### Step 4: Draft an Audit Response
 
 The following hypothetical finding has been issued:
 
@@ -473,7 +473,7 @@ top two gaps to close before the audit, and a staff briefing plan
 for the CISO and operations team who may be interviewed.
 ```
 
-**What you are learning:** The ISO 27001 surveillance audit is a certification audit — structurally different from a regulatory audit, but the preparation logic is identical: know the focus areas, confirm evidence is current and locatable, run a mock, brief the team. Applying the preparation framework to a different audit type builds transfer.
+**What you are learning:** The ISO 27001 surveillance audit is a certification audit, structurally different from a regulatory audit, but the preparation logic is identical: know the focus areas, confirm evidence is current and locatable, run a mock, brief the team. Applying the preparation framework to a different audit type builds transfer.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -506,7 +506,7 @@ surveillance audit. The auditor has issued:
   (1) 3 access reviews were not completed on schedule
   (2) Training records for 2 new starters are incomplete
 
-Draft three audit responses — one for the MAJOR and one for each
+Draft three audit responses: one for the MAJOR and one for each
 MINOR. For the MAJOR, the root cause is genuine: the procedure was
 written before we implemented our current ERP and the change
 management workflow changed. For the MINORs, the access review
@@ -517,7 +517,7 @@ Each response should demonstrate governance maturity: acknowledge,
 root cause, action taken, action planned, owner, date, evidence.
 ```
 
-**What you are learning:** Writing responses for different finding classifications — MAJOR vs MINOR — requires calibrating the response depth. A MAJOR finding requires a systemic corrective action (not just fixing the instance); a MINOR requires fixing the instance and explaining why it will not recur. This prompt also tests root cause identification: specific, honest root causes produce better responses than generic ones.
+**What you are learning:** Writing responses for different finding classifications, MAJOR vs MINOR, requires calibrating the response depth. A MAJOR finding requires a systemic corrective action (not just fixing the instance); a MINOR requires fixing the instance and explaining why it will not recur. This prompt also tests root cause identification: specific, honest root causes produce better responses than generic ones.
 :::
 
 ## Flashcards Study Aid

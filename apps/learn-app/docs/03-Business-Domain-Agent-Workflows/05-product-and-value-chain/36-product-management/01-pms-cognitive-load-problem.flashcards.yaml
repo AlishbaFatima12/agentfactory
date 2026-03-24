@@ -14,13 +14,13 @@ cards:
 
   - id: "ch36-01-pms-cognitive-load-problem-002"
     front: "What is the 'document gap' in product management?"
-    back: "The structural mismatch between the volume of writing required to PM well and the time available to PM well. It is not a skill gap or a laziness problem — it is a capacity constraint."
+    back: "The structural mismatch between the volume of writing required to PM well and the time available to PM well. It is not a skill gap or a laziness problem: it is a capacity constraint."
     tags: ["document-gap", "product-management"]
     difficulty: "basic"
 
   - id: "ch36-01-pms-cognitive-load-problem-003"
     front: "What is the most common failure mode caused by a rushed feature spec?"
-    back: "Engineers build the wrong thing because the spec was ambiguous — they fill in the gaps using their own assumptions rather than the PM's intent."
+    back: "Engineers build the wrong thing because the spec was ambiguous: they fill in the gaps using their own assumptions rather than the PM's intent."
     tags: ["failure-mode", "mode-caused", "rushed"]
     difficulty: "advanced"
 
@@ -50,7 +50,7 @@ cards:
 
   - id: "ch36-01-pms-cognitive-load-problem-008"
     front: "What are the two plugins used in Chapter 36, and what does each cover?"
-    back: "Layer 1 (official product-management plugin): foundational commands — write-spec, roadmap-update, synthesize-research, stakeholder-update, competitive-brief, metrics-review. Layer 2 (custom product-strategy plugin): workflow gap commands — brief, interview, prd, stories, prioritise, retro."
+    back: "Layer 1 (official product-management plugin): foundational commands: write-spec, roadmap-update, synthesize-research, stakeholder-update, competitive-brief, metrics-review. Layer 2 (custom product-strategy plugin): workflow gap commands: brief, interview, prd, stories, prioritise, retro."
     tags: ["plugins", "cover"]
     difficulty: "basic"
 
@@ -68,7 +68,7 @@ cards:
 
   - id: "ch36-01-pms-cognitive-load-problem-011"
     front: "What does the custom product-strategy plugin add that the official plugin does not cover?"
-    back: "Discovery briefs, interview guides, PRDs, user stories, backlog prioritisation, and retrospectives — plus three agents for automating recurring PM intelligence work."
+    back: "Discovery briefs, interview guides, PRDs, user stories, backlog prioritisation, and retrospectives: plus three agents for automating recurring PM intelligence work."
     tags: ["custom-product-strategy", "product-strategy-plugin", "product-strategy"]
     difficulty: "intermediate"
 

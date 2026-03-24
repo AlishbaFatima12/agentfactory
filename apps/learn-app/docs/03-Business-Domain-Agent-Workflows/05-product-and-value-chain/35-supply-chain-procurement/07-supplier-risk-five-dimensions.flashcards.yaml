@@ -1,6 +1,6 @@
 deck:
   id: "ch35-supplier-risk-five-dimensions"
-  title: "Supplier Risk — Five Dimensions"
+  title: "Supplier Risk; Five Dimensions"
   description: "Recall and reasoning cards covering the five risk dimensions, overall rating escalation rules, Tier 2 cascade risk, the KIFTL/KSA worked example, and the vendor-health-monitor agent."
   tags: ["supply-chain", "supplier-risk", "five-dimensions", "tier-2", "vendor-health-monitor"]
   version: 2
@@ -8,19 +8,19 @@ deck:
 cards:
   - id: "ch35-supplier-risk-five-dimensions-001"
     front: "Name the five dimensions of the supplier risk framework."
-    back: "1. Financial — could this supplier stop operating? 2. Operational — are they delivering as contracted right now? 3. Compliance — are they legally permitted to operate and supply you? 4. Geopolitical — could their operating environment disrupt supply? 5. Tier 2 / Sub-supplier — are their own suppliers creating risk that cascades to you?"
+    back: "1. Financial: could this supplier stop operating? 2. Operational: are they delivering as contracted right now? 3. Compliance: are they legally permitted to operate and supply you? 4. Geopolitical: could their operating environment disrupt supply? 5. Tier 2 / Sub-supplier: are their own suppliers creating risk that cascades to you?"
     tags: ["five-dimensions"]
     difficulty: "basic"
 
   - id: "ch35-supplier-risk-five-dimensions-002"
     front: "What rule determines when the overall supplier risk rating escalates to HIGH?"
-    back: "ESCALATE to HIGH if ANY single dimension reaches red. ELEVATE to MEDIUM-HIGH if TWO or more dimensions reach amber simultaneously. REDUCE only after confirmed remediation — not just vendor assurance."
+    back: "ESCALATE to HIGH if ANY single dimension reaches red. ELEVATE to MEDIUM-HIGH if TWO or more dimensions reach amber simultaneously. REDUCE only after confirmed remediation: not just vendor assurance."
     tags: ["overall-rating", "escalation-rules"]
     difficulty: "basic"
 
   - id: "ch35-supplier-risk-five-dimensions-003"
     front: "Why does operational risk data come from your own ERP rather than external sources?"
-    back: "Your ERP records every delivery received and every quality check completed. OTD rate, quality rejection rate, and lead time variance are internal data updated continuously — you do not need to wait for the supplier to report a problem."
+    back: "Your ERP records every delivery received and every quality check completed. OTD rate, quality rejection rate, and lead time variance are internal data updated continuously: you do not need to wait for the supplier to report a problem."
     tags: ["operational-dimension", "erp-data"]
     difficulty: "basic"
 
@@ -32,19 +32,19 @@ cards:
 
   - id: "ch35-supplier-risk-five-dimensions-005"
     front: "Why is late filing of statutory accounts itself a financial distress signal?"
-    back: "Companies in difficulty frequently delay accounts to defer disclosing deteriorating numbers. An overdue filing from a strategic supplier warrants immediate escalation — the delay is itself evidence of something being wrong."
+    back: "Companies in difficulty frequently delay accounts to defer disclosing deteriorating numbers. An overdue filing from a strategic supplier warrants immediate escalation: the delay is itself evidence of something being wrong."
     tags: ["financial-dimension", "statutory-accounts"]
     difficulty: "intermediate"
 
   - id: "ch35-supplier-risk-five-dimensions-006"
-    front: "What does UNASSESSED on the Tier 2 dimension mean — and why is it NOT the same as LOW risk?"
-    back: "UNASSESSED means no Tier 2 data has been collected — the risk is unknown, not absent. Treating unknown as LOW is how supply chain crises happen. UNASSESSED is a flag to collect data, not a clean bill of health."
+    front: "What does UNASSESSED on the Tier 2 dimension mean: and why is it NOT the same as LOW risk?"
+    back: "UNASSESSED means no Tier 2 data has been collected: the risk is unknown, not absent. Treating unknown as LOW is how supply chain crises happen. UNASSESSED is a flag to collect data, not a clean bill of health."
     tags: ["tier-2", "unassessed"]
     difficulty: "intermediate"
 
   - id: "ch35-supplier-risk-five-dimensions-007"
-    front: "In the KIFTL example, which dimension reached RED — and what caused it?"
-    back: "Operational risk reached RED: OTD at 81% and declining, four late deliveries in eight weeks. The cause was Karachi Steel & Alloys (Tier 2 supplier) entering financial restructuring, reducing KIFTL's raw material supply — but the operational signal was visible in the ERP weeks before the root cause was discovered."
+    front: "In the KIFTL example, which dimension reached RED: and what caused it?"
+    back: "Operational risk reached RED: OTD at 81% and declining, four late deliveries in eight weeks. The cause was Karachi Steel & Alloys (Tier 2 supplier) entering financial restructuring, reducing KIFTL's raw material supply: but the operational signal was visible in the ERP weeks before the root cause was discovered."
     tags: ["kiftl-example", "operational-dimension", "tier-2"]
     difficulty: "intermediate"
 
@@ -56,25 +56,25 @@ cards:
 
   - id: "ch35-supplier-risk-five-dimensions-009"
     front: "How does the vendor-health-monitor agent differ from running /supplier-risk on demand?"
-    back: "The agent monitors configured Strategic and Bottleneck vendors continuously, generates hot alerts automatically when signals cross thresholds, and produces a weekly executive brief for the CPO — without requiring manual invocation each time."
+    back: "The agent monitors configured Strategic and Bottleneck vendors continuously, generates hot alerts automatically when signals cross thresholds, and produces a weekly executive brief for the CPO: without requiring manual invocation each time."
     tags: ["vendor-health-monitor", "automation"]
     difficulty: "basic"
 
   - id: "ch35-supplier-risk-five-dimensions-010"
     front: "What OTD pattern can reveal capacity strain before the overall OTD rate falls below threshold?"
-    back: "Late deliveries clustering on the same day of the week, the same product line, or increasing partial deliveries — even when the 13-week rolling OTD is still above the corrective action threshold. Trend direction and pattern within the data matter as much as the headline figure."
+    back: "Late deliveries clustering on the same day of the week, the same product line, or increasing partial deliveries: even when the 13-week rolling OTD is still above the corrective action threshold. Trend direction and pattern within the data matter as much as the headline figure."
     tags: ["operational-dimension", "pattern-analysis"]
     difficulty: "intermediate"
 
   - id: "ch35-supplier-risk-five-dimensions-011"
     front: "A supplier has 97% OTD but its only manufacturing facility is in a country facing new export restrictions. How many risk dimensions are affected?"
-    back: "At least two. Operational is GREEN (97% OTD). Geopolitical is RED (active disruption risk to supply route). The five-dimension framework exposes risk that a single OTD metric hides — excellent operational performance tells you nothing about geopolitical exposure."
+    back: "At least two. Operational is GREEN (97% OTD). Geopolitical is RED (active disruption risk to supply route). The five-dimension framework exposes risk that a single OTD metric hides: excellent operational performance tells you nothing about geopolitical exposure."
     tags: ["five-dimensions", "geopolitical-dimension"]
     difficulty: "advanced"
     why: "What would prompt you to check Geopolitical risk on a vendor with excellent operational performance?"
 
   - id: "ch35-supplier-risk-five-dimensions-012"
     front: "Why is the /supplier-risk output described as a work plan rather than a final verdict?"
-    back: "The output is only as good as the data provided. It flags gaps where data is missing and recommends actions. If critical data (financial accounts, Tier 2 map) is absent, it identifies that absence as a risk — it does not assume all is well."
+    back: "The output is only as good as the data provided. It flags gaps where data is missing and recommends actions. If critical data (financial accounts, Tier 2 map) is absent, it identifies that absence as a risk: it does not assume all is well."
     tags: ["supplier-risk-output", "interpretation"]
     difficulty: "basic"

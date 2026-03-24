@@ -1,17 +1,17 @@
 ---
-title: "II — Office of the CFO"
+title: "II: Office of the CFO"
 sidebar_position: 0
 ---
 
-# Section II — The Office of the CFO
+# Section II: The Office of the CFO
 
 ### Chapters 28–32: AI in the Highest-Consequence Domain in Any Enterprise
 
-Section II deploys AI agents into financial reporting, compliance, and control — the functions where the cost of an error is not a productivity loss but a restatement, a regulatory breach, a capital adequacy violation, or an enforcement action. Five chapters, each with its own SKILL.md library, Cowork plugin configuration, and jurisdiction-aware exercises.
+Section II deploys AI agents into financial reporting, compliance, and control: the functions where the cost of an error is not a productivity loss but a restatement, a regulatory breach, a capital adequacy violation, or an enforcement action. Five chapters, each with its own SKILL.md library, Cowork plugin configuration, and jurisdiction-aware exercises.
 
 The section builds systematically. Chapter 28 establishes the foundational finance agent. Chapter 29 extends it into the Intent-Driven Financial Architecture. Chapters 30, 31, and 32 deploy these foundations into three specialist domains with increasing regulatory complexity: CA/CPA practice, Islamic finance, and banking-specific AI.
 
-> **Section philosophy:** AI agents in this domain do not replace professional judgment — they automate execution so that professional judgment can be applied where it matters most. The closing audit opinion, the SICR staging decision, and the SAR filing call all require a licensed professional. The agent prepares the ground; the professional decides.
+> **Section philosophy:** AI agents in this domain do not replace professional judgment: they automate execution so that professional judgment can be applied where it matters most. The closing audit opinion, the SICR staging decision, and the SAR filing call all require a licensed professional. The agent prepares the ground; the professional decides.
 
 | #   | Chapter                                                                      | Key Focus                                                   |
 | --- | ---------------------------------------------------------------------------- | ----------------------------------------------------------- |

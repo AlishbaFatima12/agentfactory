@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch33-13-gcc-001"
     front: "What are the three legal zones within the UAE, and what legal tradition does each follow?"
-    back: "1. Mainland UAE — civil law system governed by the UAE Civil Code (Federal Law No. 5 of 1985).\n2. DIFC — independent common law jurisdiction within Dubai with its own courts, regulator (DFSA), and data protection law.\n3. ADGM — independent common law jurisdiction within Abu Dhabi that directly applies English common law as at 1 June 2015."
+    back: "1. Mainland UAE: civil law system governed by the UAE Civil Code (Federal Law No. 5 of 1985).\n2. DIFC: independent common law jurisdiction within Dubai with its own courts, regulator (DFSA), and data protection law.\n3. ADGM: independent common law jurisdiction within Abu Dhabi that directly applies English common law as at 1 June 2015."
     difficulty: "basic"
     tags: ["uae-zones", "dual-legal-system"]
 
@@ -20,19 +20,19 @@ cards:
 
   - id: "ch33-13-gcc-003"
     front: "What is Article 390 of the UAE Civil Code and why does it matter for contracts?"
-    back: "Article 390 of the UAE Civil Code (Federal Law No. 5 of 1985) allows mainland UAE courts to reduce liquidated damages they consider excessive — a material risk for contracts relying on penalty clauses as deterrents. This power exists even when both parties agreed to the amount, making it fundamentally different from common law jurisdictions (DIFC, ADGM) where agreed damages are generally upheld if reasonable."
+    back: "Article 390 of the UAE Civil Code (Federal Law No. 5 of 1985) allows mainland UAE courts to reduce liquidated damages they consider excessive: a material risk for contracts relying on penalty clauses as deterrents. This power exists even when both parties agreed to the amount, making it fundamentally different from common law jurisdictions (DIFC, ADGM) where agreed damages are generally upheld if reasonable."
     difficulty: "intermediate"
     tags: ["article-390", "liquidated-damages", "mainland-uae"]
 
   - id: "ch33-13-gcc-004"
     front: "How does ADGM differ from DIFC in its application of common law?"
-    back: "ADGM directly applies English common law as at 1 June 2015. English case law — including Court of Appeal and Supreme Court decisions — is directly applicable, subject to specific ADGM legislation. DIFC operates its own common law principles without directly adopting English law. This means a legal question in ADGM can be resolved by citing English precedent directly, while DIFC may diverge from English law on the same point."
+    back: "ADGM directly applies English common law as at 1 June 2015. English case law: including Court of Appeal and Supreme Court decisions: is directly applicable, subject to specific ADGM legislation. DIFC operates its own common law principles without directly adopting English law. This means a legal question in ADGM can be resolved by citing English precedent directly, while DIFC may diverge from English law on the same point."
     difficulty: "advanced"
     tags: ["adgm", "difc", "english-law"]
 
   - id: "ch33-13-gcc-005"
     front: "What is dual data protection compliance and when does it arise in GCC contracts?"
-    back: "Dual data protection compliance arises when a contract crosses between GCC jurisdictions with separate data protection frameworks. For example, a Saudi company (subject to Saudi PDPL) contracting with a DIFC entity (subject to DIFC Data Protection Law 2020) triggers both regimes simultaneously. Each framework must be satisfied independently — the data controller's obligations under Saudi PDPL and the data processor's obligations under DIFC DP Law are separate requirements."
+    back: "Dual data protection compliance arises when a contract crosses between GCC jurisdictions with separate data protection frameworks. For example, a Saudi company (subject to Saudi PDPL) contracting with a DIFC entity (subject to DIFC Data Protection Law 2020) triggers both regimes simultaneously. Each framework must be satisfied independently: the data controller's obligations under Saudi PDPL and the data processor's obligations under DIFC DP Law are separate requirements."
     difficulty: "intermediate"
     tags: ["dual-compliance", "data-protection"]
 
@@ -44,7 +44,7 @@ cards:
 
   - id: "ch33-13-gcc-007"
     front: "In the PayStream/CloudVault worked example, why did the data localisation clause receive a RED flag?"
-    back: "PayStream is a SAMA-regulated fintech in Saudi Arabia. Saudi PDPL contains data localisation provisions for sensitive data, and payment transaction data for Saudi consumers is likely classified as sensitive personal data. CloudVault's unspecified disaster recovery facility location creates a potential violation if data is transferred outside approved jurisdictions. A review under DIFC law alone would have passed the clause — the dual overlay caught the Saudi PDPL data localisation requirement."
+    back: "PayStream is a SAMA-regulated fintech in Saudi Arabia. Saudi PDPL contains data localisation provisions for sensitive data, and payment transaction data for Saudi consumers is likely classified as sensitive personal data. CloudVault's unspecified disaster recovery facility location creates a potential violation if data is transferred outside approved jurisdictions. A review under DIFC law alone would have passed the clause: the dual overlay caught the Saudi PDPL data localisation requirement."
     difficulty: "advanced"
     tags: ["data-localisation", "paystream", "red-flag"]
 
@@ -68,12 +68,12 @@ cards:
 
   - id: "ch33-13-gcc-011"
     front: "What is the key distinction between 'the plugin is infrastructure' and 'the playbook is the product'?"
-    back: "Infrastructure (the plugin) provides agents and skills — contract review, triage, compliance. Infrastructure gets commoditised. The product (the playbook) encodes institution-specific risk tolerance, negotiated positions, regulatory obligations, and accumulated institutional knowledge. Two organisations deploy the same plugin; the one with a mature, validated playbook gets a transformed legal function, while the other gets only a better tool producing generic output."
+    back: "Infrastructure (the plugin) provides agents and skills: contract review, triage, compliance. Infrastructure gets commoditised. The product (the playbook) encodes institution-specific risk tolerance, negotiated positions, regulatory obligations, and accumulated institutional knowledge. Two organisations deploy the same plugin; the one with a mature, validated playbook gets a transformed legal function, while the other gets only a better tool producing generic output."
     difficulty: "intermediate"
     tags: ["infrastructure-vs-product", "institutional-knowledge"]
 
   - id: "ch33-13-gcc-012"
     front: "Why can cross-zone contracts within the UAE create the same complexity as cross-border contracts between different countries?"
-    back: "A mainland Abu Dhabi company contracting with a DIFC-registered firm creates dual-jurisdiction complexity: the mainland company is subject to UAE Civil Code while the DIFC firm operates under DIFC law. The governing law clause determines interpretation, but both parties' regulatory obligations persist regardless. This is the same dual-overlay complexity as a Pakistan-UAE cross-border contract — different legal systems, different courts, different regulatory frameworks."
+    back: "A mainland Abu Dhabi company contracting with a DIFC-registered firm creates dual-jurisdiction complexity: the mainland company is subject to UAE Civil Code while the DIFC firm operates under DIFC law. The governing law clause determines interpretation, but both parties' regulatory obligations persist regardless. This is the same dual-overlay complexity as a Pakistan-UAE cross-border contract: different legal systems, different courts, different regulatory frameworks."
     difficulty: "advanced"
     tags: ["cross-zone", "dual-jurisdiction"]

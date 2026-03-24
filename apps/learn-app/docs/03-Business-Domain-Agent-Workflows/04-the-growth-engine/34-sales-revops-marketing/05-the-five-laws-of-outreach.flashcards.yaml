@@ -20,7 +20,7 @@ cards:
 
   - id: "ch34-05-five-laws-003"
     front: "Ahmed sends 40 LinkedIn messages a week at 2% reply rate. Farah sends 8 at 35%. What explains the difference?"
-    back: "Farah follows five practices Ahmed does not: verified specific references, prospect-first framing, single ask, brevity, and jargon-free language. The gap is message quality, not volume — because 8 personalised messages outperform 40 templates."
+    back: "Farah follows five practices Ahmed does not: verified specific references, prospect-first framing, single ask, brevity, and jargon-free language. The gap is message quality, not volume: because 8 personalised messages outperform 40 templates."
     difficulty: "intermediate"
     why: "Why does increasing Ahmed's volume to 80 messages per week not solve his reply rate problem?"
     tags: ["outreach-quality"]
@@ -33,7 +33,7 @@ cards:
 
   - id: "ch34-05-five-laws-005"
     front: "Why does Law 2 require the first sentence to be about the prospect, not your product?"
-    back: "Inbox scanning takes 3-7 seconds. A sentence about the prospect triggers 'someone who understands my business.' A sentence about you triggers 'another vendor pitch' — and the message gets deleted."
+    back: "Inbox scanning takes 3-7 seconds. A sentence about the prospect triggers 'someone who understands my business.' A sentence about you triggers 'another vendor pitch': and the message gets deleted."
     difficulty: "intermediate"
     tags: ["law-2"]
 
@@ -57,13 +57,13 @@ cards:
 
   - id: "ch34-05-five-laws-009"
     front: "An outreach message for a Karachi prospect passes all Five Laws but uses formal British English, a UK case study reference, and LinkedIn DM as the channel. What error type is this?"
-    back: "Compliance Gap — the message content is high quality by the laws' standards but is culturally mismatched for the recipient's market."
+    back: "Compliance Gap: the message content is high quality by the laws' standards but is culturally mismatched for the recipient's market."
     difficulty: "intermediate"
     tags: ["compliance-gap"]
 
   - id: "ch34-05-five-laws-010"
     front: "Why is the Compliance Gap described as the most dangerous of the agent error types?"
-    back: "It is invisible to content-level review. A message can pass all five laws and still be wrong to send — because cultural and legal compliance operates on a different dimension than content quality."
+    back: "It is invisible to content-level review. A message can pass all five laws and still be wrong to send: because cultural and legal compliance operates on a different dimension than content quality."
     difficulty: "advanced"
     why: "How would you build a systematic check for Compliance Gaps into your outreach review process?"
     tags: ["compliance-gap"]
@@ -76,7 +76,7 @@ cards:
 
   - id: "ch34-05-five-laws-012"
     front: "A cold email opens with 'At NexaFlow Technologies, we help companies like yours scale logistics operations.' Which law does this violate and why?"
-    back: "Law 2 (Lead with Prospect). The first word is the sender's company name — the entire sentence is about the seller, dressed up to look like it is about the prospect."
+    back: "Law 2 (Lead with Prospect). The first word is the sender's company name: the entire sentence is about the seller, dressed up to look like it is about the prospect."
     difficulty: "intermediate"
     tags: ["law-2"]
 
@@ -88,14 +88,14 @@ cards:
 
   - id: "ch34-05-five-laws-014"
     front: "Why do word limits function as a proxy for respect in outreach?"
-    back: "A 400-word cold email says 'I value my message more than your time.' A 150-word email says 'I distilled this because your attention is scarce' — brevity signals that you prioritise the recipient's time over your own talking points."
+    back: "A 400-word cold email says 'I value my message more than your time.' A 150-word email says 'I distilled this because your attention is scarce': brevity signals that you prioritise the recipient's time over your own talking points."
     difficulty: "intermediate"
     why: "How does the word limit change between a cold email and a warm email, and why?"
     tags: ["law-4"]
 
   - id: "ch34-05-five-laws-015"
     front: "What should you do when an agent-generated outreach message passes all Five Laws but is culturally wrong for the prospect's market?"
-    back: "Run a separate compliance audit checking tone, channel, cultural framing, and legal requirements for the recipient's jurisdiction — then revise or rebuild the message."
+    back: "Run a separate compliance audit checking tone, channel, cultural framing, and legal requirements for the recipient's jurisdiction: then revise or rebuild the message."
     difficulty: "advanced"
     why: "Why can't the Five Laws themselves catch cultural mismatches?"
     tags: ["compliance-gap"]

@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch36-09-roadmap-planning-communication-001"
     front: "What are the four roadmap framework options and when should each be used?"
-    back: "Now/Next/Later: external comms and executive alignment (avoids false date precision). Quarterly Themes: planning meetings and strategy communication. OKR-Aligned: organisations that run on OKRs. Timeline/Gantt: engineering execution planning and resource conflict identification — NOT for external communication."
+    back: "Now/Next/Later: external comms and executive alignment (avoids false date precision). Quarterly Themes: planning meetings and strategy communication. OKR-Aligned: organisations that run on OKRs. Timeline/Gantt: engineering execution planning and resource conflict identification; NOT for external communication."
     tags: ["roadmap-framework", "framework-options"]
     difficulty: "basic"
 
@@ -44,7 +44,7 @@ cards:
 
   - id: "ch36-09-roadmap-planning-communication-007"
     front: "What is the /roadmap-update command and which plugin provides it?"
-    back: "/roadmap-update is provided by the official product-management plugin. It creates, updates, or reprioritises product roadmaps — accepts current roadmap state or a list of initiatives and produces a structured roadmap view."
+    back: "/roadmap-update is provided by the official product-management plugin. It creates, updates, or reprioritises product roadmaps: accepts current roadmap state or a list of initiatives and produces a structured roadmap view."
     tags: ["/roadmap-update-command", "plugin-provides", "roadmap-update"]
     difficulty: "intermediate"
 
@@ -56,7 +56,7 @@ cards:
 
   - id: "ch36-09-roadmap-planning-communication-009"
     front: "What is the difference between a roadmap change and a scope adjustment?"
-    back: "A roadmap change is a strategic reprioritisation — what the team is no longer building, or what moved between Now/Next/Later. A scope adjustment is normal execution refinement within a sprint. Roadmap changes require stakeholder communication; scope adjustments do not."
+    back: "A roadmap change is a strategic reprioritisation: what the team is no longer building, or what moved between Now/Next/Later. A scope adjustment is normal execution refinement within a sprint. Roadmap changes require stakeholder communication; scope adjustments do not."
     tags: ["roadmap-change", "scope-adjustment", "difference"]
     difficulty: "intermediate"
 

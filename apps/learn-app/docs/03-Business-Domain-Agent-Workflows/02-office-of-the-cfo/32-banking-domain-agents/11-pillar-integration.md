@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/pillar-integration
 sidebar_position: 11
-title: "Cross-Pillar Integration — When IFRS 9, Basel, and AML Collide"
-description: "How a single event cascades across all three regulatory pillars — from AML trigger through IFRS 9 stage migration to Basel capital impact — and why pillar-isolated agents produce incomplete advice"
+title: "Cross-Pillar Integration: When IFRS 9, Basel, and AML Collide"
+description: "How a single event cascades across all three regulatory pillars (from AML trigger through IFRS 9 stage migration to Basel capital impact) and why pillar-isolated agents produce incomplete advice"
 keywords:
   [
     "cross-pillar integration",
@@ -67,18 +67,18 @@ cognitive_load:
     - "IRB shortfall/excess: comparing IFRS 9 ECL to Basel regulatory EL"
     - "IFRS 9 transitional arrangements: phased add-back of Day 1 impact to CET1"
     - "Skill chaining in the router: how the agent detects and executes cross-pillar queries"
-  assessment: "5 concepts at B2 level — within the B2 limit of 10. Students have completed all three pillar tracks (L03-L10) and are now integrating them. The cognitive challenge is synthesis across domains, not new domain knowledge."
+  assessment: "5 concepts at B2 level: within the B2 limit of 10. Students have completed all three pillar tracks (L03-L10) and are now integrating them. The cognitive challenge is synthesis across domains, not new domain knowledge."
 
 differentiation:
   extension_for_advanced: "Model a second cascade where a Basel leverage ratio breach triggers a forced asset sale, which triggers IFRS 9 ECL recalculation due to changed collateral values, which triggers an AML review of the buyer. Trace this reverse cascade quantitatively."
   remedial_for_struggling: "Focus on the core cascade diagram: AML discovery leads to Stage 3 classification leads to higher ECL leads to lower CET1. If you can explain each arrow in one sentence and calculate the CET1 impact of a provision increase, you have the essential concept."
 ---
 
-# Cross-Pillar Integration — When IFRS 9, Basel, and AML Collide
+# Cross-Pillar Integration: When IFRS 9, Basel, and AML Collide
 
-In Lessons 3-10, you built competence in each regulatory pillar independently. You can stage assets under IFRS 9, calculate capital ratios under Basel, and investigate AML alerts. Each pillar has its own logic, its own data, and its own regulatory authority. But banks do not operate in separate regulatory universes. A single event — a fraud discovery, an economic downturn, a sanctions breach — cascades across all three pillars simultaneously, and each pillar's response changes what the other pillars see.
+In Lessons 3-10, you built competence in each regulatory pillar independently. You can stage assets under IFRS 9, calculate capital ratios under Basel, and investigate AML alerts. Each pillar has its own logic, its own data, and its own regulatory authority. But banks do not operate in separate regulatory universes. A single event (a fraud discovery, an economic downturn, a sanctions breach) cascades across all three pillars simultaneously, and each pillar's response changes what the other pillars see.
 
-This lesson connects the pillars. It demonstrates how a single event produces a chain reaction: an AML trigger forces IFRS 9 stage migration, which increases the provision charge, which reduces CET1 capital, which may breach the combined buffer requirement. The bank that treats these as three separate problems gets three separate answers. The bank that traces the cascade gets one integrated answer — and that integrated answer is what regulators, boards, and markets actually need.
+This lesson connects the pillars. It demonstrates how a single event produces a chain reaction: an AML trigger forces IFRS 9 stage migration, which increases the provision charge, which reduces CET1 capital, which may breach the combined buffer requirement. The bank that treats these as three separate problems gets three separate answers. The bank that traces the cascade gets one integrated answer: and that integrated answer is what regulators, boards, and markets actually need.
 
 ## The Cross-Pillar Cascade
 
@@ -90,17 +90,17 @@ The tax adjustment matters because the provision charge is a deductible expense.
 
 But the cascade does not stop at CET1. Consider what happens when fraud is discovered in a corporate loan portfolio.
 
-:::info The Full Cascade — One Event, Three Pillars
+:::info The Full Cascade: One Event, Three Pillars
 
 **Trigger**: Bank discovers GBP 50M in fraudulent corporate loans.
 
-**Pillar 1 — AML Response:**
+**Pillar 1: AML Response:**
 
 - Suspicious Activity Report (SAR) filed with the NCA
 - Enhanced monitoring applied to related accounts
-- Tipping-off restrictions activated — no customer communication about suspicion
+- Tipping-off restrictions activated: no customer communication about suspicion
 
-**Pillar 2 — IFRS 9 Response:**
+**Pillar 2: IFRS 9 Response:**
 
 - Fraudulent loans immediately migrate from Stage 1 to Stage 3 (credit-impaired)
 - ECL measurement changes from 12-month to lifetime with impaired LGD
@@ -108,7 +108,7 @@ But the cascade does not stop at CET1. Consider what happens when fraud is disco
 - Stage 3 ECL (lifetime, impaired): GBP 50M x 100% PD x 85% LGD = GBP 42.5M
 - Additional provision charge: GBP 42.4M
 
-**Pillar 3 — Basel Response:**
+**Pillar 3: Basel Response:**
 
 - CET1 reduction: GBP 42.4M x (1 - 25% tax) = GBP 31.8M
 - If the bank is on the IRB approach, compare IFRS 9 ECL to regulatory Expected Loss (EL)
@@ -116,10 +116,10 @@ But the cascade does not stop at CET1. Consider what happens when fraud is disco
 - If IFRS 9 ECL &lt; Regulatory EL: excess added to Tier 2 (capped at 0.6% of credit RWA)
 - Risk-weighted assets may also increase if the exposure was previously at a low risk weight
 
-**Result**: A GBP 50M fraud becomes a GBP 42.4M provision charge, a GBP 31.8M CET1 hit, a potential capital shortfall, and a regulatory investigation — all from one discovery.
+**Result**: A GBP 50M fraud becomes a GBP 42.4M provision charge, a GBP 31.8M CET1 hit, a potential capital shortfall, and a regulatory investigation: all from one discovery.
 :::
 
-## The IFRS 9 and Basel Interaction — Exercise 9 Data
+## The IFRS 9 and Basel Interaction: Exercise 9 Data
 
 The interaction between IFRS 9 provisions and Basel capital is the most quantitatively important cross-pillar linkage. Here is a complete worked example using real regulatory mechanics.
 
@@ -149,7 +149,7 @@ Because IFRS 9 ECL exceeds regulatory EL, the bank has an **excess provision** o
 - **Cap**: 0.6% x GBP 2.8B = **GBP 16.8M**
 - **Tier 2 add-back**: min(GBP 33.5M, GBP 16.8M) = **GBP 16.8M**
 
-The remaining GBP 16.7M of excess provision provides no capital benefit — it exists in the accounts but is not recognized as regulatory capital.
+The remaining GBP 16.7M of excess provision provides no capital benefit: it exists in the accounts but is not recognized as regulatory capital.
 
 ### Step 2: Stage Migration Impact
 
@@ -159,9 +159,9 @@ Now a macroeconomic deterioration triggers significant stage migration:
 | ------------------ | -------- | ------------------- | -------------------- | ----------------- |
 | Stage 1 to Stage 2 | GBP 150M | GBP 1.2M (12-month) | GBP 18.5M (lifetime) | **GBP 17.3M**     |
 
-The 12-month ECL of GBP 1.2M becomes a lifetime ECL of GBP 18.5M — an additional charge of GBP 17.3M. This happens because Stage 2 requires lifetime ECL measurement, which captures the full remaining exposure period rather than just the next 12 months.
+The 12-month ECL of GBP 1.2M becomes a lifetime ECL of GBP 18.5M: an additional charge of GBP 17.3M. This happens because Stage 2 requires lifetime ECL measurement, which captures the full remaining exposure period rather than just the next 12 months.
 
-### Step 3: Adverse Scenario — Full Stress
+### Step 3: Adverse Scenario: Full Stress
 
 Under the adverse macroeconomic scenario:
 
@@ -212,17 +212,17 @@ This cushions the capital impact but is diminishing each year. By Year 6, no add
 | **Adjusted RWA**                  | **GBP 2,852.5M** |
 | **Revised CET1 Ratio**            | **11.1%**        |
 
-The CET1 ratio has dropped from 12.0% to 11.1% — a 90 basis point decline from a single macroeconomic event. If the bank's combined buffer requirement (minimum 4.5% + CCB 2.5% + any systemic buffer) is 10.0%, the bank still has headroom. But the direction is clear, and the board needs to understand the trajectory.
+The CET1 ratio has dropped from 12.0% to 11.1%: a 90 basis point decline from a single macroeconomic event. If the bank's combined buffer requirement (minimum 4.5% + CCB 2.5% + any systemic buffer) is 10.0%, the bank still has headroom. But the direction is clear, and the board needs to understand the trajectory.
 
 ## Why Pillar-Isolated Agents Fail
 
-Consider what happens when three separate agents — one for IFRS 9, one for Basel, one for AML — each handle their domain independently.
+Consider what happens when three separate agents (one for IFRS 9, one for Basel, one for AML) each handle their domain independently.
 
 | Question                  | Isolated Agent Answer               | Integrated Agent Answer                                                                                                       |
 | ------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | "What is our ECL?"        | GBP 145.8M (correct for IFRS 9)     | GBP 145.8M, reducing CET1 by 190bp under adverse scenario                                                                     |
-| "What is our CET1 ratio?" | 12.0% (stale — no provision update) | 11.1% (reflects ECL increase, RWA change, transitional)                                                                       |
-| "Any AML concerns?"       | "No new SARs filed"                 | "Sector concentration in high-default sectors warrants enhanced monitoring — cross-reference with Stage 3 migration patterns" |
+| "What is our CET1 ratio?" | 12.0% (stale: no provision update) | 11.1% (reflects ECL increase, RWA change, transitional)                                                                       |
+| "Any AML concerns?"       | "No new SARs filed"                 | "Sector concentration in high-default sectors warrants enhanced monitoring: cross-reference with Stage 3 migration patterns" |
 
 The isolated IFRS 9 agent calculates the correct ECL but does not tell you what it means for capital. The isolated Basel agent reports a stale ratio because it has not been told about the provision charge. The isolated AML agent misses the pattern that AML risks correlate with credit deterioration.
 
@@ -271,7 +271,7 @@ At each step, explain which banking plugin skill the router
 would load and why.
 ```
 
-**What you are learning:** The cascade is not abstract — it is arithmetic. Each pillar produces a number that feeds the next pillar. By calculating each step, you see that a GBP 50M fraud does not cost GBP 50M. It costs the provision charge plus the capital impact plus the investigation costs plus the regulatory scrutiny. This is why integrated analysis matters.
+**What you are learning:** The cascade is not abstract: it is arithmetic. Each pillar produces a number that feeds the next pillar. By calculating each step, you see that a GBP 50M fraud does not cost GBP 50M. It costs the provision charge plus the capital impact plus the investigation costs plus the regulatory scrutiny. This is why integrated analysis matters.
 
 ### Prompt 2: Adapt
 
@@ -315,7 +315,7 @@ Then explain what the integrated banking agent would report
 instead, and why the board would make a different decision.
 ```
 
-**What you are learning:** Pillar isolation is not a theoretical problem. It is the default state of most banks today — separate teams, separate systems, separate reports. The integrated agent demonstrates the value of cross-pillar analysis by showing what each isolated view misses and how the integrated view changes the decision.
+**What you are learning:** Pillar isolation is not a theoretical problem. It is the default state of most banks today: separate teams, separate systems, separate reports. The integrated agent demonstrates the value of cross-pillar analysis by showing what each isolated view misses and how the integrated view changes the decision.
 
 ## Flashcards Study Aid
 

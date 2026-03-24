@@ -1,14 +1,14 @@
 deck:
   id: "ch35-three-structural-failures"
   title: "Three Structural Failures in Supply Chain Operations"
-  description: "Recall and reasoning cards covering the Reconciliation Swamp, Vendor Blind Spot, and Static Optimisation Trap — the three information-gap failures that make supply chains reactive."
+  description: "Recall and reasoning cards covering the Reconciliation Swamp, Vendor Blind Spot, and Static Optimisation Trap: the three information-gap failures that make supply chains reactive."
   tags: ["supply-chain", "structural-failures", "reconciliation-swamp", "vendor-blind-spot", "static-optimisation"]
   version: 2
 
 cards:
   - id: "ch35-three-structural-failures-001"
     front: "What is the physical-digital gap in supply chain operations?"
-    back: "The disconnect between physical events (deliveries, quality checks) and digital records — the hidden cost gap where most supply chain failures originate."
+    back: "The disconnect between physical events (deliveries, quality checks) and digital records: the hidden cost gap where most supply chain failures originate."
     tags: ["physical-digital-gap", "supply-chain"]
     difficulty: "basic"
 
@@ -32,20 +32,20 @@ cards:
 
   - id: "ch35-three-structural-failures-005"
     front: "Why does the Reconciliation Swamp persist even though ERP reconciliation software exists?"
-    back: "ERPs flag exceptions but cannot resolve them. Resolution requires human judgment about whether variances are authorised — this judgment bottleneck caps throughput and creates the queue."
+    back: "ERPs flag exceptions but cannot resolve them. Resolution requires human judgment about whether variances are authorised: this judgment bottleneck caps throughput and creates the queue."
     tags: ["reconciliation-swamp", "erp"]
     difficulty: "intermediate"
     why: "What capability would need to be added to an ERP to eliminate the human judgment bottleneck?"
 
   - id: "ch35-three-structural-failures-006"
     front: "What is the three-way match in invoice processing?"
-    back: "Matching invoice against purchase order AND goods receipt — all three documents must align before payment approves."
+    back: "Matching invoice against purchase order AND goods receipt: all three documents must align before payment approves."
     tags: ["reconciliation-swamp", "three-way-match"]
     difficulty: "basic"
 
   - id: "ch35-three-structural-failures-007"
     front: "What does the Vendor Blind Spot describe?"
-    back: "The failure to continuously monitor suppliers — signals exist in scattered systems but are reviewed at most once a year, so crises are caught after they occur."
+    back: "The failure to continuously monitor suppliers: signals exist in scattered systems but are reviewed at most once a year, so crises are caught after they occur."
     tags: ["vendor-blind-spot", "supplier-monitoring"]
     difficulty: "basic"
 
@@ -56,7 +56,7 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch35-three-structural-failures-009"
-    front: "A supplier's OTD dropped from 97% to 84% over six months — visible in ERP. Why did procurement only discover this at the annual review?"
+    front: "A supplier's OTD dropped from 97% to 84% over six months: visible in ERP. Why did procurement only discover this at the annual review?"
     back: "Monitoring dozens of suppliers across multiple systems continuously exceeds any human team's attention capacity. Annual reviews are the only feasible cadence, so the trend completed its damage before anyone noticed."
     tags: ["vendor-blind-spot", "monitoring"]
     difficulty: "intermediate"
@@ -64,32 +64,32 @@ cards:
 
   - id: "ch35-three-structural-failures-010"
     front: "What is the Tier 2 supplier problem?"
-    back: "Your Tier 1 supplier depends on their own suppliers (Tier 2). If a Tier 2 supplier fails, your Tier 1 supply is disrupted — and most organisations have zero Tier 2 visibility."
+    back: "Your Tier 1 supplier depends on their own suppliers (Tier 2). If a Tier 2 supplier fails, your Tier 1 supply is disrupted: and most organisations have zero Tier 2 visibility."
     tags: ["vendor-blind-spot", "tier-2"]
     difficulty: "intermediate"
 
   - id: "ch35-three-structural-failures-011"
     front: "What does a supply chain 'optimised for 2022 running in 2026' look like in practice?"
-    back: "Carrier contracts, sourcing strategies, and stock levels set under 2022 conditions — fuel costs, lead times, and demand patterns have changed, but no re-analysis has been done."
+    back: "Carrier contracts, sourcing strategies, and stock levels set under 2022 conditions: fuel costs, lead times, and demand patterns have changed, but no re-analysis has been done."
     tags: ["static-optimisation-trap"]
     difficulty: "basic"
 
   - id: "ch35-three-structural-failures-012"
     front: "Why does the Static Optimisation Trap persist even when analysts know re-evaluation is overdue?"
-    back: "Re-evaluation requires data collection, analysis, and decision time — all of which consume analyst capacity that is already fully consumed by operational work. Intuition never becomes a defensible recommendation without the analysis."
+    back: "Re-evaluation requires data collection, analysis, and decision time: all of which consume analyst capacity that is already fully consumed by operational work. Intuition never becomes a defensible recommendation without the analysis."
     tags: ["static-optimisation-trap", "analyst-capacity"]
     difficulty: "intermediate"
     why: "If re-evaluation took hours instead of weeks, how would supply chain optimisation cadence change?"
 
   - id: "ch35-three-structural-failures-013"
     front: "What is the common thread linking all three structural supply chain failures?"
-    back: "All three are information problems — the data exists, but the integration and attention to connect it into actionable intelligence do not."
+    back: "All three are information problems: the data exists, but the integration and attention to connect it into actionable intelligence do not."
     tags: ["structural-failures", "information-problem"]
     difficulty: "basic"
 
   - id: "ch35-three-structural-failures-014"
     front: "A team says 'we don't have enough data' to explain their supply chain problems. Why does this contradict the three structural failures?"
-    back: "Every failure occurs despite abundant data — invoices, delivery records, financial filings all exist. The failure is scattered data that exceeds human attention capacity, not absent data."
+    back: "Every failure occurs despite abundant data: invoices, delivery records, financial filings all exist. The failure is scattered data that exceeds human attention capacity, not absent data."
     tags: ["structural-failures", "misconception"]
     difficulty: "advanced"
     why: "What is the difference between having data and having connected, actionable intelligence?"

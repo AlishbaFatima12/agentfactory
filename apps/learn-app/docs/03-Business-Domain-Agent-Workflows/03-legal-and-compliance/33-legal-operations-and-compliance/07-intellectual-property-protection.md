@@ -71,7 +71,7 @@ differentiation:
 
 # Intellectual Property Protection
 
-In Lessons 3 through 5, you applied the Legal Plugin to contracts and NDAs — agreement types where the agent reviews existing documents. Now you will use `/brief` to proactively monitor and protect your organisation's intellectual property, transforming IP protection from a reactive specialist function into a continuous, automated capability.
+In Lessons 3 through 5, you applied the Legal Plugin to contracts and NDAs: agreement types where the agent reviews existing documents. Now you will use `/brief` to proactively monitor and protect your organisation's intellectual property, transforming IP protection from a reactive specialist function into a continuous, automated capability.
 
 ## Why IP Is Transformed by AI
 
@@ -141,7 +141,7 @@ Before reading the landscape analysis below, predict: how crowded is the patent 
 | Governance footer           | Explicit statement that this is research, not an FTO opinion            | Confirm the output distinguishes research scaffolding from privileged legal opinion                                                   |
 
 :::note Your output will vary
-The specific patents, filing counts, and prior art candidates depend on the technology description and the databases the agent can access via MCP. Focus on the structure: landscape summary, white spaces, FTO flags, and the governance boundary. The teaching point is that patent landscape research reduces attorney work from 40+ hours to 10-15 hours — but cannot replace the attorney's privileged FTO opinion.
+The specific patents, filing counts, and prior art candidates depend on the technology description and the databases the agent can access via MCP. Focus on the structure: landscape summary, white spaces, FTO flags, and the governance boundary. The teaching point is that patent landscape research reduces attorney work from 40+ hours to 10-15 hours: but cannot replace the attorney's privileged FTO opinion.
 :::
 
 Zara now has a structured research package to send to SpectraAI's IP attorney. Instead of asking the attorney to start from a blank page, the attorney reviews pre-screened research, focuses on the FTO flags that actually need analysis, and produces a formal opinion in significantly less time.
@@ -201,7 +201,7 @@ confirm licence compatibility before shipping
 DMCA workflow: Draft notices for attorney review and submission
 ```
 
-The skill ensures that every IP-related query in Cowork automatically applies your organisation's registered marks, monitoring thresholds, and patent portfolio context — without requiring you to paste the configuration into each prompt.
+The skill ensures that every IP-related query in Cowork automatically applies your organisation's registered marks, monitoring thresholds, and patent portfolio context: without requiring you to paste the configuration into each prompt.
 
 ## Open-Source Licence Hierarchy
 
@@ -215,7 +215,7 @@ When the agent scans your codebase for OSS components, it applies a risk hierarc
 | **Critical** | AGPL-3.0                           | Network use triggers distribution obligation                         | Escalate to IP counsel immediately |
 
 :::warning GPL/AGPL Escalation Rule
-If the agent identifies GPL or AGPL components in a product intended for proprietary distribution or SaaS deployment, escalate to IP counsel immediately. Do not rely on the agent's assessment of whether the component triggers copyleft obligations. Licence interpretation depends on linking method, distribution model, and jurisdiction — this is attorney work.
+If the agent identifies GPL or AGPL components in a product intended for proprietary distribution or SaaS deployment, escalate to IP counsel immediately. Do not rely on the agent's assessment of whether the component triggers copyleft obligations. Licence interpretation depends on linking method, distribution model, and jurisdiction: this is attorney work.
 :::
 
 ## Flashcards Study Aid

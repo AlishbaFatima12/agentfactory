@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/legal-operations-and-compliance
 sidebar_position: 33
-title: "Chapter 33 — Legal Operations & Compliance"
+title: "Chapter 33; Legal Operations & Compliance"
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-33/legal-ops-blueprint.pdf"
   title: "Legal Operations Blueprint"
@@ -13,15 +13,15 @@ version: 3.0
 status: draft
 ---
 
-# Chapter 33 — Legal Operations & Compliance
+# Chapter 33; Legal Operations & Compliance
 
 ## 📚 Teaching Aid
 
 ### Giving a Two-Person Legal Team the Operational Capacity of Six
 
-Ayesha Malik has 37 contracts waiting for review. Three auto-renewals slipped past her last quarter — one for a cloud provider that cost PKR 4.8M she wanted to renegotiate. A data subject access request sits 26 days overdue. Her single Legal Ops associate spends 60% of his time forwarding contracts to the right person, chasing signatures, and sending deadline reminders.
+Ayesha Malik has 37 contracts waiting for review. Three auto-renewals slipped past her last quarter: one for a cloud provider that cost PKR 4.8M she wanted to renegotiate. A data subject access request sits 26 days overdue. Her single Legal Ops associate spends 60% of his time forwarding contracts to the right person, chasing signatures, and sending deadline reminders.
 
-This chapter builds the system that eliminates that backlog. You install two plugin layers, configure a negotiation playbook calibrated to your organisation's positions, and work through every agent and skill the plugins provide — producing attorney-ready contract reviews, triaged NDAs, compliance assessments, litigation hold packages, meeting briefings, and a compliance calendar with automated escalation. Every lesson ends with a deployable artifact.
+This chapter builds the system that eliminates that backlog. You install two plugin layers, configure a negotiation playbook calibrated to your organisation's positions, and work through every agent and skill the plugins provide: producing attorney-ready contract reviews, triaged NDAs, compliance assessments, litigation hold packages, meeting briefings, and a compliance calendar with automated escalation. Every lesson ends with a deployable artifact.
 
 > **The governing principle:** The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.
 
@@ -31,10 +31,10 @@ This chapter requires the **Claude desktop app** with **Cowork** enabled (Pro, M
 
 1. **Install the Claude desktop app** from [claude.ai/download](https://claude.ai/download).
 2. **Open the Cowork tab** in the Claude desktop app.
-3. **Install Layer 1 — Anthropic's Legal Plugin**: Cowork sidebar → **Customize** → **Browse plugins** → find **Legal** → **Install**. This gives you `/review-contract`, `/triage-nda`, `/vendor-check`, `/brief`, `/respond`, `/compliance-check`, `/legal-risk-assessment`, `/meeting-briefing`, `/legal-response`, `/signature-request`.
-4. **Install Layer 2 — Agent Factory Legal Ops extension** (ours): Cowork sidebar → **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Legal Ops** → **Install**. This gives you 1 agent (contract-intake) and 6 skills (legal-global-router, compliance-calendar, dsar-privacy, ip-protection, legal-spend, regulatory-monitoring) with 6 jurisdiction overlays.
+3. **Install Layer 1; Anthropic's Legal Plugin**: Cowork sidebar → **Customize** → **Browse plugins** → find **Legal** → **Install**. This gives you `/review-contract`, `/triage-nda`, `/vendor-check`, `/brief`, `/respond`, `/compliance-check`, `/legal-risk-assessment`, `/meeting-briefing`, `/legal-response`, `/signature-request`.
+4. **Install Layer 2; Agent Factory Legal Ops extension** (ours): Cowork sidebar → **Customize** → **Browse plugins** → **Personal** → **+** → **Add marketplace from GitHub** → enter `https://github.com/panaversity/agentfactory-business-plugins` → find **Legal Ops** → **Install**. This gives you 1 agent (contract-intake) and 6 skills (legal-global-router, compliance-calendar, dsar-privacy, ip-protection, legal-spend, regulatory-monitoring) with 6 jurisdiction overlays.
 5. **Connect a working folder** for practice files (e.g., `legal-practice/`).
-6. **Verify**: ask about a legal topic involving a specific jurisdiction (e.g., "Review this UK vendor agreement") — the router skill should auto-activate and load the appropriate jurisdiction overlay.
+6. **Verify**: ask about a legal topic involving a specific jurisdiction (e.g., "Review this UK vendor agreement"): the router skill should auto-activate and load the appropriate jurisdiction overlay.
 
 ### Lesson Map
 

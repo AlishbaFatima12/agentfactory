@@ -41,7 +41,7 @@ learning_objectives:
   - objective: "Apply RICE scoring to a 15-item InsightFlow backlog using /prioritise with all assumptions made explicit"
     proficiency_level: "B2"
     bloom_level: "Apply"
-    assessment_method: "Student produces a RICE table where every row includes reach, impact, confidence, and effort values — with scoring notes explaining each assumption"
+    assessment_method: "Student produces a RICE table where every row includes reach, impact, confidence, and effort values: with scoring notes explaining each assumption"
 
   - objective: "Run the three mandatory challenges (Strategic Override Test, Data Gap Test, Regret Test) and produce a quarterly priority decision with documented overrides and discovery spikes"
     proficiency_level: "C1"
@@ -57,39 +57,39 @@ cognitive_load:
     - "Challenge 2: Data Gap Test"
     - "Challenge 3: 'What Would We Regret?' Test"
     - "Quarterly Priority Decision format (P1 / P2 / Stretch / Not Building / Overrides / Discovery Spikes)"
-  assessment: "6 concepts at B2-C1. The RICE formula itself is straightforward; the difficulty is the honest scoring — most students initially overestimate confidence. The three challenges are the most important concepts: they catch the errors that RICE scores reliably miss. Students who complete this lesson have a complete prioritisation toolkit applicable to any backlog."
+  assessment: "6 concepts at B2-C1. The RICE formula itself is straightforward; the difficulty is the honest scoring: most students initially overestimate confidence. The three challenges are the most important concepts: they catch the errors that RICE scores reliably miss. Students who complete this lesson have a complete prioritisation toolkit applicable to any backlog."
 
 differentiation:
   extension_for_advanced: "Take the RICE output and challenge your confidence scores. For every item where you scored confidence above 70%, ask: what evidence grounds that confidence? If it is primarily gut feel, drop confidence to 50%. Re-run RICE with the revised scores. How many items change rank? The instability in the ranking is a signal of how much the prioritisation depends on data quality. Write a 2-sentence note for the top item that changed rank: what data would you need to restore confidence above 70%?"
-  remedial_for_struggling: "Start with Value vs. Effort on a small backlog (5-7 items). Place each item in one of four quadrants: high value + low effort (do first), high value + high effort (plan carefully), low value + low effort (fill-ins), low value + high effort (do not do). This is RICE without the math. Once you can make and defend these placement decisions verbally, move to RICE — it is the same judgment, made more precise with numbers."
+  remedial_for_struggling: "Start with Value vs. Effort on a small backlog (5-7 items). Place each item in one of four quadrants: high value + low effort (do first), high value + high effort (plan carefully), low value + low effort (fill-ins), low value + high effort (do not do). This is RICE without the math. Once you can make and defend these placement decisions verbally, move to RICE: it is the same judgment, made more precise with numbers."
 
 teaching_guide:
   key_points:
-    - "RICE scores are relative, not absolute — they rank features against each other, not against an objective scale; the most important number is the confidence score, which makes the quality of evidence explicit"
-    - "A RICE score from bad data is worse than no score — it creates false precision that makes bad prioritisation decisions look defensible"
+    - "RICE scores are relative, not absolute: they rank features against each other, not against an objective scale; the most important number is the confidence score, which makes the quality of evidence explicit"
+    - "A RICE score from bad data is worse than no score: it creates false precision that makes bad prioritisation decisions look defensible"
     - "The Strategic Override Test is the most important challenge: if any item scored low would be built anyway, that override must be documented as an override, not buried in a score inflation"
-    - "Low-confidence, high-effort items should almost always have a discovery spike before entering a sprint — investing 2 weeks in research to validate a feature is far cheaper than investing a full quarter to build the wrong one"
-    - "The 'Not Building' list in the quarterly priority decision is as important as the build list — it prevents good ideas from re-entering the backlog discussion every planning meeting"
+    - "Low-confidence, high-effort items should almost always have a discovery spike before entering a sprint: investing 2 weeks in research to validate a feature is far cheaper than investing a full quarter to build the wrong one"
+    - "The 'Not Building' list in the quarterly priority decision is as important as the build list: it prevents good ideas from re-entering the backlog discussion every planning meeting"
   misconceptions:
     - "A higher RICE score means we should definitely build it. Correction: RICE scores are inputs to a decision, not decisions themselves. The three challenges exist specifically because RICE systematically undervalues strategic bets (which have low confidence early) and overvalues quick wins (which have high confidence but low strategic weight). Use RICE to rank; use judgment to decide."
     - "Prioritisation frameworks produce objective rankings. Correction: all prioritisation frameworks encode assumptions. RICE's Impact scale (1/2/3) is a judgment call. Confidence percentages are estimates. The point of the framework is not to produce an objective ranking but to make the judgments explicit and visible, so they can be challenged and improved."
     - "The 'Not Building' list is optional. Correction: the Not Building list is the most important output of any prioritisation exercise. It closes the conversation on items that will keep coming back up in planning meetings. 'We scored it and decided not to build it this quarter because [reason]' ends the debate; leaving it off the list means the debate happens again next month."
   discussion_prompts:
-    - "You run RICE and the AI-powered insights feature scores 5 — the lowest item on the backlog. Your CEO says it is the most strategically important investment you can make and should be Q3 Priority 1. Walk through the three challenges and determine whether this is a legitimate strategic override or whether the CEO's intuition conflicts with the RICE evidence in a way that warrants a discovery spike."
+    - "You run RICE and the AI-powered insights feature scores 5: the lowest item on the backlog. Your CEO says it is the most strategically important investment you can make and should be Q3 Priority 1. Walk through the three challenges and determine whether this is a legitimate strategic override or whether the CEO's intuition conflicts with the RICE evidence in a way that warrants a discovery spike."
     - "Two items have the same RICE score: Feature A has high reach, moderate impact, high confidence, and moderate effort. Feature B has low reach, very high impact, very high confidence, and low effort. The scores are identical. How do you break the tie? What additional context would you gather? Does the Data Gap Test or Strategic Override Test apply to either?"
   teaching_tips:
-    - "The Regret Test is the most memorable part of this lesson — 'ignore all scores and ask what your best customers would be most grateful for' cuts through analysis paralysis. Start the exercise by asking students to answer the Regret Test before they see the RICE scores. Then compare. The gap between the Regret Test answer and the RICE #1 is where the most productive conversation happens."
+    - "The Regret Test is the most memorable part of this lesson: 'ignore all scores and ask what your best customers would be most grateful for' cuts through analysis paralysis. Start the exercise by asking students to answer the Regret Test before they see the RICE scores. Then compare. The gap between the Regret Test answer and the RICE #1 is where the most productive conversation happens."
     - "When students produce their RICE output, ask them to read their confidence scores aloud and justify each one. This surfaces the difference between 'I believe this because I have evidence' and 'I believe this because I hope it is true.' The discipline of justifying confidence scores is a PM skill that transfers to every decision framework."
-    - "The discovery spike concept is counterintuitive for students who equate action with progress. Frame it as risk management: a 2-week discovery spike costs 2 weeks; building a low-confidence, high-effort feature and finding out it does not solve the problem costs a full quarter. Discovery spikes are not delays — they are the cheap way to avoid expensive mistakes."
+    - "The discovery spike concept is counterintuitive for students who equate action with progress. Frame it as risk management: a 2-week discovery spike costs 2 weeks; building a low-confidence, high-effort feature and finding out it does not solve the problem costs a full quarter. Discovery spikes are not delays: they are the cheap way to avoid expensive mistakes."
 ---
 
 # Backlog Prioritization Frameworks
 
 Fifteen items are competing for Q3. Six engineers. Ten sprints. Someone has to choose.
 
-Most PMs in this situation do one of two things: they pick the features their loudest stakeholder asked for, or they run a prioritisation framework and present the scores as if the scores made the decision. Both approaches have the same problem — the judgment is hidden. The stakeholder drive is obvious; the framework score looks neutral but is shaped by assumptions that deserve scrutiny.
+Most PMs in this situation do one of two things: they pick the features their loudest stakeholder asked for, or they run a prioritisation framework and present the scores as if the scores made the decision. Both approaches have the same problem: the judgment is hidden. The stakeholder drive is obvious; the framework score looks neutral but is shaped by assumptions that deserve scrutiny.
 
-This lesson teaches you to use `/prioritise` from the custom `product-strategy` plugin to apply RICE scoring to InsightFlow's backlog, make every assumption visible, and then run the three mandatory challenges that catch what the framework reliably misses. The output is not a ranked list — it is a quarterly priority decision: what you are building, what you are not building, why, and what you are investigating before committing to build.
+This lesson teaches you to use `/prioritise` from the custom `product-strategy` plugin to apply RICE scoring to InsightFlow's backlog, make every assumption visible, and then run the three mandatory challenges that catch what the framework reliably misses. The output is not a ranked list: it is a quarterly priority decision: what you are building, what you are not building, why, and what you are investigating before committing to build.
 
 ## Framework Selection Guide
 
@@ -101,7 +101,7 @@ Different prioritisation challenges need different tools. Before running any fra
 | "We need a quick 2×2 without complex scoring" | Value vs. Effort | Fast, visual, good for team alignment sessions |
 | "We need to sort backlog by customer demand vs. implementation complexity" | Kano | Distinguishes basic needs (must-have), performance needs (more = better), and delighters (unexpected value) |
 | "We need to communicate to stakeholders what is MUST vs. SHOULD vs. COULD" | MoSCoW | Designed for stakeholder communication and release scoping |
-| "We need to evaluate a single feature request — yes or no" | Single-feature evaluation | Structured go/no-go for a specific decision |
+| "We need to evaluate a single feature request: yes or no" | Single-feature evaluation | Structured go/no-go for a specific decision |
 
 InsightFlow has 15 backlog items competing for Q3. The right tool is RICE.
 
@@ -113,10 +113,10 @@ Each dimension requires a judgment with an explicit assumption:
 
 | Dimension | Definition | Scale | Common Mistake |
 | --- | --- | --- | --- |
-| **Reach** | % of active accounts likely to use this in the first 3 months | 0–100% | Confusing "could use" with "will use" — be conservative |
-| **Impact** | How much will this improve the experience for those who use it? | 1 = minimal, 2 = moderate, 3 = significant | Overestimating — 3 should be rare; most features are 1 or 2 |
+| **Reach** | % of active accounts likely to use this in the first 3 months | 0–100% | Confusing "could use" with "will use": be conservative |
+| **Impact** | How much will this improve the experience for those who use it? | 1 = minimal, 2 = moderate, 3 = significant | Overestimating; 3 should be rare; most features are 1 or 2 |
 | **Confidence** | How confident are you in the Reach and Impact estimates? | 0–100% | Rounding up to 80% when the actual evidence base supports 50% |
-| **Effort** | Engineering time in person-sprints (1 sprint = 2 weeks × 1 engineer) | Person-sprints | Estimating features in isolation — always estimate with the team |
+| **Effort** | Engineering time in person-sprints (1 sprint = 2 weeks × 1 engineer) | Person-sprints | Estimating features in isolation: always estimate with the team |
 
 :::caution Confidence Is Not Optimism
 Confidence should reflect the quality of your evidence base, not your belief in the feature. If you are scoring confidence because you think the feature will succeed, you are scoring optimism. If you are scoring confidence because you have user research, support data, or comparable feature benchmarks, you are scoring evidence. The difference changes decisions.
@@ -146,7 +146,7 @@ If yes, write the override reason explicitly. Common legitimate overrides:
 - Technical prerequisite (enables higher-scoring features)
 - Enterprise deal dependency (named deal at risk without it)
 
-None of these reasons are wrong — but they must be documented as overrides, not buried in a score that was inflated to make the override look data-driven. A score you changed to justify a decision you had already made is not prioritisation — it is reverse-engineering.
+None of these reasons are wrong: but they must be documented as overrides, not buried in a score that was inflated to make the override look data-driven. A score you changed to justify a decision you had already made is not prioritisation: it is reverse-engineering.
 
 ### Challenge 2: Data Gap Test
 
@@ -164,7 +164,7 @@ Does it match the top RICE scorer? If not, investigate why the gap exists. The g
 1. A data quality issue in the scoring (fix the score)
 2. A strategic weight that RICE cannot capture (document it as an override)
 
-The Regret Test is not a replacement for RICE — it is a sanity check. If you cannot reconcile the gap between the RICE result and the Regret Test answer, you have not finished the prioritisation.
+The Regret Test is not a replacement for RICE: it is a sanity check. If you cannot reconcile the gap between the RICE result and the Regret Test answer, you have not finished the prioritisation.
 
 ## Worked Example: InsightFlow Q3 Backlog RICE Scoring
 
@@ -361,23 +361,23 @@ DISCOVERY SPIKES RECOMMENDED:
 
 ### Evaluating the Output
 
-**Check 1 — All assumptions shown.** Every RICE score has a scoring note explaining reach, impact, and confidence estimates. If the agent produced a table without assumptions, prompt: "Add a SCORING ASSUMPTIONS section explaining the basis for reach, impact, and confidence estimates on every item."
+**Check 1; All assumptions shown.** Every RICE score has a scoring note explaining reach, impact, and confidence estimates. If the agent produced a table without assumptions, prompt: "Add a SCORING ASSUMPTIONS section explaining the basis for reach, impact, and confidence estimates on every item."
 
-**Check 2 — Three challenges all ran.** Verify that all three challenges produced output. If the Regret Test is missing, prompt: "Run Challenge 3: which item, if we shipped nothing else this quarter, would our best customers be most grateful for? Does it match the RICE #1? If not, explain the gap."
+**Check 2; Three challenges all ran.** Verify that all three challenges produced output. If the Regret Test is missing, prompt: "Run Challenge 3: which item, if we shipped nothing else this quarter, would our best customers be most grateful for? Does it match the RICE #1? If not, explain the gap."
 
-**Check 3 — Not Building list is present.** Confirm the quarterly priority decision includes an EXPLICITLY NOT BUILDING list. If missing, prompt: "Add an 'Explicitly Not Building This Quarter' section to the quarterly priority decision — with one-sentence rationale for each item."
+**Check 3; Not Building list is present.** Confirm the quarterly priority decision includes an EXPLICITLY NOT BUILDING list. If missing, prompt: "Add an 'Explicitly Not Building This Quarter' section to the quarterly priority decision: with one-sentence rationale for each item."
 
-**Check 4 — Low-confidence, high-effort items have discovery spikes.** Mobile app (confidence 25%, effort 10 sprints) and cohort analysis (confidence 30%, effort 4 sprints) should both have discovery spike recommendations with specific questions and a 2-week timeframe.
+**Check 4; Low-confidence, high-effort items have discovery spikes.** Mobile app (confidence 25%, effort 10 sprints) and cohort analysis (confidence 30%, effort 4 sprints) should both have discovery spike recommendations with specific questions and a 2-week timeframe.
 
 :::note Keep This File
-Lessons 3-14 build one continuous product management cycle for InsightFlow. Keep your Cowork session and working folder between lessons. The quarterly priority decision you produce here feeds directly into Lesson 11, where you will use `/sprint-planning` (official plugin) to scope Sprint 1 of the Workflow Builder build — pulling from the Priority 1 items in this decision.
+Lessons 3-14 build one continuous product management cycle for InsightFlow. Keep your Cowork session and working folder between lessons. The quarterly priority decision you produce here feeds directly into Lesson 11, where you will use `/sprint-planning` (official plugin) to scope Sprint 1 of the Workflow Builder build: pulling from the Priority 1 items in this decision.
 :::
 
 ## Try With AI
 
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Prompt 1 — Reproduce** (apply what you just learned):
+**Prompt 1; Reproduce** (apply what you just learned):
 
 ```
 Apply RICE scoring to this InsightFlow mini-backlog (6 items):
@@ -402,9 +402,9 @@ Show all assumptions. Run all three mandatory challenges.
 Produce a quarterly priority decision.
 ```
 
-**What you're learning:** Running a complete RICE prioritisation from start to finish on a reduced backlog. The small size makes it easy to hold all six items in mind simultaneously — which helps you feel the tradeoff between the Regret Test answer and the RICE top scorer.
+**What you're learning:** Running a complete RICE prioritisation from start to finish on a reduced backlog. The small size makes it easy to hold all six items in mind simultaneously: which helps you feel the tradeoff between the Regret Test answer and the RICE top scorer.
 
-**Prompt 2 — Adapt** (change the context):
+**Prompt 2; Adapt** (change the context):
 
 ```
 A PM at a legal tech SaaS has these 5 items competing for Q3:
@@ -431,7 +431,7 @@ What would raise its confidence to 80%?
 
 **What you're learning:** Applying the Data Gap Test in a context where the feature is strategically important but evidence is incomplete. Legal tech AI features often have confidence issues because the legal review validation step creates uncertainty. The challenge is deciding whether to spike or commit.
 
-**Prompt 3 — Apply** (connect to your domain):
+**Prompt 3; Apply** (connect to your domain):
 
 ```
 Take 5-10 items from your current or recent backlog.
@@ -453,7 +453,7 @@ Calculate RICE. Then:
 Compare the RICE ranking to the Regret Test answer. Note the gap.
 ```
 
-**What you're learning:** The real value of the prioritisation exercise — the gap between what scores highest and what you would actually feel best about building. That gap is where the most important PM judgment lives.
+**What you're learning:** The real value of the prioritisation exercise: the gap between what scores highest and what you would actually feel best about building. That gap is where the most important PM judgment lives.
 
 ## Exercise: RICE-Score the InsightFlow Story Backlog
 
@@ -461,11 +461,11 @@ Compare the RICE ranking to the Regret Test answer. Note the gap.
 **Command:** `/prioritise`
 **Time:** 35 minutes
 
-**Step 1 — Assemble the backlog**
+**Step 1; Assemble the backlog**
 
 Gather your story backlog from L08 (Workflow Builder stories) and add the following competing items from the broader InsightFlow Q3 backlog: SOC 2 compliance prep, bulk dashboard export, and at least two lower-priority items of your choice. You need at least 8 items for a meaningful RICE exercise.
 
-**Step 2 — Run /prioritise with RICE**
+**Step 2; Run /prioritise with RICE**
 
 ```
 /prioritise
@@ -479,7 +479,7 @@ Produce the quarterly priority decision with P1 / P2 / Stretch /
 Not Building / Overrides / Discovery Spikes.
 ```
 
-**Step 3 — Challenge three specific scores**
+**Step 3; Challenge three specific scores**
 
 Pick three items from the output and challenge their confidence scores:
 
@@ -495,7 +495,7 @@ After revising confidence, recalculate RICE and show the updated ranking.
 How many items changed rank?
 ```
 
-**Step 4 — Run the Regret Test**
+**Step 4; Run the Regret Test**
 
 ```
 Ignore all RICE scores. Ask: which item, if InsightFlow shipped nothing
@@ -506,17 +506,17 @@ Does this match the RICE #1 scorer? If not, explain the gap:
 (b) Is it a strategic weight RICE cannot capture? (document as override)
 ```
 
-**Step 5 — Produce the quarterly priority decision**
+**Step 5; Produce the quarterly priority decision**
 
 Verify the output includes: P1 / P2 / Stretch / Explicitly Not Building / Strategic Overrides / Discovery Spikes. If any section is missing, prompt the agent to add it.
 
-The "Explicitly Not Building" section must have at least 3 items with rationale. If the agent only listed 1, prompt: "The 'Explicitly Not Building' section must include all items that were evaluated and rejected for this quarter — with one sentence explaining why. List all rejected items."
+The "Explicitly Not Building" section must have at least 3 items with rationale. If the agent only listed 1, prompt: "The 'Explicitly Not Building' section must include all items that were evaluated and rejected for this quarter: with one sentence explaining why. List all rejected items."
 
 ## What You Built
 
-You applied RICE scoring to InsightFlow's backlog, made all assumptions explicit, ran the three mandatory challenges, and produced a quarterly priority decision with documented overrides and discovery spikes. The decision explicitly names what is not being built this quarter — closing the recurring conversation about those items in every planning meeting.
+You applied RICE scoring to InsightFlow's backlog, made all assumptions explicit, ran the three mandatory challenges, and produced a quarterly priority decision with documented overrides and discovery spikes. The decision explicitly names what is not being built this quarter: closing the recurring conversation about those items in every planning meeting.
 
-This priority decision feeds directly into Lesson 11, where you will use `/sprint-planning` from the official `product-management` plugin to scope Sprint 1 of the Workflow Builder build — pulling from the Priority 1 items you identified here.
+This priority decision feeds directly into Lesson 11, where you will use `/sprint-planning` from the official `product-management` plugin to scope Sprint 1 of the Workflow Builder build: pulling from the Priority 1 items you identified here.
 
 ## Flashcards Study Aid
 

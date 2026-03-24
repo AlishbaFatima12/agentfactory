@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/exercises-basel-aml
 sidebar_position: 13
-title: "Exercises — Basel and AML Deep Practice"
+title: "Exercises: Basel and AML Deep Practice"
 description: "Four extended exercises covering Basel III capital ratio calculation under the Standardised Approach, ICAAP stress testing, AML alert investigation with SAR drafting, and sanctions screening across multiple regimes"
 keywords:
   [
@@ -65,14 +65,14 @@ cognitive_load:
     - "ICAAP: the bank's own internal assessment of capital needs under stress, separate from regulatory minimums"
     - "Business Indicator Approach for operational risk: BI component calculation using interest, services, and financial components"
     - "Multi-regime sanctions screening: applying OFAC, EU, and UK sanctions frameworks simultaneously to a single transaction"
-  assessment: "3 new concepts at B2 level — within the B2 limit of 10. Exercises primarily apply Basel concepts from Lessons 6-8 and AML concepts from Lessons 9-10 at portfolio scale. The new concepts extend rather than replace prior knowledge."
+  assessment: "3 new concepts at B2 level: within the B2 limit of 10. Exercises primarily apply Basel concepts from Lessons 6-8 and AML concepts from Lessons 9-10 at portfolio scale. The new concepts extend rather than replace prior knowledge."
 
 differentiation:
   extension_for_advanced: "For Exercise 11, design a reverse stress test: starting from the point of failure (CET1 breaches 4.5%), work backwards to determine what combination of GDP decline, unemployment, and property crash would be required. Then assess whether this scenario is plausible."
   remedial_for_struggling: "Focus on Exercise 10 (capital ratios) and Exercise 12 Alert 1 (structuring). If you can calculate a CET1 ratio and identify a structuring pattern, you have the core skills for both Basel and AML."
 ---
 
-# Exercises — Basel and AML Deep Practice
+# Exercises: Basel and AML Deep Practice
 
 :::info ACS (Bank of England Annual Cyclical Scenario)
 **The Bank of England's yearly stress test that forces UK banks to prove they can survive a severe economic downturn -- with specific GDP, unemployment, and property price shocks prescribed by the regulator.**
@@ -90,11 +90,11 @@ A US bank with $500 billion in assets and a starting CET1 ratio of 12.5% must sh
 DFAST results are publicly disclosed (unlike the UK's confidential ICAAP), creating market discipline -- investors and counterparties can see which banks are most vulnerable to stress.
 :::
 
-In Lesson 11, you saw how IFRS 9, Basel, and AML interact in a cross-pillar cascade. Now you build fluency in Basel capital calculation and AML investigation through four extended exercises. Exercise 10 builds a complete capital ratio from raw balance sheet data. Exercise 11 stress-tests that capital under a Bank of England severe scenario. Exercises 12 and 13 take you through AML alert investigation and sanctions screening — the operational side of financial crime compliance.
+In Lesson 11, you saw how IFRS 9, Basel, and AML interact in a cross-pillar cascade. Now you build fluency in Basel capital calculation and AML investigation through four extended exercises. Exercise 10 builds a complete capital ratio from raw balance sheet data. Exercise 11 stress-tests that capital under a Bank of England severe scenario. Exercises 12 and 13 take you through AML alert investigation and sanctions screening: the operational side of financial crime compliance.
 
 These exercises use the banking plugin's `basel-capital`, `basel-rwa`, `aml-typologies`, and `aml-sar-drafting` skills. The AI assists with computation and pattern matching, but you make the professional judgments: Is this alert suspicious or a false positive? Does the bank survive the stress scenario? What management actions restore capital adequacy?
 
-## Exercise 10: Basel III Capital Ratio — Standardised Approach
+## Exercise 10: Basel III Capital Ratio: Standardised Approach
 
 **Jurisdiction**: United Kingdom (PRA regulated)
 **Duration**: 45 minutes
@@ -146,7 +146,7 @@ The Business Indicator Approach calculates operational risk capital as:
 - **Op Risk Capital** = BI Component x ILM = GBP 57.6M x 1.0 = GBP 57.6M
 - **Op Risk RWA** = Op Risk Capital / 8% = GBP 57.6M / 0.08 = **GBP 720M**
 
-**Market Risk RWA**: GBP 35M (provided — calculated separately by the trading desk)
+**Market Risk RWA**: GBP 35M (provided: calculated separately by the trading desk)
 
 ### Your Tasks
 
@@ -320,7 +320,7 @@ You are the Level 2 AML analyst reviewing three alerts escalated from the transa
 
 **Customer profile**: UK citizen, consultant surgeon at an NHS hospital, annual salary GBP 145,000. Private banking customer with GBP 1.8M in deposits. Not a PEP.
 
-**Transaction**: Three outgoing wires over 6 weeks totalling GBP 890,000 to a bank account in the Cayman Islands held by "Okonkwo Family Trust." Stated purpose: "Family trust — inheritance planning."
+**Transaction**: Three outgoing wires over 6 weeks totalling GBP 890,000 to a bank account in the Cayman Islands held by "Okonkwo Family Trust." Stated purpose: "Family trust: inheritance planning."
 
 **Additional context**: Previous transaction history shows no international wire transfers in the past 4 years. The Cayman Islands account was opened 2 months ago. No record of a trust deed in the bank's files.
 
@@ -350,11 +350,11 @@ Three payments require sanctions screening. For each, determine: true match, fal
 | Beneficiary         | Gulf Steel LLC                    |
 | Beneficiary country | Dubai, UAE                        |
 | Amount              | USD 285,000                       |
-| Purpose             | Steel rods — construction project |
+| Purpose             | Steel rods: construction project |
 
 **Screening considerations:**
 
-- "Al-Farsi" is a common Gulf name — check against OFAC SDN list and UK sanctions list
+- "Al-Farsi" is a common Gulf name: check against OFAC SDN list and UK sanctions list
 - Steel is a dual-use commodity in some sanctions regimes
 - UAE is not a sanctioned jurisdiction but is a known transshipment point
 - Verify whether Gulf Steel LLC appears on any sanctions list or is owned by a sanctioned entity
@@ -393,7 +393,7 @@ Three payments require sanctions screening. For each, determine: true match, fal
 
 - Intelligence indicates Bosphorus Trade Finance has historical connections to an Iranian entity on the OFAC SDN list
 - Turkey is not sanctioned but is a known conduit for sanctions evasion
-- The amount is relatively small — does that reduce suspicion or is it consistent with a structuring pattern?
+- The amount is relatively small: does that reduce suspicion or is it consistent with a structuring pattern?
 - Egypt is not sanctioned but verify the beneficiary is not a front for a sanctioned entity
 - What is the "50% rule" under OFAC and does it apply here?
 
@@ -434,7 +434,7 @@ Questions:
    require for business combinations?
 ```
 
-**What you are learning:** Capital planning is not just about meeting minimums — it is about maintaining buffers through growth. An acquisition that looks profitable on an earnings basis can destroy capital headroom if the RWA impact is not modelled in advance. By calculating the capital impact before the deal closes, you practise the discipline that bank treasury teams apply to every balance sheet decision.
+**What you are learning:** Capital planning is not just about meeting minimums: it is about maintaining buffers through growth. An acquisition that looks profitable on an earnings basis can destroy capital headroom if the RWA impact is not modelled in advance. By calculating the capital impact before the deal closes, you practise the discipline that bank treasury teams apply to every balance sheet decision.
 
 ### Prompt 2: Adapt
 
@@ -490,7 +490,7 @@ What verification steps distinguish them? Explain the OFAC 50%
 rule and whether it applies to any of these cases.
 ```
 
-**What you are learning:** Sanctions screening is not binary. Payment 1 tests your ability to handle common-name false positives in high-volume regions. Payment 2 tests whether you can distinguish a UK company from a sanctioned Russian entity that happens to share a name — a critical skill because blocking a legitimate UK company is a compliance failure in the other direction. Payment 3 tests the OFAC 50% rule (entities 50% or more owned by a sanctioned party are themselves sanctioned) and the concept of sanctions evasion through third countries.
+**What you are learning:** Sanctions screening is not binary. Payment 1 tests your ability to handle common-name false positives in high-volume regions. Payment 2 tests whether you can distinguish a UK company from a sanctioned Russian entity that happens to share a name: a critical skill because blocking a legitimate UK company is a compliance failure in the other direction. Payment 3 tests the OFAC 50% rule (entities 50% or more owned by a sanctioned party are themselves sanctioned) and the concept of sanctions evasion through third countries.
 
 ## Flashcards Study Aid
 

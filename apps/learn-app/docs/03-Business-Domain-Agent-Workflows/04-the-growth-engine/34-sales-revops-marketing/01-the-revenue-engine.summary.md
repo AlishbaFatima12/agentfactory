@@ -1,4 +1,4 @@
-# The Revenue Engine — Summary
+# The Revenue Engine; Summary
 
 ## Core Concept
 
@@ -8,7 +8,7 @@ The Revenue Engine is a three-layer plugin architecture (Anthropic Sales + Marke
 
 - **Three-plugin architecture**: Sales plugin (6 skills, 3 commands) + Marketing plugin (5 skills, 7 commands) + RevOps extension (15 skills) working as a coordinated stack
 - **The Preparation Gap**: 45 minutes vs 4 minutes of research per prospect, multiplied across hundreds of accounts, explains the performance gap between top and average reps
-- **Hallucinated Data** (agent error type #1): The agent invents facts — revenue estimates, internal processes, inferred connections — that sound authoritative but have no source
+- **Hallucinated Data** (agent error type #1): The agent invents facts: revenue estimates, internal processes, inferred connections: that sound authoritative but have no source
 - **Verification Hierarchy**: Cited sources and public records sit above the verification line; financial estimates and internal processes sit below it
 - **Three Rules of Hallucination Detection**: (1) Private financials are always suspect, (2) the more specific the unverifiable claim, the more likely it is fabricated, (3) inferred connections are not confirmed connections
 - **sales-marketing.local.md**: The configuration file that gives the agent business-specific ICP context, changing output from generic to tailored
@@ -24,7 +24,7 @@ The Revenue Engine is a three-layer plugin architecture (Anthropic Sales + Marke
 
 - Trusting revenue estimates for private companies (the agent infers from benchmarks, not data)
 - Treating inferred internal processes (e.g., "SLA tracking via spreadsheets") as confirmed intelligence
-- Citing unverifiable claims out loud in meetings — one fabricated fact taints every accurate insight
+- Citing unverifiable claims out loud in meetings: one fabricated fact taints every accurate insight
 - Skipping the extension installation and not noticing the missing ICP MATCH header
 
 ## Connections

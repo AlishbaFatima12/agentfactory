@@ -7,16 +7,16 @@ The hands-on exercise applies the complete Knowledge Extraction Method to a real
 - **Complete Methodology Cycle**: Interview → North star summary → SKILL.md draft → Scenario set → Scoring → Failure pattern analysis → Targeted rewrite. Each step depends on the previous one.
 
 ### Critical Patterns
-- The exercise proves the methodology works when applied to a real domain — the output is a testable SKILL.md artifact, not a theoretical exercise
+- The exercise proves the methodology works when applied to a real domain: the output is a testable SKILL.md artifact, not a theoretical exercise
 - Validation scenario design forces the writer to think about their domain from four angles simultaneously: routine function, boundary conditions, pressure scenarios, and high-consequence situations
 - The credit analyst worked example provides a template for each step that students can adapt to their own domain
 
 ### Common Mistakes
 - Rushing through the interview and producing generic notes that do not convert into specific SKILL.md instructions
-- Writing vague Principles in the first draft and expecting validation to pass — the first draft should be as specific as current understanding allows
+- Writing vague Principles in the first draft and expecting validation to pass: the first draft should be as specific as current understanding allows
 - Skipping the scoring step and revising based on intuition rather than failure pattern analysis
 - Treating the exercise as a writing exercise rather than a knowledge extraction exercise
 
 ### Connections
-- **Builds on**: All of Lessons 1-8 — the exercise is the application of the complete methodology
+- **Builds on**: All of Lessons 1-8: the exercise is the application of the complete methodology
 - **Leads to**: Lesson 10 synthesises the chapter; the domain chapters (17+) apply this methodology to specific professional contexts

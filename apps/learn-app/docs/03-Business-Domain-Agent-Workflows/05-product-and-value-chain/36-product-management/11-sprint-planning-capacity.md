@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/product-management/sprint-planning-capacity
 sidebar_position: 11
 title: "Sprint Planning & Capacity"
-description: "Learn to plan sprints that the team can actually deliver by scoping work against real capacity — accounting for PTO, on-call rotations, meetings, and carryover — using the /sprint-planning command from the official product-management plugin"
+description: "Learn to plan sprints that the team can actually deliver by scoping work against real capacity: accounting for PTO, on-call rotations, meetings, and carryover: using the /sprint-planning command from the official product-management plugin"
 keywords:
   [
     "product management",
@@ -56,26 +56,26 @@ cognitive_load:
     - "70-80% capacity rule and why buffer is essential"
     - "Sprint goal: the single sentence that defines sprint success"
     - "P0/P1/P2 priority tiers and their implications for scope decisions"
-  assessment: "4 concepts at B1-B2 level. Students arrive having prioritised the backlog in L10 — they know what to pull into the sprint. The new thinking here is around capacity arithmetic and the discipline of committing to less than full capacity. The sprint goal concept is counterintuitively simple but operationally challenging, making it worth explicit teaching."
+  assessment: "4 concepts at B1-B2 level. Students arrive having prioritised the backlog in L10: they know what to pull into the sprint. The new thinking here is around capacity arithmetic and the discipline of committing to less than full capacity. The sprint goal concept is counterintuitively simple but operationally challenging, making it worth explicit teaching."
 
 differentiation:
-  extension_for_advanced: "Run /sprint-planning twice: once with the team at full capacity, once with the actual constrained capacity. Compare the two plans. What had to be cut? What moved to stretch? Write a one-paragraph 'capacity conversation' that you would have with your engineering lead to explain the scope difference — practice the framing without blame or apology."
-  remedial_for_struggling: "Start by building the capacity table by hand before running /sprint-planning. For each team member, write: Raw days available (10 for a 2-week sprint) → minus PTO days → minus on-call overhead (typically 1-2 days) → minus recurring meetings overhead (typically 1 day). Sum the column. Multiply by 0.75. That is your planning capacity in story points (assuming 1 point per day as a rough proxy). Only then run the command — the table will match what the agent produces."
+  extension_for_advanced: "Run /sprint-planning twice: once with the team at full capacity, once with the actual constrained capacity. Compare the two plans. What had to be cut? What moved to stretch? Write a one-paragraph 'capacity conversation' that you would have with your engineering lead to explain the scope difference: practice the framing without blame or apology."
+  remedial_for_struggling: "Start by building the capacity table by hand before running /sprint-planning. For each team member, write: Raw days available (10 for a 2-week sprint) → minus PTO days → minus on-call overhead (typically 1-2 days) → minus recurring meetings overhead (typically 1 day). Sum the column. Multiply by 0.75. That is your planning capacity in story points (assuming 1 point per day as a rough proxy). Only then run the command: the table will match what the agent produces."
 
 teaching_guide:
   key_points:
-    - "Sprint planning is not about committing to the maximum the team could theoretically deliver — it is about creating a realistic commitment the team can actually meet reliably"
+    - "Sprint planning is not about committing to the maximum the team could theoretically deliver: it is about creating a realistic commitment the team can actually meet reliably"
     - "The 70-80% capacity rule exists because interrupts, context switching, and real-world complexity always consume the remaining 20-30%"
-    - "A sprint goal that cannot be stated in one clear sentence is not a goal — it is a list. A list does not help the team make trade-off decisions when the sprint gets difficult"
-    - "Carryover from the previous sprint is not a failure — but understanding why something carried over is essential before re-committing to it"
+    - "A sprint goal that cannot be stated in one clear sentence is not a goal: it is a list. A list does not help the team make trade-off decisions when the sprint gets difficult"
+    - "Carryover from the previous sprint is not a failure: but understanding why something carried over is essential before re-committing to it"
   misconceptions:
     - "Planning to 100% of capacity shows ambition. Correction: planning to 100% guarantees missed commitments, because every sprint encounters interrupts that are not in the plan. 70-80% planning capacity is the professional standard, not a sign of low ambition."
-    - "The sprint goal should summarise everything in the sprint. Correction: the sprint goal should describe the ONE outcome that defines sprint success. If a P0 item is unexpectedly blocked, the sprint goal tells the team what to protect — everything else is negotiable."
+    - "The sprint goal should summarise everything in the sprint. Correction: the sprint goal should describe the ONE outcome that defines sprint success. If a P0 item is unexpectedly blocked, the sprint goal tells the team what to protect: everything else is negotiable."
   discussion_prompts:
-    - "Your sprint plan loads the team to 78% of capacity. On day 3, a P0 production incident pulls two engineers for 2 full days. The sprint is now effectively loaded at 98%. What do you do? How do you decide what to cut — and who needs to know?"
-    - "An engineer says 'we always underestimate these tickets — I think 8 points should be 13'. Do you re-estimate before or after the capacity check? How does re-estimation affect the sprint goal?"
+    - "Your sprint plan loads the team to 78% of capacity. On day 3, a P0 production incident pulls two engineers for 2 full days. The sprint is now effectively loaded at 98%. What do you do? How do you decide what to cut: and who needs to know?"
+    - "An engineer says 'we always underestimate these tickets; I think 8 points should be 13'. Do you re-estimate before or after the capacity check? How does re-estimation affect the sprint goal?"
   teaching_tips:
-    - "The capacity table is the lesson's anchor. Have students build it before running /sprint-planning so they can verify the agent's output against their own arithmetic — this catches cases where the agent misunderstands the team constraints."
+    - "The capacity table is the lesson's anchor. Have students build it before running /sprint-planning so they can verify the agent's output against their own arithmetic: this catches cases where the agent misunderstands the team constraints."
     - "The stretch item question ('what is the first thing we cut if the sprint is hard?') is often more valuable than the sprint plan itself. Students who cannot answer it quickly have not truly prioritised."
 ---
 
@@ -83,13 +83,13 @@ teaching_guide:
 
 It is Monday morning at InsightFlow. You have a team of 12 engineers, a prioritised backlog from L10, and a two-week sprint starting today. You open the sprint planning doc and immediately face the question that derails more sprints than any technical challenge: how much can the team actually do?
 
-Not how much could they theoretically do if everything goes perfectly. Not how much they said they would do in the last optimistic planning session. How much can they reliably commit to — given that two engineers are partially allocated this sprint, one is on PTO for 3 days, the on-call rotation will consume roughly a day of the primary's capacity, and recurring meetings eat another few hours per person per week?
+Not how much could they theoretically do if everything goes perfectly. Not how much they said they would do in the last optimistic planning session. How much can they reliably commit to: given that two engineers are partially allocated this sprint, one is on PTO for 3 days, the on-call rotation will consume roughly a day of the primary's capacity, and recurring meetings eat another few hours per person per week?
 
-Sprint planning is where the prioritised backlog (L10) becomes an executable commitment. Done well, it gives the team clarity, gives stakeholders a reliable forecast, and gives you a clear story to tell in next week's stakeholder update (L12). Done poorly, it creates a sprint that starts on Monday looking achievable and ends on Friday looking like a failure — not because the team underperformed, but because the plan never accounted for reality.
+Sprint planning is where the prioritised backlog (L10) becomes an executable commitment. Done well, it gives the team clarity, gives stakeholders a reliable forecast, and gives you a clear story to tell in next week's stakeholder update (L12). Done poorly, it creates a sprint that starts on Monday looking achievable and ends on Friday looking like a failure: not because the team underperformed, but because the plan never accounted for reality.
 
 ## The Capacity Arithmetic
 
-Before you can plan a sprint, you need to know how many engineering-days you actually have — not calendar days, real productive days after all the things that consume time without being tickets.
+Before you can plan a sprint, you need to know how many engineering-days you actually have: not calendar days, real productive days after all the things that consume time without being tickets.
 
 For InsightFlow's Sprint 1 of the Workflow Builder initiative, here is the capacity picture:
 
@@ -104,10 +104,10 @@ For InsightFlow's Sprint 1 of the Workflow Builder initiative, here is the capac
 
 **Planning capacity (at 75%):** 40 × 0.75 = **30 story points**
 
-The 70-80% rule is not pessimism — it is engineering reality. Every sprint encounters interrupts that are not in the plan: a production incident, a question from sales that needs a quick spike, a dependency that turns out to be harder than expected. If you plan to 100% of capacity, those interrupts guarantee misses. If you plan to 75%, they are absorbed.
+The 70-80% rule is not pessimism: it is engineering reality. Every sprint encounters interrupts that are not in the plan: a production incident, a question from sales that needs a quick spike, a dependency that turns out to be harder than expected. If you plan to 100% of capacity, those interrupts guarantee misses. If you plan to 75%, they are absorbed.
 
 :::info Why 70-80%, Not 100%?
-Teams that consistently plan to 80% capacity and deliver reliably are trusted. Teams that plan to 100% and miss are not — even if they did the same amount of work. Reliability is a product quality. Plan for it.
+Teams that consistently plan to 80% capacity and deliver reliably are trusted. Teams that plan to 100% and miss are not: even if they did the same amount of work. Reliability is a product quality. Plan for it.
 :::
 
 ## The Sprint Goal
@@ -118,7 +118,7 @@ Before you touch the backlog, write the sprint goal. One sentence. What does a s
 
 **Right:** "Ship the first working version of the Workflow Builder trigger configuration UI so that design can begin user testing."
 
-The difference is scope. The wrong version describes everything the team might do. The right version describes the ONE outcome that defines success. When something unexpected consumes capacity mid-sprint — and it will — the sprint goal tells the team what to protect. Everything else is negotiable.
+The difference is scope. The wrong version describes everything the team might do. The right version describes the ONE outcome that defines success. When something unexpected consumes capacity mid-sprint: and it will: the sprint goal tells the team what to protect. Everything else is negotiable.
 
 :::caution If You Cannot State It in One Sentence
 The sprint is unfocused. Go back to the prioritised backlog and ask: what is the single most important thing the team could ship this sprint? That is your sprint goal. The other items are support work, not goals.
@@ -126,12 +126,12 @@ The sprint is unfocused. Go back to the prioritised backlog and ask: what is the
 
 ## The /sprint-planning Command
 
-The `/sprint-planning` command from the official **product-management** plugin generates a complete sprint plan — capacity table, prioritised backlog, risk table, definition of done, and key dates — from the inputs you provide.
+The `/sprint-planning` command from the official **product-management** plugin generates a complete sprint plan: capacity table, prioritised backlog, risk table, definition of done, and key dates: from the inputs you provide.
 
 **What it needs:**
 - Team members and their availability (PTO, on-call, meetings)
 - Sprint length and dates
-- The prioritised backlog (from L10 — P0/P1/P2 items)
+- The prioritised backlog (from L10; P0/P1/P2 items)
 - Carryover from previous sprints (if any)
 - Known dependencies or blocked items
 
@@ -268,14 +268,14 @@ The agent flagged a problem: the sprint is loaded at 97% of capacity. That is to
 The right answer depends on context the agent does not have. This is where your judgment comes in. The agent surfaces the problem. You make the call.
 
 :::note Keep This File
-The sprint plan you produce in this exercise feeds directly into Lesson 12, where you will draft three versions of a stakeholder update about Sprint 1's status — and into Lesson 14, where the Stakeholder Update Agent automates that communication pattern.
+The sprint plan you produce in this exercise feeds directly into Lesson 12, where you will draft three versions of a stakeholder update about Sprint 1's status: and into Lesson 14, where the Stakeholder Update Agent automates that communication pattern.
 :::
 
 ## Try With AI
 
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Prompt 1 — Reproduce** (apply what you just learned):
+**Prompt 1; Reproduce** (apply what you just learned):
 
 ```
 Plan a 2-week sprint for InsightFlow using this team and backlog:
@@ -298,9 +298,9 @@ Top backlog items (from L10 RICE scoring):
 Sprint goal: Ship the trigger config UI so design can start user testing.
 ```
 
-**What you're learning:** Practising the full /sprint-planning workflow — building the capacity table, confirming load against capacity, and verifying the sprint goal is singular and testable.
+**What you're learning:** Practising the full /sprint-planning workflow: building the capacity table, confirming load against capacity, and verifying the sprint goal is singular and testable.
 
-**Prompt 2 — Adapt** (change the context):
+**Prompt 2; Adapt** (change the context):
 
 ```
 Plan a sprint for a different B2B SaaS team with this profile:
@@ -323,7 +323,7 @@ If not, which item do you move to stretch first?
 
 **What you're learning:** Applying capacity arithmetic in a different product context. The question about what to cut first tests whether you understand P0/P1/P2 priority tiers versus mere backlog order.
 
-**Prompt 3 — Apply** (connect to your domain):
+**Prompt 3; Apply** (connect to your domain):
 
 ```
 Plan a sprint for your own team's current or next sprint.
@@ -340,7 +340,7 @@ If not, identify the first item to cut or move to stretch — and
 explain the trade-off to your engineering lead in two sentences.
 ```
 
-**What you're learning:** The transfer moment — applying sprint planning principles to real work. The engineering lead explanation exercises the communication skill you will build in L12.
+**What you're learning:** The transfer moment: applying sprint planning principles to real work. The engineering lead explanation exercises the communication skill you will build in L12.
 
 ## Exercise: Plan InsightFlow Sprint 1
 
@@ -348,7 +348,7 @@ explain the trade-off to your engineering lead in two sentences.
 **Command:** `/sprint-planning`
 **Time:** 20 minutes
 
-**Step 1 — Build the capacity table**
+**Step 1; Build the capacity table**
 
 Before running the command, build the capacity table by hand. For InsightFlow Sprint 1:
 
@@ -361,7 +361,7 @@ Before running the command, build the capacity table by hand. For InsightFlow Sp
 
 Calculate: raw available days → subtract overhead → multiply by 0.75 → planning capacity in story points.
 
-**Step 2 — Run /sprint-planning**
+**Step 2; Run /sprint-planning**
 
 ```
 /sprint-planning Sprint 1 — Workflow Builder
@@ -390,7 +390,7 @@ New backlog items to consider:
 - WF-004: Workflow step connector (8 pts, P2, stretch)
 ```
 
-**Step 3 — Evaluate the output**
+**Step 3; Evaluate the output**
 
 Check these criteria:
 - Is the sprint goal singular? Can you state what "done" looks like in one sentence?
@@ -399,9 +399,9 @@ Check these criteria:
 - Is there a risk for Leo's PTO impact on the critical path?
 - Are stretch items clearly labelled (do not commit)?
 
-**Step 4 — Refine if overloaded**
+**Step 4; Refine if overloaded**
 
-If the sprint is loaded above 85%, decide which item to cut first. Apply this rule: cut the lowest-priority item that does not block anything else in the sprint. Move it to stretch, not the next sprint — it might fit if the sprint runs well.
+If the sprint is loaded above 85%, decide which item to cut first. Apply this rule: cut the lowest-priority item that does not block anything else in the sprint. Move it to stretch, not the next sprint: it might fit if the sprint runs well.
 
 Send the updated sprint plan to your engineering lead (simulated):
 
@@ -414,15 +414,15 @@ that cut vs cutting [alternative item]:
 Does this match your read of the team's capacity?
 ```
 
-**Step 5 — Document your sprint plan**
+**Step 5; Document your sprint plan**
 
-Save your final sprint plan document in your working folder. It is the input to L12's stakeholder update — your stakeholder update will report on this sprint's progress.
+Save your final sprint plan document in your working folder. It is the input to L12's stakeholder update: your stakeholder update will report on this sprint's progress.
 
 ## What You Built
 
-You produced a **sprint plan** — a capacity-calibrated commitment for InsightFlow Sprint 1 of the Workflow Builder initiative. The plan includes a singular sprint goal, a capacity table with individual overhead deductions, a P0/P1/P2 prioritised backlog within 70-80% of available capacity, a risk table covering the key uncertainties (Leo's PTO, the dependency chain), and a definition of done.
+You produced a **sprint plan**: a capacity-calibrated commitment for InsightFlow Sprint 1 of the Workflow Builder initiative. The plan includes a singular sprint goal, a capacity table with individual overhead deductions, a P0/P1/P2 prioritised backlog within 70-80% of available capacity, a risk table covering the key uncertainties (Leo's PTO, the dependency chain), and a definition of done.
 
-You also practised the judgment call that every sprint plan requires: when the agent flags an overloaded sprint, you decided what to cut and why — which is a skill no command can make for you.
+You also practised the judgment call that every sprint plan requires: when the agent flags an overloaded sprint, you decided what to cut and why: which is a skill no command can make for you.
 
 The sprint plan feeds directly into Lesson 12, where you will use `/stakeholder-update` to draft three audience-calibrated versions of your Sprint 1 status update.
 
