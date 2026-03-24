@@ -92,17 +92,21 @@ Emma nods. "You already knew that. You just needed to see it."
 
 ## From English to Python
 
-In Chapter 16, you learned Spec-Driven Development: write a specification in English, let Claude Code implement it, then verify the result. That workflow carried you through every chapter since. The specification was always a natural-language document -- a markdown file describing what you wanted and how to verify it.
+Think back to Chapter 16. You learned a three-step workflow called Spec-Driven Development (SDD):
 
-TDG is the same workflow. The only thing that changes is the language of the specification:
+1. **You describe what you want** -- in plain English, in a markdown file
+2. **Claude Code builds it** -- reading your description and generating the result
+3. **You check the result** -- reading what Claude Code produced and deciding if it matches what you asked for
 
-| SDD (Chapter 16) | TDG (This Chapter) |
-|-------------------|---------------------|
-| Specification written in **English** | Specification written in **Python** (types + tests) |
-| Implementation by **Claude Code** | Implementation by **Claude Code** |
-| Verification by **human review** | Verification by **pytest + pyright + human review** |
+You have been doing this in every chapter since. The only thing that changes now is **step 1** -- how you describe what you want:
 
-The shift from English to Python is not a leap. It is a substitution. Instead of writing "this function should convert Celsius to Fahrenheit and return a float," you write:
+| | SDD (Chapter 16) | TDG (This Chapter) |
+|---|-------------------|---------------------|
+| **Step 1: You describe** | English sentences in a markdown file | Python types and tests |
+| **Step 2: AI builds** | Claude Code implements | Claude Code implements |
+| **Step 3: You check** | You read and review | pytest + pyright check automatically, then you read |
+
+Instead of writing an English sentence like *"Make a function that converts Celsius to Fahrenheit and returns a decimal number,"* you write the same idea in Python:
 
 ```python
 def celsius_to_fahrenheit(celsius: float) -> float: ...
