@@ -1,0 +1,36 @@
+flashcards:
+  - front: "What is the difference between claude --continue and claude --resume?"
+    back: "--continue resumes the most recent conversation in the current directory (fast, no selection). --resume opens an interactive session picker showing all recent sessions with metadata, or resumes a specific session by name (claude --resume session-name)."
+
+  - front: "How do you create and resume a named session?"
+    back: "Create: claude -n descriptive-name (or /rename during a session). Resume: claude --resume descriptive-name. Names appear on the prompt bar and in the session picker. Treat session names like branch names."
+
+  - front: "When should you resume a session vs start fresh with a summary?"
+    back: "Resume when: files unchanged, same investigation, recent session, context still valid. Start fresh when: files changed significantly, tool results stale, approach changed direction, significant time passed, or context window near limit with irrelevant history."
+
+  - front: "Why can resuming a session be unreliable after files changed externally?"
+    back: "Claude holds the OLD file contents from when it originally read them. It will reference code that may have moved, been renamed, or deleted. You must tell Claude which files changed and ask it to re-read them before continuing."
+
+  - front: "How do you inform a resumed session about external file changes?"
+    back: "Tell Claude what changed explicitly: 'Since our last session, src/services/orderService.ts was refactored: the update() method moved from line 145 to line 178. Please re-read the file before continuing.' This prompts Claude to re-read and update its understanding."
+
+  - front: "What does /branch (fork_session) do, and how is it different from worktrees?"
+    back: "/branch creates a new session with a copy of the current conversation history. Both branches share the same files. Worktrees (--worktree) create separate file system copies AND separate conversations. Fork for thinking/planning; worktrees for implementing competing approaches."
+
+  - front: "What does /compact do and how do you control it?"
+    back: "/compact summarizes conversation history, preserving key decisions and file states while freeing token space. Custom instructions: /compact Focus on the API changes. Permanent rules can go in CLAUDE.md. It compresses, not deletes."
+
+  - front: "What signals tell you it is time to compact or clear context?"
+    back: "Claude contradicts earlier statements, you see 'context window getting full' warnings, you finished a subtask and are starting a related one, or Claude asks something you already answered. Use /clear between unrelated tasks, /compact between related ones."
+
+  - front: "What is /btw and why is it useful for session management?"
+    back: "/btw lets you ask a quick side question that never enters conversation history. The answer appears in a dismissible overlay. Use it for syntax lookups, function signatures, or config checks that would otherwise clutter your investigation context."
+
+  - front: "What gets preserved when you resume a Claude Code session?"
+    back: "Full message history (prompts, responses, tool calls and results), the model and configuration from the original session, and all tool usage context (file reads, command outputs, code changes). Claude 'remembers' files it read, decisions it made, and the approach it was taking."
+
+  - front: "How does the fresh-start-with-summary pattern work?"
+    back: "Start a new session. Paste a structured summary: the problem, what you found, what you tried, what failed and why, and what to do next. Include specific file paths and ask Claude to re-read changed files. This gives clean context focused on what matters, with no stale data."
+
+  - front: "Exam Task 1.7: When is a fresh start with summary more reliable than --resume?"
+    back: "When tool results are stale (tests, git log outdated), files changed significantly since the last session, the approach changed direction, or significant time has passed. Fresh start avoids the risk of Claude basing decisions on outdated cached file contents or command outputs."

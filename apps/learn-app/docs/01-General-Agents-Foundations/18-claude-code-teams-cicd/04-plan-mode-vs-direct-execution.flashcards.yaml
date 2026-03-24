@@ -1,0 +1,42 @@
+flashcards:
+  - front: "When should you use plan mode instead of direct execution?"
+    back: "When multiple valid approaches exist, the change spans many files, architectural decisions must be made, or the sequence of changes matters. Examples: monolith restructuring, library migration across 45+ files, database schema redesign."
+
+  - front: "When should you use direct execution instead of plan mode?"
+    back: "When the scope is clear and narrow, the implementation is obvious, and there is only one reasonable way to do it. Examples: fix a bug with a clear stack trace, add a validation check, rename a variable."
+
+  - front: "How do you enter plan mode in Claude Code?"
+    back: "Type `/plan` from the prompt, or use Shift+Tab to toggle between plan mode and direct execution."
+
+  - front: "What happens when Claude is in plan mode?"
+    back: "Claude investigates, explores options, and proposes an approach but does NOT modify any files. You review the plan, ask questions, and request changes. Files are only modified after you approve and switch to direct execution."
+
+  - front: "What is the Explore subagent?"
+    back: "A specialized agent optimized for codebase exploration. It runs in an isolated context with read-only tools, investigates the codebase, and returns a summary to your main conversation without consuming your context window."
+
+  - front: "Why does the Explore subagent matter for context management?"
+    back: "Without Explore, investigation output (reading 20+ files) fills your context window, leaving less room for planning and implementation. Explore runs in isolation and returns only a summary, keeping your main context clean."
+
+  - front: "What is the Explore-Plan-Execute pattern?"
+    back: "Step 1: Explore subagent investigates in isolation, returns summary. Step 2: Enter plan mode, design the approach using the summary. Step 3: Switch to direct execution, implement the approved plan. This maximizes context availability at each phase."
+
+  - front: "A developer needs to migrate from moment.js to dayjs across 47 files. What mode should they use?"
+    back: "Explore first (to map all usage patterns: basic formatting, timezone, relative time), then plan mode (to design the migration order and plugin strategy), then direct execution (to implement the approved plan in batches)."
+
+  - front: "A developer needs to fix a null pointer exception with a clear stack trace. What mode?"
+    back: "Direct execution. The scope is one file, the fix is obvious from the stack trace, and plan mode would add unnecessary overhead."
+
+  - front: "Why does plan mode save time on complex tasks even though it adds a planning step?"
+    back: "Without planning, Claude may make wrong design decisions mid-implementation, requiring costly rework (undoing 7+ files). The planning overhead (a few minutes) is far less than the rework cost, making the total time shorter."
+
+  - front: "What exam question tests the plan mode vs direct execution decision?"
+    back: "Q5: A developer needs to restructure a monolith into microservices. The correct answer is plan mode, because multi-file architectural changes with multiple valid approaches require investigation and planning before execution."
+
+  - front: "When should you use Explore before plan mode, versus going straight to plan mode?"
+    back: "Use Explore first when you do not understand the current codebase state and need investigation. Go straight to plan mode when you already understand the state but need to design the approach."
+
+  - front: "Can you combine plan mode and direct execution in a single workflow?"
+    back: "Yes. Use plan mode for investigation and design, then switch to direct execution for implementation. This is the recommended approach for complex tasks: plan the approach, then execute it."
+
+  - front: "What is the cost of using plan mode for a trivial task like fixing a typo?"
+    back: "Unnecessary overhead. Plan mode adds investigation and proposal steps that provide no value when the implementation is obvious. Direct execution is faster for simple, well-scoped changes."

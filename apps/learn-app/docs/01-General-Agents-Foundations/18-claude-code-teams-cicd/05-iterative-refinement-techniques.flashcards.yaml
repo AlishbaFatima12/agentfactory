@@ -1,0 +1,30 @@
+flashcards:
+  - front: "You told Claude 'normalize the dates in this CSV' and got the wrong date format. What is the most effective fix?"
+    back: "Provide 2-3 concrete input/output examples showing the exact transformation you want. For example: Input: 'March 5th, 2024' -> Output: '2024-03-05'. I/O examples eliminate the ambiguity that prose descriptions cannot resolve."
+
+  - front: "What are the three iterative refinement techniques for Claude Code?"
+    back: "1) Concrete I/O examples (for transformations), 2) Test-driven iteration (write tests first, iterate on failures), 3) Interview pattern (have Claude ask YOU questions before implementing). Each provides a different feedback signal."
+
+  - front: "In test-driven iteration, who writes the tests and who writes the implementation?"
+    back: "YOU write the tests (encoding your knowledge of correctness and edge cases). CLAUDE writes the implementation and iterates against test failures. If Claude writes both, it writes tests that pass its own implementation, which defeats the purpose."
+
+  - front: "When should you use the interview pattern instead of I/O examples?"
+    back: "When working in an unfamiliar domain where you do not know the edge cases. The interview pattern has Claude surface design considerations (cache invalidation, failure modes, race conditions) that you might not have anticipated."
+
+  - front: "Your function has 5 bugs. Three of them interact (fixing one changes the behavior of another). Two are in separate modules. How do you communicate these to Claude?"
+    back: "Report the 3 interacting bugs in a single message so Claude can see how they affect each other. Fix the 2 independent bugs sequentially, verifying each fix before moving to the next."
+
+  - front: "When should you report multiple issues to Claude in a single message vs sequentially?"
+    back: "Single message: when fixes interact (changing one affects another). Sequential: when fixes are independent (different modules, no shared logic). If unsure, default to single message since it is safer for Claude to see the full picture."
+
+  - front: "After using the interview pattern, what should you do before implementing?"
+    back: "Start a fresh session with the resulting spec. The new session has clean context focused entirely on implementation. The interview produced the artifact (spec); a separate session executes it."
+
+  - front: "I/O examples only work for string transformations. True or false?"
+    back: "False. I/O examples work for any transformation: JSON reshaping, SQL generation, code refactoring, data format conversion. The pattern is always the same: show what goes in and what comes out."
+
+  - front: "How many I/O examples do you typically need to disambiguate a transformation?"
+    back: "Two to three examples are enough for most transformations. Pick examples that cover the ambiguous cases where two reasonable interpretations would produce different output."
+
+  - front: "(Exam Task 3.5) A developer needs to build a rate limiter but is unfamiliar with distributed caching patterns. Which refinement technique should they use first?"
+    back: "The interview pattern. Have Claude ask questions about cache invalidation, sliding vs fixed windows, distributed state, and burst handling before implementing. This surfaces design considerations the developer would not have anticipated in an unfamiliar domain."
