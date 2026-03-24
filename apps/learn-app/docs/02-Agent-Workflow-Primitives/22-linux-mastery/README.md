@@ -1,7 +1,7 @@
 ---
 sidebar_position: 22
 title: "Chapter 22: Linux Operations for Agent Deployment"
-description: "Learn to deploy, manage, and troubleshoot AI agents on Linux servers by directing Claude Code — from first SSH login to production systemd service."
+description: "Learn to deploy, manage, and troubleshoot AI agents on Linux servers by directing Claude Code: from first SSH login to production systemd service."
 keywords:
   [
     "linux",
@@ -22,7 +22,7 @@ slides:
 
 # Chapter 22: Linux Operations for Agent Deployment
 
-Ali built a competitor-analysis agent in Chapters 20 and 21. It scrapes pricing data, stores results in a database, and generates daily summaries. He runs it on his laptop. It works — when his laptop is open.
+Ali built a competitor-analysis agent in Chapters 20 and 21. It scrapes pricing data, stores results in a database, and generates daily summaries. He runs it on his laptop. It works: when his laptop is open.
 
 Sunday night. His biggest client has a board meeting Monday morning. The agent was supposed to generate a weekend pricing report. Ali opens his laptop and checks the dashboard. The agent has not run since Friday. Three days of missing data. Board meeting in twelve hours.
 
@@ -30,10 +30,10 @@ His friend Dev has a cloud server. "I'll give you SSH access," Dev texts. "Get y
 
 Ali opens a terminal. Types an SSH command. A blinking cursor on a black screen. No desktop. No icons. No file explorer.
 
-This chapter is how Ali — and you — go from that blinking cursor to a production agent that runs 24/7, survives reboots, and recovers from failures. You will not memorize Linux commands. You will direct Claude Code to execute them, read what comes back, and understand what it means.
+This chapter is how Ali, and you: go from that blinking cursor to a production agent that runs 24/7, survives reboots, and recovers from failures. You will not memorize Linux commands. You will direct Claude Code to execute them, read what comes back, and understand what it means.
 
 :::tip[Chapter Thesis]
-Your agent's code might be perfect. If you can't deploy it to a server, keep it running, and fix it when it breaks, it's a side project — not a product. Linux operations is the bridge between "it works on my laptop" and "it runs in production."
+Your agent's code might be perfect. If you can't deploy it to a server, keep it running, and fix it when it breaks, it's a side project, not a product. Linux operations is the bridge between "it works on my laptop" and "it runs in production."
 :::
 
 ## 📚 Teaching Aid
@@ -55,8 +55,8 @@ This is a real deployment, not a toy example.
 
 Before starting this chapter, you should have completed:
 
-- **Chapter 17: Seven Principles of Agent Work** — Especially Principle 1 (Bash is the Key) and Principle 5 (Persisting State in Files)
-- **Chapters 19–21** — You've built agent workflows for file processing, Python, and SQL
+- **Chapter 17: Seven Principles of Agent Work**: Especially Principle 1 (Bash is the Key) and Principle 5 (Persisting State in Files)
+- **Chapters 19–21**: You've built agent workflows for file processing, Python, and SQL
 
 **No prior Linux experience is required.** Lesson 1 starts from a blinking cursor.
 
@@ -84,10 +84,10 @@ If you're on Windows, you need WSL2 (Windows Subsystem for Linux). Run `wsl --in
 
 Every lesson in this chapter follows the same flow:
 
-1. **Story beat** — Ali hits a real problem
-2. **Direct Claude Code** — You tell the agent what to do in plain English
-3. **Read the output** — Understand what came back and why
-4. **Build the mental model** — Connect the output to the concept
+1. **Story beat**: Ali hits a real problem
+2. **Direct Claude Code**: You tell the agent what to do in plain English
+3. **Read the output**: Understand what came back and why
+4. **Build the mental model**: Connect the output to the concept
 
 You will not type Linux commands from memory. You will direct an agent, watch what it does, and learn to understand the results.
 
@@ -99,7 +99,7 @@ New to Linux? These 12 terms appear throughout the chapter. Each definition is t
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
 | **Shell**                | The program that reads your commands and tells the OS to run them. On Linux servers, this is almost always bash.                       |
 | **Terminal**             | The window application that shows your shell. Terminal is the glass, shell is the voice on the other end.                              |
-| **Directory**            | What Windows calls a "folder." On Linux, we say "directory" — same concept, different word.                                            |
+| **Directory**            | What Windows calls a "folder." On Linux, we say "directory": same concept, different word.                                            |
 | **Root**                 | Two meanings:`/` is the top of the filesystem tree, and `root` is the superuser account with unlimited power. Context tells you which. |
 | **Daemon**               | A service that runs in the background, started at boot, not attached to any terminal. Your agents become daemons in Lesson 4.          |
 | **Port**                 | A numbered channel for network communication. Your agent listens on a specific port (e.g., 8080) for incoming requests.                |

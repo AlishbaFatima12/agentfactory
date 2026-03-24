@@ -3,7 +3,7 @@ sidebar_position: 3
 chapter: 23
 lesson: 3
 title: "Cloud Backup & Portfolio"
-description: "Push your project to GitHub for cloud backup and career showcase — because a backup you've never tested doesn't exist"
+description: "Push your project to GitHub for cloud backup and career showcase: because a backup you've never tested doesn't exist"
 duration_minutes: 40
 keywords: [github, remote, push, clone, backup, portfolio, cloud]
 
@@ -69,28 +69,28 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Add a GitHub Actions workflow that runs a simple check on every push; explore GitHub Pages to deploy a static portfolio site from the repository"
-  remedial_for_struggling: "Focus on the push-clone verification loop — push your project, clone it to a new folder, and confirm all files are present before attempting .gitignore or SSH keys"
+  remedial_for_struggling: "Focus on the push-clone verification loop: push your project, clone it to a new folder, and confirm all files are present before attempting .gitignore or SSH keys"
 
 teaching_guide:
   lesson_type: "hands-on"
   session_group: 2
   session_title: "GitHub and Collaboration"
   key_points:
-    - "GitHub serves dual purposes — catastrophe prevention (backup) and career showcase (portfolio)"
-    - ".gitignore must be set up BEFORE pushing — once secrets are in Git history, they're extremely hard to remove"
-    - "Backup only counts if you test it — clone to a separate folder to prove recovery works"
+    - "GitHub serves dual purposes: catastrophe prevention (backup) and career showcase (portfolio)"
+    - ".gitignore must be set up BEFORE pushing: once secrets are in Git history, they're extremely hard to remove"
+    - "Backup only counts if you test it: clone to a separate folder to prove recovery works"
     - "The push/clone cycle is the verification step most people skip"
   misconceptions:
-    - "Students think GitHub IS Git — Git is local version control, GitHub is cloud hosting"
-    - "Students believe deleting a secret file removes it from history — it persists in Git history"
-    - "Students skip the clone test — backup is only verified when you prove you can restore"
+    - "Students think GitHub IS Git: Git is local version control, GitHub is cloud hosting"
+    - "Students believe deleting a secret file removes it from history: it persists in Git history"
+    - "Students skip the clone test: backup is only verified when you prove you can restore"
   discussion_prompts:
     - "What impression does your GitHub profile give to an employer compared to a resume?"
     - "What happens if you accidentally push an API key to a public repository?"
   teaching_tips:
     - "The GitLab disaster story creates urgency about testing backups"
     - "Have students actually create their GitHub account during the lesson"
-    - "The clone test is the emotional proof — seeing your project appear in a new folder makes backup real"
+    - "The clone test is the emotional proof: seeing your project appear in a new folder makes backup real"
   assessment_quick_check:
     - "What must you do BEFORE pushing to GitHub for the first time?"
     - "What is the difference between git clone and git pull?"
@@ -104,7 +104,7 @@ version: "2.0.0"
 
 # Cloud Backup & Portfolio
 
-On January 31, 2017, a tired engineer at GitLab — a company that builds tools for developers — ran a delete command on the wrong database. The production database. The one serving millions of users.
+On January 31, 2017, a tired engineer at GitLab (a company that builds tools for developers) ran a delete command on the wrong database. The production database. The one serving millions of users.
 
 They had five different backup systems. None of them worked. Automated backups had never actually run due to a misconfiguration. The failure alerts were being silently rejected by email filters. They lost six hours of user data and streamed the panicked recovery live in a Google Doc for the world to watch. ([Source](https://about.gitlab.com/blog/gitlab-dot-com-database-incident/))
 
@@ -126,8 +126,8 @@ Her project exists on one computer. That computer just failed. If she'd pushed t
 
 GitHub is a website that stores your Git project in the cloud. It's two things at once:
 
-1. **Cloud backup** — If your computer breaks, your project survives
-2. **Portfolio** — When you share `github.com/yourname`, employers see your real projects, your commit history, and how you solve problems
+1. **Cloud backup**: If your computer breaks, your project survives
+2. **Portfolio**: When you share `github.com/yourname`, employers see your real projects, your commit history, and how you solve problems
 
 Git is the tool on your computer. GitHub is the cloud service that stores copies of your Git projects. They work together but are not the same thing.
 
@@ -135,7 +135,7 @@ Git is the tool on your computer. GitHub is the cloud service that stores copies
 
 ## Sarah's Mistake
 
-Sarah is excited. She just learned about GitHub and wants to push her fundraiser project immediately. She runs `git push` — and it works. Everything is on GitHub. She's thrilled.
+Sarah is excited. She just learned about GitHub and wants to push her fundraiser project immediately. She runs `git push`, and it works. Everything is on GitHub. She's thrilled.
 
 Then Maya messages her: "Hey, I can see your Stripe API key on GitHub. The one for the donation page."
 
@@ -143,15 +143,15 @@ Sarah's stomach drops. She had a `config.json` with the payment API key for thei
 
 She deletes the file and pushes again. Problem solved, right?
 
-**Wrong.** The key is still in her commit history. Anyone who clones the repository gets every version of every file — including the one she "deleted." The key is out there. She has to log into Stripe, revoke the old key, and generate a new one.
+**Wrong.** The key is still in her commit history. Anyone who clones the repository gets every version of every file: including the one she "deleted." The key is out there. She has to log into Stripe, revoke the old key, and generate a new one.
 
-This is the most common security mistake in version control. It happens to professionals too. The fix isn't deleting the file — it's making sure the file never gets committed in the first place.
+This is the most common security mistake in version control. It happens to professionals too. The fix isn't deleting the file; it's making sure the file never gets committed in the first place.
 
 ---
 
 ## Step 1: Protect Secrets First
 
-Before pushing anything to the cloud, set up protection. API keys, passwords, personal notes — these should never leave your computer.
+Before pushing anything to the cloud, set up protection. API keys, passwords, personal notes: these should never leave your computer.
 
 **What you tell your agent**: "I have a config file with my API key. Make sure it never gets uploaded to GitHub."
 
@@ -175,7 +175,7 @@ git commit -m "Stop tracking config.json"
 
 :::caution
 
-Create `.gitignore` **before** your first push. Sarah learned this the hard way — once a secret is in Git history, deleting the file doesn't remove it from past commits. If that happens, you need to revoke the exposed key immediately and generate a new one.
+Create `.gitignore` **before** your first push. Sarah learned this the hard way: once a secret is in Git history, deleting the file doesn't remove it from past commits. If that happens, you need to revoke the exposed key immediately and generate a new one.
 
 :::
 
@@ -190,7 +190,7 @@ Now create an empty repository on GitHub:
 1. Click the **+** icon (top right) and select "New repository"
 2. Name it to match your local project (e.g., `fundraiser-project`)
 3. Select **Public** so it's visible as a portfolio piece
-4. **Don't** check "Add a README" — you already have files locally
+4. **Don't** check "Add a README": you already have files locally
 5. Click "Create repository"
 
 ---
@@ -206,11 +206,11 @@ git remote add origin https://github.com/yourname/fundraiser-project.git
 git push -u origin main
 ```
 
-GitHub may ask for authentication. Follow its prompts — it will guide you through setting up a personal access token or SSH key. If you get stuck, tell your agent: "I'm getting an authentication error when pushing to GitHub." It can walk you through the fix.
+GitHub may ask for authentication. Follow its prompts: it will guide you through setting up a personal access token or SSH key. If you get stuck, tell your agent: "I'm getting an authentication error when pushing to GitHub." It can walk you through the fix.
 
-**What `remote add origin` means**: You're telling Git, "This is where the cloud copy lives." The name `origin` is just a convention — it's the default name for your main cloud location.
+**What `remote add origin` means**: You're telling Git, "This is where the cloud copy lives." The name `origin` is just a convention; it's the default name for your main cloud location.
 
-**Verify it worked**: Open your repository page on GitHub. You should see your files and commit history — an exact copy of what's on your computer.
+**Verify it worked**: Open your repository page on GitHub. You should see your files and commit history: an exact copy of what's on your computer.
 
 ---
 
@@ -259,13 +259,13 @@ Sarah can now recover her entire project from any computer with internet access.
 
 Right now, your GitHub profile is visible to the world. When you share `github.com/yourname` with:
 
-- **Employers** — They see real projects, not resume claims
-- **Collaborators** — They can review your work and your process
-- **Your future self** — Every project you push is one more thing you'll never lose
+- **Employers**: They see real projects, not resume claims
+- **Collaborators**: They can review your work and your process
+- **Your future self**: Every project you push is one more thing you'll never lose
 
 ---
 
-Your code is in the cloud. But right now, anyone — including your future self — would merge changes blindly. How do you review before you trust?
+Your code is in the cloud. But right now, anyone (including your future self) would merge changes blindly. How do you review before you trust?
 
 That's what the next lesson solves.
 

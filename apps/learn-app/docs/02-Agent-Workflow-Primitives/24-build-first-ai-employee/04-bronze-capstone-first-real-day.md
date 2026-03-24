@@ -48,7 +48,7 @@ differentiation:
 
 In Give Your Employee an Identity, Teach Your Employee a Skill, and Connect Your Employee to the World lessons, you gave your employee an identity, a skill, and a connection to the outside world. Now you will find out if any of it actually works under real conditions.
 
-This is not a demo. You are going to send your AI employee the kinds of tasks that a human in your profession handles on a typical workday. Some will be routine. Some will require the domain skill you built in Teach Your Employee a Skill lesson. At least one will be deliberately ambiguous — the kind of request where a good employee asks for clarification instead of guessing.
+This is not a demo. You are going to send your AI employee the kinds of tasks that a human in your profession handles on a typical workday. Some will be routine. Some will require the domain skill you built in Teach Your Employee a Skill lesson. At least one will be deliberately ambiguous: the kind of request where a good employee asks for clarification instead of guessing.
 
 The goal is not a perfect score. The goal is an honest evaluation that tells you exactly what works, what fails, and what to improve next.
 
@@ -67,33 +67,33 @@ Send your AI employee 3-5 real professional tasks and evaluate the results using
 
 Add these files to your `nanoclaw-employee` repo:
 
-- `conversation-log.md` — full task/response transcript
-- `evaluation.md` — completed rubric with scores and reflection
+- `conversation-log.md`: full task/response transcript
+- `evaluation.md`: completed rubric with scores and reflection
 
 ## Use Case Gallery
 
 These examples show how different professions structure their five tasks. Adapt the pattern to your own work.
 
 **Accountant:**
-1. "Review this invoice for errors" — routine task testing basic identity and tone
-2. "Categorize these expenses by tax deduction type" — tests Teach Your Employee a Skill
-3. "Email the client about their payment status" — tests Connect Your Employee to the World via Gmail
-4. "Handle this tax situation" — ambiguous, should ask: which jurisdiction? personal or business?
-5. "Prepare a quarterly summary from these three invoices" — complex, combines skill + reasoning
+1. "Review this invoice for errors": routine task testing basic identity and tone
+2. "Categorize these expenses by tax deduction type": tests Teach Your Employee a Skill
+3. "Email the client about their payment status": tests Connect Your Employee to the World via Gmail
+4. "Handle this tax situation": ambiguous, should ask: which jurisdiction? personal or business?
+5. "Prepare a quarterly summary from these three invoices": complex, combines skill + reasoning
 
 **Teacher:**
-1. "Write a welcome message for parents about the field trip" — routine tone check
-2. "Plan next week's math unit on fractions for 4th graders" — tests Teach Your Employee a Skill
-3. "Post an update in the parent channel about homework policy" — tests Connect Your Employee to the World via Slack
-4. "Help with this student" — ambiguous, should ask: academic help? behavioral? what subject?
-5. "Create a differentiated worksheet for my mixed-ability class" — complex, combines skill + judgment
+1. "Write a welcome message for parents about the field trip": routine tone check
+2. "Plan next week's math unit on fractions for 4th graders": tests Teach Your Employee a Skill
+3. "Post an update in the parent channel about homework policy": tests Connect Your Employee to the World via Slack
+4. "Help with this student": ambiguous, should ask: academic help? behavioral? what subject?
+5. "Create a differentiated worksheet for my mixed-ability class": complex, combines skill + judgment
 
 **Consultant:**
-1. "Draft a status update for the project team" — routine task
-2. "Build a proposal outline for a new client engagement" — tests Teach Your Employee a Skill
-3. "Check my calendar and prep notes for tomorrow's meetings" — tests Connect Your Employee to the World
-4. "Follow up with the client" — ambiguous, should ask: which client? about what? what tone?
-5. "Analyze why this project is behind schedule and suggest recovery options" — complex reasoning
+1. "Draft a status update for the project team": routine task
+2. "Build a proposal outline for a new client engagement": tests Teach Your Employee a Skill
+3. "Check my calendar and prep notes for tomorrow's meetings": tests Connect Your Employee to the World
+4. "Follow up with the client": ambiguous, should ask: which client? about what? what tone?
+5. "Analyze why this project is behind schedule and suggest recovery options": complex reasoning
 
 ## Evaluation Rubric
 
@@ -113,7 +113,7 @@ Use this rubric for your `evaluation.md`. Score each dimension 1-5 and include s
 <details>
 <summary>Level 1: Planning Your Tasks</summary>
 
-Think about what you actually did at work this week. Pick tasks that range from routine to complex. The best test tasks are real ones — not hypothetical scenarios. If you can use actual documents, emails, or situations from your work (with sensitive details removed), the evaluation will be far more meaningful.
+Think about what you actually did at work this week. Pick tasks that range from routine to complex. The best test tasks are real ones, not hypothetical scenarios. If you can use actual documents, emails, or situations from your work (with sensitive details removed), the evaluation will be far more meaningful.
 
 </details>
 
@@ -133,11 +133,11 @@ Use the response to design a balanced test set that covers all four dimensions.
 
 Run your tasks in this specific order for the clearest signal:
 
-1. **Task 1 — Routine:** Tests basic identity and tone. Should be something your employee handles easily.
-2. **Task 2 — Skill-heavy:** Requires your Teach Your Employee a Skill SKILL.md. Does the domain expertise come through?
-3. **Task 3 — Connection-dependent:** Must use your Connect Your Employee to the World channel or MCP server. Does the integration work end-to-end?
-4. **Task 4 — Ambiguous:** Deliberately vague. A good employee asks questions before acting. A bad one guesses.
-5. **Task 5 — Complex:** Combines everything. Tests whether identity + skill + connection work together.
+1. **Task 1: Routine:** Tests basic identity and tone. Should be something your employee handles easily.
+2. **Task 2: Skill-heavy:** Requires your Teach Your Employee a Skill SKILL.md. Does the domain expertise come through?
+3. **Task 3: Connection-dependent:** Must use your Connect Your Employee to the World channel or MCP server. Does the integration work end-to-end?
+4. **Task 4: Ambiguous:** Deliberately vague. A good employee asks questions before acting. A bad one guesses.
+5. **Task 5: Complex:** Combines everything. Tests whether identity + skill + connection work together.
 
 For the iteration test: pick the weakest response from Tasks 1-5, give specific feedback, and ask for a revised version. Compare the two.
 

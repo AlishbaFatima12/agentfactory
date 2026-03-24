@@ -90,26 +90,26 @@ teaching_guide:
   session_title: "First Agent Workflow and Safety"
   key_points:
     - "The propose-refine-iterate pattern (agent proposes categories, student corrects based on domain knowledge) is the core collaboration model for all rule design"
-    - "rules.md is more valuable than the organized folders — folders go stale, but documented logic is reusable forever"
+    - "rules.md is more valuable than the organized folders: folders go stale, but documented logic is reusable forever"
     - "The 20% misc threshold is a concrete quality gate: if >20% of files are 'miscellaneous', the categorization system needs another layer"
     - "Single-file test + dry-run are two different verification steps: test checks the mechanism works, dry-run checks the decisions are right"
   misconceptions:
-    - "Students think the agent's first suggestion is final — the CSV-as-text example shows why human correction of the agent's functional classification matters"
-    - "Students confuse organized folders with a complete system — the folders are output, rules.md is the reusable product"
-    - "Students may skip the single-file test because 'it worked in the conversation' — case-sensitivity bug shows why testing with real files catches hidden errors"
+    - "Students think the agent's first suggestion is final: the CSV-as-text example shows why human correction of the agent's functional classification matters"
+    - "Students confuse organized folders with a complete system: the folders are output, rules.md is the reusable product"
+    - "Students may skip the single-file test because 'it worked in the conversation': case-sensitivity bug shows why testing with real files catches hidden errors"
   discussion_prompts:
     - "The agent classified CSV as 'text' because it IS technically text. You corrected it to 'spreadsheet' because of how you USE it. When else does technical correctness differ from practical usefulness?"
     - "If nearly half your files end up in 'misc', is that a failure of the rules or a sign your files are genuinely diverse? How do you tell the difference?"
     - "Why is the dry-run step separate from the single-file test? What kind of error does each one catch?"
   teaching_tips:
-    - "Start with the Q4-Budget-Draft.pdf ambiguity — ask students where THEY would file it before showing the lesson's approach"
-    - "The case-sensitivity bug (30 missing files with uppercase extensions) is a powerful live demo — have students check whether their own system handles .PDF vs .pdf"
-    - "Walk through the rules.md example on the board — students will create their own version in the checkpoint and need to understand the Layer 1 / Layer 2 structure"
+    - "Start with the Q4-Budget-Draft.pdf ambiguity: ask students where THEY would file it before showing the lesson's approach"
+    - "The case-sensitivity bug (30 missing files with uppercase extensions) is a powerful live demo: have students check whether their own system handles .PDF vs .pdf"
+    - "Walk through the rules.md example on the board: students will create their own version in the checkpoint and need to understand the Layer 1 / Layer 2 structure"
     - "This is a natural session break point (noted in the lesson). Acknowledge this in class if doing multi-lesson workshops"
   assessment_quick_check:
     - "Ask students to list the 6-step organization pattern from memory: propose, refine, document, test one, dry-run, batch execute"
-    - "Give a filename like 'meeting-recording-2026.mp4' and ask which category it goes to and why — tests rule application"
-    - "Ask: 'What is more valuable — your organized folders or your rules.md? Why?' — tests understanding of state persistence"
+    - "Give a filename like 'meeting-recording-2026.mp4' and ask which category it goes to and why: tests rule application"
+    - "Ask: 'What is more valuable: your organized folders or your rules.md? Why?': tests understanding of state persistence"
 ---
 
 # The Organization Workflow
@@ -118,7 +118,7 @@ Your Downloads has 487 files. Where does `Q4-Budget-Draft.pdf` go? Finance? Q4? 
 
 The answer reveals why categorization is harder than it looks. Every file belongs to multiple categories at once. A budget spreadsheet is a financial document AND a Q4 deliverable AND a project artifact. Any rule you pick will be wrong for some files.
 
-That's the hard question this lesson tackles. Not "how do I move files into folders" — but how do you design rules that handle ambiguity? The answer: you don't design them alone. You design them in conversation with a General Agent, and the best categorization systems aren't designed perfectly upfront. They're discovered through errors and corrections.
+That's the hard question this lesson tackles. Not "how do I move files into folders", but how do you design rules that handle ambiguity? The answer: you don't design them alone. You design them in conversation with a General Agent, and the best categorization systems aren't designed perfectly upfront. They're discovered through errors and corrections.
 
 ---
 
@@ -156,7 +156,7 @@ Open Claude Code and start the collaboration:
 
 **You:**
 
-> That looks mostly right. But wait — where would .csv files go? Those are spreadsheets, not documents.
+> That looks mostly right. But wait: where would .csv files go? Those are spreadsheets, not documents.
 
 **Claude Code:**
 
@@ -174,7 +174,7 @@ Open Claude Code and start the collaboration:
 >
 > Should I document these rules in a rules.md file so we can reuse them later?
 
-That correction matters. The agent classified by file format (CSV is text). You classified by function (CSV is a spreadsheet). You were right — because you know how you _use_ the files. The agent knows what they _are_. When you catch these mistakes and the agent adjusts, the rules get smarter.
+That correction matters. The agent classified by file format (CSV is text). You classified by function (CSV is a spreadsheet). You were right: because you know how you _use_ the files. The agent knows what they _are_. When you catch these mistakes and the agent adjusts, the rules get smarter.
 
 **You:**
 
@@ -305,16 +305,16 @@ This is the honest part most tutorials skip. Extension-based rules are a startin
 > After:   86 files (18% of total)
 > ```
 >
-> The remaining 86 files are genuinely miscellaneous — design files,
+> The remaining 86 files are genuinely miscellaneous: design files,
 > one-off formats, and binary data. That's a reasonable misc/ bucket.
 
-**The lesson:** Extension-based rules are layer one. Content-based analysis is layer two. When your "misc" bucket is too large, don't accept it — dig deeper. A good categorization system should have less than 20% of files uncategorized.
+**The lesson:** Extension-based rules are layer one. Content-based analysis is layer two. When your "misc" bucket is too large, don't accept it: dig deeper. A good categorization system should have less than 20% of files uncategorized.
 
 ---
 
 ## When the Agent Gets It Wrong
 
-Here's something the textbook version of this conversation doesn't show you. Sometimes the agent gets it wrong — and not in the polite, easy-to-fix way.
+Here's something the textbook version of this conversation doesn't show you. Sometimes the agent gets it wrong, and not in the polite, easy-to-fix way.
 
 ### Scenario: Silent Miscategorization
 
@@ -341,7 +341,7 @@ and my rules only matched lowercase. These fell through to misc/.
 Moving them now and updating rules.md to use case-insensitive matching.
 ```
 
-This is a real bug. Case-sensitive matching is one of the most common failures in file categorization, and the agent didn't catch it during the initial rule design. You caught it because you _verified the numbers_. This is Principle 3 in action — verification caught an error that looked like success.
+This is a real bug. Case-sensitive matching is one of the most common failures in file categorization, and the agent didn't catch it during the initial rule design. You caught it because you _verified the numbers_. This is Principle 3 in action: verification caught an error that looked like success.
 
 ### Scenario: The Agent Suggests a Category You Didn't Think Of
 
@@ -352,9 +352,9 @@ once the apps are installed. Would you like a separate "installers"
 category? That would let you easily delete them to free up space.
 ```
 
-The agent spotted a pattern you missed. This is the collaboration at work — neither you nor the agent alone would reach the best result.
+The agent spotted a pattern you missed. This is the collaboration at work: neither you nor the agent alone would reach the best result.
 
-**Why does `rules.md` matter more than the organized folders?** Next month your Downloads will fill up again. The folders will be outdated. But `rules.md` — the logic for _how_ to organize — is reusable forever. The rules are the product. The organized folders are just the output.
+**Why does `rules.md` matter more than the organized folders?** Next month your Downloads will fill up again. The folders will be outdated. But `rules.md` (the logic for _how_ to organize) is reusable forever. The rules are the product. The organized folders are just the output.
 
 ---
 
@@ -406,7 +406,7 @@ mystery-file.bin       → organized/misc/
 No files moved yet. Want me to proceed?
 ```
 
-A dry run makes the agent's intentions visible before they become irreversible. You can scan the list and catch problems — a file headed to the wrong folder, a naming conflict, something that should be skipped — while it's still just a plan on screen.
+A dry run makes the agent's intentions visible before they become irreversible. You can scan the list and catch problems: a file headed to the wrong folder, a naming conflict, something that should be skipped: while it's still just a plan on screen.
 
 The single-file test (step 4) checks that the _mechanism_ works. The dry run (step 5) checks that the _decisions_ are right. Both matter.
 
@@ -532,7 +532,7 @@ Commit our work so far with a message like "Complete file survey,
 backup, and organization — Lessons 1-3"
 ```
 
-Then start a new session for Lesson 4. Your `rules.md`, `FILE-INVENTORY.md`, and `ORGANIZER-LOG.md` carry your context forward — in files, not memory.
+Then start a new session for Lesson 4. Your `rules.md`, `FILE-INVENTORY.md`, and `ORGANIZER-LOG.md` carry your context forward, in files, not memory.
 
 If your session still feels responsive, keep going. This is guidance, not a rule.
 

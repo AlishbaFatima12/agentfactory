@@ -74,7 +74,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (categorization logic, false positives/word boundaries, iterative refinement, domain transfer). Within A2 range. The domain transfer adds minimal load because the process is identical — only the vocabulary changes."
+  assessment: "4 concepts (categorization logic, false positives/word boundaries, iterative refinement, domain transfer). Within A2 range. The domain transfer adds minimal load because the process is identical: only the vocabulary changes."
 
 differentiation:
   extension_for_advanced: "Handle case sensitivity, regex anchors for precision, more complex patterns"
@@ -85,38 +85,38 @@ teaching_guide:
   session_group: 3
   session_title: "Data Wrangling, Domain Transfer, and Capstone"
   key_points:
-    - "The Dr. Pepper false positive is the chapter's signature teaching moment — simple keyword matching ('DR' in description) silently inflates tax deductions, which is fraud by algorithm"
-    - "Regex word boundaries (\\b) solve partial matching: \\bCVS\\b matches 'CVS PHARMACY' but not 'CVSMITH' — this single concept prevents an entire category of false positives"
-    - "FALSE_POSITIVES checked BEFORE categories demonstrates that execution order matters — guards must run first or the match happens before the guard can block it"
-    - "The domain switch from bank statements to server logs proves the tools and patterns are not specific to finance — the /health 404 is the 'Dr. Pepper' of server logs"
-    - "The iterative loop (build → test → find false positives → fix) is the lesson's workflow pattern — emphasize that no one designs perfect categorization rules on the first try"
+    - "The Dr. Pepper false positive is the chapter's signature teaching moment: simple keyword matching ('DR' in description) silently inflates tax deductions, which is fraud by algorithm"
+    - "Regex word boundaries (\\b) solve partial matching: \\bCVS\\b matches 'CVS PHARMACY' but not 'CVSMITH': this single concept prevents an entire category of false positives"
+    - "FALSE_POSITIVES checked BEFORE categories demonstrates that execution order matters: guards must run first or the match happens before the guard can block it"
+    - "The domain switch from bank statements to server logs proves the tools and patterns are not specific to finance: the /health 404 is the 'Dr. Pepper' of server logs"
+    - "The iterative loop (build → test → find false positives → fix) is the lesson's workflow pattern: emphasize that no one designs perfect categorization rules on the first try"
   misconceptions:
-    - "Students think the first categorizer output 'looks right' — the false positives (Dr. Pepper, CVSMITH) are deliberately plausible enough to miss on casual inspection"
-    - "Students confuse regex word boundaries with exact string matching — \\bCVS\\b still matches 'CVS PHARMACY' and 'CVS/STORE' because the boundary is at word edges, not string edges"
-    - "Students may think false positives are edge cases they can ignore — on tax returns, a $204.99 inflation from Dr. Pepper and CVSMITH is a concrete financial error"
+    - "Students think the first categorizer output 'looks right': the false positives (Dr. Pepper, CVSMITH) are deliberately plausible enough to miss on casual inspection"
+    - "Students confuse regex word boundaries with exact string matching: \\bCVS\\b still matches 'CVS PHARMACY' and 'CVS/STORE' because the boundary is at word edges, not string edges"
+    - "Students may think false positives are edge cases they can ignore: on tax returns, a $204.99 inflation from Dr. Pepper and CVSMITH is a concrete financial error"
   discussion_prompts:
     - "The first version of the categorizer 'looked right' until you scanned the medical list carefully. How do you decide when to trust output and when to inspect it line by line?"
     - "Why are FALSE_POSITIVES checked before categories rather than after? What would happen if you checked them in the opposite order?"
     - "The Dr. Pepper problem only shows up in bank data where merchant names are messy. What other domains have similar 'looks like X but is actually Y' matching problems?"
   teaching_tips:
-    - "Let students see the FIRST output (with false positives) and ask them to find the bugs BEFORE revealing them — this builds the inspection habit"
-    - "Draw the regex word boundary concept on the board with 'CVSMITH' and show where \\b does and does not trigger — visual learners need to see the boundary positions"
-    - "The iterative loop (build → test → find false positives → fix) is the lesson's workflow pattern — emphasize that no one designs perfect categorization rules on the first try"
+    - "Let students see the FIRST output (with false positives) and ask them to find the bugs BEFORE revealing them: this builds the inspection habit"
+    - "Draw the regex word boundary concept on the board with 'CVSMITH' and show where \\b does and does not trigger: visual learners need to see the boundary positions"
+    - "The iterative loop (build → test → find false positives → fix) is the lesson's workflow pattern: emphasize that no one designs perfect categorization rules on the first try"
   assessment_quick_check:
-    - "Ask: 'Why does matching DR in a transaction description catch both doctor visits and Dr. Pepper?' — tests understanding of substring vs word boundary matching"
-    - "Give students the pattern \\bCVS\\b and ask which of these it matches: 'CVS PHARMACY', 'CVSMITH', 'MY CVS RECEIPT', 'MCVS' — tests regex boundary understanding"
-    - "Ask: 'Why must false positive guards run BEFORE category matching?' — tests understanding of execution order"
+    - "Ask: 'Why does matching DR in a transaction description catch both doctor visits and Dr. Pepper?': tests understanding of substring vs word boundary matching"
+    - "Give students the pattern \\bCVS\\b and ask which of these it matches: 'CVS PHARMACY', 'CVSMITH', 'MY CVS RECEIPT', 'MCVS': tests regex boundary understanding"
+    - "Ask: 'Why must false positive guards run BEFORE category matching?': tests understanding of execution order"
 ---
 
 # Data Wrangling
 
 :::note Halftime Check: Your Unix Toolkit
-Four lessons in, you have five Python commands that behave like native Unix tools — reading stdin, writing stdout, chaining through pipes. Plus a verification habit and an installation pattern that makes each tool permanent. Everything from here builds on top of that toolkit — not beside it.
+Four lessons in, you have five Python commands that behave like native Unix tools: reading stdin, writing stdout, chaining through pipes. Plus a verification habit and an installation pattern that makes each tool permanent. Everything from here builds on top of that toolkit, not beside it.
 :::
 
-In Lesson 4, you decomposed sum-expenses into composable tools — extract-column, filter, stats — each doing one job, chaining through pipes. Those generic tools answer any question you can express as "extract, filter, summarize." But tax season needs a different kind of answer.
+In Lesson 4, you decomposed sum-expenses into composable tools (extract-column, filter, stats) each doing one job, chaining through pipes. Those generic tools answer any question you can express as "extract, filter, summarize." But tax season needs a different kind of answer.
 
-sum-expenses gives you totals. But tax season needs CATEGORIES — medical, charitable, business. Your accountant doesn't want "Total: $4,215.52." They want:
+sum-expenses gives you totals. But tax season needs CATEGORIES: medical, charitable, business. Your accountant doesn't want "Total: $4,215.52." They want:
 
 - Medical expenses: $1,891.20
 - Charitable donations: $1,550.00
@@ -196,7 +196,7 @@ Charitable: $100.00
 Business: $89.50
 ```
 
-At first glance, that looks right. Medical, charitable, business — all categorized. The totals look reasonable.
+At first glance, that looks right. Medical, charitable, business: all categorized. The totals look reasonable.
 
 :::warning Challenge: Find the Fraud
 Scan the medical entries above. One of them would get you audited by the IRS. Another inflates your deductions by $200. Can you spot them both before reading on?
@@ -215,9 +215,9 @@ MEDICAL: CVSMITH CONSULTING: $200.00   <-- A consultant, not CVS pharmacy
 
 There it is. The keyword "DR" appears in "DR PEPPER," so the categorizer flags it as medical. "CVS" appears inside "CVSMITH," so a consulting fee gets counted as a pharmacy visit.
 
-This is what simple keyword matching does. `if 'CVS' in desc_upper` matches ANYTHING containing those three letters in sequence — CVS Pharmacy, CVSMITH, MCVS, whatever. And `if 'DR' in desc_upper` matches every doctor AND every Dr. Pepper.
+This is what simple keyword matching does. `if 'CVS' in desc_upper` matches ANYTHING containing those three letters in sequence: CVS Pharmacy, CVSMITH, MCVS, whatever. And `if 'DR' in desc_upper` matches every doctor AND every Dr. Pepper.
 
-Your medical total is inflated by $204.99. On a tax return, that's not an "oops" — it's a fraudulent deduction. The IRS doesn't care that your algorithm made the mistake. If you claim $424.11 in medical expenses when the real number is $219.12, you've filed an incorrect return. Multiply this by twelve months of bank statements and the error compounds. The categorizer doesn't just have a bug — it has a liability.
+Your medical total is inflated by $204.99. On a tax return, that's not an "oops"; it's a fraudulent deduction. The IRS doesn't care that your algorithm made the mistake. If you claim $424.11 in medical expenses when the real number is $219.12, you've filed an incorrect return. Multiply this by twelve months of bank statements and the error compounds. The categorizer doesn't just have a bug: it has a liability.
 
 ## The Fix
 
@@ -264,7 +264,7 @@ Two fixes make this work:
 | `\bCVS\b` (word boundaries) | Matches "CVS" as a complete word only | Matches "CVS PHARMACY", blocks "CVSMITH" |
 | `FALSE_POSITIVES` checked first | Guards run before category matching | "DR PEPPER" excluded before "DR" triggers medical |
 
-The `\b` is a word boundary — it marks where a word starts or ends. Without it, `CVS` matches any string containing those three letters in sequence. With it, `\bCVS\b` only matches when CVS stands alone. The same technique works for any merchant: `\b(AMZN|AMAZON)\b` catches Amazon without matching "AMAZONIA."
+The `\b` is a word boundary: it marks where a word starts or ends. Without it, `CVS` matches any string containing those three letters in sequence. With it, `\bCVS\b` only matches when CVS stands alone. The same technique works for any merchant: `\b(AMZN|AMAZON)\b` catches Amazon without matching "AMAZONIA."
 
 :::tip Extending Categories Without Writing Regex
 You don't need to understand regex to add new merchants. To add TARGET PHARMACY to medical, just tell Claude Code:
@@ -275,7 +275,7 @@ Make sure it matches "TARGET PHARMACY" but not "TARGET" by itself
 (I shop at Target for non-medical things too).
 ```
 
-The agent writes the regex. You describe what should and shouldn't match. That's the same pattern you've been using all chapter — describe the problem, let the agent handle the implementation.
+The agent writes the regex. You describe what should and shouldn't match. That's the same pattern you've been using all chapter: describe the problem, let the agent handle the implementation.
 :::
 
 Let's verify the fix:
@@ -300,9 +300,9 @@ Dr. Pepper and CVSMITH are gone. DR MARTINEZ MEDICAL still matches because it co
 **Checkpoint:** Run the categorizer on YOUR bank data from Lesson 3. How many transactions does it categorize? How many false positives do you spot?
 
 :::caution Regex Is a Stopgap, Not a Solution
-The FALSE_POSITIVES list works for known edge cases. But it's brittle — every new false positive requires a manual update. You'll never anticipate every "DR SOMETHING" that isn't a doctor.
+The FALSE_POSITIVES list works for known edge cases. But it's brittle: every new false positive requires a manual update. You'll never anticipate every "DR SOMETHING" that isn't a doctor.
 
-In a real workflow, regex handles the high-confidence matches. Everything else goes into a "NEEDS REVIEW" file for human judgment. The capstone does exactly this — the report's NEEDS REVIEW section is the honest answer to "what do you do when pattern matching isn't enough?" Regex buys you the easy 80%. The hard 20% requires a human.
+In a real workflow, regex handles the high-confidence matches. Everything else goes into a "NEEDS REVIEW" file for human judgment. The capstone does exactly this: the report's NEEDS REVIEW section is the honest answer to "what do you do when pattern matching isn't enough?" Regex buys you the easy 80%. The hard 20% requires a human.
 :::
 
 ## Prove It Transfers: Server Logs
@@ -322,7 +322,7 @@ timestamp,endpoint,status_code,response_time_ms
 2025-01-06T08:06:00,/api/payments,502,30001
 ```
 
-You need to categorize responses (Success, Client Error, Server Error) and flag problem endpoints. Replace "medical expenses" with "server errors" and you're running the same workflow. Start exactly where you'd start with bank data — test data with known answers:
+You need to categorize responses (Success, Client Error, Server Error) and flag problem endpoints. Replace "medical expenses" with "server errors" and you're running the same workflow. Start exactly where you'd start with bank data: test data with known answers:
 
 ```
 You: I have server log CSVs with timestamp, endpoint, status_code,
@@ -333,20 +333,20 @@ But first — create test data with 7 rows and verify the counts.
 Expected: Success=3, Client Error=2, Server Error=2.
 ```
 
-The agent builds `log-analyzer.py`, runs it on the test data, and the counts match. But scan the output more carefully. That `/health` endpoint returned 404 — is that actually a problem?
+The agent builds `log-analyzer.py`, runs it on the test data, and the counts match. But scan the output more carefully. That `/health` endpoint returned 404: is that actually a problem?
 
 ### The Dr. Pepper of Server Logs
 
-Health check endpoints return 404 during deployments. It's expected behavior, not an error. But your log analyzer counts it as a client error, inflating your error rate — just like Dr. Pepper inflated your medical deductions.
+Health check endpoints return 404 during deployments. It's expected behavior, not an error. But your log analyzer counts it as a client error, inflating your error rate, just like Dr. Pepper inflated your medical deductions.
 
 ```
 You: The /health 404 is expected during deployments, not a real error.
 Add a KNOWN_BENIGN list like the FALSE_POSITIVES in the tax categorizer.
 ```
 
-The agent adds a guard list. FALSE_POSITIVES became KNOWN_BENIGN. Word boundary regex became endpoint/status_code tuples. The concept — guard against known exceptions before categorizing — is identical. The domain changed; the pattern didn't.
+The agent adds a guard list. FALSE_POSITIVES became KNOWN_BENIGN. Word boundary regex became endpoint/status_code tuples. The concept (guard against known exceptions before categorizing) is identical. The domain changed; the pattern didn't.
 
-The workflow is the workflow. Build tools, verify first, guard false positives — only the domain knowledge changed. Dr. Pepper became `/health 404`. Medical categories became status codes. And that domain knowledge is yours, not the agent's.
+The workflow is the workflow. Build tools, verify first, guard false positives, only the domain knowledge changed. Dr. Pepper became `/health 404`. Medical categories became status codes. And that domain knowledge is yours, not the agent's.
 
 Your categorizer works on one file. But tax season means 12 months of bank statements, not one. The capstone puts it all together.
 
@@ -371,7 +371,7 @@ Write a regex pattern that matches all these but does NOT match:
 Explain why word boundaries matter here.
 ```
 
-**What you're learning:** You supply the real-world examples (AMZN MKTP US, AMAZON.COM, AMAZON PRIME) AND the false positives to avoid (AMAZONIA, CAMZN). The agent has the regex knowledge. You have the data knowledge. The quality of the pattern is determined by how precisely you describe what should and shouldn't match — not by your ability to write regex.
+**What you're learning:** You supply the real-world examples (AMZN MKTP US, AMAZON.COM, AMAZON PRIME) AND the false positives to avoid (AMAZONIA, CAMZN). The agent has the regex knowledge. You have the data knowledge. The quality of the pattern is determined by how precisely you describe what should and shouldn't match, not by your ability to write regex.
 
 ### Prompt 2: Handle a New False Positive
 
@@ -383,7 +383,7 @@ How do I add this to the false positive guards? Show me the pattern
 that excludes travel-related Amazon mentions.
 ```
 
-**What you're learning:** The refinement loop in practice — you discovered "AMAZON RIVER CRUISE" is wrong, which means your verification caught it. You bring the failure; the agent brings the fix. This is the same loop from Lesson 2 applied to categorization: evidence criteria (what's miscategorized) come from you, implementation (the guard pattern) comes from the agent.
+**What you're learning:** The refinement loop in practice: you discovered "AMAZON RIVER CRUISE" is wrong, which means your verification caught it. You bring the failure; the agent brings the fix. This is the same loop from Lesson 2 applied to categorization: evidence criteria (what's miscategorized) come from you, implementation (the guard pattern) comes from the agent.
 
 ### Prompt 3: Extend Categories
 

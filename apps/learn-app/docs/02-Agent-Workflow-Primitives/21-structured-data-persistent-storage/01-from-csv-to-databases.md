@@ -39,23 +39,23 @@ teaching_guide:
   session_group: 1
   session_title: "From Scripts to Databases"
   key_points:
-    - "The escalation trigger is 'every new question requires a new loop' — this is the central diagnostic students must internalize"
+    - "The escalation trigger is 'every new question requires a new loop': this is the central diagnostic students must internalize"
     - "Schema clarity means the database enforces rules (types, relationships) that scripts leave to hope and convention"
-    - "Foreign keys are not just pointers — they are enforceable promises that prevent orphaned data"
+    - "Foreign keys are not just pointers: they are enforceable promises that prevent orphaned data"
     - "The Braintrust/Vercel benchmark (100% vs 53% accuracy) provides concrete evidence, not opinion"
   misconceptions:
-    - "Students think the problem is performance — it is actually correctness and maintainability that break first"
-    - "Students assume CSV workflows fail dramatically — they actually fail silently, one edge case at a time"
-    - "Students believe they need a database for everything — the escalation matrix shows when CSV is still the right call"
-    - "Students confuse 'independent verification' with 're-running the same query' — a separate computation path is required"
+    - "Students think the problem is performance: it is actually correctness and maintainability that break first"
+    - "Students assume CSV workflows fail dramatically: they actually fail silently, one edge case at a time"
+    - "Students believe they need a database for everything: the escalation matrix shows when CSV is still the right call"
+    - "Students confuse 'independent verification' with 're-running the same query': a separate computation path is required"
   discussion_prompts:
-    - "Think about your Computation & Data Extraction tax-prep script — how many filtering loops would you need for 4 users across 3 years with monthly breakdowns?"
+    - "Think about your Computation & Data Extraction tax-prep script: how many filtering loops would you need for 4 users across 3 years with monthly breakdowns?"
     - "What is the real cost of 'it worked in the demo but fails in production'? Can you think of a real example?"
     - "When would you deliberately choose to stay with CSV even after reading this lesson?"
   teaching_tips:
-    - "Start with the tax-prep scenario — students have built this in the Computation & Data Extraction chapter so the pain point is real and personal"
-    - "The 'Two Worlds Side by Side' ASCII diagram is whiteboard-worthy — draw it and let students label the differences"
-    - "Spend time on the escalation matrix — students need judgment about WHEN to escalate, not just HOW"
+    - "Start with the tax-prep scenario: students have built this in the Computation & Data Extraction chapter so the pain point is real and personal"
+    - "The 'Two Worlds Side by Side' ASCII diagram is whiteboard-worthy: draw it and let students label the differences"
+    - "Spend time on the escalation matrix: students need judgment about WHEN to escalate, not just HOW"
     - "The failure signal checklist makes a good 'raise your hand if you have seen this' moment"
   assessment_quick_check:
     - "Name three signals that your script-based workflow should escalate to a database"
@@ -82,7 +82,7 @@ Your stomach drops. Not because the requirements are unreasonable, but because y
 
 ## The Exact Moment It Breaks
 
-Your Computation & Data Extraction script handles one question just fine — for example, computing all Medical deductions and returning `Medical deductions: $2,847.50`. Clean. Correct. Now stack on the real requirements:
+Your Computation & Data Extraction script handles one question just fine, for example, computing all Medical deductions and returning `Medical deductions: $2,847.50`. Clean. Correct. Now stack on the real requirements:
 
 - "Show Food spending for Alice in March 2024."
 - "Compare Q1 vs Q2 by category."

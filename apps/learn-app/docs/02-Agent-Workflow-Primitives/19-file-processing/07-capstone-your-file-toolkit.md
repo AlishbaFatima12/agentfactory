@@ -71,7 +71,7 @@ cognitive_load:
   concepts_list:
     - "Workflow selection under pressure (choosing the right workflow for a scenario)"
     - "Workflow-to-automation bridge (what changes when humans leave the loop)"
-  assessment: "2 genuinely new concepts plus synthesis of 6 existing workflows at B1 level. The synthesis demand is high — students must combine, not just recall. Total cognitive load is significant despite low new-concept count."
+  assessment: "2 genuinely new concepts plus synthesis of 6 existing workflows at B1 level. The synthesis demand is high: students must combine, not just recall. Total cognitive load is significant despite low new-concept count."
 
 differentiation:
   extension_for_advanced: "Create additional prompt templates for domains beyond files: calendar management, email organization, project tracking"
@@ -82,34 +82,34 @@ teaching_guide:
   session_group: 3
   session_title: "Search, Synthesis, and Capstone"
   key_points:
-    - "The shift from 'knowing six workflows' to 'knowing which one to grab under pressure' is the capstone's core test — workflow selection IS the skill"
+    - "The shift from 'knowing six workflows' to 'knowing which one to grab under pressure' is the capstone's core test: workflow selection IS the skill"
     - "The Seven Principles mapping table makes explicit what students practiced implicitly: every principle emerged through action, not lecture"
-    - "MY-PROMPT-TOOLKIT.md is the chapter's most durable deliverable — organized folders go stale, but prompt templates are permanently reusable"
+    - "MY-PROMPT-TOOLKIT.md is the chapter's most durable deliverable: organized folders go stale, but prompt templates are permanently reusable"
     - "The manual-to-automation bridge (Python code preview) shows students that the gap between manual prompts and automated AI Employees is just 'the same skill with a scheduler attached'"
   misconceptions:
-    - "Students think the capstone introduces new material — it does not. The challenge is synthesis and judgment, which feels harder than learning individual workflows"
-    - "Students may default to the survey-first sequence for every scenario — the urgent search scenario shows that context determines sequence, not a fixed order"
-    - "Students might undervalue MY-PROMPT-TOOLKIT.md compared to the organized folders — the toolkit is the only deliverable that transfers to new folders and new domains"
+    - "Students think the capstone introduces new material: it does not. The challenge is synthesis and judgment, which feels harder than learning individual workflows"
+    - "Students may default to the survey-first sequence for every scenario: the urgent search scenario shows that context determines sequence, not a fixed order"
+    - "Students might undervalue MY-PROMPT-TOOLKIT.md compared to the organized folders: the toolkit is the only deliverable that transfers to new folders and new domains"
   discussion_prompts:
     - "In Scenario 1 (urgent search), you skip the survey and go straight to search. When is it acceptable to break the standard sequence, and how do you decide?"
     - "Look at the manual-to-automated table. What changes when you remove the human from the loop? What stays exactly the same?"
     - "Which of the six workflows do you think you will use most often in your daily work? Why?"
   teaching_tips:
-    - "Run the four triage scenarios as a class activity — have students debate which workflow to use BEFORE revealing the insights. Disagreements are productive learning moments"
-    - "The 15-minute real-world test works best when students use their OWN messy folders — the stakes feel real because the files matter to them"
-    - "The Seven Principles table is the perfect review tool — walk through it row by row and ask students to recall the specific moment they experienced each principle"
-    - "End the chapter by having students read their MY-PROMPT-TOOLKIT.md aloud — hearing their own templates reinforces retention and reveals gaps"
+    - "Run the four triage scenarios as a class activity: have students debate which workflow to use BEFORE revealing the insights. Disagreements are productive learning moments"
+    - "The 15-minute real-world test works best when students use their OWN messy folders: the stakes feel real because the files matter to them"
+    - "The Seven Principles table is the perfect review tool: walk through it row by row and ask students to recall the specific moment they experienced each principle"
+    - "End the chapter by having students read their MY-PROMPT-TOOLKIT.md aloud: hearing their own templates reinforces retention and reveals gaps"
   assessment_quick_check:
     - "Present a new scenario (e.g., 'Your project folder has 200 files and a deadline in 2 hours'). Ask students which workflows they would use and in what order"
-    - "Ask students to name all Seven Principles and point to the lesson where each one appeared — tests synthesis across the whole chapter"
-    - "Ask: 'What is the difference between the organized folders and the prompt toolkit? Which one would you take to a new computer?' — tests understanding of durable vs ephemeral deliverables"
+    - "Ask students to name all Seven Principles and point to the lesson where each one appeared: tests synthesis across the whole chapter"
+    - "Ask: 'What is the difference between the organized folders and the prompt toolkit? Which one would you take to a new computer?': tests understanding of durable vs ephemeral deliverables"
 ---
 
 # Capstone: Your File Processing Toolkit
 
 Your accountant just called. They need a 1099-DIV from 2025. You have 300 files on your Desktop. Clock's ticking. Which workflow do you reach for?
 
-That's the real test. Not whether you know six workflows — but whether you know which one to grab when your files are on fire and someone is waiting. Different scenarios require different workflow orders. There's no single correct sequence.
+That's the real test. Not whether you know six workflows, but whether you know which one to grab when your files are on fire and someone is waiting. Different scenarios require different workflow orders. There's no single correct sequence.
 
 Before we build your permanent prompt toolkit, let's test your judgment.
 
@@ -128,9 +128,9 @@ You: I need to find a 1099-DIV document from 2025. It's somewhere on
 my Desktop. I need it RIGHT NOW.
 ```
 
-**Before you run this** — think: Do you survey first (Lesson 1), or go straight to search (Lesson 6)?
+**Before you run this**: think: Do you survey first (Lesson 1), or go straight to search (Lesson 6)?
 
-**Insight:** Urgency overrides the normal sequence. Search first, organize later. When someone is waiting, you don't map the territory — you find the one thing you need. The survey-first pattern is for when you have time to be systematic.
+**Insight:** Urgency overrides the normal sequence. Search first, organize later. When someone is waiting, you don't map the territory: you find the one thing you need. The survey-first pattern is for when you have time to be systematic.
 
 ### Scenario 2: The Fresh Start
 
@@ -140,9 +140,9 @@ You want to reorganize your Desktop, but you've never looked at what's there. No
 You: I want to completely reorganize my Desktop. What should I do first?
 ```
 
-**Before you run this** — think: What's your workflow and in what order?
+**Before you run this**: think: What's your workflow and in what order?
 
-**Insight:** Survey → Backup → Organize. The order matters. If you skip the survey, your categories won't match your actual files. If you skip the backup, one wrong move and you're panicking. The safety-first pattern from Lesson 2 isn't optional — it's what makes everything else safe to attempt.
+**Insight:** Survey → Backup → Organize. The order matters. If you skip the survey, your categories won't match your actual files. If you skip the backup, one wrong move and you're panicking. The safety-first pattern from Lesson 2 isn't optional; it's what makes everything else safe to attempt.
 
 ### Scenario 3: The Botched Script
 
@@ -153,9 +153,9 @@ You: I ran a rename script and it went wrong. Some files have garbled
 names and I think some are missing. What do I do?
 ```
 
-**Before you run this** — think: What do you do FIRST — try to fix the names, or something else?
+**Before you run this**: think: What do you do FIRST: try to fix the names, or something else?
 
-**Insight:** Compare against backup first. Don't start fixing individual files until you know the full extent of the damage. The recovery workflow from Lesson 5 starts with diagnosis (compare current state vs backup), not treatment. Files that "seem missing" might just be renamed — the backup comparison will tell you.
+**Insight:** Compare against backup first. Don't start fixing individual files until you know the full extent of the damage. The recovery workflow from Lesson 5 starts with diagnosis (compare current state vs backup), not treatment. Files that "seem missing" might just be renamed: the backup comparison will tell you.
 
 ### Scenario 4: The Recurring Problem
 
@@ -166,7 +166,7 @@ You: I have 150 screenshots cluttering my Desktop. I want them organized
 by month. But I'll get more screenshots next week. What's my best approach?
 ```
 
-**Before you run this** — think: One-time organization or script generation?
+**Before you run this**: think: One-time organization or script generation?
 
 **Insight:** Recurring problems need scripts, not one-time commands. The batch operations pattern from Lesson 4 taught you to ask for reusable scripts. If you just organize these 150 files manually, you'll be back here next month. Ask for a script that handles the current backlog AND future screenshots.
 
@@ -174,7 +174,7 @@ by month. But I'll get more screenshots next week. What's my best approach?
 
 ## The Real Test: Your Desktop in 15 Minutes
 
-Close the book. Open Claude Code. Point it at a folder you haven't touched yet — your Desktop, your Documents, an old project folder. Set a timer for 15 minutes.
+Close the book. Open Claude Code. Point it at a folder you haven't touched yet: your Desktop, your Documents, an old project folder. Set a timer for 15 minutes.
 
 Your goal: **survey it, back it up, organize it, and verify the results.** Use the workflows you've learned, in whatever order the situation demands.
 
@@ -185,7 +185,7 @@ working with, then create a backup of anything important, then
 organize what's left. Go.
 ```
 
-**What makes this different from the exercises:** Nobody is telling you which workflow to use or in what order. You have to assess the situation and choose. That's the skill — not knowing six workflows, but knowing which one to reach for.
+**What makes this different from the exercises:** Nobody is telling you which workflow to use or in what order. You have to assess the situation and choose. That's the skill, not knowing six workflows, but knowing which one to reach for.
 
 After 15 minutes, check your work:
 
@@ -209,7 +209,7 @@ recover, search, and verify. For each template, include the key
 phrases that trigger the right agent behavior.
 ```
 
-This toolkit is the chapter's most important deliverable. The organized folders will get messy again. The scripts will need updates. But the _templates_ — the patterns for how you direct an agent — those are permanently useful.
+This toolkit is the chapter's most important deliverable. The organized folders will get messy again. The scripts will need updates. But the _templates_ (the patterns for how you direct an agent) those are permanently useful.
 
 ---
 
@@ -230,7 +230,7 @@ You've been learning the Seven Principles without memorizing them. Let's make ex
 | 6. Search & Discovery | Described problem, agent chose tools | **P1 + P2: Bash + Code**            |
 | 6. Search & Discovery | Created persistent index of results  | **P5: Persisting State in Files**   |
 
-All seven principles showed up naturally. You didn't study them from a textbook. You experienced them through action. And you saw them reinforce each other — safety enabled experimentation, verification caught errors, persistence made rules reusable.
+All seven principles showed up naturally. You didn't study them from a textbook. You experienced them through action. And you saw them reinforce each other: safety enabled experimentation, verification caught errors, persistence made rules reusable.
 
 ---
 
@@ -265,8 +265,8 @@ Throughout this chapter, you observed the agent using these commands. You don't 
 
 | Symbol      | Plain English                               | Example                                                          |
 | ----------- | ------------------------------------------- | ---------------------------------------------------------------- |
-| `\|` (pipe) | "**then**" — chain commands together        | `find ... \| wc -l` = "find files, then count them"              |
-| `xargs`     | "**for each**" — converts text to arguments | `find ... \| xargs grep` = "find files, then search inside each" |
+| `\|` (pipe) | "**then**": chain commands together        | `find ... \| wc -l` = "find files, then count them"              |
+| `xargs`     | "**for each**": converts text to arguments | `find ... \| xargs grep` = "find files, then search inside each" |
 
 ### Flags Worth Knowing
 
@@ -278,7 +278,7 @@ Throughout this chapter, you observed the agent using these commands. You don't 
 | `-h` | Human-readable sizes (KB, MB, GB)           | `du -h`                                |
 | `-p` | Create parent directories                   | `mkdir -p a/b/c`                       |
 
-You don't need to memorize syntax. You need to recognize patterns. When you see the agent use these commands, you'll know what it's doing — and you can verify it's doing the right thing.
+You don't need to memorize syntax. You need to recognize patterns. When you see the agent use these commands, you'll know what it's doing, and you can verify it's doing the right thing.
 
 ---
 
@@ -351,7 +351,7 @@ schedule.every(1).hour.do(organize_new_files, Path("~/Downloads"))
 
 Every function in that script maps to a lesson you completed. `create_timestamped_backup` is Lesson 2. `apply_rules` is Lesson 3. `verify_all_files_accounted_for` is Lesson 5. The workflows are identical. Automation just removes _you_ as the trigger.
 
-The gap between "I type a prompt" and "it runs automatically" is smaller than you think. It's not a different skill — it's the same skill with a scheduler attached.
+The gap between "I type a prompt" and "it runs automatically" is smaller than you think. It's not a different skill; it's the same skill with a scheduler attached.
 
 ---
 
@@ -369,7 +369,7 @@ By completing the checkpoints throughout this chapter, you should now have:
 | Recovery exercise      | Completed               | ✅ Lesson 5 checkpoint |
 | `MY-PROMPT-TOOLKIT.md` | Your prompt templates   | ✅ This lesson         |
 
-If you're missing any items, go back to the relevant lesson and complete the checkpoint. The toolkit is the most important deliverable — it's what you'll use long after this chapter is done.
+If you're missing any items, go back to the relevant lesson and complete the checkpoint. The toolkit is the most important deliverable; it's what you'll use long after this chapter is done.
 
 ---
 
@@ -433,9 +433,9 @@ In Lesson 1, you asked the agent to analyze your Downloads folder. You watched i
 
 Now? You wouldn't just _watch_. You'd check whether it backed up first. You'd question its categorization rules. You'd ask for a preview before batch operations. You'd verify the results against a known state. You'd ask for a script, not a one-time fix.
 
-That shift — from passive observer to active director — is the real deliverable. Not the organized folder. Not the scripts. Not the toolkit document. The skill of _knowing what to demand from an agent_ before trusting its output.
+That shift (from passive observer to active director) is the real deliverable. Not the organized folder. Not the scripts. Not the toolkit document. The skill of _knowing what to demand from an agent_ before trusting its output.
 
-The agent is ephemeral. Your conversation ends, context resets, the next session starts fresh. But the patterns you've internalized — survey before acting, backup before changing, verify before trusting, script before repeating — those persist in _you_. They transfer to email management, project organization, data pipelines, and every domain where you direct AI agents.
+The agent is ephemeral. Your conversation ends, context resets, the next session starts fresh. But the patterns you've internalized: survey before acting, backup before changing, verify before trusting, script before repeating: those persist in _you_. They transfer to email management, project organization, data pipelines, and every domain where you direct AI agents.
 
 Your Downloads folder is organized. Your toolkit is built. You're ready for automation.
 
@@ -449,4 +449,4 @@ Your Downloads folder is organized. Your toolkit is built. You're ready for auto
 
 You've completed the entire chapter. Commit everything and start a completely fresh session before moving to the next chapter.
 
-**Why this matters:** Seven lessons of file processing generated a lot of context — surveys, organization rules, batch scripts, recovery exercises, search patterns, and this capstone. Carrying all of that into the next chapter would be the Kitchen Sink pattern from the Seven Principles chapter. Your deliverables (`MY-PROMPT-TOOLKIT.md`, `rules.md`, scripts) are all saved in files. The next chapter starts clean.
+**Why this matters:** Seven lessons of file processing generated a lot of context: surveys, organization rules, batch scripts, recovery exercises, search patterns, and this capstone. Carrying all of that into the next chapter would be the Kitchen Sink pattern from the Seven Principles chapter. Your deliverables (`MY-PROMPT-TOOLKIT.md`, `rules.md`, scripts) are all saved in files. The next chapter starts clean.

@@ -76,27 +76,27 @@ teaching_guide:
   session_group: 3
   session_title: "Search, Synthesis, and Capstone"
   key_points:
-    - "The inversion from 'search by location' to 'search by description' is the core mindset shift — students know WHAT they want, agents know HOW to find it"
+    - "The inversion from 'search by location' to 'search by description' is the core mindset shift: students know WHAT they want, agents know HOW to find it"
     - "Three search layers build progressively: filename metadata → content inside files (pdftotext + grep) → pattern-based discovery of similar files"
     - "Conversational refinement ('from Chase, not Fidelity') is a transferable skill that applies to databases, research tasks, and any AI-directed search"
-    - "The chapter progression table (Lessons 1-6) shows how each lesson added a new capability — use this to show students how far they have come"
+    - "The chapter progression table (Lessons 1-6) shows how each lesson added a new capability: use this to show students how far they have come"
   misconceptions:
-    - "Students think searching means knowing the exact filename — the entire lesson demonstrates that describing characteristics (type, date, content, source) is more powerful"
-    - "Students may not realize content search (pdftotext) is fundamentally different from filename search — looking inside files accesses information invisible to folder browsing"
-    - "Students assume broad searches are always better — the session protection tip shows why saving results to a file prevents conversation flooding"
+    - "Students think searching means knowing the exact filename: the entire lesson demonstrates that describing characteristics (type, date, content, source) is more powerful"
+    - "Students may not realize content search (pdftotext) is fundamentally different from filename search: looking inside files accesses information invisible to folder browsing"
+    - "Students assume broad searches are always better: the session protection tip shows why saving results to a file prevents conversation flooding"
   discussion_prompts:
     - "When was the last time you spent 20 minutes looking for a file? How would you describe it to an agent instead of clicking through folders?"
     - "The agent searched INSIDE PDFs to find invoices with generic filenames like 'document.pdf'. What other situations have important information trapped inside files with unhelpful names?"
     - "Descriptive search works for files, databases, and research. What makes 'describe what you need' a universal skill across different domains?"
   teaching_tips:
-    - "Start with the lost tax document scenario — it is universally relatable and immediately motivates why location-based search fails"
-    - "The traditional vs agent-directed search comparison table is excellent for the board — have students add their own examples to each column"
-    - "Demo the content search (finding invoices inside generically-named PDFs) live — the moment students see information extracted from file contents, the capability becomes real"
-    - "Connect the 'find similar files' pattern to real research workflows — this is how professionals discover related documents they did not know existed"
+    - "Start with the lost tax document scenario: it is universally relatable and immediately motivates why location-based search fails"
+    - "The traditional vs agent-directed search comparison table is excellent for the board: have students add their own examples to each column"
+    - "Demo the content search (finding invoices inside generically-named PDFs) live: the moment students see information extracted from file contents, the capability becomes real"
+    - "Connect the 'find similar files' pattern to real research workflows: this is how professionals discover related documents they did not know existed"
   assessment_quick_check:
     - "Give students a scenario: 'You need a contract you signed last year but cannot remember the filename.' Ask them to write the search prompt they would give the agent"
-    - "Ask: 'What is the difference between searching by filename and searching by content? When do you need each?' — tests understanding of the three search layers"
-    - "Ask students to name the six patterns from this chapter in order — tests synthesis of the full chapter arc"
+    - "Ask: 'What is the difference between searching by filename and searching by content? When do you need each?': tests understanding of the three search layers"
+    - "Ask students to name the six patterns from this chapter in order: tests synthesis of the full chapter arc"
 ---
 
 # Search & Discovery Workflow
@@ -208,9 +208,9 @@ You went from "I can't find that tax document" to "here's everything from Chase"
 
 ## The Invisible Skill
 
-You're learning something you might not realize. "Descriptive search" — describing what you're looking for instead of knowing where it is — is a transferable skill that goes far beyond files. Every database query, every research task, every time you ask an AI to find information in a large corpus, you're doing the same thing: describing what you need and letting a system figure out how to find it.
+You're learning something you might not realize. "Descriptive search": describing what you're looking for instead of knowing where it is: is a transferable skill that goes far beyond files. Every database query, every research task, every time you ask an AI to find information in a large corpus, you're doing the same thing: describing what you need and letting a system figure out how to find it.
 
-The agent used `find`, `grep`, and `xargs` behind the scenes. You didn't need to know those commands. But notice the skill you _did_ use: you described the file in progressively more specific terms. "Tax document from 2023" → "about dividends" → "from Chase, not Fidelity." Each refinement narrowed the search. That's the skill — not bash syntax, but the ability to describe what you need in terms a search can use.
+The agent used `find`, `grep`, and `xargs` behind the scenes. You didn't need to know those commands. But notice the skill you _did_ use: you described the file in progressively more specific terms. "Tax document from 2023" → "about dividends" → "from Chase, not Fidelity." Each refinement narrowed the search. That's the skill, not bash syntax, but the ability to describe what you need in terms a search can use.
 
 | Traditional Search         | Agent-Directed Search                    |
 | -------------------------- | ---------------------------------------- |
@@ -268,7 +268,7 @@ and scan_20251215.pdf ($599.99).
 Want me to rename these with meaningful names based on their content?
 ```
 
-This is the jump from searching by _metadata_ (filename, date, size) to searching by _content_ (what's actually in the file). The agent used `pdftotext` to read inside the PDFs, then `grep` to find matches. You couldn't do this by browsing folders — the filenames told you nothing.
+This is the jump from searching by _metadata_ (filename, date, size) to searching by _content_ (what's actually in the file). The agent used `pdftotext` to read inside the PDFs, then `grep` to find matches. You couldn't do this by browsing folders: the filenames told you nothing.
 
 **The progression through this chapter:**
 
@@ -367,7 +367,7 @@ By now in this chapter, you've learned:
 
 Each pattern expands your capability. You understand your files. You protect them with backups. You document your rules. You automate repetitive tasks. You recover from mistakes. Now you find anything by describing it.
 
-You now have six distinct workflows. Survey, backup, organize, batch, recover, search. Each powerful on its own. But the real skill isn't knowing each workflow — it's knowing which one to reach for when your files are on fire and your boss is on the phone.
+You now have six distinct workflows. Survey, backup, organize, batch, recover, search. Each powerful on its own. But the real skill isn't knowing each workflow; it's knowing which one to reach for when your files are on fire and your boss is on the phone.
 
 ---
 
@@ -385,7 +385,7 @@ I need to find a document that meets multiple criteria:
 Show me your search strategy before running it.
 ```
 
-**What you're practicing:** Complex search specification. You're asking the agent to combine multiple filters — file type, content, date, and even numeric values. Watch how it approaches an ambitious search request.
+**What you're practicing:** Complex search specification. You're asking the agent to combine multiple filters: file type, content, date, and even numeric values. Watch how it approaches an ambitious search request.
 
 **Prompt 2: Search Report Generation**
 

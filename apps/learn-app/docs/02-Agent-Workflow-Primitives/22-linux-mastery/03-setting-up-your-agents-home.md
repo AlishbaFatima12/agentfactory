@@ -72,19 +72,19 @@ teaching_guide:
   session_title: "Agent Organization"
   key_points:
     - "The kitchen analogy (knives in the bathroom, spices under the bed) makes the cost of bad organization visceral and immediate"
-    - "The /opt/agents/ convention is a real Linux pattern — students are learning professional deployment norms, not toy setups"
+    - "The /opt/agents/ convention is a real Linux pattern: students are learning professional deployment norms, not toy setups"
     - "Extracting secrets to .env is the single highest-impact security improvement a beginner can make"
-    - "Log persistence (tee + redirection) bridges into Lesson 4's systemd journaling — logs are the thread that connects operations lessons"
+    - "Log persistence (tee + redirection) bridges into Lesson 4's systemd journaling: logs are the thread that connects operations lessons"
   misconceptions:
-    - "Students think organization is optional cosmetics — the 'house of cards' framing shows that disorganization causes real failures"
-    - "Students confuse .env files with environment variables — .env is the file, environment variables are what the OS loads from it"
-    - "Students think redirect (>) and tee are the same — redirect replaces terminal output, tee duplicates it to both screen and file"
+    - "Students think organization is optional cosmetics: the 'house of cards' framing shows that disorganization causes real failures"
+    - "Students confuse .env files with environment variables: .env is the file, environment variables are what the OS loads from it"
+    - "Students think redirect (>) and tee are the same: redirect replaces terminal output, tee duplicates it to both screen and file"
   discussion_prompts:
     - "If a colleague needed to take over Ali's agent tomorrow, could they find everything? What would they look for first?"
     - "Why is a hardcoded password in source code worse than a weak password in a .env file?"
   teaching_tips:
-    - "Have students draw the directory tree on paper before creating it — the spatial act reinforces the mental model"
-    - "The before/after table at the end is the lesson's summary — project it and let students compare the two states"
+    - "Have students draw the directory tree on paper before creating it: the spatial act reinforces the mental model"
+    - "The before/after table at the end is the lesson's summary: project it and let students compare the two states"
     - "If students have a real project, have them design its directory structure as the exercise instead of following Ali's"
   assessment_quick_check:
     - "Why does the agent live in /opt/agents/ instead of /home/ali/?"

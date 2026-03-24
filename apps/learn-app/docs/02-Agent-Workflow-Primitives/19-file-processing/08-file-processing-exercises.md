@@ -51,7 +51,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (workflow application, systematic debugging, pipeline design) — within A2 limit. Exercises reinforce existing L00-L07 knowledge."
+  assessment: "3 concepts (workflow application, systematic debugging, pipeline design): within A2 limit. Exercises reinforce existing L00-L07 knowledge."
 
 differentiation:
   extension_for_advanced: "Complete all 3 capstone projects; attempt exercises with minimal prompts; write reusable scripts"
@@ -65,33 +65,33 @@ teaching_guide:
     - "Build + Debug pairing develops two distinct skills: applying workflows correctly (Build) vs diagnosing what went wrong in someone else's work (Debug)"
     - "The seven-step File Processing Framework (Survey, Backup, Plan, Test, Execute, Verify, Document) is the transferable takeaway that applies to any domain, not just files"
     - "Scaffolding is deliberately removed across modules: Modules 1-2 have starter prompts, Modules 3-5 remove them, Capstones remove all guidance"
-    - "Capstone C (Your Own Files) has real consequences — it is the only exercise where the files actually matter, making the safety-first pattern genuinely necessary"
+    - "Capstone C (Your Own Files) has real consequences: it is the only exercise where the files actually matter, making the safety-first pattern genuinely necessary"
   misconceptions:
-    - "Students think Debug exercises are easier than Build — diagnosing someone else's errors requires deeper understanding than executing a workflow yourself"
-    - "Students may skip the 3-file test in batch exercises because it 'worked in the chapter lessons' — the starter files deliberately include edge cases that only surface during testing"
-    - "Students underestimate Capstone C compared to A and B — working with real files adds psychological pressure that changes decision-making"
+    - "Students think Debug exercises are easier than Build: diagnosing someone else's errors requires deeper understanding than executing a workflow yourself"
+    - "Students may skip the 3-file test in batch exercises because it 'worked in the chapter lessons': the starter files deliberately include edge cases that only surface during testing"
+    - "Students underestimate Capstone C compared to A and B: working with real files adds psychological pressure that changes decision-making"
   discussion_prompts:
     - "In Module 1, how did the Debug exercise (finding errors in someone else's inventory) teach you something different from the Build exercise (creating your own)?"
     - "The assessment rubric goes from Beginner to Advanced. Where do you honestly place yourself after completing the exercises? What would move you up one level?"
     - "The exercises use downloaded starter files, but Capstone C uses your real files. How did the stakes change your approach?"
   teaching_tips:
-    - "Assign Module 1 as homework before the exercises workshop — students arrive ready to work on Modules 2-5 with investigation skills already practiced"
+    - "Assign Module 1 as homework before the exercises workshop: students arrive ready to work on Modules 2-5 with investigation skills already practiced"
     - "For classroom settings, pair students on Debug exercises: one student creates a broken state, the other diagnoses it. This is more engaging than using the provided starter files"
-    - "The assessment rubric works well as a self-evaluation tool — have students rate themselves before and after completing the exercises to see growth"
-    - "Do not skip Capstone C for students who complete A or B — the real-file experience is irreplaceable and tests whether the framework holds under genuine stakes"
+    - "The assessment rubric works well as a self-evaluation tool: have students rate themselves before and after completing the exercises to see growth"
+    - "Do not skip Capstone C for students who complete A or B: the real-file experience is irreplaceable and tests whether the framework holds under genuine stakes"
   assessment_quick_check:
-    - "Ask students to recite the seven-step File Processing Framework from memory — it is the chapter's core deliverable"
+    - "Ask students to recite the seven-step File Processing Framework from memory: it is the chapter's core deliverable"
     - "Present a new scenario (e.g., 'messy shared Google Drive') and ask students which modules' skills they would apply and in what order"
     - "Ask: 'What is the difference between a Build exercise and a Debug exercise? Which one was harder for you, and why?'"
 ---
 
 # Practice: File Processing Exercises
 
-You've learned six powerful file processing workflows. You can survey folders, create safety backups, design organization rules, run batch operations, recover from mistakes, and search by description. That's real capability — but knowing the workflows and executing them under pressure are different things. The gap between understanding a workflow and applying it to 80 messy files with wrong extensions, duplicate names, and missing metadata is where most people stall.
+You've learned six powerful file processing workflows. You can survey folders, create safety backups, design organization rules, run batch operations, recover from mistakes, and search by description. That's real capability, but knowing the workflows and executing them under pressure are different things. The gap between understanding a workflow and applying it to 80 messy files with wrong extensions, duplicate names, and missing metadata is where most people stall.
 
 These 13 exercises close the gap between understanding and fluency. Each module gives you two exercises: a **Build** exercise where you apply a workflow to real files, and a **Debug** exercise where you diagnose what went wrong when someone else did it poorly. Three skills run through every exercise: **file workflow execution** (applying survey, backup, organization, batch, recovery, and search workflows), **systematic debugging** (diagnosing errors by comparing expected vs. actual file state), and **pipeline design** (combining workflows into end-to-end systems).
 
-Every exercise uses real starter files — actual folders with 20-100 files you'll survey, backup, organize, rename, recover, and search. This isn't hypothetical. By the end, you'll have practiced every workflow on messy, realistic data.
+Every exercise uses real starter files, actual folders with 20-100 files you'll survey, backup, organize, rename, recover, and search. This isn't hypothetical. By the end, you'll have practiced every workflow on messy, realistic data.
 
 :::info Download Exercise Files
 **[Download File Processing Exercises (ZIP)](https://github.com/panaversity/claude-code-file-processing-exercises/releases/latest/download/file-processing-exercises.zip)**
@@ -108,11 +108,11 @@ If the download link doesn't work, visit the [repository releases page](https://
 The workflow for every exercise is the same:
 
 1. **Open the exercise folder** from the `claude-code-file-processing-exercises/` directory
-2. **Read the INSTRUCTIONS.md** inside the folder — it describes the scenario and starter files
+2. **Read the INSTRUCTIONS.md** inside the folder: it describes the scenario and starter files
 3. **Read the walkthrough below** for context on what you're practicing and why
 4. **Start Claude Code** and point it at the exercise folder
-5. **Work through the exercise** — write your own prompts (use starters only if stuck)
-6. **Reflect** using the questions provided — this is where the real learning happens
+5. **Work through the exercise**: write your own prompts (use starters only if stuck)
+6. **Reflect** using the questions provided: this is where the real learning happens
 
 You don't need to complete all 13 in one sitting. Work through one module at a time. Each module builds on the workflows from specific chapter lessons.
 
@@ -120,8 +120,8 @@ You don't need to complete all 13 in one sitting. Work through one module at a t
 
 ## Tool Guide
 
-- **Claude Code** — Required for all exercises. File processing is terminal work: surveying directories, copying files, renaming batches, verifying results. Claude Code runs these operations directly.
-- **Cowork** — Can be used for Exercise 3.2 (analyzing organization rules) and capstone planning where you're designing systems on paper before executing. But Claude Code is strongly preferred since every exercise involves manipulating real files.
+- **Claude Code**: Required for all exercises. File processing is terminal work: surveying directories, copying files, renaming batches, verifying results. Claude Code runs these operations directly.
+- **Cowork**: Can be used for Exercise 3.2 (analyzing organization rules) and capstone planning where you're designing systems on paper before executing. But Claude Code is strongly preferred since every exercise involves manipulating real files.
 
 ---
 
@@ -130,8 +130,8 @@ You don't need to complete all 13 in one sitting. Work through one module at a t
 In Lessons 1-7, you learned each workflow in isolation with guided walkthroughs. These exercises are different in three ways:
 
 - **No step-by-step instructions.** The exercises describe the scenario and the goal. You decide the approach, choose the commands, and handle edge cases yourself.
-- **Build + Debug pairing.** Every module has a Build exercise (apply the workflow) and a Debug exercise (diagnose someone else's mistakes). Debugging someone else's work develops different skills than doing the work yourself — you learn to read logs, compare expected vs. actual state, and trace root causes.
-- **Increasing independence.** Modules 1-2 provide starter prompts to scaffold your learning. Modules 3-5 remove the scaffolding. Capstones remove everything — you design the entire approach.
+- **Build + Debug pairing.** Every module has a Build exercise (apply the workflow) and a Debug exercise (diagnose someone else's mistakes). Debugging someone else's work develops different skills than doing the work yourself: you learn to read logs, compare expected vs. actual state, and trace root causes.
+- **Increasing independence.** Modules 1-2 provide starter prompts to scaffold your learning. Modules 3-5 remove the scaffolding. Capstones remove everything: you design the entire approach.
 
 By Module 5, you should be able to face a new file processing problem and instinctively reach for the right workflow without needing to review the chapter lessons.
 
@@ -141,15 +141,15 @@ By Module 5, you should be able to face a new file processing problem and instin
 
 Use this for every exercise:
 
-1. **Survey** — What files exist? How many? How big? What types?
-2. **Backup** — Create a safety net before any changes
-3. **Plan** — Design rules and approach before executing
-4. **Test** — Try on ONE file first
-5. **Execute** — Run the batch operation
-6. **Verify** — Compare results against expectations
-7. **Document** — Save rules, logs, and templates for reuse
+1. **Survey**: What files exist? How many? How big? What types?
+2. **Backup**: Create a safety net before any changes
+3. **Plan**: Design rules and approach before executing
+4. **Test**: Try on ONE file first
+5. **Execute**: Run the batch operation
+6. **Verify**: Compare results against expectations
+7. **Document**: Save rules, logs, and templates for reuse
 
-This framework applies to every file management task, not just these exercises. Whether you're reorganizing a photo library, cleaning up a code repository, or migrating data between systems, these seven steps prevent the mistakes that turn a 10-minute task into a 2-hour recovery operation. Notice that steps 1-3 happen before any files change. That's intentional — most file disasters come from skipping preparation.
+This framework applies to every file management task, not just these exercises. Whether you're reorganizing a photo library, cleaning up a code repository, or migrating data between systems, these seven steps prevent the mistakes that turn a 10-minute task into a 2-hour recovery operation. Notice that steps 1-3 happen before any files change. That's intentional: most file disasters come from skipping preparation.
 
 ---
 
@@ -173,10 +173,10 @@ For each exercise, evaluate yourself on:
 
 <ExerciseCard id="1.1" title="The Project Handoff" />
 
-### Exercise 1.1 — The Project Handoff (Build)
+### Exercise 1.1: The Project Handoff (Build)
 
 **The Problem:**
-Open the `module-1-file-investigation/exercise-1.1-project-handoff/` folder. You'll find `messy-project/` — a folder with 40+ files across nested directories, no documentation, and a mix of source code, data files, images, and config files. A colleague just left the company and handed you this project folder with the message "figure out what's in here." No README, no explanation, no file manifest. You need to understand the project well enough to brief your team by end of day.
+Open the `module-1-file-investigation/exercise-1.1-project-handoff/` folder. You'll find `messy-project/`: a folder with 40+ files across nested directories, no documentation, and a mix of source code, data files, images, and config files. A colleague just left the company and handed you this project folder with the message "figure out what's in here." No README, no explanation, no file manifest. You need to understand the project well enough to brief your team by end of day.
 
 **Your Task:**
 Survey the entire folder structure and create a comprehensive `FILE-INVENTORY.md` that documents everything: total file count, file types with counts, directory tree, largest files, newest and oldest files, any hidden files or dotfiles, and a summary of what this project appears to be. Someone reading your inventory should understand the folder's contents without opening a single file.
@@ -205,10 +205,10 @@ After exploring with `ls -laR`, `find . -type f | wc -l`, and `du -sh */`, try: 
 
 <ExerciseCard id="1.2" title="The Lying Inventory" />
 
-### Exercise 1.2 — The Lying Inventory (Debug)
+### Exercise 1.2: The Lying Inventory (Debug)
 
 **The Problem:**
-Open the `module-1-file-investigation/exercise-1.2-lying-inventory/` folder. You'll find two things: `wrong-inventory.md` — a file inventory someone created — and `actual-files/` — the folder it supposedly documents. The inventory has errors. Wrong file counts, missing files, incorrect sizes, missed hidden files, and at least one file listed that doesn't actually exist.
+Open the `module-1-file-investigation/exercise-1.2-lying-inventory/` folder. You'll find two things: `wrong-inventory.md`: a file inventory someone created, and `actual-files/`: the folder it supposedly documents. The inventory has errors. Wrong file counts, missing files, incorrect sizes, missed hidden files, and at least one file listed that doesn't actually exist.
 
 **Your Task:**
 Systematically compare the inventory against the actual folder. Find every discrepancy. For each error, document: what the inventory claims, what's actually true, and what command proves it. Create a `CORRECTIONS.md` listing every error with evidence.
@@ -216,7 +216,7 @@ Systematically compare the inventory against the actual folder. Find every discr
 **What You'll Learn:**
 
 - How to verify someone else's work by comparing claims against ground truth
-- That inventories go stale the moment files change — verification is not optional
+- That inventories go stale the moment files change: verification is not optional
 - The specific commands (`diff`, `comm`, `find`, `stat`) that catch discrepancies between documentation and reality
 
 **Starter Prompt (Intentionally Vague):**
@@ -241,17 +241,17 @@ After running `find actual-files/ -type f | wc -l` and comparing to the inventor
 
 <ExerciseCard id="2.1" title="The Migration Prep" />
 
-### Exercise 2.1 — The Migration Prep (Build)
+### Exercise 2.1: The Migration Prep (Build)
 
 **The Problem:**
-Open the `module-2-safety-first/exercise-2.1-migration-prep/` folder. You'll find `migration-source/` — a folder containing project files that need to be migrated to a new structure. The folder has symlinks, files with special characters in names, a mix of permissions, some large binary files, and nested directories 4 levels deep. Before you migrate anything, you need a complete, verified backup.
+Open the `module-2-safety-first/exercise-2.1-migration-prep/` folder. You'll find `migration-source/`: a folder containing project files that need to be migrated to a new structure. The folder has symlinks, files with special characters in names, a mix of permissions, some large binary files, and nested directories 4 levels deep. Before you migrate anything, you need a complete, verified backup.
 
 **Your Task:**
 Create a comprehensive backup of `migration-source/` that handles all edge cases: symlinks (follow or preserve?), special characters, permissions, large files, and deep nesting. Verify the backup is complete by comparing file counts, total sizes, and spot-checking specific files. Document your backup strategy in `BACKUP-LOG.md`.
 
 **What You'll Learn:**
 
-- That `cp -r` alone misses symlinks, permissions, and special characters — real backups need `rsync` or careful `cp` flags
+- That `cp -r` alone misses symlinks, permissions, and special characters, real backups need `rsync` or careful `cp` flags
 - How to verify backup completeness beyond "the folder exists" (compare counts, sizes, checksums)
 - Why documenting your backup strategy matters: if the migration fails, you need to know exactly what you backed up and how
 
@@ -261,7 +261,7 @@ Create a comprehensive backup of `migration-source/` that handles all edge cases
 
 **Better Prompt (Build Toward This):**
 
-After running `find migration-source/ -type l` and `find migration-source/ -name '*[[:space:]]*'` to discover edge cases: "Create a backup of migration-source/ to backup-YYYY-MM-DD/. Handle: (1) symlinks — preserve them as symlinks, don't follow, (2) files with spaces and special characters, (3) preserve file permissions, (4) nested directories to any depth. After copying, verify: file count matches, total size matches, spot-check 3 specific files by comparing checksums. Document everything in BACKUP-LOG.md."
+After running `find migration-source/ -type l` and `find migration-source/ -name '*[[:space:]]*'` to discover edge cases: "Create a backup of migration-source/ to backup-YYYY-MM-DD/. Handle: (1) symlinks: preserve them as symlinks, don't follow, (2) files with spaces and special characters, (3) preserve file permissions, (4) nested directories to any depth. After copying, verify: file count matches, total size matches, spot-check 3 specific files by comparing checksums. Document everything in BACKUP-LOG.md."
 
 **Reflection Questions:**
 
@@ -273,10 +273,10 @@ After running `find migration-source/ -type l` and `find migration-source/ -name
 
 <ExerciseCard id="2.2" title="The Incomplete Backup" />
 
-### Exercise 2.2 — The Incomplete Backup (Debug)
+### Exercise 2.2: The Incomplete Backup (Debug)
 
 **The Problem:**
-Open the `module-2-safety-first/exercise-2.2-incomplete-backup/` folder. You'll find `original/` (the source folder with 30+ files) and `backup/` (a backup someone made). The backup is missing 6 files. Your job is to figure out why each file is missing — not just that it's missing, but what caused the omission.
+Open the `module-2-safety-first/exercise-2.2-incomplete-backup/` folder. You'll find `original/` (the source folder with 30+ files) and `backup/` (a backup someone made). The backup is missing 6 files. Your job is to figure out why each file is missing, not just that it's missing, but what caused the omission.
 
 **Your Task:**
 Compare `backup/` against `original/` and identify all 6 missing files. For each one, determine the likely cause: Was it a hidden file that `cp` skipped? A symlink that wasn't followed? A file created after the backup timestamp? A file in a subdirectory that wasn't recursively copied? Document each discrepancy with its probable cause in `DIAGNOSIS.md`.
@@ -285,7 +285,7 @@ Compare `backup/` against `original/` and identify all 6 missing files. For each
 
 - The six most common reasons backups are incomplete (hidden files, symlinks, permissions, timestamps, recursive depth, filename encoding)
 - How to use `diff <(find original/) <(find backup/)` to systematically find missing files
-- That diagnosing why a backup failed is more valuable than just noticing it failed — the cause tells you how to prevent it next time
+- That diagnosing why a backup failed is more valuable than just noticing it failed: the cause tells you how to prevent it next time
 
 **Starter Prompt (Intentionally Vague):**
 
@@ -309,13 +309,13 @@ After running `diff <(cd original && find . | sort) <(cd backup && find . | sort
 
 <ExerciseCard id="3.1" title="The Freelancer's Chaos" />
 
-### Exercise 3.1 — The Freelancer's Chaos (Build)
+### Exercise 3.1: The Freelancer's Chaos (Build)
 
 **The Problem:**
-Open the `module-3-organization-rules/exercise-3.1-freelancer-chaos/` folder. You'll find `freelancer-files/` — a flat folder with 60+ files from a freelancer's working directory. There are client deliverables mixed with personal files, invoices mixed with project assets, drafts mixed with finals, and file names that follow no consistent pattern. Some are `invoice_march.pdf`, others are `ACME_logo_v3_FINAL_FINAL.png`, others are `notes.txt`. The freelancer has 3 active clients and needs to be able to find any client's files within 30 seconds.
+Open the `module-3-organization-rules/exercise-3.1-freelancer-chaos/` folder. You'll find `freelancer-files/`: a flat folder with 60+ files from a freelancer's working directory. There are client deliverables mixed with personal files, invoices mixed with project assets, drafts mixed with finals, and file names that follow no consistent pattern. Some are `invoice_march.pdf`, others are `ACME_logo_v3_FINAL_FINAL.png`, others are `notes.txt`. The freelancer has 3 active clients and needs to be able to find any client's files within 30 seconds.
 
 **Your Task:**
-Design organization rules that sort these files into a logical folder structure. Don't just move files — first write a `rules.md` that defines your categories, naming conventions, and how to handle ambiguous files. Then apply the rules. Then verify the result: every file should be in exactly one category, no file should be lost, and someone unfamiliar with the project should understand where to find things.
+Design organization rules that sort these files into a logical folder structure. Don't just move files: first write a `rules.md` that defines your categories, naming conventions, and how to handle ambiguous files. Then apply the rules. Then verify the result: every file should be in exactly one category, no file should be lost, and someone unfamiliar with the project should understand where to find things.
 
 **What You'll Learn:**
 
@@ -333,10 +333,10 @@ Design organization rules that sort these files into a logical folder structure.
 
 <ExerciseCard id="3.2" title="The Collision Course" />
 
-### Exercise 3.2 — The Collision Course (Debug)
+### Exercise 3.2: The Collision Course (Debug)
 
 **The Problem:**
-Open the `module-3-organization-rules/exercise-3.2-collision-course/` folder. You'll find `broken-rules.md` — an organization system someone designed — and `unsorted-files/` — a batch of files waiting to be organized. The rules have problems: overlapping categories (a file could go in two places), gaps (some file types aren't covered), ambiguous criteria (what counts as "important"?), and contradictory instructions.
+Open the `module-3-organization-rules/exercise-3.2-collision-course/` folder. You'll find `broken-rules.md`: an organization system someone designed, and `unsorted-files/`: a batch of files waiting to be organized. The rules have problems: overlapping categories (a file could go in two places), gaps (some file types aren't covered), ambiguous criteria (what counts as "important"?), and contradictory instructions.
 
 **Your Task:**
 Analyze `broken-rules.md` and identify every flaw: overlaps, gaps, ambiguities, and contradictions. Fix each one with a clear rationale. Then apply your corrected rules to `unsorted-files/` and verify the result.
@@ -363,10 +363,10 @@ Analyze `broken-rules.md` and identify every flaw: overlaps, gaps, ambiguities, 
 
 <ExerciseCard id="4.1" title="Photo Library Cleanup" />
 
-### Exercise 4.1 — Photo Library Cleanup (Build)
+### Exercise 4.1: Photo Library Cleanup (Build)
 
 **The Problem:**
-Open the `module-4-batch-operations/exercise-4.1-photo-library/` folder. You'll find `photo-dump/` — 50+ image files with inconsistent naming from three different sources: a phone camera (`IMG_20240315_142355.jpg`), a DSLR (`DSC_0042.NEF`), screenshots (`Screenshot 2024-03-15 at 2.23.55 PM.png`), and downloads (`photo.png`, `vacation (copy 2).JPEG`). File extensions are mixed case. Some files have EXIF dates, some don't. There are duplicates with slightly different names pointing to the same image.
+Open the `module-4-batch-operations/exercise-4.1-photo-library/` folder. You'll find `photo-dump/`: 50+ image files with inconsistent naming from three different sources: a phone camera (`IMG_20240315_142355.jpg`), a DSLR (`DSC_0042.NEF`), screenshots (`Screenshot 2024-03-15 at 2.23.55 PM.png`), and downloads (`photo.png`, `vacation (copy 2).JPEG`). File extensions are mixed case. Some files have EXIF dates, some don't. There are duplicates with slightly different names pointing to the same image.
 
 **Your Task:**
 Design a batch rename operation that gives every file a consistent name format: `YYYY-MM-DD_description_NNN.ext` (lowercase extension). Handle: files without dates (use file modification date), duplicates (append sequential numbers), and missing descriptions (use "unnamed"). Test on 3 files first, then run the full batch. Verify no files were lost by comparing counts before and after.
@@ -394,19 +394,19 @@ Design a batch rename operation that gives every file a consistent name format: 
 
 <ExerciseCard id="4.2" title="The Rename Disaster" />
 
-### Exercise 4.2 — The Rename Disaster (Debug)
+### Exercise 4.2: The Rename Disaster (Debug)
 
 **The Problem:**
-Open the `module-4-batch-operations/exercise-4.2-rename-disaster/` folder. You'll find `mangled-files/` — files after a botched batch rename — and `rename-log.txt` — a log of every rename operation that was executed. The rename script had bugs: some files were overwritten (duplicates mapped to the same target name), some extensions were corrupted, and some files ended up with garbled names from encoding issues.
+Open the `module-4-batch-operations/exercise-4.2-rename-disaster/` folder. You'll find `mangled-files/`: files after a botched batch rename, and `rename-log.txt`: a log of every rename operation that was executed. The rename script had bugs: some files were overwritten (duplicates mapped to the same target name), some extensions were corrupted, and some files ended up with garbled names from encoding issues.
 
 **Your Task:**
 Use `rename-log.txt` to reconstruct what happened. Identify every bug in the original rename logic. Determine which files can be recovered (the log has the original names) and which are permanently damaged (overwritten). Create a `RECOVERY-PLAN.md` documenting: what went wrong, which files are recoverable, and the recovery commands.
 
 **What You'll Learn:**
 
-- How rename logs enable recovery — and why every batch operation should produce one
+- How rename logs enable recovery, and why every batch operation should produce one
 - The three most common batch rename bugs: collision (two files map to same target), encoding corruption, and extension mangling
-- That the cost of a botched batch operation is proportional to the number of files — which is exactly why you test on 3 first
+- That the cost of a botched batch operation is proportional to the number of files: which is exactly why you test on 3 first
 
 **The Challenge:** After completing the recovery plan, write a corrected rename script (or prompt) that handles all the edge cases the original missed. Test it on the recovered files to prove it works. Compare your corrected version against the original log to verify every bug is addressed.
 
@@ -424,10 +424,10 @@ Use `rename-log.txt` to reconstruct what happened. Identify every bug in the ori
 
 <ExerciseCard id="5.1" title="The Accidental Flatten" />
 
-### Exercise 5.1 — The Accidental Flatten (Build)
+### Exercise 5.1: The Accidental Flatten (Build)
 
 **The Problem:**
-Open the `module-5-recovery-and-search/exercise-5.1-accidental-flatten/` folder. You'll find two directories: `flattened/` — where all files from a nested project structure were accidentally moved into a single flat directory — and `backup/` — an older backup that preserves the original nested structure. Someone ran a command that moved every file to the root level, destroying the folder hierarchy. The flattened directory has 40+ files that used to live in subdirectories like `src/`, `tests/`, `docs/`, and `assets/`. File names are intact, but all directory context is gone.
+Open the `module-5-recovery-and-search/exercise-5.1-accidental-flatten/` folder. You'll find two directories: `flattened/`: where all files from a nested project structure were accidentally moved into a single flat directory, and `backup/`: an older backup that preserves the original nested structure. Someone ran a command that moved every file to the root level, destroying the folder hierarchy. The flattened directory has 40+ files that used to live in subdirectories like `src/`, `tests/`, `docs/`, and `assets/`. File names are intact, but all directory context is gone.
 
 **Your Task:**
 Reconstruct the original nested directory structure. Use `backup/` as your reference for where files should go, but note that some files in `flattened/` are newer than the backup (they were created after the backup was made). You'll need to decide where new files belong based on their type and naming patterns. Verify the reconstruction by comparing your result against the backup's structure.
@@ -448,10 +448,10 @@ Reconstruct the original nested directory structure. Use `backup/` as your refer
 
 <ExerciseCard id="5.2" title="The Tax Season Hunt" />
 
-### Exercise 5.2 — The Tax Season Hunt (Search)
+### Exercise 5.2: The Tax Season Hunt (Search)
 
 **The Problem:**
-Open the `module-5-recovery-and-search/exercise-5.2-tax-season-hunt/` folder. You'll find `document-archive/` — a folder with 100+ files accumulated over 3 years of freelance work. Somewhere in this mess are 5 specific documents you need for tax filing. You don't know the exact file names — you only have descriptions:
+Open the `module-5-recovery-and-search/exercise-5.2-tax-season-hunt/` folder. You'll find `document-archive/`: a folder with 100+ files accumulated over 3 years of freelance work. Somewhere in this mess are 5 specific documents you need for tax filing. You don't know the exact file names: you only have descriptions:
 
 1. "The contract I signed with Acme Corp in Q2 2023"
 2. "The receipt for the laptop I bought for work"
@@ -460,7 +460,7 @@ Open the `module-5-recovery-and-search/exercise-5.2-tax-season-hunt/` folder. Yo
 5. "The spreadsheet where I tracked monthly expenses"
 
 **Your Task:**
-Find all 5 documents using only the descriptions above. For each one, document: the search strategy you used, the commands that narrowed it down, and the final file path. You cannot open every file — there are too many. You need to use metadata (dates, sizes, types), file names, and content search (`grep`) strategically.
+Find all 5 documents using only the descriptions above. For each one, document: the search strategy you used, the commands that narrowed it down, and the final file path. You cannot open every file: there are too many. You need to use metadata (dates, sizes, types), file names, and content search (`grep`) strategically.
 
 **What You'll Learn:**
 
@@ -480,62 +480,62 @@ Find all 5 documents using only the descriptions above. For each one, document: 
 
 ## Module 6: Capstone Projects
 
-> **Choose one (or more). This is where everything comes together — no starter prompts provided.**
+> **Choose one (or more). This is where everything comes together: no starter prompts provided.**
 
-Capstones are different from the exercises above. There are no guided prompts — you design the entire approach yourself. Each project requires applying all six workflows together to solve a realistic problem. Where module exercises test individual skills, capstones test your ability to orchestrate those skills into a coherent pipeline. The quality of your documentation matters as much as the result — someone should be able to follow your process and reproduce it on a different folder.
+Capstones are different from the exercises above. There are no guided prompts: you design the entire approach yourself. Each project requires applying all six workflows together to solve a realistic problem. Where module exercises test individual skills, capstones test your ability to orchestrate those skills into a coherent pipeline. The quality of your documentation matters as much as the result: someone should be able to follow your process and reproduce it on a different folder.
 
 <ExerciseCard id="A" title="The Full Pipeline" />
 
-### Capstone A — The Full Pipeline
+### Capstone A: The Full Pipeline
 
-Open the `module-6-capstone/capstone-A-full-pipeline/` folder. You'll find `messy-downloads/` — an 80-file folder that simulates a real Downloads directory accumulated over months. There are PDFs, images, code files, spreadsheets, documents, archives, duplicates, and files with no clear purpose.
+Open the `module-6-capstone/capstone-A-full-pipeline/` folder. You'll find `messy-downloads/`: an 80-file folder that simulates a real Downloads directory accumulated over months. There are PDFs, images, code files, spreadsheets, documents, archives, duplicates, and files with no clear purpose.
 
 Take this folder through the complete File Processing Framework:
 
-1. **Survey** — Create a comprehensive inventory of what's in the folder
-2. **Backup** — Create a verified safety backup before touching anything
-3. **Plan** — Design organization rules with categories, naming conventions, and ambiguity resolution
-4. **Test** — Apply your rules to 5 files and verify the result
-5. **Execute** — Organize and rename the full batch
-6. **Verify** — Compare results against your plan; confirm no files lost
-7. **Document** — Create a complete record: rules, logs, before/after stats
+1. **Survey**: Create a comprehensive inventory of what's in the folder
+2. **Backup**: Create a verified safety backup before touching anything
+3. **Plan**: Design organization rules with categories, naming conventions, and ambiguity resolution
+4. **Test**: Apply your rules to 5 files and verify the result
+5. **Execute**: Organize and rename the full batch
+6. **Verify**: Compare results against your plan; confirm no files lost
+7. **Document**: Create a complete record: rules, logs, before/after stats
 
 **What You'll Learn:**
 
-- How all six workflows connect into a single pipeline — each step's output feeds the next step's input
+- How all six workflows connect into a single pipeline: each step's output feeds the next step's input
 - That the full pipeline takes longer than any single workflow, but prevents the cascading failures that make individual steps fail
 - The discipline of documenting as you go: your `rules.md`, `backup-log.md`, and `verification-report.md` become a reusable template
 
 **Deliverables:**
 
-- `FILE-INVENTORY.md` — Complete survey of the 80-file folder
-- `backup/` — Verified safety backup with integrity checks
-- `rules.md` — Organization categories, naming conventions, ambiguity handling
-- `rename-log.txt` — Record of every rename operation
-- `VERIFICATION-REPORT.md` — Before/after comparison, file count confirmation, spot checks
+- `FILE-INVENTORY.md`: Complete survey of the 80-file folder
+- `backup/`: Verified safety backup with integrity checks
+- `rules.md`: Organization categories, naming conventions, ambiguity handling
+- `rename-log.txt`: Record of every rename operation
+- `VERIFICATION-REPORT.md`: Before/after comparison, file count confirmation, spot checks
 
 **Reflection Questions:**
 
 1. Which step took the longest? Which step prevented the most potential problems?
 2. Did any step's output force you to revise a previous step? (For example, did executing the batch reveal a gap in your rules?)
-3. How would you adapt this pipeline for a different domain — say, organizing a music library or a code repository?
+3. How would you adapt this pipeline for a different domain: say, organizing a music library or a code repository?
 
 ---
 
 <ExerciseCard id="B" title="The Team File System" />
 
-### Capstone B — The Team File System
+### Capstone B: The Team File System
 
-Open the `module-6-capstone/capstone-B-team-file-system/` folder. You'll find `team-scenario.md` — a description of a 3-person team (a designer, a developer, and a project manager) who share a project folder and keep stepping on each other's files. The scenario describes their pain points: overwritten designs, lost meeting notes, conflicting versions.
+Open the `module-6-capstone/capstone-B-team-file-system/` folder. You'll find `team-scenario.md`: a description of a 3-person team (a designer, a developer, and a project manager) who share a project folder and keep stepping on each other's files. The scenario describes their pain points: overwritten designs, lost meeting notes, conflicting versions.
 
 Design a complete shared file system for this team:
 
-1. **Folder structure** — Where does each person's work live? Where do shared assets go?
-2. **Naming conventions** — How do files indicate owner, version, status (draft/review/final)?
-3. **Organization rules** — What goes where? How are conflicts resolved?
-4. **Backup strategy** — How often? What's backed up? Who's responsible?
-5. **Recovery plan** — When someone accidentally overwrites a file, what's the procedure?
-6. **Search guide** — How does each person find what they need quickly?
+1. **Folder structure**: Where does each person's work live? Where do shared assets go?
+2. **Naming conventions**: How do files indicate owner, version, status (draft/review/final)?
+3. **Organization rules**: What goes where? How are conflicts resolved?
+4. **Backup strategy**: How often? What's backed up? Who's responsible?
+5. **Recovery plan**: When someone accidentally overwrites a file, what's the procedure?
+6. **Search guide**: How does each person find what they need quickly?
 
 Create the complete folder structure, write the rules document, and verify the system handles all the scenarios described in `team-scenario.md`.
 
@@ -548,10 +548,10 @@ Create the complete folder structure, write the rules document, and verify the s
 **Deliverables:**
 
 - Complete folder structure (created as actual directories)
-- `FILE-SYSTEM-RULES.md` — Naming conventions, ownership, version control, conflict resolution
-- `BACKUP-STRATEGY.md` — Schedule, scope, responsibility assignments
-- `RECOVERY-PROCEDURES.md` — Step-by-step instructions for common disaster scenarios
-- `QUICK-SEARCH-GUIDE.md` — How each team member finds what they need
+- `FILE-SYSTEM-RULES.md`: Naming conventions, ownership, version control, conflict resolution
+- `BACKUP-STRATEGY.md`: Schedule, scope, responsibility assignments
+- `RECOVERY-PROCEDURES.md`: Step-by-step instructions for common disaster scenarios
+- `QUICK-SEARCH-GUIDE.md`: How each team member finds what they need
 
 **Reflection Questions:**
 
@@ -563,14 +563,14 @@ Create the complete folder structure, write the rules document, and verify the s
 
 <ExerciseCard id="C" title="Your Own Files" />
 
-### Capstone C — Your Own Files
+### Capstone C: Your Own Files
 
-Open the `module-6-capstone/capstone-C-your-own-files/` folder for a self-assessment template. Then close it — this capstone uses YOUR actual files.
+Open the `module-6-capstone/capstone-C-your-own-files/` folder for a self-assessment template. Then close it: this capstone uses YOUR actual files.
 
-Pick a real folder on your computer — your Downloads, Desktop, Documents, or a project directory that's gotten messy. Apply all six workflows to your actual files:
+Pick a real folder on your computer: your Downloads, Desktop, Documents, or a project directory that's gotten messy. Apply all six workflows to your actual files:
 
-1. **Survey** your real folder — how bad is it?
-2. **Backup** everything before you touch it — real files, real stakes
+1. **Survey** your real folder: how bad is it?
+2. **Backup** everything before you touch it, real files, real stakes
 3. **Design rules** that fit how you actually work, not how you wish you worked
 4. **Test** on a handful of files first
 5. **Execute** the full organization
@@ -578,15 +578,15 @@ Pick a real folder on your computer — your Downloads, Desktop, Documents, or a
 7. **Document** your rules so future-you can maintain the system
 
 **What Makes This Special:**
-Unlike Capstones A and B, this one has real consequences. The files you're organizing are files you actually need. The rules you design must fit your real workflow. The backup must be genuinely complete because there's no "reset" button. This is where the File Processing Framework proves its value — or exposes gaps in your understanding.
+Unlike Capstones A and B, this one has real consequences. The files you're organizing are files you actually need. The rules you design must fit your real workflow. The backup must be genuinely complete because there's no "reset" button. This is where the File Processing Framework proves its value, or exposes gaps in your understanding.
 
 **Deliverables:**
 
-- `BEFORE-SNAPSHOT.md` — Survey of your folder before any changes
-- `backup/` — Complete safety backup of your real files
-- `MY-RULES.md` — Organization rules tailored to your actual workflow
-- `AFTER-SNAPSHOT.md` — Survey of your folder after organization
-- `WHAT-I-LEARNED.md` — What worked, what surprised you, what you'd do differently
+- `BEFORE-SNAPSHOT.md`: Survey of your folder before any changes
+- `backup/`: Complete safety backup of your real files
+- `MY-RULES.md`: Organization rules tailored to your actual workflow
+- `AFTER-SNAPSHOT.md`: Survey of your folder after organization
+- `WHAT-I-LEARNED.md`: What worked, what surprised you, what you'd do differently
 
 **Reflection Questions:**
 
@@ -598,8 +598,8 @@ Unlike Capstones A and B, this one has real consequences. The files you're organ
 
 ## What's Next
 
-You've practiced all six file processing workflows across 13 exercises — surveying, backing up, organizing, batch processing, recovering, and searching. More importantly, you've practiced them on messy, realistic data where edge cases actually matter.
+You've practiced all six file processing workflows across 13 exercises: surveying, backing up, organizing, batch processing, recovering, and searching. More importantly, you've practiced them on messy, realistic data where edge cases actually matter.
 
 The File Processing Framework you've internalized (Survey, Backup, Plan, Test, Execute, Verify, Document) transfers to any domain where you direct General Agents to work with files, data, or any structured collection. Whether you're managing a photo library, migrating a codebase, or reorganizing a team's shared drive, the same seven steps prevent the same classes of mistakes.
 
-These patterns become the foundation for automated workflows in later chapters, where the manual prompting you practiced here evolves into autonomous agent behavior. The rules you wrote, the logs you kept, and the verification habits you built are exactly what AI Employees need to operate independently — they just need those patterns encoded as instructions rather than typed as prompts.
+These patterns become the foundation for automated workflows in later chapters, where the manual prompting you practiced here evolves into autonomous agent behavior. The rules you wrote, the logs you kept, and the verification habits you built are exactly what AI Employees need to operate independently; they just need those patterns encoded as instructions rather than typed as prompts.

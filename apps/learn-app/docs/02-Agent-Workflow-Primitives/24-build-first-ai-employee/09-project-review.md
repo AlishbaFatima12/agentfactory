@@ -50,7 +50,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 2
-  assessment: "2 concepts (self-evaluation against criteria, gap analysis between plan and execution) — deliberately light to focus on reflection, not new learning"
+  assessment: "2 concepts (self-evaluation against criteria, gap analysis between plan and execution): deliberately light to focus on reflection, not new learning"
 
 differentiation:
   extension_for_advanced: "Write a 1-page 'lessons learned' document that someone starting this project could use to avoid your mistakes and accelerate their build."
@@ -61,7 +61,7 @@ differentiation:
 
 In The Project Brief, you set the scope and goals for your build. In the build lessons through Prove Professional Value, you created a working AI employee for your profession. Now you evaluate what you actually produced.
 
-This assessment is not a test — it is an honest inventory. The checklist below tells you exactly what a completed build looks like at each tier. Check what you finished, note what you did not, and decide what comes next.
+This assessment is not a test: it is an honest inventory. The checklist below tells you exactly what a completed build looks like at each tier. Check what you finished, note what you did not, and decide what comes next.
 
 ## Submission Checklist
 
@@ -69,25 +69,25 @@ Review your `nanoclaw-employee/` repository against the criteria for your tier. 
 
 ### Bronze Tier
 
-- [ ] `groups/main/CLAUDE.md` with profession-specific identity — not a generic assistant, but an employee that knows your domain vocabulary, common tasks, and professional standards (Give Your Employee an Identity)
-- [ ] Custom `SKILL.md` in `.claude/skills/` with 5 or more domain decision rules — rules that encode how a professional in your field makes judgment calls, not just task instructions (Teach Your Employee a Skill)
-- [ ] Working channel or MCP connection documented — your employee can communicate through at least one external channel beyond the terminal (Connect Your Employee to the World)
-- [ ] `conversation-log.md` with 3 to 5 real professional tasks — actual work you delegated, not toy examples, with the employee's responses and your assessment of quality (Bronze Capstone: First Real Day)
-- [ ] `evaluation.md` with completed rubric and honest reflection — did the employee perform at the level of a junior colleague, an intern, or not yet useful? (Bronze Capstone: First Real Day)
+- [ ] `groups/main/CLAUDE.md` with profession-specific identity, not a generic assistant, but an employee that knows your domain vocabulary, common tasks, and professional standards (Give Your Employee an Identity)
+- [ ] Custom `SKILL.md` in `.claude/skills/` with 5 or more domain decision rules: rules that encode how a professional in your field makes judgment calls, not just task instructions (Teach Your Employee a Skill)
+- [ ] Working channel or MCP connection documented: your employee can communicate through at least one external channel beyond the terminal (Connect Your Employee to the World)
+- [ ] `conversation-log.md` with 3 to 5 real professional tasks, actual work you delegated, not toy examples, with the employee's responses and your assessment of quality (Bronze Capstone: First Real Day)
+- [ ] `evaluation.md` with completed rubric and honest reflection: did the employee perform at the level of a junior colleague, an intern, or not yet useful? (Bronze Capstone: First Real Day)
 
 ### Silver Tier (All Bronze items, plus)
 
-- [ ] `scheduler-config.md` with scheduled task design — what runs, when, and why that cadence matters for your profession (Make Your Employee Proactive)
-- [ ] `hitl-boundaries.md` with 4 or more categorized actions — each with domain-specific reasoning for why it is auto-approve, needs-approval, or never-automate (Teach Your Employee Boundaries)
-- [ ] `memory-config.md` with action log and knowledge store schemas — working SQLite tables that log autonomous actions and persist corrections from real interactions (Give Your Employee a Memory)
-- [ ] `domain-report-sample.md` — an actual report your employee generated autonomously, pulling from 2 or more data sources, containing at least one proactive recommendation (Prove Professional Value)
+- [ ] `scheduler-config.md` with scheduled task design: what runs, when, and why that cadence matters for your profession (Make Your Employee Proactive)
+- [ ] `hitl-boundaries.md` with 4 or more categorized actions: each with domain-specific reasoning for why it is auto-approve, needs-approval, or never-automate (Teach Your Employee Boundaries)
+- [ ] `memory-config.md` with action log and knowledge store schemas: working SQLite tables that log autonomous actions and persist corrections from real interactions (Give Your Employee a Memory)
+- [ ] `domain-report-sample.md`: an actual report your employee generated autonomously, pulling from 2 or more data sources, containing at least one proactive recommendation (Prove Professional Value)
 
 ### Gold Tier (All Silver items, plus)
 
-- [ ] 3 groups configured with distinct `CLAUDE.md` files — `main` (admin), a professional work group, and a client-facing or external group, each with different identity and permissions (Prove Professional Value)
-- [ ] Isolation test results documented — evidence that the non-admin group cannot perform admin actions or access restricted data (Prove Professional Value)
-- [ ] System architecture diagram — showing the three groups, their data access boundaries, and communication flows between them (Prove Professional Value)
-- [ ] Memory isolation demonstrated — each group has independent action logs and knowledge stores; non-admin groups cannot access admin memory (Give Your Employee a Memory + Prove Professional Value)
+- [ ] 3 groups configured with distinct `CLAUDE.md` files: `main` (admin), a professional work group, and a client-facing or external group, each with different identity and permissions (Prove Professional Value)
+- [ ] Isolation test results documented: evidence that the non-admin group cannot perform admin actions or access restricted data (Prove Professional Value)
+- [ ] System architecture diagram: showing the three groups, their data access boundaries, and communication flows between them (Prove Professional Value)
+- [ ] Memory isolation demonstrated: each group has independent action logs and knowledge stores; non-admin groups cannot access admin memory (Give Your Employee a Memory + Prove Professional Value)
 
 ## Reflection
 
@@ -95,10 +95,10 @@ Pull up your Layer 3 design from the "NanoClaw Hands-On Setup" lesson in "Meet Y
 
 Consider these questions:
 
-**How much of your Layer 3 design did you implement?** Count the skills you designed versus the skills you built. Count the MCP connections you planned versus the ones that work. The gap between plan and execution is normal — the question is whether you understand why the gap exists.
+**How much of your Layer 3 design did you implement?** Count the skills you designed versus the skills you built. Count the MCP connections you planned versus the ones that work. The gap between plan and execution is normal: the question is whether you understand why the gap exists.
 
-**What would take your employee from its current tier to the next?** If you completed Bronze, what specific work would get you to Silver? If you completed Silver, what is the hardest part of Gold? Be concrete — "add scheduling" is vague, "build a weekly cash flow report skill that reads bank CSV and invoice spreadsheet" is actionable.
+**What would take your employee from its current tier to the next?** If you completed Bronze, what specific work would get you to Silver? If you completed Silver, what is the hardest part of Gold? Be concrete: "add scheduling" is vague, "build a weekly cash flow report skill that reads bank CSV and invoice spreadsheet" is actionable.
 
 **How did your employee's behavior change after corrections?** Review your knowledge store entries. Did the employee behave differently the next time a relevant task came up? For Gold students: does your memory isolation actually hold, or can groups leak knowledge to each other?
 
-**What surprised you about encoding your professional expertise into an AI system?** Most people discover that the hardest part is not the technology — it is articulating the judgment calls they make unconsciously every day. What did you know that you did not know you knew?
+**What surprised you about encoding your professional expertise into an AI system?** Most people discover that the hardest part is not the technology: it is articulating the judgment calls they make unconsciously every day. What did you know that you did not know you knew?

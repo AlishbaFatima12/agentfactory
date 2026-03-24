@@ -18,7 +18,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Python cannot read integer-only output"
       ],
       correctOption: 2,
-      explanation: "Silent truncation is the biggest risk because Bash integer arithmetic drops remainders without warning — $((10/3)) returns 3, not 3.333. This is worse than a syntax error because you get a result that looks plausible but is wrong. Running slower is not the issue — it is accuracy. Bash does not need special flags — it simply cannot do decimal math. Python reads any numeric format from stdin — that is not a concern.",
+      explanation: "Silent truncation is the biggest risk because Bash integer arithmetic drops remainders without warning: $((10/3)) returns 3, not 3.333. This is worse than a syntax error because you get a result that looks plausible but is wrong. Running slower is not the issue (it is accuracy. Bash does not need special flags) it simply cannot do decimal math. Python reads any numeric format from stdin: that is not a concern.",
       source: "Lesson 1: From Broken Math to Your First Tool"
     },
     {
@@ -30,7 +30,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "LLMs round all decimals to whole numbers"
       ],
       correctOption: 0,
-      explanation: "LLMs predict the next likely token rather than executing arithmetic operations. For small sets (2-3 numbers), the prediction often matches reality, but at scale (500 numbers) errors accumulate silently. AI assistants do not refuse financial calculations — they attempt them and may get them wrong. There is no 100-item limit on chat interfaces. LLMs do not systematically round decimals — they produce plausible-looking but potentially incorrect results.",
+      explanation: "LLMs predict the next likely token rather than executing arithmetic operations. For small sets (2-3 numbers), the prediction often matches reality, but at scale (500 numbers) errors accumulate silently. AI assistants do not refuse financial calculations; they attempt them and may get them wrong. There is no 100-item limit on chat interfaces. LLMs do not systematically round decimals; they produce plausible-looking but potentially incorrect results.",
       source: "Lesson 1: From Broken Math to Your First Tool"
     },
     {
@@ -54,7 +54,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "stdin scripts run faster than file-reading scripts"
       ],
       correctOption: 1,
-      explanation: "Reading from stdin makes the script composable — it connects to cat, grep, awk, or any other command through pipes without modification. Hardcoded filenames do not cause import errors (A) — they cause FileNotFoundError if the path is wrong, but that is a different issue. stdin is not inherently faster (B). Hardcoded paths can work across operating systems with the right syntax (C). The real value is composability through the pipe operator.",
+      explanation: "Reading from stdin makes the script composable: it connects to cat, grep, awk, or any other command through pipes without modification. Hardcoded filenames do not cause import errors (A); they cause FileNotFoundError if the path is wrong, but that is a different issue. stdin is not inherently faster (B). Hardcoded paths can work across operating systems with the right syntax (C). The real value is composability through the pipe operator.",
       source: "Lesson 1: From Broken Math to Your First Tool"
     },
     {
@@ -78,11 +78,11 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "All input rows were processed successfully"
       ],
       correctOption: 0,
-      explanation: "Exit code 0 only means the process terminated without an unhandled exception — 'did not crash.' The buggy_sum.py example proves this: it returns exit code 0 while silently skipping numbers starting with 6-9, producing wrong results. You cannot conclude the total is correct, the logic is bug-free, or all rows were processed from exit code 0 alone. Only verification with known-answer test data can establish correctness.",
+      explanation: "Exit code 0 only means the process terminated without an unhandled exception: 'did not crash.' The buggy_sum.py example proves this: it returns exit code 0 while silently skipping numbers starting with 6-9, producing wrong results. You cannot conclude the total is correct, the logic is bug-free, or all rows were processed from exit code 0 alone. Only verification with known-answer test data can establish correctness.",
       source: "Lesson 2: The Testing Loop"
     },
     {
-      question: "buggy_sum.py returns 60 when given inputs 10, 20, 30 — which is correct. It returns 40 when given inputs 10, 60, 30 — which should be 100. What does this reveal about test data selection?",
+      question: "buggy_sum.py returns 60 when given inputs 10, 20, 30 (which is correct. It returns 40 when given inputs 10, 60, 30) which should be 100. What does this reveal about test data selection?",
       options: [
         "Tests should always use numbers under fifty",
         "Test inputs must include diverse digit ranges",
@@ -90,7 +90,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "A single passing test proves script correctness"
       ],
       correctOption: 1,
-      explanation: "The bug only surfaces when inputs start with digits 6-9, so test data limited to low-digit numbers misses it entirely. Using diverse digit ranges (0-9) exposes the hidden filter. Using only numbers under fifty would miss the exact bug demonstrated. Prime numbers have no special relevance to this bug. A single passing test is explicitly disproven — the 10, 20, 30 test passed while the bug remained hidden.",
+      explanation: "The bug only surfaces when inputs start with digits 6-9, so test data limited to low-digit numbers misses it entirely. Using diverse digit ranges (0-9) exposes the hidden filter. Using only numbers under fifty would miss the exact bug demonstrated. Prime numbers have no special relevance to this bug. A single passing test is explicitly disproven: the 10, 20, 30 test passed while the bug remained hidden.",
       source: "Lesson 2: The Testing Loop"
     },
     {
@@ -102,7 +102,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Run additional tests with edge cases and known answers"
       ],
       correctOption: 3,
-      explanation: "The zero-trust verification pattern requires multiple test cases with known answers — integers, decimals, negatives, and edge cases. A single passing test is insufficient because bugs can hide in untested input ranges. Showing the exit code was zero only means no crash. Citing AI authorship is not proof of correctness. Clean output can still contain wrong values. Only diverse test cases with hand-calculated expected values establish confidence.",
+      explanation: "The zero-trust verification pattern requires multiple test cases with known answers: integers, decimals, negatives, and edge cases. A single passing test is insufficient because bugs can hide in untested input ranges. Showing the exit code was zero only means no crash. Citing AI authorship is not proof of correctness. Clean output can still contain wrong values. Only diverse test cases with hand-calculated expected values establish confidence.",
       source: "Lesson 2: The Testing Loop"
     },
     {
@@ -150,7 +150,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "awk split on the comma inside the quoted field"
       ],
       correctOption: 3,
-      explanation: "awk treats every comma as a field separator, even commas inside quoted fields. 'AMAZON, INC.' becomes two fields (AMAZON and INC.), shifting column positions. The third field becomes INC.\" instead of -89.50. This is not an encoding error. awk has no file size limit. Python is not required for all three-column CSVs — only for CSVs with embedded commas in quoted fields. The issue is that awk does not understand CSV quoting rules.",
+      explanation: "awk treats every comma as a field separator, even commas inside quoted fields. 'AMAZON, INC.' becomes two fields (AMAZON and INC.), shifting column positions. The third field becomes INC.\" instead of -89.50. This is not an encoding error. awk has no file size limit. Python is not required for all three-column CSVs, only for CSVs with embedded commas in quoted fields. The issue is that awk does not understand CSV quoting rules.",
       source: "Lesson 3: Parsing Real Data"
     },
     {
@@ -162,7 +162,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "The operating system hides partial error messages"
       ],
       correctOption: 0,
-      explanation: "A command that fails on one row and succeeds on 29 produces a plausible-looking total that appears correct at first glance. Only row-by-row inspection reveals the error. A crash on all rows (comparison) is immediately obvious and impossible to miss. Crashes being easier to fix (A) is true but not the core danger. awk does support CSV files (C) — just not quoted fields with embedded delimiters. The OS does not hide messages (D).",
+      explanation: "A command that fails on one row and succeeds on 29 produces a plausible-looking total that appears correct at first glance. Only row-by-row inspection reveals the error. A crash on all rows (comparison) is immediately obvious and impossible to miss. Crashes being easier to fix (A) is true but not the core danger. awk does support CSV files (C), just not quoted fields with embedded delimiters. The OS does not hide messages (D).",
       source: "Lesson 3: Parsing Real Data"
     },
     {
@@ -174,7 +174,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Use awk for numeric columns and csv module for text columns"
       ],
       correctOption: 2,
-      explanation: "The decision hinges on data source, not file size. If you control the format (no embedded delimiters), awk is fast and simple. External data (bank exports, downloaded datasets) may contain commas inside quoted fields, requiring a proper CSV parser. File size (A) is irrelevant — a small external CSV can have quoting traps. Column name spaces (C) do not determine the choice. Column data type (D) does not matter — the issue is delimiter handling, not content type.",
+      explanation: "The decision hinges on data source, not file size. If you control the format (no embedded delimiters), awk is fast and simple. External data (bank exports, downloaded datasets) may contain commas inside quoted fields, requiring a proper CSV parser. File size (A) is irrelevant: a small external CSV can have quoting traps. Column name spaces (C) do not determine the choice. Column data type (D) does not matter: the issue is delimiter handling, not content type.",
       source: "Lesson 3: Parsing Real Data"
     },
     {
@@ -186,7 +186,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Specify that the CSV uses UTF-8 character encoding"
       ],
       correctOption: 1,
-      explanation: "Mentioning the edge case ('some merchant names have commas') steers the agent toward Python's csv module instead of naive awk. This is the director's role — your domain knowledge about the data guides the agent's tool selection. Asking for faster performance is not the issue. Requesting JSON output changes format, not parsing correctness. Specifying UTF-8 encoding is unrelated to the comma-in-quotes problem.",
+      explanation: "Mentioning the edge case ('some merchant names have commas') steers the agent toward Python's csv module instead of naive awk. This is the director's role: your domain knowledge about the data guides the agent's tool selection. Asking for faster performance is not the issue. Requesting JSON output changes format, not parsing correctness. Specifying UTF-8 encoding is unrelated to the comma-in-quotes problem.",
       source: "Lesson 3: Parsing Real Data"
     },
     {
@@ -210,7 +210,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Smaller scripts require fewer Python library imports"
       ],
       correctOption: 2,
-      explanation: "Decomposition enables recombination — the same three tools answer questions about totals, averages, counts, and large transactions without code changes. You just rearrange the pipeline. Disk space (B) is negligible. Python does not auto-parallelize piped scripts (C) — the shell handles pipe buffering. Import count (D) may or may not change and is not the primary benefit. The power is in answering questions you have not thought of yet.",
+      explanation: "Decomposition enables recombination: the same three tools answer questions about totals, averages, counts, and large transactions without code changes. You just rearrange the pipeline. Disk space (B) is negligible. Python does not auto-parallelize piped scripts (C): the shell handles pipe buffering. Import count (D) may or may not change and is not the primary benefit. The power is in answering questions you have not thought of yet.",
       source: "Lesson 4: One Tool, One Job"
     },
     {
@@ -222,7 +222,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Python enforces that scripts cannot reference domain terms"
       ],
       correctOption: 0,
-      explanation: "A tool that knows nothing about its context works in every context — bank data, payroll, student grades, server logs. This is Principle 2 (Code as Universal Interface) in action. Security clearance (A) is not a real requirement. Generic tools do not inherently crash less (B) — they are tested the same way. Python has no restriction on domain terms (D). The less a tool knows about its specific use case, the more use cases it serves.",
+      explanation: "A tool that knows nothing about its context works in every context: bank data, payroll, student grades, server logs. This is Principle 2 (Code as Universal Interface) in action. Security clearance (A) is not a real requirement. Generic tools do not inherently crash less (B); they are tested the same way. Python has no restriction on domain terms (D). The less a tool knows about its specific use case, the more use cases it serves.",
       source: "Lesson 4: One Tool, One Job"
     },
     {
@@ -234,7 +234,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Decomposed pipelines cannot contain bugs by design"
       ],
       correctOption: 1,
-      explanation: "In a decomposed pipeline, a bug in filter.py only affects pipe segments that include it. Pipelines using just extract-column and stats remain correct. The bug does not corrupt other tools — each tool is an independent process. While wrong filter output would produce wrong stats numbers, that is because of the incorrect input, not a bug in stats.py itself. No architecture prevents bugs by design.",
+      explanation: "In a decomposed pipeline, a bug in filter.py only affects pipe segments that include it. Pipelines using just extract-column and stats remain correct. The bug does not corrupt other tools: each tool is an independent process. While wrong filter output would produce wrong stats numbers, that is because of the incorrect input, not a bug in stats.py itself. No architecture prevents bugs by design.",
       source: "Lesson 4: One Tool, One Job"
     },
     {
@@ -258,7 +258,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "sum.py must be updated to match the new stats format"
       ],
       correctOption: 0,
-      explanation: "Because each tool only reads stdin and writes stdout, adding features to stats.py does not affect any other tool. extract-column still outputs one value per line. filter still keeps matching numbers. The interface contract (numbers in, results out) is unchanged. extract-column does not need metadata (A). filter does not need statistical context (B). sum.py is independent (D). This is the benefit of composable tools — improvements propagate without rewiring.",
+      explanation: "Because each tool only reads stdin and writes stdout, adding features to stats.py does not affect any other tool. extract-column still outputs one value per line. filter still keeps matching numbers. The interface contract (numbers in, results out) is unchanged. extract-column does not need metadata (A). filter does not need statistical context (B). sum.py is independent (D). This is the benefit of composable tools: improvements propagate without rewiring.",
       source: "Lesson 4: One Tool, One Job"
     },
     {
@@ -270,7 +270,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "A Unicode encoding mismatch between input and script"
       ],
       correctOption: 2,
-      explanation: "DR PEPPER matches the keyword 'DR' because simple substring matching does not distinguish between a doctor prefix and a brand name — this is a false positive. It is not a syntax error because the code runs correctly. The CSV data is not corrupted — 'DR PEPPER SNAPPLE' is a valid merchant name. There is no encoding mismatch. The error is in the matching logic, not the data or the language runtime.",
+      explanation: "DR PEPPER matches the keyword 'DR' because simple substring matching does not distinguish between a doctor prefix and a brand name: this is a false positive. It is not a syntax error because the code runs correctly. The CSV data is not corrupted: 'DR PEPPER SNAPPLE' is a valid merchant name. There is no encoding mismatch. The error is in the matching logic, not the data or the language runtime.",
       source: "Lesson 5: Data Wrangling & Domain Transfer"
     },
     {
@@ -282,7 +282,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Using word boundaries so CVS only matches standalone words"
       ],
       correctOption: 3,
-      explanation: "Word boundaries (\\bCVS\\b) ensure CVS matches only as a complete word, blocking matches within CVSMITH. Case-insensitive matching (A) does not solve the substring problem — it would still match CVS inside CVSMITH. String anchoring (B) would miss 'MY CVS RECEIPT' where CVS is not at the start. Exact string comparison (D) would be too restrictive, missing 'CVS PHARMACY #1234' and other valid variations.",
+      explanation: "Word boundaries (\\bCVS\\b) ensure CVS matches only as a complete word, blocking matches within CVSMITH. Case-insensitive matching (A) does not solve the substring problem: it would still match CVS inside CVSMITH. String anchoring (B) would miss 'MY CVS RECEIPT' where CVS is not at the start. Exact string comparison (D) would be too restrictive, missing 'CVS PHARMACY #1234' and other valid variations.",
       source: "Lesson 5: Data Wrangling & Domain Transfer"
     },
     {
@@ -294,7 +294,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Categories are computationally more expensive to check"
       ],
       correctOption: 1,
-      explanation: "If categories are checked first, 'DR PEPPER' matches 'DR' in the medical category before the false positive guard can exclude it. Guards must run first to prevent incorrect matches from ever being assigned. Python dictionaries have no ordering requirement (A). Computational cost (B) is negligible for small pattern sets. No exception occurs (C) — the code runs either way, but produces wrong results if guards come second. Execution order determines correctness.",
+      explanation: "If categories are checked first, 'DR PEPPER' matches 'DR' in the medical category before the false positive guard can exclude it. Guards must run first to prevent incorrect matches from ever being assigned. Python dictionaries have no ordering requirement (A). Computational cost (B) is negligible for small pattern sets. No exception occurs (C): the code runs either way, but produces wrong results if guards come second. Execution order determines correctness.",
       source: "Lesson 5: Data Wrangling & Domain Transfer"
     },
     {
@@ -306,7 +306,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "The pattern requires whitespace on both sides to match"
       ],
       correctOption: 0,
-      explanation: "\\b marks a word boundary — the transition between a word character and a non-word character. In CVSMITH, there is no boundary between S and I (both are word characters), so \\bCVS\\b fails. In 'CVS PHARMACY,' boundaries exist before C and after S. It is not a line anchor (A) — that would be ^ and $. It is not case-restricted (B) — \\b works with any case. It does not require whitespace specifically (D) — punctuation and string edges also count as boundaries.",
+      explanation: "\\b marks a word boundary: the transition between a word character and a non-word character. In CVSMITH, there is no boundary between S and I (both are word characters), so \\bCVS\\b fails. In 'CVS PHARMACY,' boundaries exist before C and after S. It is not a line anchor (A) (that would be ^ and $. It is not case-restricted (B)) \\b works with any case. It does not require whitespace specifically (D): punctuation and string edges also count as boundaries.",
       source: "Lesson 5: Data Wrangling & Domain Transfer"
     },
     {
@@ -318,7 +318,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "The FALSE_POSITIVES list handles server errors automatically"
       ],
       correctOption: 2,
-      explanation: "The workflow pattern — build a categorizer, verify with known data, guard against false positives — transfers to any domain. For server logs, /health returning 404 during deployments is the 'Dr. Pepper' equivalent. Merchant-specific regex patterns do not apply to server logs. While the csv module works for both domains, that is a tool detail, not the key transferable concept. The specific FALSE_POSITIVES list needs new entries for the new domain.",
+      explanation: "The workflow pattern: build a categorizer, verify with known data, guard against false positives: transfers to any domain. For server logs, /health returning 404 during deployments is the 'Dr. Pepper' equivalent. Merchant-specific regex patterns do not apply to server logs. While the csv module works for both domains, that is a tool detail, not the key transferable concept. The specific FALSE_POSITIVES list needs new entries for the new domain.",
       source: "Lesson 5: Data Wrangling & Domain Transfer"
     },
     {
@@ -330,7 +330,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Dr. Pepper being categorized as a medical expense"
       ],
       correctOption: 3,
-      explanation: "Both are false positives — items that match a category pattern but do not belong. DR PEPPER matches 'DR' (medical keyword) just as /health 404 matches '4xx' (client error pattern). Both require guard lists (FALSE_POSITIVES / KNOWN_BENIGN). The awk CSV splitting (B) is a parsing failure, not categorization. Bash truncation (C) is an arithmetic limitation. Exit code masking (D) is a verification gap. The false positive concept is what transfers between domains.",
+      explanation: "Both are false positives: items that match a category pattern but do not belong. DR PEPPER matches 'DR' (medical keyword) just as /health 404 matches '4xx' (client error pattern). Both require guard lists (FALSE_POSITIVES / KNOWN_BENIGN). The awk CSV splitting (B) is a parsing failure, not categorization. Bash truncation (C) is an arithmetic limitation. Exit code masking (D) is a verification gap. The false positive concept is what transfers between domains.",
       source: "Lesson 5: Data Wrangling & Domain Transfer"
     },
     {
@@ -354,7 +354,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Validates each row against the CSV header format"
       ],
       correctOption: 2,
-      explanation: "The -q (quiet) flag tells tail not to print filename prefixes (==> filename <==) when processing multiple files. Without it, filename markers would appear in the combined data and break CSV parsing. It does not sort (A) — that requires the sort command. It does not compress (C) — that requires gzip or similar. It does not validate format (D) — tail simply outputs lines. Quiet mode ensures clean data concatenation.",
+      explanation: "The -q (quiet) flag tells tail not to print filename prefixes (==> filename <==) when processing multiple files. Without it, filename markers would appear in the combined data and break CSV parsing. It does not sort (A) (that requires the sort command. It does not compress (C)) that requires gzip or similar. It does not validate format (D): tail simply outputs lines. Quiet mode ensures clean data concatenation.",
       source: "Lesson 6: Capstone: Tax Season Prep"
     },
     {
@@ -366,7 +366,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "The regex patterns need to be replaced with machine learning"
       ],
       correctOption: 0,
-      explanation: "NEEDS REVIEW is a feature, not a failure. Good automation flags ambiguity for human judgment rather than making silent guesses. Regex handles the high-confidence 80%; the hard 20% requires human review. It is not a bug (A) — the categorizer correctly identified what it could not confidently classify. Adding all to existing categories (B) would risk false positives. Machine learning (D) is unnecessary complexity for this use case.",
+      explanation: "NEEDS REVIEW is a feature, not a failure. Good automation flags ambiguity for human judgment rather than making silent guesses. Regex handles the high-confidence 80%; the hard 20% requires human review. It is not a bug (A): the categorizer correctly identified what it could not confidently classify. Adding all to existing categories (B) would risk false positives. Machine learning (D) is unnecessary complexity for this use case.",
       source: "Lesson 6: Capstone: Tax Season Prep"
     },
     {
@@ -402,7 +402,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Ask the AI to remember the date range for future sessions"
       ],
       correctOption: 2,
-      explanation: "Building a new single-purpose date-filter tool follows the Unix philosophy — it reads CSV from stdin, keeps rows in a date range, and writes to stdout. No existing tool changes. Rewriting tax-prep (A) violates the one-tool-one-job principle by adding a responsibility. Manual deletion (C) is error-prone and not repeatable. AI session memory (D) does not filter data. A new composable tool plugs into the existing pipeline seamlessly.",
+      explanation: "Building a new single-purpose date-filter tool follows the Unix philosophy: it reads CSV from stdin, keeps rows in a date range, and writes to stdout. No existing tool changes. Rewriting tax-prep (A) violates the one-tool-one-job principle by adding a responsibility. Manual deletion (C) is error-prone and not repeatable. AI session memory (D) does not filter data. A new composable tool plugs into the existing pipeline seamlessly.",
       source: "Lesson 6: Capstone: Tax Season Prep"
     },
     {
@@ -414,7 +414,7 @@ question: "You run echo $((14.50 + 23.75)) and get a syntax error. Your colleagu
         "Both were detected immediately by automated monitoring systems"
       ],
       correctOption: 0,
-      explanation: "The Vancouver Stock Exchange truncated to three decimal places silently, and Bash truncates to zero decimal places silently ($((10/3)) returns 3). Both produce plausible-looking wrong results without errors or warnings. Python was not involved in either case. Neither was fixed by a language upgrade — the VSE recalculated, and Bash's design is intentional. Neither was detected immediately — the VSE error ran for 22 months undetected.",
+      explanation: "The Vancouver Stock Exchange truncated to three decimal places silently, and Bash truncates to zero decimal places silently ($((10/3)) returns 3). Both produce plausible-looking wrong results without errors or warnings. Python was not involved in either case. Neither was fixed by a language upgrade: the VSE recalculated, and Bash's design is intentional. Neither was detected immediately: the VSE error ran for 22 months undetected.",
 source: "Lesson 1: From Broken Math to Your First Tool"
 },
 {
@@ -426,7 +426,7 @@ options: [
 "Yes, to practice building tools on every possible occasion"
 ],
 correctOption: 1,
-explanation: "For three low-stakes receipts, asking the AI directly is appropriate — even if it is off by a cent, nobody cares. Scripts pay for themselves when data is too large to sanity-check manually, or when being wrong has consequences. Not all calculations need scripts (B). Python handles any amount (C). Building unnecessary tools wastes time (D). The rule: if the calculation is repeated, financial at scale, or high-stakes, build the script. Otherwise, prompt directly.",
+explanation: "For three low-stakes receipts, asking the AI directly is appropriate, even if it is off by a cent, nobody cares. Scripts pay for themselves when data is too large to sanity-check manually, or when being wrong has consequences. Not all calculations need scripts (B). Python handles any amount (C). Building unnecessary tools wastes time (D). The rule: if the calculation is repeated, financial at scale, or high-stakes, build the script. Otherwise, prompt directly.",
 source: "Lesson 1: From Broken Math to Your First Tool"
 },
 {
@@ -450,7 +450,7 @@ options: [
 "Filter conditions only work with greater-than comparisons"
 ],
 correctOption: 0,
-explanation: "One passing test only proves the script works for that specific input. Edge cases like zero (is 0 less than 0?), decimal values (does -0.01 pass?), and empty input (does the script crash?) remain untested. One hundred inputs (A) is an arbitrary number — diverse edge cases matter more than volume. Who writes tests (C) is irrelevant to test coverage. Filter conditions work with any comparison (D). Multiple targeted tests with diverse inputs provide meaningful confidence.",
+explanation: "One passing test only proves the script works for that specific input. Edge cases like zero (is 0 less than 0?), decimal values (does -0.01 pass?), and empty input (does the script crash?) remain untested. One hundred inputs (A) is an arbitrary number: diverse edge cases matter more than volume. Who writes tests (C) is irrelevant to test coverage. Filter conditions work with any comparison (D). Multiple targeted tests with diverse inputs provide meaningful confidence.",
 source: "Lesson 2: The Testing Loop"
 },
 {
@@ -462,7 +462,7 @@ options: [
 "Python csv module is the only way to read CSV header rows"
 ],
 correctOption: 2,
-explanation: "Even if today's data is clean, external data sources can change their export format without notice. A bank might start quoting merchant names containing commas, breaking awk silently. awk is not deprecated — it remains a standard Unix tool. The csv module is not inherently faster — awk is often faster for simple cases. awk can read CSV headers just fine. The defensive choice accounts for future data changes from sources you do not control.",
+explanation: "Even if today's data is clean, external data sources can change their export format without notice. A bank might start quoting merchant names containing commas, breaking awk silently. awk is not deprecated: it remains a standard Unix tool. The csv module is not inherently faster: awk is often faster for simple cases. awk can read CSV headers just fine. The defensive choice accounts for future data changes from sources you do not control.",
 source: "Lesson 3: Parsing Real Data"
 },
 {
@@ -480,13 +480,13 @@ source: "Lesson 3: Parsing Real Data"
 {
 question: "sum-expenses.py does four things: reads CSV, extracts a column, filters negatives, and sums. You split it into three tools. When would you still use the original monolithic script?",
 options: [
-"Never — monolithic scripts should always be deleted after decomposition",
+"Never: monolithic scripts should always be deleted after decomposition",
 "As a convenient shortcut for the common expense-total use case",
 "Only when the decomposed tools produce different numerical results",
 "Only when running on operating systems that lack pipe support"
 ],
 correctOption: 1,
-explanation: "The original script is a convenient shortcut for the most common question — total expenses. You keep both: the monolithic script for quick answers and the decomposed tools for questions sum-expenses cannot answer. Deleting working code (A) is wasteful. If both produce different results (B), one has a bug. All modern operating systems support pipes (D). The decomposition does not replace the original — it reveals the composable architecture hiding inside it.",
+explanation: "The original script is a convenient shortcut for the most common question: total expenses. You keep both: the monolithic script for quick answers and the decomposed tools for questions sum-expenses cannot answer. Deleting working code (A) is wasteful. If both produce different results (B), one has a bug. All modern operating systems support pipes (D). The decomposition does not replace the original: it reveals the composable architecture hiding inside it.",
 source: "Lesson 4: One Tool, One Job"
 },
 {
@@ -498,7 +498,7 @@ options: [
 "Bash is the Key prevents Python scripts from causing damage"
 ],
 correctOption: 2,
-explanation: "Principle 4 (Small, Reversible Decomposition) means each tool is small enough to test independently with simple input. A bug in filter.py is found by running echo -e '10\\n-5\\n20' | filter '< 0' — no other tools involved. Persisting State in Files is about saving scripts and results, not blast radius. Observability is about seeing output, not centralized logging. Bash is the Key refers to shell orchestration, not preventing Python bugs.",
+explanation: "Principle 4 (Small, Reversible Decomposition) means each tool is small enough to test independently with simple input. A bug in filter.py is found by running echo -e '10\\n-5\\n20' | filter '< 0': no other tools involved. Persisting State in Files is about saving scripts and results, not blast radius. Observability is about seeing output, not centralized logging. Bash is the Key refers to shell orchestration, not preventing Python bugs.",
 source: "Lesson 4: One Tool, One Job"
 },
 {
@@ -510,7 +510,7 @@ options: [
 "Word boundaries do not apply to names containing spaces"
 ],
 correctOption: 0,
-explanation: "DR MARTINEZ MEDICAL contains the standalone word MEDICAL, which matches the medical category keyword \\bMEDICAL\\b. The DR PEPPER guard only blocks descriptions matching the specific DR PEPPER pattern, not all descriptions containing DR. The guard is working correctly (A). Python does not process in reverse alphabetical order (C). Word boundaries work fine with spaces (D) — spaces are non-word characters that create valid boundaries.",
+explanation: "DR MARTINEZ MEDICAL contains the standalone word MEDICAL, which matches the medical category keyword \\bMEDICAL\\b. The DR PEPPER guard only blocks descriptions matching the specific DR PEPPER pattern, not all descriptions containing DR. The guard is working correctly (A). Python does not process in reverse alphabetical order (C). Word boundaries work fine with spaces (D): spaces are non-word characters that create valid boundaries.",
 source: "Lesson 5: Data Wrangling & Domain Transfer"
 },
 {
@@ -522,7 +522,7 @@ options: [
 "Inspect output line by line to find false positives manually"
 ],
 correctOption: 3,
-explanation: "The iterative refinement loop requires manual inspection of categorized output to find false positives that look plausible but are wrong — like Dr. Pepper appearing as medical. Deploying without review (A) pushes silent errors to production. AI self-confirmation (B) lacks independent verification. Adding more patterns without reviewing output (D) may increase false positives rather than reducing them. Human inspection is the verification step that catches what automation misses.",
+explanation: "The iterative refinement loop requires manual inspection of categorized output to find false positives that look plausible but are wrong: like Dr. Pepper appearing as medical. Deploying without review (A) pushes silent errors to production. AI self-confirmation (B) lacks independent verification. Adding more patterns without reviewing output (D) may increase false positives rather than reducing them. Human inspection is the verification step that catches what automation misses.",
 source: "Lesson 5: Data Wrangling & Domain Transfer"
 },
 {
@@ -534,7 +534,7 @@ options: [
 "Running the tool twice guarantees consistent results"
 ],
 correctOption: 1,
-explanation: "You calculated expected totals by hand before running the tool, then compared the tool output against your independent baseline. This is the zero-trust verification pattern from Lesson 2 applied to the full workflow. Exit codes (A) only indicate no crash. Automated testing supplements but does not eliminate manual verification (B). Running twice (D) proves consistency, not correctness — a consistently wrong tool would pass that test.",
+explanation: "You calculated expected totals by hand before running the tool, then compared the tool output against your independent baseline. This is the zero-trust verification pattern from Lesson 2 applied to the full workflow. Exit codes (A) only indicate no crash. Automated testing supplements but does not eliminate manual verification (B). Running twice (D) proves consistency, not correctness: a consistently wrong tool would pass that test.",
 source: "Lesson 6: Capstone: Tax Season Prep"
 },
 {
@@ -558,7 +558,7 @@ options: [
 "Microservice architecture with API gateway routing"
 ],
 correctOption: 2,
-explanation: "Tools that read stdin and write stdout are composable — they connect to any other tool through pipes without modification. This standardized interface is the Unix philosophy's core design principle. Object-oriented polymorphism (A) relates to class inheritance, not pipe interfaces. Functional programming (C) is about immutability, not stdin/stdout. Microservice architecture (D) involves network APIs, not shell pipes. Composability through standard interfaces is the precise concept.",
+explanation: "Tools that read stdin and write stdout are composable; they connect to any other tool through pipes without modification. This standardized interface is the Unix philosophy's core design principle. Object-oriented polymorphism (A) relates to class inheritance, not pipe interfaces. Functional programming (C) is about immutability, not stdin/stdout. Microservice architecture (D) involves network APIs, not shell pipes. Composability through standard interfaces is the precise concept.",
 source: "Lesson 4: One Tool, One Job"
 },
 {
@@ -582,11 +582,11 @@ options: [
 "Providing domain-specific data knowledge the agent lacks"
 ],
 correctOption: 3,
-explanation: "Describing your bank's specific schema (Debit and Credit columns instead of Amount) provides domain knowledge that the agent cannot discover on its own. The agent adapts the implementation to match your data. Memorizing APIs (A) is the agent's role. Writing code first (B) reverses the workflow. Giving wrong requirements (D) wastes time. Your irreplaceable contribution is knowing what your actual data looks like — the agent handles the code.",
+explanation: "Describing your bank's specific schema (Debit and Credit columns instead of Amount) provides domain knowledge that the agent cannot discover on its own. The agent adapts the implementation to match your data. Memorizing APIs (A) is the agent's role. Writing code first (B) reverses the workflow. Giving wrong requirements (D) wastes time. Your irreplaceable contribution is knowing what your actual data looks like: the agent handles the code.",
 source: "Lesson 3: Parsing Real Data"
 },
 {
-question: "The chapter's central rule is: 'If it is math, ask AI to write code that calculates — never ask AI to calculate.' Which scenario correctly applies this rule?",
+question: "The chapter's central rule is: 'If it is math, ask AI to write code that calculates, never ask AI to calculate.' Which scenario correctly applies this rule?",
 options: [
 "Ask the AI to build a script that sums amounts from stdin",
 "Ask the AI to sum 200 invoice amounts in a spreadsheet",
@@ -594,7 +594,7 @@ options: [
 "Ask the AI to round each transaction to the nearest dollar"
 ],
 correctOption: 0,
-explanation: "Asking the AI to build a script that calculates follows the rule — the computation happens in verified code, not in the AI's token prediction. Asking the AI to sum directly (A) relies on unreliable head-math at scale. Estimating spending (C) is a prediction, not precise computation. Rounding via AI (D) is still asking the AI to compute rather than write code that computes. The distinction is between executing arithmetic and predicting arithmetic.",
+explanation: "Asking the AI to build a script that calculates follows the rule: the computation happens in verified code, not in the AI's token prediction. Asking the AI to sum directly (A) relies on unreliable head-math at scale. Estimating spending (C) is a prediction, not precise computation. Rounding via AI (D) is still asking the AI to compute rather than write code that computes. The distinction is between executing arithmetic and predicting arithmetic.",
 source: "Lesson 1: From Broken Math to Your First Tool"
 },
 {
@@ -606,7 +606,7 @@ options: [
 "Skip verification since the categorizer already proved correct on bank data"
 ],
 correctOption: 2,
-explanation: "The build-verify-guard workflow transfers to any categorization domain — only the patterns and false positive guards need updating for new data. Rewriting from scratch (A) discards proven architecture. awk (C) still has the same CSV quoting issues with external data. Skipping verification (D) violates the zero-trust principle — new data may contain patterns your tests never covered. The workflow is the transferable asset; the patterns are domain-specific.",
+explanation: "The build-verify-guard workflow transfers to any categorization domain, only the patterns and false positive guards need updating for new data. Rewriting from scratch (A) discards proven architecture. awk (C) still has the same CSV quoting issues with external data. Skipping verification (D) violates the zero-trust principle: new data may contain patterns your tests never covered. The workflow is the transferable asset; the patterns are domain-specific.",
 source: "Lesson 5: Data Wrangling & Domain Transfer"
 }
 ]}

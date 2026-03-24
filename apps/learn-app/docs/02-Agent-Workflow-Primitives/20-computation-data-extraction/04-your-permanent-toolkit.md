@@ -71,34 +71,34 @@ teaching_guide:
   session_group: 2
   session_title: "Composable Tools and Data Wrangling"
   key_points:
-    - "The Unix philosophy — 'do one thing well' — is the design principle behind every tool in this chapter; this lesson makes it explicit"
-    - "sum-expenses.py was secretly three responsibilities in one file (extract, filter, sum) — decomposing it reveals the composable architecture hiding inside"
+    - "The Unix philosophy: 'do one thing well': is the design principle behind every tool in this chapter; this lesson makes it explicit"
+    - "sum-expenses.py was secretly three responsibilities in one file (extract, filter, sum): decomposing it reveals the composable architecture hiding inside"
     - "P2 (Code as Universal Interface) and P4 (Small, Reversible Decomposition) work together: small tools ARE the interface, and each is independently testable"
-    - "The same data source (bank.csv) answers completely different questions depending on which tools you chain — the data stays fixed, the pipeline changes"
+    - "The same data source (bank.csv) answers completely different questions depending on which tools you chain: the data stays fixed, the pipeline changes"
   misconceptions:
-    - "Students think decomposition means more work — it means more flexibility with less debugging, because each tool is independently verifiable"
-    - "Students may think extract-column only works on bank CSVs — it works on ANY CSV because it knows nothing about bank statements, only columns"
-    - "Students confuse 'small script' with 'limited script' — stats.py does five calculations but is still a single-purpose tool because all five operate on the same input type"
+    - "Students think decomposition means more work: it means more flexibility with less debugging, because each tool is independently verifiable"
+    - "Students may think extract-column only works on bank CSVs: it works on ANY CSV because it knows nothing about bank statements, only columns"
+    - "Students confuse 'small script' with 'limited script': stats.py does five calculations but is still a single-purpose tool because all five operate on the same input type"
   discussion_prompts:
     - "sum-expenses.py gives the right answer. Why would you break something that works into three separate scripts?"
     - "extract-column knows nothing about bank statements. Why is that ignorance a feature, not a limitation?"
     - "If filter.py has a bug, how many of your pipelines break? What if sum-expenses.py has a bug?"
   teaching_tips:
-    - "Start by showing the monster script with 6 flags and ask students to find the bug — the complexity demonstrates the problem before the solution"
-    - "Run cat bank.csv | extract-column Amount | filter '< 0' | stats live and then immediately change the pipeline to answer a different question — the speed of recombination is the lesson"
-    - "Have students predict what 'cat bank.csv | extract-column Description' outputs before running it — this builds pipeline reasoning"
-    - "The verification step (pipeline output matches sum-expenses output) connects back to L2 — same answer through a different path proves both approaches are correct"
+    - "Start by showing the monster script with 6 flags and ask students to find the bug: the complexity demonstrates the problem before the solution"
+    - "Run cat bank.csv | extract-column Amount | filter '< 0' | stats live and then immediately change the pipeline to answer a different question: the speed of recombination is the lesson"
+    - "Have students predict what 'cat bank.csv | extract-column Description' outputs before running it: this builds pipeline reasoning"
+    - "The verification step (pipeline output matches sum-expenses output) connects back to L2: same answer through a different path proves both approaches are correct"
   assessment_quick_check:
-    - "Ask: 'What three tools would you chain to find the 5 largest expenses?' — tests pipeline construction thinking"
-    - "Ask: 'extract-column works on bank CSVs. Can it work on a CSV of student grades?' — tests understanding that the tool is data-agnostic"
-    - "Ask: 'You added a --verbose flag to stats.py. Which other tools need to change?' — answer: none, tests understanding of tool independence"
+    - "Ask: 'What three tools would you chain to find the 5 largest expenses?': tests pipeline construction thinking"
+    - "Ask: 'extract-column works on bank CSVs. Can it work on a CSV of student grades?': tests understanding that the tool is data-agnostic"
+    - "Ask: 'You added a --verbose flag to stats.py. Which other tools need to change?': answer: none, tests understanding of tool independence"
 ---
 
 # One Tool, One Job
 
 The Unix way: one tool, one job, infinite combinations.
 
-Your accountant calls with three questions: "What's the total?" "What was the average?" "How many purchases were over $100?" You have one script. It answers one question. So you start adding flags — `--average`, `--count`, `--threshold`, `--top`, `--limit`. Six months later:
+Your accountant calls with three questions: "What's the total?" "What was the average?" "How many purchases were over $100?" You have one script. It answers one question. So you start adding flags: `--average`, `--count`, `--threshold`, `--top`, `--limit`. Six months later:
 
 ```bash
 python3 sum-expenses.py --sum --average --count --threshold 100 --top --limit 5 --filter negatives
@@ -119,11 +119,11 @@ cat bank.csv | python3 sum-expenses.py
 
 `cat` does one thing: read a file. Your script does one thing: process the data. The pipe connects them. Neither tool knows about the other. Neither needs to.
 
-This is the Unix philosophy: **build small tools that each do one thing, then chain them with pipes.** Every tool reads stdin, writes stdout. Every tool is ignorant of what comes before or after it in the pipeline. That ignorance is the feature — it means any tool connects to any other tool without modification.
+This is the Unix philosophy: **build small tools that each do one thing, then chain them with pipes.** Every tool reads stdin, writes stdout. Every tool is ignorant of what comes before or after it in the pipeline. That ignorance is the feature: it means any tool connects to any other tool without modification.
 
 Your sum-expenses script violates this principle. It reads CSV AND extracts a column AND filters negatives AND sums. Four responsibilities in one file. Time to break it apart.
 
-:::warning Your Turn First — 3 Minutes
+:::warning Your Turn First: 3 Minutes
 Before you ask Claude Code for help, try this yourself. Look at what sum-expenses.py does:
 
 1. Reads a CSV
@@ -131,7 +131,7 @@ Before you ask Claude Code for help, try this yourself. Look at what sum-expense
 3. Filters for negative amounts (debits)
 4. Sums the result
 
-If you had to split this into separate scripts — each reading stdin and writing stdout — how would you divide the work? How many scripts? What would each one do?
+If you had to split this into separate scripts (each reading stdin and writing stdout) how would you divide the work? How many scripts? What would each one do?
 
 Write down your decomposition (even just bullet points) before reading on. Then compare your design to what Claude Code builds. Did you split in the same places? Did you make the tools more specific (bank-only) or more general (any CSV)?
 :::
@@ -154,14 +154,14 @@ Build me three separate scripts that each do ONE thing:
 
 The agent builds all three. Here's what each one does:
 
-**extract-column.py** — `cat data.csv | extract-column Amount`
+**extract-column.py**: `cat data.csv | extract-column Amount`
 ```python
 reader = csv.DictReader(sys.stdin)
 for row in reader:
     print(row[column])             # One value per line to stdout
 ```
 
-**filter.py** — `filter "< 0"` keeps numbers matching a condition
+**filter.py**: `filter "< 0"` keeps numbers matching a condition
 ```python
 for line in sys.stdin:
     value = float(line.strip())
@@ -169,13 +169,13 @@ for line in sys.stdin:
         print(line.strip())
 ```
 
-**stats.py** — reads numbers from stdin, prints sum, count, average, min, max
+**stats.py**: reads numbers from stdin, prints sum, count, average, min, max
 ```python
 numbers = [float(line) for line in sys.stdin if line.strip()]
 print(f"Sum: {sum(numbers):.2f}")  # Plus count, average, min, max
 ```
 
-The full scripts are in your working directory. Three scripts, each reading stdin, each writing stdout. None knows about bank statements — only about columns, numbers, and conditions.
+The full scripts are in your working directory. Three scripts, each reading stdin, each writing stdout. None knows about bank statements, only about columns, numbers, and conditions.
 
 ## The Power of Recombination
 
@@ -195,7 +195,7 @@ Min:     -200.00
 Max:     -4.99
 ```
 
-Same data. Five answers instead of one. And you didn't modify a single script — you just connected tools that already existed.
+Same data. Five answers instead of one. And you didn't modify a single script: you just connected tools that already existed.
 
 Now change the question:
 
@@ -223,26 +223,26 @@ cat ~/finances/sample-2025.csv | extract-column Amount | filter "> 0" | stats
 | All merchant names | `extract-column Description` |
 | Average income | `extract-column Amount \| filter "> 0" \| stats` |
 
-The data doesn't change. The tools don't change. Only the pipeline changes — and that's just a different arrangement of the same building blocks.
+The data doesn't change. The tools don't change. Only the pipeline changes, and that's just a different arrangement of the same building blocks.
 
 ## Why This Is Better
 
-A bug in `filter.py` breaks one pipe segment — not your entire workflow. You test each tool with three numbers from stdin instead of every flag combination. And when you need a new capability — say, sorting by amount — you build `sort-numbers.py`, test it in isolation, and plug it into the pipeline. The existing tools don't know it exists and don't need to. Small tools answer questions you haven't thought of yet because the pipeline changes, not the tools.
+A bug in `filter.py` breaks one pipe segment, not your entire workflow. You test each tool with three numbers from stdin instead of every flag combination. And when you need a new capability (say, sorting by amount) you build `sort-numbers.py`, test it in isolation, and plug it into the pipeline. The existing tools don't know it exists and don't need to. Small tools answer questions you haven't thought of yet because the pipeline changes, not the tools.
 
 ## The Principle Connection
 
 Two of the Seven Principles from the Seven Principles chapter come alive here:
 
-**P2: Code as Universal Interface.** `extract-column` doesn't know it's processing bank statements. It extracts a column from ANY CSV — bank data, payroll, student grades, server logs. The tool is universal *because* it's small. The less a tool knows about its context, the more contexts it works in.
+**P2: Code as Universal Interface.** `extract-column` doesn't know it's processing bank statements. It extracts a column from ANY CSV: bank data, payroll, student grades, server logs. The tool is universal *because* it's small. The less a tool knows about its context, the more contexts it works in.
 
 **P4: Small, Reversible Decomposition.** If `filter.py` has a bug, you fix one script and re-test it with `echo -e "10\n-5\n20" | filter "< 0"`. If `sum-expenses.py` has a bug, you're debugging 30 lines of intertwined logic. Small tools have small blast radii.
 
 These two principles reinforce each other. Small tools (P4) become universal interfaces (P2) because their simplicity makes them context-independent.
 
 :::tip The Retrospective Insight
-Look back at sum-expenses.py from Lesson 3. It was doing three jobs: extracting the Amount column, filtering for negatives, and summing the result. It worked — but it could only answer one question. The three-tool decomposition doesn't replace sum-expenses; it reveals the composable architecture that was hiding inside it.
+Look back at sum-expenses.py from Lesson 3. It was doing three jobs: extracting the Amount column, filtering for negatives, and summing the result. It worked, but it could only answer one question. The three-tool decomposition doesn't replace sum-expenses; it reveals the composable architecture that was hiding inside it.
 
-You can keep sum-expenses.py for the common case — it's a convenient shortcut. But when you need a question it can't answer, you have the building blocks to construct any pipeline you need.
+You can keep sum-expenses.py for the common case; it's a convenient shortcut. But when you need a question it can't answer, you have the building blocks to construct any pipeline you need.
 :::
 
 ## Install Your Library
@@ -265,7 +265,7 @@ Run this and verify the expense total matches what sum-expenses produced in Less
 cat ~/finances/sample-2025.csv | extract-column Amount | filter "< 0" | stats
 ```
 
-The Sum line should show your expense total. Same answer, different architecture — but now you can ask questions sum-expenses never could.
+The Sum line should show your expense total. Same answer, different architecture, but now you can ask questions sum-expenses never could.
 
 Then try a question sum-expenses CAN'T answer:
 
@@ -276,7 +276,7 @@ cat ~/finances/sample-2025.csv | extract-column Amount | filter "< -100" | stats
 If both work, your composable toolkit is operational.
 :::
 
-You made the architecture decision — three tools, not one, each reading stdin and writing stdout. The agent made every implementation decision within that architecture. That's the director's role at its clearest: you decide what to build and how the pieces connect. The agent decides how each piece works inside.
+You made the architecture decision: three tools, not one, each reading stdin and writing stdout. The agent made every implementation decision within that architecture. That's the director's role at its clearest: you decide what to build and how the pieces connect. The agent decides how each piece works inside.
 
 ## The Pattern
 
@@ -285,9 +285,9 @@ You made the architecture decision — three tools, not one, each reading stdin 
 Each tool reads stdin and writes stdout so I can chain them with pipes."
 ```
 
-This prompt pattern works because it gives the agent two constraints: single responsibility (one thing) and composability (stdin/stdout). Everything else — the language, the parsing logic, the error handling — is the agent's call.
+This prompt pattern works because it gives the agent two constraints: single responsibility (one thing) and composability (stdin/stdout). Everything else (the language, the parsing logic, the error handling) is the agent's call.
 
-You can extract, filter, and summarize any column in any CSV. But tax season needs something these generic tools can't do: look at a merchant name and decide if it's medical, charitable, or business. That's not filtering — that's *judgment*. And judgment needs patterns.
+You can extract, filter, and summarize any column in any CSV. But tax season needs something these generic tools can't do: look at a merchant name and decide if it's medical, charitable, or business. That's not filtering: that's *judgment*. And judgment needs patterns.
 
 ## Flashcards Study Aid
 
@@ -305,7 +305,7 @@ and standard deviation. Keep the stdin reading pattern so it still
 works in pipelines.
 ```
 
-**What you're learning:** Extending a tool without breaking its interface. stats.py gains two capabilities, but its contract — reads numbers from stdin, prints results to stdout — doesn't change. Every existing pipeline that uses stats.py gets the new statistics for free. That's what composability buys you: improvements propagate without rewiring.
+**What you're learning:** Extending a tool without breaking its interface. stats.py gains two capabilities, but its contract (reads numbers from stdin, prints results to stdout) doesn't change. Every existing pipeline that uses stats.py gets the new statistics for free. That's what composability buys you: improvements propagate without rewiring.
 
 ### Prompt 2: Build a New Tool
 
@@ -315,7 +315,7 @@ the N largest values. Default to 5 if no argument given.
 I want to use it like: cat bank.csv | extract-column Amount | filter "< 0" | top 3
 ```
 
-**What you're learning:** Adding a new capability to your toolkit without touching existing tools. You specified the interface (`top 3`), the input source (stdin), and the output behavior (print N values). The agent handles implementation. Tomorrow, if you need the N smallest instead, you build `bottom.py` — same pattern, new tool, zero changes to anything else.
+**What you're learning:** Adding a new capability to your toolkit without touching existing tools. You specified the interface (`top 3`), the input source (stdin), and the output behavior (print N values). The agent handles implementation. Tomorrow, if you need the N smallest instead, you build `bottom.py`: same pattern, new tool, zero changes to anything else.
 
 ### Prompt 3: When NOT to Decompose
 
@@ -326,4 +326,4 @@ Should I decompose it further, or is it already a good single-purpose
 tool? When does decomposition stop being helpful?
 ```
 
-**What you're learning:** The boundary of decomposition. Not every script needs splitting — a 15-line single-purpose tool that reads stdin and writes stdout is already following the Unix philosophy. The agent's answer teaches you to recognize when a tool is "done" — when splitting it further would create tools too small to be useful on their own. The rule: if a tool does one thing and you can test it with one command, it's small enough.
+**What you're learning:** The boundary of decomposition. Not every script needs splitting: a 15-line single-purpose tool that reads stdin and writes stdout is already following the Unix philosophy. The agent's answer teaches you to recognize when a tool is "done": when splitting it further would create tools too small to be useful on their own. The rule: if a tool does one thing and you can test it with one command, it's small enough.

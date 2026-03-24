@@ -46,7 +46,7 @@ differentiation:
 
 # Connect Your Employee to the World
 
-In Teach Your Employee a Skill lesson, you gave your employee domain expertise through a custom skill. Now you will give it reach — the ability to communicate and act through the tools your profession actually uses.
+In Teach Your Employee a Skill lesson, you gave your employee domain expertise through a custom skill. Now you will give it reach: the ability to communicate and act through the tools your profession actually uses.
 
 Your AI employee can think, but it can only talk through WhatsApp. A real employee needs access to the platforms where your work happens. An accountant needs email for client invoices. A teacher needs Slack for parent communication. A developer needs GitHub for code review workflows. The connection you add here should be the single highest-value integration for your specific profession.
 
@@ -58,7 +58,7 @@ Add the one connection that would create the most value for your AI employee's p
 
 ### Acceptance Criteria
 
-1. Your new connection is working — demonstrated through a real send/receive interaction or a successful tool call
+1. Your new connection is working: demonstrated through a real send/receive interaction or a successful tool call
 2. You have documented what data crosses the container boundary (what goes in, what comes out, what is stored)
 3. You can explain in one paragraph why you chose this specific connection over alternatives
 
@@ -77,14 +77,14 @@ Pick the path that matches your profession, or adapt one to fit:
 | **Developer** | GitHub MCP | Code review workflows, issue triage, PR summaries | MCP Server |
 | **Consultant** | Google Calendar MCP | Meeting preparation, schedule analysis, client appointment management | MCP Server |
 
-Your profession probably suggests a different connection entirely. That is the point — choose what matters for YOUR work.
+Your profession probably suggests a different connection entirely. That is the point: choose what matters for YOUR work.
 
 ## Hints
 
 <details>
 <summary>Level 1: Where to Look</summary>
 
-Run `/help` in your NanoClaw WhatsApp group to see all available commands, including the `/add-*` commands for channels. For MCP servers, check the NanoClaw repository's documentation on MCP configuration. Your Layer 3 design from the NanoClaw Hands-On Setup lesson already lists the MCP servers you planned — start there.
+Run `/help` in your NanoClaw WhatsApp group to see all available commands, including the `/add-*` commands for channels. For MCP servers, check the NanoClaw repository's documentation on MCP configuration. Your Layer 3 design from the NanoClaw Hands-On Setup lesson already lists the MCP servers you planned: start there.
 
 </details>
 
@@ -102,9 +102,9 @@ Use the answer to confirm or adjust your choice before committing to the setup.
 <details>
 <summary>Level 3: Step-by-Step Guidance</summary>
 
-**For channels:** Use the built-in commands — `/add-telegram`, `/add-gmail`, `/add-slack`, or `/add-discord`. Each command starts a guided setup flow. Follow the prompts, complete the authentication, and test with a simple message.
+**For channels:** Use the built-in commands: `/add-telegram`, `/add-gmail`, `/add-slack`, or `/add-discord`. Each command starts a guided setup flow. Follow the prompts, complete the authentication, and test with a simple message.
 
-**For MCP servers:** Add the server configuration to your NanoClaw MCP settings. You will need the server's npm package or docker image, plus any required API keys. Test with a simple request that exercises the new connection — for example, ask your employee to read your latest calendar event or fetch a GitHub issue.
+**For MCP servers:** Add the server configuration to your NanoClaw MCP settings. You will need the server's npm package or docker image, plus any required API keys. Test with a simple request that exercises the new connection, for example, ask your employee to read your latest calendar event or fetch a GitHub issue.
 
 **For the data boundary analysis:** Ask yourself three questions: (1) What data does my employee send OUT through this connection? (2) What data comes IN from this connection? (3) Is any of this data stored inside the container?
 

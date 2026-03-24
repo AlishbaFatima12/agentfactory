@@ -24,7 +24,7 @@ options: [
 "Experts use fewer prompts to accomplish their same tasks"
 ],
 correctOption: 1,
-explanation: "The chapter's core insight is that experts describe the problem, not the solution. They let the General Agent figure out which commands to run and how to help. Beginners try to specify technical details and describe solutions. Memorizing bash commands is explicitly not recommended — the chapter teaches observation over memorization. Running commands manually is the opposite of effective agent use. Using fewer prompts is not the distinguishing factor; quality of prompts matters more.",
+explanation: "The chapter's core insight is that experts describe the problem, not the solution. They let the General Agent figure out which commands to run and how to help. Beginners try to specify technical details and describe solutions. Memorizing bash commands is explicitly not recommended: the chapter teaches observation over memorization. Running commands manually is the opposite of effective agent use. Using fewer prompts is not the distinguishing factor; quality of prompts matters more.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -36,7 +36,7 @@ options: [
 "Stopped execution because the find command encountered an error"
 ],
 correctOption: 2,
-explanation: "The pipe symbol connects commands by passing the output of the left command as input to the right command. For example, 'find ~/Downloads -name _.pdf | wc -l' means 'find PDFs, then count them.' The pipe does not create backups or script files — it is a real-time data flow between commands. It does not stop on failure either; that behavior requires different syntax like &&. Small tools chained together through pipes is what makes the shell powerful.",
+explanation: "The pipe symbol connects commands by passing the output of the left command as input to the right command. For example, 'find ~/Downloads -name _.pdf | wc -l' means 'find PDFs, then count them.' The pipe does not create backups or script files: it is a real-time data flow between commands. It does not stop on failure either; that behavior requires different syntax like &&. Small tools chained together through pipes is what makes the shell powerful.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -48,7 +48,7 @@ options: [
 "It automatically generates bash scripts for all later use cases"
 ],
 correctOption: 0,
-explanation: "The 'Help me understand' pattern works because it does two things: describes the problem (not the solution) and specifies what outcome you want. You say 'cluttered Downloads folder' instead of 'run find and du commands.' The agent figures out how to help. This pattern does not use technical vocabulary — it is deliberately non-technical. It does not limit the agent or generate scripts automatically. The power comes from letting the agent choose the right tools while you define success.",
+explanation: "The 'Help me understand' pattern works because it does two things: describes the problem (not the solution) and specifies what outcome you want. You say 'cluttered Downloads folder' instead of 'run find and du commands.' The agent figures out how to help. This pattern does not use technical vocabulary: it is deliberately non-technical. It does not limit the agent or generate scripts automatically. The power comes from letting the agent choose the right tools while you define success.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -60,7 +60,7 @@ options: [
 "A sorted ranking of the most recently modified files present"
 ],
 correctOption: 1,
-explanation: "The command 'du -sh' means disk usage with summary and human-readable flags. The -s flag shows only the total (summary), and -h shows sizes in KB, MB, or GB instead of raw bytes. It does not list individual files or their dates — that would be ls or find. It does not group by extension — that requires additional commands. It does not sort by modification date — that would need sort or ls with specific flags. It simply reports the total size of the specified directory.",
+explanation: "The command 'du -sh' means disk usage with summary and human-readable flags. The -s flag shows only the total (summary), and -h shows sizes in KB, MB, or GB instead of raw bytes. It does not list individual files or their dates (that would be ls or find. It does not group by extension) that requires additional commands. It does not sort by modification date: that would need sort or ls with specific flags. It simply reports the total size of the specified directory.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -72,7 +72,7 @@ options: [
 "The total count of PDF files found inside the Downloads folder"
 ],
 correctOption: 3,
-explanation: "Reading left to right: find in Downloads, only files (-type f), named _.pdf, then pipe to wc -l which counts lines. Since find outputs one filename per line, wc -l counts the total number of matching files. It does not list filenames — the pipe sends them to wc which only outputs a number. It does not calculate sizes — that would need du. It does not show dates — that would need -newer or ls flags. The pipe transforms the file list into a simple count.",
+explanation: "Reading left to right: find in Downloads, only files (-type f), named _.pdf, then pipe to wc -l which counts lines. Since find outputs one filename per line, wc -l counts the total number of matching files. It does not list filenames: the pipe sends them to wc which only outputs a number. It does not calculate sizes (that would need du. It does not show dates) that would need -newer or ls flags. The pipe transforms the file list into a simple count.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -84,7 +84,7 @@ options: [
 "Read the official bash manual documentation thoroughly from start"
 ],
 correctOption: 2,
-explanation: "The chapter explicitly teaches observation over memorization. You watch what the agent does, learning patterns without rote memorization. You do not need to memorize commands — you need to recognize them when the agent uses them. Completing a bash tutorial first is not recommended; the chapter teaches just-in-time learning through agent interaction. Reading the full bash manual is unnecessary. The philosophy is prompt patterns over command syntax.",
+explanation: "The chapter explicitly teaches observation over memorization. You watch what the agent does, learning patterns without rote memorization. You do not need to memorize commands: you need to recognize them when the agent uses them. Completing a bash tutorial first is not recommended; the chapter teaches just-in-time learning through agent interaction. Reading the full bash manual is unnecessary. The philosophy is prompt patterns over command syntax.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -108,7 +108,7 @@ options: [
 "Markdown format makes the analysis easier for humans to read"
 ],
 correctOption: 1,
-explanation: "Saving the analysis to FILE-INVENTORY.md applies Principle 5: Persisting State in Files. Future sessions can read this file and build on the analysis without re-running everything. The agent does not specifically require this file to continue — it is for your benefit across sessions. While markdown is readable, that is not the primary reason. Preventing re-runs is a side benefit, but the core purpose is persistence across sessions. Everything that follows in the chapter builds on understanding YOUR files from this inventory.",
+explanation: "Saving the analysis to FILE-INVENTORY.md applies Principle 5: Persisting State in Files. Future sessions can read this file and build on the analysis without re-running everything. The agent does not specifically require this file to continue: it is for your benefit across sessions. While markdown is readable, that is not the primary reason. Preventing re-runs is a side benefit, but the core purpose is persistence across sessions. Everything that follows in the chapter builds on understanding YOUR files from this inventory.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -120,7 +120,7 @@ options: [
 "Create backup, verify it is complete, then reorganize files"
 ],
 correctOption: 3,
-explanation: "The safety-first pattern requires creating a backup BEFORE any changes, verifying it is complete, and only then proceeding with modifications. This is the 'right order' explicitly shown in the chapter. Making changes first and backing up later risks permanent data loss. Verifying before creating makes no sense — there is nothing to verify yet. Backing up results after changes defeats the purpose — the backup should preserve the original state so you can restore if something goes wrong.",
+explanation: "The safety-first pattern requires creating a backup BEFORE any changes, verifying it is complete, and only then proceeding with modifications. This is the 'right order' explicitly shown in the chapter. Making changes first and backing up later risks permanent data loss. Verifying before creating makes no sense: there is nothing to verify yet. Backing up results after changes defeats the purpose: the backup should preserve the original state so you can restore if something goes wrong.",
 source: "Lesson 2: The Safety-First Pattern"
 },
 {
@@ -132,7 +132,7 @@ options: [
 "The backup command requires a specific file type as input"
 ],
 correctOption: 0,
-explanation: "The agent asked because 'important' means different things to different people. A photographer cares about images, an accountant cares about spreadsheets, a researcher cares about PDFs. The agent offered options: all files, recent files, specific types, or custom selection. This clarification prevents misunderstandings that could lead to data loss. File sizes have nothing to do with the question. Operating system permissions do not require this interaction. The backup command works with any files — the question is which files matter to you.",
+explanation: "The agent asked because 'important' means different things to different people. A photographer cares about images, an accountant cares about spreadsheets, a researcher cares about PDFs. The agent offered options: all files, recent files, specific types, or custom selection. This clarification prevents misunderstandings that could lead to data loss. File sizes have nothing to do with the question. Operating system permissions do not require this interaction. The backup command works with any files: the question is which files matter to you.",
 source: "Lesson 2: The Safety-First Pattern"
 },
 {
@@ -156,7 +156,7 @@ options: [
 "That the backup was compressed to conserve available disk space"
 ],
 correctOption: 1,
-explanation: "After creating a backup, the chapter shows the agent comparing file counts between source and backup to verify completeness. The agent checked 'PDF files in Downloads: 47, PDF files in backup: 47' to confirm the match. Checking the directory location is secondary to confirming completeness. Original files should NOT be deleted — the backup is a copy, not a move. Compression is not part of the standard verification pattern. Trust but verify means proving the numbers match.",
+explanation: "After creating a backup, the chapter shows the agent comparing file counts between source and backup to verify completeness. The agent checked 'PDF files in Downloads: 47, PDF files in backup: 47' to confirm the match. Checking the directory location is secondary to confirming completeness. Original files should NOT be deleted: the backup is a copy, not a move. Compression is not part of the standard verification pattern. Trust but verify means proving the numbers match.",
 source: "Lesson 2: The Safety-First Pattern"
 },
 {
@@ -180,7 +180,7 @@ options: [
 "System configurations never need any safety precautions before changes"
 ],
 correctOption: 2,
-explanation: "The chapter explicitly maps the pattern across domains: code changes use git commits before refactoring, database updates use exports before modifying, and system configurations use snapshots before changing settings. The common thread is creating a reversible state before any irreversible action. The pattern absolutely applies beyond files — it is described as a universal safety mindset. No domain has built-in safety that eliminates the need for backups. System configurations absolutely need precautions.",
+explanation: "The chapter explicitly maps the pattern across domains: code changes use git commits before refactoring, database updates use exports before modifying, and system configurations use snapshots before changing settings. The common thread is creating a reversible state before any irreversible action. The pattern absolutely applies beyond files: it is described as a universal safety mindset. No domain has built-in safety that eliminates the need for backups. System configurations absolutely need precautions.",
 source: "Lesson 2: The Safety-First Pattern"
 },
 {
@@ -192,7 +192,7 @@ options: [
 "Compress all files automatically without asking for any permission"
 ],
 correctOption: 0,
-explanation: "The chapter shows an agent that caught the space problem BEFORE running out mid-backup. It presented options: backup only recent files, backup only documents, use a different destination, or compress. This demonstrates checking preconditions, a key safety behavior. Proceeding with a partial backup without informing the user is the worst option — it creates false confidence. Canceling entirely is too extreme when alternatives exist. Compressing without asking violates the principle that agents should clarify before acting.",
+explanation: "The chapter shows an agent that caught the space problem BEFORE running out mid-backup. It presented options: backup only recent files, backup only documents, use a different destination, or compress. This demonstrates checking preconditions, a key safety behavior. Proceeding with a partial backup without informing the user is the worst option: it creates false confidence. Canceling entirely is too extreme when alternatives exist. Compressing without asking violates the principle that agents should clarify before acting.",
 source: "Lesson 2: The Safety-First Pattern"
 },
 {
@@ -204,7 +204,7 @@ options: [
 "Constraints make the backup process run significantly more slowly"
 ],
 correctOption: 1,
-explanation: "The chapter states: 'The backup constraint ENABLES the changes. Without the safety net, you would hesitate. With it, you can experiment freely.' The constraint of requiring backups does not limit you — it frees you. People abandon cleanup projects because they fear losing something irreplaceable. With a verified backup, that fear disappears. Constraints do not prevent changes — they make you confident enough to make them. They do not slow the process or limit file counts. The paradox is that adding a safety requirement enables more action, not less.",
+explanation: "The chapter states: 'The backup constraint ENABLES the changes. Without the safety net, you would hesitate. With it, you can experiment freely.' The constraint of requiring backups does not limit you: it frees you. People abandon cleanup projects because they fear losing something irreplaceable. With a verified backup, that fear disappears. Constraints do not prevent changes; they make you confident enough to make them. They do not slow the process or limit file counts. The paradox is that adding a safety requirement enables more action, not less.",
 source: "Lesson 2: The Safety-First Pattern"
 },
 {
@@ -216,7 +216,7 @@ options: [
 "Catching rule errors early prevents batch-wide mistakes later on"
 ],
 correctOption: 3,
-explanation: "Testing on one file first is about catching errors early. If the test file lands in the wrong folder, you know immediately — before the mistake affects hundreds of files. The chapter shows the agent moving budget-2026.pdf as a test, then verifying it arrived correctly before proceeding with 486 more files. Agents absolutely can process multiple files. Backups are not related to single-file testing. Batch commands do not technically require prior testing — it is a best practice for safety, not a technical requirement.",
+explanation: "Testing on one file first is about catching errors early. If the test file lands in the wrong folder, you know immediately: before the mistake affects hundreds of files. The chapter shows the agent moving budget-2026.pdf as a test, then verifying it arrived correctly before proceeding with 486 more files. Agents absolutely can process multiple files. Backups are not related to single-file testing. Batch commands do not technically require prior testing: it is a best practice for safety, not a technical requirement.",
 source: "Lesson 3: The Organization Workflow"
 },
 {
@@ -228,7 +228,7 @@ options: [
 "It prevents the agent from creating any additional files afterward"
 ],
 correctOption: 0,
-explanation: "Rules.md documents the categorization logic so it can be reused. The chapter states: 'Next week when your Downloads folder fills up again, the logic is already documented.' This is Principle 5 (Persisting State in Files) in action. Rules.md does not replace FILE-INVENTORY.md — they serve different purposes. It does not grant special access to directories. It does not prevent the agent from creating files. The key value is that documented rules survive between sessions and can be applied again automatically.",
+explanation: "Rules.md documents the categorization logic so it can be reused. The chapter states: 'Next week when your Downloads folder fills up again, the logic is already documented.' This is Principle 5 (Persisting State in Files) in action. Rules.md does not replace FILE-INVENTORY.md; they serve different purposes. It does not grant special access to directories. It does not prevent the agent from creating files. The key value is that documented rules survive between sessions and can be applied again automatically.",
 source: "Lesson 3: The Organization Workflow"
 },
 {
@@ -240,7 +240,7 @@ options: [
 "Collaboration takes longer and produces identical AI-only results"
 ],
 correctOption: 2,
-explanation: "The chapter explicitly states: 'Neither of you could have reached this result alone. The AI didn't know you cared about spreadsheets, and you didn't want to manually design the whole system.' The collaboration was essential — the AI proposed initial categories, the human refined them by requesting a separate spreadsheets folder, and the AI adapted. The AI does not always know perfect categories — it needed human input about spreadsheet preferences. Human override without discussion misses AI suggestions. Collaboration produced better results, not identical ones.",
+explanation: "The chapter explicitly states: 'Neither of you could have reached this result alone. The AI didn't know you cared about spreadsheets, and you didn't want to manually design the whole system.' The collaboration was essential: the AI proposed initial categories, the human refined them by requesting a separate spreadsheets folder, and the AI adapted. The AI does not always know perfect categories: it needed human input about spreadsheet preferences. Human override without discussion misses AI suggestions. Collaboration produced better results, not identical ones.",
 source: "Lesson 3: The Organization Workflow"
 },
 {
@@ -276,7 +276,7 @@ options: [
 "It prevents you from undoing any of the completed file operations"
 ],
 correctOption: 0,
-explanation: "The ORGANIZER-LOG.md records the full activity history, providing transparency into what the agent did and enabling later auditing. This is Principle 7 (Observability) in action — logging everything and showing progress. The log is not a prerequisite for file operations; it is a record of them. It does not speed up the process — it adds a small overhead for the benefit of transparency. It certainly does not prevent undoing operations; if anything, it makes recovery easier by showing exactly what changed.",
+explanation: "The ORGANIZER-LOG.md records the full activity history, providing transparency into what the agent did and enabling later auditing. This is Principle 7 (Observability) in action: logging everything and showing progress. The log is not a prerequisite for file operations; it is a record of them. It does not speed up the process: it adds a small overhead for the benefit of transparency. It certainly does not prevent undoing operations; if anything, it makes recovery easier by showing exactly what changed.",
 source: "Lesson 3: The Organization Workflow"
 },
 {
@@ -288,7 +288,7 @@ options: [
 "Never because the agent loses all progress between its sessions"
 ],
 correctOption: 2,
-explanation: "The chapter advises starting a fresh session when context gets long, noting that three lessons of exploration creates significant context. Crucially, your rules.md, FILE-INVENTORY.md, and ORGANIZER-LOG.md carry context forward in files — exactly as Principle 5 prescribes. Starting fresh after every operation is excessive and impractical. Errors alone are not the trigger — context length is. The agent does not lose progress because important state is persisted in files, not in the conversation. Files are the memory that survives between sessions.",
+explanation: "The chapter advises starting a fresh session when context gets long, noting that three lessons of exploration creates significant context. Crucially, your rules.md, FILE-INVENTORY.md, and ORGANIZER-LOG.md carry context forward in files: exactly as Principle 5 prescribes. Starting fresh after every operation is excessive and impractical. Errors alone are not the trigger: context length is. The agent does not lose progress because important state is persisted in files, not in the conversation. Files are the memory that survives between sessions.",
 source: "Lesson 3: The Organization Workflow"
 },
 {
@@ -312,7 +312,7 @@ options: [
 "The agent strongly prefers writing scripts over individual commands"
 ],
 correctOption: 1,
-explanation: "The chapter contrasts one-time commands (files renamed, start over next time) with script generation (files renamed plus a reusable script). Scripts solve the category of problems, not just one instance. They also serve as documentation — six months later, opening rename-screenshots.sh shows exactly how you wanted files named. This is Principle 2 (Code as Universal Interface) in action. Scripts do not inherently run faster. Agent preference is not the reason. One-time commands are absolutely available in all terminals.",
+explanation: "The chapter contrasts one-time commands (files renamed, start over next time) with script generation (files renamed plus a reusable script). Scripts solve the category of problems, not just one instance. They also serve as documentation: six months later, opening rename-screenshots.sh shows exactly how you wanted files named. This is Principle 2 (Code as Universal Interface) in action. Scripts do not inherently run faster. Agent preference is not the reason. One-time commands are absolutely available in all terminals.",
 source: "Lesson 4: Batch Operations Workflow"
 },
 {
@@ -324,7 +324,7 @@ options: [
 "It sets special permissions on each directory created in the full path"
 ],
 correctOption: 2,
-explanation: "The -p flag in mkdir means 'create parents.' Without -p, mkdir only creates the last directory and fails if parents do not exist. With -p, it creates the entire chain: renamed/, 2024/, and january/ — all missing folders in one command. It does not create only the final directory; that is what mkdir without -p attempts. It does not overwrite existing directories. It does not set special permissions. The chapter explicitly explains that -p creates ALL missing folders in the path.",
+explanation: "The -p flag in mkdir means 'create parents.' Without -p, mkdir only creates the last directory and fails if parents do not exist. With -p, it creates the entire chain: renamed/, 2024/, and january/: all missing folders in one command. It does not create only the final directory; that is what mkdir without -p attempts. It does not overwrite existing directories. It does not set special permissions. The chapter explicitly explains that -p creates ALL missing folders in the path.",
 source: "Lesson 4: Batch Operations Workflow"
 },
 {
@@ -348,7 +348,7 @@ options: [
 "The first argument passed when running the script from the terminal"
 ],
 correctOption: 3,
-explanation: "In a bash script, $1 is the first argument typed after the script name. The chapter explains: when you run './rename-screenshots.sh ~/Screenshots', the $1 becomes '~/Screenshots'. The script then processes every .png file in that folder. Exit codes are accessed via $?. The argument count is $#. The script name itself is $0. Understanding $1 helps you see how scripts become reusable — the same script works on different folders by changing the argument.",
+explanation: "In a bash script, $1 is the first argument typed after the script name. The chapter explains: when you run './rename-screenshots.sh ~/Screenshots', the $1 becomes '~/Screenshots'. The script then processes every .png file in that folder. Exit codes are accessed via $?. The argument count is $#. The script name itself is $0. Understanding $1 helps you see how scripts become reusable: the same script works on different folders by changing the argument.",
 source: "Lesson 4: Batch Operations Workflow"
 },
 {
@@ -360,7 +360,7 @@ options: [
 "It automatically rolls back any operations that fail during execution"
 ],
 correctOption: 1,
-explanation: "The preview-approve-execute-log workflow ensures nothing happens without your review. You see the proposed changes (preview), give the go-ahead (approve), watch the execution, and get a log of everything that happened. This is fundamentally different from running commands yourself. It does not make commands faster — adding preview steps takes more time. It does not eliminate the need for backups — both patterns work together. It does not automatically roll back failures — that requires explicit recovery steps.",
+explanation: "The preview-approve-execute-log workflow ensures nothing happens without your review. You see the proposed changes (preview), give the go-ahead (approve), watch the execution, and get a log of everything that happened. This is fundamentally different from running commands yourself. It does not make commands faster: adding preview steps takes more time. It does not eliminate the need for backups: both patterns work together. It does not automatically roll back failures: that requires explicit recovery steps.",
 source: "Lesson 4: Batch Operations Workflow"
 },
 {
@@ -384,7 +384,7 @@ options: [
 "Agents perform recovery differently when important files are actually lost"
 ],
 correctOption: 0,
-explanation: "The chapter uses the fire drill analogy: nobody expects a fire during the drill, but the point is building muscle memory. If the first time you try to restore from backup is when you have actually lost important files, you will be stressed, rushed, and more likely to make things worse. Practicing when nothing is at stake builds confidence. Recovery commands are not inherently difficult — they are just stressful when real data is at risk. The backup system works the same way regardless of practice or real scenarios. Agents do not change their recovery behavior.",
+explanation: "The chapter uses the fire drill analogy: nobody expects a fire during the drill, but the point is building muscle memory. If the first time you try to restore from backup is when you have actually lost important files, you will be stressed, rushed, and more likely to make things worse. Practicing when nothing is at stake builds confidence. Recovery commands are not inherently difficult; they are just stressful when real data is at risk. The backup system works the same way regardless of practice or real scenarios. Agents do not change their recovery behavior.",
 source: "Lesson 5: Error Recovery & Resilience"
 },
 {
@@ -408,7 +408,7 @@ options: [
 "The command permanently deletes everything inside without confirmation"
 ],
 correctOption: 3,
-explanation: "The chapter explicitly warns: rm -rf removes recursively and forces deletion — it deletes without asking. The -r flag means recursive (all contents inside directories) and -f means force (no confirmation prompts). It does not move files to a temporary directory — deletion is permanent. It processes all matching files, not just the first one. It does not always require administrator privileges for files you own. The chapter states you should never run it unless you have a verified backup you can restore from.",
+explanation: "The chapter explicitly warns: rm -rf removes recursively and forces deletion: it deletes without asking. The -r flag means recursive (all contents inside directories) and -f means force (no confirmation prompts). It does not move files to a temporary directory: deletion is permanent. It processes all matching files, not just the first one. It does not always require administrator privileges for files you own. The chapter states you should never run it unless you have a verified backup you can restore from.",
 source: "Lesson 5: Error Recovery & Resilience"
 },
 {
@@ -444,7 +444,7 @@ options: [
 "A planned step built into every workflow from the very start"
 ],
 correctOption: 3,
-explanation: "The chapter states: 'Recovery should be a planned step, not an emergency response.' It provides a table showing recovery thinking at every stage: before you start, ask what your recovery plan is; before destructive ops, create backups; after batch operations, compare results; when something is off, compare against backup; after recovery, verify completion. Recovery is not optional — it should be planned from the start. It is not purely manual — the agent assists. It is not the first step — backup comes first in the workflow.",
+explanation: "The chapter states: 'Recovery should be a planned step, not an emergency response.' It provides a table showing recovery thinking at every stage: before you start, ask what your recovery plan is; before destructive ops, create backups; after batch operations, compare results; when something is off, compare against backup; after recovery, verify completion. Recovery is not optional (it should be planned from the start. It is not purely manual) the agent assists. It is not the first step: backup comes first in the workflow.",
 source: "Lesson 5: Error Recovery & Resilience"
 },
 {
@@ -468,7 +468,7 @@ options: [
 "Searches only the files that were modified within the last full week"
 ],
 correctOption: 2,
-explanation: "The -l flag in grep means 'list files only.' Instead of showing every matching line inside files, grep -l shows just the names of files that contain at least one match. This is useful when you want to know which files contain a term, not see every instance. Limiting to the first line would be a different flag. Counting matches uses -c flag. File modification filtering is not a grep feature — that requires find. The chapter uses grep -l to find files containing '1099' or 'dividend' without showing every matching line.",
+explanation: "The -l flag in grep means 'list files only.' Instead of showing every matching line inside files, grep -l shows just the names of files that contain at least one match. This is useful when you want to know which files contain a term, not see every instance. Limiting to the first line would be a different flag. Counting matches uses -c flag. File modification filtering is not a grep feature: that requires find. The chapter uses grep -l to find files containing '1099' or 'dividend' without showing every matching line.",
 source: "Lesson 6: Search & Discovery Workflow"
 },
 {
@@ -492,7 +492,7 @@ options: [
 "It matches regardless of uppercase or lowercase letter differences"
 ],
 correctOption: 3,
-explanation: "The -i flag means case-insensitive. With 'find -iname _chase_', it matches Chase, chase, CHASE, or any mixed case. The chapter uses this because filenames often have inconsistent capitalization — your bank might name files 'Chase-Statement.pdf' or 'CHASE_TAX.pdf.' Without -i, you would miss files that do not match your exact capitalization. It does not restrict to indexed files, invert searches, or include hidden dot-files. Case-insensitive search is essential when you do not remember the exact casing of filenames.",
+explanation: "The -i flag means case-insensitive. With 'find -iname _chase_', it matches Chase, chase, CHASE, or any mixed case. The chapter uses this because filenames often have inconsistent capitalization: your bank might name files 'Chase-Statement.pdf' or 'CHASE_TAX.pdf.' Without -i, you would miss files that do not match your exact capitalization. It does not restrict to indexed files, invert searches, or include hidden dot-files. Case-insensitive search is essential when you do not remember the exact casing of filenames.",
 source: "Lesson 6: Search & Discovery Workflow"
 },
 {
@@ -504,7 +504,7 @@ options: [
 "Stop the search entirely and try a completely different approach"
 ],
 correctOption: 1,
-explanation: "The chapter warns that broad searches can return thousands of results, flooding the conversation and degrading agent performance. The recommended approach is: 'Save the full list to search-results.txt and just show me the first 10 matches.' This keeps your session clean and creates a persistent record. Repeating the same search produces the same overwhelming results. Deleting files to reduce results is destructive and absurd. Stopping entirely is premature when the results exist — they just need to be managed. Persisting results to a file applies Principle 5.",
+explanation: "The chapter warns that broad searches can return thousands of results, flooding the conversation and degrading agent performance. The recommended approach is: 'Save the full list to search-results.txt and just show me the first 10 matches.' This keeps your session clean and creates a persistent record. Repeating the same search produces the same overwhelming results. Deleting files to reduce results is destructive and absurd. Stopping entirely is premature when the results exist; they just need to be managed. Persisting results to a file applies Principle 5.",
 source: "Lesson 6: Search & Discovery Workflow"
 },
 {
@@ -516,7 +516,7 @@ options: [
 "Display all contents of every PDF file stored in my Downloads"
 ],
 correctOption: 0,
-explanation: "The chapter presents 'Find files that match [description] from [time period]' as the key search pattern. It tells the agent what characteristics to look for and when the file was created or modified. The agent searches broadly and narrows based on your criteria. Listing by date does not search by description. Searching for exact filenames assumes you know the name — the whole point is that you do not. Displaying all PDF contents does not help find a specific file. Descriptive search combined with time constraints is the most effective pattern.",
+explanation: "The chapter presents 'Find files that match [description] from [time period]' as the key search pattern. It tells the agent what characteristics to look for and when the file was created or modified. The agent searches broadly and narrows based on your criteria. Listing by date does not search by description. Searching for exact filenames assumes you know the name: the whole point is that you do not. Displaying all PDF contents does not help find a specific file. Descriptive search combined with time constraints is the most effective pattern.",
 source: "Lesson 6: Search & Discovery Workflow"
 },
 {
@@ -528,7 +528,7 @@ options: [
 "File browsers understand natural language file descriptions just as well"
 ],
 correctOption: 2,
-explanation: "The chapter provides a comparison table showing key differences: agents search multiple locations simultaneously (Downloads, Documents, Desktop), match content inside files (not just filenames), filter and explain results, and refine through conversation. File browsers typically search one folder at a time by filename only. File browsers do not return more accurate results — they are more limited. Agents search by description, not just exact names. File browsers do not understand natural language. The combination of multi-location search, content matching, and conversational refinement makes agent search fundamentally different.",
+explanation: "The chapter provides a comparison table showing key differences: agents search multiple locations simultaneously (Downloads, Documents, Desktop), match content inside files (not just filenames), filter and explain results, and refine through conversation. File browsers typically search one folder at a time by filename only. File browsers do not return more accurate results; they are more limited. Agents search by description, not just exact names. File browsers do not understand natural language. The combination of multi-location search, content matching, and conversational refinement makes agent search fundamentally different.",
 source: "Lesson 6: Search & Discovery Workflow"
 },
 {
@@ -564,7 +564,7 @@ options: [
 "Automation completely replaces every principle learned in this chapter"
 ],
 correctOption: 0,
-explanation: "The chapter maps the transition: your rules.md becomes the AI Employee's decision rules, your verification patterns become its supervision methods, manual prompting becomes automatic watching. The manual workflows you mastered are the foundation — automation adds the layer that runs without you. Human oversight is not removed — the agent reports results to you. The workflows do not change entirely — they are the same patterns running automatically. The principles are not replaced — they become even more important in autonomous systems.",
+explanation: "The chapter maps the transition: your rules.md becomes the AI Employee's decision rules, your verification patterns become its supervision methods, manual prompting becomes automatic watching. The manual workflows you mastered are the foundation: automation adds the layer that runs without you. Human oversight is not removed: the agent reports results to you. The workflows do not change entirely; they are the same patterns running automatically. The principles are not replaced; they become even more important in autonomous systems.",
 source: "Lesson 7: Capstone: Your File Processing Toolkit"
 },
 {
@@ -576,7 +576,7 @@ options: [
 "Agents must use entirely different commands for every non-file related task"
 ],
 correctOption: 2,
-explanation: "The chapter emphasizes that the patterns are universal: survey (understand the problem), backup (establish safety), design rules (document logic), execute (apply at scale), recover (fix mistakes). These apply to email management, project organization, data cleaning, and any workflow involving General Agents. Files are not the only domain agents handle — the chapter uses files as a training ground because problems are concrete and feedback is immediate. Other domains use the same patterns, not different ones. While agents use different commands per domain, the workflow patterns remain identical.",
+explanation: "The chapter emphasizes that the patterns are universal: survey (understand the problem), backup (establish safety), design rules (document logic), execute (apply at scale), recover (fix mistakes). These apply to email management, project organization, data cleaning, and any workflow involving General Agents. Files are not the only domain agents handle: the chapter uses files as a training ground because problems are concrete and feedback is immediate. Other domains use the same patterns, not different ones. While agents use different commands per domain, the workflow patterns remain identical.",
 source: "Lesson 7: Capstone: Your File Processing Toolkit"
 },
 {
@@ -588,7 +588,7 @@ options: [
 "Ask the agent when describing the task is faster than doing it yourself"
 ],
 correctOption: 3,
-explanation: "The chapter presents a clear rule: if you can describe the task faster than you can do it, ask the agent. If you can do it faster than you can describe it, just do it. Three files to move? Drag them — five seconds. Three hundred files to categorize by type, date, and project? Describe that in ten seconds, let the agent work. Always using the agent is wrong because simple tasks like checking if a file exists are faster by hand. Administrator access is not the deciding factor. The agent can work with personal files — the decision is about efficiency, not file importance.",
+explanation: "The chapter presents a clear rule: if you can describe the task faster than you can do it, ask the agent. If you can do it faster than you can describe it, just do it. Three files to move? Drag them: five seconds. Three hundred files to categorize by type, date, and project? Describe that in ten seconds, let the agent work. Always using the agent is wrong because simple tasks like checking if a file exists are faster by hand. Administrator access is not the deciding factor. The agent can work with personal files: the decision is about efficiency, not file importance.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -600,7 +600,7 @@ options: [
 "Comparing two large directories to identify what files are missing"
 ],
 correctOption: 0,
-explanation: "The chapter identifies browsing photo thumbnails as a task where the agent is the wrong tool entirely. You need to see the images to decide which to keep — the agent sees filenames and metadata, not visual content. Other examples include network drives with different latency behavior and emotionally important decisions that are not computational. Renaming 87 screenshots is exactly where agents excel at complex batch operations. Finding documents across folders uses the agent's multi-location search capability. Comparing directories leverages diff commands, which the agent handles naturally.",
+explanation: "The chapter identifies browsing photo thumbnails as a task where the agent is the wrong tool entirely. You need to see the images to decide which to keep: the agent sees filenames and metadata, not visual content. Other examples include network drives with different latency behavior and emotionally important decisions that are not computational. Renaming 87 screenshots is exactly where agents excel at complex batch operations. Finding documents across folders uses the agent's multi-location search capability. Comparing directories leverages diff commands, which the agent handles naturally.",
 source: "Lesson 1: Your First Agent Workflow"
 },
 {
@@ -612,7 +612,7 @@ options: [
 "A dry run requires special permissions that a test does not need at all"
 ],
 correctOption: 2,
-explanation: "The chapter makes a clear distinction: the single-file test checks that the mechanism works — can the agent actually move files correctly? The dry run checks that the decisions are right — are files going to the correct destinations? A dry run shows what would happen without executing anything, letting you scan the plan for misplaced files. It does not process all files — that is the batch execution step after approval. It does not create backups — that is the safety-first pattern from Lesson 2. Special permissions are not involved. Both serve different verification purposes under Principle 7 (Observability).",
+explanation: "The chapter makes a clear distinction: the single-file test checks that the mechanism works: can the agent actually move files correctly? The dry run checks that the decisions are right: are files going to the correct destinations? A dry run shows what would happen without executing anything, letting you scan the plan for misplaced files. It does not process all files: that is the batch execution step after approval. It does not create backups: that is the safety-first pattern from Lesson 2. Special permissions are not involved. Both serve different verification purposes under Principle 7 (Observability).",
 source: "Lesson 3: The Organization Workflow"
 },
 {
@@ -624,7 +624,7 @@ options: [
 "Restore everything from backup and abandon the entire batch operation"
 ],
 correctOption: 1,
-explanation: "The chapter teaches a key principle: do not fix the file, fix the rule. Updating the script to handle special characters means this edge case never causes problems again — the script gets smarter each time it fails. Renaming files manually solves today's problem but leaves the script broken for next time. Deleting files because they caused errors is destructive and unnecessary — the originals are untouched in their original location. Restoring from backup and abandoning is excessive when 80 of 87 files succeeded. Every edge case you fix in the script is an edge case that never bites you again.",
+explanation: "The chapter teaches a key principle: do not fix the file, fix the rule. Updating the script to handle special characters means this edge case never causes problems again: the script gets smarter each time it fails. Renaming files manually solves today's problem but leaves the script broken for next time. Deleting files because they caused errors is destructive and unnecessary: the originals are untouched in their original location. Restoring from backup and abandoning is excessive when 80 of 87 files succeeded. Every edge case you fix in the script is an edge case that never bites you again.",
 source: "Lesson 4: Batch Operations Workflow"
 },
 {
@@ -636,7 +636,7 @@ options: [
 "Recovery scripts require fewer system permissions than direct agent actions"
 ],
 correctOption: 0,
-explanation: "The chapter states that the agent is ephemeral while code is eternal. A recovery script saved to disk produces the same result every time — same steps, same verification, same outcome — without needing the agent present. Next month the agent might interpret your request differently, use different flags, or skip verification. The agent absolutely can execute recovery commands interactively — it does so throughout the lesson exercises. Speed is not the primary advantage of scripts over interactive commands. Permissions are identical either way. The pattern: if you ask the agent the same task twice, ask it to write a script instead.",
+explanation: "The chapter states that the agent is ephemeral while code is eternal. A recovery script saved to disk produces the same result every time (same steps, same verification, same outcome) without needing the agent present. Next month the agent might interpret your request differently, use different flags, or skip verification. The agent absolutely can execute recovery commands interactively: it does so throughout the lesson exercises. Speed is not the primary advantage of scripts over interactive commands. Permissions are identical either way. The pattern: if you ask the agent the same task twice, ask it to write a script instead.",
 source: "Lesson 5: Error Recovery & Resilience"
 },
 {

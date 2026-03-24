@@ -5,9 +5,9 @@ Recovery confidence matters more than mistake avoidance. You deliberately practi
 ### Key Mental Models
 
 - **Deliberate practice over fear**: Break something on purpose in a safe environment. Recovery becomes muscle memory, not panic.
-- **Backup as undo button**: Your Lesson 2 backup isn't just insurance — it's an active tool you use when things go wrong.
+- **Backup as undo button**: Your Lesson 2 backup isn't just insurance; it's an active tool you use when things go wrong.
 - **Compare before restoring**: Always check what's different between current state and backup before restoring. Don't blindly overwrite.
-- **Agent is ephemeral, code is eternal**: Asking the agent to recover files works once. A recovery script works forever — same steps, same result, no agent needed.
+- **Agent is ephemeral, code is eternal**: Asking the agent to recover files works once. A recovery script works forever: same steps, same result, no agent needed.
 
 ### Critical Patterns
 

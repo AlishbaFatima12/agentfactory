@@ -1,6 +1,6 @@
 ### Core Concept
 
-Descriptive search means describing what you're looking for, not where you think it is. You know the content or purpose. Let the agent find the location. This "invisible skill" — describing what you need in progressively specific terms — transfers to databases, research, and any domain where you search large collections.
+Descriptive search means describing what you're looking for, not where you think it is. You know the content or purpose. Let the agent find the location. This "invisible skill" (describing what you need in progressively specific terms) transfers to databases, research, and any domain where you search large collections.
 
 ### Key Mental Models
 

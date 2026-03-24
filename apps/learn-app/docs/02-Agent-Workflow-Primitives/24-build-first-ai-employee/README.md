@@ -7,7 +7,7 @@ title: "Chapter 24: Project - Build Your AI Employee"
 
 **You've learned the pieces. Now build something real.**
 
-This is a **project**. You'll build a working AI Employee for YOUR profession using [NanoClaw](https://github.com/qwibitai/nanoclaw) — the same tool you set up in the "NanoClaw Hands-On Setup" lesson from "Meet Your First AI Employee - OpenClaw". No new installations, no architecture lectures. Just challenges, acceptance criteria, and your professional expertise.
+This is a **project**. You'll build a working AI Employee for YOUR profession using [NanoClaw](https://github.com/qwibitai/nanoclaw): the same tool you set up in the "NanoClaw Hands-On Setup" lesson from "Meet Your First AI Employee - OpenClaw". No new installations, no architecture lectures. Just challenges, acceptance criteria, and your professional expertise.
 
 ## Prerequisites
 
@@ -78,7 +78,7 @@ Gold adds: 3-group config + isolation demo + system diagram + memory isolation t
 
 ## Design Philosophy
 
-This project doesn't teach NanoClaw — you already know it. Instead, each lesson gives you:
+This project doesn't teach NanoClaw: you already know it. Instead, each lesson gives you:
 
 1. **A challenge** with clear acceptance criteria
 2. **A use case gallery** with profession-specific examples
