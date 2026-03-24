@@ -225,9 +225,17 @@ You could type this all manually. Or: and this is the Claude Code way: **ask Cla
 
 Here's the process:
 
-### Step 1: Ask Claude Code to Generate CLAUDE.md
+### Step 1: Generate CLAUDE.md with `/init`
 
-Start Claude Code in your project directory and ask:
+The fastest way to create a CLAUDE.md is the built-in `/init` command. Start Claude Code in your project directory and type:
+
+```
+/init
+```
+
+Claude analyzes your codebase and generates a CLAUDE.md with build commands, test instructions, and project conventions.
+
+**Alternative (conversational approach):** If you want more control, ask Claude directly:
 
 ```
 claude "Help me create a CLAUDE.md file for this project.
@@ -235,7 +243,7 @@ What are the main sections I should include, and can you generate a template
 based on what you see in the codebase?"
 ```
 
-Claude will analyze your actual files and propose a CLAUDE.md structure based on your real project.
+Both approaches produce a CLAUDE.md based on your real project files.
 
 #### 🤝 Practice Exercise
 
@@ -489,6 +497,7 @@ alembic/             # Database migrations
 - ✅ File is in project root (same level as `.git`, `package.json`, etc.)
 - ✅ You restarted Claude Code session (new terminal, not same session)
 - ✅ File has content (not empty)
+- ✅ Run `/memory` inside Claude Code to see which CLAUDE.md files are loaded and verify yours appears in the list
 
 **Solution**: If all above are true, restart your terminal completely. Sometimes the session needs a fresh start.
 
@@ -498,7 +507,22 @@ alembic/             # Database migrations
 
 ### Concerns About File Size?
 
-A typical CLAUDE.md is 1-3 KB. Context is cheap; clarity is expensive. A well-organized CLAUDE.md saves repeated explanations every session and improves Claude's suggestions.
+Target **under 200 lines** per CLAUDE.md file. Concise instructions get better adherence than lengthy documents. If your CLAUDE.md grows beyond 200 lines, split it using `@path/to/file` imports (e.g., `@docs/conventions.md`) to keep each file focused. A well-organized CLAUDE.md saves repeated explanations every session and improves Claude's suggestions.
+
+---
+
+## Auto Memory: Claude's Own Notes
+
+CLAUDE.md is _your_ instructions to Claude. But Claude also keeps its own notes. **Auto memory** is enabled by default: as Claude works on your project, it saves learnings (build commands, debugging insights, project patterns) to `~/.claude/projects/<project>/memory/`. The first 200 lines of these memory files are loaded into every session automatically.
+
+You do not need to configure auto memory. It works in the background. The distinction is simple:
+
+| System          | Who Writes It | Purpose                                                |
+| :-------------- | :------------ | :----------------------------------------------------- |
+| **CLAUDE.md**   | You           | Your instructions, standards, and context for Claude   |
+| **Auto memory** | Claude        | Claude's own notes about what it learned while working |
+
+Both systems complement each other. CLAUDE.md tells Claude what you want; auto memory helps Claude remember what it discovered. Chapter 18 covers advanced memory management (`/memory` command, toggling, browsing memory files).
 
 ---
 
@@ -622,7 +646,6 @@ Let's create a CLAUDE.md file that eliminates context friction and makes every s
 > "Now that CLAUDE.md is working, help me identify what ELSE should go in it based on my workflow: I frequently [describe your common tasks: write tests, add API endpoints, update documentation, etc.]. What context would help you give better suggestions for these tasks?"
 
 **What you're learning:** How to evolve CLAUDE.md from "good enough" to "optimized for you." Context that helps Claude help you is always worth discovering.
-
 
 ## Flashcards Study Aid
 

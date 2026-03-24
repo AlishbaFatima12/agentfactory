@@ -52,10 +52,10 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "1.1.0"
+version: "1.2.0"
 
 teaching_guide:
   lesson_type: "core"
@@ -169,30 +169,22 @@ cp -r folder-name folder-name-backup-$(date +%Y%m%d)
 
 Cowork is powerful but has constraints. Understanding them prevents frustration:
 
-### 1. No Project Support (Currently)
+### 1. Project Context Across Sessions
 
-Claude Code has projects -- persistent contexts that remember configuration, tools, and working state across sessions. Cowork doesn't yet have this structured project support.
+Claude Code has persistent project contexts through `CLAUDE.md` files, settings, hooks, and skills that persist across sessions. Cowork now shares much of this infrastructure. CLAUDE.md files, MCP servers, hooks, skills, and settings configured for a project apply across both CLI and Desktop sessions.
 
-**What this means:**
+**What still requires attention:**
 
-- File access permissions reset between sessions
-- You may need to re-establish context for complex tasks
+- You may need to re-grant folder access when starting new Cowork sessions
+- Not all Code-tab project configuration carries over identically to Cowork
 
-**Partial solution -- general memory:** Claude's general memory (available on Pro, Max, Team, and Enterprise plans since late 2025) automatically captures your preferences, project conventions, and frequently referenced information across sessions. This means Claude will remember things like "this user prefers TypeScript" or "their project uses FastAPI" without being told each time. However, general memory does not provide structured project contexts like Claude Code's `CLAUDE.md` files.
+**General memory** (available on Pro, Max, Teams, and Enterprise plans since late 2025) automatically captures your preferences, project conventions, and frequently referenced information across sessions. This means Claude remembers things like "this user prefers TypeScript" or "their project uses FastAPI" without being told each time.
 
-**Workaround for detailed context:** Create a `project-context.md` file in each workspace with:
-
-- Project description
-- Common conventions
-- Frequently used instructions
-
-This complements general memory by providing the detailed, project-specific context that automatic memory doesn't capture.
+**Workaround for detailed context:** Create a `project-context.md` file in each workspace with project description, common conventions, and frequently used instructions. This complements general memory by providing detailed, project-specific context that automatic memory doesn't capture.
 
 ### 2. Memory: What Works and What's Coming
 
-Claude's memory capabilities have evolved significantly. Here is what exists today and what is still on the horizon:
-
-**General memory (available now):** Launched in September 2025 for Team and Enterprise plans, and expanded to Pro and Max users in October 2025, general memory allows Claude to automatically retain key information across conversations:
+**General memory (available now):** Launched in September 2025 for Team and Enterprise plans, expanded to Pro and Max users in October 2025, general memory allows Claude to automatically retain key information across conversations:
 
 - Your preferences and working style
 - Project patterns and conventions
@@ -201,9 +193,9 @@ Claude's memory capabilities have evolved significantly. Here is what exists tod
 
 **What general memory does not do:**
 
-- It does not replay full session transcripts -- you cannot ask "what exactly did we discuss on Tuesday"
+- It does not replay full session transcripts (you cannot ask "what exactly did we discuss on Tuesday")
 - It does not provide structured, searchable knowledge repositories
-- It does not guarantee retention of every detail -- it captures what it determines is most relevant
+- It does not guarantee retention of every detail; it captures what it determines is most relevant
 
 **Knowledge Bases (still coming):** These will be dedicated, topic-specific persistent repositories that you curate and organize. Unlike general memory (which is automatic), Knowledge Bases will let you deliberately index documents and maintain structured reference material for Claude to search.
 
@@ -232,28 +224,57 @@ When using Connectors, external APIs have rate limits:
 
 ---
 
-## What's Arrived and What's Coming
+## What's Arrived
 
-Some features that were "upcoming" when Cowork launched have now shipped. Here is what's delivered and what remains on the horizon.
+Many features that were "upcoming" when Cowork launched have now shipped. Here is what has been delivered.
 
-### Delivered: Plugins and Expanded Connectors
+### Plugins and Expanded Connectors
 
 The connector ecosystem has matured significantly:
 
 - **50+ Connectors** spanning productivity, communication, design, engineering, finance, and healthcare
 - **Plugins layer**: Bundles connectors with skills, slash commands, and sub-agents into workflow packages (see Lesson 29)
+- **Plugin Manager UI**: Browse, install, and manage plugins directly from the desktop app without using a terminal (click **+** > **Plugins** > **Add plugin**)
 - **Enterprise features**: Organization marketplaces, OpenTelemetry tracking, per-user provisioning
 - **13 new enterprise connectors** (February 2026): Google Workspace suite, DocuSign, Apollo, and others
 
-If your tools are covered by the Connectors Directory, integration is one-click. If not, MCP lets you build custom integrations.
+If your tools are covered by the Connectors menu, integration is one-click. If not, MCP lets you build custom integrations.
 
-### Delivered: Unified UI
+### Unified Desktop UI
 
-The Claude Desktop app now includes three tabs; Chat, Cowork, and Code; in a single application. Skills transfer across all tabs.
+The Claude Desktop app includes three tabs (Chat, Cowork, and Code) in a single application. Skills transfer across all tabs. Settings, CLAUDE.md files, hooks, and MCP servers are shared between CLI and Desktop sessions.
 
-**Still coming:** Deeper integration with seamless mode switching and fully consistent settings across all interfaces.
+### Remote and Cloud Sessions
 
-### Coming: Knowledge Bases
+Sessions can now run on Anthropic-managed cloud infrastructure. They continue even when your laptop is closed, your computer is off, or you switch devices. You can monitor remote sessions from claude.ai/code or the Claude mobile app.
+
+### Enhanced Scheduling
+
+Scheduled tasks are now a first-class feature with three execution modes: cloud tasks (run on Anthropic infrastructure, no machine required), desktop tasks (run locally with access to your files), and `/loop` (session-scoped polling). Desktop tasks support hourly, daily, weekday, and weekly frequencies with configurable permission modes.
+
+### Session Sharing
+
+Sessions can be shared with team members (Team/Enterprise) or publicly (Pro/Max). This enables collaborative workflows where one person starts a task and others can review or continue the work.
+
+### Computer Use (Research Preview)
+
+Claude in the Desktop app can now **control your screen on macOS**: open apps, click buttons, fill forms, and interact with desktop applications that have no CLI or API. This is a research preview requiring a Pro or Max plan.
+
+Key details:
+
+- Claude checks each action and flags potential prompt injection from on-screen content
+- Per-app permission tiers: View-only (browsers, trading platforms), Click-only (terminals, IDEs), Full control (everything else)
+- Apps are hidden while Claude works, restored when finished
+- Requires macOS Accessibility and Screen Recording permissions
+- Not available on Team or Enterprise plans
+
+Computer Use is the broadest and slowest interaction method. Claude tries more precise tools first (connectors, Bash, Chrome extension) and falls back to screen control only when nothing else can reach the target app.
+
+---
+
+## What's Still Coming
+
+### Knowledge Bases
 
 **The gap:** General memory captures preferences and patterns automatically, but you cannot yet curate structured reference libraries for Claude to search.
 
@@ -266,33 +287,42 @@ The Claude Desktop app now includes three tabs; Chat, Cowork, and Code; in a sin
 
 **Impact:** You'll be able to ask "What did I decide about X last month?" and Claude will search your curated Knowledge Base, combining it with what general memory already knows about your preferences.
 
-### Coming: Enhanced Multi-Modal Capabilities
+### Enhanced Multi-Modal Capabilities
 
 **Current:** Strong text and document processing, with improved image understanding in Cowork.
 
 **Coming:** Better handling of advanced image analysis, audio transcription, and video content understanding.
 
-### Coming: Collaboration Features
+### Collaboration Features
 
 **Future:** Shared workspaces where teams can grant Claude access to shared resources, maintain team Knowledge Bases, and use shared Skills and conventions.
+
+### Linux Desktop Support
+
+Linux is not currently supported for the Claude Desktop app. CLI-based Claude Code works on Linux.
 
 ---
 
 ## When to Wait vs. Proceed
 
-**Available now; proceed if you need:**
+**Available now, proceed if you need:**
 
 - General memory (preferences and conventions across sessions)
 - 50+ Connectors and Plugins for workflow automation
 - Built-in Skills for document processing (docx, xlsx, pptx, pdf)
-- Browser integration for web-based workflows
-- macOS or Windows desktop environment
+- Browser integration for web-based workflows (Chrome and Edge)
+- Remote/cloud sessions that continue when your computer is off
+- Scheduled tasks (cloud, desktop, and `/loop`)
+- Computer Use on macOS (research preview, Pro/Max only)
+- Session sharing (Team/Enterprise and Pro/Max)
+- macOS (Apple Silicon) or Windows desktop environment
 
-**Not yet available; wait if you need:**
+**Not yet available, wait if you need:**
 
 - Structured, searchable knowledge repositories (Knowledge Bases coming)
 - Team collaboration features (on the roadmap)
 - Linux desktop support (no official support yet)
+- Computer Use on Windows or Linux
 
 **Prepare now for what's coming:**
 
@@ -300,7 +330,7 @@ The Claude Desktop app now includes three tabs; Chat, Cowork, and Code; in a sin
 - Build Skills that work across Code and Cowork tabs
 - Design workflows with team-shareable components in mind
 
-**The key insight:** Learning Cowork patterns now builds transferable expertise. The mental model; agentic AI, filesystem access, Skills, approval workflows, Plugins; persists across updates. Investing in current capabilities is not wasted even as new features arrive.
+**The key insight:** Learning Cowork patterns now builds transferable expertise. The mental model (agentic AI, filesystem access, Skills, approval workflows, Plugins) persists across updates. Investing in current capabilities is not wasted even as new features arrive.
 
 ## Try With AI
 

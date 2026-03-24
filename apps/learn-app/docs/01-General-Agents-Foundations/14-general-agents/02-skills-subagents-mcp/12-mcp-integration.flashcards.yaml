@@ -16,7 +16,7 @@ cards:
   - id: "ch14-12-mcp-integration-002"
     type: recall
     front: "What is the command syntax to install an MCP server in Claude Code?"
-    back: "claude mcp add --transport stdio <name> <command>"
+    back: "claude mcp add <name> --transport stdio -- <command> (note the -- separator before the command and -y flag on npx)"
     tags: ["mcp", "installation"]
     difficulty: "basic"
 
@@ -110,3 +110,10 @@ cards:
     tags: ["mcp", "security", "boundaries"]
     difficulty: "intermediate"
     why: "MCP's power comes from broad access, which is also its security risk."
+
+  - id: "ch14-12-mcp-integration-015"
+    type: recall
+    front: "What is .mcp.json and how does it differ from claude mcp add?"
+    back: "A project-level MCP configuration file at the project root. Unlike claude mcp add (per-machine), .mcp.json can be committed to version control so every team member gets the same MCP servers automatically."
+    tags: ["mcp", "configuration", "team"]
+    difficulty: "intermediate"

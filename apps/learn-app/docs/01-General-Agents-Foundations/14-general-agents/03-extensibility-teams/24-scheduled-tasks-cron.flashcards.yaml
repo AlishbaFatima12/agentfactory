@@ -99,3 +99,17 @@ cards:
   tags:
   - configuration
   - disable
+- id: ch14-24-scheduled-tasks-cron-013
+  difficulty: intermediate
+  front: What are the three tiers of scheduling in Claude Code, and how do they differ in durability?
+  back: 'Cloud Scheduled Tasks (run on Anthropic infrastructure, survive restarts, no machine needed), Desktop scheduled tasks (persist while app is open, require local machine), and /loop (session-scoped, die on exit).'
+  tags:
+  - scheduling-tiers
+  - durability
+- id: ch14-24-scheduled-tasks-cron-014
+  difficulty: basic
+  front: What command creates and manages Cloud Scheduled Tasks from the CLI?
+  back: 'The `/schedule` command. Example: `/schedule every weekday at 9am: check the CI dashboard`'
+  tags:
+  - cloud-scheduling
+  - commands

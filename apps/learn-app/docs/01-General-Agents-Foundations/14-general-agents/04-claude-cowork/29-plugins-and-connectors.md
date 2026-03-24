@@ -56,10 +56,10 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "2.0.0"
+version: "2.1.0"
 
 teaching_guide:
   lesson_type: "core"
@@ -101,15 +101,15 @@ prerequisites:
 
 # Plugins and Connectors: Extending Cowork's Reach
 
-In Lesson 28, you explored browser integration for web-based workflows. Now you will connect Cowork to the services where your real data lives; Google Drive, Slack, Jira, and dozens more; through Plugins and Connectors.
+In Lesson 28, you explored browser integration for web-based workflows. Now you will connect Cowork to the services where your real data lives (Google Drive, Slack, Jira, and dozens more) through Plugins and Connectors.
 
-You learned about MCP (Model Context Protocol) in Lesson 12; how developers create servers that expose tools to Claude Code. **Plugins and Connectors bring the same capability to Cowork, but without requiring any development work.**
+You learned about MCP (Model Context Protocol) in Lesson 12, where developers create servers that expose tools to Claude Code. **Plugins and Connectors bring the same capability to Cowork, but without requiring any development work.**
 
 ---
 
 ## What Plugins Are
 
-A **Plugin** is a workflow package that bundles multiple capabilities into a single, installable unit. Think of it like an app on your phone; one download gives you everything you need.
+A **Plugin** is a workflow package that bundles multiple capabilities into a single, installable unit. Think of it like an app on your phone: one install gives you everything you need.
 
 A Plugin can contain any combination of:
 
@@ -120,7 +120,7 @@ A Plugin can contain any combination of:
 | **Slash commands** | Create shortcuts for common tasks | `/weekly-report`, `/standup-summary`  |
 | **Sub-agents**     | Enable autonomous workflows       | Research assistant, document reviewer |
 
-You install a Plugin with one click from the Plugin directory, and all its components become available in your Cowork session.
+You install a Plugin from the **+** button > **Plugins** > **Add plugin** menu in the desktop app, or via the CLI. All its components become available in your session.
 
 **Department-specific Plugin templates** provide ready-to-use packages for common roles:
 
@@ -223,11 +223,13 @@ Some Connectors also render **interactive apps** inline in the chat. For example
 
 ### Step 1: Open Connector Settings
 
-In Claude Desktop (Cowork mode):
+In Claude Desktop:
 
-1. Click the **Customize** menu (bottom-left of the chat input)
+1. Click the **+** button next to the prompt box
 2. Select **Connectors** from the menu
 3. You'll see available Connectors organized by category
+
+You can add connectors before or during a session. To manage or disconnect connectors later, go to **Settings > Connectors** in the desktop app, or select **Manage connectors** from the Connectors menu in the prompt box.
 
 ### Step 2: Add a Connector
 
@@ -323,13 +325,13 @@ Claude:
 
 - WordPress
 
-**New Connectors** are added regularly. The Connectors Directory at claude.com/connectors shows all available integrations, with 50+ and growing.
+**New Connectors** are added regularly. You can browse available integrations from the **+** button > **Connectors** menu inside Claude Desktop, with 50+ and growing.
 
 ---
 
 ## Slash Commands and Structured Forms
 
-Plugins can expose **slash commands**; shortcuts you type in the chat input (like `/weekly-report` or `/standup-summary`). When you invoke a slash command, Cowork can present a **structured form**; a fill-in UI with labeled fields; instead of requiring you to type a free-text prompt. You fill in the form fields, click submit, and the Plugin executes the workflow with your inputs.
+Plugins can expose **slash commands**: shortcuts you type in the chat input (like `/weekly-report` or `/standup-summary`). When you invoke a slash command, Cowork can present a **structured form** (a fill-in UI with labeled fields) instead of requiring you to type a free-text prompt. You fill in the form fields, click submit, and the Plugin executes the workflow with your inputs.
 
 This matters because structured forms reduce ambiguity. Instead of hoping Claude interprets your free-text prompt correctly, the form guides you to provide exactly the inputs the workflow needs.
 
@@ -438,7 +440,7 @@ Plugins and Connectors require granting Claude access to your external accounts.
 
 ## What's Next
 
-Plugins and Connectors extend Cowork's reach to external data sources and bundled capabilities. But Cowork is still evolving. The next lesson covers current limitations, safety considerations, and what's coming in future updates; including Knowledge Bases that will give Claude persistent memory across sessions.
+Plugins and Connectors extend Cowork's reach to external data sources and bundled capabilities. But Cowork is still evolving. The next lesson covers current limitations, safety considerations, and what's coming in future updates, including Knowledge Bases that will give Claude persistent memory across sessions.
 
 ## Flashcards Study Aid
 

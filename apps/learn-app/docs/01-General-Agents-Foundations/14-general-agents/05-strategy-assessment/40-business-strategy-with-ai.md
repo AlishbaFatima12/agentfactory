@@ -1,6 +1,6 @@
 ---
 slug: /General-Agents-Foundations/general-agents/business-strategy-with-ai
-sidebar_position: 35
+sidebar_position: 40
 title: "Business Strategy with AI: 10 MBA Frameworks in Your Terminal"
 description: "Apply Harvard, Wharton, and Stanford MBA frameworks; Porter's Five Forces, disruption analysis, financial statement reading, leadership coaching; to your own business using Claude and the StratArts plugin"
 keywords:
@@ -16,7 +16,7 @@ keywords:
     StratArts,
   ]
 chapter: 14
-lesson: 35
+lesson: 40
 duration_minutes: 18
 
 # PEDAGOGICAL LAYER METADATA
@@ -92,7 +92,7 @@ version: "1.0.0"
 
 prerequisites:
   - "Lesson 8-9: Agent Skills (understanding how Skills work)"
-  - "Lesson 33: From Skills to Business (monetization context)"
+  - "Lesson 38: From Skills to Business (monetization context)"
 
 teaching_guide:
   lesson_type: "applied"
@@ -113,7 +113,7 @@ teaching_guide:
   teaching_tips:
     - "Have students analyze an industry they know well first; they can evaluate the AI's output quality when they have domain knowledge"
     - "The financial statements section works best with a real public company (Apple, Tesla, a local company they know)"
-    - "Frame the StratArts install as 'adding a business advisor to your team'; connects back to the Digital FTE concept from Lesson 33"
+    - "Frame the StratArts install as 'adding a business advisor to your team'; connects back to the Digital FTE concept from Lesson 38"
   assessment_quick_check:
     - "Name Porter's Five Forces without looking"
     - "What is the difference between TAM, SAM, and SOM?"
@@ -428,7 +428,7 @@ The plugin skills produce structured outputs -- tables, canvases, scored framewo
 
 ### What's Next
 
-You have the strategic frameworks. The **Chapter Quiz** (Lesson 36) tests your understanding across all 35 lessons -- from your first Claude Code session through skills, MCP, hooks, plugins, agent teams, scheduled tasks, Cowork, and now business strategy.
+You have the strategic frameworks. The **Chapter Quiz** (Lesson 41) tests your understanding across all 40 lessons -- from your first Claude Code session through skills, MCP, hooks, plugins, agent teams, scheduled tasks, Cowork, and now business strategy.
 
 ---
 

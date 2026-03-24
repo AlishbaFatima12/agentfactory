@@ -25,18 +25,18 @@ Claude in 2026 is not a single tool. It is **eight integrated modes**, each desi
 
 ![How to Use Claude AI; The Eight Modes](/img/ch14-how-to-use-claude-ai.png)
 
-*Figure 14.1; How to Use Claude AI: The Eight Modes*
+_Figure 14.1; How to Use Claude AI: The Eight Modes_
 
-| Mode | What It Does | Where You'll Learn It |
-|------|-------------|----------------------|
-| **Chat** | Conversational Q&A; where most people start and stay | Prerequisite |
-| **Cowork** | AI coworker that works on your actual files on your machine | **Section D** |
-| **Projects** | Save prompts, files, and context in one persistent workspace | Chapter 15 |
-| **Artifacts** | Interactive apps, dashboards, and tools built inside the chat | Part 2 exercises |
-| **Excel** | Claude inside your spreadsheets; reads data, writes formulas, builds charts | Part 3 |
-| **Connectors** | Link Claude to Gmail, Drive, Slack, Notion, Figma, and 50+ more | **Section B** (MCP) |
-| **Plugins** | Pre-built agent packs for specific roles; sales, marketing, legal, finance | **Section C** + Part 3 |
-| **Skills** | Reusable task templates that give Claude specialist knowledge | **Section B** |
+| Mode           | What It Does                                                                | Where You'll Learn It  |
+| -------------- | --------------------------------------------------------------------------- | ---------------------- |
+| **Chat**       | Conversational Q&A; where most people start and stay                        | Prerequisite           |
+| **Cowork**     | AI coworker that works on your actual files on your machine                 | **Section D**          |
+| **Projects**   | Save prompts, files, and context in one persistent workspace                | Chapter 15             |
+| **Artifacts**  | Interactive apps, dashboards, and tools built inside the chat               | Part 2 exercises       |
+| **Excel**      | Claude inside your spreadsheets; reads data, writes formulas, builds charts | Part 3                 |
+| **Connectors** | Link Claude to Gmail, Drive, Slack, Notion, Figma, and 50+ more             | **Section B** (MCP)    |
+| **Plugins**    | Pre-built agent packs for specific roles; sales, marketing, legal, finance  | **Section C** + Part 3 |
+| **Skills**     | Reusable task templates that give Claude specialist knowledge               | **Section B**          |
 
 **Why this matters:** When you build a Digital FTE in this book, you are not building a chatbot. You are composing Skills, wiring Connectors, packaging Plugins, and deploying through Cowork or Claude Code. The infographic above is your map. Return to it whenever you need to remember where a capability lives.
 
@@ -71,13 +71,18 @@ By the end of this chapter, you'll have:
 - **Worktrees**; Parallel agent isolation using git worktrees for safe, independent workstreams (Lesson 22)
 - **Remote Control**; Sessions without boundaries: control local Claude Code from any device via secure relay (Lesson 23)
 - **Scheduled Tasks**; The /loop skill for recurring checks, one-time reminders, and cron tool lifecycle management (Lesson 24)
-- **Claude Cowork Fundamentals**; From terminal to desktop (Lesson 25), getting started (Lesson 26), and practical workflows (Lesson 27)
-- **Browser Integration**; Claude in Chrome (Lesson 28) for web-based automation
-- **Plugins and Connectors**; (Lesson 29): pre-built integrations with Google Workspace, Notion, Slack, and more
-- **Safety, Limitations & What's Coming**; Understanding boundaries, responsible use, and the future of agentic AI (Lesson 30)
-- **Built-in Document Skills**; Working with docx, xlsx, pptx, and pdf files (Lesson 31)
-- **Decision Framework**; Choosing between Code and Cowork (Lesson 32)
-- **From Skills to Business**; Understanding how Skills become monetizable products (Lesson 33), the Digital FTE model, and the path to revenue
-- **Cross-Vendor Landscape**; How Claude Code concepts (CLAUDE.md, Skills, MCP, hooks, teams) map to OpenAI Codex, Google Gemini CLI, and emerging industry standards (Lesson 34)
-- **Business Strategy with AI**; 10 MBA-level frameworks (Porter's Five Forces, disruption analysis, financial statements, leadership) applied to your business using Claude and the StratArts plugin (Lesson 35)
-- **Chapter Quiz**; 50-question interactive assessment (Lesson 36) covering all chapter concepts
+- **Channels**; Event-driven automation that lets agents react to file changes, git commits, and external triggers without polling (Lesson 25)
+- **Claude Cowork Fundamentals**; From terminal to desktop (Lesson 26), getting started (Lesson 27), and practical workflows (Lesson 28)
+- **Browser Integration**; Claude in Chrome (Lesson 29) for web-based automation
+- **Plugins and Connectors**; Pre-built integrations with Google Workspace, Notion, Slack, and more (Lesson 30)
+- **Safety, Limitations & What's Coming**; Understanding boundaries, responsible use, and the future of agentic AI (Lesson 31)
+- **Built-in Document Skills**; Working with docx, xlsx, pptx, and pdf files (Lesson 32)
+- **Dispatch**; Assign tasks to Cowork from any device: mobile, tablet, or another machine (Lesson 33)
+- **Computer Use**; Let Claude control your screen: clicking, typing, and navigating desktop applications autonomously (Lesson 34)
+- **Projects and Scheduling**; Organize your AI workflows with persistent project contexts and scheduled task execution (Lesson 35)
+- **Custom Visuals**; Interactive diagrams, charts, and data visualizations generated on demand inside Cowork (Lesson 36)
+- **Decision Framework**; Choosing between Code and Cowork (Lesson 37)
+- **From Skills to Business**; Understanding how Skills become monetizable products (Lesson 38), the Digital FTE model, and the path to revenue
+- **Cross-Vendor Landscape**; How Claude Code concepts (CLAUDE.md, Skills, MCP, hooks, teams) map to OpenAI Codex, Google Gemini CLI, and emerging industry standards (Lesson 39)
+- **Business Strategy with AI**; 10 MBA-level frameworks (Porter's Five Forces, disruption analysis, financial statements, leadership) applied to your business using Claude and the StratArts plugin (Lesson 40)
+- **Chapter Quiz**; 50-question interactive assessment (Lesson 41) covering all chapter concepts

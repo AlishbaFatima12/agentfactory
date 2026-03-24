@@ -15,6 +15,10 @@ Plugins are bundled packages that combine multiple Claude Code capabilities: ski
 - List available: `/plugin marketplace list`
 - Plugin manifest (`plugin.json`) declares all components with paths
 - Skills install to `.claude/skills/` and activate automatically when Claude detects matching requests
+- Use `/reload-plugins` to pick up changes without restarting Claude Code
+- Validate plugins before distributing: `claude plugin validate ./path-to-plugin`
+- Update installed plugins: `claude plugin update plugin-name@marketplace-name`
+- Official marketplace plugins auto-update at startup
 
 ### Common Mistakes
 
@@ -22,6 +26,7 @@ Plugins are bundled packages that combine multiple Claude Code capabilities: ski
 - Creating "mega-skills" that do too much instead of focused, composable skills Claude can combine
 - Writing vague skill descriptions without specific trigger scenarios and examples
 - Treating components as separate (skills here, agents there) instead of bundling related capabilities together
+- Using the old `python-lsp` plugin name instead of the correct `pyright-lsp`
 
 ### Connections
 

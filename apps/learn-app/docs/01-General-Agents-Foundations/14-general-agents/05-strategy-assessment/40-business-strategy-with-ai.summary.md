@@ -6,5 +6,5 @@ The key insight is framework selection: Porter's Five Forces for current competi
 
 **Key connections:**
 
-- **Builds on**: Lesson 8-9 (Agent Skills; understanding skills as reusable tools), Lesson 33 (From Skills to Business; monetization context)
-- **Leads to**: Chapter Quiz (Lesson 36) testing understanding across all 35 lessons
+- **Builds on**: Lesson 8-9 (Agent Skills; understanding skills as reusable tools), Lesson 38 (From Skills to Business; monetization context)
+- **Leads to**: Chapter Quiz (Lesson 41) testing understanding across all 40 lessons

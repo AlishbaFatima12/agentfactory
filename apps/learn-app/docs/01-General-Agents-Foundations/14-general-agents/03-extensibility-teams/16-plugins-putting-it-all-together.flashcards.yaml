@@ -95,3 +95,24 @@ cards:
     why: "What happens to teammates when only User scope is used?"
     tags: ["plugins", "installation-scopes", "collaboration"]
     difficulty: "advanced"
+
+  - id: "ch14-16-plugins-013"
+    type: recall
+    front: "What command picks up plugin changes without restarting Claude Code?"
+    back: "/reload-plugins"
+    tags: ["plugins", "commands"]
+    difficulty: "basic"
+
+  - id: "ch14-16-plugins-014"
+    type: recall
+    front: "How do you submit a plugin to the official Anthropic marketplace?"
+    back: "Through in-app forms at claude.ai/settings/plugins/submit or platform.claude.com/plugins/submit."
+    tags: ["plugins", "marketplace", "distribution"]
+    difficulty: "intermediate"
+
+  - id: "ch14-16-plugins-015"
+    type: recall
+    front: "How many language server plugins are available in the official marketplace?"
+    back: "11 languages: TypeScript, Python (Pyright), Rust, Go, C/C++ (clangd), C#, Java, Kotlin, Lua, PHP, and Swift."
+    tags: ["plugins", "lsp", "code-intelligence"]
+    difficulty: "intermediate"

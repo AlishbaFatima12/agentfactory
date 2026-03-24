@@ -1,6 +1,6 @@
 ---
 slug: /General-Agents-Foundations/general-agents/cross-vendor-landscape
-sidebar_position: 34
+sidebar_position: 39
 title: "The Cross-Vendor Landscape: Your Skills Are Portable"
 description: "See how Claude Code concepts map to OpenAI Codex, Google Gemini CLI, and emerging industry standards; your agent-building skills transfer everywhere."
 keywords:
@@ -14,7 +14,7 @@ keywords:
     portable skills,
   ]
 chapter: 14
-lesson: 34
+lesson: 39
 duration_minutes: 25
 chapter_type: Concept
 
@@ -63,7 +63,7 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2026-02-11"
-last_modified: "2026-02-11"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
 version: "1.0.0"
@@ -90,7 +90,7 @@ teaching_guide:
     - "Project the Concept Mapping Table and walk through it row by row; for each row, connect back to the specific Chapter 14 lesson where students first learned that concept"
     - "Use the Three Philosophies table as a group exercise: assign each group a philosophy and have them argue why their tool is best for a given scenario"
     - "For the SWE-bench section, show how the same model can score differently on Verified vs Pro to teach critical benchmark literacy"
-    - "As this is the chapter closer, explicitly tie the full arc together: Lesson 1 (what are agents) through Lesson 34 (your skills transfer everywhere); the chapter thesis is that agent-building patterns are universal, not vendor-specific"
+    - "As this is the chapter closer, explicitly tie the full arc together: Lesson 1 (what are agents) through Lesson 39 (your skills transfer everywhere); the chapter thesis is that agent-building patterns are universal, not vendor-specific"
   assessment_quick_check:
     - "Name the three founding projects of the Agentic AI Foundation and what each standardizes."
     - "What is the SKILL.md directory path in Claude Code vs Codex vs Gemini CLI?"
@@ -112,29 +112,34 @@ MIT Technology Review named "Generative Coding" one of its 10 Breakthrough Techn
 
 ---
 
-## The Market in February 2026
+## The Market in March 2026
 
 The agentic coding market has consolidated into two leaders and several strong contenders.
 
 ### Tier 1: The Two Leaders
 
 **Anthropic (Claude Code)**
-Analyst estimates put Claude Code at ~$1B annual recurring revenue as of early February 2026 ([Sacra](https://sacra.com/c/anthropic/)). SemiAnalysis estimated Claude Code accounts for ~4% of all public GitHub commits ([SemiAnalysis, Feb 5, 2026](https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point)). Claude Opus 4.5 holds the top spot on SWE-bench Verified at 80.9%. Philosophy: developer-in-the-loop, local terminal execution, accuracy-first.
+Claude Code's run-rate revenue has surpassed $2.5B, more than doubling since January 2026 ([Constellation Research](https://www.constellationr.com/insights/news/anthropics-claude-code-revenue-doubled-jan-1)). Anthropic's overall ARR has reached $19B ([Yahoo Finance](https://finance.yahoo.com/news/anthropic-arr-surges-19-billion-151028403.html)). Claude Code accounts for roughly 4% of all public GitHub commits ([SemiAnalysis](https://newsletter.semianalysis.com/p/claude-code-is-the-inflection-point)). Claude Opus 4.5 holds the top spot on SWE-bench Verified at 80.9%. The source code is available on GitHub ([github.com/anthropics/claude-code](https://github.com/anthropics/claude-code)) under Anthropic's commercial license (source-available, not OSI-approved open source). Philosophy: developer-in-the-loop, local terminal execution, accuracy-first.
 
 **OpenAI (Codex)**
-Codex CLI is open source, built in Rust, installable via `npm i -g @openai/codex` ([GitHub](https://github.com/openai/codex)). OpenAI launched a macOS desktop app on February 2, 2026, and released GPT-5.3-Codex on February 5, 2026. Codex supports cloud sandbox execution (default for delegated tasks) and also provides local CLI modes. Philosophy: parallel, asynchronous, fire-and-forget delegation.
+Codex CLI is open source, built in Rust, installable via `npm i -g @openai/codex` ([GitHub](https://github.com/openai/codex)). GPT-5.4 mini is now available in Codex alongside GPT-5.3-Codex, using 30% of the compute budget of the full model ([Codex Changelog](https://developers.openai.com/codex/changelog)). The Codex app is now available on Windows in addition to macOS. Rate limits have doubled across all plans. Codex supports cloud sandbox execution (default for delegated tasks) and also provides local CLI modes. Philosophy: parallel, asynchronous, fire-and-forget delegation.
 
 ### Tier 2: Strong Contenders
 
-| Tool                  | Key Stat                                                                                                               | Positioning                                                                                                                                                                   |
-| --------------------- | ---------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Cursor**            | ~$1B ARR, ~$29.3B valuation (analyst est., [Sacra](https://sacra.com/c/cursor/))                                       | Fastest SaaS growth in history ([SaaStr](https://www.saastr.com/cursor-hit-1b-arr-in-17-months-the-fastest-b2b-to-scale-ever-and-its-not-even-close/)). IDE-first experience. |
-| **GitHub Copilot**    | 68% developer usage, ~$400M revenue 2025 ([a16z](https://a16z.com/the-trillion-dollar-ai-software-development-stack/)) | Agent mode GA. Massive distribution via GitHub ecosystem.                                                                                                                     |
-| **Google Gemini CLI** | Open source (Apache 2.0), free tier (1,000 req/day), 1M token context                                                  | Accessible, open, enormous context window.                                                                                                                                    |
+| Tool                  | Key Stat                                                                                                                                                                                                                                                                            | Positioning                                                                                                                                                                                                                                |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Cursor**            | >$2B ARR, in talks at ~$50B valuation ([TechCrunch](https://techcrunch.com/2026/03/02/cursor-has-reportedly-surpassed-2b-in-annualized-revenue/), [Bloomberg](https://www.bloomberg.com/news/articles/2026-03-12/ai-coding-startup-cursor-in-talks-for-about-50-billion-valuation)) | Doubled revenue in three months. Enterprise now ~60% of revenue. IDE-first experience.                                                                                                                                                     |
+| **GitHub Copilot**    | 68% developer usage, ~$400M revenue 2025 ([a16z](https://a16z.com/the-trillion-dollar-ai-software-development-stack/))                                                                                                                                                              | Custom agents, sub-agents, terminal agent, and JetBrains agentic capabilities now GA ([GitHub Blog](https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/)). Massive distribution via GitHub ecosystem. |
+| **Google Gemini CLI** | Open source (Apache 2.0), free tier (1,000 req/day), 1M token context                                                                                                                                                                                                               | Plan Mode on by default, skills on by default, gVisor/LXC sandboxing, HTTP A2A remote agents ([Gemini CLI docs](https://geminicli.com/docs/changelogs/)). Rapid feature evolution.                                                         |
 
-### Tier 3: Emerging Players
+### Tier 3: Emerging and Open-Source Players
 
-Amazon Q Developer and Devin (which acquired the Windsurf product and brand) round out the landscape.
+| Tool                   | Key Stat                                                                                                                                                                                                    | Positioning                                                                                                                                                                                                |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Devin/Windsurf**     | Cognition acquired Windsurf for ~$250M, inheriting $82M ARR and 350+ enterprise customers ([TechCrunch](https://techcrunch.com/2025/07/14/cognition-maker-of-the-ai-coding-agent-devin-acquires-windsurf/)) | Fully autonomous agent (Devin) plus IDE (Windsurf) under one roof. Combined enterprise ARR up 30%+ post-acquisition.                                                                                       |
+| **Amazon Q Developer** | Gartner Magic Quadrant Leader, deep integration across 200+ AWS services                                                                                                                                    | Strong enterprise play with free tier. Notable adoption at BT Group and National Australia Bank.                                                                                                           |
+| **Cline**              | 5M+ installs across VS Code/JetBrains/Cursor, 58K+ GitHub stars ([cline.bot](https://cline.bot))                                                                                                            | Open-source autonomous coding agent running locally in your IDE. Native subagents (v3.58), CLI 2.0. Fork Roo Code also growing. Not mentioned in any vendor's marketing because it competes with everyone. |
+| **OpenCode**           | 120K+ GitHub stars, MIT licensed ([github.com/opencode-ai/opencode](https://github.com/opencode-ai/opencode))                                                                                               | Go-based CLI agent, works with 75+ models (Claude, GPT, Gemini, local). Privacy-first, provider-agnostic. Desktop app and VS Code extension also available. Often called "the open-source Claude Code."    |
 
 ---
 
@@ -163,7 +168,7 @@ The pattern: what you know transfers. The directory name changes (`.claude/` vs 
 
 In December 2025, the biggest companies in AI did something unusual: they agreed on shared standards.
 
-The **Agentic AI Foundation (AAIF)** formed under the [Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) with platinum members including Anthropic, OpenAI, Google, Microsoft, AWS, Block, Bloomberg, and Cloudflare. The foundation governs three founding projects:
+The **Agentic AI Foundation (AAIF)** formed under the [Linux Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) and has grown to [146 members](https://www.linuxfoundation.org/press/agentic-ai-foundation-welcomes-97-new-members) as of February 2026. Platinum members include Anthropic, OpenAI, Google, Microsoft, AWS, Block, Bloomberg, and Cloudflare. Gold members added in 2026 include JPMorgan Chase, American Express, Autodesk, Red Hat, UiPath, ServiceNow, Lenovo, and Huawei. David Nalley (AWS) serves as governing board chair. The foundation governs three founding projects:
 
 | Project                                                              | Created By                                                                                                                              | What It Standardizes                                                 | Adoption                                                 |
 | -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
@@ -181,14 +186,14 @@ A fourth standard, **Agent Skills** (the SKILL.md format), was created by Anthro
 
 Each tool reflects a different design philosophy. None is universally "best" -- they excel at different work.
 
-|                 | Claude Code                               | OpenAI Codex                            | Gemini CLI                              |
-| --------------- | ----------------------------------------- | --------------------------------------- | --------------------------------------- |
-| **Philosophy**  | "Measure twice, cut once"                 | "Move fast, iterate"                    | "Open and accessible"                   |
-| **Execution**   | Local terminal                            | Cloud sandbox + local                   | Local CLI + cloud inference             |
-| **Strengths**   | Deep reasoning, accuracy, self-correction | Parallel tasks, async delegation, speed | Free tier, 1M context, open source      |
-| **Best for**    | Complex refactoring, architecture work    | Batch operations, exploration           | Budget-conscious teams, large codebases |
-| **Pricing**     | $20+/month subscription                   | $20-$200/month (via ChatGPT)            | Free (1,000 req/day)                    |
-| **Open source** | No                                        | CLI is open source (Rust)               | Yes (Apache 2.0)                        |
+|                 | Claude Code                                     | OpenAI Codex                            | Gemini CLI                              |
+| --------------- | ----------------------------------------------- | --------------------------------------- | --------------------------------------- |
+| **Philosophy**  | "Measure twice, cut once"                       | "Move fast, iterate"                    | "Open and accessible"                   |
+| **Execution**   | Local terminal                                  | Cloud sandbox + local                   | Local CLI + cloud inference             |
+| **Strengths**   | Deep reasoning, accuracy, self-correction       | Parallel tasks, async delegation, speed | Free tier, 1M context, open source      |
+| **Best for**    | Complex refactoring, architecture work          | Batch operations, exploration           | Budget-conscious teams, large codebases |
+| **Pricing**     | Pro $17/mo (annual) or $20/mo; Max $100-$200/mo | $20-$200/month (via ChatGPT)            | Free (1,000 req/day)                    |
+| **Open source** | Source-available on GitHub (commercial license) | CLI is open source (Rust)               | Yes (Apache 2.0)                        |
 
 Professional developers increasingly use multiple tools for different strengths. Claude Code for the careful architecture work. Codex for parallelized bulk tasks. Gemini CLI for quick queries against massive codebases. This is "poly-agentic" development -- choosing the right tool for each task, not committing to one forever.
 
@@ -200,18 +205,20 @@ SWE-bench is a benchmark that tests whether AI can solve real software engineeri
 
 Multiple variants exist with different difficulty levels. **SWE-bench Verified** uses human-validated problems. **SWE-bench Pro** is harder, with more complex multi-file problems.
 
-### SWE-bench Verified Leaderboard (February 2026, [source](https://www.marc0.dev/en/leaderboard))
+### SWE-bench Verified Leaderboard (March 2026, [source](https://www.marc0.dev/en/leaderboard))
 
 | Rank | Model             | Score |
 | ---- | ----------------- | ----- |
 | 1    | Claude Opus 4.5   | 80.9% |
 | 2    | Claude Opus 4.6   | 80.8% |
-| 3    | GPT-5.2           | 80.0% |
-| 4    | Gemini 3 Flash    | 78.0% |
-| 5    | Claude Sonnet 4.5 | 77.2% |
-| 6    | Gemini 3 Pro      | 76.2% |
+| 3    | Gemini 3.1 Pro    | 80.6% |
+| 4    | MiniMax M2.5      | 80.2% |
+| 5    | GPT-5.2           | 80.0% |
+| 6    | Claude Sonnet 4.6 | 79.6% |
 
-**Important caveat**: Companies report scores on different benchmark variants, making direct comparisons tricky. GPT-5.3-Codex scores 56.8% on SWE-bench Pro -- which is a harder test, not a worse score. When comparing models, always check which variant was used.
+Notable changes since February 2026: Gemini 3.1 Pro jumped from rank 6 to rank 3 at 80.6%. MiniMax M2.5 entered the top tier as the leading open-weight model. Claude Sonnet 4.6, a mid-tier model, nearly matches flagships at 79.6%.
+
+**Important caveat**: Companies report scores on different benchmark variants, making direct comparisons tricky. GPT-5.3-Codex scores 56.8% on SWE-bench Pro, which is a harder test, not a worse score. When comparing models, always check which variant was used.
 
 ---
 
@@ -272,17 +279,17 @@ consider beyond benchmark scores when choosing a coding agent?
 - [AGENTS.md](https://agents.md/) -- cross-vendor project instructions standard
 - [OpenAI Codex CLI](https://github.com/openai/codex) -- open source repository
 - [Google Gemini CLI](https://github.com/google-gemini/gemini-cli) -- open source repository
-- [SWE-bench Verified leaderboard](https://www.marc0.dev/en/leaderboard) -- February 2026 snapshot
+- [SWE-bench Verified leaderboard](https://www.marc0.dev/en/leaderboard) -- March 2026 snapshot
 
 :::info Snapshot disclaimer
-The AI model and market landscape change rapidly. Figures in this lesson reflect snapshots from February 2026 and are cited to specific public sources. Check the linked references for the latest numbers. Benchmark scores are self-reported by model providers unless independently verified, and different evaluation variants (Verified, Pro, Lite) produce different results for the same models.
+The AI model and market landscape change rapidly. Figures in this lesson reflect snapshots from March 2026 and are cited to specific public sources. Check the linked references for the latest numbers. Benchmark scores are self-reported by model providers unless independently verified, and different evaluation variants (Verified, Pro, Lite) produce different results for the same models.
 :::
 
 ---
 
 ## What's Next
 
-You know how the tools work and how they compare across vendors. Next up: **Business Strategy with AI** (Lesson 35) -- 10 MBA-level frameworks (Porter's Five Forces, disruption analysis, financial statements, leadership) applied to your own business using Claude and the StratArts plugin. Then the **Chapter Quiz** (Lesson 36) tests your understanding across all 35 lessons.
+You know how the tools work and how they compare across vendors. Next up: **Business Strategy with AI** (Lesson 40) -- 10 MBA-level frameworks (Porter's Five Forces, disruption analysis, financial statements, leadership) applied to your own business using Claude and the StratArts plugin. Then the **Chapter Quiz** (Lesson 41) tests your understanding across all 40 lessons.
 
 ## Flashcards Study Aid
 

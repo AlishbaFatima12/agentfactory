@@ -125,8 +125,8 @@ Run this command in Claude Code right now:
 │                                                                                      │
 │   Built-in agents (always available)                                                 │
 │   Bash · inherit                                                                     │
-│   general-purpose · sonnet                                                           │
-│   statusline-setup · sonnet                                                          │
+│   general-purpose · inherit                                                          │
+│   statusline-setup · inherit                                                         │
 │   Explore · haiku                                                                    │
 │   Plan · inherit                                                                     │
 │   claude-code-guide · haiku                                                          │
@@ -165,7 +165,7 @@ Use the Explore subagent to tell me what's in this folder and summarize the proj
 | --------------------- | --------------------------------------------------------------- | ---------------- |
 | **Explore**           | Finding files, searching code, understanding codebase structure | Haiku (fast)     |
 | **Plan**              | Complex multi-step tasks, creating implementation strategies    | Sonnet (smart)   |
-| **general-purpose**   | Multi-step tasks requiring various tools                        | Sonnet           |
+| **general-purpose**   | Multi-step tasks requiring various tools                        | Inherits current |
 | **Bash**              | Command execution tasks                                         | Inherits current |
 | **claude-code-guide** | Questions about Claude Code itself                              | Haiku            |
 
@@ -275,6 +275,8 @@ You → Main Claude Code → Launches Subagent → Subagent works → Returns re
 Use the Plan subagent to analyze this feature request.
 ```
 
+**@-mention invocation**: Type `@` in the chat and pick a subagent from the typeahead menu. This guarantees that specific subagent runs, rather than relying on Claude to match your request automatically.
+
 ---
 
 ## Hands-On: Create Your First Custom Subagent
@@ -359,6 +361,8 @@ When reviewing code:
 4. Recommend cleaner patterns
 ```
 
+The `model` field accepts: `sonnet`, `opus`, `haiku`, a full model ID (e.g., `claude-sonnet-4-6`), or `inherit` to use whatever model the main conversation is using. When omitted, subagents inherit the current model by default.
+
 ---
 
 ## More Subagent Ideas
@@ -375,6 +379,10 @@ Once you understand the pattern, create specialists for any repeated task:
 1. What expertise does this specialist have?
 2. What should it do autonomously?
 3. What format should results be in?
+
+:::tip Persistent Memory for Subagents
+Subagents can retain knowledge across conversations using the `memory` field in their frontmatter (e.g., `memory: project`). This gives the subagent a dedicated memory directory that survives between sessions, so a research subagent can build on previous findings rather than starting from scratch every time.
+:::
 
 ---
 
@@ -453,7 +461,6 @@ Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises covering
 **🎯 Orchestrate Multiple Agents:**
 
 > "I need to understand this unfamiliar codebase. Use Explore to map the project structure, AND use Plan to create a learning path for understanding the architecture. Show me how the results combine."
-
 
 ## Flashcards Study Aid
 

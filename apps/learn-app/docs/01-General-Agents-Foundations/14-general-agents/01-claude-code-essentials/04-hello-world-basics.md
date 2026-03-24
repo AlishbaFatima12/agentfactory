@@ -119,6 +119,14 @@ You'll see a prompt. It looks something like:
 
 This is where you talk to Claude. In natural language. No special syntax. No commands you need to memorize.
 
+:::tip Voice Input
+Prefer speaking over typing? Type `/voice` to enable push-to-talk voice dictation. Hold the Space bar, speak naturally, and your transcript inserts at the cursor. Useful for longer instructions or accessibility needs.
+:::
+
+:::tip Output Styles
+Try typing `/config` and switching to **Learning** mode. In this mode, Claude explains its decisions and marks code sections with `TODO(human)` for you to complete yourself. Great for building real understanding instead of just copy-pasting.
+:::
+
 ---
 
 ## Your First Questions: Orient Yourself
@@ -179,11 +187,10 @@ Notice that Claude didn't just do things. **It asked first.**
 
 This is the permission model. Every time Claude wants to:
 
-- **Read** a file
 - **Write** or create a file
-- **Run** a command
+- **Run** a terminal command
 
-It shows you exactly what it's about to do and waits for your approval.
+It shows you exactly what it's about to do and waits for your approval. (Reading files does not require approval, since it is a read-only operation.)
 
 Press `[Enter]` to approve. Press `[Esc]` to reject.
 
@@ -249,7 +256,6 @@ You're building a **mental model**. The tools are the same; the architecture is 
 > "Ask Claude to create a file, and when it asks for approval, press Esc to reject. Then ask it to do something different. Notice how Claude adapts without frustration."
 
 **Next Up:** Now that you're comfortable conversing with Claude, let's teach Claude about YOUR preferences.
-
 
 ## Flashcards Study Aid
 

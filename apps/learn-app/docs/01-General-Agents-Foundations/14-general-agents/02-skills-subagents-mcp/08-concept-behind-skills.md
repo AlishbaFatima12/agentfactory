@@ -124,7 +124,7 @@ Put them together: an intelligent agent that can execute. Claude Code isn't just
 
 Agents today have intelligence and capabilities, but not always the expertise needed for real work. They can do amazing things when you provide detailed guidance. But they're missing the important context up front. They can't absorb your organizational knowledge efficiently. They don't learn from your feedback over time.
 
-That's the gap skills fill. Not more intelligence. Not more execution capability. **Expertise**:the domain-specific knowledge that makes generic capability specifically useful.
+That's the gap skills fill. Not more intelligence. Not more execution capability. **Expertise**: the domain-specific knowledge that makes generic capability specifically useful.
 
 ---
 
@@ -224,6 +224,18 @@ But if skills are just folders, where do they come from?
 
 Skills emerge from different places, each serving different needs.
 
+**Bundled Skills**: Claude Code ships with built-in skills available in every installation. These handle common developer workflows out of the box:
+
+| Skill                       | Purpose                                                       |
+| --------------------------- | ------------------------------------------------------------- |
+| `/batch <instruction>`      | Orchestrate large-scale changes across a codebase in parallel |
+| `/claude-api`               | Load Claude API reference for your project's language         |
+| `/debug [description]`      | Troubleshoot the current session by reading the debug log     |
+| `/loop [interval] <prompt>` | Run a prompt repeatedly on an interval                        |
+| `/simplify [focus]`         | Review recently changed files for quality issues              |
+
+Think of these as the pre-installed apps on a new phone. You can use them immediately without downloading anything.
+
 **Foundational Skills**: Basic capabilities that extend what Claude can do out of the box.
 
 Examples: Creating Word documents, PowerPoint presentations, Excel spreadsheets, PDFs. These are like basic life skills: everyone needs them.
@@ -238,7 +250,7 @@ These are like specialized certifications: expertise in specific tools.
 
 Examples: Your company's coding style guide. Internal documentation standards. Organization-specific workflows that encode "how we do things here."
 
-**Here's where the real traction is**: Anthropic has been talking to Fortune 100 companies using skills to teach agents about organizational best practices and the unique ways they use bespoke internal software. Developer productivity teams: serving thousands or tens of thousands of engineers: deploy skills to teach Claude Code about internal code style standards and preferred workflows.
+**Here's where the real traction is**: Anthropic has been talking to Fortune 100 companies using skills to teach agents about organizational best practices and the unique ways they use bespoke internal software. Developer productivity teams, serving thousands or tens of thousands of engineers, deploy skills to teach Claude Code about internal code style standards and preferred workflows.
 
 Within five weeks of launch, thousands of skills were created across all three categories. The ecosystem is growing fast because the format is simple enough that anyone can contribute.
 
@@ -324,6 +336,7 @@ That last row is critical. Skills you create in Claude Code can be:
 - **Versioned** in Git (track improvements over time)
 - **Integrated** into Custom Agents (Part 6 teaches this)
 - **Monetized** as part of vertical AI solutions
+- **Portable** across AI tools: skills follow the [Agent Skills open standard](https://agentskills.io), which works across Claude Code, OpenAI Codex, Goose, and other compatible tools. Your skills are not locked to one vendor.
 
 When you create a skill, you're not just saving keystrokes. You're encoding expertise that compounds in value: for yourself, your team, and potentially your business.
 
@@ -458,7 +471,6 @@ This lesson is based on the Anthropic talk "Don't Build Agents, Build Skills Ins
 **What you're learning:** The limits of skills: essential for deciding when to use Part 6's SDK-based agents. Not everything should be a skill.
 
 ---
-
 
 ## Flashcards Study Aid
 

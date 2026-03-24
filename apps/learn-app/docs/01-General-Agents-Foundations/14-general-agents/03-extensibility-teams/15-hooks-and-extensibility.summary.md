@@ -10,8 +10,9 @@ Hooks are automated scripts that run when specific events occur in Claude Code: 
 
 ### Critical Patterns
 
-- Four hook events: `PreToolUse` (before tool runs), `PostToolUse` (after tool completes), `SessionStart` (session opens), `SessionEnd` (session closes)
+- Five main hook events: `PreToolUse` (before tool runs), `PostToolUse` (after tool completes), `UserPromptSubmit` (when you submit a prompt), `SessionStart` (session opens), `SessionEnd` (session closes), plus 20+ additional events for advanced use cases
 - Hooks live in `.claude/settings.json` with structure: event type → matcher (optional) → command action
+- Four hook types exist: `command` (shell scripts), `http` (POST to URLs), `prompt` (LLM evaluation), and `agent` (subagent verification); this lesson teaches command hooks, with full coverage in Chapter 18
 - Start simple: a SessionStart hook that echoes project context gives immediate value
 - Co-design custom hooks through AI collaboration: you provide workflow context, AI suggests patterns, iterate together
 
@@ -24,4 +25,4 @@ Hooks are automated scripts that run when specific events occur in Claude Code: 
 ### Connections
 
 - **Builds on**: CLAUDE.md configuration, MCP external connections, Skills custom commands
-- **Leads to**: Advanced hook building and debugging (Part 6)
+- **Leads to**: Advanced hook types (prompt, http, agent) and 22+ hook events in Chapter 18

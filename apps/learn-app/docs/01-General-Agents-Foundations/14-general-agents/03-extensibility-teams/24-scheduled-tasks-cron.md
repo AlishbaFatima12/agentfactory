@@ -276,10 +276,31 @@ Schedule a recurring task that coordinates with agent teams. A parent agent can 
 
 ### For Durable Scheduling
 
-When tasks need to survive restarts, session-scoped scheduling is the wrong tool. Use:
+When tasks need to survive restarts, session-scoped scheduling is the wrong tool. Claude Code now offers a spectrum of scheduling options:
 
-- **Desktop scheduled tasks** -- Claude Cowork's graphical scheduling for recurring desktop workflows
-- **GitHub Actions** with a `schedule` trigger -- for unattended CI/CD automation that runs without a terminal
+| Tier        | Method                  | Runs Where                  | Survives Restart?       | Machine Required? |
+| :---------- | :---------------------- | :-------------------------- | :---------------------- | :---------------- |
+| **Cloud**   | Cloud Scheduled Tasks   | Anthropic infrastructure    | Yes                     | No                |
+| **Desktop** | Desktop scheduled tasks | Your local machine          | Yes (while app is open) | Yes               |
+| **Session** | `/loop`                 | Current Claude Code process | No                      | Yes               |
+
+**Cloud Scheduled Tasks** run on Anthropic's infrastructure, so they persist across restarts and execute even when your machine is off. Create and manage them with the `/schedule` command:
+
+```
+/schedule every weekday at 9am: check the CI dashboard and summarize any failures
+```
+
+You can also manage cloud tasks through the Claude.ai web interface at **Settings > Scheduled Tasks**. Cloud tasks require a Pro or Max plan.
+
+**Desktop scheduled tasks** use Claude Desktop's graphical scheduling for recurring workflows. Your machine must be on with the Desktop app running.
+
+**GitHub Actions** with a `schedule` trigger remain the best choice for unattended CI/CD automation that runs without any Anthropic-specific infrastructure.
+
+:::tip Beyond Schedules: Event-Driven Automation with Channels
+
+Scheduled tasks fire on a timer. But what if you want Claude to respond to _events_ instead? **Channels** let you push messages from external sources (Telegram, Discord, webhooks) directly into a running Claude Code session. Think of it as the event-driven complement to time-driven scheduling: schedules ask "check every hour," channels ask "react when something happens." You can learn more in the official docs at `code.claude.com/docs/en/channels`.
+
+:::
 
 ---
 

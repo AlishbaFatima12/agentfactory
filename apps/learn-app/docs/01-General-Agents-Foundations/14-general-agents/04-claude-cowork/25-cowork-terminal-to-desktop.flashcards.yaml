@@ -9,7 +9,7 @@ cards:
   - id: "ch14-cowork-terminal-to-desktop-001"
     type: recall
     front: "What is Claude Cowork?"
-    back: "Agentic AI in the Claude Desktop app, available on macOS and Windows."
+    back: "An autonomous background agent in the Claude Desktop app that works on tasks in a cloud VM with its own environment, available on macOS (Apple Silicon M1+) and Windows."
     tags: [claude-cowork, definition]
     difficulty: "basic"
 
@@ -23,7 +23,7 @@ cards:
   - id: "ch14-cowork-terminal-to-desktop-003"
     type: recall
     front: "What is the key distinction between Claude Cowork and a web chatbot?"
-    back: "Cowork is an agent that acts; a chatbot only responds."
+    back: "Cowork is an autonomous agent that acts independently in the background; a chatbot only responds to messages interactively."
     tags: [agent-vs-chatbot, cowork-definition]
     difficulty: "basic"
 
@@ -59,7 +59,7 @@ cards:
   - id: "ch14-cowork-terminal-to-desktop-008"
     type: recall
     front: "What is Claude Code best for versus what is Claude Cowork best for?"
-    back: "Code: writing software, tests, debugging.\nCowork: documents, reports, analysis."
+    back: "Code: writing software, tests, debugging.\nCowork: documents, reports, analysis, and autonomous background tasks."
     tags: [code-vs-cowork, best-for]
     difficulty: "intermediate"
 

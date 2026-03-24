@@ -9,14 +9,14 @@ cards:
   - id: "ch14-cowork-getting-started-001"
     type: recall
     front: "Which Claude subscription tiers include access to Cowork?"
-    back: "Pro, Max, Team Premium, and Enterprise (free and Team Standard excluded)"
+    back: "Pro, Max, Teams, and Enterprise (free tier excluded)"
     tags: [subscription, requirements]
     difficulty: "basic"
 
   - id: "ch14-cowork-getting-started-002"
     type: recall
-    front: "What platforms does Claude Cowork support as of its February 2026 Windows launch?"
-    back: "macOS and Windows (x64)"
+    front: "What platforms does Claude Cowork support?"
+    back: "macOS (Apple Silicon M1+) and Windows (x64 and ARM64). Intel Macs cannot use the Cowork tab."
     tags: [platform, requirements]
     difficulty: "basic"
 
@@ -65,7 +65,7 @@ cards:
   - id: "ch14-cowork-getting-started-009"
     type: recall
     front: "What is the first troubleshooting step if Cowork mode does not appear in Claude Desktop?"
-    back: "Ensure you have a Pro, Max, Team Premium, or Enterprise subscription"
+    back: "Ensure you have a Pro, Max, Teams, or Enterprise subscription. On macOS, also verify you have Apple Silicon (M1+)."
     tags: [troubleshooting, subscription]
     difficulty: "intermediate"
 

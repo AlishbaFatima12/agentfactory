@@ -1,4 +1,4 @@
-# Lesson 32: Code vs. Cowork - A Decision Framework
+# Lesson 37: Code vs. Cowork - A Decision Framework
 
 ## Quick Reference
 
@@ -63,8 +63,10 @@ Skills you create work in **both interfaces**. A Skill for "financial report ana
 
 ## The Convergence Path
 
-**Current**: Two separate interfaces optimized for different use cases
+**Where we started**: Two separate interfaces optimized for different use cases
 
-**Coming**: Unified interface with terminal/desktop switching, shared Skills, unified settings
+**What's happening now**: Claude Code runs in terminal, VS Code, JetBrains, desktop app, web browser, and iOS app. The desktop app and web surfaces blur the Code/Cowork boundary, providing Code capabilities without terminal comfort.
+
+**Where it's heading**: A unified experience where terminal power and visual convenience coexist in every surface.
 
 **Implication**: Focus on patterns that transfer (agentic reasoning, Skill design), not interface-specific tricks.

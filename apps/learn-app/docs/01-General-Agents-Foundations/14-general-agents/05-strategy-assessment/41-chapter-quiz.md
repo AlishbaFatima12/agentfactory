@@ -1,6 +1,6 @@
 ---
 slug: /General-Agents-Foundations/general-agents/chapter-quiz
-sidebar_position: 36
+sidebar_position: 41
 title: "Chapter 14: Claude Code and Cowork Quiz"
 proficiency_level: B1
 layer: 1
@@ -11,11 +11,11 @@ running_example_id: claude-code-quiz
 
 # Chapter 14: Claude Code and Cowork Quiz
 
-Test your understanding of Claude Code and Claude Cowork's architecture, extensibility features, and workflow patterns. This assessment covers installation, configuration, MCP integration, subagents, skills, hooks, settings hierarchy, plugin architecture, browser integration, connectors, and built-in document Skills.
+Test your understanding of Claude Code and Claude Cowork's architecture, extensibility features, and workflow patterns. This assessment covers installation, configuration, MCP integration, subagents, skills, hooks, settings hierarchy, plugin architecture, browser integration, connectors, built-in document Skills, channels, Dispatch, Computer Use, projects, scheduling, and custom visuals.
 
 <Quiz
 title="Chapter 14: Claude Code Features and Workflows Assessment"
-questionsPerBatch={30}
+questionsPerBatch={35}
 questions={[ {
 question: "A developer notices that Claude Code sometimes generates boilerplate code patterns but doesn't understand the project's specific architectural constraints. What does this observation reveal about the fundamental limitation Claude Code was designed to address?",
 options: [
@@ -77,15 +77,15 @@ explanation: "Hooks (Option C) provide the ideal balance between AI agency and s
 source: "Lesson 01: Claude Code Origin Story"
 },
 {
-question: "After installing Claude Code globally using 'npm install -g claude-code', you run 'claude-code chat' but receive 'command not found'. Your colleague suggests checking the PATH. What does this debugging scenario reveal about the relationship between npm global installation and shell environment?",
+question: "After installing Claude Code using the native installer, you run 'claude' in your terminal but receive 'command not found'. Your colleague suggests checking the PATH. What does this debugging scenario reveal about the relationship between CLI tool installation and shell environment?",
 options: [
-"npm global installs require restarting the computer to update system environment fully",
-"npm global installs only work with administrator or sudo privileges on system",
-"npm global installs fail when Node.js version is below the minimum requirement",
-"npm global installs require the npm bin directory in PATH variable"
+"Native installs require restarting the computer to update system environment fully",
+"Native installs only work with administrator or sudo privileges on the system",
+"Native installs fail when Node.js version is below the minimum requirement",
+"The installer placed the binary in a directory not included in your PATH variable"
 ],
 correctOption: 3,
-explanation: "This scenario tests understanding of how npm global installations interact with the shell environment. When npm installs packages globally, it places executables in its global bin directory (typically 'npm config get prefix'/bin). For the shell to find these commands, this directory must be in your PATH environment variable. If it's not, the shell can't locate the 'claude-code' executable, producing 'command not found.' Option B is incorrect because global installs typically work without sudo (though permissions can sometimes require it). Option C misses the point: npm would error during installation if Node.js version was incompatible, not at runtime. Option D is wrong because PATH changes take effect in new shell sessions, not after reboot. The real issue is PATH configuration, which is foundational to understanding command-line tool installation.",
+explanation: "This scenario tests understanding of how CLI tool installations interact with the shell environment. When Claude Code is installed (whether natively, via Homebrew, or via WinGet), the executable is placed in a specific directory (e.g., ~/.local/bin/ on Linux/macOS). For the shell to find the 'claude' command, this directory must be in your PATH environment variable. If it is not, the shell cannot locate the executable, producing 'command not found.' Option B is incorrect because most installers work without sudo (though system-level paths may require it). Option C misses the point: Claude Code no longer requires Node.js for its native installer. Option D is wrong because PATH changes take effect in new shell sessions, not after a reboot. The real issue is PATH configuration, which is foundational to understanding command-line tool installation.",
 source: "Lesson 02: Installing and Authenticating Claude Code"
 },
 {
@@ -117,11 +117,11 @@ question: "After authenticating Claude Code, you want to verify the connection b
 options: [
 "Read the authentication documentation to verify the installation steps",
 "Check the API key format using a regular expression validator",
-"Run 'npm list -g claude-code' to confirm package installation",
-"Run 'claude-code chat' and send a simple test message"
+"Run 'claude --version' to confirm the CLI is installed correctly",
+"Run 'claude' and send a simple test message to verify the full chain"
 ],
 correctOption: 3,
-explanation: "Actually using Claude Code with a simple test message (Option C) is the most effective validation because it tests the entire chain: API key validity, network connectivity, correct environment variable configuration, and API access permissions. This is an example of end-to-end testing: verifying the system works by using it. Option A (reading documentation) doesn't test anything; documentation won't reveal configuration issues. Option B (format validation) is insufficient because it doesn't confirm the key is actually valid with Anthropic's servers. Option D (checking package installation) only confirms the package exists, not that it can authenticate successfully. In software engineering, this principle applies broadly: the best way to verify a system works is to use it in a realistic scenario. A simple 'hello world' test catches configuration issues that theoretical validation would miss.",
+explanation: "Actually using Claude Code with a simple test message (Option D) is the most effective validation because it tests the entire chain: API key validity, network connectivity, correct environment variable configuration, and API access permissions. This is an example of end-to-end testing: verifying the system works by using it. Option A (reading documentation) doesn't test anything; documentation won't reveal configuration issues. Option B (format validation) is insufficient because it doesn't confirm the key is actually valid with Anthropic's servers. Option C (checking the version) only confirms the binary is installed and on PATH, not that it can authenticate successfully. In software engineering, this principle applies broadly: the best way to verify a system works is to use it in a realistic scenario. A simple 'hello world' test catches configuration issues that theoretical validation would miss.",
 source: "Lesson 02: Installing and Authenticating Claude Code"
 },
 {
@@ -626,7 +626,7 @@ options: [
 ],
 correctOption: 2,
 explanation: "Option C is correct because it leverages each tool's strengths: Claude Code for programming (Python scripts) and Claude Cowork for document creation (Word report). This hybrid approach is optimal when tasks span both domains. Option A is suboptimal because while Claude Code can create documents, Cowork's docx Skill is purpose-built for Word documents and provides better formatting. Option B would be inefficient:Cowork can create documents but isn't optimized for writing and debugging code. Option D misses the productivity gains from using the right tool for each part of the workflow. The principle is tool specialization: use each interface for what it's optimized for.",
-source: "Lesson 32: Code vs. Cowork: A Decision Framework"
+source: "Lesson 37: Code vs. Cowork: A Decision Framework"
 },
 {
 question: "A colleague asks: 'What's the actual difference between Claude Code and Claude Cowork? They're both just Claude, right?' What's the most accurate explanation?",
@@ -722,7 +722,7 @@ options: [
 ],
 correctOption: 2,
 explanation: "Option C is correct because it optimizes for each role's needs: developers benefit from Code's terminal integration and git support, while knowledge workers benefit from Cowork's document Skills and visual interface. Both interfaces share the same underlying AI and Skills, so expertise transfers across the team. Option A forces non-technical staff to use terminals, creating unnecessary barriers. Option B limits developers by removing tools optimized for their work. Option D bases the decision on popularity rather than fit-for-purpose. The principle is right tool for the job: different roles have different needs, and that's okay.",
-source: "Lesson 32: Code vs. Cowork: A Decision Framework"
+source: "Lesson 37: Code vs. Cowork: A Decision Framework"
 },
 {
 question: "You set up `/loop 5m check the deployment status` and then exit Claude Code to grab coffee. When you return and start a new session, what happened to your scheduled task?",
@@ -782,7 +782,7 @@ options: [
 ],
 correctOption: 1,
 explanation: "Option B is correct: when there are many suppliers, no single supplier can dictate terms or prices; this is favorable for any business buying from them. Option A is wrong: three companies controlling 80% means intense rivalry for the remaining share, which is unfavorable. Option C confuses market dynamism with favorability: many substitutes actually increase price pressure. Option D is wrong: concentrated markets with alternatives give buyers more negotiating power, not less. Porter's Five Forces rates each force as favorable or unfavorable; understanding which forces work for and against you determines strategic positioning.",
-source: "Lesson 35: Business Strategy with AI"
+source: "Lesson 40: Business Strategy with AI"
 },
 {
 question: "A successful enterprise software company keeps adding advanced features requested by its largest customers. Meanwhile, a startup offers a simpler, cheaper version that satisfies 80% of small business needs. Which concept from Christensen's disruption theory best explains what's happening?",
@@ -794,7 +794,7 @@ options: [
 ],
 correctOption: 1,
 explanation: "Option B correctly identifies the classic disruption pattern: the incumbent over-serves (adds features nobody asked for) while focusing on its most profitable customers, creating an opening for a simpler, cheaper alternative that satisfies the majority. This is the core of the Innovator's Dilemma. Option A misidentifies the pattern: moving upmarket to serve existing customers is sustaining innovation, not Blue Ocean. Option C uses the wrong framework (Porter, not Christensen). Option D also uses the wrong framework: disruption theory explains WHY cheap alternatives succeed, while Porter's cost leadership is a strategic choice, not a disruption mechanism.",
-source: "Lesson 35: Business Strategy with AI"
+source: "Lesson 40: Business Strategy with AI"
 },
 {
 question: "A company reports $5M in annual profit but is running out of cash and may not make payroll next month. What financial concept explains this seemingly contradictory situation?",
@@ -806,7 +806,211 @@ options: [
 ],
 correctOption: 1,
 explanation: "Option B is correct: profit is an accounting opinion (calculated under accrual rules where revenue is recognized when earned, not when cash arrives), while cash is a fact. A company can show profits while running out of cash if customers pay late (accounts receivable grows), inventory ties up capital, or debt payments consume operating cash flow. This is why the cash flow statement exists alongside the income statement; they tell different stories. Option A is wrong: divergence between profit and cash is normal, not fraudulent. Option C is wrong: profitable companies go bankrupt regularly when they mismanage cash. Option D overgeneralizes: all three statements are important for different purposes.",
-source: "Lesson 35: Business Strategy with AI"
+source: "Lesson 40: Business Strategy with AI"
+},
+{
+question: "Your manager asks why the company should pay for Claude Cowork when the team already uses ChatGPT for document work. What capability most clearly differentiates Cowork from a standard chatbot-based document assistant?",
+options: [
+"Cowork supports more file formats than ChatGPT, including PPTX and XLSX natively",
+"Cowork is an autonomous AI employee that works independently on tasks in its own environment, notifying you when finished",
+"Cowork uses a superior language model that produces higher-quality text output",
+"Cowork integrates with Microsoft Office while ChatGPT only works with Google Workspace"
+],
+correctOption: 1,
+explanation: "Option B captures Cowork's defining differentiator: it is not a chatbot you interact with turn-by-turn. Cowork is an autonomous background agent that works on tasks in a cloud VM with its own environment. You assign work, and it executes independently, notifying you when done. This positions Cowork as a Digital FTE (Full-Time Equivalent) for knowledge work, not merely a better chat interface. Option A may be partially true but misses the architectural distinction. Option C is misleading because both use frontier-class models. Option D is factually incorrect. The key insight is agency: Cowork acts, not just advises.",
+source: "Lesson 25: From Terminal to Desktop: The Cowork Story"
+},
+{
+question: "You need a daily report generated at 6 AM, but your laptop is usually closed at that hour. Which scheduling approach in the Claude ecosystem would reliably run this task?",
+options: [
+"Use `/loop 24h generate the report` and leave your laptop open overnight",
+"Use Desktop scheduled tasks so the Claude desktop app runs it when your machine is on",
+"Use Cloud scheduled tasks, which run on Anthropic's infrastructure regardless of whether your machine is on",
+"Use a cron job on your laptop that calls the Claude API directly at 6 AM"
+],
+correctOption: 2,
+explanation: "Option C is correct: Cloud scheduled tasks run on Anthropic's infrastructure and do not require your machine to be on. This is the durable scheduling tier designed for exactly this scenario. Option A fails because /loop is session-scoped and dies when you close the terminal. Option B requires your machine to be on and the Claude desktop app to be running. Option D bypasses Claude Code entirely and requires custom development. The three-tier scheduling model is: Cloud (runs anywhere, most durable), Desktop (requires app open), and /loop (session-scoped, least durable). Choose the tier that matches your reliability requirements.",
+source: "Lesson 24: Scheduled Tasks: The Loop Skill and Cron Tools"
+},
+{
+question: "You're advising a startup on which AI coding tool to adopt. They want an open-source, self-hostable option that works with models from multiple providers. Which competitor would you recommend they evaluate alongside Claude Code?",
+options: [
+"Cursor, which has surpassed $2B in annual recurring revenue and supports multiple models",
+"GitHub Copilot, which recently added agent mode and custom agents support",
+"OpenCode, an MIT-licensed Go-based CLI that works with 75+ models from multiple providers",
+"Windsurf, which was recently acquired by Cognition for its enterprise capabilities"
+],
+correctOption: 2,
+explanation: "Option C correctly identifies OpenCode as the open-source, multi-provider option. OpenCode is MIT-licensed, written in Go, works with 75+ models, and has attracted 112K+ GitHub stars. It offers a desktop app and VS Code extension alongside its CLI. Option A is wrong because Cursor is proprietary (closed-source) and not self-hostable. Option B is wrong because GitHub Copilot is a proprietary service, not open-source or self-hostable. Option D is wrong because Windsurf was acquired by Cognition (makers of Devin) and is a proprietary product. For teams that need open-source and model flexibility, OpenCode and Cline (5M+ VS Code installs, 59K+ GitHub stars) are the primary alternatives to evaluate against Claude Code.",
+source: "Lesson 39: Cross-Vendor Landscape"
+},
+{
+question: "You're at your phone waiting for a flight and realize you forgot to ask Claude to reorganize a large folder of research PDFs on your desktop. Without access to your laptop, what Cowork capability lets you start this task remotely?",
+options: [
+"Use the Claude mobile app to open a Cowork session that runs locally on your phone",
+"Use Dispatch to send the task from your phone to your desktop Claude instance, which executes it in the background",
+"Email the instructions to yourself and have Claude process them when you return to your laptop",
+"Use the browser extension on your phone to start a remote Cowork session"
+],
+correctOption: 1,
+explanation: "Option B correctly identifies Dispatch: a feature that lets you assign tasks from the Claude mobile app to your desktop Claude instance. The desktop executes the task in the background and notifies you when complete. This is the mobile-to-desktop task assignment pattern. Option A is wrong because Cowork sessions with filesystem access run on your desktop or cloud, not locally on a phone. Option C is a manual workaround, not a product capability. Option D is wrong because the browser extension is for Chrome/Edge on desktop, not mobile browsers. Dispatch requires the latest Claude Desktop app and Claude mobile app, and is available on Pro and Max plans.",
+source: "Lesson 25: From Terminal to Desktop: The Cowork Story"
+},
+{
+question: "A non-technical colleague asks you to help set up Claude Cowork for a repetitive task: every Monday morning, pull data from a Google Sheet, generate a summary, and email it to their team. They want this to happen automatically without opening the app. Which combination of Cowork features makes this possible?",
+options: [
+"A custom MCP server that connects to Google Sheets, plus a validation hook that sends the email",
+"A Connector for Google Sheets, a built-in xlsx Skill, and a Cloud scheduled task set to run every Monday",
+"A CLAUDE.md file describing the workflow, plus a /loop skill set to 7-day intervals",
+"A browser extension that opens Google Sheets, copies the data, and pastes it into an email draft"
+],
+correctOption: 1,
+explanation: "Option B combines three capabilities correctly: a Connector (pre-built MCP server) for Google Sheets provides data access without custom code; the built-in xlsx Skill handles spreadsheet reading and summary generation; and a Cloud scheduled task ensures it runs every Monday on Anthropic's infrastructure even if the laptop is off. Option A requires custom development, which the non-technical colleague cannot do. Option C fails because /loop is session-scoped and cannot survive across weeks. Option D is fragile and requires the computer to be on with the browser open. The correct answer reflects Cowork's value proposition: enabling non-developers to automate complex workflows using pre-built components and durable scheduling.",
+source: "Lesson 27: Cowork in Action: Practical Workflows"
+},
+{
+question: "Your monitoring tool fires a webhook when CPU usage exceeds 90%. You want Claude to investigate immediately whenever this happens. Which automation pattern from the automation triptych is the best fit?",
+options: [
+"Time-driven with /loop polling the monitoring dashboard every minute for CPU alerts",
+"Event-driven with a channel that receives the webhook and pushes it into Claude's session",
+"Human-driven with Remote Control so you can tell Claude to investigate from your phone",
+"A combination of all three patterns running simultaneously for maximum coverage"
+],
+correctOption: 1,
+explanation: "Option B is correct: event-driven automation via channels is designed for unpredictable events that require immediate response. The monitoring tool sends a webhook when the threshold is breached, the channel server receives it and pushes the event into Claude's running session, and Claude reacts instantly. Option A (time-driven /loop) would waste resources polling every minute when CPU spikes are rare, and introduces up to a minute of delay between the spike and detection. Option C (human-driven) requires you to notice the alert first and then manually tell Claude, defeating the purpose of automation. Option D overcomplicates the solution: the event-driven pattern alone handles this perfectly. The automation triptych teaches that each pattern has a sweet spot: /loop for regular checks, channels for unpredictable events, Remote Control for human judgment.",
+source: "Lesson 25: Channels: Event-Driven Automation"
+},
+{
+question: "You set up a Telegram channel for Claude Code and your colleague messages the bot from their phone. Nothing happens in your session. Your colleague insists the bot should respond to anyone. What security feature explains this behavior?",
+options: [
+"Telegram channels only work during business hours as a built-in safety measure",
+"The sender allowlist blocks all messages except from explicitly paired accounts",
+"Claude Code's firewall settings block messages from unknown IP addresses",
+"Telegram bots can only receive messages from the account that created them"
+],
+correctOption: 1,
+explanation: "Option B is correct: channels use sender allowlists as their security model. Only sender IDs you have explicitly paired (using the pairing code flow) can push messages into your session. Everyone else is silently dropped. This is intentional: channels are a potential prompt injection vector, and gating on sender identity prevents unauthorized users from putting text in front of Claude. Option A is incorrect because channels have no time-based restrictions. Option C is wrong because the security model operates at the sender identity level, not the network/IP level. Option D is wrong because Telegram bots can receive messages from anyone, but the channel server's allowlist filters them before they reach Claude. The key design principle is that security gates on sender identity, not room or channel identity.",
+source: "Lesson 25: Channels: Event-Driven Automation"
+},
+{
+question: "You send a Dispatch task from your phone: 'Fix the failing test in my project at ~/code/app.' You check back an hour later and the task never executed. Your laptop is open and the Claude app is running. What is the most likely cause?",
+options: [
+"Dispatch only works on Wi-Fi networks, not cellular, for security reasons",
+"Your laptop went to sleep while idle, preventing the Claude app from executing the task",
+"You need a Team or Enterprise plan for Dispatch to route tasks to Code sessions",
+"Dispatch cannot access project directories outside the Cowork folder sandbox"
+],
+correctOption: 1,
+explanation: "Option B is correct: Dispatch tasks execute on your desktop computer, and the machine must be awake with the Claude app running. Even if the laptop lid is open, many machines sleep after a period of inactivity, which stops task execution. Tasks queue but do not execute until the desktop is active again. Option A is wrong because Dispatch works over any internet connection. Option C is wrong because Dispatch is available on Pro and Max plans (not Team or Enterprise). Option D is wrong because Dispatch can access local files and project directories, which is one of its core capabilities. The critical requirement is that the desktop must be awake and the Claude app must be running.",
+source: "Lesson 32: Dispatch: Assign Tasks from Anywhere"
+},
+{
+question: "You send two Dispatch tasks from your phone: 'Write a project brief' and 'Fix the login bug in ~/code/app.' Where does each task execute?",
+options: [
+"Both execute in Cowork because all Dispatch tasks route to the Cowork environment",
+"Both execute in Code sessions because Dispatch always uses the Code environment",
+"The project brief stays in Cowork; the bug fix routes to a Code session with a Dispatch badge",
+"You must manually specify the environment for each task using a routing flag"
+],
+correctOption: 2,
+explanation: "Option C is correct: Dispatch automatically routes tasks based on their nature. Knowledge work (writing documents, research, organizing files) stays in Cowork, while development work (fixing bugs, running tests, opening PRs) routes to a Code session that appears in the Code tab with a Dispatch badge. You do not need to specify the environment. Option A is wrong because development tasks route to Code. Option B is wrong because knowledge tasks stay in Cowork. Option D is wrong because routing is automatic based on task content, not manual flags. This automatic routing is a key feature of Dispatch: Claude reads your task description and decides which environment is the best fit.",
+source: "Lesson 32: Dispatch: Assign Tasks from Anywhere"
+},
+{
+question: "You enable Computer Use and ask Claude to type a password into a login form in the 1Password app. Claude refuses. You then ask it to type search terms into Safari's URL bar. Claude also refuses to type there. What explains both refusals?",
+options: [
+"Computer Use is in beta and cannot interact with any third-party applications yet",
+"1Password should be on the denied-apps list, and Safari is view-only so Claude cannot type in it",
+"Claude requires administrator privileges to interact with password managers and browsers",
+"Computer Use only works with apps that have been pre-approved by Anthropic's compatibility list"
+],
+correctOption: 1,
+explanation: "Option B is correct for both cases. Password managers like 1Password should be on your denied-apps list (Claude cannot interact with denied apps at all), and browsers like Safari are assigned the view-only permission tier, meaning Claude can see them in screenshots but cannot click or type. These are two different safety mechanisms working together: denied apps block all access, while view-only tiers allow Claude to see but not interact. Option A is wrong because Computer Use works with most macOS applications. Option C is wrong because the restrictions come from the permission tier system and denied-apps list, not OS privileges. Option D is wrong because there is no pre-approval list; the tiers are assigned by app category automatically.",
+source: "Lesson 33: Computer Use: Let Claude Control Your Screen"
+},
+{
+question: "A colleague asks: 'Why not just use Computer Use for everything instead of connectors and browser tools?' Which principle from the tool priority hierarchy best answers this question?",
+options: [
+"Computer Use is only available on macOS with Apple Silicon, so it cannot be used everywhere",
+"Connectors and browser tools are faster and more reliable; Computer Use is the fallback for apps with no API, CLI, or web interface",
+"Computer Use costs more API credits per action than connectors or browser tools",
+"Computer Use requires manual permission approval for every app, making it impractical for frequent tasks"
+],
+correctOption: 1,
+explanation: "Option B correctly states the tool priority hierarchy principle: Claude always chooses the most precise and reliable tool available. Connectors (fastest, direct API) beat browser tools (medium, web interaction) which beat Computer Use (slowest, screen control). Computer Use works by taking screenshots, analyzing pixels, and simulating mouse clicks, which is inherently slower and less reliable than making a direct API call or interacting with structured web elements. Option A is a real limitation but does not explain the hierarchy principle. Option C is not how the pricing model works. Option D is partially true (per-app approvals exist) but the core reason is speed and reliability, not approval friction. The rule of thumb: if there is a faster, more reliable path, Claude takes it. Computer Use handles everything else.",
+source: "Lesson 33: Computer Use: Let Claude Control Your Screen"
+},
+{
+question: "You create a Cowork project called 'Marketing Q3' with instructions specifying bullet-point formatting and a 20% change threshold for flagging metrics. In a separate project called 'Engineering Standup,' you ask Claude what formatting rules you prefer. What does Claude know?",
+options: [
+"Claude remembers your bullet-point preference because project memory is global across all projects",
+"Claude knows nothing about your formatting rules because project memory is scoped per-project",
+"Claude remembers because both projects share the same Cowork account memory pool",
+"Claude partially remembers: it recalls the formatting but not the metric threshold"
+],
+correctOption: 1,
+explanation: "Option B is correct: project memory is scoped per-project. Claude remembers everything within a project (instructions, preferences, past task context) but carries nothing from one project to another. The 'Engineering Standup' project starts fresh with no knowledge of the 'Marketing Q3' instructions or preferences. Option A is wrong because memory is not global. Option C is wrong because there is no shared account-level memory pool for projects. Option D is wrong because the scoping is all-or-nothing per project, not selective. This scoping is intentional: it prevents context from one project bleeding into unrelated work, keeping each project's instructions and memory clean.",
+source: "Lesson 34: Projects and Scheduling: Organize Your AI Workflows"
+},
+{
+question: "You set up a Cowork scheduled task to compile a weekly report every Monday at 7 AM. Your laptop is typically closed overnight and you open it around 8:30 AM. What happens to the Monday 7 AM task?",
+options: [
+"The task is skipped entirely and will not run until the following Monday",
+"The task runs on Anthropic's cloud servers at 7 AM regardless of your laptop state",
+"The missed task fires automatically when you open your laptop and Cowork starts, delayed but not lost",
+"The task runs at 7 AM using a background daemon that stays active even when the laptop is closed"
+],
+correctOption: 2,
+explanation: "Option C is correct: Cowork desktop scheduled tasks only run while two conditions are met: your computer is awake and the Cowork app is open. If either condition fails at the scheduled time, the task does not execute. However, when you open your laptop and Cowork starts up again, the missed task fires automatically and you receive a notification. The task is delayed, not lost. Option A is wrong because missed tasks do fire when the app reopens. Option B is wrong because Cowork desktop scheduling runs locally, not in the cloud (cloud scheduled tasks are a separate feature). Option D is wrong because there is no background daemon; the scheduling depends on the app being active.",
+source: "Lesson 34: Projects and Scheduling: Organize Your AI Workflows"
+},
+{
+question: "You generate an interactive flowchart in Claude chat on your desktop. Your colleague wants to view it in their Cowork session. What happens when they try?",
+options: [
+"The visual renders normally because Cowork and Claude chat share the same rendering engine",
+"The visual does not render in Cowork; they need to open it in Claude web chat or the desktop app's chat interface",
+"The visual renders but loses interactivity, displaying as a static image in Cowork",
+"Cowork automatically converts the visual to a PDF attachment for compatibility"
+],
+correctOption: 1,
+explanation: "Option B is correct: custom visuals render only in Claude web chat (claude.ai) and the Claude Desktop app's chat interface. They do not render in Cowork sessions, mobile apps, or API responses. If your colleague needs the visual, you should export it (download as SVG or HTML) and share the file, or share the original conversation link so they can view it in web or desktop chat. Option A is wrong because Cowork and chat use different rendering pipelines. Option C is wrong because there is no partial rendering; visuals simply do not appear in Cowork. Option D is wrong because there is no automatic conversion feature.",
+source: "Lesson 35: Custom Visuals: Interactive Diagrams and Charts"
+},
+{
+question: "You ask Claude to create an interactive bar chart from your sales data. The result looks good, but the colors clash with your company branding. You close the conversation to start fresh with better color instructions. What happens to the chart?",
+options: [
+"The chart is automatically saved to your Documents folder as a backup file",
+"The chart is preserved in your conversation history and can be accessed from the sidebar",
+"The chart is gone unless you exported it (downloaded as SVG/HTML or saved as an artifact) before closing",
+"The chart persists in Claude's memory and can be regenerated with 'show me the chart from last time'"
+],
+correctOption: 2,
+explanation: "Option C is correct: custom visuals are ephemeral by default. They live inside the conversation and disappear when you close it, unless you explicitly preserve them. Three ways to save: copy as image (static PNG), download as SVG or HTML file, or save as an artifact (persistent and shareable). Option A is wrong because there is no automatic backup for visuals. Option B is partially misleading: while conversation history may retain some context, the interactive visual rendering is tied to the active conversation. Option D is wrong because Claude does not retain generated visuals in memory across conversations. The lesson's key takeaway is to export early and often, especially before iterating further, so you always have a fallback.",
+source: "Lesson 35: Custom Visuals: Interactive Diagrams and Charts"
+},
+{
+question: "You installed the fakechat channel plugin and added it to your .mcp.json file, but when you start Claude Code normally and send a message from the fakechat browser UI, nothing arrives in your session. What did you miss?",
+options: [
+"Fakechat requires a paid Claude Pro plan and does not work with API key authentication",
+"You must start Claude Code with the --channels flag to enable channel notifications; .mcp.json alone is not enough",
+"The fakechat plugin needs a separate configuration token before it can receive messages",
+"Channel plugins only work when Claude Code is running inside a tmux session"
+],
+correctOption: 1,
+explanation: "Option B is correct: being listed in .mcp.json allows the MCP server to connect and its tools to work normally, but channel notifications (the push mechanism) require the --channels flag on startup. Without this flag, the channel server connects as a regular MCP server but cannot push events into your session. The correct startup command is: claude --channels plugin:fakechat@claude-plugins-official. Option A is wrong because channel functionality depends on the --channels flag, not the plan type (though channels do require a claude.ai login). Option C is wrong because fakechat is a zero-configuration demo that requires no tokens. Option D is wrong because tmux is optional (useful for persistence) but not required for channels to function.",
+source: "Lesson 25: Channels: Event-Driven Automation"
+},
+{
+question: "You want Claude to fill out a timesheet in your company's proprietary desktop app that has no API, no CLI, and no web interface. The app runs only on macOS. Which Claude capability is the right fit?",
+options: [
+"A custom MCP server that reverse-engineers the app's internal database format",
+"A Cowork connector configured to interface with the desktop application directly",
+"Computer Use, which can open the app, navigate its interface, and fill in the timesheet fields",
+"A browser extension that injects automation scripts into the app's rendering layer"
+],
+correctOption: 2,
+explanation: "Option C is correct: Computer Use is specifically designed for this scenario. When an application has no API, no CLI, and no web interface, screen control is the only remaining path. Claude can open the app, take screenshots to understand the interface, click buttons, type into fields, and navigate through the timesheet form. This is the gap Computer Use fills: apps that can only be operated through their visual interface. Option A is risky and fragile because reverse-engineering internal databases bypasses the application's logic and could corrupt data. Option B is wrong because connectors are pre-built MCP integrations for services with APIs, not desktop apps without them. Option D is wrong because desktop apps do not have a browser rendering layer that can be scripted.",
+source: "Lesson 33: Computer Use: Let Claude Control Your Screen"
 }
 ]}
 />
