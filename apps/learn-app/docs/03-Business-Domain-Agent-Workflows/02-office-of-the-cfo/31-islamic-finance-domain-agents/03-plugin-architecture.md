@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/plugin-architecture
 sidebar_position: 3
-title: "The Plugin Architecture — Router, Product Skills, Jurisdiction Overlays"
-description: "Walk through the three-layer skill architecture that makes jurisdiction-aware Islamic finance agents possible — the global router, product skill files, and jurisdiction overlays — and understand the transferable multi-jurisdiction pattern"
+title: "The Plugin Architecture: Router, Product Skills, Jurisdiction Overlays"
+description: "Walk through the three-layer skill architecture that makes jurisdiction-aware Islamic finance agents possible (the global router, product skill files, and jurisdiction overlays) and understand the transferable multi-jurisdiction pattern"
 keywords:
   [
     "Islamic finance plugin architecture",
@@ -27,7 +27,7 @@ skills:
     category: "Technical"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can take a sample query ('Generate a murabaha income schedule for a Bahraini IFI') and trace the routing through all three layers — identifying which jurisdiction the router selects, which product skill loads, and which overlay modifies the output"
+    measurable_at_this_level: "Student can take a sample query ('Generate a murabaha income schedule for a Bahraini IFI') and trace the routing through all three layers: identifying which jurisdiction the router selects, which product skill loads, and which overlay modifies the output"
 
   - name: "Explain the Layered Skill Pattern"
     proficiency_level: "B1"
@@ -40,7 +40,7 @@ learning_objectives:
   - objective: "Trace a query through the three-layer routing architecture, identifying which file loads at each layer and why"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Given a sample Islamic finance query, student can name the router decision, the product skill file loaded, and the jurisdiction overlay applied — and explain what would go wrong if any layer were missing"
+    assessment_method: "Given a sample Islamic finance query, student can name the router decision, the product skill file loaded, and the jurisdiction overlay applied: and explain what would go wrong if any layer were missing"
 
   - objective: "Explain the separation of concerns between product skills and jurisdiction overlays"
     proficiency_level: "B1"
@@ -61,14 +61,14 @@ cognitive_load:
     - "Jurisdiction overlay anatomy (mandatory labels, balance sheet presentation, regulatory requirements)"
     - "Universal rules (prohibited terms, Shariah escalation)"
     - "The fundamental limitation: agent executes, SSB judges"
-  assessment: "6 concepts at B1 level — within the 7-10 cognitive limit for this tier. The lesson is a walk-through of existing skill files rather than abstract theory, so cognitive load is managed through concrete examination of real files."
+  assessment: "6 concepts at B1 level: within the 7-10 cognitive limit for this tier. The lesson is a walk-through of existing skill files rather than abstract theory, so cognitive load is managed through concrete examination of real files."
 
 differentiation:
-  extension_for_advanced: "Consider a domain outside Islamic finance where the same transaction has different outputs by jurisdiction — for example, revenue recognition under US GAAP vs IFRS, or employment law across EU member states. Sketch the three-layer architecture for that domain: what would the router check, what would the product skill contain, and what would the jurisdiction overlay modify?"
+  extension_for_advanced: "Consider a domain outside Islamic finance where the same transaction has different outputs by jurisdiction: for example, revenue recognition under US GAAP vs IFRS, or employment law across EU member states. Sketch the three-layer architecture for that domain: what would the router check, what would the product skill contain, and what would the jurisdiction overlay modify?"
   remedial_for_struggling: "Focus on the routing sequence: Step 1 (identify jurisdiction), Step 2 (identify product), Step 3 (load overlay), Step 4 (apply in order). If you can trace a single query through all four steps, you understand the architecture."
 ---
 
-# The Plugin Architecture — Router, Product Skills, Jurisdiction Overlays
+# The Plugin Architecture: Router, Product Skills, Jurisdiction Overlays
 
 In Lesson 2, you examined the Global Standards Map and saw how 20 jurisdictions resolve into three accounting regimes. Now you will examine the skill architecture that translates that map into agent behaviour. The architecture has three layers, and you will walk through each one using the actual skill files from the plugin repository.
 
@@ -85,7 +85,7 @@ Layer 1:  Base Finance Plugin       (journal-entry, reconciliation, income-state
               ↑ foundation
 ```
 
-**Layer 1** is the base finance plugin you installed in Chapter 28. It provides the fundamental accounting commands — `/journal-entry`, `/reconciliation`, `/income-statement` — that work for any accounting domain.
+**Layer 1** is the base finance plugin you installed in Chapter 28. It provides the fundamental accounting commands: `/journal-entry`, `/reconciliation`, `/income-statement`: that work for any accounting domain.
 
 **Layer 2** is the product skill library. Each Islamic finance product has its own SKILL.md file containing the recognition rules, measurement methods, and journal entry sequences that are common across all jurisdictions. The murabaha skill knows the four-step journal entry sequence. The ijarah skill knows the lease accounting mechanics. The sukuk skill knows the SPPI test. The arithmetic lives here.
 
@@ -95,17 +95,17 @@ The **global router** sits above all three layers and determines which product s
 
 ## Anatomy of the Global Router
 
-The router is not an accounting engine — it does not contain any accounting rules. It is a routing controller that reads the query, identifies the jurisdiction and product, and loads the correct files before any output is generated.
+The router is not an accounting engine: it does not contain any accounting rules. It is a routing controller that reads the query, identifies the jurisdiction and product, and loads the correct files before any output is generated.
 
 The routing protocol has four steps:
 
-**Step 1 — Identify the jurisdiction.** The router reads the query and conversation context for jurisdiction signals: country names, currencies (BHD, MYR, AED, SAR, GBP, PKR), regulator names (CBB, BNM, CBUAE, SAMA), stock exchanges, or standard references. If no jurisdiction is identifiable, the router asks before proceeding. It never assumes a default.
+**Step 1: Identify the jurisdiction.** The router reads the query and conversation context for jurisdiction signals: country names, currencies (BHD, MYR, AED, SAR, GBP, PKR), regulator names (CBB, BNM, CBUAE, SAMA), stock exchanges, or standard references. If no jurisdiction is identifiable, the router asks before proceeding. It never assumes a default.
 
-**Step 2 — Identify the product.** The router maps query terms to product skill files. "Murabaha," "cost-plus," "deferred sale," or "FAS 2" all map to the murabaha product skill. "Ijarah," "IMB," "lease," or "FAS 32" map to the ijarah product skill. The mapping table covers all eight product families and their common alternative names.
+**Step 2: Identify the product.** The router maps query terms to product skill files. "Murabaha," "cost-plus," "deferred sale," or "FAS 2" all map to the murabaha product skill. "Ijarah," "IMB," "lease," or "FAS 32" map to the ijarah product skill. The mapping table covers all eight product families and their common alternative names.
 
-**Step 3 — Load the jurisdiction overlay.** Based on the jurisdiction identified in Step 1, the router loads the corresponding overlay file. Bahrain loads `bahrain-aaoifi.md`. Malaysia loads `malaysia-mfrs.md`. The UK loads `uk-ifrs.md`.
+**Step 3: Load the jurisdiction overlay.** Based on the jurisdiction identified in Step 1, the router loads the corresponding overlay file. Bahrain loads `bahrain-aaoifi.md`. Malaysia loads `malaysia-mfrs.md`. The UK loads `uk-ifrs.md`.
 
-**Step 4 — Apply rules in order.** The product skill rules are applied first (accounting mechanics), then the jurisdiction overlay modifications (labels, presentation, disclosure). The response begins with a header confirming the governing framework, product, and jurisdiction — ensuring traceability.
+**Step 4 (Apply rules in order.** The product skill rules are applied first (accounting mechanics), then the jurisdiction overlay modifications (labels, presentation, disclosure). The response begins with a header confirming the governing framework, product, and jurisdiction) ensuring traceability.
 
 :::info The Critical Design Decision
 The router never defaults to IFRS. If the jurisdiction is not specified, it asks. This is a deliberate design choice: defaulting to any framework means producing wrong output in every other framework. The cost of asking one question is far lower than the cost of a non-compliant financial statement.
@@ -115,7 +115,7 @@ The router never defaults to IFRS. If the jurisdiction is not specified, it asks
 
 The murabaha product skill (`skills/murabaha/SKILL.md`) illustrates how product skills are structured. It opens with a core principle:
 
-> Murabaha is a SALE transaction, not a LOAN transaction. The bank is a merchant purchasing and reselling — not a lender charging interest. This principle governs all accounting treatment and terminology.
+> Murabaha is a SALE transaction, not a LOAN transaction. The bank is a merchant purchasing and reselling; not a lender charging interest. This principle governs all accounting treatment and terminology.
 
 The skill then contains four sections that every product skill follows:
 
@@ -130,11 +130,11 @@ The skill then contains four sections that every product skill follows:
 | 3    | Periodic profit recognition | Deferred Murabaha Income                 | Income account (label per overlay)        |
 | 4    | Customer instalment payment | Cash                                     | Murabaha Receivable                       |
 
-**Income labels by regime.** The skill provides the correct income label for each regime — but the jurisdiction overlay confirms which label applies in the specific jurisdiction.
+**Income labels by regime.** The skill provides the correct income label for each regime; but the jurisdiction overlay confirms which label applies in the specific jurisdiction.
 
 **Impairment rules.** AAOIFI regime uses FAS 30. IFRS regime uses IFRS 9 ECL model. A Shariah constraint applies in both: the bank cannot charge additional profit on overdue amounts, because additional charges on overdue amounts constitute riba.
 
-The product skill contains the accounting mechanics. It does not contain Bahrain-specific CBB rulebook references or Malaysia-specific MASB guidance — those live in the jurisdiction overlays.
+The product skill contains the accounting mechanics. It does not contain Bahrain-specific CBB rulebook references or Malaysia-specific MASB guidance: those live in the jurisdiction overlays.
 
 ## Anatomy of a Jurisdiction Overlay: Bahrain
 
@@ -152,11 +152,11 @@ The overlay then provides three categories of modifications:
 | Ijarah                | "Ijarah Income"           | "Lease Income," "Finance Lease Income"   |
 | Diminishing Musharaka | "Musharaka Rental Income" | "Home Finance Income," "Mortgage Income" |
 
-**Balance sheet presentation.** Asset-side: never use "Loans and Advances" — each product has its own classification ("Murabaha Receivables," "Ijarah Assets," "Diminishing Musharaka Investments"). Liability-side: Investment Account Holders' funds appear as a separate category — "Equity of Investment Account Holders" — between liabilities and shareholders' equity.
+**Balance sheet presentation.** Asset-side: never use "Loans and Advances": each product has its own classification ("Murabaha Receivables," "Ijarah Assets," "Diminishing Musharaka Investments"). Liability-side: Investment Account Holders' funds appear as a separate category: "Equity of Investment Account Holders": between liabilities and shareholders' equity.
 
 **CBB regulatory requirements.** The overlay lists the Central Bank of Bahrain's specific requirements: quarterly Prudential Information Returns using AAOIFI-based line items, annual public disclosure including the Shariah Supervisory Board report, IFSB capital adequacy standards as adopted by CBB, and AAOIFI FAS 30 non-performing finance classification.
 
-When the agent processes a murabaha query for Bahrain, it applies the murabaha product skill first (getting the journal entry mechanics right), then applies the Bahrain overlay (getting the labels, classifications, and disclosures right). The combination produces output that is correct for Bahrain — and only for Bahrain.
+When the agent processes a murabaha query for Bahrain, it applies the murabaha product skill first (getting the journal entry mechanics right), then applies the Bahrain overlay (getting the labels, classifications, and disclosures right). The combination produces output that is correct for Bahrain: and only for Bahrain.
 
 ## Universal Rules: What Applies Everywhere
 
@@ -164,10 +164,10 @@ The router encodes rules that apply in every jurisdiction, regardless of regime:
 
 **Prohibited terms.** These terms must never appear in any Islamic finance output:
 
-- "Interest income" — replace with the jurisdiction-appropriate income label
-- "Loans and advances" — in AAOIFI jurisdictions, use the product-specific receivable name
-- "Interest expense" — replace with "profit distributed to investment account holders" or "financing cost"
-- "Net interest margin" — replace with "net financing margin" or "net profit margin"
+- "Interest income": replace with the jurisdiction-appropriate income label
+- "Loans and advances": in AAOIFI jurisdictions, use the product-specific receivable name
+- "Interest expense": replace with "profit distributed to investment account holders" or "financing cost"
+- "Net interest margin": replace with "net financing margin" or "net profit margin"
 
 **Shariah compliance escalation.** When any of these conditions arise, the agent flags for Shariah Supervisory Board review and does not process the entry without noting the escalation:
 
@@ -176,7 +176,7 @@ The router encodes rules that apply in every jurisdiction, regardless of regime:
 - A non-Shariah income item that must be treated as charity
 - Any transaction involving interest-based conventional instruments proposed as Islamic finance
 
-**The fundamental limitation.** This boundary is encoded in every skill file: the agent automates execution — journal entries, income schedules, disclosure drafting, regulatory reporting. It does not make Shariah compliance judgments. Determinations of whether a specific transaction structure is permissible are the exclusive function of qualified Shariah scholars on the institution's Shariah Supervisory Board. The agent executes; the SSB judges.
+**The fundamental limitation.** This boundary is encoded in every skill file: the agent automates execution: journal entries, income schedules, disclosure drafting, regulatory reporting. It does not make Shariah compliance judgments. Determinations of whether a specific transaction structure is permissible are the exclusive function of qualified Shariah scholars on the institution's Shariah Supervisory Board. The agent executes; the SSB judges.
 
 :::tip The Transferable Pattern
 The router-product-overlay architecture is not specific to Islamic finance. Any domain where the same transaction has different outputs by jurisdiction can use this pattern. Tax across OECD countries. Employment law across EU member states. Healthcare regulation across US states. The architectural contribution of this chapter transfers to every multi-jurisdiction domain you encounter.
@@ -188,13 +188,13 @@ To see the full architecture in action, trace a sample query through all three l
 
 **Query:** "Generate a murabaha income schedule for ABC Islamic Bank in Bahrain. The bank purchased industrial equipment for BHD 500,000 and sold it to a customer at 15% mark-up over 36 months."
 
-**Step 1 — Router identifies jurisdiction:** "Bahrain" appears in the query. Currency is BHD. The router loads `skills/islamic-finance-router/references/jurisdictions/bahrain-aaoifi.md`.
+**Step 1: Router identifies jurisdiction:** "Bahrain" appears in the query. Currency is BHD. The router loads `skills/islamic-finance-router/references/jurisdictions/bahrain-aaoifi.md`.
 
-**Step 2 — Router identifies product:** "Murabaha" appears in the query. The router loads `skills/murabaha/SKILL.md`.
+**Step 2: Router identifies product:** "Murabaha" appears in the query. The router loads `skills/murabaha/SKILL.md`.
 
-**Step 3 — Product skill applies:** The murabaha skill provides the four-step journal entry sequence, the effective profit rate calculation method, and the income recognition schedule formula.
+**Step 3: Product skill applies:** The murabaha skill provides the four-step journal entry sequence, the effective profit rate calculation method, and the income recognition schedule formula.
 
-**Step 4 — Jurisdiction overlay applies:** The Bahrain overlay changes the income label to "Murabaha Income" (FAS 2), classifies the receivable as "Murabaha Receivables" (not "Loans and Advances"), and adds the response header:
+**Step 4: Jurisdiction overlay applies:** The Bahrain overlay changes the income label to "Murabaha Income" (FAS 2), classifies the receivable as "Murabaha Receivables" (not "Loans and Advances"), and adds the response header:
 
 ```
 GOVERNING FRAMEWORK: AAOIFI FAS 2 — Bahrain (CBB Mandatory)
@@ -202,7 +202,7 @@ PRODUCT: Murabaha
 JURISDICTION: Bahrain — CBB Rulebook applies
 ```
 
-If the same query said "Maybank Islamic in Malaysia," the overlay would change to `malaysia-mfrs.md`, the income label would become "Profit from Islamic Financing," and the governing framework header would reference MFRS 9 — while the arithmetic in the income schedule would remain identical.
+If the same query said "Maybank Islamic in Malaysia," the overlay would change to `malaysia-mfrs.md`, the income label would become "Profit from Islamic Financing," and the governing framework header would reference MFRS 9: while the arithmetic in the income schedule would remain identical.
 
 ## Try With AI
 
@@ -257,7 +257,7 @@ Use the murabaha product as your example. Show me:
 Explain why this separation makes the architecture extensible.
 ```
 
-**What you are learning:** The separation of concerns — arithmetic in product skills, labels in overlays — is what makes the architecture scale. By understanding why they are separated, you can apply the same pattern to any multi-jurisdiction domain.
+**What you are learning:** The separation of concerns (arithmetic in product skills, labels in overlays) is what makes the architecture scale. By understanding why they are separated, you can apply the same pattern to any multi-jurisdiction domain.
 
 ### Prompt 3: Apply
 
@@ -291,9 +291,9 @@ claude plugin install islamic-finance@agentfactory-business
 
 **Cowork:** Sidebar → Customize → Browse plugins → + → Add marketplace from GitHub → `panaversity/agentfactory-business-plugins` → Install "islamic-finance"
 
-**Verify:** Start a new session and say "I have a Bahrain murabaha query." The agent should automatically reference AAOIFI FAS 2 — if it does, the plugin is active.
+**Verify:** Start a new session and say "I have a Bahrain murabaha query." The agent should automatically reference AAOIFI FAS 2: if it does, the plugin is active.
 
-Browse the complete skill library in the [plugin repository](https://github.com/panaversity/agentfactory-business-plugins/tree/main/islamic-finance) — the skill files examined in this lesson are at `skills/islamic-finance-router/SKILL.md`, `skills/murabaha/SKILL.md`, and `skills/islamic-finance-router/references/jurisdictions/bahrain-aaoifi.md`.
+Browse the complete skill library in the [plugin repository](https://github.com/panaversity/agentfactory-business-plugins/tree/main/islamic-finance): the skill files examined in this lesson are at `skills/islamic-finance-router/SKILL.md`, `skills/murabaha/SKILL.md`, and `skills/islamic-finance-router/references/jurisdictions/bahrain-aaoifi.md`.
 :::
 
 ## Flashcards Study Aid
@@ -302,4 +302,4 @@ Browse the complete skill library in the [plugin repository](https://github.com/
 
 ---
 
-Continue to [Lesson 4: Murabaha — Cost-Plus Financing Across Jurisdictions →](./04-murabaha.md)
+Continue to [Lesson 4: Murabaha: Cost-Plus Financing Across Jurisdictions →](./04-murabaha.md)

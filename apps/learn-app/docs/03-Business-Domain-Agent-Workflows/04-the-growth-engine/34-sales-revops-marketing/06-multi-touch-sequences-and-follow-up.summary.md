@@ -1,8 +1,8 @@
-# Multi-Touch Sequences and Follow-Up — Summary
+# Multi-Touch Sequences and Follow-Up; Summary
 
 ## Core Concept
 
-A single outreach touch earns roughly 5% response; a well-constructed 6-touch sequence with genuine value at every step reaches 25-35%. The difference is not persistence — it is that each subsequent touch adds something the prospect did not have before. However, the agent introduces a structural risk: personalisation decays as the sequence progresses because the research brief has finite material, and later touches start recycling earlier references or falling back to generic observations.
+A single outreach touch earns roughly 5% response; a well-constructed 6-touch sequence with genuine value at every step reaches 25-35%. The difference is not persistence: it is that each subsequent touch adds something the prospect did not have before. However, the agent introduces a structural risk: personalisation decays as the sequence progresses because the research brief has finite material, and later touches start recycling earlier references or falling back to generic observations.
 
 ## Key Mental Models
 
@@ -16,22 +16,22 @@ A single outreach touch earns roughly 5% response; a well-constructed 6-touch se
 ## Critical Patterns
 
 - Audit every touch against the Five Laws from L05, paying special attention to Law 1 (Specific Verifiable Reference) degrading in later touches
-- Rate each touch as SEND / EDIT / REWRITE — most students find touches 1-3 earn SEND or EDIT, while 4-6 need more work
-- Check exit conditions BEFORE checking copywriting quality — a beautifully written Touch 5 after a "not interested" reply is worse than a mediocre Touch 1 at the right time
-- The /email-sequence command (marketing plugin) produces segment-level nurture campaigns; the sequence skill (extension) produces personalised sales sequences — do not confuse the two
+- Rate each touch as SEND / EDIT / REWRITE: most students find touches 1-3 earn SEND or EDIT, while 4-6 need more work
+- Check exit conditions BEFORE checking copywriting quality: a beautifully written Touch 5 after a "not interested" reply is worse than a mediocre Touch 1 at the right time
+- The /email-sequence command (marketing plugin) produces segment-level nurture campaigns; the sequence skill (extension) produces personalised sales sequences: do not confuse the two
 
 ## Common Mistakes
 
 - Giving up after a single touch (5% response rate) or sending the same message repeatedly hoping repetition breaks through
-- Letting all 6 touches run without checking whether personalisation has degraded — the agent does not warn you about Over-Automation
-- Using a marketing nurture sequence for a researched sales prospect — sending Sarah Chen the same generic email that 500 trial users received
+- Letting all 6 touches run without checking whether personalisation has degraded: the agent does not warn you about Over-Automation
+- Using a marketing nurture sequence for a researched sales prospect: sending Sarah Chen the same generic email that 500 trial users received
 - Omitting exit conditions, which means the agent sends all six touches regardless of what happens (reply, bounce, unsubscribe)
 - Not enhancing later touches with fresh research (a new LinkedIn post, a conference talk, a mutual connection) when the agent's personalisation decays
 
 ## Connections
 
-- Builds directly on the Five Laws from **L05** — every touch is audited law-by-law
+- Builds directly on the Five Laws from **L05**: every touch is audited law-by-law
 - Depends on rich research briefs from **L02** and enriched data from **L04** to fuel personalisation across 6 touches
 - Over-Automation is the fourth agent error type, following Hallucinated Data (**L01**), Miscalibrated Scoring (**L03**), and Compliance Gap (**L05**)
-- Exit conditions connect to the routing rules from **L03** — a prospect who does not respond after 6 touches moves to CULTIVATE tier
-- Follow-up templates connect to the pre-call brief and call summary workflow in **L07** — the follow-up skill uses accumulated sequence context to continue the conversation naturally
+- Exit conditions connect to the routing rules from **L03**: a prospect who does not respond after 6 touches moves to CULTIVATE tier
+- Follow-up templates connect to the pre-call brief and call summary workflow in **L07**: the follow-up skill uses accumulated sequence context to continue the conversation naturally

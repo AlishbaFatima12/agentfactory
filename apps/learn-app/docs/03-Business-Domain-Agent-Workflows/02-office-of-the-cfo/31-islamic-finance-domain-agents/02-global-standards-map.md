@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/global-standards-map
 sidebar_position: 2
-title: "The Global Standards Map — Three Regimes, One Transaction"
+title: "The Global Standards Map: Three Regimes, One Transaction"
 description: "A 20-jurisdiction reference map of Islamic finance accounting standards, four-jurisdiction murabaha comparison, and the three accounting regimes that every jurisdiction-aware agent must route through"
 keywords:
   [
@@ -45,7 +45,7 @@ learning_objectives:
   - objective: "Compare the accounting treatment of a murabaha transaction across four reference jurisdictions, identifying which differences are cosmetic and which are compliance-critical"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student can complete a comparison table for murabaha across Bahrain, Malaysia, UK, and Pakistan — correctly identifying the income label, receivable classification, and governing standard for each"
+    assessment_method: "Student can complete a comparison table for murabaha across Bahrain, Malaysia, UK, and Pakistan: correctly identifying the income label, receivable classification, and governing standard for each"
 
   - objective: "Classify jurisdictions into the three accounting regimes and explain what determines regime membership"
     proficiency_level: "A2"
@@ -59,22 +59,22 @@ cognitive_load:
     - "Regime 1: AAOIFI Primary jurisdictions and their characteristics"
     - "Regime 2: IFRS with Islamic guidance jurisdictions and their characteristics"
     - "Regime 3: Local Standards jurisdictions"
-    - "The murabaha comparison table — same numbers, different labels"
+    - "The murabaha comparison table: same numbers, different labels"
     - "The compliance-vs-calculation distinction"
-  assessment: "6 concepts at the A2-B1 boundary — within cognitive limits. The lesson is reference-heavy (tables and maps) rather than conceptually dense, so actual cognitive load is lower than the concept count suggests. Students use the map as a lookup tool, not something to memorise."
+  assessment: "6 concepts at the A2-B1 boundary: within cognitive limits. The lesson is reference-heavy (tables and maps) rather than conceptually dense, so actual cognitive load is lower than the concept count suggests. Students use the map as a lookup tool, not something to memorise."
 
 differentiation:
   extension_for_advanced: "Select a jurisdiction not covered in the four-jurisdiction deep dive (e.g., Turkey, Indonesia, or Nigeria). Research its Islamic finance regulatory framework and write a one-paragraph summary: primary standard, AAOIFI role, regulator, and one unique feature. Explain which regime it belongs to."
   remedial_for_struggling: "Focus on the three regimes concept box. If you can explain the difference between Regime 1 (AAOIFI primary) and Regime 2 (IFRS with Islamic guidance) using Bahrain and Malaysia as examples, you have the core understanding for every subsequent lesson."
 ---
 
-# The Global Standards Map — Three Regimes, One Transaction
+# The Global Standards Map: Three Regimes, One Transaction
 
-In Lesson 1, you learned that the same Islamic finance transaction produces different accounting outputs depending on jurisdiction. Now you will see exactly how that variation maps across 20 jurisdictions — and why the variation resolves into three practical regimes that make the routing problem manageable.
+In Lesson 1, you learned that the same Islamic finance transaction produces different accounting outputs depending on jurisdiction. Now you will see exactly how that variation maps across 20 jurisdictions: and why the variation resolves into three practical regimes that make the routing problem manageable.
 
 ## The Global Standards Map
 
-This table is the most important single reference in this chapter. Every AI agent working on Islamic finance must be told which row of this table governs before it produces any accounting output. Save it — you will return to it throughout every subsequent lesson.
+This table is the most important single reference in this chapter. Every AI agent working on Islamic finance must be told which row of this table governs before it produces any accounting output. Save it: you will return to it throughout every subsequent lesson.
 
 | Jurisdiction       | Primary Standard         | AAOIFI Role                                 | Islamic Finance Regulator          | Unique Features                                       |
 | ------------------ | ------------------------ | ------------------------------------------- | ---------------------------------- | ----------------------------------------------------- |
@@ -100,7 +100,7 @@ This table is the most important single reference in this chapter. Every AI agen
 | **Sudan**          | AAOIFI                   | Mandatory                                   | Central Bank of Sudan              | Full Islamic banking system                           |
 
 :::info Reference
-Keep the Global Standards Map alongside your skill files — the router checks it on every query.
+Keep the Global Standards Map alongside your skill files: the router checks it on every query.
 :::
 
 ## The Three Accounting Regimes
@@ -108,15 +108,15 @@ Keep the Global Standards Map alongside your skill files — the router checks i
 Despite 20 jurisdictions with different regulators, the accounting treatment of Islamic finance products resolves into three practical regimes. This is the insight that makes agent routing manageable.
 
 :::info The Three Accounting Regimes
-**Regime 1 — AAOIFI Primary** (Bahrain, Qatar, Sudan, partial Jordan/Pakistan)
+**Regime 1: AAOIFI Primary** (Bahrain, Qatar, Sudan, partial Jordan/Pakistan)
 
 The Islamic financial institution uses AAOIFI Financial Accounting Standards as its primary framework. Murabaha is a trading transaction under FAS 28 (which superseded FAS 2 effective 1 January 2020). Ijarah assets stay on the lessor's balance sheet under FAS 32. The financial statements look structurally different from IFRS statements. Terminology reflects Shariah characterisation: "Murabaha Income," "Murabaha Receivables," "Equity of Investment Account Holders."
 
-**Regime 2 — IFRS with Islamic Guidance** (Malaysia, UAE, Saudi Arabia, Kuwait, UK, Turkey, Pakistan listed entities, most of Africa)
+**Regime 2: IFRS with Islamic Guidance** (Malaysia, UAE, Saudi Arabia, Kuwait, UK, Turkey, Pakistan listed entities, most of Africa)
 
 The institution uses IFRS (or a local IFRS-equivalent such as MFRS or TFRS) as its primary framework. IFRS 9 governs financial instruments. IFRS 16 governs leases. Murabaha receivables are classified using the IFRS 9 business model test and SPPI test. AAOIFI provides supplementary Shariah disclosures in the notes. The financial statements look similar to conventional banks, with additional Islamic disclosure sections.
 
-**Regime 3 — Local Standards** (Iran, Bangladesh, some African jurisdictions)
+**Regime 3: Local Standards** (Iran, Bangladesh, some African jurisdictions)
 
 A local standard-setter has issued standards incorporating both Islamic jurisprudence and local regulatory requirements. Accounting treatment may differ materially from both AAOIFI and IFRS.
 :::
@@ -127,25 +127,25 @@ A local standard-setter has issued standards incorporating both Islamic jurispru
 
 The 20-jurisdiction map is comprehensive but abstract. To make the regimes concrete, examine how four reference jurisdictions handle the same profession.
 
-### Bahrain — AAOIFI Mandatory (Regime 1)
+### Bahrain: AAOIFI Mandatory (Regime 1)
 
 Bahrain is the global reference case for AAOIFI accounting. AAOIFI is headquartered in Bahrain, and the Central Bank of Bahrain requires all Islamic financial institutions to apply AAOIFI Financial Accounting Standards as their primary framework. Bahrain Islamic Bank, Ithmaar Banking Group, and Al Baraka Banking Group all prepare AAOIFI-primary financial statements.
 
-What this means in practice: when a Bahraini IFI executes a murabaha, the income is labelled "Murabaha Income" under FAS 28. The receivable is classified as "Murabaha Receivables" — never under "Loans and Advances." Investment account holders' funds appear as a separate category on the balance sheet: "Equity of Investment Account Holders" — between liabilities and shareholders' equity. The CBB Rulebook incorporates AAOIFI requirements directly.
+What this means in practice: when a Bahraini IFI executes a murabaha, the income is labelled "Murabaha Income" under FAS 28. The receivable is classified as "Murabaha Receivables" (never under "Loans and Advances." Investment account holders' funds appear as a separate category on the balance sheet: "Equity of Investment Account Holders") between liabilities and shareholders' equity. The CBB Rulebook incorporates AAOIFI requirements directly.
 
-### Malaysia — MFRS/IFRS with Islamic Guidance (Regime 2)
+### Malaysia: MFRS/IFRS with Islamic Guidance (Regime 2)
 
-Malaysia is the world's most developed Islamic finance ecosystem outside the GCC and the global leader in sukuk issuance. Malaysian Islamic banks — Maybank Islamic, CIMB Islamic, Bank Islam Malaysia Berhad — apply MFRS, which is substantively equivalent to IFRS. The Malaysian Accounting Standards Board determined that conventional MFRS standards could be applied to Islamic financial transactions with appropriate additional disclosures.
+Malaysia is the world's most developed Islamic finance ecosystem outside the GCC and the global leader in sukuk issuance. Malaysian Islamic banks (Maybank Islamic, CIMB Islamic, Bank Islam Malaysia Berhad) apply MFRS, which is substantively equivalent to IFRS. The Malaysian Accounting Standards Board determined that conventional MFRS standards could be applied to Islamic financial transactions with appropriate additional disclosures.
 
-What this means in practice: murabaha receivables are classified under MFRS 9 using the business model test and SPPI test. The income is labelled "Profit from Islamic Financing" — not "Murabaha Income" (AAOIFI) and not "Interest Income" (conventional). The financial statements look similar to those of conventional banks with additional Islamic disclosure sections.
+What this means in practice: murabaha receivables are classified under MFRS 9 using the business model test and SPPI test. The income is labelled "Profit from Islamic Financing"; not "Murabaha Income" (AAOIFI) and not "Interest Income" (conventional). The financial statements look similar to those of conventional banks with additional Islamic disclosure sections.
 
-### United Kingdom — IFRS (Regime 2)
+### United Kingdom: IFRS (Regime 2)
 
-The UK is the leading Western Islamic finance centre, with five fully-fledged Islamic banks including Al Rayan Bank — the largest UK Islamic bank. All UK financial institutions apply IFRS as required by the Prudential Regulation Authority and Financial Conduct Authority.
+The UK is the leading Western Islamic finance centre, with five fully-fledged Islamic banks including Al Rayan Bank: the largest UK Islamic bank. All UK financial institutions apply IFRS as required by the Prudential Regulation Authority and Financial Conduct Authority.
 
 What this means in practice: Al Rayan Bank applies IFRS 9 to its murabaha and diminishing musharaka products. The income is labelled using IFRS 9 effective interest rate mechanics, though Al Rayan uses "Profit from Home Finance" rather than "Interest Income." HMRC has issued specific guidance ensuring Shariah-compliant structures are treated equivalently to conventional counterparts for tax purposes.
 
-### Pakistan — IFRS with AAOIFI Supplemental (Regime 2, with Regime 1 elements)
+### Pakistan: IFRS with AAOIFI Supplemental (Regime 2, with Regime 1 elements)
 
 Pakistan presents the most complex case among the four references. Listed Islamic banks apply IFRS as required by the Companies Act 2017 and SECP. However, AAOIFI Shariah standards are mandatory via the SBP's Shariah Governance Framework, and AAOIFI accounting standards are used supplementally where IFRS does not address specific Islamic transactions. The Federal Shariat Court's ruling has mandated full conversion of the banking system to Islamic finance by 2028.
 
@@ -166,7 +166,7 @@ The table below makes the jurisdiction variation concrete. The same $1 million m
 
 The arithmetic is identical in all four columns. The compliance outcome is not. An agent that uses "Interest Income" in Bahrain, or "Murabaha Receivables" in the UK, or omits the SBP Shariah Governance Framework disclosure in Pakistan, produces non-compliant output in each case.
 
-This is why the jurisdiction overlay SKILL.md is not optional — it is the compliance layer.
+This is why the jurisdiction overlay SKILL.md is not optional: it is the compliance layer.
 
 ## Try With AI
 
@@ -258,7 +258,7 @@ different or the same? Which differences matter for
 regulatory compliance?
 ```
 
-**What you are learning:** The calculation is identical — the effective profit rate method produces the same numbers everywhere. The compliance difference is entirely in labels and classification. This distinction is what makes the jurisdiction overlay architecture work: the product skill handles the arithmetic, the overlay handles the labels.
+**What you are learning:** The calculation is identical: the effective profit rate method produces the same numbers everywhere. The compliance difference is entirely in labels and classification. This distinction is what makes the jurisdiction overlay architecture work: the product skill handles the arithmetic, the overlay handles the labels.
 
 ## Flashcards Study Aid
 

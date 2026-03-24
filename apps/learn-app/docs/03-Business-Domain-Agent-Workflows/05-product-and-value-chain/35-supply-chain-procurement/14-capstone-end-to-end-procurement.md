@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/supply-chain-procurement/capstone-end-to-end-procurement
 sidebar_position: 14
-title: "Capstone — End-to-End Procurement"
-description: "Run a complete procurement cycle for a new spend category: classify vendors, run six-dimension assessments, configure reconciliation rules, build a risk dashboard, analyse logistics and spend, deploy all five agents, and deliver the first executive brief — a complete, deployable procurement operating system for one category"
+title: "Capstone; End-to-End Procurement"
+description: "Run a complete procurement cycle for a new spend category: classify vendors, run six-dimension assessments, configure reconciliation rules, build a risk dashboard, analyse logistics and spend, deploy all five agents, and deliver the first executive brief: a complete, deployable procurement operating system for one category"
 keywords:
   [
     "procurement capstone",
@@ -52,7 +52,7 @@ learning_objectives:
     bloom_level: "Create"
     assessment_method: "Student completes all seven phases and produces the full deliverable set: classification register, vendor assessments, reconciliation rules, risk dashboard, agent configuration, and first executive brief"
 
-  - objective: "Use outputs from earlier phases as inputs to later phases — demonstrating that the procurement operating system is a connected system, not a collection of independent tools"
+  - objective: "Use outputs from earlier phases as inputs to later phases: demonstrating that the procurement operating system is a connected system, not a collection of independent tools"
     proficiency_level: "B2"
     bloom_level: "Apply"
     assessment_method: "Student's capstone outputs show explicit cross-references: tolerance rules calibrated to vendor tier from Phase 1, risk thresholds informed by classification, agent monitoring lists derived from assessment, executive brief pulling from all prior outputs"
@@ -60,41 +60,41 @@ learning_objectives:
   - objective: "Produce a first weekly executive brief that a CPO and COO would find decision-ready"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student's executive brief output contains RAG status, a single most-important issue, a recommended action with owner and deadline, and a savings pipeline figure — in a format appropriate for executive consumption"
+    assessment_method: "Student's executive brief output contains RAG status, a single most-important issue, a recommended action with owner and deadline, and a savings pipeline figure: in a format appropriate for executive consumption"
 
 cognitive_load:
   new_concepts: 1
   concepts_list:
-    - "Procurement operating system integration — how the eight skills and five agents connect into a single coherent system for one category"
-  assessment: "1 new concept at C1 level — the integration pattern. All underlying skills and agents were introduced in Lessons 3-13. The capstone is application and synthesis, not new content acquisition. The cognitive challenge is sequencing and connecting, not learning new procedures."
+    - "Procurement operating system integration: how the eight skills and five agents connect into a single coherent system for one category"
+  assessment: "1 new concept at C1 level: the integration pattern. All underlying skills and agents were introduced in Lessons 3-13. The capstone is application and synthesis, not new content acquisition. The cognitive challenge is sequencing and connecting, not learning new procedures."
 
 differentiation:
   extension_for_advanced: "After completing the capstone for one category, design the extension architecture: how would you replicate this system across all spend categories simultaneously? What is the minimum data infrastructure required? What organisational capability (people, processes, systems) would need to change for a procurement team of 12 managing 400 active vendors? Write a one-page CPO brief recommending the rollout approach."
-  remedial_for_struggling: "Complete each phase in order, using the exact plugin commands from the phase instructions. Do not skip phases or merge them. Each phase's output is required by the next phase — if you skip classification, you cannot calibrate risk thresholds; if you skip risk thresholds, the agents cannot be configured correctly. Follow the sequence."
+  remedial_for_struggling: "Complete each phase in order, using the exact plugin commands from the phase instructions. Do not skip phases or merge them. Each phase's output is required by the next phase: if you skip classification, you cannot calibrate risk thresholds; if you skip risk thresholds, the agents cannot be configured correctly. Follow the sequence."
 
 teaching_guide:
   key_points:
-    - "The capstone is a systems integration exercise, not a test of memory — all commands are in the lesson"
+    - "The capstone is a systems integration exercise, not a test of memory: all commands are in the lesson"
     - "The cross-phase dependencies are the teaching point: show where each output feeds the next phase"
-    - "The first executive brief is the deliverable that justifies the entire system to the CPO — quality matters here"
+    - "The first executive brief is the deliverable that justifies the entire system to the CPO: quality matters here"
     - "90 minutes is realistic for a student who has completed Lessons 3-13; if a student is struggling, it is because they skipped earlier exercises"
-    - "The final deliverable should be real enough to use — if a student has used their own vendor data throughout, the capstone output is an actual starting point for their organisation"
+    - "The final deliverable should be real enough to use: if a student has used their own vendor data throughout, the capstone output is an actual starting point for their organisation"
   misconceptions:
-    - "The capstone is a review exercise. Correction: the capstone produces a working procurement system. The deliverable is not a reflection on what was learned — it is an artefact that could be deployed in an actual procurement organisation."
+    - "The capstone is a review exercise. Correction: the capstone produces a working procurement system. The deliverable is not a reflection on what was learned: it is an artefact that could be deployed in an actual procurement organisation."
     - "Each phase is independent. Correction: the cross-phase dependencies are explicit. The vendor tier from Phase 1 determines the assessment depth in Phase 2. The assessment scores inform the risk thresholds in Phase 4. The risk classifications determine which vendors go into the agent watch list. Threading these connections is what makes the output a system rather than a collection of outputs."
   discussion_prompts:
-    - "Looking at your completed executive brief — would your CPO act on this? What would they need to see that is not there? What would they want removed because it is too detailed?"
+    - "Looking at your completed executive brief: would your CPO act on this? What would they need to see that is not there? What would they want removed because it is too detailed?"
     - "You have now built a complete procurement operating system for one category in 90 minutes. What would it have taken to build the equivalent manually? What does that ratio suggest about the deployment priority for the remaining categories?"
   teaching_tips:
     - "Ask students to use their own vendor data from Exercises 1-8 wherever possible. A capstone with real data from the student's own organisation is more valuable than one with placeholder names."
     - "The final executive brief should be formatted for actual use. Before the session ends, ask students: 'Would you send this to your CPO today? What would you change?' That conversation surfaces more learning than any written assessment."
 ---
 
-# Capstone — End-to-End Procurement
+# Capstone; End-to-End Procurement
 
 You have spent thirteen lessons building a procurement operating system component by component. You classified vendors into Kraljic tiers. You ran six-dimension assessments. You designed and tested three-way match tolerance rules. You built a supplier risk dashboard. You analysed logistics carrier performance and spend patterns. You wrote professional vendor communications. You deployed five persistent intelligence agents. And you built a vendor exit protocol for the scenario you hoped would never happen.
 
-Each of those capabilities is valuable on its own. But the procurement team that uses `/vendor-assess` once and never connects the output to their risk thresholds, their agent configuration, or their invoice reconciliation rules is using a point tool. The team that connects these capabilities into a system — where the classification register informs the risk thresholds, which inform the agent watch list, which feeds the executive brief, which drives the actions that prevent the exit scenarios — has a procurement operating system.
+Each of those capabilities is valuable on its own. But the procurement team that uses `/vendor-assess` once and never connects the output to their risk thresholds, their agent configuration, or their invoice reconciliation rules is using a point tool. The team that connects these capabilities into a system: where the classification register informs the risk thresholds, which inform the agent watch list, which feeds the executive brief, which drives the actions that prevent the exit scenarios: has a procurement operating system.
 
 This capstone builds that system for one spend category from scratch, running all seven phases in sequence, using each phase's output as the input to the next. The deliverable is not a document. It is a deployable system that runs continuously after this session ends.
 
@@ -102,7 +102,7 @@ This capstone builds that system for one spend category from scratch, running al
 
 ## Capstone Scenario
 
-You are the procurement lead for a mid-sized organisation. Your CPO has asked you to bring a new vendor category under active procurement management — a category that has been procured ad-hoc by different business units without coordinated vendor relationships, tolerance rules, or risk monitoring.
+You are the procurement lead for a mid-sized organisation. Your CPO has asked you to bring a new vendor category under active procurement management: a category that has been procured ad-hoc by different business units without coordinated vendor relationships, tolerance rules, or risk monitoring.
 
 **Your category:** Choose one from your own organisation, or use this scenario:
 
@@ -112,7 +112,7 @@ You are the procurement lead for a mid-sized organisation. Your CPO has asked yo
 >
 > **CPO requirement:** Classify and assess all vendors; configure automated invoice processing; deploy risk monitoring; deliver the first weekly executive brief within this session
 
-Each phase below maps to a skill or set of skills you have already used. Follow the sequence — each output feeds the next phase.
+Each phase below maps to a skill or set of skills you have already used. Follow the sequence: each output feeds the next phase.
 
 ---
 
@@ -122,7 +122,7 @@ Each phase below maps to a skill or set of skills you have already used. Follow 
 **Time:** ~12 minutes
 **Feeds:** Phase 2 (assessment depth), Phase 4 (risk thresholds), Phase 6 (agent watch list)
 
-Start with classification — you cannot calibrate assessment depth, risk thresholds, or agent monitoring without knowing what tier each vendor belongs to.
+Start with classification: you cannot calibrate assessment depth, risk thresholds, or agent monitoring without knowing what tier each vendor belongs to.
 
 For each vendor in your category, classify using the Kraljic framework (supply risk × profit impact):
 
@@ -142,7 +142,7 @@ For each vendor in your category, classify using the Kraljic framework (supply r
 | ------ | ---- | -------------- | ----------- | ------------- | ---------------- | --------------- |
 |        |      |                |             |               |                  |                 |
 
-**Cross-phase note:** The vendor tier determines everything downstream. Your Tier 1 (Strategic) vendors get full six-dimension assessments (Phase 2), quarterly review frequency, and a place on the Vendor Health Monitor watch list. Your Tier 4 (Bottleneck) vendors get the same monitoring intensity despite low spend. Tier 2 and Tier 3 vendors get lighter treatment — use your assessment time where the risk is highest.
+**Cross-phase note:** The vendor tier determines everything downstream. Your Tier 1 (Strategic) vendors get full six-dimension assessments (Phase 2), quarterly review frequency, and a place on the Vendor Health Monitor watch list. Your Tier 4 (Bottleneck) vendors get the same monitoring intensity despite low spend. Tier 2 and Tier 3 vendors get lighter treatment: use your assessment time where the risk is highest.
 
 :::note Connecting to Exercise 1
 If you completed Exercise 1 in Lesson 3, you already have a partial classification register. For the capstone, extend it with the new category vendors, or bring in the Exercise 1 register if the categories overlap.
@@ -175,7 +175,7 @@ Classify first, then assess. For Tier 1 (Strategic) and Tier 4 (Bottleneck) vend
 | ------ | --------- | ----------- | ---------- | ------------ | ------------- | --------------- | ------- |
 |        |           |             |            |              |               |                 |         |
 
-**Cross-phase note:** The assessment dimensions connect to the risk framework (Phase 4) — financial score informs the financial risk dimension, operational score maps to performance risk. The market position dimension informs your tolerance rules in Phase 3 (Tier 1 vendors with strong market position can negotiate tighter tolerances). Record the scores — Phase 4 uses them.
+**Cross-phase note:** The assessment dimensions connect to the risk framework (Phase 4): financial score informs the financial risk dimension, operational score maps to performance risk. The market position dimension informs your tolerance rules in Phase 3 (Tier 1 vendors with strong market position can negotiate tighter tolerances). Record the scores; Phase 4 uses them.
 
 ---
 
@@ -210,7 +210,7 @@ Configure the tolerance rules for your new category's vendors. Tolerances should
                    apply-rules:"from:supply-chain.local.md"
 ```
 
-Confirm the test invoice is classified correctly: MATCHED (within tolerance), PRICE VARIANCE (in tolerance), or PRICE VARIANCE (out of tolerance — route to manager).
+Confirm the test invoice is classified correctly: MATCHED (within tolerance), PRICE VARIANCE (in tolerance), or PRICE VARIANCE (out of tolerance: route to manager).
 
 **Cross-phase note:** These tolerance rules are loaded into the Invoice Reconciliation Agent in Phase 6. The agent applies exactly these rules to every incoming invoice from category vendors automatically.
 
@@ -241,12 +241,12 @@ Using the assessment scores from Phase 2, build the supplier risk dashboard for 
 | ------ | --------- | ----------- | ------------- | ---------- | ------------ | ------- | --------------- | ----------- |
 |        |           |             |               |            |              |         |                 |             |
 
-**Define alert thresholds** for each vendor at this stage — the specific score or metric change that would trigger an immediate Vendor Health Monitor alert. Example:
+**Define alert thresholds** for each vendor at this stage: the specific score or metric change that would trigger an immediate Vendor Health Monitor alert. Example:
 
 - AlphaSteel Corp Tier 1: alert if financial score drops >2 points, or OTD falls below 88%
 - KIFTL Tier 4: alert if OTD falls below 85%, or any financial distress news (zero tolerance for single-source Bottleneck)
 
-**Cross-phase note:** These thresholds load directly into the Vendor Health Monitor in Phase 6. Do not configure the agent with generic thresholds — use the risk-informed thresholds from this phase.
+**Cross-phase note:** These thresholds load directly into the Vendor Health Monitor in Phase 6. Do not configure the agent with generic thresholds: use the risk-informed thresholds from this phase.
 
 ---
 
@@ -303,7 +303,7 @@ The spend analysis output should identify:
 
 This is the phase where the category goes from manually managed to continuously monitored. Deploy each agent with the parameters derived from the earlier phases:
 
-**Vendor Health Monitor** — use the vendor list from Phase 1 and the alert thresholds from Phase 4:
+**Vendor Health Monitor**: use the vendor list from Phase 1 and the alert thresholds from Phase 4:
 
 ```
 /schedule agent:"vendor-health-monitor"
@@ -315,7 +315,7 @@ This is the phase where the category goes from manually managed to continuously 
           digest-recipients:"CPO, Finance Director, Logistics Manager"
 ```
 
-**Invoice Reconciliation Agent** — use the tolerance rules configured in Phase 3:
+**Invoice Reconciliation Agent**: use the tolerance rules configured in Phase 3:
 
 ```
 /schedule agent:"invoice-reconciliation-agent"
@@ -326,7 +326,7 @@ This is the phase where the category goes from manually managed to continuously 
           report-recipient:"Finance Manager"
 ```
 
-**Procurement Calendar Agent** — load contract and certification data from Phase 2 assessments:
+**Procurement Calendar Agent**: load contract and certification data from Phase 2 assessments:
 
 ```
 /schedule agent:"procurement-calendar-agent"
@@ -335,7 +335,7 @@ This is the phase where the category goes from manually managed to continuously 
           alert-recipients:"[category manager], CPO"
 ```
 
-**Logistics Intelligence Agent** — use the carrier baseline from Phase 5:
+**Logistics Intelligence Agent**: use the carrier baseline from Phase 5:
 
 ```
 /schedule agent:"logistics-intelligence-agent"
@@ -347,7 +347,7 @@ This is the phase where the category goes from manually managed to continuously 
           alert-recipients:"Logistics Manager, Procurement"
 ```
 
-**Spend Intelligence Agent** — use the spend baseline and commodity index from Phase 5:
+**Spend Intelligence Agent**: use the spend baseline and commodity index from Phase 5:
 
 ```
 /schedule agent:"spend-intelligence-agent"
@@ -395,7 +395,7 @@ You now have a running procurement operating system for your category. Generate 
 | Recommended action with owner and deadline        |          |                 |
 | Savings pipeline total with £ value               |          |                 |
 | Vendor risk summary (any alerts since last brief) |          |                 |
-| Contract calendar — any critical deadlines?       |          |                 |
+| Contract calendar: any critical deadlines?       |          |                 |
 
 If any element is missing or is too detailed for executive consumption, refine the prompt:
 
@@ -406,7 +406,7 @@ If any element is missing or is too detailed for executive consumption, refine t
                     into single Operations section"]
 ```
 
-Iterate until the brief is genuinely decision-ready — the format your CPO would actually want to receive.
+Iterate until the brief is genuinely decision-ready: the format your CPO would actually want to receive.
 
 ---
 
@@ -430,12 +430,12 @@ Risk scores across five dimensions with alert thresholds for each Tier 1/4 vendo
 Current carrier performance and category spend data with the identified savings pipeline entry (Phase 5).
 
 **6. Five Deployed Agents**
-All five agents configured, scheduled, and running — with parameters derived from the earlier phases (Phase 6).
+All five agents configured, scheduled, and running: with parameters derived from the earlier phases (Phase 6).
 
 **7. First Weekly Executive Brief**
 The CPO/COO brief template with first output, formatted for decision-use (Phase 7).
 
-This is your procurement operating system for one category. It classifies, assesses, monitors invoices, tracks deadlines, monitors carriers, analyses spend, and delivers a weekly brief — without requiring the procurement team to remember to run any of it.
+This is your procurement operating system for one category. It classifies, assesses, monitors invoices, tracks deadlines, monitors carriers, analyses spend, and delivers a weekly brief: without requiring the procurement team to remember to run any of it.
 
 :::note What this system produces every week, automatically
 
@@ -454,17 +454,17 @@ The capstone uses all eight skills and integrates all eight exercises. Here is h
 
 | Earlier Exercise                           | Capstone Phase Using It     | What It Contributes                                      |
 | ------------------------------------------ | --------------------------- | -------------------------------------------------------- |
-| Ex 1 — Vendor Classification (L03/L04)     | Phase 1 + Phase 2           | Classification register and assessment depth calibration |
-| Ex 1B — Risk Configuration (L04)           | Phase 4                     | Six-dimension scores and alert thresholds                |
-| Ex 2 — Invoice Reconciliation Sprint (L06) | Phase 3                     | Invoice pattern data for tolerance calibration           |
-| Ex 3 — Supplier Risk Dashboard (L07)       | Phase 4                     | Risk dimension framework and scoring methodology         |
-| Ex 4 — Logistics Optimisation (L08)        | Phase 5                     | Carrier performance baseline                             |
-| Ex 5 — Spend Consolidation (L10)           | Phase 5                     | Category spend baseline and consolidation opportunities  |
-| Ex 6 — Three-Way Match Rules (L05)         | Phase 3                     | Tolerance rule design pattern                            |
-| Ex 7 — Intelligence Dashboard (L12)        | Phase 6 + Phase 7           | Agent configuration and executive brief format           |
-| Ex 8 — Vendor Exit Protocol (L13)          | Phase 4 + Escalation design | Alert thresholds and exit scenario preparedness          |
+| Ex 1; Vendor Classification (L03/L04)     | Phase 1 + Phase 2           | Classification register and assessment depth calibration |
+| Ex 1B; Risk Configuration (L04)           | Phase 4                     | Six-dimension scores and alert thresholds                |
+| Ex 2; Invoice Reconciliation Sprint (L06) | Phase 3                     | Invoice pattern data for tolerance calibration           |
+| Ex 3; Supplier Risk Dashboard (L07)       | Phase 4                     | Risk dimension framework and scoring methodology         |
+| Ex 4; Logistics Optimisation (L08)        | Phase 5                     | Carrier performance baseline                             |
+| Ex 5; Spend Consolidation (L10)           | Phase 5                     | Category spend baseline and consolidation opportunities  |
+| Ex 6; Three-Way Match Rules (L05)         | Phase 3                     | Tolerance rule design pattern                            |
+| Ex 7; Intelligence Dashboard (L12)        | Phase 6 + Phase 7           | Agent configuration and executive brief format           |
+| Ex 8; Vendor Exit Protocol (L13)          | Phase 4 + Escalation design | Alert thresholds and exit scenario preparedness          |
 
-The capstone is not an independent exercise — it is the integration of everything you have built. If you completed the earlier exercises with your own vendor data, the capstone output is a working starting point for your organisation.
+The capstone is not an independent exercise: it is the integration of everything you have built. If you completed the earlier exercises with your own vendor data, the capstone output is a working starting point for your organisation.
 
 ---
 
@@ -481,7 +481,7 @@ in each phase, and explain why the order matters — what would break if I
 ran Phase 4 (risk monitoring) before Phase 1 (vendor classification)?
 ```
 
-**What you are learning:** The dependency chain that connects vendor classification to every downstream workflow — classification determines assessment depth, risk thresholds, and review frequency.
+**What you are learning:** The dependency chain that connects vendor classification to every downstream workflow: classification determines assessment depth, risk thresholds, and review frequency.
 
 ### Prompt 2: Adapt
 
@@ -493,7 +493,7 @@ must I start fresh? Produce a checklist for "deploy procurement
 operating system for new category."
 ```
 
-**What you are learning:** The reusability of your procurement operating system — which components are category-specific (tolerance rules, vendor list) and which are shared (agent schedules, brief format).
+**What you are learning:** The reusability of your procurement operating system: which components are category-specific (tolerance rules, vendor list) and which are shared (agent schedules, brief format).
 
 ### Prompt 3: Apply
 
@@ -506,7 +506,7 @@ procurement categories?" Draft a one-page rollout plan that covers:
 4. What the CPO's weekly brief looks like once all 12 are live
 ```
 
-**What you are learning:** The difference between building a prototype for one category and scaling a procurement operating system across an organisation — the strategic planning that turns a chapter exercise into a real deployment.
+**What you are learning:** The difference between building a prototype for one category and scaling a procurement operating system across an organisation: the strategic planning that turns a chapter exercise into a real deployment.
 
 <Flashcards />
 

@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/people-hr/persistent-agents-orchestrator-maintenance
 sidebar_position: 12
-title: "Persistent Agents — Onboarding Orchestrator and Policy Maintenance"
+title: "Persistent Agents: Onboarding Orchestrator and Policy Maintenance"
 description: "Deploy two always-running HR agents that catch the things humans miss: the onboarding orchestrator automates the T-14 to Day 90 new hire workflow, and the policy maintenance agent monitors policy currency and statutory rate changes on a monthly cycle"
 keywords:
   [
@@ -57,48 +57,48 @@ learning_objectives:
   - objective: "Explain why persistent background agents are the right architecture for HR process monitoring and what would happen without them"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student articulates the 'humans are busy' argument — agents catch what falls through the cracks — and gives a specific example of an onboarding failure the orchestrator would have prevented"
+    assessment_method: "Student articulates the 'humans are busy' argument, agents catch what falls through the cracks , and gives a specific example of an onboarding failure the orchestrator would have prevented"
 
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Event-triggered agents — activated by HRIS events (new hire record, resignation), not on a schedule"
-    - "Scheduled agents — run on a fixed cadence (monthly, weekly) independent of specific events"
-    - "Onboarding orchestrator timeline — T-14 to Day 90 milestones, outputs, and alert triggers"
-    - "Policy maintenance agent — five monthly checks, event-triggered rate monitoring, maintenance report"
-  assessment: "4 concepts at B1/B2 level. This lesson introduces the 'persistent agent' pattern — agents that run continuously in the background, catching what humans miss. The two agents serve as concrete examples of the two agent architectures (event-triggered vs scheduled), making the conceptual distinction grounded and practical."
+    - "Event-triggered agents, activated by HRIS events (new hire record, resignation), not on a schedule"
+    - "Scheduled agents, run on a fixed cadence (monthly, weekly) independent of specific events"
+    - "Onboarding orchestrator timeline, T-14 to Day 90 milestones, outputs, and alert triggers"
+    - "Policy maintenance agent: five monthly checks, event-triggered rate monitoring, maintenance report"
+  assessment: "4 concepts at B1/B2 level. This lesson introduces the 'persistent agent' pattern, agents that run continuously in the background, catching what humans miss. The two agents serve as concrete examples of the two agent architectures (event-triggered vs scheduled), making the conceptual distinction grounded and practical."
 
 differentiation:
-  extension_for_advanced: "Design a third persistent agent for the EdTech company or your own organisation. Define: trigger (event or schedule), the specific workflow it runs, the alert conditions and escalation paths, the output format, and the business case (what would it catch that currently falls through the cracks?). Present the agent design in the same format as the architecture spec — function, trigger, workflow, outputs, sensitivity."
+  extension_for_advanced: "Design a third persistent agent for the EdTech company or your own organisation. Define: trigger (event or schedule), the specific workflow it runs, the alert conditions and escalation paths, the output format, and the business case (what would it catch that currently falls through the cracks?). Present the agent design in the same format as the architecture spec, function, trigger, workflow, outputs, sensitivity."
   remedial_for_struggling: "Focus on just the onboarding orchestrator. Map the eight milestones (T-14, T-7, T-3, Day 1, Day 10, Day 30, Day 60, Day 90) and for each: what does the agent do, what does the agent send, and who receives it? If you can trace this workflow for Ayesha Raza's onboarding, you understand the core pattern that applies to any event-triggered agent."
 
 teaching_guide:
   key_points:
-    - "These agents run continuously — they are the HR equivalent of an audit agent, catching the things humans miss because humans are busy with other things"
+    - "These agents run continuously; they are the HR equivalent of an audit agent, catching the things humans miss because humans are busy with other things"
     - "The T-3 alert for incomplete pre-boarding is the highest-value single intervention: catching the missing laptop before Day 1 prevents a week of productivity loss for the new hire"
-    - "The policy maintenance agent is only useful if someone acts on the reports — the value chain ends at human review and decision"
+    - "The policy maintenance agent is only useful if someone acts on the reports: the value chain ends at human review and decision"
     - "Both agents together represent what AI-native HR looks like: not replacing HR judgment, but ensuring that the processes requiring human judgment actually reach a human with enough time to act"
   misconceptions:
     - "Persistent agents run 24/7 in a continuous loop. Correction: agents are triggered and run their workflow, then sleep until the next trigger. The onboarding orchestrator runs at specific milestones (T-14, T-7, T-3, etc.), not constantly. Between milestones, it is idle."
-    - "The onboarding orchestrator replaces the manager's role in onboarding. Correction: the agent handles administrative coordination — tracking completion, sending reminders, generating check-in agendas. The manager's role in building a relationship with the new hire, providing development feedback, and making judgment calls cannot be automated."
+    - "The onboarding orchestrator replaces the manager's role in onboarding. Correction: the agent handles administrative coordination, tracking completion, sending reminders, generating check-in agendas. The manager's role in building a relationship with the new hire, providing development feedback, and making judgment calls cannot be automated."
     - "If the policy maintenance agent flags a rate change, the policy is automatically updated. Correction: the agent identifies that a change is needed and who is responsible. The actual policy update requires a human HR professional to verify, rewrite, and approve the policy. Agents surface the work; humans do the judgment."
   discussion_prompts:
-    - "Think about a bad onboarding experience — either your own or one you observed. What specifically went wrong? At which point in the T-14 to Day 90 timeline would the orchestrator have caught it?"
+    - "Think about a bad onboarding experience, either your own or one you observed. What specifically went wrong? At which point in the T-14 to Day 90 timeline would the orchestrator have caught it?"
     - "If the policy maintenance agent flags that the statutory sick pay rate in your FAQ is out of date, what is the process for updating it? Who reviews it? Who approves it? What is the risk if the wrong rate stays in the FAQ for three months?"
   teaching_tips:
-    - "The Ayesha Raza opening scenario is the key teaching moment — the laptop that was not ordered at T-3. Dwell on this. It is an almost universal onboarding failure, and it illustrates exactly why the T-3 alert is the agent's highest-value feature."
+    - "The Ayesha Raza opening scenario is the key teaching moment: the laptop that was not ordered at T-3. Dwell on this. It is an almost universal onboarding failure, and it illustrates exactly why the T-3 alert is the agent's highest-value feature."
     - "Distinguish clearly between the two agent architectures (event vs schedule) before diving into each agent's detail. Students who confuse the architectures will have trouble configuring either one correctly."
 ---
 
-# Persistent Agents — Onboarding Orchestrator and Policy Maintenance
+# Persistent Agents: Onboarding Orchestrator and Policy Maintenance
 
-It is three days before Ayesha Raza's start date. On paper, the pre-boarding checklist is progressing. The offer letter was signed three weeks ago. The IT system provisioning request was submitted. But nobody checked whether the laptop had actually been ordered. It had not — the IT provisioning request had been submitted to the wrong shared inbox, silently misfiled, and forgotten. Nobody noticed, because nobody was looking.
+It is three days before Ayesha Raza's start date. On paper, the pre-boarding checklist is progressing. The offer letter was signed three weeks ago. The IT system provisioning request was submitted. But nobody checked whether the laptop had actually been ordered. It had not: the IT provisioning request had been submitted to the wrong shared inbox, silently misfiled, and forgotten. Nobody noticed, because nobody was looking.
 
 Ayesha's Day 1 has her starting at 9am, working through an IT setup session, and accessing the data warehouse by lunchtime. Instead, she spends Day 1 on a laptop borrowed from a colleague, with no data access, no system credentials, and an IT team scrambling to catch up on a provisioning request that should have been actioned two weeks ago. By Week 1, she is behind. By the 30-day check-in, the initial impression is more complicated than it should be.
 
-The Onboarding Orchestrator would have caught this. At T-3 days, the agent checks the pre-boarding checklist against completion status and identifies any critical items still incomplete. "IT provisioning not confirmed — laptop not ordered" would have generated an immediate escalation to the HR team, three days before Ayesha's start date. Three days is enough time to fix it. One hour on Day 1 is not.
+The Onboarding Orchestrator would have caught this. At T-3 days, the agent checks the pre-boarding checklist against completion status and identifies any critical items still incomplete. "IT provisioning not confirmed, laptop not ordered" would have generated an immediate escalation to the HR team, three days before Ayesha's start date. Three days is enough time to fix it. One hour on Day 1 is not.
 
-This lesson is about the two persistent agents that run continuously in the background of an AI-native HR operation — catching the things humans miss because humans are busy with the 60% of administrative work that these same agents help reduce.
+This lesson is about the two persistent agents that run continuously in the background of an AI-native HR operation, catching the things humans miss because humans are busy with the 60% of administrative work that these same agents help reduce.
 
 ## Two Agent Architectures
 
@@ -110,7 +110,7 @@ The four agents in the hr-operations plugin follow two distinct architectures:
 | **Scheduled**       | Activated on a fixed cadence       | `policy-maintenance-agent` (monthly, 1st Monday)                                                |
 | **Hybrid**          | Scheduled cadence + event override | `policy-maintenance-agent` (monthly + statutory rate change event)                              |
 
-The `knowledge-base-agent` is a third pattern — always-on, responding to individual employee queries — covered in Lesson 4.
+The `knowledge-base-agent` is a third pattern, always-on, responding to individual employee queries, covered in Lesson 4.
 
 Understanding which architecture fits a use case determines how the agent is configured. Event-triggered agents need an HRIS integration that fires when a record is created or changed. Scheduled agents need a cron schedule and a defined monthly workflow. Hybrid agents need both.
 
@@ -137,9 +137,9 @@ When a new hire record is created in the HRIS, the orchestrator activates. It th
 
 ### Three Alert Triggers
 
-The orchestrator is not just a reminder system. It has three alert conditions that escalate to HR immediately — not at the next scheduled milestone:
+The orchestrator is not just a reminder system. It has three alert conditions that escalate to HR immediately, not at the next scheduled milestone:
 
-**Alert 1 — T-3 incomplete critical pre-boarding:**
+**Alert 1, T-3 incomplete critical pre-boarding:**
 
 Any of these items still incomplete at T-3 days triggers an immediate HR alert:
 
@@ -150,24 +150,24 @@ Any of these items still incomplete at T-3 days triggers an immediate HR alert:
 
 Why: these items cannot be fixed in the final three days if caught on Day 1.
 
-**Alert 2 — Mandatory training incomplete at Day 10:**
+**Alert 2, Mandatory training incomplete at Day 10:**
 
-If the new starter has not completed mandatory compliance training (GDPR, information security, code of conduct) by Day 10, the agent escalates to the manager with a specific deadline. Mandatory training is not optional and not flexible — it is a compliance requirement.
+If the new starter has not completed mandatory compliance training (GDPR, information security, code of conduct) by Day 10, the agent escalates to the manager with a specific deadline. Mandatory training is not optional and not flexible; it is a compliance requirement.
 
-Why: most training non-completion in the first 30 days is not intentional — it is an admin failure. The escalation turns "the training email got buried" into a tracked, owned item.
+Why: most training non-completion in the first 30 days is not intentional; it is an admin failure. The escalation turns "the training email got buried" into a tracked, owned item.
 
-**Alert 3 — Satisfaction survey score at or below threshold:**
+**Alert 3, Satisfaction survey score at or below threshold:**
 
 The Day 60 satisfaction survey produces a score. If the new starter rates their onboarding experience at or below the configured threshold (typically 2 out of 5), the orchestrator escalates to the HR Business Partner for a direct check-in conversation.
 
 Why: a 2/5 score at Day 60 is a retention signal, not just a satisfaction signal. The HRBP check-in gives the new starter a confidential channel to surface concerns before they make a decision to leave.
 
-### Ayesha Raza — Tracing the Full Workflow
+### Ayesha Raza: Tracing the Full Workflow
 
 Ayesha Raza joins the EdTech company as Senior Data Analyst, start date 10 March 2026. Here is what the orchestrator does:
 
 ```
-ONBOARDING ORCHESTRATOR: Ayesha Raza — Senior Data Analyst
+ONBOARDING ORCHESTRATOR: Ayesha Raza, Senior Data Analyst
 Start date: 10 March 2026 | Manager: Omar Farooq
 ================================================================
 
@@ -191,7 +191,7 @@ T-3 (7 March):
   → Pre-boarding status check:
     ✅ Laptop confirmed shipped, arrival Day 1 AM
     ✅ System access provisioning complete
-    ⚠️  ALERT: Manager Day 1 availability — Omar in external meeting
+    ⚠️  ALERT: Manager Day 1 availability, Omar in external meeting
         8:30–10am. Day 1 welcome handover arranged: team lead covers.
   → HR alert sent with Omar's morning conflict flagged
 
@@ -215,7 +215,7 @@ Day 30 (9 April):
 Day 60 (9 May):
   → 60-day check-in scheduled: 13 May
   → Satisfaction survey sent to Ayesha
-  → Survey result: 4.2/5 (above threshold — no alert)
+  → Survey result: 4.2/5 (above threshold; no alert)
   → HR copy of survey result filed
 
 Day 90 (8 June):
@@ -229,7 +229,7 @@ Day 90 (8 June):
 ================================================================
 ```
 
-The orchestrator does not judge whether Ayesha is performing well. That is Omar's job. It ensures that the administrative infrastructure of onboarding — the checklist completion, the training, the check-ins, the surveys — actually happens, with someone accountable for every item.
+The orchestrator does not judge whether Ayesha is performing well. That is Omar's job. It ensures that the administrative infrastructure of onboarding: the checklist completion, the training, the check-ins, the surveys, actually happens, with someone accountable for every item.
 
 ## The Policy Maintenance Agent
 
@@ -244,10 +244,10 @@ On the first Monday of each month, the policy maintenance agent runs five checks
 | Check                            | What it looks for                                                                                            | Example finding                                                                                          |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
 | **1. Policy version currency**   | Are all documents referencing the current policy version?                                                    | "Employee handbook still references the 2024 holiday entitlement; 2025 version updated the accrual rate" |
-| **2. Statutory rate monitoring** | Are all rates current for the configured jurisdiction?                                                       | "Statutory Sick Pay rate in FAQ: £109.40/week. Current rate: £116.75/week [VERIFY] — update required"    |
-| **3. Document consistency**      | Is the same policy described the same way in different documents?                                            | "Parental leave section: handbook says 26 weeks; intranet FAQ says 24 weeks — inconsistency flagged"     |
-| **4. Link validity**             | Are all policy links in employee-facing documents still active?                                              | "3 broken links in the benefits guide — pages moved after HRIS migration"                                |
-| **5. FAQ gap analysis**          | Are there recurring question categories in the knowledge-base-agent log that suggest a FAQ entry is missing? | "14 queries this month about jury duty leave — no FAQ entry exists"                                      |
+| **2. Statutory rate monitoring** | Are all rates current for the configured jurisdiction?                                                       | "Statutory Sick Pay rate in FAQ: £109.40/week. Current rate: £116.75/week [VERIFY], update required"    |
+| **3. Document consistency**      | Is the same policy described the same way in different documents?                                            | "Parental leave section: handbook says 26 weeks; intranet FAQ says 24 weeks, inconsistency flagged"     |
+| **4. Link validity**             | Are all policy links in employee-facing documents still active?                                              | "3 broken links in the benefits guide, pages moved after HRIS migration"                                |
+| **5. FAQ gap analysis**          | Are there recurring question categories in the knowledge-base-agent log that suggest a FAQ entry is missing? | "14 queries this month about jury duty leave; no FAQ entry exists"                                      |
 
 ### Event-Triggered: Statutory Rate Changes
 
@@ -268,7 +268,7 @@ In addition to the monthly cycle, the policy maintenance agent monitors for stat
 **Event-triggered workflow:**
 
 ```
-Rate change detected: National Living Wage — effective 6 April 2026
+Rate change detected: National Living Wage, effective 6 April 2026
         ↓
 Agent searches all employee-facing documents for the current rate
         ↓
@@ -290,14 +290,14 @@ Jurisdiction: UK | Configuration: hr.local.md loaded
 
 POLICY VERSION CURRENCY
   ✅ Employee handbook: current version (v2026.1)
-  ⚠️  Benefits guide: references 2024 pension contribution rates —
+  ⚠️  Benefits guide: references 2024 pension contribution rates,
       PAYE rates updated January 2026; needs refresh
   ✅ Remote working policy: current
 
 STATUTORY RATE MONITORING
   ⚠️  IMPORTANT: National Living Wage changes 6 April 2026.
       Current rate in documents: £11.44/hour
-      New rate: [VERIFY — check gov.uk before publication]
+      New rate: [VERIFY, check gov.uk before publication]
       Documents to update: offer letter template, FAQ entry #3,
       employee handbook section 8.2
   ✅  Statutory Sick Pay: correct rate in all documents
@@ -316,8 +316,8 @@ LINK VALIDITY
 
 FAQ GAP ANALYSIS (from knowledge-base-agent log)
   New question categories requiring FAQ entries:
-  — Jury duty leave (14 queries this month; no FAQ exists)
-  — Work from abroad requests (9 queries; current FAQ is ambiguous)
+ , Jury duty leave (14 queries this month; no FAQ exists)
+ , Work from abroad requests (9 queries; current FAQ is ambiguous)
 
 RECOMMENDED ACTIONS (prioritised)
   1. [URGENT] Verify and update NLW rate in 3 documents before 6 April
@@ -325,13 +325,13 @@ RECOMMENDED ACTIONS (prioritised)
   3. Add jury duty leave FAQ entry
   4. Clarify parental leave entitlement wording (align with handbook)
   5. Refresh benefits guide pension contribution rates
-  6. Clarify remote work abroad FAQ — add policy position clearly
+  6. Clarify remote work abroad FAQ, add policy position clearly
 
 NEXT REPORT: 6 April 2026 (first Monday of April)
 ```
 
 :::note Your output will vary
-The specific policy issues, rates, and documents will depend on your organisation's jurisdiction, documentation state, and the knowledge base agent query log. The structure of the report — five check categories, prioritised actions — is consistent regardless of what the agent finds.
+The specific policy issues, rates, and documents will depend on your organisation's jurisdiction, documentation state, and the knowledge base agent query log. The structure of the report: five check categories, prioritised actions: is consistent regardless of what the agent finds.
 :::
 
 ## Exercise: Configure Both Agents and Run a Simulated Monthly Audit
@@ -341,13 +341,13 @@ The specific policy issues, rates, and documents will depend on your organisatio
 **Plugin:** `onboarding-orchestrator` + `policy-maintenance-agent` (deploy from hr-operations plugin)
 **Goal:** Configure both persistent agents and run a simulated monthly policy audit to experience the maintenance workflow
 
-### Step 1 — Configure the Onboarding Orchestrator
+### Step 1: Configure the Onboarding Orchestrator
 
 In Cowork, deploy the `onboarding-orchestrator` from the hr-operations plugin. Configure it with:
 
 ```
 New hire: Ayesha Raza (from Chapter scenario) or a new hire of your choice
-Start date: [Date — any upcoming Monday works]
+Start date: [Date, any upcoming Monday works]
 Manager: Omar Farooq
 Jurisdiction: Pakistan
 Mandatory training: GDPR, Information Security, Code of Conduct
@@ -357,15 +357,15 @@ HR alert contact: [Your name or fictional HR contact]
 
 Then trace the full workflow: for each of the eight milestones (T-14 through Day 90), write one sentence describing what the agent sends, to whom.
 
-**Extend:** Simulate the T-3 scenario — mark the laptop as "not confirmed" in the pre-boarding checklist. Verify the agent generates an alert. Who receives it? What does it say?
+**Extend:** Simulate the T-3 scenario, mark the laptop as "not confirmed" in the pre-boarding checklist. Verify the agent generates an alert. Who receives it? What does it say?
 
-### Step 2 — Configure the Policy Maintenance Agent
+### Step 2: Configure the Policy Maintenance Agent
 
 Deploy the `policy-maintenance-agent` from the hr-operations plugin. Configure it for:
 
 ```
-Jurisdiction: UK (or Pakistan — your choice)
-Policy documents to monitor: [List 3 policies — can be fictional]
+Jurisdiction: UK (or Pakistan; your choice)
+Policy documents to monitor: [List 3 policies, can be fictional]
   1. [Policy name + location]
   2. [Policy name + location]
   3. [Policy name + location]
@@ -374,7 +374,7 @@ Monthly schedule: First Monday of each month
 Statutory rate monitoring: Enabled
 ```
 
-### Step 3 — Run a Simulated Monthly Audit
+### Step 3: Run a Simulated Monthly Audit
 
 Ask the policy maintenance agent to simulate a monthly audit on this fictional policy set:
 
@@ -385,18 +385,18 @@ your findings and identify any issues requiring action.
 
 Documents:
 1. Employee Handbook (fictional company, UK jurisdiction)
-   — Sick pay: 10 days full pay, then SSP
-   — Annual leave: 25 days per year
-   — Parental leave: 26 weeks full pay (primary carer)
+  , Sick pay: 10 days full pay, then SSP
+  , Annual leave: 25 days per year
+  , Parental leave: 26 weeks full pay (primary carer)
 
 2. HR FAQ document (last updated January 2025)
-   — FAQ #1: "How do I report sick?" (references old process)
-   — FAQ #4: "What is the SSP rate?" [Note: uses £109.40 — old rate]
-   — No FAQ entry for jury duty leave
+  , FAQ #1: "How do I report sick?" (references old process)
+  , FAQ #4: "What is the SSP rate?" [Note: uses £109.40, old rate]
+  . No FAQ entry for jury duty leave
 
 3. Benefits guide
-   — Two links to pension provider portal (one may be broken)
-   — References "2024 pension auto-enrolment thresholds"
+  , Two links to pension provider portal (one may be broken)
+  , References "2024 pension auto-enrolment thresholds"
 
 Run the five monthly checks and produce a maintenance report.
 ```
@@ -433,7 +433,7 @@ Also: at T-3, the pre-boarding checklist shows the laptop has not been
 confirmed as ordered. What does the agent do?
 ```
 
-**What you are learning:** Tracing the full workflow milestone by milestone makes the agent's value concrete. The T-3 laptop scenario illustrates the specific failure the orchestrator prevents — the one that ruins Day 1 for a new hire and takes weeks to recover from.
+**What you are learning:** Tracing the full workflow milestone by milestone makes the agent's value concrete. The T-3 laptop scenario illustrates the specific failure the orchestrator prevents: the one that ruins Day 1 for a new hire and takes weeks to recover from.
 
 **Adapt**: Design the alert trigger conditions for your organisation.
 
@@ -455,10 +455,10 @@ For each:
 - What action should the alert request?
 
 Also: what is the single most common onboarding failure that agents
-could catch that humans currently miss — based on our context?
+could catch that humans currently miss, based on our context?
 ```
 
-**What you are learning:** Alert trigger conditions are the most important configuration decision for any event-triggered agent. An agent that alerts too frequently is ignored. An agent that only alerts on critical failures is genuinely useful. Designing the conditions for your specific context forces you to identify what actually goes wrong — not what theoretically could.
+**What you are learning:** Alert trigger conditions are the most important configuration decision for any event-triggered agent. An agent that alerts too frequently is ignored. An agent that only alerts on critical failures is genuinely useful. Designing the conditions for your specific context forces you to identify what actually goes wrong, not what theoretically could.
 
 **Apply**: Design a monthly policy audit cycle for your organisation.
 
@@ -471,21 +471,21 @@ Context:
 - Current policy documentation: [Where do policies live? How many?
   When were they last reviewed?]
 - Known issues: [Any policies you know are out of date or inconsistent?]
-- Jurisdiction: [UK / Pakistan / other — for statutory rate monitoring]
+- Jurisdiction: [UK / Pakistan / other, for statutory rate monitoring]
 
 Please design:
 1. The five monthly checks the agent should run (use the standard five
    categories but adapt them to my documentation set)
 2. The event triggers for statutory rate monitoring in my jurisdiction
-   — what rates should the agent monitor and when do they change?
-3. The output format for the monthly report — who receives it,
+  : what rates should the agent monitor and when do they change?
+3. The output format for the monthly report, who receives it,
    what decisions should it prompt, and what is the escalation path
    if a critical issue is found?
 4. What is the one policy most likely to be out of date in my
    organisation right now? What should I check first?
 ```
 
-**What you are learning:** A policy maintenance agent is only useful if it is configured for your specific documentation state and jurisdiction. Designing the audit cycle for your context reveals the gaps that exist right now — before you even deploy the agent. The final question ("which policy is most likely out of date right now?") often produces the most immediately actionable output.
+**What you are learning:** A policy maintenance agent is only useful if it is configured for your specific documentation state and jurisdiction. Designing the audit cycle for your context reveals the gaps that exist right now, before you even deploy the agent. The final question ("which policy is most likely out of date right now?") often produces the most immediately actionable output.
 :::
 
 ## Flashcards Study Aid

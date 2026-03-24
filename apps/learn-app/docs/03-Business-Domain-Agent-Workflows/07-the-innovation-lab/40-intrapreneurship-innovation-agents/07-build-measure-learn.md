@@ -57,32 +57,32 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "BML loop — Build, Measure, Learn as a closed feedback system"
-    - "Eight pivot types — taxonomy for classifying direction changes after assumption failure"
-    - "Evidence quality hierarchy — seven levels from payment+renewal down to stated problem awareness"
-    - "Pivot decision checklist — four conditions that must be met before recommending a pivot"
-  assessment: "4 concepts at B1 level. This lesson applies prior concepts (assumption mapping from L05) rather than introducing entirely new frameworks. The BML analysis is the culmination of Lessons 5 and 6 — students are not learning a new system, they are completing one."
+    - "BML loop, Build, Measure, Learn as a closed feedback system"
+    - "Eight pivot types, taxonomy for classifying direction changes after assumption failure"
+    - "Evidence quality hierarchy, seven levels from payment+renewal down to stated problem awareness"
+    - "Pivot decision checklist, four conditions that must be met before recommending a pivot"
+  assessment: "4 concepts at B1 level. This lesson applies prior concepts (assumption mapping from L05) rather than introducing entirely new frameworks. The BML analysis is the culmination of Lessons 5 and 6: students are not learning a new system, they are completing one."
 
 differentiation:
   extension_for_advanced: "After completing the AP pilot BML analysis, model the impact of the unexpected learnings on the business model. The 30% handwritten invoice rate changes the technical complexity and potentially the pricing. The remittance email request suggests a new feature. How do you decide which unexpected learning to act on first? What criteria would you use?"
-  remedial_for_struggling: "Focus on one assumption at a time. For each critical assumption in your MVP, ask three questions: (1) What did we specifically measure? (2) Does that measurement meet the VALIDATED threshold (payment or sustained usage)? (3) If not, what is the status — INVALIDATED or INCONCLUSIVE? Do not move to pivot analysis until you have answered these three questions for each assumption."
+  remedial_for_struggling: "Focus on one assumption at a time. For each critical assumption in your MVP, ask three questions: (1) What did we specifically measure? (2) Does that measurement meet the VALIDATED threshold (payment or sustained usage)? (3) If not, what is the status, INVALIDATED or INCONCLUSIVE? Do not move to pivot analysis until you have answered these three questions for each assumption."
 
 teaching_guide:
   key_points:
-    - "VALIDATED means customers paid or sustained usage — not enthusiasm, not 'they said they would use it'"
-    - "Unexpected learnings are often more valuable than the expected ones — they reveal assumptions you did not know you were making"
+    - "VALIDATED means customers paid or sustained usage, not enthusiasm, not 'they said they would use it'"
+    - "Unexpected learnings are often more valuable than the expected ones; they reveal assumptions you did not know you were making"
     - "The pivot decision checklist prevents premature pivots driven by impatience rather than data"
-    - "A good pivot preserves validated learning — it changes direction, not everything"
-    - "Inconclusive is a valid result — it means you ran the test but cannot draw a conclusion, and you need to redesign the test"
+    - "A good pivot preserves validated learning ; it changes direction, not everything"
+    - "Inconclusive is a valid result ; it means you ran the test but cannot draw a conclusion, and you need to redesign the test"
   misconceptions:
     - "If the pilot was mostly successful, you persevere. Correction: the pivot-or-persevere decision is assumption-by-assumption, not overall. You can persevere on the business model while pivoting on the channel."
-    - "Unexpected findings are noise. Correction: unexpected findings are often the most valuable signal in a pilot. The AP pilot's discovery that 30% of invoices were handwritten was not in the original assumption map — but it fundamentally changed the V1 roadmap."
+    - "Unexpected findings are noise. Correction: unexpected findings are often the most valuable signal in a pilot. The AP pilot's discovery that 30% of invoices were handwritten was not in the original assumption map , but it fundamentally changed the V1 roadmap."
     - "One pilot is enough to validate an assumption. Correction: the pivot decision checklist requires at least 2 iterations of the same test before drawing a conclusion. One pilot is a data point; a pattern requires multiple tests."
   discussion_prompts:
-    - "In the AP pilot, Pilot 3 had only 45% adoption — well below the 70% success criterion. Should the team pivot on adoption, or investigate why Pilot 3 was different? What additional data would you need?"
+    - "In the AP pilot, Pilot 3 had only 45% adoption, well below the 70% success criterion. Should the team pivot on adoption, or investigate why Pilot 3 was different? What additional data would you need?"
     - "The unexpected finding about remittance emails is a customer-discovered feature request. How do you decide whether to add it to V1 or keep it for V2? What criteria would you use?"
   teaching_tips:
-    - "The AP pilot data is rich enough to run a full BML analysis. Walk students through each assumption status before revealing the recommendation — have them predict the persevere/pivot decision based on the data."
+    - "The AP pilot data is rich enough to run a full BML analysis. Walk students through each assumption status before revealing the recommendation, have them predict the persevere/pivot decision based on the data."
     - "The 30% handwritten invoice finding is a teaching moment for unexpected learnings: the team had assumed this was a rare edge case, but it was nearly a third of all invoices. This changes the accuracy target significantly."
 ---
 
@@ -92,7 +92,7 @@ You built the MVP. You ran the pilot. You have data.
 
 Now comes the step that most teams get wrong: interpreting what the data actually says versus what you hoped it would say. Six weeks of working with pilot customers creates emotional investment. You know the customers' names. You saw the product working. It is psychologically difficult to look at the adoption numbers objectively when you want them to be higher.
 
-The Build-Measure-Learn analysis exists to separate the learning from the emotion. It maps pilot results to specific assumptions, classifies evidence against a quality standard, and produces a structured pivot-or-persevere recommendation — before the team has a chance to rationalise their way to the conclusion they want.
+The Build-Measure-Learn analysis exists to separate the learning from the emotion. It maps pilot results to specific assumptions, classifies evidence against a quality standard, and produces a structured pivot-or-persevere recommendation, before the team has a chance to rationalise their way to the conclusion they want.
 
 In Lesson 6, you designed the MVP and pre-agreed the success and failure criteria. Now you apply those criteria to the pilot results.
 
@@ -107,31 +107,31 @@ BUILD ──► MEASURE ──► LEARN
        (next iteration)
 ```
 
-**Build**: The smallest thing that tests the critical assumptions — your MVP from Lesson 6.
+**Build**: The smallest thing that tests the critical assumptions; your MVP from Lesson 6.
 
 **Measure**: Specific metrics mapped to success criteria. Not vanity metrics ("total sign-ups") but learning metrics ("percentage of invoices processed through the system by Week 4").
 
-**Learn**: Three types of output — validated assumptions, invalidated assumptions, and unexpected learnings. All three matter. Unexpected learnings reveal assumptions you did not know you were making.
+**Learn**: Three types of output, validated assumptions, invalidated assumptions, and unexpected learnings. All three matter. Unexpected learnings reveal assumptions you did not know you were making.
 
 ## Evidence Quality: What Counts as Validation
 
-Before interpreting pilot results, you need a shared standard for what constitutes validation. Without this standard, teams drift toward motivated reasoning — finding evidence that the pilot succeeded regardless of what the data says.
+Before interpreting pilot results, you need a shared standard for what constitutes validation. Without this standard, teams drift toward motivated reasoning, finding evidence that the pilot succeeded regardless of what the data says.
 
 The evidence hierarchy runs from most to least reliable:
 
 | Level | Evidence Type | What It Means |
 | --- | --- | --- |
-| 1 | Customer paid AND renewed | Revealed preference over time — the strongest signal |
+| 1 | Customer paid AND renewed | Revealed preference over time: the strongest signal |
 | 2 | Customer paid once | Revealed preference at a moment in time |
 | 3 | Customer signed a letter of intent with specific terms | Serious intent with terms attached |
 | 4 | Customer used the product N times without prompting | Behavioural adoption without hand-holding |
-| 5 | Customer said they would pay a specific amount in an interview | Stated intent — useful but not validated |
-| 6 | Customer said the problem is real and painful | Problem acknowledgment — not solution validation |
-| 7 | Multiple people described the same problem | Signal that the problem exists — not that your solution works |
+| 5 | Customer said they would pay a specific amount in an interview | Stated intent, useful but not validated |
+| 6 | Customer said the problem is real and painful | Problem acknowledgment, not solution validation |
+| 7 | Multiple people described the same problem | Signal that the problem exists, not that your solution works |
 
 **VALIDATED** requires Level 1, 2, or 4. Paying customers and unprompted usage are the only behaviours that reveal genuine value.
 
-"They said they loved it" is Level 5 at best. Enthusiasm without payment is not validation. This is the most common misreading of pilot results: teams hear positive feedback and call the assumption validated. The test of validation is not what customers say — it is what they do.
+"They said they loved it" is Level 5 at best. Enthusiasm without payment is not validation. This is the most common misreading of pilot results: teams hear positive feedback and call the assumption validated. The test of validation is not what customers say; it is what they do.
 
 ## The AP Automation Pilot Results
 
@@ -147,9 +147,9 @@ Payments and pricing:
   lower revenue, requested a lower tier)
 
 AI accuracy:
-- Overall accuracy: 91% (target was >90% — just met)
+- Overall accuracy: 91% (target was >90%, just met)
 - Accuracy on handwritten invoices: 87%
-- Unexpected finding: approximately 30% of invoices were handwritten —
+- Unexpected finding: approximately 30% of invoices were handwritten,
   higher than our estimate of 10-15%
 
 Adoption:
@@ -161,7 +161,7 @@ Adoption:
 Qualitative feedback:
 - All 3 CFOs: "I would be comfortable showing this to my auditor"
 - Unexpected request from 2 CFOs: automated vendor payment remittance
-  emails — they had to send these manually; they expected them to be
+  emails; they had to send these manually; they expected them to be
   part of the system
 
 Conduct a build-measure-learn analysis:
@@ -183,17 +183,17 @@ WHAT WE TESTED:
  Sample: 3 customers; approximately 4 weeks of invoice processing data
 
 WHAT WE MEASURED:
- Pricing ($500/month target): 2/3 at $500; 1 at $350 — PARTIAL
- AI accuracy (>90% target): 91% overall; 87% handwritten — PARTIAL
- Adoption (>70% by Week 4): 89%/71%/45% — MIXED
+ Pricing ($500/month target): 2/3 at $500; 1 at $350, PARTIAL
+ AI accuracy (>90% target): 91% overall; 87% handwritten, PARTIAL
+ Adoption (>70% by Week 4): 89%/71%/45%, MIXED
 
 ASSUMPTION OUTCOMES:
  A-001 (CFOs pay $500/month):
    Status: PARTIALLY VALIDATED
-   Evidence: 2 of 3 pilots paid $500/month (Level 2 — paid once).
-     1 pilot required $350 — this is a different customer segment
+   Evidence: 2 of 3 pilots paid $500/month (Level 2, paid once).
+     1 pilot required $350. This is a different customer segment
      (smaller company, lower revenue), not a pricing failure.
-   Confidence: MEDIUM — 3 pilots is a small sample. The pattern suggests
+   Confidence: MEDIUM, 3 pilots is a small sample. The pattern suggests
      $500 works for the target segment ($5M-$50M); need 3-5 more to confirm.
    Update: Consider a formal pricing tier ($500/month mid-market;
      $350/month SME under $5M revenue) to avoid losing deals.
@@ -201,9 +201,9 @@ ASSUMPTION OUTCOMES:
  A-002 (AI accuracy >90% on invoice formats):
    Status: PARTIALLY VALIDATED
    Evidence: 91% overall meets the MVP threshold. 87% on handwritten
-     invoices misses the target — but handwritten invoices were 30% of
+     invoices misses the target , but handwritten invoices were 30% of
      volume, not the 10-15% assumed.
-   Confidence: MEDIUM — 3 customer data sets. Directionally positive;
+   Confidence: MEDIUM, 3 customer data sets. Directionally positive;
      needs larger sample to confirm.
    Implication: Handwritten invoice accuracy is a more critical problem
      than assumed. V1 must address this; not a V2 deprioritisation.
@@ -211,9 +211,9 @@ ASSUMPTION OUTCOMES:
  A-005 (adoption >70% by Week 4):
    Status: MIXED
    Evidence: 89% (Pilot 1) and 71% (Pilot 2) validate the assumption.
-     45% (Pilot 3) does not — but the context is confounding: 3 new
+     45% (Pilot 3) does not , but the context is confounding: 3 new
      finance staff in 6 weeks is an unusually high disruption.
-   Confidence: MEDIUM — the adoption failure in Pilot 3 may be a
+   Confidence: MEDIUM: the adoption failure in Pilot 3 may be a
      people/change management issue, not a product issue.
    Next step: Re-measure Pilot 3 adoption after staff onboarding
      stabilises (Week 8-10) before concluding adoption fails.
@@ -225,13 +225,13 @@ UNEXPECTED LEARNINGS:
 
  2. Remittance email automation is expected behaviour
     Implication: Customers assumed remittance emails were included.
-    This is a simple feature with high perceived value — a quick win
+    This is a simple feature with high perceived value: a quick win
     for V1 that removes a manual step for the CFO.
 
 PIVOT OR PERSEVERE:
  Recommendation: PERSEVERE with two specific additions.
  Rationale: The critical assumptions held on 2/3 metrics. The failures
-   are explainable and actionable — not fundamental product-market fit
+   are explainable and actionable, not fundamental product-market fit
    problems. There is no evidence of a TIER 1 invalidation.
 
  Next steps before V1 build:
@@ -251,43 +251,43 @@ PIVOT OR PERSEVERE:
 
 ## Pivot Types: Eight Ways to Change Direction
 
-When the BML analysis produces an INVALIDATED assumption, the next question is: which type of pivot is appropriate? Not all direction changes are the same. Identifying the pivot type prevents overcorrection — changing everything when only one dimension needs to change.
+When the BML analysis produces an INVALIDATED assumption, the next question is: which type of pivot is appropriate? Not all direction changes are the same. Identifying the pivot type prevents overcorrection, changing everything when only one dimension needs to change.
 
-**Zoom-in pivot** — One feature of the product becomes the whole product.
+**Zoom-in pivot:** One feature of the product becomes the whole product.
 Use when: one aspect of the MVP is getting disproportionate engagement. ("They love the WhatsApp approval workflow but ignore the dashboard.")
 
-**Zoom-out pivot** — The whole product becomes one feature of a larger product.
+**Zoom-out pivot:** The whole product becomes one feature of a larger product.
 Use when: the product is not sufficient to solve the problem on its own. ("AP automation needs to be part of a broader finance operations platform.")
 
-**Customer segment pivot** — Same product; different customer.
+**Customer segment pivot:** Same product; different customer.
 Use when: the product works, but for a different customer than expected. ("The SME segment at $350/month is responding better than the mid-market at $500/month.")
 
-**Customer need pivot** — Same customer; different problem.
+**Customer need pivot:** Same customer; different problem.
 Use when: you know the customer well but chose the wrong problem to solve. ("CFOs need help with vendor payment terms negotiation more than AP automation.")
 
-**Platform pivot** — Application becomes a platform, or vice versa.
+**Platform pivot:** Application becomes a platform, or vice versa.
 Use when: the product is more valuable as infrastructure for others to build on. ("Give banks and ERP vendors API access to the AP matching engine.")
 
-**Business architecture pivot** — High-margin, low-volume becomes low-margin, high-volume (or reverse).
+**Business architecture pivot:** High-margin, low-volume becomes low-margin, high-volume (or reverse).
 Use when: unit economics only work at a scale you cannot reach with your current go-to-market. ("The $500/month model needs to be a $50/month volume play.")
 
-**Technology pivot** — Same positioning; different technology.
+**Technology pivot:** Same positioning; different technology.
 Use when: the current technology cannot achieve the required accuracy, scale, or cost. ("AI matching is not reaching 90% accuracy; switch to rule-based matching with human review.")
 
-**Channel pivot** — Same product; different distribution.
+**Channel pivot:** Same product; different distribution.
 Use when: the product works but the channel is too expensive or too slow. ("Direct sales to CFOs takes 3 months; partner with accounting firms for reseller distribution.")
 
 ### The Pivot Decision Checklist
 
 Before recommending a pivot, verify four conditions:
 
-1. **Two iterations minimum** — Have you run at least two tests of the same approach? One failure is a data point. A pattern requires multiple tests.
-2. **Behaviour over opinion** — Is the invalidation based on what customers did, or what they said? Customers who say "I wouldn't use this" sometimes do. Customers who do not use it after four weeks are telling you something behavioural.
-3. **Team readiness** — Is the team emotionally ready for a pivot? A pivot decided under stress often targets the wrong dimension.
-4. **Preserved learning** — What is still true? A good pivot preserves the learning from the MVP and changes only the dimension that is broken.
+1. **Two iterations minimum:** Have you run at least two tests of the same approach? One failure is a data point. A pattern requires multiple tests.
+2. **Behaviour over opinion:** Is the invalidation based on what customers did, or what they said? Customers who say "I wouldn't use this" sometimes do. Customers who do not use it after four weeks are telling you something behavioural.
+3. **Team readiness:** Is the team emotionally ready for a pivot? A pivot decided under stress often targets the wrong dimension.
+4. **Preserved learning:** What is still true? A good pivot preserves the learning from the MVP and changes only the dimension that is broken.
 
 :::note For Intrapreneurs
-Inside an existing organisation, the pivot decision has an additional variable: organisational appetite. An intrapreneur whose pilot showed mixed adoption results faces a different decision than a startup founder. The question is not just "should we pivot?" but "can we get internal sponsorship to continue at all?" The BML analysis gives you the evidence to make the case — either for the pivot or for another iteration. The evidence quality standard is the same: behaviour over statements, payment (or budget approval) over enthusiasm.
+Inside an existing organisation, the pivot decision has an additional variable: organisational appetite. An intrapreneur whose pilot showed mixed adoption results faces a different decision than a startup founder. The question is not just "should we pivot?" but "can we get internal sponsorship to continue at all?" The BML analysis gives you the evidence to make the case, either for the pivot or for another iteration. The evidence quality standard is the same: behaviour over statements, payment (or budget approval) over enthusiasm.
 :::
 
 ## Try With AI
@@ -295,7 +295,7 @@ Inside an existing organisation, the pivot decision has an additional variable: 
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Run the AP pilot BML analysis:
+**Reproduce:** Run the AP pilot BML analysis:
 
 ```
 /validate
@@ -303,7 +303,7 @@ Our AP automation MVP ran for 6 weeks with 3 pilot customers.
 Results:
 - 2 of 3 pilots at $500/month; 1 pilot at $350/month
 - AI matching accuracy: 91% overall; 87% on handwritten invoices
-  (handwritten invoices were ~30% of volume — higher than expected)
+  (handwritten invoices were ~30% of volume, higher than expected)
 - Invoice adoption by Week 4: Pilot 1: 89%; Pilot 2: 71%; Pilot 3: 45%
   (Pilot 3 had 3 new finance staff during the pilot period)
 - All 3 CFOs: "I would be comfortable showing this to my auditor"
@@ -321,9 +321,9 @@ INCONCLUSIVE), unexpected learnings with implications, and
 pivot-or-persevere recommendation.
 ```
 
-**What you are learning:** Notice that the BML analysis does not declare the pilot a success or failure overall — it assesses each assumption independently. Pilot 3's 45% adoption and the handwritten invoice finding are both important signals, but they point to different actions. The analysis separates them so you can act on each specifically.
+**What you are learning:** Notice that the BML analysis does not declare the pilot a success or failure overall ; it assesses each assumption independently. Pilot 3's 45% adoption and the handwritten invoice finding are both important signals, but they point to different actions. The analysis separates them so you can act on each specifically.
 
-**Adapt** — Analyse a different pilot outcome:
+**Adapt:** Analyse a different pilot outcome:
 
 ```
 /validate
@@ -343,15 +343,15 @@ Assumptions tested:
 Produce: BML analysis with assumption status, pivot-or-persevere, V1 priorities.
 ```
 
-**What you are learning:** A marketplace pilot produces different assumption status patterns than a SaaS pilot — both the supply side (designers) and demand side (buyers) must validate. Notice that 6 paying buyers from 25 sign-ups (24% conversion) raises new questions: is the sign-up to payment conversion too low, or is 24% strong for a new marketplace?
+**What you are learning:** A marketplace pilot produces different assumption status patterns than a SaaS pilot, both the supply side (designers) and demand side (buyers) must validate. Notice that 6 paying buyers from 25 sign-ups (24% conversion) raises new questions: is the sign-up to payment conversion too low, or is 24% strong for a new marketplace?
 
-**Apply** — Analyse your own pilot results:
+**Apply:** Analyse your own pilot results:
 
 ```
 /validate
 I ran a pilot with these results:
 [Describe your pilot setup]
-[Paste your metrics — adoption, payment, usage, feedback]
+[Paste your metrics, adoption, payment, usage, feedback]
 [Note any unexpected findings]
 
 My critical assumptions were:

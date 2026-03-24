@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/operations-management/operational-metrics-designing-what-to-measure
 sidebar_position: 11
-title: "Operational Metrics — Designing What to Measure"
+title: "Operational Metrics: Designing What to Measure"
 description: "Design a 5-10 metric operational KPI framework using /metrics, define leading and lagging indicators with thresholds that trigger action, and generate a monthly operations report using /status-report"
 keywords:
   [
@@ -56,7 +56,7 @@ learning_objectives:
   - objective: "Classify candidate metrics as leading or lagging and ensure at least one leading indicator per major risk area"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student reviews their framework and can identify which metrics are leading, which are lagging, and which risk areas have only lagging indicators — then adds a leading indicator for each gap"
+    assessment_method: "Student reviews their framework and can identify which metrics are leading, which are lagging, and which risk areas have only lagging indicators; then adds a leading indicator for each gap"
 
   - objective: "Use /metrics and /status-report together: framework design followed by monthly report generation"
     proficiency_level: "B1"
@@ -66,42 +66,42 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Leading vs lagging indicators — the temporal distinction that separates preventive from reactive measurement"
-    - "Metric definition structure — the eight-field definition that makes a metric unambiguous and actionable"
-    - "Red threshold design — what makes a threshold an alarm rather than a thermometer"
-    - "Metrics-to-report workflow — how /metrics and /status-report complement each other"
+    - "Leading vs lagging indicators: the temporal distinction that separates preventive from reactive measurement"
+    - "Metric definition structure: the eight-field definition that makes a metric unambiguous and actionable"
+    - "Red threshold design: what makes a threshold an alarm rather than a thermometer"
+    - "Metrics-to-report workflow: how /metrics and /status-report complement each other"
   assessment: "4 concepts at B1/B2 level is appropriate. The leading/lagging distinction is intuitive once named but requires practice in classification. The metric definition structure is detailed but each field is self-explanatory. The /metrics and /status-report workflow is the practical skill that consolidates everything."
 
 differentiation:
-  extension_for_advanced: "After completing the exercise, challenge yourself to reduce your 5-10 metric framework to exactly 5 metrics — the 5 that would give a COO the clearest picture of operational health with the fewest numbers. Then write a one-paragraph explanation of why you selected those 5 and what each one reveals that the others do not. This is the harder skill: not adding metrics but eliminating the redundant ones."
-  remedial_for_struggling: "Focus on two things: (1) the leading/lagging distinction — ask 'does this metric tell me what happened, or what is about to happen?' Lagging = what happened; leading = early warning. (2) the red threshold — for every metric, ask 'at what level does someone need to take action?' If you cannot answer that, the metric is not yet designed; it is only described."
+  extension_for_advanced: "After completing the exercise, challenge yourself to reduce your 5-10 metric framework to exactly 5 metrics: the 5 that would give a COO the clearest picture of operational health with the fewest numbers. Then write a one-paragraph explanation of why you selected those 5 and what each one reveals that the others do not. This is the harder skill: not adding metrics but eliminating the redundant ones."
+  remedial_for_struggling: "Focus on two things: (1) the leading/lagging distinction, ask 'does this metric tell me what happened, or what is about to happen?' Lagging = what happened; leading = early warning. (2) the red threshold, for every metric, ask 'at what level does someone need to take action?' If you cannot answer that, the metric is not yet designed; it is only described."
 
 teaching_guide:
   key_points:
-    - "The most common operations reporting failure is 30 metrics that tell leadership nothing — the solution is 5-10 metrics that tell the operational story, each with a named owner and a red threshold that triggers action"
-    - "A metric without a defined red threshold is a thermometer, not an alarm — it shows you the temperature but does not tell you when to act"
-    - "Every major risk area needs at least one leading indicator — if all your metrics are lagging, you can only measure what went wrong, not prevent what is about to go wrong"
+    - "The most common operations reporting failure is 30 metrics that tell leadership nothing: the solution is 5-10 metrics that tell the operational story, each with a named owner and a red threshold that triggers action"
+    - "A metric without a defined red threshold is a thermometer, not an alarm ; it shows you the temperature but does not tell you when to act"
+    - "Every major risk area needs at least one leading indicator; if all your metrics are lagging, you can only measure what went wrong, not prevent what is about to go wrong"
     - "/metrics designs the framework (what to measure, how to calculate it, what thresholds mean); /status-report fills it in (what the numbers actually are this month)"
     - "The metrics in this lesson aggregate all previous lessons: vendor SLA compliance (L03), SOP currency (L05), change failure rate (L06), compliance obligation currency (L07), risk register review completion (L09), incident MTTR (L10)"
   misconceptions:
     - "More metrics means more information. Correction: more metrics means more cognitive load and less clarity. A 30-metric dashboard requires the reader to do the analytical work the dashboard should be doing for them. Fewer, better metrics produce better decisions."
     - "Leading indicators predict the future. Correction: leading indicators indicate what is about to happen based on current trends, not what will definitely happen. They are early warnings that reduce surprise, not forecasts."
-    - "Thresholds should be set aspirationally (green = perfect performance). Correction: thresholds should be set operationally — green = the range within which no escalation is needed; amber = the range that requires attention but not crisis response; red = the level that requires immediate escalation to a specific person within a specific timeframe."
+    - "Thresholds should be set aspirationally (green = perfect performance). Correction: thresholds should be set operationally, green = the range within which no escalation is needed; amber = the range that requires attention but not crisis response; red = the level that requires immediate escalation to a specific person within a specific timeframe."
   discussion_prompts:
     - "Look at the six domains in the Standard Operations Metrics Library (Vendor, Process, Change, Compliance, Risk, Incident). Which of these has the highest proportion of lagging indicators? What does that tell you about the maturity of operations monitoring in that domain?"
     - "If you had to give a COO a single number that summarised operational health this month, what would it be and why? What would that one number miss?"
   teaching_tips:
-    - "The complementary relationship between /metrics and /status-report is the key teaching insight of this lesson. /metrics is a design tool — you use it once (or when the framework needs updating) to decide what to measure and how. /status-report is a reporting tool — you use it monthly to fill in the actuals. Students often confuse these; clarifying the design-vs-reporting distinction clarifies when to use each command."
-    - "The cross-reference to all previous lessons (L03-L10) is worth making explicit. Every metric in the framework should be traceable to a lesson: vendor SLA compliance = L03, SOP currency = L05, etc. This reinforces that metrics are not invented — they measure the operational data built throughout the chapter."
+    - "The complementary relationship between /metrics and /status-report is the key teaching insight of this lesson. /metrics is a design tool; you use it once (or when the framework needs updating) to decide what to measure and how. /status-report is a reporting tool; you use it monthly to fill in the actuals. Students often confuse these; clarifying the design-vs-reporting distinction clarifies when to use each command."
+    - "The cross-reference to all previous lessons (L03-L10) is worth making explicit. Every metric in the framework should be traceable to a lesson: vendor SLA compliance = L03, SOP currency = L05, etc. This reinforces that metrics are not invented; they measure the operational data built throughout the chapter."
 ---
 
-# Operational Metrics — Designing What to Measure
+# Operational Metrics: Designing What to Measure
 
-Your monthly operations report is 30 metrics. Your COO opens it, scans the first three rows, and asks you to summarise it in a paragraph. You spend the next 20 minutes doing analysis that the report should have done for her. She leaves the meeting not confident about operational health — only informed that there are 30 things being measured.
+Your monthly operations report is 30 metrics. Your COO opens it, scans the first three rows, and asks you to summarise it in a paragraph. You spend the next 20 minutes doing analysis that the report should have done for her. She leaves the meeting not confident about operational health, only informed that there are 30 things being measured.
 
-This is not an unusual problem. Operations functions accumulate metrics the same way they accumulate vendors: gradually, without a portfolio view, until the total is more than anyone can manage. Each metric was added for a reason — the compliance team asked for an obligation-tracking number; the IT director wanted incident statistics; HR requested headcount capacity data. Individually, each request was reasonable. Collectively, they produced a dashboard that requires its readers to do the analytical work the dashboard should be doing for them.
+This is not an unusual problem. Operations functions accumulate metrics the same way they accumulate vendors: gradually, without a portfolio view, until the total is more than anyone can manage. Each metric was added for a reason: the compliance team asked for an obligation-tracking number; the IT director wanted incident statistics; HR requested headcount capacity data. Individually, each request was reasonable. Collectively, they produced a dashboard that requires its readers to do the analytical work the dashboard should be doing for them.
 
-The alternative is not fewer metrics — it is better-designed metrics. Five to ten well-chosen measurements that tell the operational story clearly are worth more than thirty that a COO has to interpret. The difference is not in the number of metrics collected; it is in how they were designed. Were they chosen because they are easy to collect, or because they answer the question "what do we need to know to run this organisation well?" Do they have owners? Do they have red thresholds that trigger specific actions? Do they include at least one leading indicator per major risk area — a warning that something is about to go wrong, not just a confirmation of what already did?
+The alternative is not fewer metrics; it is better-designed metrics. Five to ten well-chosen measurements that tell the operational story clearly are worth more than thirty that a COO has to interpret. The difference is not in the number of metrics collected; it is in how they were designed. Were they chosen because they are easy to collect, or because they answer the question "what do we need to know to run this organisation well?" Do they have owners? Do they have red thresholds that trigger specific actions? Do they include at least one leading indicator per major risk area: a warning that something is about to go wrong, not just a confirmation of what already did?
 
 This lesson teaches you to design a metrics framework that gives leadership genuine operational intelligence, not just operational statistics.
 
@@ -118,7 +118,7 @@ Every metrics framework should be evaluated against five principles. These princ
 
 ### Principle 1: Measure What Matters, Not What Is Easy
 
-The easiest metrics to collect are often the least useful. "Number of SOPs written" is easy — count the files in the folder. "Process error rate" is harder — it requires defining what an error is and tracking occurrences. But process error rate answers a question that matters: are our processes producing correct outputs? Number of SOPs written answers a question that is adjacent to what matters: are we documenting processes? A full folder of SOPs tells you nothing about whether they work.
+The easiest metrics to collect are often the least useful. "Number of SOPs written" is easy, count the files in the folder. "Process error rate" is harder ; it requires defining what an error is and tracking occurrences. But process error rate answers a question that matters: are our processes producing correct outputs? Number of SOPs written answers a question that is adjacent to what matters: are we documenting processes? A full folder of SOPs tells you nothing about whether they work.
 
 Start from the question: "What do we need to know to run operations well?" Then determine how to measure it. Not the other way round.
 
@@ -126,16 +126,16 @@ Start from the question: "What do we need to know to run operations well?" Then 
 
 | Type        | What It Tells You                                    | When You Find Out       | Example                                                |
 | ----------- | ---------------------------------------------------- | ----------------------- | ------------------------------------------------------ |
-| **Lagging** | What happened — performance in the period just ended | After the fact          | Incident MTTR last month: 4.2 hours                    |
-| **Leading** | What is about to happen — early warning signals      | While you can still act | Open SLA warnings this week: 3 vendor breaches flagged |
+| **Lagging** | What happened, performance in the period just ended | After the fact          | Incident MTTR last month: 4.2 hours                    |
+| **Leading** | What is about to happen, early warning signals      | While you can still act | Open SLA warnings this week: 3 vendor breaches flagged |
 
-Lagging metrics are essential for accountability — they tell you whether you met your targets. Leading metrics are essential for prevention — they tell you whether you are heading towards a problem while there is still time to change course. Every major risk area should have at least one leading indicator. An operations dashboard with only lagging metrics can only measure what went wrong; it cannot help you prevent what is about to go wrong.
+Lagging metrics are essential for accountability; they tell you whether you met your targets. Leading metrics are essential for prevention; they tell you whether you are heading towards a problem while there is still time to change course. Every major risk area should have at least one leading indicator. An operations dashboard with only lagging metrics can only measure what went wrong; it cannot help you prevent what is about to go wrong.
 
 ### Principle 3: Every Metric Has an Owner
 
 A metric without a named owner is decoration. Nobody is responsible for improving it, nobody is accountable for understanding what it means, and when it turns red, nobody has to explain why. Every metric in your framework must have a named owner who is accountable for both producing the measurement and for the performance it reflects.
 
-"The operations team" is not an owner. Head of Operations — [Name] — is an owner.
+"The operations team" is not an owner. Head of Operations, [Name]: is an owner.
 
 ### Principle 4: Red Thresholds Trigger Actions
 
@@ -149,17 +149,17 @@ RED: Vendor SLA compliance falls below 80%
 → Escalate to COO within 24 hours; initiate vendor performance review
 ```
 
-The red threshold does not just define the alarm level — it defines who picks up the phone when the alarm fires.
+The red threshold does not just define the alarm level ; it defines who picks up the phone when the alarm fires.
 
 ### Principle 5: Fewer, Better
 
 An operations dashboard is a decision-support tool, not a data repository. Its job is to tell a story clearly enough that a COO can act on it in under five minutes. That means selecting 5-10 metrics that together tell the complete operational story, not 30 that require a reading guide.
 
-When you have more than 10 candidate metrics, do not add them all. Apply a priority filter: which metrics answer a question that cannot be answered by any other metric in the framework? Which risks would you be blind to if a specific metric were removed? Keep those. Archive the rest — they can become inputs to deeper analysis when needed, but they should not crowd the primary dashboard.
+When you have more than 10 candidate metrics, do not add them all. Apply a priority filter: which metrics answer a question that cannot be answered by any other metric in the framework? Which risks would you be blind to if a specific metric were removed? Keep those. Archive the rest; they can become inputs to deeper analysis when needed, but they should not crowd the primary dashboard.
 
 ## The Metric Definition Structure
 
-Every metric in your framework requires eight fields. Skipping any field produces an ambiguous metric — one that different people will calculate differently, interpret differently, or fail to act on when it turns red.
+Every metric in your framework requires eight fields. Skipping any field produces an ambiguous metric: one that different people will calculate differently, interpret differently, or fail to act on when it turns red.
 
 ```
 METRIC: Vendor SLA Compliance Rate
@@ -178,10 +178,10 @@ Data source:       Vendor SLA tracking log; incident tickets for
 Measurement freq:  Monthly
 
 Thresholds:
-  🟢 GREEN:   ≥92% — target performance range
-  🟡 AMBER:   85–91% — review with Operations Manager; identify
+  🟢 GREEN:   ≥92%, target performance range
+  🟡 AMBER:   85–91%, review with Operations Manager; identify
               breach patterns; notify affected vendor leads
-  🔴 RED:     <85% — escalate to COO within 24 hours; initiate
+  🔴 RED:     <85%; escalate to COO within 24 hours; initiate
               formal performance review; assess renewal strategy impact
 
 Trend direction:   Higher is better
@@ -196,11 +196,11 @@ Each field has a specific job:
 | **Data source**     | Enables the person collecting it to know where to look                           |
 | **Owner**           | Establishes who is responsible for measurement and performance                   |
 | **Red threshold**   | Converts the metric from reporting to action; specifies who acts and when        |
-| **Trend direction** | Tells the reader whether an increase is good or bad — not always obvious         |
+| **Trend direction** | Tells the reader whether an increase is good or bad, not always obvious         |
 
 ## The Standard Operations Metrics Library
 
-Your framework should draw from the operational domains covered in this chapter. For each domain, the library includes both leading and lagging indicators. Select one to two metrics per domain most relevant to your organisation — do not include all of them.
+Your framework should draw from the operational domains covered in this chapter. For each domain, the library includes both leading and lagging indicators. Select one to two metrics per domain most relevant to your organisation, do not include all of them.
 
 ### Vendor Management (from L03)
 
@@ -227,7 +227,7 @@ Your framework should draw from the operational domains covered in this chapter.
 | Change failure rate               | Lagging         | % of changes that caused incidents or required rollback                |
 | Changes without impact assessment | Leading         | Count of MAJOR+ changes approved without a completed impact assessment |
 | Post-implementation review rate   | Lagging         | % of PIRs completed on schedule                                        |
-| Emergency change rate             | Leading/Lagging | Emergency changes as % of total — high rate signals process breakdown  |
+| Emergency change rate             | Leading/Lagging | Emergency changes as % of total, high rate signals process breakdown  |
 
 ### Compliance (from L07)
 
@@ -252,7 +252,7 @@ Your framework should draw from the operational domains covered in this chapter.
 | Metric                       | Type    | What It Measures                                            |
 | ---------------------------- | ------- | ----------------------------------------------------------- |
 | MTTR by severity             | Lagging | Mean time to resolve, split by P1/P2/P3                     |
-| MTTD                         | Lagging | Mean time to detect — gap between incident start and alert  |
+| MTTD                         | Lagging | Mean time to detect, gap between incident start and alert  |
 | Corrective action completion | Lagging | % of post-mortem CAs closed on time                         |
 | Repeat incident rate         | Lagging | % of incidents with the same root cause as a prior incident |
 
@@ -280,7 +280,7 @@ health picture. For each metric:
 1. Full definition using the metric definition structure
 2. Classification as leading or lagging
 3. Whether this metric addresses one of our three primary risks
-4. Owner role (not the team — a specific named role)
+4. Owner role (not the team: a specific named role)
 5. Thresholds with escalation paths for amber and red
 
 Ensure at least 2 of the 8 metrics are leading indicators.
@@ -290,17 +290,17 @@ Ensure at least 2 of the 8 metrics are leading indicators.
 
 | Output Element                | What to Verify                                                                 |
 | ----------------------------- | ------------------------------------------------------------------------------ |
-| **Metric count**              | 6-8 metrics — not 5, not 12                                                    |
+| **Metric count**              | 6-8 metrics, not 5, not 12                                                    |
 | **Formula precision**         | Each formula is precise enough that two people would calculate the same number |
 | **Leading indicator count**   | At least 2 (ideally one per primary risk area)                                 |
-| **Red threshold specificity** | Each red threshold names who is escalated to and by when — not just a number   |
+| **Red threshold specificity** | Each red threshold names who is escalated to and by when , not just a number   |
 | **Owner specificity**         | Named roles (Head of Operations, CFO), not teams or departments                |
 
 **What to evaluate:**
 
 - Does every metric have a formula that leaves no room for interpretation?
-- Are there at least two leading indicators? Are the three primary risk areas all covered — including at least one leading indicator per risk area?
-- Does each red threshold specify an escalation path (who, by when) — or does it just define the alarm level?
+- Are there at least two leading indicators? Are the three primary risk areas all covered, including at least one leading indicator per risk area?
+- Does each red threshold specify an escalation path (who, by when) , or does it just define the alarm level?
 - Is every metric owned by a specific role, not "the team"?
 - If you removed any single metric from the framework, would you be blind to a material risk? (If no, the metric is redundant.)
 
@@ -322,10 +322,10 @@ Actuals for this month:
 - Vendor SLA compliance rate: 87% (amber threshold is 85-91%)
 - Renewal pipeline value: £312,000 in contracts renewing next 90 days
 - Change failure rate: 12% (2 of 17 changes caused incidents)
-- Obligation currency rate: 94% — 2 obligations flagged as outdated
-- Risk register review completion: 78% — 4 risks overdue for review
+- Obligation currency rate: 94%, 2 obligations flagged as outdated
+- Risk register review completion: 78%, 4 risks overdue for review
 - Incident MTTR (P1): 3.8 hours average; (P2): 1.4 hours
-- Corrective action completion rate: 68% — 5 of 16 CAs past due date
+- Corrective action completion rate: 68%, 5 of 16 CAs past due date
 
 Format as a one-page monthly report suitable for the COO.
 Include: headline RAG status, metrics table with trend vs. last month,
@@ -347,7 +347,7 @@ Renewal pipeline value          | 🟡     | £312K/90d  | £180K/90d  | ↑ wat
 Change failure rate             | 🟡     | 12%        | 8%         | ↑ worse
 Obligation currency rate        | 🟢     | 94%        | 96%        | ↓ (stable)
 Risk register review completion | 🟡     | 78%        | 85%        | ↓
-Incident MTTR — P1              | 🟢     | 3.8 hrs    | 4.2 hrs    | ↑ improving
+Incident MTTR, P1              | 🟢     | 3.8 hrs    | 4.2 hrs    | ↑ improving
 CA completion rate              | 🔴     | 68%        | 79%        | ↓
 
 KEY ISSUES (🔴):
@@ -380,7 +380,7 @@ The report tells the COO exactly what needs attention, who is responsible, and w
 **Plugin commands:** `/metrics` (custom) + `/status-report` (official)
 **Goal:** Design a 5-10 metric framework covering all major risk areas, then generate a sample monthly report using the framework
 
-### Step 1 — Identify Your Risk Areas
+### Step 1: Identify Your Risk Areas
 
 Before designing metrics, identify the five or six risk areas that matter most for your operational context. Use the domains from this lesson as a starting point:
 
@@ -393,7 +393,7 @@ Before designing metrics, identify the five or six risk areas that matter most f
 | Risk               | L09           | Register reviews overdue; risks above appetite    |
 | Incident           | L10           | MTTR increasing; repeat incidents                 |
 
-### Step 2 — Design the Framework
+### Step 2: Design the Framework
 
 ```
 /metrics
@@ -406,7 +406,7 @@ For each metric, produce a full definition:
 - What it measures (one sentence)
 - Why it matters (what decision it informs)
 - Type: LEADING or LAGGING
-- Formula (precise — same answer for any two people)
+- Formula (precise, same answer for any two people)
 - Data source
 - Measurement frequency (monthly unless specified)
 - Owner (named role, not team)
@@ -420,19 +420,19 @@ lead over lag, named owners, action-triggering red thresholds,
 and 6-8 metrics maximum.
 ```
 
-### Step 3 — Evaluate the Framework
+### Step 3: Evaluate the Framework
 
 **What to evaluate:**
 
 - Does every metric have a formula that is unambiguous? Could two people calculate the same number from the same data?
 - Is there at least one leading indicator for each risk area? Which areas have only lagging metrics?
-- Does each red threshold specify the escalation path (person + timeframe) — not just a number?
+- Does each red threshold specify the escalation path (person + timeframe) , not just a number?
 - Is every metric owned by a named role?
 - If you removed any single metric, would you be blind to a material risk area?
 
 For any metric that fails these checks, ask `/metrics` to strengthen the specific definition.
 
-### Step 4 — Generate the Monthly Report
+### Step 4: Generate the Monthly Report
 
 Using the framework you designed, generate a sample monthly report. Use realistic (but fictional) actuals:
 
@@ -443,20 +443,20 @@ Generate a one-page monthly operations report for [current month].
 Framework: [paste your metric definitions from Step 2]
 
 Sample actuals (use these or create your own realistic values):
-- Vendor SLA compliance: [your value — choose one that is amber]
+- Vendor SLA compliance: [your value, choose one that is amber]
 - [Leading indicator from vendor]: [your value]
-- Change failure rate: [your value — make at least one red]
+- Change failure rate: [your value, make at least one red]
 - [Your compliance metric]: [your value]
 - Risk register review completion: [your value]
-- Incident MTTR: [your value — show improvement from prior month]
-- CA completion rate: [your value — make at least one concern]
+- Incident MTTR: [your value, show improvement from prior month]
+- CA completion rate: [your value, make at least one concern]
 
 Format: headline status, metrics table with trend vs. last month,
 key issues for red items (owner + action), watch items for amber,
 and three next-month priorities.
 ```
 
-### Step 5 — Stress Test the Report
+### Step 5: Stress Test the Report
 
 Review the `/status-report` output as if you were the COO:
 
@@ -465,9 +465,9 @@ Review the `/status-report` output as if you were the COO:
 3. Is there an amber metric that could become red in the next month without intervention?
 4. Are there any metrics in your framework that you could not fill in because you do not know where the data comes from? If so, the data source field needs to be revisited.
 
-**Deliverable:** A complete metrics framework (6-8 metrics, fully defined) and a sample monthly operations report with at least one red item and two amber items. Save this framework — the operations intelligence brief in Lesson 13 draws directly from these metrics plus the agent outputs from Lesson 12.
+**Deliverable:** A complete metrics framework (6-8 metrics, fully defined) and a sample monthly operations report with at least one red item and two amber items. Save this framework: the operations intelligence brief in Lesson 13 draws directly from these metrics plus the agent outputs from Lesson 12.
 
-:::note Connection to Lesson 13 — Intelligence Brief
+:::note Connection to Lesson 13, Intelligence Brief
 The metrics framework you design here becomes the backbone of the operations intelligence brief in Lesson 13. The brief synthesises the metric status from this framework with the agent outputs from Lesson 12 (vendor-watchdog, process-health, compliance-monitor, change-tracker) into a single monthly intelligence package for the COO. Keep this framework in your Cowork session.
 :::
 
@@ -480,7 +480,7 @@ The metrics framework you design here becomes the backbone of the operations int
 Design a 5-metric operations framework for a 30-person technology
 startup. Our two biggest risks are: (1) we are completely dependent
 on AWS for all infrastructure, and (2) we have no documentation
-for any of our critical processes — everything lives in people's heads.
+for any of our critical processes; everything lives in people's heads.
 
 For each metric:
 - Name and one-sentence description
@@ -493,7 +493,7 @@ Ensure at least one metric specifically measures the key-person
 dependency risk.
 ```
 
-**What you are learning:** Designing a small framework first builds the pattern recognition you need before tackling a larger one. A startup's two primary risks (infrastructure dependency, zero documentation) map directly to specific metrics — the skill is translating a risk statement into a measurement definition.
+**What you are learning:** Designing a small framework first builds the pattern recognition you need before tackling a larger one. A startup's two primary risks (infrastructure dependency, zero documentation) map directly to specific metrics: the skill is translating a risk statement into a measurement definition.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -505,22 +505,22 @@ it against the five design principles:
 6-8 metric framework for your industry]
 
 For each principle, score the framework:
-1. Measure what matters (not what is easy) — does each metric
+1. Measure what matters (not what is easy), does each metric
    answer a question that matters for operations?
-2. Leading over lagging — is there at least one leading indicator
+2. Leading over lagging: is there at least one leading indicator
    per risk area?
-3. Every metric has an owner — are all owners named roles,
+3. Every metric has an owner: are all owners named roles,
    not teams?
-4. Red thresholds trigger actions — does each red threshold
+4. Red thresholds trigger actions, does each red threshold
    specify who acts and by when?
-5. Fewer, better — could any metric be removed without creating
+5. Fewer, better, could any metric be removed without creating
    a blind spot?
 
 Recommend one addition (if any risk area has no coverage) and
 one removal (the most redundant metric in the current set).
 ```
 
-**What you are learning:** Evaluating an existing framework against the five principles is harder than designing from scratch because it requires critique of choices that were already made. The discipline of recommending a removal — not just an addition — tests whether the "fewer, better" principle is genuinely applied.
+**What you are learning:** Evaluating an existing framework against the five principles is harder than designing from scratch because it requires critique of choices that were already made. The discipline of recommending a removal , not just an addition, tests whether the "fewer, better" principle is genuinely applied.
 
 **Apply**: Extend to a new situation the lesson didn't cover directly.
 
@@ -541,14 +541,14 @@ the metrics design principles. Your analysis should answer:
 2. Who would own them in an operations context?
 3. Do they belong on the primary operations dashboard, or would
    they be better served by a separate HR/Finance dashboard?
-4. If you add all five, the dashboard grows from 8 to 13 metrics —
+4. If you add all five, the dashboard grows from 8 to 13 metrics,
    does this violate the "fewer, better" principle?
 
 Recommend whether to accept, reject, or modify each request,
 with a one-paragraph rationale for each recommendation.
 ```
 
-**What you are learning:** Metrics governance — deciding what goes on the primary dashboard — is a boundary-setting skill. The operations dashboard is not the only dashboard; HR and Finance have their own. The question is whether a metric belongs on the operations COO view or on a functional view. Defending "fewer, better" against reasonable requests is the practical test of the principle.
+**What you are learning:** Metrics governance, deciding what goes on the primary dashboard: is a boundary-setting skill. The operations dashboard is not the only dashboard; HR and Finance have their own. The question is whether a metric belongs on the operations COO view or on a functional view. Defending "fewer, better" against reasonable requests is the practical test of the principle.
 :::
 
 ## Flashcards Study Aid

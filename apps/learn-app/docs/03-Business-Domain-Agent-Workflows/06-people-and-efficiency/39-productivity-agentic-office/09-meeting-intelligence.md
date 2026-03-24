@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/productivity-agentic-office/meeting-intelligence
 sidebar_position: 9
 title: "Meeting Intelligence"
-description: "Transform how you prepare, participate in, and follow up from meetings — learn the three-phase model (before/during/after), D/A/F/Q/R note-taking, and how to produce structured meeting synthesis with numbered decisions, owned actions, and work.local.md updates using /agentic-office:meeting-intelligence"
+description: "Transform how you prepare, participate in, and follow up from meetings: learn the three-phase model (before/during/after), D/A/F/Q/R note-taking, and how to produce structured meeting synthesis with numbered decisions, owned actions, and work.local.md updates using /agentic-office:meeting-intelligence"
 keywords:
   [
     "meeting intelligence",
@@ -44,7 +44,7 @@ skills:
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can review a meeting synthesis and identify decisions that are too vague, actions without single named owners, actions with non-specific deadlines, and deferred items without triggers — and revise each to meet the synthesis quality standard"
+    measurable_at_this_level: "Student can review a meeting synthesis and identify decisions that are too vague, actions without single named owners, actions with non-specific deadlines, and deferred items without triggers , and revise each to meet the synthesis quality standard"
 
 learning_objectives:
   - objective: "Describe the three-phase meeting model (before/during/after) and explain what each phase produces and why the pre-meeting preparation phase is the highest-leverage of the three"
@@ -65,27 +65,27 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Three-phase meeting model — before (prep), during (D/A/F/Q/R), after (synthesis)"
-    - "D/A/F/Q/R note-taking codes — Decision, Action, Fact, Question, Risk"
-    - "Synthesis quality standard — specific decisions, single-owner actions, dated deadlines, triggered deferrals"
-    - "Decision numbering convention — D-YYYY-NNN / A-YYYY-NNN for persistent, searchable history"
-    - "work.local.md update proposals — synthesis proposes updates to project status, decision log, action log; never applies without confirmation"
-  assessment: "5 concepts at B1-B2. The three-phase model is the organising framework — all other concepts sit within it. D/A/F/Q/R is a simple code system that becomes natural quickly; the worked example shows how messy real-time notes transform into clean synthesis. The synthesis quality standard is the most discipline-intensive concept because it requires overriding habitual vagueness ('the team will follow up'). Decision numbering is the persistence mechanism that makes meeting intelligence accumulate value over time."
+    - "Three-phase meeting model, before (prep), during (D/A/F/Q/R), after (synthesis)"
+    - "D/A/F/Q/R note-taking codes, Decision, Action, Fact, Question, Risk"
+    - "Synthesis quality standard, specific decisions, single-owner actions, dated deadlines, triggered deferrals"
+    - "Decision numbering convention, D-YYYY-NNN / A-YYYY-NNN for persistent, searchable history"
+    - "work.local.md update proposals, synthesis proposes updates to project status, decision log, action log; never applies without confirmation"
+  assessment: "5 concepts at B1-B2. The three-phase model is the organising framework, all other concepts sit within it. D/A/F/Q/R is a simple code system that becomes natural quickly; the worked example shows how messy real-time notes transform into clean synthesis. The synthesis quality standard is the most discipline-intensive concept because it requires overriding habitual vagueness ('the team will follow up'). Decision numbering is the persistence mechanism that makes meeting intelligence accumulate value over time."
 
 differentiation:
   extension_for_advanced: "Run the three-phase model for a recurring meeting (weekly standup or equivalent) over three consecutive cycles. Compare the synthesis outputs across the three meetings: do decisions from meeting one appear as open actions in meeting two? Do actions close, or do they reappear? What does the pattern tell you about the quality of your action management between meetings? Configure the 'last time this group met' section in work.local.md to surface prior meeting outputs automatically."
-  remedial_for_struggling: "Start with just the after-meeting phase. Take any set of notes from a meeting you attended in the last week — however messy, however brief — and paste them into the synthesis prompt. Focus on pulling out just decisions and actions. Do not worry about the D/A/F/Q/R codes yet. Once the synthesis output feels natural, apply the codes prospectively in your next meeting and see how much cleaner the input becomes."
+  remedial_for_struggling: "Start with just the after-meeting phase. Take any set of notes from a meeting you attended in the last week, however messy, however brief , and paste them into the synthesis prompt. Focus on pulling out just decisions and actions. Do not worry about the D/A/F/Q/R codes yet. Once the synthesis output feels natural, apply the codes prospectively in your next meeting and see how much cleaner the input becomes."
 
 teaching_guide:
   key_points:
-    - "The preparation phase is the highest-leverage of the three phases because it changes what happens in the meeting — not just how it is recorded. A meeting where one person has the stakeholder notes and everyone else does not is a meeting where one person controls the outcome."
-    - "D/A/F/Q/R codes work because they defer organisation. During a meeting, your job is to capture accurately and quickly. The code tells the synthesis what type of item each note is, so you can take messy notes without worrying about structure — the skill organises them after."
-    - "The single-owner rule for actions is the most impactful practice change in this lesson. 'The team will follow up' is not an action — it is a guarantee of nothing happening. One person owns each action. That person may delegate, but they are accountable."
+    - "The preparation phase is the highest-leverage of the three phases because it changes what happens in the meeting , not just how it is recorded. A meeting where one person has the stakeholder notes and everyone else does not is a meeting where one person controls the outcome."
+    - "D/A/F/Q/R codes work because they defer organisation. During a meeting, your job is to capture accurately and quickly. The code tells the synthesis what type of item each note is, so you can take messy notes without worrying about structure: the skill organises them after."
+    - "The single-owner rule for actions is the most impactful practice change in this lesson. 'The team will follow up' is not an action; it is a guarantee of nothing happening. One person owns each action. That person may delegate, but they are accountable."
     - "Decision numbering creates institutional memory. The question 'why did we decide X' is one of the most common sources of organisational friction. D-2026-001 in the work.local.md decision log answers that question permanently."
   misconceptions:
-    - "Meeting notes are administrative overhead — the real work happens in the meeting. Correction: in knowledge-work organisations, the meeting is only valuable if what was decided and agreed is accurately captured and followed through. Studies of meeting effectiveness consistently find that action follow-through rate, not discussion quality, is the strongest predictor of meeting value."
-    - "The D/A/F/Q/R codes require extra effort during the meeting. Correction: the codes require less cognitive effort, not more, because they give you a decision rule during capture: 'Is this a D, A, F, Q, or R?' removes the need to evaluate the note — just code it and keep moving."
-    - "The synthesis should capture everything that was discussed. Correction: the synthesis captures decisions, actions, deferred items, and open questions — not discussion. Discussion is the process; these are the outputs. A synthesis full of discussion summaries is meeting documentation, not meeting intelligence."
+    - "Meeting notes are administrative overhead: the real work happens in the meeting. Correction: in knowledge-work organisations, the meeting is only valuable if what was decided and agreed is accurately captured and followed through. Studies of meeting effectiveness consistently find that action follow-through rate, not discussion quality, is the strongest predictor of meeting value."
+    - "The D/A/F/Q/R codes require extra effort during the meeting. Correction: the codes require less cognitive effort, not more, because they give you a decision rule during capture: 'Is this a D, A, F, Q, or R?' removes the need to evaluate the note, just code it and keep moving."
+    - "The synthesis should capture everything that was discussed. Correction: the synthesis captures decisions, actions, deferred items, and open questions, not discussion. Discussion is the process; these are the outputs. A synthesis full of discussion summaries is meeting documentation, not meeting intelligence."
   discussion_prompts:
     - "Zia receives Omar's ROI brief on Monday and approves the analytics budget. This creates decision D-2026-012. Six months later, the analytics tool chosen has not delivered the ROI. How does D-2026-012 in the decision log change how this conversation happens?"
     - "The meeting synthesis proposes work.local.md updates but never applies them without confirmation. Why is this design choice important? What could go wrong if the synthesis applied updates automatically?"
@@ -96,11 +96,11 @@ teaching_guide:
 
 # Meeting Intelligence
 
-Professionals in knowledge-work organisations spend — by most industry surveys — 35-55% of their working time in meetings. Most of this time is poorly used, for reasons that are structurally predictable: people arrive without the context they need to contribute, discussions happen that should have been resolved asynchronously, decisions are made without the right information, and agreed actions are vaguely captured and rarely followed through.
+Professionals in knowledge-work organisations spend, by most industry surveys, 35-55% of their working time in meetings. Most of this time is poorly used, for reasons that are structurally predictable: people arrive without the context they need to contribute, discussions happen that should have been resolved asynchronously, decisions are made without the right information, and agreed actions are vaguely captured and rarely followed through.
 
 None of these failures are inevitable. Each one is addressable with the three-phase meeting model: preparation before the meeting, structured note-taking during, and synthesis within two hours after. The `/agentic-office:meeting-intelligence` command supports all three phases.
 
-This lesson walks through each phase with the full Panaversity case study — prep for the Monday Executive Weekly, D/A/F/Q/R notes during the meeting, and a structured synthesis from the notes. By the end, you will be able to apply all three phases to any real meeting in your calendar.
+This lesson walks through each phase with the full Panaversity case study, prep for the Monday Executive Weekly, D/A/F/Q/R notes during the meeting, and a structured synthesis from the notes. By the end, you will be able to apply all three phases to any real meeting in your calendar.
 
 ## The Three-Phase Model
 
@@ -112,9 +112,9 @@ The three phases serve different purposes and produce different outputs.
 | DURING | Real-time          | Capture accurately without losing the thread of the meeting     | D/A/F/Q/R coded notes ready for synthesis                                   |
 | AFTER  | Within 2 hours     | Convert raw notes into structured, distributable meeting record | Decisions, actions, deferred items, next meeting proposal, update proposals |
 
-The before phase is the highest-leverage of the three. A well-prepared meeting participant changes what happens in the room — not just how it is recorded afterwards. The prep brief surfaces context that most attendees will not have remembered to gather, flags the stakeholder dynamics that affect how to present each agenda item, and identifies in advance what decisions actually need to be made versus what is discussion.
+The before phase is the highest-leverage of the three. A well-prepared meeting participant changes what happens in the room , not just how it is recorded afterwards. The prep brief surfaces context that most attendees will not have remembered to gather, flags the stakeholder dynamics that affect how to present each agenda item, and identifies in advance what decisions actually need to be made versus what is discussion.
 
-## Phase 1: Before — The Meeting Prep Brief
+## Phase 1: Before: The Meeting Prep Brief
 
 Run the prep brief 30 minutes before any meeting that requires your active participation.
 
@@ -123,36 +123,36 @@ Run the prep brief 30 minutes before any meeting that requires your active parti
 > type: prep
 > Meeting: Monday Executive Weekly in 30 minutes
 > Agenda:
->   1. Project Nighthawk — facility update (Zia presenting)
->   2. Q2 Budgets — Omar presenting analytics spend proposal
->   3. Workshop programme — decision on expanding to Islamabad
+>   1. Project Nighthawk, facility update (Zia presenting)
+>   2. Q2 Budgets, Omar presenting analytics spend proposal
+>   3. Workshop programme, decision on expanding to Islamabad
 > Attendees: Executive Weekly group (from work.local.md meeting_rhythm)
 ```
 
 ### Sample Meeting Prep Brief: Executive Weekly
 
 ```
-MEETING BRIEF — Executive Weekly
+MEETING BRIEF, Executive Weekly
 Date: Monday, 17 March 2026 | Time: 09:00 PKT | Duration: 30 min standing
 Attendees: Zia Khan, Omar Farooq, Ayesha Raza (observer), [Finance lead]
 ════════════════════════════════════════════════════════════
-ITEM 1: PROJECT NIGHTHAWK — FACILITY UPDATE (Zia presenting)
+ITEM 1: PROJECT NIGHTHAWK, FACILITY UPDATE (Zia presenting)
   Context:      Facility agreement negotiations for Karachi expansion.
-                10+ days without update from the facility liaison —
+                10+ days without update from the facility liaison,
                 the longest gap since negotiations began.
   Decision needed: One of three: (a) Escalate to COO-level contact,
                    (b) Extend the Q3 deadline, (c) Identify a backup facility
   Key risk:     Q3 launch is at risk if the facility agreement is not signed
                 by 31 March. Every week of delay compresses the downstream plan.
-  Your position: Present the delay factually. Recommend (a) — formal letter to
+  Your position: Present the delay factually. Recommend (a), formal letter to
                  facility owner by Wednesday. The group needs to decide, not
                  discuss further.
   Stakeholder note: Finance representative will want to understand the cost
                     implication of a Q3 slip. Prepare a one-line quantification
                     before the meeting: what is the revenue delay if Q3 moves to Q4?
 
-ITEM 2: Q2 BUDGETS — ANALYTICS SPEND PROPOSAL (Omar presenting)
-  Context:      Omar is proposing analytics investment — tooling and partial
+ITEM 2: Q2 BUDGETS, ANALYTICS SPEND PROPOSAL (Omar presenting)
+  Context:      Omar is proposing analytics investment, tooling and partial
                 headcount for Ayesha's pipeline. She is currently in onboarding;
                 this budget unlocks her full scope.
   What Omar needs: Approval in principle before detailed ROI brief.
@@ -160,42 +160,42 @@ ITEM 2: Q2 BUDGETS — ANALYTICS SPEND PROPOSAL (Omar presenting)
                    does not like scope creep in the questions.
   Your position: Support in principle. Ask for the ROI brief before final sign-off.
                  The stronger framing for the group: faster investor reporting
-                 enables faster fundraising decisions — frame as revenue enablement,
+                 enables faster fundraising decisions, frame as revenue enablement,
                  not cost reduction.
   Stakeholder note: Omar will have data; do not pre-empt it. Let him present,
                     then ask one clarifying question about ERP compatibility
                     (operations context: ERP migration in progress; confirm
                     analytics tooling is compatible with post-migration architecture).
 
-ITEM 3: WORKSHOP EXPANSION — ISLAMABAD (Decision required)
+ITEM 3: WORKSHOP EXPANSION, ISLAMABAD (Decision required)
   Context:      Current workshop locations: Karachi (Project Nighthawk) and
                 Faisalabad (PIAIC SIG, Zia chairs). Islamabad would be the third.
-  Decision needed: YES / NO / DEFER — with a timeline if deferred.
+  Decision needed: YES / NO / DEFER, with a timeline if deferred.
   Arguments for:  Market demand; PIAIC brand expansion; government relations
                   in the capital; Zia already has the SIG model that works.
-  Arguments against: Capacity — Project Nighthawk is already stretching
+  Arguments against: Capacity, Project Nighthawk is already stretching
                       operations; adding Islamabad simultaneously is a
                       distraction from delivering Karachi well.
   Your position: Recommend deferring until Nighthawk facility is resolved.
                  Islamabad should not be a decision made under operational pressure.
-  Note:         "Disagree and commit" — once the group decides, full execution
+  Note:         "Disagree and commit", once the group decides, full execution
                 expected. Come with a clear position, not a list of considerations.
 
-MEETING RULES (from work.local.md — Executive Weekly):
-  • 30 min standing — no slides
+MEETING RULES (from work.local.md, Executive Weekly):
+  • 30 min standing; no slides
   • Decisions documented in Notion after the meeting
-  • "Disagree and commit" — once decided, full execution expected
-  • Async-first culture — only bring to this meeting what truly needs the group
+  • "Disagree and commit", once decided, full execution expected
+  • Async-first culture, only bring to this meeting what truly needs the group
 
 LAST TIME THIS GROUP MET:
-  Executive Weekly — 10 March 2026
+  Executive Weekly, 10 March 2026
   Key decisions: Analytics budget discussion deferred (no proposal ready);
                  Nighthawk update expected this week
   Open actions: Omar to prepare analytics proposal (due today); Zia to
-                confirm Nighthawk status (overdue — 10 days without update)
+                confirm Nighthawk status (overdue, 10 days without update)
 
 WHAT YOU NEED FROM THIS MEETING:
-  (1) A decision on Nighthawk escalation — not discussion, a decision
+  (1) A decision on Nighthawk escalation, not discussion, a decision
   (2) Analytics budget approved in principle with ROI brief gate
   (3) Islamabad deferred cleanly with a clear trigger for revisit
 ════════════════════════════════════════════════════════════
@@ -213,73 +213,73 @@ Compare arriving at the Executive Weekly with this brief versus without it. With
 
 This is the difference between attending a meeting and leading one.
 
-## Phase 2: During — D/A/F/Q/R Note-Taking
+## Phase 2: During: D/A/F/Q/R Note-Taking
 
 The D/A/F/Q/R system is a note-taking discipline with one purpose: capture everything accurately during the meeting without needing to organise it in real time. Each note gets one code:
 
 | Code | Meaning  | What It Captures                                       | Example                                                  |
 | ---- | -------- | ------------------------------------------------------ | -------------------------------------------------------- |
-| D    | Decision | Something the group has decided — a conclusion reached | D: Nighthawk — escalate, Zia writes formal letter by Wed |
-| A    | Action   | Something someone must do — who, what, by when         | A: Omar — analytics ROI brief — by Mon 24 March          |
+| D    | Decision | Something the group has decided: a conclusion reached | D: Nighthawk, escalate, Zia writes formal letter by Wed |
+| A    | Action   | Something someone must do, who, what, by when         | A: Omar, analytics ROI brief, by Mon 24 March          |
 | F    | Fact     | Context or information to remember                     | F: ERP migration affects finance system in Q2            |
-| Q    | Question | Something raised but not resolved — needs follow-up    | Q: What is the cost of a Q3→Q4 Nighthawk slip?           |
+| Q    | Question | Something raised but not resolved, needs follow-up    | Q: What is the cost of a Q3→Q4 Nighthawk slip?           |
 | R    | Risk     | A concern or risk raised during discussion             | R: Islamabad + Nighthawk simultaneously = capacity risk  |
 
-The coding system works because it is a decision rule: during the meeting, you do not decide how to organise a note — you decide which one of five types it is. This frees attention for the discussion.
+The coding system works because it is a decision rule: during the meeting, you do not decide how to organise a note; you decide which one of five types it is. This frees attention for the discussion.
 
 Here is the during-meeting note template:
 
 ```
-MEETING NOTES — Executive Weekly — 17 March 2026
+MEETING NOTES, Executive Weekly, 17 March 2026
 ─────────────────────────────────────────────────────────
 Use these codes while taking notes:
 D: [Decision made]
-A: [Action — who; what; by when]
+A: [Action, who; what; by when]
 F: [Fact / context to remember]
 Q: [Question raised but not resolved]
 R: [Risk or concern raised]
 ─────────────────────────────────────────────────────────
-D: Nighthawk — no update from liaison; decided escalate to COO level; Zia writes
+D: Nighthawk; no update from liaison; decided escalate to COO level; Zia writes
    formal letter to facility owner by Wednesday
-A: Zia — formal letter to Nighthawk facility owner — by Wed 19 March
-D: Analytics budget — approved in principle; Omar produces ROI brief before final sign-off
-A: Omar — analytics ROI brief — by Mon 24 March before final budget sign-off
-D: Islamabad expansion — DEFERRED; revisit when Nighthawk resolved
-F: ERP migration in Q2 — Omar to confirm analytics tooling compatibility in ROI brief
+A: Zia, formal letter to Nighthawk facility owner, by Wed 19 March
+D: Analytics budget, approved in principle; Omar produces ROI brief before final sign-off
+A: Omar, analytics ROI brief, by Mon 24 March before final budget sign-off
+D: Islamabad expansion, DEFERRED; revisit when Nighthawk resolved
+F: ERP migration in Q2, Omar to confirm analytics tooling compatibility in ROI brief
 Q: What is financial cost of Q3→Q4 Nighthawk slip? (raised by finance rep; not answered)
-R: Capacity — taking on Islamabad while Nighthawk unresolved is a distraction risk
-F: Chapter 28 deadline Thursday — noted in AOB
-A: Zia — Chapter 28 filing — by Thu 20 March
+R: Capacity, taking on Islamabad while Nighthawk unresolved is a distraction risk
+F: Chapter 28 deadline Thursday, noted in AOB
+A: Zia, Chapter 28 filing, by Thu 20 March
 ─────────────────────────────────────────────────────────
 ```
 
-Messy, linear, in the order things happened. That is correct — do not tidy these during the meeting.
+Messy, linear, in the order things happened. That is correct, do not tidy these during the meeting.
 
-## Phase 3: After — Meeting Synthesis
+## Phase 3: After: Meeting Synthesis
 
 Within two hours of the meeting ending, paste the raw notes into the synthesis command:
 
 ```
 /agentic-office:meeting-intelligence
 > type: synthesis
-> Meeting: Executive Weekly — 17 March 2026
+> Meeting: Executive Weekly, 17 March 2026
 > Raw notes: [paste D/A/F/Q/R notes above]
 ```
 
 ### Sample Meeting Synthesis
 
 ```
-MEETING NOTES — Executive Weekly
+MEETING NOTES, Executive Weekly
 Date: 17 March 2026 | Duration: 30 min | Synthesised: 09:45 PKT
 Attendees: Zia Khan, Omar Farooq, Ayesha Raza (observer), Finance lead
 ════════════════════════════════════════════════════════════
 DECISIONS MADE:
-  D-2026-001: Project Nighthawk — escalation approved
+  D-2026-001: Project Nighthawk, escalation approved
               Formal letter to facility owner required; COO-level escalation
               if no response within 5 business days
-  D-2026-002: Analytics budget — approved in principle
+  D-2026-002: Analytics budget, approved in principle
               Final sign-off subject to receipt and review of Omar's ROI brief
-  D-2026-003: Islamabad workshop expansion — DEFERRED
+  D-2026-003: Islamabad workshop expansion, DEFERRED
               No timeline set; trigger for revisit: Project Nighthawk
               facility agreement signed
 
@@ -295,19 +295,19 @@ ACTION ITEMS:
               Due:   Thursday, 20 March 2026
 
 ITEMS DEFERRED:
-  Islamabad workshop expansion — deferred
+  Islamabad workshop expansion, deferred
   Reason: Nighthawk capacity risk; group agreed not to add a third
           workshop location while Karachi facility is unresolved
   Trigger: Project Nighthawk facility agreement signed
 
 QUESTIONS OPEN:
-  Cost of Q3→Q4 Nighthawk slip — raised by Finance representative;
+  Cost of Q3→Q4 Nighthawk slip, raised by Finance representative;
   not answered in the meeting
   Owner: Zia Khan to quantify and circulate
   By:    Before the next Executive Weekly (24 March)
 
 NEXT MEETING:
-  Executive Weekly — Monday, 24 March 2026 | 09:00 PKT
+  Executive Weekly, Monday, 24 March 2026 | 09:00 PKT
   Proposed agenda:
     1. Nighthawk facility response (A-2026-001 outcome)
     2. Analytics ROI brief review (A-2026-002 review + final sign-off)
@@ -319,7 +319,7 @@ WORK.LOCAL.MD UPDATES PROPOSED:
   Analytics budget: status → approved_in_principle; roi_brief_due: 24 March
   Decision log: Add D-2026-001, D-2026-002, D-2026-003
   Action log: Add A-2026-001, A-2026-002, A-2026-003
-  Open question: Cost of Q3→Q4 slip — add to Zia's action log
+  Open question: Cost of Q3→Q4 slip, add to Zia's action log
   → Apply updates? [Confirm to apply / Review each individually]
 ════════════════════════════════════════════════════════════
 ```
@@ -328,11 +328,11 @@ WORK.LOCAL.MD UPDATES PROPOSED:
 
 The synthesis quality standard has three non-negotiable rules:
 
-**Decisions must be specific.** "Approved the analytics budget" is not specific — it omits the conditions that govern what approved means. "Approved in principle, subject to ROI brief" is specific. The test: if you read D-2026-002 in six months without any other context, would you know what was decided and under what conditions?
+**Decisions must be specific.** "Approved the analytics budget" is not specific ; it omits the conditions that govern what approved means. "Approved in principle, subject to ROI brief" is specific. The test: if you read D-2026-002 in six months without any other context, would you know what was decided and under what conditions?
 
-**Actions must have one named owner and a specific date.** "The team will follow up on analytics" is not an action — it guarantees nothing happens. One person owns each action. That person may delegate, but they are accountable. "Next week" is not a date — "Monday, 24 March" is.
+**Actions must have one named owner and a specific date.** "The team will follow up on analytics" is not an action ; it guarantees nothing happens. One person owns each action. That person may delegate, but they are accountable. "Next week" is not a date, "Monday, 24 March" is.
 
-**Deferred items must have a trigger.** "Islamabad — revisit later" means revisit never. "Islamabad — revisit when Project Nighthawk facility agreement signed" has a clear trigger that can be tracked in `work.local.md`.
+**Deferred items must have a trigger.** "Islamabad, revisit later" means revisit never. "Islamabad, revisit when Project Nighthawk facility agreement signed" has a clear trigger that can be tracked in `work.local.md`.
 
 Here is the contrast for each failure mode:
 
@@ -340,8 +340,8 @@ Here is the contrast for each failure mode:
 | ------------------------ | ----------------------------------- | ------------------------------------------------------------------------ |
 | Vague decision           | "Discussed the analytics budget"    | "Analytics budget approved in principle, subject to ROI brief by 24 Mar" |
 | Shared action owner      | "The team will look into Islamabad" | "Zia Khan to quantify Nighthawk Q3→Q4 cost by Monday 24 March"           |
-| Non-specific deadline    | "Omar to produce the brief ASAP"    | "Omar Farooq — ROI brief — Monday 24 March 2026"                         |
-| Deferred without trigger | "Islamabad — will revisit"          | "Islamabad — deferred; trigger: Nighthawk facility resolved"             |
+| Non-specific deadline    | "Omar to produce the brief ASAP"    | "Omar Farooq, ROI brief. Monday 24 March 2026"                         |
+| Deferred without trigger | "Islamabad, will revisit"          | "Islamabad, deferred; trigger: Nighthawk facility resolved"             |
 
 ## Decision Numbering Convention
 
@@ -356,13 +356,13 @@ The `/agentic-office:workplace-search` command (Lesson 11) can search the decisi
 > When did we last decide anything about the Islamabad expansion?
 ```
 
-This returns D-2026-003 and the context from the meeting. Without the decision log, this question requires finding the meeting notes from the right meeting — assuming anyone kept them.
+This returns D-2026-003 and the context from the meeting. Without the decision log, this question requires finding the meeting notes from the right meeting, assuming anyone kept them.
 
 ## work.local.md Update Proposals
 
-After generating a synthesis, the skill proposes updates to `work.local.md` — project status changes, new decisions to the decision log, new actions to the action log. It always proposes; it never applies without your confirmation.
+After generating a synthesis, the skill proposes updates to `work.local.md`, project status changes, new decisions to the decision log, new actions to the action log. It always proposes; it never applies without your confirmation.
 
-This design matters. The skill does not have enough context to know whether a decision log entry is complete, whether a project status change is accurate, or whether an action is already captured elsewhere. The confirmation step is not a limitation — it is the point where your judgment integrates with the synthesis output.
+This design matters. The skill does not have enough context to know whether a decision log entry is complete, whether a project status change is accurate, or whether an action is already captured elsewhere. The confirmation step is not a limitation; it is the point where your judgment integrates with the synthesis output.
 
 ## Exercise: The Two-Meeting Sprint
 
@@ -371,7 +371,7 @@ This design matters. The skill does not have enough context to know whether a de
 **Plugin command:** `/agentic-office:meeting-intelligence`
 **Goal:** Run all three phases for a real upcoming meeting
 
-### Part A — Before (15 minutes, 30 min before your next meeting)
+### Part A: Before (15 minutes, 30 min before your next meeting)
 
 Choose a real meeting from your calendar this week. Generate the prep brief:
 
@@ -379,17 +379,17 @@ Choose a real meeting from your calendar this week. Generate the prep brief:
 /agentic-office:meeting-intelligence
 > type: prep
 > Meeting: [Your meeting name and time]
-> Agenda: [Agenda items — as specific as you have them]
+> Agenda: [Agenda items, as specific as you have them]
 > Attendees: [Who is attending]
 ```
 
 Review the output. Note: which context did the skill surface that you had not thought to prepare? Which stakeholder notes are accurate? What is missing (and should be added to `work.local.md`)?
 
-### Part B — During (in-meeting)
+### Part B: During (in-meeting)
 
-Use the D/A/F/Q/R template. At the top of your notes page, write the five codes. During the meeting, prefix each note with the appropriate code. Do not tidy — just code and capture.
+Use the D/A/F/Q/R template. At the top of your notes page, write the five codes. During the meeting, prefix each note with the appropriate code. Do not tidy, just code and capture.
 
-### Part C — After (15 minutes, within 2 hours of the meeting)
+### Part C: After (15 minutes, within 2 hours of the meeting)
 
 Paste your D/A/F/Q/R notes into the synthesis:
 
@@ -407,7 +407,7 @@ Review the synthesis. Apply the quality standard:
 - Does every deferred item have a trigger?
 - Are the proposed `work.local.md` updates accurate?
 
-### Part D — Review and Gap Analysis (5 minutes)
+### Part D: Review and Gap Analysis (5 minutes)
 
 Ask yourself: what context did you have during the meeting that the synthesis did not capture? What would have been in the prep brief if your `work.local.md` were more complete? These gaps are your `work.local.md` improvement list.
 
@@ -423,17 +423,17 @@ Use these prompts in Cowork or your preferred AI assistant.
 ```
 Generate a meeting prep brief for the Monday Executive Weekly at Panaversity.
 
-Meeting: Executive Weekly — Monday, 17 March 2026, 09:00 PKT, 30 min standing
+Meeting: Executive Weekly, Monday, 17 March 2026, 09:00 PKT, 30 min standing
 Attendees: Zia Khan (CEO), Omar Farooq (Head of Analytics), Ayesha Raza
            (Senior Data Analyst, observer), finance representative
 
 Agenda:
-1. Project Nighthawk — facility update (Zia presenting)
+1. Project Nighthawk, facility update (Zia presenting)
    Context: Karachi expansion; facility agreement stalled 10+ days;
             Q3 target at risk
-2. Q2 Budgets — analytics spend proposal (Omar presenting)
+2. Q2 Budgets, analytics spend proposal (Omar presenting)
    Context: Tooling + Ayesha onboarding costs; analytics brief expected
-3. Workshop expansion — Islamabad decision
+3. Workshop expansion, Islamabad decision
    Context: Current workshops in Karachi and Faisalabad; Islamabad
             would be the third location
 
@@ -441,7 +441,7 @@ People context:
 Omar: Data-driven; does not like surprises; needs lead time; will push back
       if scope creep is implied in questions
 Zia's communication style: Direct, evidence-based, bullet points for analysis
-Culture: "Disagree and commit" — once decided, full execution expected
+Culture: "Disagree and commit", once decided, full execution expected
 
 For each agenda item, provide:
 - The context needed to contribute well
@@ -452,7 +452,7 @@ For each agenda item, provide:
 Include the meeting rules at the end.
 ```
 
-**What you are learning:** The prep brief reveals what you know about each agenda item and each person's likely response — before the pressure of the meeting room. The exercise of generating it surfaces assumptions you hold about the discussion that you have not made explicit. When the skill's stakeholder note about Omar differs from your intuition, one of you is wrong — and it is worth knowing which before the meeting starts.
+**What you are learning:** The prep brief reveals what you know about each agenda item and each person's likely response, before the pressure of the meeting room. The exercise of generating it surfaces assumptions you hold about the discussion that you have not made explicit. When the skill's stakeholder note about Omar differs from your intuition, one of you is wrong , and it is worth knowing which before the meeting starts.
 
 **Adapt**: Generate a prep brief for a real upcoming meeting.
 
@@ -461,7 +461,7 @@ Generate a meeting prep brief for a real meeting I have coming up.
 
 Meeting: [Meeting name, date, time, duration]
 Attendees: [Who is attending and their roles]
-Agenda: [Your agenda items — as specific as you have them]
+Agenda: [Your agenda items, as specific as you have them]
 
 For each attendee, I know this about how they communicate:
 [Add 1-2 sentences about each person's style and priorities]
@@ -489,7 +489,7 @@ Apply the meeting synthesis quality standard:
 - Deferred items must have a trigger for revisit
 
 Raw notes:
-[Paste actual notes from a recent meeting — any format]
+[Paste actual notes from a recent meeting, any format]
 
 Number decisions as D-[YYYY]-[NNN] and actions as A-[YYYY]-[NNN].
 At the end, propose any work.local.md updates this meeting implies:

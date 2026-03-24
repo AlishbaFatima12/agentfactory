@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/productivity-agentic-office/cross-domain-intelligence
 sidebar_position: 11
 title: "Cross-Domain Intelligence"
-description: "Wire your domain agents together — learn context injection to load Finance, HR, and Operations context for cross-domain tasks, cross-context search across all four memory layers, and integration protocols that automate coordination across the agentic organisation using /agentic-office:context-loader and /agentic-office:workplace-search"
+description: "Wire your domain agents together: learn context injection to load Finance, HR, and Operations context for cross-domain tasks, cross-context search across all four memory layers, and integration protocols that automate coordination across the agentic organisation using /agentic-office:context-loader and /agentic-office:workplace-search"
 keywords:
   [
     "cross-domain intelligence",
@@ -29,7 +29,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can identify which domains are relevant to a given task, load cross-domain context using /agentic-office:context-loader, and use the output — including the gaps in context section — to identify what information is missing before proceeding with the task"
+    measurable_at_this_level: "Student can identify which domains are relevant to a given task, load cross-domain context using /agentic-office:context-loader, and use the output, including the gaps in context section, to identify what information is missing before proceeding with the task"
 
   - name: "Run Cross-Context Searches Across All Four Memory Layers Using /agentic-office:workplace-search"
     proficiency_level: "B1"
@@ -46,7 +46,7 @@ skills:
     measurable_at_this_level: "Student can identify trigger events in one domain (e.g. new hire approved in HR) that should automatically surface relevant context from other domains (Finance, Operations), and configure the integration protocol in work.local.md to automate this coordination"
 
 learning_objectives:
-  - objective: "Explain the cross-domain integration problem — why domain agents built in Chapters 28-38 are isolated silos without the productivity layer, and how context injection addresses this"
+  - objective: "Explain the cross-domain integration problem: why domain agents built in Chapters 28-38 are isolated silos without the productivity layer, and how context injection addresses this"
     proficiency_level: "B1"
     bloom_level: "Understand"
     assessment_method: "Student can name a real scenario in their own work where information from two different domains (e.g. HR and Finance) is relevant to the same decision, and explain what would fail if they approached it with only one domain's context"
@@ -64,41 +64,41 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Context injection pattern — loading domain context before a task so outputs are informed by cross-domain information"
-    - "Five context types — single-domain, cross-domain, person, project, decision"
-    - "Cross-context search — searching all four memory layers simultaneously with grouped, sourced results"
-    - "Integration protocols — trigger-based rules in work.local.md that automate cross-domain coordination"
-  assessment: "4 concepts at B1-B2. The context injection pattern is the integrating concept that connects all previous lessons — it is the mechanism by which the productivity layer coordinates with domain agents. The five types are a practical taxonomy that makes the command usable immediately. Cross-context search is a natural companion to context injection — one pushes context into a task, the other pulls context about a topic. Integration protocols extend the pattern from manual to automated, which is the direction of sophistication."
+    - "Context injection pattern, loading domain context before a task so outputs are informed by cross-domain information"
+    - "Five context types, single-domain, cross-domain, person, project, decision"
+    - "Cross-context search, searching all four memory layers simultaneously with grouped, sourced results"
+    - "Integration protocols, trigger-based rules in work.local.md that automate cross-domain coordination"
+  assessment: "4 concepts at B1-B2. The context injection pattern is the integrating concept that connects all previous lessons; it is the mechanism by which the productivity layer coordinates with domain agents. The five types are a practical taxonomy that makes the command usable immediately. Cross-context search is a natural companion to context injection: one pushes context into a task, the other pulls context about a topic. Integration protocols extend the pattern from manual to automated, which is the direction of sophistication."
 
 differentiation:
   extension_for_advanced: "Design a complete integration protocol matrix for your organisation's four most common cross-domain scenarios. For each scenario: (1) which domains are involved, (2) what triggers the need for cross-domain context, (3) what information from each domain is always relevant, and (4) what gaps are likely to remain even after a successful context load. Configure the integration protocols in work.local.md and test them against two of the four scenarios. What percentage of the relevant context is captured automatically vs manually provided?"
-  remedial_for_struggling: "Start with person context — the simplest type. Choose one person you interact with regularly. Run /agentic-office:context-loader with type:person and their name. Review the output: what did the skill surface about their communication style, current focus, and active projects? What was missing? Person context is the entry point to cross-domain thinking because every real task involves at least one person — and knowing how they communicate is always relevant."
+  remedial_for_struggling: "Start with person context: the simplest type. Choose one person you interact with regularly. Run /agentic-office:context-loader with type:person and their name. Review the output: what did the skill surface about their communication style, current focus, and active projects? What was missing? Person context is the entry point to cross-domain thinking because every real task involves at least one person , and knowing how they communicate is always relevant."
 
 teaching_guide:
   key_points:
     - "The integration problem is the reason this lesson exists: domain agents are siloed. The finance agent does not know about the HR onboarding. The HR agent does not know about the Operations ERP migration. Each works well in its domain and fails at the boundaries. Context injection is the boundary-crossing mechanism."
-    - "Knowing what you do NOT know is as important as knowing what you do know. The 'gaps in context' section of the context brief is not a failure — it is the output that makes the next action correct. Many bad decisions in organisations are made not because of wrong information but because of missing information that was not noticed as missing."
-    - "Cross-context search is the inverse of context injection. Context injection says 'load what I need for this task.' Cross-context search says 'find everything about this topic, wherever it lives.' Both are needed because not all information needs surface in advance — sometimes you need to search for something specific."
+    - "Knowing what you do NOT know is as important as knowing what you do know. The 'gaps in context' section of the context brief is not a failure; it is the output that makes the next action correct. Many bad decisions in organisations are made not because of wrong information but because of missing information that was not noticed as missing."
+    - "Cross-context search is the inverse of context injection. Context injection says 'load what I need for this task.' Cross-context search says 'find everything about this topic, wherever it lives.' Both are needed because not all information needs surface in advance, sometimes you need to search for something specific."
     - "Integration protocols shift the system from reactive (I need context now) to proactive (the system knows when to surface context). A well-configured protocol means that when a new hire is approved in HR, the system automatically checks Finance (budget impact?) and Operations (system access timeline?). This is what makes the agentic organisation emergent rather than assembled."
   misconceptions:
-    - "Context injection means loading all available context before every task. Correction: load only context that is relevant to the task. Irrelevant context creates noise — it dilutes the useful signal, increases reading time, and can introduce misleading parallels. The integration protocol rules in context.md explicitly say never load context from irrelevant domains."
-    - "The gaps in context section means the skill failed to find information. Correction: the gaps section is a deliberate feature. It tells you what context would be useful but is not in work.local.md — meaning the next action is to add it. A context brief without a gaps section is either very complete (rare) or not looking for gaps (a problem)."
-    - "Cross-context search only works if everything is perfectly organised in work.local.md. Correction: the search works on whatever is in work.local.md, and it tells you explicitly when something is not found. 'Not in workplace memory' is a valid and useful answer — it means you need to add the information, and the skill offers to help you do that."
+    - "Context injection means loading all available context before every task. Correction: load only context that is relevant to the task. Irrelevant context creates noise ; it dilutes the useful signal, increases reading time, and can introduce misleading parallels. The integration protocol rules in context.md explicitly say never load context from irrelevant domains."
+    - "The gaps in context section means the skill failed to find information. Correction: the gaps section is a deliberate feature. It tells you what context would be useful but is not in work.local.md, meaning the next action is to add it. A context brief without a gaps section is either very complete (rare) or not looking for gaps (a problem)."
+    - "Cross-context search only works if everything is perfectly organised in work.local.md. Correction: the search works on whatever is in work.local.md, and it tells you explicitly when something is not found. 'Not in workplace memory' is a valid and useful answer ; it means you need to add the information, and the skill offers to help you do that."
   discussion_prompts:
     - "Dr. Sana Mirza is joining Monday. The HR agent knows about her onboarding. The Finance agent knows about the headcount budget. The Operations agent knows about system access timelines. Without the context-loader, which of these conversations would Zia have that he should have had? Which information would he miss?"
     - "The integration protocol triggers on 'new_hire approved'. What other organisational events should trigger cross-domain context loading automatically? Design three integration protocols for your own organisation."
   teaching_tips:
-    - "The case study for this lesson — Dr. Sana Mirza's onboarding — is ideal because it genuinely touches three domains in a realistic way. HR owns the onboarding process. Finance approved the headcount. Operations owns system access. A single task (onboard a new Head of Curriculum) requires coordinating all three domains simultaneously. This is not an edge case — it is how most important tasks actually work."
-    - "The 'gaps in context' section deserves a full teaching moment. Walk students through the Islamabad search results and show that 'No active tasks related to Islamabad expansion' in the task history is informative — it means no one has been assigned to do anything about this. That is relevant context, even though it is an absence."
+    - "The case study for this lesson, Dr. Sana Mirza's onboarding: is ideal because it genuinely touches three domains in a realistic way. HR owns the onboarding process. Finance approved the headcount. Operations owns system access. A single task (onboard a new Head of Curriculum) requires coordinating all three domains simultaneously. This is not an edge case; it is how most important tasks actually work."
+    - "The 'gaps in context' section deserves a full teaching moment. Walk students through the Islamabad search results and show that 'No active tasks related to Islamabad expansion' in the task history is informative ; it means no one has been assigned to do anything about this. That is relevant context, even though it is an absence."
 ---
 
 # Cross-Domain Intelligence
 
 The domain agents built in Chapters 28-38 operate in their own contexts. The finance agent from Chapter 28 knows about the analytics budget proposal. HR domain agents (Chapter 37, planned) know that Ayesha is in her onboarding window and that Dr. Sana Mirza joins Monday. The operations intelligence layer (Chapter 38, planned) knows the BSI ISO renewal is pending and the ERP migration is in progress. The Chapter 34 revenue engine knows the pipeline state.
 
-None of these agents knows what the others know. They are isolated silos of intelligence — each excellent within its domain, each blind to the boundaries.
+None of these agents knows what the others know. They are isolated silos of intelligence: each excellent within its domain, each blind to the boundaries.
 
-This lesson introduces the two commands that wire them together. `/agentic-office:context-loader` loads specific context from one or more domains before a task — so the task output is informed by everything relevant, not just what happens to be in the current conversation. `/agentic-office:workplace-search` searches all four memory layers simultaneously — so any question about your organisation returns results from every layer at once, not just the one layer you happened to open.
+This lesson introduces the two commands that wire them together. `/agentic-office:context-loader` loads specific context from one or more domains before a task. So the task output is informed by everything relevant, not just what happens to be in the current conversation. `/agentic-office:workplace-search` searches all four memory layers simultaneously. So any question about your organisation returns results from every layer at once, not just the one layer you happened to open.
 
 Together, these two commands are the integration layer that turns isolated domain agents into a coordinated organisation.
 
@@ -134,12 +134,12 @@ Here is the cross-domain context brief for a finance discussion involving HR and
 ```
 
 ```
-CONTEXT BRIEF — Finance: Analytics Budget Discussion
+CONTEXT BRIEF, Finance: Analytics Budget Discussion
 Loaded from: work.local.md (people, projects, org memory) +
              Finance domain (Ch. 28) + Operations domain (Ch. 38)
 ════════════════════════════════════════════════════════════
 CORE CONTEXT:
-  This is a budget approval conversation — not a negotiation.
+  This is a budget approval conversation , not a negotiation.
   The decision (D-2026-002) is already "approved in principle."
   The purpose of this conversation is to review Omar's ROI brief
   and confirm final sign-off, not to re-open the approval decision.
@@ -150,11 +150,11 @@ FINANCE CONTEXT:
               Pending: Omar's ROI brief (due Monday 24 March)
   Watch:      The ROI brief will likely focus on reporting time savings.
               The stronger case (for any future CFO review) is revenue
-              enablement — faster investor reporting = faster fundraising
+              enablement, faster investor reporting = faster fundraising
               decisions. Frame the final sign-off around this framing,
               not cost reduction.
 
-PEOPLE CONTEXT — OMAR FAROOQ:
+PEOPLE CONTEXT, OMAR FAROOQ:
   Communication style: Data-driven; structured presentation; needs lead time
   What he is likely to bring: A structured ROI case with numbers
   What to watch for: He will push back if scope creep is implied in
@@ -170,7 +170,7 @@ OPERATIONS CONTEXT:
                  any integration tooling.
   Implication:  Add one question to the ROI brief review: "Has ERP
                 compatibility been confirmed for the chosen tooling?"
-                This is not a blocker — it is a clarifying condition.
+                This is not a blocker; it is a clarifying condition.
 
 HR CONTEXT:
   Ayesha Raza: Day 4 of onboarding; pipeline audit is one of her
@@ -199,11 +199,11 @@ GAPS IN CONTEXT:
 
 Three structural elements are worth noting:
 
-**The domains are separated but synthesised.** Finance context, Operations context, and HR context each appear in their own section — but the "What to Watch For" section synthesises them. The synthesis is what makes the brief useful: not just "here is what Finance knows" and "here is what HR knows," but "here is what matters when you put them together."
+**The domains are separated but synthesised.** Finance context, Operations context, and HR context each appear in their own section , but the "What to Watch For" section synthesises them. The synthesis is what makes the brief useful: not just "here is what Finance knows" and "here is what HR knows," but "here is what matters when you put them together."
 
-**The gaps section is not a failure.** The specific tooling name is not in `work.local.md` — so the brief tells you to check the ROI brief before the conversation. The ERP migration completion date is uncertain — so the brief tells you to confirm with Operations before approving integrations. Knowing what you do not know before a conversation is as valuable as knowing what you do know.
+**The gaps section is not a failure.** The specific tooling name is not in `work.local.md`. So the brief tells you to check the ROI brief before the conversation. The ERP migration completion date is uncertain. So the brief tells you to confirm with Operations before approving integrations. Knowing what you do not know before a conversation is as valuable as knowing what you do know.
 
-**The core context is a reframe.** The brief does not just summarise — it reframes. "This is a budget approval conversation — not a negotiation. The decision is already 'approved in principle.'" This context prevents the most common failure mode: treating a confirmation conversation as a re-opening of the decision.
+**The core context is a reframe.** The brief does not just summarise ; it reframes. "This is a budget approval conversation , not a negotiation. The decision is already 'approved in principle.'" This context prevents the most common failure mode: treating a confirmation conversation as a re-opening of the decision.
 
 ## Cross-Context Search: All Four Layers at Once
 
@@ -220,12 +220,12 @@ SEARCH RESULTS: "Islamabad expansion"
 Found in:
 
 PROJECT MEMORY:
-  BankersAI — Islamabad identified as potential third workshop location
+  BankersAI, Islamabad identified as potential third workshop location
   (after Karachi and Faisalabad); no project record created; classified
   as under consideration since Q4 2025
 
 MEETING NOTES / DECISION LOG:
-  Executive Weekly — 17 March 2026:
+  Executive Weekly, 17 March 2026:
   D-2026-003: Islamabad expansion DEFERRED
   Reason: Project Nighthawk facility still unresolved; capacity risk
           of adding third location while Karachi is not yet secured
@@ -245,13 +245,13 @@ TERMINOLOGY:
 TASK / DELEGATION LOG:
   No active tasks related to Islamabad expansion.
   (Note: this means no one has been assigned to take any action
-   on Islamabad since the deferral decision — this is correct,
+   on Islamabad since the deferral decision. This is correct,
    as D-2026-003 set no timeline)
 
 RECOMMENDED NEXT STEP:
   Create a project stub for Islamabad if you want to start tracking it
   formally ahead of the Nighthawk trigger. Currently it is a deferred
-  decision — nothing will happen until Project Nighthawk is resolved.
+  decision; nothing will happen until Project Nighthawk is resolved.
   If Nighthawk resolves before Q2 end, this decision becomes active
   immediately and a project record will be needed.
 ════════════════════════════════════════════════════════════
@@ -259,34 +259,34 @@ RECOMMENDED NEXT STEP:
 
 ### What the Search Reveals
 
-The Islamabad search returns context from five different layers — project memory, meeting decisions, people context, organisational terminology, and task history. Each result comes from a different part of `work.local.md`. Without the search command, accessing this picture would require navigating to each section manually.
+The Islamabad search returns context from five different layers, project memory, meeting decisions, people context, organisational terminology, and task history. Each result comes from a different part of `work.local.md`. Without the search command, accessing this picture would require navigating to each section manually.
 
-The "No active tasks" entry in the task/delegation log is as informative as a positive result. It confirms that the deferral decision (D-2026-003) has been correctly followed — no one has been assigned to Islamabad work, which is exactly right given the deferral status.
+The "No active tasks" entry in the task/delegation log is as informative as a positive result. It confirms that the deferral decision (D-2026-003) has been correctly followed; no one has been assigned to Islamabad work, which is exactly right given the deferral status.
 
-The recommended next step turns search into action. Information without a suggested action is harder to use. The recommendation — create a project stub if you want to track it before the trigger — is specific and immediately actionable.
+The recommended next step turns search into action. Information without a suggested action is harder to use. The recommendation, create a project stub if you want to track it before the trigger: is specific and immediately actionable.
 
 ## The Dr. Sana Mirza Onboarding Scenario
 
-Here is a realistic cross-domain scenario. Dr. Sana Mirza is joining Panaversity on Monday 23 March as Head of Curriculum. Her onboarding is not a single-domain task — it genuinely touches HR (onboarding protocol), Finance (headcount budget), and Operations (system access).
+Here is a realistic cross-domain scenario. Dr. Sana Mirza is joining Panaversity on Monday 23 March as Head of Curriculum. Her onboarding is not a single-domain task ; it genuinely touches HR (onboarding protocol), Finance (headcount budget), and Operations (system access).
 
 ```
 /agentic-office:context-loader
 > type: cross-domain
 > I need to prepare for Dr. Sana Mirza's onboarding on Monday 23 March.
 > She is joining as Head of Curriculum. Load context from HR, Finance,
-> and Operations — everything relevant to preparing for her first week.
+> and Operations; everything relevant to preparing for her first week.
 ```
 
 ```
-CONTEXT BRIEF — Dr. Sana Mirza Onboarding
+CONTEXT BRIEF, Dr. Sana Mirza Onboarding
 Loaded from: work.local.md (people, projects) + HR domain (Ch. 37) +
              Finance domain (Ch. 28) + Operations domain (Ch. 38)
 ════════════════════════════════════════════════════════════
 CORE CONTEXT:
-  Dr. Sana Mirza joins Monday as Head of Curriculum — a NEW ROLE at
+  Dr. Sana Mirza joins Monday as Head of Curriculum: a NEW ROLE at
   Panaversity. She brings a PhD in Learning Sciences (Aga Khan University)
   and owns the PHM framework. She is academically precise and evidence-based.
-  Her relationship with Omar Farooq needs careful mediation — they will work
+  Her relationship with Omar Farooq needs careful mediation; they will work
   closely on the curriculum-analytics interface, and their professional styles
   are different.
 
@@ -296,9 +296,9 @@ HR CONTEXT:
                        access provisioning, intro to team rhythm
   Ayesha Raza connection: Ayesha is in her own onboarding window (Day 4
                            as of 17 March). Two people onboarding simultaneously
-                           — coordinate check-in schedules to avoid overlap.
+                          , coordinate check-in schedules to avoid overlap.
   PHM framework: She owns this IP. Ensure her first week includes time to
-                 brief the team on PHM — this is a strategic asset that others
+                 brief the team on PHM. This is a strategic asset that others
                  need to understand.
 
 FINANCE CONTEXT:
@@ -307,7 +307,7 @@ FINANCE CONTEXT:
   Analytics interaction: Her curriculum role has an analytics interface
                          (what data does the curriculum team use to measure
                          learning outcomes?). Coordinate with Omar on the
-                         analytics budget — her tooling needs may be part
+                         analytics budget, her tooling needs may be part
                          of the same approval currently in flight.
 
 OPERATIONS CONTEXT:
@@ -317,24 +317,24 @@ OPERATIONS CONTEXT:
                  Standard lead time: 2 business days from request.
                  ACTION: Submit access request today (Thursday) to ensure
                          access is ready for Monday.
-  ERP note: ERP migration in progress — confirm no curriculum team
+  ERP note: ERP migration in progress; confirm no curriculum team
             systems are affected by the migration timeline.
 
 PEOPLE CONTEXT:
   Dr. Sana Mirza communication style: Academic precision; evidence-based;
   prefers written briefs over verbal updates. Allow time for thoughtful
-  responses — she does not respond quickly to exploratory questions.
+  responses; she does not respond quickly to exploratory questions.
   Omar dynamic: Proactively introduce them before Monday if possible.
                 Their working relationship is important to the PHM-analytics
                 interface. An unmediated first meeting in a group setting
                 risks a difficult start.
 
 WHAT TO WATCH FOR:
-  1. System access — submit today; confirm ready by Monday morning
-  2. Omar introduction — brief introduction before Monday recommended
-  3. Ayesha overlap — coordinate 30-day check-in schedules to avoid
+  1. System access, submit today; confirm ready by Monday morning
+  2. Omar introduction, brief introduction before Monday recommended
+  3. Ayesha overlap, coordinate 30-day check-in schedules to avoid
      both happening the same week
-  4. PHM briefing — schedule a team session in week 2 or 3
+  4. PHM briefing, schedule a team session in week 2 or 3
 
 GAPS IN CONTEXT:
   → Dr. Sana Mirza's preferred working hours and location are not in
@@ -360,7 +360,7 @@ From the context brief, the integrated action plan for Dr. Sana Mirza's onboardi
 | Schedule PHM framework team briefing                | Curriculum        | Dr. Sana Mirza | Week 2-3          |
 | Discuss analytics tooling needs with Omar           | Finance/Analytics | Zia            | Week 2            |
 
-Without cross-domain context loading, three of these actions — the ERP check, the Omar introduction mediation note, and the analytics tooling needs — would not appear in any single-domain task list. They exist in the gaps between domains.
+Without cross-domain context loading, three of these actions: the ERP check, the Omar introduction mediation note, and the analytics tooling needs, would not appear in any single-domain task list. They exist in the gaps between domains.
 
 ## Integration Protocols
 
@@ -406,18 +406,18 @@ integration_protocols:
     surface_context: true
 ```
 
-The `new_hire` protocol is what would have automatically surfaced the Operations system access requirement for Dr. Sana Mirza — if it had been configured before her onboarding. The first time you run cross-domain context loading manually for a new hire scenario, you identify what the protocol should contain. Then you configure it. The next new hire gets the full context automatically.
+The `new_hire` protocol is what would have automatically surfaced the Operations system access requirement for Dr. Sana Mirza; if it had been configured before her onboarding. The first time you run cross-domain context loading manually for a new hire scenario, you identify what the protocol should contain. Then you configure it. The next new hire gets the full context automatically.
 
 This is the direction of sophistication: from manual cross-domain context loading (this lesson) to automated integration protocols (ongoing configuration) to a system that proactively surfaces cross-domain context before you need to ask for it (the emerging behaviour of a well-configured agentic organisation).
 
 ## Exercise: The Cross-Domain Integration Sprint
 
-**Type:** Applied Practice — Cross-Domain Scenario
+**Type:** Applied Practice, Cross-Domain Scenario
 **Time:** 45 minutes
 **Plugin commands:** `/agentic-office:context-loader` + `/agentic-office:workplace-search`
 **Goal:** Load cross-domain context for a real scenario, run three searches, practice the onboarding scenario, and identify integration gaps
 
-### Step 1 — Cross-Domain Context Load (15 minutes)
+### Step 1: Cross-Domain Context Load (15 minutes)
 
 Choose a real scenario from your work this week that touches at least two domains (a conversation, a decision, a project handoff, a new hire, a vendor discussion). Load cross-domain context:
 
@@ -434,18 +434,18 @@ Annotate the output:
 - Which items did the brief surface that you had not considered?
 - What is in the "gaps in context" section? Are these genuine gaps that would affect the outcome?
 
-### Step 2 — Cross-Context Searches (10 minutes)
+### Step 2: Cross-Context Searches (10 minutes)
 
-Run three searches — one for a project, one for a person, one for a decision:
-
-```
-/agentic-office:workplace-search
-> [Your project name] — search everything
-```
+Run three searches: one for a project, one for a person, one for a decision:
 
 ```
 /agentic-office:workplace-search
-> [Person's name] — what do we know about their current focus?
+> [Your project name], search everything
+```
+
+```
+/agentic-office:workplace-search
+> [Person's name]: what do we know about their current focus?
 ```
 
 ```
@@ -455,7 +455,7 @@ Run three searches — one for a project, one for a person, one for a decision:
 
 For each search, note: which layer produced the most useful result? What was not found (and should be added to `work.local.md`)?
 
-### Step 3 — The Onboarding Scenario (15 minutes)
+### Step 3: The Onboarding Scenario (15 minutes)
 
 Use the Dr. Sana Mirza scenario as a reference model. Apply it to someone joining your team (or a recent joiner). Load cross-domain context:
 
@@ -468,7 +468,7 @@ Use the Dr. Sana Mirza scenario as a reference model. Apply it to someone joinin
 
 Generate the integrated action plan from the context brief. Which actions would you have missed without the cross-domain load?
 
-### Step 4 — Integration Gap Analysis (5 minutes)
+### Step 4: Integration Gap Analysis (5 minutes)
 
 Ask the integrating question:
 
@@ -494,12 +494,12 @@ Head of Analytics at Panaversity.
 
 Load cross-domain context from:
 
-Finance: Omar's analytics proposal — tooling + Ayesha onboarding costs.
+Finance: Omar's analytics proposal, tooling + Ayesha onboarding costs.
 Approved in principle (Executive Weekly 17 March). ROI brief due Monday.
 
-People/HR: Omar — data-driven, structured, does not like surprises,
+People/HR: Omar, data-driven, structured, does not like surprises,
            needs lead time. Will push back on scope creep.
-           Ayesha Raza — in her onboarding window (Day 4); pipeline
+           Ayesha Raza, in her onboarding window (Day 4); pipeline
            audit is her first project; analytics budget affects her tooling.
 
 Operations: ERP migration in progress in Q2. Analytics tooling must be
@@ -515,13 +515,13 @@ Generate a cross-domain context brief with these sections:
 - Gaps in context (what is not known that would be useful)
 ```
 
-**What you are learning:** The core context section of the brief should reframe the purpose of the conversation before you walk in. "This is a budget confirmation, not a re-opening of the approval" is more useful than a summary of the budget figures. Generating this reframe forces you to be clear about what you actually need from the conversation — which is the most important preparation you can do.
+**What you are learning:** The core context section of the brief should reframe the purpose of the conversation before you walk in. "This is a budget confirmation, not a re-opening of the approval" is more useful than a summary of the budget figures. Generating this reframe forces you to be clear about what you actually need from the conversation, which is the most important preparation you can do.
 
 **Adapt**: Load cross-domain context for your own scenario.
 
 ```
 I am about to [describe a real task or conversation you have this week
-that involves more than one domain — a hire, a budget decision, a
+that involves more than one domain: a hire, a budget decision, a
 vendor discussion, a project escalation].
 
 The relevant domains are: [list 2-3 domains from Finance, HR, Operations,
@@ -532,7 +532,7 @@ For each domain, I know this relevant context:
 [Domain 2]: [What you know about this domain's stake in the task]
 
 Generate a cross-domain context brief. Include:
-- Core context (reframe — what is the actual purpose of this task?)
+- Core context (reframe: what is the actual purpose of this task?)
 - [Domain 1] context
 - [Domain 2] context
 - People context (anyone involved and how they communicate)
@@ -567,7 +567,7 @@ The third question is the most important. The gap between the current
 answer and a comprehensive answer is your integration roadmap.
 ```
 
-**What you are learning:** The question "what would I need to add to make this comprehensive?" is the most important habit this lesson teaches. Running it regularly converts the integration sprint from a one-time exercise into an ongoing improvement loop. The agentic organisation gets more intelligent as the memory gets richer — and the memory gets richer because you notice and address gaps.
+**What you are learning:** The question "what would I need to add to make this comprehensive?" is the most important habit this lesson teaches. Running it regularly converts the integration sprint from a one-time exercise into an ongoing improvement loop. The agentic organisation gets more intelligent as the memory gets richer , and the memory gets richer because you notice and address gaps.
 :::
 
 ## Flashcards Study Aid

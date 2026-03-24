@@ -181,12 +181,12 @@ companies. Buyer persona: VP Ops / Director Ops. Key markets: Pakistan, UAE, UK.
 ```
 
 :::note Folder instructions persist across all messages in this session
-Once saved, the agent reads demo-data.md and sales-marketing.local.md automatically — you do not need to reference these files in every prompt. Every lesson from L02 onward assumes these instructions are active. If you start a new Cowork session, re-paste them.
+Once saved, the agent reads demo-data.md and sales-marketing.local.md automatically: you do not need to reference these files in every prompt. Every lesson from L02 onward assumes these instructions are active. If you start a new Cowork session, re-paste them.
 :::
 
 ## Your First Research Brief
 
-You are NexaFlow Technologies. Your top prospect is Meridian Logistics in Leeds — prospect #1 in the demo dataset you just generated.
+You are NexaFlow Technologies. Your top prospect is Meridian Logistics in Leeds: prospect #1 in the demo dataset you just generated.
 
 Run this prompt. It activates the `prospect-research` and `persona-icp` skills from the extension to produce a structured brief with ICP scoring:
 
@@ -201,7 +201,7 @@ and a recommended outreach angle.
 ```
 
 :::tip Skill Not Activating?
-If your output is a plain text response without structured sections (ICP MATCH, WHO, WHAT, etc.), the research skill did not activate. Try prefixing your prompt with `/prospect-research` to invoke it directly — you will learn more about explicit skill invocation in Lesson 9.
+If your output is a plain text response without structured sections (ICP MATCH, WHO, WHAT, etc.), the research skill did not activate. Try prefixing your prompt with `/prospect-research` to invoke it directly: you will learn more about explicit skill invocation in Lesson 9.
 :::
 
 **What to expect:** The agent reads your demo data and produces a structured brief. The exact content varies between runs, but look for these sections:
@@ -209,13 +209,13 @@ If your output is a plain text response without structured sections (ICP MATCH, 
 | Section       | What It Contains                                                                                                                                |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | **ICP MATCH** | Scores Meridian against your ICP criteria (company size, industry, buyer persona). If the extension is active, this section appears at the top. |
-| **WHO**       | Sarah Chen's background — sourced from your demo dataset, potentially embellished                                                               |
+| **WHO**       | Sarah Chen's background: sourced from your demo dataset, potentially embellished                                                               |
 | **WHAT**      | Company profile for Meridian Logistics                                                                                                          |
 | **WHEN**      | Timing signals (promotion, contract win, LinkedIn activity)                                                                                     |
 | **PAIN**      | Primary pain points the agent identifies for this prospect                                                                                      |
 | **HOOK**      | Recommended opening angle based on pain + timing                                                                                                |
 
-The agent combines your demo data with web research. Since Meridian Logistics is fictional, the web research returns nothing useful — the agent fills gaps from your dataset and its own inferences. This is exactly the setup for the next section.
+The agent combines your demo data with web research. Since Meridian Logistics is fictional, the web research returns nothing useful: the agent fills gaps from your dataset and its own inferences. This is exactly the setup for the next section.
 
 Read the full output. It is structured, specific, and professional. It looks like something Farah would produce after 45 minutes of deep research.
 
@@ -225,7 +225,7 @@ And at least one claim in it will go beyond your demo data.
 
 Open `demo-data.md` and read the Meridian Logistics prospect record. Now compare it to the agent's brief, claim by claim.
 
-Your dataset contains specific facts you generated: company name, location, employee count, contact name and title, recent signals. The agent's brief includes these — but it also includes claims that go **beyond** your data. Revenue estimates, career history embellishments, internal process descriptions, LinkedIn post specifics — details the agent inferred to make the brief sound authoritative.
+Your dataset contains specific facts you generated: company name, location, employee count, contact name and title, recent signals. The agent's brief includes these: but it also includes claims that go **beyond** your data. Revenue estimates, career history embellishments, internal process descriptions, LinkedIn post specifics: details the agent inferred to make the brief sound authoritative.
 
 Since Meridian Logistics is fictional, your `demo-data.md` is the only source of truth. Any claim not traceable to that file is an agent embellishment. The skill you need before every subsequent lesson is the ability to tell them apart before you act on them.
 
@@ -233,18 +233,18 @@ Since Meridian Logistics is fictional, your `demo-data.md` is the only source of
 
 | Claim Type                        | Example                            | Why Trustworthy                                   |
 | --------------------------------- | ---------------------------------- | ------------------------------------------------- |
-| Company name, location, employees | Directly from your prospect record | You generated this data — it is your ground truth |
+| Company name, location, employees | Directly from your prospect record | You generated this data: it is your ground truth |
 | Contact name and title            | Sarah Chen, VP Operations          | Specified in the generation prompt                |
 | Recent signals you specified      | Contract win, scaling challenges   | You defined these as part of the prospect profile |
 
-These claims are your ground truth. In a real sales workflow, the equivalent is data from your CRM, LinkedIn, or Companies House — sources you can independently verify. Verified claims become conversation openers: "I noticed you are scaling rapidly after a major contract win — are you rebuilding your operations workflow?"
+These claims are your ground truth. In a real sales workflow, the equivalent is data from your CRM, LinkedIn, or Companies House: sources you can independently verify. Verified claims become conversation openers: "I noticed you are scaling rapidly after a major contract win: are you rebuilding your operations workflow?"
 
 ### Claims Beyond Your Data
 
 | Claim Type                                                | Why Suspect                                                                                                    | The Tell                                                                                                                       |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Revenue or financial estimates                            | Your demo data may not include revenue, or the agent adjusted the figure to sound precise                      | **Private financials stated as estimates.** Revenue for private companies is not public unless voluntarily disclosed.          |
-| Internal processes (e.g. "SLA tracking via spreadsheets") | No source — not in your demo data, not discoverable via web search for a fictional company                     | **Internal process presented as intelligence.** The agent inferred a common pain pattern for logistics companies of this size. |
+| Internal processes (e.g. "SLA tracking via spreadsheets") | No source: not in your demo data, not discoverable via web search for a fictional company                     | **Internal process presented as intelligence.** The agent inferred a common pain pattern for logistics companies of this size. |
 | Specific career timeline or LinkedIn post content         | Your demo data has a brief background; the agent may add employers, dates, or post topics it cannot have found | **Inference dressed as observation.** The agent expanded sparse data into a plausible, specific narrative.                     |
 
 Look for these in your own output. Identify at least two claims that are not in `demo-data.md`. For each one, decide: is it a reasonable inference, or is it presented as fact?
@@ -358,7 +358,7 @@ prospect research brief with ICP match scoring, timing signals,
 and a recommended outreach angle.
 ```
 
-**What you're learning:** How the `prospect-research` and `persona-icp` skills structure intelligence into actionable sections (ICP MATCH / WHO / WHAT / WHEN / PAIN / HOOK). Run this prompt twice and compare the two outputs. The structure should match but specific claims will differ between runs — the agent produces different embellishments each time, which is itself a lesson in why verification matters.
+**What you're learning:** How the `prospect-research` and `persona-icp` skills structure intelligence into actionable sections (ICP MATCH / WHO / WHAT / WHEN / PAIN / HOOK). Run this prompt twice and compare the two outputs. The structure should match but specific claims will differ between runs: the agent produces different embellishments each time, which is itself a lesson in why verification matters.
 
 ### Prompt 2: Adapt
 

@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch34-13-revops-agents-001"
     front: "What are the five RevOps agents and their primary functions?"
-    back: "1. Lead Intelligence — buying signal alerts\n2. CRM Hygiene — data quality\n3. Outreach Sequencing — touch progression\n4. Marketing Performance — campaign analysis\n5. Revenue Reporting — pipeline dashboard"
+    back: "1. Lead Intelligence: buying signal alerts\n2. CRM Hygiene: data quality\n3. Outreach Sequencing: touch progression\n4. Marketing Performance: campaign analysis\n5. Revenue Reporting: pipeline dashboard"
     difficulty: "basic"
     tags: ["five-agents"]
 
@@ -33,13 +33,13 @@ cards:
 
   - id: "ch34-13-revops-agents-005"
     front: "Crescent Freight scores 45/100 with 34 days in Proposal and zero engagement. What does this pipeline data tell you?"
-    back: "The deal has gone silent — it is not in progress. It needs a new champion, a different approach, or disqualification. The low score reflects stalled timing and absent engagement, not poor fit."
+    back: "The deal has gone silent: it is not in progress. It needs a new champion, a different approach, or disqualification. The low score reflects stalled timing and absent engagement, not poor fit."
     difficulty: "intermediate"
     tags: ["at-risk-deals"]
 
   - id: "ch34-13-revops-agents-006"
     front: "What three scenarios does /forecast model, and what was NexaFlow's likely case gap to target?"
-    back: "Best case, likely case, and worst case. NexaFlow's likely case was $630,000 against a $750,000 target — a gap of $120,000."
+    back: "Best case, likely case, and worst case. NexaFlow's likely case was $630,000 against a $750,000 target: a gap of $120,000."
     difficulty: "basic"
     tags: ["forecast"]
 
@@ -70,7 +70,7 @@ cards:
 
   - id: "ch34-13-revops-agents-011"
     front: "The CRM shows Crescent Freight at 60% probability but the agent says 35%. Why is the gap valuable?"
-    back: "The CRM stores the rep's subjective estimate. The agent applies objective criteria (34 days stalled, zero engagement). A 25-point gap means someone needs to investigate — neither assessment is always right, but the discrepancy triggers review."
+    back: "The CRM stores the rep's subjective estimate. The agent applies objective criteria (34 days stalled, zero engagement). A 25-point gap means someone needs to investigate: neither assessment is always right, but the discrepancy triggers review."
     difficulty: "advanced"
     why: "When should you trust the agent's probability over the rep's?"
     tags: ["probability-gap"]
@@ -83,7 +83,7 @@ cards:
 
   - id: "ch34-13-revops-agents-013"
     front: "Why do RevOps agents produce digests but never take autonomous action?"
-    back: "Agents identify signals and surface intelligence, but the decision to act — calling a prospect, pausing a channel, disqualifying a deal — requires human judgment the agent cannot replicate. The boundary is inform versus act."
+    back: "Agents identify signals and surface intelligence, but the decision to act: calling a prospect, pausing a channel, disqualifying a deal: requires human judgment the agent cannot replicate. The boundary is inform versus act."
     difficulty: "intermediate"
     why: "What risks emerge if an agent is given permission to send outreach autonomously?"
     tags: ["inform-vs-act"]
@@ -96,7 +96,7 @@ cards:
 
   - id: "ch34-13-revops-agents-015"
     front: "TransPak Logistics is a $350,000 deal at 40% likely probability. Why might this estimate need human review?"
-    back: "The KCCI mutual connection and strong fit score support 40%, but the slow deal cycle makes Q1 closure uncertain. A $350K deal with a procurement timeline that could extend into Q2 may need a lower Q1 probability — that judgment requires knowledge of the buying process the agent does not have."
+    back: "The KCCI mutual connection and strong fit score support 40%, but the slow deal cycle makes Q1 closure uncertain. A $350K deal with a procurement timeline that could extend into Q2 may need a lower Q1 probability: that judgment requires knowledge of the buying process the agent does not have."
     difficulty: "advanced"
     why: "How does deal size typically correlate with forecast accuracy?"
     tags: ["forecast"]

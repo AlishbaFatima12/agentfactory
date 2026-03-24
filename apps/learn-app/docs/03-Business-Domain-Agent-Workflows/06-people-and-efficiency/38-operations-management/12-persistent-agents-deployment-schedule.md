@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/operations-management/persistent-agents-deployment-schedule
 sidebar_position: 12
-title: "Persistent Agents — Deployment and Schedule"
-description: "Deploy four persistent operations agents that continuously monitor vendor contracts, SOP currency, compliance obligations, and the change pipeline — so operational drift is caught automatically rather than discovered at audit time"
+title: "Persistent Agents: Deployment and Schedule"
+description: "Deploy four persistent operations agents that continuously monitor vendor contracts, SOP currency, compliance obligations, and the change pipeline: so operational drift is caught automatically rather than discovered at audit time"
 keywords:
   [
     "persistent agents",
@@ -28,7 +28,7 @@ skills:
     category: "Technical"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can configure all four operations agents with appropriate data sources, schedules, and escalation contacts — and can explain what each agent monitors and why that monitoring matters"
+    measurable_at_this_level: "Student can configure all four operations agents with appropriate data sources, schedules, and escalation contacts , and can explain what each agent monitors and why that monitoring matters"
 
   - name: "Evaluate Agent Alert Output for Actionability"
     proficiency_level: "B1"
@@ -42,7 +42,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Content-Creation"
-    measurable_at_this_level: "Student can design a coordinated agent schedule — accounting for agent interdependencies and report audiences — and justify the timing choices against operational requirements"
+    measurable_at_this_level: "Student can design a coordinated agent schedule, accounting for agent interdependencies and report audiences , and justify the timing choices against operational requirements"
 
 learning_objectives:
   - objective: "Configure all four persistent agents (vendor-watchdog, process-health, compliance-monitor, change-tracker) with data sources, schedules, and escalation contacts for the running-context organisation"
@@ -50,12 +50,12 @@ learning_objectives:
     bloom_level: "Apply"
     assessment_method: "Student completes the configuration exercise and runs a simulated check for each agent, producing at least one alert and one monthly report structure"
 
-  - objective: "Evaluate the quality of agent alert output against the standard that alerts must include a specific recommended action — not just a status"
+  - objective: "Evaluate the quality of agent alert output against the standard that alerts must include a specific recommended action , not just a status"
     proficiency_level: "B1"
     bloom_level: "Evaluate"
-    assessment_method: "Student reviews three sample agent alerts and identifies which contain actionable recommendations versus which only report status — and rewrites the status-only alerts"
+    assessment_method: "Student reviews three sample agent alerts and identifies which contain actionable recommendations versus which only report status , and rewrites the status-only alerts"
 
-  - objective: "Explain how the four agents interact — where one agent's output triggers another agent's check — and trace a realistic interaction chain through the agent network"
+  - objective: "Explain how the four agents interact: where one agent's output triggers another agent's check , and trace a realistic interaction chain through the agent network"
     proficiency_level: "B2"
     bloom_level: "Analyze"
     assessment_method: "Student maps the interaction chain starting from a Compliance Monitor detection of a regulatory change and traces what other agents should respond and why"
@@ -63,41 +63,41 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Persistent agent — an agent that runs on a fixed schedule rather than being invoked manually for each task"
-    - "Alert with recommended action — the distinction between an agent that reports status and one that drives decisions"
-    - "Agent interdependency — when one agent's output triggers a check by another agent in the same network"
-    - "Escalation path — the rule determining when an alert is escalated from operational owner to COO to board level"
-  assessment: "4 concepts at B2 level is appropriate. Students have spent Lessons 3-11 building the operational data these agents monitor — they understand the domain. The new concepts are about automation design, not the operational content itself."
+    - "Persistent agent: an agent that runs on a fixed schedule rather than being invoked manually for each task"
+    - "Alert with recommended action: the distinction between an agent that reports status and one that drives decisions"
+    - "Agent interdependency: when one agent's output triggers a check by another agent in the same network"
+    - "Escalation path: the rule determining when an alert is escalated from operational owner to COO to board level"
+  assessment: "4 concepts at B2 level is appropriate. Students have spent Lessons 3-11 building the operational data these agents monitor; they understand the domain. The new concepts are about automation design, not the operational content itself."
 
 differentiation:
-  extension_for_advanced: "Design a fifth agent — an 'Operations Heartbeat' agent — that runs daily and produces a one-paragraph operational health summary by querying the other four agents' alert queues. Define its trigger conditions, alert format, and integration points. What would it need to access that the existing four agents already produce?"
-  remedial_for_struggling: "Focus on one agent — the Vendor Watchdog. Configure just this one with a real or hypothetical vendor list. Run the weekly check simulation. Verify that the output tells you what to do — not just what happened. Once you have that pattern working, the other three agents follow the same structure."
+  extension_for_advanced: "Design a fifth agent: an 'Operations Heartbeat' agent that runs daily and produces a one-paragraph operational health summary by querying the other four agents' alert queues. Define its trigger conditions, alert format, and integration points. What would it need to access that the existing four agents already produce?"
+  remedial_for_struggling: "Focus on one agent: the Vendor Watchdog. Configure just this one with a real or hypothetical vendor list. Run the weekly check simulation. Verify that the output tells you what to do , not just what happened. Once you have that pattern working, the other three agents follow the same structure."
 
 teaching_guide:
   key_points:
-    - "The transition from one-time analysis (Lessons 3-11) to continuous intelligence (Lesson 12) is the key conceptual shift — students have built the data; now they automate the monitoring"
-    - "No official plugin has persistent agents — this is the custom plugin's primary differentiator and the reason both plugins are taught together"
-    - "Agents must produce recommended actions, not just status reports — an alert that says 'contract renewing in 45 days' is less valuable than one that says 'begin renegotiation by [specific date] because notice period requires action by [date]'"
-    - "Agent interdependencies are a feature, not a side effect — the Change Tracker and Process Health agent are designed to coordinate because change and process documentation are inseparable"
+    - "The transition from one-time analysis (Lessons 3-11) to continuous intelligence (Lesson 12) is the key conceptual shift: students have built the data; now they automate the monitoring"
+    - "No official plugin has persistent agents. This is the custom plugin's primary differentiator and the reason both plugins are taught together"
+    - "Agents must produce recommended actions, not just status reports: an alert that says 'contract renewing in 45 days' is less valuable than one that says 'begin renegotiation by [specific date] because notice period requires action by [date]'"
+    - "Agent interdependencies are a feature, not a side effect: the Change Tracker and Process Health agent are designed to coordinate because change and process documentation are inseparable"
   misconceptions:
     - "Persistent agents run automatically without any configuration. Correction: agents require data sources to be specified, escalation contacts to be set, and thresholds to be calibrated to the organisation. They are not zero-setup tools."
     - "More frequent agent checks are always better. Correction: the schedule is designed around meaningful signal frequency. The Compliance Monitor runs weekly because obligations change weekly. The Process Health agent runs monthly because SOP currency is a monthly concern. Mismatch between schedule and signal frequency produces noise, not insight."
-    - "Agents can update compliance or change status automatically. Correction: agents flag and alert — they do not change status. Only named human owners can confirm a compliance control is effective or close a change. The agent's job is to ensure that nothing is missed; the human's job is to make the call."
+    - "Agents can update compliance or change status automatically. Correction: agents flag and alert; they do not change status. Only named human owners can confirm a compliance control is effective or close a change. The agent's job is to ensure that nothing is missed; the human's job is to make the call."
   discussion_prompts:
     - "Before these agents existed, who in your organisation was responsible for checking vendor renewals, SOP currency, compliance obligation reviews, and change pipeline status every week? Was anyone? What happened when that person was on leave?"
-    - "If the Vendor Watchdog detects an unapproved vendor payment, who should receive the alert — the finance team, the procurement team, the CFO? What does your organisation's escalation policy say about this?"
+    - "If the Vendor Watchdog detects an unapproved vendor payment, who should receive the alert: the finance team, the procurement team, the CFO? What does your organisation's escalation policy say about this?"
   teaching_tips:
     - "Frame the lesson as the payoff for Lessons 3-11. Students built the vendor register, the SOP library, the compliance map, and the change log in those lessons. The agents in Lesson 12 monitor exactly that data. The connection is direct and should be made explicit."
     - "The alert format matters as much as the alert content. Show students what a weak alert looks like ('Contract renewing soon') versus a strong one (the full format with service description, value, dates, notice deadline, owner, and required action). The difference in usefulness is stark."
 ---
 
-# Persistent Agents — Deployment and Schedule
+# Persistent Agents: Deployment and Schedule
 
-You have spent the last nine lessons building the operations intelligence layer from scratch: vendor register, contract obligations, SOP library, change log, compliance map, risk register, incident post-mortems, and a metrics dashboard. Each of those artefacts has one thing in common — they were built once and will immediately start drifting.
+You have spent the last nine lessons building the operations intelligence layer from scratch: vendor register, contract obligations, SOP library, change log, compliance map, risk register, incident post-mortems, and a metrics dashboard. Each of those artefacts has one thing in common; they were built once and will immediately start drifting.
 
 The vendor register becomes stale the moment a new subscription renews without anyone noticing. The compliance map drifts when a regulatory update lands and nobody reviews its implications. The SOP library decays when a system change goes live without triggering a documentation update. The change log accumulates stale approvals when nobody tracks whether approved changes were ever implemented. In most organisations, this drift is invisible until it becomes an audit finding, a compliance breach, or an operational failure.
 
-Persistent agents close this gap. Rather than waiting for a human to think to check — and hoping they remember — each agent runs on a fixed schedule, monitors a specific domain of your operational data, and alerts when something needs attention. This lesson deploys four agents: the Vendor Watchdog, the Process Health agent, the Compliance Monitor, and the Change Tracker. Together they form the automated monitoring layer of the operations intelligence system you have been building.
+Persistent agents close this gap. Rather than waiting for a human to think to check , and hoping they remember: each agent runs on a fixed schedule, monitors a specific domain of your operational data, and alerts when something needs attention. This lesson deploys four agents: the Vendor Watchdog, the Process Health agent, the Compliance Monitor, and the Change Tracker. Together they form the automated monitoring layer of the operations intelligence system you have been building.
 
 This is the transition from one-time analysis to continuous intelligence. The data is already built. Now you make it self-maintaining.
 
@@ -105,28 +105,28 @@ This is the transition from one-time analysis to continuous intelligence. The da
 This exercise requires the **Operations** plugin (official) and the **Operations Intelligence** plugin (custom). If you have not installed them, follow the instructions in the [Chapter 38 prerequisites](./README.md#prerequisites) before continuing.
 :::
 
-## Why Persistent Agents — and Why Only in the Custom Plugin
+## Why Persistent Agents , and Why Only in the Custom Plugin
 
 Every tool in the official Operations plugin was designed for on-demand use: you invoke `/vendor-review` when you want a vendor analysis, `/change-request` when you need an impact assessment. The official plugin is excellent at responding to requests. It does not, by design, watch for problems you haven't yet noticed.
 
-The custom Operations Intelligence plugin adds the layer that the official plugin cannot: agents that run autonomously on a schedule, monitor operational data continuously, and alert without being asked. This is not a gap in the official plugin's quality — it is a deliberate architectural separation between command-response tools and persistent automation.
+The custom Operations Intelligence plugin adds the layer that the official plugin cannot: agents that run autonomously on a schedule, monitor operational data continuously, and alert without being asked. This is not a gap in the official plugin's quality; it is a deliberate architectural separation between command-response tools and persistent automation.
 
 | Capability               | Official Plugin (on-demand)  | Custom Plugin (persistent)          |
 | ------------------------ | ---------------------------- | ----------------------------------- |
-| Vendor evaluation        | `/vendor-review` on request  | Vendor Watchdog — weekly automation |
-| Compliance tracking      | `compliance-tracking` skill  | Compliance Monitor — weekly check   |
-| Process documentation    | `/process-doc` on request    | Process Health — monthly check      |
-| Change management        | `/change-request` on request | Change Tracker — weekly monitoring  |
+| Vendor evaluation        | `/vendor-review` on request  | Vendor Watchdog, weekly automation |
+| Compliance tracking      | `compliance-tracking` skill  | Compliance Monitor, weekly check   |
+| Process documentation    | `/process-doc` on request    | Process Health, monthly check      |
+| Change management        | `/change-request` on request | Change Tracker, weekly monitoring  |
 | Scheduled alert delivery | Not available                | All four agents                     |
 | Monthly COO reports      | Not available                | All four agents                     |
 
-The practical difference: with only the official plugin, someone must remember to run the vendor audit every quarter. With the persistent agents, the Vendor Watchdog runs every Monday morning and delivers an alert if something needs attention — whether or not anyone remembered to check.
+The practical difference: with only the official plugin, someone must remember to run the vendor audit every quarter. With the persistent agents, the Vendor Watchdog runs every Monday morning and delivers an alert if something needs attention , whether or not anyone remembered to check.
 
 ## The Four Operations Agents
 
 ### Agent 1: Vendor Watchdog
 
-**Purpose:** Monitor the vendor portfolio continuously — renewals, SLA performance, spend versus budget, and unapproved vendor payments.
+**Purpose:** Monitor the vendor portfolio continuously, renewals, SLA performance, spend versus budget, and unapproved vendor payments.
 
 **Schedule:** Every Monday at 07:00
 
@@ -139,33 +139,33 @@ The practical difference: with only the official plugin, someone must remember t
 | Spend vs. budget     | Invoice above contracted rate, or cumulative spend >10% over budget | Finance + procurement        |
 | Approved vendor list | Payment to a vendor not on the approved list                        | Procurement + CFO            |
 
-**Alert format — renewal example:**
+**Alert format, renewal example:**
 
 ```
 ⚠️ RENEWAL ALERT: Salesforce CRM
 Service:         CRM platform (sales team + customer success)
 Annual value:    £124,000
-Renewal date:    15 April — 47 days away
+Renewal date:    15 April, 47 days away
 Notice required: 60 days (from contract)
-Notice deadline: 16 February — ALREADY PASSED
+Notice deadline: 16 February, ALREADY PASSED
 Owner:           Head of Sales
 Action required: Begin emergency renewal process immediately.
-                 Notice window has closed — auto-renewal will proceed
+                 Notice window has closed, auto-renewal will proceed
                  unless contract allows late cancellation. Verify
                  contract terms and engage vendor this week.
-Escalating to:   COO — contract value >£50,000 and notice deadline missed.
+Escalating to:   COO, contract value >£50,000 and notice deadline missed.
 ```
 
-**Alert format — SLA breach example:**
+**Alert format, SLA breach example:**
 
 ```
 🔴 SLA BREACH ALERT: CloudHost UK (infrastructure)
-SLA metric:   Uptime — contracted 99.9%
+SLA metric:   Uptime, contracted 99.9%
 Contracted:   99.9%
 Actual:       99.67% (three incidents this period)
 Breach since: 3 March
 Incidents:    3 (total 19.2 hours downtime)
-Credit due:   Check contract terms — likely £3,800-£7,200 based
+Credit due:   Check contract terms, likely £3,800-£7,200 based
               on downtime duration and SLA credit formula
 Owner:        Head of IT
 Action:       Generate scorecard → initiate formal vendor conversation
@@ -173,13 +173,13 @@ Action:       Generate scorecard → initiate formal vendor conversation
 Escalation:   If breach continues >4 weeks: include in weekly COO report.
 ```
 
-**Monthly report to COO:** Full vendor portfolio snapshot — spend, performance, renewal pipeline, rationalisation opportunities, and three prioritised recommended actions.
+**Monthly report to COO:** Full vendor portfolio snapshot, spend, performance, renewal pipeline, rationalisation opportunities, and three prioritised recommended actions.
 
 ---
 
 ### Agent 2: Process Health Agent
 
-**Purpose:** Monitor the currency and completeness of the SOP library — overdue reviews, orphaned SOPs, change-triggered updates, and regulatory-triggered updates.
+**Purpose:** Monitor the currency and completeness of the SOP library, overdue reviews, orphaned SOPs, change-triggered updates, and regulatory-triggered updates.
 
 **Schedule:** First Monday of each month
 
@@ -192,35 +192,35 @@ Escalation:   If breach continues >4 weeks: include in weekly COO report.
 | Change-triggered reviews     | Changes marked complete that reference systems covered by SOPs | SOP owner          |
 | Regulation-triggered reviews | Regulatory changes that affect embedded controls in SOPs       | SOP owner + CCO    |
 
-**Alert format — overdue review:**
+**Alert format, overdue review:**
 
 ```
 ⚠️ SOP REVIEW OVERDUE: SOP-0042: Client Onboarding Process
 Owner:        Sarah Okonkwo (Client Services Manager)
 Tier:         1 (Critical)
-Review due:   14 January — 52 days overdue
-Action:       Review by 28 February (Tier 1 — 14-day deadline from today)
+Review due:   14 January, 52 days overdue
+Action:       Review by 28 February (Tier 1, 14-day deadline from today)
 Escalating:   Tier 1 SOP overdue >30 days → Operations Manager notified.
               If not reviewed by 28 February → escalate to COO.
 ```
 
-**Alert format — orphaned SOP:**
+**Alert format, orphaned SOP:**
 
 ```
 🔴 ORPHANED SOP: SOP-0019: Payroll Submission Verification
-Previous owner: James Mackenzie (Finance Controller — left 15 February)
+Previous owner: James Mackenzie (Finance Controller, left 15 February)
 Status:         Owner has left the organisation
 Action:         Assign interim owner within 5 business days.
-                Schedule knowledge capture session — James left recently
+                Schedule knowledge capture session, James left recently
                 and process knowledge may still be accessible.
 Alert to:       Finance Director + Operations Manager
 ```
 
-**Alert format — change-triggered review:**
+**Alert format, change-triggered review:**
 
 ```
 🟡 CHANGE-TRIGGERED REVIEW REQUIRED: SOP-0031: Software Access Provisioning
-Change:       CH-2024-047 — HR System Migration (completed 8 March)
+Change:       CH-2024-047, HR System Migration (completed 8 March)
 What changed: Steps 3 and 4 of this SOP reference the old HR system's
               user provisioning screens (Workday). Migration replaced
               Workday with BambooHR. Steps 3, 4, and 7 now reference
@@ -229,13 +229,13 @@ SOP owner:    IT Operations Manager
 Action:       Review and update SOP within 14 days (Tier 1 SOP).
 ```
 
-**Monthly process health report to COO:** Full SOP library status — current, due for review, overdue, orphaned — plus change-triggered and regulation-triggered reviews pending.
+**Monthly process health report to COO:** Full SOP library status, current, due for review, overdue, orphaned, plus change-triggered and regulation-triggered reviews pending.
 
 ---
 
 ### Agent 3: Compliance Monitor
 
-**Purpose:** Track all compliance obligations continuously — approaching review dates, aging evidence, regulatory changes, and unresolved gaps.
+**Purpose:** Track all compliance obligations continuously, approaching review dates, aging evidence, regulatory changes, and unresolved gaps.
 
 **Schedule:** Every Monday at 08:00
 
@@ -248,23 +248,23 @@ Action:       Review and update SOP within 14 days (Tier 1 SOP).
 | Regulatory changes | Relevant regulatory updates in configured jurisdictions    | CCO              |
 | Open gaps          | GAP obligations without remediation progress after 14 days | COO              |
 
-**Alert format — obligation due for review:**
+**Alert format, obligation due for review:**
 
 ```
-⚠️ COMPLIANCE REVIEW DUE: OBL-007: UK GDPR — Data Retention Policy
+⚠️ COMPLIANCE REVIEW DUE: OBL-007: UK GDPR, Data Retention Policy
 Framework:      UK GDPR (ICO)
 Owner:          Data Protection Officer
-Review due:     5 April — 18 days away
+Review due:     5 April, 18 days away
 Current status: 🟢 CURRENT
 Action:         Schedule review this week. Confirm data retention schedules
                 are still accurate for all data categories. Update evidence
                 record to confirm CURRENT status for another 12 months.
 ```
 
-**Alert format — regulatory change:**
+**Alert format, regulatory change:**
 
 ```
-📋 REGULATORY CHANGE DETECTED: ICO Guidance Update — Legitimate Interest Assessments
+📋 REGULATORY CHANGE DETECTED: ICO Guidance Update, Legitimate Interest Assessments
 Framework:     UK GDPR (ICO)
 Change:        Updated guidance on when a Legitimate Interest Assessment (LIA)
                is required. New guidance narrows the circumstances where
@@ -275,11 +275,11 @@ Potentially affected obligations:
                OBL-004: Marketing communications consent basis
                OBL-012: Third-party data sharing lawful basis
 Action:        Brief sent to Data Protection Officer and CCO for impact
-               assessment. Do NOT update obligation status automatically —
+               assessment. Do NOT update obligation status automatically,
                human review required before any status changes.
 ```
 
-**Note on status changes:** The Compliance Monitor **never** updates obligation status automatically. Regulatory changes are flagged for human review. Only the named obligation owner, after confirming control effectiveness, can change a status from PARTIAL to CURRENT. This is deliberate — automated status changes on compliance obligations create audit liability.
+**Note on status changes:** The Compliance Monitor **never** updates obligation status automatically. Regulatory changes are flagged for human review. Only the named obligation owner, after confirming control effectiveness, can change a status from PARTIAL to CURRENT. This is deliberate, automated status changes on compliance obligations create audit liability.
 
 **Quarterly report to Board/Audit Committee:** Full compliance dashboard, regulatory changes assessed, open actions, upcoming obligations and review schedule.
 
@@ -287,7 +287,7 @@ Action:        Brief sent to Data Protection Officer and CCO for impact
 
 ### Agent 4: Change Tracker
 
-**Purpose:** Monitor all open change requests — impact assessment compliance, rollback plan presence, stale approvals, overdue changes, post-implementation reviews, and emergency change retrospectives.
+**Purpose:** Monitor all open change requests, impact assessment compliance, rollback plan presence, stale approvals, overdue changes, post-implementation reviews, and emergency change retrospectives.
 
 **Schedule:** Every Friday at 16:00
 
@@ -302,12 +302,12 @@ Action:        Brief sent to Data Protection Officer and CCO for impact
 | PIR tracking             | Post-implementation reviews overdue for Major/Critical changes         | Change owner → Change Manager |
 | Emergency retrospectives | Emergency changes without retrospective review within 10 business days | Change owner                  |
 
-**Alert format — missing impact assessment:**
+**Alert format, missing impact assessment:**
 
 ```
-🔴 CHANGE BLOCKED — MISSING IMPACT ASSESSMENT: CH-2024-089: ERP Module Upgrade
+🔴 CHANGE BLOCKED, MISSING IMPACT ASSESSMENT: CH-2024-089: ERP Module Upgrade
 Classification: MAJOR
-Approved by:    Operations Director — 12 March
+Approved by:    Operations Director, 12 March
 Missing:        Impact assessment (required for MAJOR changes)
 Action:         Change is paused pending impact assessment completion.
                 This change must not proceed to implementation until
@@ -316,22 +316,22 @@ Alert to:       Change Manager (enforce pause) + COO (visibility)
 Owner:          IT Programme Manager
 ```
 
-**Alert format — PIR overdue:**
+**Alert format, PIR overdue:**
 
 ```
 🟡 PIR OVERDUE: CH-2024-071: CRM System Upgrade
 Go-live date:   8 February
-PIR due:        8 March (4 weeks post go-live — MAJOR change)
+PIR due:        8 March (4 weeks post go-live, MAJOR change)
 Days overdue:   12 days
 Owner:          Head of IT
 Action:         Complete PIR within 5 business days.
 Escalation:     If not completed by 20 March → alert to Change Manager.
 Note:           This was a significant change (2-day outage during
                 go-live weekend). PIR is particularly important here
-                — the failure mode should be documented and prevented.
+               : the failure mode should be documented and prevented.
 ```
 
-## Agent Interdependencies — How the Network Works
+## Agent Interdependencies: How the Network Works
 
 The four agents are designed to be independent but their outputs interact. Understanding these interactions is the difference between running four uncoordinated monitors and running a coordinated operations intelligence network.
 
@@ -352,7 +352,7 @@ Process Health Agent flags SOPs referencing the changed system
 
 Vendor Watchdog detects SLA breach
         ↓
-Risk register (L09) should be updated — the vendor's SLA
+Risk register (L09) should be updated: the vendor's SLA
 failure creates an operational risk entry
         ↓
 Compliance Monitor may need to check if any compliance
@@ -367,12 +367,12 @@ obligation depends on this vendor's performance
 | New vendor → approved list  | Vendor Watchdog    | Procurement (human) | Unapproved vendor must go through formal approval             |
 
 :::info Why Coordination Matters
-These interactions are not automatic — the agents alert; humans act. But by making the interactions explicit, you ensure that a regulatory change does not leave outdated SOPs unchecked, and a system change does not leave process documentation that still references the old system. The agents create the visibility; your operations team acts on it.
+These interactions are not automatic: the agents alert; humans act. But by making the interactions explicit, you ensure that a regulatory change does not leave outdated SOPs unchecked, and a system change does not leave process documentation that still references the old system. The agents create the visibility; your operations team acts on it.
 :::
 
 ## Configuring the Agents
 
-Each agent requires configuration before its first run. Configuration lives in `ops.local.md` — the organisation-specific configuration file you built in Lesson 2. Agents draw their thresholds, data source paths, and escalation contacts from this file.
+Each agent requires configuration before its first run. Configuration lives in `ops.local.md`: the organisation-specific configuration file you built in Lesson 2. Agents draw their thresholds, data source paths, and escalation contacts from this file.
 
 **Minimum configuration for each agent:**
 
@@ -383,7 +383,7 @@ Each agent requires configuration before its first run. Configuration lives in `
 | Compliance Monitor | Compliance map path, jurisdictions to monitor (web search targets), evidence age thresholds   |
 | Change Tracker     | Change log path or MCP source, classification thresholds, PIR deadlines per classification    |
 
-**Worked example — configuring the Vendor Watchdog:**
+**Worked example, configuring the Vendor Watchdog:**
 
 ```
 Configure the vendor-watchdog agent for our organisation.
@@ -415,14 +415,14 @@ Configure and confirm the first weekly check schedule.
 
 **Type:** Agent deployment and configuration
 **Time:** 35 minutes
-**Plugin:** Operations Intelligence (custom) — persistent agents
+**Plugin:** Operations Intelligence (custom), persistent agents
 **Goal:** Configure all four agents, run a simulated weekly/monthly check for each, and review the output quality
 
 :::tip Plugin Setup Reminder
 This exercise requires the **Operations Intelligence** custom plugin. The official Operations plugin is not used in this exercise.
 :::
 
-### Step 1 — Prepare the Configuration Context
+### Step 1: Prepare the Configuration Context
 
 Before configuring the agents, gather the following for your 200-person professional services firm:
 
@@ -433,7 +433,7 @@ Before configuring the agents, gather the following for your 200-person professi
 
 If you have not completed the earlier lessons, use the running context: 200-person UK professional services firm, ~47 vendors, ~20 SOPs across four tiers, primary regulatory framework UK GDPR, two recent changes in the change log.
 
-### Step 2 — Configure and Run Each Agent
+### Step 2: Configure and Run Each Agent
 
 For each agent, use the following prompt pattern, adapting to your data:
 
@@ -443,7 +443,7 @@ For each agent, use the following prompt pattern, adapting to your data:
 Configure the vendor-watchdog agent for our 200-person UK professional
 services firm.
 
-Vendor data: [paste or describe your vendor list — at minimum include
+Vendor data: [paste or describe your vendor list, at minimum include
 5-10 vendors with renewal dates, annual values, and SLA commitments]
 
 Schedule: Monday 07:00
@@ -467,11 +467,11 @@ based on the data I provided.
 ```
 Configure the process-health agent for our organisation.
 
-SOP library: [describe your SOPs — include at minimum 5 SOPs with
+SOP library: [describe your SOPs, include at minimum 5 SOPs with
 tier, review cycle, and named owner. Include at least one SOP with
 an overdue review date and one SOP whose owner has recently left.]
 
-Review cycles: Tier 1 — annual, Tier 2 — 18 months, Tier 3 — 2 years
+Review cycles: Tier 1, annual, Tier 2, 18 months, Tier 3, 2 years
 
 Recent changes: [describe any recent system changes from your change
 log that might affect documented processes]
@@ -487,7 +487,7 @@ Run the monthly check and show me the process health report.
 Configure the compliance-monitor agent for our UK professional
 services firm.
 
-Compliance map: [describe or paste your compliance obligations —
+Compliance map: [describe or paste your compliance obligations,
 include at minimum: UK GDPR, Companies Act, at least one FCA obligation
 if applicable, employment law. Include at least one obligation whose
 review is due within 30 days and one where evidence is >12 months old.]
@@ -508,32 +508,32 @@ Run the weekly check and show me the alerts that would be generated.
 ```
 Configure the change-tracker agent for our organisation.
 
-Change log: [describe your open and recently completed changes —
+Change log: [describe your open and recently completed changes,
 include at minimum 3-4 changes: one Major change approved but
 awaiting implementation, one recently completed Major change
 without a PIR yet, one change approaching its planned go-live
 date without a rollback plan.]
 
-PIR deadlines: Major/Critical — 4 weeks; Significant — 6 weeks
+PIR deadlines: Major/Critical, 4 weeks; Significant, 6 weeks
 
 Schedule: Friday 16:00
 
 Run the weekly check and show me the alerts that would be generated.
 ```
 
-### Step 3 — Evaluate Agent Output Quality
+### Step 3: Evaluate Agent Output Quality
 
 For each agent's output, evaluate:
 
 **What to evaluate:**
 
-- Does each alert include a **specific recommended action** — not just a status? "Contract renewing soon" is a status. "Begin renegotiation by [date] because notice period requires action by [date]" is an action.
+- Does each alert include a **specific recommended action** , not just a status? "Contract renewing soon" is a status. "Begin renegotiation by [date] because notice period requires action by [date]" is an action.
 - Are **escalation thresholds clear**? Can the recipient tell exactly when something will be escalated and to whom?
 - Would the **COO find the monthly report actionable**? Count the number of decisions the COO can make from the report versus the number of follow-up questions they would need to ask.
-- Are the agents monitoring the **data you built in Lessons 3-11**? The Vendor Watchdog should reference your vendor register. The Process Health agent should reference your SOP library. If the agents are giving generic output, your configuration context is insufficient — add more specific data.
+- Are the agents monitoring the **data you built in Lessons 3-11**? The Vendor Watchdog should reference your vendor register. The Process Health agent should reference your SOP library. If the agents are giving generic output, your configuration context is insufficient, add more specific data.
 - Does the **monthly report have a recommended actions section**? A report without recommendations is a status update, not intelligence.
 
-### Step 4 — Trace the Interaction Chain
+### Step 4: Trace the Interaction Chain
 
 Run this additional prompt to test the agent network's coordination:
 
@@ -550,10 +550,10 @@ Show me the full interaction chain from the regulatory change detection
 to the SOP update completion.
 ```
 
-**Deliverable:** Four configured agents, each producing at least one alert and a monthly report structure. A traced interaction chain from regulatory change to SOP review. Save your configuration — Lesson 13 uses the agent outputs to build the operations intelligence brief.
+**Deliverable:** Four configured agents, each producing at least one alert and a monthly report structure. A traced interaction chain from regulatory change to SOP review. Save your configuration, Lesson 13 uses the agent outputs to build the operations intelligence brief.
 
 :::note Keep This File
-The agent outputs you generate in this lesson — alerts, monthly reports, and the interaction chain — are the inputs to Lesson 13 (Operations Intelligence Brief). Keep them in your Cowork session. You will synthesise them into a single COO-level brief in the next lesson.
+The agent outputs you generate in this lesson, alerts, monthly reports, and the interaction chain: are the inputs to Lesson 13 (Operations Intelligence Brief). Keep them in your Cowork session. You will synthesise them into a single COO-level brief in the next lesson.
 :::
 
 ## Try With AI
@@ -577,7 +577,7 @@ Escalation: Contracts >£30,000 with renewal <60 days → COO alert
 Run the first weekly check. What alerts would be generated?
 ```
 
-**What you are learning:** Even a minimal vendor list generates meaningful alerts when a significant contract (Salesforce, £45,000) is approaching renewal with only 45 days — below the 60-day escalation threshold. Notice how the alert format determines whether the recipient knows what to do or just knows that something is happening.
+**What you are learning:** Even a minimal vendor list generates meaningful alerts when a significant contract (Salesforce, £45,000) is approaching renewal with only 45 days, below the 60-day escalation threshold. Notice how the alert format determines whether the recipient knows what to do or just knows that something is happening.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -590,20 +590,20 @@ one Major change that has been approved but not yet implemented,
 and at least one recently completed change that needs a PIR.]
 
 Our change classifications: Standard / Significant / Major / Critical
-PIR requirements: Major and Critical — mandatory within 4 weeks.
+PIR requirements: Major and Critical, mandatory within 4 weeks.
 
 What alerts should the change-tracker generate for this pipeline?
 What is the change failure rate based on the data I provided?
 ```
 
-**What you are learning:** Applying the Change Tracker to your own change log reveals whether your change process is operating within its own governance requirements — or whether the review that no one has done yet was actually required. The agent makes these gaps visible without requiring anyone to manually track every change's compliance status.
+**What you are learning:** Applying the Change Tracker to your own change log reveals whether your change process is operating within its own governance requirements , or whether the review that no one has done yet was actually required. The agent makes these gaps visible without requiring anyone to manually track every change's compliance status.
 
 **Apply**: Extend to a new situation the lesson didn't cover directly.
 
 ```
 I am the COO of a 200-person professional services firm. I have
 four operations agents configured and running. It is the first
-Monday of the month — all four agents have run their checks.
+Monday of the month, all four agents have run their checks.
 
 The Vendor Watchdog has flagged: two upcoming renewals, one SLA
 breach (infrastructure provider, week 3), one unapproved vendor
@@ -626,7 +626,7 @@ versus which can be delegated? What does each delegation instruction
 look like?
 ```
 
-**What you are learning:** Triage is the COO's most important skill when the agents deliver their Monday morning output. Not every alert is equal — the Major change missing a rollback plan with a go-live in 8 days demands immediate action; the SOP overdue by 45 days is serious but not today's emergency. This prompt builds the judgment to prioritise across the four agent outputs simultaneously.
+**What you are learning:** Triage is the COO's most important skill when the agents deliver their Monday morning output. Not every alert is equal: the Major change missing a rollback plan with a go-live in 8 days demands immediate action; the SOP overdue by 45 days is serious but not today's emergency. This prompt builds the judgment to prioritise across the four agent outputs simultaneously.
 :::
 
 ## Flashcards Study Aid

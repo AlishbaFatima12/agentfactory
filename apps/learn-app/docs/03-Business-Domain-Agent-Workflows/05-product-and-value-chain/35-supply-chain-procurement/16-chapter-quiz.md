@@ -31,7 +31,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Freight carriers are scored on cost alone, ignoring service levels"
       ],
       correctOption: 1,
-      explanation: "The vendor blind spot means the organisation has no continuous monitoring of supplier performance — problems accumulate invisibly until a crisis or contract renewal forces a review. Manual invoice matching describes the reconciliation swamp. Using annual snapshots for network design describes the static optimisation trap. Scoring carriers on cost alone is a logistics scoring weakness but not one of the chapter's three named structural failures.",
+      explanation: "The vendor blind spot means the organisation has no continuous monitoring of supplier performance: problems accumulate invisibly until a crisis or contract renewal forces a review. Manual invoice matching describes the reconciliation swamp. Using annual snapshots for network design describes the static optimisation trap. Scoring carriers on cost alone is a logistics scoring weakness but not one of the chapter's three named structural failures.",
       source: "Lesson 1: Three Structural Failures"
     },
     {
@@ -55,7 +55,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Each skill is invoked directly, making a routing layer unnecessary"
       ],
       correctOption: 3,
-      explanation: "Unlike some chapter plugins, the supply chain plugin has no router because each of the eight skills is designed to be invoked directly by name. This keeps the architecture simpler and removes an intermediary layer that could introduce routing errors. The absence of a router is not about audit trails or task complexity — it is a deliberate design decision. The plugin is equally suitable for team and individual use; user count does not drive the routing decision.",
+      explanation: "Unlike some chapter plugins, the supply chain plugin has no router because each of the eight skills is designed to be invoked directly by name. This keeps the architecture simpler and removes an intermediary layer that could introduce routing errors. The absence of a router is not about audit trails or task complexity: it is a deliberate design decision. The plugin is equally suitable for team and individual use; user count does not drive the routing decision.",
       source: "Lesson 2: Plugin Architecture"
     },
     {
@@ -79,7 +79,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Bottleneck"
       ],
       correctOption: 1,
-      explanation: "The Kraljic Matrix plots supply risk on one axis and profit impact on the other. Strategic items have both high supply risk and high profit impact — the opposite of Commodity items which have low risk and low impact. Tactical items have low supply risk but higher profit impact. Bottleneck items have high supply risk but low profit impact. Strategic items demand the most management attention and typically require partnership-level supplier relationships.",
+      explanation: "The Kraljic Matrix plots supply risk on one axis and profit impact on the other. Strategic items have both high supply risk and high profit impact: the opposite of Commodity items which have low risk and low impact. Tactical items have low supply risk but higher profit impact. Bottleneck items have high supply risk but low profit impact. Strategic items demand the most management attention and typically require partnership-level supplier relationships.",
       source: "Lesson 3: Kraljic Matrix"
     },
     {
@@ -91,7 +91,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Commodity items are riskiest because they are purchased from many vendors simultaneously"
       ],
       correctOption: 2,
-      explanation: "Bottleneck items are characterised by low spend but high supply dependency — the organisation cannot substitute or do without them easily. This combination is the most dangerous because the low spend figure makes the item invisible to cost-focused management while a supply disruption can halt production. Strategic items carry high risk too but their high spend makes them visible. Commodity items have low risk by definition. Tactical items have manageable supply risk despite higher spend.",
+      explanation: "Bottleneck items are characterised by low spend but high supply dependency: the organisation cannot substitute or do without them easily. This combination is the most dangerous because the low spend figure makes the item invisible to cost-focused management while a supply disruption can halt production. Strategic items carry high risk too but their high spend makes them visible. Commodity items have low risk by definition. Tactical items have manageable supply risk despite higher spend.",
       source: "Lesson 3: Kraljic Matrix"
     },
     {
@@ -103,7 +103,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Tactical"
       ],
       correctOption: 3,
-      explanation: "Tactical items sit in the quadrant with high profit impact but low supply risk — they contribute meaningfully to the business but can be sourced from multiple vendors relatively easily. Strategic items have both high profit impact and high supply risk. Bottleneck items have high supply risk but low profit impact. Commodity items have both low profit impact and low supply risk. Tactical items often benefit from supplier consolidation and volume leverage strategies.",
+      explanation: "Tactical items sit in the quadrant with high profit impact but low supply risk: they contribute meaningfully to the business but can be sourced from multiple vendors relatively easily. Strategic items have both high profit impact and high supply risk. Bottleneck items have high supply risk but low profit impact. Commodity items have both low profit impact and low supply risk. Tactical items often benefit from supplier consolidation and volume leverage strategies.",
       source: "Lesson 3: Kraljic Matrix"
     },
     {
@@ -115,7 +115,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Greater than 95%"
       ],
       correctOption: 1,
-      explanation: "The Six-Dimension Assessment sets the On-Time Delivery (OTD) threshold at greater than 90% for acceptable operational performance. Falling below this threshold signals a supplier requiring corrective action. The quality dimension uses a separate threshold of less than 1.5% defect rate. The other percentages listed are plausible but incorrect — 80% and 85% are too lenient for most B2B supply chains, and 95% is the threshold used in high-reliability industries not specified in Chapter 35.",
+      explanation: "The Six-Dimension Assessment sets the On-Time Delivery (OTD) threshold at greater than 90% for acceptable operational performance. Falling below this threshold signals a supplier requiring corrective action. The quality dimension uses a separate threshold of less than 1.5% defect rate. The other percentages listed are plausible but incorrect; 80% and 85% are too lenient for most B2B supply chains, and 95% is the threshold used in high-reliability industries not specified in Chapter 35.",
       source: "Lesson 4: Six-Dimension Assessment"
     },
     {
@@ -155,7 +155,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
       source: "Lesson 5: Three-Way Match"
     },
     {
-      question: "Under what circumstances is two-way matching — comparing only the invoice against the purchase order — considered sufficient?",
+      question: "Under what circumstances is two-way matching: comparing only the invoice against the purchase order: considered sufficient?",
       options: [
         "For services, utilities, or items below the materiality threshold",
         "When the invoice exceeds the materiality threshold",
@@ -175,7 +175,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "As a routine update to be applied automatically after 48 hours"
       ],
       correctOption: 1,
-      explanation: "A bank detail change on a supplier invoice is a primary fraud indicator — it is a common vector for payment diversion fraud, also known as business email compromise. Chapter 35 classifies this as a fraud flag requiring immediate investigation before any payment is made. Treating it as a routine update, a low-priority error, or a medium-priority discrepancy exposes the organisation to significant financial loss. The four-stage reconciliation process includes this as a specific fraud detection check.",
+      explanation: "A bank detail change on a supplier invoice is a primary fraud indicator: it is a common vector for payment diversion fraud, also known as business email compromise. Chapter 35 classifies this as a fraud flag requiring immediate investigation before any payment is made. Treating it as a routine update, a low-priority error, or a medium-priority discrepancy exposes the organisation to significant financial loss. The four-stage reconciliation process includes this as a specific fraud detection check.",
       source: "Lesson 6: Invoice Reconciliation"
     },
     {
@@ -187,7 +187,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "As a systematic issue requiring root-cause investigation at the supplier"
       ],
       correctOption: 3,
-      explanation: "Three or more of the same exception type from the same vendor is the threshold for classifying an issue as systematic rather than isolated. A systematic issue indicates a process failure at the supplier — such as incorrect unit-of-measure mapping or a billing system error — that will recur unless the root cause is addressed. Treating each as isolated wastes resolution effort. Waiving small amounts masks a growing liability. The chapter's four-stage reconciliation framework includes systematic pattern detection as a distinct stage.",
+      explanation: "Three or more of the same exception type from the same vendor is the threshold for classifying an issue as systematic rather than isolated. A systematic issue indicates a process failure at the supplier: such as incorrect unit-of-measure mapping or a billing system error: that will recur unless the root cause is addressed. Treating each as isolated wastes resolution effort. Waiving small amounts masks a growing liability. The chapter's four-stage reconciliation framework includes systematic pattern detection as a distinct stage.",
       source: "Lesson 6: Invoice Reconciliation"
     },
     {
@@ -199,7 +199,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "HIGH, to apply the precautionary principle until data is gathered"
       ],
       correctOption: 2,
-      explanation: "Chapter 35's supplier risk framework requires an UNASSESSED rating when data is absent — it is never acceptable to infer LOW risk from missing information. Absence of data means the risk is unknown, not absent. Assigning LOW without data is a false assurance that can lead to undetected supplier failures. MEDIUM as a neutral default is also incorrect because it implies a degree of knowledge that does not exist. UNASSESSED triggers a data-gathering action rather than masking the gap.",
+      explanation: "Chapter 35's supplier risk framework requires an UNASSESSED rating when data is absent: it is never acceptable to infer LOW risk from missing information. Absence of data means the risk is unknown, not absent. Assigning LOW without data is a false assurance that can lead to undetected supplier failures. MEDIUM as a neutral default is also incorrect because it implies a degree of knowledge that does not exist. UNASSESSED triggers a data-gathering action rather than masking the gap.",
       source: "Lesson 7: Supplier Risk"
     },
     {
@@ -211,7 +211,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Commodity"
       ],
       correctOption: 0,
-      explanation: "Tier 2 mapping — identifying the suppliers of your suppliers — is required for Strategic category items. Strategic items carry both high profit impact and high supply risk, meaning a failure in a Tier 2 supplier can cascade to your business even if your direct Tier 1 supplier appears stable. Commodity and Tactical items have lower supply risk profiles that do not typically justify the cost of Tier 2 mapping. Bottleneck items may warrant selective Tier 2 review but the chapter specifies this requirement for Strategic items.",
+      explanation: "Tier 2 mapping: identifying the suppliers of your suppliers: is required for Strategic category items. Strategic items carry both high profit impact and high supply risk, meaning a failure in a Tier 2 supplier can cascade to your business even if your direct Tier 1 supplier appears stable. Commodity and Tactical items have lower supply risk profiles that do not typically justify the cost of Tier 2 mapping. Bottleneck items may warrant selective Tier 2 review but the chapter specifies this requirement for Strategic items.",
       source: "Lesson 7: Supplier Risk"
     },
     {
@@ -223,7 +223,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "As a carrier reliability issue requiring scorecard review only"
       ],
       correctOption: 1,
-      explanation: "An expedited freight rate above 10% is a warning signal that an upstream problem exists — typically poor demand forecasting, supplier delivery failures, or inadequate buffer stock. Expedited shipping is a symptom, not a root cause. Accepting it as normal agility or absorbing it as a budget line ignores the underlying issue and ensures costs will persist. While carrier scorecard review is useful, the 10%+ expedite rate points to planning or supplier failures upstream of the carrier relationship.",
+      explanation: "An expedited freight rate above 10% is a warning signal that an upstream problem exists: typically poor demand forecasting, supplier delivery failures, or inadequate buffer stock. Expedited shipping is a symptom, not a root cause. Accepting it as normal agility or absorbing it as a budget line ignores the underlying issue and ensures costs will persist. While carrier scorecard review is useful, the 10%+ expedite rate points to planning or supplier failures upstream of the carrier relationship.",
       source: "Lesson 8: Logistics"
     },
     {
@@ -235,7 +235,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Scope 4"
       ],
       correctOption: 2,
-      explanation: "Freight and logistics emissions fall under Scope 3 of the Greenhouse Gas Protocol — indirect emissions in a company's value chain that are not owned or directly controlled by the reporting organisation. Scope 1 covers direct emissions from owned sources such as company vehicles. Scope 2 covers purchased electricity and heat. Scope 4 is not an official GHG Protocol category. Logistics procurement decisions, including carrier selection and modal shift, are a primary lever for reducing Scope 3 emissions.",
+      explanation: "Freight and logistics emissions fall under Scope 3 of the Greenhouse Gas Protocol: indirect emissions in a company's value chain that are not owned or directly controlled by the reporting organisation. Scope 1 covers direct emissions from owned sources such as company vehicles. Scope 2 covers purchased electricity and heat. Scope 4 is not an official GHG Protocol category. Logistics procurement decisions, including carrier selection and modal shift, are a primary lever for reducing Scope 3 emissions.",
       source: "Lesson 8: Logistics"
     },
     {
@@ -247,7 +247,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Demand change >20% and carrier cost increase >15%"
       ],
       correctOption: 3,
-      explanation: "The network design review triggers defined in Chapter 35 are a demand change exceeding 20% or a carrier cost increase exceeding 15%. Either condition can make the current network suboptimal. The other combinations describe thresholds from other chapters or frameworks — invoice discrepancy and OTD drive reconciliation and supplier reviews, not network redesign. Spend concentration and geopolitical triggers drive sourcing strategy reviews. Supplier count thresholds are not defined network redesign triggers in the chapter.",
+      explanation: "The network design review triggers defined in Chapter 35 are a demand change exceeding 20% or a carrier cost increase exceeding 15%. Either condition can make the current network suboptimal. The other combinations describe thresholds from other chapters or frameworks: invoice discrepancy and OTD drive reconciliation and supplier reviews, not network redesign. Spend concentration and geopolitical triggers drive sourcing strategy reviews. Supplier count thresholds are not defined network redesign triggers in the chapter.",
       source: "Lesson 9: Network Design"
     },
     {
@@ -259,7 +259,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "A carbon emission reduction forecast for each scenario"
       ],
       correctOption: 1,
-      explanation: "Chapter 35 requires that a network design scenario comparison be accompanied by a sensitivity analysis that tests how the recommendation holds up when key assumptions — such as demand forecasts, fuel costs, or lead times — are varied. A recommendation that is only optimal under a single set of assumptions may be fragile. Gantt charts and carrier contract lists are implementation tools, not analytical requirements at the design stage. Carbon forecasts are valuable but not the primary validation requirement in the chapter's framework.",
+      explanation: "Chapter 35 requires that a network design scenario comparison be accompanied by a sensitivity analysis that tests how the recommendation holds up when key assumptions: such as demand forecasts, fuel costs, or lead times: are varied. A recommendation that is only optimal under a single set of assumptions may be fragile. Gantt charts and carrier contract lists are implementation tools, not analytical requirements at the design stage. Carbon forecasts are valuable but not the primary validation requirement in the chapter's framework.",
       source: "Lesson 9: Network Design"
     },
     {
@@ -283,7 +283,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Identified → Captured → Active"
       ],
       correctOption: 2,
-      explanation: "The savings tracking progression is Identified (opportunity found and sized), Active (initiative underway — negotiation, tender, or consolidation in progress), and Captured (saving realised and reflected in actual spend or contract). Reversing the order, such as claiming Captured savings before an initiative is Active, is a common reporting error that inflates procurement performance. Procurement dashboards should show the pipeline across all three states so leadership can see both current savings and future potential.",
+      explanation: "The savings tracking progression is Identified (opportunity found and sized), Active (initiative underway: negotiation, tender, or consolidation in progress), and Captured (saving realised and reflected in actual spend or contract). Reversing the order, such as claiming Captured savings before an initiative is Active, is a common reporting error that inflates procurement performance. Procurement dashboards should show the pipeline across all three states so leadership can see both current savings and future potential.",
       source: "Lesson 10: Spend Analytics"
     },
     {
@@ -319,7 +319,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Send the corrective action request for outstanding issues"
       ],
       correctOption: 1,
-      explanation: "The 120-day milestone in the procurement-calendar cascade triggers the supplier performance review and internal decision on whether to renew, renegotiate, or exit. This gives sufficient lead time to run a competitive tender if exit is chosen. The non-renewal notice is issued closer to expiry, typically at the 90 or 60-day mark. Emergency RFQ is not part of the scheduled cascade — it is triggered by unexpected supplier failure. Corrective action requests are issued based on performance events, not calendar countdown.",
+      explanation: "The 120-day milestone in the procurement-calendar cascade triggers the supplier performance review and internal decision on whether to renew, renegotiate, or exit. This gives sufficient lead time to run a competitive tender if exit is chosen. The non-renewal notice is issued closer to expiry, typically at the 90 or 60-day mark. Emergency RFQ is not part of the scheduled cascade: it is triggered by unexpected supplier failure. Corrective action requests are issued based on performance events, not calendar countdown.",
       source: "Lesson 12: Agents and Schedule"
     },
     {
@@ -367,7 +367,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "That agents should replace human procurement professionals entirely"
       ],
       correctOption: 0,
-      explanation: "The seven-phase capstone demonstrates that enterprise supply chain intelligence emerges from orchestrating all eight skills and five agents together as a system — not from any single skill in isolation. The chapter's three structural failures each require multiple capabilities to address. Skills handle discrete analytical tasks while agents provide continuous monitoring and scheduling. The capstone explicitly rejects the idea that supply chain AI is a collection of point tools; it is an integrated operational capability. Human professionals direct and review the system throughout.",
+      explanation: "The seven-phase capstone demonstrates that enterprise supply chain intelligence emerges from orchestrating all eight skills and five agents together as a system: not from any single skill in isolation. The chapter's three structural failures each require multiple capabilities to address. Skills handle discrete analytical tasks while agents provide continuous monitoring and scheduling. The capstone explicitly rejects the idea that supply chain AI is a collection of point tools; it is an integrated operational capability. Human professionals direct and review the system throughout.",
       source: "Lesson 14: Capstone"
     },
     {
@@ -379,7 +379,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "To list all plugin installation commands for technical setup"
       ],
       correctOption: 2,
-      explanation: "The Quick Reference lesson consolidates the chapter's key skill invocations, threshold values (OTD, quality, spend concentration, network triggers), agent functions, and decision rules into a single reference page for operational use. It does not introduce new skills — all skills are taught in prior lessons. It is a practitioner reference, not academic theory. Installation commands are covered in the plugin architecture lesson, not the quick reference. The quick reference is designed for use during actual procurement workflows.",
+      explanation: "The Quick Reference lesson consolidates the chapter's key skill invocations, threshold values (OTD, quality, spend concentration, network triggers), agent functions, and decision rules into a single reference page for operational use. It does not introduce new skills: all skills are taught in prior lessons. It is a practitioner reference, not academic theory. Installation commands are covered in the plugin architecture lesson, not the quick reference. The quick reference is designed for use during actual procurement workflows.",
       source: "Lesson 15: Quick Reference"
     },
     {
@@ -391,7 +391,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "The vendor blind spot and the static optimisation trap"
       ],
       correctOption: 3,
-      explanation: "Using only the invoice-reconcile skill addresses the reconciliation swamp by improving exception handling. However, the vendor blind spot — the absence of continuous supplier monitoring — requires the risk-sentinel agent. The static optimisation trap — network design that does not adapt — requires the network design skill and supporting agents. Using a single skill in isolation leaves two of the three structural failures completely unaddressed. Chapter 35's integrated approach is designed precisely to address all three failures together.",
+      explanation: "Using only the invoice-reconcile skill addresses the reconciliation swamp by improving exception handling. However, the vendor blind spot: the absence of continuous supplier monitoring: requires the risk-sentinel agent. The static optimisation trap: network design that does not adapt: requires the network design skill and supporting agents. Using a single skill in isolation leaves two of the three structural failures completely unaddressed. Chapter 35's integrated approach is designed precisely to address all three failures together.",
       source: "Lesson 1: Three Structural Failures"
     },
     {
@@ -403,7 +403,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Commodity, due to low spend and low risk"
       ],
       correctOption: 0,
-      explanation: "Packaging at 18% of spend represents meaningful profit impact, and twelve qualified global vendors means supply risk is low — this combination places it in the Tactical quadrant. It does not qualify as Strategic because supply risk is low despite the high spend. Bottleneck requires high supply risk, which contradicts having twelve qualified vendors. Commodity requires both low profit impact and low supply risk; 18% of spend is not low impact. The Tactical classification suggests a leverage and volume-consolidation strategy.",
+      explanation: "Packaging at 18% of spend represents meaningful profit impact, and twelve qualified global vendors means supply risk is low: this combination places it in the Tactical quadrant. It does not qualify as Strategic because supply risk is low despite the high spend. Bottleneck requires high supply risk, which contradicts having twelve qualified vendors. Commodity requires both low profit impact and low supply risk; 18% of spend is not low impact. The Tactical classification suggests a leverage and volume-consolidation strategy.",
       source: "Lesson 3: Kraljic Matrix"
     },
     {
@@ -415,7 +415,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "MEDIUM financial risk, as a neutral default pending document request"
       ],
       correctOption: 1,
-      explanation: "Strong operational performance does not imply financial health — a supplier can deliver reliably until the day it enters insolvency. Without financial statements, the financial dimension must be scored UNASSESSED. The UNASSESSED rating triggers a data-collection action rather than inferring risk level from incomplete information. MEDIUM as a neutral default is incorrect because it implies knowledge that does not exist. This mirrors the supplier risk rule: absent data always yields UNASSESSED, never a favourable rating.",
+      explanation: "Strong operational performance does not imply financial health: a supplier can deliver reliably until the day it enters insolvency. Without financial statements, the financial dimension must be scored UNASSESSED. The UNASSESSED rating triggers a data-collection action rather than inferring risk level from incomplete information. MEDIUM as a neutral default is incorrect because it implies knowledge that does not exist. This mirrors the supplier risk rule: absent data always yields UNASSESSED, never a favourable rating.",
       source: "Lesson 4: Six-Dimension Assessment"
     },
     {
@@ -427,7 +427,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Hold payment until a retrospective goods receipt is created"
       ],
       correctOption: 2,
-      explanation: "For services, there is no physical goods receipt because nothing tangible was delivered to a warehouse. Two-way matching — comparing the invoice against the purchase order — is the appropriate approach. Creating a retrospective GR is a process workaround that undermines the integrity of the goods receipt record. A four-way match including a statement of work is an additional control some organisations apply but is not the standard defined in Chapter 35. Two-way matching for services is an explicit exception rule in the three-way match framework.",
+      explanation: "For services, there is no physical goods receipt because nothing tangible was delivered to a warehouse. Two-way matching: comparing the invoice against the purchase order: is the appropriate approach. Creating a retrospective GR is a process workaround that undermines the integrity of the goods receipt record. A four-way match including a statement of work is an additional control some organisations apply but is not the standard defined in Chapter 35. Two-way matching for services is an explicit exception rule in the three-way match framework.",
       source: "Lesson 5: Three-Way Match"
     },
     {
@@ -439,7 +439,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Stage 3: Pattern detection across the exception log"
       ],
       correctOption: 3,
-      explanation: "Stage 3 of the four-stage invoice reconciliation process is dedicated to pattern detection — examining the exception log to identify whether the same exception type is recurring from the same vendor, which signals a systematic issue. Stage 1 handles document ingestion and field extraction. Stage 2 runs tolerance checks against the PO. Stage 4 manages escalation and approval routing. Pattern detection is explicitly separated as its own stage because it requires looking across multiple invoices, not just analysing a single document.",
+      explanation: "Stage 3 of the four-stage invoice reconciliation process is dedicated to pattern detection: examining the exception log to identify whether the same exception type is recurring from the same vendor, which signals a systematic issue. Stage 1 handles document ingestion and field extraction. Stage 2 runs tolerance checks against the PO. Stage 4 manages escalation and approval routing. Pattern detection is explicitly separated as its own stage because it requires looking across multiple invoices, not just analysing a single document.",
       source: "Lesson 6: Invoice Reconciliation"
     },
     {
@@ -451,7 +451,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "A Kraljic reclassification from Strategic to Bottleneck"
       ],
       correctOption: 1,
-      explanation: "An OTD of 88% falls below the 90% threshold defined in the Six-Dimension Assessment framework's operational dimension, requiring a Corrective Action Request (CAR) to formally document the performance gap and request a remediation plan. It does not automatically trigger non-renewal — that escalation follows if corrective action fails. Reclassifying the supplier in the Kraljic Matrix is driven by supply risk and profit impact changes, not operational KPI shortfalls. Six months of data makes this a persistent issue rather than a one-off exception.",
+      explanation: "An OTD of 88% falls below the 90% threshold defined in the Six-Dimension Assessment framework's operational dimension, requiring a Corrective Action Request (CAR) to formally document the performance gap and request a remediation plan. It does not automatically trigger non-renewal: that escalation follows if corrective action fails. Reclassifying the supplier in the Kraljic Matrix is driven by supply risk and profit impact changes, not operational KPI shortfalls. Six months of data makes this a persistent issue rather than a one-off exception.",
       source: "Lesson 4: Six-Dimension Assessment"
     },
     {
@@ -463,7 +463,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Reclassify the supplier to Bottleneck status in the risk register"
       ],
       correctOption: 0,
-      explanation: "A persistent agent detecting a geopolitical event should raise an alert with a preliminary risk assessment — surfacing the signal to the human procurement team for decision-making. Waiting for a quarterly review defeats the purpose of continuous monitoring. Automatically placing orders on hold could disrupt supply without human judgement. Reclassifying the supplier is a human decision requiring full Six-Dimension Assessment review, not an automated agent action. The agent's role is detection and escalation, not autonomous decision execution.",
+      explanation: "A persistent agent detecting a geopolitical event should raise an alert with a preliminary risk assessment: surfacing the signal to the human procurement team for decision-making. Waiting for a quarterly review defeats the purpose of continuous monitoring. Automatically placing orders on hold could disrupt supply without human judgement. Reclassifying the supplier is a human decision requiring full Six-Dimension Assessment review, not an automated agent action. The agent's role is detection and escalation, not autonomous decision execution.",
       source: "Lesson 7: Supplier Risk"
     },
     {
@@ -475,7 +475,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "An upstream planning or supplier failure masking carrier performance data"
       ],
       correctOption: 3,
-      explanation: "When expedited freight exceeds 10% of volume, it indicates an upstream problem — poor demand forecasting or supplier delivery failures — that is being solved by paying premium rates to the carrier. A high carrier OTD score in this context is misleading: the organisation is essentially buying performance by using expedited services. Treating the carrier as a specialist in urgent freight encourages the root cause to persist. The 14% expedite rate is the signal that the problem lies upstream of the carrier relationship.",
+      explanation: "When expedited freight exceeds 10% of volume, it indicates an upstream problem: poor demand forecasting or supplier delivery failures: that is being solved by paying premium rates to the carrier. A high carrier OTD score in this context is misleading: the organisation is essentially buying performance by using expedited services. Treating the carrier as a specialist in urgent freight encourages the root cause to persist. The 14% expedite rate is the signal that the problem lies upstream of the carrier relationship.",
       source: "Lesson 8: Logistics"
     },
     {
@@ -499,7 +499,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Flag for geopolitical risk review given high supply concentration"
       ],
       correctOption: 1,
-      explanation: "High spend concentration in a category provides negotiating leverage — the organisation is an important customer to those three vendors. The framework recommends assessing whether this concentration can be used to negotiate better pricing, terms, or service levels. Automatic diversification sacrifices leverage. Whether concentration creates Bottleneck risk depends on the Kraljic classification of MRO, not the spend percentage alone. Geopolitical review is driven by supplier geography and Kraljic classification, not by spend concentration within a category.",
+      explanation: "High spend concentration in a category provides negotiating leverage: the organisation is an important customer to those three vendors. The framework recommends assessing whether this concentration can be used to negotiate better pricing, terms, or service levels. Automatic diversification sacrifices leverage. Whether concentration creates Bottleneck risk depends on the Kraljic classification of MRO, not the spend percentage alone. Geopolitical review is driven by supplier geography and Kraljic classification, not by spend concentration within a category.",
       source: "Lesson 10: Spend Analytics"
     },
     {
@@ -511,7 +511,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Deferred, because final decision is pending budget approval"
       ],
       correctOption: 0,
-      explanation: "An initiative in active vendor negotiation is in the Active savings state — the opportunity has been identified, vendors are engaged, and work is underway to realise the saving. Identified applies when the opportunity has been sized but no action has begun. Captured applies only when the saving is reflected in actual spend or a signed contract. Deferred is not one of the three states in the Chapter 35 savings framework. Correctly classifying the state ensures the pipeline report accurately distinguishes committed savings from potential ones.",
+      explanation: "An initiative in active vendor negotiation is in the Active savings state: the opportunity has been identified, vendors are engaged, and work is underway to realise the saving. Identified applies when the opportunity has been sized but no action has begun. Captured applies only when the saving is reflected in actual spend or a signed contract. Deferred is not one of the three states in the Chapter 35 savings framework. Correctly classifying the state ensures the pipeline report accurately distinguishes committed savings from potential ones.",
       source: "Lesson 10: Spend Analytics"
     },
     {
@@ -523,11 +523,11 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Emergency assurance communication"
       ],
       correctOption: 2,
-      explanation: "A non-renewal notice is the correct communication type when informing a supplier that a contract will not be extended at its natural expiry date, regardless of whether performance has been satisfactory. A dispute communication addresses a specific invoice or contractual disagreement. A Corrective Action Request is used for recurring performance failures. An emergency assurance communication is used when urgent supply risk requires immediate confirmation of delivery capability. The non-renewal notice should be issued at the appropriate calendar milestone — typically 90 or 60 days before expiry.",
+      explanation: "A non-renewal notice is the correct communication type when informing a supplier that a contract will not be extended at its natural expiry date, regardless of whether performance has been satisfactory. A dispute communication addresses a specific invoice or contractual disagreement. A Corrective Action Request is used for recurring performance failures. An emergency assurance communication is used when urgent supply risk requires immediate confirmation of delivery capability. The non-renewal notice should be issued at the appropriate calendar milestone: typically 90 or 60 days before expiry.",
       source: "Lesson 11: Communications"
     },
     {
-      question: "Why must all supplier communications — including routine performance updates — maintain a formal audit trail?",
+      question: "Why must all supplier communications: including routine performance updates: maintain a formal audit trail?",
       options: [
         "To satisfy the procurement-calendar agent's data requirements",
         "To demonstrate to internal stakeholders that the procurement team is active",
@@ -547,7 +547,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "To launch the emergency RFQ process for replacement sourcing"
       ],
       correctOption: 1,
-      explanation: "The 30-day milestone is the final checkpoint in the procurement-calendar cascade — at this point, decisions have been made and the focus shifts to executing transition steps: confirming the incoming supplier is ready, ensuring knowledge transfer is complete, and verifying that no supply gap will occur at contract expiry. The supplier performance review happens at 120 days. Non-renewal or renewal notices are issued at 90 days. Emergency RFQ is an unscheduled event triggered by unexpected supplier failure, not a calendar milestone.",
+      explanation: "The 30-day milestone is the final checkpoint in the procurement-calendar cascade: at this point, decisions have been made and the focus shifts to executing transition steps: confirming the incoming supplier is ready, ensuring knowledge transfer is complete, and verifying that no supply gap will occur at contract expiry. The supplier performance review happens at 120 days. Non-renewal or renewal notices are issued at 90 days. Emergency RFQ is an unscheduled event triggered by unexpected supplier failure, not a calendar milestone.",
       source: "Lesson 12: Agents and Schedule"
     },
     {
@@ -559,7 +559,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Spend-tracker agent"
       ],
       correctOption: 0,
-      explanation: "The risk-sentinel agent provides continuous between-cycle monitoring of supplier risk signals — news events, financial alerts, regulatory actions, and geopolitical developments that could affect supplier viability. The procurement-calendar agent manages time-based contract milestones. The invoice-monitor agent watches for invoice anomalies and exception patterns. The spend-tracker agent monitors spend against categories and savings states. The risk-sentinel specifically addresses the vendor blind spot structural failure by providing real-time rather than periodic risk visibility.",
+      explanation: "The risk-sentinel agent provides continuous between-cycle monitoring of supplier risk signals: news events, financial alerts, regulatory actions, and geopolitical developments that could affect supplier viability. The procurement-calendar agent manages time-based contract milestones. The invoice-monitor agent watches for invoice anomalies and exception patterns. The spend-tracker agent monitors spend against categories and savings states. The risk-sentinel specifically addresses the vendor blind spot structural failure by providing real-time rather than periodic risk visibility.",
       source: "Lesson 12: Agents and Schedule"
     },
     {
@@ -571,7 +571,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "A dispute communication citing the contractual documentation obligation"
       ],
       correctOption: 3,
-      explanation: "Withholding contractual transition documentation is a breach of the contract's exit obligations, making a dispute communication the appropriate tool — it formally cites the contractual obligation and puts the supplier on notice. A non-renewal notice was already issued earlier in the exit process. An emergency assurance communication addresses supply delivery risk, not documentation disputes. A CAR is for recurring performance failures, not contractual exit obligations. The dispute communication creates the legal evidence trail needed if escalation to legal counsel becomes necessary.",
+      explanation: "Withholding contractual transition documentation is a breach of the contract's exit obligations, making a dispute communication the appropriate tool: it formally cites the contractual obligation and puts the supplier on notice. A non-renewal notice was already issued earlier in the exit process. An emergency assurance communication addresses supply delivery risk, not documentation disputes. A CAR is for recurring performance failures, not contractual exit obligations. The dispute communication creates the legal evidence trail needed if escalation to legal counsel becomes necessary.",
       source: "Lesson 13: Vendor Exit"
     },
     {
@@ -583,7 +583,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "60 days is chosen because it matches the procurement-calendar cascade intervals"
       ],
       correctOption: 2,
-      explanation: "The 60-day scenario is taught because it represents a constrained window that requires running multiple tracks simultaneously — exit notice, emergency RFQ, transition planning, and post-mortem preparation — rather than sequentially. It illustrates how to orchestrate the full toolkit under time pressure. The scenario is not derived from UK regulatory requirements or standard notice period norms. The 60-day timeframe is a teaching construct that demonstrates the highest-value orchestration challenge: maintaining supply continuity under an aggressive exit timeline.",
+      explanation: "The 60-day scenario is taught because it represents a constrained window that requires running multiple tracks simultaneously: exit notice, emergency RFQ, transition planning, and post-mortem preparation: rather than sequentially. It illustrates how to orchestrate the full toolkit under time pressure. The scenario is not derived from UK regulatory requirements or standard notice period norms. The 60-day timeframe is a teaching construct that demonstrates the highest-value orchestration challenge: maintaining supply continuity under an aggressive exit timeline.",
       source: "Lesson 13: Vendor Exit"
     },
     {
@@ -595,7 +595,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Phase 1 must be completed before the plugin can be installed"
       ],
       correctOption: 0,
-      explanation: "Starting with Kraljic classification is correct because it determines the appropriate management strategy for all subsequent phases — which suppliers need Tier 2 mapping, which communication tone to use, how much network design investment is justified, and what risk monitoring intensity is required. Without knowing whether a supplier is Strategic, Tactical, Bottleneck, or Commodity, every subsequent decision lacks its foundational context. The skill dependencies and regulatory requirements in the other options are not accurate characterisations of the capstone structure.",
+      explanation: "Starting with Kraljic classification is correct because it determines the appropriate management strategy for all subsequent phases: which suppliers need Tier 2 mapping, which communication tone to use, how much network design investment is justified, and what risk monitoring intensity is required. Without knowing whether a supplier is Strategic, Tactical, Bottleneck, or Commodity, every subsequent decision lacks its foundational context. The skill dependencies and regulatory requirements in the other options are not accurate characterisations of the capstone structure.",
       source: "Lesson 14: Capstone"
     },
     {
@@ -607,7 +607,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "All three structural failures, because skills without agents provide no intelligence"
       ],
       correctOption: 1,
-      explanation: "The vendor blind spot specifically requires persistent agents — particularly the risk-sentinel and procurement-calendar agents — to provide continuous monitoring between manual reviews. Skills are invoked on demand and cannot watch for signals autonomously. Using only skills means the organisation still has periodic rather than continuous supplier visibility. The reconciliation swamp can be significantly addressed by the invoice-reconcile skill even without an invoice-monitor agent for continuous watching. The static optimisation trap is addressed primarily through the network design skill.",
+      explanation: "The vendor blind spot specifically requires persistent agents: particularly the risk-sentinel and procurement-calendar agents: to provide continuous monitoring between manual reviews. Skills are invoked on demand and cannot watch for signals autonomously. Using only skills means the organisation still has periodic rather than continuous supplier visibility. The reconciliation swamp can be significantly addressed by the invoice-reconcile skill even without an invoice-monitor agent for continuous watching. The static optimisation trap is addressed primarily through the network design skill.",
       source: "Lesson 14: Capstone"
     },
     {
@@ -619,7 +619,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Eight skills are required to cover the seven capstone phases plus one overlap"
       ],
       correctOption: 1,
-      explanation: "Each of the eight skills in the Chapter 35 plugin addresses a distinct analytical domain — invoice reconciliation, supplier risk assessment, network design, spend analytics, logistics scoring, communications drafting, Kraljic mapping, and Six-Dimension Assessment — with different data requirements, methodologies, and output formats. Consolidating them would create multi-purpose skills that are harder to invoke precisely and harder to maintain. Plugin skill count is not technically capped at eight. Marketability and phase count are not the architectural drivers.",
+      explanation: "Each of the eight skills in the Chapter 35 plugin addresses a distinct analytical domain: invoice reconciliation, supplier risk assessment, network design, spend analytics, logistics scoring, communications drafting, Kraljic mapping, and Six-Dimension Assessment: with different data requirements, methodologies, and output formats. Consolidating them would create multi-purpose skills that are harder to invoke precisely and harder to maintain. Plugin skill count is not technically capped at eight. Marketability and phase count are not the architectural drivers.",
       source: "Lesson 2: Plugin Architecture"
     },
     {
@@ -631,7 +631,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Geopolitical and compliance dimensions"
       ],
       correctOption: 3,
-      explanation: "Geopolitical and compliance dimensions surface emerging risks — regulatory changes, sanctions, export restrictions, and political instability — that can materially affect a supplier before they appear in financial statements or operational delivery data. Commercial and financial dimensions are lag indicators that reflect problems after they have manifested. Operational KPIs are also lag indicators. The geopolitical and compliance dimensions function as leading indicators, which is why the Six-Dimension framework requires all six rather than relying on financial and operational data alone.",
+      explanation: "Geopolitical and compliance dimensions surface emerging risks: regulatory changes, sanctions, export restrictions, and political instability: that can materially affect a supplier before they appear in financial statements or operational delivery data. Commercial and financial dimensions are lag indicators that reflect problems after they have manifested. Operational KPIs are also lag indicators. The geopolitical and compliance dimensions function as leading indicators, which is why the Six-Dimension framework requires all six rather than relying on financial and operational data alone.",
       source: "Lesson 4: Six-Dimension Assessment"
     },
     {
@@ -643,7 +643,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "No, because three-way match quantity variances always require manual resolution"
       ],
       correctOption: 0,
-      explanation: "Three-way match processes include configurable tolerance rules precisely to handle small variances without requiring manual intervention on every invoice. If the organisation's tolerance rule permits a 5% quantity variance (which is common for goods that are counted or weighed), automatic approval is appropriate. The high invoice value creates a legitimate argument for a lower tolerance threshold, but the question tests whether tolerance rules are applied — not overridden by value alone. Blanket rules requiring manual resolution for all quantity variances defeat the automation purpose.",
+      explanation: "Three-way match processes include configurable tolerance rules precisely to handle small variances without requiring manual intervention on every invoice. If the organisation's tolerance rule permits a 5% quantity variance (which is common for goods that are counted or weighed), automatic approval is appropriate. The high invoice value creates a legitimate argument for a lower tolerance threshold, but the question tests whether tolerance rules are applied: not overridden by value alone. Blanket rules requiring manual resolution for all quantity variances defeat the automation purpose.",
       source: "Lesson 5: Three-Way Match"
     },
     {
@@ -679,7 +679,7 @@ title="Chapter 35: Supply Chain & Procurement Assessment"
         "Agents are required by the plugin specification format even if skills could do the work"
       ],
       correctOption: 1,
-      explanation: "The five agents address a fundamental limitation of on-demand skill invocations: skills only act when invoked by a human. The vendor blind spot structural failure exists precisely because humans do not continuously monitor suppliers — they check periodically. Agents run persistently, monitor data streams, detect events between human-initiated reviews, and raise alerts proactively. This is the architectural answer to continuous monitoring. Cost, data volume, and specification requirements are not the reasons the agent layer exists in Chapter 35's design.",
+      explanation: "The five agents address a fundamental limitation of on-demand skill invocations: skills only act when invoked by a human. The vendor blind spot structural failure exists precisely because humans do not continuously monitor suppliers: they check periodically. Agents run persistently, monitor data streams, detect events between human-initiated reviews, and raise alerts proactively. This is the architectural answer to continuous monitoring. Cost, data volume, and specification requirements are not the reasons the agent layer exists in Chapter 35's design.",
       source: "Lesson 12: Agents and Schedule"
     }
   ]}

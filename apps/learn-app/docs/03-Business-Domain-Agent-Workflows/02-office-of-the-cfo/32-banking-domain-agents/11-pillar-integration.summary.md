@@ -1,11 +1,11 @@
 ### Core Concept
 
-A single event cascades across all three regulatory pillars simultaneously — an AML fraud discovery triggers a SAR filing, forces IFRS 9 stage migration from Stage 1 to Stage 3 (multiplying the provision from $0.1M to $42.5M on a $50M exposure), and reduces CET1 capital by the post-tax provision amount — and pillar-isolated agents miss these chain reactions because each skill's output is an input to the next.
+A single event cascades across all three regulatory pillars simultaneously (an AML fraud discovery triggers a SAR filing, forces IFRS 9 stage migration from Stage 1 to Stage 3 (multiplying the provision from $0.1M to $42.5M on a $50M exposure), and reduces CET1 capital by the post-tax provision amount) and pillar-isolated agents miss these chain reactions because each skill's output is an input to the next.
 
 ### Key Mental Models
 
-- **The Cross-Pillar Cascade Formula**: A provision increase hits CET1 through retained earnings as CET1 Impact = Provision Increase x (1 - Tax Rate) / RWA — so a GBP 42.4M provision at 25% tax reduces CET1 by GBP 31.8M, and if Stage 3 migration also increases the risk weight (to 150%), RWA rises simultaneously, compounding the capital ratio decline.
-- **IRB Shortfall/Excess Mechanism**: IRB banks must compare IFRS 9 ECL to Basel regulatory Expected Loss — when ECL exceeds regulatory EL, the excess can be added to Tier 2 (capped at 0.6% of credit RWA); when ECL falls short, the shortfall must be deducted from capital (50% CET1, 50% Tier 2). This mechanism is how IFRS 9 and Basel interact at the most granular level.
+- **The Cross-Pillar Cascade Formula**: A provision increase hits CET1 through retained earnings as CET1 Impact = Provision Increase x (1 - Tax Rate) / RWA: so a GBP 42.4M provision at 25% tax reduces CET1 by GBP 31.8M, and if Stage 3 migration also increases the risk weight (to 150%), RWA rises simultaneously, compounding the capital ratio decline.
+- **IRB Shortfall/Excess Mechanism**: IRB banks must compare IFRS 9 ECL to Basel regulatory Expected Loss: when ECL exceeds regulatory EL, the excess can be added to Tier 2 (capped at 0.6% of credit RWA); when ECL falls short, the shortfall must be deducted from capital (50% CET1, 50% Tier 2). This mechanism is how IFRS 9 and Basel interact at the most granular level.
 
 ### Critical Patterns
 
@@ -15,8 +15,8 @@ A single event cascades across all three regulatory pillars simultaneously — a
 
 ### Common Mistakes
 
-- Treating the CET1 impact of a provision as simply provision divided by RWA — the tax adjustment (provision x (1 - tax rate)) must be applied because the provision is a deductible expense, and RWA may change simultaneously
-- Operating three separate agents for IFRS 9, Basel, and AML without data sharing — this is the default state of most banks today and produces incomplete regulatory advice at every level
+- Treating the CET1 impact of a provision as simply provision divided by RWA: the tax adjustment (provision x (1 - tax rate)) must be applied because the provision is a deductible expense, and RWA may change simultaneously
+- Operating three separate agents for IFRS 9, Basel, and AML without data sharing: this is the default state of most banks today and produces incomplete regulatory advice at every level
 
 ### Connections
 

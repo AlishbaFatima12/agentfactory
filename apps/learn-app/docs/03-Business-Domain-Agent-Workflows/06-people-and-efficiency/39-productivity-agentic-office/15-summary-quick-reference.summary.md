@@ -1,6 +1,6 @@
 ### Core Concept
 
-Chapter 39 is the integration layer that turns a collection of capable domain agents into something that behaves like an organisation — by giving all agents a shared context through `work.local.md`. When it works, Claude stops being a chatbot you brief every session and starts behaving like a knowledgeable colleague.
+Chapter 39 is the integration layer that turns a collection of capable domain agents into something that behaves like an organisation, by giving all agents a shared context through `work.local.md`. When it works, Claude stops being a chatbot you brief every session and starts behaving like a knowledgeable colleague.
 
 ### Key Mental Models
 
@@ -17,10 +17,10 @@ Chapter 39 is the integration layer that turns a collection of capable domain ag
 
 ### Common Mistakes
 
-- Using bare `/task` or `/memory` without the plugin prefix — these are ambiguous in a two-plugin system and may route to the wrong skill.
+- Using bare `/task` or `/memory` without the plugin prefix: these are ambiguous in a two-plugin system and may route to the wrong skill.
 - Treating setup as a one-time event: the maintenance cadence (daily/weekly/monthly/quarterly) is what keeps the system valuable after the initial configuration.
 
 ### Connections
 
 - **Builds on**: Every lesson in Chapter 39 (Lessons 1–14)
-- **Leads to**: Chapter 40 — The Intrapreneurship Agent (capstone of Part 3)
+- **Leads to**: Chapter 40. The Intrapreneurship Agent (capstone of Part 3)

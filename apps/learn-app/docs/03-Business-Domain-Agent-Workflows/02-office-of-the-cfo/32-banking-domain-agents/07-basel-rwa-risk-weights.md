@@ -197,7 +197,7 @@ The output floor is being phased in gradually:
 | 2029 | 70%                  | EU / UK                        |
 | 2030 | 72.5% (fully phased) | EU / UK                        |
 
-The output floor is expected to materially increase RWA for large EU banks — particularly those with heavily optimised IRB models, where the impact may exceed 30% — as the floor progressively constrains internal model benefits. The UK PRA has set a similar trajectory, with full implementation expected by 1 January 2030. US rulemaking remains under discussion.
+The output floor is expected to materially increase RWA for large EU banks (particularly those with heavily optimised IRB models, where the impact may exceed 30%) as the floor progressively constrains internal model benefits. The UK PRA has set a similar trajectory, with full implementation expected by 1 January 2030. US rulemaking remains under discussion.
 
 ## Exercise 4: RWA Comparison -- SA vs IRB
 
@@ -275,10 +275,10 @@ The agent routes through `basel-rwa-credit` to produce an SA RWA calculation and
 | CET1 ratios        | Computes ratios under SA, IRB, and floored RWA      | Three ratios show the floor's impact on the reported capital position |
 
 :::note Your output will vary
-The specific RWA amounts depend on your portfolio composition and asset class assignments. The teaching point is that the output floor constrains IRB banks from reporting RWA far below SA levels — verify the risk weight assignments and floor calculation methodology, not specific numbers.
+The specific RWA amounts depend on your portfolio composition and asset class assignments. The teaching point is that the output floor constrains IRB banks from reporting RWA far below SA levels: verify the risk weight assignments and floor calculation methodology, not specific numbers.
 :::
 
-Fatima reviews the asset class assignments — particularly whether rated corporates have valid external ratings that support the assigned weight — and validates that the floor impact is consistent with her capital planning projections.
+Fatima reviews the asset class assignments (particularly whether rated corporates have valid external ratings that support the assigned weight) and validates that the floor impact is consistent with her capital planning projections.
 
 ## Try With AI
 

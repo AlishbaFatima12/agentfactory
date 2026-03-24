@@ -1,4 +1,4 @@
-# GCC Legal Systems and Cross-Border Practice — Summary
+# GCC Legal Systems and Cross-Border Practice; Summary
 
 ## Core Concept
 

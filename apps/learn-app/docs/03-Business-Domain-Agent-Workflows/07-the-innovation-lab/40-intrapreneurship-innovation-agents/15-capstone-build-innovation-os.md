@@ -29,14 +29,14 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Content-Creation"
-    measurable_at_this_level: "Student can produce a complete innov.local.md with all six sections populated from their own exercise outputs — venture context, customer profiles, assumption stack, financial model parameters, competitive landscape, and fundraising or intrapreneurship section — with no placeholder text remaining"
+    measurable_at_this_level: "Student can produce a complete innov.local.md with all six sections populated from their own exercise outputs, venture context, customer profiles, assumption stack, financial model parameters, competitive landscape, and fundraising or intrapreneurship section, with no placeholder text remaining"
 
   - name: "Validate Venture Context File Quality Using the 4-Question Diagnostic Test"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can run the 4-question test (/idea, /canvas, /hypothesis, /pitch), distinguish between a specific response (output references their venture's actual data) and a generic response (output ignores their context), and identify which section of innov.local.md produced the generic output — and add sufficient specificity to fix it"
+    measurable_at_this_level: "Student can run the 4-question test (/idea, /canvas, /hypothesis, /pitch), distinguish between a specific response (output references their venture's actual data) and a generic response (output ignores their context), and identify which section of innov.local.md produced the generic output , and add sufficient specificity to fix it"
 
 learning_objectives:
   - objective: "Construct a complete innov.local.md file by drawing on outputs from all prior exercises (L03 through L14)"
@@ -55,26 +55,26 @@ cognitive_load:
   assessment: "This is an integration lesson. No new concepts are introduced. All cognitive effort goes into applying and synthesising the 14 prior lessons into a single coherent venture context file. The 4-question validation test is the assessment mechanism, not new learning."
 
 differentiation:
-  extension_for_advanced: "After completing your innov.local.md, run it through the full agent stack: generate a Monday Innovation Brief, Customer Signal Digest, Financial Health Review, and Fundraising Readiness Score — all in a single session. Evaluate the coherence: do the four agents tell a consistent story about your venture? Where do they contradict each other — and what does that contradiction reveal about the gaps in your venture context?"
+  extension_for_advanced: "After completing your innov.local.md, run it through the full agent stack: generate a Monday Innovation Brief, Customer Signal Digest, Financial Health Review, and Fundraising Readiness Score, all in a single session. Evaluate the coherence: do the four agents tell a consistent story about your venture? Where do they contradict each other , and what does that contradiction reveal about the gaps in your venture context?"
   remedial_for_struggling: "Complete only the first three sections of innov.local.md: venture context, customer profiles (one persona), and assumption stack (your top 5 assumptions). Run the 4-question test with this partial file. Even a partially populated file will produce significantly more specific outputs than an unpopulated one. Complete the remaining sections one lesson at a time."
 
 teaching_guide:
   key_points:
-    - "innov.local.md is the memory that makes every skill specific — without it, skills produce generic outputs; with it, they produce venture-specific intelligence"
-    - "The four-question validation test is the quality gate: if any of the 4 outputs is generic, find the section causing it and add specificity — do not move on until all 4 outputs are venture-specific"
-    - "The most common gaps are: customer_profiles (pains too vague), key_assumptions (too few — need 15–20), competitive_landscape (differentiation too generic), financial_model (all ASSUMED)"
-    - "For intrapreneurs, the fundraising section is replaced by the intrapreneurship section — approval pathway, internal stakeholders, budget constraints, and success definition"
-    - "This lesson's deliverable — a complete innov.local.md — is the single most valuable output from the entire chapter. It is reusable across every tool in the Innovation OS for months."
+    - "innov.local.md is the memory that makes every skill specific, without it, skills produce generic outputs; with it, they produce venture-specific intelligence"
+    - "The four-question validation test is the quality gate: if any of the 4 outputs is generic, find the section causing it and add specificity, do not move on until all 4 outputs are venture-specific"
+    - "The most common gaps are: customer_profiles (pains too vague), key_assumptions (too few, need 15–20), competitive_landscape (differentiation too generic), financial_model (all ASSUMED)"
+    - "For intrapreneurs, the fundraising section is replaced by the intrapreneurship section, approval pathway, internal stakeholders, budget constraints, and success definition"
+    - "This lesson's deliverable: a complete innov.local.md: is the single most valuable output from the entire chapter. It is reusable across every tool in the Innovation OS for months."
   misconceptions:
     - "innov.local.md is a one-time setup. Correction: it is a living document that must be updated after every significant learning. The version number convention (1.0 → 1.1 → 2.0) makes updates traceable. A stale innov.local.md is as bad as none."
-    - "Any text in the sections will do. Correction: the quality test is whether the outputs are specific. Generic text ('customers want a better product') produces generic output. Specific text ('CFO of $10M–$50M manufacturer; pain: 40 person-hours/month on error correction; willing to pay $500/month — LOI signed') produces specific output."
-    - "innov.local.md only matters for the innovation plugin. Correction: the file can be referenced by any skill or agent that needs venture context. It is analogous to a work.local.md for general Cowork sessions — a persistent context that shapes all outputs."
+    - "Any text in the sections will do. Correction: the quality test is whether the outputs are specific. Generic text ('customers want a better product') produces generic output. Specific text ('CFO of $10M–$50M manufacturer; pain: 40 person-hours/month on error correction; willing to pay $500/month, LOI signed') produces specific output."
+    - "innov.local.md only matters for the innovation plugin. Correction: the file can be referenced by any skill or agent that needs venture context. It is analogous to a work.local.md for general Cowork sessions: a persistent context that shapes all outputs."
   discussion_prompts:
-    - "You have completed all 15 lessons and built your innov.local.md. You run the 4-question test and 3 of 4 responses are generic. What does this tell you about your venture — is it a problem with innov.local.md, or a problem with the underlying venture clarity?"
+    - "You have completed all 15 lessons and built your innov.local.md. You run the 4-question test and 3 of 4 responses are generic. What does this tell you about your venture: is it a problem with innov.local.md, or a problem with the underlying venture clarity?"
     - "A team member suggests sharing the innov.local.md with an investor before the pitch meeting. What are the risks and benefits of sharing this file externally?"
   teaching_tips:
     - "Walk through the AP automation innov.local.md section by section before asking students to build their own. The contrast between 'example filled in with real data' and 'template placeholder text' makes the quality requirement concrete."
-    - "Time-box each section of the student build. Students tend to over-invest in the venture context and under-invest in assumptions. The assumption stack is the hardest section to complete well — prompt them to aim for 15 entries, not 5."
+    - "Time-box each section of the student build. Students tend to over-invest in the venture context and under-invest in assumptions. The assumption stack is the hardest section to complete well, prompt them to aim for 15 entries, not 5."
 ---
 
 # Capstone: Build Your Innovation OS
@@ -83,19 +83,19 @@ You have used every tool in the Innovation OS individually. You have conducted c
 
 Each of these was a separate tool. In this lesson, you assemble them into a single, integrated system: your Innovation OS.
 
-The integration point is `innov.local.md` — the venture context file that makes every skill specific to your venture. Without it, each tool produces generic outputs that could apply to any business. With it, each tool produces intelligence that is calibrated to your specific customers, assumptions, financial model, and stage.
+The integration point is `innov.local.md`: the venture context file that makes every skill specific to your venture. Without it, each tool produces generic outputs that could apply to any business. With it, each tool produces intelligence that is calibrated to your specific customers, assumptions, financial model, and stage.
 
 :::note The Full Exercise Chain
 This capstone draws on every prior exercise:
-- **Ex 2 (L03):** Customer discovery synthesis — feeds customer_profiles
-- **Ex 1 (L04):** Selected idea — feeds venture.solution_hypothesis
-- **Ex 3.1 (L05):** Assumption map — feeds key_assumptions (all entries)
-- **Ex 3.2 (L06):** MVP scoping — feeds venture.stage_goal
-- **Ex 4 (L08):** Business Model Canvas — feeds business_model_canvas
-- **Ex 5 (L09):** Unit economics — feeds financial_model.unit_economics
-- **Market data (L10):** Competitive landscape — feeds competitive_landscape
-- **Ex 7 (L11):** ICP and GTM — feeds customer_profiles buying_process
-- **Ex 6 (L12):** Pitch narrative — feeds fundraising.current_round data
+- **Ex 2 (L03):** Customer discovery synthesis, feeds customer_profiles
+- **Ex 1 (L04):** Selected idea, feeds venture.solution_hypothesis
+- **Ex 3.1 (L05):** Assumption map, feeds key_assumptions (all entries)
+- **Ex 3.2 (L06):** MVP scoping, feeds venture.stage_goal
+- **Ex 4 (L08):** Business Model Canvas, feeds business_model_canvas
+- **Ex 5 (L09):** Unit economics, feeds financial_model.unit_economics
+- **Market data (L10):** Competitive landscape, feeds competitive_landscape
+- **Ex 7 (L11):** ICP and GTM, feeds customer_profiles buying_process
+- **Ex 6 (L12):** Pitch narrative, feeds fundraising.current_round data
 
 If you have completed every prior exercise, all the data you need already exists. This lesson is about assembling it into one coherent file.
 :::
@@ -105,8 +105,8 @@ If you have completed every prior exercise, all the data you need already exists
 Before building your own file, walk through the complete, filled-in version for the AP automation venture. Every field comes from prior lesson outputs.
 
 ```yaml
-# innov.local.md — AP Automation SaaS Venture
-# Chapter 40 Capstone Example — Derived from Lessons 3–14
+# innov.local.md: AP Automation SaaS Venture
+# Chapter 40 Capstone Example: Derived from Lessons 3–14
 
 ---
 
@@ -118,7 +118,7 @@ venture:
   problem_statement: >
     Mid-market companies ($5M–$50M revenue) manage accounts payable
     through WhatsApp approvals and Excel reconciliation, generating
-    3–5 invoice matching errors per month with no audit trail — creating
+    3–5 invoice matching errors per month with no audit trail, creating
     audit risk, cash flow uncertainty, and 40+ person-hours of monthly
     error correction.
 
@@ -133,7 +133,7 @@ venture:
     applies AI matching against POs at 91% accuracy, routes approval
     decisions through the messaging platform the team already uses
     (WhatsApp, Teams, or Slack), and maintains a real-time AP dashboard
-    with full audit trail — at $500/month for mid-market; $350/month for SME.
+    with full audit trail, at $500/month for mid-market; $350/month for SME.
 
   unfair_advantage: >
     Founder ran AP for a $20M manufacturer for 6 years. Built the
@@ -153,7 +153,7 @@ key_assumptions:
     risk: "HIGH"
     evidence: "VALIDATED"
     test_method: "Charge 3 pilots; measure payment and renewal"
-    test_cost: "0 — testing through normal sales"
+    test_cost: "0, testing through normal sales"
     test_status: "VALIDATED"
     result: "3 pilots paying $500/month; no churn after 2 months"
 
@@ -162,7 +162,7 @@ key_assumptions:
     risk: "HIGH"
     evidence: "VALIDATED"
     test_method: "Measure reconciliation errors per month pre/post deployment"
-    test_cost: "0 — measured in pilot"
+    test_cost: "0, measured in pilot"
     test_status: "VALIDATED"
     result: "Error correction time dropped from 40 to 4 person-hours/month in Pilot 1"
 
@@ -189,7 +189,7 @@ key_assumptions:
     risk: "HIGH"
     evidence: "TESTING"
     test_method: "Measure 7-day adoption rate in Pilot 3 post WhatsApp deployment"
-    test_cost: "0 — measured in live deployment"
+    test_cost: "0, measured in live deployment"
     test_status: "TESTING"
     result: "Day 5 of 7-day measurement: 52% adoption; watching for trend"
 
@@ -216,7 +216,7 @@ key_assumptions:
     risk: "MEDIUM"
     evidence: "ANECDOTAL"
     test_method: "Track onboarding time for all new staff additions in pilots"
-    test_cost: "0 — observational measurement"
+    test_cost: "0, observational measurement"
     test_status: "TESTING"
     result: "Pilot 3 new hires took 3 days (target: 2). Onboarding guide may help."
 
@@ -260,7 +260,7 @@ customer_profiles:
       - "WhatsApp approvals with no audit trail (7/10 CFOs; MED-HIGH): cannot prove who approved what"
 
     gain_drivers:
-      - "Audit confidence: 'I would be comfortable showing this to my auditor' — all 3 pilots validated"
+      - "Audit confidence: 'I would be comfortable showing this to my auditor', all 3 pilots validated"
       - "Time back: error correction from 40 hrs to 4 hrs/month (Pilot 1 measured)"
 
     willingness_to_pay: >
@@ -289,7 +289,7 @@ business_model_canvas:
     open_question: "Can the SME segment reach similar LTV at $350/month lower price point?"
 
   value_propositions:
-    primary: "AP automation that works inside WhatsApp — no behaviour change required; full audit trail from day one"
+    primary: "AP automation that works inside WhatsApp; no behaviour change required; full audit trail from day one"
     secondary: "Reconciliation accuracy from 40 error-hours/month to <5"
     evidence: "VALIDATED (all 3 pilots; Pilot 1 measured)"
     open_question: "Does ERP integration strengthen the value prop enough to change pricing?"
@@ -313,7 +313,7 @@ business_model_canvas:
     open_question: "Does tiered pricing expand addressable market or just dilute average ARR?"
 
   key_resources:
-    - "AI invoice matching model (trained on 5,000 real invoices — proprietary training data)"
+    - "AI invoice matching model (trained on 5,000 real invoices, proprietary training data)"
     - "WhatsApp Business API integration (technical differentiation)"
     - "Founder's 6-year AP operations experience (domain moat)"
 
@@ -324,7 +324,7 @@ business_model_canvas:
 
   key_partnerships:
     - "WhatsApp Business API provider (distribution dependency)"
-    - "Accounting software providers — Xero, QuickBooks (integration roadmap)"
+    - "Accounting software providers, Xero, QuickBooks (integration roadmap)"
 
   cost_structure:
     fixed_costs:
@@ -352,8 +352,8 @@ financial_model:
     ltv_cac_ratio: "131:1 (founder-led); 30:1 (sustainable)"
     gross_margin_pct: "90%"
     payback_period_months: "1 month (founder-led CAC)"
-    churn_annual_pct: "15% (ASSUMED — no 12-month data yet)"
-    churn_basis: "ASSUMED — 3 pilots; no churns in 2 months. Insufficient data for measured rate."
+    churn_annual_pct: "15% (ASSUMED; no 12-month data yet)"
+    churn_basis: "ASSUMED, 3 pilots; no churns in 2 months. Insufficient data for measured rate."
 
   current_state:
     mrr: "$1,500 (3 pilots × $500)"
@@ -366,7 +366,7 @@ financial_model:
 
   milestones:
     breakeven_target: "5 months from seed close (10 customers)"
-    fundraise_trigger: "$3,000 MRR (6 customers) — start fundraising process"
+    fundraise_trigger: "$3,000 MRR (6 customers); start fundraising process"
     series_a_readiness: "$300K ARR (50 customers); CAC:LTV ratio validated at scale; 2+ sales reps at target quota"
 
 ---
@@ -395,7 +395,7 @@ competitive_landscape:
   indirect_alternatives:
     - name: "Excel + WhatsApp (current behaviour)"
       why_customers_use_it: "Free; familiar; already in use; requires no procurement process"
-      our_advantage: "Audit trail; error reduction; dashboard visibility — all with existing WhatsApp behaviour"
+      our_advantage: "Audit trail; error reduction; dashboard visibility, all with existing WhatsApp behaviour"
 
     - name: "Accounting software AP (Xero, QuickBooks)"
       why_customers_use_it: "Already purchased; built into existing workflow"
@@ -405,14 +405,14 @@ competitive_landscape:
     The only AP automation tool designed to work inside the messaging apps
     (WhatsApp, Teams, Slack) that mid-market finance teams already use for approvals.
     Every competitor requires CFOs to adopt a new portal and change existing behaviour.
-    We work with existing behaviour — WhatsApp approval stays as WhatsApp approval,
+    We work with existing behaviour, WhatsApp approval stays as WhatsApp approval,
     but now with an AI-matched invoice, a full audit trail, and a real-time dashboard.
 
   moat_building: >
     Data moat: each invoice processed improves AI matching accuracy. At 100,000
     invoices processed (projected 18 months post-seed), matching accuracy exceeds
     any new entrant's initial model capability. Switching cost: once a CFO's
-    audit trail is in the system, switching means losing the historical audit record —
+    audit trail is in the system, switching means losing the historical audit record,
     a strong retention driver after 6+ months.
 
 ---
@@ -428,7 +428,7 @@ fundraising:
       - "Sales hire (2 reps): 30%"
       - "Customer success: 20%"
       - "Operations and infrastructure: 10%"
-    milestone_at_close: "50 customers; $360K ARR; Series A ready — 18 months"
+    milestone_at_close: "50 customers; $360K ARR; Series A ready, 18 months"
 
   investor_pipeline:
     - name: "TBD Angel 1"
@@ -436,7 +436,7 @@ fundraising:
       status: "OUTREACH PENDING"
       fit: "Former CFO background; knows the pain directly"
       last_contact: ""
-      next_action: "Warm introduction via [advisor] — send intro this week"
+      next_action: "Warm introduction via [advisor], send intro this week"
 
   data_room_status:
     - item: "Pitch deck"
@@ -461,18 +461,18 @@ This is what a complete, validated `innov.local.md` looks like. Every field cont
 
 Now build your own. Follow these six steps in order. Each step maps to a prior exercise.
 
-### Step 1 — Venture context (from L01–L04)
+### Step 1: Venture context (from L01–L04)
 
 ```
 Fill in the venture section of innov.local.md for my venture.
-My idea: [Your idea from L04 — the selected idea from your idea sprint]
+My idea: [Your idea from L04: the selected idea from your idea sprint]
 My problem statement: [From your HMW problem statement in L03]
 My target customer: [From your ICP in L11, or from your discovery interviews]
 My solution hypothesis: [From your MVP scoping in L06]
 My stage goal: [What am I trying to prove at this stage?]
 ```
 
-### Step 2 — Customer profiles (from L03 discovery)
+### Step 2: Customer profiles (from L03 discovery)
 
 ```
 Build a customer_profiles entry for my primary persona.
@@ -483,7 +483,7 @@ Based on my L03 discovery synthesis:
   - Buying process: [From your L11 ICP work]
 ```
 
-### Step 3 — Assumption stack (from L05)
+### Step 3: Assumption stack (from L05)
 
 ```
 Populate key_assumptions with my top 10 assumptions.
@@ -494,7 +494,7 @@ For each:
   - Any results from L07 BML analysis: [What was measured]
 ```
 
-### Step 4 — Financial model parameters (from L09)
+### Step 4: Financial model parameters (from L09)
 
 ```
 Fill in financial_model.unit_economics for my venture.
@@ -507,18 +507,18 @@ From my L09 unit economics exercise:
   - Runway: [Your calculated runway]
 ```
 
-### Step 5 — Competitive landscape (from L10)
+### Step 5: Competitive landscape (from L10)
 
 ```
 Fill in competitive_landscape for my venture.
 From my L10 competitive intelligence work:
   - Direct competitors: [Your top 3 from the competitive scan]
   - Indirect alternatives: [Including 'do nothing' / current workaround]
-  - Our differentiation: [Specific — not generic]
+  - Our differentiation: [Specific, not generic]
   - Moat building: [Data, network effects, switching costs]
 ```
 
-### Step 6 — Fundraising or intrapreneurship section
+### Step 6: Fundraising or intrapreneurship section
 
 **For entrepreneurs:** Populate the fundraising section from your L12 pitch exercise. Fill in the current round details, use of funds, and milestone at close. Start the investor pipeline with at least 3 target investors you have researched.
 
@@ -538,7 +538,7 @@ Internal constraints:
   - Headcount: [People available]
   - Timeline: [When this must show results]
 Internal stakeholders: [Your CHAMPION / NEUTRAL / RESISTANT map]
-Success definition: [Specific and measurable — not 'add value']
+Success definition: [Specific and measurable, not 'add value']
 ```
 
 ## The 4-Question Validation Test
@@ -557,10 +557,10 @@ Based on innov.local.md, give me:
 
 | Generic output | Section to fix |
 | -------------- | -------------- |
-| "Your most important task is to talk to more customers" | customer_profiles — pains too vague or no buying process documented |
-| "You should test whether customers will pay" | key_assumptions — too few assumptions; no test methods written |
-| "Investors will ask about competition" | competitive_landscape — differentiation too generic |
-| "Your business model needs more revenue" | financial_model — all ASSUMED; no measured data |
+| "Your most important task is to talk to more customers" | customer_profiles, pains too vague or no buying process documented |
+| "You should test whether customers will pay" | key_assumptions, too few assumptions; no test methods written |
+| "Investors will ask about competition" | competitive_landscape, differentiation too generic |
+| "Your business model needs more revenue" | financial_model, all ASSUMED; no measured data |
 
 Fix the section. Re-run the specific prompt that produced the generic response. Repeat until all 4 responses are venture-specific.
 
@@ -568,24 +568,24 @@ Fix the section. Re-run the specific prompt that produced the generic response. 
 
 Based on the template validation notes, these are the sections students most often complete insufficiently:
 
-**customer_profiles — pains too vague:**
+**customer_profiles, pains too vague:**
 Weak: "Customers want a faster process."
 Strong: "3–5 reconciliation errors per month (9/10 CFOs); one CFO estimated 40 person-hours/month on error correction alone."
 
-**key_assumptions — too few:**
+**key_assumptions, too few:**
 Weak: 5 assumptions, all HIGH risk, all UNTESTED.
 Strong: 15–20 assumptions across all three tiers; varied statuses including VALIDATED entries from prior exercises.
 
-**competitive_landscape — differentiation too generic:**
+**competitive_landscape, differentiation too generic:**
 Weak: "We are easier to use and more affordable."
-Strong: "The only AP tool designed to work inside WhatsApp — competitors require behaviour change; we work with existing behaviour."
+Strong: "The only AP tool designed to work inside WhatsApp, competitors require behaviour change; we work with existing behaviour."
 
-**financial_model — all ASSUMED:**
+**financial_model, all ASSUMED:**
 Weak: All fields marked ASSUMED.
-Strong: Fill in any number you can actually defend — measured CAC from your pilot sales, actual burn rate, real cash on hand. Mark ASSUMED only what you genuinely have not measured.
+Strong: Fill in any number you can actually defend, measured CAC from your pilot sales, actual burn rate, real cash on hand. Mark ASSUMED only what you genuinely have not measured.
 
 :::note For Intrapreneurs
-Your innov.local.md has the same structure with one key substitution: the `fundraising:` section becomes `intrapreneurship:`. The approval pathway maps the internal gates your project must pass. The internal stakeholders map is your equivalent of the investor pipeline — tracking who is CHAMPION, NEUTRAL, or RESISTANT and what each needs to move forward. The 4-question validation test still works: replace "investor question" with "objection from the CFO or Legal team that I am least prepared to answer."
+Your innov.local.md has the same structure with one key substitution: the `fundraising:` section becomes `intrapreneurship:`. The approval pathway maps the internal gates your project must pass. The internal stakeholders map is your equivalent of the investor pipeline, tracking who is CHAMPION, NEUTRAL, or RESISTANT and what each needs to move forward. The 4-question validation test still works: replace "investor question" with "objection from the CFO or Legal team that I am least prepared to answer."
 :::
 
 ## Try With AI
@@ -593,7 +593,7 @@ Your innov.local.md has the same structure with one key substitution: the `fundr
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Run the validation test on the AP venture:
+**Reproduce:** Run the validation test on the AP venture:
 
 ```
 Based on the following innov.local.md for the AP automation SaaS venture,
@@ -606,13 +606,13 @@ give me:
 [Paste a condensed version of the AP innov.local.md above]
 ```
 
-**What you are learning:** If the 4 answers reference specific AP venture data — Pilot 3 adoption rate, assumption A-005, the churn assumption that is ASSUMED not measured — the context file is working. Generic answers signal which sections need more specificity.
+**What you are learning:** If the 4 answers reference specific AP venture data, Pilot 3 adoption rate, assumption A-005, the churn assumption that is ASSUMED not measured: the context file is working. Generic answers signal which sections need more specificity.
 
-**Adapt** — Diagnose a partially completed innov.local.md:
+**Adapt:** Diagnose a partially completed innov.local.md:
 
 ```
 Here is my draft innov.local.md with some sections complete and some still placeholder:
-[Paste your draft — including any sections still showing placeholder text]
+[Paste your draft, including any sections still showing placeholder text]
 
 Diagnose:
 1. Which sections are sufficiently specific to produce venture-specific outputs?
@@ -623,7 +623,7 @@ Diagnose:
 
 **What you are learning:** The AI's diagnosis of your innov.local.md reveals which prior exercises you need to revisit. A weak customer_profiles section means going back to the L03 discovery synthesis. A weak financial_model section means returning to L09 unit economics. The capstone exposes the weakest link in your prior work.
 
-**Apply** — Run the full 4-question validation test on your completed file:
+**Apply:** Run the full 4-question validation test on your completed file:
 
 ```
 Based on my innov.local.md:
@@ -632,14 +632,14 @@ Based on my innov.local.md:
 Give me:
 1. Today's most important task for my venture
 2. The assumption I should be testing this week (reference the A-00X ID)
-3. The investor question I am least prepared to answer — and what I need to do to prepare
-4. One thing in my business model that I should be more worried about — with a specific reason
+3. The investor question I am least prepared to answer , and what I need to do to prepare
+4. One thing in my business model that I should be more worried about, with a specific reason
 
 If any of these answers is generic (not referencing my specific venture data),
 tell me which section of innov.local.md is producing the generic output.
 ```
 
-**What you are learning:** The 4-question test is not a one-time exercise — it is a weekly practice. Running it regularly after updating innov.local.md keeps your venture intelligence current and surfaces the decisions that need attention before they become urgent.
+**What you are learning:** The 4-question test is not a one-time exercise; it is a weekly practice. Running it regularly after updating innov.local.md keeps your venture intelligence current and surfaces the decisions that need attention before they become urgent.
 :::
 
 ## Flashcards Study Aid

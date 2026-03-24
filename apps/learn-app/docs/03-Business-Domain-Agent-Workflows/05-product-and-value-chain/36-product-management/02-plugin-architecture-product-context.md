@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/product-management/plugin-architecture-product-context
 sidebar_position: 2
 title: "Plugin Architecture & Your Product Context"
-description: "Install both PM plugins, understand the two-layer command architecture, and configure product.local.md — the context file that calibrates every subsequent AI command to your specific product."
+description: "Install both PM plugins, understand the two-layer command architecture, and configure product.local.md: the context file that calibrates every subsequent AI command to your specific product."
 keywords:
   [
     "product management",
@@ -55,7 +55,7 @@ cognitive_load:
     - "product.local.md as the context calibration file"
     - "Command-to-plugin mapping"
     - "Plugin installation via Cowork sidebar"
-  assessment: "4 technical concepts at B1 level. The most cognitively demanding part is the product.local.md configuration — it requires translating abstract product knowledge into structured fields. The exercise scaffolds this step by step."
+  assessment: "4 technical concepts at B1 level. The most cognitively demanding part is the product.local.md configuration: it requires translating abstract product knowledge into structured fields. The exercise scaffolds this step by step."
 
 differentiation:
   extension_for_advanced: "After completing the InsightFlow product.local.md, create a second one for a real product you work on or have worked on. Run the same test command (/brief with a simple problem statement) with each configuration. How does the output differ? What does this tell you about which sections of product.local.md have the highest leverage?"
@@ -63,28 +63,28 @@ differentiation:
 
 teaching_guide:
   key_points:
-    - "product.local.md is the most important configuration step in the chapter — every subsequent command is calibrated by it. Spending time getting it right here pays dividends across all 12 remaining lessons."
+    - "product.local.md is the most important configuration step in the chapter: every subsequent command is calibrated by it. Spending time getting it right here pays dividends across all 12 remaining lessons."
     - "The Layer 1 / Layer 2 distinction is conceptual, not just administrative. Layer 1 provides speed on universal PM tasks. Layer 2 enforces the craft principles that separate good PM work from technically-adequate PM work."
-    - "The test command in Step 5 is not optional. Students who skip the verification step frequently discover in Lesson 3 or 4 that their product.local.md has gaps — at which point fixing it takes longer because there is more context to rebuild."
+    - "The test command in Step 5 is not optional. Students who skip the verification step frequently discover in Lesson 3 or 4 that their product.local.md has gaps: at which point fixing it takes longer because there is more context to rebuild."
     - "Plugin installation paths differ slightly between Cowork versions. The Cowork sidebar approach described here is the current path; if students see a different UI, the key is to find 'Browse plugins' and look for 'Product Management' (official) and 'Product Strategy' (custom, via GitHub)."
   misconceptions:
-    - "product.local.md is just a template to fill in — the more fields the better. Correction: quality beats quantity. A product.local.md with sparse but accurate information produces better output than one with vague or incorrect information in every field. The Personas section is especially high-leverage: a precisely described primary persona changes the output more than any other section."
-    - "The two plugins duplicate each other — one is enough. Correction: the official plugin covers foundational workflows efficiently; the custom plugin covers gaps the official plugin was not designed for. Running /brief from the official plugin and /brief from the custom plugin would produce very different outputs — the custom plugin enforces problem-focused framing as a structural rule."
+    - "product.local.md is just a template to fill in: the more fields the better. Correction: quality beats quantity. A product.local.md with sparse but accurate information produces better output than one with vague or incorrect information in every field. The Personas section is especially high-leverage: a precisely described primary persona changes the output more than any other section."
+    - "The two plugins duplicate each other: one is enough. Correction: the official plugin covers foundational workflows efficiently; the custom plugin covers gaps the official plugin was not designed for. Running /brief from the official plugin and /brief from the custom plugin would produce very different outputs: the custom plugin enforces problem-focused framing as a structural rule."
   discussion_prompts:
     - "If you had to fill in product.local.md for your current product right now, which section would be hardest? Why? What does the difficulty of that section reveal about what your team has and has not made explicit?"
     - "The Stakeholder Map section asks for 'communication style' and 'alert threshold' for each stakeholder. How do you currently track that information? Is it in anyone's head? What happens when the PM who knows it leaves?"
   teaching_tips:
-    - "Walk through the product.local.md template section by section before the exercise, using InsightFlow as the example. Students often underestimate the Personas section — a good persona description includes what a perfect week looks like for them (the '10/10 week' field), which forces specificity that generic persona descriptions avoid."
+    - "Walk through the product.local.md template section by section before the exercise, using InsightFlow as the example. Students often underestimate the Personas section: a good persona description includes what a perfect week looks like for them (the '10/10 week' field), which forces specificity that generic persona descriptions avoid."
     - "The test command (Step 5) should show InsightFlow-specific language. If the output sounds generic, ask: which section of product.local.md is the agent likely ignoring? This teaches students to debug their context configuration, not just the AI output."
 ---
 
 # Plugin Architecture & Your Product Context
 
-Every AI command you run in this chapter is only as good as the context it runs against. A `/brief` command that does not know your product, your personas, or your current priorities produces a generic PM artifact that you will spend more time correcting than it saved. A `/brief` command that knows InsightFlow is a B2B SaaS analytics platform at Series B, that your primary persona is Analyst Alex who spends three days waiting for reports, and that your biggest strategic bet is workflow automation — that command produces a brief that sounds like it was written by someone who has been on your team for two years.
+Every AI command you run in this chapter is only as good as the context it runs against. A `/brief` command that does not know your product, your personas, or your current priorities produces a generic PM artifact that you will spend more time correcting than it saved. A `/brief` command that knows InsightFlow is a B2B SaaS analytics platform at Series B, that your primary persona is Analyst Alex who spends three days waiting for reports, and that your biggest strategic bet is workflow automation: that command produces a brief that sounds like it was written by someone who has been on your team for two years.
 
 The difference between those two outputs is not the command. It is the configuration.
 
-This lesson has two objectives. First: install both plugins that power the chapter. Second: configure `product.local.md` — the context file that tells every subsequent command what it needs to know about your product. By the end, you will have the foundation that all twelve remaining exercises build on.
+This lesson has two objectives. First: install both plugins that power the chapter. Second: configure `product.local.md`: the context file that tells every subsequent command what it needs to know about your product. By the end, you will have the foundation that all twelve remaining exercises build on.
 
 ## The Two-Plugin Architecture
 
@@ -106,7 +106,7 @@ Chapter 36 uses two plugins that together cover the full PM workflow cycle. Unde
 | `/metrics-review`      | Analyse product metrics and surface actionable insights             |
 | `/sprint-planning`     | Plan sprints by scoping work against team capacity                  |
 
-These are the universal PM commands — every product team writes specs, manages roadmaps, synthesises research, and communicates with stakeholders. The official plugin handles these efficiently and reliably.
+These are the universal PM commands: every product team writes specs, manages roadmaps, synthesises research, and communicates with stakeholders. The official plugin handles these efficiently and reliably.
 
 ### Layer 2: Custom `product-strategy` Plugin
 
@@ -122,7 +122,7 @@ These are the universal PM commands — every product team writes specs, manages
 | `/prioritise` | Apply RICE, MoSCoW, or weighted scoring to a backlog                |
 | `/retro`      | Structure product retrospectives and post-mortems                   |
 
-This plugin fills the workflow gaps the official plugin does not cover. It also encodes specific craft principles — like "never propose a solution in a problem brief" — as enforced structural rules, not just suggestions.
+This plugin fills the workflow gaps the official plugin does not cover. It also encodes specific craft principles: like "never propose a solution in a problem brief": as enforced structural rules, not just suggestions.
 
 ### How They Complement Each Other
 
@@ -215,7 +215,7 @@ Name, role, what they care about, communication style, alert threshold
 **Command:** `/brief` (verification test)
 **Time:** 20 minutes
 
-**Step 1 — Install both plugins**
+**Step 1; Install both plugins**
 
 Open Cowork. Install the official `product-management` plugin:
 
@@ -231,9 +231,9 @@ Cowork sidebar → Customize → Browse plugins → Personal → + →
 "Product Strategy" → Install
 ```
 
-Verify both are active by typing `/` in the Cowork chat — you should see both plugin command sets in the autocomplete list.
+Verify both are active by typing `/` in the Cowork chat: you should see both plugin command sets in the autocomplete list.
 
-**Step 2 — Copy the template and fill Product Identity**
+**Step 2; Copy the template and fill Product Identity**
 
 Create a new file called `product.local.md` in your Cowork skills root directory. Fill in the Product Identity section for InsightFlow:
 
@@ -258,7 +258,7 @@ Core value prop: "InsightFlow turns raw data into decisions without
 requiring a data team"
 ```
 
-**Step 3 — Add Vision and Personas**
+**Step 3; Add Vision and Personas**
 
 Add the Vision and Personas sections:
 
@@ -307,7 +307,7 @@ Key difference: Cares about accuracy, audit trail, and exporting to
 board-ready formats — not daily usage
 ```
 
-**Step 4 — Add Engineering Team and Stakeholder Map**
+**Step 4; Add Engineering Team and Stakeholder Map**
 
 ```markdown
 ## Engineering Team
@@ -338,7 +338,7 @@ Engineering working agreements:
 | Aisha Patel  | Head of Sales | Deal-blocking features     | Short; commercial framing  | Any enterprise deal blocker   |
 ```
 
-**Step 5 — Test by running /brief**
+**Step 5; Test by running /brief**
 
 Save `product.local.md` and run this prompt in Cowork:
 
@@ -359,7 +359,7 @@ Evaluate the output against these criteria:
 - Does it connect to the onboarding or self-serve theme from current priorities?
 - Does the problem statement avoid solution proposals?
 
-If the output does not reflect InsightFlow context, review your product.local.md for missing or inaccurate sections — likely the Personas section is the culprit.
+If the output does not reflect InsightFlow context, review your product.local.md for missing or inaccurate sections: likely the Personas section is the culprit.
 
 :::note Keep This File
 Lessons 3-14 build one continuous product management cycle for InsightFlow. Keep your Cowork session and your product.local.md file throughout the chapter. Every command you run from Lesson 3 onward uses this context.
@@ -367,7 +367,7 @@ Lessons 3-14 build one continuous product management cycle for InsightFlow. Keep
 
 ## What You Built
 
-You have configured the foundation artifact for the entire chapter: a `product.local.md` that encodes InsightFlow's identity, personas, engineering context, and stakeholder map. Every plugin command you run from here through Lesson 14 will use this context to calibrate its output to InsightFlow — producing documents that sound specific, not generic.
+You have configured the foundation artifact for the entire chapter: a `product.local.md` that encodes InsightFlow's identity, personas, engineering context, and stakeholder map. Every plugin command you run from here through Lesson 14 will use this context to calibrate its output to InsightFlow: producing documents that sound specific, not generic.
 
 You also verified that both plugins are installed and active. The command map is now clear: official plugin for foundational PM workflows, custom plugin for workflow gaps and craft enforcement.
 
@@ -375,7 +375,7 @@ You also verified that both plugins are installed and active. The command map is
 
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Prompt 1 — Reproduce** (apply what you just learned):
+**Prompt 1; Reproduce** (apply what you just learned):
 
 ```
 I am setting up product.local.md for a B2B project management tool.
@@ -389,9 +389,9 @@ Draft the Product Identity and Personas sections of product.local.md
 for TaskFlow.
 ```
 
-**What you're learning:** Practising the product.local.md format with a different product solidifies what each section requires — and reveals which sections are hardest to fill for a product you do not yet know deeply.
+**What you're learning:** Practising the product.local.md format with a different product solidifies what each section requires: and reveals which sections are hardest to fill for a product you do not yet know deeply.
 
-**Prompt 2 — Adapt** (change the context):
+**Prompt 2; Adapt** (change the context):
 
 ```
 A PM has filled in product.local.md but the Personas section
@@ -411,7 +411,7 @@ how the brief output would differ.
 
 **What you're learning:** The contrast between a vague and a precise persona description makes the leverage of the Personas section concrete. A persona that describes behavior, not just role, changes the output qualitatively.
 
-**Prompt 3 — Apply** (connect to your domain):
+**Prompt 3; Apply** (connect to your domain):
 
 ```
 Draft the Personas section of product.local.md for a product you
@@ -429,7 +429,7 @@ backlog. Does the output sound like it was written for your actual
 users? What is still missing?
 ```
 
-**What you're learning:** Building a product.local.md persona for a product you know deeply reveals whether your team's shared understanding of your users is precise enough to generate useful AI output — or whether the personas are vaguer than you thought.
+**What you're learning:** Building a product.local.md persona for a product you know deeply reveals whether your team's shared understanding of your users is precise enough to generate useful AI output: or whether the personas are vaguer than you thought.
 
 ## Flashcards Study Aid
 
@@ -437,4 +437,4 @@ users? What is still missing?
 
 ---
 
-Continue to [Lesson 3: Discovery Briefs — Framing the Right Problem →](./03-discovery-briefs-framing-problems.md)
+Continue to [Lesson 3: Discovery Briefs; Framing the Right Problem →](./03-discovery-briefs-framing-problems.md)

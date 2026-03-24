@@ -1,11 +1,11 @@
 ---
-title: "Lesson 10 Summary — Incident Management: Post-Mortem and Five Whys"
+title: "Lesson 10 Summary: Incident Management: Post-Mortem and Five Whys"
 chapter: 38
 lesson: 10
 type: summary
 ---
 
-# Lesson 10 Summary — Incident Management: Post-Mortem and Five Whys
+# Lesson 10 Summary: Incident Management: Post-Mortem and Five Whys
 
 ## Core Insight
 
@@ -13,7 +13,7 @@ Incidents almost never recur because of bad luck. They recur because the post-mo
 
 ## What the /incident Command Does
 
-The `/incident` command (custom Operations Intelligence plugin) structures post-mortems across five task types: post-mortem, Five Whys drill, incident log entry, corrective action tracker, and lessons learned brief. The primary use is the full post-mortem — a structured eight-section report covering timeline, impact, root cause analysis, contributing factors, what went well, corrective actions, lessons learned, and follow-up scheduling.
+The `/incident` command (custom Operations Intelligence plugin) structures post-mortems across five task types: post-mortem, Five Whys drill, incident log entry, corrective action tracker, and lessons learned brief. The primary use is the full post-mortem: a structured eight-section report covering timeline, impact, root cause analysis, contributing factors, what went well, corrective actions, lessons learned, and follow-up scheduling.
 
 ## Five Whys in Practice
 
@@ -28,7 +28,7 @@ Every corrective action must pass five criteria: Specific (describes exactly wha
 
 ## Blameless Post-Mortems
 
-Blameless means directing accountability at systems and processes, not individuals. Every question is framed as "what allowed this to happen?" not "who made the mistake?" This is not about removing accountability — it is about directing it where it produces change.
+Blameless means directing accountability at systems and processes, not individuals. Every question is framed as "what allowed this to happen?" not "who made the mistake?" This is not about removing accountability; it is about directing it where it produces change.
 
 ## Key Cross-Reference
 

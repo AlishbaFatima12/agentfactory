@@ -31,7 +31,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can write an Objective with 2-4 Key Results that are measurable, outcome-based, and appropriately ambitious — and can distinguish them from output-based KRs that measure team activity rather than user behavior"
+    measurable_at_this_level: "Student can write an Objective with 2-4 Key Results that are measurable, outcome-based, and appropriately ambitious: and can distinguish them from output-based KRs that measure team activity rather than user behavior"
 
 learning_objectives:
   - objective: "Define InsightFlow's North Star metric and explain why it is preferable to alternative candidates like MAU or revenue"
@@ -60,23 +60,23 @@ cognitive_load:
   assessment: "5 concepts at B2 level. Students arrive having shipped Sprint 1 and communicated about it. Now they look at whether the work moved the metrics. The metrics hierarchy is dense but structurally coherent: North Star → L1 → L2 follows the same logic as OKR structure. Tie them together early. The anti-patterns section is high value because it names patterns students will recognise from their own experience."
 
 differentiation:
-  extension_for_advanced: "Run /metrics-review twice: once as a weekly check (15-minute format) and once as a quarterly business review (strategic format). Compare what each review includes. What appears in the quarterly review that would not be in a weekly check? Then design a dashboard layout for InsightFlow that would support both cadences — one screen for weekly health monitoring, a deeper view for quarterly strategy."
-  remedial_for_struggling: "Start with just the North Star metric. Ask yourself: what is the single thing that happens when a user gets value from InsightFlow? (An analyst builds a dashboard they use.) Now ask: how do you measure whether that is happening consistently? (Weekly active teams creating or editing dashboards.) Once you have the North Star, the L1 metrics follow naturally — they are the levers that drive it."
+  extension_for_advanced: "Run /metrics-review twice: once as a weekly check (15-minute format) and once as a quarterly business review (strategic format). Compare what each review includes. What appears in the quarterly review that would not be in a weekly check? Then design a dashboard layout for InsightFlow that would support both cadences: one screen for weekly health monitoring, a deeper view for quarterly strategy."
+  remedial_for_struggling: "Start with just the North Star metric. Ask yourself: what is the single thing that happens when a user gets value from InsightFlow? (An analyst builds a dashboard they use.) Now ask: how do you measure whether that is happening consistently? (Weekly active teams creating or editing dashboards.) Once you have the North Star, the L1 metrics follow naturally: they are the levers that drive it."
 
 teaching_guide:
   key_points:
-    - "The North Star metric is the single metric that best captures whether users are getting value from the product — not the metric that is easiest to move, not the metric leadership likes, but the one that genuinely reflects value delivery"
+    - "The North Star metric is the single metric that best captures whether users are getting value from the product: not the metric that is easiest to move, not the metric leadership likes, but the one that genuinely reflects value delivery"
     - "OKRs fail when Key Results measure team output (features shipped, tickets closed) instead of user outcomes (retention rate, activation rate). The test is simple: could you hit this KR without any user ever benefiting?"
-    - "Dashboard anti-patterns are as dangerous as bad metrics — vanity metrics always go up and create false confidence, one-dashboard-for-all means no dashboard serves anyone well"
-    - "Every metric in a review should come with a comparison — a raw number without context (previous period, target, benchmark) is not information"
+    - "Dashboard anti-patterns are as dangerous as bad metrics: vanity metrics always go up and create false confidence, one-dashboard-for-all means no dashboard serves anyone well"
+    - "Every metric in a review should come with a comparison: a raw number without context (previous period, target, benchmark) is not information"
   misconceptions:
-    - "MAU (Monthly Active Users) is a good North Star metric. Correction: MAU is a vanity metric for most products because it always grows with any marketing spend. A better North Star captures value delivery — the specific action that predicts whether users will pay and retain."
-    - "OKR Key Results should be about things the team can control (shipping features). Correction: Key Results should measure user and business outcomes, which the team influences but does not control. That is the point — it forces the team to connect their work to results, not just activity."
+    - "MAU (Monthly Active Users) is a good North Star metric. Correction: MAU is a vanity metric for most products because it always grows with any marketing spend. A better North Star captures value delivery: the specific action that predicts whether users will pay and retain."
+    - "OKR Key Results should be about things the team can control (shipping features). Correction: Key Results should measure user and business outcomes, which the team influences but does not control. That is the point: it forces the team to connect their work to results, not just activity."
   discussion_prompts:
     - "InsightFlow's monthly active users grew 15% last month. Is this good news? What would you need to know before deciding whether to celebrate or investigate? What is the risk of treating MAU growth as a success signal without deeper context?"
-    - "Your CEO wants to add 'team satisfaction score' to the InsightFlow product dashboard. You know team satisfaction is important, but it is not a product metric — it is an HR metric. How do you push back without dismissing the CEO's instinct? What is the right home for that metric?"
+    - "Your CEO wants to add 'team satisfaction score' to the InsightFlow product dashboard. You know team satisfaction is important, but it is not a product metric: it is an HR metric. How do you push back without dismissing the CEO's instinct? What is the right home for that metric?"
   teaching_tips:
-    - "The North Star metric definition exercise (what happens when a user gets value?) is more productive as a thinking exercise before running the command. Have students write their North Star candidate and rationale before seeing the worked example — then compare."
+    - "The North Star metric definition exercise (what happens when a user gets value?) is more productive as a thinking exercise before running the command. Have students write their North Star candidate and rationale before seeing the worked example: then compare."
     - "The OKR exercise is the hardest part of the lesson. The most common failure is KRs that measure output ('ship 3 new features') rather than outcome ('increase activation rate from 35% to 50%'). The test: 'Could you hit this KR without users ever benefiting?' If yes, it is an output KR."
 ---
 
@@ -84,9 +84,9 @@ teaching_guide:
 
 InsightFlow's Workflow Builder Sprint 1 shipped. The trigger configuration UI is in design testing. Stakeholders have been updated. Now comes the question that distinguishes a PM who is busy from a PM who is effective: did any of this actually move the metrics that matter?
 
-You have data from the past month. New signups are up. But the North Star metric — weekly active teams creating or editing dashboards — is flat. Activation rate (the percentage of new signups who reach their first dashboard) dropped slightly. Enterprise retention is strong, but free tier churn is above the benchmark for Series B companies in this space. There is something worth investigating here, and a monthly metrics review is the structure for finding it.
+You have data from the past month. New signups are up. But the North Star metric: weekly active teams creating or editing dashboards: is flat. Activation rate (the percentage of new signups who reach their first dashboard) dropped slightly. Enterprise retention is strong, but free tier churn is above the benchmark for Series B companies in this space. There is something worth investigating here, and a monthly metrics review is the structure for finding it.
 
-The `/metrics-review` command from the official **product-management** plugin turns raw metric data into a structured analysis: a scorecard with comparisons, trend analysis, bright spots, areas of concern, and recommended actions. But the command's value is proportional to how well you have defined your metrics hierarchy — because a review against the wrong metrics is not just useless, it is actively misleading.
+The `/metrics-review` command from the official **product-management** plugin turns raw metric data into a structured analysis: a scorecard with comparisons, trend analysis, bright spots, areas of concern, and recommended actions. But the command's value is proportional to how well you have defined your metrics hierarchy: because a review against the wrong metrics is not just useless, it is actively misleading.
 
 This lesson builds the hierarchy first. Then runs the review.
 
@@ -112,16 +112,16 @@ The single metric that best captures the core value your product delivers. It sh
 
 | Criterion          | Description                              | InsightFlow Test                                           |
 | ------------------ | ---------------------------------------- | ---------------------------------------------------------- |
-| **Value-aligned**  | Moves when users get more value          | Yes — users get value when they create/edit dashboards     |
-| **Leading**        | Predicts long-term retention and revenue | Yes — dashboard creation predicts ongoing engagement       |
-| **Actionable**     | The product team can influence it        | Yes — onboarding, templates, and performance all affect it |
-| **Understandable** | Everyone knows what it means and why     | Yes — "active teams building dashboards" is clear          |
+| **Value-aligned**  | Moves when users get more value          | Yes: users get value when they create/edit dashboards     |
+| **Leading**        | Predicts long-term retention and revenue | Yes: dashboard creation predicts ongoing engagement       |
+| **Actionable**     | The product team can influence it        | Yes: onboarding, templates, and performance all affect it |
+| **Understandable** | Everyone knows what it means and why     | Yes: "active teams building dashboards" is clear          |
 
 **InsightFlow's North Star:** Weekly active teams creating or editing dashboards
 
-**Why not MAU?** Monthly Active Users always grows with marketing spend. It does not tell you whether users are getting value — only that they logged in. A team could grow MAU while the core product experience deteriorates. The North Star should move when users genuinely benefit from the product.
+**Why not MAU?** Monthly Active Users always grows with marketing spend. It does not tell you whether users are getting value: only that they logged in. A team could grow MAU while the core product experience deteriorates. The North Star should move when users genuinely benefit from the product.
 
-**Why not revenue?** Revenue is a lagging indicator — it measures what happened 3-6 months ago in SaaS, not what is happening now. By the time revenue trends appear, the underlying product health signals have been visible for weeks.
+**Why not revenue?** Revenue is a lagging indicator: it measures what happened 3-6 months ago in SaaS, not what is happening now. By the time revenue trends appear, the underlying product health signals have been visible for weeks.
 
 ### L1 Health Indicators
 
@@ -131,18 +131,18 @@ The five to seven metrics that together paint a complete picture of product heal
 | ---------------- | ----------------------------------------- | ----------------------------------------------------------- |
 | **Acquisition**  | Are new users finding the product?        | New trial signups per week                                  |
 | **Activation**   | Are new users reaching the value moment?  | % of signups who create their first dashboard within 7 days |
-| **Engagement**   | Are active users getting value regularly? | North Star — WAT creating/editing dashboards                |
+| **Engagement**   | Are active users getting value regularly? | North Star; WAT creating/editing dashboards                |
 | **Retention**    | Are users coming back?                    | D30 retention: % of signups still active at 30 days         |
 | **Monetisation** | Is value translating to revenue?          | Free-to-Pro conversion rate; MRR growth                     |
 | **Satisfaction** | How do users feel about the product?      | NPS; export/dashboard-specific CSAT                         |
 
 :::tip The Activation Metric Is the Most Valuable L1
-Activation rate — the percentage of new signups who reach the first meaningful value moment — is typically the highest-leverage metric a PM can improve. Low activation means users are signing up, trying the product, and leaving before they get value. Fixing activation has a compound effect: it improves retention, LTV, and NPS simultaneously.
+Activation rate: the percentage of new signups who reach the first meaningful value moment: is typically the highest-leverage metric a PM can improve. Low activation means users are signing up, trying the product, and leaving before they get value. Fixing activation has a compound effect: it improves retention, LTV, and NPS simultaneously.
 :::
 
 ### L2 Diagnostic Metrics
 
-L2 metrics answer "why is an L1 metric moving?" They are not for the weekly dashboard — they are for investigation.
+L2 metrics answer "why is an L1 metric moving?" They are not for the weekly dashboard: they are for investigation.
 
 If activation rate drops (L1), L2 diagnostics might include:
 
@@ -190,10 +190,10 @@ KR4: Achieve NPS ≥ 45 (up from current 38)
 
 ### OKR Quality Rules
 
-- 70% completion is the target for stretch OKRs — if you are confident you will hit 100%, they are not ambitious enough
-- 2-3 Objectives maximum per quarter — more than that and nothing is truly prioritised
-- Key Results should be uncomfortable — they should require genuine product improvement, not just shipping
-- Review OKRs at mid-quarter — if a KR is clearly off track, adjust effort allocation or flag it as a risk
+- 70% completion is the target for stretch OKRs: if you are confident you will hit 100%, they are not ambitious enough
+- 2-3 Objectives maximum per quarter: more than that and nothing is truly prioritised
+- Key Results should be uncomfortable: they should require genuine product improvement, not just shipping
+- Review OKRs at mid-quarter: if a KR is clearly off track, adjust effort allocation or flag it as a risk
 
 ## The /metrics-review Command
 
@@ -323,9 +323,9 @@ Before acting on this review, check these quality criteria from the `/metrics-re
 
 **Does every metric have a comparison?** A raw number without context is not information. The scorecard shows current, previous, change, target, and status for every metric. If any metric shows only a current value, prompt: "Add prior period and target to [metric]."
 
-**Are anomalies explained?** The activation drop and churn increase are flagged with a likely cause (onboarding redesign). The agent attributes them as likely correlated — note the epistemic humility here. Correlation is not causation. The review recommends investigation, not a conclusion.
+**Are anomalies explained?** The activation drop and churn increase are flagged with a likely cause (onboarding redesign). The agent attributes them as likely correlated: note the epistemic humility here. Correlation is not causation. The review recommends investigation, not a conclusion.
 
-**Do recommended actions name a specific next step?** "Investigate further" is not a recommended action. "Pull L2 funnel data for new onboarding flow — identify the specific drop-off step" is.
+**Do recommended actions name a specific next step?** "Investigate further" is not a recommended action. "Pull L2 funnel data for new onboarding flow: identify the specific drop-off step" is.
 
 :::note Keep This File
 The metrics review you run in this exercise feeds directly into Lesson 14, where you will run a retrospective on Sprint 1 and evaluate whether the metrics you tracked were the right ones to measure.
@@ -335,7 +335,7 @@ The metrics review you run in this exercise feeds directly into Lesson 14, where
 
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Prompt 1 — Reproduce** (apply what you just learned):
+**Prompt 1; Reproduce** (apply what you just learned):
 
 ```
 Run a monthly metrics review for InsightFlow using this data:
@@ -355,9 +355,9 @@ Produce: summary (3 sentences), metric scorecard, 2 areas of concern
 with likely causes, 3 recommended actions.
 ```
 
-**What you're learning:** Running the full /metrics-review workflow with structured data. The key skill is evaluating whether the agent's "likely causes" are well-reasoned or speculative — and prompting for more rigour when needed.
+**What you're learning:** Running the full /metrics-review workflow with structured data. The key skill is evaluating whether the agent's "likely causes" are well-reasoned or speculative: and prompting for more rigour when needed.
 
-**Prompt 2 — Adapt** (change the context):
+**Prompt 2; Adapt** (change the context):
 
 ```
 Write OKRs for InsightFlow Q2 based on the February metrics review.
@@ -378,9 +378,9 @@ Then evaluate your own KRs: are any of them output-based rather
 than outcome-based? If so, rewrite them.
 ```
 
-**What you're learning:** The OKR self-evaluation exercise — writing KRs and then testing them against the output-vs-outcome rule. This is the skill that separates OKRs that drive behaviour from OKRs that just look good in a planning doc.
+**What you're learning:** The OKR self-evaluation exercise: writing KRs and then testing them against the output-vs-outcome rule. This is the skill that separates OKRs that drive behaviour from OKRs that just look good in a planning doc.
 
-**Prompt 3 — Apply** (connect to your domain):
+**Prompt 3; Apply** (connect to your domain):
 
 ```
 Define your product's metrics hierarchy:
@@ -399,7 +399,7 @@ Define your product's metrics hierarchy:
    Is any metric showing a raw number without a comparison? Name and fix it.
 ```
 
-**What you're learning:** Building your own metrics hierarchy. The North Star definition forces clarity on what "value delivered" means in your product — a question many PMs have never explicitly answered.
+**What you're learning:** Building your own metrics hierarchy. The North Star definition forces clarity on what "value delivered" means in your product: a question many PMs have never explicitly answered.
 
 ## Exercise: InsightFlow Metrics Review + OKRs
 
@@ -407,7 +407,7 @@ Define your product's metrics hierarchy:
 **Command:** `/metrics-review`
 **Time:** 30 minutes
 
-**Step 1 — Define InsightFlow's North Star and L1 metrics**
+**Step 1; Define InsightFlow's North Star and L1 metrics**
 
 Before running /metrics-review, write down:
 
@@ -417,7 +417,7 @@ Before running /metrics-review, write down:
 
 This step ensures you are reviewing the right things, not just whatever data is available.
 
-**Step 2 — Run /metrics-review with sample data**
+**Step 2; Run /metrics-review with sample data**
 
 ```
 /metrics-review monthly
@@ -448,7 +448,7 @@ Context:
 - No major incidents or marketing campaigns
 ```
 
-**Step 3 — Evaluate the output**
+**Step 3; Evaluate the output**
 
 Check these criteria:
 
@@ -456,7 +456,7 @@ Check these criteria:
 - For the activation drop: does the agent propose a likely cause? Is that cause reasonable given the context (new onboarding flow)? Or is it speculative?
 - Are the recommended actions specific? "Investigate activation further" is too vague. "Pull funnel drop-off data for the new onboarding flow by step" is specific.
 
-**Step 4 — Write OKRs for next quarter**
+**Step 4; Write OKRs for next quarter**
 
 Based on the metrics review, write one Objective and 3-4 Key Results for InsightFlow Q2:
 
@@ -474,19 +474,19 @@ confidence). Each KR must name a specific metric, current baseline,
 and Q2 target.
 ```
 
-**Step 5 — Evaluate your OKRs for the output trap**
+**Step 5; Evaluate your OKRs for the output trap**
 
-For each Key Result, ask: "Could the team hit this KR without a single user benefiting?" If yes — if the KR could be hit by shipping a feature that no one uses — rewrite it to measure user behaviour instead.
+For each Key Result, ask: "Could the team hit this KR without a single user benefiting?" If yes: if the KR could be hit by shipping a feature that no one uses: rewrite it to measure user behaviour instead.
 
 Save the OKR document. It becomes the strategic backdrop for the retrospective in Lesson 14.
 
 ## What You Built
 
-You built InsightFlow's product metrics hierarchy — North Star, five L1 health indicators, and an understanding of when to use L2 diagnostic metrics. You ran a monthly metrics review against illustrative post-Sprint 1 data and produced a scorecard with trend analysis, areas of concern, and three specific recommended actions.
+You built InsightFlow's product metrics hierarchy; North Star, five L1 health indicators, and an understanding of when to use L2 diagnostic metrics. You ran a monthly metrics review against illustrative post-Sprint 1 data and produced a scorecard with trend analysis, areas of concern, and three specific recommended actions.
 
 You also wrote Q2 OKRs using the output-versus-outcome discipline, ensuring your Key Results measure user behaviour rather than team activity.
 
-The metrics review feeds directly into Lesson 14, where you will retrospect on Sprint 1 and evaluate whether the success metrics you tracked were the right ones — and whether the team built what you intended.
+The metrics review feeds directly into Lesson 14, where you will retrospect on Sprint 1 and evaluate whether the success metrics you tracked were the right ones: and whether the team built what you intended.
 
 ## Flashcards Study Aid
 
@@ -494,4 +494,4 @@ The metrics review feeds directly into Lesson 14, where you will retrospect on S
 
 ---
 
-Continue to [Lesson 14: Continuous Intelligence — Agents & Retrospectives →](./14-continuous-intelligence-agents-retrospectives.md)
+Continue to [Lesson 14: Continuous Intelligence; Agents & Retrospectives →](./14-continuous-intelligence-agents-retrospectives.md)

@@ -14,7 +14,7 @@ cards:
 
   - id: "ch36-15-chapter-summary-quick-reference-002"
     front: "Which plugin provides /brief, /retro, /prioritise, and /stories?"
-    back: "The custom product-strategy plugin (Layer 2). These fill workflow gaps the official plugin does not cover — discovery, retrospectives, prioritisation, and story decomposition."
+    back: "The custom product-strategy plugin (Layer 2). These fill workflow gaps the official plugin does not cover: discovery, retrospectives, prioritisation, and story decomposition."
     tags: ["plugin-provides", "provides-/brief", "brief"]
     difficulty: "intermediate"
 
@@ -44,7 +44,7 @@ cards:
 
   - id: "ch36-15-chapter-summary-quick-reference-007"
     front: "What does the ROAM framework stand for, and which command uses it?"
-    back: "Resolved, Owned, Accepted, Mitigated. Used in /stakeholder-update for risk communication — every risk in a stakeholder update should be ROAM-classified to specify what is being done about it."
+    back: "Resolved, Owned, Accepted, Mitigated. Used in /stakeholder-update for risk communication: every risk in a stakeholder update should be ROAM-classified to specify what is being done about it."
     tags: ["roam-framework", "framework-stand", "command"]
     difficulty: "intermediate"
 
@@ -68,12 +68,12 @@ cards:
 
   - id: "ch36-15-chapter-summary-quick-reference-011"
     front: "What is the central thesis of Chapter 36 about AI and PM judgment?"
-    back: "The PM's job is judgment. AI removes the bottleneck between judgment and the documentation that expresses it. The agent writes the first draft. The PM reviews, directs, and refines. The document reflects the PM's judgment — not the agent's defaults."
+    back: "The PM's job is judgment. AI removes the bottleneck between judgment and the documentation that expresses it. The agent writes the first draft. The PM reviews, directs, and refines. The document reflects the PM's judgment: not the agent's defaults."
     tags: ["central-thesis", "judgment"]
     difficulty: "advanced"
 
   - id: "ch36-15-chapter-summary-quick-reference-012"
     front: "Which command is used to deploy persistent agents in Cowork?"
-    back: "/schedule — used to configure and deploy each PM agent with its monitoring schedule, data source connections, and escalation thresholds."
+    back: "/schedule: used to configure and deploy each PM agent with its monitoring schedule, data source connections, and escalation thresholds."
     tags: ["deploy-persistent", "persistent-agents", "command"]
     difficulty: "intermediate"

@@ -2,10 +2,10 @@
 slug: /Business-Domain-Agent-Workflows/operations-management
 sidebar_position: 38
 title: "Chapter 38: Operations Management"
-description: "Build AI agents for operations intelligence — vendor management, contract analysis, process documentation, change management, compliance tracking, audit preparation, risk registers, incident post-mortems, operational metrics, and four persistent agents that run your operations monitoring continuously"
+description: "Build AI agents for operations intelligence: vendor management, contract analysis, process documentation, change management, compliance tracking, audit preparation, risk registers, incident post-mortems, operational metrics, and four persistent agents that run your operations monitoring continuously"
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-38/operations-management-slides.pdf"
-  title: "Operations Intelligence — Making the Invisible Visible"
+  title: "Operations Intelligence: Making the Invisible Visible"
   height: 700
 chapter_number: 38
 part_number: 3

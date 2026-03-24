@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/chapter-summary
 sidebar_position: 10
 title: "Chapter Summary"
-description: "Synthesise the Knowledge Extraction Method into a connected methodology: from the articulation gap through dual extraction methods, SKILL.md translation, validation scenario design, the validation loop, and shadow mode deployment — ready for the domain-specific chapters that follow"
+description: "Synthesise the Knowledge Extraction Method into a connected methodology: from the articulation gap through dual extraction methods, SKILL.md translation, validation scenario design, the validation loop, and shadow mode deployment: ready for the domain-specific chapters that follow"
 keywords:
   [
     "chapter summary",
@@ -52,7 +52,7 @@ learning_objectives:
 cognitive_load:
   new_concepts: 0
   concepts_list: []
-  assessment: "Synthesis lesson — no new concepts introduced; integrates and connects all prior lessons into a coherent end-to-end methodology"
+  assessment: "Synthesis lesson; no new concepts introduced; integrates and connects all prior lessons into a coherent end-to-end methodology"
 
 differentiation:
   extension_for_advanced: "Draft a one-page extraction plan for your domain: classify it as A-primary, B-primary, or A+B; identify the five interview questions you would prioritise; list three document types for Method B; describe four validation scenarios (one per category); and state your shadow mode criteria."
@@ -63,19 +63,19 @@ teaching_guide:
   session_group: 3
   session_title: "Synthesis and What Comes Next"
   key_points:
-    - "The methodology is a chain, not a checklist — each stage produces the input the next stage requires"
+    - "The methodology is a chain, not a checklist: each stage produces the input the next stage requires"
     - "The chapter's central insight is that tacit knowledge can be made explicit through structured methods, but the result must be validated before it is trustworthy"
     - "Extraction without validation produces a SKILL.md that encodes the expert's knowledge but has unknown coverage gaps; validation without extraction produces a SKILL.md that passes tests but does not contain the expert's actual decision-making logic"
     - "Every domain chapter that follows (Finance, Legal, HR, Healthcare, Architecture, Sales, Operations) applies this methodology to a specific professional context"
   misconceptions:
-    - "Students may think the methodology is optional for their domain — every domain chapter assumes the reader can conduct an extraction and run a validation loop"
-    - "Students may underestimate the validation stage — the scenario set and the validation loop are what convert a plausible draft into a production-ready file"
-    - "Students may see shadow mode as a formality — it is the stage where real production inputs reveal gaps that no constructed scenario set can anticipate"
+    - "Students may think the methodology is optional for their domain: every domain chapter assumes the reader can conduct an extraction and run a validation loop"
+    - "Students may underestimate the validation stage: the scenario set and the validation loop are what convert a plausible draft into a production-ready file"
+    - "Students may see shadow mode as a formality: it is the stage where real production inputs reveal gaps that no constructed scenario set can anticipate"
   discussion_prompts:
     - "Which stage of the methodology do you expect to find most difficult in your domain? What makes it difficult?"
     - "If you had to explain the Knowledge Extraction Method to a colleague in two sentences, what would you say?"
   teaching_tips:
-    - "The methodology chain table is the most useful teaching artefact in this summary — use it to walk through the chapter's logic in sequence"
+    - "The methodology chain table is the most useful teaching artefact in this summary: use it to walk through the chapter's logic in sequence"
     - "The bridge to the domain chapters should be framed as application: students now have the methodology; the domain chapters show how it works in specific professional contexts"
   assessment_checks:
     - question: "What are the two extraction methods and when do you use each?"
@@ -83,16 +83,16 @@ teaching_guide:
     - question: "What are the four validation scenario categories and the threshold for shadow mode?"
       expected_response: "Standard cases (50%), edge cases (25%), adversarial cases (15%), and high-stakes cases (10%). The threshold is 95% pass rate with zero high-stakes failures and a minimum of 20 scenarios."
     - question: "What is the difference between scenario testing and shadow mode?"
-      expected_response: "Scenario testing validates the SKILL.md against constructed inputs that cover known categories. Shadow mode validates against real production inputs that the scenario set could not fully anticipate. Both are necessary — scenario testing for known gaps, shadow mode for unknown ones."
+      expected_response: "Scenario testing validates the SKILL.md against constructed inputs that cover known categories. Shadow mode validates against real production inputs that the scenario set could not fully anticipate. Both are necessary: scenario testing for known gaps, shadow mode for unknown ones."
 ---
 
 # Chapter Summary
 
-This chapter began with a problem: the knowledge that makes a domain agent genuinely useful is tacit — it resists articulation — and no platform, model improvement, or prompt engineering technique solves this without a structured extraction methodology. It ends with the complete methodology. The nine lessons between those two points did not add complexity for its own sake. Each one answered a question that the previous lesson raised.
+This chapter began with a problem: the knowledge that makes a domain agent genuinely useful is tacit: it resists articulation: and no platform, model improvement, or prompt engineering technique solves this without a structured extraction methodology. It ends with the complete methodology. The nine lessons between those two points did not add complexity for its own sake. Each one answered a question that the previous lesson raised.
 
 The articulation gap raised the question of how to surface tacit knowledge. The five-question interview framework answered it for knowledge that lives in expert heads. The interview protocol made the framework operational. The document extraction framework answered it for knowledge that lives in institutional documents. The domain-method mapping determined when to use each method and how to reconcile them when both apply. The SKILL.md translation lesson turned extraction outputs into structured instructions. The validation scenario set tested whether those instructions actually work. The validation loop turned test failures into targeted improvements. And the hands-on exercise proved that the methodology produces results when applied to a real domain.
 
-That chain is the chapter. Understanding it as a chain — not as nine separate lessons — is the synthesis this summary is for.
+That chain is the chapter. Understanding it as a chain (not as nine separate lessons) is the synthesis this summary is for.
 
 ## The Methodology in Sequence
 
@@ -114,11 +114,11 @@ Each lesson answered a specific question. Each answer led directly to the next q
 
 Reading the nine lessons as a sequence reveals three insights that no individual lesson states on its own.
 
-The first is that extraction and validation are interdependent, not sequential add-ons. An extraction that produces a SKILL.md which is never validated against scenarios is a document that encodes the expert's knowledge but has unknown coverage gaps — it handles the cases the expert thought to mention and fails on the ones they did not. A validation that tests a SKILL.md which was not produced through structured extraction is a test of instructions that do not contain the expert's actual decision-making logic — the scenarios may pass, but the agent is not doing what the expert would do. The methodology requires both stages because each one catches the failures the other cannot.
+The first is that extraction and validation are interdependent, not sequential add-ons. An extraction that produces a SKILL.md which is never validated against scenarios is a document that encodes the expert's knowledge but has unknown coverage gaps: it handles the cases the expert thought to mention and fails on the ones they did not. A validation that tests a SKILL.md which was not produced through structured extraction is a test of instructions that do not contain the expert's actual decision-making logic: the scenarios may pass, but the agent is not doing what the expert would do. The methodology requires both stages because each one catches the failures the other cannot.
 
-The second insight is that the credit analyst example was not an illustration — it was a proof of concept. Every lesson applied the same methodology to the same domain, and by Lesson 9, the cumulative result was a testable SKILL.md draft. The methodology is not theoretical. It produces a concrete artifact that can be validated, revised, and deployed.
+The second insight is that the credit analyst example was not an illustration: it was a proof of concept. Every lesson applied the same methodology to the same domain, and by Lesson 9, the cumulative result was a testable SKILL.md draft. The methodology is not theoretical. It produces a concrete artifact that can be validated, revised, and deployed.
 
-The third insight is that the methodology is domain-agnostic but the application is domain-specific. The five interview questions work for any domain. The three-pass document extraction works for any document corpus. The four validation categories apply to any agent. But the specific questions you ask, the specific documents you extract from, the specific scenarios you design, and the specific scoring criteria you apply all depend on the professional context. This is why the domain chapters that follow are necessary — not to teach a different methodology, but to show how this one works when applied to finance, legal, HR, healthcare, architecture, sales, and operations.
+The third insight is that the methodology is domain-agnostic but the application is domain-specific. The five interview questions work for any domain. The three-pass document extraction works for any document corpus. The four validation categories apply to any agent. But the specific questions you ask, the specific documents you extract from, the specific scenarios you design, and the specific scoring criteria you apply all depend on the professional context. This is why the domain chapters that follow are necessary; not to teach a different methodology, but to show how this one works when applied to finance, legal, HR, healthcare, architecture, sales, and operations.
 
 ## Self-Assessment Checklist
 
@@ -143,7 +143,7 @@ This checklist consolidates the full Knowledge Extraction Method into a single r
 - Method B-primary (knowledge in documents): HR, operations
 - A+B (knowledge in both): legal, healthcare, architecture
 
-**2. Extract — Method A** (L02, L03)
+**2. Extract: Method A** (L02, L03)
 - Brief the expert: purpose, output, process expectation
 - Ask the five questions with follow-ups:
   - Q1: Recent success (decision-making logic)
@@ -154,7 +154,7 @@ This checklist consolidates the full Knowledge Extraction Method into a single r
 - Capture specific statements, not generic ones
 - Write the north star summary immediately: paragraph 1 = decision-making logic, paragraph 2 = escalation condition
 
-**3. Extract — Method B** (L04)
+**3. Extract: Method B** (L04)
 - Pass One: extract every explicit rule as "The agent should [X] when [Y]"
 - Pass Two: map contradictions (temporal, jurisdictional, interpretive)
 - Pass Three: identify gaps (low-stakes = apply-and-flag; high-stakes = escalate)
@@ -180,7 +180,7 @@ This checklist consolidates the full Knowledge Extraction Method into a single r
 
 The methodology does not change. The five interview questions, the three-pass document extraction, the reconciliation principle, the SKILL.md structure, and the validation loop are the permanent toolkit. What changes in each domain chapter is the context in which they are applied.
 
-Chapter 28 opens with finance — the domain the credit analyst example has been preparing you for. Where this chapter used the credit analyst to teach the methodology, Chapter 28 uses the methodology to build a production-grade financial analysis agent. The extraction targets shift from general credit analysis to specific financial workflows. The validation scenarios shift from illustrative examples to domain-specific test cases grounded in real financial instruments and regulatory requirements. The shadow mode criteria shift from generic thresholds to metrics that a compliance function would accept.
+Chapter 28 opens with finance: the domain the credit analyst example has been preparing you for. Where this chapter used the credit analyst to teach the methodology, Chapter 28 uses the methodology to build a production-grade financial analysis agent. The extraction targets shift from general credit analysis to specific financial workflows. The validation scenarios shift from illustrative examples to domain-specific test cases grounded in real financial instruments and regulatory requirements. The shadow mode criteria shift from generic thresholds to metrics that a compliance function would accept.
 
 The architecture from Chapter 26 does not change. The methodology from Chapter 27 does not change. What the domain chapters add is the professional knowledge that makes the methodology produce a SKILL.md worth deploying.
 
@@ -210,7 +210,7 @@ Identify any gaps where I would need information I do not currently
 have to complete a stage.
 ```
 
-**What you're learning:** How to apply the complete chapter methodology to a real domain agent. This synthesis exercise forces you to use every stage — problem identification, method selection, extraction, translation, and validation — in sequence for a specific use case, revealing which parts of the methodology you have understood deeply and which remain abstract.
+**What you're learning:** How to apply the complete chapter methodology to a real domain agent. This synthesis exercise forces you to use every stage, problem identification, method selection, extraction, translation, and validation, in sequence for a specific use case, revealing which parts of the methodology you have understood deeply and which remain abstract.
 
 ### Prompt 2: Methodology Comparison
 
@@ -236,7 +236,7 @@ Explain why the same methodology produces different extraction plans
 for these two domains.
 ```
 
-**What you're learning:** How the methodology adapts to domain context. The extraction framework is consistent across domains — the same five questions, the same three passes, the same four validation categories — but the specific knowledge surfaced, the method priority, and the reconciliation decisions differ fundamentally based on where the critical knowledge lives. Comparing two contrasting domains makes this adaptation concrete rather than theoretical.
+**What you're learning:** How the methodology adapts to domain context. The extraction framework is consistent across domains: the same five questions, the same three passes, the same four validation categories; but the specific knowledge surfaced, the method priority, and the reconciliation decisions differ fundamentally based on where the critical knowledge lives. Comparing two contrasting domains makes this adaptation concrete rather than theoretical.
 
 ### Prompt 3: Gap Analysis
 
@@ -257,7 +257,7 @@ Based on my answers, recommend which lessons I should revisit before
 starting the domain chapters.
 ```
 
-**What you're learning:** The gap between conceptual understanding and operational readiness is the gap that determines whether the domain chapters will be productive or frustrating. This prompt simulates a readiness assessment — surfacing the stages where you know the concept but would struggle with the execution, so you can review those lessons before applying the methodology to a specific domain.
+**What you're learning:** The gap between conceptual understanding and operational readiness is the gap that determines whether the domain chapters will be productive or frustrating. This prompt simulates a readiness assessment: surfacing the stages where you know the concept but would struggle with the execution, so you can review those lessons before applying the methodology to a specific domain.
 
 ## Flashcards Study Aid
 

@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch33-02-negotiation-playbook-001"
     front: "What is legal.local.md and why is it called a negotiation playbook?"
-    back: "legal.local.md is a configuration file that encodes an organisation's standard contractual positions, acceptable ranges, and RED escalation triggers. It transforms the Legal Plugin from a generic reviewer into an institutional knowledge system — producing output calibrated to your organisation's specific risk tolerance, regulatory obligations, and negotiation experience."
+    back: "legal.local.md is a configuration file that encodes an organisation's standard contractual positions, acceptable ranges, and RED escalation triggers. It transforms the Legal Plugin from a generic reviewer into an institutional knowledge system: producing output calibrated to your organisation's specific risk tolerance, regulatory obligations, and negotiation experience."
     difficulty: "basic"
     tags: ["playbook", "legal-local-md"]
 
@@ -20,13 +20,13 @@ cards:
 
   - id: "ch33-02-negotiation-playbook-003"
     front: "What three fields define each clause position in the playbook?"
-    back: "1. STANDARD POSITION — what the organisation ideally wants\n2. ACCEPTABLE RANGE — what the organisation can live with\n3. ESCALATE (RED) IF — hard limits that require attorney review\nOptionally, a NOTES field adds jurisdiction-specific considerations."
+    back: "1. STANDARD POSITION: what the organisation ideally wants\n2. ACCEPTABLE RANGE: what the organisation can live with\n3. ESCALATE (RED) IF: hard limits that require attorney review\nOptionally, a NOTES field adds jurisdiction-specific considerations."
     difficulty: "basic"
     tags: ["clause-positions", "structure"]
 
   - id: "ch33-02-negotiation-playbook-004"
     front: "How does a playbook-calibrated review differ from a generic review for a limitation of liability clause with a 3-month fee cap?"
-    back: "Generic review: YELLOW — 'Cap appears low relative to contract value.'\nPlaybook-calibrated review: RED — 'PKR 600,000 against Noor standard of 12 months = PKR 2,400,000. 75% below floor. Recommend mutual 12-month cap.'\nThe playbook changes the classification, adds specific numbers, and provides actionable redline language matching the organisation's positions."
+    back: "Generic review: YELLOW: 'Cap appears low relative to contract value.'\nPlaybook-calibrated review: RED: 'PKR 600,000 against Noor standard of 12 months = PKR 2,400,000. 75% below floor. Recommend mutual 12-month cap.'\nThe playbook changes the classification, adds specific numbers, and provides actionable redline language matching the organisation's positions."
     difficulty: "intermediate"
     tags: ["calibration", "comparison"]
 
@@ -38,7 +38,7 @@ cards:
 
   - id: "ch33-02-negotiation-playbook-006"
     front: "What are SCCs (Standard Contractual Clauses) and why do they matter for cross-border data transfers?"
-    back: "SCCs are pre-approved contractual terms for transferring personal data from a jurisdiction with strong data protection to one without an adequacy decision. The EU adopted new SCCs in June 2021; the UK has its own International Data Transfer Agreement (IDTA). DIFC and ADGM maintain separate approved transfer mechanisms. Using the wrong SCCs for your jurisdiction — or none at all — can result in regulatory enforcement."
+    back: "SCCs are pre-approved contractual terms for transferring personal data from a jurisdiction with strong data protection to one without an adequacy decision. The EU adopted new SCCs in June 2021; the UK has its own International Data Transfer Agreement (IDTA). DIFC and ADGM maintain separate approved transfer mechanisms. Using the wrong SCCs for your jurisdiction: or none at all: can result in regulatory enforcement."
     difficulty: "intermediate"
     tags: ["sccs", "data-transfer", "cross-border"]
 
@@ -50,7 +50,7 @@ cards:
 
   - id: "ch33-02-negotiation-playbook-008"
     front: "What is the ~~category placeholder system in MCP connector categories?"
-    back: "Skills in the Legal Plugin use ~~category placeholders (e.g., ~~cloud storage, ~~email) that resolve at runtime to whatever MCP server is connected. This makes the plugin provider-agnostic — swapping from Box to SharePoint requires changing the connector configuration, not modifying any skill definition."
+    back: "Skills in the Legal Plugin use ~~category placeholders (e.g., ~~cloud storage, ~~email) that resolve at runtime to whatever MCP server is connected. This makes the plugin provider-agnostic: swapping from Box to SharePoint requires changing the connector configuration, not modifying any skill definition."
     difficulty: "intermediate"
     tags: ["mcp-connectors", "placeholders"]
 
@@ -62,18 +62,18 @@ cards:
 
   - id: "ch33-02-negotiation-playbook-010"
     front: "How does the plugin's role change when MCP connectors are added?"
-    back: "Without connectors, the plugin is a document reviewer — you upload contracts and paste text. With connectors, it becomes a process manager: the Contract Intake Agent monitors Gmail for incoming agreements, the compliance calendar syncs deadlines to Google Calendar, and vendor management pulls meeting context from calendar and Slack channels."
+    back: "Without connectors, the plugin is a document reviewer: you upload contracts and paste text. With connectors, it becomes a process manager: the Contract Intake Agent monitors Gmail for incoming agreements, the compliance calendar syncs deadlines to Google Calendar, and vendor management pulls meeting context from calendar and Slack channels."
     difficulty: "intermediate"
     tags: ["mcp-connectors", "workflow"]
 
   - id: "ch33-02-negotiation-playbook-011"
     front: "Why does Fatima Al-Rashidi's playbook at PayGulf Technologies produce different output from Noor Technologies' playbook on the same contract?"
-    back: "PayGulf is DFSA-regulated in DIFC. Fatima's playbook specifies DIFC DP Law 2020 compliance (not PDPA 2023), defaults to DIFC law and DIFC Courts (never mainland UAE law above AED 1,000,000 due to Arabic-prevails risk), and has a higher liability floor (AED 500,000) because DFSA-regulated entities require conservative postures. Same plugin, same commands — radically different output because the playbook encodes institutional knowledge, not generic standards."
+    back: "PayGulf is DFSA-regulated in DIFC. Fatima's playbook specifies DIFC DP Law 2020 compliance (not PDPA 2023), defaults to DIFC law and DIFC Courts (never mainland UAE law above AED 1,000,000 due to Arabic-prevails risk), and has a higher liability floor (AED 500,000) because DFSA-regulated entities require conservative postures. Same plugin, same commands: radically different output because the playbook encodes institutional knowledge, not generic standards."
     difficulty: "advanced"
     tags: ["calibration", "dfsa", "institutional-knowledge"]
 
   - id: "ch33-02-negotiation-playbook-012"
     front: "What is the key insight about the difference between the plugin and the playbook?"
-    back: "The plugin is infrastructure — it provides the commands and skills for contract review, triage, and compliance. The playbook is the product — it encodes your organisation's risk tolerance, regulatory obligations, and negotiation experience. A playbook transforms generic observations into actionable instructions with specific numbers and replacement language."
+    back: "The plugin is infrastructure: it provides the commands and skills for contract review, triage, and compliance. The playbook is the product: it encodes your organisation's risk tolerance, regulatory obligations, and negotiation experience. A playbook transforms generic observations into actionable instructions with specific numbers and replacement language."
     difficulty: "basic"
     tags: ["playbook", "institutional-knowledge"]

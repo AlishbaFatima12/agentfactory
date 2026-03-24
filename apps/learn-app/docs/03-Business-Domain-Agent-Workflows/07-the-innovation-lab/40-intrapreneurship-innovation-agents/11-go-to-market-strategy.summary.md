@@ -2,7 +2,7 @@
 
 ## What You Learned
 
-GTM strategy is how strategy meets execution. You learned to define an ICP with a buying trigger (the specific event that creates urgency — not just demographics), write a positioning statement using the For/Who/Our product/That/Unlike/We format, and design a channel strategy ranked by CAC efficiency across six archetypes. The lesson also covered a seven-step sales process, value-based pricing rules, and a 90-day GTM calendar with decision gates at Day 30 and Day 60.
+GTM strategy is how strategy meets execution. You learned to define an ICP with a buying trigger (the specific event that creates urgency , not just demographics), write a positioning statement using the For/Who/Our product/That/Unlike/We format, and design a channel strategy ranked by CAC efficiency across six archetypes. The lesson also covered a seven-step sales process, value-based pricing rules, and a 90-day GTM calendar with decision gates at Day 30 and Day 60.
 
 ## Key Takeaways
 

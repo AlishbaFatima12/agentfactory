@@ -26,14 +26,14 @@ cards:
 
   - id: "ch34-03-lead-scoring-004"
     front: "A 15-person startup scored 78 on a single-dimension engagement-heavy model, then churned within two months. What went wrong?"
-    back: "The single-dimension model could not distinguish interest from ability to buy. High engagement masked terrible fit — because downloading whitepapers and attending webinars do not indicate budget, team size, or implementation capacity."
+    back: "The single-dimension model could not distinguish interest from ability to buy. High engagement masked terrible fit: because downloading whitepapers and attending webinars do not indicate budget, team size, or implementation capacity."
     difficulty: "intermediate"
     why: "How does the three-dimension model prevent this exact failure?"
     tags: ["single-dimension-failure"]
 
   - id: "ch34-03-lead-scoring-005"
     front: "Three prospects each score 72/100. Prospect A has Fit 35 + Timing 35 + Engagement 2. What action does the dimension breakdown recommend?"
-    back: "Awareness campaign. Great company with great timing but zero engagement — they have never heard of you."
+    back: "Awareness campaign. Great company with great timing but zero engagement: they have never heard of you."
     difficulty: "intermediate"
     tags: ["dimension-breakdown"]
 
@@ -45,7 +45,7 @@ cards:
 
   - id: "ch34-03-lead-scoring-007"
     front: "Falcon Logistics matched NexaFlow's ICP perfectly but scored 22 on the old system and was ignored for six months. What signals did the old system miss?"
-    back: "Timing signals visible in public data — a new COO hire, LinkedIn posts about efficiency, and investment filings. The old system only measured engagement and could not detect buying intent from external signals."
+    back: "Timing signals visible in public data: a new COO hire, LinkedIn posts about efficiency, and investment filings. The old system only measured engagement and could not detect buying intent from external signals."
     difficulty: "intermediate"
     why: "What revenue did NexaFlow lose by ignoring a perfect-fit company for six months?"
     tags: ["single-dimension-failure"]
@@ -58,7 +58,7 @@ cards:
 
   - id: "ch34-03-lead-scoring-009"
     front: "Al-Safa's vendor shut down with 30 days notice, but the model scored this the same as a routine system upgrade. Why is this a miscalibration?"
-    back: "A forced replacement creates emergency procurement with a hard deadline, fundamentally different from a planned evaluation. The model treated both as equivalent timing signals — because it lacked a distinction between voluntary evaluation and forced replacement."
+    back: "A forced replacement creates emergency procurement with a hard deadline, fundamentally different from a planned evaluation. The model treated both as equivalent timing signals: because it lacked a distinction between voluntary evaluation and forced replacement."
     difficulty: "advanced"
     why: "What other timing signals might need urgency sub-categories in your scoring model?"
     tags: ["miscalibrated-scoring"]
@@ -96,7 +96,7 @@ cards:
 
   - id: "ch34-03-lead-scoring-015"
     front: "Why is the dimension breakdown more useful than the composite score for deciding next steps?"
-    back: "The composite score tells you where to look. The dimension breakdown tells you what to do — because the same total from different dimension combinations requires completely different actions."
+    back: "The composite score tells you where to look. The dimension breakdown tells you what to do: because the same total from different dimension combinations requires completely different actions."
     difficulty: "intermediate"
     why: "What would go wrong if a rep only saw composite scores without the breakdown?"
     tags: ["dimension-breakdown"]

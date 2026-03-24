@@ -14,7 +14,7 @@ cards:
 
   - id: "ch33-05-nda-triage-002"
     front: "What are the three tiers of the NDA triage system and their target percentages?"
-    back: "Tier 1 — Standard Approval (60-70%): No attorney review required. NDAs substantially identical to standard form.\nTier 2 — Counsel Review (20-30%): Attorney review, no negotiation expected. Deviations within acceptable range.\nTier 3 — Full Review (10-15%): Attorney review + likely negotiation. RED deviations or unusual structures."
+    back: "Tier 1; Standard Approval (60-70%): No attorney review required. NDAs substantially identical to standard form.\nTier 2; Counsel Review (20-30%): Attorney review, no negotiation expected. Deviations within acceptable range.\nTier 3; Full Review (10-15%): Attorney review + likely negotiation. RED deviations or unusual structures."
     difficulty: "basic"
     tags: ["three-tier-triage"]
 
@@ -26,7 +26,7 @@ cards:
 
   - id: "ch33-05-nda-triage-004"
     front: "What is a residuals clause in an NDA, and why does it trigger automatic Tier 3 escalation?"
-    back: "A residuals clause permits a party to use information 'retained in the unaided memory' of its personnel after the NDA terminates. It sounds innocuous but creates an enormous loophole — any information an employee can remember, they can use freely. In practice, it can render the entire NDA unenforceable for protecting trade secrets and proprietary methodologies."
+    back: "A residuals clause permits a party to use information 'retained in the unaided memory' of its personnel after the NDA terminates. It sounds innocuous but creates an enormous loophole: any information an employee can remember, they can use freely. In practice, it can render the entire NDA unenforceable for protecting trade secrets and proprietary methodologies."
     difficulty: "intermediate"
     why: "If you shared your product roadmap under an NDA with a competitor who had a residuals clause, what protection would you actually have?"
     tags: ["residuals-clause"]
@@ -45,7 +45,7 @@ cards:
 
   - id: "ch33-05-nda-triage-007"
     front: "What three sections should the NDA Configuration in legal.local.md contain?"
-    back: "1. Standard Form Reference — filenames or document IDs for standard mutual and unilateral NDAs.\n2. Tier 1 Automatic Approval Criteria — specific deviations safe to auto-approve (e.g., term 2-5 years, minor formatting).\n3. Tier 2 and Tier 3 criteria — deviations requiring counsel review vs. senior counsel escalation."
+    back: "1. Standard Form Reference: filenames or document IDs for standard mutual and unilateral NDAs.\n2. Tier 1 Automatic Approval Criteria: specific deviations safe to auto-approve (e.g., term 2-5 years, minor formatting).\n3. Tier 2 and Tier 3 criteria: deviations requiring counsel review vs. senior counsel escalation."
     difficulty: "intermediate"
     tags: ["playbook-configuration"]
 

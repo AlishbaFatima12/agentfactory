@@ -161,7 +161,7 @@ Format: structured markdown with clear section headers.
 Save as legal-demo-data.md in my working folder.
 ```
 
-**Output:** A structured dataset containing 3 vendor agreements, 2 NDAs, and a company legal profile. Save this file — every subsequent lesson references Noor Technologies and these agreements.
+**Output:** A structured dataset containing 3 vendor agreements, 2 NDAs, and a company legal profile. Save this file: every subsequent lesson references Noor Technologies and these agreements.
 
 ## Your First Contract Review
 
@@ -237,17 +237,17 @@ Now run:
 
 | Section                          | Intent                                                                   | What to Verify                                                                                                                                              |
 | -------------------------------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ATTORNEY REVIEW: REQUIRED header | Governance boundary — appears on every Legal Plugin output               | Confirm this header is present at the top                                                                                                                   |
+| ATTORNEY REVIEW: REQUIRED header | Governance boundary: appears on every Legal Plugin output               | Confirm this header is present at the top                                                                                                                   |
 | Overall assessment               | Summary recommendation (proceed / proceed with modifications / escalate) | Compare against your prediction                                                                                                                             |
 | GREEN clauses                    | Clauses acceptable as written                                            | Should include standard boilerplate clauses                                                                                                                 |
 | YELLOW clauses                   | Clauses to negotiate before signing                                      | Look for auto-renewal notice period, late payment interest rate, one-sided indemnification                                                                  |
 | RED clauses                      | Clauses requiring attorney escalation                                    | Look for liability cap, unrestricted data transfer, IP ownership of customisations, no data return on termination, governing law forcing foreign litigation |
 
 :::note Your output will vary
-The specific clause classifications, recommendations, and redline language depend on the plugin version and your playbook configuration. Focus on the structure: GREEN/YELLOW/RED tiers with clause-by-clause analysis. The teaching point is the three-tier classification system and the ATTORNEY REVIEW: REQUIRED governance boundary — not the specific numbers or recommendations.
+The specific clause classifications, recommendations, and redline language depend on the plugin version and your playbook configuration. Focus on the structure: GREEN/YELLOW/RED tiers with clause-by-clause analysis. The teaching point is the three-tier classification system and the ATTORNEY REVIEW: REQUIRED governance boundary: not the specific numbers or recommendations.
 :::
 
-**Calibration.** Compare your prediction to the actual output. Most students predict "proceed" because the agreement looks standard at first read. The RED flags surprise them — several clauses carry material risk that a quick manual read could miss.
+**Calibration.** Compare your prediction to the actual output. Most students predict "proceed" because the agreement looks standard at first read. The RED flags surprise them: several clauses carry material risk that a quick manual read could miss.
 
 Notice the header at the top of the output: **ATTORNEY REVIEW: REQUIRED**. That header appears on every output the Legal Plugin produces. It is not optional and it cannot be removed.
 

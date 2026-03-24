@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch35-chapter-summary-quick-reference-001"
     front: "What is the central insight of Chapter 35 about supply chain problems?"
-    back: "Every supply chain problem is an information problem before it is an operational problem. Invoice exceptions, supply disruptions, logistics overpayments, and stock-outs all trace back to information gaps — not absent data, but scattered data that exceeds human attention capacity to connect."
+    back: "Every supply chain problem is an information problem before it is an operational problem. Invoice exceptions, supply disruptions, logistics overpayments, and stock-outs all trace back to information gaps: not absent data, but scattered data that exceeds human attention capacity to connect."
     tags: ["central-insight"]
     difficulty: "basic"
 
@@ -43,7 +43,7 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch35-chapter-summary-quick-reference-007"
-    front: "Which three commands were renamed from their original spec names — and what are the correct names?"
+    front: "Which three commands were renamed from their original spec names: and what are the correct names?"
     back: "Use /invoice-reconcile (not /reconcile), /vendor-communicate (not /communicate), /supply-network-design (not /network-design). All three were renamed to avoid collision with Anthropic-owned command surfaces."
     tags: ["command-naming", "renamed-commands"]
     difficulty: "basic"
@@ -62,18 +62,18 @@ cards:
 
   - id: "ch35-chapter-summary-quick-reference-010"
     front: "How does supply-chain.local.md make the plugin organisation-specific?"
-    back: "supply-chain.local.md encodes the organisation's currency, vendor tier counts, invoice tolerance thresholds, risk review frequencies, key contacts, and MCP connection status. Every skill uses these values instead of generic defaults — making the same command produce different outputs tailored to different organisational policies."
+    back: "supply-chain.local.md encodes the organisation's currency, vendor tier counts, invoice tolerance thresholds, risk review frequencies, key contacts, and MCP connection status. Every skill uses these values instead of generic defaults: making the same command produce different outputs tailored to different organisational policies."
     tags: ["local-config", "supply-chain-local-md"]
     difficulty: "intermediate"
 
   - id: "ch35-chapter-summary-quick-reference-011"
-    front: "What seven capabilities did Chapter 35 build — as a summary?"
+    front: "What seven capabilities did Chapter 35 build: as a summary?"
     back: "1. Vendor lifecycle management (onboarding to exit). 2. Invoice reconciliation toward straight-through processing. 3. Supplier risk monitoring across five dimensions with Tier 2 visibility. 4. Logistics optimisation including network design. 5. Spend analytics and market benchmarking. 6. Vendor communications for disputes and exits. 7. Five persistent agents running the intelligence layer continuously."
     tags: ["chapter-summary", "seven-capabilities"]
     difficulty: "basic"
 
   - id: "ch35-chapter-summary-quick-reference-012"
-    front: "Which 2-3 commands would most organisations start with — and why not all eight at once?"
-    back: "Start with the commands that address the organisation's worst current failure — typically /invoice-reconcile (if exception rate is high) or /supplier-risk (if a disruption recently occurred). All eight commands require data infrastructure; starting focused allows MCP connections to be proven before scaling. Expand from demonstrated value, not from full deployment."
+    front: "Which 2-3 commands would most organisations start with: and why not all eight at once?"
+    back: "Start with the commands that address the organisation's worst current failure: typically /invoice-reconcile (if exception rate is high) or /supplier-risk (if a disruption recently occurred). All eight commands require data infrastructure; starting focused allows MCP connections to be proven before scaling. Expand from demonstrated value, not from full deployment."
     tags: ["deployment-strategy"]
     difficulty: "intermediate"

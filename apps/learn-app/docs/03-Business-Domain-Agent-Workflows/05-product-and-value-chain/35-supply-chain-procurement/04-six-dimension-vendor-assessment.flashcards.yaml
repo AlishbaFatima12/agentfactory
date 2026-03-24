@@ -38,7 +38,7 @@ cards:
     difficulty: "basic"
 
   - id: "ch35-six-dimension-vendor-assessment-006"
-    front: "Why is 'zero financial visibility' on a sole-source vendor flagged as critical — even if nothing is wrong?"
+    front: "Why is 'zero financial visibility' on a sole-source vendor flagged as critical: even if nothing is wrong?"
     back: "Not knowing is itself the risk. If the vendor fails unexpectedly, there is no early warning and no time to qualify alternatives. For a sole-source supplier, 'I don't know' on financial health = critical risk."
     tags: ["financial-dimension", "visibility"]
     difficulty: "intermediate"
@@ -46,7 +46,7 @@ cards:
 
   - id: "ch35-six-dimension-vendor-assessment-007"
     front: "What does the Strategic dimension measure that the other five dimensions do not?"
-    back: "The cost of exit — switching timeline, switching cost, relationship investment, and future optionality. The other dimensions assess current performance; Strategic assesses how trapped you are."
+    back: "The cost of exit: switching timeline, switching cost, relationship investment, and future optionality. The other dimensions assess current performance; Strategic assesses how trapped you are."
     tags: ["strategic-dimension", "switching-cost"]
     difficulty: "intermediate"
 
@@ -70,7 +70,7 @@ cards:
 
   - id: "ch35-six-dimension-vendor-assessment-011"
     front: "Why is the /vendor-assess output a work plan rather than a final verdict?"
-    back: "The output is only as good as the data provided. It flags gaps where data is missing and recommends actions. If critical data (financial accounts, Tier 2 map) is absent, the output identifies that absence as a risk — it does not assume all is well."
+    back: "The output is only as good as the data provided. It flags gaps where data is missing and recommends actions. If critical data (financial accounts, Tier 2 map) is absent, the output identifies that absence as a risk: it does not assume all is well."
     tags: ["vendor-assess", "output-interpretation"]
     difficulty: "basic"
 
@@ -83,6 +83,6 @@ cards:
 
   - id: "ch35-six-dimension-vendor-assessment-013"
     front: "When ranking actions from a /vendor-assess output, what two factors determine priority order?"
-    back: "Risk severity first (Critical before High, High before Medium), then feasibility within each level — quick wins rank above structural changes requiring long timelines."
+    back: "Risk severity first (Critical before High, High before Medium), then feasibility within each level: quick wins rank above structural changes requiring long timelines."
     tags: ["vendor-assess", "action-ranking"]
     difficulty: "intermediate"

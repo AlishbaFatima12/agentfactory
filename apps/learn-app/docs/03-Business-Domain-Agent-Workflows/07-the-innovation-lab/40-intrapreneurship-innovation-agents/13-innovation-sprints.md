@@ -36,7 +36,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can score each backlog item on assumption risk (1–3) and delivery value (1–3), compute a priority score, and build a sprint from the highest-scoring items down — with items scoring ≤2 deferred unless they are quick wins"
+    measurable_at_this_level: "Student can score each backlog item on assumption risk (1–3) and delivery value (1–3), compute a priority score, and build a sprint from the highest-scoring items down, with items scoring ≤2 deferred unless they are quick wins"
 
 learning_objectives:
   - objective: "Distinguish between an innovation sprint and a product sprint and select the correct format for a given venture stage"
@@ -52,16 +52,16 @@ learning_objectives:
   - objective: "Score a backlog using the assumption risk × delivery value formula and build a sprint from the top-scoring items"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces a scored backlog table with assumption risk, delivery value, and priority score columns — and justifies why the top-scoring items form the sprint and lower-scoring items are deferred"
+    assessment_method: "Student produces a scored backlog table with assumption risk, delivery value, and priority score columns , and justifies why the top-scoring items form the sprint and lower-scoring items are deferred"
 
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Innovation sprint vs. product sprint — the dual goal distinction"
-    - "Learning goal — the specific assumption being tested this sprint"
-    - "Assumption-linked user stories — each story references an assumption ID"
-    - "Priority scoring formula — Assumption Risk × Delivery Value (max 9)"
-  assessment: "4 concepts at B1, all building on the Assumption Stack from L05 and the BML loop from L07. Students already understand assumptions and learning cycles — this lesson applies those concepts to the sprint planning format."
+    - "Innovation sprint vs. product sprint: the dual goal distinction"
+    - "Learning goal: the specific assumption being tested this sprint"
+    - "Assumption-linked user stories: each story references an assumption ID"
+    - "Priority scoring formula, Assumption Risk × Delivery Value (max 9)"
+  assessment: "4 concepts at B1, all building on the Assumption Stack from L05 and the BML loop from L07. Students already understand assumptions and learning cycles. This lesson applies those concepts to the sprint planning format."
 
 differentiation:
   extension_for_advanced: "After writing the sprint plan, run a retrospective simulation: imagine the sprint is complete and your WhatsApp adoption hypothesis was only partially validated (adoption improved from 45% to 60%, not the target 65%). What assumption status updates would you record? What would the next sprint priority be? How does 'partial validation' change your pivot-or-persevere decision?"
@@ -69,28 +69,28 @@ differentiation:
 
 teaching_guide:
   key_points:
-    - "The learning goal is what distinguishes an innovation sprint from a product sprint — without it, you are delivering features but not reducing uncertainty"
-    - "Each user story should link to an assumption ID from the assumption map — this makes the sprint a structured experiment, not just a to-do list"
+    - "The learning goal is what distinguishes an innovation sprint from a product sprint, without it, you are delivering features but not reducing uncertainty"
+    - "Each user story should link to an assumption ID from the assumption map. This makes the sprint a structured experiment, not just a to-do list"
     - "The priority scoring formula (Assumption Risk × Delivery Value) is a tool for having the prioritisation conversation, not an algorithm that removes judgment"
-    - "The assumption update in the retrospective is the most important output — it is what keeps innov.local.md current and the team aligned on what has and has not been validated"
+    - "The assumption update in the retrospective is the most important output; it is what keeps innov.local.md current and the team aligned on what has and has not been validated"
     - "Innovation sprints are used at DISCOVERY, VALIDATION, and MVP stages. Switch to product sprints at GROWTH when assumptions are largely validated."
   misconceptions:
-    - "A sprint with only a delivery goal is an innovation sprint if the team is working on an innovation. Correction: a sprint with only a delivery goal is a product sprint regardless of context. The learning goal — the specific assumption being tested — is what makes it an innovation sprint."
+    - "A sprint with only a delivery goal is an innovation sprint if the team is working on an innovation. Correction: a sprint with only a delivery goal is a product sprint regardless of context. The learning goal: the specific assumption being tested: is what makes it an innovation sprint."
     - "Acceptance criteria can be directional ('adoption should improve'). Correction: every acceptance criterion must be binary: pass or fail, measurable. 'Adoption improves from 45% to ≥65% within 7 days of deployment' is testable. 'Adoption should improve' is not."
-    - "The retrospective is for team process. Correction: in an innovation sprint, the primary retrospective output is assumption updates — which assumptions changed status and what evidence supports the change. Team process is secondary."
+    - "The retrospective is for team process. Correction: in an innovation sprint, the primary retrospective output is assumption updates, which assumptions changed status and what evidence supports the change. Team process is secondary."
   discussion_prompts:
     - "Your sprint plan shows 8 user stories. The priority scoring formula suggests 4 of them score ≤2. A developer argues that those 4 are quick wins that would boost team morale. How do you decide?"
     - "You are at Day 7 of a 14-day sprint and the mid-sprint check shows the critical assumption test is behind schedule. What are your options, and how do you choose between them?"
   teaching_tips:
-    - "Use the WhatsApp adoption sprint from the AP example — it is concrete and relatable. Walk through how the learning goal (validate WhatsApp improves adoption by ≥20 percentage points) directly tests assumption A-004 from the assumption map."
+    - "Use the WhatsApp adoption sprint from the AP example; it is concrete and relatable. Walk through how the learning goal (validate WhatsApp improves adoption by ≥20 percentage points) directly tests assumption A-004 from the assumption map."
     - "Show a weak user story and a strong user story side by side. Students immediately recognise the weak one from their own experience writing tickets."
 ---
 
 # Innovation Sprints
 
-Agile was designed for software delivery — iterating on a solution when the requirements are reasonably understood. Innovation adds a layer of uncertainty that standard Agile was not built for: you are not just building; you are simultaneously discovering the problem, validating your solution, and delivering working software. Running standard Agile under these conditions produces well-organised execution of the wrong thing.
+Agile was designed for software delivery, iterating on a solution when the requirements are reasonably understood. Innovation adds a layer of uncertainty that standard Agile was not built for: you are not just building; you are simultaneously discovering the problem, validating your solution, and delivering working software. Running standard Agile under these conditions produces well-organised execution of the wrong thing.
 
-The DLA Stack's third methodology — Agile — adapted for innovation conditions is what this lesson teaches. You have already done the Design Thinking (Lessons 3–4) and Lean Startup work (Lessons 5–7). You have an assumption map with assumption IDs, validated learning from your MVP, and a working business model. Now you build a sprint that is not just a delivery machine, but a learning machine.
+The DLA Stack's third methodology, Agile, adapted for innovation conditions is what this lesson teaches. You have already done the Design Thinking (Lessons 3–4) and Lean Startup work (Lessons 5–7). You have an assumption map with assumption IDs, validated learning from your MVP, and a working business model. Now you build a sprint that is not just a delivery machine, but a learning machine.
 
 :::note From Lesson 5 and Lesson 7
 This lesson builds directly on two prior lessons. From L05 you have an assumption map with IDs (A-001 through A-010+) and risk tiers. From L07 you have experience with the Build-Measure-Learn loop. The innovation sprint formalises the BML loop into a structured 2-week cadence with explicit goals, measurement, and retrospective assumption updates.
@@ -98,7 +98,7 @@ This lesson builds directly on two prior lessons. From L05 you have an assumptio
 
 ## Innovation Sprint vs. Product Sprint
 
-The difference is not cosmetic — it changes how you plan, execute, and evaluate the sprint.
+The difference is not cosmetic ; it changes how you plan, execute, and evaluate the sprint.
 
 | Dimension          | Product Sprint                         | Innovation Sprint                                          |
 | ------------------ | -------------------------------------- | ---------------------------------------------------------- |
@@ -109,31 +109,31 @@ The difference is not cosmetic — it changes how you plan, execute, and evaluat
 | Definition of done | Code deployed; QA passed               | Code deployed + learning measured + innov.local.md updated |
 | Stage              | GROWTH (assumptions largely validated) | DISCOVERY, VALIDATION, MVP                                 |
 
-The key adaptation: the sprint must have two goals — a **learning goal** (which assumption are we testing?) and a **delivery goal** (what do we build that enables the test?). Without the learning goal, you are running a product sprint and calling it innovation.
+The key adaptation: the sprint must have two goals: a **learning goal** (which assumption are we testing?) and a **delivery goal** (what do we build that enables the test?). Without the learning goal, you are running a product sprint and calling it innovation.
 
 :::info When to switch formats
-Use the Innovation Sprint format when your venture is at DISCOVERY, VALIDATION, or MVP stage — when critical assumptions remain unvalidated. Switch to the Product Sprint format at GROWTH stage, when you have validated product-market fit and are scaling a known solution.
+Use the Innovation Sprint format when your venture is at DISCOVERY, VALIDATION, or MVP stage: when critical assumptions remain unvalidated. Switch to the Product Sprint format at GROWTH stage, when you have validated product-market fit and are scaling a known solution.
 :::
 
 ## Sprint Plan Components
 
 A complete innovation sprint plan has six components:
 
-**1. Sprint goal** — Dual statement: what are we learning (reference assumption ID), and what are we building that enables the measurement?
+**1. Sprint goal:** Dual statement: what are we learning (reference assumption ID), and what are we building that enables the measurement?
 
-**2. Backlog** — User stories with acceptance criteria, story points, owner assignment, and assumption ID linkage.
+**2. Backlog:** User stories with acceptance criteria, story points, owner assignment, and assumption ID linkage.
 
-**3. Definition of done** — Three dimensions: code (deployed and tested), learning (measured for a specific period), and documentation (innov.local.md updated).
+**3. Definition of done:** Three dimensions: code (deployed and tested), learning (measured for a specific period), and documentation (innov.local.md updated).
 
-**4. Mid-sprint check** — A Day 7 review: is the critical story on track? Is there any early signal on the learning goal? Is any story at risk?
+**4. Mid-sprint check:** A Day 7 review: is the critical story on track? Is there any early signal on the learning goal? Is any story at risk?
 
-**5. Sprint review format** — What to demo, what data to present, whether the assumption was confirmed or invalidated, and what stakeholders say.
+**5. Sprint review format:** What to demo, what data to present, whether the assumption was confirmed or invalidated, and what stakeholders say.
 
-**6. Retrospective format** — What worked, what did not, assumption status updates with evidence, one experiment for next sprint.
+**6. Retrospective format:** What worked, what did not, assumption status updates with evidence, one experiment for next sprint.
 
 ## User Story Quality
 
-The user story is the unit of work in a sprint. In an innovation sprint, each story should link to an assumption — making it an explicit experiment rather than a feature request.
+The user story is the unit of work in a sprint. In an innovation sprint, each story should link to an assumption, making it an explicit experiment rather than a feature request.
 
 **Weak story:**
 
@@ -166,15 +166,15 @@ Maximum score: 9
 
 **Assumption Risk Score:**
 
-- 3 = Tests a Tier 1 (existential) assumption — if this assumption is wrong, the venture must pivot
-- 2 = Tests a Tier 2 (serious) assumption — product changes significantly if wrong
+- 3 = Tests a Tier 1 (existential) assumption; if this assumption is wrong, the venture must pivot
+- 2 = Tests a Tier 2 (serious) assumption, product changes significantly if wrong
 - 1 = Tests a Tier 3 assumption or no assumption (pure delivery)
 
 **Delivery Value Score:**
 
-- 3 = Blocks the next critical path item — nothing else can proceed without this
-- 2 = Enables faster learning — accelerates the next experiment
-- 1 = Nice to have — no critical dependency
+- 3 = Blocks the next critical path item; nothing else can proceed without this
+- 2 = Enables faster learning, accelerates the next experiment
+- 1 = Nice to have; no critical dependency
 
 Build the sprint from the highest-scoring items down. Items scoring ≤2 go to the backlog unless they are quick wins (estimated under 2 hours).
 
@@ -183,7 +183,7 @@ Build the sprint from the highest-scoring items down. Items scoring ≤2 go to t
 The following is the innovation sprint plan for validating WhatsApp adoption in the AP automation venture.
 
 ```
-INNOVATION SPRINT PLAN — Sprint 2
+INNOVATION SPRINT PLAN, Sprint 2
 Dates: [Start] – [End] | Team: 3 (2 developers, 1 founder) | Velocity: 18 points
 ════════════════════════════════════════════════════════════
 
@@ -227,7 +227,7 @@ SPRINT BACKLOG:
   - Session completed with all 3 new staff members
   - 1-page quick reference guide created (covers: how to send invoice,
     how to approve on WhatsApp, how to use dashboard)
- Tests assumption: A-005 (adoption — staff knowledge barrier sub-assumption)
+ Tests assumption: A-005 (adoption, staff knowledge barrier sub-assumption)
 
  US-004: Competitor research [2 points] [Founder]
  As the founding team, we want to identify any competitor who has
@@ -235,7 +235,7 @@ SPRINT BACKLOG:
  so that we can adjust positioning if needed.
  Acceptance criteria:
   - Market scan completed; findings documented in innov.local.md
- Tests assumption: none — pure delivery (deferred from last sprint)
+ Tests assumption: none, pure delivery (deferred from last sprint)
 
 PRIORITY SCORES:
  US-001: Risk 3 × Value 3 = 9 ✓ IN SPRINT
@@ -255,13 +255,13 @@ MID-SPRINT CHECK (Day 7):
 
 SPRINT REVIEW FORMAT:
  Demo:     Show WhatsApp approval flow with real Pilot 3 invoice
- Measure:  Adoption rate change (pre vs. post — even early data)
+ Measure:  Adoption rate change (pre vs. post, even early data)
  Learning: Did we confirm or invalidate the WhatsApp adoption hypothesis?
- Input:    Pilot 3 CFO on WhatsApp UX — what works, what does not
+ Input:    Pilot 3 CFO on WhatsApp UX: what works, what does not
 
 SPRINT RETROSPECTIVE FORMAT:
- What worked? (1 item per person — specific)
- What did not work? (1 item per person — specific)
+ What worked? (1 item per person, specific)
+ What did not work? (1 item per person, specific)
  Assumption updates:
   A-004 (WhatsApp integration feasibility): [Update with evidence]
   A-005 (adoption): [Update with 7-day adoption data]
@@ -300,7 +300,7 @@ Sprint retrospective for Sprint [N].
 What was completed: [List US completed]
 What was not completed: [List + reason]
 Learning goal result: [Was the hypothesis confirmed, invalidated, or inconclusive?]
-Data: [The actual measurement — adoption rate, conversion, etc.]
+Data: [The actual measurement, adoption rate, conversion, etc.]
 What worked / did not work: [Team observations]
 
 Output:
@@ -310,7 +310,7 @@ Output:
 ```
 
 :::note For Intrapreneurs
-Innovation sprints work identically inside organisations. The learning goals become: "Will the internal process team adopt the new workflow?" The delivery goals become: "Deploy the process change to Team A as a pilot." The retrospective assumption updates feed back to your internal innovation committee. One adjustment: internal pilots often require an explicit "change management" user story — the humans who need to change their behaviour need support that external customers often do not.
+Innovation sprints work identically inside organisations. The learning goals become: "Will the internal process team adopt the new workflow?" The delivery goals become: "Deploy the process change to Team A as a pilot." The retrospective assumption updates feed back to your internal innovation committee. One adjustment: internal pilots often require an explicit "change management" user story: the humans who need to change their behaviour need support that external customers often do not.
 :::
 
 ## Try With AI
@@ -318,7 +318,7 @@ Innovation sprints work identically inside organisations. The learning goals bec
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Run the chapter's worked example:
+**Reproduce:** Run the chapter's worked example:
 
 ```
 /sprint
@@ -326,7 +326,7 @@ Design a 2-week innovation sprint for the AP automation venture.
 Sprint goal: Validate that WhatsApp approval workflow improves invoice
 adoption rate vs. email-only by ≥20 percentage points.
 Team: 2 developers, 1 founder (product/sales).
-Current venture stage: MVP — 3 paying pilots active.
+Current venture stage: MVP, 3 paying pilots active.
 Current assumption being tested: A-004 (WhatsApp integration feasibility),
 A-005 (adoption: CFOs will approve via mobile messaging in workflow).
 
@@ -339,14 +339,14 @@ Output:
 6. Retrospective format with assumption update template
 ```
 
-**What you are learning:** Notice how each user story maps to an assumption ID. The backlog is not a to-do list — it is a set of experiments. The priority scores make the "what goes in this sprint" conversation explicit rather than intuitive.
+**What you are learning:** Notice how each user story maps to an assumption ID. The backlog is not a to-do list; it is a set of experiments. The priority scores make the "what goes in this sprint" conversation explicit rather than intuitive.
 
-**Adapt** — Plan a sprint for a different venture stage:
+**Adapt:** Plan a sprint for a different venture stage:
 
 ```
 /sprint
 Design a 2-week innovation sprint.
-Venture: [A B2B SaaS at VALIDATION stage — first 3 pilots just signed]
+Venture: [A B2B SaaS at VALIDATION stage, first 3 pilots just signed]
 Sprint goal: Validate that our onboarding process gets a new customer
 to their first successful automated transaction within 3 business days.
 Team: 1 developer, 1 founder.
@@ -358,15 +358,15 @@ For each user story: include assumption ID reference and binary
 acceptance criteria.
 ```
 
-**What you are learning:** At VALIDATION stage, the riskiest assumption is usually about onboarding and adoption — not about the core product. Notice how the sprint goal focuses on the onboarding assumption, not on building more features.
+**What you are learning:** At VALIDATION stage, the riskiest assumption is usually about onboarding and adoption, not about the core product. Notice how the sprint goal focuses on the onboarding assumption, not on building more features.
 
-**Apply** — Plan a sprint for your own venture:
+**Apply:** Plan a sprint for your own venture:
 
 ```
 /sprint
 Design a 2-week innovation sprint for my venture.
 My current stage: [DISCOVERY / VALIDATION / MVP]
-My most critical unvalidated assumption: [From my assumption map in L05 — reference A-00X]
+My most critical unvalidated assumption: [From my assumption map in L05, reference A-00X]
 What I am currently building or testing: [Current state]
 Team composition: [Your team]
 

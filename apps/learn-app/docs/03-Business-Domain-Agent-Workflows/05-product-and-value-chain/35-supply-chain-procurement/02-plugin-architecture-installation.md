@@ -61,29 +61,29 @@ cognitive_load:
     - "8 skills and their one-line purpose mapping"
     - "5 persistent agents and their monitoring roles"
     - "MCP integration points (ERP, AP, logistics, financial databases)"
-  assessment: "5 concepts at A2-B1 level. This is a setup and orientation lesson — the primary cognitive work is understanding the architecture before using it. No new frameworks; the goal is familiarity with the plugin's components before Lesson 3 begins using them."
+  assessment: "5 concepts at A2-B1 level. This is a setup and orientation lesson: the primary cognitive work is understanding the architecture before using it. No new frameworks; the goal is familiarity with the plugin's components before Lesson 3 begins using them."
 
 differentiation:
   extension_for_advanced: "Read the plugin's README.md after installation to understand the SKILL.md structure for each of the 8 skills. Pick one skill (e.g., vendor-assessment) and read its SKILL.md. How does the skill encode organisational policy? What parameters would you change for your organisation? How does supply-chain.local.md override the skill defaults?"
-  remedial_for_struggling: "Focus on getting the plugin installed and running one verification command before reading further. If installation fails, work through the troubleshooting steps before continuing. You do not need to understand the full plugin architecture to proceed — just confirm the commands are available and the plugin responds."
+  remedial_for_struggling: "Focus on getting the plugin installed and running one verification command before reading further. If installation fails, work through the troubleshooting steps before continuing. You do not need to understand the full plugin architecture to proceed: just confirm the commands are available and the plugin responds."
 
 teaching_guide:
   key_points:
-    - "supply-chain.local.md is the key personalisation layer — it is what makes the plugin work for your organisation rather than a generic template"
-    - "The 3 command renames exist to avoid conflicts with Anthropic-owned command surfaces — students must always use the renamed versions"
-    - "MCP integration is what gives the plugin access to live operational data — without it, the plugin operates on data the student provides manually"
-    - "The 5 persistent agents automate the monitoring work that the skills perform manually — agents are introduced here but activated properly in Lesson 12"
+    - "supply-chain.local.md is the key personalisation layer: it is what makes the plugin work for your organisation rather than a generic template"
+    - "The 3 command renames exist to avoid conflicts with Anthropic-owned command surfaces: students must always use the renamed versions"
+    - "MCP integration is what gives the plugin access to live operational data: without it, the plugin operates on data the student provides manually"
+    - "The 5 persistent agents automate the monitoring work that the skills perform manually: agents are introduced here but activated properly in Lesson 12"
   misconceptions:
     - "I need to configure everything in supply-chain.local.md before I can use the plugin. Correction: The plugin works with defaults. supply-chain.local.md adds your organisation's specifics. Start with what you know; add the rest as you work through the lessons."
-    - "The plugin will automatically connect to my ERP once installed. Correction: MCP integration requires explicit configuration — you specify the MCP server endpoints. Installation gives you the skills; MCP connection gives the skills access to your live data."
-    - "/reconcile is the right command for invoice reconciliation. Correction: The command is /invoice-reconcile — the original /reconcile name was renamed to avoid collision with Anthropic-owned surfaces."
+    - "The plugin will automatically connect to my ERP once installed. Correction: MCP integration requires explicit configuration: you specify the MCP server endpoints. Installation gives you the skills; MCP connection gives the skills access to your live data."
+    - "/reconcile is the right command for invoice reconciliation. Correction: The command is /invoice-reconcile: the original /reconcile name was renamed to avoid collision with Anthropic-owned surfaces."
   discussion_prompts:
     - "Looking at the 8 commands, which one addresses the structural failure that costs your organisation the most? Which failure from Lesson 1 would you tackle first?"
     - "What data sources would you want to connect via MCP to make this plugin most useful for your organisation?"
   teaching_tips:
-    - "Walk students through the installation live — have them run the verification command immediately after installing to confirm the plugin is active before proceeding"
+    - "Walk students through the installation live: have them run the verification command immediately after installing to confirm the plugin is active before proceeding"
     - "The supply-chain.local.md template deserves 5 minutes of discussion: what organisational knowledge goes into it and why that knowledge changes how every skill behaves"
-    - "Emphasise that MCP integration is optional for the exercises — students can provide data manually in prompts throughout Lessons 3-13, then add MCP connectivity when they deploy"
+    - "Emphasise that MCP integration is optional for the exercises: students can provide data manually in prompts throughout Lessons 3-13, then add MCP connectivity when they deploy"
 ---
 
 # Plugin Architecture and Installation
@@ -116,19 +116,19 @@ supply-chain/
 └── README.md
 ```
 
-No router skill — each of the 8 skills is directly addressable. No jurisdiction overlays — supply chain policy is organisation-specific rather than jurisdiction-specific, and is configured via `supply-chain.local.md`.
+No router skill: each of the 8 skills is directly addressable. No jurisdiction overlays: supply chain policy is organisation-specific rather than jurisdiction-specific, and is configured via `supply-chain.local.md`.
 
 ## Installing the Plugin
 
 Open Cowork and navigate to the plugin marketplace in the sidebar.
 
-**Option 1 — Marketplace install:**
+**Option 1; Marketplace install:**
 
 ```
 claude plugin install supply-chain@agentfactory-business
 ```
 
-**Option 2 — GitHub install (if not yet in marketplace):**
+**Option 2; GitHub install (if not yet in marketplace):**
 
 ```
 claude plugin install github:panaversity/agentfactory-business-plugins/supply-chain
@@ -143,19 +143,19 @@ List all available supply-chain plugin commands with a one-line description of e
 You should see all 8 commands listed. If the plugin is not active, check the Cowork sidebar under Settings → Plugins to confirm it appears in the installed list.
 
 :::tip Plugin Setup Reminder
-If you encounter issues during installation, confirm you have Cowork open (not the standard Claude interface) and that you are running the installation command in the chat input — not in a terminal. Plugin commands are Cowork-specific.
+If you encounter issues during installation, confirm you have Cowork open (not the standard Claude interface) and that you are running the installation command in the chat input: not in a terminal. Plugin commands are Cowork-specific.
 :::
 
-## The 8 Skills — What They Do
+## The 8 Skills; What They Do
 
 | Command                  | What It Does                                                          | Addresses (from Lesson 1)                |
 | ------------------------ | --------------------------------------------------------------------- | ---------------------------------------- |
 | `/vendor-assess`         | Six-dimension vendor assessment and Kraljic classification            | Vendor Blind Spot                        |
 | `/supplier-risk`         | Continuous multi-dimension risk brief for a named supplier            | Vendor Blind Spot                        |
 | `/invoice-reconcile`     | Three-way match invoice reconciliation with tolerance rules           | Reconciliation Swamp                     |
-| `/vendor-communicate`    | Vendor communications — dispute notices, CARs, exit letters           | Reconciliation Swamp / Vendor Blind Spot |
+| `/vendor-communicate`    | Vendor communications: dispute notices, CARs, exit letters           | Reconciliation Swamp / Vendor Blind Spot |
 | `/logistics-brief`       | Carrier performance analysis and lane efficiency review               | Static Optimisation Trap                 |
-| `/spend-analysis`        | Spend analytics — price consistency, vendor consolidation, benchmarks | Static Optimisation Trap                 |
+| `/spend-analysis`        | Spend analytics: price consistency, vendor consolidation, benchmarks | Static Optimisation Trap                 |
 | `/supply-chain-brief`    | Weekly executive supply chain intelligence dashboard                  | All three failures                       |
 | `/supply-network-design` | Supply chain network scenario modelling (MCP-connected)               | Static Optimisation Trap                 |
 
@@ -171,7 +171,7 @@ Three commands in this plugin use names that differ from the original specificat
 Always use the plugin names. If you type `/reconcile` in Cowork, you may get unexpected behaviour. Use `/invoice-reconcile`.
 :::
 
-## The 5 Persistent Agents — What They Monitor
+## The 5 Persistent Agents; What They Monitor
 
 | Agent                          | Monitoring Role                                                                           | Schedule                    |
 | ------------------------------ | ----------------------------------------------------------------------------------------- | --------------------------- |
@@ -185,7 +185,7 @@ The agents automate the continuous monitoring work that Lessons 3–13 teach you
 
 ## Configuring supply-chain.local.md
 
-The plugin ships with sensible defaults. `supply-chain.local.md` is where you override those defaults with your organisation's specifics. Think of it as the plugin's institutional memory — the policies, thresholds, and classifications that make every skill behave correctly for your context.
+The plugin ships with sensible defaults. `supply-chain.local.md` is where you override those defaults with your organisation's specifics. Think of it as the plugin's institutional memory: the policies, thresholds, and classifications that make every skill behave correctly for your context.
 
 Create or open `supply-chain.local.md` in Cowork's Instructions pane (Settings → Instructions → New file) and populate the template:
 
@@ -235,7 +235,7 @@ Create or open `supply-chain.local.md` in Cowork's Instructions pane (Settings �
 - **Financial databases**: [Connected / Not yet configured]
 ```
 
-You will refine this configuration as you work through each lesson. For now, complete what you know. The classification counts and invoice thresholds are what the skills use most immediately — start there.
+You will refine this configuration as you work through each lesson. For now, complete what you know. The classification counts and invoice thresholds are what the skills use most immediately: start there.
 
 ## Connecting MCP Integrations
 
@@ -252,7 +252,7 @@ The five key MCP integration points:
 | **Financial databases**                   | Supplier financial health, credit ratings           | Companies House, D&B, Creditsafe APIs |
 
 :::info Web Search MCP
-The Web Search MCP is also valuable for this plugin — specifically for the `vendor-health-monitor` agent's external monitoring: supplier news, commodity price changes, regulatory updates, geopolitical risk signals. If you have Web Search MCP enabled in Cowork, it is automatically available to the plugin's agents.
+The Web Search MCP is also valuable for this plugin: specifically for the `vendor-health-monitor` agent's external monitoring: supplier news, commodity price changes, regulatory updates, geopolitical risk signals. If you have Web Search MCP enabled in Cowork, it is automatically available to the plugin's agents.
 :::
 
 For the exercises in Lessons 3–13, you do not need MCP connected. Each exercise provides sample data in the prompt. When you deploy the plugin for real operational use, MCP connection is what converts it from a demonstration tool to a live intelligence layer.
@@ -261,21 +261,21 @@ For the exercises in Lessons 3–13, you do not need MCP connected. Each exercis
 
 Run these three prompts to confirm the plugin is correctly installed and configured:
 
-**Verification 1 — Plugin active:**
+**Verification 1; Plugin active:**
 
 ```
 List all commands available from the supply-chain plugin.
 For each command, provide a one-line description of when to use it.
 ```
 
-**Verification 2 — Configuration loaded:**
+**Verification 2; Configuration loaded:**
 
 ```
 What are my current invoice reconciliation thresholds?
 Show me the configuration that will govern tolerance rules in /invoice-reconcile.
 ```
 
-**Verification 3 — First skill test:**
+**Verification 3; First skill test:**
 
 ```
 /vendor-assess
@@ -287,7 +287,7 @@ Jurisdiction: UK
 Relationship: New — first assessment
 ```
 
-You expect to see a Tier 3 (Commodity) classification for this test vendor — low spend, low supply risk, many alternatives. If the classification output looks structured and includes tier reasoning, the skill is working.
+You expect to see a Tier 3 (Commodity) classification for this test vendor: low spend, low supply risk, many alternatives. If the classification output looks structured and includes tier reasoning, the skill is working.
 
 ## Try With AI
 
@@ -305,7 +305,7 @@ working correctly. Please:
    before using /invoice-reconcile for the first time
 ```
 
-**What you are learning:** Verifying a plugin installation before using it confirms you understand the architecture — not just that the install command ran. The command naming question reinforces the collision-avoidance pattern you will use throughout this chapter.
+**What you are learning:** Verifying a plugin installation before using it confirms you understand the architecture: not just that the install command ran. The command naming question reinforces the collision-avoidance pattern you will use throughout this chapter.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -339,7 +339,7 @@ organisation with:
    can use global defaults?
 ```
 
-**What you are learning:** Enterprise plugin deployment introduces configuration complexity that a single supply-chain.local.md file may not address cleanly. Thinking through multi-region configuration reveals the boundaries of the local configuration approach — and where organisational governance decisions need to be made before the plugin is deployed.
+**What you are learning:** Enterprise plugin deployment introduces configuration complexity that a single supply-chain.local.md file may not address cleanly. Thinking through multi-region configuration reveals the boundaries of the local configuration approach: and where organisational governance decisions need to be made before the plugin is deployed.
 :::
 
 ## Flashcards Study Aid
@@ -348,4 +348,4 @@ organisation with:
 
 ---
 
-Continue to [Lesson 3: Vendor Classification — The Kraljic Matrix →](./03-vendor-classification-kraljic.md)
+Continue to [Lesson 3: Vendor Classification; The Kraljic Matrix →](./03-vendor-classification-kraljic.md)

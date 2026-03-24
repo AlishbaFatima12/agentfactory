@@ -1,4 +1,4 @@
-# The Legal Operations Sprint — Summary
+# The Legal Operations Sprint; Summary
 
 ## Core Concept
 

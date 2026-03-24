@@ -32,7 +32,7 @@ cards:
 
   - id: "ch35-logistics-carrier-performance-005"
     front: "What does it mean when expedited freight exceeds 10% of total logistics spend?"
-    back: "It signals an upstream supply chain problem, not a logistics problem. The correct response is to diagnose the root cause — late supplier delivery, demand forecast error, inventory positioning, customer emergency, or production planning error — then address it upstream, not by sourcing more premium freight capacity."
+    back: "It signals an upstream supply chain problem, not a logistics problem. The correct response is to diagnose the root cause: late supplier delivery, demand forecast error, inventory positioning, customer emergency, or production planning error: then address it upstream, not by sourcing more premium freight capacity."
     tags: ["expedited-freight", "10-percent-rule"]
     difficulty: "intermediate"
 
@@ -44,7 +44,7 @@ cards:
 
   - id: "ch35-logistics-carrier-performance-007"
     front: "In the UK carrier example, why was Evri's low cost per kg (£1.45) not sufficient reason to keep B2B shipments on them?"
-    back: "Evri's OTD rate fell to 83.4% (below the 90% threshold) and their damage rate doubled to 0.8%. The downstream cost of 17% late B2B deliveries — customer service escalations, compensation, redelivery, reputational damage — exceeds the £0.39/kg saving over DPD."
+    back: "Evri's OTD rate fell to 83.4% (below the 90% threshold) and their damage rate doubled to 0.8%. The downstream cost of 17% late B2B deliveries: customer service escalations, compensation, redelivery, reputational damage: exceeds the £0.39/kg saving over DPD."
     tags: ["carrier-scorecard", "evri-example"]
     difficulty: "intermediate"
 
@@ -56,13 +56,13 @@ cards:
 
   - id: "ch35-logistics-carrier-performance-009"
     front: "What does the logistics-intelligence-agent do that /logistics-brief alone cannot?"
-    back: "The agent monitors carrier performance continuously against configured thresholds and generates alerts when performance deteriorates between review cycles — catching issues like a carrier's OTD decline at the 2-point mark rather than discovering it at the quarterly review after customer impact has accumulated."
+    back: "The agent monitors carrier performance continuously against configured thresholds and generates alerts when performance deteriorates between review cycles: catching issues like a carrier's OTD decline at the 2-point mark rather than discovering it at the quarterly review after customer impact has accumulated."
     tags: ["logistics-intelligence-agent", "continuous-monitoring"]
     difficulty: "basic"
 
   - id: "ch35-logistics-carrier-performance-010"
     front: "What does network design (Dimension 3) answer that carrier performance (Dimension 2) cannot?"
-    back: "Network design asks whether your warehouse, DC, and cross-dock locations are optimally positioned relative to current demand patterns. Carrier performance assesses how well your current routes are executed. They are different questions — a perfect carrier on a sub-optimal route is still a sub-optimal network."
+    back: "Network design asks whether your warehouse, DC, and cross-dock locations are optimally positioned relative to current demand patterns. Carrier performance assesses how well your current routes are executed. They are different questions: a perfect carrier on a sub-optimal route is still a sub-optimal network."
     tags: ["network-design", "four-dimensions"]
     difficulty: "intermediate"
 
@@ -71,7 +71,7 @@ cards:
     back: "Why is expedited freight rising? Before buying more premium capacity, diagnose the root cause across the five categories. If 73% of expedited orders trace to one business unit's inventory positioning failure (as in the lesson example), more premium capacity solves nothing and costs £24,000+ per year. Fix the inventory positioning instead."
     tags: ["expedited-freight", "root-cause"]
     difficulty: "advanced"
-    why: "When does solving a logistics cost symptom mask an upstream process failure — and what are the stakes of not finding the root cause?"
+    why: "When does solving a logistics cost symptom mask an upstream process failure: and what are the stakes of not finding the root cause?"
 
   - id: "ch35-logistics-carrier-performance-012"
     front: "Why is Scope 3 logistics emissions reporting increasingly a compliance requirement rather than just a sustainability aspiration?"

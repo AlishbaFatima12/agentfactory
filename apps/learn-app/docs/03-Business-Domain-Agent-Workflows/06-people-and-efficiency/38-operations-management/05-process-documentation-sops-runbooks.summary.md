@@ -1,14 +1,14 @@
-# Summary: Process Documentation — SOPs and Runbooks
+# Summary: Process Documentation: SOPs and Runbooks
 
 ## What This Lesson Covers
 
-Process documentation fails not when it is created, but when the organisation stops maintaining it. This lesson teaches the structured creation of two types of process documentation — SOPs (governance-focused) and runbooks (execution-focused) — and the design discipline that keeps them accurate over time.
+Process documentation fails not when it is created, but when the organisation stops maintaining it. This lesson teaches the structured creation of two types of process documentation, SOPs (governance-focused) and runbooks (execution-focused) , and the design discipline that keeps them accurate over time.
 
 ## The Three-Stage Failure Cycle
 
-Process documents follow a predictable decay pattern. Stage 1: the document is created and reflects current reality. Stage 2: the process changes (system upgrade, team restructure, policy update) but the document is not updated because nobody owns that update. Stage 3: the document diverges far enough from reality that it actively misleads — new employees follow it and make errors; auditors find discrepancies. The root cause is not poor writing; it is absence of document ownership. Document Control — specifically the review date and named reviewer — is the mechanism that prevents this.
+Process documents follow a predictable decay pattern. Stage 1: the document is created and reflects current reality. Stage 2: the process changes (system upgrade, team restructure, policy update) but the document is not updated because nobody owns that update. Stage 3: the document diverges far enough from reality that it actively misleads, new employees follow it and make errors; auditors find discrepancies. The root cause is not poor writing; it is absence of document ownership. Document Control, specifically the review date and named reviewer: is the mechanism that prevents this.
 
-## SOP vs Runbook — The Core Distinction
+## SOP vs Runbook: The Core Distinction
 
 SOPs (Standard Operating Procedures) are governance documents. They answer: who is responsible, what controls apply, what approvals are required. Their audience is managers, auditors, compliance reviewers, and new employees. Created with `/process-doc`.
 

@@ -85,13 +85,13 @@ differentiation:
 
 In Lesson 10, you built a 12-week campaign with a content calendar and measurement framework. It is now Week 5. The numbers are in. Time to analyse.
 
-NexaFlow's whitepaper downloads are above target. LinkedIn impressions look strong. But LinkedIn click-through rate is just below benchmark. Email open rates are solid, yet email click rates are weak. Trade press performance is below expectation. Zara has a dashboard full of green and amber indicators. The question is not "how are we doing?" — the question is "what should we do differently next week?"
+NexaFlow's whitepaper downloads are above target. LinkedIn impressions look strong. But LinkedIn click-through rate is just below benchmark. Email open rates are solid, yet email click rates are weak. Trade press performance is below expectation. Zara has a dashboard full of green and amber indicators. The question is not "how are we doing?": the question is "what should we do differently next week?"
 
 Most marketing teams stare at dashboards and draw intuitive conclusions. This lesson teaches a different approach: generate structured analysis with specific optimisation recommendations, then evaluate those recommendations with your domain expertise before acting. You will run the base plugin's `/performance-report`, compare it against the extension's deeper analysis, pull competitive intelligence with `/competitive-brief`, and set up a weekly cadence that turns data into decisions.
 
 ## The Demo Data: Week 5 Campaign Results
 
-Before you can analyse performance, you need performance data. If you have a connected analytics platform (Amplitude, HubSpot, LinkedIn Campaign Manager), the `/performance-report` command can pull data directly through connectors. If you do not have connectors set up — which is the case for most students working through this lesson — generate demo data that matches NexaFlow's Week 5 scenario:
+Before you can analyse performance, you need performance data. If you have a connected analytics platform (Amplitude, HubSpot, LinkedIn Campaign Manager), the `/performance-report` command can pull data directly through connectors. If you do not have connectors set up: which is the case for most students working through this lesson: generate demo data that matches NexaFlow's Week 5 scenario:
 
 ```
 Generate Week 5 performance data for NexaFlow's Q2 campaign.
@@ -191,7 +191,7 @@ The extension adds three dimensions the base report does not cover:
 | Three-dimension scoring integration | Fit/Timing/Engagement breakdown of HOT leads         | Identifies which scoring dimension is weakest across your leads |
 
 :::note Your output will vary
-The extension adds context the base report lacks. The teaching point is the _difference in judgment_: the base report may flag a metric as "below target" using a global benchmark, while the extension shows it is actually above the local benchmark. Your domain expertise decides which report leads to better decisions. The real problem may not be the metric the base report flagged — it may be ICP match rate or timing score weakness.
+The extension adds context the base report lacks. The teaching point is the _difference in judgment_: the base report may flag a metric as "below target" using a global benchmark, while the extension shows it is actually above the local benchmark. Your domain expertise decides which report leads to better decisions. The real problem may not be the metric the base report flagged: it may be ICP match rate or timing score weakness.
 :::
 
 ### What the Extension Adds
@@ -201,10 +201,10 @@ Read both reports side by side. Three differences typically change the recommend
 | Dimension             | Base Plugin                         | Extension                                                            |
 | --------------------- | ----------------------------------- | -------------------------------------------------------------------- |
 | **Benchmark context** | Uses global benchmarks              | Uses regional benchmarks (which may tell a different story)          |
-| **Lead quality**      | Counts all leads equally            | Filters by ICP match — reveals whether targeting is too broad        |
-| **Lead readiness**    | Reports HOT leads as a single count | Breaks into Fit/Timing/Engagement — shows which dimension is weakest |
+| **Lead quality**      | Counts all leads equally            | Filters by ICP match: reveals whether targeting is too broad        |
+| **Lead readiness**    | Reports HOT leads as a single count | Breaks into Fit/Timing/Engagement: shows which dimension is weakest |
 
-The base report may flag a channel as underperforming. The extension may show that same channel is actually above the local benchmark — the "problem" was a global target that does not account for regional differences. Your domain expertise decides which report leads to better budget decisions.
+The base report may flag a channel as underperforming. The extension may show that same channel is actually above the local benchmark: the "problem" was a global target that does not account for regional differences. Your domain expertise decides which report leads to better budget decisions.
 
 ## Evaluating the Recommendations
 
@@ -251,7 +251,7 @@ Focus: How they position against smaller competitors like NexaFlow
 Competitive intelligence from an agent is a starting point. Verify claims against current public sources. The teaching point is _using_ the brief: take the messaging opportunity and feed it into next week's content calendar entries to differentiate against the competitor's blind spots.
 :::
 
-Meridian Logistics in Leeds faces a different competitive landscape. Their competitors lead with post-Brexit customs automation and HMRC compliance — a positioning battle where regulatory credibility matters more than AI capability. The competitive brief for Meridian's market would emphasise compliance and established client references rather than technology differentiation. This is why competitive positioning is market-specific: the same company needs different messaging in Karachi versus Leeds.
+Meridian Logistics in Leeds faces a different competitive landscape. Their competitors lead with post-Brexit customs automation and HMRC compliance: a positioning battle where regulatory credibility matters more than AI capability. The competitive brief for Meridian's market would emphasise compliance and established client references rather than technology differentiation. This is why competitive positioning is market-specific: the same company needs different messaging in Karachi versus Leeds.
 
 ### Using Competitive Intel in Week 6
 
@@ -269,7 +269,7 @@ enterprise-and-compliance positioning. Lean into NexaFlow's
 AI automation advantage and "built for growing 3PLs" message.
 ```
 
-The agent revises the content angles. The warehouse automation blog becomes "How AI Dispatch Beats Manual Workflows — What Enterprise Platforms Won't Tell You." The LinkedIn article shifts from generic fleet tracking to "Why Growing 3PLs Need AI-Native Tools, Not Retrofitted Enterprise Software." Each adjustment positions NexaFlow's strength against LogiFlow's blind spot.
+The agent revises the content angles. The warehouse automation blog becomes "How AI Dispatch Beats Manual Workflows; What Enterprise Platforms Won't Tell You." The LinkedIn article shifts from generic fleet tracking to "Why Growing 3PLs Need AI-Native Tools, Not Retrofitted Enterprise Software." Each adjustment positions NexaFlow's strength against LogiFlow's blind spot.
 
 ## The Weekly Cadence
 
@@ -283,7 +283,7 @@ Analysis without rhythm is a one-time exercise. Build a recurring cadence that t
 
 ### Why This Order Matters
 
-Monday starts with channel metrics because you need to know immediately if any channel has hit a pause threshold from L10's measurement framework. If UK LinkedIn CPL crosses $750 for the second consecutive week, you pause spending Monday morning — not Friday afternoon after spending another $700.
+Monday starts with channel metrics because you need to know immediately if any channel has hit a pause threshold from L10's measurement framework. If UK LinkedIn CPL crosses $750 for the second consecutive week, you pause spending Monday morning: not Friday afternoon after spending another $700.
 
 Wednesday aligns sales and marketing on lead quality. Marketing generated 28 downloads, but sales worked only 18 HOT leads. Which of those 18 converted to meetings? Which were dead ends despite high scores? This feedback loop corrects the scoring model from L03 and the ICP calibration from L02. Without Wednesday alignment, marketing optimises for volume and sales complains about quality.
 
@@ -344,7 +344,7 @@ What structural similarities do you see in how competitive
 positioning analysis works across different industries?
 ```
 
-**What you are learning:** Competitive positioning is not a one-time exercise. Competitors adapt. The value of `/competitive-brief` is not the snapshot — it is the cadence. Running it monthly reveals positioning shifts before they affect your pipeline. The fallback differentiation question builds strategic thinking: if your current advantage disappears, what is your next one?
+**What you are learning:** Competitive positioning is not a one-time exercise. Competitors adapt. The value of `/competitive-brief` is not the snapshot: it is the cadence. Running it monthly reveals positioning shifts before they affect your pipeline. The fallback differentiation question builds strategic thinking: if your current advantage disappears, what is your next one?
 
 ### Prompt 3: Your Own Campaign Data (Apply)
 
@@ -368,7 +368,7 @@ analytics (LinkedIn post engagement, newsletter open rates) as
 a starting point. The analysis principles are the same.
 ```
 
-**What you are learning:** Campaign analysis skills transfer across platforms and scales. The same questions — which channels justify their cost, what should I change next week, is this recommendation executable — apply whether you manage a $25,000 B2B campaign or a personal LinkedIn presence. By comparing AI recommendations to your intuition, you discover where structured analysis adds value beyond what experienced marketers already know.
+**What you are learning:** Campaign analysis skills transfer across platforms and scales. The same questions: which channels justify their cost, what should I change next week, is this recommendation executable: apply whether you manage a $25,000 B2B campaign or a personal LinkedIn presence. By comparing AI recommendations to your intuition, you discover where structured analysis adds value beyond what experienced marketers already know.
 
 ## Flashcards Study Aid
 

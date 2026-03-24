@@ -66,7 +66,7 @@ cognitive_load:
     - "Marketplace mechanism (discovery, subscription, deployment without original author)"
     - "Vertical skill packs (domain-specific SKILL.md templates as starting points)"
     - "Connector packages (bundled MCP connectors with SKILL.md templates)"
-  assessment: "3 concepts at A2-B1 level — within the 5-7 cognitive limit for this tier. All three concepts build directly on SKILL.md and connector knowledge established in earlier lessons. The publishability assessment adds one evaluative judgement, which is appropriate for B1."
+  assessment: "3 concepts at A2-B1 level: within the 5-7 cognitive limit for this tier. All three concepts build directly on SKILL.md and connector knowledge established in earlier lessons. The publishability assessment adds one evaluative judgement, which is appropriate for B1."
 
 differentiation:
   extension_for_advanced: "Design a marketplace listing for a vertical skill pack in your domain. Write the listing description (what the pack contains, what the subscriber must customise, what institutional knowledge is excluded), and draft a one-paragraph justification for why the encoded knowledge crosses the transferability threshold."
@@ -77,25 +77,25 @@ teaching_guide:
   session_group: 3
   session_title: "Distribution and Monetisation"
   key_points:
-    - "The marketplace is a distribution mechanism — it solves the discovery and deployment problem for generalisable domain expertise. Without it, a well-designed SKILL.md stops at the organisation that built it."
+    - "The marketplace is a distribution mechanism: it solves the discovery and deployment problem for generalisable domain expertise. Without it, a well-designed SKILL.md stops at the organisation that built it."
     - "Vertical skill packs are starting points, not finished products. The subscriber receives a well-structured SKILL.md and must customise it with their own jurisdiction settings, clause standards, and escalation routing. The marketplace provides architecture; the knowledge worker provides institutional knowledge."
     - "Connector packages reduce deployment friction by bundling the MCP connectors alongside the SKILL.md template. The subscriber still needs to configure API credentials and permission scopes, but the connector infrastructure is pre-built."
     - "The publishability test is a single question: is this knowledge general enough to be valuable to a practitioner at a different organisation without access to your proprietary context? General best practice = publishable. Specific institutional knowledge = not publishable."
     - "The economics of marketplace publishing (from Chapter 25 Lesson 5) are most attractive when domain expertise is valuable across many organisations but does not depend on any single organisation's proprietary context."
   misconceptions:
     - "Students may think they are selling their organisation's competitive advantage. Clarify: publishable knowledge is general domain best practice, not proprietary institutional context. Publishing what your competitors already know is the model."
-    - "Students may assume marketplace plugins are ready to deploy without customisation. Both categories require subscriber customisation — skill packs need institutional knowledge added, connector packages need API credentials and permission scopes configured."
+    - "Students may assume marketplace plugins are ready to deploy without customisation. Both categories require subscriber customisation: skill packs need institutional knowledge added, connector packages need API credentials and permission scopes configured."
     - "Students may conflate marketplace plugins with bespoke plugins. A marketplace plugin is designed to be general enough to serve many organisations. A bespoke plugin encodes one organisation's specific context and is never appropriate for publication."
   discussion_prompts:
     - "Think about the domain knowledge you use most in your work. How much of it is general best practice that any practitioner in your field would recognise? How much depends on your specific organisation's systems, clients, or internal standards?"
     - "If you could publish one SKILL.md to the marketplace, what would it encode? Who would subscribe? What would the subscriber still need to customise themselves?"
   teaching_tips:
-    - "The transferability question is the most important concept in this lesson. Spend time on concrete examples — walk through specific knowledge claims and classify them as publishable or not."
+    - "The transferability question is the most important concept in this lesson. Spend time on concrete examples: walk through specific knowledge claims and classify them as publishable or not."
     - "Connect the marketplace economics to Chapter 25 Lesson 5 explicitly, but do not re-explain the four models. The point here is to show which model applies (Marketplace) and why the economics are attractive."
     - "The distinction between starting point and finished product is critical. Students who understand this will not be frustrated when they subscribe to a skill pack and discover it requires significant customisation. That customisation is the feature, not a defect."
   assessment_checks:
     - question: "What is a vertical skill pack?"
-      expected_response: "A domain-specific SKILL.md template that encodes general best practice for a professional function — contract triage, financial research, BIM coordination — without organisation-specific customisation. It is a starting point that the subscribing organisation customises with their own jurisdiction settings, clause standards, and escalation routing."
+      expected_response: "A domain-specific SKILL.md template that encodes general best practice for a professional function (contract triage, financial research, BIM coordination) without organisation-specific customisation. It is a starting point that the subscribing organisation customises with their own jurisdiction settings, clause standards, and escalation routing."
     - question: "What does a connector package contain that a vertical skill pack does not?"
       expected_response: "A connector package bundles MCP connectors alongside a SKILL.md template, enabling more complete deployment from a single subscription. The connectors are pre-configured for standard API patterns, but the subscriber must still configure their own API credentials and permission scopes."
     - question: "What is the test for whether domain knowledge is publishable to the marketplace?"
@@ -108,34 +108,34 @@ Anthropic launched the Cowork plugin marketplace at [claude.com/plugins](https:/
 
 In Lesson 8, you established how the ownership model distributes responsibility: you write the SKILL.md, IT and plugin developers maintain the connectors and infrastructure, the administrator governs the deployment. The result is a plugin that serves one organisation's domain workflows. But the question this lesson asks is a different one: what happens when the SKILL.md you have built encodes expertise that could benefit not just your organisation, but dozens of others doing similar work?
 
-The answer is the Cowork Plugin Marketplace — a distribution mechanism designed for exactly that situation. When domain expertise is genuinely generalisable, the marketplace provides the infrastructure to publish it, the discovery layer for other organisations to find it, and the deployment pathway that allows a subscribing organisation to use a plugin built by someone they have never met. A published plugin can be subscribed to, configured with the subscriber's own connector settings, and deployed without involvement from the original author.
+The answer is the Cowork Plugin Marketplace: a distribution mechanism designed for exactly that situation. When domain expertise is genuinely generalisable, the marketplace provides the infrastructure to publish it, the discovery layer for other organisations to find it, and the deployment pathway that allows a subscribing organisation to use a plugin built by someone they have never met. A published plugin can be subscribed to, configured with the subscriber's own connector settings, and deployed without involvement from the original author.
 
 This changes the economics of expertise. A SKILL.md that took a senior contracts lawyer six weeks to refine can, once published, generate ongoing subscription revenue from every legal practice that benefits from the same contract triage logic. The marginal cost of each additional subscriber is effectively zero. The expertise has become an asset, not just a capability.
 
 ## How the Marketplace Works
 
-The marketplace operates on a straightforward subscription model. A knowledge worker publishes a plugin — typically a vertical skill pack, a connector package, or both — with a listing that describes what the plugin does, which professional domain it serves, and what customisation the subscriber will need to perform before deployment.
+The marketplace operates on a straightforward subscription model. A knowledge worker publishes a plugin (typically a vertical skill pack, a connector package, or both) with a listing that describes what the plugin does, which professional domain it serves, and what customisation the subscriber will need to perform before deployment.
 
 Subscribing organisations discover plugins through the marketplace's domain filters and search tools. Once a subscription is initiated, the plugin's components are provisioned to the subscriber's Cowork environment. Crucially, the subscriber gains access to the SKILL.md and the connector infrastructure, but they are not deploying the author's plugin as-is. They are deploying a starting point that requires their own institutional knowledge to complete.
 
-This distinction matters because it separates what the marketplace distributes — architectural knowledge, domain structure, general best practice — from what only the subscribing organisation can provide: their specific jurisdiction settings, their clause standards, their escalation routing, their API credentials. The marketplace handles the first category. The knowledge worker inside the subscribing organisation handles the second.
+This distinction matters because it separates what the marketplace distributes (architectural knowledge, domain structure, general best practice) from what only the subscribing organisation can provide: their specific jurisdiction settings, their clause standards, their escalation routing, their API credentials. The marketplace handles the first category. The knowledge worker inside the subscribing organisation handles the second.
 
 ## Vertical Skill Packs
 
-Anthropic's official plugins demonstrate one distribution pattern — Anthropic-authored plugins available to all enterprise customers. This book uses the terms 'vertical skill packs' and 'connector packages' as our categorisation framework for understanding marketplace offerings.
+Anthropic's official plugins demonstrate one distribution pattern: Anthropic-authored plugins available to all enterprise customers. This book uses the terms 'vertical skill packs' and 'connector packages' as our categorisation framework for understanding marketplace offerings.
 
 A vertical skill pack is a domain-specific SKILL.md template that encodes best practice for a professional function without encoding any single organisation's proprietary context. Think of it as the architecture of a domain agent: the Persona section establishes the appropriate professional identity, the Questions section defines the scope of the function and its boundaries, and the Principles section captures the operating logic that any competent practitioner in that domain would recognise as sound.
 
 What the pack does not include is the institutional knowledge that makes a plugin genuinely specific. A contract triage skill pack for the legal domain will encode the general logic of how a contract review agent should approach unfamiliar clause language, when to escalate, and how to categorise risk. It will not encode the specific clause standards your firm has developed over twenty years, the jurisdiction-specific risk thresholds your practice has calibrated against case outcomes, or the escalation routing your internal hierarchy requires.
 
-The subscriber receives a well-structured SKILL.md ready for customisation. The marketplace provides the architecture; the knowledge worker inside the subscribing organisation provides the institutional knowledge that transforms a general template into a deployed agent that actually reflects how their practice works. This is not a deficiency of the skill pack — it is the design. The general cannot substitute for the specific. What the pack sells is the months of structural thinking that the subscriber would otherwise have to do from scratch.
+The subscriber receives a well-structured SKILL.md ready for customisation. The marketplace provides the architecture; the knowledge worker inside the subscribing organisation provides the institutional knowledge that transforms a general template into a deployed agent that actually reflects how their practice works. This is not a deficiency of the skill pack: it is the design. The general cannot substitute for the specific. What the pack sells is the months of structural thinking that the subscriber would otherwise have to do from scratch.
 
 | Property                     | Vertical Skill Pack                                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | **What it contains**         | SKILL.md template with Persona, Questions, and Principles sections reflecting general domain best practice                |
 | **What it does not contain** | Organisation-specific jurisdiction settings, clause standards, escalation routing, client conventions                     |
 | **Who customises it**        | A knowledge worker inside the subscribing organisation, using the template as a starting point                            |
-| **Deployment effort**        | Moderate — the SKILL.md must be customised before deployment; connectors must be configured separately                    |
+| **Deployment effort**        | Moderate: the SKILL.md must be customised before deployment; connectors must be configured separately                    |
 | **Best for**                 | Organisations that have the domain expertise to customise but want to avoid building the structural scaffold from scratch |
 
 Domains with well-developed vertical skill packs in the marketplace include contract review (covering major common law jurisdictions), financial research (covering equity analysis and fixed income), BIM coordination (covering standard building code categories), and clinical triage (covering primary care assessment frameworks). Each pack represents a publishable body of general best practice. None encodes a specific firm's proprietary knowledge.
@@ -144,29 +144,29 @@ Domains with well-developed vertical skill packs in the marketplace include cont
 
 A connector package takes the vertical skill pack concept and extends it: rather than providing the SKILL.md template alone, a connector package bundles MCP connectors alongside the template to enable more complete deployment from a single subscription.
 
-The rationale is practical. Many domain workflows depend on a predictable set of external integrations. A financial research agent reliably needs access to market data, financial databases, and internal data warehouses. Rather than requiring each subscribing organisation to commission these connectors separately — a process that, as Lesson 6 explained, depends on the underlying system's API maturity — a connector package provides pre-built connectors configured for standard API patterns. The subscriber still needs to provide their own API credentials and configure permission scopes appropriate to their deployment. But the connector infrastructure itself — the MCP server declarations that handle authentication and translate data formats — arrives pre-built rather than requiring commissioning.
+The rationale is practical. Many domain workflows depend on a predictable set of external integrations. A financial research agent reliably needs access to market data, financial databases, and internal data warehouses. Rather than requiring each subscribing organisation to commission these connectors separately: a process that, as Lesson 6 explained, depends on the underlying system's API maturity: a connector package provides pre-built connectors configured for standard API patterns. The subscriber still needs to provide their own API credentials and configure permission scopes appropriate to their deployment. But the connector infrastructure itself: the MCP server declarations that handle authentication and translate data formats: arrives pre-built rather than requiring commissioning.
 
 | Property                     | Connector Package                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------- |
 | **What it contains**         | SKILL.md template plus pre-built MCP connectors for the systems the domain agent typically requires   |
 | **What it does not contain** | API credentials, organisation-specific permission scopes, proprietary data access                     |
 | **Who customises it**        | IT configures connector credentials and scopes; knowledge worker customises the SKILL.md              |
-| **Deployment effort**        | Lower than a skill pack alone — connector infrastructure is pre-built, reducing time-to-deployment    |
+| **Deployment effort**        | Lower than a skill pack alone: connector infrastructure is pre-built, reducing time-to-deployment    |
 | **Best for**                 | Organisations that need the complete deployment package and have IT capacity to configure credentials |
 
-A financial research connector package, for example, bundles connectors for financial data providers (such as FactSet or LSEG), Snowflake, and common CRM platforms alongside a financial research SKILL.md template. The subscribing organisation connects their financial data credentials, scopes the Snowflake access to their data warehouse, and assigns appropriate CRM read permissions — tasks that are specific to their environment. What they do not have to do is specify and commission the connector infrastructure from scratch.
+A financial research connector package, for example, bundles connectors for financial data providers (such as FactSet or LSEG), Snowflake, and common CRM platforms alongside a financial research SKILL.md template. The subscribing organisation connects their financial data credentials, scopes the Snowflake access to their data warehouse, and assigns appropriate CRM read permissions: tasks that are specific to their environment. What they do not have to do is specify and commission the connector infrastructure from scratch.
 
 ## The Publishability Test
 
 Not every SKILL.md belongs in the marketplace. The central question for any knowledge worker considering publication is whether their expertise crosses the transferability threshold.
 
-Transferable knowledge is knowledge that a practitioner at a different organisation — a firm they have never worked with, in a city they have never visited — would recognise as sound and would benefit from encoding. General best practice for contract review in English common law jurisdictions is transferable. The standard approach to qualifying a sales lead in enterprise software is transferable. The general framework for reviewing building plans against standard building codes is transferable.
+Transferable knowledge is knowledge that a practitioner at a different organisation: a firm they have never worked with, in a city they have never visited: would recognise as sound and would benefit from encoding. General best practice for contract review in English common law jurisdictions is transferable. The standard approach to qualifying a sales lead in enterprise software is transferable. The general framework for reviewing building plans against standard building codes is transferable.
 
-Non-transferable knowledge is knowledge that only has value in the context of your specific organisation's systems, clients, relationships, or internal history. Your firm's interpretation of a particular statutory provision based on twenty years of case outcomes is not publishable — it is your competitive edge. Your client relationship conventions are not publishable — they are your proprietary context. Your internal escalation routing is not publishable — it reflects your specific hierarchy.
+Non-transferable knowledge is knowledge that only has value in the context of your specific organisation's systems, clients, relationships, or internal history. Your firm's interpretation of a particular statutory provision based on twenty years of case outcomes is not publishable: it is your competitive edge. Your client relationship conventions are not publishable: they are your proprietary context. Your internal escalation routing is not publishable: it reflects your specific hierarchy.
 
 The IP distinction is not complicated, but it requires honest self-assessment. The easiest test: could a practitioner at a competitor organisation, using only publicly available information and general professional training, arrive at the same knowledge independently? If yes, it is transferable. If the knowledge depends on access to your clients, your cases, your systems, or your internal documents to make sense, it is not transferable.
 
-This test also connects directly to the marketplace economics covered in [Chapter 25 Lesson 5](/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape/four-monetisation-models). The Marketplace model is most economically attractive for domain expertise that is valuable across many organisations but not dependent on any single organisation's proprietary context. Revenue per subscriber runs in the range of hundreds of pounds per month. Marginal cost of each additional subscriber is effectively zero. The economic case is strong — but only for knowledge that genuinely qualifies.
+This test also connects directly to the marketplace economics covered in [Chapter 25 Lesson 5](/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape/four-monetisation-models). The Marketplace model is most economically attractive for domain expertise that is valuable across many organisations but not dependent on any single organisation's proprietary context. Revenue per subscriber runs in the range of hundreds of pounds per month. Marginal cost of each additional subscriber is effectively zero. The economic case is strong; but only for knowledge that genuinely qualifies.
 
 ## Skill Packs Versus Connector Packages: A Summary
 
@@ -221,7 +221,7 @@ general best practice into organisation-specific knowledge that should
 be excluded from the marketplace listing.
 ```
 
-**What you're learning:** Designing a skill pack outline is the first concrete step toward publication. The exercise makes the transferability test operational — you will discover which principles are universally sound and which encode your firm's particular approach. The flagging step trains the editorial judgement that distinguishes a publishable skill pack from a proprietary plugin.
+**What you're learning:** Designing a skill pack outline is the first concrete step toward publication. The exercise makes the transferability test operational: you will discover which principles are universally sound and which encode your firm's particular approach. The flagging step trains the editorial judgement that distinguishes a publishable skill pack from a proprietary plugin.
 
 ### Prompt 3: Evaluate Marketplace Opportunity for Your Industry
 
@@ -238,7 +238,7 @@ DOMAIN]. Who would subscribe? What would they pay? What would the
 competitive landscape look like in two years?
 ```
 
-**What you're learning:** Marketplace opportunity analysis is not just about what you can publish — it is about what the market needs and what economics make sense. This prompt trains the commercial judgement required to decide whether to invest in publication, not just whether your knowledge qualifies.
+**What you're learning:** Marketplace opportunity analysis is not just about what you can publish: it is about what the market needs and what economics make sense. This prompt trains the commercial judgement required to decide whether to invest in publication, not just whether your knowledge qualifies.
 
 ## Flashcards Study Aid
 

@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/finance-domain-agents/enterprise-extensions-risk-and-compliance
 sidebar_position: 9
-title: "Enterprise Extensions — Risk and Compliance"
-description: "Design SKILL.md extensions for credit risk frameworks, regulatory reporting automation, investment policy statement compliance, and portfolio attribution — encoding institutional knowledge that generic plugins cannot provide"
+title: "Enterprise Extensions: Risk and Compliance"
+description: "Design SKILL.md extensions for credit risk frameworks, regulatory reporting automation, investment policy statement compliance, and portfolio attribution: encoding institutional knowledge that generic plugins cannot provide"
 keywords:
   [
     "enterprise extensions",
@@ -71,45 +71,45 @@ cognitive_load:
     - "IPS constraint categories and verification sequence"
     - "Portfolio attribution (Brinson model, return decomposition)"
     - "Jurisdiction-specific regulatory differences (SBP, Basel III, SEC)"
-  assessment: "7 concepts at B1/B2 level — at the upper bound of the 7-10 range for intermediate learners. The concepts are interconnected (each is a different application of the same pattern: encoding institutional knowledge as SKILL.md instructions), which reduces effective cognitive load compared to 7 unrelated concepts."
+  assessment: "7 concepts at B1/B2 level: at the upper bound of the 7-10 range for intermediate learners. The concepts are interconnected (each is a different application of the same pattern: encoding institutional knowledge as SKILL.md instructions), which reduces effective cognitive load compared to 7 unrelated concepts."
 
 differentiation:
   extension_for_advanced: "After completing the credit analysis exercise, write a second SKILL.md extension for either regulatory reporting or IPS compliance in your jurisdiction. Compare the two extensions: which required more institutional knowledge vs more regulatory research? What does this tell you about which extensions carry greater knowledge-loss risk when experienced staff leave?"
-  remedial_for_struggling: "Focus on the credit risk extension only. Complete the five-instruction exercise using the worked example as a template. The concept boxes provide the financial definitions you need — you do not need prior credit analysis experience to complete the exercise, only the ability to translate a scenario into specific SKILL.md instructions."
+  remedial_for_struggling: "Focus on the credit risk extension only. Complete the five-instruction exercise using the worked example as a template. The concept boxes provide the financial definitions you need: you do not need prior credit analysis experience to complete the exercise, only the ability to translate a scenario into specific SKILL.md instructions."
 
 teaching_guide:
   lesson_type: "core"
   session_group: 3
   session_title: "Enterprise Extensions"
   key_points:
-    - "Generic plugins compute ratios correctly — extensions encode which ratios matter and what the thresholds mean in your specific context"
+    - "Generic plugins compute ratios correctly: extensions encode which ratios matter and what the thresholds mean in your specific context"
     - "The gap between a generic plugin and an enterprise extension is institutional knowledge: the sector-specific thresholds, the governance sequences, the judgment calls that experienced professionals make"
     - "Every extension follows the same pattern: identify what the generic plugin lacks, then write SKILL.md instructions using Chapter 27's Persona-Questions-Principles structure"
     - "Regulatory extensions carry the highest compliance urgency because applying the wrong jurisdiction's methodology produces materially incorrect filings"
   misconceptions:
-    - "Students may think extensions replace the generic plugins — they layer on top, adding institutional specificity to the generic foundation"
-    - "Students may write generic SKILL.md instructions ('analyze credit risk carefully') instead of specific ones ('flag interest coverage below 2.0x in non-cyclical sectors') — the exercise is designed to surface this gap"
-    - "Students may assume one extension fits all jurisdictions — regulatory extensions are jurisdiction-specific by design (SBP rules differ from Basel III implementation by national regulators)"
+    - "Students may think extensions replace the generic plugins: they layer on top, adding institutional specificity to the generic foundation"
+    - "Students may write generic SKILL.md instructions ('analyze credit risk carefully') instead of specific ones ('flag interest coverage below 2.0x in non-cyclical sectors'): the exercise is designed to surface this gap"
+    - "Students may assume one extension fits all jurisdictions: regulatory extensions are jurisdiction-specific by design (SBP rules differ from Basel III implementation by national regulators)"
   discussion_prompts:
     - "Which of the four extensions covered in this lesson would create the most value in your organization? Is the answer driven by operational pain, knowledge risk, or regulatory exposure?"
-    - "Consider the credit analyst worked example. What would change if you wrote it for a different sector — technology lending vs commercial real estate vs trade finance?"
+    - "Consider the credit analyst worked example. What would change if you wrote it for a different sector: technology lending vs commercial real estate vs trade finance?"
   teaching_tips:
-    - "The concept boxes are reference material, not teaching content — students should read them to understand the financial concepts, then focus on how to encode those concepts as SKILL.md instructions"
-    - "The credit analysis exercise is the most important deliverable — ensure students produce specific instructions, not textbook definitions"
+    - "The concept boxes are reference material, not teaching content: students should read them to understand the financial concepts, then focus on how to encode those concepts as SKILL.md instructions"
+    - "The credit analysis exercise is the most important deliverable: ensure students produce specific instructions, not textbook definitions"
   assessment_checks:
     - question: "What is the difference between a generic plugin and an enterprise extension?"
-      expected_response: "A generic plugin computes standard financial metrics correctly but without institutional context. An enterprise extension adds your organization's specific thresholds, governance sequences, and judgment calls — the institutional knowledge that determines whether output is immediately usable or requires significant rework."
+      expected_response: "A generic plugin computes standard financial metrics correctly but without institutional context. An enterprise extension adds your organization's specific thresholds, governance sequences, and judgment calls: the institutional knowledge that determines whether output is immediately usable or requires significant rework."
     - question: "Why must regulatory reporting extensions be jurisdiction-specific?"
-      expected_response: "Because each regulator's implementation of Basel III (or equivalent) differs in calculation methodology, filing format, submission timeline, and materiality thresholds. Applying the wrong jurisdiction's methodology produces a materially incorrect filing — not just a formatting error."
+      expected_response: "Because each regulator's implementation of Basel III (or equivalent) differs in calculation methodology, filing format, submission timeline, and materiality thresholds. Applying the wrong jurisdiction's methodology produces a materially incorrect filing; not just a formatting error."
     - question: "What does the constraint verification sequence in an IPS compliance extension check first?"
       expected_response: "Hard caps first (violation is never permissible), then concentration targets (violation requires advisor sign-off), then screening exclusions (violation requires client waiver), then liquidity requirements (violation triggers senior advisor review)."
 ---
 
-# Enterprise Extensions — Risk and Compliance
+# Enterprise Extensions: Risk and Compliance
 
-In Lessons 1 through 8, you learned how Claude in Excel and Cowork's finance plugins handle standard financial workflows: model comprehension, scenario testing, comparable company analysis, and domain-specific commands for investment banking, equity research, private equity, and wealth management. These generic plugins compute ratios correctly, build structurally sound models, and produce professionally formatted deliverables. What they do not encode is what makes your firm's analysis distinctive — the sector-specific leverage thresholds your credit officers apply, the regulatory return formats your compliance team files, the IPS constraints your wealth advisors must verify before every recommendation.
+In Lessons 1 through 8, you learned how Claude in Excel and Cowork's finance plugins handle standard financial workflows: model comprehension, scenario testing, comparable company analysis, and domain-specific commands for investment banking, equity research, private equity, and wealth management. These generic plugins compute ratios correctly, build structurally sound models, and produce professionally formatted deliverables. What they do not encode is what makes your firm's analysis distinctive: the sector-specific leverage thresholds your credit officers apply, the regulatory return formats your compliance team files, the IPS constraints your wealth advisors must verify before every recommendation.
 
-This lesson covers four enterprise extensions that address the most common gaps between generic plugin capability and institutional need. Each follows the same pattern you learned in Chapter 27: identify what the generic plugin lacks, then write SKILL.md instructions using the Persona-Questions-Principles structure to close that gap. The extensions covered here — credit risk, regulatory reporting, IPS compliance, and portfolio attribution — represent the highest-impact areas where institutional knowledge encoded as SKILL.md instructions creates measurable operational value.
+This lesson covers four enterprise extensions that address the most common gaps between generic plugin capability and institutional need. Each follows the same pattern you learned in Chapter 27: identify what the generic plugin lacks, then write SKILL.md instructions using the Persona-Questions-Principles structure to close that gap. The extensions covered here (credit risk, regulatory reporting, IPS compliance, and portfolio attribution) represent the highest-impact areas where institutional knowledge encoded as SKILL.md instructions creates measurable operational value.
 
 ## What Enterprise Extensions Are
 
@@ -117,9 +117,9 @@ The generic plugins in Lessons 4 through 8 cover workflows common across financi
 
 Every extension follows the same structure:
 
-1. **What the generic plugin lacks** — the institutional knowledge gap
-2. **What the extension adds** — the SKILL.md instructions that close it
-3. **Key instructions to write** — the specific Persona, Questions, and Principles
+1. **What the generic plugin lacks**: the institutional knowledge gap
+2. **What the extension adds**: the SKILL.md instructions that close it
+3. **Key instructions to write**: the specific Persona, Questions, and Principles
 
 The eleven extension areas across the chapter span credit risk, regulatory reporting, treasury, FP&A planning, M&A institutional memory, IPS compliance, sector valuation, board and IR packs, multi-entity consolidation, credit portfolio monitoring, and finance business partnering. This lesson focuses on four that carry the highest combination of compliance urgency and knowledge-loss risk.
 
@@ -131,9 +131,9 @@ Variance analysis compares actual results against a plan (budget or forecast) or
 
 **Volume variance:** Difference explained by selling more or fewer units than planned.
 **Price variance:** Difference explained by selling at a higher or lower price.
-**Mix variance:** Difference explained by a different product or service mix — even if total volume and average price were on plan, a shift toward lower-margin products reduces profitability.
+**Mix variance:** Difference explained by a different product or service mix: even if total volume and average price were on plan, a shift toward lower-margin products reduces profitability.
 
-**Example:** Budget: 1,000 units at $100 = $100,000. Actual: 950 units at $103 = $97,850. Revenue variance: -$2,150. Volume component: 50 fewer units x $100 = -$5,000. Price component: 950 units x $3 upside = +$2,850. Total: -$2,150. A complete variance analysis always shows these components separately — the total masks a volume problem partially offset by pricing strength.
+**Example:** Budget: 1,000 units at $100 = $100,000. Actual: 950 units at $103 = $97,850. Revenue variance: -$2,150. Volume component: 50 fewer units x $100 = -$5,000. Price component: 950 units x $3 upside = +$2,850. Total: -$2,150. A complete variance analysis always shows these components separately: the total masks a volume problem partially offset by pricing strength.
 
 :::
 
@@ -143,7 +143,7 @@ Variance analysis compares actual results against a plan (budget or forecast) or
 
 **What the generic plugin lacks.** Standard credit metrics without your institution's sector leverage thresholds, management quality assessment protocols, or loss-history-derived escalation conditions.
 
-**What the extension adds.** Your firm's actual credit methodology — the specific leverage thresholds per sector, the five ratios on the first page of every credit file, the signals your experienced credit officers read as proxies for management quality.
+**What the extension adds.** Your firm's actual credit methodology: the specific leverage thresholds per sector, the five ratios on the first page of every credit file, the signals your experienced credit officers read as proxies for management quality.
 
 ---
 
@@ -161,7 +161,7 @@ Variance analysis compares actual results against a plan (budget or forecast) or
 - **DPO (Days Payable Outstanding):** How long the company takes to pay suppliers.
 - **DIO (Days Inventory Outstanding):** How long inventory sits before sale.
 
-**Cash Conversion Cycle:** DSO + DIO - DPO. A shorter or negative cycle means the company collects cash from customers before paying suppliers — a sign of strong working capital management.
+**Cash Conversion Cycle:** DSO + DIO - DPO. A shorter or negative cycle means the company collects cash from customers before paying suppliers: a sign of strong working capital management.
 
 :::
 
@@ -169,10 +169,10 @@ Variance analysis compares actual results against a plan (budget or forecast) or
 
 **Key SKILL.md instructions to write:**
 
-- **Sector-specific leverage thresholds** — cyclical sectors carry lower acceptable leverage than defensive sectors at the same credit grade. Your SKILL.md should specify the threshold per sector, not a single generic number.
+- **Sector-specific leverage thresholds**: cyclical sectors carry lower acceptable leverage than defensive sectors at the same credit grade. Your SKILL.md should specify the threshold per sector, not a single generic number.
 - **The five financial ratios required on the first page of every credit file**, in your institution's format and calculation methodology.
-- **Management quality signals** your experienced credit officers use as proxies for depth and reliability — the qualitative indicators that supplement the quantitative ratios.
-- **Non-negotiable escalation conditions** — transaction size thresholds, heightened-risk sectors, borrowers with prior credit events. These are unconditional routing rules, not guidelines.
+- **Management quality signals** your experienced credit officers use as proxies for depth and reliability: the qualitative indicators that supplement the quantitative ratios.
+- **Non-negotiable escalation conditions**: transaction size thresholds, heightened-risk sectors, borrowers with prior credit events. These are unconditional routing rules, not guidelines.
 
 ### Exercise 15: Credit Analysis SKILL.md
 
@@ -180,15 +180,15 @@ Variance analysis compares actual results against a plan (budget or forecast) or
 
 Apply the interview framework from Chapter 27 to a credit scenario you have observed.
 
-1. Describe a credit situation — real or hypothetical — where the outcome was better or worse than expected. Write 200 words covering the key signals and the decision that was made.
+1. Describe a credit situation (real or hypothetical) where the outcome was better or worse than expected. Write 200 words covering the key signals and the decision that was made.
 
 2. Extract one credit signal from that situation. Write it as a SKILL.md instruction: _"When [condition], [action]."_
 
 3. Identify the ratio or analysis that would surface that signal. Write it: _"Calculate [ratio] as [formula]. Flag as a concern if [threshold]."_
 
-4. Write a five-instruction Principles section encoding the most important credit judgment calls you have seen made well or badly. Each instruction should reference a specific ratio, threshold, or signal — not a generic directive.
+4. Write a five-instruction Principles section encoding the most important credit judgment calls you have seen made well or badly. Each instruction should reference a specific ratio, threshold, or signal; not a generic directive.
 
-**The key learning:** A SKILL.md built from a real credit scenario encodes the judgment call that saved or cost money — not a textbook definition of credit analysis. The interview framework applied to credit produces instructions that reflect how experienced credit officers actually think, not how the training manual says they should. A credit agent built on this material asks the right questions. One built on generic ratios calculates them correctly and misses what matters.
+**The key learning:** A SKILL.md built from a real credit scenario encodes the judgment call that saved or cost money; not a textbook definition of credit analysis. The interview framework applied to credit produces instructions that reflect how experienced credit officers actually think, not how the training manual says they should. A credit agent built on this material asks the right questions. One built on generic ratios calculates them correctly and misses what matters.
 
 ---
 
@@ -220,10 +220,10 @@ Bank regulators require banks to hold minimum capital relative to their risk-wei
 
 **Key SKILL.md instructions to write:**
 
-- **Regulator-specific calculation methodology** — which Basel III implementation applies to your institution. SBP rules, Fed rules, EBA rules, and PRA rules each produce different results from the same underlying data.
-- **Return formats and filing calendars** — the specific schedules, the data fields, and the quarterly or annual submission deadlines.
-- **Mandatory sign-off sequence** — who reviews what, in what order, before any filing leaves the organisation. No filing leaves without General Counsel or CCO sign-off. This is an unconditional escalation condition in every regulatory reporting SKILL.md.
-- **Materiality thresholds** — what magnitude of change triggers a formal resubmission versus a commentary note in the next regular filing.
+- **Regulator-specific calculation methodology**: which Basel III implementation applies to your institution. SBP rules, Fed rules, EBA rules, and PRA rules each produce different results from the same underlying data.
+- **Return formats and filing calendars**: the specific schedules, the data fields, and the quarterly or annual submission deadlines.
+- **Mandatory sign-off sequence**: who reviews what, in what order, before any filing leaves the organisation. No filing leaves without General Counsel or CCO sign-off. This is an unconditional escalation condition in every regulatory reporting SKILL.md.
+- **Materiality thresholds**: what magnitude of change triggers a formal resubmission versus a commentary note in the next regular filing.
 
 ---
 
@@ -231,7 +231,7 @@ Bank regulators require banks to hold minimum capital relative to their risk-wei
 
 **What the generic plugin lacks.** The wealth-management plugin can generate client meeting prep, run rebalancing analysis, and produce performance reports. It does not know that Client A has a 20% maximum in any single equity, that Client B prohibits tobacco and weapons, that Client C is in a restricted trading period, or that Client D's IPS requires a minimum 30% fixed income allocation regardless of market conditions. Without these constraints, every portfolio recommendation is analytically sound and potentially non-compliant.
 
-**What the extension adds.** A mandatory IPS compliance layer that runs before any portfolio recommendation reaches the client — verifying IPS constraints, flagging violations, documenting the compliance check, and routing edge cases to advisor judgment. The compliance check is not optional and not skippable.
+**What the extension adds.** A mandatory IPS compliance layer that runs before any portfolio recommendation reaches the client: verifying IPS constraints, flagging violations, documenting the compliance check, and routing edge cases to advisor judgment. The compliance check is not optional and not skippable.
 
 ---
 
@@ -249,18 +249,18 @@ An IPS is a document that defines the investment objectives, constraints, and go
 
 **Key SKILL.md instructions to write:**
 
-- **Client constraint database structure** — how each client's IPS constraints are encoded: the format for concentration limits (hard cap vs target vs floor), the taxonomy for excluded securities (individual securities vs sectors vs ESG screens), the format for liquidity requirements, and how restricted period rules are handled.
-- **Constraint verification sequence** — the order in which constraints are checked: hard caps first (violation is never permissible), then concentration targets (violation requires advisor sign-off), then screening exclusions (violation requires client waiver), then liquidity requirements (violation triggers senior advisor review).
-- **Edge case routing** — the conditions requiring advisor judgment rather than automated compliance: when a constraint appears to conflict with the client's stated return objective, when a market event causes a position to breach a concentration limit through appreciation rather than trading, when a client requests a trade that would violate their own IPS.
-- **Documentation standards** — the minimum documentation for every recommendation: the IPS constraint check result, the advisor's confirmation, and — for any case requiring judgment — the advisor's written rationale. This documentation is the evidence of fiduciary compliance in any regulatory examination.
+- **Client constraint database structure**: how each client's IPS constraints are encoded: the format for concentration limits (hard cap vs target vs floor), the taxonomy for excluded securities (individual securities vs sectors vs ESG screens), the format for liquidity requirements, and how restricted period rules are handled.
+- **Constraint verification sequence**: the order in which constraints are checked: hard caps first (violation is never permissible), then concentration targets (violation requires advisor sign-off), then screening exclusions (violation requires client waiver), then liquidity requirements (violation triggers senior advisor review).
+- **Edge case routing**: the conditions requiring advisor judgment rather than automated compliance: when a constraint appears to conflict with the client's stated return objective, when a market event causes a position to breach a concentration limit through appreciation rather than trading, when a client requests a trade that would violate their own IPS.
+- **Documentation standards**: the minimum documentation for every recommendation: the IPS constraint check result, the advisor's confirmation, and: for any case requiring judgment: the advisor's written rationale. This documentation is the evidence of fiduciary compliance in any regulatory examination.
 
 ---
 
 ## Extension 10: Portfolio Attribution and Risk Decomposition
 
-**What the generic plugin lacks.** The generic portfolio reporting commands produce performance numbers — total return, benchmark-relative return, sector weightings. They do not decompose that performance into the decisions that produced it. A portfolio manager who sees "+2.3% relative to benchmark" does not know whether that came from being overweight in the right sectors (allocation), picking the right securities within those sectors (selection), or a combination of the two. Without attribution, performance reporting is a scoreboard without a game analysis.
+**What the generic plugin lacks.** The generic portfolio reporting commands produce performance numbers: total return, benchmark-relative return, sector weightings. They do not decompose that performance into the decisions that produced it. A portfolio manager who sees "+2.3% relative to benchmark" does not know whether that came from being overweight in the right sectors (allocation), picking the right securities within those sectors (selection), or a combination of the two. Without attribution, performance reporting is a scoreboard without a game analysis.
 
-**What the extension adds.** A portfolio attribution skill that decomposes total return into allocation, selection, and interaction effects using the Brinson attribution model — and a risk decomposition layer that maps portfolio risk to its factor sources.
+**What the extension adds.** A portfolio attribution skill that decomposes total return into allocation, selection, and interaction effects using the Brinson attribution model: and a risk decomposition layer that maps portfolio risk to its factor sources.
 
 ---
 
@@ -270,7 +270,7 @@ An IPS is a document that defines the investment objectives, constraints, and go
 
 - **Allocation effect:** The value added (or lost) by overweighting or underweighting sectors relative to the benchmark. If you overweighted technology and technology outperformed, your allocation to technology added value.
 - **Selection effect:** The value added by picking securities within a sector that outperformed or underperformed that sector's benchmark return. If your technology stocks returned 15% while the benchmark technology sector returned 12%, your selection within technology added 3%.
-- **Interaction effect:** The combined effect of allocation and selection decisions — the additional return from overweighting a sector in which you also had superior stock selection.
+- **Interaction effect:** The combined effect of allocation and selection decisions: the additional return from overweighting a sector in which you also had superior stock selection.
 
 **Total Return Decomposition:** Portfolio return = benchmark return + allocation effect + selection effect + interaction effect. This decomposition tells the portfolio manager _why_ performance differed from the benchmark, not just _how much_ it differed.
 
@@ -280,10 +280,10 @@ An IPS is a document that defines the investment objectives, constraints, and go
 
 **Key SKILL.md instructions to write:**
 
-- **Attribution methodology** — which Brinson variant your firm uses (arithmetic vs geometric, single-period vs multi-period linking), the benchmark against which attribution is calculated, and the sector classification system (GICS, ICB, or a custom taxonomy).
-- **Risk factor decomposition** — the factors your firm tracks (market beta, sector, style, currency, credit, duration) and the methodology for isolating each factor's contribution to portfolio risk and return.
-- **Reporting format** — how attribution results are presented to portfolio managers vs clients vs investment committees. Each audience requires different granularity and different emphasis.
-- **Threshold alerts** — the allocation or selection effects that trigger review: a sector allocation drift beyond the permitted range, a selection effect that indicates a systematic stock-picking pattern (positive or negative), or a tracking error that exceeds the mandate's permitted range.
+- **Attribution methodology**: which Brinson variant your firm uses (arithmetic vs geometric, single-period vs multi-period linking), the benchmark against which attribution is calculated, and the sector classification system (GICS, ICB, or a custom taxonomy).
+- **Risk factor decomposition**: the factors your firm tracks (market beta, sector, style, currency, credit, duration) and the methodology for isolating each factor's contribution to portfolio risk and return.
+- **Reporting format**: how attribution results are presented to portfolio managers vs clients vs investment committees. Each audience requires different granularity and different emphasis.
+- **Threshold alerts**: the allocation or selection effects that trigger review: a sector allocation drift beyond the permitted range, a selection effect that indicates a systematic stock-picking pattern (positive or negative), or a tracking error that exceeds the mandate's permitted range.
 
 ---
 
@@ -324,7 +324,7 @@ Focus on the boundaries — the thresholds where
 reasonable professionals might disagree on the right call.
 ```
 
-**What you're learning:** The boundary between "fire" and "do not fire" is where SKILL.md instructions reveal their precision. A Principle that says "flag high leverage" is untestable. A Principle that says "flag net debt/EBITDA above 4.0x in non-cyclical sectors, above 3.0x in cyclical sectors" is testable — and the AI can generate edge cases at 3.9x in a sector that sits between cyclical and non-cyclical. These boundary scenarios are the most diagnostic test of whether your instructions encode real institutional judgment or textbook generalities.
+**What you're learning:** The boundary between "fire" and "do not fire" is where SKILL.md instructions reveal their precision. A Principle that says "flag high leverage" is untestable. A Principle that says "flag net debt/EBITDA above 4.0x in non-cyclical sectors, above 3.0x in cyclical sectors" is testable: and the AI can generate edge cases at 3.9x in a sector that sits between cyclical and non-cyclical. These boundary scenarios are the most diagnostic test of whether your instructions encode real institutional judgment or textbook generalities.
 
 ### Prompt 2: Regulatory Extension Gap Analysis
 
@@ -350,7 +350,7 @@ that encodes the jurisdiction-specific requirement.
 Format each as: "When [condition], [action]."
 ```
 
-**What you're learning:** Regulatory reporting is where the gap between generic and institution-specific is widest — and where the consequences of using the wrong methodology are most severe. Using AI to systematically identify jurisdiction-specific requirements accelerates the research phase of building the extension. The AI surfaces regulatory requirements you might miss; your expertise validates which ones apply to your institution and how they interact with your existing processes.
+**What you're learning:** Regulatory reporting is where the gap between generic and institution-specific is widest: and where the consequences of using the wrong methodology are most severe. Using AI to systematically identify jurisdiction-specific requirements accelerates the research phase of building the extension. The AI surfaces regulatory requirements you might miss; your expertise validates which ones apply to your institution and how they interact with your existing processes.
 
 ### Prompt 3: Investment Policy Compliance Check
 
@@ -379,7 +379,7 @@ Fixed Income: 30%, Alternatives: 15%, Unhedged FX: 10%]
    notification contain?
 ```
 
-**What you're learning:** IPS compliance is the most operationally critical extension because a breach can trigger regulatory consequences. The discipline of encoding policy limits as testable rules — with explicit boundary cases and escalation paths — ensures the agent catches violations before they become compliance events. The edge cases near boundaries are where professional judgment matters most.
+**What you're learning:** IPS compliance is the most operationally critical extension because a breach can trigger regulatory consequences. The discipline of encoding policy limits as testable rules (with explicit boundary cases and escalation paths) ensures the agent catches violations before they become compliance events. The edge cases near boundaries are where professional judgment matters most.
 
 ## Flashcards Study Aid
 
@@ -387,4 +387,4 @@ Fixed Income: 30%, Alternatives: 15%, Unhedged FX: 10%]
 
 ---
 
-Continue to [Lesson 10: Enterprise Extensions — Operations and Strategy →](./10-enterprise-extensions-operations-and-strategy.md)
+Continue to [Lesson 10: Enterprise Extensions: Operations and Strategy →](./10-enterprise-extensions-operations-and-strategy.md)

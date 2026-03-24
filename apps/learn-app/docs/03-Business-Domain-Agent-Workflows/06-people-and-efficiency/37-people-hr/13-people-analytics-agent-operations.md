@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/people-hr/people-analytics-agent-operations
 sidebar_position: 13
 title: "People Analytics & Agent Operations"
-description: "Use /people-report and /recruiting-pipeline to generate data-driven HR insights, then read your four persistent agents as sensors — their weekly and monthly reports are operational intelligence, not just system logs"
+description: "Use /people-report and /recruiting-pipeline to generate data-driven HR insights, then read your four persistent agents as sensors: their weekly and monthly reports are operational intelligence, not just system logs"
 keywords:
   [
     "people and hr",
@@ -42,14 +42,14 @@ skills:
     category: "Conceptual"
     bloom_level: "Evaluate"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can interpret a knowledge-base-agent weekly report and identify at least two signals that require HR action — distinguishing between documentation gaps, policy confusion, and escalation patterns"
+    measurable_at_this_level: "Student can interpret a knowledge-base-agent weekly report and identify at least two signals that require HR action, distinguishing between documentation gaps, policy confusion, and escalation patterns"
 
   - name: "Design an HR Intelligence Dashboard from Multiple Agent Outputs"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can design a conceptual HR intelligence dashboard that maps specific metrics from each of the four persistent agents to the business questions those metrics answer — and identify the thresholds that would trigger HR action"
+    measurable_at_this_level: "Student can design a conceptual HR intelligence dashboard that maps specific metrics from each of the four persistent agents to the business questions those metrics answer , and identify the thresholds that would trigger HR action"
 
 learning_objectives:
   - objective: "Use /people-report to generate a quarterly headcount and attrition report for a 200-person organisation"
@@ -75,11 +75,11 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "People analytics report types — headcount, attrition, diversity, org health — and the business question each answers"
-    - "Recruiting pipeline velocity — days-per-stage and stage-to-stage conversion rates as diagnostic tools"
-    - "Agent reports as sensors — how the four persistent agents generate operational intelligence beyond their automation function"
-    - "HR intelligence dashboard — combining agent reports and people analytics into a continuous monitoring layer"
-  assessment: "Four concepts in 45 minutes is manageable because the lesson builds on existing knowledge: students have been using the people analytics skills since L02 and the four persistent agents since L04/L05/L11/L12. This lesson reframes what they already know — agent reports are not system logs, they are intelligence — which is a conceptual shift more than a new technical skill."
+    - "People analytics report types, headcount, attrition, diversity, org health , and the business question each answers"
+    - "Recruiting pipeline velocity, days-per-stage and stage-to-stage conversion rates as diagnostic tools"
+    - "Agent reports as sensors: how the four persistent agents generate operational intelligence beyond their automation function"
+    - "HR intelligence dashboard, combining agent reports and people analytics into a continuous monitoring layer"
+  assessment: "Four concepts in 45 minutes is manageable because the lesson builds on existing knowledge: students have been using the people analytics skills since L02 and the four persistent agents since L04/L05/L11/L12. This lesson reframes what they already know, agent reports are not system logs, they are intelligence, which is a conceptual shift more than a new technical skill."
 
 differentiation:
   extension_for_advanced: "Build a data model for an HR intelligence dashboard. For each of the six metrics you would track weekly, define: the data source (which agent or people analytics tool), the calculation method, the threshold that triggers action, the responsible owner, and the escalation path. Calculate the minimum viable dataset your HRIS would need to export to support this dashboard automatically."
@@ -87,29 +87,29 @@ differentiation:
 
 teaching_guide:
   key_points:
-    - "The governing insight of this lesson: agents are not just automation — they are sensors. Their reports contain operational intelligence about where the HR function is working and where it is failing."
-    - "Rising query volume in the KB agent report is a signal, not just a number. It means employees cannot find an answer — which means either the documentation is missing, the policy is confusing, or the policy has recently changed."
+    - "The governing insight of this lesson: agents are not just automation; they are sensors. Their reports contain operational intelligence about where the HR function is working and where it is failing."
+    - "Rising query volume in the KB agent report is a signal, not just a number. It means employees cannot find an answer, which means either the documentation is missing, the policy is confusing, or the policy has recently changed."
     - "The recruiting pipeline's most diagnostic metric is time-in-stage, not pipeline size. A long queue at screening means the job description is attracting the wrong candidates. A long queue at debrief means calibration is broken."
     - "The HR intelligence dashboard is the CHRO's early-warning system. Without it, problems become visible only when they are already serious."
   misconceptions:
     - "More data means better HR decisions. Correction: the skill is in identifying which metrics signal actionable problems. A 50-metric dashboard is noise. A 6-metric dashboard with clear thresholds and owners is intelligence."
-    - "Agent reports are system logs for IT to review. Correction: agent reports are business intelligence for HR to act on. The KB agent's query volume and topic distribution tells the CHRO where the organisation's knowledge infrastructure is failing — that is a strategic insight, not a technical log."
-    - "People analytics replaces HR judgment. Correction: data surfaces patterns; humans make decisions. The /people-report output tells you that attrition in the engineering team is higher than the company average — but only a human conversation with those engineers tells you why, and only a human can judge what to do about it."
+    - "Agent reports are system logs for IT to review. Correction: agent reports are business intelligence for HR to act on. The KB agent's query volume and topic distribution tells the CHRO where the organisation's knowledge infrastructure is failing that is a strategic insight, not a technical log."
+    - "People analytics replaces HR judgment. Correction: data surfaces patterns; humans make decisions. The /people-report output tells you that attrition in the engineering team is higher than the company average , but only a human conversation with those engineers tells you why, and only a human can judge what to do about it."
   discussion_prompts:
-    - "If your KB agent received 200 queries about overtime pay in one week — up from 20 the previous week — what would that signal? What are the two or three most likely causes? What would you do first?"
+    - "If your KB agent received 200 queries about overtime pay in one week, up from 20 the previous week: what would that signal? What are the two or three most likely causes? What would you do first?"
     - "What is the difference between a recruiting pipeline report that shows a long queue at the offer stage, and one that shows a long queue at the screening stage? What different actions do those two signals suggest?"
   teaching_tips:
-    - "The four agent reports described in this lesson do not exist as downloadable templates — they are constructed through the lesson's exercise. Have students draft the template themselves before showing them the example. The act of designing the report structure forces them to think about what questions it needs to answer."
+    - "The four agent reports described in this lesson do not exist as downloadable templates; they are constructed through the lesson's exercise. Have students draft the template themselves before showing them the example. The act of designing the report structure forces them to think about what questions it needs to answer."
     - "Use the Team Lead, Data Engineering pipeline from L09 as the worked example for /recruiting-pipeline. Students already know this role; seeing the pipeline data for it reinforces the continuity of the employee lifecycle."
 ---
 
 # People Analytics & Agent Operations
 
-Every Monday morning, the CHRO at the EdTech company in Karachi opens four reports. The first is the Knowledge Base Agent's weekly query summary: 312 employee queries handled this week, up from 247 last week, with a spike in questions about the new flexible working policy. The second is the Onboarding Orchestrator's completion report: three new joiners started this week; pre-boarding tasks are 94% complete; one new joiner has not completed their IT access setup, flagged for follow-up. The third is the Policy Maintenance Agent's monthly audit: two statutory rate changes detected, both updated and published; one policy cross-reference inconsistency identified and queued for HR review. The fourth is a recruiting pipeline update for the Team Lead, Data Engineering role: 18 candidates sourced, 9 screened, 4 in interview, average time-in-stage at screening is 11 days — above the 7-day target.
+Every Monday morning, the CHRO at the EdTech company in Karachi opens four reports. The first is the Knowledge Base Agent's weekly query summary: 312 employee queries handled this week, up from 247 last week, with a spike in questions about the new flexible working policy. The second is the Onboarding Orchestrator's completion report: three new joiners started this week; pre-boarding tasks are 94% complete; one new joiner has not completed their IT access setup, flagged for follow-up. The third is the Policy Maintenance Agent's monthly audit: two statutory rate changes detected, both updated and published; one policy cross-reference inconsistency identified and queued for HR review. The fourth is a recruiting pipeline update for the Team Lead, Data Engineering role: 18 candidates sourced, 9 screened, 4 in interview, average time-in-stage at screening is 11 days, above the 7-day target.
 
-Each report answers a different question. Together, they tell a story about the health of the HR function. The KB agent report says the flexible working policy launch is creating confusion — employees are asking the same questions the policy should have answered clearly. The onboarding report says the process is working well overall but one new joiner needs a follow-up call about IT access. The policy report says the statutory rate monitoring is functioning and two changes were handled without manual intervention. The recruiting pipeline report says the screening stage is slow — something is wrong with how candidates are being evaluated or progressed.
+Each report answers a different question. Together, they tell a story about the health of the HR function. The KB agent report says the flexible working policy launch is creating confusion, employees are asking the same questions the policy should have answered clearly. The onboarding report says the process is working well overall but one new joiner needs a follow-up call about IT access. The policy report says the statutory rate monitoring is functioning and two changes were handled without manual intervention. The recruiting pipeline report says the screening stage is slow, something is wrong with how candidates are being evaluated or progressed.
 
-This lesson covers two official plugin skills — `/people-report` for workforce analytics and `/recruiting-pipeline` for hiring pipeline management — and then does something that the tool descriptions do not make explicit: it teaches you to read your four persistent agents not as automation systems, but as sensors. Their reports are operational intelligence. The question is whether you know how to extract the signal from them.
+This lesson covers two official plugin skills, `/people-report` for workforce analytics and `/recruiting-pipeline` for hiring pipeline management , and then does something that the tool descriptions do not make explicit: it teaches you to read your four persistent agents not as automation systems, but as sensors. Their reports are operational intelligence. The question is whether you know how to extract the signal from them.
 
 ## People Analytics with `/people-report`
 
@@ -128,7 +128,7 @@ This lesson covers two official plugin skills — `/people-report` for workforce
 
 | Metric                             | What It Reveals                                   | Warning Threshold                                    |
 | ---------------------------------- | ------------------------------------------------- | ---------------------------------------------------- |
-| Voluntary attrition rate           | Overall retention health                          | Industry dependent — know your benchmark             |
+| Voluntary attrition rate           | Overall retention health                          | Industry dependent, know your benchmark             |
 | Regrettable attrition              | Are we losing the right people or the wrong ones? | Any regrettable attrition >5% warrants investigation |
 | Average tenure at exit             | Is the problem early-tenure or late-tenure?       | Patterns shift interpretation completely             |
 | eNPS (Employee Net Promoter Score) | Employee sentiment and advocacy                   | Below 0 is a warning sign                            |
@@ -157,12 +157,12 @@ Data provided:
 **Sample output:**
 
 ```
-## People Report: Quarterly Headcount & Attrition — Q1
+## People Report: Quarterly Headcount & Attrition: Q1
 
 ### Executive Summary
 Three key findings this quarter:
 1. Headcount grew 5% (238 → 250); growth concentrated in Engineering and Sales as planned.
-2. Voluntary attrition rate: 1.6% for the quarter (~6.4% annualised). Two Senior Engineering departures warrant investigation — they represent the most expensive and hardest-to-replace exits.
+2. Voluntary attrition rate: 1.6% for the quarter (~6.4% annualised). Two Senior Engineering departures warrant investigation; they represent the most expensive and hardest-to-replace exits.
 3. eNPS of +22 is healthy; participation at 78% is strong and provides a reliable signal.
 
 ### Key Metrics
@@ -171,7 +171,7 @@ Three key findings this quarter:
 | Total headcount             | 250      | ↑ +12   |
 | Voluntary attrition (qtr)   | 1.6%     | ↑ from 0.8% |
 | Regrettable departures      | 2        | ↑ (both senior) |
-| Average tenure at exit      | 2.3 yrs  | —       |
+| Average tenure at exit      | 2.3 yrs  | -       |
 | eNPS                        | +22      | ↑ from +18 |
 
 ### Detailed Analysis
@@ -198,7 +198,7 @@ manager as undesired exits of high performers.
 ```
 
 :::note Your output will vary
-The quality of a `/people-report` output depends entirely on the data you provide. If you upload a full HRIS export, the analysis will be richer and more specific. If you describe the data in text, the analysis will be directional. The framework — executive summary, key metrics, detailed analysis, recommendations — is consistent regardless of data richness.
+The quality of a `/people-report` output depends entirely on the data you provide. If you upload a full HRIS export, the analysis will be richer and more specific. If you describe the data in text, the analysis will be directional. The framework, executive summary, key metrics, detailed analysis, recommendations: is consistent regardless of data richness.
 :::
 
 ## Recruiting Pipeline with `/recruiting-pipeline`
@@ -218,10 +218,10 @@ The quality of a `/people-report` output depends entirely on the data you provid
 
 ### Worked Example: Team Lead, Data Engineering
 
-Following from L09 — Zara accepted the internal promotion. The EdTech company now needs to hire a Data Engineer externally. Omar wants to understand where the pipeline stands.
+Following from L09, Zara accepted the internal promotion. The EdTech company now needs to hire a Data Engineer externally. Omar wants to understand where the pipeline stands.
 
 ```
-/recruiting-pipeline Team Lead, Data Engineering — external hire pipeline
+/recruiting-pipeline Team Lead, Data Engineering, external hire pipeline
 
 Pipeline data (as of Day 28 from job opening):
   Sourced: 24 candidates
@@ -240,21 +240,21 @@ Pipeline data (as of Day 28 from job opening):
 **Sample output:**
 
 ```
-## Recruiting Pipeline: Data Engineer — EdTech, Karachi
+## Recruiting Pipeline: Data Engineer: EdTech, Karachi
 
 ### Pipeline Summary (Day 28)
 | Stage       | Count | Conversion | Time in Stage | Target |
 |-------------|-------|------------|---------------|--------|
-| Sourced     | 24    | —          | —             | —      |
+| Sourced     | 24    | -          | -             | -      |
 | Screen      | 9     | 58%        | 5 days        | ≤7 days |
 | Interview   | 4     | 44%        | 12 days ← ⚠️ | ≤7 days |
 | Debrief     | 1     | 25%        | 6 days        | ≤5 days |
-| Offer       | 0     | —          | —             | —      |
+| Offer       | 0     | -          | -             | -      |
 
 ### Diagnostic Finding
 **Screen → Interview conversion (12 days average) is the primary bottleneck.**
 Candidates are sitting at screen stage for 12 days before receiving an interview invitation.
-This is nearly double the 7-day target and likely causes candidate drop-off — strong
+This is nearly double the 7-day target and likely causes candidate drop-off, strong
 candidates at this level are typically in multiple processes simultaneously.
 
 **44% screen → interview conversion** is also below a healthy benchmark.
@@ -265,7 +265,7 @@ not accurately assessing candidate quality for the role.
 1. **Immediate**: Audit scheduling process for screen → interview transition.
    Are interviews being offered within 48 hours of a screen completing?
 2. **Review**: Check screen assessment criteria. A 44% pass rate may indicate
-   the JD is attracting candidates who are close but not qualified — or the
+   the JD is attracting candidates who are close but not qualified , or the
    screen rubric is too strict for this level.
 3. **Risk**: At current velocity, Day 45 time-to-fill target is at risk.
    Consider parallel-tracking 5 additional sourced candidates now.
@@ -273,23 +273,23 @@ not accurately assessing candidate quality for the role.
 
 ## Agent Reports as Operational Intelligence
 
-This is the insight most HR teams miss: the four persistent agents are not just automation systems. They are sensors. Every week and every month, they produce reports that contain operational intelligence about the health of the HR function — if you know how to read them.
+This is the insight most HR teams miss: the four persistent agents are not just automation systems. They are sensors. Every week and every month, they produce reports that contain operational intelligence about the health of the HR function; if you know how to read them.
 
 ### The Knowledge Base Agent: Query Intelligence
 
-The KB agent answers employee questions 24/7. Its weekly report is not a log of answers — it is a map of where your HR knowledge infrastructure is working and where it is failing.
+The KB agent answers employee questions 24/7. Its weekly report is not a log of answers; it is a map of where your HR knowledge infrastructure is working and where it is failing.
 
 | Signal                          | What It Means                                                        | Action                                                   |
 | ------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
-| Rising query volume on a topic  | Employees cannot find an answer — missing or confusing documentation | Review and update the relevant policy or FAQ             |
+| Rising query volume on a topic  | Employees cannot find an answer, missing or confusing documentation | Review and update the relevant policy or FAQ             |
 | Repeated exact same question    | FAQ entry does not exist or is hard to find                          | Add or surface the FAQ entry                             |
 | High escalation rate on a topic | KB agent is reaching its knowledge boundary here                     | Expand knowledge base or redesign the FAQ for this topic |
-| Queries about a new policy      | Launch created confusion — policy language unclear                   | Simplify policy language and republish                   |
+| Queries about a new policy      | Launch created confusion, policy language unclear                   | Simplify policy language and republish                   |
 
 **Sample KB agent weekly digest (what the CHRO reads):**
 
 ```
-KNOWLEDGE BASE AGENT — WEEKLY REPORT
+KNOWLEDGE BASE AGENT, WEEKLY REPORT
 Week of: [Date]
 Total queries handled: 312
 Escalated to HR: 14 (4.5%)
@@ -300,10 +300,10 @@ TOP QUERY CATEGORIES THIS WEEK:
      "What counts as a 'core hours' day vs a flexible day?"
    → FAQ gap: Core hours definition not in FAQ. Recommend: add specific Q&A.
 
-2. Holiday booking process: 44 queries (14%) — stable
+2. Holiday booking process: 44 queries (14%), stable
    → No action needed; standard seasonal pattern
 
-3. Salary review timeline: 38 queries (12%) — new this week
+3. Salary review timeline: 38 queries (12%), new this week
    → Signal: Employees anticipating the upcoming review cycle.
    → Recommendation: Publish FAQ on timeline and process now, before
      volume increases further.
@@ -321,12 +321,12 @@ AGENT ACCURACY REVIEW:
 
 ### The Onboarding Orchestrator: Process Health
 
-The orchestrator runs the onboarding workflow automatically (T-14 to Day 90). Its completion reports tell you whether the process is working — and where new joiners are falling behind.
+The orchestrator runs the onboarding workflow automatically (T-14 to Day 90). Its completion reports tell you whether the process is working , and where new joiners are falling behind.
 
 | Signal                                           | What It Means                                              | Action                                                       |
 | ------------------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------ |
 | Pre-boarding task completion &lt;90%                | New joiners are arriving unprepared on Day 1               | Follow up with specific incomplete tasks; review task design |
-| 30-day survey scores trending down               | Onboarding experience is deteriorating                     | Investigate — new manager? changed programme?                |
+| 30-day survey scores trending down               | Onboarding experience is deteriorating                     | Investigate, new manager? changed programme?                |
 | IT access delays flagged                         | IT provisioning is a consistent friction point             | Fix the process upstream with IT                             |
 | One new joiner consistently behind on milestones | Potential early warning of poor fit or manager support gap | HR check-in call                                             |
 
@@ -352,7 +352,7 @@ The offboarding agent triggers when a resignation record appears in the HRIS and
 
 ## The HR Intelligence Dashboard
 
-The CHRO does not read four separate reports independently. They look for patterns across all four — signals that, together, tell a story about the health of the HR function.
+The CHRO does not read four separate reports independently. They look for patterns across all four, signals that, together, tell a story about the health of the HR function.
 
 A conceptual HR intelligence dashboard might look like this:
 
@@ -367,7 +367,7 @@ A conceptual HR intelligence dashboard might look like this:
 | Voluntary attrition rate            | `/people-report`            | Quarterly       | Trend increase >2pp → investigation       |
 | Time-in-stage (screening)           | `/recruiting-pipeline`      | Per active role | >7 days → audit screening process         |
 
-The dashboard does not replace judgment — it directs attention. When the KB agent shows a spike in flexible working queries and the policy maintenance agent has just flagged a cross-reference inconsistency in the flexible working policy, those two signals together point to one root cause. That connection is only visible if someone is reading all four reports.
+The dashboard does not replace judgment ; it directs attention. When the KB agent shows a spike in flexible working queries and the policy maintenance agent has just flagged a cross-reference inconsistency in the flexible working policy, those two signals together point to one root cause. That connection is only visible if someone is reading all four reports.
 
 ## Exercise: Quarterly Analytics Review and Agent Intelligence Audit
 
@@ -376,7 +376,7 @@ The dashboard does not replace judgment — it directs attention. When the KB ag
 **Plugin commands:** `/people-report`, `/recruiting-pipeline`
 **Goal:** Generate a quarterly people report, review a simulated KB agent weekly report, and identify the signals that would require HR action this week
 
-### Step 1 — Generate a People Report
+### Step 1: Generate a People Report
 
 Use the following scenario data (or substitute your own organisation's data) to generate a quarterly people report:
 
@@ -398,7 +398,7 @@ Review the output. Identify:
 - The single most significant attrition finding
 - One recommendation you would act on this quarter
 
-### Step 2 — Audit a KB Agent Weekly Report
+### Step 2: Audit a KB Agent Weekly Report
 
 Review the sample KB agent report in this lesson. Identify:
 
@@ -408,7 +408,7 @@ Review the sample KB agent report in this lesson. Identify:
 
 Write three specific actions HR should take this week based on the report.
 
-### Step 3 — Design Your HR Intelligence Dashboard
+### Step 3: Design Your HR Intelligence Dashboard
 
 On paper or in a document, design your HR intelligence dashboard. For each metric you would track:
 
@@ -447,7 +447,7 @@ a key metrics table, a detailed analysis of the most significant attrition
 pattern, and two specific HR recommendations.
 ```
 
-**What you are learning:** A people report is only useful if it surfaces a priority. This prompt practises reading for signal — the executive summary and detailed analysis should tell you exactly what to investigate and why.
+**What you are learning:** A people report is only useful if it surfaces a priority. This prompt practises reading for signal: the executive summary and detailed analysis should tell you exactly what to investigate and why.
 
 **Adapt**: Analyse recruiting pipeline friction for a role in your own organisation.
 
@@ -469,7 +469,7 @@ Identify:
 4. Whether our current velocity will hit the time-to-fill target
 ```
 
-**What you are learning:** Time-in-stage is the recruiting pipeline's most diagnostic metric. The stage where candidates are stuck longest points to the specific process failure — not just that the process is slow.
+**What you are learning:** Time-in-stage is the recruiting pipeline's most diagnostic metric. The stage where candidates are stuck longest points to the specific process failure , not just that the process is slow.
 
 **Apply**: Design a weekly HR signal review using all four agent outputs.
 
@@ -502,4 +502,4 @@ Output as a structured protocol the team could run in 30 minutes each Monday.
 
 ---
 
-Continue to [Lesson 14: Capstone — The Full Employee Lifecycle →](./14-capstone-full-employee-lifecycle.md)
+Continue to [Lesson 14: Capstone. The Full Employee Lifecycle →](./14-capstone-full-employee-lifecycle.md)

@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/shariah-screening
 sidebar_position: 14
-title: "Shariah Portfolio Screening — Global Standards"
-description: "Apply four competing Shariah equity screening methodologies — SC Malaysia, Tadawul, AAOIFI Standard 21, and MSCI Islamic — to a global portfolio, calculate purification obligations from quarterly dividends, analyze screening divergence where the same company passes one methodology but fails another, and build a quarterly Cowork screening workflow"
+title: "Shariah Portfolio Screening: Global Standards"
+description: "Apply four competing Shariah equity screening methodologies (SC Malaysia, Tadawul, AAOIFI Standard 21, and MSCI Islamic) to a global portfolio, calculate purification obligations from quarterly dividends, analyze screening divergence where the same company passes one methodology but fails another, and build a quarterly Cowork screening workflow"
 keywords:
   [
     "Shariah screening",
@@ -67,25 +67,25 @@ cognitive_load:
   new_concepts: 6
   concepts_list:
     - "Sector exclusion screens (hard exclusions vs soft exclusions with NPI test)"
-    - "Financial ratio screens — debt, cash, and accounts receivable thresholds"
+    - "Financial ratio screens: debt, cash, and accounts receivable thresholds"
     - "Non-permissible income (NPI) threshold and the 5% rule"
     - "Purification obligation calculation from quarterly dividends"
-    - "Screening divergence — same company, different pass/fail across methodologies"
+    - "Screening divergence: same company, different pass/fail across methodologies"
     - "Quarterly SSB compliance reporting structure"
-  assessment: "6 concepts at B1-B2 level. The screening framework builds directly on the Shariah compliance concepts from earlier lessons. Students apply four competing methodologies to the same portfolio — the multi-methodology comparison is the core learning, not any single methodology in isolation."
+  assessment: "6 concepts at B1-B2 level. The screening framework builds directly on the Shariah compliance concepts from earlier lessons. Students apply four competing methodologies to the same portfolio: the multi-methodology comparison is the core learning, not any single methodology in isolation."
 
 differentiation:
-  extension_for_advanced: "Research the emerging ESG-Shariah convergence. SC Malaysia's SRI (Sustainable and Responsible Investment) Sukuk Framework overlaps significantly with conventional ESG screening — both exclude weapons, both screen for environmental impact. Draft a comparison of SC Malaysia's Shariah screen with MSCI's ESG screen, identifying which ESG-excluded companies would also be Shariah-excluded and which would not. This is a live practice development in Islamic capital markets."
-  remedial_for_struggling: "Focus on the sector exclusion screen (Step 1 of the methodology) and the NPI 5% threshold. These two screens alone determine the Shariah status of most companies. The financial ratio screens (debt, cash) are refinements that matter for borderline cases. If you can explain why a conventional bank is excluded (hard exclusion — interest-based business) and why a hotel chain might be excluded (NPI test — alcohol revenue exceeds 5%), you have the core concept."
+  extension_for_advanced: "Research the emerging ESG-Shariah convergence. SC Malaysia's SRI (Sustainable and Responsible Investment) Sukuk Framework overlaps significantly with conventional ESG screening: both exclude weapons, both screen for environmental impact. Draft a comparison of SC Malaysia's Shariah screen with MSCI's ESG screen, identifying which ESG-excluded companies would also be Shariah-excluded and which would not. This is a live practice development in Islamic capital markets."
+  remedial_for_struggling: "Focus on the sector exclusion screen (Step 1 of the methodology) and the NPI 5% threshold. These two screens alone determine the Shariah status of most companies. The financial ratio screens (debt, cash) are refinements that matter for borderline cases. If you can explain why a conventional bank is excluded (hard exclusion (interest-based business) and why a hotel chain might be excluded (NPI test) alcohol revenue exceeds 5%), you have the core concept."
 ---
 
-# Shariah Portfolio Screening — Global Standards
+# Shariah Portfolio Screening: Global Standards
 
-In Lesson 13, you compared zakat calculation across jurisdictions — one Islamic obligation, multiple formulas. Shariah portfolio screening presents an analogous challenge: one ethical framework, multiple screening methodologies, and the same company can be Shariah-compliant under one methodology and non-compliant under another.
+In Lesson 13, you compared zakat calculation across jurisdictions: one Islamic obligation, multiple formulas. Shariah portfolio screening presents an analogous challenge: one ethical framework, multiple screening methodologies, and the same company can be Shariah-compliant under one methodology and non-compliant under another.
 
-Four major screening frameworks govern global Islamic equity investing. The Securities Commission Malaysia maintains the SC Shariah-compliant securities list. The Saudi Exchange (Tadawul) publishes its own Shariah-compliant list. AAOIFI Shariah Standard 21 provides the scholarly reference standard. The MSCI Islamic Index applies its own independent methodology. All four agree on the core prohibitions — conventional banking, alcohol, gambling, pork, weapons of mass destruction. Where they diverge is in the financial ratio thresholds, the denominator used (total assets versus market capitalisation), and the treatment of borderline sectors.
+Four major screening frameworks govern global Islamic equity investing. The Securities Commission Malaysia maintains the SC Shariah-compliant securities list. The Saudi Exchange (Tadawul) publishes its own Shariah-compliant list. AAOIFI Shariah Standard 21 provides the scholarly reference standard. The MSCI Islamic Index applies its own independent methodology. All four agree on the core prohibitions: conventional banking, alcohol, gambling, pork, weapons of mass destruction. Where they diverge is in the financial ratio thresholds, the denominator used (total assets versus market capitalisation), and the treatment of borderline sectors.
 
-For a global Islamic fund manager holding equities across Malaysian, Saudi, UAE, UK, and US markets, the question is not whether to screen but **which methodology governs** — and what happens when they disagree.
+For a global Islamic fund manager holding equities across Malaysian, Saudi, UAE, UK, and US markets, the question is not whether to screen but **which methodology governs**: and what happens when they disagree.
 
 ---
 
@@ -125,9 +125,9 @@ This is where the methodologies diverge:
 | **NPI screen**                         | 5% of total revenue | 5% of total revenue | 5% of total revenue | 5% of total revenue    |
 | **Cash + interest-bearing securities** | 33% of total assets | 30% of market cap   | 30% of market cap   | 33.33% of total assets |
 
-The **denominator difference** is the most common source of screening divergence. SC Malaysia and MSCI use **total assets** (a balance sheet figure, relatively stable). Tadawul and AAOIFI SS21 use **market capitalisation** (a market figure, volatile). A company with stable debt but a falling share price can breach the Tadawul or AAOIFI debt threshold while remaining compliant under SC Malaysia — not because its debt changed, but because its market cap dropped.
+The **denominator difference** is the most common source of screening divergence. SC Malaysia and MSCI use **total assets** (a balance sheet figure, relatively stable). Tadawul and AAOIFI SS21 use **market capitalisation** (a market figure, volatile). A company with stable debt but a falling share price can breach the Tadawul or AAOIFI debt threshold while remaining compliant under SC Malaysia; not because its debt changed, but because its market cap dropped.
 
-### Step 3: Non-Permissible Income (NPI) — The 5% Rule
+### Step 3: Non-Permissible Income (NPI). The 5% Rule
 
 All four methodologies apply a **5% threshold** for non-permissible income:
 
@@ -141,7 +141,7 @@ If NPI % = 0% → FULLY CLEAN
 
 NPI includes: interest income, revenue from conventional insurance, alcohol sales, tobacco sales, pork-related revenue, gambling revenue, adult content revenue.
 
-A company that passes the 5% threshold is Shariah-compliant but **not fully clean** — any dividends received from it carry a purification obligation.
+A company that passes the 5% threshold is Shariah-compliant but **not fully clean**: any dividends received from it carry a purification obligation.
 
 ### Step 4: Purification
 
@@ -171,11 +171,11 @@ Cr: Cash                              [Amount]
 
 The most professionally important concept in Shariah screening is that different methodologies produce **different results for the same company**. Three common divergence scenarios:
 
-**Scenario 1 — Denominator divergence:** A company has stable debt at 32% of total assets but the same debt is 35% of its (declining) market capitalisation. **SC Malaysia: PASS. MSCI: FAIL.** The debt has not changed — only the denominator.
+**Scenario 1 (Denominator divergence:** A company has stable debt at 32% of total assets but the same debt is 35% of its (declining) market capitalisation. **SC Malaysia: PASS. MSCI: FAIL.** The debt has not changed) only the denominator.
 
-**Scenario 2 — Sector classification divergence:** A Malaysian palm oil plantation company is included in SC Malaysia's Shariah-compliant list (palm oil is halal). MSCI excludes the same company due to environmental screening criteria that overlap with its Islamic methodology. **SC Malaysia: PASS. MSCI: FAIL.** The exclusion reason is not Shariah-based but methodology-based.
+**Scenario 2: Sector classification divergence:** A Malaysian palm oil plantation company is included in SC Malaysia's Shariah-compliant list (palm oil is halal). MSCI excludes the same company due to environmental screening criteria that overlap with its Islamic methodology. **SC Malaysia: PASS. MSCI: FAIL.** The exclusion reason is not Shariah-based but methodology-based.
 
-**Scenario 3 — NPI definition divergence:** A UK technology company has 6.2% of revenue from a subsidiary that provides services to conventional financial institutions. SC Malaysia classifies this as non-permissible and excludes the company. MSCI uses a narrower NPI definition that counts only direct interest income, not services to interest-based institutions. **SC Malaysia: FAIL. MSCI: PASS.**
+**Scenario 3: NPI definition divergence:** A UK technology company has 6.2% of revenue from a subsidiary that provides services to conventional financial institutions. SC Malaysia classifies this as non-permissible and excludes the company. MSCI uses a narrower NPI definition that counts only direct interest income, not services to interest-based institutions. **SC Malaysia: FAIL. MSCI: PASS.**
 
 **Resolution approach:** The fund's SSB must have a documented policy specifying which methodology governs and how conflicts are resolved. The conservative approach: exclude if **any** methodology excludes. The selective approach: apply the methodology specified in the fund's SSB-approved investment policy. For borderline cases, refer to the SSB for a specific ruling.
 
@@ -183,16 +183,16 @@ The most professionally important concept in Shariah screening is that different
 
 :::info Exercise Requirements
 
-**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Plugin:** Islamic Finance Domain Agents (install once: see Lesson 3)
 :::
 
-## Exercise 11: Saturna Capital Amana Income Fund — Global Screening
+## Exercise 11: Saturna Capital Amana Income Fund: Global Screening
 
 **What you will build:** A global screening workbook applying four methodologies, a purification calculation, a screening divergence analysis, and a quarterly SSB report.
 
 **Requirements:** Cowork or your preferred AI assistant, spreadsheet capability. 45 minutes.
 
-### Step 1 — Build the Global Screening Workbook
+### Step 1: Build the Global Screening Workbook
 
 ```
 Build a Shariah equity screening workbook applying the most
@@ -217,9 +217,9 @@ Identify any companies where methodologies disagree.
 Save to /outputs/global-shariah-screen.xlsx.
 ```
 
-Review the output. Confirm the sector exclusions are correctly applied — the financial services company should be a hard exclusion under all four methodologies.
+Review the output. Confirm the sector exclusions are correctly applied: the financial services company should be a hard exclusion under all four methodologies.
 
-### Step 2 — Purification Calculation
+### Step 2: Purification Calculation
 
 ```
 The fund received total quarterly dividends of USD 4.2M from
@@ -235,7 +235,7 @@ report to unitholders
 
 Check: Purification = $4.2M × 1.8% = $75,600. This amount must be donated to charity and disclosed to unitholders.
 
-### Step 3 — Screening Divergence Analysis
+### Step 3: Screening Divergence Analysis
 
 ```
 Identify three companies in the screening workbook where at least
@@ -249,9 +249,9 @@ methodological artefact (e.g., denominator difference)?
 Justify your recommendation for the SSB.
 ```
 
-This step is the core professional skill. The AI agent can identify the divergence. The professional judgment — whether to include or exclude — must come from the CA/CPA and the SSB.
+This step is the core professional skill. The AI agent can identify the divergence. The professional judgment (whether to include or exclude) must come from the CA/CPA and the SSB.
 
-### Step 4 — Quarterly SSB Report
+### Step 4: Quarterly SSB Report
 
 ```
 Draft the quarterly Shariah Supervisory Board compliance report
@@ -269,7 +269,7 @@ Format for a three-member global SSB: one scholar from the US,
 one from Malaysia, one from Saudi Arabia.
 ```
 
-### Step 5 — Quarterly Cowork Screening Task
+### Step 5: Quarterly Cowork Screening Task
 
 ```
 Write a /schedule task for quarterly Shariah screening automation:
@@ -289,7 +289,7 @@ than 3% of fund NAV becomes non-compliant, escalate immediately
 rather than waiting for the quarterly report.
 ```
 
-**Check your work:** The Cowork task in Step 5 should have robust exception handling. A Shariah compliance breach is not a routine administrative event — it requires immediate attention because continued holding of a non-compliant stock after the compliance breach is known constitutes a Shariah violation. The 30-day divestment window that most SSBs allow is a concession, not a comfort zone.
+**Check your work:** The Cowork task in Step 5 should have robust exception handling. A Shariah compliance breach is not a routine administrative event: it requires immediate attention because continued holding of a non-compliant stock after the compliance breach is known constitutes a Shariah violation. The 30-day divestment window that most SSBs allow is a concession, not a comfort zone.
 
 ---
 
@@ -333,7 +333,7 @@ price dropped? What is the Shariah argument for and against?
 address this volatility problem?
 ```
 
-**What you are learning:** The denominator choice is not a technicality — it determines how stable a company's Shariah status is over market cycles. A fund that uses market-cap-based screening will experience more turnover (and more transaction costs) during market downturns, as companies breach thresholds not because their debt increased but because their share price fell. The trailing average approach smooths this volatility but introduces a lag.
+**What you are learning:** The denominator choice is not a technicality: it determines how stable a company's Shariah status is over market cycles. A fund that uses market-cap-based screening will experience more turnover (and more transaction costs) during market downturns, as companies breach thresholds not because their debt increased but because their share price fell. The trailing average approach smooths this volatility but introduces a lag.
 
 ### Prompt 3: Apply
 
@@ -341,13 +341,13 @@ Build a personal Shariah screening skill in Cowork using **Create with Claude**.
 
 > "I hold 15 stocks across US, UK, and Malaysian markets. Help me build a skill that screens my portfolio for Shariah compliance using the appropriate methodology for each market, flags failures, and calculates my purification obligation. The skill should default to SC Malaysia methodology for Malaysian stocks, MSCI Islamic for US and UK stocks, and let me switch methodologies if needed."
 
-Review Claude's draft — does it include routing logic to select the correct methodology by market? Does it specify the financial ratio thresholds and NPI screen? Refine and save.
+Review Claude's draft: does it include routing logic to select the correct methodology by market? Does it specify the financial ratio thresholds and NPI screen? Refine and save.
 
 **Test the skill** by running a screening command on a sample portfolio: pick 3-4 well-known companies (e.g., Apple, Petronas, HSBC) and ask the skill to screen them. Check whether it correctly applies the hard exclusion for HSBC (conventional banking) and runs the financial ratio screens for the others.
 
 **After testing**, compare your skill's approach against the `shariah-screening-global` skill installed by the plugin. Does your skill handle methodology switching the same way the plugin's router handles jurisdiction switching? What routing logic did Claude include that you did not specify in your prompt?
 
-**What you are learning:** Building a screening skill from your own requirements tests whether you understand the routing pattern from Lesson 3. The router logic (identify methodology, load screening rules, apply, flag) mirrors the chapter's router-to-product-to-overlay architecture. If Claude produced a skill without routing logic, your prompt was missing the methodology-switching instruction — the same gap that makes generic agents fail across jurisdictions.
+**What you are learning:** Building a screening skill from your own requirements tests whether you understand the routing pattern from Lesson 3. The router logic (identify methodology, load screening rules, apply, flag) mirrors the chapter's router-to-product-to-overlay architecture. If Claude produced a skill without routing logic, your prompt was missing the methodology-switching instruction: the same gap that makes generic agents fail across jurisdictions.
 
 ## Flashcards Study Aid
 
@@ -355,4 +355,4 @@ Review Claude's draft — does it include routing logic to select the correct me
 
 ---
 
-Continue to [Lesson 15: AAOIFI vs IFRS — Full Financial Statements →](./15-aaoifi-vs-ifrs-capstone.md)
+Continue to [Lesson 15: AAOIFI vs IFRS: Full Financial Statements →](./15-aaoifi-vs-ifrs-capstone.md)

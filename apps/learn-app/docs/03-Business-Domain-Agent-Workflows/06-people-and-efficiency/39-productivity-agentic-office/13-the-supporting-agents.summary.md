@@ -1,12 +1,12 @@
 ### Core Concept
 
-The three supporting agents — Memory Keeper, Meeting Intelligence, and Work Tracker — are invisible infrastructure that runs on triggers and weekly schedules, feeding current data to the Chief of Staff so its outputs stay accurate. The system maintains itself; you approve the updates.
+The three supporting agents, Memory Keeper, Meeting Intelligence, and Work Tracker: are invisible infrastructure that runs on triggers and weekly schedules, feeding current data to the Chief of Staff so its outputs stay accurate. The system maintains itself; you approve the updates.
 
 ### Key Mental Models
 
 - **Trigger-based vs Scheduled**: The Chief of Staff runs on a fixed schedule; the supporting agents activate on events (new person mentioned, meeting ends, delegation created). This makes them invisible in normal operation and precise when they fire.
-- **Propose-Then-Confirm**: The Memory Keeper never modifies `work.local.md` autonomously — it proposes, you confirm. Wrong context propagates wrong outputs to every downstream agent, so the confirmation step is the quality gate, not an inconvenience.
-- **Cadence as Dependency Chain**: The weekly maintenance sequence is ordered by dependency — Memory Keeper must run before the Chief of Staff brief (briefs need current context), Work Tracker audit before Meeting Intelligence audit (delegation patterns inform meeting efficiency analysis).
+- **Propose-Then-Confirm**: The Memory Keeper never modifies `work.local.md` autonomously ; it proposes, you confirm. Wrong context propagates wrong outputs to every downstream agent, so the confirmation step is the quality gate, not an inconvenience.
+- **Cadence as Dependency Chain**: The weekly maintenance sequence is ordered by dependency, Memory Keeper must run before the Chief of Staff brief (briefs need current context), Work Tracker audit before Meeting Intelligence audit (delegation patterns inform meeting efficiency analysis).
 
 ### Critical Patterns
 
@@ -18,8 +18,8 @@ The three supporting agents — Memory Keeper, Meeting Intelligence, and Work Tr
 
 ### Common Mistakes
 
-- Assuming the agents capture everything: they only detect what appears in conversations and MCP-integrated channels — context in unconnected email threads or physical meetings must still be manually added.
-- Overdue follow-up messages that sound like reprimands: the Work Tracker's tone is always "any blockers I can help with?" — reprimand language damages relationships without improving outcomes.
+- Assuming the agents capture everything: they only detect what appears in conversations and MCP-integrated channels, context in unconnected email threads or physical meetings must still be manually added.
+- Overdue follow-up messages that sound like reprimands: the Work Tracker's tone is always "any blockers I can help with?", reprimand language damages relationships without improving outcomes.
 
 ### Connections
 

@@ -17,7 +17,7 @@ cards:
   difficulty: intermediate
 - id: ch36-12-stakeholder-communication-002
   front: What is the executive stakeholder update word limit, and why?
-  back: Under 200-300 words. Executives want the most important thing and any actions required from them — not a comprehensive status. If they want more detail, they will ask. Compression forces you to decide what actually matters.
+  back: Under 200-300 words. Executives want the most important thing and any actions required from them, not a comprehensive status. If they want more detail, they will ask. Compression forces you to decide what actually matters.
   tags:
   - executive-stakeholder
   - stakeholder-update
@@ -25,7 +25,7 @@ cards:
   difficulty: basic
 - id: ch36-12-stakeholder-communication-003
   front: When should you move a product status from Green to Yellow?
-  back: At the FIRST sign of risk — before you are certain something will go wrong. Yellow means mitigation is underway but outcome is uncertain. Waiting until Yellow becomes Red removes leadership's ability to help early.
+  back: At the FIRST sign of risk, before you are certain something will go wrong. Yellow means mitigation is underway but outcome is uncertain. Waiting until Yellow becomes Red removes leadership's ability to help early.
   tags:
   - product-status
   - move
@@ -49,14 +49,14 @@ cards:
   difficulty: basic
 - id: ch36-12-stakeholder-communication-006
   front: What does ADR stand for, and when should you write one?
-  back: Architecture Decision Record. Write one when making a significant product or technical decision — especially ones that constrain future options, that people disagreed about, or that someone will question later. Keep them short (one page). Document context, decision, consequences, and alternatives considered.
+  back: Architecture Decision Record. Write one when making a significant product or technical decision, especially ones that constrain future options, that people disagreed about, or that someone will question later. Keep them short (one page). Document context, decision, consequences, and alternatives considered.
   tags:
   - adr-stand
   - write
   difficulty: intermediate
 - id: ch36-12-stakeholder-communication-007
   front: What is the NEVER DO rule for stakeholder updates from the /stakeholder-update skill?
-  back: Never send the same version to different audiences — every audience gets a version calibrated to them. The executive version would alarm engineers with its compression; the engineering version would lose executives in technical detail.
+  back: Never send the same version to different audiences. Every audience gets a version calibrated to them. The executive version would alarm engineers with its compression; the engineering version would lose executives in technical detail.
   tags:
   - stakeholder-updates
   - /stakeholder-update-skill
@@ -64,7 +64,7 @@ cards:
   difficulty: intermediate
 - id: ch36-12-stakeholder-communication-008
   front: What is the difference between a 'watch item' and a 'blocker' in stakeholder language?
-  back: A watch item is a risk that is being monitored but has not yet affected the sprint — no action needed from leadership. A blocker is an active impediment preventing work — action is needed to resolve it, either from the PM or from leadership.
+  back: A watch item is a risk that is being monitored but has not yet affected the sprint; no action needed from leadership. A blocker is an active impediment preventing work; action is needed to resolve it, either from the PM or from leadership.
   tags:
   - watch-item
   - stakeholder-language
@@ -80,7 +80,7 @@ cards:
   difficulty: intermediate
 - id: ch36-12-stakeholder-communication-010
   front: What is the 'Red is a request for help' rule?
-  back: Use Red status when you have genuinely exhausted your own options and need external intervention — a resource addition, timeline extension, or scope cut that requires leadership decision. Do not use Red for drama. Do not wait so long that Red comes as a surprise.
+  back: Use Red status when you have genuinely exhausted your own options and need external intervention, such as a resource addition, timeline extension, or scope cut that requires leadership decision. Do not use Red for drama. Do not wait so long that Red comes as a surprise.
   tags:
   - request
   - rule

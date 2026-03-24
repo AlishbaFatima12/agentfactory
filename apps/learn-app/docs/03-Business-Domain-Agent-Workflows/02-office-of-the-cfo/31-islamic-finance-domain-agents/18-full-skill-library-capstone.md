@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/full-skill-library-capstone
 sidebar_position: 18
-title: "Full Islamic Finance Agent — SKILL.md Library Build"
-description: "Deploy the complete 25-file Islamic finance SKILL.md library — 12 product skills and 13 jurisdiction overlays — with the global routing skill, scheduled tasks, a multi-jurisdiction test suite, and the agent capability statement that draws the line between agent execution and SSB judgment"
+title: "Full Islamic Finance Agent: SKILL.md Library Build"
+description: "Deploy the complete 25-file Islamic finance SKILL.md library (12 product skills and 13 jurisdiction overlays) with the global routing skill, scheduled tasks, a multi-jurisdiction test suite, and the agent capability statement that draws the line between agent execution and SSB judgment"
 keywords:
   [
     "Islamic finance SKILL.md",
@@ -38,7 +38,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can apply Method A (interview-based knowledge extraction) to produce a product SKILL.md from their own professional knowledge, and Method B (document analysis) to produce a jurisdiction overlay SKILL.md from a regulatory source document — then verify both against the routing logic"
+    measurable_at_this_level: "Student can apply Method A (interview-based knowledge extraction) to produce a product SKILL.md from their own professional knowledge, and Method B (document analysis) to produce a jurisdiction overlay SKILL.md from a regulatory source document: then verify both against the routing logic"
 
   - name: "Design Multi-Jurisdiction Test Suite"
     proficiency_level: "C1"
@@ -51,17 +51,17 @@ learning_objectives:
   - objective: "Audit and deploy a complete 25-file SKILL.md library with the global routing skill, verifying structural completeness and routing correctness"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes Exercise 15 Steps 1-2 — auditing the full library, building/verifying the routing skill, and confirming the four-question routing protocol"
+    assessment_method: "Student completes Exercise 15 Steps 1-2: auditing the full library, building/verifying the routing skill, and confirming the four-question routing protocol"
 
   - objective: "Apply Knowledge Extraction Methods A (interview) and B (document analysis) to produce and verify SKILL.md files for Islamic finance products and jurisdictions"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes Exercise 15 Steps 3-4 — producing a murabaha product skill via Method A and jurisdiction overlays via Method B, then validating against the routing logic"
+    assessment_method: "Student completes Exercise 15 Steps 3-4: producing a murabaha product skill via Method A and jurisdiction overlays via Method B, then validating against the routing logic"
 
   - objective: "Design and execute a multi-jurisdiction test suite that validates the complete routing and overlay system across all 13 jurisdictions"
     proficiency_level: "C1"
     bloom_level: "Evaluate"
-    assessment_method: "Student completes Exercise 15 Step 6 — running 13 test queries and verifying correct framework, labels, and disclosures in each output"
+    assessment_method: "Student completes Exercise 15 Step 6: running 13 test queries and verifying correct framework, labels, and disclosures in each output"
 
 cognitive_load:
   new_concepts: 7
@@ -73,10 +73,10 @@ cognitive_load:
     - "Scheduled task deployment (daily, monthly, quarterly, annual Islamic finance cycles)"
     - "Multi-jurisdiction test suite design (13 queries validating routing logic)"
     - "Agent capability statement (defining the execution-vs-judgment boundary)"
-  assessment: "7 concepts at B2-C1 level — this is the agent-building capstone and intentionally integrates all prior learning. Students arrive having completed 14 product and jurisdiction exercises plus the consolidation and fintech lessons. The cognitive load is manageable because each concept builds on a specific prior lesson rather than introducing entirely new material."
+  assessment: "7 concepts at B2-C1 level: this is the agent-building capstone and intentionally integrates all prior learning. Students arrive having completed 14 product and jurisdiction exercises plus the consolidation and fintech lessons. The cognitive load is manageable because each concept builds on a specific prior lesson rather than introducing entirely new material."
 
 differentiation:
-  extension_for_advanced: "Add a 14th jurisdiction overlay — Jordan, Iran, or Sudan — to the library. Research the regulatory framework, determine the AAOIFI/IFRS/local standard regime, and produce the overlay SKILL.md using Method B. Add a 14th test query to the test suite and verify routing."
+  extension_for_advanced: "Add a 14th jurisdiction overlay (Jordan, Iran, or Sudan) to the library. Research the regulatory framework, determine the AAOIFI/IFRS/local standard regime, and produce the overlay SKILL.md using Method B. Add a 14th test query to the test suite and verify routing."
   remedial_for_struggling: "Focus on Steps 1-2 (audit and routing) and Step 6 (test suite). If you can confirm the library structure, explain the routing logic, and run three test queries (one AAOIFI, one IFRS, one MFRS jurisdiction) that produce correct output, you have demonstrated the core capability."
 
 teaching_guide:
@@ -84,17 +84,17 @@ teaching_guide:
   session_group: 5
   session_title: "Agent-Building Capstone"
   key_points:
-    - "This capstone integrates every lesson in the chapter — the products, jurisdictions, consolidation patterns, and fintech reasoning all feed into the deployed library"
+    - "This capstone integrates every lesson in the chapter: the products, jurisdictions, consolidation patterns, and fintech reasoning all feed into the deployed library"
     - "The five chapter insights in the closing section are the conceptual takeaways that should persist after the technical details fade"
-    - "The agent capability statement in Step 7 is the single most important deliverable — it defines what the agent does and what it does not do, and that boundary is the professional's value proposition"
-    - "The test suite validates the system — without it, deployment is speculative"
+    - "The agent capability statement in Step 7 is the single most important deliverable: it defines what the agent does and what it does not do, and that boundary is the professional's value proposition"
+    - "The test suite validates the system: without it, deployment is speculative"
   misconceptions:
-    - "Students may treat the capstone as a mechanical file-copying exercise — the audit in Step 1 requires evaluating structural completeness, not just confirming file existence"
-    - "Students may skip the test suite (Step 6) — this is the validation that distinguishes a deployed system from a collection of files"
-    - "Students may write the capability statement (Step 7) as marketing copy rather than a precise boundary definition — the final paragraph about SSB judgment must be technically accurate"
+    - "Students may treat the capstone as a mechanical file-copying exercise: the audit in Step 1 requires evaluating structural completeness, not just confirming file existence"
+    - "Students may skip the test suite (Step 6): this is the validation that distinguishes a deployed system from a collection of files"
+    - "Students may write the capability statement (Step 7) as marketing copy rather than a precise boundary definition: the final paragraph about SSB judgment must be technically accurate"
 ---
 
-# Full Islamic Finance Agent — SKILL.md Library Build
+# Full Islamic Finance Agent: SKILL.md Library Build
 
 In Lesson 17, you applied established accounting frameworks to fintech structures that the standards did not anticipate. Now you step back and look at the complete system. Over the preceding seventeen lessons, you have worked through every major Islamic finance product, explored jurisdiction-specific variations across thirteen countries, navigated cross-border consolidation, and reasoned through emerging fintech structures. This final lesson deploys the complete infrastructure.
 
@@ -133,12 +133,12 @@ The routing logic follows a strict protocol: (1) identify jurisdiction, (2) iden
 
 :::info Capstone Requirements
 
-**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Plugin:** Islamic Finance Domain Agents (install once: see Lesson 3)
 :::
 
 ## Exercise 15: Full SKILL.md Library Build (90 min)
 
-### Step 1 — Review the Installed Plugin's Skills Library
+### Step 1: Review the Installed Plugin's Skills Library
 
 Open Cowork's **Skills panel** and review the installed Islamic finance plugin's skill library. For each of the 25 skills (12 products + 13 jurisdictions), verify:
 
@@ -160,7 +160,7 @@ For each skill, confirm:
 Report any gaps or incomplete skills.
 ```
 
-### Step 2 — Create the Global Routing Skill
+### Step 2: Create the Global Routing Skill
 
 The routing skill is the control layer that ensures the correct product and jurisdiction skills are loaded. Create it using **Write skill instructions** in Cowork's Skills panel:
 
@@ -177,7 +177,7 @@ Click **Create**.
 
 Verify the routing logic handles edge cases: what happens when a query mentions two jurisdictions (consolidation)? When a product is not in the library (new fintech structure)? When the jurisdiction uses a local standard not in the library (Iran, Bangladesh)?
 
-### Step 3 — Find a Gap in the Installed Library
+### Step 3: Find a Gap in the Installed Library
 
 The installed plugin covers 13 jurisdictions. Your task: identify a jurisdiction that is NOT in the library but has an active Islamic finance market.
 
@@ -188,29 +188,29 @@ Choose one of: Jordan, Iran, Sudan, Bangladesh, Brunei, Morocco, or another coun
 3. **What specific labelling requirements exist?**
 4. **What would the router need to know to route queries for this jurisdiction?**
 
-If you choose a jurisdiction from the AAOIFI mandatory group (Sudan, Jordan), compare its requirements against the existing Bahrain overlay — what is shared and what is jurisdiction-specific?
+If you choose a jurisdiction from the AAOIFI mandatory group (Sudan, Jordan), compare its requirements against the existing Bahrain overlay: what is shared and what is jurisdiction-specific?
 
-### Step 4 — Build the Extension: New Jurisdiction Overlay
+### Step 4: Build the Extension: New Jurisdiction Overlay
 
 Build a new jurisdiction overlay skill for the jurisdiction you identified in Step 3. Use one of two approaches:
 
-**Option A — Create with Claude:** Open Cowork's Skills panel, select **Create with Claude**, and tell Cowork: "Help me build a jurisdiction overlay skill for [JURISDICTION]. Here are the key regulatory requirements: [PASTE KEY REQUIREMENTS from the regulator's website or published framework]. The skill should cover: primary accounting framework, AAOIFI role, accounting treatment differences from default IFRS, required Shariah disclosures, regulatory-specific requirements, NEVER rules, and SSB escalation triggers." Review Claude's draft, refine, and save.
+**Option A: Create with Claude:** Open Cowork's Skills panel, select **Create with Claude**, and tell Cowork: "Help me build a jurisdiction overlay skill for [JURISDICTION]. Here are the key regulatory requirements: [PASTE KEY REQUIREMENTS from the regulator's website or published framework]. The skill should cover: primary accounting framework, AAOIFI role, accounting treatment differences from default IFRS, required Shariah disclosures, regulatory-specific requirements, NEVER rules, and SSB escalation triggers." Review Claude's draft, refine, and save.
 
-**Option B — Upload a skill:** If the companion repository includes a reference overlay for your chosen jurisdiction, use **Upload a skill** in the Skills panel to import it, then customise the instructions for any jurisdiction-specific requirements you identified in Step 3.
+**Option B: Upload a skill:** If the companion repository includes a reference overlay for your chosen jurisdiction, use **Upload a skill** in the Skills panel to import it, then customise the instructions for any jurisdiction-specific requirements you identified in Step 3.
 
-Compare the resulting skill's structure against the existing Bahrain or Malaysia overlay from the installed plugin — does it follow the same format? Does it contain the same section headings?
+Compare the resulting skill's structure against the existing Bahrain or Malaysia overlay from the installed plugin: does it follow the same format? Does it contain the same section headings?
 
-### Step 5 — Test Your Extension
+### Step 5: Test Your Extension
 
 Test your new jurisdiction overlay by running 3 queries against it:
 
-1. **Murabaha query** — Does the routing logic correctly identify your new jurisdiction and apply the right labels?
-2. **Sukuk investor query** — Does the classification match your jurisdiction's adopted framework?
-3. **Zakat query** — Does the zakat treatment follow the local regulatory approach?
+1. **Murabaha query**: Does the routing logic correctly identify your new jurisdiction and apply the right labels?
+2. **Sukuk investor query**: Does the classification match your jurisdiction's adopted framework?
+3. **Zakat query**: Does the zakat treatment follow the local regulatory approach?
 
-If any query produces incorrect output, identify whether the gap is in the product skill (unlikely — these are universal) or in your jurisdiction overlay (the labels, disclosure references, or regulatory requirements you specified). Fix the overlay and re-test.
+If any query produces incorrect output, identify whether the gap is in the product skill (unlikely: these are universal) or in your jurisdiction overlay (the labels, disclosure references, or regulatory requirements you specified). Fix the overlay and re-test.
 
-Also verify the scheduled task architecture would work for your jurisdiction. Configure these operational tasks using Cowork's `/schedule` feature. Each task runs automatically at the specified frequency — the router loads the correct skills and jurisdiction overlays.
+Also verify the scheduled task architecture would work for your jurisdiction. Configure these operational tasks using Cowork's `/schedule` feature. Each task runs automatically at the specified frequency: the router loads the correct skills and jurisdiction overlays.
 
 | Frequency     | Task                        | What It Does                                                                              |
 | ------------- | --------------------------- | ----------------------------------------------------------------------------------------- |
@@ -219,10 +219,10 @@ Also verify the scheduled task architecture would work for your jurisdiction. Co
 | **Daily**     | Sukuk income accrual        | Accrues daily income on sukuk investment portfolio                                        |
 | **Monthly**   | Profit pool distribution    | Calculates IAH profit-sharing pool and distributes to mudaraba account holders            |
 | **Monthly**   | Zakat monitoring            | Tracks minimum balance positions against zakat nisab thresholds                           |
-| **Monthly**   | Shariah income check        | Calculates non-Shariah-compliant income as percentage of total — flags if above threshold |
+| **Monthly**   | Shariah income check        | Calculates non-Shariah-compliant income as percentage of total: flags if above threshold |
 | **Quarterly** | Shariah portfolio screen    | Re-screens investment portfolio against adopted Shariah methodology                       |
 | **Quarterly** | SSB quarterly report        | Produces quarterly Shariah compliance report for SSB review                               |
-| **Annual**    | AAOIFI-IFRS reconciliation  | For groups with both AAOIFI and IFRS entities — produces full reconciliation              |
+| **Annual**    | AAOIFI-IFRS reconciliation  | For groups with both AAOIFI and IFRS entities: produces full reconciliation              |
 
 To configure the daily murabaha profit recognition task in Cowork:
 
@@ -323,9 +323,9 @@ Escalation: If ZATCA zakat base differs > 5% from prior year,
   chair before computation.
 ```
 
-### Step 6 — Multi-Jurisdiction Test Suite
+### Step 6: Multi-Jurisdiction Test Suite
 
-Run 13 test queries — one per jurisdiction — confirming the routing logic correctly loads the right overlay for each. Each query should be a simple murabaha income recognition question, and you verify three things in the output:
+Run 13 test queries (one per jurisdiction) confirming the routing logic correctly loads the right overlay for each. Each query should be a simple murabaha income recognition question, and you verify three things in the output:
 
 | #   | Test Query Jurisdiction | Verify Framework    | Verify Income Label                         | Verify Key Disclosure           |
 | --- | ----------------------- | ------------------- | ------------------------------------------- | ------------------------------- |
@@ -345,7 +345,7 @@ Run 13 test queries — one per jurisdiction — confirming the routing logic co
 
 A test failure in any jurisdiction means the routing logic or the overlay file has a gap that must be fixed before deployment.
 
-### Step 7 — Document the Agent Capability Statement
+### Step 7: Document the Agent Capability Statement
 
 Produce a one-page capability statement suitable for client engagements. The statement should cover:
 
@@ -356,7 +356,7 @@ Produce a one-page capability statement suitable for client engagements. The sta
 
 The final paragraph must define the boundary:
 
-> _"This agent automates the mechanical accounting, schedule generation, disclosure drafting, and regulatory reporting workflows across 13 Islamic finance jurisdictions. It does not make Shariah compliance judgments. The question of whether a specific transaction structure is Shariah-permissible, whether a borderline equity screening case passes or fails the fund's adopted methodology, or whether a new product innovation complies with the relevant fatwa — these are judgments for qualified Shariah scholars on the institution's Shariah Supervisory Board. The agent's role is to execute, flag, escalate, and document. The SSB's role is to judge."_
+> _"This agent automates the mechanical accounting, schedule generation, disclosure drafting, and regulatory reporting workflows across 13 Islamic finance jurisdictions. It does not make Shariah compliance judgments. The question of whether a specific transaction structure is Shariah-permissible, whether a borderline equity screening case passes or fails the fund's adopted methodology, or whether a new product innovation complies with the relevant fatwa: these are judgments for qualified Shariah scholars on the institution's Shariah Supervisory Board. The agent's role is to execute, flag, escalate, and document. The SSB's role is to judge."_
 
 ---
 
@@ -370,25 +370,25 @@ These five structural insights from this chapter deserve to be carried forward i
 
 **Three: Sukuk accounting has one unresolved structural risk.** Draft AAOIFI Standard 62's proposed shift from asset-based to asset-backed sukuk would, if adopted, require restructuring of a significant portion of the global sukuk market. Any practitioner advising on sukuk in 2025-2027 must assess the Standard 62 risk as a material contingent event.
 
-**Four: Islamic fintech is creating accounting questions the standards have not answered.** Digital murabaha, P2P Islamic lending, impact sukuk through mobile apps — these structures are scaling faster than the standard-setters can respond. The CA/CPA who develops well-reasoned technical positions now will be the sought-after adviser as the sector grows.
+**Four: Islamic fintech is creating accounting questions the standards have not answered.** Digital murabaha, P2P Islamic lending, impact sukuk through mobile apps: these structures are scaling faster than the standard-setters can respond. The CA/CPA who develops well-reasoned technical positions now will be the sought-after adviser as the sector grows.
 
 **Five: The agent executes; the SSB judges.** No SKILL.md file and no AI agent can determine whether a specific transaction structure is Shariah-permissible. Shariah compliance is a scholarly function, not an accounting function. The value of the AI-augmented Islamic finance practice is that it automates execution, freeing the professional's time for the judgment work that only qualified practitioners can perform.
 
 ---
 
-## Chapter Contract — Revisited
+## Chapter Contract: Revisited
 
 Return to the five questions from the Chapter 31 README. You should now be able to answer each from direct experience:
 
-1. **What are the three accounting regimes?** You worked through all three — AAOIFI primary (L04-L06, L14), IFRS with Islamic guidance (L08-L11), and applied them comparatively in every exercise.
+1. **What are the three accounting regimes?** You worked through all three: AAOIFI primary (L04-L06, L14), IFRS with Islamic guidance (L08-L11), and applied them comparatively in every exercise.
 
-2. **How does the router-to-product-to-overlay architecture work?** You built and tested it in this lesson — the global router dispatches to the correct product and jurisdiction files before any output is generated.
+2. **How does the router-to-product-to-overlay architecture work?** You built and tested it in this lesson: the global router dispatches to the correct product and jurisdiction files before any output is generated.
 
 3. **Why do AAOIFI and IFRS produce different balance sheet presentations?** You produced both side-by-side in L14 and reconciled them in L15's consolidation exercise.
 
-4. **How would you build a jurisdiction overlay for a new country?** You applied Method A and Method B in Steps 3-4 of this exercise — interview-based and document-based knowledge extraction.
+4. **How would you build a jurisdiction overlay for a new country?** You applied Method A and Method B in Steps 3-4 of this exercise: interview-based and document-based knowledge extraction.
 
-5. **Where is the boundary between agent execution and SSB judgment?** You defined it in the capability statement — the agent handles accounting mechanics, the SSB handles Shariah permissibility.
+5. **Where is the boundary between agent execution and SSB judgment?** You defined it in the capability statement: the agent handles accounting mechanics, the SSB handles Shariah permissibility.
 
 ---
 
@@ -415,7 +415,7 @@ Research the jurisdiction and produce:
    does not exist in any of the 13 existing overlays
 ```
 
-**What you are learning:** The library is designed to be extensible. Adding a jurisdiction is not a custom development project — it is Method B document analysis applied to a new regulatory source, followed by a test query to validate. This is the pattern for extending any domain agent library to new contexts.
+**What you are learning:** The library is designed to be extensible. Adding a jurisdiction is not a custom development project: it is Method B document analysis applied to a new regulatory source, followed by a test query to validate. This is the pattern for extending any domain agent library to new contexts.
 
 ### Prompt 2: Adapt
 

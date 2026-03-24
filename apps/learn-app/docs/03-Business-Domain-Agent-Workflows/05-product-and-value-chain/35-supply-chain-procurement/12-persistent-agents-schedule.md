@@ -54,7 +54,7 @@ learning_objectives:
   - objective: "Configure and deploy all five agents with monitoring parameters appropriate to a defined vendor portfolio"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes Exercise 7, producing a working agent configuration with named vendors, thresholds, and scheduling cadences — not a theoretical design"
+    assessment_method: "Student completes Exercise 7, producing a working agent configuration with named vendors, thresholds, and scheduling cadences: not a theoretical design"
 
   - objective: "Use /schedule to set recurring agent runs and /supply-chain-brief to generate the first weekly executive brief"
     proficiency_level: "B1"
@@ -64,31 +64,31 @@ learning_objectives:
 cognitive_load:
   new_concepts: 6
   concepts_list:
-    - "Vendor Health Monitor — continuous vendor surveillance with hot alerts and weekly digest"
-    - "Invoice Reconciliation Agent — AP inbox automation with four-stage workflow"
-    - "Procurement Calendar Agent — contract and certification deadline tracking with lead-time alerts"
-    - "Logistics Intelligence Agent — carrier SLA and disruption monitoring"
-    - "Spend Intelligence Agent — monthly category analytics and commodity price triggers"
-    - "/schedule command — configure recurring agent runs with cadence, scope, and output format"
-  assessment: "6 concepts at B2 level — the cognitive load is managed by the fact that students have already used the underlying manual skills (vendor assessment in L03-L04, invoice reconciliation in L05-L06, logistics in L08, spend analysis in L10). The agents automate these known workflows. The new conceptual work is the scheduling layer and the orchestration design."
+    - "Vendor Health Monitor: continuous vendor surveillance with hot alerts and weekly digest"
+    - "Invoice Reconciliation Agent; AP inbox automation with four-stage workflow"
+    - "Procurement Calendar Agent: contract and certification deadline tracking with lead-time alerts"
+    - "Logistics Intelligence Agent: carrier SLA and disruption monitoring"
+    - "Spend Intelligence Agent: monthly category analytics and commodity price triggers"
+    - "/schedule command: configure recurring agent runs with cadence, scope, and output format"
+  assessment: "6 concepts at B2 level: the cognitive load is managed by the fact that students have already used the underlying manual skills (vendor assessment in L03-L04, invoice reconciliation in L05-L06, logistics in L08, spend analysis in L10). The agents automate these known workflows. The new conceptual work is the scheduling layer and the orchestration design."
 
 differentiation:
-  extension_for_advanced: "Design the agent interaction protocol: when the Vendor Health Monitor raises a financial distress hot alert on a Strategic vendor, which other agents should be automatically triggered, and what should their outputs include? Define the cascading response logic — from hot alert through to executive brief — as a documented workflow that could be reproduced by a new CPO."
-  remedial_for_struggling: "Focus on matching each agent to one manual task you have already completed in this chapter. The Vendor Health Monitor automates what you did manually in Lesson 4 (assessment and monitoring). The Invoice Reconciliation Agent automates what you did in Lesson 6. Start there — understand the agent as an automation of a known workflow before focusing on the configuration details."
+  extension_for_advanced: "Design the agent interaction protocol: when the Vendor Health Monitor raises a financial distress hot alert on a Strategic vendor, which other agents should be automatically triggered, and what should their outputs include? Define the cascading response logic: from hot alert through to executive brief: as a documented workflow that could be reproduced by a new CPO."
+  remedial_for_struggling: "Focus on matching each agent to one manual task you have already completed in this chapter. The Vendor Health Monitor automates what you did manually in Lesson 4 (assessment and monitoring). The Invoice Reconciliation Agent automates what you did in Lesson 6. Start there: understand the agent as an automation of a known workflow before focusing on the configuration details."
 
 teaching_guide:
   key_points:
-    - "Agents are real Cowork deployments — not diagrams, not hypothetical architectures"
+    - "Agents are real Cowork deployments: not diagrams, not hypothetical architectures"
     - "The Procurement Calendar Agent is the most underestimated: missing a notice deadline costs more than a year of agent runtime"
-    - "/schedule is what transforms a one-time skill into a running system — it is the difference between a tool and an employee"
-    - "Hot alerts and weekly digests are not the same thing — calibrating the difference prevents CPO alert fatigue"
+    - "/schedule is what transforms a one-time skill into a running system: it is the difference between a tool and an employee"
+    - "Hot alerts and weekly digests are not the same thing: calibrating the difference prevents CPO alert fatigue"
     - "The supply chain intelligence system produces its value through consistency: running every week regardless of whether the human remembers to ask"
   misconceptions:
-    - "Agents replace human judgment. Correction: agents surface information that requires human judgment. The Vendor Health Monitor does not decide how to respond to a financial distress signal — it ensures the CPO has the information within two hours, not two weeks."
+    - "Agents replace human judgment. Correction: agents surface information that requires human judgment. The Vendor Health Monitor does not decide how to respond to a financial distress signal: it ensures the CPO has the information within two hours, not two weeks."
     - "More alerts are better. Correction: alert fatigue causes the most important signals to be ignored. The escalation design (hot alert threshold vs. weekly digest) is as important as the agent itself. An agent that sends 40 alerts a week will be muted."
     - "The agents work independently. Correction: the five agents are designed as a system. The Invoice Reconciliation Agent's exception pattern report feeds the Vendor Health Monitor's assessment of operational reliability. The Logistics Intelligence Agent's expedited freight spike may signal a supply disruption that the Vendor Health Monitor should be alerted to."
   discussion_prompts:
-    - "If you could only deploy one of the five agents first — because of a resource constraint or a specific business pain — which would you choose and why? What does your answer reveal about the biggest current gap in your procurement operating system?"
+    - "If you could only deploy one of the five agents first: because of a resource constraint or a specific business pain: which would you choose and why? What does your answer reveal about the biggest current gap in your procurement operating system?"
     - "The Procurement Calendar Agent's value is entirely in preventing a single class of failure: missed deadlines. How would you convince a CPO who has manually managed contract dates for 20 years without catastrophe that this agent is worth deploying?"
   teaching_tips:
     - "Make the exercise real: the students should name actual vendors (or realistic ones for their industry) in the configuration. A generic placeholder configuration teaches nothing; a specific vendor with a specific threshold teaches judgment."
@@ -97,13 +97,13 @@ teaching_guide:
 
 # Persistent Agents & Schedule
 
-In the past nine lessons, every workflow you have run required you to start it. You decided when to classify a vendor. You decided when to check the invoice backlog. You decided when to review carrier performance. The insights you produced were accurate and valuable — but they existed only when you had time to ask for them.
+In the past nine lessons, every workflow you have run required you to start it. You decided when to classify a vendor. You decided when to check the invoice backlog. You decided when to review carrier performance. The insights you produced were accurate and valuable: but they existed only when you had time to ask for them.
 
-Your procurement portfolio does not stop moving between your review cycles. Your highest-risk vendor's financial position changes on a Tuesday afternoon while you are in a budget meeting. Your largest carrier's OTD has been declining for three weeks — a trend that is obvious in retrospect but invisible without a weekly data pull. A contract notice deadline will pass on Thursday, extending a relationship you intended to exit by another 12 months.
+Your procurement portfolio does not stop moving between your review cycles. Your highest-risk vendor's financial position changes on a Tuesday afternoon while you are in a budget meeting. Your largest carrier's OTD has been declining for three weeks: a trend that is obvious in retrospect but invisible without a weekly data pull. A contract notice deadline will pass on Thursday, extending a relationship you intended to exit by another 12 months.
 
-The five persistent agents in the supply chain plugin exist to solve this problem. They run continuously — not when you remember to ask, but on a schedule, triggered by thresholds, producing outputs in the format your CPO actually wants to read. This lesson deploys all five as an integrated supply chain intelligence system.
+The five persistent agents in the supply chain plugin exist to solve this problem. They run continuously: not when you remember to ask, but on a schedule, triggered by thresholds, producing outputs in the format your CPO actually wants to read. This lesson deploys all five as an integrated supply chain intelligence system.
 
-## What the Agents Are — and What They Are Not
+## What the Agents Are: and What They Are Not
 
 These agents are real, deployable components in Cowork. You configure them once with your vendor portfolio, thresholds, and scheduling preferences, and they run. Each agent automates a monitoring workflow you have already performed manually in an earlier lesson. The shift is from a skill you invoke when you remember to a system that runs whether or not you remember.
 
@@ -116,7 +116,7 @@ These agents are real, deployable components in Cowork. You configure them once 
 | Spend Intelligence Agent     | Category spend analytics, commodity price triggers | L10 spend analytics and consolidation        |
 
 :::note Agents surface information; humans make decisions
-None of the five agents makes a final decision. The Vendor Health Monitor does not decide whether to exit a vendor in financial distress — it ensures the CPO has a brief with scenario analysis within two hours of the news breaking. The Invoice Reconciliation Agent does not approve disputed invoices — it routes genuine exceptions to the right human with the supporting data. The agents remove the latency between an event occurring and the right person knowing about it.
+None of the five agents makes a final decision. The Vendor Health Monitor does not decide whether to exit a vendor in financial distress: it ensures the CPO has a brief with scenario analysis within two hours of the news breaking. The Invoice Reconciliation Agent does not approve disputed invoices: it routes genuine exceptions to the right human with the supporting data. The agents remove the latency between an event occurring and the right person knowing about it.
 :::
 
 ## Agent 1: Vendor Health Monitor
@@ -170,15 +170,15 @@ Weekly digests are consolidated into the supply chain brief via `/supply-chain-b
 
 **Four-stage workflow:**
 
-1. **Document Intelligence** — Extract structured data, run Stage 1 validation (arithmetic, vendor master match, duplicate detection, late submission, bank detail change check)
-2. **Three-Way Match** — Match each invoice line against PO and goods receipt; apply tolerance rules from `supply-chain.local.md`
-3. **Exception Routing** — Auto-approve matched invoices within tolerance; route price and quantity exceptions to category manager or CPO; auto-reject duplicates and bank-detail-change invoices
-4. **Audit and Logging** — Log every decision with invoice number, classification, decision, approver, resolution date; draft vendor dispute communication for exceptions
+1. **Document Intelligence**; Extract structured data, run Stage 1 validation (arithmetic, vendor master match, duplicate detection, late submission, bank detail change check)
+2. **Three-Way Match**; Match each invoice line against PO and goods receipt; apply tolerance rules from `supply-chain.local.md`
+3. **Exception Routing**; Auto-approve matched invoices within tolerance; route price and quantity exceptions to category manager or CPO; auto-reject duplicates and bank-detail-change invoices
+4. **Audit and Logging**; Log every decision with invoice number, classification, decision, approver, resolution date; draft vendor dispute communication for exceptions
 
 **Weekly exception report (Friday):** Straight-through rate, exception type breakdown, pattern flags (systematic vendor errors), open items approaching payment terms.
 
 :::caution Bank detail change rule
-Any invoice or email requesting a bank detail change triggers an automatic hold and escalation to the Finance Director — not an auto-reject. This is the highest-risk fraud vector in procurement. The correct response is always to call the vendor on a known, previously established number. Never update payment details based on an emailed instruction alone.
+Any invoice or email requesting a bank detail change triggers an automatic hold and escalation to the Finance Director: not an auto-reject. This is the highest-risk fraud vector in procurement. The correct response is always to call the vendor on a known, previously established number. Never update payment details based on an emailed instruction alone.
 :::
 
 ## Agent 3: Procurement Calendar Agent
@@ -191,15 +191,15 @@ Any invoice or email requesting a bank detail change triggers an automatic hold 
 | ----------------------- | ------------------------------------------- | ----------------------------------- |
 | 120 days                | "Contract strategy review required"         | Category manager                    |
 | 90 days                 | Confirm RFQ launched (if retender decision) | Category manager + CPO              |
-| 60 days                 | **Notice deadline** — confirm notice sent   | Category manager                    |
+| 60 days                 | **Notice deadline**: confirm notice sent   | Category manager                    |
 | 30 days                 | If no decision: CRITICAL alert              | CPO + Finance Director              |
-| Day of expiry           | EMERGENCY alert — bridge arrangement        | CPO + Finance Director + Operations |
+| Day of expiry           | EMERGENCY alert: bridge arrangement        | CPO + Finance Director + Operations |
 
 **Certification tracking (ISO 9001/14001, Modern Slavery, GDPR DPA, sanctions screening):**
 
 - 90 days before expiry: request renewal evidence from vendor
 - 60 days without confirmation: escalated written request
-- 30 days without confirmation: CPO review — can we continue trading?
+- 30 days without confirmation: CPO review: can we continue trading?
 - On expiry: halt new POs requiring this certification
 
 **Monthly calendar output:** CRITICAL deadlines this month, important items in the next 30-60 days, pipeline for 90-120 days, certifications expiring within 90 days, statutory obligations due.
@@ -221,7 +221,7 @@ Any invoice or email requesting a bank detail change triggers an automatic hold 
 - **Expedited freight spike** (above configured threshold % of total) → root cause analysis + identification of which cost centres generated the expedited volume
 
 :::info Expedited freight as a diagnostic
-A spike in expedited freight is almost never a logistics problem. It is a supply chain problem — a vendor delivering late, a demand spike the planning team did not anticipate, or a production schedule change that bypassed normal procurement. The Logistics Intelligence Agent flags the spike; the Vendor Health Monitor or Spend Intelligence Agent will often identify the underlying cause.
+A spike in expedited freight is almost never a logistics problem. It is a supply chain problem: a vendor delivering late, a demand spike the planning team did not anticipate, or a production schedule change that bypassed normal procurement. The Logistics Intelligence Agent flags the spike; the Vendor Health Monitor or Spend Intelligence Agent will often identify the underlying cause.
 :::
 
 ## Agent 5: Spend Intelligence Agent
@@ -246,7 +246,7 @@ A spike in expedited freight is almost never a logistics problem. It is a supply
 
 ## Scheduling Agents with `/schedule`
 
-Each agent runs on a configured cadence. The `/schedule` command sets up recurring runs directly in Cowork — transforming a one-time manual skill invocation into a scheduled system component.
+Each agent runs on a configured cadence. The `/schedule` command sets up recurring runs directly in Cowork: transforming a one-time manual skill invocation into a scheduled system component.
 
 **Scheduling the Vendor Health Monitor for daily news scans:**
 
@@ -294,7 +294,7 @@ The Invoice Reconciliation Agent is typically event-triggered (new invoice arriv
 **Plugin commands:** `/vendor-communicate`, `/supply-chain-brief`, `/schedule`
 **Goal:** A working weekly supply chain intelligence system with agent configurations, dashboard metrics, first executive brief, and escalation criteria
 
-### Step 1 — Define the Dashboard Metrics
+### Step 1; Define the Dashboard Metrics
 
 Review the following metric table. Adjust the thresholds to match your organisation's context (or keep the defaults for the exercise):
 
@@ -313,7 +313,7 @@ Review the following metric table. Adjust the thresholds to match your organisat
 
 For each metric, identify the data source in your organisation and the owner responsible for resolving a red status.
 
-### Step 2 — Configure the Vendor Health Monitor
+### Step 2; Configure the Vendor Health Monitor
 
 Using your vendor classification register from [Exercise 1 (Lesson 3)](./03-vendor-classification-kraljic.md), configure the Vendor Health Monitor:
 
@@ -330,7 +330,7 @@ Using your vendor classification register from [Exercise 1 (Lesson 3)](./03-vend
 
 Note the agent output confirming the vendors loaded and the monitoring parameters active.
 
-### Step 3 — Configure All Five Agents
+### Step 3; Configure All Five Agents
 
 Repeat the configuration process for the remaining four agents:
 
@@ -381,7 +381,7 @@ Repeat the configuration process for the remaining four agents:
           alert-recipients:"CPO, Finance Director"
 ```
 
-### Step 4 — Generate the First Weekly Executive Brief
+### Step 4; Generate the First Weekly Executive Brief
 
 With agents configured, generate the first CPO/COO brief:
 
@@ -403,11 +403,11 @@ Review the output. Does it contain:
 
 If the format does not match what your CPO would want to read, iterate the prompt with specific format adjustments.
 
-### Step 5 — Define the Escalation Criteria
+### Step 5; Define the Escalation Criteria
 
 The final and most important configuration step: what single supply chain event warrants interrupting the CPO on a Sunday evening?
 
-Define three specific trigger conditions. This example is from the spec — adjust to match your organisation's risk tolerance:
+Define three specific trigger conditions. This example is from the spec: adjust to match your organisation's risk tolerance:
 
 ```
 Configure immediate mobile alert for:
@@ -417,12 +417,12 @@ Configure immediate mobile alert for:
 3. Logistics disruption affecting >20% of weekly shipment volume
 ```
 
-Discuss: why 75% rather than 80%? Why >20% of volume rather than any disruption? The numbers reflect the point at which the operational impact is severe enough that the CPO needs to act — not just be informed at the next weekly review.
+Discuss: why 75% rather than 80%? Why >20% of volume rather than any disruption? The numbers reflect the point at which the operational impact is severe enough that the CPO needs to act: not just be informed at the next weekly review.
 
 **Deliverable:** Complete supply chain intelligence dashboard with all five agents configured and scheduled, first weekly executive brief produced and reviewed, escalation alert criteria defined and configured. You now have a procurement operating system that runs continuously.
 
 :::note Keep This Configuration
-The agent configurations you have built here feed directly into the Capstone (Lesson 14). Keep your Cowork session active — the agents will have run at least one cycle before you reach the capstone exercise.
+The agent configurations you have built here feed directly into the Capstone (Lesson 14). Keep your Cowork session active: the agents will have run at least one cycle before you reach the capstone exercise.
 :::
 
 ## Try With AI
@@ -450,7 +450,7 @@ Configure the agent and confirm: what will it monitor daily?
 What will it escalate immediately vs. include in the weekly digest?
 ```
 
-**What you are learning:** The Vendor Health Monitor's value is the distinction between real-time hot alerts (financial distress, OTD crisis) and weekly digest items (trend analysis, minor movements). Configuring that threshold — not just deploying the agent — is the critical decision.
+**What you are learning:** The Vendor Health Monitor's value is the distinction between real-time hot alerts (financial distress, OTD crisis) and weekly digest items (trend analysis, minor movements). Configuring that threshold: not just deploying the agent: is the critical decision.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -492,7 +492,7 @@ Answer: (1) Should this be classified as a HOT ALERT or a WATCH item?
 what do you do next?
 ```
 
-**What you are learning:** The Vendor Health Monitor will surface signals that require human judgment to interpret. A parent company entering administration does not automatically mean the subsidiary is affected — but it creates supply risk that must be assessed before Monday's production run begins. The agent's value is surfacing the signal; yours is knowing what to do with it.
+**What you are learning:** The Vendor Health Monitor will surface signals that require human judgment to interpret. A parent company entering administration does not automatically mean the subsidiary is affected: but it creates supply risk that must be assessed before Monday's production run begins. The agent's value is surfacing the signal; yours is knowing what to do with it.
 :::
 
 ## Flashcards Study Aid

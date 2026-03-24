@@ -17,7 +17,7 @@ slides:
 
 > _"The question is not whether AI will transform the accounting profession. The question is which practitioners will lead the transformation and which will be displaced by it."_
 
-Chapter 29 gave you the Intent-Driven Financial Architecture — the methodology for encoding financial logic into Named Range structures that AI agents can read, reason about, and extend. This chapter applies that foundation, along with everything you have learned about Cowork plugins (Chapter 26), knowledge extraction (Chapter 27), and finance domain agents (Chapter 28), to the profession where the stakes are highest: chartered accountancy and certified public accounting.
+Chapter 29 gave you the Intent-Driven Financial Architecture: the methodology for encoding financial logic into Named Range structures that AI agents can read, reason about, and extend. This chapter applies that foundation, along with everything you have learned about Cowork plugins (Chapter 26), knowledge extraction (Chapter 27), and finance domain agents (Chapter 28), to the profession where the stakes are highest: chartered accountancy and certified public accounting.
 
 The CA/CPA profession sits at the intersection of three forces: regulatory severity (errors carry legal consequences), high volume of routine work (ripe for automation), and an agentic AI transition already underway (major firms are deploying autonomous workflows). This chapter maps all five practice domains against the Gen-AI and Agentic AI spectrum, shows you exactly where automation replaces routine work and where professional judgment becomes more valuable, then builds the domain-specific agents for each.
 
@@ -29,10 +29,10 @@ By the end of this chapter, you will be able to:
 
 - Analyse the five CA/CPA practice domains (Accounting & Financial Reporting, Tax & Advisory, Assurance, Management Accounting, GRC) and rank them by AI transformation impact
 - Distinguish between Gen-AI capabilities (available now) and Agentic AI capabilities (approaching) for each domain, using real-world deployments as evidence
-- Deploy the Cowork plugin ecosystem for CA/CPA practice — both the knowledge-work-plugins/finance suite and the financial-services-plugins suite
+- Deploy the Cowork plugin ecosystem for CA/CPA practice: both the knowledge-work-plugins/finance suite and the financial-services-plugins suite
 - Execute cross-application Cowork workflows for month-end close, board pack automation, and compliance monitoring
 - Build five domain-specific Cowork skills that encode jurisdiction rules, chart of accounts, audit methodology, client knowledge, and compliance calendars
-- Complete 24 practice exercises spanning all five domains — from basic plugin workflows to full practice deployment
+- Complete 24 practice exercises spanning all five domains: from basic plugin workflows to full practice deployment
 - Articulate the boundary between AI execution and professional judgment across every domain
 
 ## Lesson Flow
@@ -63,24 +63,24 @@ By the end of this chapter, you should be able to answer these five questions:
 2. How do the Cowork knowledge-work-plugins/finance and financial-services-plugins differ in scope, and which plugin commands serve which practice domains?
 3. What are the five domain agent extensions (jurisdiction tax, chart of accounts, audit methodology, client entity, compliance calendar) and why can't generic plugins replace them?
 4. How would you apply the Knowledge Extraction Method (Chapter 27) to encode a senior practitioner's judgment about audit materiality or tax advisory into a Cowork skill?
-5. Where is the boundary between AI execution and professional judgment in each of the five domains — what work can an agent do autonomously, and what requires a qualified practitioner's sign-off?
+5. Where is the boundary between AI execution and professional judgment in each of the five domains: what work can an agent do autonomously, and what requires a qualified practitioner's sign-off?
 
 ## Companion Repository
 
 Exercise data, reference skill examples, and workflow recipe templates for this chapter are available in the companion repository: [**panaversity/ca-cpa-practice-agents**](https://github.com/panaversity/ca-cpa-practice-agents)
 
-[**Download ca-cpa-exercise-data.zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) — trial balances, entity profiles, source documents, and working paper templates for Exercises 1-24. Unzip into your working folder. Or clone the repo directly to also get:
+[**Download ca-cpa-exercise-data.zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip): trial balances, entity profiles, source documents, and working paper templates for Exercises 1-24. Unzip into your working folder. Or clone the repo directly to also get:
 
-- `reference-skills/` — Five reference SKILL.md files (Pakistan defaults) to study before building your own skills in Lessons 8-9
-- `workflow-recipes/` — Natural language scheduling templates for month-end close, board pack, compliance monitoring, and other recurring workflows
+- `reference-skills/`: Five reference SKILL.md files (Pakistan defaults) to study before building your own skills in Lessons 8-9
+- `workflow-recipes/`: Natural language scheduling templates for month-end close, board pack, compliance monitoring, and other recurring workflows
 
 ## After Chapter 30
 
 When you finish this chapter, your perspective shifts:
 
 1. **You see the profession differently.** Every CA/CPA practice area maps to a point on the Gen-AI to Agentic AI spectrum. You know where automation replaces routine work and where your professional judgment becomes more valuable.
-2. **You have a working plugin stack.** The Cowork plugins are installed, configured, and tested across all five domains — month-end close, tax computation, audit programme, board pack, and compliance monitoring.
+2. **You have a working plugin stack.** The Cowork plugins are installed, configured, and tested across all five domains: month-end close, tax computation, audit programme, board pack, and compliance monitoring.
 3. **You own domain-specific agents.** The five Cowork skills encode your jurisdiction's rules, your firm's chart of accounts, your audit methodology, your clients' profiles, and your regulatory calendar.
-4. **You can deploy a full AI-augmented practice.** Exercise 24 proves you can build, configure, test, and document a complete AI-augmented CA/CPA practice — from plugin installation to scheduled automation.
+4. **You can deploy a full AI-augmented practice.** Exercise 24 proves you can build, configure, test, and document a complete AI-augmented CA/CPA practice: from plugin installation to scheduled automation.
 
 Start with [Lesson 1: The Most Consequential AI Transformation](./01-the-most-consequential-ai-transformation.md).

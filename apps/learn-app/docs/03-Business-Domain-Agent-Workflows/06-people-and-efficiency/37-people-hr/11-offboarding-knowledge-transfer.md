@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/people-hr/offboarding-knowledge-transfer
 sidebar_position: 11
-title: "Offboarding and Knowledge Transfer — The Four-Phase Process"
-description: "Design an offboarding process that protects the organisation, preserves institutional knowledge, leaves a positive experience, and supports the team — using /offboard and the offboarding-knowledge-agent to automate the workflow"
+title: "Offboarding and Knowledge Transfer: The Four-Phase Process"
+description: "Design an offboarding process that protects the organisation, preserves institutional knowledge, leaves a positive experience, and supports the team: using /offboard and the offboarding-knowledge-agent to automate the workflow"
 keywords:
   [
     "people and hr",
@@ -27,7 +27,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can invoke /offboard and produce a complete offboarding plan covering all four phases — immediate actions, handover, exit interview, and last day — with owners and dates assigned to every item"
+    measurable_at_this_level: "Student can invoke /offboard and produce a complete offboarding plan covering all four phases, immediate actions, handover, exit interview, and last day, with owners and dates assigned to every item"
 
   - name: "Design an Exit Interview for Institutional Learning"
     proficiency_level: "B2"
@@ -62,11 +62,11 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Four offboarding principles — the framework that separates good offboarding from checklist compliance"
-    - "Four-phase offboarding timeline — immediate, handover, exit interview, last day"
-    - "Exit interview design — timing, interviewer, question structure, and why the line manager must not conduct it"
-    - "Offboarding-knowledge-agent — HRIS-triggered automation that coordinates the knowledge capture workflow on resignation"
-  assessment: "4 concepts at B1/B2 level. Lesson 11 builds directly on Lesson 10 (knowledge capture feeds into the offboarding knowledge transfer phase). The new concepts here are the organisational process design elements — the four principles, the phased timeline, and the exit interview design — which are practical and concrete."
+    - "Four offboarding principles: the framework that separates good offboarding from checklist compliance"
+    - "Four-phase offboarding timeline, immediate, handover, exit interview, last day"
+    - "Exit interview design, timing, interviewer, question structure, and why the line manager must not conduct it"
+    - "Offboarding-knowledge-agent, HRIS-triggered automation that coordinates the knowledge capture workflow on resignation"
+  assessment: "4 concepts at B1/B2 level. Lesson 11 builds directly on Lesson 10 (knowledge capture feeds into the offboarding knowledge transfer phase). The new concepts here are the organisational process design elements: the four principles, the phased timeline, and the exit interview design, which are practical and concrete."
 
 differentiation:
   extension_for_advanced: "Conduct an audit of your organisation's current offboarding process against the four principles (protect the organisation, preserve knowledge, positive experience, support the team). Rate each principle 1–5 based on how well your current process delivers it. For any principle rated below 4, identify the specific gap and propose a change to the process or documentation. Produce a one-page 'offboarding process improvement plan' with three prioritised changes."
@@ -75,26 +75,26 @@ differentiation:
 teaching_guide:
   key_points:
     - "Most offboarding does Principle 1 (protect the organisation) incompletely and ignores Principles 2, 3, and 4 entirely"
-    - "The handover plan must be written by the departing employee and completed by Week 2 of the notice period — not the last week"
-    - "Exit interviews conducted by the line manager produce useless data — employees will not be honest with the manager they are leaving about management issues"
-    - "The offboarding-knowledge-agent does not replace the human judgment required for sensitive situations — it automates the coordination workflow"
+    - "The handover plan must be written by the departing employee and completed by Week 2 of the notice period , not the last week"
+    - "Exit interviews conducted by the line manager produce useless data, employees will not be honest with the manager they are leaving about management issues"
+    - "The offboarding-knowledge-agent does not replace the human judgment required for sensitive situations ; it automates the coordination workflow"
   misconceptions:
     - "A last-day checklist is the same as a good offboarding process. Correction: the last-day checklist is only Phase 4. By the last day, the handover plan should be complete, the exit interview done, and the knowledge capture programme underway. If everything important is still happening on the last day, the process has failed."
-    - "Exit interviews should happen in the last week — when the employee has had time to reflect. Correction: Week 3 is the right timing. Week 1 is too early (the employee may not yet know why they are leaving). The last week is too rushed and the employee is mentally disengaged. Week 3 gives honest, considered responses."
-    - "The offboarding-knowledge-agent can handle all knowledge capture autonomously. Correction: the agent coordinates the workflow — scheduling sessions, generating guides, structuring notes. The actual knowledge extraction requires a human interviewer. The agent makes the process happen; humans make the process work."
+    - "Exit interviews should happen in the last week: when the employee has had time to reflect. Correction: Week 3 is the right timing. Week 1 is too early (the employee may not yet know why they are leaving). The last week is too rushed and the employee is mentally disengaged. Week 3 gives honest, considered responses."
+    - "The offboarding-knowledge-agent can handle all knowledge capture autonomously. Correction: the agent coordinates the workflow, scheduling sessions, generating guides, structuring notes. The actual knowledge extraction requires a human interviewer. The agent makes the process happen; humans make the process work."
   discussion_prompts:
     - "Think about the last time a colleague or manager left an organisation. Was there a formal offboarding process? What was preserved? What was lost? What would good have looked like?"
     - "Why might an employee be reluctant to share honest feedback in an exit interview conducted by their manager? What are the specific risks the employee is navigating?"
   teaching_tips:
-    - "The four principles are the most important concept in this lesson — they should come before the process steps. Without the principles, the steps are just a checklist. With the principles, each step has a clear 'why'."
-    - "Walk through the exit interview timing question carefully. Students often assume 'the last week gives time for reflection' — the counter-argument (mental disengagement, rushed, less honest) needs to land before moving on."
+    - "The four principles are the most important concept in this lesson; they should come before the process steps. Without the principles, the steps are just a checklist. With the principles, each step has a clear 'why'."
+    - "Walk through the exit interview timing question carefully. Students often assume 'the last week gives time for reflection': the counter-argument (mental disengagement, rushed, less honest) needs to land before moving on."
 ---
 
-# Offboarding and Knowledge Transfer — The Four-Phase Process
+# Offboarding and Knowledge Transfer: The Four-Phase Process
 
-The same Senior Project Manager from Lesson 10 — David Okafor, Head of Client Services, 12 years at the company, six weeks' notice — now moves from knowledge capture into the full offboarding process. His resignation has been accepted. The handshakes have been done, the announcement drafted, and the senior account manager assigned interim coverage. What happens next determines whether David leaves as an ambassador or a detractor, whether the organisation keeps the client relationships intact, and whether the team can absorb his departure without six months of disruption.
+The same Senior Project Manager from Lesson 10, David Okafor, Head of Client Services, 12 years at the company, six weeks' notice, now moves from knowledge capture into the full offboarding process. His resignation has been accepted. The handshakes have been done, the announcement drafted, and the senior account manager assigned interim coverage. What happens next determines whether David leaves as an ambassador or a detractor, whether the organisation keeps the client relationships intact, and whether the team can absorb his departure without six months of disruption.
 
-Most offboarding processes collapse into a last-day checklist. Laptop returned, accounts revoked, P45 processed. The assumption is that offboarding is an administrative close-down — the work is done when the departing employee's access is removed. This assumption produces a specific and predictable failure: the institutional knowledge is not transferred (it has already evaporated by the time anyone thinks about it), the team is not prepared (nobody told them what is changing and what they are now responsible for), and the departing employee — who could have been a valuable alumni and referral source — feels processed rather than valued.
+Most offboarding processes collapse into a last-day checklist. Laptop returned, accounts revoked, P45 processed. The assumption is that offboarding is an administrative close-down: the work is done when the departing employee's access is removed. This assumption produces a specific and predictable failure: the institutional knowledge is not transferred (it has already evaporated by the time anyone thinks about it), the team is not prepared (nobody told them what is changing and what they are now responsible for), and the departing employee, who could have been a valuable alumni and referral source, feels processed rather than valued.
 
 Good offboarding is built on four principles that determine what the process is actually for.
 
@@ -102,23 +102,23 @@ Good offboarding is built on four principles that determine what the process is 
 
 | Principle                            | What it means                                                                        | What most organisations actually do |
 | ------------------------------------ | ------------------------------------------------------------------------------------ | ----------------------------------- |
-| **Protect the organisation**         | Ensure access is removed, documentation is complete, legal obligations are met       | Done — incompletely                 |
+| **Protect the organisation**         | Ensure access is removed, documentation is complete, legal obligations are met       | Done, incompletely                 |
 | **Preserve institutional knowledge** | Structured handover that transfers what the departing employee knows                 | Ignored or rushed                   |
-| **Positive experience**              | The employee leaves feeling valued — as an alumni, not a detractor                   | Ignored                             |
+| **Positive experience**              | The employee leaves feeling valued, as an alumni, not a detractor                   | Ignored                             |
 | **Support the team**                 | The team understands the transition, has coverage, and is not left managing a vacuum | Ignored                             |
 
-The gap between Principle 1 and Principles 2–4 is where most offboarding fails. Organisations know how to remove access. They rarely know how to preserve knowledge, manage the experience, or support the team — because these things require planning that starts before the last week, not during it.
+The gap between Principle 1 and Principles 2–4 is where most offboarding fails. Organisations know how to remove access. They rarely know how to preserve knowledge, manage the experience, or support the team, because these things require planning that starts before the last week, not during it.
 
 ## The Four-Phase Timeline
 
-**Phase 1: Departure confirmed — Immediate actions (within 24 hours)**
+**Phase 1: Departure confirmed, Immediate actions (within 24 hours)**
 
 HR actions:
 
 - Acknowledge the resignation in writing; confirm the notice period and last day
 - Initiate the HRIS departure record
 - Notify Payroll: final pay date, accrued holiday calculation
-- Trigger the knowledge capture plan (use `/knowledge` — Lesson 10)
+- Trigger the knowledge capture plan (use `/knowledge`, Lesson 10)
 - Schedule exit interview for Week 3 of the notice period (not sooner, not later)
 
 Manager actions:
@@ -127,16 +127,16 @@ Manager actions:
 - Begin the handover planning conversation: what does a successful handover look like?
 - Identify interim coverage or start the successor conversation with HR
 
-IT actions (schedule for the last working day — not before):
+IT actions (schedule for the last working day, not before):
 
 - Prepare access removal schedule: list every system, every account, every credential
 - Arrange device return logistics
 - Plan email forwarding and auto-reply for the agreed post-departure period
 - Identify any shared accounts or credentials that need changing on the last day
 
-**Phase 2: Notice period — Handover planning (complete by Week 2)**
+**Phase 2: Notice period, Handover planning (complete by Week 2)**
 
-The handover plan is the most important single document in the offboarding process. It is owned and written by the departing employee. It is reviewed and validated by the manager. It must be complete before the last week — not during it.
+The handover plan is the most important single document in the offboarding process. It is owned and written by the departing employee. It is reviewed and validated by the manager. It must be complete before the last week, not during it.
 
 The `/offboard` skill generates a structured handover table:
 
@@ -145,8 +145,8 @@ The `/offboard` skill generates a structured handover table:
 | Whitmore Group account           | Active; Q2 delivery in progress      | Teams/ClientFiles/Whitmore  | David Whitmore (CTO), James Hargreaves (VP Eng) | Senior Account Manager            | Week 2      |
 | Foresight Capital account        | Renewal negotiation ongoing          | Teams/ClientFiles/Foresight | Sarah Kim (Procurement)                         | Priya Kapoor (VP Client)          | Week 2      |
 | Delta Education account          | Recovery plan in progress; sensitive | Teams/ClientFiles/Delta     | David's direct notes only                       | Schedule transfer session         | Week 1      |
-| Quarterly account review process | Q2 review due Week 5                 | SharePoint/Processes/QBR    | —                                               | Prepare run-through for senior AM | Week 3      |
-| Client reporting templates       | Updated March 2026                   | SharePoint/Templates        | —                                               | Document for team access          | Week 2      |
+| Quarterly account review process | Q2 review due Week 5                 | SharePoint/Processes/QBR    | -                                               | Prepare run-through for senior AM | Week 3      |
+| Client reporting templates       | Updated March 2026                   | SharePoint/Templates        | -                                               | Document for team access          | Week 2      |
 
 :::caution Do not leave the handover to the last week
 A departing employee in their final week is mentally disengaged, emotionally focused on the transition, and often working longer hours managing the handover conversations they have been delaying. The quality of knowledge transfer in the last week is a fraction of what it is in Weeks 1–3. The handover plan must be started immediately and completed by Week 2.
@@ -157,7 +157,7 @@ The handover plan is not just a status update. It must also include:
 - **Recurring responsibilities:** What happens weekly, monthly, quarterly that the next person needs to take on
 - **Key relationships:** Who to call, what they need, relationship context (this connects to the knowledge capture from Lesson 10)
 - **Open issues:** Anything unresolved that the successor needs to know about
-- **"What I wish I'd known":** The institutional knowledge no document captures — the section where tacit knowledge surfaces most honestly
+- **"What I wish I'd known":** The institutional knowledge no document captures: the section where tacit knowledge surfaces most honestly
 
 **Phase 3: Exit interview (Week 3 of notice period)**
 
@@ -165,14 +165,14 @@ The exit interview is one of the most valuable and most wasted HR instruments. V
 
 Three rules for exit interview design:
 
-**Rule 1: Week 3 is the right timing.** Week 1 is too early — the employee has just made an emotional decision and may not yet know clearly why. The last week is too rushed and the employee is mentally out the door. Week 3 gives considered, honest responses while there is still time to act on operational feedback.
+**Rule 1: Week 3 is the right timing.** Week 1 is too early: the employee has just made an emotional decision and may not yet know clearly why. The last week is too rushed and the employee is mentally out the door. Week 3 gives considered, honest responses while there is still time to act on operational feedback.
 
-**Rule 2: The interviewer must be the HR Business Partner — never the line manager.** An employee will not tell their line manager the real reasons they are leaving if those reasons involve management issues. The HRB P can receive candid feedback that the line manager cannot. Exit interviews conducted by line managers produce polished, safe responses that contain almost no useful signal.
+**Rule 2: The interviewer must be the HR Business Partner; never the line manager.** An employee will not tell their line manager the real reasons they are leaving if those reasons involve management issues. The HRB P can receive candid feedback that the line manager cannot. Exit interviews conducted by line managers produce polished, safe responses that contain almost no useful signal.
 
-**Rule 3: The question structure has three sections — and the last section is the most important.**
+**Rule 3: The question structure has three sections , and the last section is the most important.**
 
 ```
-EXIT INTERVIEW STRUCTURE — 45-60 minutes, confidential
+EXIT INTERVIEW STRUCTURE, 45-60 minutes, confidential
 
 SECTION 1: Understanding the departure
 "What prompted you to start looking / consider leaving?"
@@ -185,38 +185,38 @@ SECTION 2: Experience assessment
 "Do you feel you had the support and development you needed?"
 
 SECTION 3: Organisational learning (THE MOST IMPORTANT SECTION)
-"What should we protect — things we do well that we might lose?"
+"What should we protect, things we do well that we might lose?"
 "What do you think needs to change here?"
 "What advice would you give your successor?"
 "Is there anything you'd want HR or leadership to know
  that you haven't been able to say in your role?"
 ```
 
-Section 3 produces the feedback that benefits the organisation. Section 1 explains the departure. Section 2 captures experience data. Section 3 is where employees say things that are genuinely hard to hear and genuinely valuable — if the environment is safe enough and the interviewer is trusted enough for honesty.
+Section 3 produces the feedback that benefits the organisation. Section 1 explains the departure. Section 2 captures experience data. Section 3 is where employees say things that are genuinely hard to hear and genuinely valuable; if the environment is safe enough and the interviewer is trusted enough for honesty.
 
 **The exit interview output:**
 
 ```
 EXIT INTERVIEW SUMMARY
 Employee: David Okafor | Date: [Week 3] | Interviewer: HR Business Partner
-CONFIDENTIAL — filed in secure personnel records only
+CONFIDENTIAL, filed in secure personnel records only
 
-Departure reason (primary): Career advancement opportunity — role outside
+Departure reason (primary): Career advancement opportunity, role outside
   industry; company could not match progression timeline
 
 Key themes:
   Positive: Client autonomy, quality of team, strong company values
   Development areas identified by employee:
-    — Internal promotion process perceived as opaque; no clear timeline
-    — Limited peer learning in senior commercial roles (no senior peer)
+   , Internal promotion process perceived as opaque; no clear timeline
+   , Limited peer learning in senior commercial roles (no senior peer)
 
 Actionable feedback:
-  1. Senior commercial career pathway lacks documentation — candidates
+  1. Senior commercial career pathway lacks documentation, candidates
      don't know what "Head of Client Services" requires to progress beyond
   2. Cross-functional senior peer group (finance + ops + commercial) would
      address isolation several senior contributors have mentioned
 
-Rehire eligible: YES — unconditional
+Rehire eligible: YES, unconditional
 Filed: Secure HR system / Personnel record / [Date]
 ```
 
@@ -234,7 +234,7 @@ HR:
 
 IT:
 
-- All system access removed — document the time and method for each system
+- All system access removed, document the time and method for each system
 - Device returned and wiped per data security policy
 - Email auto-reply activated; forwarding set up for agreed period
 - All shared accounts / passwords transferred or changed
@@ -242,11 +242,11 @@ IT:
 Manager:
 
 - Handover confirmed complete by both parties
-- Team farewell arranged (employee's preference respected — not all departing employees want a big send-off)
+- Team farewell arranged (employee's preference respected, not all departing employees want a big send-off)
 - Successor briefed or interim coverage confirmed as active
 - Team communication sent acknowledging the departure
 
-## Using `/offboard` — The David Okafor Example
+## Using `/offboard`: The David Okafor Example
 
 ```
 /offboard
@@ -255,18 +255,18 @@ Employee: David Okafor
 Role: Head of Client Services
 Tenure: 12 years
 Notice period: 6 weeks
-Last day: [Date — 6 weeks from resignation]
+Last day: [Date, 6 weeks from resignation]
 Jurisdiction: UK
 Reason: Career advancement (resignation)
-Knowledge risk: HIGH (from /knowledge assessment — Lesson 10)
+Knowledge risk: HIGH (from /knowledge assessment, Lesson 10)
 Handover targets: Senior Account Manager (commercial clients),
-                  Priya Kapoor (VP — strategic oversight)
+                  Priya Kapoor (VP, strategic oversight)
 ```
 
 **Sample output (condensed):**
 
 ```
-TASK:          Offboarding Plan — David Okafor
+TASK:          Offboarding Plan, David Okafor
 DOCUMENT TYPE: Offboarding Plan
 JURISDICTION:  UK
 CONFIGURATION: Loaded: hr.local.md
@@ -276,36 +276,36 @@ OFFBOARDING PLAN: David Okafor
 Role: Head of Client Services | Notice: 6 weeks | Last day: [Date]
 ================================================================
 
-PHASE 1 — IMMEDIATE (within 24 hours of resignation confirmed)
+PHASE 1, IMMEDIATE (within 24 hours of resignation confirmed)
   HR:
-  - Acknowledge resignation in writing; confirm notice end date — HR | Day 1
-  - Notify Payroll: final pay + accrued holiday calculation — HR | Day 1
-  - Trigger /knowledge capture plan (HIGH risk — 3 sessions) — HR | Day 2
-  - Schedule exit interview: Week 3 with HRBP — HR | Day 2
+  - Acknowledge resignation in writing; confirm notice end date, HR | Day 1
+  - Notify Payroll: final pay + accrued holiday calculation, HR | Day 1
+  - Trigger /knowledge capture plan (HIGH risk, 3 sessions), HR | Day 2
+  - Schedule exit interview: Week 3 with HRBP, HR | Day 2
   Manager:
-  - Agree announcement timing with David — Manager | Day 1
-  - Begin handover planning conversation — Manager | Day 2
-  - Identify interim coverage: Senior Account Manager — Manager | Day 3
+  - Agree announcement timing with David, Manager | Day 1
+  - Begin handover planning conversation, Manager | Day 2
+  - Identify interim coverage: Senior Account Manager, Manager | Day 3
   IT:
   - Prepare access removal schedule (all client systems, email,
-    SharePoint, CRM) — IT | Day 3
+    SharePoint, CRM), IT | Day 3
 
-PHASE 2 — HANDOVER (complete by Week 2)
+PHASE 2, HANDOVER (complete by Week 2)
   | Area | Status | Files | Contacts | Handover to | By date |
   |---|---|---|---|---|---|
   | Whitmore Group | Active delivery | Teams/ClientFiles/Whitmore | David Whitmore, James Hargreaves | Senior AM | Week 2 |
   | Foresight Capital | Renewal negotiation | Teams/ClientFiles/Foresight | Sarah Kim | Priya Kapoor | Week 2 |
-  | Delta Education | Recovery — sensitive | Notes with David | Via knowledge session | Knowledge session Week 1 | Week 1 |
-  | QBR process | Q2 due Week 5 | SharePoint/Processes | — | Run-through with Senior AM | Week 3 |
+  | Delta Education | Recovery, sensitive | Notes with David | Via knowledge session | Knowledge session Week 1 | Week 1 |
+  | QBR process | Q2 due Week 5 | SharePoint/Processes | - | Run-through with Senior AM | Week 3 |
 
   Handover must also include: recurring responsibilities, open issues,
   and "what I wish I'd known" section
 
-PHASE 3 — EXIT INTERVIEW
+PHASE 3, EXIT INTERVIEW
   Scheduled: Week 3 with [HRBP Name] | 45-60 minutes | Confidential
   NOT to be conducted by line manager
 
-PHASE 4 — LAST DAY
+PHASE 4, LAST DAY
   HR: Final payslip, P45, HRIS close, benefits cessation, reference policy
   IT: All access removed + documented, device returned, email forwarding set
   Manager: Handover confirmed complete, team farewell, successor briefed
@@ -313,7 +313,7 @@ PHASE 4 — LAST DAY
 ```
 
 :::note Your output will vary
-The exact structure of the handover table, the specific checklist items, and the timeline will depend on the role, jurisdiction, and knowledge risk level. The structure above is the framework — your content fills it in.
+The exact structure of the handover table, the specific checklist items, and the timeline will depend on the role, jurisdiction, and knowledge risk level. The structure above is the framework; your content fills it in.
 :::
 
 ## The Offboarding-Knowledge-Agent
@@ -345,7 +345,7 @@ Step 5: Completion report (last day)
   Output: Knowledge capture completion report to HR and manager
 ```
 
-The agent does not conduct the interviews — humans do that. What the agent does is ensure the process happens: it creates the plan, books the sessions, generates the interview guides, and structures the outputs. Without it, these steps depend on an HR team member remembering to do them during what is always a busy, emotionally charged period. With it, the process runs automatically from the moment the HRIS records the resignation.
+The agent does not conduct the interviews, humans do that. What the agent does is ensure the process happens: it creates the plan, books the sessions, generates the interview guides, and structures the outputs. Without it, these steps depend on an HR team member remembering to do them during what is always a busy, emotionally charged period. With it, the process runs automatically from the moment the HRIS records the resignation.
 
 ## Exercise: Design a Complete Offboarding Process
 
@@ -354,13 +354,13 @@ The agent does not conduct the interviews — humans do that. What the agent doe
 **Plugin command:** `/offboard`
 **Goal:** Design a complete offboarding process for a departing employee, including all four phases, an exit interview schedule, and the handover plan
 
-### Step 1 — Choose Your Departing Employee
+### Step 1: Choose Your Departing Employee
 
 Use a real departing employee (anonymised if needed), a colleague role-playing a departure, or this fictional scenario:
 
-> **Scenario:** Fatima Al-Rashid is a Senior HR Business Partner at the EdTech company in Karachi. She has been with the company for 8 years. She manages relationships with three business units (Engineering, Product, and Analytics) and is the primary HR contact for 80 employees. She has just submitted her resignation — she is moving to a CPO role at a larger organisation. She has given 4 weeks' notice.
+> **Scenario:** Fatima Al-Rashid is a Senior HR Business Partner at the EdTech company in Karachi. She has been with the company for 8 years. She manages relationships with three business units (Engineering, Product, and Analytics) and is the primary HR contact for 80 employees. She has just submitted her resignation; she is moving to a CPO role at a larger organisation. She has given 4 weeks' notice.
 
-### Step 2 — Run `/offboard`
+### Step 2: Run `/offboard`
 
 Invoke `/offboard` with Fatima's details:
 
@@ -372,7 +372,7 @@ Role: Senior HR Business Partner
 Tenure: 8 years
 Notice period: 4 weeks
 Jurisdiction: Pakistan
-Reason: Career advancement — CPO role elsewhere
+Reason: Career advancement, CPO role elsewhere
 Business units covered: Engineering, Product, Analytics
 Employee relationships: 80 employees (primary HR contact)
 Knowledge risk: Run /knowledge first or estimate as HIGH (8 years, sole
@@ -381,7 +381,7 @@ Knowledge risk: Run /knowledge first or estimate as HIGH (8 years, sole
 
 Review the output and add any missing items specific to the HRBP role (e.g., active employee relations cases that need careful handover, confidential information that must be transferred securely).
 
-### Step 3 — Design the Exit Interview Questions
+### Step 3: Design the Exit Interview Questions
 
 Design a 10-question exit interview guide for Fatima. Include at least:
 
@@ -391,7 +391,7 @@ Design a 10-question exit interview guide for Fatima. Include at least:
 
 Confirm: who will conduct the interview, when in the notice period, and how the output will be stored.
 
-### Step 4 — Build the Handover Plan Table
+### Step 4: Build the Handover Plan Table
 
 Identify Fatima's five most critical work areas and build the handover table:
 
@@ -400,7 +400,7 @@ Identify Fatima's five most critical work areas and build the handover table:
 
 For each area: what is the status, where do the files live, and who is the handover target?
 
-**Deliverable:** A complete offboarding plan for Fatima Al-Rashid — all four phases with owners and dates, an exit interview guide with 10 questions, and a handover table covering five work areas.
+**Deliverable:** A complete offboarding plan for Fatima Al-Rashid, all four phases with owners and dates, an exit interview guide with 10 questions, and a handover table covering five work areas.
 
 ## Try With AI
 
@@ -417,11 +417,11 @@ Employee: Fatima Al-Rashid, Senior HR Business Partner
 Tenure: 8 years
 Notice period: 4 weeks
 Jurisdiction: Pakistan
-Reason: Career advancement — CPO role at another organisation
+Reason: Career advancement, CPO role at another organisation
 Responsibilities: Primary HR contact for Engineering, Product, and
   Analytics teams (80 employees total)
 Knowledge risk: HIGH (8 years; sole relationship holder; no named successor)
-Handover target: To be determined — HR team to cover collectively until
+Handover target: To be determined, HR team to cover collectively until
   replacement is hired
 
 The offboarding plan should include:
@@ -433,7 +433,7 @@ Phase 4: Last day checklist
 Assign owners to every action item and include a timeline.
 ```
 
-**What you are learning:** The `/offboard` skill produces a complete, phased offboarding plan that assigns owners and timelines to every action. The teaching point is that all four phases must start immediately — not just Phase 1. By Week 2 of a 4-week notice, the handover plan should be complete and the exit interview should be scheduled.
+**What you are learning:** The `/offboard` skill produces a complete, phased offboarding plan that assigns owners and timelines to every action. The teaching point is that all four phases must start immediately , not just Phase 1. By Week 2 of a 4-week notice, the handover plan should be complete and the exit interview should be scheduled.
 
 **Adapt**: Design exit interview questions for your organisation.
 
@@ -442,7 +442,7 @@ I need to design an exit interview guide for my organisation.
 The interviewer will be an HR Business Partner (never the line manager).
 The interview will happen in Week 3 of the notice period.
 
-Context: [Describe your organisation — size, sector, current challenges
+Context: [Describe your organisation, size, sector, current challenges
 you'd want to understand better from departing employees]
 
 Please create a 10-question exit interview guide that:
@@ -457,7 +457,7 @@ Also: what are the three most common mistakes interviewers make in
 exit interviews, and how should I avoid them?
 ```
 
-**What you are learning:** Exit interview design is a skill — the difference between questions that produce honest feedback and questions that produce guarded, generic responses lies in the framing, the sequencing, and the environment the interviewer creates. Designing good questions forces you to think about what you actually want to learn from departing employees.
+**What you are learning:** Exit interview design is a skill: the difference between questions that produce honest feedback and questions that produce guarded, generic responses lies in the framing, the sequencing, and the environment the interviewer creates. Designing good questions forces you to think about what you actually want to learn from departing employees.
 
 **Apply**: Evaluate your organisation's current offboarding process.
 
@@ -470,7 +470,7 @@ principles:
 4. Supports the remaining team (transition, coverage, communication)
 
 Our current process: [Describe what actually happens when someone
-resigns at your organisation — be honest about what gets done and
+resigns at your organisation, be honest about what gets done and
 what gets skipped]
 
 For each principle: rate our process 1–5 and explain what we do
@@ -481,7 +481,7 @@ our offboarding process that would have the highest impact. What
 would it cost in HR time? What would it produce in value?
 ```
 
-**What you are learning:** Evaluating a process against principles rather than a checklist reveals the gap between what you do and why you do it. Most organisations will score poorly on Principles 2–4 — not because they don't care, but because their process was never designed to deliver those outcomes. The diagnostic question is: if we redesigned offboarding from scratch with all four principles as requirements, what would we change?
+**What you are learning:** Evaluating a process against principles rather than a checklist reveals the gap between what you do and why you do it. Most organisations will score poorly on Principles 2–4, not because they don't care, but because their process was never designed to deliver those outcomes. The diagnostic question is: if we redesigned offboarding from scratch with all four principles as requirements, what would we change?
 :::
 
 ## Flashcards Study Aid
@@ -490,4 +490,4 @@ would it cost in HR time? What would it produce in value?
 
 ---
 
-Continue to [Lesson 12: Persistent Agents — Orchestrator and Maintenance →](./12-persistent-agents-orchestrator-maintenance.md)
+Continue to [Lesson 12: Persistent Agents: Orchestrator and Maintenance →](./12-persistent-agents-orchestrator-maintenance.md)

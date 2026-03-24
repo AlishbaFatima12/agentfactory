@@ -1,11 +1,11 @@
 ### Core Concept
 
-The banking plugin contains 17 skills — 1 router and 16 product skills organised by pillar (IFRS 9, Basel, AML, Reconciliation) — with a pillar-aware router that detects whether a query involves one or multiple pillars and chains the appropriate skills in dependency order, so the output of one skill feeds the input of the next.
+The banking plugin contains 17 skills (1 router and 16 product skills organised by pillar (IFRS 9, Basel, AML, Reconciliation)) with a pillar-aware router that detects whether a query involves one or multiple pillars and chains the appropriate skills in dependency order, so the output of one skill feeds the input of the next.
 
 ### Key Mental Models
 
-- **Pillar-Aware Routing vs Jurisdiction-Aware Routing**: The banking router routes by regulatory pillar (IFRS 9 vs Basel vs AML), while the Islamic finance router from Chapter 31 routes by jurisdiction (Bahrain vs Malaysia vs UK) — both are instances of the same architectural pattern (context detection, specialised skill loading, output chaining) applied to different routing dimensions.
-- **Skill Chaining for Cross-Pillar Queries**: When the router detects signals from multiple pillars, it loads skills in dependency order — for example, an IFRS 9 provision increase affecting Basel capital loads `ifrs9-ecl` first, then `basel-capital` — so that each skill's output becomes the next skill's input, enabling integrated analysis that single-pillar agents cannot produce.
+- **Pillar-Aware Routing vs Jurisdiction-Aware Routing**: The banking router routes by regulatory pillar (IFRS 9 vs Basel vs AML), while the Islamic finance router from Chapter 31 routes by jurisdiction (Bahrain vs Malaysia vs UK): both are instances of the same architectural pattern (context detection, specialised skill loading, output chaining) applied to different routing dimensions.
+- **Skill Chaining for Cross-Pillar Queries**: When the router detects signals from multiple pillars, it loads skills in dependency order: for example, an IFRS 9 provision increase affecting Basel capital loads `ifrs9-ecl` first, then `basel-capital`: so that each skill's output becomes the next skill's input, enabling integrated analysis that single-pillar agents cannot produce.
 
 ### Critical Patterns
 
@@ -15,8 +15,8 @@ The banking plugin contains 17 skills — 1 router and 16 product skills organis
 
 ### Common Mistakes
 
-- Assuming the router runs all skills in parallel — it sequences them because each skill's output is an input to the next in cross-pillar queries
-- Confusing the banking plugin's pillar routing with Chapter 31's jurisdiction routing — while architecturally similar, they route on fundamentally different dimensions
+- Assuming the router runs all skills in parallel: it sequences them because each skill's output is an input to the next in cross-pillar queries
+- Confusing the banking plugin's pillar routing with Chapter 31's jurisdiction routing: while architecturally similar, they route on fundamentally different dimensions
 
 ### Connections
 

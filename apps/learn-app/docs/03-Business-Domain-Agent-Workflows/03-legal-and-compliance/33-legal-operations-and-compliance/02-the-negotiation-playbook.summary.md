@@ -1,4 +1,4 @@
-# The Negotiation Playbook — Summary
+# The Negotiation Playbook; Summary
 
 ## Core Concept
 

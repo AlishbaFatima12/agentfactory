@@ -34,7 +34,7 @@ skills:
     category: "Technical"
     bloom_level: "Understand"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can identify which section of innov.local.md configures venture context, customer profiles, assumptions, financial model, and fundraising — and explain why filling it in changes command output quality"
+    measurable_at_this_level: "Student can identify which section of innov.local.md configures venture context, customer profiles, assumptions, financial model, and fundraising , and explain why filling it in changes command output quality"
 
 learning_objectives:
   - objective: "Install the innovation plugin and verify that all 10 commands are available in Cowork"
@@ -55,29 +55,29 @@ learning_objectives:
 cognitive_load:
   new_concepts: 3
   concepts_list:
-    - "Plugin architecture — what the student installs versus what lives in the development repository"
-    - "10-command map — which command handles which DLA stage and what it produces"
-    - "innov.local.md — venture context configuration that makes outputs specific"
+    - "Plugin architecture: what the student installs versus what lives in the development repository"
+    - "10-command map, which command handles which DLA stage and what it produces"
+    - "innov.local.md, venture context configuration that makes outputs specific"
   assessment: "3 concepts at A2 level is well within cognitive limits. The lesson is primarily procedural (install, verify) with one conceptual piece (why innov.local.md matters). The command map is a reference table, not a memory task."
 
 differentiation:
   extension_for_advanced: "Read the spec's full innov.local.md template and start filling in the venture and key_assumptions sections for your own idea before you reach Lesson 15. The more context you provide early, the more specific every command output will be throughout the chapter."
-  remedial_for_struggling: "Focus on completing the installation and verifying that Cowork responds to '/idea' with something coherent. You do not need to understand every section of innov.local.md now — that understanding builds through Lessons 3-14."
+  remedial_for_struggling: "Focus on completing the installation and verifying that Cowork responds to '/idea' with something coherent. You do not need to understand every section of innov.local.md now that understanding builds through Lessons 3-14."
 
 teaching_guide:
   key_points:
-    - "Students install only the plugin deliverables (.claude-plugin/ and skills/) — NOT the development artifacts (evals/, tests/, examples/)"
-    - "The innov.local.md template is introduced and understood now, but NOT filled in — that is the capstone exercise in Lesson 15"
+    - "Students install only the plugin deliverables (.claude-plugin/ and skills/), NOT the development artifacts (evals/, tests/, examples/)"
+    - "The innov.local.md template is introduced and understood now, but NOT filled in that is the capstone exercise in Lesson 15"
     - "Stage-aware calibration is a key feature: commands check the venture stage and warn if the user is at the wrong DLA stage"
-    - "innov.local.md works alongside work.local.md from Chapter 28 — it is an extension, not a replacement"
+    - "innov.local.md works alongside work.local.md from Chapter 28; it is an extension, not a replacement"
   misconceptions:
-    - "All 10 commands work at any stage. Correction: commands are stage-aware. /financials warns if you are at the IDEA stage — you do not have enough data yet. /idea warns if you are at MVP — are you pivoting?"
-    - "innov.local.md must be complete before using the plugin. Correction: you can start immediately with conversation context. innov.local.md improves specificity — it does not gate access."
+    - "All 10 commands work at any stage. Correction: commands are stage-aware. /financials warns if you are at the IDEA stage; you do not have enough data yet. /idea warns if you are at MVP: are you pivoting?"
+    - "innov.local.md must be complete before using the plugin. Correction: you can start immediately with conversation context. innov.local.md improves specificity ; it does not gate access."
   discussion_prompts:
     - "Why would a plugin command warn you if you are at the wrong DLA stage? What failure mode does that prevent?"
     - "innov.local.md is essentially a persistent memory for your venture. What information is most critical to record first, and why?"
   teaching_tips:
-    - "Walk students through the innov.local.md validation test at the end of the template (four verification prompts). This shows why specificity matters — generic input produces generic output."
+    - "Walk students through the innov.local.md validation test at the end of the template (four verification prompts). This shows why specificity matters, generic input produces generic output."
     - "If students have a venture idea in mind, encourage them to fill in the venture: section right now. Even a rough problem statement changes command output quality immediately."
 ---
 
@@ -85,27 +85,27 @@ teaching_guide:
 
 In Lesson 1, you learned that the DLA Stack is a three-methodology innovation system and that AI compresses the execution overhead at every stage. This lesson installs the toolkit: the Cowork innovation plugin with 10 commands covering every stage of the DLA Stack, plus the `innov.local.md` configuration file that makes every output specific to your venture.
 
-Think of this as fitting out your workshop before starting to build. By the end of this lesson, you will have all 10 commands available in Cowork and understand what each one does — and you will have the `innov.local.md` template ready to fill in as you work through the chapter.
+Think of this as fitting out your workshop before starting to build. By the end of this lesson, you will have all 10 commands available in Cowork and understand what each one does , and you will have the `innov.local.md` template ready to fill in as you work through the chapter.
 
 ## Plugin Architecture
 
-The innovation plugin lives in the `agentfactory-business-plugins` repository. When you install it, you get the skills and configuration — not the development artifacts. Here is what you install:
+The innovation plugin lives in the `agentfactory-business-plugins` repository. When you install it, you get the skills and configuration , not the development artifacts. Here is what you install:
 
 ```
 .claude-plugin/
 └── plugin.json          ← Plugin metadata and configuration
 
 skills/
-├── idea/SKILL.md        ← /idea — idea generation + evaluation
-├── discovery/SKILL.md   ← /discovery — customer research + synthesis
-├── hypothesis/SKILL.md  ← /hypothesis — assumption mapping + MVP design
-├── canvas/SKILL.md      ← /canvas — Business Model Canvas
-├── financials/SKILL.md  ← /financials — unit economics + runway model
-├── pitch/SKILL.md       ← /pitch — investor deck narrative
-├── sprint/SKILL.md      ← /sprint — innovation sprint planning
-├── market/SKILL.md      ← /market — competitive intelligence + sizing
-├── gtm/SKILL.md         ← /gtm — go-to-market strategy
-└── validate/SKILL.md    ← /validate — build-measure-learn analysis
+├── idea/SKILL.md        ← /idea, idea generation + evaluation
+├── discovery/SKILL.md   ← /discovery, customer research + synthesis
+├── hypothesis/SKILL.md  ← /hypothesis, assumption mapping + MVP design
+├── canvas/SKILL.md      ← /canvas, Business Model Canvas
+├── financials/SKILL.md  ← /financials, unit economics + runway model
+├── pitch/SKILL.md       ← /pitch, investor deck narrative
+├── sprint/SKILL.md      ← /sprint, innovation sprint planning
+├── market/SKILL.md      ← /market, competitive intelligence + sizing
+├── gtm/SKILL.md         ← /gtm, go-to-market strategy
+└── validate/SKILL.md    ← /validate, build-measure-learn analysis
 
 agents/
 ├── idea-generator.md
@@ -118,7 +118,7 @@ LICENSE
 ```
 
 :::note What You Are NOT Installing
-The plugin repository also contains development artifacts — `evals/`, `tests/`, `examples/`, `specs/` — used by the plugin maintainers. You install only what is above: the plugin configuration, skills, and agents. The development artifacts are for contributors, not learners.
+The plugin repository also contains development artifacts, `evals/`, `tests/`, `examples/`, `specs/`, used by the plugin maintainers. You install only what is above: the plugin configuration, skills, and agents. The development artifacts are for contributors, not learners.
 :::
 
 ## The 10-Command Map
@@ -152,7 +152,7 @@ DESIGN THINKING ──► LEAN STARTUP ──► AGILE
 
 ### Stage-Aware Calibration
 
-Every command checks your venture stage and warns if you are at the wrong DLA level for what you are asking. This is not a restriction — it is a guardrail. Examples:
+Every command checks your venture stage and warns if you are at the wrong DLA level for what you are asking. This is not a restriction; it is a guardrail. Examples:
 
 - `/financials` at IDEA stage: "You do not have customer data yet. These numbers will be highly speculative. Do you want to proceed with scenario modelling, or return here after customer discovery?"
 - `/idea` at MVP stage: "You have a validated product. Are you pivoting or exploring adjacent markets?"
@@ -163,27 +163,27 @@ These warnings surface the failure modes from Lesson 1 in real time.
 ## Installation
 
 :::tip Plugin Setup
-**Prerequisites**: You need a Cowork account and access to the `agentfactory-business-plugins` repository. If you have not used Cowork before, complete Chapter 28 (Productivity Domain Agents) first — this plugin works alongside `work.local.md` from that chapter.
+**Prerequisites**: You need a Cowork account and access to the `agentfactory-business-plugins` repository. If you have not used Cowork before, complete Chapter 28 (Productivity Domain Agents) first. This plugin works alongside `work.local.md` from that chapter.
 :::
 
-**Step 1 — Open the plugin browser.** In Cowork, click the sidebar gear icon → **Customize** → **Browse plugins**.
+**Step 1, Open the plugin browser.** In Cowork, click the sidebar gear icon → **Customize** → **Browse plugins**.
 
-**Step 2 — Add the marketplace.** Under **Personal**, click **+** → **Add marketplace from GitHub** → enter:
+**Step 2, Add the marketplace.** Under **Personal**, click **+** → **Add marketplace from GitHub** → enter:
 
 ```
 https://github.com/panaversity/agentfactory-business-plugins
 ```
 
-**Step 3 — Find and install the Innovation plugin.** Browse the catalog, find **Innovation**, and click **Install**.
+**Step 3, Find and install the Innovation plugin.** Browse the catalog, find **Innovation**, and click **Install**.
 
-**Step 4 — Verify installation.** In a new Cowork session, type:
+**Step 4. Verify installation.** In a new Cowork session, type:
 
 ```
 Tell me about the innovation plugin. What commands are available
 and what does each one do?
 ```
 
-You should receive a response listing all 10 commands with descriptions. If Cowork does not recognise the plugin, close and reopen the session — plugin activation sometimes requires a fresh session.
+You should receive a response listing all 10 commands with descriptions. If Cowork does not recognise the plugin, close and reopen the session, plugin activation sometimes requires a fresh session.
 
 ## The innov.local.md Template
 
@@ -193,41 +193,41 @@ The template has eight sections:
 
 | Section                  | What It Configures                                                                     | When to Fill In                       |
 | ------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------- |
-| `venture:`               | Name, stage, problem statement, target customer, solution hypothesis, unfair advantage | Now — even rough is better than blank |
+| `venture:`               | Name, stage, problem statement, target customer, solution hypothesis, unfair advantage | Now, even rough is better than blank |
 | `key_assumptions:`       | Your assumption stack with risk levels and test status                                 | Lesson 5 (Assumption Stack)           |
-| `customer_profiles:`     | Personas from discovery — JTBD, pains, buying process                                  | Lesson 3 (Customer Discovery)         |
+| `customer_profiles:`     | Personas from discovery, JTBD, pains, buying process                                  | Lesson 3 (Customer Discovery)         |
 | `business_model_canvas:` | Canvas blocks with evidence quality                                                    | Lesson 8 (Business Model Canvas)      |
 | `financial_model:`       | Unit economics, runway, milestones                                                     | Lesson 9 (Unit Economics)             |
 | `competitive_landscape:` | Competitors, alternatives, differentiation, moat                                       | Lesson 10 (Market Intelligence)       |
 | `fundraising:`           | Round, pipeline, data room status                                                      | Lesson 12 (Investor Pitch)            |
 | `intrapreneurship:`      | Internal approval pathway, budget, stakeholders                                        | As applicable                         |
 
-**Right now**: Copy the template and rename it `innov.local.md`. You do not fill it in fully until the Lesson 15 capstone. But if you have a venture idea already, fill in the `venture:` section — a rough problem statement and target customer is enough to improve every command output immediately.
+**Right now**: Copy the template and rename it `innov.local.md`. You do not fill it in fully until the Lesson 15 capstone. But if you have a venture idea already, fill in the `venture:` section: a rough problem statement and target customer is enough to improve every command output immediately.
 
 ### The Validation Test
 
 At the end of Lesson 15, you will run four validation prompts to confirm your `innov.local.md` is producing specific rather than generic output:
 
 ```
-/idea — what 3 ideas should I explore this week?
+/idea: what 3 ideas should I explore this week?
 ```
 
 Expected: Ideas specific to your problem space, not generic innovation ideas.
 
 ```
-/canvas — what is the health of my business model canvas?
+/canvas: what is the health of my business model canvas?
 ```
 
 Expected: Block-by-block assessment using your actual canvas content.
 
 ```
-/hypothesis — what is my most critical untested assumption?
+/hypothesis: what is my most critical untested assumption?
 ```
 
 Expected: A specific assumption ID with a cheap, concrete test recommendation.
 
 ```
-/pitch — write my executive summary
+/pitch; write my executive summary
 ```
 
 Expected: A summary with your actual traction numbers and problem statement.
@@ -235,7 +235,7 @@ Expected: A summary with your actual traction numbers and problem statement.
 If the outputs are generic, a section needs more specificity. The most common gaps: `customer_profiles` (pains too vague), `key_assumptions` (too few), `competitive_landscape` (differentiation too generic), `financial_model` (all ASSUMED).
 
 :::note For Intrapreneurs
-The `innov.local.md` template includes an `intrapreneurship:` section specifically for you. Use it to record your approval pathway (current stage, next gate, gate owner, gate criteria), internal constraints (budget, headcount, technology), and stakeholder map (champion, neutral, resistant). This replaces the `fundraising:` section if you are not raising external capital — though you can use both if your intrapreneurship project eventually leads to a spin-out.
+The `innov.local.md` template includes an `intrapreneurship:` section specifically for you. Use it to record your approval pathway (current stage, next gate, gate owner, gate criteria), internal constraints (budget, headcount, technology), and stakeholder map (champion, neutral, resistant). This replaces the `fundraising:` section if you are not raising external capital, though you can use both if your intrapreneurship project eventually leads to a spin-out.
 :::
 
 ## Mini-Activity: Configure Your Venture Section
@@ -249,7 +249,7 @@ If you have a venture idea in mind:
 ```
 /idea
 I am starting a new venture. Here is my rough concept:
-[Describe your idea in 2-3 sentences — the problem, the customer,
+[Describe your idea in 2-3 sentences: the problem, the customer,
 and your initial hypothesis for the solution]
 
 Help me fill in the venture: section of innov.local.md with this
@@ -277,7 +277,7 @@ This gives every command real context to work with from the start.
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — List all 10 commands:
+**Reproduce:** List all 10 commands:
 
 ```
 List all 10 innovation plugin commands. For each one, describe:
@@ -287,9 +287,9 @@ List all 10 innovation plugin commands. For each one, describe:
 4. One example of when you would use it
 ```
 
-**What you are learning:** Understanding what each command produces before you use it means you know what to expect and how to evaluate the output. You are not discovering the tool as you go — you are using it with intent.
+**What you are learning:** Understanding what each command produces before you use it means you know what to expect and how to evaluate the output. You are not discovering the tool as you go; you are using it with intent.
 
-**Adapt** — Stage mapping for your context:
+**Adapt:** Stage mapping for your context:
 
 ```
 I am at the [IDEA / DISCOVERY / VALIDATION / MVP] stage of my
@@ -300,7 +300,7 @@ until later, and why?
 
 **What you are learning:** Stage-aware command selection is what separates a systematic innovation process from random tool use. This prompt forces you to think about where you are before deciding what to do next.
 
-**Apply** — Set up your venture context:
+**Apply:** Set up your venture context:
 
 ```
 I am [an entrepreneur / an intrapreneur at {company}] working on

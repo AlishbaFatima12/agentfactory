@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/productivity-agentic-office/workplace-memory-architecture
 sidebar_position: 3
 title: "Workplace Memory Architecture"
-description: "Understand the four-layer memory model that gives Claude persistent organisational context — then build Layers 1 (Personal) and 4 (Organisational) of your work.local.md, the most important configuration file in your Agentic Office."
+description: "Understand the four-layer memory model that gives Claude persistent organisational context: then build Layers 1 (Personal) and 4 (Organisational) of your work.local.md, the most important configuration file in your Agentic Office."
 keywords:
   [
     "workplace memory",
@@ -29,28 +29,28 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Content-Creation"
-    measurable_at_this_level: "Student can write a complete, honest Layer 1 entry that includes their actual working style, decision-making preferences, current focus, working hours, primary tools, and communication preferences — accurate enough that an AI using this data produces outputs calibrated to the individual"
+    measurable_at_this_level: "Student can write a complete, honest Layer 1 entry that includes their actual working style, decision-making preferences, current focus, working hours, primary tools, and communication preferences, accurate enough that an AI using this data produces outputs calibrated to the individual"
 
   - name: "Build an Organisational Terminology Dictionary with Use/Not-Use Guidance"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Content-Creation"
-    measurable_at_this_level: "Student can produce a terminology dictionary of at least 10 entries, each formatted with the term, its organisational definition, when to use it, and when NOT to use it — and can verify that an AI using this dictionary produces organisation-specific vocabulary without prompting"
+    measurable_at_this_level: "Student can produce a terminology dictionary of at least 10 entries, each formatted with the term, its organisational definition, when to use it, and when NOT to use it , and can verify that an AI using this dictionary produces organisation-specific vocabulary without prompting"
 
   - name: "Document Organisational Unwritten Rules as Actionable Memory Entries"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Communication"
-    measurable_at_this_level: "Student can identify at least three unwritten rules in their organisation — norms that every colleague knows but are never formally documented — and write them as specific, actionable memory entries that change AI output behaviour in a measurable way"
+    measurable_at_this_level: "Student can identify at least three unwritten rules in their organisation, norms that every colleague knows but are never formally documented , and write them as specific, actionable memory entries that change AI output behaviour in a measurable way"
 
   - name: "Verify Memory Layer Output Quality Using /agentic-office:workplace-context"
     proficiency_level: "B1"
     category: "Technical"
     bloom_level: "Evaluate"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can run the workplace-context skill with a specific query and evaluate whether the output demonstrates genuine contextual knowledge — distinguishing between generic responses (Layer not populated) and organisation-specific responses (Layer populated correctly)"
+    measurable_at_this_level: "Student can run the workplace-context skill with a specific query and evaluate whether the output demonstrates genuine contextual knowledge, distinguishing between generic responses (Layer not populated) and organisation-specific responses (Layer populated correctly)"
 
 learning_objectives:
   - objective: "Describe the purpose of each of the four memory layers and explain which type of information belongs in each layer"
@@ -66,22 +66,22 @@ learning_objectives:
   - objective: "Build Layer 4 (Organisational) of work.local.md with at least 10 terminology entries, their meeting rhythm, culture values, and at least 3 unwritten rules"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "After populating Layer 4, student runs /agentic-office:workplace-context and receives output that uses their organisation's actual terminology — confirming that at least 3 internal terms appear unprompted in the response"
+    assessment_method: "After populating Layer 4, student runs /agentic-office:workplace-context and receives output that uses their organisation's actual terminology, confirming that at least 3 internal terms appear unprompted in the response"
 
   - objective: "Test the workplace-context skill with a query and evaluate the output quality before and after Layer 1 and 4 are populated"
     proficiency_level: "B1"
     bloom_level: "Evaluate"
-    assessment_method: "Student produces a before/after comparison showing the difference in output quality when /agentic-office:workplace-context is queried on an empty work.local.md versus a populated one — and can articulate specifically what improved and what is still missing (pointing to Layers 2 and 3 as the next step)"
+    assessment_method: "Student produces a before/after comparison showing the difference in output quality when /agentic-office:workplace-context is queried on an empty work.local.md versus a populated one , and can articulate specifically what improved and what is still missing (pointing to Layers 2 and 3 as the next step)"
 
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "The four-layer memory model — Personal, Team, Projects, Organisational and the information each layer holds"
-    - "Layer 1 (Personal) — calibrating AI output to the individual's working style and current context"
-    - "Layer 4 (Organisational) — terminology dictionary, meeting rhythm, culture, and unwritten rules"
-    - "The unwritten rules section — highest-value section in work.local.md; encodes implicit organisational norms"
-    - "work.local.md vs CLAUDE.md — different purposes: professional memory vs hot cache"
-  assessment: "5 concepts at A2-B2 level. The four-layer model is the conceptual anchor for the entire chapter — establishing it clearly here pays dividends in every subsequent lesson. Layer 1 (Personal) is built first because it is the least sensitive and the most immediately verifiable. Layer 4 (Organisational) is built second because the terminology dictionary produces the most dramatic before/after improvement in output quality. Layers 2 (Team) and 3 (Projects) are deferred to Lessons 4 and 5 — this lesson builds the foundation without overwhelming the reader."
+    - "The four-layer memory model, Personal, Team, Projects, Organisational and the information each layer holds"
+    - "Layer 1 (Personal), calibrating AI output to the individual's working style and current context"
+    - "Layer 4 (Organisational), terminology dictionary, meeting rhythm, culture, and unwritten rules"
+    - "The unwritten rules section, highest-value section in work.local.md; encodes implicit organisational norms"
+    - "work.local.md vs CLAUDE.md, different purposes: professional memory vs hot cache"
+  assessment: "5 concepts at A2-B2 level. The four-layer model is the conceptual anchor for the entire chapter, establishing it clearly here pays dividends in every subsequent lesson. Layer 1 (Personal) is built first because it is the least sensitive and the most immediately verifiable. Layer 4 (Organisational) is built second because the terminology dictionary produces the most dramatic before/after improvement in output quality. Layers 2 (Team) and 3 (Projects) are deferred to Lessons 4 and 5. This lesson builds the foundation without overwhelming the reader."
 
 differentiation:
   extension_for_advanced: "After completing your terminology dictionary, test its limits. Ask /agentic-office:workplace-context to draft a message to an external stakeholder. Does it automatically avoid using internal terms (codenames, jargon) in external-facing content? If not, add 'Not: external communications' guidance to each sensitive term entry. The terminology dictionary should encode not just what terms mean, but where they should and should not appear."
@@ -89,30 +89,30 @@ differentiation:
 
 teaching_guide:
   key_points:
-    - "The new hire vs. experienced colleague analogy is the lesson's emotional centre. The constraint is not intelligence — it is accumulated organisational knowledge. work.local.md encodes that accumulated knowledge so Claude can operate like the experienced colleague, not the brilliant new hire."
-    - "Layer 4's unwritten rules section is consistently the highest-value, most underfilled section. Every organisation has unwritten rules that every colleague knows — but they are never written down because they feel too obvious or too sensitive. These are exactly what an AI needs to produce outputs that do not embarrass the sender."
-    - "The difference between work.local.md and CLAUDE.md must be clear. CLAUDE.md is the official plugin's hot cache — fast retrieval of what happened in recent sessions. work.local.md is the structured professional memory — the enduring organisational context. Both exist; both matter; they serve different functions."
+    - "The new hire vs. experienced colleague analogy is the lesson's emotional centre. The constraint is not intelligence; it is accumulated organisational knowledge. work.local.md encodes that accumulated knowledge so Claude can operate like the experienced colleague, not the brilliant new hire."
+    - "Layer 4's unwritten rules section is consistently the highest-value, most underfilled section. Every organisation has unwritten rules that every colleague knows , but they are never written down because they feel too obvious or too sensitive. These are exactly what an AI needs to produce outputs that do not embarrass the sender."
+    - "The difference between work.local.md and CLAUDE.md must be clear. CLAUDE.md is the official plugin's hot cache, fast retrieval of what happened in recent sessions. work.local.md is the structured professional memory: the enduring organisational context. Both exist; both matter; they serve different functions."
     - "The exercise in this lesson is the most important exercise in the chapter. A well-built Layer 1 and Layer 4 changes every subsequent output. The reader who skips this work will find every later skill lesson more generic and less useful."
   misconceptions:
     - "work.local.md is just another configuration file. Correction: it is the primary intelligence asset of the Agentic Office. Everything from task prioritisation to delegation guidance to the morning digest draws from it. An empty work.local.md produces generic outputs. A rich work.local.md produces colleague-quality outputs. The quality of every skill in Lessons 6-11 is directly proportional to the quality of work.local.md."
-    - "I should fill in work.local.md with how I want to work, not how I actually work. Correction: the instructions in the template say explicitly — 'Work.local.md that describes how you wish you worked is useless. Describe how you actually work.' Aspirational entries produce outputs calibrated to a person who does not exist."
+    - "I should fill in work.local.md with how I want to work, not how I actually work. Correction: the instructions in the template say explicitly, 'Work.local.md that describes how you wish you worked is useless. Describe how you actually work.' Aspirational entries produce outputs calibrated to a person who does not exist."
     - "The terminology dictionary is for unusual jargon only. Correction: every term that an AI would use a generic substitute for belongs in the dictionary. 'Boulders' is obviously internal. But so is 'the Compass', 'Digital FTE', 'PHM', 'TutorClaw'. The test: if a new employee would not know what this term means on their first day, it belongs in the dictionary."
   discussion_prompts:
-    - "The unwritten rules section of work.local.md asks for things that every colleague knows but are never formally documented. What are the three most important unwritten rules in your organisation? How would an AI — without this section — violate one of them in the first week of use?"
+    - "The unwritten rules section of work.local.md asks for things that every colleague knows but are never formally documented. What are the three most important unwritten rules in your organisation? How would an AI, without this section, violate one of them in the first week of use?"
     - "After filling in Layer 4's terminology dictionary with 10 or more entries, run the workplace-context skill and count how many of your internal terms appear unprompted in a status update. Then ask yourself: how many hours per month have you spent manually translating generic AI output into your organisation's vocabulary? That is the value of Layer 4."
   teaching_tips:
     - "Show the before/after for work.local.md clearly. An empty Layer 4 produces a status update full of 'OKRs', 'digital agents', and 'your strategy document'. A populated Layer 4 produces 'Boulders', 'Digital FTEs', and 'the Compass'. This contrast is what motivates the 40-minute exercise."
-    - "Walk through the Panaversity example step by step for Layer 1 and Layer 4. The reader should be able to see exactly how Zia's profile maps to the template fields — then replicate the process for themselves."
-    - "The skill: /agentic-office:workplace-context is introduced in this lesson. Teach readers to invoke it with a specific query ('describe our organisation using only what you know from work.local.md') rather than a vague one — the specific query makes the before/after comparison much clearer."
+    - "Walk through the Panaversity example step by step for Layer 1 and Layer 4. The reader should be able to see exactly how Zia's profile maps to the template fields; then replicate the process for themselves."
+    - "The skill: /agentic-office:workplace-context is introduced in this lesson. Teach readers to invoke it with a specific query ('describe our organisation using only what you know from work.local.md') rather than a vague one: the specific query makes the before/after comparison much clearer."
 ---
 
 # Workplace Memory Architecture
 
 > _"The difference between a brilliant new hire and an experienced colleague is not intelligence. It is context."_
 
-Zia Khan could hire the smartest analyst in Pakistan tomorrow. On day one, that analyst would ask: "What is Project Nighthawk?" "Who is Omar and what does he need from me?" "When you say Boulders, what do you mean?" The analyst is not slow — they are uninformed. They lack the accumulated context that every colleague builds over months of working together.
+Zia Khan could hire the smartest analyst in Pakistan tomorrow. On day one, that analyst would ask: "What is Project Nighthawk?" "Who is Omar and what does he need from me?" "When you say Boulders, what do you mean?" The analyst is not slow; they are uninformed. They lack the accumulated context that every colleague builds over months of working together.
 
-Claude faces the same constraint. Its intelligence is not the bottleneck. The bottleneck is organisational context — the structured knowledge of your people, your projects, your vocabulary, and your culture that every experienced colleague carries and that Claude, without memory, does not.
+Claude faces the same constraint. Its intelligence is not the bottleneck. The bottleneck is organisational context: the structured knowledge of your people, your projects, your vocabulary, and your culture that every experienced colleague carries and that Claude, without memory, does not.
 
 `work.local.md` encodes this context in four layers. This lesson explains each layer and builds Layers 1 and 4. Layers 2 and 3 follow in Lessons 4 and 5.
 
@@ -123,29 +123,29 @@ Each layer addresses a different dimension of organisational context. Together, 
 | Layer       | Name           | What It Contains                                                             | Failure Mode It Closes       |
 | ----------- | -------------- | ---------------------------------------------------------------------------- | ---------------------------- |
 | **Layer 1** | Personal       | Your working style, priorities, current focus, communication preferences     | Priority Blindness (partial) |
-| **Layer 2** | Team           | Key stakeholders — roles, communication styles, sensitivities, current focus | People Anonymity             |
-| **Layer 3** | Projects       | Active projects — status, owner, milestones, risks, decisions made           | Project Amnesia              |
+| **Layer 2** | Team           | Key stakeholders, roles, communication styles, sensitivities, current focus | People Anonymity             |
+| **Layer 3** | Projects       | Active projects, status, owner, milestones, risks, decisions made           | Project Amnesia              |
 | **Layer 4** | Organisational | Terminology, meeting rhythm, culture, unwritten rules                        | Terminology Blindness        |
 
-The layers are designed to be built incrementally. Layer 1 comes first because it requires no information about others — just honest self-knowledge. Layer 4 comes second because the terminology dictionary has the most immediate, visible impact on output quality. Layers 2 and 3 build on this foundation.
+The layers are designed to be built incrementally. Layer 1 comes first because it requires no information about others, just honest self-knowledge. Layer 4 comes second because the terminology dictionary has the most immediate, visible impact on output quality. Layers 2 and 3 build on this foundation.
 
 ### How work.local.md Relates to CLAUDE.md
 
-The official Productivity plugin creates CLAUDE.md — a hot cache that holds recent session context. It is optimised for speed: whatever Claude learned in recent sessions is stored here for fast retrieval.
+The official Productivity plugin creates CLAUDE.md: a hot cache that holds recent session context. It is optimised for speed: whatever Claude learned in recent sessions is stored here for fast retrieval.
 
-`work.local.md` serves a different purpose. It is the structured professional memory layer — the enduring organisational context that does not change from session to session. Your terminology does not change weekly. Your key stakeholders do not change monthly. Your culture and unwritten rules do not change at all unless something significant shifts.
+`work.local.md` serves a different purpose. It is the structured professional memory layer: the enduring organisational context that does not change from session to session. Your terminology does not change weekly. Your key stakeholders do not change monthly. Your culture and unwritten rules do not change at all unless something significant shifts.
 
 Both files exist. Both matter. They serve different functions in the same system.
 
 ```
-CLAUDE.md:         Hot cache — recent session context, temporary state
-work.local.md:     Professional memory — enduring organisational context
-memory/ directory: Deep storage — longer-form reference documents
+CLAUDE.md:         Hot cache, recent session context, temporary state
+work.local.md:     Professional memory, enduring organisational context
+memory/ directory: Deep storage, longer-form reference documents
 ```
 
 ## Layer 1: Personal Memory
 
-Layer 1 is the calibration layer. It tells Claude who you are and how you work — so that every output is calibrated to your actual preferences, not to a generic professional.
+Layer 1 is the calibration layer. It tells Claude who you are and how you work. So that every output is calibrated to your actual preferences, not to a generic professional.
 
 The fields in Layer 1 are specific by design. Generic entries produce generic calibration.
 
@@ -169,8 +169,8 @@ decision_making: >
   Evidence first, then judgment.
 
 current_focus: >
-  AI Agent Factory book (completing Part 3 — Chapter 39 in
-  progress). PIAIC Karachi expansion (Project Nighthawk —
+  AI Agent Factory book (completing Part 3, Chapter 39 in
+  progress). PIAIC Karachi expansion (Project Nighthawk,
   facility agreement stalled; needs escalation). Q2 2026
   curriculum launch target.
 
@@ -193,19 +193,19 @@ language_preference: >
 
 Notice what this Layer 1 does that a generic profile does not: it specifies format preferences (bullets for analysis, narrative for persuasion), flags the current focus projects, and names the communication channels for different contexts. Every output Claude produces for Zia will be calibrated to these specifics.
 
-The most important field — and the one most frequently underfilled — is `current_focus`. This field is the primary signal Claude uses to infer urgency. If AgentFactory is listed as the current focus, tasks connected to it receive elevated priority by default. Update this field whenever your focus shifts.
+The most important field , and the one most frequently underfilled: is `current_focus`. This field is the primary signal Claude uses to infer urgency. If AgentFactory is listed as the current focus, tasks connected to it receive elevated priority by default. Update this field whenever your focus shifts.
 
 :::caution Write What Is True, Not What Is Aspirational
 The template instructions say: "Work.local.md that describes how you wish you worked is useless. Describe how you actually work."
 
-If you actually prefer to receive a summary before the detail — write that. If you actually check WhatsApp more than email — write that. If you actually make decisions quickly under pressure even though you prefer to have data — write that.
+If you actually prefer to receive a summary before the detail; write that. If you actually check WhatsApp more than email; write that. If you actually make decisions quickly under pressure even though you prefer to have data; write that.
 
 An aspirational Layer 1 calibrates Claude to a version of you that does not show up at work. The real you is what you need.
 :::
 
 ## Layer 4: Organisational Memory
 
-Layer 4 is where the Context Problem is most visibly solved. It contains four components — and the last one (unwritten rules) is consistently the highest-value, most underfilled section in every work.local.md.
+Layer 4 is where the Context Problem is most visibly solved. It contains four components , and the last one (unwritten rules) is consistently the highest-value, most underfilled section in every work.local.md.
 
 ### The Terminology Dictionary
 
@@ -218,7 +218,7 @@ The format requires four pieces for each entry: the term, what it means, when to
 ```yaml
 terminology:
   "Boulders": >
-    Quarterly strategic priorities — our equivalent of OKRs.
+    Quarterly strategic priorities, our equivalent of OKRs.
     Use: in all internal planning, status updates, and priority
     discussions. Not: external communications or formal board
     documents (use "strategic priorities" instead).
@@ -226,7 +226,7 @@ terminology:
 
   "Digital FTE": >
     A fully configured AI agent performing a specific professional
-    role. Not a chatbot — a Digital Full-Time Employee.
+    role. Not a chatbot: a Digital Full-Time Employee.
     Use: all contexts where we discuss AI agents performing roles.
     Not: marketing materials without explanation; new-hire onboarding
     before the term is introduced.
@@ -234,16 +234,16 @@ terminology:
   "AgentFactory": >
     Internal codename for the AI Agent Factory book and curriculum
     project. Use: all internal references to the book project.
-    Not: external communications — use "AI Agent Factory" externally.
+    Not: external communications; use "AI Agent Factory" externally.
 
   "Project Nighthawk": >
     Internal codename for the Karachi expansion project.
-    Use: internal only — team discussions, planning documents,
+    Use: internal only, team discussions, planning documents,
     status updates. Not: any external communication; do not use
     externally under any circumstances.
 
   "The Compass": >
-    The annual strategic planning document — reviewed quarterly.
+    The annual strategic planning document, reviewed quarterly.
     Use: when referencing the strategic plan formally.
     Not: casual references in Slack (use "the strategy doc").
 
@@ -253,7 +253,7 @@ terminology:
     Use: technical and curriculum contexts.
 
   "PHM": >
-    Personalized Hybrid Model — Panaversity's seven-approach
+    Personalized Hybrid Model, Panaversity's seven-approach
     adaptive teaching framework. Core pedagogical IP, owned by
     Dr. Sana Mirza. Use: curriculum and pedagogical discussions.
 
@@ -268,7 +268,7 @@ terminology:
     based decisions. Not: as a casual adjective.
 ```
 
-With this dictionary loaded, a request to "write a status update for the Boulders review" produces an output that uses "Boulders", references "AgentFactory" and "Project Nighthawk" by name, and refers to "Digital FTEs" correctly — without Zia needing to explain any of these terms.
+With this dictionary loaded, a request to "write a status update for the Boulders review" produces an output that uses "Boulders", references "AgentFactory" and "Project Nighthawk" by name, and refers to "Digital FTEs" correctly, without Zia needing to explain any of these terms.
 
 **Target for a well-built terminology dictionary: 20-50 entries.** Start with terms that would confuse an outsider. Then add the terms that even colleagues within the organisation sometimes use inconsistently.
 
@@ -298,15 +298,15 @@ meeting_rhythm:
 
   - name: "Banker Workshop"
     frequency: "Monthly"
-    day_time: "Last Saturday of month — full day"
+    day_time: "Last Saturday of month, full day"
     attendees: ["Zia", "Workshop team", "Banking sector attendees"]
     purpose: "AI upskilling workshop for banking professionals"
-    note: "Content reviewed 7 days before delivery — non-negotiable."
+    note: "Content reviewed 7 days before delivery, non-negotiable."
 ```
 
 ### Culture Configuration
 
-The culture section — especially the unwritten rules — is where Layer 4 earns its investment.
+The culture section, especially the unwritten rules: is where Layer 4 earns its investment.
 
 ```yaml
 culture:
@@ -315,7 +315,7 @@ culture:
 
   decision_making: >
     Evidence first; then judgment. Decisions documented in Notion.
-    "Disagree and commit" — once decided, full execution expected.
+    "Disagree and commit", once decided, full execution expected.
     No revisiting decisions without new evidence.
 
   communication: >
@@ -336,12 +336,12 @@ culture:
       this deadline is non-negotiable regardless of other pressures"
 ```
 
-The unwritten rules are the most valuable entries in the entire file. They encode the implicit norms that every colleague learns through experience — often after violating them once. A new hire who did not know that "let's take this offline" means "do not minute this" might write detailed meeting notes that include the politically sensitive discussion. An AI without this rule would do the same.
+The unwritten rules are the most valuable entries in the entire file. They encode the implicit norms that every colleague learns through experience, often after violating them once. A new hire who did not know that "let's take this offline" means "do not minute this" might write detailed meeting notes that include the politically sensitive discussion. An AI without this rule would do the same.
 
-Every organisation has these rules. They feel obvious to insiders precisely because everyone knows them — but an AI cannot know them without being told. This section is where you tell it.
+Every organisation has these rules. They feel obvious to insiders precisely because everyone knows them , but an AI cannot know them without being told. This section is where you tell it.
 
 :::tip The Unwritten Rules Test
-For every entry you consider adding to the unwritten rules section, ask: "If an AI assistant violated this rule in public output tomorrow — sent an email, produced a document, included something in a briefing — would it cause a problem?"
+For every entry you consider adding to the unwritten rules section, ask: "If an AI assistant violated this rule in public output tomorrow, sent an email, produced a document, included something in a briefing, would it cause a problem?"
 
 If yes, it belongs in the file.
 
@@ -374,7 +374,7 @@ For this lesson, use the verification query:
 **Sample output after Layer 1 and Layer 4 are populated:**
 
 ```
-WORKPLACE CONTEXT — Panaversity / PIAIC
+WORKPLACE CONTEXT, Panaversity / PIAIC
 ════════════════════════════════════════════════════════════
 
 PERSONAL CONTEXT (Layer 1)
@@ -419,7 +419,7 @@ LAYERS NOT YET POPULATED:
 ════════════════════════════════════════════════════════════
 ```
 
-This output demonstrates that the skill is reading correctly from work.local.md. It uses Panaversity's actual terminology. It references real projects by their internal names. It notes the meeting schedule. And — critically — it tells you what is still missing: Layers 2 and 3 are empty.
+This output demonstrates that the skill is reading correctly from work.local.md. It uses Panaversity's actual terminology. It references real projects by their internal names. It notes the meeting schedule. And, critically ; it tells you what is still missing: Layers 2 and 3 are empty.
 
 Compare this with what the same query produces on an empty work.local.md:
 
@@ -440,19 +440,19 @@ This is the most important exercise in the chapter. A well-built Layer 1 and Lay
 
 ---
 
-### Part 1 — Build Layer 1: Personal (15 minutes)
+### Part 1: Build Layer 1: Personal (15 minutes)
 
 Open your `work.local.md` file and fill in the Layer 1 section with your own real context.
 
 **Required fields:**
 
 - `name` and `role`
-- `working_style` — how you actually communicate and process information
-- `decision_making` — what you need before you make a decision
-- `current_focus` — your top 1-3 priorities right now (update this frequently)
-- `working_hours` — include timezone
-- `primary_tools` — the two or three tools you use daily
-- `communication_preference` — which channels for which purposes
+- `working_style`: how you actually communicate and process information
+- `decision_making`: what you need before you make a decision
+- `current_focus`; your top 1-3 priorities right now (update this frequently)
+- `working_hours`, include timezone
+- `primary_tools`: the two or three tools you use daily
+- `communication_preference`, which channels for which purposes
 
 **Quality check:** After filling in Layer 1, ask:
 
@@ -462,15 +462,15 @@ Open your `work.local.md` file and fill in the Layer 1 section with your own rea
   status update for me? What should you never include?
 ```
 
-If the answer matches your actual preferences — Layer 1 is correct. If it describes someone else, go back and be more specific.
+If the answer matches your actual preferences, Layer 1 is correct. If it describes someone else, go back and be more specific.
 
 ---
 
-### Part 2 — Build Layer 4: Organisational Memory (25 minutes)
+### Part 2: Build Layer 4: Organisational Memory (25 minutes)
 
 Layer 4 has four components. Work through them in order.
 
-**Step 1 — Terminology dictionary (15 minutes)**
+**Step 1, Terminology dictionary (15 minutes)**
 
 Aim for at least 10 entries to start. For each entry, include:
 
@@ -487,15 +487,15 @@ High-value entries to include first:
 - Any abbreviations that would confuse an outsider
 - Any product, team, or programme names that are internal-only
 
-**Step 2 — Meeting rhythm (5 minutes)**
+**Step 2, Meeting rhythm (5 minutes)**
 
-Add your three to five most significant recurring meetings. Include the exact time and timezone — the digest skill uses this for meeting prep timing.
+Add your three to five most significant recurring meetings. Include the exact time and timezone: the digest skill uses this for meeting prep timing.
 
-**Step 3 — Culture and unwritten rules (5 minutes)**
+**Step 3, Culture and unwritten rules (5 minutes)**
 
 Add your organisation's stated values (use their exact wording). Write two to three sentences about how decisions are made and how information flows.
 
-Then — the most important step — write the unwritten rules. Target: at least three rules. These should be things that every colleague knows but that are never in any handbook. Ask yourself: "What would an AI do wrong in its first week that would embarrass me?"
+Then: the most important step; write the unwritten rules. Target: at least three rules. These should be things that every colleague knows but that are never in any handbook. Ask yourself: "What would an AI do wrong in its first week that would embarrass me?"
 
 ---
 
@@ -516,10 +516,10 @@ After completing both layers, run:
 - Does the output mention your meeting rhythm?
 - Does the output acknowledge what is still missing (Layers 2 and 3)?
 
-If yes to all four — your foundation is solid. Lessons 4 and 5 build the people and project layers on top of this.
+If yes to all four; your foundation is solid. Lessons 4 and 5 build the people and project layers on top of this.
 
 :::note Keep This File
-Your work.local.md is progressive — Lessons 4 and 5 build directly on what you create here. Do not start a new file or delete this one between lessons.
+Your work.local.md is progressive, Lessons 4 and 5 build directly on what you create here. Do not start a new file or delete this one between lessons.
 :::
 
 :::tip Try With AI
@@ -549,11 +549,11 @@ Communication: Async-first; Slack daily, email formal,
 
 Based on this Layer 1, write a project status update for
 Project Nighthawk. Do not include any information I have
-not given you — only use this working context to calibrate
+not given you, only use this working context to calibrate
 the format and style of the output.
 ```
 
-**What you are learning:** Layer 1 does not provide project data — it calibrates format and style. The output should be structured correctly (bullets not paragraphs, direct not padded), but it will still ask you for the actual project status because that comes from Layer 3. This distinction — personal calibration vs. project data — is the difference between Layer 1 and Layer 3.
+**What you are learning:** Layer 1 does not provide project data ; it calibrates format and style. The output should be structured correctly (bullets not paragraphs, direct not padded), but it will still ask you for the actual project status because that comes from Layer 3. This distinction, personal calibration vs. project data: is the difference between Layer 1 and Layer 3.
 
 **Adapt**: Build your own Layer 1 and test how well it calibrates output.
 
@@ -572,7 +572,7 @@ based on my Layer 1? What would you have done differently
 without it?
 ```
 
-**What you are learning:** The "what would you have done differently" question is diagnostic. If the answer is "not much" — your Layer 1 entries are too generic. Sharpen them. If the answer identifies three or four specific adjustments — your Layer 1 is working.
+**What you are learning:** The "what would you have done differently" question is diagnostic. If the answer is "not much"; your Layer 1 entries are too generic. Sharpen them. If the answer identifies three or four specific adjustments; your Layer 1 is working.
 
 **Apply**: Build a complete Layer 4 terminology dictionary for your organisation and test it.
 
@@ -582,20 +582,20 @@ I will give you the term and its real meaning. Format each
 as a work.local.md terminology entry (definition, when to
 use, when NOT to use, related terms):
 
-1. [Your term] — means: [definition]
-2. [Your term] — means: [definition]
-3. [Your term] — means: [definition]
+1. [Your term], means: [definition]
+2. [Your term], means: [definition]
+3. [Your term], means: [definition]
 [continue to 10]
 
 After formatting these as proper terminology entries, write
 a status update for one of my projects using ONLY these
-internal terms — no generic substitutes. Then write the
+internal terms; no generic substitutes. Then write the
 same update as an external stakeholder communication, applying
 the "Not:" guidance from the terminology entries to avoid
 internal-only language.
 ```
 
-**What you are learning:** The "internal vs external" version of the same update demonstrates the value of the "Not:" field in the terminology dictionary. Claude applying the "Not: external communications" guidance automatically — without you needing to say it — is exactly the behaviour the terminology dictionary enables.
+**What you are learning:** The "internal vs external" version of the same update demonstrates the value of the "Not:" field in the terminology dictionary. Claude applying the "Not: external communications" guidance automatically, without you needing to say it: is exactly the behaviour the terminology dictionary enables.
 :::
 
 ## Flashcards Study Aid

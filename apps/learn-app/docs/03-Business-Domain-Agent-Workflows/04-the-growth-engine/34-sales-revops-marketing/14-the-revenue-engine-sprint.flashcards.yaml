@@ -20,7 +20,7 @@ cards:
 
   - id: "ch34-14-sprint-003"
     front: "Why should all five closed-won deals score above 60 when validating the ICP?"
-    back: "They already bought — if the ICP scores them below 60, the scoring model penalises a dimension that does not predict buying behaviour. This is Miscalibrated Scoring: the model has drifted from reality."
+    back: "They already bought: if the ICP scores them below 60, the scoring model penalises a dimension that does not predict buying behaviour. This is Miscalibrated Scoring: the model has drifted from reality."
     difficulty: "intermediate"
     why: "How would you recalibrate without loosening criteria so broadly that poor-fit companies also pass?"
     tags: ["miscalibrated-scoring"]
@@ -33,20 +33,20 @@ cards:
 
   - id: "ch34-14-sprint-005"
     front: "A campaign brief allocates $8,000 to a logistics trade show, but the actual booth cost is unknown. What Agent Output Taxonomy error is this?"
-    back: "Hallucinated Data — the budget figure is fabricated. Every downstream decision built on that allocation inherits the error."
+    back: "Hallucinated Data: the budget figure is fabricated. Every downstream decision built on that allocation inherits the error."
     difficulty: "intermediate"
     tags: ["hallucinated-data"]
 
   - id: "ch34-14-sprint-006"
     front: "Why does the sprint require flagging errors during live execution rather than in post-hoc review?"
-    back: "In live execution, errors compound across stages — a hallucinated research finding contaminates the score, which contaminates the outreach. Catching errors in real time prevents downstream corruption that post-hoc review cannot undo."
+    back: "In live execution, errors compound across stages: a hallucinated research finding contaminates the score, which contaminates the outreach. Catching errors in real time prevents downstream corruption that post-hoc review cannot undo."
     difficulty: "intermediate"
     why: "How does the cost of an error change depending on which pipeline stage it is caught in?"
     tags: ["error-detection"]
 
   - id: "ch34-14-sprint-007"
     front: "Touches 4-6 in a sequence become generic while Touches 1-3 reference specific research. What error is this?"
-    back: "Context Loss — the research intelligence was consumed by early touches and not replenished for later ones, causing personalisation decay across the sequence."
+    back: "Context Loss: the research intelligence was consumed by early touches and not replenished for later ones, causing personalisation decay across the sequence."
     difficulty: "intermediate"
     tags: ["context-loss"]
 
@@ -65,7 +65,7 @@ cards:
 
   - id: "ch34-14-sprint-010"
     front: "A call summary reads 'Great meeting, they have budget and a timeline' without referencing specific pain points or the champion name from research. What error is this?"
-    back: "Context Loss — the intelligence from the research brief existed but the summary did not use it, producing a generic output instead of one grounded in upstream data."
+    back: "Context Loss: the intelligence from the research brief existed but the summary did not use it, producing a generic output instead of one grounded in upstream data."
     difficulty: "intermediate"
     tags: ["context-loss"]
 
@@ -84,7 +84,7 @@ cards:
 
   - id: "ch34-14-sprint-013"
     front: "A sequence has no exit conditions and sends Touch 5 after the prospect replied 'not interested' to Touch 3. What error is this?"
-    back: "Over-Automation — the sequence continued past a negative human signal because no stop rules were defined. Exit conditions for reply, bounce, and opt-out are required."
+    back: "Over-Automation: the sequence continued past a negative human signal because no stop rules were defined. Exit conditions for reply, bounce, and opt-out are required."
     difficulty: "intermediate"
     tags: ["over-automation"]
 
@@ -104,7 +104,7 @@ cards:
 
   - id: "ch34-14-sprint-016"
     front: "The sprint uses NexaFlow's clean demo pipeline. How does running against real data reveal engine fragility?"
-    back: "Real pipelines have missing data, inconsistent formatting, and deals that defy standard stage progressions. Components that work with clean data but break with messy inputs reveal where the engine needs hardening — that fragility map becomes the improvement roadmap."
+    back: "Real pipelines have missing data, inconsistent formatting, and deals that defy standard stage progressions. Components that work with clean data but break with messy inputs reveal where the engine needs hardening: that fragility map becomes the improvement roadmap."
     difficulty: "advanced"
     why: "Which revenue engine components are most likely to be fragile when faced with real data?"
     tags: ["real-data"]

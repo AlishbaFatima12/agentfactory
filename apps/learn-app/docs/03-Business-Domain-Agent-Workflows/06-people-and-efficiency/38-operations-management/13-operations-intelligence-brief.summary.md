@@ -1,39 +1,39 @@
-# Lesson 13 Summary — Operations Intelligence Brief
+# Lesson 13 Summary: Operations Intelligence Brief
 
 ## What This Lesson Covers
 
-Lesson 13 is the synthesis lesson — taking all the operational intelligence built across Lessons 3-12 and combining it into a single, coherent COO-level brief. This is the payoff of the chapter: eleven lessons of data collection and agent monitoring become one actionable document that tells a decision-ready story about the organisation's operational health.
+Lesson 13 is the synthesis lesson, taking all the operational intelligence built across Lessons 3-12 and combining it into a single, coherent COO-level brief. This is the payoff of the chapter: eleven lessons of data collection and agent monitoring become one actionable document that tells a decision-ready story about the organisation's operational health.
 
 ## The Core Distinction: Intelligence vs. Compilation
 
-A compiled report concatenates outputs from separate sources. An intelligence brief synthesises them. Synthesis means identifying cross-domain connections that individual reports cannot see — a vendor SLA breach and a related compliance obligation and an overdue change that was supposed to fix both represent a connected risk chain, not three separate issues. The brief's value is in surfacing these connections.
+A compiled report concatenates outputs from separate sources. An intelligence brief synthesises them. Synthesis means identifying cross-domain connections that individual reports cannot see: a vendor SLA breach and a related compliance obligation and an overdue change that was supposed to fix both represent a connected risk chain, not three separate issues. The brief's value is in surfacing these connections.
 
 ## The Two Plugin Commands
 
-**`/status-report` (official plugin):** Provides the structural skeleton — executive summary, domain-by-domain status, risks, actions, and upcoming items. This is the backbone of the brief.
+**`/status-report` (official plugin):** Provides the structural skeleton, executive summary, domain-by-domain status, risks, actions, and upcoming items. This is the backbone of the brief.
 
-**`/metrics` (custom plugin):** Provides trend context — month-on-month changes, RAG status for each metric, and a leading indicator assessment that identifies which current trends suggest next-month problems. Three metrics deteriorating simultaneously signals a systemic issue that no single metric reveals.
+**`/metrics` (custom plugin):** Provides trend context, month-on-month changes, RAG status for each metric, and a leading indicator assessment that identifies which current trends suggest next-month problems. Three metrics deteriorating simultaneously signals a systemic issue that no single metric reveals.
 
 ## The Five-Step Synthesis Workflow
 
-1. **Gather** — collect agent monthly reports, status report, metrics output, and risk register status
-2. **Connect** — identify cross-domain signals that are related before generating the brief
-3. **Generate backbone** — run `/status-report` with the month's operational data
-4. **Enrich** — add trend analysis from `/metrics`, agent monitoring intelligence, and cross-domain connections
-5. **Summarise** — write the executive summary (max 1 page) and top 3 recommended actions (specific, owned, time-bound)
+1. **Gather:** collect agent monthly reports, status report, metrics output, and risk register status
+2. **Connect:** identify cross-domain signals that are related before generating the brief
+3. **Generate backbone:** run `/status-report` with the month's operational data
+4. **Enrich:** add trend analysis from `/metrics`, agent monitoring intelligence, and cross-domain connections
+5. **Summarise:** write the executive summary (max 1 page) and top 3 recommended actions (specific, owned, time-bound)
 
 ## The Two Intelligence Cadences
 
-**Weekly alerts:** Agent alerts only — items requiring action this week. Audience: operational team. Purpose: decision triggers.
+**Weekly alerts:** Agent alerts only, items requiring action this week. Audience: operational team. Purpose: decision triggers.
 
-**Monthly brief:** Full synthesis — narrative, trends, cross-domain patterns, strategic recommendations. Audience: COO. Purpose: state of operations and forward direction.
+**Monthly brief:** Full synthesis, narrative, trends, cross-domain patterns, strategic recommendations. Audience: COO. Purpose: state of operations and forward direction.
 
 Conflating the two produces noise in the weekly channel and insufficient depth in the monthly brief.
 
 ## The Executive Summary Standard
 
-The executive summary is the hardest section and the most important. A COO who reads only the executive summary should understand: the overall operational health status, the most critical issue this month, and what the recommended actions are. If the summary requires the COO to read the full brief to understand what to do, it is not a summary — it is a table of contents.
+The executive summary is the hardest section and the most important. A COO who reads only the executive summary should understand: the overall operational health status, the most critical issue this month, and what the recommended actions are. If the summary requires the COO to read the full brief to understand what to do, it is not a summary; it is a table of contents.
 
 ## What This Enables
 
-Lesson 14 (Capstone) uses the complete brief as the final deliverable of the end-to-end sprint. The five-step synthesis workflow is repeatable — once established, the monthly brief takes under 30 minutes to produce with the agent outputs and metrics data already generated by the monitoring layer.
+Lesson 14 (Capstone) uses the complete brief as the final deliverable of the end-to-end sprint. The five-step synthesis workflow is repeatable, once established, the monthly brief takes under 30 minutes to produce with the agent outputs and metrics data already generated by the monitoring layer.

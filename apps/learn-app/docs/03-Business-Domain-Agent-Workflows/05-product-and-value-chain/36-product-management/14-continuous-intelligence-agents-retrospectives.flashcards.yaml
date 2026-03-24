@@ -32,7 +32,7 @@ cards:
 
   - id: "ch36-14-continuous-intelligence-agents-retrospectives-005"
     front: "What are the three persistent PM agents and their weekly schedules?"
-    back: "Research Intelligence Agent (Monday morning: weekly user signal digest), Stakeholder Update Agent (Friday: three-version update queue for PM review + triggered updates), Roadmap Coherence Agent (Wednesday: three coherence checks — orphan detection, coverage, sprint alignment)."
+    back: "Research Intelligence Agent (Monday morning: weekly user signal digest), Stakeholder Update Agent (Friday: three-version update queue for PM review + triggered updates), Roadmap Coherence Agent (Wednesday: three coherence checks: orphan detection, coverage, sprint alignment)."
     tags: ["weekly-schedules", "persistent", "agents"]
     difficulty: "basic"
 
@@ -56,24 +56,24 @@ cards:
 
   - id: "ch36-14-continuous-intelligence-agents-retrospectives-009"
     front: "What sprint off-roadmap percentage triggers a Roadmap Coherence Agent alert?"
-    back: ">30% off-roadmap work triggers an alert to PM and EM. >50% is urgent — roadmap is effectively paused. The threshold is NOT 0% — some sprint flexibility is healthy. Maintenance and bug fixes are tracked separately and are not 'off-roadmap'."
+    back: ">30% off-roadmap work triggers an alert to PM and EM. >50% is urgent: roadmap is effectively paused. The threshold is NOT 0%: some sprint flexibility is healthy. Maintenance and bug fixes are tracked separately and are not 'off-roadmap'."
     tags: ["sprint-off-roadmap", "off-roadmap-percentage", "off-roadmap"]
     difficulty: "intermediate"
 
   - id: "ch36-14-continuous-intelligence-agents-retrospectives-010"
     front: "What is the metric quality rating scale in /retro's Q3 section?"
-    back: "HIGH: the metric was measurable, sensitive to the feature, the right thing to measure, and had a failure threshold defined. MEDIUM: partially — e.g., measurable but no pre-launch baseline, or the metric was a proxy that could be improved. LOW: the metric could not be measured, was not sensitive, or measured the wrong thing."
+    back: "HIGH: the metric was measurable, sensitive to the feature, the right thing to measure, and had a failure threshold defined. MEDIUM: partially: e.g., measurable but no pre-launch baseline, or the metric was a proxy that could be improved. LOW: the metric could not be measured, was not sensitive, or measured the wrong thing."
     tags: ["metric-quality", "quality-rating", "scale"]
     difficulty: "advanced"
 
   - id: "ch36-14-continuous-intelligence-agents-retrospectives-011"
     front: "What must always be in the product.local.md updates section of a retro?"
-    back: "At least one specific quality rule derived from a retro finding. If nothing changes in product.local.md, the retro was a review exercise, not a learning exercise. The rules should be specific enough to change behaviour on the next feature — not reminders or aspirations."
+    back: "At least one specific quality rule derived from a retro finding. If nothing changes in product.local.md, the retro was a review exercise, not a learning exercise. The rules should be specific enough to change behaviour on the next feature: not reminders or aspirations."
     tags: ["product-local", "updates-section", "always"]
     difficulty: "intermediate"
 
   - id: "ch36-14-continuous-intelligence-agents-retrospectives-012"
     front: "What is /schedule used for in Cowork, and how does it relate to the three PM agents?"
-    back: "/schedule deploys an agent as a persistent, scheduled component that runs automatically on its configured schedule and deposits output in a PM review queue. The three PM agents are deployed with /schedule — each receives a schedule, data source configuration, and escalation thresholds."
+    back: "/schedule deploys an agent as a persistent, scheduled component that runs automatically on its configured schedule and deposits output in a PM review queue. The three PM agents are deployed with /schedule: each receives a schedule, data source configuration, and escalation thresholds."
     tags: ["schedule", "cowork", "relate"]
     difficulty: "advanced"

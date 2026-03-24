@@ -276,14 +276,14 @@ The agent routes through `basel-capital` to produce a capital adequacy assessmen
 | Buffer assessment | Compares CET1 ratio to combined buffer requirement                   | Combined buffer = minimum + CCB + applicable systemic buffer; surplus/deficit identified |
 
 :::note Your output will vary
-The specific ratios depend on your capital instruments, deductions, and RWA. The teaching point is the capital stack hierarchy and the buffer compliance framework — verify that instrument classifications and deductions are complete, not that specific ratios match.
+The specific ratios depend on your capital instruments, deductions, and RWA. The teaching point is the capital stack hierarchy and the buffer compliance framework: verify that instrument classifications and deductions are complete, not that specific ratios match.
 :::
 
 James reviews whether the AT1 CoCos meet the perpetuity and non-cumulative criteria for AT1 classification, and confirms that no additional deductions (such as significant investments) have been omitted from the calculation.
 
 ### Jurisdiction Variant: GCC (SAMA and CBUAE)
 
-GCC regulators apply the standard Basel III minimums (4.5% CET1, 8.0% Total Capital) plus the 2.5% Capital Conservation Buffer, producing combined requirements of 7.0% CET1 and 10.5% Total Capital — consistent with Basel III as implemented globally. SAMA additionally applies D-SIB buffers of 0.5-1.5% to the largest Saudi banks. The Central Bank of the UAE (CBUAE) sets similar floors: a minimum CET1 of 7.0% and a Capital Conservation Buffer of 2.5%, with the CBUAE additionally requiring a minimum Tier 1 leverage ratio of 3.0% for all UAE-licensed banks under CBUAE Regulation No. 52/2020. Both jurisdictions require banks to calculate capital ratios under the Standardised Approach unless explicitly approved for IRB, and both have adopted Basel III liquidity standards (LCR and NSFR) with local modifications to HQLA eligibility -- notably, UAE federal government bonds and Saudi government sukuk qualify as Level 1 HQLA. The banking plugin's `uae-cbuae` jurisdiction overlay reflects these higher floors and local HQLA classifications.
+GCC regulators apply the standard Basel III minimums (4.5% CET1, 8.0% Total Capital) plus the 2.5% Capital Conservation Buffer, producing combined requirements of 7.0% CET1 and 10.5% Total Capital: consistent with Basel III as implemented globally. SAMA additionally applies D-SIB buffers of 0.5-1.5% to the largest Saudi banks. The Central Bank of the UAE (CBUAE) sets similar floors: a minimum CET1 of 7.0% and a Capital Conservation Buffer of 2.5%, with the CBUAE additionally requiring a minimum Tier 1 leverage ratio of 3.0% for all UAE-licensed banks under CBUAE Regulation No. 52/2020. Both jurisdictions require banks to calculate capital ratios under the Standardised Approach unless explicitly approved for IRB, and both have adopted Basel III liquidity standards (LCR and NSFR) with local modifications to HQLA eligibility -- notably, UAE federal government bonds and Saudi government sukuk qualify as Level 1 HQLA. The banking plugin's `uae-cbuae` jurisdiction overlay reflects these higher floors and local HQLA classifications.
 
 ## Try With AI
 

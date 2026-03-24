@@ -14,7 +14,7 @@ The shift from Claude in Excel to Cowork is a scope expansion. Claude in Excel a
 - **Full close workflow**: Day 1 close-management skill → Day 3 `/reconciliation` → Day 4 `/journal-entry` → Day 5 `/variance-analysis` → Day 6 `/income-statement` → SOX season `/sox-testing`. Each command produces a deliverable that feeds the next phase.
 - Reconciliation identifies discrepancies; journal entries create the correcting entries with proper documentation
 - The close-management skill provides continuous context across all close interactions, not just when explicitly invoked
-- SOX workpapers are frameworks, not conclusions — the plugin generates the testing structure, but a qualified auditor executes the tests and documents the conclusions
+- SOX workpapers are frameworks, not conclusions: the plugin generates the testing structure, but a qualified auditor executes the tests and documents the conclusions
 - The category placeholder system (~~erp) is Chapter 26's division of responsibility made concrete
 
 ### Common Mistakes

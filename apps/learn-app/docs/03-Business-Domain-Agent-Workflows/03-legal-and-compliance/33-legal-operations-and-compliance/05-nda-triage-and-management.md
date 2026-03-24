@@ -71,10 +71,10 @@ differentiation:
 
 # NDA Triage and Management
 
-In Lesson 3, you reviewed the CloudStack agreement clause by clause and saw RED flags on data protection and liability. NDAs are different — the question is not "what needs redlining?" but "does this need attorney time at all?" This lesson builds a three-tier triage system that routes the right NDAs to the right level of review.
+In Lesson 3, you reviewed the CloudStack agreement clause by clause and saw RED flags on data protection and liability. NDAs are different: the question is not "what needs redlining?" but "does this need attorney time at all?" This lesson builds a three-tier triage system that routes the right NDAs to the right level of review.
 
 :::tip Connector Dual-Mode
-If you connected Box or Egnyte in Lesson 1, the agent can pull NDAs directly from your document management system. If not, upload the NDA PDF or paste the text — both paths produce identical triage output.
+If you connected Box or Egnyte in Lesson 1, the agent can pull NDAs directly from your document management system. If not, upload the NDA PDF or paste the text: both paths produce identical triage output.
 :::
 
 :::info Concept Box: NDA (Non-Disclosure Agreement)
@@ -103,7 +103,7 @@ NDAs with RED deviations, unusual structures (unilateral where mutual expected),
 
 | Tier   | Target Response Time | Attorney Involvement                       |
 | ------ | -------------------- | ------------------------------------------ |
-| Tier 1 | 1 business day       | None — business-unit manager approval      |
+| Tier 1 | 1 business day       | None: business-unit manager approval      |
 | Tier 2 | 2 business days      | Reviewing attorney (~15 min)               |
 | Tier 3 | 5 business days      | Senior counsel (full review + negotiation) |
 
@@ -111,15 +111,15 @@ NDAs with RED deviations, unusual structures (unilateral where mutual expected),
 
 The following provisions trigger automatic Tier 3 escalation regardless of other clause quality:
 
-1. **Residuals clause** — permits use of information "retained in unaided memory"
-2. **No carve-out for publicly available information** — overly broad scope
+1. **Residuals clause**: permits use of information "retained in unaided memory"
+2. **No carve-out for publicly available information**: overly broad scope
 3. **Non-compete provisions** of any scope
-4. **Asymmetric injunctive relief** — favouring counterparty only
-5. **Perpetual confidentiality** — no sunset provision
-6. **Unilateral NDA where mutual expected** — without business justification
-7. **Unrestricted disclosure to affiliates** — no need-to-know requirement
-8. **Governing law in non-English-speaking jurisdiction** — without executive summary
-9. **Survival period exceeding 7 years** — disproportionate to typical commercial risk
+4. **Asymmetric injunctive relief**: favouring counterparty only
+5. **Perpetual confidentiality**: no sunset provision
+6. **Unilateral NDA where mutual expected**: without business justification
+7. **Unrestricted disclosure to affiliates**: no need-to-know requirement
+8. **Governing law in non-English-speaking jurisdiction**: without executive summary
+9. **Survival period exceeding 7 years**: disproportionate to typical commercial risk
 
 ## Worked Example: Triaging an NDA from a Saudi Partner
 
@@ -152,16 +152,16 @@ Business team wants to start technical discussions next week.
 | Attorney review footer             | Governance boundary reminder                                                 | Confirm the ATTORNEY REVIEW: REQUIRED footer is present                                              |
 
 :::note Your output will vary
-The specific clause classifications, deviation counts, and proposed positions depend on your playbook configuration and the NDA text. Focus on the triage tier assignment and the deviation analysis structure. The teaching point is how the three-tier system routes NDAs to the appropriate level of review — not the specific recommendations in any single output.
+The specific clause classifications, deviation counts, and proposed positions depend on your playbook configuration and the NDA text. Focus on the triage tier assignment and the deviation analysis structure. The teaching point is how the three-tier system routes NDAs to the appropriate level of review: not the specific recommendations in any single output.
 :::
 
 :::info Concept Box: Residuals Clause
 A residuals clause in an NDA permits a party to use information "retained in the unaided memory" of its personnel after the NDA terminates. For example: "Nothing in this Agreement shall restrict either party from using ideas, concepts, know-how, or techniques that are retained in the unaided memories of its Representatives who have had access to Confidential Information." This sounds innocuous but creates an enormous loophole -- any information an employee can remember, they can use freely. In practice, it can render the entire NDA unenforceable for its most valuable purpose: protecting trade secrets and proprietary methodologies. The Legal Plugin automatically flags any residuals clause as a Tier 3 RED item. **Why it matters:** residuals clauses are the most commonly overlooked high-risk provision in NDAs -- they sound reasonable but can undermine the entire agreement.
 :::
 
-Compare your prediction to the output. If you predicted Tier 1 but it classified Tier 2, look at which deviations triggered the routing. The governing law deviation (Saudi law instead of Pakistani/English law) is the kind of issue that seems minor but has real enforcement implications. This gap between gut feel and systematic triage is the value of the system — it catches issues your intuition might dismiss.
+Compare your prediction to the output. If you predicted Tier 1 but it classified Tier 2, look at which deviations triggered the routing. The governing law deviation (Saudi law instead of Pakistani/English law) is the kind of issue that seems minor but has real enforcement implications. This gap between gut feel and systematic triage is the value of the system: it catches issues your intuition might dismiss.
 
-Bilal reviews the output. The governing law flag is sensible — he knows from experience that English law with LCIA arbitration is the standard recommendation for cross-border deals between Pakistani and Gulf entities. He routes to the reviewing attorney with the agent's summary attached. The attorney confirms the governing law position, notes that the 5-year confidentiality period is acceptable for a strategic partnership, and the NDA is routed for signatory approval.
+Bilal reviews the output. The governing law flag is sensible: he knows from experience that English law with LCIA arbitration is the standard recommendation for cross-border deals between Pakistani and Gulf entities. He routes to the reviewing attorney with the agent's summary attached. The attorney confirms the governing law position, notes that the 5-year confidentiality period is acceptable for a strategic partnership, and the NDA is routed for signatory approval.
 
 Total attorney time: 12 minutes. Without the triage system, this NDA would have waited in the general review queue for 2-3 days, potentially delaying the partnership kickoff.
 
@@ -338,13 +338,13 @@ a partial competitor.
 
 :::info PayGulf Comparison
 
-PayGulf Technologies processes approximately 20 NDAs per month with fintech counterparties — payment gateways, banking API providers, card scheme partners, and merchant acquirers. The volume is comparable to Noor Technologies, but PayGulf's triage thresholds are materially tighter because of its DFSA-regulated status.
+PayGulf Technologies processes approximately 20 NDAs per month with fintech counterparties: payment gateways, banking API providers, card scheme partners, and merchant acquirers. The volume is comparable to Noor Technologies, but PayGulf's triage thresholds are materially tighter because of its DFSA-regulated status.
 
 A standard technology company triaging an NDA asks: does this deviate from our standard form? A DFSA-regulated entity must also ask: does this counterparty handle payment data, and if so, does the NDA adequately protect information that falls under both confidentiality obligations and PCI DSS requirements? An NDA with a payment gateway provider that would be Tier 1 (auto-approve) for Noor Technologies may be Tier 2 (counsel review) for PayGulf, because the counterparty processes cardholder data and the NDA must address data handling practices that the DFSA requires PayGulf to oversee in its outsourcing arrangements.
 
-PayGulf's triage configuration adds three RED flags beyond the standard nine. First, any NDA with a counterparty that processes, stores, or transmits payment card data must include provisions addressing PCI DSS compliance obligations — without these, the NDA is incomplete for regulatory purposes. Second, counterparty due diligence on data handling practices is required by DFSA outsourcing rules whenever confidential information includes customer payment data. Third, any NDA breach involving payment system data may trigger mandatory reporting obligations to the DFSA and potentially to card schemes — the NDA must not contain provisions that would prevent or delay such reporting.
+PayGulf's triage configuration adds three RED flags beyond the standard nine. First, any NDA with a counterparty that processes, stores, or transmits payment card data must include provisions addressing PCI DSS compliance obligations: without these, the NDA is incomplete for regulatory purposes. Second, counterparty due diligence on data handling practices is required by DFSA outsourcing rules whenever confidential information includes customer payment data. Third, any NDA breach involving payment system data may trigger mandatory reporting obligations to the DFSA and potentially to card schemes: the NDA must not contain provisions that would prevent or delay such reporting.
 
-The practical effect: what Noor classifies as Tier 1 auto-approve, PayGulf may classify as Tier 2 review. Fatima's team reviews more NDAs than a non-regulated company of similar size — but the regulatory cost of getting an NDA wrong is proportionally higher. The triage system does not reduce attorney involvement to zero; it ensures attorney time is spent on the NDAs where regulatory exposure is real.
+The practical effect: what Noor classifies as Tier 1 auto-approve, PayGulf may classify as Tier 2 review. Fatima's team reviews more NDAs than a non-regulated company of similar size: but the regulatory cost of getting an NDA wrong is proportionally higher. The triage system does not reduce attorney involvement to zero; it ensures attorney time is spent on the NDAs where regulatory exposure is real.
 
 :::
 

@@ -1,11 +1,11 @@
 ### Core Concept
 
-IFRS 9 requires probability-weighted ECL across multiple macroeconomic scenarios because the expected credit loss is NOT the credit loss under the expected scenario — credit losses are non-linear, so adverse scenarios contribute disproportionately — and when models still fall short, Post-Model Adjustments bridge the gap between model output and management's assessment of actual expected losses.
+IFRS 9 requires probability-weighted ECL across multiple macroeconomic scenarios because the expected credit loss is NOT the credit loss under the expected scenario (credit losses are non-linear, so adverse scenarios contribute disproportionately) and when models still fall short, Post-Model Adjustments bridge the gap between model output and management's assessment of actual expected losses.
 
 ### Key Mental Models
 
-- **Non-Linearity Principle**: A 10% GDP decline does not produce twice the losses of a 5% decline — it may produce three or four times the losses because default rates accelerate and recovery rates collapse simultaneously. This means the probability-weighted ECL always exceeds the base case ECL, even when the base case has the highest probability weight.
-- **PMAs as the Audit Focus**: Post-Model Adjustments represent management override of quantitative models, making them inherently subjective and the single most scrutinised element of IFRS 9 reporting. Every PMA requires documented rationale, committee approval, quantified impact, time-limiting, and quarterly review — governance exists to ensure PMAs are genuine risk adjustments, not earnings manipulation.
+- **Non-Linearity Principle**: A 10% GDP decline does not produce twice the losses of a 5% decline: it may produce three or four times the losses because default rates accelerate and recovery rates collapse simultaneously. This means the probability-weighted ECL always exceeds the base case ECL, even when the base case has the highest probability weight.
+- **PMAs as the Audit Focus**: Post-Model Adjustments represent management override of quantitative models, making them inherently subjective and the single most scrutinised element of IFRS 9 reporting. Every PMA requires documented rationale, committee approval, quantified impact, time-limiting, and quarterly review: governance exists to ensure PMAs are genuine risk adjustments, not earnings manipulation.
 
 ### Critical Patterns
 
@@ -16,8 +16,8 @@ IFRS 9 requires probability-weighted ECL across multiple macroeconomic scenarios
 
 ### Common Mistakes
 
-- Reporting only the base case ECL — a bank using a single scenario understates expected losses by failing to capture the non-linear tail risk from adverse scenarios
-- Treating PMAs as permanent model changes — they are temporary adjustments with expiry dates, and they must be removed when the underlying issue is resolved or incorporated into the model
+- Reporting only the base case ECL: a bank using a single scenario understates expected losses by failing to capture the non-linear tail risk from adverse scenarios
+- Treating PMAs as permanent model changes: they are temporary adjustments with expiry dates, and they must be removed when the underlying issue is resolved or incorporated into the model
 
 ### Connections
 

@@ -1,8 +1,8 @@
-# Compensation, Talent & Org Planning — Summary
+# Compensation, Talent & Org Planning: Summary
 
 ## Key Concepts
 
-- **Internal mobility imperative**: Industry research suggests assessing internal candidates first is both more cost-effective and a retention signal — overlooked high-potential employees typically leave.
+- **Internal mobility imperative**: Industry research suggests assessing internal candidates first is both more cost-effective and a retention signal, overlooked high-potential employees typically leave.
 - **Compensation percentile bands**: 25th (below market) / 50th (median) / 75th (above market) / 90th (top of market). Used to benchmark a role and check internal equity before making a promotion offer.
 - **Six-dimension talent assessment**: The `/match` framework evaluates Critical skills, Experience, Performance trajectory, Readiness indicators, Development areas, and Motivation. Each dimension has its own rating scale.
 - **Development gap types**: EXPERIENCE GAP (has aptitude, needs opportunity), SKILL GAP (needs to build capability), MINDSET GAP (assumptions need to shift). Gap type determines the development intervention.

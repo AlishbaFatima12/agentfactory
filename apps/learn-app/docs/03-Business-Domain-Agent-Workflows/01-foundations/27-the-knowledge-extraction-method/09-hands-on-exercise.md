@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/the-knowledge-extraction-method/hands-on-exercise
 sidebar_position: 9
-title: "Hands-On Exercise — First Extraction and SKILL.md Draft"
+title: "Hands-On Exercise: First Extraction and SKILL.md Draft"
 description: "Apply the full Knowledge Extraction Method to your own professional domain: conduct a structured interview, write a first-draft SKILL.md, design validation scenarios, score the results, and perform targeted rewrites that surface the gap between tacit knowledge and written instruction"
 keywords:
   [
@@ -62,7 +62,7 @@ learning_objectives:
 cognitive_load:
   new_concepts: 0
   concepts_list: []
-  assessment: "Application exercise — no new concepts introduced. Students apply the full methodology from Lessons 1-8 to their own professional domain. The cognitive demand is in synthesis and application, not in new conceptual material."
+  assessment: "Application exercise; no new concepts introduced. Students apply the full methodology from Lessons 1-8 to their own professional domain. The cognitive demand is in synthesis and application, not in new conceptual material."
 
 differentiation:
   extension_for_advanced: "After completing the five-scenario validation, design five additional scenarios: two adversarial cases that probe different Principles, two edge cases that test different boundary conditions, and one high-stakes case for a different escalation trigger. Score all ten and use the extended failure pattern to perform a more comprehensive SKILL.md revision."
@@ -73,35 +73,35 @@ teaching_guide:
   session_group: 3
   session_title: "Hands-On Extraction"
   key_points:
-    - "The exercise produces a real artifact — a first-draft SKILL.md for the student's own professional domain — not a hypothetical exercise"
-    - "The self-interview variant works but produces less rich material than the partner variant — the partner notices when the student skips over tacit knowledge"
-    - "The 'uncertain' scenario (fifth scenario) is the most diagnostic — if the student cannot think of one, they have not yet thought carefully about their SKILL.md's boundaries"
-    - "The reflection should capture what the student discovered they knew but had not articulated — this is the chapter's thesis experienced directly"
+    - "The exercise produces a real artifact: a first-draft SKILL.md for the student's own professional domain; not a hypothetical exercise"
+    - "The self-interview variant works but produces less rich material than the partner variant: the partner notices when the student skips over tacit knowledge"
+    - "The 'uncertain' scenario (fifth scenario) is the most diagnostic: if the student cannot think of one, they have not yet thought carefully about their SKILL.md's boundaries"
+    - "The reflection should capture what the student discovered they knew but had not articulated: this is the chapter's thesis experienced directly"
   misconceptions:
-    - "Students may think they can skip the interview and write the SKILL.md from memory — the interview structure surfaces knowledge that unaided recall does not"
-    - "Students may write scenarios that are too easy — every scenario should have a plausible failure mode, or it is not testing the SKILL.md meaningfully"
-    - "Students may rewrite the entire SKILL.md in Step 5 — the discipline is targeted revision, not wholesale rewriting"
+    - "Students may think they can skip the interview and write the SKILL.md from memory: the interview structure surfaces knowledge that unaided recall does not"
+    - "Students may write scenarios that are too easy: every scenario should have a plausible failure mode, or it is not testing the SKILL.md meaningfully"
+    - "Students may rewrite the entire SKILL.md in Step 5: the discipline is targeted revision, not wholesale rewriting"
   discussion_prompts:
     - "After completing the exercise, compare your north star summary with your finished SKILL.md. Does the SKILL.md encode the substance of the summary? What is missing?"
-    - "What was the most surprising piece of knowledge you surfaced during the interview — something you use daily but had never written down?"
+    - "What was the most surprising piece of knowledge you surfaced during the interview: something you use daily but had never written down?"
   teaching_tips:
-    - "Set clear time boundaries for each step — the exercise is designed to be completed in 150 minutes, and most students who overrun do so in Step 1 or Step 2"
-    - "The reflection in Step 5 is the most important pedagogical moment — encourage students to take it seriously rather than treating it as a formality"
-    - "If running this as a group exercise, pair students from different domains for the partner interview — cross-domain interviewers ask better follow-up questions because nothing seems obvious to them"
+    - "Set clear time boundaries for each step: the exercise is designed to be completed in 150 minutes, and most students who overrun do so in Step 1 or Step 2"
+    - "The reflection in Step 5 is the most important pedagogical moment: encourage students to take it seriously rather than treating it as a formality"
+    - "If running this as a group exercise, pair students from different domains for the partner interview: cross-domain interviewers ask better follow-up questions because nothing seems obvious to them"
   assessment_checks:
     - question: "What are the five deliverables the exercise produces?"
       expected_response: "Interview notes, a first-draft SKILL.md, five validation scenarios with expected outputs, a scored assessment identifying weaknesses, and a targeted rewrite of the two weakest instructions with a reflection."
     - question: "Why does the exercise include an 'uncertain' scenario?"
       expected_response: "Because every SKILL.md has gaps, and the uncertain scenario is designed to find at least one. If the student cannot identify a scenario where they are unsure how their SKILL.md would respond, they have not yet examined their boundaries carefully enough."
     - question: "What does the gap between the first draft and the revised draft measure?"
-      expected_response: "How much tacit knowledge the first draft was relying on — knowledge the author assumed the reader (the agent) would have but did not explicitly encode. The size of the revision is a direct measure of how much tacit knowledge was surfaced by the validation process."
+      expected_response: "How much tacit knowledge the first draft was relying on: knowledge the author assumed the reader (the agent) would have but did not explicitly encode. The size of the revision is a direct measure of how much tacit knowledge was surfaced by the validation process."
 ---
 
-# Hands-On Exercise — First Extraction and SKILL.md Draft
+# Hands-On Exercise: First Extraction and SKILL.md Draft
 
-Lessons 1 through 8 taught the methodology. This exercise is where you apply it. Over the next two and a half hours, you will conduct a knowledge extraction interview on your own professional domain, write a first-draft SKILL.md, test it against scenarios you design, and revise the instructions that fail. The output is a real artifact — a SKILL.md that encodes your professional expertise — not a hypothetical exercise.
+Lessons 1 through 8 taught the methodology. This exercise is where you apply it. Over the next two and a half hours, you will conduct a knowledge extraction interview on your own professional domain, write a first-draft SKILL.md, test it against scenarios you design, and revise the instructions that fail. The output is a real artifact: a SKILL.md that encodes your professional expertise; not a hypothetical exercise.
 
-The gap between your first draft and your revised draft — how much more specific you had to become — is a direct measure of how much tacit knowledge your first draft was relying on. If the two versions look similar, you have not yet surfaced the knowledge that matters. If the revision is noticeably more specific, the extraction worked.
+The gap between your first draft and your revised draft (how much more specific you had to become) is a direct measure of how much tacit knowledge your first draft was relying on. If the two versions look similar, you have not yet surfaced the knowledge that matters. If the revision is noticeably more specific, the extraction worked.
 
 ## What You Need
 
@@ -123,19 +123,19 @@ The five questions from Lesson 2 are your extraction tool. Choose the partner in
 
 ### Partner Interview Variant (Recommended)
 
-**Briefing your interviewer (5 minutes).** Give your interviewer this context: "I am going to describe a professional function I perform at work. Your job is to ask me five questions, in order, and to write down my answers as specifically as you can. The most useful thing you can do is notice when I give a vague answer and push for a concrete example. When I say 'it depends', ask me what it depends on. When I say 'you just know', ask me how I know. You are not evaluating my work — you are helping me articulate what I do that I have never written down."
+**Briefing your interviewer (5 minutes).** Give your interviewer this context: "I am going to describe a professional function I perform at work. Your job is to ask me five questions, in order, and to write down my answers as specifically as you can. The most useful thing you can do is notice when I give a vague answer and push for a concrete example. When I say 'it depends', ask me what it depends on. When I say 'you just know', ask me how I know. You are not evaluating my work: you are helping me articulate what I do that I have never written down."
 
 **The five questions (45 minutes total, roughly 8-10 minutes each).** These are the same five questions from Lesson 2. The interviewer coaching notes below help your partner push past generic answers to the specific material your SKILL.md needs.
 
 **Question 1: "Walk me through a recent example of this work going well."** The interviewer should listen for the difference between what you describe doing and what a textbook would prescribe. When you say "then I check the numbers", the interviewer should ask: "Which numbers? In what order? What are you looking for?" Follow up with: "What did you look for first?" "What told you this was going the right way?"
 
-**Question 2: "Tell me about a time this work went wrong — not because of bad luck, but because of a judgement call that turned out to be mistaken."** The interviewer should push for specific signals, not categories. "The numbers didn't look right" is a category. "The gross margin was above 40% for a logistics company, which usually means they've capitalised something they shouldn't have" is a signal. Follow up with: "At what point could the mistake have been caught?" "Is there a signal you now look for that you weren't looking for then?"
+**Question 2: "Tell me about a time this work went wrong; not because of bad luck, but because of a judgement call that turned out to be mistaken."** The interviewer should push for specific signals, not categories. "The numbers didn't look right" is a category. "The gross margin was above 40% for a logistics company, which usually means they've capitalised something they shouldn't have" is a signal. Follow up with: "At what point could the mistake have been caught?" "Is there a signal you now look for that you weren't looking for then?"
 
 **Question 3: "What is the thing that a junior professional in this role consistently gets wrong that a senior one never does?"** The interviewer should probe for the reasoning. What does the senior see that the junior does not? Follow up with: "Can you give me a specific example?" "How long does it typically take someone to learn this, and why does it take that long?"
 
-**Question 4: "If you had to write a one-page decision guide for this work — something that would help someone make the right call in ninety percent of situations — what would be on it?"** The interviewer should distinguish between generic principles and load-bearing heuristics. The second category is far more instructive for a SKILL.md. Follow up with: "What's the first thing on the page?" "Is there a heuristic you use that isn't in this guide because it's too hard to explain?"
+**Question 4: "If you had to write a one-page decision guide for this work, something that would help someone make the right call in ninety percent of situations, what would be on it?"** The interviewer should distinguish between generic principles and load-bearing heuristics. The second category is far more instructive for a SKILL.md. Follow up with: "What's the first thing on the page?" "Is there a heuristic you use that isn't in this guide because it's too hard to explain?"
 
-**Question 5: "What are the situations where you would not trust an automated system to handle this — and why?"** The interviewer should push for the threshold. "It depends on the size" is not enough. "Above £5m I always escalate; between £2m and £5m it depends on the sector and the borrower's track record" is a threshold. Follow up with: "Can you describe a situation where the context was so unusual that no standard procedure applied?"
+**Question 5: "What are the situations where you would not trust an automated system to handle this: and why?"** The interviewer should push for the threshold. "It depends on the size" is not enough. "Above £5m I always escalate; between £2m and £5m it depends on the sector and the borrower's track record" is a threshold. Follow up with: "Can you describe a situation where the context was so unusual that no standard procedure applied?"
 
 ### Self-Interview Variant
 
@@ -143,27 +143,27 @@ If you do not have a partner, open a blank document and set a timer for ten minu
 
 The self-interview prompts below are adapted from the five questions in Lesson 2. They are reworded for self-reflection rather than conversation, but each one targets the same extraction purpose as its corresponding question:
 
-1. "Describe the last time you performed this task from start to finish. Not the idealised version — the actual version." *(Targets Q1: recent success — activates episodic memory about decision-making logic)*
-2. "Think of a time your judgement turned out to be wrong — not bad luck, but a call you would make differently now. What did you miss?" *(Targets Q2: instructive failure — surfaces defensive knowledge)*
-3. "What does a competent new hire in your role consistently get wrong that you never do? What do you see that they do not?" *(Targets Q3: junior vs senior gap — identifies the expertise differential)*
-4. "If you had to write a one-page cheat sheet for someone covering your role next week, what would be on it? What would you most want to prevent them from doing?" *(Targets Q4: one-page decision guide — compresses operational heuristics)*
-5. "Describe a situation where you could have escalated but chose not to, and one where you chose to escalate when you could have handled it yourself. What determined the difference?" *(Targets Q5: automation boundaries — defines human-in-the-loop requirements)*
+1. "Describe the last time you performed this task from start to finish. Not the idealised version: the actual version." *(Targets Q1: recent success: activates episodic memory about decision-making logic)*
+2. "Think of a time your judgement turned out to be wrong, not bad luck, but a call you would make differently now. What did you miss?" *(Targets Q2: instructive failure, surfaces defensive knowledge)*
+3. "What does a competent new hire in your role consistently get wrong that you never do? What do you see that they do not?" *(Targets Q3: junior vs senior gap: identifies the expertise differential)*
+4. "If you had to write a one-page cheat sheet for someone covering your role next week, what would be on it? What would you most want to prevent them from doing?" *(Targets Q4: one-page decision guide: compresses operational heuristics)*
+5. "Describe a situation where you could have escalated but chose not to, and one where you chose to escalate when you could have handled it yourself. What determined the difference?" *(Targets Q5: automation boundaries: defines human-in-the-loop requirements)*
 
 ### The North Star Summary (10 minutes)
 
-Immediately after the interview, write a two-paragraph summary — the same format taught in Lesson 3. The first paragraph captures the most important decision-making logic the interview surfaced: the core analytical process, the key signals, the sequence in which the expert evaluates information. The second paragraph captures the most important escalation condition: the situations where human judgement is genuinely irreplaceable and the boundaries of what the agent should handle autonomously.
+Immediately after the interview, write a two-paragraph summary: the same format taught in Lesson 3. The first paragraph captures the most important decision-making logic the interview surfaced: the core analytical process, the key signals, the sequence in which the expert evaluates information. The second paragraph captures the most important escalation condition: the situations where human judgement is genuinely irreplaceable and the boundaries of what the agent should handle autonomously.
 
 This summary is your anchor for everything that follows. Write it while the interview is fresh. If the SKILL.md you produce in Step 2 does not clearly encode the substance of both paragraphs, something has been lost in the translation.
 
 ## Step 2: Write the First-Draft SKILL.md (30 minutes)
 
-Using your interview notes and the template below, write a complete first-draft SKILL.md. Do not leave any section blank. If you are uncertain about a section, write your best attempt and mark it with "[UNCERTAIN]" — you will revisit these marks during scoring.
+Using your interview notes and the template below, write a complete first-draft SKILL.md. Do not leave any section blank. If you are uncertain about a section, write your best attempt and mark it with "[UNCERTAIN]": you will revisit these marks during scoring.
 
-You may use your AI assistant to help structure your notes into prose. But the content — the specific knowledge, the judgement calls, the boundary conditions — must come from your interview notes, not from the model's general knowledge. If the assistant adds a principle that did not come from your interview, delete it.
+You may use your AI assistant to help structure your notes into prose. But the content: the specific knowledge, the judgement calls, the boundary conditions: must come from your interview notes, not from the model's general knowledge. If the assistant adds a principle that did not come from your interview, delete it.
 
 ### SKILL.md Template
 
-**Persona (2-3 paragraphs).** Paragraph 1 establishes the professional standing and communication register — the agent's level of expertise, how it communicates, and its relationship to the user. Paragraph 2 establishes the epistemic standard — how the agent handles uncertainty, distinguishes conclusions from inferences, and manages incomplete information. Paragraph 3 establishes the identity constraint — the single most important thing this agent is not. State it as professional identity, not as a rule.
+**Persona (2-3 paragraphs).** Paragraph 1 establishes the professional standing and communication register: the agent's level of expertise, how it communicates, and its relationship to the user. Paragraph 2 establishes the epistemic standard; how the agent handles uncertainty, distinguishes conclusions from inferences, and manages incomplete information. Paragraph 3 establishes the identity constraint: the single most important thing this agent is not. State it as professional identity, not as a rule.
 
 **Questions (in-scope and out-of-scope).** List three to five in-scope categories, each with a specific description of what falls within the category, what data sources it works with, and what outputs it produces. Then list at least four out-of-scope types, each with an explanation of why it is out of scope and a positive redirection telling the user what to do instead. The out-of-scope section should be at least as long as any single in-scope category.
 
@@ -175,19 +175,19 @@ Design five scenarios using this template for each:
 
 **Scenario [number]: [short title].** Category (Standard / Edge / Adversarial / High-stakes / Uncertain). Test input (the exact query a user would submit). What a correct response looks like (2-3 sentences). What a common failure looks like (2-3 sentences). Primary scoring component (Accuracy / Calibration / Boundary compliance).
 
-Design one scenario from each of the four standard categories, plus one "uncertain" scenario — a query where you genuinely do not know how your SKILL.md would handle it. The uncertain scenario is the most diagnostic. If you cannot think of one, you have not yet thought carefully enough about the boundaries of your instructions.
+Design one scenario from each of the four standard categories, plus one "uncertain" scenario: a query where you genuinely do not know how your SKILL.md would handle it. The uncertain scenario is the most diagnostic. If you cannot think of one, you have not yet thought carefully enough about the boundaries of your instructions.
 
 ## Step 4: Score and Identify Weaknesses (20 minutes)
 
-For each scenario, read your SKILL.md as though you were the agent. Score three components — accuracy, calibration, and boundary compliance — as pass or fail. A scenario passes overall only when all three components pass.
+For each scenario, read your SKILL.md as though you were the agent. Score three components (accuracy, calibration, and boundary compliance) as pass or fail. A scenario passes overall only when all three components pass.
 
 After scoring, identify the two specific instructions in your SKILL.md most responsible for the failures. Quote each instruction, explain why it is weak (too vague, missing, contradictory, or incomplete), and write your first thought on what it needs to say instead.
 
 ## Step 5: Targeted Rewrite and Reflection (10 minutes)
 
-Rewrite the two weakest instructions. The rewrite should be specific enough that the scoring outcome changes from Fail to Pass for the scenario that exposed the weakness. Do not rewrite the entire SKILL.md — the discipline is targeted revision. Check that your rewrite does not conflict with existing instructions elsewhere in the document.
+Rewrite the two weakest instructions. The rewrite should be specific enough that the scoring outcome changes from Fail to Pass for the scenario that exposed the weakness. Do not rewrite the entire SKILL.md: the discipline is targeted revision. Check that your rewrite does not conflict with existing instructions elsewhere in the document.
 
-Then write a two-sentence reflection on what this exercise taught you about the difference between knowing something and instructing an agent to do it. If your reflection is generic — "I learned that writing instructions is hard" — push deeper. What specific piece of knowledge did you discover you had not articulated?
+Then write a two-sentence reflection on what this exercise taught you about the difference between knowing something and instructing an agent to do it. If your reflection is generic ("I learned that writing instructions is hard") push deeper. What specific piece of knowledge did you discover you had not articulated?
 
 ## Credit Analyst Worked Example (Abbreviated)
 
@@ -203,9 +203,9 @@ To illustrate what the exercise produces, here is an abbreviated version of the 
 
 **Uncertain scenario:** "The borrower's management accounts show improving margins but the audited accounts from six months earlier show a different picture. Which should I rely on?" The analyst was uncertain whether the SKILL.md gave clear guidance on the hierarchy of data sources when auditability and recency conflict.
 
-**Weakest instruction found:** "Use the most recent data available" — too vague. It did not specify how to handle the tension between recency and auditability. **Rewrite:** "When audited and unaudited sources cover overlapping periods, present both with their respective dates and verification status. Flag the discrepancy and state which conclusions change depending on which source is used. Do not default to the more recent source when the older source carries a higher standard of verification."
+**Weakest instruction found:** "Use the most recent data available": too vague. It did not specify how to handle the tension between recency and auditability. **Rewrite:** "When audited and unaudited sources cover overlapping periods, present both with their respective dates and verification status. Flag the discrepancy and state which conclusions change depending on which source is used. Do not default to the more recent source when the older source carries a higher standard of verification."
 
-**Reflection:** "I discovered that my instinct for which data source to trust is not a single rule — it is a conditional hierarchy that depends on the stakes of the conclusion and the verification standard of the source. My first draft assumed the agent would resolve the tension the same way I do, without being told how."
+**Reflection:** "I discovered that my instinct for which data source to trust is not a single rule: it is a conditional hierarchy that depends on the stakes of the conclusion and the verification standard of the source. My first draft assumed the agent would resolve the tension the same way I do, without being told how."
 
 ## Timing Summary
 
@@ -241,7 +241,7 @@ For each adversarial scenario:
    close it
 ```
 
-**What you're learning:** Your own adversarial scenarios are limited by what you thought to test. An AI assistant can generate scenarios you did not anticipate — which is precisely the kind of gap that shadow mode would surface in production. Using AI to stress-test before deployment is a practical application of the methodology that extends your validation coverage beyond your own imagination.
+**What you're learning:** Your own adversarial scenarios are limited by what you thought to test. An AI assistant can generate scenarios you did not anticipate; which is precisely the kind of gap that shadow mode would surface in production. Using AI to stress-test before deployment is a practical application of the methodology that extends your validation coverage beyond your own imagination.
 
 ### Prompt 2: Specificity Audit
 
@@ -264,7 +264,7 @@ Then calculate a "specificity score" — the percentage of instructions
 that passed the testability criterion on first draft.
 ```
 
-**What you're learning:** The testability criterion from Lesson 6 is the single most important quality check for SKILL.md Principles. Running a systematic audit after completing the exercise reveals how much specificity you still need to add — and the specificity score gives you a concrete measure of progress when you compare your first draft to your revision.
+**What you're learning:** The testability criterion from Lesson 6 is the single most important quality check for SKILL.md Principles. Running a systematic audit after completing the exercise reveals how much specificity you still need to add: and the specificity score gives you a concrete measure of progress when you compare your first draft to your revision.
 
 ### Prompt 3: Extraction Gap Analysis
 

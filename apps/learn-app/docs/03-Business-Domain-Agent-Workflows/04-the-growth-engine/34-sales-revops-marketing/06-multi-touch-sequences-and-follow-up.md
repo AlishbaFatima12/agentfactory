@@ -83,9 +83,9 @@ differentiation:
 
 In Lesson 5, you drafted personalised outreach that follows the Five Laws. Sarah Chen received your LinkedIn message. She didn't respond. Now what?
 
-Most reps face this moment and make one of two mistakes. They give up after a single touch — concluding that silence means disinterest. Or they send the same message again, hoping repetition will break through. Neither works. Industry data shows that single-touch outreach earns roughly a 5% response rate, while a well-constructed 6-touch sequence with genuine value at every step reaches 25-35%. The difference is not persistence. The difference is that each subsequent touch adds something the prospect did not have before — a case study, an industry insight, a diagnostic question — so that by touch 4 or 5, the cumulative value earns a reply.
+Most reps face this moment and make one of two mistakes. They give up after a single touch: concluding that silence means disinterest. Or they send the same message again, hoping repetition will break through. Neither works. Industry data shows that single-touch outreach earns roughly a 5% response rate, while a well-constructed 6-touch sequence with genuine value at every step reaches 25-35%. The difference is not persistence. The difference is that each subsequent touch adds something the prospect did not have before: a case study, an industry insight, a diagnostic question: so that by touch 4 or 5, the cumulative value earns a reply.
 
-The problem is cognitive load. Writing six unique, personalised touches for every prospect in your pipeline is exhausting. By touch 3, most reps default to generic follow-ups that could be sent to anyone. That is where the agent helps — and where it introduces a new risk. This lesson builds a complete 6-touch sequence, compares sales sequences to marketing sequences, and surfaces a new error type that the agent will not warn you about.
+The problem is cognitive load. Writing six unique, personalised touches for every prospect in your pipeline is exhausting. By touch 3, most reps default to generic follow-ups that could be sent to anyone. That is where the agent helps: and where it introduces a new risk. This lesson builds a complete 6-touch sequence, compares sales sequences to marketing sequences, and surfaces a new error type that the agent will not warn you about.
 
 ## Building the Meridian Sequence
 
@@ -114,7 +114,7 @@ consolidation delays, and WMS integration challenges.
 | Touch 6 (Day 21) | Graceful close with door open                  | Protects the relationship; no last-ditch ask        |
 
 :::note Your output will vary
-The specific content of each touch depends on your research brief from Lesson 2 and enrichment data from Lesson 4. The teaching point is the _progression_ — each touch adds something new — and whether personalisation holds through all six touches or decays in the later ones. If Touch 5 recycles references from Touch 2, you have found personalisation decay.
+The specific content of each touch depends on your research brief from Lesson 2 and enrichment data from Lesson 4. The teaching point is the _progression_: each touch adds something new: and whether personalisation holds through all six touches or decays in the later ones. If Touch 5 recycles references from Touch 2, you have found personalisation decay.
 :::
 
 ### Understanding the Sequence Logic
@@ -130,13 +130,13 @@ Read through your six touches and notice the progression. This is not six versio
 | **#5** | Email    | Q3 earnings insight + 2-hour diagnostic offer         | New research + low-commitment CTA |
 | **#6** | Email    | Graceful close with door open                         | Protect the relationship          |
 
-Touch 3 is content, not pitch. Touch 6 is a graceful close, not a last-ditch ask. The sequence earns attention by delivering value at every step — case studies, data points, diagnostic offers — rather than repeating the same request with increasing desperation.
+Touch 3 is content, not pitch. Touch 6 is a graceful close, not a last-ditch ask. The sequence earns attention by delivering value at every step: case studies, data points, diagnostic offers: rather than repeating the same request with increasing desperation.
 
-Each touch must use a distinct hook, proof point, or angle not present in any previous touch. Plan the distribution of available hooks across touches before writing — do not front-load all proof points into Touch 1. Reserve your strongest proof point (case study, customer result) for Touch 3-4, not Touch 1 — social proof converts better after rapport is established.
+Each touch must use a distinct hook, proof point, or angle not present in any previous touch. Plan the distribution of available hooks across touches before writing: do not front-load all proof points into Touch 1. Reserve your strongest proof point (case study, customer result) for Touch 3-4, not Touch 1: social proof converts better after rapport is established.
 
 ## Sales Sequences vs Marketing Sequences
 
-The sequence you just built is a **sales sequence** — personalised to Sarah Chen, informed by her research brief, tailored to her specific situation. Now compare it to a marketing sequence.
+The sequence you just built is a **sales sequence**: personalised to Sarah Chen, informed by her research brief, tailored to her specific situation. Now compare it to a marketing sequence.
 
 Run the `/email-sequence` command from the marketing plugin:
 
@@ -149,7 +149,7 @@ new NexaFlow trial users. Goal: convert to paid within 14 days.
 
 | Section                     | Intent                               | What to Verify                                            |
 | --------------------------- | ------------------------------------ | --------------------------------------------------------- |
-| Sequence header             | Segment name, email count, timeline  | Audience is "all new trial users" — not a named prospect  |
+| Sequence header             | Segment name, email count, timeline  | Audience is "all new trial users": not a named prospect  |
 | Welcome email (Day 0)       | Product introduction + quick start   | Generic to all users, no individual references            |
 | Feature highlight (Day 3)   | Key feature adoption nudge           | References shared behaviour patterns, not individual data |
 | Social proof (Day 7)        | Customer story or metric             | Generic success story applicable to the segment           |
@@ -157,23 +157,23 @@ new NexaFlow trial users. Goal: convert to paid within 14 days.
 | Urgency + CTA (Day 14)      | Conversion push before trial expires | Clear deadline and loss framing                           |
 
 :::note Your output will vary
-The content depends on your product description and segment definition. The teaching point is the _contrast with the sales sequence_ — marketing sequences address a segment, sales sequences address a person. Count how many touches reference the prospect by name (sales: all, marketing: none). That count reveals the structural boundary between personalised outreach and segment-level automation.
+The content depends on your product description and segment definition. The teaching point is the _contrast with the sales sequence_: marketing sequences address a segment, sales sequences address a person. Count how many touches reference the prospect by name (sales: all, marketing: none). That count reveals the structural boundary between personalised outreach and segment-level automation.
 :::
 
 Now compare the two sequences side by side:
 
 | Dimension           | Sales Sequence (Sarah Chen)                                                   | Marketing Sequence (Trial Users)                           |
 | ------------------- | ----------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| **Personalisation** | References BrightPath acquisition, WMS challenges, Q3 earnings, LinkedIn post | Generic to all trial users — no individual research        |
+| **Personalisation** | References BrightPath acquisition, WMS challenges, Q3 earnings, LinkedIn post | Generic to all trial users: no individual research        |
 | **Trigger**         | Rep-initiated based on research                                               | Lifecycle-triggered (sign-up event)                        |
 | **Audience**        | One person: Sarah Chen                                                        | A segment: all new trial users                             |
 | **Exit condition**  | Reply, bounce, unsubscribe, silence after 6 → warm nurture                    | Trial converts, trial expires, user unsubscribes           |
-| **Five Laws**       | Enforced on every touch (Law 1 requires specific references)                  | Law 1 not applicable — no individual prospect to reference |
+| **Five Laws**       | Enforced on every touch (Law 1 requires specific references)                  | Law 1 not applicable: no individual prospect to reference |
 | **Who sends**       | Rep reviews and approves each touch                                           | Fully automated, no human review                           |
 
-The key difference is personalisation depth. The sales sequence would fail if you swapped "Sarah Chen" for any other name — every touch references her specific situation. The marketing sequence works for any trial user because it references shared experiences (feature adoption, social proof), not individual research.
+The key difference is personalisation depth. The sales sequence would fail if you swapped "Sarah Chen" for any other name: every touch references her specific situation. The marketing sequence works for any trial user because it references shared experiences (feature adoption, social proof), not individual research.
 
-Neither is better. They serve different purposes. Sales sequences convert known, researched prospects. Marketing sequences nurture segments at scale. The mistake is using a marketing sequence where a sales sequence is needed — sending Sarah Chen the same generic nurture email that 500 other trial users received.
+Neither is better. They serve different purposes. Sales sequences convert known, researched prospects. Marketing sequences nurture segments at scale. The mistake is using a marketing sequence where a sales sequence is needed: sending Sarah Chen the same generic nurture email that 500 other trial users received.
 
 ## Discovering the Decay Problem
 
@@ -185,29 +185,29 @@ Sarah that was not already in Touch 1? Or has the personalisation
 decayed to generic advice?
 ```
 
-Look at the language: "I noticed Meridian's Q3 update mentioned 'integration synergies expected in H1.'" This references a new data point — the Q3 earnings mention — which means the agent found additional research to keep the personalisation fresh. That is good.
+Look at the language: "I noticed Meridian's Q3 update mentioned 'integration synergies expected in H1.'" This references a new data point: the Q3 earnings mention: which means the agent found additional research to keep the personalisation fresh. That is good.
 
 Now look at the phrase "the 90-day window I mentioned." This refers back to Touch 2. It is not new information. It is recycled context. By Touch 5, the agent is working harder to find new angles, and the ratio of new insight to recycled reference is shifting.
 
-This is **personalisation decay** — the gradual loss of prospect-specific references as a sequence progresses. In the early touches, the research brief provides rich material. By touches 4-5, the agent has used the best research and starts recycling earlier references or falling back to broader industry observations.
+This is **personalisation decay**: the gradual loss of prospect-specific references as a sequence progresses. In the early touches, the research brief provides rich material. By touches 4-5, the agent has used the best research and starts recycling earlier references or falling back to broader industry observations.
 
-Personalisation decay is not a bug in the agent. It is a structural limitation: the research brief has finite material, and a 6-touch sequence demands more unique angles than most briefs contain. The lesson is that later touches need manual review and enhancement. The agent drafts the structure. You add the fresh insight — a new LinkedIn post, a conference talk, a mutual connection — that keeps the sequence feeling researched, not robotic.
+Personalisation decay is not a bug in the agent. It is a structural limitation: the research brief has finite material, and a 6-touch sequence demands more unique angles than most briefs contain. The lesson is that later touches need manual review and enhancement. The agent drafts the structure. You add the fresh insight: a new LinkedIn post, a conference talk, a mutual connection: that keeps the sequence feeling researched, not robotic.
 
 :::warning Over-Automation
-You have just discovered a new agent error type. In Lesson 1, you identified **Hallucinated Data** — the agent inventing facts. In Lesson 3, **Miscalibrated Scoring** — the agent weighting dimensions incorrectly. In Lesson 5, **Compliance Gap** — legally non-compliant content. Now you have **Over-Automation**: the agent continues executing when it should pause for human judgment.
+You have just discovered a new agent error type. In Lesson 1, you identified **Hallucinated Data**: the agent inventing facts. In Lesson 3, **Miscalibrated Scoring**: the agent weighting dimensions incorrectly. In Lesson 5, **Compliance Gap**: legally non-compliant content. Now you have **Over-Automation**: the agent continues executing when it should pause for human judgment.
 
-Over-Automation is not limited to sequences that run too long. It includes any situation where the agent's output quality has degraded below the threshold where sending it helps your relationship with the prospect. A Touch 5 with recycled personalisation is not illegal. But it tells Sarah Chen that the person writing to her has run out of things to say — and is letting a machine keep talking.
+Over-Automation is not limited to sequences that run too long. It includes any situation where the agent's output quality has degraded below the threshold where sending it helps your relationship with the prospect. A Touch 5 with recycled personalisation is not illegal. But it tells Sarah Chen that the person writing to her has run out of things to say: and is letting a machine keep talking.
 
 The diagnostic question: **"Should the agent have stopped before touch #5?"** If the answer is yes, you have detected Over-Automation. The fix is not deleting the touch. The fix is enhancing it with fresh research or replacing it with a manual, genuinely personal message.
 :::
 
 ## Follow-Up Templates
 
-When a prospect responds — whether after touch 2 or touch 5 — the sequence stops and the follow-up skill takes over. Let's build a follow-up for a successful outcome.
+When a prospect responds: whether after touch 2 or touch 5: the sequence stops and the follow-up skill takes over. Let's build a follow-up for a successful outcome.
 
 Sarah Chen replied after Touch 4:
 
-> "Hi Farah — the TransGlobal brief was helpful. We're finalising our WMS integration scope next month. Could we set up a call in early April to walk through the consolidation diagnostic you mentioned?"
+> "Hi Farah: the TransGlobal brief was helpful. We're finalising our WMS integration scope next month. Could we set up a call in early April to walk through the consolidation diagnostic you mentioned?"
 
 This is a positive response with a delayed timeline. Generate the follow-up:
 
@@ -260,18 +260,18 @@ needs. Please let us know a time that works.
 
 The difference is stark. The context-aware follow-up references the TransGlobal brief, the inventory-masters-first approach, and provides a specific diagnostic agenda. The generic follow-up could be sent to anyone. The sequence built context over 21 days. The follow-up skill uses that context to make the response feel like a continuation of a conversation, not a cold start.
 
-Follow-ups must be sent within 2 hours of the call ending. The "What I heard" section must use the prospect's exact phrases from call notes — quoted verbatim, not paraphrased. Every commitment made by either side must be listed with the exact date agreed, not approximations. If the call notes don't contain a detail, it cannot appear in the follow-up.
+Follow-ups must be sent within 2 hours of the call ending. The "What I heard" section must use the prospect's exact phrases from call notes: quoted verbatim, not paraphrased. Every commitment made by either side must be listed with the exact date agreed, not approximations. If the call notes don't contain a detail, it cannot appear in the follow-up.
 
 ## Exit Conditions
 
-Every sequence needs rules for when to stop. Without them, the agent sends all six touches regardless of what happens — and that is how Over-Automation damages relationships.
+Every sequence needs rules for when to stop. Without them, the agent sends all six touches regardless of what happens: and that is how Over-Automation damages relationships.
 
 | Condition                          | Action                                               | Reasoning                                                                                                                                 |
 | ---------------------------------- | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| **Reply to any touch**             | Exit sequence, brief the rep                         | The prospect has engaged — shift from sequence to conversation                                                                            |
+| **Reply to any touch**             | Exit sequence, brief the rep                         | The prospect has engaged: shift from sequence to conversation                                                                            |
 | **Email bounce**                   | Switch channel (try LinkedIn)                        | The email address may be wrong, but the prospect is still reachable                                                                       |
 | **Unsubscribe or "stop"**          | Stop immediately, log in CRM                         | Continuing after an explicit opt-out is both unprofessional and, in most jurisdictions, illegal                                           |
-| **No response after 6 touches**    | Move to warm nurture, do not re-sequence for 90 days | Six touches with zero signal means the timing is wrong — not necessarily the prospect. Re-sequencing before 90 days feels like harassment |
+| **No response after 6 touches**    | Move to warm nurture, do not re-sequence for 90 days | Six touches with zero signal means the timing is wrong: not necessarily the prospect. Re-sequencing before 90 days feels like harassment |
 | **Out-of-office reply**            | Pause until return date + 3 days                     | Sending messages to someone who is away wastes touches and creates inbox clutter when they return                                         |
 | **Prospect forwards to colleague** | Pause, re-research, rebuild                          | A new stakeholder requires a fresh research brief and a new sequence tailored to their role                                               |
 
@@ -283,7 +283,7 @@ Exit conditions are the governance layer that separates professional outreach fr
 2. A marketing nurture sequence for comparison, showing the structural differences between personalised sales outreach and segment-level automation
 3. The Over-Automation error type, discovered by examining where personalisation decays across sequence length
 4. Follow-up templates that use sequence context to continue the conversation naturally
-5. Exit conditions for six scenarios — reply, bounce, unsubscribe, silence, out-of-office, and stakeholder change
+5. Exit conditions for six scenarios: reply, bounce, unsubscribe, silence, out-of-office, and stakeholder change
 
 ## Flashcards Study Aid
 
@@ -317,7 +317,7 @@ Then identify: at which touch does personalisation start to
 decay? What new research would you need to strengthen it?
 ```
 
-**What you're learning:** You are practising the complete sequence-building workflow — from research brief to Five Laws audit — with your own prospect data. The audit forces you to evaluate whether personalisation holds across all six touches or decays after touch 3. This builds the diagnostic instinct to catch Over-Automation before it reaches a prospect's inbox.
+**What you're learning:** You are practising the complete sequence-building workflow: from research brief to Five Laws audit: with your own prospect data. The audit forces you to evaluate whether personalisation holds across all six touches or decays after touch 3. This builds the diagnostic instinct to catch Over-Automation before it reaches a prospect's inbox.
 
 **Prompt 2: Sales vs Marketing Comparison**
 
@@ -341,7 +341,7 @@ specific prospect. Answer these questions:
    damage your credibility?
 ```
 
-**What you're learning:** The comparison reveals the structural boundary between personalised outreach and segment-level automation. Sales sequences require human review because personalisation is their value. Marketing sequences can run fully automated because they address shared experiences. Confusing the two — sending a generic nurture email to a researched prospect — signals that you did not do the work.
+**What you're learning:** The comparison reveals the structural boundary between personalised outreach and segment-level automation. Sales sequences require human review because personalisation is their value. Marketing sequences can run fully automated because they address shared experiences. Confusing the two: sending a generic nurture email to a researched prospect: signals that you did not do the work.
 
 **Prompt 3: Build a Sequence for a Real Prospect**
 
@@ -363,4 +363,4 @@ research or insight would make it SEND-ready. Then revise
 those touches and re-evaluate.
 ```
 
-**What you're learning:** This exercise calibrates your judgment for where the agent's output is good enough to send and where it needs human enhancement. Most students find that touches 1-3 earn SEND or EDIT status, while touches 4-6 need more work. That pattern reflects personalisation decay — and knowing where it starts in your sequences tells you exactly where to invest your time.
+**What you're learning:** This exercise calibrates your judgment for where the agent's output is good enough to send and where it needs human enhancement. Most students find that touches 1-3 earn SEND or EDIT status, while touches 4-6 need more work. That pattern reflects personalisation decay: and knowing where it starts in your sequences tells you exactly where to invest your time.

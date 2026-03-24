@@ -42,7 +42,7 @@ learning_objectives:
     bloom_level: "Apply"
     assessment_method: "Student invokes /prd with InsightFlow Workflow Builder context and receives a PRD with all 10 sections present"
 
-  - objective: "Evaluate a PRD against the NEVER DO rules from the /prd skill spec — checking commercial evidence quality, MUST vs SHOULD scope, and failure threshold definition"
+  - objective: "Evaluate a PRD against the NEVER DO rules from the /prd skill spec: checking commercial evidence quality, MUST vs SHOULD scope, and failure threshold definition"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
     assessment_method: "Student identifies at least two quality violations in the PRD output and corrects them with follow-up prompts"
@@ -53,39 +53,39 @@ cognitive_load:
     - "Spec vs. PRD distinction (scope, audience, purpose)"
     - "10-section PRD template"
     - "PRD status gates (DRAFT → REVIEW → REFINED → APPROVED → SHIPPED)"
-    - "Failure threshold — the pre-launch definition of 'change direction'"
+    - "Failure threshold: the pre-launch definition of 'change direction'"
     - "MUST vs. SHOULD scope rule (if more than 60% are MUST, scope is too large)"
-  assessment: "5 concepts build on L06 — students already know spec anatomy, so this lesson extends that knowledge to initiative scale. The most important new concept is the failure threshold, which is counterintuitive for PMs who focus on success. The 60% MUST rule provides a concrete heuristic that prevents the common trap of labelling everything as must-have."
+  assessment: "5 concepts build on L06: students already know spec anatomy, so this lesson extends that knowledge to initiative scale. The most important new concept is the failure threshold, which is counterintuitive for PMs who focus on success. The 60% MUST rule provides a concrete heuristic that prevents the common trap of labelling everything as must-have."
 
 differentiation:
   extension_for_advanced: "Take the Workflow Builder PRD and run a MUST challenge: list every MUST requirement, then ask for each one 'Would we actually not ship without this?' Downgrade any that you would ship without to SHOULD. How many remain as genuine MUSTs? Then verify the success metrics: are they specific enough that you could set up an analytics query to measure them today, before the feature ships?"
-  remedial_for_struggling: "Focus on the distinction between spec and PRD by reading Section 4 (Functional Requirements) of the PRD template. Each entry in that section is essentially a feature spec rolled up to one line per feature — name, priority, description, and spec reference. The PRD does not replace the spec; it references it. Once you understand that relationship, the PRD stops feeling like duplication and starts feeling like coordination."
+  remedial_for_struggling: "Focus on the distinction between spec and PRD by reading Section 4 (Functional Requirements) of the PRD template. Each entry in that section is essentially a feature spec rolled up to one line per feature: name, priority, description, and spec reference. The PRD does not replace the spec; it references it. Once you understand that relationship, the PRD stops feeling like duplication and starts feeling like coordination."
 
 teaching_guide:
   key_points:
-    - "A spec is written for the team building one feature; a PRD is written for the entire organisation aligning on a major bet — audience determines format"
-    - "The failure threshold is the most important section most PMs skip — defining what would cause you to change direction before launch is harder than defining success, but far more valuable"
-    - "If more than 60% of functional requirements are labelled MUST, the scope is too large — this is a forcing function, not a suggestion"
-    - "The engineering lead must sign off on Section 6 (Technical Architecture Notes) before the PRD moves to REVIEW status — never skip this gate"
-    - "PRD commercial evidence must cite sources and quantities — 'customers have asked for this' is not evidence; '4 enterprise deals cited SSO as a blocker in Q2' is evidence"
+    - "A spec is written for the team building one feature; a PRD is written for the entire organisation aligning on a major bet: audience determines format"
+    - "The failure threshold is the most important section most PMs skip: defining what would cause you to change direction before launch is harder than defining success, but far more valuable"
+    - "If more than 60% of functional requirements are labelled MUST, the scope is too large: this is a forcing function, not a suggestion"
+    - "The engineering lead must sign off on Section 6 (Technical Architecture Notes) before the PRD moves to REVIEW status: never skip this gate"
+    - "PRD commercial evidence must cite sources and quantities: 'customers have asked for this' is not evidence; '4 enterprise deals cited SSO as a blocker in Q2' is evidence"
   misconceptions:
-    - "A PRD is just a longer spec. Correction: a PRD and a spec serve different audiences and answer different questions. The spec asks 'how do we build this feature?' The PRD asks 'should we make this bet, and what does winning look like?' A PRD without commercial context, success metrics, GTM requirements, and a failure threshold is not a PRD — it is a long spec."
+    - "A PRD is just a longer spec. Correction: a PRD and a spec serve different audiences and answer different questions. The spec asks 'how do we build this feature?' The PRD asks 'should we make this bet, and what does winning look like?' A PRD without commercial context, success metrics, GTM requirements, and a failure threshold is not a PRD: it is a long spec."
     - "The failure threshold is negative thinking. Correction: defining what would cause you to change direction before launch is how you prevent sunk-cost escalation. PMs who define failure thresholds in advance make better decisions at the 30-day review because they have a pre-committed standard, not a post-hoc rationalisation."
-    - "Once the PRD is APPROVED, it cannot change. Correction: PRDs are living documents through the REFINED stage. The goal of the status gates is to ensure that changes are deliberate — every change to an APPROVED PRD requires a new sign-off, which prevents quiet scope creep."
+    - "Once the PRD is APPROVED, it cannot change. Correction: PRDs are living documents through the REFINED stage. The goal of the status gates is to ensure that changes are deliberate: every change to an APPROVED PRD requires a new sign-off, which prevents quiet scope creep."
   discussion_prompts:
-    - "Your CEO adds three new MUST requirements to the PRD the week before sprint planning — none of which were in the original document. The PRD is now at 70% MUST. How do you handle this conversation? What do you say to the CEO? What options do you present?"
+    - "Your CEO adds three new MUST requirements to the PRD the week before sprint planning: none of which were in the original document. The PRD is now at 70% MUST. How do you handle this conversation? What do you say to the CEO? What options do you present?"
     - "The engineering lead reviews the architecture notes section and says 'this will take 3 sprints more than the current estimate.' The PRD was already APPROVED. What happens next? Who needs to be involved in the re-scoping decision?"
   teaching_tips:
-    - "The Workflow Builder PRD should feel like a natural expansion of the L06 spec — it wraps the trigger configuration spec plus other features into the full initiative. If students feel like they are starting over, remind them: the spec they wrote in L06 becomes Section 4, Feature 1 of the PRD."
-    - "The commercial evidence section is where many PM students struggle — they list requests without quantifying them. A useful exercise: ask students to take each commercial evidence item and ask 'would this convince the CFO to fund 8 sprints of engineering work?' If not, the evidence is too weak."
-    - "Teach the failure threshold by asking the inverse question first: 'How will you know this worked?' Then ask 'How will you know this is not working — and at what point would you change direction?' The second question is harder and more important."
+    - "The Workflow Builder PRD should feel like a natural expansion of the L06 spec: it wraps the trigger configuration spec plus other features into the full initiative. If students feel like they are starting over, remind them: the spec they wrote in L06 becomes Section 4, Feature 1 of the PRD."
+    - "The commercial evidence section is where many PM students struggle: they list requests without quantifying them. A useful exercise: ask students to take each commercial evidence item and ask 'would this convince the CFO to fund 8 sprints of engineering work?' If not, the evidence is too weak."
+    - "Teach the failure threshold by asking the inverse question first: 'How will you know this worked?' Then ask 'How will you know this is not working: and at what point would you change direction?' The second question is harder and more important."
 ---
 
 # PRDs for Multi-Team Initiatives
 
 You have a spec for the Workflow Builder trigger configuration feature. It is tight, well-scoped, and ready for engineering review. Maria Santos, your CTO, reads it and sends you a message: "This is good for the trigger feature, but I need the bigger picture. Engineering, design, data, and the platform team are all involved in Workflow Builder. How do I know this initiative is worth 4 months of cross-team work? What does success look like? What are the launch requirements? Who is signing off on the architecture?"
 
-The spec answers the question for one team building one feature. The PRD answers the question the CTO is asking — the question the entire organisation needs answered before it makes a major bet.
+The spec answers the question for one team building one feature. The PRD answers the question the CTO is asking: the question the entire organisation needs answered before it makes a major bet.
 
 This lesson teaches you when a PRD is required instead of a spec, how to use `/prd` from the custom `product-strategy` plugin to generate a 10-section PRD, and how to evaluate the output against the quality rules that prevent the most expensive PRD failures: undefined success metrics, vague commercial evidence, and MUSTs that are not really MUSTs.
 
@@ -99,7 +99,7 @@ The distinction is not about document length. It is about scope, audience, and w
 | **Audience**          | Engineering team building the feature   | Entire team + leadership + cross-functional stakeholders                                                        |
 | **Question answered** | How do we build this feature correctly? | Should we make this bet, and what does winning look like?                                                       |
 | **Required when**     | Always, for any feature going to sprint | Multiple teams involved, executive alignment required, new product area                                         |
-| **What it adds**      | —                                       | Commercial context, GTM requirements, non-functional requirements, launch plan, dependencies, failure threshold |
+| **What it adds**      |;                                       | Commercial context, GTM requirements, non-functional requirements, launch plan, dependencies, failure threshold |
 
 **The decision rule**: Write a spec when the work involves one feature, one team, and 1–3 sprints. Write a PRD when the initiative involves multiple features, multiple teams, or requires executive sign-off.
 
@@ -120,9 +120,9 @@ The `/prd` command from the custom `product-strategy` plugin produces a document
 | **7. Go-to-Market Requirements**    | What must be ready at launch          | Documentation, CS enablement, sales enablement, pricing, beta programme, customer communication        |
 | **8. Launch Plan**                  | How the rollout happens               | Phased rollout (beta → GA), feature flags, monitoring plan, rollback plan                              |
 | **9. Dependencies and Risks**       | What could block or derail            | External dependencies table, risk register with mitigations                                            |
-| **10. Open Questions**              | Unresolved decisions                  | Numbered, with owner and due date — all must resolve before REFINED status                             |
+| **10. Open Questions**              | Unresolved decisions                  | Numbered, with owner and due date: all must resolve before REFINED status                             |
 
-### The Failure Threshold — The Section Most PMs Skip
+### The Failure Threshold; The Section Most PMs Skip
 
 Every PRD must define a failure threshold in Section 2: the specific outcome that would cause you to change direction. This is not pessimism. It is the difference between a pre-committed standard and a post-hoc rationalisation.
 
@@ -140,7 +140,7 @@ Section 4 (Functional Requirements) uses MoSCoW priority for each feature. The `
 
 > **If more than 60% of requirements are labelled MUST, the scope is too large.**
 
-This is a forcing function, not a guideline. When everything is MUST, nothing is MUST — you have just created a list of things you are hoping to build, not a prioritised set of launch requirements. Challenge every MUST: "Would we actually not ship without this?" If you would ship without it, it is a SHOULD.
+This is a forcing function, not a guideline. When everything is MUST, nothing is MUST: you have just created a list of things you are hoping to build, not a prioritised set of launch requirements. Challenge every MUST: "Would we actually not ship without this?" If you would ship without it, it is a SHOULD.
 
 :::caution The MUST Test
 For each requirement labelled MUST, ask: "If this were not ready on launch day, would we delay the entire initiative?" If the answer is "probably not," it is a SHOULD. MUSTs that are actually SHOULDs inflate the scope, slow down the first launch, and defer the learning you could get by shipping smaller.
@@ -148,7 +148,7 @@ For each requirement labelled MUST, ask: "If this were not ready on launch day, 
 
 ## Worked Example: InsightFlow Workflow Builder PRD
 
-Your L06 spec defined one feature: trigger configuration. But the Workflow Builder initiative is larger — it includes the automation builder UI (the canvas where users build workflows), the action library (what workflows can do), and the trigger configuration feature from L06. These features require three teams, a full Q3, and CEO sign-off on the engineering investment.
+Your L06 spec defined one feature: trigger configuration. But the Workflow Builder initiative is larger: it includes the automation builder UI (the canvas where users build workflows), the action library (what workflows can do), and the trigger configuration feature from L06. These features require three teams, a full Q3, and CEO sign-off on the engineering investment.
 
 Run `/prd` to produce the full initiative document:
 
@@ -350,13 +350,13 @@ SECTION 6: TECHNICAL ARCHITECTURE NOTES
 
 ### Evaluating the PRD Output
 
-**Check 1 — Commercial evidence is quantified with sources.** The output cites "8/12 interviews" and "31 support tickets" with sources (L04 synthesis, support ticket analysis). If the agent produced "many customers have requested this," prompt: "Quantify the commercial evidence. How many users? From what source? In what time period?"
+**Check 1; Commercial evidence is quantified with sources.** The output cites "8/12 interviews" and "31 support tickets" with sources (L04 synthesis, support ticket analysis). If the agent produced "many customers have requested this," prompt: "Quantify the commercial evidence. How many users? From what source? In what time period?"
 
-**Check 2 — Failure threshold is defined.** The sample defines a specific number (10% activation at 60 days) and a specific action (research sprint, not "reconsider"). If the output only has success metrics, prompt: "Add a failure threshold to Section 2. Define the specific outcome that would cause us to pause investment and the action we would take."
+**Check 2; Failure threshold is defined.** The sample defines a specific number (10% activation at 60 days) and a specific action (research sprint, not "reconsider"). If the output only has success metrics, prompt: "Add a failure threshold to Section 2. Define the specific outcome that would cause us to pause investment and the action we would take."
 
-**Check 3 — Section 6 has engineering lead sign-off pending.** The output correctly flags that the CTO must confirm architecture notes before REVIEW. If the agent omitted this flag, add it.
+**Check 3; Section 6 has engineering lead sign-off pending.** The output correctly flags that the CTO must confirm architecture notes before REVIEW. If the agent omitted this flag, add it.
 
-**Check 4 — No more than 60% of requirements are MUST.** The sample has 3 of 5 at MUST — exactly at the limit. Challenge Feature 1 (Builder UI): "Would we not launch Workflow Builder without the visual canvas?" If trigger configuration could ship as a simplified workflow tool without a visual builder, that changes the scope.
+**Check 4; No more than 60% of requirements are MUST.** The sample has 3 of 5 at MUST: exactly at the limit. Challenge Feature 1 (Builder UI): "Would we not launch Workflow Builder without the visual canvas?" If trigger configuration could ship as a simplified workflow tool without a visual builder, that changes the scope.
 
 :::note Keep This File
 Lessons 3-14 build one continuous product management cycle for InsightFlow. Keep your Cowork session and working folder between lessons. The Workflow Builder PRD you produce in this exercise feeds directly into Lesson 8, where you will use `/stories` to decompose the PRD's user requirements into sprint-ready user stories.
@@ -374,13 +374,13 @@ The PRD moves through five status gates, each with explicit requirements:
 | **APPROVED** | CPO/CEO sign-off; ready for sprint planning                                                           |
 | **SHIPPED**  | Feature live; success metrics being actively tracked                                                  |
 
-The engineering lead sign-off on Section 6 is non-negotiable for REVIEW status. A PRD that goes to APPROVED without CTO confirmation of architecture notes has an unverified technical foundation — the most common source of PRD-to-sprint failures.
+The engineering lead sign-off on Section 6 is non-negotiable for REVIEW status. A PRD that goes to APPROVED without CTO confirmation of architecture notes has an unverified technical foundation: the most common source of PRD-to-sprint failures.
 
 ## Try With AI
 
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Prompt 1 — Reproduce** (apply what you just learned):
+**Prompt 1; Reproduce** (apply what you just learned):
 
 ```
 Write Section 2 (Business Context) of a PRD for InsightFlow's
@@ -403,9 +403,9 @@ Requirements for Section 2:
    change direction, and what action we would take
 ```
 
-**What you're learning:** Writing the commercial case for a compliance initiative — which is harder than writing it for a feature, because the value is in sales unblocking rather than user adoption. Notice how the failure threshold changes when the initiative is compliance-driven rather than feature-driven.
+**What you're learning:** Writing the commercial case for a compliance initiative: which is harder than writing it for a feature, because the value is in sales unblocking rather than user adoption. Notice how the failure threshold changes when the initiative is compliance-driven rather than feature-driven.
 
-**Prompt 2 — Adapt** (change the context):
+**Prompt 2; Adapt** (change the context):
 
 ```
 A PM at a legal tech SaaS is writing a PRD for their "AI Contract
@@ -425,7 +425,7 @@ Write the Functional Requirements section (Section 4) for this PRD:
 
 **What you're learning:** Applying the 60% MUST rule in a different domain. Legal tech frequently over-specifies must-haves due to regulatory anxiety. The exercise forces a discipline that applies across all regulated-industry PRDs.
 
-**Prompt 3 — Apply** (connect to your domain):
+**Prompt 3; Apply** (connect to your domain):
 
 ```
 Think of a current or planned initiative that involves more than one
@@ -447,7 +447,7 @@ After writing, ask yourself: would this commercial case convince your
 CFO to fund the initiative? If not, what evidence is missing?
 ```
 
-**What you're learning:** The real test — applying PRD discipline to your own work. The commercial evidence section is where most PMs discover how thin their evidence base actually is. That is the point of writing it before the initiative is approved, not after.
+**What you're learning:** The real test: applying PRD discipline to your own work. The commercial evidence section is where most PMs discover how thin their evidence base actually is. That is the point of writing it before the initiative is approved, not after.
 
 ## Exercise: PRD for InsightFlow's Workflow Builder
 
@@ -455,7 +455,7 @@ CFO to fund the initiative? If not, what evidence is missing?
 **Command:** `/prd`
 **Time:** 35 minutes
 
-**Step 1 — Assemble context from prior lessons**
+**Step 1; Assemble context from prior lessons**
 
 You have evidence from three prior lessons to ground this PRD:
 
@@ -463,7 +463,7 @@ You have evidence from three prior lessons to ground this PRD:
 - L05 competitive brief: 2 competitors offer automation; InsightFlow does not
 - L06 spec: Trigger configuration (REVIEW v1.0)
 
-**Step 2 — Run /prd**
+**Step 2; Run /prd**
 
 ```
 /prd
@@ -477,21 +477,21 @@ engineering lead must review and confirm architecture notes before
 REVIEW status.
 ```
 
-**Step 3 — Evaluate: does every MUST actually need to ship?**
+**Step 3; Evaluate: does every MUST actually need to ship?**
 
 For each requirement labelled MUST in Section 4, ask the test question: "If this were not ready on launch day, would we delay the entire initiative?" If any MUST would not actually block the launch, downgrade it to SHOULD and note why.
 
-**Step 4 — Evaluate: is the failure threshold specific enough?**
+**Step 4; Evaluate: is the failure threshold specific enough?**
 
 Read the failure threshold in Section 2. Ask: "Would this threshold resolve a disagreement in the post-launch review, or would it be open to interpretation?" If it is open to interpretation, make it more specific: add a number, a timeframe, and a named action.
 
-**Step 5 — Identify what needs engineering sign-off**
+**Step 5; Identify what needs engineering sign-off**
 
-List the open questions in Section 6 that the engineering lead must answer before Section 6 is confirmed. If the PRD currently has two open technical questions in Section 6, set up a review meeting request in your calendar system for the sprint before the PRD moves to REVIEW. This is the step most PMs skip — and it is what causes PRD-to-sprint failures.
+List the open questions in Section 6 that the engineering lead must answer before Section 6 is confirmed. If the PRD currently has two open technical questions in Section 6, set up a review meeting request in your calendar system for the sprint before the PRD moves to REVIEW. This is the step most PMs skip: and it is what causes PRD-to-sprint failures.
 
 ## What You Built
 
-You produced a 10-section PRD for InsightFlow's Workflow Builder initiative — the multi-team document that wraps your L06 feature spec into the broader commercial and engineering alignment needed for a major strategic bet. You evaluated the commercial evidence quality, tested MUSTs against the 60% rule, and verified that a failure threshold was defined before launch.
+You produced a 10-section PRD for InsightFlow's Workflow Builder initiative: the multi-team document that wraps your L06 feature spec into the broader commercial and engineering alignment needed for a major strategic bet. You evaluated the commercial evidence quality, tested MUSTs against the 60% rule, and verified that a failure threshold was defined before launch.
 
 This PRD feeds directly into Lesson 8, where you will use `/stories` from the custom `product-strategy` plugin to decompose the user requirements in Sections 3 and 4 into sprint-ready user stories for the engineering team.
 

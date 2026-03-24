@@ -1,4 +1,4 @@
-# Litigation Support, Legal Hold, and Canned Responses — Summary
+# Litigation Support, Legal Hold, and Canned Responses; Summary
 
 ## Core Concept
 

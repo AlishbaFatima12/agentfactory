@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/people-hr/offer-letters-employment-docs
 sidebar_position: 7
 title: "Offer Letters & Employment Documents"
-description: "Eliminate the administrative burden of employment documentation — draft offer letters, promotion letters, and reference letters using /draft-offer and /reference, with jurisdiction-specific terms and mandatory HR review before sending"
+description: "Eliminate the administrative burden of employment documentation: draft offer letters, promotion letters, and reference letters using /draft-offer and /reference, with jurisdiction-specific terms and mandatory HR review before sending"
 keywords:
   [
     "people and hr",
@@ -28,7 +28,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Content-Creation"
-    measurable_at_this_level: "Student can use /draft-offer to generate a complete offer letter with correct compensation structure, jurisdiction-specific additions, and the mandatory REVIEW BEFORE SENDING flag — then verify the output against hr.local.md before treating it as complete"
+    measurable_at_this_level: "Student can use /draft-offer to generate a complete offer letter with correct compensation structure, jurisdiction-specific additions, and the mandatory REVIEW BEFORE SENDING flag; then verify the output against hr.local.md before treating it as complete"
 
   - name: "Select and Generate the Correct Reference Letter Type"
     proficiency_level: "B1"
@@ -63,44 +63,44 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Employment document types — offer, promotion, salary change, contract amendment, flexible working, and the reference letter family"
-    - "Jurisdiction-specific additions — UK right-to-work and P45, Pakistan EOBI, UAE probation under Labour Law"
-    - "Reference letter types — factual, professional, and employment verification — with distinct legal risk profiles"
-    - "Two-direction legal risk in references — defamation (false negative) and misrepresentation (falsely positive)"
+    - "Employment document types, offer, promotion, salary change, contract amendment, flexible working, and the reference letter family"
+    - "Jurisdiction-specific additions, UK right-to-work and P45, Pakistan EOBI, UAE probation under Labour Law"
+    - "Reference letter types, factual, professional, and employment verification, with distinct legal risk profiles"
+    - "Two-direction legal risk in references, defamation (false negative) and misrepresentation (falsely positive)"
   assessment: "4 concepts, moderate load. The document types form a family (offer + variants); the reference letter types form a second family. Jurisdiction-specific additions are the most detail-heavy concept but are presented as a checklist pattern rather than requiring memorisation. The two-direction legal risk is the conceptual centrepiece that gives the REVIEW BEFORE SENDING requirement meaning."
 
 differentiation:
   extension_for_advanced: "Map your organisation's current employment document process end-to-end: who originates, who reviews, who signs, how long each step takes, and what the error rate is (wrong name, wrong salary, wrong start date in the final letter). Then calculate: if /draft-offer reduced the drafting step from 30 minutes to 2 minutes for every document, what would the annual time saving be in your organisation? What would you do with that time?"
-  remedial_for_struggling: "Focus on one document type: the offer letter. Run /draft-offer with the Marcus Chen example from the lesson. Verify it against the mandatory elements checklist. Understand each element and why it is there — especially the REVIEW BEFORE SENDING warning. Once you can verify an offer letter against the checklist, the other document types follow the same pattern."
+  remedial_for_struggling: "Focus on one document type: the offer letter. Run /draft-offer with the Marcus Chen example from the lesson. Verify it against the mandatory elements checklist. Understand each element and why it is there, especially the REVIEW BEFORE SENDING warning. Once you can verify an offer letter against the checklist, the other document types follow the same pattern."
 
 teaching_guide:
   key_points:
-    - "Both /draft-offer (official plugin) and /reference (custom plugin) output CONFIDENTIAL documents — every worked example must show the sensitivity label"
-    - "The REVIEW BEFORE SENDING warning is not optional — it is mandatory output from both skills. Students must understand that AI-generated employment documents require HR review before use"
-    - "The two-direction legal risk in references is the most important concept in this lesson: defamation (false negative) and misrepresentation (falsely positive) — both create liability. The safest response when in doubt is factual reference only"
-    - "Jurisdiction-specific additions are the most common source of errors in offer letters — the UK right-to-work check is legally required; the Pakistan EOBI contribution is statutory. These cannot be omitted"
+    - "Both /draft-offer (official plugin) and /reference (custom plugin) output CONFIDENTIAL documents: every worked example must show the sensitivity label"
+    - "The REVIEW BEFORE SENDING warning is not optional; it is mandatory output from both skills. Students must understand that AI-generated employment documents require HR review before use"
+    - "The two-direction legal risk in references is the most important concept in this lesson: defamation (false negative) and misrepresentation (falsely positive), both create liability. The safest response when in doubt is factual reference only"
+    - "Jurisdiction-specific additions are the most common source of errors in offer letters: the UK right-to-work check is legally required; the Pakistan EOBI contribution is statutory. These cannot be omitted"
   misconceptions:
-    - "The AI-generated offer letter can be sent directly once it looks right. Correction: every offer letter requires HR review before sending, regardless of how accurate it looks. The skill generates a complete draft — it does not replace the HR sign-off that verifies facts against the employment record, confirms compensation against the approved band, and ensures compliance."
+    - "The AI-generated offer letter can be sent directly once it looks right. Correction: every offer letter requires HR review before sending, regardless of how accurate it looks. The skill generates a complete draft ; it does not replace the HR sign-off that verifies facts against the employment record, confirms compensation against the approved band, and ensures compliance."
     - "A positive reference is always better than a factual reference. Correction: a positive reference that overstates performance creates misrepresentation liability. If the new employer makes a hiring decision based on an inflated reference and suffers harm as a result, the organisation that provided the reference may face liability. When in doubt: factual reference only."
     - "Including salary in a reference is standard practice. Correction: salary information should never be included in a reference without the employee's explicit written consent. This applies even when the requesting organisation asks for it."
   discussion_prompts:
     - "Think about the last offer letter your organisation issued. How long did it take from 'candidate accepted' to 'signed letter received'? What were the bottlenecks? Where did errors occur?"
-    - "Your organisation has a policy of factual references only — but a departing employee asks you to write a personal professional reference for them. What do you do? What are the risks on each side?"
+    - "Your organisation has a policy of factual references only , but a departing employee asks you to write a personal professional reference for them. What do you do? What are the risks on each side?"
   teaching_tips:
-    - "The volume calculation (50-80 documents × 20-30 minutes each = 25+ hours per year) is immediately resonant for HR professionals. Start with the maths — it creates the motivation for everything that follows."
+    - "The volume calculation (50-80 documents × 20-30 minutes each = 25+ hours per year) is immediately resonant for HR professionals. Start with the maths ; it creates the motivation for everything that follows."
     - "The REVIEW BEFORE SENDING warning is worth dwelling on: students should understand this is a hard rule, not a suggestion. The AI draft is a starting point, not a finished document."
-    - "The two reference legal risk directions (defamation vs misrepresentation) are the conceptual hook that makes the three reference types memorable — each type manages a different risk profile."
+    - "The two reference legal risk directions (defamation vs misrepresentation) are the conceptual hook that makes the three reference types memorable: each type manages a different risk profile."
 ---
 
 # Offer Letters & Employment Documents
 
 Priya Kapoor sent the message at 5:47pm: _"We've made the decision on the Product Marketing Manager role. Marcus Chen is our hire. Can we get the offer letter out tomorrow?"_
 
-The HRBP responsible for the London office had three other letters to draft before end of week. The offer letter template was in a shared drive that had not been reorganised since 2023. Marcus's role had a bespoke compensation structure — base salary, a signing bonus contingent on start date, and an enhanced holiday entitlement negotiated during the process. The UK right-to-work check requirements had changed in the previous quarter, and the HRBP was not certain whether the standard template had been updated to reflect them.
+The HRBP responsible for the London office had three other letters to draft before end of week. The offer letter template was in a shared drive that had not been reorganised since 2023. Marcus's role had a bespoke compensation structure, base salary, a signing bonus contingent on start date, and an enhanced holiday entitlement negotiated during the process. The UK right-to-work check requirements had changed in the previous quarter, and the HRBP was not certain whether the standard template had been updated to reflect them.
 
-In a traditional HR operation, this takes 30 minutes to draft, 15 minutes for a senior HR review, and carries a real risk of a delay if either person is occupied. At 100 people, a growing technology company might issue 50-80 employment documents per year — offer letters, promotion letters, salary change notifications, contract amendments, flexible working agreements. At 25 minutes each, that is more than 30 hours of HR time annually [VERIFY] on documents that share the same underlying structure, the same legal requirements, and the same formatting needs. Only the names, numbers, and role details change.
+In a traditional HR operation, this takes 30 minutes to draft, 15 minutes for a senior HR review, and carries a real risk of a delay if either person is occupied. At 100 people, a growing technology company might issue 50-80 employment documents per year, offer letters, promotion letters, salary change notifications, contract amendments, flexible working agreements. At 25 minutes each, that is more than 30 hours of HR time annually [VERIFY] on documents that share the same underlying structure, the same legal requirements, and the same formatting needs. Only the names, numbers, and role details change.
 
-The `/draft-offer` skill generates a complete offer letter from the key variables in under two minutes. The 30 hours of drafting become 30 minutes of review. The HRBP's job shifts from writer to verifier — a better use of HR judgment.
+The `/draft-offer` skill generates a complete offer letter from the key variables in under two minutes. The 30 hours of drafting become 30 minutes of review. The HRBP's job shifts from writer to verifier: a better use of HR judgment.
 
 ## Five Employment Document Types
 
@@ -108,23 +108,23 @@ The offer letter is the primary document in a hiring workflow, but it is one of 
 
 | Document Type                  | When Issued                         | Key Variables                                                                   |
 | ------------------------------ | ----------------------------------- | ------------------------------------------------------------------------------- |
-| **Offer letter**               | Hiring — candidate selected         | Role, compensation, start date, notice period, probation, holiday, jurisdiction |
+| **Offer letter**               | Hiring, candidate selected         | Role, compensation, start date, notice period, probation, holiday, jurisdiction |
 | **Promotion letter**           | Internal promotion                  | New role title, new salary, effective date, any change to notice period         |
 | **Salary change notification** | Annual review or market adjustment  | New salary, effective date, reference to review framework                       |
 | **Contract amendment**         | Role change, working pattern change | Specific clause being amended, effective date, confirmation of all other terms  |
 | **Flexible working agreement** | Approved flexible working request   | New working pattern, effective date, trial period if applicable, review date    |
 
-All five follow the same `/draft-offer` workflow. The primary worked example here is the offer letter — the others adapt the same input/output pattern.
+All five follow the same `/draft-offer` workflow. The primary worked example here is the offer letter: the others adapt the same input/output pattern.
 
 ### Jurisdiction-Specific Additions
 
-The most common source of errors in offer letters is jurisdiction-specific content. The `/draft-offer` skill adds jurisdiction-specific requirements when `hr.local.md` is configured — but the HR reviewer must verify these are correctly applied.
+The most common source of errors in offer letters is jurisdiction-specific content. The `/draft-offer` skill adds jurisdiction-specific requirements when `hr.local.md` is configured , but the HR reviewer must verify these are correctly applied.
 
 | Jurisdiction | Mandatory Additions                                                                                          | Why It Matters                                                                                                                |
 | ------------ | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| **UK**       | Right-to-work check requirement; P45 request from departing employer; reference to statutory notice minimums | Right-to-work checks are legally required before employment begins — missing this creates criminal liability for the employer |
+| **UK**       | Right-to-work check requirement; P45 request from departing employer; reference to statutory notice minimums | Right-to-work checks are legally required before employment begins, missing this creates criminal liability for the employer |
 | **Pakistan** | EOBI (Employees Old-Age Benefits Institution) contribution confirmation; reference to provincial labour law  | EOBI contributions are statutory; omitting them from the offer creates payroll compliance issues from Day 1                   |
-| **UAE**      | Reference to probation period under UAE Labour Law (maximum 6 months); end-of-service gratuity structure     | UAE Labour Law specifies exact probation period limits — probation terms that exceed the statutory maximum are unenforceable  |
+| **UAE**      | Reference to probation period under UAE Labour Law (maximum 6 months); end-of-service gratuity structure     | UAE Labour Law specifies exact probation period limits, probation terms that exceed the statutory maximum are unenforceable  |
 
 ## Worked Example: Marcus Chen's Offer Letter with `/draft-offer`
 
@@ -153,7 +153,7 @@ Jurisdiction: UK
 **Expected output:**
 
 ```
-TASK:          Offer Letter — Marcus Chen
+TASK:          Offer Letter, Marcus Chen
 DOCUMENT TYPE: Offer Letter
 JURISDICTION:  UK
 CONFIGURATION: hr.local.md loaded
@@ -163,11 +163,11 @@ SENSITIVITY:   CONFIDENTIAL
 18 March 2026
 
 Marcus Chen
-[Address — add before sending]
+[Address, add before sending]
 
 Dear Marcus,
 
-OFFER OF EMPLOYMENT — Product Marketing Manager
+OFFER OF EMPLOYMENT, Product Marketing Manager
 
 We are delighted to offer you the position of Product Marketing Manager
 at [Company Name], reporting to Priya Kapoor, VP Marketing.
@@ -176,7 +176,7 @@ ROLE AND DEPARTMENT
   Position:    Product Marketing Manager
   Department:  Marketing
   Reports to:  Priya Kapoor, VP Marketing
-  Location:    London HQ — hybrid (3 days office / 2 days remote)
+  Location:    London HQ, hybrid (3 days office / 2 days remote)
 
 START DATE
   Your proposed start date is 1 April 2026. Please let us know if this
@@ -208,7 +208,7 @@ NOTICE PERIOD (POST-PROBATION)
 RIGHT TO WORK
   This offer is conditional on you providing evidence of your right to
   work in the United Kingdom before your start date. We will contact you
-  separately to arrange the right-to-work check. [UK jurisdiction — mandatory]
+  separately to arrange the right-to-work check. [UK jurisdiction, mandatory]
 
 NEXT STEPS
   Please confirm acceptance by signing and returning a copy of this
@@ -216,7 +216,7 @@ NEXT STEPS
   contract of employment, new starter forms, and onboarding details.
 
   Please also arrange for your P45 to be forwarded from your previous
-  employer, or complete a Starter Checklist if unavailable. [UK — mandatory]
+  employer, or complete a Starter Checklist if unavailable. [UK, mandatory]
 
 We look forward to welcoming you to the team.
 
@@ -230,12 +230,12 @@ I accept the offer of employment as described above.
 Signature: _______________________  Date: ___________
 Full name: _______________________
 
-WARNING: REVIEW BEFORE SENDING — This offer letter must be reviewed
+WARNING: REVIEW BEFORE SENDING. This offer letter must be reviewed
 by HR before sending. Verify all facts against the employment record and
 approved compensation band. Remove this note before issuing.
 ```
 
-**Verification checklist — before sending:**
+**Verification checklist, before sending:**
 
 | Element                      | Check                                          | Sign-Off |
 | ---------------------------- | ---------------------------------------------- | -------- |
@@ -252,12 +252,12 @@ approved compensation band. Remove this note before issuing.
 | REVIEW BEFORE SENDING        | Removed from final document                    | □        |
 
 :::note Your output will vary
-The exact offer letter structure will depend on your `hr.local.md` configuration and the jurisdiction. The REVIEW BEFORE SENDING flag will always appear — this is mandatory output. Remove it only after completing your HR review against the checklist above. Never send a document that still contains the warning.
+The exact offer letter structure will depend on your `hr.local.md` configuration and the jurisdiction. The REVIEW BEFORE SENDING flag will always appear. This is mandatory output. Remove it only after completing your HR review against the checklist above. Never send a document that still contains the warning.
 :::
 
 ## Reference Letters with `/reference`
 
-Reference letters use a different skill — `/reference` from the custom hr-operations plugin — because they carry a distinct risk profile from offer letters and require a different decision framework.
+Reference letters use a different skill, `/reference` from the custom hr-operations plugin, because they carry a distinct risk profile from offer letters and require a different decision framework.
 
 ### Three Reference Letter Types
 
@@ -265,26 +265,26 @@ The first decision is type selection. The wrong type creates legal exposure; the
 
 | Type                        | Contents                                                               | When to Use                                                                                     | Legal Risk Managed                                                  |
 | --------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| **Factual**                 | Job title, dates of employment, rehire eligibility (if policy permits) | Default for all references; required by many corporate policies                                 | Defamation risk eliminated — only verifiable facts                  |
-| **Professional**            | Factual + performance assessment + achievements + recommendation       | Only when: employee explicitly requests, written consent given, signer can truthfully recommend | Misrepresentation risk — must be accurate and substantiable         |
-| **Employment verification** | Current status, role, salary (with consent), start date                | Mortgage, visa, rental applications — not hiring decisions                                      | Minimal — but salary must never be included without written consent |
+| **Factual**                 | Job title, dates of employment, rehire eligibility (if policy permits) | Default for all references; required by many corporate policies                                 | Defamation risk eliminated, only verifiable facts                  |
+| **Professional**            | Factual + performance assessment + achievements + recommendation       | Only when: employee explicitly requests, written consent given, signer can truthfully recommend | Misrepresentation risk, must be accurate and substantiable         |
+| **Employment verification** | Current status, role, salary (with consent), start date                | Mortgage, visa, rental applications, not hiring decisions                                      | Minimal , but salary must never be included without written consent |
 
 ### The Two-Direction Legal Risk
 
-Employment references create liability in two directions — understanding both is essential before generating any reference.
+Employment references create liability in two directions, understanding both is essential before generating any reference.
 
 | Risk                  | What It Means                                                                                                                                                                   | How to Avoid It                                                                                                                          |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | **Defamation**        | Providing false negative information that harms the employee's reputation or future employment                                                                                  | Stick to factual only. If you cannot substantiate a claim with documented evidence, do not include it. When in doubt: factual reference. |
-| **Misrepresentation** | Providing falsely positive information that a new employer relies on when making a hiring decision — if the new employer suffers harm, the referring organisation may be liable | Only recommend what you genuinely believe to be true. Factual references protect against this — they make no performance claims.         |
+| **Misrepresentation** | Providing falsely positive information that a new employer relies on when making a hiring decision; if the new employer suffers harm, the referring organisation may be liable | Only recommend what you genuinely believe to be true. Factual references protect against this; they make no performance claims.         |
 
 :::caution Reference Policy First
-Before generating any reference, check your organisation's reference policy from `hr.local.md`. Many organisations permit HR to provide factual references only — managers are not authorised to provide professional references without HR involvement. Operating outside this policy creates both legal and governance risk.
+Before generating any reference, check your organisation's reference policy from `hr.local.md`. Many organisations permit HR to provide factual references only, managers are not authorised to provide professional references without HR involvement. Operating outside this policy creates both legal and governance risk.
 :::
 
 ### Worked Example: Reference Letter for a Departing Employee
 
-A colleague at the EdTech company — Zara Hussain, Senior Data Engineer — is leaving after three years. She has asked Omar Farooq for a professional reference for a new role. Omar checks the company's reference policy (factual only from HR; professional references from managers require HR sign-off and written consent from the employee).
+A colleague at the EdTech company, Zara Hussain, Senior Data Engineer: is leaving after three years. She has asked Omar Farooq for a professional reference for a new role. Omar checks the company's reference policy (factual only from HR; professional references from managers require HR sign-off and written consent from the employee).
 
 Zara has provided written consent. HR has approved. Omar uses `/reference`.
 
@@ -311,7 +311,7 @@ Policy check: HR has confirmed professional reference is authorised
 **Expected output:**
 
 ```
-TASK:          Reference Letter — Zara Hussain
+TASK:          Reference Letter, Zara Hussain
 DOCUMENT TYPE: Professional Reference
 JURISDICTION:  Pakistan
 CONFIGURATION: hr.local.md loaded
@@ -329,14 +329,14 @@ April 2026, reporting directly to me as Head of Analytics.
 
 In three years, Zara made a measurable impact on our data infrastructure.
 She led the migration of our legacy data pipeline to a cloud-native
-architecture — a complex, high-risk project she delivered on schedule with
+architecture: a complex, high-risk project she delivered on schedule with
 a 40% reduction in processing time. She did this while managing two junior
 engineers through the transition, both of whom have since been promoted.
 Her technical leadership on our largest client integration was a direct
 factor in that client's successful onboarding.
 
 Beyond technical delivery, Zara is one of the engineers who earns trust
-with non-technical stakeholders naturally — she explains complex
+with non-technical stakeholders naturally; she explains complex
 infrastructure decisions in business terms without losing the technical
 precision that makes those decisions sound. This is a combination that is
 rare and valuable.
@@ -350,7 +350,7 @@ Omar Farooq
 Head of Analytics
 [Contact details]
 
-WARNING: REVIEW BEFORE SENDING — This reference must be reviewed by HR
+WARNING: REVIEW BEFORE SENDING. This reference must be reviewed by HR
 before sending. Verify all facts against HRIS records. Confirm the
 reference is consistent with the employee's documented performance record.
 Remove this note before issuing.
@@ -360,7 +360,7 @@ Remove this note before issuing.
 
 | Check                 | What to Look For                                                   |
 | --------------------- | ------------------------------------------------------------------ |
-| Sensitivity label     | CONFIDENTIAL — must appear in the output header                    |
+| Sensitivity label     | CONFIDENTIAL, must appear in the output header                    |
 | Facts verified        | All dates, job titles, and achievement claims checked against HRIS |
 | Consistency check     | Reference content is consistent with documented performance record |
 | Consent confirmed     | Written consent from employee on file before issuing               |
@@ -374,7 +374,7 @@ Remove this note before issuing.
 **Plugin commands:** `/draft-offer` (official human-resources plugin) + `/reference` (custom hr-operations plugin)
 **Goal:** Draft one offer letter and one reference letter, verify both against their respective checklists, and identify the mandatory HR review points
 
-### Part A — Offer Letter (15 minutes)
+### Part A: Offer Letter (15 minutes)
 
 Draft an offer letter for Marcus Chen (or a fictional hire in your own organisation):
 
@@ -400,11 +400,11 @@ After receiving the output, complete the verification checklist:
 - Sensitivity label is CONFIDENTIAL
 - REVIEW BEFORE SENDING flag is present (remove only after real HR review)
 
-### Part B — Reference Letter (15 minutes)
+### Part B: Reference Letter (15 minutes)
 
 A departing employee is requesting a reference. Using this scenario (or a fictional one):
 
-_Ayesha Raza is leaving after 18 months. She has been a high performer — delivered the Q1 analytics refresh ahead of schedule, established strong stakeholder relationships, and mentored two newer analysts. Her manager, Omar, wants to provide a professional reference. The company policy permits professional references from managers with written employee consent and HR sign-off._
+_Ayesha Raza is leaving after 18 months. She has been a high performer, delivered the Q1 analytics refresh ahead of schedule, established strong stakeholder relationships, and mentored two newer analysts. Her manager, Omar, wants to provide a professional reference. The company policy permits professional references from managers with written employee consent and HR sign-off._
 
 **Step 1:** Identify the correct reference type and explain why.
 
@@ -412,11 +412,11 @@ _Ayesha Raza is leaving after 18 months. She has been a high performer — deliv
 
 **Step 3:** Invoke `/reference` with relevant details.
 
-**Step 4:** Verify the output — sensitivity label, REVIEW BEFORE SENDING flag, factual accuracy, and consistency with documented performance.
+**Step 4:** Verify the output, sensitivity label, REVIEW BEFORE SENDING flag, factual accuracy, and consistency with documented performance.
 
-**Step 5 — Extend:** Using the same `/draft-offer` skill, draft a promotion letter for a fictional internal promotion. Note what changes from an offer letter (new role title, new salary, effective date — no probation, no right-to-work recheck). What stays the same?
+**Step 5, Extend:** Using the same `/draft-offer` skill, draft a promotion letter for a fictional internal promotion. Note what changes from an offer letter (new role title, new salary, effective date; no probation, no right-to-work recheck). What stays the same?
 
-**Deliverable:** A verified offer letter and a verified reference letter — both with CONFIDENTIAL sensitivity labels, mandatory review warnings, and completed verification checklists. Plus one promotion letter draft.
+**Deliverable:** A verified offer letter and a verified reference letter, both with CONFIDENTIAL sensitivity labels, mandatory review warnings, and completed verification checklists. Plus one promotion letter draft.
 
 :::note Keep This File
 The offer letter you draft here connects to Lesson 11 (Offboarding), which references the original employment documentation when calculating entitlements and generating offboarding documents. Keep the offer letter as a reference for later lessons.
@@ -448,7 +448,7 @@ CONFIDENTIAL. Include a REVIEW BEFORE SENDING warning with a checklist
 of what must be verified before sending.
 ```
 
-**What you are learning:** The structure of a complete offer letter — and particularly how jurisdiction-specific content (UK right-to-work requirement, P45 instruction) is added automatically when the jurisdiction is specified. The REVIEW BEFORE SENDING warning and checklist teach the verification discipline.
+**What you are learning:** The structure of a complete offer letter , and particularly how jurisdiction-specific content (UK right-to-work requirement, P45 instruction) is added automatically when the jurisdiction is specified. The REVIEW BEFORE SENDING warning and checklist teach the verification discipline.
 
 **Adapt**: Apply to your next real hire.
 
@@ -462,11 +462,11 @@ Draft the complete offer letter. Apply all jurisdiction-specific
 requirements for [jurisdiction]. Mark as CONFIDENTIAL.
 
 After the letter, list the top 3 things an HR reviewer must verify
-before this letter can be sent — specific to the role details and
+before this letter can be sent, specific to the role details and
 jurisdiction I have provided, not generic advice.
 ```
 
-**What you are learning:** Jurisdiction-specific requirements vary significantly — applying them correctly to your actual context requires specifying the jurisdiction and verifying the output against the current statutory requirements. The reviewer checklist is the most important output for a real HR workflow.
+**What you are learning:** Jurisdiction-specific requirements vary significantly, applying them correctly to your actual context requires specifying the jurisdiction and verifying the output against the current statutory requirements. The reviewer checklist is the most important output for a real HR workflow.
 
 **Apply**: Generate three document types from the same candidate data.
 
@@ -487,7 +487,7 @@ mandatory review warning, and list what changes between document types
 versus what remains the same.
 ```
 
-**What you are learning:** The employment document family shares a common structure — role, party names, dates, terms — but each type has distinct legal requirements, sensitivity levels, and review obligations. Generating all three from the same candidate data makes the differences visible and teaches the pattern rather than just a single document type.
+**What you are learning:** The employment document family shares a common structure, role, party names, dates, terms , but each type has distinct legal requirements, sensitivity levels, and review obligations. Generating all three from the same candidate data makes the differences visible and teaches the pattern rather than just a single document type.
 :::
 
 ## Flashcards Study Aid

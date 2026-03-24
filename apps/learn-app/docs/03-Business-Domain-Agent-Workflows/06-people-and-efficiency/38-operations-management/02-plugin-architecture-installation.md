@@ -61,21 +61,21 @@ learning_objectives:
 cognitive_load:
   new_concepts: 3
   concepts_list:
-    - "Two-plugin architecture — official plugin covers standard operations commands; custom plugin covers gaps not addressed by official"
-    - "ops.local.md — the organisation-specific configuration file that calibrates all plugin output to your operational context"
-    - "Auto-skills — official plugin capabilities that activate from keyword patterns in natural prompts rather than from slash commands"
-  assessment: "3 concepts is appropriate for a setup lesson. Students are not learning new domain knowledge here — they are configuring a system. The cognitive focus is on the architecture pattern (why two plugins) and the configuration file (how context shapes output). Both are immediately verifiable through the exercise."
+    - "Two-plugin architecture, official plugin covers standard operations commands; custom plugin covers gaps not addressed by official"
+    - "ops.local.md: the organisation-specific configuration file that calibrates all plugin output to your operational context"
+    - "Auto-skills, official plugin capabilities that activate from keyword patterns in natural prompts rather than from slash commands"
+  assessment: "3 concepts is appropriate for a setup lesson. Students are not learning new domain knowledge here; they are configuring a system. The cognitive focus is on the architecture pattern (why two plugins) and the configuration file (how context shapes output). Both are immediately verifiable through the exercise."
 
 differentiation:
-  extension_for_advanced: "After completing the basic installation and Organisation Context configuration, populate the Regulatory Frameworks and Risk Configuration sections of ops.local.md as well. Run /audit with your regulatory framework details and compare the output against a generic prompt with no context. Document the differences — these represent the calibration value of ops.local.md."
-  remedial_for_struggling: "Focus on getting both plugins installed and the verification commands working. The ops.local.md configuration can be completed minimally — just your organisation's name, size, and jurisdiction. The configuration builds progressively through subsequent lessons; you do not need a complete file to proceed."
+  extension_for_advanced: "After completing the basic installation and Organisation Context configuration, populate the Regulatory Frameworks and Risk Configuration sections of ops.local.md as well. Run /audit with your regulatory framework details and compare the output against a generic prompt with no context. Document the differences: these represent the calibration value of ops.local.md."
+  remedial_for_struggling: "Focus on getting both plugins installed and the verification commands working. The ops.local.md configuration can be completed minimally, just your organisation's name, size, and jurisdiction. The configuration builds progressively through subsequent lessons; you do not need a complete file to proceed."
 
 teaching_guide:
   key_points:
-    - "The two-plugin architecture follows the zero-overlap principle — every capability is covered exactly once, by whichever plugin is best suited"
+    - "The two-plugin architecture follows the zero-overlap principle: every capability is covered exactly once, by whichever plugin is best suited"
     - "ops.local.md is the lever that transforms generic AI output into organisation-specific operations intelligence"
-    - "Auto-skills (compliance-tracking, risk-assessment, process-optimization) are NEVER invoked with slash commands — they activate from natural language keywords"
-    - "Installation verification is non-negotiable — students who skip verification and discover broken plugins three lessons later waste significant time"
+    - "Auto-skills (compliance-tracking, risk-assessment, process-optimization) are NEVER invoked with slash commands; they activate from natural language keywords"
+    - "Installation verification is non-negotiable: students who skip verification and discover broken plugins three lessons later waste significant time"
   misconceptions:
     - "Both plugins do similar things. Correction: there is zero overlap by design. Official handles vendor review, process documentation, change management, status reporting, and runbooks. Custom handles audit, contract analysis, incident management, metrics framework, and persistent agents."
     - "ops.local.md needs to be complete before starting. Correction: it is built progressively. Organisation Context is the minimum for Lesson 2. Each subsequent lesson adds the relevant section."
@@ -86,12 +86,12 @@ teaching_guide:
   teaching_tips:
     - "Require students to run both verification commands before continuing to Lesson 3. A non-working plugin discovered in Lesson 7 is much harder to debug than one discovered in Lesson 2."
     - "Demo the difference between a prompt with ops.local.md context and without. The contrast makes the configuration file feel immediately valuable rather than bureaucratic."
-    - "Explain auto-skills with the keyword trigger analogy: the skill activates when it recognises its domain keywords in your prompt — you do not need to call it by name."
+    - "Explain auto-skills with the keyword trigger analogy: the skill activates when it recognises its domain keywords in your prompt; you do not need to call it by name."
 ---
 
 # Plugin Architecture and Installation
 
-The vendor portfolio audit in Lesson 3 will not work without the Operations plugin installed. The audit preparation in Lesson 8 will not work without the Operations Intelligence plugin installed. The operations intelligence brief in Lesson 13 draws on tools from both. Getting the architecture in place before any exercises begin is not a preliminary step — it is the foundation that everything else is built on.
+The vendor portfolio audit in Lesson 3 will not work without the Operations plugin installed. The audit preparation in Lesson 8 will not work without the Operations Intelligence plugin installed. The operations intelligence brief in Lesson 13 draws on tools from both. Getting the architecture in place before any exercises begin is not a preliminary step; it is the foundation that everything else is built on.
 
 This lesson installs both plugins, explains why the architecture uses two rather than one, and configures the baseline context file that calibrates all subsequent plugin output to your organisation. It ends with two verification commands. By the end of this lesson, you have a working operations intelligence environment and a context file you will expand progressively across all subsequent lessons.
 
@@ -99,28 +99,28 @@ This lesson installs both plugins, explains why the architecture uses two rather
 
 The official Operations plugin (from Anthropic's knowledge-work-plugins collection) covers the standard operational workflows that most operations professionals need: vendor evaluation, process documentation, change management, status reporting, and runbooks. These are well-defined tasks with established patterns that a general-purpose plugin handles well.
 
-The custom Operations Intelligence plugin (from the Panaversity business plugins collection) covers the gaps. Audit preparation has specific evidence-packaging requirements that differ from general compliance tracking. Contract obligation extraction requires deeper analysis than vendor evaluation covers. Incident post-mortems follow a structured methodology (Five Whys, corrective action tracking) that has no official equivalent. The metrics framework requires designing what to measure before generating reports — which is a different task from the reporting itself.
+The custom Operations Intelligence plugin (from the Panaversity business plugins collection) covers the gaps. Audit preparation has specific evidence-packaging requirements that differ from general compliance tracking. Contract obligation extraction requires deeper analysis than vendor evaluation covers. Incident post-mortems follow a structured methodology (Five Whys, corrective action tracking) that has no official equivalent. The metrics framework requires designing what to measure before generating reports, which is a different task from the reporting itself.
 
 The two plugins are designed with **zero overlap**: every capability is covered exactly once, by the plugin best suited to it.
 
 | Capability                    | Official Plugin Command      | Custom Plugin Command |
 | ----------------------------- | ---------------------------- | --------------------- |
-| Vendor evaluation             | `/vendor-review`             | —                     |
-| Contract obligation analysis  | —                            | `/contract`           |
-| Process documentation         | `/process-doc` + `/runbook`  | —                     |
-| Change impact + rollback      | `/change-request`            | —                     |
-| Status reports + KPIs         | `/status-report`             | —                     |
-| Audit preparation + evidence  | —                            | `/audit`              |
-| Incident post-mortem + RCA    | —                            | `/incident`           |
-| Metrics framework design      | —                            | `/metrics`            |
-| Compliance obligation mapping | `compliance-tracking` (auto) | —                     |
-| Risk register + assessment    | `risk-assessment` (auto)     | —                     |
-| Persistent monitoring agents  | —                            | 4 agents              |
+| Vendor evaluation             | `/vendor-review`             | -                     |
+| Contract obligation analysis  | -                            | `/contract`           |
+| Process documentation         | `/process-doc` + `/runbook`  | -                     |
+| Change impact + rollback      | `/change-request`            | -                     |
+| Status reports + KPIs         | `/status-report`             | -                     |
+| Audit preparation + evidence  | -                            | `/audit`              |
+| Incident post-mortem + RCA    | -                            | `/incident`           |
+| Metrics framework design      | -                            | `/metrics`            |
+| Compliance obligation mapping | `compliance-tracking` (auto) | -                     |
+| Risk register + assessment    | `risk-assessment` (auto)     | -                     |
+| Persistent monitoring agents  | -                            | 4 agents              |
 
 :::info Auto-Skills Are Not Slash Commands
-The official plugin includes three capabilities that activate automatically from keyword patterns in your prompts — you do not invoke them with a slash command. `compliance-tracking` activates when your prompt contains words like "compliance", "obligation", or "regulatory". `risk-assessment` activates on "risk", "risk register", or "mitigation". `process-optimization` activates on "optimize", "bottleneck", or "efficiency".
+The official plugin includes three capabilities that activate automatically from keyword patterns in your prompts; you do not invoke them with a slash command. `compliance-tracking` activates when your prompt contains words like "compliance", "obligation", or "regulatory". `risk-assessment` activates on "risk", "risk register", or "mitigation". `process-optimization` activates on "optimize", "bottleneck", or "efficiency".
 
-**Never type `/compliance-tracking` or `/risk-assessment` as a command.** These are not commands — they are background knowledge layers that activate from natural language. Lessons 7 and 9 explain how to write prompts that trigger them reliably.
+**Never type `/compliance-tracking` or `/risk-assessment` as a command.** These are not commands; they are background knowledge layers that activate from natural language. Lessons 7 and 9 explain how to write prompts that trigger them reliably.
 :::
 
 ## Step 1: Install the Official Operations Plugin
@@ -135,7 +135,7 @@ The Operations plugin adds six commands to your Cowork session:
 | Command           | Function                                                   |
 | ----------------- | ---------------------------------------------------------- |
 | `/vendor-review`  | Vendor portfolio audit, SLA scorecards, renewal calendar   |
-| `/process-doc`    | Process documentation — SOPs, RACI matrices, flowcharts    |
+| `/process-doc`    | Process documentation, SOPs, RACI matrices, flowcharts    |
 | `/runbook`        | Operational runbook creation and maintenance               |
 | `/change-request` | Change impact assessment, communications plan, rollback    |
 | `/status-report`  | Status reports with KPIs, risks, and action items          |
@@ -157,14 +157,14 @@ The Operations Intelligence plugin adds four commands and four persistent agents
 | Command | `/contract`          | Contract obligation extraction, risk flagging, renewal strategy       |
 | Command | `/incident`          | Post-mortem, Five Whys RCA, corrective action tracking                |
 | Command | `/metrics`           | Operational metrics framework, dashboard design, reporting templates  |
-| Agent   | vendor-watchdog      | Weekly vendor monitoring — renewals, SLA breaches, unapproved spend   |
+| Agent   | vendor-watchdog      | Weekly vendor monitoring, renewals, SLA breaches, unapproved spend   |
 | Agent   | process-health       | Monthly SOP currency review, orphaned process detection               |
 | Agent   | compliance-monitor   | Weekly obligation review, evidence aging, regulatory change alerts    |
 | Agent   | change-tracker       | Weekly change pipeline, impact assessment compliance, PIR tracking    |
 
 ## Step 3: Verify Both Plugins
 
-Before configuring `ops.local.md`, verify that both plugins are responding correctly. Run each verification command below and confirm you receive a structured response — not an error.
+Before configuring `ops.local.md`, verify that both plugins are responding correctly. Run each verification command below and confirm you receive a structured response , not an error.
 
 **Verify the official plugin:**
 
@@ -173,10 +173,10 @@ Before configuring `ops.local.md`, verify that both plugins are responding corre
 Evaluate a hypothetical SaaS project management tool for a 200-person
 UK professional services firm. Annual cost: £18,000. Renewal in 4 months.
 Usage: active across 3 departments. SLA: 99.5% uptime, <4hr support response.
-This is a verification test — please provide a brief vendor evaluation.
+This is a verification test, please provide a brief vendor evaluation.
 ```
 
-**What to expect:** A structured vendor evaluation with cost assessment, performance rating, and renewal recommendation. If you receive an error or an unformatted response, the plugin is not correctly installed — repeat Step 1.
+**What to expect:** A structured vendor evaluation with cost assessment, performance rating, and renewal recommendation. If you receive an error or an unformatted response, the plugin is not correctly installed, repeat Step 1.
 
 **Verify the custom plugin:**
 
@@ -184,7 +184,7 @@ This is a verification test — please provide a brief vendor evaluation.
 /audit
 Prepare a brief audit readiness check for an ISO 27001 surveillance audit.
 Organisation: 200-person UK professional services firm. Last audit: 18 months ago.
-This is a verification test — please provide a brief readiness summary.
+This is a verification test, please provide a brief readiness summary.
 ```
 
 **What to expect:** A structured audit readiness summary with evidence requirements and gap assessment. If you receive an error, repeat Step 2.
@@ -195,44 +195,44 @@ Do not proceed to Lesson 3 until both verification commands return structured re
 
 ## Step 4: Configure ops.local.md
 
-Every plugin in this chapter uses `ops.local.md` — the organisation-specific configuration file that calibrates output to your operational context. Without it, plugin commands produce generic best-practice responses. With it, `/vendor-review` knows your renewal cycle and spend thresholds; `/audit` knows your regulatory frameworks and last audit dates; `compliance-tracking` knows which obligations apply to your organisation.
+Every plugin in this chapter uses `ops.local.md`: the organisation-specific configuration file that calibrates output to your operational context. Without it, plugin commands produce generic best-practice responses. With it, `/vendor-review` knows your renewal cycle and spend thresholds; `/audit` knows your regulatory frameworks and last audit dates; `compliance-tracking` knows which obligations apply to your organisation.
 
-The file has seven sections. In this lesson, you populate the first section — **Organisation Context** — as a minimum. You will add subsequent sections progressively as you reach the relevant lessons.
+The file has seven sections. In this lesson, you populate the first section, **Organisation Context:**, as a minimum. You will add subsequent sections progressively as you reach the relevant lessons.
 
 ### Creating ops.local.md
 
 In your Cowork session, create a new file named `ops.local.md` and populate the Organisation Context section:
 
 ```
-# ops.local.md — Operations Configuration
+# ops.local.md: Operations Configuration
 
 ## Organisation Context
 
 Organisation name: [Your organisation name]
 Size: [Number of employees]
-Type: [Industry / sector — e.g., professional services, manufacturing, retail]
+Type: [Industry / sector, e.g., professional services, manufacturing, retail]
 Primary jurisdiction: [UK / UAE / Pakistan / other]
 Secondary jurisdictions: [If applicable]
 Primary currency: [GBP / USD / PKR / AED]
 Financial year end: [Month]
 
 ## Vendor Portfolio
-[Leave blank — you will populate this in Lesson 3]
+[Leave blank; you will populate this in Lesson 3]
 
 ## Regulatory Frameworks
-[Leave blank — you will populate this in Lesson 7]
+[Leave blank; you will populate this in Lesson 7]
 
 ## Risk Configuration
-[Leave blank — you will populate this in Lesson 9]
+[Leave blank; you will populate this in Lesson 9]
 
 ## Change Management
-[Leave blank — you will populate this in Lesson 6]
+[Leave blank; you will populate this in Lesson 6]
 
 ## Process Library
-[Leave blank — you will populate this in Lesson 5]
+[Leave blank; you will populate this in Lesson 5]
 
 ## Operational Metrics
-[Leave blank — you will populate this in Lesson 11]
+[Leave blank; you will populate this in Lesson 11]
 ```
 
 :::note Building ops.local.md Progressively
@@ -244,7 +244,7 @@ You do not need to complete ops.local.md before continuing. Each lesson that int
 If you are working through the exercises using the chapter's fictional firm (a 200-person UK professional services company), use these values for Organisation Context:
 
 ```
-Organisation name: [Do not invent a name — use "your organisation" language]
+Organisation name: [Do not invent a name; use "your organisation" language]
 Size: 200 employees
 Type: Professional services (consulting/advisory)
 Primary jurisdiction: UK
@@ -260,11 +260,11 @@ Financial year end: March
 **Plugin commands:** `/vendor-review` (verify), `/audit` (verify)
 **Goal:** Both plugins installed, both verification commands returning structured responses, Organisation Context section of ops.local.md complete
 
-### Step 1 — Install both plugins
+### Step 1: Install both plugins
 
 Follow Steps 1 and 2 above. Confirm installation by checking that `/vendor-review` and `/audit` appear in your Cowork command list.
 
-### Step 2 — Run verification commands
+### Step 2: Run verification commands
 
 Run both verification prompts from Step 3 above. Confirm each produces a structured response.
 
@@ -275,11 +275,11 @@ Run both verification prompts from Step 3 above. Confirm each produces a structu
 - Are both responses organisation-relevant (even though you used a hypothetical scenario)?
 - Does either response produce an error or fall back to generic output that ignores the plugin?
 
-### Step 3 — Create and populate ops.local.md
+### Step 3: Create and populate ops.local.md
 
 Create `ops.local.md` in your Cowork session and complete the Organisation Context section using your actual organisation's details or the fictional firm profile above. Leave subsequent sections as placeholders.
 
-### Step 4 — Confirm context calibration
+### Step 4: Confirm context calibration
 
 Run the following prompt to verify that ops.local.md is being read:
 
@@ -326,7 +326,7 @@ prompt that triggers an auto-skill:
 **Adapt**: Modify the scenario to match your organisation.
 
 ```
-My organisation is a [describe your type of organisation — size, industry,
+My organisation is a [describe your type of organisation, size, industry,
 jurisdiction]. Based on our ops.local.md configuration:
 
 Which three /vendor-review scenarios are most immediately relevant
@@ -358,7 +358,7 @@ zero-overlap principle. The answer to question 2 must reference
 ops.local.md and the progressive configuration approach.
 ```
 
-**What you are learning:** Translating a technical architecture decision (two plugins, zero overlap) into a business justification tests whether you have understood the *why* behind the architecture — not just the how. This is the kind of communication operations leads are asked to produce regularly.
+**What you are learning:** Translating a technical architecture decision (two plugins, zero overlap) into a business justification tests whether you have understood the *why* behind the architecture , not just the how. This is the kind of communication operations leads are asked to produce regularly.
 :::
 
 ## Flashcards Study Aid
@@ -367,4 +367,4 @@ ops.local.md and the progressive configuration approach.
 
 ---
 
-Continue to [Lesson 3: Vendor Management — The Portfolio View →](./03-vendor-management-portfolio-view.md)
+Continue to [Lesson 3: Vendor Management. The Portfolio View →](./03-vendor-management-portfolio-view.md)

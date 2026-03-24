@@ -271,7 +271,7 @@ The agent routes through `liquidity-lcr` to produce an LCR calculation.
 | LCR result          | Divides HQLA by net outflows and compares to 100% minimum    | LCR >= 100%; PASS/FAIL status with headroom quantified                                                     |
 
 :::note Your output will vary
-The specific HQLA amounts and LCR ratio depend on your asset composition and funding structure. The teaching point is the HQLA classification hierarchy and the inflow cap mechanism — verify that Level 2 caps are checked and run-off rates are appropriate, not that specific numbers match.
+The specific HQLA amounts and LCR ratio depend on your asset composition and funding structure. The teaching point is the HQLA classification hierarchy and the inflow cap mechanism: verify that Level 2 caps are checked and run-off rates are appropriate, not that specific numbers match.
 :::
 
 Nadia reviews whether the covered bonds genuinely qualify at Level 2A (AAA-rated, meeting the covered bond directive criteria) and confirms that the run-off rates applied to wholesale financial deposits reflect her bank's PRA-agreed assumptions.

@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/product-management/chapter-summary-quick-reference
 sidebar_position: 15
 title: "Chapter Summary & Quick Reference"
-description: "A complete reference for Chapter 36 — all 13 commands across both plugins, the three PM agents, key frameworks, and the consolidated 'NEVER DO' quality rules from every skill spec"
+description: "A complete reference for Chapter 36: all 13 commands across both plugins, the three PM agents, key frameworks, and the consolidated 'NEVER DO' quality rules from every skill spec"
 keywords:
   [
     "product management",
@@ -36,7 +36,7 @@ learning_objectives:
 cognitive_load:
   new_concepts: 0
   concepts_list: []
-  assessment: "No new concepts — this is a pure reference lesson. Cognitive load is minimal. The value is consolidation: bringing together 15 lessons of material into a single navigable reference."
+  assessment: "No new concepts: this is a pure reference lesson. Cognitive load is minimal. The value is consolidation: bringing together 15 lessons of material into a single navigable reference."
 
 differentiation:
   extension_for_advanced: "Use this reference page as the basis for a product.local.md custom commands section. For each of the 13 commands, write a one-sentence 'when I use this' rule specific to your product context. These personalised rules, added to product.local.md, will pre-configure each command's context so outputs are immediately specific to your product."
@@ -45,19 +45,19 @@ differentiation:
 teaching_guide:
   key_points:
     - "The two-plugin architecture is the chapter's structural insight: the official product-management plugin provides foundational PM workflows, the custom product-strategy plugin fills workflow gaps the official plugin does not cover"
-    - "No single command covers the full PM cycle — the commands form a chain, with each lesson's output feeding the next"
-    - "The NEVER DO rules are the quality standards encoded in each skill — they are as important as the commands themselves"
+    - "No single command covers the full PM cycle: the commands form a chain, with each lesson's output feeding the next"
+    - "The NEVER DO rules are the quality standards encoded in each skill: they are as important as the commands themselves"
   misconceptions:
     - "The official plugin is better than the custom plugin. Correction: They serve different purposes. The official plugin covers foundational workflows; the custom plugin covers discovery and strategy gaps. Use both based on the task, not based on which is 'official'."
   discussion_prompts:
     - "You are onboarding a new PM onto your team. They have 30 minutes. Which three commands would you show them first, and why? Your answer reveals which parts of the PM workflow are highest-leverage for your specific product context."
   teaching_tips:
-    - "This page is a navigation aid — refer students back to it when they are unsure which command to use for a new PM task. It should be the first stop before searching through individual lessons."
+    - "This page is a navigation aid: refer students back to it when they are unsure which command to use for a new PM task. It should be the first stop before searching through individual lessons."
 ---
 
 # Chapter Summary & Quick Reference
 
-Chapter 36 taught you to deploy AI agents across the full product management workflow cycle — from discovery through retrospective. This page consolidates everything into a single reference: commands, agents, frameworks, and quality rules.
+Chapter 36 taught you to deploy AI agents across the full product management workflow cycle: from discovery through retrospective. This page consolidates everything into a single reference: commands, agents, frameworks, and quality rules.
 
 ## The PM Workflow Cycle
 
@@ -80,16 +80,16 @@ The cycle feeds back: `/retro` findings update `product.local.md`, which improve
 
 | Plugin               | Layer              | Repository                                       | Install                                                                                                                                                                                          |
 | -------------------- | ------------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `product-management` | Layer 1 — Official | `knowledge-work-plugins/product-management`      | `claude plugins add knowledge-work-plugins/product-management`                                                                                                                                   |
-| `product-strategy`   | Layer 2 — Custom   | `agentfactory-business-plugins/product-strategy` | Cowork sidebar: Customize > Browse plugins > Personal > + > Add marketplace from GitHub > enter `https://github.com/panaversity/agentfactory-business-plugins` > find Product Strategy > Install |
+| `product-management` | Layer 1; Official | `knowledge-work-plugins/product-management`      | `claude plugins add knowledge-work-plugins/product-management`                                                                                                                                   |
+| `product-strategy`   | Layer 2; Custom   | `agentfactory-business-plugins/product-strategy` | Cowork sidebar: Customize > Browse plugins > Personal > + > Add marketplace from GitHub > enter `https://github.com/panaversity/agentfactory-business-plugins` > find Product Strategy > Install |
 
-## All 13 Commands — Quick Reference
+## All 13 Commands; Quick Reference
 
 ### Official product-management Plugin (7 commands)
 
 | Command                | Lesson | Purpose                                                                                                | When to Use                                                            |
 | ---------------------- | ------ | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------- |
-| `/write-spec`          | L06    | Write a feature specification with problem, requirements, acceptance criteria, and edge cases          | You have a feature to define — after research, before the PRD          |
+| `/write-spec`          | L06    | Write a feature specification with problem, requirements, acceptance criteria, and edge cases          | You have a feature to define: after research, before the PRD          |
 | `/roadmap-update`      | L09    | Plan, structure, and communicate the product roadmap in engineering, executive, and customer formats   | Roadmap planning cycles, quarterly reviews, stakeholder alignment      |
 | `/synthesize-research` | L04    | Synthesise raw user research (interview notes, support data, surveys) into structured product insights | After user interviews, surveys, or support ticket analysis             |
 | `/stakeholder-update`  | L12    | Generate audience-calibrated stakeholder updates: executive, engineering, and customer versions        | Weekly status, launch announcements, escalations, risk communication   |
@@ -101,14 +101,14 @@ The cycle feeds back: `/retro` findings update `product.local.md`, which improve
 
 | Command       | Lesson | Purpose                                                                                                                           | When to Use                                                        |
 | ------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| `/brief`      | L03    | Create a problem brief, discovery brief, or initiative brief — reframe feature requests into structured problem-focused documents | Discovery phase: before committing to any solution                 |
+| `/brief`      | L03    | Create a problem brief, discovery brief, or initiative brief: reframe feature requests into structured problem-focused documents | Discovery phase: before committing to any solution                 |
 | `/interview`  | L04    | Generate interview guides and synthesis frameworks for user research                                                              | Before user interviews or focus groups                             |
-| `/prd`        | L07    | Generate a Product Requirements Document for multi-team initiatives — wraps a feature spec into a team-alignment document         | After the feature spec, when multiple teams need to coordinate     |
+| `/prd`        | L07    | Generate a Product Requirements Document for multi-team initiatives: wraps a feature spec into a team-alignment document         | After the feature spec, when multiple teams need to coordinate     |
 | `/stories`    | L08    | Generate user stories with acceptance criteria from a PRD or feature spec                                                         | After PRD, before sprint planning                                  |
 | `/prioritise` | L10    | Apply RICE, MoSCoW, ICE, or Now/Next/Later scoring to a backlog                                                                   | Backlog grooming, quarterly planning, sprint composition decisions |
 | `/retro`      | L14    | Structure a product retrospective with four questions, metric quality ratings, and specific process improvement commitments       | 4-12 weeks post-feature launch; sprint retrospectives              |
 
-## Three PM Agents — Quick Reference
+## Three PM Agents; Quick Reference
 
 | Agent                   | Plugin           | Schedule                         | Purpose                                                                                                    | Escalation Threshold                                                                       |
 | ----------------------- | ---------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -136,8 +136,8 @@ These rules are encoded in the skill specs. They are the quality standards that 
 ### Discovery (/brief)
 
 - Never include solution proposals in a problem brief's PROBLEM section
-- Never omit the WHAT WE DO NOT KNOW section — if it says N/A, the brief is not a brief
-- Never write vague discovery questions — each must name a research method and be answerable
+- Never omit the WHAT WE DO NOT KNOW section: if it says N/A, the brief is not a brief
+- Never write vague discovery questions: each must name a research method and be answerable
 
 ### Specifications (/write-spec)
 
@@ -148,13 +148,13 @@ These rules are encoded in the skill specs. They are the quality standards that 
 ### Stakeholder Updates (/stakeholder-update)
 
 - Never send the same version to different audiences
-- Never bury risks inside good news — lead with risks when they are important
-- Never use Yellow as a failure signal — it is good risk management
+- Never bury risks inside good news: lead with risks when they are important
+- Never use Yellow as a failure signal: it is good risk management
 
 ### Metrics (/metrics-review)
 
 - Never present a metric without a comparison (previous period, target, or benchmark)
-- Never attribute a metric change as certain — correlation is not causation
+- Never attribute a metric change as certain: correlation is not causation
 - Never produce a review that does not lead to at least one recommended action
 
 ### Retrospectives (/retro)
@@ -166,12 +166,12 @@ These rules are encoded in the skill specs. They are the quality standards that 
 ### Agents
 
 - Never auto-send any stakeholder communication without PM review and approval
-- Never surface a single user complaint as a signal — three is a pattern, five is a signal
+- Never surface a single user complaint as a signal: three is a pattern, five is a signal
 - Never classify maintenance or bug fixes as off-roadmap work
 
-## product.local.md — Your PM Configuration File
+## product.local.md; Your PM Configuration File
 
-`product.local.md` is the context file that makes every command specific to your product. It is introduced in L02 and updated throughout the chapter — especially after retrospectives.
+`product.local.md` is the context file that makes every command specific to your product. It is introduced in L02 and updated throughout the chapter: especially after retrospectives.
 
 **Required sections:**
 
@@ -191,10 +191,10 @@ These rules are encoded in the skill specs. They are the quality standards that 
 
 | Lesson | Title                                             | Plugin   | Command(s)                            |
 | ------ | ------------------------------------------------- | -------- | ------------------------------------- |
-| L01    | The PM's Cognitive Load Problem                   | —        | None                                  |
+| L01    | The PM's Cognitive Load Problem                   |;        | None                                  |
 | L02    | Plugin Architecture & Product Context             | Both     | Setup + product.local.md              |
-| L03    | Discovery Briefs — Framing the Right Problem      | Custom   | `/brief`                              |
-| L04    | User Research — Interviews & Synthesis            | Both     | `/interview` + `/synthesize-research` |
+| L03    | Discovery Briefs; Framing the Right Problem      | Custom   | `/brief`                              |
+| L04    | User Research; Interviews & Synthesis            | Both     | `/interview` + `/synthesize-research` |
 | L05    | Competitive Intelligence                          | Official | `/competitive-brief`                  |
 | L06    | Feature Specifications                            | Official | `/write-spec`                         |
 | L07    | PRDs for Multi-Team Initiatives                   | Custom   | `/prd`                                |
@@ -204,15 +204,15 @@ These rules are encoded in the skill specs. They are the quality standards that 
 | L11    | Sprint Planning & Capacity                        | Official | `/sprint-planning`                    |
 | L12    | Stakeholder Communication                         | Official | `/stakeholder-update`                 |
 | L13    | Metrics, OKRs & Product Analytics                 | Official | `/metrics-review`                     |
-| L14    | Continuous Intelligence — Agents & Retrospectives | Custom   | `/retro` + `/schedule`                |
-| L15    | Chapter Summary & Quick Reference                 | —        | Reference                             |
-| L16    | Chapter Quiz                                      | —        | 50 questions                          |
+| L14    | Continuous Intelligence; Agents & Retrospectives | Custom   | `/retro` + `/schedule`                |
+| L15    | Chapter Summary & Quick Reference                 |;        | Reference                             |
+| L16    | Chapter Quiz                                      |;        | 50 questions                          |
 
 ## The Central Thesis
 
 > "The PM's job is judgment. AI removes the bottleneck between judgment and the documentation that expresses it."
 
-The best PMs in this chapter did not use AI to replace their thinking. They used AI to express their thinking at the quality it deserves — in a fraction of the time. The agent writes the first draft. The PM reviews, directs, and refines. The output reflects the PM's judgment, not the agent's defaults.
+The best PMs in this chapter did not use AI to replace their thinking. They used AI to express their thinking at the quality it deserves: in a fraction of the time. The agent writes the first draft. The PM reviews, directs, and refines. The output reflects the PM's judgment, not the agent's defaults.
 
 What does not change: the PM's job is judgment. Which user problem matters most. Which solution deserves to be built. What to say no to. AI does not make those calls. It removes the friction between the call and the document that communicates it.
 

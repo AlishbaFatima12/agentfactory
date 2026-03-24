@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/productivity-agentic-office/building-your-people-memory
 sidebar_position: 4
 title: "Building Your People Memory"
-description: "Build Layer 2 of your workplace memory — structured person entries with communication styles, priorities, and sensitivities — and generate calibrated person briefs using /agentic-office:workplace-context."
+description: "Build Layer 2 of your workplace memory: structured person entries with communication styles, priorities, and sensitivities , and generate calibrated person briefs using /agentic-office:workplace-context."
 keywords:
   [
     "people memory",
@@ -29,7 +29,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Information-Literacy"
-    measurable_at_this_level: "Student can write a complete person entry for work.local.md — including communication style, current focus, priorities, relationship notes, and sensitivity flags — that produces calibrated, actionable output when used with /agentic-office:workplace-context"
+    measurable_at_this_level: "Student can write a complete person entry for work.local.md, including communication style, current focus, priorities, relationship notes, and sensitivity flags that produces calibrated, actionable output when used with /agentic-office:workplace-context"
 
   - name: "Generate and Evaluate Person Briefs for Stakeholder Interactions"
     proficiency_level: "B2"
@@ -43,52 +43,52 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Safety"
-    measurable_at_this_level: "Student can identify which person entry information requires a RESTRICTED sensitivity flag and articulate why — explaining the rule that sensitive entries are never surfaced in group outputs or shared briefings"
+    measurable_at_this_level: "Student can identify which person entry information requires a RESTRICTED sensitivity flag and articulate why, explaining the rule that sensitive entries are never surfaced in group outputs or shared briefings"
 
 learning_objectives:
   - objective: "Explain why generic AI outputs differ from stakeholder-calibrated outputs, citing at least two ways that person entries in work.local.md enable more precise delegation messages and meeting briefs"
     proficiency_level: "B1"
     bloom_level: "Understand"
-    assessment_method: "Student can contrast a generic 'draft a message to Omar' output with one that loads Omar's communication profile — citing specific calibration elements (lead time preference, Slack vs email, scope specificity) that change the output"
+    assessment_method: "Student can contrast a generic 'draft a message to Omar' output with one that loads Omar's communication profile, citing specific calibration elements (lead time preference, Slack vs email, scope specificity) that change the output"
 
   - objective: "Write complete person entries for at least three stakeholders using the seven-field format, with specific and accurate communication guidance rather than generic descriptions"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student's person entries contain specific behavioural observations (e.g. 'will push back on scope creep — be specific about what you need') rather than generic descriptions (e.g. 'likes clear communication')"
+    assessment_method: "Student's person entries contain specific behavioural observations (e.g. 'will push back on scope creep, be specific about what you need') rather than generic descriptions (e.g. 'likes clear communication')"
 
   - objective: "Generate a person brief using /agentic-office:workplace-context and evaluate its accuracy, identifying at least one entry that needs refinement and stating what specific observation is missing"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student tests a person brief against their actual knowledge of the person and can articulate the gap — not just 'it is inaccurate' but 'the entry says prefers async but this person actually responds better to short calls for complex topics'"
+    assessment_method: "Student tests a person brief against their actual knowledge of the person and can articulate the gap , not just 'it is inaccurate' but 'the entry says prefers async but this person actually responds better to short calls for complex topics'"
 
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "Person entry format — the seven fields and what makes each one specific vs generic"
-    - "Sensitivity handling — RESTRICTED flag and the rule against surfacing in group outputs"
-    - "Person brief — what the skill produces and how it differs from a raw memory lookup"
-    - "Calibration feedback loop — how to improve entries based on brief output quality"
-  assessment: "4 concepts at B1-B2 level. The person entry format is immediately applicable — every professional knows their key stakeholders and this lesson gives a structure for what they already know. Sensitivity handling is the most conceptually important: it prevents memory from becoming a liability. The person brief is the payoff moment — seeing how structured inputs produce calibrated outputs. The calibration loop closes the lesson pedagogically."
+    - "Person entry format: the seven fields and what makes each one specific vs generic"
+    - "Sensitivity handling, RESTRICTED flag and the rule against surfacing in group outputs"
+    - "Person brief: what the skill produces and how it differs from a raw memory lookup"
+    - "Calibration feedback loop: how to improve entries based on brief output quality"
+  assessment: "4 concepts at B1-B2 level. The person entry format is immediately applicable: every professional knows their key stakeholders and this lesson gives a structure for what they already know. Sensitivity handling is the most conceptually important: it prevents memory from becoming a liability. The person brief is the payoff moment, seeing how structured inputs produce calibrated outputs. The calibration loop closes the lesson pedagogically."
 
 differentiation:
-  extension_for_advanced: "After building your entries, run a delegation exercise: delegate a task to each of your three stakeholders using /agentic-office:delegation. Examine how the handoff messages differ based on each person's entry. Where the message feels generic, trace the gap back to a specific field in the entry — then improve it. The delegation output is the highest-fidelity test of whether your person entries are truly specific."
-  remedial_for_struggling: "Start with just one person — the colleague you interact with most frequently. Write their entry using the seven fields, but focus only on two: communication (how they prefer to receive information) and note (one behavioural observation that actually affects how you work with them). Run a person brief for them alone. Does the guidance match your experience? If yes, add one more person. Build incrementally."
+  extension_for_advanced: "After building your entries, run a delegation exercise: delegate a task to each of your three stakeholders using /agentic-office:delegation. Examine how the handoff messages differ based on each person's entry. Where the message feels generic, trace the gap back to a specific field in the entry; then improve it. The delegation output is the highest-fidelity test of whether your person entries are truly specific."
+  remedial_for_struggling: "Start with just one person: the colleague you interact with most frequently. Write their entry using the seven fields, but focus only on two: communication (how they prefer to receive information) and note (one behavioural observation that actually affects how you work with them). Run a person brief for them alone. Does the guidance match your experience? If yes, add one more person. Build incrementally."
 
 teaching_guide:
   key_points:
-    - "The difference between a calibrated output and a generic one is entirely determined by the quality of the person entry. Vague entries produce vague briefs — 'prefers clear communication' tells the skill nothing useful."
-    - "Sensitivity entries serve a real purpose — protecting individuals from having sensitive information surface in group contexts. The RESTRICTED flag is not about secrecy; it is about appropriate use."
-    - "A person brief is only as good as the entries that feed it. The brief output is a diagnostic for entry quality — if the guidance is generic, the entry needs more specificity."
+    - "The difference between a calibrated output and a generic one is entirely determined by the quality of the person entry. Vague entries produce vague briefs, 'prefers clear communication' tells the skill nothing useful."
+    - "Sensitivity entries serve a real purpose, protecting individuals from having sensitive information surface in group contexts. The RESTRICTED flag is not about secrecy; it is about appropriate use."
+    - "A person brief is only as good as the entries that feed it. The brief output is a diagnostic for entry quality; if the guidance is generic, the entry needs more specificity."
     - "The communication field is the most important field. Role and reporting lines change; how someone prefers to work changes slowly. Focus first on communication."
   misconceptions:
     - "More detail is always better. Correction: specificity is better than volume. 'Prefers detailed written briefs, particularly for analytical requests; will ask follow-up questions if context is missing' is better than five paragraphs of general observations."
-    - "Sensitive information should not be in the system at all. Correction: sensitive information belongs in the system with a RESTRICTED flag. The flag controls when it surfaces — not whether it is stored. Information you cannot access when you need it is useless."
-    - "Person entries capture personality. Correction: person entries capture working style — how someone communicates, what they are currently focused on, what they find difficult. This is professional context, not psychological profiling."
+    - "Sensitive information should not be in the system at all. Correction: sensitive information belongs in the system with a RESTRICTED flag. The flag controls when it surfaces, not whether it is stored. Information you cannot access when you need it is useless."
+    - "Person entries capture personality. Correction: person entries capture working style: how someone communicates, what they are currently focused on, what they find difficult. This is professional context, not psychological profiling."
   discussion_prompts:
     - "You receive a person brief before a difficult conversation. The brief accurately describes the person's communication style but also surfaces a sensitivity note: they are under performance review. Would you use that information to calibrate your approach? How do you distinguish calibration from manipulation?"
     - "Your team member's communication style has changed since you wrote their entry. How would you know? What would the signal be? How often should you review and update person entries?"
   teaching_tips:
-    - "The contrast between generic and calibrated outputs is the lesson's most powerful teaching moment. Show both — the un-calibrated 'draft a message to Omar' and the calibrated version — and let the difference speak for itself."
+    - "The contrast between generic and calibrated outputs is the lesson's most powerful teaching moment. Show both: the un-calibrated 'draft a message to Omar' and the calibrated version , and let the difference speak for itself."
     - "When building entries, push students toward specificity with the question: 'Would this observation apply to 80% of professionals, or is it unique to this person?' Generic observations (likes clear communication, detail-oriented) fail this test. Specific observations pass it."
 ---
 
@@ -98,9 +98,9 @@ Zia has a meeting with Omar at 11:00 to discuss the analytics brief for the inve
 
 Without people memory, the output is competent but generic: "Hi Omar, I wanted to reach out about the analytics brief we discussed. Could you let me know your timeline for completion?"
 
-With people memory — with Omar's full profile loaded — the output is different: "Omar — I wanted to follow up on the analytics brief for the investor deck. Deadline is [Date + 5 days]. To confirm scope: Q1 student completion rates vs prior year; revenue per student (last 4Q); Q1 cohort retention at 30/60/90 days. Format: slides-ready data, charts preferred. Can you confirm receipt and flag any data availability issues by EOD today? Happy to reduce scope if needed."
+With people memory, with Omar's full profile loaded: the output is different: "Omar, I wanted to follow up on the analytics brief for the investor deck. Deadline is [Date + 5 days]. To confirm scope: Q1 student completion rates vs prior year; revenue per student (last 4Q); Q1 cohort retention at 30/60/90 days. Format: slides-ready data, charts preferred. Can you confirm receipt and flag any data availability issues by EOD today? Happy to reduce scope if needed."
 
-The second message gives Omar exactly what he needs: specific scope, confirmed deadline, clear format, and an explicit offer to adjust — because the entry notes he dislikes last-minute asks and will push back on scope creep. The difference is not intelligence. It is context.
+The second message gives Omar exactly what he needs: specific scope, confirmed deadline, clear format, and an explicit offer to adjust, because the entry notes he dislikes last-minute asks and will push back on scope creep. The difference is not intelligence. It is context.
 
 Layer 2 of `work.local.md` is where that context lives.
 
@@ -108,7 +108,7 @@ Layer 2 of `work.local.md` is where that context lives.
 
 Layer 2 is the team memory layer. For each key stakeholder, it stores the professional context that makes outputs stakeholder-aware rather than generically professional.
 
-This is not a directory or an org chart — those already exist. Layer 2 stores the working intelligence that does not live anywhere else: how this person actually communicates, what they are focused on right now, what they find difficult, and what a good working relationship with them requires.
+This is not a directory or an org chart, those already exist. Layer 2 stores the working intelligence that does not live anywhere else: how this person actually communicates, what they are focused on right now, what they find difficult, and what a good working relationship with them requires.
 
 When `/agentic-office:workplace-context` produces a delegation message, a meeting brief, or a handoff communication, it loads the relevant person entries to calibrate the output. Without Layer 2, every output uses default professional tone. With Layer 2, every output is tailored to the specific person receiving it.
 
@@ -125,12 +125,12 @@ Each person entry has seven fields. Here is the format from the `workplace-conte
   current_focus: "[What they are working on right now]"
   priorities: "[Their current top 1–3 priorities]"
   note: "[Anything important about working with this person]"
-  sensitivity: "[Optional — anything that must not be shared broadly]"
+  sensitivity: "[Optional, anything that must not be shared broadly]"
 ```
 
-The most important field is `communication`. This is what directly calibrates outputs. A strong communication entry describes specific behaviours — channel preference, response to urgency, how they process requests — rather than general traits. "Detail-oriented" tells the skill nothing useful. "Prefers written briefs to verbal requests; will ask follow-up questions if context is missing; give her more context than you think necessary" is actionable.
+The most important field is `communication`. This is what directly calibrates outputs. A strong communication entry describes specific behaviours, channel preference, response to urgency, how they process requests, rather than general traits. "Detail-oriented" tells the skill nothing useful. "Prefers written briefs to verbal requests; will ask follow-up questions if context is missing; give her more context than you think necessary" is actionable.
 
-The `note` field is for working observations — not personality assessments, but professional patterns that affect how collaboration works. "Will push back on scope creep — be specific about what you need" is a working observation. "Perfectionist" is a personality assessment. The former helps; the latter adds noise.
+The `note` field is for working observations, not personality assessments, but professional patterns that affect how collaboration works. "Will push back on scope creep, be specific about what you need" is a working observation. "Perfectionist" is a personality assessment. The former helps; the latter adds noise.
 
 The `sensitivity` field is optional. When used, it carries a RESTRICTED flag. More on this below.
 
@@ -138,44 +138,44 @@ The `sensitivity` field is optional. When used, it carries a RESTRICTED flag. Mo
 
 Here are the three entries for the Panaversity team members you will be working with throughout this chapter.
 
-### Omar Farooq — Head of Analytics
+### Omar Farooq: Head of Analytics
 
 ```yaml
 - name: "Omar Farooq"
   role: "Head of Analytics, Panaversity"
   reports_to: "Zia Khan (CEO)"
   communication: >
-    Prefers data-backed requests. Give him lead time — he dislikes last-minute asks.
+    Prefers data-backed requests. Give him lead time; he dislikes last-minute asks.
     Best channel: Slack DM for routine requests; email for formal requests.
-    Be specific about exactly what you need — he will flag scope ambiguity.
+    Be specific about exactly what you need; he will flag scope ambiguity.
   current_focus: "Rebuilding the student performance dashboard; Q1 analytics refresh"
   priorities: "Q1 analytics refresh; data pipeline audit"
   note:
-    "Will push back on scope creep — be specific about what you need and why.
+    "Will push back on scope creep, be specific about what you need and why.
     Data requests need at least 3 business days' lead time. Responds better
     to written briefs than to verbal conversations for analytical tasks."
 ```
 
-### Ayesha Raza — Senior Data Analyst
+### Ayesha Raza: Senior Data Analyst
 
 ```yaml
 - name: "Ayesha Raza"
   role: "Senior Data Analyst, Finance & Analytics"
   reports_to: "Omar Farooq"
   communication: >
-    Detail-oriented; prefers written briefs to verbal requests. New to edtech —
+    Detail-oriented; prefers written briefs to verbal requests. New to edtech,
     experienced in fintech. Help her bridge between the two domains where needed.
     She processes best with structured context; do not assume she knows internal terms.
   current_focus: "Q1 analytics refresh (first project at Panaversity); pipeline audit"
   priorities: "Q1 analytics refresh; pipeline audit"
   note:
-    "New starter — joined March 2026, still in onboarding window. Timely feedback
+    "New starter, joined March 2026, still in onboarding window. Timely feedback
     in the first month shapes confidence. A week's delay on work she has submitted
     sends the wrong signal. Be specific and encouraging in all feedback. She will
-    use fintech mental models — help her translate to edtech where needed."
+    use fintech mental models, help her translate to edtech where needed."
 ```
 
-### Dr. Sana Mirza — Head of Curriculum
+### Dr. Sana Mirza: Head of Curriculum
 
 ```yaml
 - name: "Dr. Sana Mirza"
@@ -183,14 +183,14 @@ Here are the three entries for the Panaversity team members you will be working 
   reports_to: "Zia Khan (CEO)"
   communication: >
     Academic precision; prefers structured proposals with clear evidence base.
-    Will ask for research backing on pedagogical claims — prepare sources.
+    Will ask for research backing on pedagogical claims, prepare sources.
     Prefers formal written communication for proposals; values thoroughness over speed.
   current_focus: "Onboarding; taking formal ownership of the PHM framework"
   priorities: "Understanding the curriculum architecture; establishing PHM framework ownership"
   note:
-    "Starts Monday — joining from Aga Khan University (PhD Learning Sciences).
-    Give her formal ownership of the PHM framework — she will want to build on
-    it, not just inherit it. Key relationship to manage: Omar Farooq — different
+    "Starts Monday, joining from Aga Khan University (PhD Learning Sciences).
+    Give her formal ownership of the PHM framework; she will want to build on
+    it, not just inherit it. Key relationship to manage: Omar Farooq, different
     working styles on data questions for the curriculum; may need mediation on
     early interactions. Do not make informal curriculum design decisions before
     she is settled in."
@@ -211,12 +211,12 @@ Consider Zara Hussain, a Senior Data Engineer being assessed for a Team Lead rol
     does not like surprise meeting invites. Likes sufficient context before responding.
   current_focus: "Infrastructure roadmap; platform reliability work"
   priorities: "Platform stability; engineering velocity"
-  note: "Direct and efficient — prefers concrete requests with clear success criteria."
-  sensitivity: "RESTRICTED — Being assessed for Team Lead role. Do not reference
+  note: "Direct and efficient, prefers concrete requests with clear success criteria."
+  sensitivity: "RESTRICTED, Being assessed for Team Lead role. Do not reference
     succession planning in group communications or shared briefings."
 ```
 
-The sensitivity field carries two functions. First, it stores information that is professionally relevant — Zara's succession process affects how to brief about her in certain contexts. Second, the RESTRICTED flag instructs the skill to never include this information in group outputs or shared briefings where Zara might see it.
+The sensitivity field carries two functions. First, it stores information that is professionally relevant, Zara's succession process affects how to brief about her in certain contexts. Second, the RESTRICTED flag instructs the skill to never include this information in group outputs or shared briefings where Zara might see it.
 
 **The rule:** Sensitive entries are applied only when directly relevant to a one-to-one task (e.g. Zia preparing for a private conversation with Zara's manager). They are never surfaced in:
 
@@ -225,7 +225,7 @@ The sensitivity field carries two functions. First, it stores information that i
 - Meeting prep documents where the subject is an attendee
 - Any output that could be seen by the person the entry concerns
 
-This is not overcaution. It is professional practice. The information has value — and that value disappears the moment the entry surfaces in the wrong context.
+This is not overcaution. It is professional practice. The information has value , and that value disappears the moment the entry surfaces in the wrong context.
 
 ## The Person Brief in Action
 
@@ -240,55 +240,55 @@ Once entries are in place, you can request a person brief before any significant
 **Sample output:**
 
 ```
-PEOPLE BRIEF — 17 March 2026
+PEOPLE BRIEF, 17 March 2026
 ════════════════════════════════════════════════════════════
-─── OMAR FAROOQ — Head of Analytics ───────────────────────
+─── OMAR FAROOQ, Head of Analytics ───────────────────────
   Reports to:      Zia Khan (CEO)
   Current focus:   Q1 analytics refresh; data pipeline audit
   Current mood:    Analytics brief request was delegated yesterday;
-                   has not confirmed receipt — may be managing the
+                   has not confirmed receipt, may be managing the
                    pipeline audit alongside the new ask
   How to approach: Give the analytics request in writing with full
                    scope confirmed; offer to reduce scope if timeline
                    is a problem; confirm he has everything he needs
-  Watch for:       Will flag scope ambiguity immediately — be specific
+  Watch for:       Will flag scope ambiguity immediately, be specific
   Do not:          Make last-minute asks; leave scope open-ended
   Today's context: Still waiting for confirmation on analytics brief;
-                   may need a nudge — but give him the benefit of the
+                   may need a nudge , but give him the benefit of the
                    doubt on timeline before following up
 
-─── AYESHA RAZA — Senior Data Analyst ─────────────────────
+─── AYESHA RAZA, Senior Data Analyst ─────────────────────
   Reports to:   Omar Farooq
-  Joined:       March 2026 — Day 17 of onboarding (still in 30-day window)
+  Joined:       March 2026, Day 17 of onboarding (still in 30-day window)
   Background:   Fintech → edtech transition; strong analytical background
   Current work: Q1 analytics refresh; pipeline audit (first project)
-  How to approach: She submitted her first analysis this morning —
+  How to approach: She submitted her first analysis this morning,
                    review and respond today; be specific and encouraging
   Note:         Timely feedback in the first month shapes confidence;
                 a week's delay would be a missed opportunity to signal
                 that her work is seen and valued
-  Bridge:       She will use fintech mental models — help her translate
+  Bridge:       She will use fintech mental models, help her translate
                 to edtech metrics and terminology where needed
   Do not:       Delay feedback; leave her uncertain about quality
 
-─── DR. SANA MIRZA — Head of Curriculum (NEW) ─────────────
+─── DR. SANA MIRZA, Head of Curriculum (NEW) ─────────────
   Reports to:  Zia Khan (CEO)
   Starts:      Monday 18 March 2026
   Background:  Education technology; PhD Learning Sciences; Aga Khan University
   Style:       Academic precision; evidence-based; prefers structured proposals
   Strengths:   Will strengthen the pedagogical foundation of the curriculum
-  To give her: Formal ownership of the PHM framework — she will want to
+  To give her: Formal ownership of the PHM framework; she will want to
                build on it, not just inherit it
-  To manage:   Omar relationship — different working styles on data questions
+  To manage:   Omar relationship, different working styles on data questions
                for the curriculum; introduce them carefully; mediate early
   Do not:      Make informal curriculum design decisions before she is settled in;
                present her with decisions already made on her core remit
 ════════════════════════════════════════════════════════════
 ```
 
-This output did not come from the skill's intelligence — it came from the entries you wrote. The skill structured and surfaced what you already knew. The quality of the brief is a direct function of the quality of the entries.
+This output did not come from the skill's intelligence ; it came from the entries you wrote. The skill structured and surfaced what you already knew. The quality of the brief is a direct function of the quality of the entries.
 
-If the brief for Omar reads as generic — "good communicator, data-focused" — that is a signal to return to his entry and make the communication field more specific.
+If the brief for Omar reads as generic, "good communicator, data-focused" that is a signal to return to his entry and make the communication field more specific.
 
 ## Building Your Own People Entries
 
@@ -296,7 +296,7 @@ Now build Layer 2 for your own context. Aim for five to eight people: the direct
 
 For each person, work through the seven fields. Two discipline points:
 
-**Write how they actually communicate, not how you wish they did.** If someone dislikes confrontation but you prefer directness, the entry should reflect their preference — because the brief will calibrate to _them_, not to you. An entry that describes how you want to work with them produces briefs calibrated to your preferences, not to reality.
+**Write how they actually communicate, not how you wish they did.** If someone dislikes confrontation but you prefer directness, the entry should reflect their preference, because the brief will calibrate to _them_, not to you. An entry that describes how you want to work with them produces briefs calibrated to your preferences, not to reality.
 
 **Avoid the generic.** Before saving any `communication` entry, ask: "Would this describe 80% of professionals?" If yes, it is too generic. "Prefers clear communication" fails this test. "Responds better to written Slack messages than verbal requests for analytical tasks; needs two business days' lead time on data pulls" passes it.
 
@@ -305,7 +305,7 @@ For each person, work through the seven fields. Two discipline points:
 **Time:** 30 minutes
 **Plugin command:** `/agentic-office:workplace-context`
 
-**Step 1 — Add 5–8 stakeholders (20 minutes)**
+**Step 1, Add 5–8 stakeholders (20 minutes)**
 
 For each person in your Layer 2, use:
 
@@ -322,7 +322,7 @@ For each person in your Layer 2, use:
 
 Focus on people whose working style directly affects your own outputs: the colleague whose approval you need, the direct report you delegate to most frequently, the stakeholder whose communication style is most different from yours.
 
-**Step 2 — Generate person briefs (10 minutes)**
+**Step 2, Generate person briefs (10 minutes)**
 
 Once entries are in place, run a brief for the three people you are most likely to interact with today or this week:
 
@@ -336,7 +336,7 @@ Evaluate the output: Is the guidance specific enough to be actionable? For each 
 **Deliverable:** Layer 2 of your `work.local.md` with 5+ person entries. At least one person brief that you evaluate as specific enough to change your approach to an interaction.
 
 :::note Keep This File
-Your `work.local.md` is progressive — Lesson 5 adds Layer 3 (Projects). Do not start a new file. Every lesson from here builds on what you have already written.
+Your `work.local.md` is progressive, Lesson 5 adds Layer 3 (Projects). Do not start a new file. Every lesson from here builds on what you have already written.
 :::
 
 ## Try With AI
@@ -352,12 +352,12 @@ Add the following person entry to memory:
 Name: Omar Farooq
 Role: Head of Analytics, Panaversity
 Reports to: Zia Khan (CEO)
-Communication: Prefers data-backed requests. Give him lead time —
+Communication: Prefers data-backed requests. Give him lead time,
   dislikes last-minute asks. Best channel: Slack DM for routine,
   email for formal. Will flag scope ambiguity.
 Current focus: Rebuilding the student performance dashboard; Q1 analytics refresh
 Priorities: Q1 analytics refresh; data pipeline audit
-Note: Will push back on scope creep — be specific about what you need.
+Note: Will push back on scope creep, be specific about what you need.
   Data requests need at least 3 business days' lead time.
 
 Now I need to delegate an analytics task to Omar. The task is:
@@ -369,7 +369,7 @@ by [Date + 5 days]. Format: slides-ready data, charts preferred.
 Draft the delegation message to Omar. What should I know before sending?
 ```
 
-**What you are learning:** The delegation message output should reflect Omar's profile specifically — lead time acknowledgement, specific scope, written format, offer to adjust. If the output is generic, the entry needs more specificity in the communication field. This exercise shows the direct relationship between entry quality and output calibration.
+**What you are learning:** The delegation message output should reflect Omar's profile specifically, lead time acknowledgement, specific scope, written format, offer to adjust. If the output is generic, the entry needs more specificity in the communication field. This exercise shows the direct relationship between entry quality and output calibration.
 
 **Adapt**: Build entries for your own key stakeholders and test them.
 
@@ -390,7 +390,7 @@ Rate each brief: is the guidance specific enough to change how
 you approach an interaction? What would make it more specific?
 ```
 
-**What you are learning:** The exercise of rating brief specificity teaches you what makes a person entry useful. When you rate a brief as too generic, trace the gap back to the entry — usually the communication field is under-specified. Improving person entries is an ongoing practice, not a one-time setup.
+**What you are learning:** The exercise of rating brief specificity teaches you what makes a person entry useful. When you rate a brief as too generic, trace the gap back to the entry, usually the communication field is under-specified. Improving person entries is an ongoing practice, not a one-time setup.
 
 **Apply**: Use people memory for a difficult conversation.
 
@@ -405,7 +405,7 @@ specific interaction: what should I know, how should I approach it,
 what should I avoid, and what outcome should I be aiming for?
 ```
 
-**What you are learning:** People memory is most valuable in high-stakes interactions — not just routine delegation. The brief does not tell you what to say. It tells you how this specific person is likely to receive what you say, which is the foundation for any difficult conversation.
+**What you are learning:** People memory is most valuable in high-stakes interactions , not just routine delegation. The brief does not tell you what to say. It tells you how this specific person is likely to receive what you say, which is the foundation for any difficult conversation.
 :::
 
 ## Flashcards Study Aid

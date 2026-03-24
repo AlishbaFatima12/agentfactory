@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/domain-accounting-financial-reporting
 sidebar_position: 2
-title: "Domain 1 — Accounting and Financial Reporting"
-description: "How AI is transforming the highest-impact CA/CPA domain — from Gen-AI capabilities in statement drafting and accounting research to agentic autonomous reporting and transaction recording agents, with real-world deployments and a hands-on month-end close exercise"
+title: "Domain 1: Accounting and Financial Reporting"
+description: "How AI is transforming the highest-impact CA/CPA domain: from Gen-AI capabilities in statement drafting and accounting research to agentic autonomous reporting and transaction recording agents, with real-world deployments and a hands-on month-end close exercise"
 keywords:
   [
     "accounting AI",
@@ -29,7 +29,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Information Literacy"
-    measurable_at_this_level: "Student can describe the three Gen-AI capability categories in accounting — financial statement drafting, disclosure drafting, and accounting research — and explain what each automates versus what remains human judgment"
+    measurable_at_this_level: "Student can describe the three Gen-AI capability categories in accounting (financial statement drafting, disclosure drafting, and accounting research) and explain what each automates versus what remains human judgment"
 
   - name: "Distinguish IFRS and US GAAP Implications for AI Automation"
     proficiency_level: "A2"
@@ -43,7 +43,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can use Cowork to guide an AI assistant through a structured month-end close process — trial balance review, reconciliation identification, financial statement drafting, and journal entry suggestion — and identify where professional judgment is required"
+    measurable_at_this_level: "Student can use Cowork to guide an AI assistant through a structured month-end close process (trial balance review, reconciliation identification, financial statement drafting, and journal entry suggestion) and identify where professional judgment is required"
 
 learning_objectives:
   - objective: "Describe the three categories of Gen-AI capability currently available in accounting and financial reporting and explain what each automates"
@@ -82,36 +82,36 @@ teaching_guide:
   session_group: 1
   session_title: "Domain 1 Deep Dive"
   key_points:
-    - "Domain 1 accounts for the largest proportion of staff time in most CA/CPA practices — and the largest proportion of work that AI can execute autonomously"
+    - "Domain 1 accounts for the largest proportion of staff time in most CA/CPA practices: and the largest proportion of work that AI can execute autonomously"
     - "Three Gen-AI capabilities are production-ready today: financial statement drafting, disclosure drafting, and accounting research"
-    - "The IFRS vs US GAAP distinction is not academic — it directly affects the quality and reliability of AI-generated accounting output"
-    - "The autonomous financial reporting agent and autonomous transactions recording agent represent the agentic frontier — the shift from AI-assisted to AI-executed accounting"
-    - "The Practice Exercise maps the boundary between agent-executable work and professional judgment — every assumption Claude flags is a future skill encoding decision"
+    - "The IFRS vs US GAAP distinction is not academic: it directly affects the quality and reliability of AI-generated accounting output"
+    - "The autonomous financial reporting agent and autonomous transactions recording agent represent the agentic frontier: the shift from AI-assisted to AI-executed accounting"
+    - "The Practice Exercise maps the boundary between agent-executable work and professional judgment: every assumption Claude flags is a future skill encoding decision"
   misconceptions:
-    - "Students may assume AI replaces the entire month-end close — in reality, Gen-AI automates the drafting and routine computation while professional judgment on estimates, classifications, and non-standard transactions remains human"
-    - "Students may think IFRS and US GAAP are interchangeable for AI purposes — the principles vs rules distinction creates measurably different AI output quality"
-    - "Students may believe autonomous agents are fully deployed today — SAP Joule, Oracle Fusion, and Numeric are on the trajectory but still require human approval for most outputs"
+    - "Students may assume AI replaces the entire month-end close: in reality, Gen-AI automates the drafting and routine computation while professional judgment on estimates, classifications, and non-standard transactions remains human"
+    - "Students may think IFRS and US GAAP are interchangeable for AI purposes: the principles vs rules distinction creates measurably different AI output quality"
+    - "Students may believe autonomous agents are fully deployed today: SAP Joule, Oracle Fusion, and Numeric are on the trajectory but still require human approval for most outputs"
   discussion_prompts:
     - "If an autonomous agent could run your month-end close overnight and present you with a completed reporting package each morning, what would your role become? What questions would you ask to validate the output?"
-    - "Consider a non-standard transaction you have encountered — a first-time IFRS adoption, a complex estimate, an unusual related-party arrangement. Could an AI handle it? What information would it need?"
+    - "Consider a non-standard transaction you have encountered: a first-time IFRS adoption, a complex estimate, an unusual related-party arrangement. Could an AI handle it? What information would it need?"
   teaching_tips:
-    - "The IFRS vs US GAAP concept box is critical for international audiences — spend time on it because the principles vs rules distinction explains WHY AI output quality varies across jurisdictions"
-    - "The Practice Exercise should be treated as the centrepiece of this lesson — the conceptual content sets up the exercise, and the exercise is where learning is consolidated"
-    - "SAP Joule and Oracle Fusion are real platforms students can look up — encourage them to visit the URLs and see current capabilities for themselves"
+    - "The IFRS vs US GAAP concept box is critical for international audiences: spend time on it because the principles vs rules distinction explains WHY AI output quality varies across jurisdictions"
+    - "The Practice Exercise should be treated as the centrepiece of this lesson: the conceptual content sets up the exercise, and the exercise is where learning is consolidated"
+    - "SAP Joule and Oracle Fusion are real platforms students can look up: encourage them to visit the URLs and see current capabilities for themselves"
   assessment_checks:
     - question: "What are the three Gen-AI capability categories currently available in accounting and financial reporting?"
       expected_response: "Financial statement drafting (producing draft income statement, balance sheet, cash flow from trial balance data), disclosure drafting (generating standard notes and disclosures from templates calibrated to IFRS or US GAAP), and accounting research (navigating the full body of standards to produce structured technical memos on correct accounting treatment)."
     - question: "Why does the IFRS vs US GAAP distinction matter for AI automation?"
-      expected_response: "US GAAP is rules-based — the agent can look up the specific rule and apply it, producing higher-quality output for clear-cut situations. IFRS is principles-based — the agent must exercise judgment in applying general principles to specific facts, which is a harder problem that produces less reliable output. Both are available to AI research tools, but output quality is higher for rule application than for judgment calls."
+      expected_response: "US GAAP is rules-based (the agent can look up the specific rule and apply it, producing higher-quality output for clear-cut situations. IFRS is principles-based) the agent must exercise judgment in applying general principles to specific facts, which is a harder problem that produces less reliable output. Both are available to AI research tools, but output quality is higher for rule application than for judgment calls."
     - question: "What is the difference between an autonomous financial reporting agent and an autonomous transactions recording agent?"
-      expected_response: "The financial reporting agent executes the month-end close process — extracting trial balance data, running reconciliations, posting standard journal entries, preparing draft financial statements, and flagging exceptions. The transactions recording agent processes incoming transactions continuously — invoices, receipts, bank entries — classifying them to correct accounts and maintaining an updated general ledger. Both shift the human role from execution to exception handling and judgment."
+      expected_response: "The financial reporting agent executes the month-end close process: extracting trial balance data, running reconciliations, posting standard journal entries, preparing draft financial statements, and flagging exceptions. The transactions recording agent processes incoming transactions continuously: invoices, receipts, bank entries: classifying them to correct accounts and maintaining an updated general ledger. Both shift the human role from execution to exception handling and judgment."
 ---
 
-# Domain 1 — Accounting and Financial Reporting
+# Domain 1: Accounting and Financial Reporting
 
-> _"The month-end close is not a technical exercise. It is a professional judgment exercise that happens to involve a large amount of technical work. AI is about to remove the technical work. What remains is the judgment — and that is the part that matters."_
+> _"The month-end close is not a technical exercise. It is a professional judgment exercise that happens to involve a large amount of technical work. AI is about to remove the technical work. What remains is the judgment: and that is the part that matters."_
 
-In Lesson 1, you saw that Accounting and Financial Reporting ranks first among the five CA/CPA domains for AI impact. Now you will understand why. This domain encompasses the day-to-day recording of financial transactions (bookkeeping), the preparation of financial statements (income statement, balance sheet, cash flow statement), and the production of corporate reporting packages for management, board, and external stakeholders. In most CA/CPA practices and finance functions, this domain accounts for the largest proportion of staff time — and because so much of it is rule-based and document-intensive, the largest proportion of work that AI can execute.
+In Lesson 1, you saw that Accounting and Financial Reporting ranks first among the five CA/CPA domains for AI impact. Now you will understand why. This domain encompasses the day-to-day recording of financial transactions (bookkeeping), the preparation of financial statements (income statement, balance sheet, cash flow statement), and the production of corporate reporting packages for management, board, and external stakeholders. In most CA/CPA practices and finance functions, this domain accounts for the largest proportion of staff time: and because so much of it is rule-based and document-intensive, the largest proportion of work that AI can execute.
 
 ## What Gen-AI Can Do Today
 
@@ -119,28 +119,28 @@ Three categories of Generative AI capability are production-ready for this domai
 
 ### Financial Statement Drafting
 
-An AI assistant with access to trial balance data can produce a draft set of financial statements — income statement, balance sheet, cash flow statement — in minutes. The agent applies the relevant accounting standard (IFRS or US GAAP) to determine presentation, calculates subtotals and totals, and generates the notes to the financial statements based on the underlying data. The accountant reviews, adjusts, and approves.
+An AI assistant with access to trial balance data can produce a draft set of financial statements (income statement, balance sheet, cash flow statement) in minutes. The agent applies the relevant accounting standard (IFRS or US GAAP) to determine presentation, calculates subtotals and totals, and generates the notes to the financial statements based on the underlying data. The accountant reviews, adjusts, and approves.
 
-Consider a mid-size manufacturing company in Karachi with a PKR 500 million trial balance. Before Gen-AI, preparing the annual financial statements required 3-5 days of staff time for a semi-senior accountant. With Gen-AI, the draft is produced in minutes. The professional's time shifts from preparing the statements to reviewing them — checking that classifications are correct, that estimates are reasonable, and that presentation complies with the applicable standard.
+Consider a mid-size manufacturing company in Karachi with a PKR 500 million trial balance. Before Gen-AI, preparing the annual financial statements required 3-5 days of staff time for a semi-senior accountant. With Gen-AI, the draft is produced in minutes. The professional's time shifts from preparing the statements to reviewing them: checking that classifications are correct, that estimates are reasonable, and that presentation complies with the applicable standard.
 
 ### Disclosure Drafting
 
-Financial statement notes and disclosures are among the most time-consuming elements of the reporting process. An AI assistant can draft standard disclosures — accounting policy notes, related party disclosures, segment reporting, going concern language — from templates calibrated to the applicable standard and the entity's specific circumstances.
+Financial statement notes and disclosures are among the most time-consuming elements of the reporting process. An AI assistant can draft standard disclosures (accounting policy notes, related party disclosures, segment reporting, going concern language) from templates calibrated to the applicable standard and the entity's specific circumstances.
 
 The distinction that matters here is between standard and non-standard disclosures. Standard disclosures (accounting policies, depreciation methods, revenue recognition) follow well-established templates that Gen-AI handles reliably. Non-standard disclosures (new transactions, first-time IFRS adoptions, complex estimates) still require significant professional judgment.
 
 ### Accounting Research
 
-When a transaction or event raises a question about the correct accounting treatment, the research process — identifying the relevant standard, reading the guidance, applying it to specific facts — is a strong Gen-AI use case. The AI navigates the full body of IFRS or US GAAP standards, identifies the relevant provisions, and produces a structured technical memo outlining the treatment and the basis for it. The accountant evaluates the memo rather than conducting the research from scratch.
+When a transaction or event raises a question about the correct accounting treatment, the research process (identifying the relevant standard, reading the guidance, applying it to specific facts) is a strong Gen-AI use case. The AI navigates the full body of IFRS or US GAAP standards, identifies the relevant provisions, and produces a structured technical memo outlining the treatment and the basis for it. The accountant evaluates the memo rather than conducting the research from scratch.
 
-:::info IFRS vs US GAAP — Why It Matters for AI
+:::info IFRS vs US GAAP: Why It Matters for AI
 **IFRS (International Financial Reporting Standards)** is the accounting framework used by listed companies in over 140 countries, including Pakistan, the UK, EU, Australia, and most of Asia and the Middle East. IFRS is **principles-based**: it sets out broad principles and requires preparers to exercise judgment in applying them to specific transactions.
 
 **US GAAP (Generally Accepted Accounting Principles)** is the accounting framework mandated for listed companies in the United States by the SEC. US GAAP is **rules-based**: it contains extensive specific guidance for particular transactions and industries.
 
-**Why this matters for AI**: Rules-based standards are more amenable to automation — the agent can look up the rule and apply it. Principles-based standards require the agent to exercise judgment in applying general principles to specific facts — a harder problem. Both IFRS and US GAAP are available to AI research tools, but the quality of AI output is higher for clear-cut rule application than for complex judgment calls.
+**Why this matters for AI**: Rules-based standards are more amenable to automation (the agent can look up the rule and apply it. Principles-based standards require the agent to exercise judgment in applying general principles to specific facts) a harder problem. Both IFRS and US GAAP are available to AI research tools, but the quality of AI output is higher for clear-cut rule application than for complex judgment calls.
 
-For Pakistani CAs working under IFRS as adopted by SECP, this means AI-drafted financial statements require more careful review than they would under US GAAP — the principles leave more room for the AI to make judgment calls that a professional might make differently.
+For Pakistani CAs working under IFRS as adopted by SECP, this means AI-drafted financial statements require more careful review than they would under US GAAP: the principles leave more room for the AI to make judgment calls that a professional might make differently.
 :::
 
 ## Agentic AI Capabilities Approaching Production
@@ -151,33 +151,33 @@ Two categories of agentic capability are moving from prototype to production dep
 
 This agent executes the month-end close process autonomously: extracting trial balance data from the ERP, running automated reconciliations, posting standard journal entries, preparing draft financial statements, flagging exceptions for human review, and delivering a completed reporting package. The human role shifts from executing the close to reviewing the agent's output and handling exceptions.
 
-The scale of change is significant. A typical month-end close in a mid-size practice takes 5-8 working days with a team of 3-4 people. An autonomous agent reduces the routine execution to hours, with the professional team focused on the judgment calls — estimates, accruals, non-standard transactions, management analysis.
+The scale of change is significant. A typical month-end close in a mid-size practice takes 5-8 working days with a team of 3-4 people. An autonomous agent reduces the routine execution to hours, with the professional team focused on the judgment calls: estimates, accruals, non-standard transactions, management analysis.
 
 ### The Autonomous Transactions Recording Agent
 
-This agent processes incoming transactions — invoices, receipts, bank entries, intercompany transactions — classifying them to the correct accounts, applying accruals and deferrals, and maintaining a continuously updated general ledger. The human role shifts from data entry and routine classification to exception handling and judgment calls on non-standard transactions.
+This agent processes incoming transactions (invoices, receipts, bank entries, intercompany transactions) classifying them to the correct accounts, applying accruals and deferrals, and maintaining a continuously updated general ledger. The human role shifts from data entry and routine classification to exception handling and judgment calls on non-standard transactions.
 
 ## Real-World Deployments
 
 Three platforms illustrate where the industry stands today.
 
-**SAP Joule** is currently among the most advanced enterprise AI deployments in accounting. Embedded in SAP's ERP platform, Joule includes dedicated accounting agents — an Accounting Accruals Agent for period-end close, a Cash Management Agent for reconciliations and cash positioning, and invoice processing automation. SAP's Joule Studio agent builder became generally available in Q1 2026, signalling a clear trajectory toward agentic financial reporting.
+**SAP Joule** is currently among the most advanced enterprise AI deployments in accounting. Embedded in SAP's ERP platform, Joule includes dedicated accounting agents: an Accounting Accruals Agent for period-end close, a Cash Management Agent for reconciliations and cash positioning, and invoice processing automation. SAP's Joule Studio agent builder became generally available in Q1 2026, signalling a clear trajectory toward agentic financial reporting.
 
-**Oracle Fusion Cloud ERP AI** embeds AI across account reconciliation, anomaly investigation, and close management. Oracle's AI Agent Studio — expanded in October 2025 with a marketplace and partner network — enables enterprise teams to build and deploy autonomous workflow agents for finance processes, including a Payables Agent and a Ledger Agent.
+**Oracle Fusion Cloud ERP AI** embeds AI across account reconciliation, anomaly investigation, and close management. Oracle's AI Agent Studio (expanded in October 2025 with a marketplace and partner network) enables enterprise teams to build and deploy autonomous workflow agents for finance processes, including a Payables Agent and a Ledger Agent.
 
 **Numeric** focuses specifically on the financial close process, using AI to automatically analyse reconciliations, detect anomalies, and propose adjustments. The company raised USD 51 million in Series B funding in November 2025, expanding from close management into a broader finance platform. Human approval remains required, but the volume of manual work is significantly reduced.
 
 :::tip Global Perspective
-**Pakistan (IFRS as adopted by SECP)**: Pakistani listed companies follow IFRS standards. SECP oversees financial reporting quality. FBR requirements add a tax-reporting layer. The platforms above are enterprise-grade — Pakistani practices typically encounter them through multinational engagements or large listed clients.
+**Pakistan (IFRS as adopted by SECP)**: Pakistani listed companies follow IFRS standards. SECP oversees financial reporting quality. FBR requirements add a tax-reporting layer. The platforms above are enterprise-grade: Pakistani practices typically encounter them through multinational engagements or large listed clients.
 **US GAAP / SEC**: US-listed companies follow US GAAP. The SEC mandates XBRL-tagged financial statements, which are highly amenable to AI processing. Oracle Fusion has strong US GAAP support.
 **UK FRS 101/102**: UK companies below the IFRS threshold use FRS 101 (reduced IFRS) or FRS 102 (UK GAAP). The Financial Reporting Council (FRC) oversees standards. Smaller UK practices are early adopters of AI close tools because the reduced standard set simplifies automation.
 :::
 
 ## What This Means for Practitioners
 
-For individual practitioners, Domain 1 represents the most significant role restructuring in the near term. Junior and semi-senior roles whose primary function is transaction processing, reconciliation, and routine reporting preparation face the highest displacement risk. The CA/CPA who thrives in this environment shifts from preparing financial statements to interpreting them — from executing the close to owning the judgment calls the agent cannot make.
+For individual practitioners, Domain 1 represents the most significant role restructuring in the near term. Junior and semi-senior roles whose primary function is transaction processing, reconciliation, and routine reporting preparation face the highest displacement risk. The CA/CPA who thrives in this environment shifts from preparing financial statements to interpreting them: from executing the close to owning the judgment calls the agent cannot make.
 
-At the service level, fully automated reporting platforms are emerging as a business model. The subscription-based reporting service — where an accounting firm delivers a monthly financial reporting package through an AI-powered platform rather than through staff time — is a structural change in how accounting services are priced and delivered. Practices that recognize this shift early have a pricing advantage; those that continue billing by the hour for work an agent can do in minutes face margin compression.
+At the service level, fully automated reporting platforms are emerging as a business model. The subscription-based reporting service (where an accounting firm delivers a monthly financial reporting package through an AI-powered platform rather than through staff time) is a structural change in how accounting services are priced and delivered. Practices that recognize this shift early have a pricing advantage; those that continue billing by the hour for work an agent can do in minutes face margin compression.
 
 | Role              | Before AI                                             | After AI                                                 |
 | ----------------- | ----------------------------------------------------- | -------------------------------------------------------- |
@@ -193,7 +193,7 @@ At the service level, fully automated reporting platforms are emerging as a busi
 
 ### Setup
 
-1. [**Download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and unzip it. Open `exercises/trial-balances/textile-manufacturer-tb.csv` — the ready-made Crescent Textiles trial balance (PKR-denominated, ~35 IFRS accounts). If you have your own trial balance data in Excel or CSV format, you can use that instead.
+1. [**Download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and unzip it. Open `exercises/trial-balances/textile-manufacturer-tb.csv`: the ready-made Crescent Textiles trial balance (PKR-denominated, ~35 IFRS accounts). If you have your own trial balance data in Excel or CSV format, you can use that instead.
 2. Create a new folder on your computer (e.g., `month-end-close-exercise`). Place the downloaded CSV file inside it.
 3. Open that folder in Cowork.
 
@@ -235,18 +235,18 @@ At the service level, fully automated reporting platforms are emerging as a busi
    credit entries.
    ```
 
-5. Review the output. For each item where Claude has flagged an assumption or uncertainty, write a one-sentence instruction that would resolve it — this is the raw material for a month-end close skill.
+5. Review the output. For each item where Claude has flagged an assumption or uncertainty, write a one-sentence instruction that would resolve it: this is the raw material for a month-end close skill.
 
-**Check your work:** You should have a draft income statement and balance sheet, a list of reconciliations with data sources, a set of proposed month-end journal entries, and a list of assumption-resolution instructions. The assumption list is the most valuable output — it maps the exact boundary between what an agent can execute and what requires your professional judgment.
+**Check your work:** You should have a draft income statement and balance sheet, a list of reconciliations with data sources, a set of proposed month-end journal entries, and a list of assumption-resolution instructions. The assumption list is the most valuable output: it maps the exact boundary between what an agent can execute and what requires your professional judgment.
 
-:::tip Plugin Bridge — From Prompts to Commands
+:::tip Plugin Bridge: From Prompts to Commands
 Steps 3 and 4 used conversational prompts. If you have `finance@knowledge-work-plugins` installed from Chapter 28, try the same tasks using structured plugin commands and compare the output:
 
-- `/income-statement monthly` — produces a standardised income statement from the same trial balance data
-- `/journal-entry "Record depreciation and accruals for month-end close"` — generates structured journal entries as in Step 4
-- `/reconciliation bank` — performs a structured bank reconciliation as discussed in Step 2
+- `/income-statement monthly`: produces a standardised income statement from the same trial balance data
+- `/journal-entry "Record depreciation and accruals for month-end close"`: generates structured journal entries as in Step 4
+- `/reconciliation bank`: performs a structured bank reconciliation as discussed in Step 2
 
-The plugin commands produce consistent, structured output. The conversational approach gives you more flexibility to explore. In practice, you will use both — commands for routine execution, prompts for investigation and judgment calls.
+The plugin commands produce consistent, structured output. The conversational approach gives you more flexibility to explore. In practice, you will use both: commands for routine execution, prompts for investigation and judgment calls.
 :::
 
 ## Try With AI
@@ -272,7 +272,7 @@ intensive and what information you would need from the client
 to draft it properly.
 ```
 
-**What you are learning:** The standard vs non-standard distinction is the practical boundary of Gen-AI capability in disclosure work. By classifying disclosures for your specific entity type and jurisdiction, you identify exactly where AI drafting saves time and where it requires professional oversight — the foundation for building domain-specific Cowork skills later in this chapter.
+**What you are learning:** The standard vs non-standard distinction is the practical boundary of Gen-AI capability in disclosure work. By classifying disclosures for your specific entity type and jurisdiction, you identify exactly where AI drafting saves time and where it requires professional oversight: the foundation for building domain-specific Cowork skills later in this chapter.
 
 ### Prompt 2: Autonomous Agent Oversight Design
 
@@ -297,7 +297,7 @@ Frame your answer for [YOUR JURISDICTION]'s regulatory
 requirements.
 ```
 
-**What you are learning:** Agentic AI in accounting is not about removing humans — it is about redesigning the human role from executor to overseer. By designing the oversight framework yourself, you develop the architectural thinking that separates practitioners who deploy agents safely from those who either reject them entirely or deploy them without adequate controls.
+**What you are learning:** Agentic AI in accounting is not about removing humans: it is about redesigning the human role from executor to overseer. By designing the oversight framework yourself, you develop the architectural thinking that separates practitioners who deploy agents safely from those who either reject them entirely or deploy them without adequate controls.
 
 ### Prompt 3: Role Transition Planning
 
@@ -321,7 +321,7 @@ ensure my professional value increases as automation increases?
 Give me a 90-day development plan.
 ```
 
-**What you are learning:** The practitioner implications section of this lesson is abstract until you apply it to your own career. By mapping your current tasks against the automation categories and building a personal development plan, you convert domain knowledge into career strategy — the most valuable output of this entire chapter.
+**What you are learning:** The practitioner implications section of this lesson is abstract until you apply it to your own career. By mapping your current tasks against the automation categories and building a personal development plan, you convert domain knowledge into career strategy: the most valuable output of this entire chapter.
 
 ## Flashcards Study Aid
 
@@ -329,4 +329,4 @@ Give me a 90-day development plan.
 
 ---
 
-Continue to [Lesson 3: Domain 2 — Tax and Non-Assurance Advisory →](./03-domain-tax-non-assurance-advisory.md)
+Continue to [Lesson 3: Domain 2: Tax and Non-Assurance Advisory →](./03-domain-tax-non-assurance-advisory.md)

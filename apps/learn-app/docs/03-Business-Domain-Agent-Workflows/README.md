@@ -1,9 +1,9 @@
 ---
 sidebar_position: 3
-title: "Part 3: Business Domain Agent Workflows — Building for the Enterprise"
+title: "Part 3: Business Domain Agent Workflows: Building for the Enterprise"
 ---
 
-# Part 3: Business Domain Agent Workflows — Building for the Enterprise
+# Part 3: Business Domain Agent Workflows: Building for the Enterprise
 
 ## A New Focus: Enterprise Workflows
 
@@ -11,9 +11,9 @@ The first two parts of this book built the Agent Factory: the paradigm shift fro
 
 Part 3 is where those agents go to work.
 
-This part has a deliberately narrow focus: **enterprise business workflows**. Not AI in general, not consumer applications, not research prototypes — but the specific functions that run a real organisation: finance, legal, sales, supply chain, product management, human resources, operations, productivity, and innovation. Each chapter deploys AI agents into one of these functions with the same discipline that the rest of this book applies to technical systems: real domain knowledge, production-ready configurations, jurisdiction-aware SKILL.md libraries, and exercises that produce deployable outputs — not proofs of concept.
+This part has a deliberately narrow focus: **enterprise business workflows**. Not AI in general, not consumer applications, not research prototypes , but the specific functions that run a real organisation: finance, legal, sales, supply chain, product management, human resources, operations, productivity, and innovation. Each chapter deploys AI agents into one of these functions with the same discipline that the rest of this book applies to technical systems: real domain knowledge, production-ready configurations, jurisdiction-aware SKILL.md libraries, and exercises that produce deployable outputs, not proofs of concept.
 
-The central commitment of Part 3 is that domain expertise is the scarce resource, not technical capability. The AI infrastructure is built. The Cowork platform is configured. The MCP connectors exist. What makes an agent in the CFO's office genuinely valuable is not the model — it is the twenty years of financial judgment encoded in its SKILL.md. That knowledge belongs to the professional, not the platform. Part 3 teaches professionals to deploy it.
+The central commitment of Part 3 is that domain expertise is the scarce resource, not technical capability. The AI infrastructure is built. The Cowork platform is configured. The MCP connectors exist. What makes an agent in the CFO's office genuinely valuable is not the model; it is the twenty years of financial judgment encoded in its SKILL.md. That knowledge belongs to the professional, not the platform. Part 3 teaches professionals to deploy it.
 
 ---
 
@@ -36,14 +36,14 @@ Here is a breakdown of exactly who should read this part and why:
 #### 3. Enterprise Executives & Business Leaders (The "Decision Makers")
 
 - **Who they are:** CIOs, CTOs, COOs, CFOs, and Transformation Directors.
-- **Why they should read it:** Leaders are currently struggling with _how_ to deploy AI safely without causing massive legal or financial liabilities. The **Governance Escalation Framework** outlined in this part is exactly what the C-suite needs. It provides a strategic roadmap for transforming their company into an "Agentic Enterprise" systematically—starting with rigorous financial controls before expanding to sales and operations.
+- **Why they should read it:** Leaders are currently struggling with _how_ to deploy AI safely without causing massive legal or financial liabilities. The **Governance Escalation Framework** outlined in this part is exactly what the C-suite needs. It provides a strategic roadmap for transforming their company into an "Agentic Enterprise" systematically, starting with rigorous financial controls before expanding to sales and operations.
 
 #### 4. AI Product Managers & Solutions Architects (The "Translators")
 
 - **Who they are:** The professionals sitting between the developers and the business stakeholders, designing the AI workflows.
 - **Why they should read it:** They need to understand how to map a massive enterprise function (like Contract Lifecycle Management or IFRS 9 assessments) into discrete, automated agent skills and workflows. It gives them a perfect architectural template to plan sprints, gather requirements, and define where the "human-in-the-loop" handoffs must occur.
 
-#### 5. Banking & Islamic Finance experts — credit officers, Shariah advisors, and Islamic banking teams.
+#### 5. Banking & Islamic Finance experts, credit officers, Shariah advisors, and Islamic banking teams.
 
 #### 6. Senior leaders in Sales/RevOps, Supply Chain, HR/Operations, Product Management & Innovation who want to turn their playbooks and judgment into scalable AI agents
 
@@ -57,7 +57,7 @@ If **Part 1 and 2** of this Agent Factory Book is for the _coders_, **Part 3** i
 
 ### Platform Agnosticism and Open Standards
 
-While this part utilizes Claude Cowork platform for rapid deployment and testing, it is crucial to understand that all workflows, knowledge extraction methodologies, and SKILL.md libraries developed in this part are strictly **platform-agnostic**. We deliberately architect your domain expertise around open industry standards—such as the emerging protocols documented at https://agentskills.io/home and the Model Context Protocol (MCP)—to ensure your enterprise logic is never locked into a single vendor's ecosystem. By structuring tacit knowledge into standardized, universally readable formats, the agents and skills you build become highly portable intellectual property. They can be seamlessly exported, integrated, and executed across any major agentic framework or enterprise orchestration tool that supports these standards, including Claude Code, Claude Cowork, Gemini CLI, OpenAI Codex, Cursor, and Microsoft Copilot. This design philosophy ensures that the business value you create today remains a durable, adaptable asset regardless of how the underlying AI infrastructure evolves.
+While this part utilizes Claude Cowork platform for rapid deployment and testing, it is crucial to understand that all workflows, knowledge extraction methodologies, and SKILL.md libraries developed in this part are strictly **platform-agnostic**. We deliberately architect your domain expertise around open industry standards (such as the emerging protocols documented at https://agentskills.io/home and the Model Context Protocol (MCP)) to ensure your enterprise logic is never locked into a single vendor's ecosystem. By structuring tacit knowledge into standardized, universally readable formats, the agents and skills you build become highly portable intellectual property. They can be seamlessly exported, integrated, and executed across any major agentic framework or enterprise orchestration tool that supports these standards, including Claude Code, Claude Cowork, Gemini CLI, OpenAI Codex, Cursor, and Microsoft Copilot. This design philosophy ensures that the business value you create today remains a durable, adaptable asset regardless of how the underlying AI infrastructure evolves.
 
 ---
 
@@ -69,7 +69,7 @@ Running through all sixteen chapters of Part 3 is a single principle that every 
 
 This is the [10-80-10 rhythm introduced in the thesis](https://agentfactory.panaversity.org/docs/thesis#the-10-80-10-rule-the-operating-rhythm-of-the-ai-workforce): 10% human intent (the spec, the constraints, the domain judgment that frames the task), 80% agent execution (the computation, the drafting, the analysis), 10% human verification (the professional call that no model can make). Every domain workflow in Part 3 follows this pattern.
 
-This is not a limitation of current AI capability. It is the correct architecture for enterprise deployment. The IFRS 9 SICR assessment for a borderline credit — whether a loan has suffered a significant increase in credit risk — involves qualitative information no model can fully capture. The SAR filing decision under the Proceeds of Crime Act is a legal obligation that cannot be delegated to software. The closing audit opinion requires a licensed professional's signature. The contract negotiation strategy requires an attorney's judgment.
+This is not a limitation of current AI capability. It is the correct architecture for enterprise deployment. The IFRS 9 SICR assessment for a borderline credit , whether a loan has suffered a significant increase in credit risk, involves qualitative information no model can fully capture. The SAR filing decision under the Proceeds of Crime Act is a legal obligation that cannot be delegated to software. The closing audit opinion requires a licensed professional's signature. The contract negotiation strategy requires an attorney's judgment.
 
 In every one of these cases, AI agents can dramatically reduce the time and effort required to reach the point where judgment is needed. They can run the ECL calculation, draft the SAR narrative, prepare the audit workpaper, and summarise the contract risk profile. But the professional makes the call.
 
@@ -79,9 +79,9 @@ Every chapter in Part 3 encodes this principle in the SKILL.md files it produces
 
 ### What You Will Build
 
-Every chapter in Part 3 ends with at least one deployable artefact. Not a prototype. Not a demonstration. A production-ready agent configuration — with a validated SKILL.md library, a defined escalation framework, a Cowork plugin setup, and exercises whose outputs a practitioner can take directly into their organisation.
+Every chapter in Part 3 ends with at least one deployable artefact. Not a prototype. Not a demonstration. A production-ready agent configuration, with a validated SKILL.md library, a defined escalation framework, a Cowork plugin setup, and exercises whose outputs a practitioner can take directly into their organisation.
 
-The artefacts vary by domain. In Section II (The Office of the CFO), you will build a complete banking AI plugin stack covering IFRS 9, Basel III/IV, and AML across seven jurisdictions — 23 production-ready SKILL.md files you can deploy immediately. In Section III (Legal & Compliance), you will build a contract lifecycle management agent and Legal Ops workflows that transform the legal function from a bottleneck into a business enabler. In Section IV (The Growth Engine), you will build sales and marketing agents that encode the judgment of your top performers and scale it across the team.
+The artefacts vary by domain. In Section II (The Office of the CFO), you will build a complete banking AI plugin stack covering IFRS 9, Basel III/IV, and AML across seven jurisdictions, 23 production-ready SKILL.md files you can deploy immediately. In Section III (Legal & Compliance), you will build a contract lifecycle management agent and Legal Ops workflows that transform the legal function from a bottleneck into a business enabler. In Section IV (The Growth Engine), you will build sales and marketing agents that encode the judgment of your top performers and scale it across the team.
 
 In every case, the hands-on work is scoped to sessions you can complete in a day. The goal is proof: by the end of each chapter, you will have direct personal evidence that an agent encoding your domain expertise is not a theoretical possibility. It is something you have built, tested against realistic scenarios, and validated against professional standards.
 
@@ -93,7 +93,7 @@ Part 3 spans **sixteen chapters across seven sections**. The sections follow the
 
 ---
 
-## Section I — Foundations
+## Section I: Foundations
 
 ### Chapters 25, 26, 27: How to Think About Enterprise AI Agents Before Building Them
 
@@ -105,7 +105,7 @@ Section I establishes the conceptual and technical foundations that every subseq
 
 **[→ Read Chapter 25](/docs/Business-Domain-Agent-Workflows/enterprise-agentic-landscape)**
 
-Maps the strategic landscape of enterprise AI in 2026 — why adoption stalled in 2024–2025, the platform shift that unlocked deployment, and the Cowork vs. Frontier decision framework. Introduces the four monetisation models that govern how domain agents create financial value and the Organisational AI Maturity Model that tells you which organisations are genuinely ready to deploy.
+Maps the strategic landscape of enterprise AI in 2026, why adoption stalled in 2024–2025, the platform shift that unlocked deployment, and the Cowork vs. Frontier decision framework. Introduces the four monetisation models that govern how domain agents create financial value and the Organisational AI Maturity Model that tells you which organisations are genuinely ready to deploy.
 
 **Key topics:** The Pilot Trap and why enterprise AI stalled · Cowork vs. Frontier platform comparison · Knowledge worker centrality · Four monetisation models · Organisational AI Maturity Model · The seven deployment domains
 
@@ -115,7 +115,7 @@ Maps the strategic landscape of enterprise AI in 2026 — why adoption stalled i
 
 **[→ Read Chapter 26](/docs/Business-Domain-Agent-Workflows/enterprise-agent-blueprint)**
 
-The anatomy of a Cowork plugin — SKILL.md files, the plugin package structure, MCP connectors, the governance layer, the three-way ownership model, and the marketplace. Explains the Persona–Questions–Principles (PQP) Framework, the three-level context hierarchy, and who is responsible for each layer.
+The anatomy of a Cowork plugin, SKILL.md files, the plugin package structure, MCP connectors, the governance layer, the three-way ownership model, and the marketplace. Explains the Persona–Questions–Principles (PQP) Framework, the three-level context hierarchy, and who is responsible for each layer.
 
 **Key topics:** Cowork plugin anatomy and package structure · The PQP Framework (Persona, Questions, Principles) · Three-level context hierarchy · MCP connector ecosystem · Governance layer and shadow mode · Three-way ownership model · Plugin marketplace
 
@@ -125,21 +125,21 @@ The anatomy of a Cowork plugin — SKILL.md files, the plugin package structure,
 
 **[→ Read Chapter 27](/docs/Business-Domain-Agent-Workflows/the-knowledge-extraction-method)**
 
-The methodology chapter for the entire curriculum. Describes how to transform the tacit knowledge locked in expert practitioners' heads — and in institutional documents — into the SKILL.md files that make domain agents genuinely useful. Every domain chapter in Sections II through VII applies this method.
+The methodology chapter for the entire curriculum. Describes how to transform the tacit knowledge locked in expert practitioners' heads , and in institutional documents, into the SKILL.md files that make domain agents genuinely useful. Every domain chapter in Sections II through VII applies this method.
 
-**Key topics:** Method A — expert interview protocol (the five questions that surface tacit knowledge) · Method B — three-pass document extraction from policy manuals · From extraction to SKILL.md translation · Building validation scenario sets · The Validation Loop — shadow mode and graduated autonomy
+**Key topics:** Method A, expert interview protocol (the five questions that surface tacit knowledge) · Method B, three-pass document extraction from policy manuals · From extraction to SKILL.md translation · Building validation scenario sets · The Validation Loop, shadow mode and graduated autonomy
 
 ---
 
-## Section II — The Office of the CFO
+## Section II: The Office of the CFO
 
 ### Chapters 28–32: AI in the Highest-Consequence Domain in Any Enterprise
 
-Section II deploys AI agents into financial reporting, compliance, and control — the functions where the cost of an error is not a productivity loss but a restatement, a regulatory breach, a capital adequacy violation, or an enforcement action. Five chapters, each with its own SKILL.md library, Cowork plugin configuration, and jurisdiction-aware exercises.
+Section II deploys AI agents into financial reporting, compliance, and control: the functions where the cost of an error is not a productivity loss but a restatement, a regulatory breach, a capital adequacy violation, or an enforcement action. Five chapters, each with its own SKILL.md library, Cowork plugin configuration, and jurisdiction-aware exercises.
 
 The section builds systematically. Chapter 28 establishes the foundational finance agent. Chapter 29 extends it into the Intent-Driven Financial Architecture. Chapters 30, 31, and 32 deploy these foundations into three specialist domains with increasing regulatory complexity: CA/CPA practice, Islamic finance, and banking-specific AI.
 
-> **Section philosophy:** AI agents in this domain do not replace professional judgment — they automate execution so that professional judgment can be applied where it matters most. The closing audit opinion, the SICR staging decision, and the SAR filing call all require a licensed professional. The agent prepares the ground; the professional decides.
+> **Section philosophy:** AI agents in this domain do not replace professional judgment; they automate execution so that professional judgment can be applied where it matters most. The closing audit opinion, the SICR staging decision, and the SAR filing call all require a licensed professional. The agent prepares the ground; the professional decides.
 
 ---
 
@@ -147,7 +147,7 @@ The section builds systematically. Chapter 28 establishes the foundational finan
 
 **[→ Read Chapter 28](/docs/Business-Domain-Agent-Workflows/finance-domain-agents)**
 
-Builds the foundational finance agent covering financial statement analysis, DCF valuation, variance analysis, and FP&A workflows. The only chapter in Part 3 that demonstrates both a Cowork implementation and an OpenAI Frontier implementation side by side — because the finance vertical is where both platforms compete most directly.
+Builds the foundational finance agent covering financial statement analysis, DCF valuation, variance analysis, and FP&A workflows. The only chapter in Part 3 that demonstrates both a Cowork implementation and an OpenAI Frontier implementation side by side, because the finance vertical is where both platforms compete most directly.
 
 **Key topics:** Financial statement ingestion and normalisation · DCF modelling with scenario analysis · Variance analysis with CFO narrative generation · Budget vs. actuals monitoring with automatic exception flagging · Integration with the `finance@knowledge-work-plugins` stack
 
@@ -159,9 +159,9 @@ Builds the foundational finance agent covering financial statement analysis, DCF
 
 **[→ Read Chapter 29](/docs/Business-Domain-Agent-Workflows/intent-driven-financial-architecture)**
 
-Extends the foundational finance agent into a methodology for building AI systems that reason about strategic intent, not just data retrieval. The CFO co-pilot — a persistent agent that knows the company's financial history and can connect financial data to business narrative automatically.
+Extends the foundational finance agent into a methodology for building AI systems that reason about strategic intent, not just data retrieval. The CFO co-pilot: a persistent agent that knows the company's financial history and can connect financial data to business narrative automatically.
 
-**Key topics:** The IDFA framework — from data query to strategic synthesis · Forward-looking scenario planning agents · Connecting financial data to business narrative automatically · Integration with ERP systems and BI tools via Cowork connectors
+**Key topics:** The IDFA framework, from data query to strategic synthesis · Forward-looking scenario planning agents · Connecting financial data to business narrative automatically · Integration with ERP systems and BI tools via Cowork connectors
 
 **Plugin:** `finance@knowledge-work-plugins` + custom connectors
 
@@ -171,50 +171,50 @@ Extends the foundational finance agent into a methodology for building AI system
 
 **[→ Read Chapter 30](/docs/Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice)**
 
-Deploys AI across the full range of CA/CPA practice areas: audit, tax, advisory, and client service. Covers the governance principle that is absolute in this domain — the closing opinion always requires a licensed professional — and builds the SKILL.md library that makes the agent genuinely useful up to that boundary.
+Deploys AI across the full range of CA/CPA practice areas: audit, tax, advisory, and client service. Covers the governance principle that is absolute in this domain: the closing opinion always requires a licensed professional , and builds the SKILL.md library that makes the agent genuinely useful up to that boundary.
 
-**Key topics:** Audit workpaper automation and analytical procedures at scale · Tax provision computation and disclosure drafting · Client onboarding, engagement letter, and KYC workflows · Continuous accounting — real-time close instead of month-end batch · Practice management — WIP tracking, billing, capacity planning
+**Key topics:** Audit workpaper automation and analytical procedures at scale · Tax provision computation and disclosure drafting · Client onboarding, engagement letter, and KYC workflows · Continuous accounting, real-time close instead of month-end batch · Practice management, WIP tracking, billing, capacity planning
 
 **Plugin:** `finance@knowledge-work-plugins` + audit plugin
 
 ---
 
-#### Chapter 31: Islamic Finance Domain Agents — A Global Practice Guide 📝 _First Draft_
+#### Chapter 31: Islamic Finance Domain Agents. A Global Practice Guide 📝 _First Draft_
 
 **[→ Read Chapter 31](/docs/Business-Domain-Agent-Workflows/islamic-finance-domain-agents)**
 
 The most comprehensive treatment of Islamic finance AI in any curriculum. 16,421 words, 26 SKILL.md files, 7 jurisdiction overlays (Bahrain, Qatar, Malaysia, Saudi Arabia, UAE, UK, Pakistan), and 14 exercises including a full Shariah audit trail and IFRS/FAS 9 interaction analysis. Downloadable Islamic Finance Cowork Skills Library included.
 
-**Key topics:** Full product library — Murabaha, Ijarah, Diminishing Musharaka, Sukuk, Takaful, Zakat · AAOIFI and IFSB standard compliance and automated Shariah screening · GCC cross-border transaction structuring · Islamic banking vs. conventional banking AI architecture
+**Key topics:** Full product library, Murabaha, Ijarah, Diminishing Musharaka, Sukuk, Takaful, Zakat · AAOIFI and IFSB standard compliance and automated Shariah screening · GCC cross-border transaction structuring · Islamic banking vs. conventional banking AI architecture
 
 **Plugin:** `islamic-finance@knowledge-work-plugins` (26-file library, 7 jurisdiction overlays)
 
 ---
 
-#### Chapter 32: Banking-Specific AI — IFRS 9 ECL, Basel III/IV, and AML/KYC 📝 _First Draft_
+#### Chapter 32: Banking-Specific AI, IFRS 9 ECL, Basel III/IV, and AML/KYC 📝 _First Draft_
 
 **[→ Read Chapter 32](/docs/Business-Domain-Agent-Workflows/banking-domain-agents)**
 
-Full-treatment banking AI across the three regulatory pillars that determine whether a bank is safe, accurate, and clean: IFRS 9 Expected Credit Loss (accounting accuracy), Basel III/IV capital adequacy (solvency), and AML/KYC financial crime prevention. Includes a dedicated section on bank reconciliation — nostro reconciliation, the IFRS 9 four-way provision tie-out, and suspense account control. 14 exercises and a downloadable 23-file Banking Cowork Skills Library across 7 jurisdictions.
+Full-treatment banking AI across the three regulatory pillars that determine whether a bank is safe, accurate, and clean: IFRS 9 Expected Credit Loss (accounting accuracy), Basel III/IV capital adequacy (solvency), and AML/KYC financial crime prevention. Includes a dedicated section on bank reconciliation, nostro reconciliation, the IFRS 9 four-way provision tie-out, and suspense account control. 14 exercises and a downloadable 23-file Banking Cowork Skills Library across 7 jurisdictions.
 
 **Key topics:**
 
-- **IFRS 9 ECL** — PD/LGD/EAD models, three-stage framework, macroeconomic scenario overlays, post-model adjustments, IFRS 7 disclosure
-- **Basel III/IV** — CET1, RWA, LCR, NSFR, ICAAP stress testing, Basel IV output floor, leverage ratio
-- **AML/KYC** — Transaction monitoring, 20 typologies, SAR drafting (UK/US/AU formats), CDD/EDD, sanctions screening
-- **Bank Reconciliation** — Nostro reconciliation, suspense account control, IFRS 9 provision four-way tie-out
+- **IFRS 9 ECL:** PD/LGD/EAD models, three-stage framework, macroeconomic scenario overlays, post-model adjustments, IFRS 7 disclosure
+- **Basel III/IV:** CET1, RWA, LCR, NSFR, ICAAP stress testing, Basel IV output floor, leverage ratio
+- **AML/KYC:** Transaction monitoring, 20 typologies, SAR drafting (UK/US/AU formats), CDD/EDD, sanctions screening
+- **Bank Reconciliation:** Nostro reconciliation, suspense account control, IFRS 9 provision four-way tie-out
 
 **Plugin:** `banking@knowledge-work-plugins` (23-file library, 7 jurisdiction overlays: UK, EU, USA, Australia, Singapore, UAE, Pakistan)
 
 ---
 
-## Section III — Legal & Compliance
+## Section III: Legal & Compliance
 
 ### Chapter 33: The Guardrails That Make Enterprise AI Deployment Safe and Defensible
 
-Section III addresses the function that sets the boundaries within which all enterprise AI operates: legal and compliance. This section is positioned immediately after the financial controls of Section II deliberately — legal is an enabling function, not just a constraint. Enterprises that can execute legal processes faster move faster. Enterprises with more effective compliance AI can operate in more jurisdictions with greater confidence.
+Section III addresses the function that sets the boundaries within which all enterprise AI operates: legal and compliance. This section is positioned immediately after the financial controls of Section II deliberately, legal is an enabling function, not just a constraint. Enterprises that can execute legal processes faster move faster. Enterprises with more effective compliance AI can operate in more jurisdictions with greater confidence.
 
-Chapter 33 gives significant treatment to **Legal Operations Agents** — the emerging practice of deploying AI agents specifically within legal department workflows. Legal Ops Agents manage contract lifecycles, route documents for review, flag non-standard clauses, monitor regulatory changes, and maintain the compliance calendar. They transform the legal function from a bottleneck into a business enabler.
+Chapter 33 gives significant treatment to **Legal Operations Agents:** the emerging practice of deploying AI agents specifically within legal department workflows. Legal Ops Agents manage contract lifecycles, route documents for review, flag non-standard clauses, monitor regulatory changes, and maintain the compliance calendar. They transform the legal function from a bottleneck into a business enabler.
 
 ---
 
@@ -222,21 +222,21 @@ Chapter 33 gives significant treatment to **Legal Operations Agents** — the em
 
 **[→ Read Chapter 33](/docs/Business-Domain-Agent-Workflows/legal-operations-and-compliance)**
 
-Builds AI agents that transform the legal function — from contract lifecycle management through IP protection to regulatory compliance monitoring. The governance principle in this chapter is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
+Builds AI agents that transform the legal function, from contract lifecycle management through IP protection to regulatory compliance monitoring. The governance principle in this chapter is non-negotiable: certain decisions must always involve a qualified attorney regardless of how accurate an agent becomes.
 
-**Key topics:** Contract Lifecycle Management (CLM) — drafting, redlining, clause library, approval routing · **Legal Ops Agents** — the emerging practice of AI in legal department workflows · NDA and standard agreement automation · IP protection — patent landscape monitoring, trademark watch, prior art search · Regulatory compliance monitoring across jurisdictions · Risk and compliance tracking — policy gaps, audit readiness, regulatory calendar
+**Key topics:** Contract Lifecycle Management (CLM), drafting, redlining, clause library, approval routing · **Legal Ops Agents:** the emerging practice of AI in legal department workflows · NDA and standard agreement automation · IP protection, patent landscape monitoring, trademark watch, prior art search · Regulatory compliance monitoring across jurisdictions · Risk and compliance tracking, policy gaps, audit readiness, regulatory calendar
 
 **Plugin:** Legal Ops plugin (built in chapter)
 
 ---
 
-## Section IV — The Growth Engine
+## Section IV: The Growth Engine
 
 ### Chapter 34: Scaling the Judgment of Your Top 1% Across the Entire Organisation
 
-Section IV addresses the function that determines whether an enterprise grows or stagnates: go-to-market execution. Sales and marketing are domains where AI leverage is exceptionally high, because the core activities — identifying the right prospects, crafting the right message, analysing campaign performance — are pattern-recognition and personalisation tasks at which large language models excel.
+Section IV addresses the function that determines whether an enterprise grows or stagnates: go-to-market execution. Sales and marketing are domains where AI leverage is exceptionally high, because the core activities, identifying the right prospects, crafting the right message, analysing campaign performance, are pattern-recognition and personalisation tasks at which large language models excel.
 
-The central insight of this section is a reframing: AI does not replace salespeople or marketers. It democratises the capabilities of the best ones. The intuition that a top 1% sales performer has about which prospects are ready, which messages land, and which objections signal genuine interest — that judgment, encoded in a SKILL.md library, can scale across the entire team.
+The central insight of this section is a reframing: AI does not replace salespeople or marketers. It democratises the capabilities of the best ones. The intuition that a top 1% sales performer has about which prospects are ready, which messages land, and which objections signal genuine interest that judgment, encoded in a SKILL.md library, can scale across the entire team.
 
 ---
 
@@ -244,19 +244,19 @@ The central insight of this section is a reframing: AI does not replace salespeo
 
 **[→ Read Chapter 34](/docs/Business-Domain-Agent-Workflows/the-growth-engine/sales-revops-marketing)**
 
-Builds AI agents that scale the judgment of top performers across the entire sales and marketing organisation — from prospecting through pipeline management to campaign optimisation.
+Builds AI agents that scale the judgment of top performers across the entire sales and marketing organisation, from prospecting through pipeline management to campaign optimisation.
 
-**Key topics:** Prospecting agents — ICP matching, lead scoring, account prioritisation · CRM enrichment — automatic contact data, company research, intent signals · Personalised outreach ghostwriting based on prospect's communication style and history · Campaign planning, content creation, and cross-channel performance analysis · RevOps intelligence — pipeline forecasting, churn prediction, revenue attribution
+**Key topics:** Prospecting agents, ICP matching, lead scoring, account prioritisation · CRM enrichment, automatic contact data, company research, intent signals · Personalised outreach ghostwriting based on prospect's communication style and history · Campaign planning, content creation, and cross-channel performance analysis · RevOps intelligence, pipeline forecasting, churn prediction, revenue attribution
 
 **Plugin:** `sales@knowledge-work-plugins` + `marketing@knowledge-work-plugins`
 
 ---
 
-## Section V — The Product & Value Chain
+## Section V: The Product & Value Chain
 
 ### Chapters 35–36: Bridging Physical Operations and Digital Record-Keeping
 
-Section V covers the two domains that connect customer demand to product delivery: supply chain and product management. Chapter 35 addresses the fundamental challenge of operational AI — data lives in multiple systems, decisions must be made in near-real-time, and the cost of error hits the P&L immediately. Chapter 36 addresses the product manager's core challenge: synthesising customer feedback, technical constraints, business priorities, and market signals into decisions about what to build next.
+Section V covers the two domains that connect customer demand to product delivery: supply chain and product management. Chapter 35 addresses the fundamental challenge of operational AI, data lives in multiple systems, decisions must be made in near-real-time, and the cost of error hits the P&L immediately. Chapter 36 addresses the product manager's core challenge: synthesising customer feedback, technical constraints, business priorities, and market signals into decisions about what to build next.
 
 ---
 
@@ -264,9 +264,9 @@ Section V covers the two domains that connect customer demand to product deliver
 
 **[→ Read Chapter 35](/docs/Business-Domain-Agent-Workflows/supply-chain-procurement)**
 
-Deploys AI agents across the end-to-end supply chain — from vendor selection and purchase order management to invoice reconciliation and logistics optimisation.
+Deploys AI agents across the end-to-end supply chain, from vendor selection and purchase order management to invoice reconciliation and logistics optimisation.
 
-**Key topics:** Vendor management agents — supplier risk scoring, performance monitoring, relationship history · Purchase order and invoice reconciliation — three-way match automation at scale · Logistics optimisation — route planning, carrier selection, duty and compliance · Demand forecasting integrating sales pipeline data with inventory planning · Supplier communication — automated RFQ, PO acknowledgement, dispute resolution
+**Key topics:** Vendor management agents, supplier risk scoring, performance monitoring, relationship history · Purchase order and invoice reconciliation, three-way match automation at scale · Logistics optimisation, route planning, carrier selection, duty and compliance · Demand forecasting integrating sales pipeline data with inventory planning · Supplier communication, automated RFQ, PO acknowledgement, dispute resolution
 
 **Plugin:** `operations@knowledge-work-plugins`
 
@@ -276,19 +276,19 @@ Deploys AI agents across the end-to-end supply chain — from vendor selection a
 
 **[→ Read Chapter 36](/docs/Business-Domain-Agent-Workflows/product-management)**
 
-Builds AI agents that transform product management from a reactive coordination function into a proactive strategic capability — from discovery through to stakeholder communication.
+Builds AI agents that transform product management from a reactive coordination function into a proactive strategic capability, from discovery through to stakeholder communication.
 
-**Key topics:** Feature specification writing — user story generation from discovery notes · Roadmap planning — priority scoring using RICE, WSJF, and custom frameworks · User research synthesis — thematic analysis of interviews, surveys, support tickets · Stakeholder communication — automated sprint updates, release notes, executive summaries · Market and competitive intelligence — continuous monitoring and synthesis
+**Key topics:** Feature specification writing, user story generation from discovery notes · Roadmap planning, priority scoring using RICE, WSJF, and custom frameworks · User research synthesis, thematic analysis of interviews, surveys, support tickets · Stakeholder communication, automated sprint updates, release notes, executive summaries · Market and competitive intelligence, continuous monitoring and synthesis
 
 **Plugin:** `product-management@knowledge-work-plugins`
 
 ---
 
-## Section VI — People & Efficiency
+## Section VI: People & Efficiency
 
 ### Chapters 37–39: Preserving Institutional Memory and Building the Agentic Office
 
-Section VI addresses the infrastructure that determines whether an organisation can execute consistently at scale: its people systems, its operational processes, and the productivity environment in which all knowledge work happens. Three chapters with distinct but complementary purposes — HR builds the knowledge layer, Operations builds the process layer, and Productivity integrates them into a coherent agentic office.
+Section VI addresses the infrastructure that determines whether an organisation can execute consistently at scale: its people systems, its operational processes, and the productivity environment in which all knowledge work happens. Three chapters with distinct but complementary purposes, HR builds the knowledge layer, Operations builds the process layer, and Productivity integrates them into a coherent agentic office.
 
 ---
 
@@ -296,9 +296,9 @@ Section VI addresses the infrastructure that determines whether an organisation 
 
 **[→ Read Chapter 37](/docs/Business-Domain-Agent-Workflows/people-hr)**
 
-Builds AI agents that preserve institutional memory, accelerate onboarding, and automate the administrative overhead of human resource management — without losing the human dimension of people operations.
+Builds AI agents that preserve institutional memory, accelerate onboarding, and automate the administrative overhead of human resource management, without losing the human dimension of people operations.
 
-**Key topics:** Employee onboarding agents — personalised 30-60-90 day plans, document collection, system access · Policy synthesis — converting policy libraries into searchable, conversational knowledge bases · Talent matching — internal mobility, skills gap analysis, succession planning · Internal knowledge base agents — answering HR questions without ticket queues · Performance review automation — template generation, sentiment analysis, calibration support
+**Key topics:** Employee onboarding agents, personalised 30-60-90 day plans, document collection, system access · Policy synthesis, converting policy libraries into searchable, conversational knowledge bases · Talent matching, internal mobility, skills gap analysis, succession planning · Internal knowledge base agents, answering HR questions without ticket queues · Performance review automation, template generation, sentiment analysis, calibration support
 
 **Plugin:** `human-resources@knowledge-work-plugins`
 
@@ -308,9 +308,9 @@ Builds AI agents that preserve institutional memory, accelerate onboarding, and 
 
 **[→ Read Chapter 38](/docs/Business-Domain-Agent-Workflows/operations-management)**
 
-Builds AI agents that make operational processes visible, documented, optimised, and compliant — transforming operations from a reactive function into a continuous improvement engine.
+Builds AI agents that make operational processes visible, documented, optimised, and compliant, transforming operations from a reactive function into a continuous improvement engine.
 
-**Key topics:** Process documentation agents — turning interviews into SOPs and workflow diagrams · Vendor management — contract tracking, renewal alerts, performance dashboards · Change management — impact assessment, communication planning, rollout monitoring · Compliance tracking — policy adherence, audit preparation, regulatory calendar management · Operational KPI monitoring — exception alerting when metrics breach thresholds
+**Key topics:** Process documentation agents, turning interviews into SOPs and workflow diagrams · Vendor management, contract tracking, renewal alerts, performance dashboards · Change management, impact assessment, communication planning, rollout monitoring · Compliance tracking, policy adherence, audit preparation, regulatory calendar management · Operational KPI monitoring, exception alerting when metrics breach thresholds
 
 **Plugin:** `operations@knowledge-work-plugins`
 
@@ -320,15 +320,15 @@ Builds AI agents that make operational processes visible, documented, optimised,
 
 **[→ Read Chapter 39](/docs/Business-Domain-Agent-Workflows/productivity-agentic-office)**
 
-The integration chapter. Builds the workplace AI layer that knows your organisation's people, projects, terminology, and priorities — and connects all the domain agents from Chapters 28–38 into a coherent agentic office environment. This is the chapter where the domain agents stop being point solutions and start working as a system.
+The integration chapter. Builds the workplace AI layer that knows your organisation's people, projects, terminology, and priorities , and connects all the domain agents from Chapters 28–38 into a coherent agentic office environment. This is the chapter where the domain agents stop being point solutions and start working as a system.
 
-**Key topics:** Task management agents — priority scoring, deadline tracking, meeting follow-up extraction · Workplace memory — persistent context about projects, decisions, and relationships · The agentic daily briefing · Visual dashboard — project status, team capacity, and risk indicators · Cross-domain orchestration — how the domain agents from Chapters 28–38 work together
+**Key topics:** Task management agents, priority scoring, deadline tracking, meeting follow-up extraction · Workplace memory, persistent context about projects, decisions, and relationships · The agentic daily briefing · Visual dashboard, project status, team capacity, and risk indicators · Cross-domain orchestration: how the domain agents from Chapters 28–38 work together
 
 **Plugin:** `productivity@knowledge-work-plugins`
 
 ---
 
-## Section VII — The Innovation Lab
+## Section VII: The Innovation Lab
 
 ### Chapter 40: Where Mastery of Enterprise AI Becomes the Foundation for Building New Ventures
 
@@ -340,9 +340,9 @@ Section VII is the culmination of Part 3. The student who has completed Chapters
 
 **[→ Read Chapter 40](/docs/Business-Domain-Agent-Workflows/intrapreneurship-innovation-agents)**
 
-Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution — for both the intrapreneur within a large enterprise and the founder building from scratch.
+Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution, for both the intrapreneur within a large enterprise and the founder building from scratch.
 
-**Key topics:** Lean Startup AI agents — hypothesis generation, MVP specification, experiment design · Design Thinking agents — user research synthesis, persona building, journey mapping · Agile AI agents — backlog generation, sprint planning, retrospective synthesis · Business plan writing — AI-assisted financial modelling, market sizing, competitive analysis · Investor pitch preparation — narrative structuring, financial summary, Q&A preparation · Funding strategy — grant identification, investor targeting, pitch iteration
+**Key topics:** Lean Startup AI agents, hypothesis generation, MVP specification, experiment design · Design Thinking agents, user research synthesis, persona building, journey mapping · Agile AI agents, backlog generation, sprint planning, retrospective synthesis · Business plan writing, AI-assisted financial modelling, market sizing, competitive analysis · Investor pitch preparation, narrative structuring, financial summary, Q&A preparation · Funding strategy, grant identification, investor targeting, pitch iteration
 
 **Plugin:** Custom innovation plugin (built in chapter)
 
@@ -350,26 +350,26 @@ Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution 
 
 ## Chapter Map at a Glance
 
-> **All 16 chapters are now published.** Chapters marked 📝 _First Draft_ are live but have not yet been tested in Cowork — exercises and plugin integrations will be refined in a future pass.
+> **All 16 chapters are now published.** Chapters marked 📝 _First Draft_ are live but have not yet been tested in Cowork, exercises and plugin integrations will be refined in a future pass.
 
-| #   | Title                                      | Section                   | Status         |
-| --- | ------------------------------------------ | ------------------------- | -------------- |
-| 25  | The Enterprise Agentic Landscape           | I — Foundations           | ✅ Published   |
-| 26  | The Enterprise Agent Blueprint             | I — Foundations           | ✅ Published   |
-| 27  | The Knowledge Extraction Method            | I — Foundations           | ✅ Published   |
-| 28  | Finance Domain Agents                      | II — Office of the CFO    | ✅ Published   |
-| 29  | Intent-Driven Financial Architecture       | II — Office of the CFO    | ✅ Published   |
-| 30  | AI Transformation of CA/CPA Practice Areas | II — Office of the CFO    | ✅ Published   |
-| 31  | Islamic Finance Domain Agents              | II — Office of the CFO    | 📝 First Draft |
-| 32  | Banking-Specific AI                        | II — Office of the CFO    | 📝 First Draft |
-| 33  | Legal Operations and Compliance            | III — Legal & Compliance  | 📝 First Draft |
-| 34  | Sales, RevOps & Marketing                  | IV — The Growth Engine    | ✅ Published   |
-| 35  | Supply Chain & Procurement                 | V — Product & Value Chain | 📝 First Draft |
-| 36  | Product Management                         | V — Product & Value Chain | 📝 First Draft |
-| 37  | People & Organisational Operations (HR)    | VI — People & Efficiency  | 📝 First Draft |
-| 38  | Operations                                 | VI — People & Efficiency  | 📝 First Draft |
-| 39  | Productivity & The Agentic Office          | VI — People & Efficiency  | 📝 First Draft |
-| 40  | The Intrapreneurship Agent                 | VII — Innovation Lab      | 📝 First Draft |
+| #   | Title                                      | Section                  | Status         |
+| --- | ------------------------------------------ | ------------------------ | -------------- |
+| 25  | The Enterprise Agentic Landscape           | I, Foundations           | ✅ Published   |
+| 26  | The Enterprise Agent Blueprint             | I, Foundations           | ✅ Published   |
+| 27  | The Knowledge Extraction Method            | I, Foundations           | ✅ Published   |
+| 28  | Finance Domain Agents                      | II, Office of the CFO    | ✅ Published   |
+| 29  | Intent-Driven Financial Architecture       | II, Office of the CFO    | ✅ Published   |
+| 30  | AI Transformation of CA/CPA Practice Areas | II, Office of the CFO    | ✅ Published   |
+| 31  | Islamic Finance Domain Agents              | II, Office of the CFO    | 📝 First Draft |
+| 32  | Banking-Specific AI                        | II, Office of the CFO    | 📝 First Draft |
+| 33  | Legal Operations and Compliance            | III, Legal & Compliance  | 📝 First Draft |
+| 34  | Sales, RevOps & Marketing                  | IV. The Growth Engine    | ✅ Published   |
+| 35  | Supply Chain & Procurement                 | V, Product & Value Chain | 📝 First Draft |
+| 36  | Product Management                         | V, Product & Value Chain | 📝 First Draft |
+| 37  | People & Organisational Operations (HR)    | VI, People & Efficiency  | 📝 First Draft |
+| 38  | Operations                                 | VI, People & Efficiency  | 📝 First Draft |
+| 39  | Productivity & The Agentic Office          | VI, People & Efficiency  | 📝 First Draft |
+| 40  | The Intrapreneurship Agent                 | VII, Innovation Lab      | 📝 First Draft |
 
 ---
 
@@ -377,11 +377,11 @@ Combines Lean Startup, Design Thinking, and Agile with AI-accelerated execution 
 
 Three threads run through all sixteen chapters and give Part 3 its coherence:
 
-**Thread 1 — The SKILL.md Accumulation.** Every chapter contributes to a growing domain knowledge library. The Islamic Finance plugin library from Chapter 31 is immediately deployable by any bank or professional services firm operating in Islamic finance. The Banking plugin library from Chapter 32 covers IFRS 9, Basel III/IV, AML, and seven jurisdiction overlays in production-ready form. Students leave Part 3 with intellectual property, not just knowledge.
+**Thread 1. The SKILL.md Accumulation.** Every chapter contributes to a growing domain knowledge library. The Islamic Finance plugin library from Chapter 31 is immediately deployable by any bank or professional services firm operating in Islamic finance. The Banking plugin library from Chapter 32 covers IFRS 9, Basel III/IV, AML, and seven jurisdiction overlays in production-ready form. Students leave Part 3 with intellectual property, not just knowledge.
 
-**Thread 2 — The Governance Escalation Framework.** Every chapter encodes a precise boundary between what the agent executes and what the professional decides. The credit officer makes the SICR staging call. The MLRO makes the SAR filing decision. The attorney decides the negotiation strategy. The auditor signs the closing opinion. Part 3 systematically builds the professional judgment to know where that boundary is in every domain — which is ultimately more valuable than any individual agent configuration.
+**Thread 2. The Governance Escalation Framework.** Every chapter encodes a precise boundary between what the agent executes and what the professional decides. The credit officer makes the SICR staging call. The MLRO makes the SAR filing decision. The attorney decides the negotiation strategy. The auditor signs the closing opinion. Part 3 systematically builds the professional judgment to know where that boundary is in every domain, which is ultimately more valuable than any individual agent configuration.
 
-**Thread 3 — The Integration Architecture.** The seven sections are designed to work together. Financial data from Chapter 28 feeds the Chapter 32 banking compliance agent. Customer intelligence from Chapter 34 feeds the Chapter 36 product roadmap agent. The HR knowledge base from Chapter 37 feeds the Chapter 39 workplace memory layer. Chapter 40 draws on all of them. Chapter 39 — the Agentic Office — is the integration chapter that makes domain agents work as a coherent system rather than isolated point solutions.
+**Thread 3. The Integration Architecture.** The seven sections are designed to work together. Financial data from Chapter 28 feeds the Chapter 32 banking compliance agent. Customer intelligence from Chapter 34 feeds the Chapter 36 product roadmap agent. The HR knowledge base from Chapter 37 feeds the Chapter 39 workplace memory layer. Chapter 40 draws on all of them. Chapter 39: the Agentic Office: is the integration chapter that makes domain agents work as a coherent system rather than isolated point solutions.
 
 ---
 

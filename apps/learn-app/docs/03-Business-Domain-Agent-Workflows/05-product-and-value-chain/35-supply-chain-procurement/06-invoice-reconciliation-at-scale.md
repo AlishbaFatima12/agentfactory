@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/supply-chain-procurement/invoice-reconciliation-at-scale
 sidebar_position: 6
 title: "Invoice Reconciliation at Scale"
-description: "Run the four-stage invoice reconciliation workflow — Document Intelligence, Three-Way Match, Exception Routing, Audit and Pattern Monitoring — and learn how the invoice-reconciliation-agent automates the full process when your monthly volume exceeds what a human team can handle"
+description: "Run the four-stage invoice reconciliation workflow; Document Intelligence, Three-Way Match, Exception Routing, Audit and Pattern Monitoring: and learn how the invoice-reconciliation-agent automates the full process when your monthly volume exceeds what a human team can handle"
 keywords:
   [
     "invoice reconciliation",
@@ -29,7 +29,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can process an invoice through the four-stage workflow — extraction, three-way match, exception routing, and audit logging — and produce a reconciliation output with correct classification and recommended actions"
+    measurable_at_this_level: "Student can process an invoice through the four-stage workflow: extraction, three-way match, exception routing, and audit logging: and produce a reconciliation output with correct classification and recommended actions"
 
   - name: "Interpret and Act on Multi-Exception Reconciliation Outputs"
     proficiency_level: "B2"
@@ -64,32 +64,32 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Stage 1 Document Intelligence — extraction, validation, fraud signals"
-    - "Stage 2 Three-Way Match — six exception types and their classification logic"
-    - "Stage 3 Exception Routing — per-exception routing rules and approval chains"
-    - "Stage 4 Audit and Pattern Monitoring — exception register, pattern detection, weekly reporting"
-    - "Invoice-reconciliation-agent — persistent automation that runs the four stages continuously"
-  assessment: "5 concepts at B1-B2 level. The four-stage pipeline is sequential and mechanical, which manages load well — each stage leads naturally to the next. The worked example (Meridian Office Supplies) grounds the abstract stages in a single concrete invoice with three distinct exception types. Students who worked through Lesson 5 already understand the tolerance rules that Stage 2 applies."
+    - "Stage 1 Document Intelligence: extraction, validation, fraud signals"
+    - "Stage 2 Three-Way Match: six exception types and their classification logic"
+    - "Stage 3 Exception Routing: per-exception routing rules and approval chains"
+    - "Stage 4 Audit and Pattern Monitoring: exception register, pattern detection, weekly reporting"
+    - "Invoice-reconciliation-agent: persistent automation that runs the four stages continuously"
+  assessment: "5 concepts at B1-B2 level. The four-stage pipeline is sequential and mechanical, which manages load well: each stage leads naturally to the next. The worked example (Meridian Office Supplies) grounds the abstract stages in a single concrete invoice with three distinct exception types. Students who worked through Lesson 5 already understand the tolerance rules that Stage 2 applies."
 
 differentiation:
-  extension_for_advanced: "Research the invoice fraud vector that the Document Intelligence stage guards against: bank detail substitution (also called 'mandate fraud' or 'payment diversion fraud'). How do attackers execute this? What controls beyond vendor master matching protect against it? Investigate how enterprise AP systems (SAP, Oracle Fusion, Coupa) handle bank detail change verification — and compare that to the manual phone verification protocol described in this lesson."
-  remedial_for_struggling: "Focus on reading the reconciliation output correctly before trying to run it yourself. Start with the Meridian Office Supplies example: trace each line item from the invoice through the output. Item 1 has a price variance — find the variance amount, the tolerance, and the routing decision. Item 2 has a quantity variance — find the held amount. Item 3 has an unauthorised charge — find the rejection reason. Once you can read the output confidently, running /invoice-reconcile for a new invoice becomes straightforward."
+  extension_for_advanced: "Research the invoice fraud vector that the Document Intelligence stage guards against: bank detail substitution (also called 'mandate fraud' or 'payment diversion fraud'). How do attackers execute this? What controls beyond vendor master matching protect against it? Investigate how enterprise AP systems (SAP, Oracle Fusion, Coupa) handle bank detail change verification: and compare that to the manual phone verification protocol described in this lesson."
+  remedial_for_struggling: "Focus on reading the reconciliation output correctly before trying to run it yourself. Start with the Meridian Office Supplies example: trace each line item from the invoice through the output. Item 1 has a price variance: find the variance amount, the tolerance, and the routing decision. Item 2 has a quantity variance: find the held amount. Item 3 has an unauthorised charge: find the rejection reason. Once you can read the output confidently, running /invoice-reconcile for a new invoice becomes straightforward."
 
 teaching_guide:
   key_points:
-    - "The four stages handle different data quality problems — extraction errors, pricing discrepancies, goods receipt mismatches, and systematic patterns — and each requires different resolution authority"
-    - "Partial payment is the correct action for invoices with a mix of matched and excepted line items — never hold an entire invoice because one line has a variance"
-    - "The audit trail is as important as the reconciliation decision — every approved payment, every exception, every routing decision must be logged with reasoning for audit purposes"
-    - "Pattern monitoring converts the exception register from an incident log into an early warning system — three exceptions of the same type from one vendor in 30 days is a system problem, not three separate incidents"
+    - "The four stages handle different data quality problems: extraction errors, pricing discrepancies, goods receipt mismatches, and systematic patterns: and each requires different resolution authority"
+    - "Partial payment is the correct action for invoices with a mix of matched and excepted line items: never hold an entire invoice because one line has a variance"
+    - "The audit trail is as important as the reconciliation decision: every approved payment, every exception, every routing decision must be logged with reasoning for audit purposes"
+    - "Pattern monitoring converts the exception register from an incident log into an early warning system: three exceptions of the same type from one vendor in 30 days is a system problem, not three separate incidents"
   misconceptions:
     - "Hold the entire invoice if any line has an exception. Correction: matched lines should be approved and paid immediately; only the excepted portions should be held or disputed. Holding entire invoices harms vendor relationships and creates unnecessary cash flow disruption."
-    - "The reconciliation agent replaces the AP team. Correction: the agent automates the high-volume, rule-based matching. The AP team focuses on exceptions that require judgment — commercial negotiations with vendors, investigation of systematic patterns, approval decisions above threshold. The agent frees capacity; it does not eliminate the need for human judgment."
-    - "An invoice with a bank detail change from the vendor master is a minor administrative update. Correction: bank detail changes on existing vendor accounts are the primary invoice fraud vector. Always verify by phone using a number from the vendor master — not the number on the invoice — before making any payment. This is not bureaucracy; it is a necessary control against a common and costly fraud."
+    - "The reconciliation agent replaces the AP team. Correction: the agent automates the high-volume, rule-based matching. The AP team focuses on exceptions that require judgment: commercial negotiations with vendors, investigation of systematic patterns, approval decisions above threshold. The agent frees capacity; it does not eliminate the need for human judgment."
+    - "An invoice with a bank detail change from the vendor master is a minor administrative update. Correction: bank detail changes on existing vendor accounts are the primary invoice fraud vector. Always verify by phone using a number from the vendor master: not the number on the invoice: before making any payment. This is not bureaucracy; it is a necessary control against a common and costly fraud."
   discussion_prompts:
     - "Your reconciliation agent has been running for 60 days. The exception register shows that one vendor (FastFreight) accounts for 18 of your 47 price variance exceptions in that period, all within the ±10% freight tolerance. Each one auto-approved. The pattern is clear but no-one has acted on it. Is the auto-approve rule working correctly? What action does the pattern monitoring output require?"
     - "You are the CPO reviewing the AP automation business case. The proposal says the reconciliation agent will reduce exception invoices from 22% to 7%. What questions would you ask before approving? What could go wrong with this estimate?"
   teaching_tips:
-    - "The Meridian invoice example is the lesson's anchor. Walk through it slowly — many students are unfamiliar with how partial payment works. The insight that Item 2's 18 confirmed units are paid immediately while the 6 unconfirmed units are held is counterintuitive to students who think invoice = pay in full or hold everything."
+    - "The Meridian invoice example is the lesson's anchor. Walk through it slowly: many students are unfamiliar with how partial payment works. The insight that Item 2's 18 confirmed units are paid immediately while the 6 unconfirmed units are held is counterintuitive to students who think invoice = pay in full or hold everything."
     - "Stage 4 pattern monitoring is often undervalued by students because it feels administrative. Emphasise that the pattern register is what catches systematic vendor problems before they become financial disputes. The FastFreight example (discussion prompt) makes this concrete."
 ---
 
@@ -97,23 +97,23 @@ teaching_guide:
 
 An accounts payable team at a typical mid-sized company manually matches invoices against purchase orders for several hours every day. For each invoice, someone retrieves the PO, checks the prices, calls the warehouse to confirm delivery quantities, and then routes any discrepancies to the right person for resolution. The work is repetitive, error-prone, and does not scale with invoice volume.
 
-The multi-agent reconciliation architecture replaces this manual workflow with four coordinated stages: Document Intelligence (extract and validate), Three-Way Match (compare and classify), Exception Routing (route each exception to the right authority), and Audit and Pattern Monitoring (log decisions and surface systematic problems). Research from GEP suggests that organisations using coordinated agent architectures for invoice reconciliation can reduce exception processing time significantly and improve first-match accuracy from typical rates in the 75-80% range toward 95% or above — though results vary substantially based on data quality and configuration.
+The multi-agent reconciliation architecture replaces this manual workflow with four coordinated stages: Document Intelligence (extract and validate), Three-Way Match (compare and classify), Exception Routing (route each exception to the right authority), and Audit and Pattern Monitoring (log decisions and surface systematic problems). Research from GEP suggests that organisations using coordinated agent architectures for invoice reconciliation can reduce exception processing time significantly and improve first-match accuracy from typical rates in the 75-80% range toward 95% or above: though results vary substantially based on data quality and configuration.
 
 This lesson teaches the workflow you invoke with a single `/invoice-reconcile` command, and introduces the persistent `invoice-reconciliation-agent` that automates the entire process for high-volume AP operations.
 
 :::note Tolerance Rules Required
-This lesson assumes you have configured your tolerance rules in `supply-chain.local.md`. If you have not done so, complete [Lesson 5 (Three-Way Match Rule Design)](./05-three-way-match-rule-design.md) before continuing. The reconciliation workflow applies your configured rules — without them, it falls back to defaults that may not match your operational context.
+This lesson assumes you have configured your tolerance rules in `supply-chain.local.md`. If you have not done so, complete [Lesson 5 (Three-Way Match Rule Design)](./05-three-way-match-rule-design.md) before continuing. The reconciliation workflow applies your configured rules: without them, it falls back to defaults that may not match your operational context.
 :::
 
 ## The Four-Stage Reconciliation Workflow
 
 ### Stage 1: Document Intelligence
 
-Every invoice enters Stage 1 before anything else happens. The Document Intelligence stage does not match or classify — it extracts, validates, and flags anything that should stop the process before it reaches the match engine.
+Every invoice enters Stage 1 before anything else happens. The Document Intelligence stage does not match or classify: it extracts, validates, and flags anything that should stop the process before it reaches the match engine.
 
 **Mandatory extraction fields:**
 
-- Vendor name (exact legal name — must match vendor master)
+- Vendor name (exact legal name: must match vendor master)
 - Vendor ID (cross-reference ERP vendor master)
 - Invoice number (for duplicate detection)
 - Invoice date (check against late submission rules)
@@ -132,7 +132,7 @@ Every invoice enters Stage 1 before anything else happens. The Document Intellig
 - Bank detail change: are the bank details the same as the vendor master?
 
 :::danger Bank Detail Changes Are a Fraud Alert
-If the bank details on an incoming invoice differ from your vendor master, **stop processing immediately**. This is the primary invoice fraud vector — attackers intercept vendor email, substitute payment details, and collect payments intended for legitimate vendors. Before any payment, verify by phone using a number from your vendor master (not the invoice) that the bank detail change is genuine. Escalate to your Finance Director. Do not process the invoice until verification is complete.
+If the bank details on an incoming invoice differ from your vendor master, **stop processing immediately**. This is the primary invoice fraud vector: attackers intercept vendor email, substitute payment details, and collect payments intended for legitimate vendors. Before any payment, verify by phone using a number from your vendor master (not the invoice) that the bank detail change is genuine. Escalate to your Finance Director. Do not process the invoice until verification is complete.
 :::
 
 ### Stage 2: Three-Way Match
@@ -142,9 +142,9 @@ Stage 2 receives the structured data extracted in Stage 1 and queries your ERP f
 | Classification                        | Condition                                        | Default Action                        |
 | ------------------------------------- | ------------------------------------------------ | ------------------------------------- |
 | ✅ MATCHED                            | Price and quantity within tolerance              | Auto-approve                          |
-| 🟡 PRICE VARIANCE — WITHIN TOLERANCE  | Price differs but within configured %            | Auto-approve with Finance flag        |
-| 🔴 PRICE VARIANCE — OUTSIDE TOLERANCE | Price exceeds tolerance                          | Route to Procurement                  |
-| 🔴 QUANTITY VARIANCE — OVER-INVOICED  | Invoice qty > confirmed GR qty                   | Hold excess; investigate              |
+| 🟡 PRICE VARIANCE; WITHIN TOLERANCE  | Price differs but within configured %            | Auto-approve with Finance flag        |
+| 🔴 PRICE VARIANCE; OUTSIDE TOLERANCE | Price exceeds tolerance                          | Route to Procurement                  |
+| 🔴 QUANTITY VARIANCE; OVER-INVOICED  | Invoice qty > confirmed GR qty                   | Hold excess; investigate              |
 | 🟡 GR PENDING                         | Invoice matches PO but GR not yet confirmed      | Hold invoice; alert warehouse         |
 | 🔴 PO NOT FOUND                       | Invoice references non-existent PO               | Hold; route to Procurement            |
 | 🔴 DUPLICATE DETECTED                 | Same vendor, same amount, within configured days | Reject; notify vendor                 |
@@ -160,16 +160,16 @@ The routing matrix depends on your configuration, but the standard pattern:
 
 | Exception Type                                                 | Routing Destination                                 | Typical Deadline            |
 | -------------------------------------------------------------- | --------------------------------------------------- | --------------------------- |
-| Price variance — within tolerance                              | Finance (audit log only)                            | Automated                   |
-| Price variance — outside tolerance, below escalation threshold | Category manager + Procurement                      | 3 business days             |
-| Price variance — outside tolerance, above escalation threshold | CPO                                                 | 5 business days             |
-| Quantity variance — over-invoiced                              | Warehouse + Finance                                 | 5 business days             |
+| Price variance: within tolerance                              | Finance (audit log only)                            | Automated                   |
+| Price variance: outside tolerance, below escalation threshold | Category manager + Procurement                      | 3 business days             |
+| Price variance: outside tolerance, above escalation threshold | CPO                                                 | 5 business days             |
+| Quantity variance: over-invoiced                              | Warehouse + Finance                                 | 5 business days             |
 | GR pending                                                     | Warehouse → Finance on resolution                   | 5 days; auto-escalate at 10 |
 | PO not found (above materiality)                               | Procurement (retrospective PO or rejection)         | 3 business days             |
 | Duplicate                                                      | Finance (automated rejection + vendor notification) | Automated                   |
 | Fraud alert (bank details changed)                             | Finance Director                                    | Immediate                   |
 
-Stage 3 also drafts vendor communications for disputed lines — routed to the `/vendor-communicate` skill for formal dispute letters where required.
+Stage 3 also drafts vendor communications for disputed lines: routed to the `/vendor-communicate` skill for formal dispute letters where required.
 
 ### Stage 4: Audit and Pattern Monitoring
 
@@ -186,11 +186,11 @@ Stage 4 runs continuously in the background, logging every decision and monitori
 
 Pattern monitoring is where Stage 4 converts from a record-keeping function to an intelligence function. Three patterns trigger escalation beyond routine exception handling:
 
-1. **Same exception type from same vendor more than 3 times in 30 days:** This is not three separate incidents — it is one systematic problem. The vendor's billing system has a data quality issue. The response is a vendor data alignment meeting, not three more exception approvals.
+1. **Same exception type from same vendor more than 3 times in 30 days:** This is not three separate incidents: it is one systematic problem. The vendor's billing system has a data quality issue. The response is a vendor data alignment meeting, not three more exception approvals.
 
 2. **Price variance on the same line item for more than 2 consecutive invoices:** The vendor is repeatedly billing at a price that differs from the agreed contract. This is contract non-compliance. The response is a commercial review, not continued tolerance-based approval.
 
-3. **GR pending rate above 15% from one vendor:** Either the vendor is despatching faster than your warehouse can confirm receipt, or there is a goods receipt process gap on your side. Either way, this pattern requires investigation — not just invoice-by-invoice holds.
+3. **GR pending rate above 15% from one vendor:** Either the vendor is despatching faster than your warehouse can confirm receipt, or there is a goods receipt process gap on your side. Either way, this pattern requires investigation: not just invoice-by-invoice holds.
 
 ## The Worked Example: Meridian Office Supplies
 
@@ -261,13 +261,13 @@ VENDOR COMMUNICATION DRAFTED:
 
 Reading this output, three things happen immediately:
 
-1. **Pay Meridian £765.00 now** — the 18 confirmed toner cartridges are clean. Holding this amount while investigating the other lines penalises Meridian for a problem on lines 1 and 3.
+1. **Pay Meridian £765.00 now**: the 18 confirmed toner cartridges are clean. Holding this amount while investigating the other lines penalises Meridian for a problem on lines 1 and 3.
 
-2. **Hold £255.00** — the 6 unconfirmed toner units. Your warehouse needs to confirm whether they received those 6 units. If yes, the hold is released. If no, they are over-invoiced and this becomes a dispute.
+2. **Hold £255.00**: the 6 unconfirmed toner units. Your warehouse needs to confirm whether they received those 6 units. If yes, the hold is released. If no, they are over-invoiced and this becomes a dispute.
 
-3. **Dispute £145.00** — £100 for the price variance on paper (Meridian has no authorisation to increase prices unilaterally above the PO) and £45 for the delivery charge that was not in the agreement.
+3. **Dispute £145.00**; £100 for the price variance on paper (Meridian has no authorisation to increase prices unilaterally above the PO) and £45 for the delivery charge that was not in the agreement.
 
-The total £1,160.00 gap between the invoice (£2,990) and the immediate payment (£765) is not a rejection of the invoice — it is a partial approval with three distinct resolution paths requiring different people and different conversations.
+The total £1,160.00 gap between the invoice (£2,990) and the immediate payment (£765) is not a rejection of the invoice: it is a partial approval with three distinct resolution paths requiring different people and different conversations.
 
 ## Introducing the Invoice-Reconciliation-Agent
 
@@ -283,7 +283,7 @@ The agent:
 - Logs every decision to the exception register
 - Generates the weekly pattern analysis report
 
-The agent is introduced in detail in [Lesson 12 (Persistent Agents & Schedule)](./12-persistent-agents-schedule.md). For this lesson, the key conceptual point is that the `/invoice-reconcile` command you run manually in the exercise is the same workflow the agent runs automatically at scale — the difference is volume and the presence of a human triggering each invocation.
+The agent is introduced in detail in [Lesson 12 (Persistent Agents & Schedule)](./12-persistent-agents-schedule.md). For this lesson, the key conceptual point is that the `/invoice-reconcile` command you run manually in the exercise is the same workflow the agent runs automatically at scale: the difference is volume and the presence of a human triggering each invocation.
 
 :::info What the Agent Cannot Replace
 The agent handles rule-based decisions: matching, classification, routing, logging. It cannot replace human judgment for:
@@ -293,7 +293,7 @@ The agent handles rule-based decisions: matching, classification, routing, loggi
 - Investigation of systematic exception patterns that require vendor meetings
 - Any decision above the configured financial thresholds
 
-The agent's value is that it brings every invoice to the threshold of human decision — fully extracted, matched, classified, and routed — rather than leaving humans to do the extraction and matching work first.
+The agent's value is that it brings every invoice to the threshold of human decision: fully extracted, matched, classified, and routed: rather than leaving humans to do the extraction and matching work first.
 :::
 
 ## Exercise: The Invoice Reconciliation Sprint (Exercise 2)
@@ -307,7 +307,7 @@ The agent's value is that it brings every invoice to the threshold of human deci
 Before starting, confirm your tolerance rules are in `supply-chain.local.md`. If you completed [Exercise 6 from Lesson 5](./05-three-way-match-rule-design.md), your rules are already configured. If not, run `/invoice-reconcile type:"tolerance-configuration"` to set defaults before proceeding.
 :::
 
-### Step 1 — Gather Your Invoice Sample
+### Step 1; Gather Your Invoice Sample
 
 Pull 10 invoices from your accounts payable queue or archive. Aim for a realistic mix:
 
@@ -323,7 +323,7 @@ If you are doing this as a training exercise without access to real invoices, us
 | Invoice      | Vendor           | Total   | Expected Issue                               |
 | ------------ | ---------------- | ------- | -------------------------------------------- |
 | INV-2026-001 | AlphaSteel Corp  | £18,240 | Clean match                                  |
-| INV-2026-002 | BulkPack Supply  | £4,760  | Quantity variance — over-invoiced            |
+| INV-2026-002 | BulkPack Supply  | £4,760  | Quantity variance: over-invoiced            |
 | INV-2026-003 | FastFreight Ltd  | £2,150  | Price variance within tolerance (freight)    |
 | INV-2026-004 | CleanCo Services | £3,600  | Price variance outside tolerance (services)  |
 | INV-2026-005 | AlphaSteel Corp  | £18,240 | Potential duplicate of INV-2026-001          |
@@ -331,9 +331,9 @@ If you are doing this as a training exercise without access to real invoices, us
 | INV-2026-007 | BulkPack Supply  | £5,100  | Unauthorised surcharge added                 |
 | INV-2026-008 | PrecisionCast    | £22,500 | Clean match                                  |
 | INV-2026-009 | FastFreight Ltd  | £2,340  | Price variance within tolerance (freight)    |
-| INV-2026-010 | AlphaSteel Corp  | £17,980 | GR pending — goods receipt not yet confirmed |
+| INV-2026-010 | AlphaSteel Corp  | £17,980 | GR pending: goods receipt not yet confirmed |
 
-### Step 2 — Configure Your Tolerance Rules
+### Step 2; Configure Your Tolerance Rules
 
 Before reconciling, confirm your tolerance rules are set for each category in the sample. If not configured:
 
@@ -348,7 +348,7 @@ For the synthetic sample, use these categories:
 - Services (CleanCo): ±0% price / N/A
 - Freight (FastFreight): ±10% price / N/A
 
-### Step 3 — Process All 10 Invoices
+### Step 3; Process All 10 Invoices
 
 For each invoice, run:
 
@@ -365,9 +365,9 @@ Record for each invoice:
 | ------- | -------------- | --------------- | ----------- | --------------- | --------------- |
 |         |                |                 |             |                 |                 |
 
-Pay particular attention to invoices with multiple exception types — the partial payment calculation requires tracking matched and excepted amounts per line item.
+Pay particular attention to invoices with multiple exception types: the partial payment calculation requires tracking matched and excepted amounts per line item.
 
-### Step 4 — Draft Vendor Communications for All Disputes
+### Step 4; Draft Vendor Communications for All Disputes
 
 For each disputed invoice, draft a vendor communication. The `/vendor-communicate` command handles formal dispute letters:
 
@@ -386,7 +386,7 @@ Review each draft against these criteria:
 - Is the required action stated clearly (provide credit note / submit revised invoice / confirm bank details)?
 - Is the tone professional without being aggressive?
 
-### Step 5 — Pattern Analysis
+### Step 5; Pattern Analysis
 
 After processing all 10 invoices, run a pattern analysis:
 
@@ -401,12 +401,12 @@ Answer these questions from the pattern output:
 1. What is the overall exception rate in this sample?
 2. Which vendor(s) account for the most exceptions?
 3. Which exception type appears most frequently?
-4. Are exceptions from one vendor concentrated in a single exception type — or spread across multiple types?
+4. Are exceptions from one vendor concentrated in a single exception type: or spread across multiple types?
 5. What does the pattern suggest about root causes?
 
 If one vendor accounts for three or more exceptions of the same type (e.g. FastFreight showing two price variance exceptions in this sample), flag this as a systematic issue rather than independent incidents. The correct response is a vendor data alignment meeting to diagnose whether the problem is in their billing system, their pricing data, or your PO configuration.
 
-**Deliverable:** 10 reconciled invoices with classifications, approved/held/disputed amounts, and required actions for each. Vendor dispute communications for all exceptions requiring vendor contact. A pattern analysis identifying any systematic issues and recommended vendor-level actions. Note your exception rate — you will use it to validate the efficiency impact estimate from Lesson 5's Exercise 6.
+**Deliverable:** 10 reconciled invoices with classifications, approved/held/disputed amounts, and required actions for each. Vendor dispute communications for all exceptions requiring vendor contact. A pattern analysis identifying any systematic issues and recommended vendor-level actions. Note your exception rate: you will use it to validate the efficiency impact estimate from Lesson 5's Exercise 6.
 
 :::note Cross-Reference
 After completing this exercise, return to [Exercise 6 in Lesson 5](./05-three-way-match-rule-design.md) and apply your tolerance rules to this invoice batch. Compare the exception rate under the default rules vs. your calibrated rules. The difference is the business case for category-specific tolerance design.
@@ -484,7 +484,7 @@ For each pattern:
 3. Does your tolerance rule or rejection rule need to change?
 ```
 
-**What you are learning:** Pattern analysis distinguishes between three different root causes requiring different interventions. FastFreight's consistent 7-9% surcharge may signal an undisclosed pricing model change — a commercial issue. AlphaSteel's GR delays are an internal warehouse process issue. BulkPack's duplicates may be a billing system error or fraud attempt — requiring different responses.
+**What you are learning:** Pattern analysis distinguishes between three different root causes requiring different interventions. FastFreight's consistent 7-9% surcharge may signal an undisclosed pricing model change: a commercial issue. AlphaSteel's GR delays are an internal warehouse process issue. BulkPack's duplicates may be a billing system error or fraud attempt: requiring different responses.
 :::
 
 ## Flashcards Study Aid
@@ -493,4 +493,4 @@ For each pattern:
 
 ---
 
-Continue to [Lesson 7: Supplier Risk — Five Dimensions →](./07-supplier-risk-five-dimensions.md)
+Continue to [Lesson 7: Supplier Risk; Five Dimensions →](./07-supplier-risk-five-dimensions.md)

@@ -138,7 +138,7 @@ Processing details:
 
 | Section                | Intent                                                                   | What to Verify                                                                                                                       |
 | ---------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Recommendation header  | Overall assessment: Proceed / Proceed with conditions / Requires review  | Compare against your prediction — most students predict "Proceed" but the assessment typically returns "Proceed with conditions"     |
+| Recommendation header  | Overall assessment: Proceed / Proceed with conditions / Requires review  | Compare against your prediction: most students predict "Proceed" but the assessment typically returns "Proceed with conditions"     |
 | Applicable regulations | Lists each regulation that applies, why it applies, and key requirements | Should identify data protection regimes for all three jurisdictions (Pakistan, UAE, UK) plus any electronic transactions legislation |
 | Requirements checklist | Specific compliance actions needed before launch                         | Should include cross-border transfer mechanisms, impact assessments, and processor agreements                                        |
 | Risk analysis          | HIGH/MEDIUM/LOW classification of compliance gaps                        | Look for cross-border data transfer as the highest-risk item                                                                         |
@@ -146,7 +146,7 @@ Processing details:
 | Attorney review footer | Governance boundary reminder                                             | Confirm the footer is present                                                                                                        |
 
 :::note Your output will vary
-The specific regulations identified, risk ratings, and priority ordering depend on the business action described and your playbook configuration. Focus on whether the assessment identifies the correct jurisdictions and surfaces regulations you did not anticipate. The teaching point is proactive compliance — identifying regulatory requirements before launch, not after.
+The specific regulations identified, risk ratings, and priority ordering depend on the business action described and your playbook configuration. Focus on whether the assessment identifies the correct jurisdictions and surfaces regulations you did not anticipate. The teaching point is proactive compliance: identifying regulatory requirements before launch, not after.
 :::
 
 ### Calibration
@@ -215,7 +215,7 @@ matrix.
 | Summary with overall recommendation     | Aggregated risk profile                                               | Should reflect the highest-severity item as the gating factor                                    |
 
 :::note Your output will vary
-The specific risk scores depend on how the agent assesses severity and likelihood for your scenario. Focus on whether the scoring rationale is defensible and whether the action recommendations are proportionate to the risk level. The teaching point is the 5x5 framework itself — transforming subjective risk judgment into quantified, prioritised action.
+The specific risk scores depend on how the agent assesses severity and likelihood for your scenario. Focus on whether the scoring rationale is defensible and whether the action recommendations are proportionate to the risk level. The teaching point is the 5x5 framework itself: transforming subjective risk judgment into quantified, prioritised action.
 :::
 
 The risk matrix transforms the compliance assessment from a checklist into a prioritised action plan. RED items must be resolved before launch. YELLOW items need attention but do not block a phased rollout. GREEN items can be handled in the normal course of business.
@@ -242,14 +242,14 @@ Expanding service to Saudi Arabia for the first time.
 
 | Section                      | Intent                                                                      | What to Verify                                                                                  |
 | ---------------------------- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Recommendation header        | Overall assessment — likely "Requires review" given regulated entity status | Check whether the agent escalates beyond "Proceed with conditions" given DFSA-regulated context |
+| Recommendation header        | Overall assessment: likely "Requires review" given regulated entity status | Check whether the agent escalates beyond "Proceed with conditions" given DFSA-regulated context |
 | SAMA outsourcing rules       | Saudi regulatory requirements for outsourcing payment processing            | Should identify SAMA approval requirements and data localisation obligations                    |
 | Saudi PDPL requirements      | Data protection for Saudi residents                                         | Should flag data localisation and cross-border transfer requirements                            |
 | DFSA regulatory requirements | Home regulator obligations for material business changes                    | Should identify notification requirements and systems/controls obligations                      |
 | Industry-specific standards  | Payment card data security requirements                                     | Should reference PCI DSS given payment data processing                                          |
 
 :::note Your output will vary
-PayGulf's regulated status means the compliance assessment should be materially more severe than Noor's. A regulated entity faces both commercial law requirements and sector-specific regulatory obligations. Focus on whether the agent identifies the layered regulatory complexity — not just data protection, but financial services regulation and payment industry standards.
+PayGulf's regulated status means the compliance assessment should be materially more severe than Noor's. A regulated entity faces both commercial law requirements and sector-specific regulatory obligations. Focus on whether the agent identifies the layered regulatory complexity: not just data protection, but financial services regulation and payment industry standards.
 :::
 
 Fatima applies the risk matrix to PayGulf's four identified risks:

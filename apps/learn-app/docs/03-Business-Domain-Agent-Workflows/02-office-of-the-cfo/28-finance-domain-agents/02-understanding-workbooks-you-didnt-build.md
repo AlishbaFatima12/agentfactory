@@ -64,11 +64,11 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Dependency tracing — following formula chains from output back to input cells"
-    - "Cell-level citations — Claude's ability to reference specific cells you can click to verify"
-    - "Four financial model types — three-statement, DCF, comps, LBO"
-    - "Input vs output cells — blue-cell convention for assumptions vs formula-calculated results"
-    - "Cascading changes — how modifying one assumption flows through a multi-tab model"
+    - "Dependency tracing: following formula chains from output back to input cells"
+    - "Cell-level citations: Claude's ability to reference specific cells you can click to verify"
+    - "Four financial model types: three-statement, DCF, comps, LBO"
+    - "Input vs output cells: blue-cell convention for assumptions vs formula-calculated results"
+    - "Cascading changes: how modifying one assumption flows through a multi-tab model"
   assessment: "5 concepts at A2-B1 level, within the 5-7 cognitive limit for this tier. The financial model types share a common structure (inputs drive outputs) that provides scaffolding across the set."
 
 differentiation:
@@ -80,26 +80,26 @@ teaching_guide:
   session_group: 1
   session_title: "Understanding Workbooks You Didn't Build"
   key_points:
-    - "Every finance professional inherits models nobody documented — this is the universal starting point for the lesson because it connects immediately to real professional frustration"
-    - "Claude traces formula dependency chains and provides cell-level citations — the cell references are clickable in the sidebar, making verification immediate rather than requiring manual tab-hopping"
-    - "The four financial model types all share the same fundamental structure: inputs (assumptions) drive calculated outputs — understanding this pattern transfers across model types"
+    - "Every finance professional inherits models nobody documented: this is the universal starting point for the lesson because it connects immediately to real professional frustration"
+    - "Claude traces formula dependency chains and provides cell-level citations: the cell references are clickable in the sidebar, making verification immediate rather than requiring manual tab-hopping"
+    - "The four financial model types all share the same fundamental structure: inputs (assumptions) drive calculated outputs: understanding this pattern transfers across model types"
     - "Verification is non-negotiable: Claude's traces must be confirmed by navigating to cited cells, because any AI-generated reference could be incorrect"
   misconceptions:
-    - "Students may think Claude replaces the need to understand the model — Claude accelerates comprehension but the professional must still verify and interpret"
-    - "Students may assume all financial models follow the same structure — while inputs-drive-outputs is universal, the specific linkages vary significantly between model types"
-    - "Students may trust Claude's cell references without verification — the discipline of checking cited cells is the core professional skill this lesson builds"
+    - "Students may think Claude replaces the need to understand the model: Claude accelerates comprehension but the professional must still verify and interpret"
+    - "Students may assume all financial models follow the same structure: while inputs-drive-outputs is universal, the specific linkages vary significantly between model types"
+    - "Students may trust Claude's cell references without verification: the discipline of checking cited cells is the core professional skill this lesson builds"
   discussion_prompts:
     - "Think of a time you inherited a spreadsheet or document someone else built. What was hardest about understanding it? How would dependency tracing have changed that experience?"
     - "Why is it important to verify Claude's cell references rather than trusting them? What could go wrong if a dependency trace contained an error you did not catch?"
   teaching_tips:
-    - "Walk through the board call scenario in real time — the urgency makes the value of rapid dependency tracing concrete and memorable"
-    - "Emphasise the verification step as a professional discipline, not a lack of trust in the tool — even correct traces need human confirmation in finance"
+    - "Walk through the board call scenario in real time: the urgency makes the value of rapid dependency tracing concrete and memorable"
+    - "Emphasise the verification step as a professional discipline, not a lack of trust in the tool: even correct traces need human confirmation in finance"
     - "Use the Concept Box as a reference anchor: students should understand that regardless of model type, the input-output pattern holds"
   assessment_checks:
     - question: "What does Claude provide when it traces a formula dependency chain?"
       expected_response: "A plain-language explanation of the formula logic with specific cell references that you can click in the sidebar to navigate directly to the source cells. The trace shows which input cells drive the output, where those inputs live across tabs, and how the calculation flows."
     - question: "Why should you always verify Claude's cell-level citations?"
-      expected_response: "Because any AI-generated reference could be inaccurate — a wrong cell reference in a financial model could lead to incorrect analysis. The professional discipline is to navigate to each cited cell and confirm that the reference matches what Claude described. This verification step is what makes the trace trustworthy."
+      expected_response: "Because any AI-generated reference could be inaccurate: a wrong cell reference in a financial model could lead to incorrect analysis. The professional discipline is to navigate to each cited cell and confirm that the reference matches what Claude described. This verification step is what makes the trace trustworthy."
     - question: "What are the four major financial model types and what do they share in common?"
       expected_response: "Three-statement model (links income statement, balance sheet, cash flow), DCF (projects and discounts future cash flows), comps (compares companies using market multiples), and LBO (models leveraged acquisitions). All four share the same fundamental structure: input cells containing assumptions drive formula-calculated output cells."
 ---

@@ -72,10 +72,10 @@ differentiation:
 >
 > CLM is the end-to-end process of creating, negotiating, executing, storing, monitoring, and renewing or terminating contracts. In a mature CLM system, every contract is searchable, every obligation is tracked, and every renewal date triggers an alert. For example, a company with 500 active vendor contracts and a proper CLM system knows that 23 contracts have renewal notice deadlines in the next 60 days, that 4 contracts have uncapped liability provisions flagged for renegotiation, and that the average negotiation cycle time is 11 days. Without CLM, that same company discovers missed renewals when the invoice arrives for another year of a service they intended to cancel. Why it matters: the World Commerce & Contracting Association estimates that poor contract management costs organisations 5-9% of annual revenue -- for a PKR 10 billion company, that is PKR 500 million to PKR 900 million per year lost to administrative friction.
 
-In Lesson 2, you built a negotiation playbook — the `legal.local.md` file that calibrates every review to your organisation's positions. Now you will see exactly how that playbook drives the review output. You will run `/review-contract` against a real vendor agreement, interpret the GREEN/YELLOW/RED classification, and generate attorney-ready redlines that reflect your organisation's standards rather than generic commercial positions.
+In Lesson 2, you built a negotiation playbook: the `legal.local.md` file that calibrates every review to your organisation's positions. Now you will see exactly how that playbook drives the review output. You will run `/review-contract` against a real vendor agreement, interpret the GREEN/YELLOW/RED classification, and generate attorney-ready redlines that reflect your organisation's standards rather than generic commercial positions.
 
 :::tip Connector Dual-Mode
-If you connected Box, Egnyte, or another document management system in Lesson 1, the agent can pull contracts directly from your storage. If not, upload the contract PDF or paste the text — both paths produce identical quality output.
+If you connected Box, Egnyte, or another document management system in Lesson 1, the agent can pull contracts directly from your storage. If not, upload the contract PDF or paste the text: both paths produce identical quality output.
 :::
 
 **Contract Lifecycle Management** is the end-to-end process by which organisations create, negotiate, execute, store, monitor, and renew or terminate contracts. In most organisations without a dedicated CLM system, this process is chaos: contracts drafted in Word, negotiated via tracked-changes email threads, executed by printing and scanning, stored in a shared drive no one can search, renewed when (and if) a calendar reminder fires.
@@ -147,7 +147,7 @@ PRIORITY:   Nice-to-have
 Noor Technologies is a 180-person software company headquartered in Karachi, Pakistan. Their Head of Legal Operations, Bilal Hussain, has received a SaaS agreement from CloudStack Inc., a US-based project management tool vendor. The annual contract value is PKR 4,800,000 (approximately USD 17,000). Noor Technologies is the customer.
 
 :::note Prediction Moment
-Before Bilal runs `/review-contract`, predict: which clauses will the plugin flag as RED? Which will be GREEN? Read the contract description above — a US-based SaaS vendor, PKR 4.8M annual value, Pakistani customer. Write your predictions, then compare them to the output below.
+Before Bilal runs `/review-contract`, predict: which clauses will the plugin flag as RED? Which will be GREEN? Read the contract description above: a US-based SaaS vendor, PKR 4.8M annual value, Pakistani customer. Write your predictions, then compare them to the output below.
 :::
 
 Bilal opens Cowork and begins the review:
@@ -175,10 +175,10 @@ New vendor -- first engagement.
 | Holistic Risk Summary                 | Overall recommendation with priority negotiation order        | Should prioritise regulatory requirements (DPA) over commercial preferences                |
 
 :::note Your output will vary
-The specific redline language, fallback positions, and priority rankings depend on your playbook configuration and the contract details. Focus on whether the agent correctly identifies the gap between the contract terms and your playbook standards. The teaching point is calibrated analysis — the agent uses your playbook to produce specific, actionable redlines rather than generic observations.
+The specific redline language, fallback positions, and priority rankings depend on your playbook configuration and the contract details. Focus on whether the agent correctly identifies the gap between the contract terms and your playbook standards. The teaching point is calibrated analysis: the agent uses your playbook to produce specific, actionable redlines rather than generic observations.
 :::
 
-Bilal reviews the output. He forwards it to Ayesha (the GC), who reviews the redlines, adjusts any liability floor figures for cleaner negotiation optics, and sends the marked-up contract to CloudStack's legal team. Total time: roughly 40 minutes of combined review — compared to 3-4 hours of manual attorney review without the plugin.
+Bilal reviews the output. He forwards it to Ayesha (the GC), who reviews the redlines, adjusts any liability floor figures for cleaner negotiation optics, and sends the marked-up contract to CloudStack's legal team. Total time: roughly 40 minutes of combined review: compared to 3-4 hours of manual attorney review without the plugin.
 
 ---
 
@@ -214,7 +214,7 @@ After the CloudStack agreement is negotiated and executed, Bilal runs:
 | Overdue items                        | Obligations past their deadline                            | Address any overdue items immediately                  |
 
 :::note Your output will vary
-The specific dates, amounts, and obligation details depend on the contract you executed and the data in your repository. The teaching point is that a signed contract is the beginning of a legal relationship — the agent transforms it from a static document into an actively monitored set of obligations.
+The specific dates, amounts, and obligation details depend on the contract you executed and the data in your repository. The teaching point is that a signed contract is the beginning of a legal relationship: the agent transforms it from a static document into an actively monitored set of obligations.
 :::
 
 ---
@@ -250,13 +250,13 @@ Bilal wants to prepare for a negotiation with a large enterprise vendor. He quer
 | Counterparty resistance patterns | Which vendor types push back hardest                      | Informs preparation for future negotiations     |
 
 :::note Your output will vary
-The benchmarking results depend entirely on the contracts in your repository. The teaching point is that your archive of executed contracts is institutional intelligence — it transforms anecdotal negotiation experience into evidence-based positions. When a vendor insists on a short liability cap, your portfolio data provides specific evidence of what comparable vendors have accepted.
+The benchmarking results depend entirely on the contracts in your repository. The teaching point is that your archive of executed contracts is institutional intelligence: it transforms anecdotal negotiation experience into evidence-based positions. When a vendor insists on a short liability cap, your portfolio data provides specific evidence of what comparable vendors have accepted.
 :::
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
 :::tip Cross-Border Contracts
-When your contracts involve parties, performance, or data flows across multiple jurisdictions, the review gets more complex. Lesson 4 covers cross-border analysis in depth — including multi-overlay loading, the five cross-border pitfalls, and e-signature routing with `/signature-request`.
+When your contracts involve parties, performance, or data flows across multiple jurisdictions, the review gets more complex. Lesson 4 covers cross-border analysis in depth: including multi-overlay loading, the five cross-border pitfalls, and e-signature routing with `/signature-request`.
 :::
 
 ---
@@ -265,7 +265,7 @@ When your contracts involve parties, performance, or data flows across multiple 
 
 1. A complete contract review with GREEN/YELLOW/RED classification and attorney-ready redlines for the CloudStack SaaS agreement
 2. An obligation tracking dashboard showing upcoming deadlines, renewal alerts, and overdue items via `/vendor-check`
-3. An institutional benchmarking query against Noor Technologies' contract repository — evidence-based negotiation positions derived from 34 executed contracts
+3. An institutional benchmarking query against Noor Technologies' contract repository: evidence-based negotiation positions derived from 34 executed contracts
 
 ---
 
@@ -356,7 +356,7 @@ This comparison — agent output vs. your judgment — is exactly
 what attorney review means in practice.
 ```
 
-**What you are learning:** The real test of the contract review workflow is applying it to your own agreements. The prediction-then-comparison exercise builds the judgment calibration that makes you effective at reviewing agent output — knowing when to accept the classification and when to override it based on context the agent does not have.
+**What you are learning:** The real test of the contract review workflow is applying it to your own agreements. The prediction-then-comparison exercise builds the judgment calibration that makes you effective at reviewing agent output: knowing when to accept the classification and when to override it based on context the agent does not have.
 
 ---
 

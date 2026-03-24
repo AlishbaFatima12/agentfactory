@@ -1,15 +1,15 @@
 ---
-title: "IV — The Growth Engine"
+title: "IV; The Growth Engine"
 sidebar_position: 0
 ---
 
-# Section IV — The Growth Engine
+# Section IV; The Growth Engine
 
 ### Chapter 34: Scaling the Judgment of Your Top 1% Across the Entire Organisation
 
-Section IV addresses the function that determines whether an enterprise grows or stagnates: go-to-market execution. Sales and marketing are domains where AI leverage is exceptionally high, because the core activities — identifying the right prospects, crafting the right message, analysing campaign performance — are pattern-recognition and personalisation tasks at which large language models excel.
+Section IV addresses the function that determines whether an enterprise grows or stagnates: go-to-market execution. Sales and marketing are domains where AI leverage is exceptionally high, because the core activities: identifying the right prospects, crafting the right message, analysing campaign performance: are pattern-recognition and personalisation tasks at which large language models excel.
 
-The central insight of this section is a reframing: AI does not replace salespeople or marketers. It democratises the capabilities of the best ones. The intuition that a top 1% sales performer has about which prospects are ready, which messages land, and which objections signal genuine interest — that judgment, encoded in a SKILL.md library, can scale across the entire team.
+The central insight of this section is a reframing: AI does not replace salespeople or marketers. It democratises the capabilities of the best ones. The intuition that a top 1% sales performer has about which prospects are ready, which messages land, and which objections signal genuine interest: that judgment, encoded in a SKILL.md library, can scale across the entire team.
 
 | #   | Chapter                   | Key Focus                                                      |
 | --- | ------------------------- | -------------------------------------------------------------- |

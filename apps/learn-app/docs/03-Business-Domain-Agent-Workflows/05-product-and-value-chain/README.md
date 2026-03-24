@@ -1,13 +1,13 @@
 ---
-title: "V — Product & Value Chain"
+title: "V; Product & Value Chain"
 sidebar_position: 0
 ---
 
-# Section V — Product & Value Chain
+# Section V; Product & Value Chain
 
 ### Chapters 35–36: Bridging Physical Operations and Digital Record-Keeping
 
-Section V covers the two domains that connect customer demand to product delivery: supply chain and product management. Chapter 35 addresses the fundamental challenge of operational AI — data lives in multiple systems, decisions must be made in near-real-time, and the cost of error hits the P&L immediately. Chapter 36 addresses the product manager's core challenge: synthesising customer feedback, technical constraints, business priorities, and market signals into decisions about what to build next.
+Section V covers the two domains that connect customer demand to product delivery: supply chain and product management. Chapter 35 addresses the fundamental challenge of operational AI: data lives in multiple systems, decisions must be made in near-real-time, and the cost of error hits the P&L immediately. Chapter 36 addresses the product manager's core challenge: synthesising customer feedback, technical constraints, business priorities, and market signals into decisions about what to build next.
 
 | #   | Chapter                    | Key Focus                                                            |
 | --- | -------------------------- | -------------------------------------------------------------------- |
