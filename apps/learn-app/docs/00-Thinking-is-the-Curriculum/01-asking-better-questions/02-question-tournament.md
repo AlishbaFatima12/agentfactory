@@ -45,7 +45,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (question ranking by diagnostic power, actionable vs. generic responses, comparative evaluation of question sets) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (question ranking by diagnostic power, actionable vs. generic responses, comparative evaluation of question sets) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "After completing the exercise, identify the 3 question patterns that consistently produced the best AI responses across both sets. Write a one-paragraph 'question design principle' based on your findings."
@@ -56,17 +56,17 @@ teaching_guide:
   session_group: 1
   session_title: "The Question Tournament"
   key_points:
-    - "Question quality is a skill you can evaluate and improve, not an innate talent — the tournament format makes this viscerally clear"
-    - "The gap between 'seems like a good question' and 'actually produces useful AI output' is the core learning — many well-phrased questions produce generic responses"
+    - "Question quality is a skill you can evaluate and improve, not an innate talent: the tournament format makes this viscerally clear"
+    - "The gap between 'seems like a good question' and 'actually produces useful AI output' is the core learning: many well-phrased questions produce generic responses"
     - "Ranking someone else's questions develops evaluation skill faster than self-assessment because you see patterns you cannot see in your own work"
   misconceptions:
-    - "Students think more questions = better analysis — the tournament reveals that 3 great questions outperform 15 mediocre ones"
-    - "Students rank questions by topic importance rather than diagnostic power — a question about an important topic can still be poorly formed"
+    - "Students think more questions = better analysis: the tournament reveals that 3 great questions outperform 15 mediocre ones"
+    - "Students rank questions by topic importance rather than diagnostic power: a question about an important topic can still be poorly formed"
   discussion_prompts:
     - "Which was harder: generating your own 15 questions or ranking your partner's 15? Why?"
     - "Did any questions that seemed strong on paper produce surprisingly generic AI responses? What does this tell you about question design?"
   teaching_tips:
-    - "Pair students from different backgrounds when possible — a business student and a technical student ask fundamentally different questions about the same scenario"
+    - "Pair students from different backgrounds when possible: a business student and a technical student ask fundamentally different questions about the same scenario"
     - "Have pairs share their most surprising finding with the class: which question unexpectedly produced the best or worst AI response?"
   assessment_quick_check:
     - "Ask students to explain the difference between a question that is 'important' and a question that is 'diagnostic'"
@@ -81,15 +81,15 @@ Use the same scenario you chose in [Exercise 1 (The Prediction Lock)](./01-predi
 
 ### What You Do
 
-**Step 1 — Generate your questions (no AI).** Write 15 diagnostic questions about your scenario. Work independently, without any AI tool.
+**Step 1. Generate your questions (no AI).** Write 15 diagnostic questions about your scenario. Work independently, without any AI tool.
 
-**Step 2 — Swap and rank.** Exchange question lists with your partner. Rank their 15 questions from most to least diagnostic. Write a one-sentence justification for each ranking explaining why you placed it where you did.
+**Step 2. Swap and rank.** Exchange question lists with your partner. Rank their 15 questions from most to least diagnostic. Write a one-sentence justification for each ranking explaining why you placed it where you did.
 
-**Step 3 — Select the top 10.** Take the top 5 questions from your list and the top 5 from your partner's list — 10 questions total.
+**Step 3. Select the top 10.** Take the top 5 questions from your list and the top 5 from your partner's list: 10 questions total.
 
-**Step 4 — Test against AI.** Feed each of the 10 questions to both Claude and ChatGPT separately. Note a brief summary of each response.
+**Step 4. Test against AI.** Feed each of the 10 questions to both Claude and ChatGPT separately. Note a brief summary of each response.
 
-**Step 5 — Build the comparison table.** For each question, record the responses and judge whether they were genuinely useful or generic filler (see template below).
+**Step 5. Build the comparison table.** For each question, record the responses and judge whether they were genuinely useful or generic filler (see template below).
 
 :::tip Solo Learner Alternative
 Generate your 15 questions, then prompt AI: "You are my study partner. Generate 15 diagnostic questions for this scenario that are different from mine. Do not see my questions first." Once AI generates its 15, rank AI's questions and have AI rank yours. Then proceed with Steps 3-5 using the combined lists.

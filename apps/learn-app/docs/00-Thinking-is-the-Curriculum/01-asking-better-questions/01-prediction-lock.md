@@ -57,10 +57,10 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (prediction lock, diagnostic questions, question ranking by power, reasoning receipt) — within Part 0 beginner range of 3-5"
+  assessment: "4 concepts (prediction lock, diagnostic questions, question ranking by power, reasoning receipt) : within Part 0 beginner range of 3-5"
 
 differentiation:
-  extension_for_advanced: "After completing the exercise, feed your prediction lock to a second AI tool and compare how the two tools rate the same questions differently — analyze why"
+  extension_for_advanced: "After completing the exercise, feed your prediction lock to a second AI tool and compare how the two tools rate the same questions differently: analyze why"
   remedial_for_struggling: "Start with just 5 questions instead of 10. Focus on writing a clear diagnosis first, then build questions from what you do not yet know about the scenario"
 
 teaching_guide:
@@ -68,24 +68,24 @@ teaching_guide:
   session_group: 1
   session_title: "The Prediction Lock"
   key_points:
-    - "The prediction lock is a timestamp-sealed document — its value comes from being written BEFORE AI access, making it a genuine record of independent thinking"
-    - "Question ranking by diagnostic power is the core skill — students must justify WHY one question reveals more than another, not just list questions"
-    - "The reasoning receipt format (prompt/response/decision/justification) carries forward through every chapter — establish it carefully here"
-    - "Students will discover that their initial diagnosis is often partially wrong — this is the point, not a failure"
+    - "The prediction lock is a timestamp-sealed document: its value comes from being written BEFORE AI access, making it a genuine record of independent thinking"
+    - "Question ranking by diagnostic power is the core skill: students must justify WHY one question reveals more than another, not just list questions"
+    - "The reasoning receipt format (prompt/response/decision/justification) carries forward through every chapter: establish it carefully here"
+    - "Students will discover that their initial diagnosis is often partially wrong: this is the point, not a failure"
   misconceptions:
-    - "Students think the goal is to get the 'right answer' to the business scenario — the scenario answer is worth 0%, the thinking process is the entire grade"
-    - "Students rank questions by 'importance' rather than diagnostic power — emphasize that a diagnostic question is one that distinguishes between competing explanations"
-    - "Students treat the reasoning receipt as bureaucratic paperwork — frame it as a mirror that reveals whether they actually thought or just copied"
+    - "Students think the goal is to get the 'right answer' to the business scenario: the scenario answer is worth 0%, the thinking process is the entire grade"
+    - "Students rank questions by 'importance' rather than diagnostic power: emphasize that a diagnostic question is one that distinguishes between competing explanations"
+    - "Students treat the reasoning receipt as bureaucratic paperwork: frame it as a mirror that reveals whether they actually thought or just copied"
   discussion_prompts:
     - "Two students both concluded that 'poor targeting' caused the sales drop. One predicted it before AI and one got it from AI. How would you tell the difference?"
     - "Why does ranking questions by diagnostic power produce better thinking than just listing every question you can think of?"
   teaching_tips:
-    - "Have students seal their prediction locks physically (envelope, timestamp, photo) before opening AI tools — the ceremony reinforces that this commitment matters"
-    - "Walk through one example question ranking as a class: 'What changed in the marketing mix?' vs 'Did sales drop across all product categories?' — which one eliminates more hypotheses?"
+    - "Have students seal their prediction locks physically (envelope, timestamp, photo) before opening AI tools: the ceremony reinforces that this commitment matters"
+    - "Walk through one example question ranking as a class: 'What changed in the marketing mix?' vs 'Did sales drop across all product categories?' : which one eliminates more hypotheses?"
     - "The reasoning receipt is new for most students. Show a completed example (accept/reject/modify) before they start, so the format does not become a barrier to the thinking"
   assessment_quick_check:
     - "Ask students: What is the difference between a question that is 'interesting' and a question that is 'diagnostic'?"
-    - "Ask students to explain why the prediction lock must be written BEFORE touching AI — what would be lost if they wrote it after?"
+    - "Ask students to explain why the prediction lock must be written BEFORE touching AI: what would be lost if they wrote it after?"
 ---
 
 import Tabs from "@theme/Tabs";
@@ -95,7 +95,7 @@ import TabItem from "@theme/TabItem";
 
 > _AI quality is downstream of question quality. The student who asks better questions gets better answers from every tool, every person, and every system for the rest of their career._
 
-Most students type the first thing that comes to mind into an AI tool and accept whatever comes back. This chapter trains you to treat question formulation as a disciplined practice. A vague question produces a vague answer. A precise, layered question produces insight. This is not about prompt engineering — it is about thinking clearly enough to know what you actually need to know.
+Most students type the first thing that comes to mind into an AI tool and accept whatever comes back. This chapter trains you to treat question formulation as a disciplined practice. A vague question produces a vague answer. A precise, layered question produces insight. This is not about prompt engineering; it is about thinking clearly enough to know what you actually need to know.
 
 ---
 
@@ -220,7 +220,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that the quality of your questions determines the quality of every answer you will ever get — from AI, from colleagues, from data. By predicting first and then comparing, you see exactly where your thinking was strong and where it was lazy. The AI grading reveals blind spots in your questioning that you cannot see yourself. Over time, you internalize what makes a question diagnostic rather than decorative.
+You learn that the quality of your questions determines the quality of every answer you will ever get; from AI, from colleagues, from data. By predicting first and then comparing, you see exactly where your thinking was strong and where it was lazy. The AI grading reveals blind spots in your questioning that you cannot see yourself. Over time, you internalize what makes a question diagnostic rather than decorative.
 
 ## Flashcards Study Aid
 

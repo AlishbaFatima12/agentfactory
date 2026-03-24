@@ -45,7 +45,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (confidence calibration, overconfidence/underconfidence patterns, timed assessment under pressure) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (confidence calibration, overconfidence/underconfidence patterns, timed assessment under pressure) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "After analyzing your calibration chart, generate 5 new AI claims specifically in the topic areas where you were most overconfident. Repeat the exercise for those 5 and compare your calibration."
@@ -56,18 +56,18 @@ teaching_guide:
   session_group: 2
   session_title: "Confidence Calibration"
   key_points:
-    - "Most people — especially smart people — are systematically overconfident about AI accuracy. This exercise makes the overconfidence visible and quantifiable."
+    - "Most people: especially smart people: are systematically overconfident about AI accuracy. This exercise makes the overconfidence visible and quantifiable."
     - "The time pressure simulates real-world conditions where you must quickly assess AI output without unlimited verification time"
-    - "This exercise is repeated at the end of the book to measure calibration improvement — the baseline established here becomes the comparison point"
+    - "This exercise is repeated at the end of the book to measure calibration improvement: the baseline established here becomes the comparison point"
   misconceptions:
-    - "Students think the goal is to get all 10 claims right — the goal is to have CALIBRATED confidence (high confidence on things that are right, low confidence on things that are wrong)"
-    - "Students think speed means guessing — the 2-minute window is enough to read carefully and notice red flags, but not enough to verify everything"
+    - "Students think the goal is to get all 10 claims right: the goal is to have CALIBRATED confidence (high confidence on things that are right, low confidence on things that are wrong)"
+    - "Students think speed means guessing: the 2-minute window is enough to read carefully and notice red flags, but not enough to verify everything"
   discussion_prompts:
     - "Were you more overconfident or underconfident overall? What does this pattern tell you about how you currently interact with AI?"
     - "Which topic areas were you worst calibrated on? Why do you think those areas are harder to judge?"
   teaching_tips:
-    - "Use a visible timer for the 2-minute rounds — the pressure is part of the exercise design, not an arbitrary constraint"
-    - "Have students share their calibration charts anonymously and display the class average — most classes show systematic overconfidence, which is a powerful collective learning moment"
+    - "Use a visible timer for the 2-minute rounds: the pressure is part of the exercise design, not an arbitrary constraint"
+    - "Have students share their calibration charts anonymously and display the class average: most classes show systematic overconfidence, which is a powerful collective learning moment"
   assessment_quick_check:
     - "For claims the student rated at 80%+ confidence, what percentage were actually correct? (Good calibration: >80%)"
     - "Can the student name the specific topic area where they were most overconfident?"
@@ -81,9 +81,9 @@ teaching_guide:
 
 This exercise uses a different format: rapid-fire timed rounds.
 
-**Step 1 — Generate the 10 claims.** Prompt AI with: _"Generate 10 specific factual claims across these topics: science, history, current events, technology, geography, and law. Mix accurate claims with inaccurate ones. Do not tell me which are which. Number them 1-10."_ Save the list.
+**Step 1. Generate the 10 claims.** Prompt AI with: _"Generate 10 specific factual claims across these topics: science, history, current events, technology, geography, and law. Mix accurate claims with inaccurate ones. Do not tell me which are which. Number them 1-10."_ Save the list.
 
-**Step 2 — Rate each claim under time pressure (2 minutes each).** Set a timer. For each of the 10 claims, you have 2 minutes to:
+**Step 2. Rate each claim under time pressure (2 minutes each).** Set a timer. For each of the 10 claims, you have 2 minutes to:
 
 - Read the claim carefully
 - Rate your confidence (0-100%) that it is accurate
@@ -92,11 +92,11 @@ This exercise uses a different format: rapid-fire timed rounds.
 
 Do NOT look anything up during this phase. The time pressure simulates real-world conditions where you must quickly assess AI output.
 
-**Step 3 — Verify each claim.** After rating all 10, go back and verify each claim using web search. For each, record: accurate, inaccurate, or partially accurate, and note your source.
+**Step 3. Verify each claim.** After rating all 10, go back and verify each claim using web search. For each, record: accurate, inaccurate, or partially accurate, and note your source.
 
-**Step 4 — Build your calibration table.** Fill in the template below. For each claim, determine whether you were calibrated (correct), overconfident (high confidence + wrong), or underconfident (low confidence + right).
+**Step 4. Build your calibration table.** Fill in the template below. For each claim, determine whether you were calibrated (correct), overconfident (high confidence + wrong), or underconfident (low confidence + right).
 
-**Step 5 — Write your reflection (200 words).** Analyze your calibration patterns: Which topics were you most overconfident about? Underconfident? What red flags did you miss?
+**Step 5. Write your reflection (200 words).** Analyze your calibration patterns: Which topics were you most overconfident about? Underconfident? What red flags did you miss?
 
 ---
 
@@ -169,11 +169,11 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that most people — especially smart people — are systematically overconfident about AI accuracy. By quantifying your calibration, you get a precise map of where your trust in AI is well-placed and where it is dangerous. This exercise is repeated at the end of the book to measure how much your calibration improves after completing all 10 chapters.
+You learn that most people (especially smart people) are systematically overconfident about AI accuracy. By quantifying your calibration, you get a precise map of where your trust in AI is well-placed and where it is dangerous. This exercise is repeated at the end of the book to measure how much your calibration improves after completing all 10 chapters.
 
 ---
 
-:::info Chapter Deliverable — Error Detection Portfolio
+:::info Chapter Deliverable . Error Detection Portfolio
 
 1. Your sealed error prediction document + two annotated AI responses with full Error Taxonomy markup (Exercise 1)
 2. Your three-draft contradiction analysis with divergence annotations and evolution notes (Exercise 2)

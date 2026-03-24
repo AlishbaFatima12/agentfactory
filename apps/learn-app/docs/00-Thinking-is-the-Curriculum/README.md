@@ -11,9 +11,9 @@ title: "Part 0: Thinking is the Curriculum"
 
 Everyone is telling you to reskill. Learn AI tools or get left behind. They are right, but they are solving the wrong problem. The tools are easy. Thinking is hard. A twelve-year-old can prompt ChatGPT. The hard part is knowing whether what it gave you is true. The hard part is asking the question it would never ask itself. The hard part is thinking. AI does not reward people who can use it. AI rewards people who can think clearly enough to direct it, question it, and know when it is wrong. Our education systems spent twenty years giving us knowledge and never once taught us how to think with it. Part 0 fixes that.
 
-Millions of students can now generate essays, analyses, code, and business plans in seconds. Almost none of them can tell whether what AI produced is correct. They cannot ask the question that AI never thought to ask. They cannot spot the reasoning flaw buried in a fluent paragraph. They cannot look at a system and see the second-order consequence that breaks everything. They have the most powerful cognitive tool in human history — and no idea how to think with it.
+Millions of students can now generate essays, analyses, code, and business plans in seconds. Almost none of them can tell whether what AI produced is correct. They cannot ask the question that AI never thought to ask. They cannot spot the reasoning flaw buried in a fluent paragraph. They cannot look at a system and see the second-order consequence that breaks everything. They have the most powerful cognitive tool in human history, and no idea how to think with it.
 
-This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to *operate* AI. Not one of them puts thinking first.
+This is not their fault. They were never taught to think in a world where thinking can be outsourced. **Every AI curriculum on earth starts in the wrong place.** They start with tools. Prompts. APIs. Frameworks. They teach people to _operate_ AI. Not one of them puts thinking first.
 
 **Part 0 puts thinking first.**
 
@@ -27,15 +27,15 @@ In the AI era, education must develop more than intelligence. It must also devel
 
 **The Unsolved Problem**
 
-Every university, every bootcamp, every corporate training program is asking the same question: *If students have access to AI, how do we know they actually learned to think?*
+Every university, every bootcamp, every corporate training program is asking the same question: _If students have access to AI, how do we know they actually learned to think?_
 
 The honest answer, until now, has been: we don't.
 
 Some institutions ban AI. That is denial. Some allow AI and grade the output. That is grading AI, not the student. Some add oral exams on top. That helps, but does not scale.
 
-Part 0 is a different answer. It introduces **six assessment layers** — prediction locks, reasoning receipts, live defence, contradiction challenges, divergence tests, and iterative drafts — engineered so that passing all six *requires* genuine human thinking. No single layer is cheat-proof. All six together are. This is not a policy. It is an architecture.
+Part 0 is a different answer. It introduces **six assessment layers** (prediction locks, reasoning receipts, live defence, contradiction challenges, divergence tests, and iterative drafts) engineered so that passing all six _requires_ genuine human thinking. No single layer is cheat-proof. All six together are. This is not a policy. It is an architecture.
 
-**And it scales.** AI gives every student instant, personalized feedback on every exercise. Peer review circles add human judgment. Instructors intervene only on flagged cases. The result: rigorous thinking assessment for tens of thousands of students — with no multiple-choice exams, no essay mills, and no guesswork about who actually learned.
+**And it scales.** AI gives every student instant, personalized feedback on every exercise. Peer review circles add human judgment. Instructors intervene only on flagged cases. The result: rigorous thinking assessment for tens of thousands of students; with no multiple-choice exams, no essay mills, and no guesswork about who actually learned.
 
 Eleven chapters. Ten thinking skills. Forty exercises. One rule:
 
@@ -47,27 +47,28 @@ You will not be graded on what you produced. You will be graded on whether you c
 
 **Exercise:** Should a startup build a custom AI agent or use an off-the-shelf tool?
 
-**Step 1 — Prediction Lock (before you touch AI):**
+**Step 1. Prediction Lock (before you touch AI):**
 Write your position and seal it. You cannot change it later.
+
 > "I predict custom-built wins for companies with unique workflows. Confidence: 55%. I'd change my mind if off-the-shelf tools handle customization better than I expect."
 
-**Step 2 — AI Research (now you open AI):**
+**Step 2. AI Research (now you open AI):**
 Give the same question to Claude and ChatGPT. Read their arguments. Do not copy them. Decide what you agree with, what you reject, and why.
 
-**Step 3 — Reasoning Receipt (document your decisions):**
+**Step 3. Reasoning Receipt (document your decisions):**
+
 > "AI argued that off-the-shelf saves 6 months. I agreed on speed but rejected its assumption that the startup's workflow is standard. My confidence shifted from 55% to 70%."
 
-**Step 4 — AI Grades Your Thinking (not your answer):**
-Submit your prediction lock and reasoning receipt to AI using the prompt provided in the exercise. AI scores you on five dimensions: independent thinking, critical evaluation, reasoning depth, originality, and self-awareness. The grade is on *how* you thought — not *what* you concluded.
+**Step 4. AI Grades Your Thinking (not your answer):**
+Submit your prediction lock and reasoning receipt to AI using the prompt provided in the exercise. AI scores you on five dimensions: independent thinking, critical evaluation, reasoning depth, originality, and self-awareness. The grade is on _how_ you thought; not _what_ you concluded.
 
-The student who copied AI's answer scores low. The student who disagreed with AI and explained why scores high — even if their final answer is the same.
+The student who copied AI's answer scores low. The student who disagreed with AI and explained why scores high; even if their final answer is the same.
 
 ![Worked_Example](../../static/img/worked-example.png)
 
 :::
 
 > _Part 0 teaches humans how to thrive in the AI era. The rest of the book builds the era itself._
-
 
 ## What You Need
 
@@ -86,13 +87,13 @@ _Applied in: Every chapter. The prediction lock is the universal starting point.
 :::
 
 :::note Layer 2: The Reasoning Receipt
-Students do not submit answers. They submit a reasoning trail — every prompt they wrote, every AI response they received, every decision they made to accept, reject, or modify. The grade is on the decisions. AI can generate answers but it cannot generate a genuine record of someone else's decision-making process.
+Students do not submit answers. They submit a reasoning trail; every prompt they wrote, every AI response they received, every decision they made to accept, reject, or modify. The grade is on the decisions. AI can generate answers but it cannot generate a genuine record of someone else's decision-making process.
 
 _Applied in: Chapters 1, 2, 5, 6, 8, 9. The reasoning receipt is the primary grading artifact._
 :::
 
 :::note Layer 3: Live Defence
-The student submits their work, then defends it without AI access. If the student outsourced all thinking to AI, they collapse under the first question. This is the oldest assessment method in academia — the oral examination — and it is suddenly the most AI-proof one.
+The student submits their work, then defends it without AI access. If the student outsourced all thinking to AI, they collapse under the first question. This is the oldest assessment method in academia (the oral examination) and it is suddenly the most AI-proof one.
 
 _Applied in: Chapters 1, 3, 5, 7, 10. Every chapter with live performance uses this layer._
 :::
@@ -100,7 +101,7 @@ _Applied in: Chapters 1, 3, 5, 7, 10. Every chapter with live performance uses t
 :::note Layer 4: Contradiction Challenges
 After a student submits their work, it is fed into AI with the prompt "argue against this." The student must respond in real-time. The student who copied from AI does not understand what they submitted well enough to defend it against AI's own counter-attack.
 
-_Applied in: Chapters 1, 2, 4, 7, 9. Submitting work is never the end — defending it is the real assessment._
+_Applied in: Chapters 1, 2, 4, 7, 9. Submitting work is never the end; defending it is the real assessment._
 :::
 
 :::note Layer 5: The Divergence Test
@@ -128,9 +129,9 @@ Every exercise in this part follows a four-step cycle:
 1. You think first and produce a deliverable without AI or with documented AI collaboration.
 2. You submit your deliverable to AI using an exact prompt provided in the exercise.
 3. AI grades your work, identifies your blind spots, and gives you specific feedback.
-4. You reflect on the gap between your self-assessment and AI's assessment — that gap is where the deepest learning happens.
+4. You reflect on the gap between your self-assessment and AI's assessment; that gap is where the deepest learning happens.
 
-This is not AI doing your thinking for you. This is AI acting as a rigorous, tireless, infinitely patient evaluator of your thinking. A human instructor cannot read 30 students' reasoning receipts in real-time and give each one detailed feedback. AI can. The instructor's role shifts from grading to designing exercises and conducting live defences — the parts that require human judgment.
+This is not AI doing your thinking for you. This is AI acting as a rigorous, tireless, infinitely patient evaluator of your thinking. A human instructor cannot read 30 students' reasoning receipts in real-time and give each one detailed feedback. AI can. The instructor's role shifts from grading to designing exercises and conducting live defences; the parts that require human judgment.
 
 ## When AI Feedback Seems Wrong {#feedback-challenge-protocol}
 
@@ -236,15 +237,15 @@ At the end, calculate your average per dimension across all 40 exercises and com
 AI can generate reports, draft strategies, write code, and produce analyses that look flawless. What it cannot do is know when its own output is wrong. That single failure is now the most expensive problem in every industry.
 
 The developer who asks better questions (Chapter 1) frames the problem
-correctly before AI generates a single line of code — because the
+correctly before AI generates a single line of code; because the
 most expensive bug is the one that solves the wrong problem. The
 compliance officer who detects broken reasoning (Chapter 2) catches
-the hallucination before it reaches production — and before it costs
+the hallucination before it reaches production; and before it costs
 the company a lawsuit, a product recall, or a lost customer. The
 healthcare professional who thinks in systems (Chapter 3) catches
 the second-order drug interaction that no pattern-matching model will
 ever flag. The engineer who reasons from first principles (Chapter 4)
-redesigns the process everyone else assumed was fixed — because AI
+redesigns the process everyone else assumed was fixed; because AI
 can optimize a broken system faster than anyone, and only a human
 will ask whether the system should exist at all. The communicator who
 knows what matters (Chapter 5) walks into a room full of AI-generated
@@ -252,11 +253,11 @@ slides and is the only person who can explain what they actually mean.
 The professional who works with AI without surrendering judgment
 (Chapter 6) gets ten times the leverage without ten times the risk.
 The one who surrenders judgment becomes a middleman between a prompt
-and a product — and middlemen get automated. The leader who reasons
+and a product; and middlemen get automated. The leader who reasons
 through dilemmas (Chapter 7) makes the ethical call that AI will
-never make — because AI calculates trade-offs and humans own them.
+never make; because AI calculates trade-offs and humans own them.
 The founder who builds from nothing (Chapter 8) creates what no
-prompt could generate — because prompts remix the past and founders
+prompt could generate; because prompts remix the past and founders
 invent the future. The executive who decides under uncertainty
 (Chapter 9) makes the call when the data is incomplete, the
 stakeholders disagree, the deadline is tomorrow, and AI has produced
@@ -274,22 +275,22 @@ market that has already made its verdict:
 
 ## For Solo and Online Learners
 
-Several exercises involve peer interaction — question tournaments, cross-examination, live defence, hard conversations, and teach-back sessions. If you are learning alone or asynchronously online, every peer exercise includes a **Solo Learner Alternative**. These alternatives use AI to simulate the peer role:
+Several exercises involve peer interaction; question tournaments, cross-examination, live defence, hard conversations, and teach-back sessions. If you are learning alone or asynchronously online, every peer exercise includes a **Solo Learner Alternative**. These alternatives use AI to simulate the peer role:
 
-Instead of a peer panel questioning your work, you submit your deliverable to AI with a specific adversarial prompt that generates tough, unpredictable questions — then you respond in writing. Instead of a live role-play partner, AI plays the stakeholder and you practice adapting in real-time through a multi-turn conversation. Instead of peer feedback forms, you use a structured AI evaluation prompt designed to replicate what an engaged peer would notice.
+Instead of a peer panel questioning your work, you submit your deliverable to AI with a specific adversarial prompt that generates tough, unpredictable questions; then you respond in writing. Instead of a live role-play partner, AI plays the stakeholder and you practice adapting in real-time through a multi-turn conversation. Instead of peer feedback forms, you use a structured AI evaluation prompt designed to replicate what an engaged peer would notice.
 
-The solo path is not inferior to the peer path — it is different. Peers provide unpredictability, social pressure, and perspectives you cannot anticipate. AI provides consistency, tirelessness, and the ability to generate adversarial challenges on demand. If possible, combine both.
+The solo path is not inferior to the peer path; it is different. Peers provide unpredictability, social pressure, and perspectives you cannot anticipate. AI provides consistency, tirelessness, and the ability to generate adversarial challenges on demand. If possible, combine both.
 
 <details>
 <summary>How This Scales: Assessment for Tens of Thousands of Students (Instructor Reference)</summary>
 
-**Tier 1 — AI First-Pass (every student, every exercise):**
+**Tier 1 . AI First-Pass (every student, every exercise):**
 Every exercise includes an exact AI check prompt. The student submits their work, receives AI-generated scores and feedback, and includes this in their portfolio. This provides immediate, personalized feedback at unlimited scale. AI scores serve as the baseline assessment.
 
-**Tier 2 — Peer Review Circles (every student, per chapter):**
-Students are organized into review circles of 4-5 people. At the end of each chapter, circles exchange portfolios and evaluate one peer's work using a provided rubric. Peer reviewers submit their evaluation along with their own portfolio. Reviewing others' thinking is itself a thinking exercise — it reinforces the skills being taught.
+**Tier 2 . Peer Review Circles (every student, per chapter):**
+Students are organized into review circles of 4-5 people. At the end of each chapter, circles exchange portfolios and evaluate one peer's work using a provided rubric. Peer reviewers submit their evaluation along with their own portfolio. Reviewing others' thinking is itself a thinking exercise; it reinforces the skills being taught.
 
-**Tier 3 — Instructor Spot-Check (flagged portfolios):**
+**Tier 3 . Instructor Spot-Check (flagged portfolios):**
 Instructors do not review every portfolio. They review flagged cases: portfolios where AI scores and peer scores diverge significantly, portfolios with suspiciously high divergence-test similarity, students who challenged AI feedback (to verify the challenge was legitimate), and a random 10% sample for calibration. This keeps instructor load manageable at any scale while ensuring quality control.
 
 _This three-tier system means every student gets personalized AI feedback within minutes, peer feedback within days, and instructor attention where it matters most._
@@ -298,7 +299,7 @@ _This three-tier system means every student gets personalized AI feedback within
 
 ## Before You Begin
 
-Complete the [Thinking Baseline](./thinking-baseline.md) — a 30-minute ungraded assessment that snapshots your current thinking skills. You will repeat it in Chapter 11 to measure your growth.
+Complete the [Thinking Baseline](./thinking-baseline.md); a 30-minute ungraded assessment that snapshots your current thinking skills. You will repeat it in Chapter 11 to measure your growth.
 
 ## Learning Path
 

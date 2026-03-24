@@ -1,5 +1,5 @@
 ### Core Concept
-You cannot improve a decision process you do not understand. The Decision Audit forces accurate self-assessment of your own thinking patterns — not whether you got the right answer, but whether your process was sound.
+You cannot improve a decision process you do not understand. The Decision Audit forces accurate self-assessment of your own thinking patterns; not whether you got the right answer, but whether your process was sound.
 
 ### Key Mental Models
 - **Process vs. Outcome**: A good decision process can produce bad outcomes, and vice versa. The audit evaluates your process, not your luck. This distinction prevents both false confidence (right answer, bad process) and false shame (wrong answer, good process).
@@ -14,8 +14,8 @@ You cannot improve a decision process you do not understand. The Decision Audit 
 
 ### Common Mistakes
 - Writing vague improvement recommendations ("be more careful") instead of actionable ones ("write reversal triggers before consulting AI")
-- Confusing bad outcomes with bad process — good decisions can lead to bad results
-- Being either too harsh or too generous in self-assessment — calibrated honesty is the skill
+- Confusing bad outcomes with bad process; good decisions can lead to bad results
+- Being either too harsh or too generous in self-assessment; calibrated honesty is the skill
 - Writing a narrative of what happened rather than analyzing the decision process itself
 
 ### Connections

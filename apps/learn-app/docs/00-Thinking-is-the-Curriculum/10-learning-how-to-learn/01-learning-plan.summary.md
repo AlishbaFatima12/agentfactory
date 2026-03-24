@@ -1,5 +1,5 @@
 ### Core Concept
-Learning itself requires a strategy. The Learning Plan is a Prediction Lock about your own learning process — committed before you start, then tested against reality during the 72-hour sprint and evaluated in the retrospective.
+Learning itself requires a strategy. The Learning Plan is a Prediction Lock about your own learning process; committed before you start, then tested against reality during the 72-hour sprint and evaluated in the retrospective.
 
 ### Key Mental Models
 - **Learning Plan as Prediction Lock**: Just as Chapter 1 committed a diagnosis before AI, this exercise commits a learning strategy before studying. The value comes from comparing plan to reality afterward.

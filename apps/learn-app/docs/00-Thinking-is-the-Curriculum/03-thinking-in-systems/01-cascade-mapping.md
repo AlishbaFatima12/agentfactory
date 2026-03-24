@@ -45,7 +45,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (cascade map structure, multi-domain effects, second/third-order consequences, feedback loops) — within Part 0 beginner range of 3-5"
+  assessment: "4 concepts (cascade map structure, multi-domain effects, second/third-order consequences, feedback loops) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "After completing your cascade map, identify which feedback loops are amplifying (positive feedback) vs. dampening (negative feedback) and explain why that distinction matters for predicting outcomes"
@@ -56,24 +56,24 @@ teaching_guide:
   session_group: 3
   session_title: "The Cascade Map"
   key_points:
-    - "The cascade map is a visual thinking tool — its value is in forcing students to trace consequences beyond the obvious first-order effects"
+    - "The cascade map is a visual thinking tool: its value is in forcing students to trace consequences beyond the obvious first-order effects"
     - "Feedback loops are the key insight: most AI tools list effects linearly but miss the circular dynamics where effects reinforce or counteract each other"
-    - "Students should draw the map BEFORE AI — the act of struggling to find connections builds the systems thinking muscle"
+    - "Students should draw the map BEFORE AI: the act of struggling to find connections builds the systems thinking muscle"
     - "The five-domain minimum (employees, customers, competitors, regulators, internal knowledge) ensures breadth; the feedback loop requirement ensures depth"
   misconceptions:
-    - "Students list effects in each domain independently without drawing connections between domains — the cascade map's value is in the connections, not the lists"
-    - "Students confuse correlation with causation in their causal chains — emphasize that each arrow must have a mechanism (why does A cause B?)"
-    - "Students think more effects = better map — a smaller map with well-explained mechanisms and genuine feedback loops is superior to a sprawling list"
+    - "Students list effects in each domain independently without drawing connections between domains: the cascade map's value is in the connections, not the lists"
+    - "Students confuse correlation with causation in their causal chains: emphasize that each arrow must have a mechanism (why does A cause B?)"
+    - "Students think more effects = better map: a smaller map with well-explained mechanisms and genuine feedback loops is superior to a sprawling list"
   discussion_prompts:
     - "Why do AI tools tend to produce broader but shallower systems analysis? What structural feature of cascade maps captures something that a bullet-point list cannot?"
-    - "Can you find a feedback loop in your map where the effect is counter-intuitive — where a seemingly positive first-order effect leads to a negative second-order outcome?"
+    - "Can you find a feedback loop in your map where the effect is counter-intuitive: where a seemingly positive first-order effect leads to a negative second-order outcome?"
   teaching_tips:
     - "Have students draw on paper first. The physical act of drawing arrows between domains builds spatial understanding of interconnection that typing cannot replicate"
     - "Walk through one feedback loop as a class: cost savings from replacing loan officers leads to reduced personal service, which leads to customer churn, which reduces revenue, which negates the cost savings. Ask: is this amplifying or dampening?"
-    - "The scenario options are deliberately from different domains — encourage students to pick the one farthest from their expertise to challenge their assumptions"
+    - "The scenario options are deliberately from different domains: encourage students to pick the one farthest from their expertise to challenge their assumptions"
   assessment_quick_check:
     - "Ask students: What is the difference between a second-order effect and a feedback loop?"
-    - "Ask students to explain one of their feedback loops without looking at their map — if they cannot, they drew it without understanding it"
+    - "Ask students to explain one of their feedback loops without looking at their map: if they cannot, they drew it without understanding it"
 ---
 
 import Tabs from "@theme/Tabs";
@@ -93,7 +93,7 @@ You will use the **Error Taxonomy** from [Chapter 2, Exercise 1](../02-detecting
 
 ### What You Do
 
-You receive a single decision. Without AI, draw a cascade map on paper or in a document — tracing effects across at least five domains: employees, customers, competitors, regulators, and the organization's own internal knowledge base. Identify at least three feedback loops (where an effect circles back to amplify or dampen the original decision). This map is your Draft 1 — submitted before any AI is consulted.
+You receive a single decision. Without AI, draw a cascade map on paper or in a document; tracing effects across at least five domains: employees, customers, competitors, regulators, and the organization's own internal knowledge base. Identify at least three feedback loops (where an effect circles back to amplify or dampen the original decision). This map is your Draft 1; submitted before any AI is consulted.
 
 ### Choose Your Scenario
 
@@ -197,7 +197,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn to see consequences that do not appear on a linear list. By forcing yourself to map effects before AI does it for you, you build the mental habit of asking "and then what?" for every decision. The AI feedback reveals effects you missed — expanding your systems thinking vocabulary for future problems.
+You learn to see consequences that do not appear on a linear list. By forcing yourself to map effects before AI does it for you, you build the mental habit of asking "and then what?" for every decision. The AI feedback reveals effects you missed; expanding your systems thinking vocabulary for future problems.
 
 ## Flashcards Study Aid
 

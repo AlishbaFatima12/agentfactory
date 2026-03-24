@@ -45,7 +45,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (principle audit, constraint change propagation, principles vs. patterns distinction under stress) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (principle audit, constraint change propagation, principles vs. patterns distinction under stress) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "After rebuilding, predict which NEXT constraint change would most fundamentally break your rebuilt solution. What does this tell you about the fragility of your remaining assumptions?"
@@ -56,21 +56,21 @@ teaching_guide:
   session_group: 4
   session_title: "Rebuild Under New Constraints"
   key_points:
-    - "This is the ultimate test of first principles reasoning — if you derived from principles, you can adapt; if you borrowed a pattern, you have to start over"
-    - "The principle audit (survived/collapsed/emerged) is the key deliverable structure — it makes the adaptation visible"
+    - "This is the ultimate test of first principles reasoning: if you derived from principles, you can adapt; if you borrowed a pattern, you have to start over"
+    - "The principle audit (survived/collapsed/emerged) is the key deliverable structure: it makes the adaptation visible"
     - "Comparing human vs. AI rebuild strategies reveals different adaptation approaches: humans tend to preserve core logic; AI tends to regenerate from scratch"
     - "The 200-word reflection on principles vs. patterns connects the full chapter's learning arc"
   misconceptions:
-    - "Students try to start from scratch instead of revising — the constraint is that they must trace which principles survived and which collapsed"
+    - "Students try to start from scratch instead of revising: the constraint is that they must trace which principles survived and which collapsed"
     - "Students patch their old solution superficially rather than genuinely rebuilding from the surviving principles"
-    - "Students think 'principles that collapsed' means they were wrong — collapsed principles were correct under the old constraints, they just do not apply to the new situation"
+    - "Students think 'principles that collapsed' means they were wrong: collapsed principles were correct under the old constraints, they just do not apply to the new situation"
   discussion_prompts:
-    - "What percentage of your original principles survived the constraint change? Does this surprise you — were your principles more robust or more fragile than you expected?"
-    - "What is the difference between a principle and a pattern? This exercise was designed to make that distinction visible — can you now articulate it?"
+    - "What percentage of your original principles survived the constraint change? Does this surprise you: were your principles more robust or more fragile than you expected?"
+    - "What is the difference between a principle and a pattern? This exercise was designed to make that distinction visible: can you now articulate it?"
   teaching_tips:
-    - "Each scenario's constraint change fundamentally shifts the problem — Education moves from supply allocation to access optimization, Technical moves from capacity limits to cooperation dynamics, Community moves from supply scarcity to logistics bottlenecks"
-    - "Have students share their principle audits before their rebuilt solutions — the quality of the audit predicts the quality of the rebuild"
-    - "The chapter-level AI feedback (Beginner/Developing/Proficient/Advanced) gives students a cumulative rating across all 4 exercises — emphasize growth trajectory over absolute score"
+    - "Each scenario's constraint change fundamentally shifts the problem: Education moves from supply allocation to access optimization, Technical moves from capacity limits to cooperation dynamics, Community moves from supply scarcity to logistics bottlenecks"
+    - "Have students share their principle audits before their rebuilt solutions: the quality of the audit predicts the quality of the rebuild"
+    - "The chapter-level AI feedback (Beginner/Developing/Proficient/Advanced) gives students a cumulative rating across all 4 exercises: emphasize growth trajectory over absolute score"
   assessment_quick_check:
     - "Ask students: Name one principle that survived the constraint change and explain WHY it still holds"
     - "Ask students: What is the most important thing this chapter taught you about the difference between reasoning from principles and reasoning from patterns?"
@@ -90,21 +90,21 @@ The instructor removes or changes one foundational constraint from the scenario 
 <Tabs>
   <TabItem value="education" label="Education" default>
     **Scenario A (Education):** "Now assume the AI tutoring system has unlimited
-    capacity but students have limited internet access — only 2 hours per day."
+    capacity but students have limited internet access; only 2 hours per day."
   </TabItem>
   <TabItem value="technical" label="Technical">
     **Scenario B (Technical):** "Now assume your GPU cluster has doubled in size
     but every research team must share their compute allocation with at least one
-    other team — no team gets exclusive access."
+    other team; no team gets exclusive access."
   </TabItem>
   <TabItem value="community" label="Community">
     **Scenario C (Community):** "Now assume disaster relief supplies are
-    unlimited but only 3 of the 50 neighborhoods have functioning roads —
+    unlimited but only 3 of the 50 neighborhoods have functioning roads :
     all other deliveries must go through those 3 access points."
   </TabItem>
 </Tabs>
 
-Rebuild your solution. You cannot start from scratch — trace which of your first principles still hold and which collapsed. Then ask AI to rebuild under the same new constraints and compare adaptation strategies.
+Rebuild your solution. You cannot start from scratch; trace which of your first principles still hold and which collapsed. Then ask AI to rebuild under the same new constraints and compare adaptation strategies.
 
 ---
 

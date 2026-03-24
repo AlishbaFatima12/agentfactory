@@ -14,7 +14,7 @@ slides:
 **Core Skill:** Verification and Discernment
 
 :::note Building On Previous Chapters
-You will use the **Question Formulation** skill from [Chapter 1](../01-asking-better-questions/01-prediction-lock.md) to design your error-detection queries. The **Reasoning Receipt** format you learned carries forward — annotating AI output becomes second nature from here on.
+You will use the **Question Formulation** skill from [Chapter 1](../01-asking-better-questions/01-prediction-lock.md) to design your error-detection queries. The **Reasoning Receipt** format you learned carries forward; annotating AI output becomes second nature from here on.
 :::
 
 This chapter trains you to become a systematic error detector. Not vague skepticism ("don't trust AI") but precise, categorized analysis of where and how reasoning breaks. You will develop an Error Taxonomy that you carry through the rest of the book and apply to every AI interaction.

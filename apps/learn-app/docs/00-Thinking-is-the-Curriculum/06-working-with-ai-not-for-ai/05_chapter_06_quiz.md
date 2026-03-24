@@ -18,7 +18,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The exercise requires students to trust AI completely for one attempt"
       ],
       correctOption: 2,
-      explanation: "Accepting without overrides creates a controlled baseline — if students edit AI output, the comparison cannot isolate what AI adds versus what the student adds. This is experimental design, not a statement about AI quality. The purpose is not about time constraints or building trust — it is about creating a fair three-way comparison.",
+      explanation: "Accepting without overrides creates a controlled baseline; if students edit AI output, the comparison cannot isolate what AI adds versus what the student adds. This is experimental design, not a statement about AI quality. The purpose is not about time constraints or building trust; it is about creating a fair three-way comparison.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -30,7 +30,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "When the student applies real judgment through prompting, evaluating, and overriding"
       ],
       correctOption: 3,
-      explanation: "Collaboration only outperforms both solo and pure AI when the human applies real judgment — prompting strategically, evaluating critically, overriding when wrong, and iterating. Passive acceptance with polish, extra time, or better models do not produce the collaboration advantage. The human judgment IS the value-add.",
+      explanation: "Collaboration only outperforms both solo and pure AI when the human applies real judgment; prompting strategically, evaluating critically, overriding when wrong, and iterating. Passive acceptance with polish, extra time, or better models do not produce the collaboration advantage. The human judgment IS the value-add.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -42,7 +42,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Students work harder when they know they cannot rely on AI"
       ],
       correctOption: 0,
-      explanation: "Deep thinking without the shortcut of prompting can produce original insights — AI availability can channel thinking toward prompt-worthy questions rather than unexpected connections. Solo work is not always more creative, AI is not strictly limited to training data, and effort level alone does not explain the originality difference.",
+      explanation: "Deep thinking without the shortcut of prompting can produce original insights . AI availability can channel thinking toward prompt-worthy questions rather than unexpected connections. Solo work is not always more creative, AI is not strictly limited to training data, and effort level alone does not explain the originality difference.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -66,7 +66,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "To ensure all students finish at the same time for class discussion"
       ],
       correctOption: 2,
-      explanation: "Time limits make the comparison fair — without constraints, students could spend unlimited time on any version, making it impossible to compare the value each approach adds within realistic constraints. The purpose is not about assignment length, deadline simulation, or synchronizing class completion.",
+      explanation: "Time limits make the comparison fair; without constraints, students could spend unlimited time on any version, making it impossible to compare the value each approach adds within realistic constraints. The purpose is not about assignment length, deadline simulation, or synchronizing class completion.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -78,7 +78,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It teaches that human intervention is not automatically beneficial"
       ],
       correctOption: 3,
-      explanation: "Discovering that some interventions made things worse teaches that human judgment is not automatically beneficial — knowing WHERE your judgment adds value and where it subtracts is the core of strategic AI collaboration. This does not prove AI is always better or that modifications should be avoided entirely.",
+      explanation: "Discovering that some interventions made things worse teaches that human judgment is not automatically beneficial; knowing WHERE your judgment adds value and where it subtracts is the core of strategic AI collaboration. This does not prove AI is always better or that modifications should be avoided entirely.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -90,7 +90,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It pivots from individual exercises to group projects"
       ],
       correctOption: 0,
-      explanation: "Chapter 6 pivots from 'thinking without AI' (Chapters 1-5) to 'thinking with AI' — students now apply all previously learned solo thinking skills as the judgment layer in AI collaboration. It is not about being the middle chapter, introducing technical tools, or moving to group work.",
+      explanation: "Chapter 6 pivots from 'thinking without AI' (Chapters 1-5) to 'thinking with AI'; students now apply all previously learned solo thinking skills as the judgment layer in AI collaboration. It is not about being the middle chapter, introducing technical tools, or moving to group work.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -126,7 +126,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The student completed the project faster than expected"
       ],
       correctOption: 2,
-      explanation: "A 95% accept rate likely indicates passive collaboration — accepting AI output habitually rather than evaluating it critically. While AI might occasionally be that consistently good, such a high rate without strong justifications suggests the student is working FOR AI (accepting its direction) rather than WITH AI (applying strategic judgment).",
+      explanation: "A 95% accept rate likely indicates passive collaboration; accepting AI output habitually rather than evaluating it critically. While AI might occasionally be that consistently good, such a high rate without strong justifications suggests the student is working FOR AI (accepting its direction) rather than WITH AI (applying strategic judgment).",
       source: "Exercise 2: The Collaboration Log"
     },
     {
@@ -150,7 +150,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The exercise requires at least 15 AI interactions which is harder with familiar topics"
       ],
       correctOption: 0,
-      explanation: "Assigning an unfamiliar country ensures the student genuinely needs AI for research and analysis rather than relying on existing knowledge. This makes the Collaboration Log meaningful — every interaction involves a real decision about AI output rather than just confirming what the student already knows.",
+      explanation: "Assigning an unfamiliar country ensures the student genuinely needs AI for research and analysis rather than relying on existing knowledge. This makes the Collaboration Log meaningful; every interaction involves a real decision about AI output rather than just confirming what the student already knows.",
       source: "Exercise 2: The Collaboration Log"
     },
     {
@@ -162,7 +162,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It cross-references the log against the actual AI conversation history"
       ],
       correctOption: 2,
-      explanation: "The AI Check evaluates whether each reject decision was justified — unjustified rejects are flagged as unnecessarily overriding. The AI may have been right in cases the student rejected. This catches gaming because artificial rejects lack substantive justification. It is not about optimal thresholds, strategy quality correlation, or conversation verification.",
+      explanation: "The AI Check evaluates whether each reject decision was justified; unjustified rejects are flagged as unnecessarily overriding. The AI may have been right in cases the student rejected. This catches gaming because artificial rejects lack substantive justification. It is not about optimal thresholds, strategy quality correlation, or conversation verification.",
       source: "Exercise 2: The Collaboration Log"
     },
     {
@@ -174,7 +174,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The willingness and ability to say 'the AI is wrong here' and back it up"
       ],
       correctOption: 3,
-      explanation: "The override instinct is the willingness and ability to say 'the AI is wrong here' and back it up with evidence and reasoning. It is not about habitual questioning, personal preference, or prompt engineering — it is about targeted, justified correction of specific errors when AI produces flawed analysis.",
+      explanation: "The override instinct is the willingness and ability to say 'the AI is wrong here' and back it up with evidence and reasoning. It is not about habitual questioning, personal preference, or prompt engineering; it is about targeted, justified correction of specific errors when AI produces flawed analysis.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -186,7 +186,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The AI Check cannot detect obvious errors in the analysis"
       ],
       correctOption: 0,
-      explanation: "The exercise uses subtle errors because real AI errors in business analysis are subtle — logical flaws, outdated market assumptions, and false correlations that look plausible on the surface. Training with obvious errors would not build the detection skill students need in practice. Instructor design difficulty and AI Check capabilities are not the driving factors.",
+      explanation: "The exercise uses subtle errors because real AI errors in business analysis are subtle; logical flaws, outdated market assumptions, and false correlations that look plausible on the surface. Training with obvious errors would not build the detection skill students need in practice. Instructor design difficulty and AI Check capabilities are not the driving factors.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -210,7 +210,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It teaches prevention rather than just detection, creating a transferable skill"
       ],
       correctOption: 3,
-      explanation: "Prompt redesign teaches prevention rather than detection — spotting one error is a one-time fix, but redesigning prompts to prevent error types creates a transferable skill for all future AI interactions. Redesigned prompts do not guarantee perfection, and the value is not about grading weight or AI Check emphasis.",
+      explanation: "Prompt redesign teaches prevention rather than detection; spotting one error is a one-time fix, but redesigning prompts to prevent error types creates a transferable skill for all future AI interactions. Redesigned prompts do not guarantee perfection, and the value is not about grading weight or AI Check emphasis.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -222,7 +222,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It replaces the student's judgment with a proven error detection framework"
       ],
       correctOption: 2,
-      explanation: "The Error Taxonomy gives students systematic categories for identifying what type of error AI made — logical flaw, outdated data, or false assumption — rather than relying on gut feeling. It does not provide a list of guaranteed AI errors, automate accept/reject decisions, or replace student judgment. It is a diagnostic tool that enhances judgment.",
+      explanation: "The Error Taxonomy gives students systematic categories for identifying what type of error AI made (logical flaw, outdated data, or false assumption) rather than relying on gut feeling. It does not provide a list of guaranteed AI errors, automate accept/reject decisions, or replace student judgment. It is a diagnostic tool that enhances judgment.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -234,7 +234,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The exercise requires at least 50% of AI suggestions to be accepted"
       ],
       correctOption: 0,
-      explanation: "Overriding everything without justification is as problematic as accepting everything because it wastes good AI output and adds noise without strategic purpose. Strategic override means targeted, justified correction of specific errors. Blanket rejection is reactive, not strategic. There is no minimum accept requirement — the issue is about justified decisions.",
+      explanation: "Overriding everything without justification is as problematic as accepting everything because it wastes good AI output and adds noise without strategic purpose. Strategic override means targeted, justified correction of specific errors. Blanket rejection is reactive, not strategic. There is no minimum accept requirement; the issue is about justified decisions.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -246,7 +246,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It gives students twice as many ideas to include in their final synthesis"
       ],
       correctOption: 1,
-      explanation: "Disagreement signals genuine complexity — questions with clear answers tend to produce agreement, while questions requiring judgment produce divergent recommendations. This is not about tool superiority, quality issues, or idea quantity. The disagreement itself tells the student that human arbitration is needed and valuable.",
+      explanation: "Disagreement signals genuine complexity; questions with clear answers tend to produce agreement, while questions requiring judgment produce divergent recommendations. This is not about tool superiority, quality issues, or idea quantity. The disagreement itself tells the student that human arbitration is needed and valuable.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -258,7 +258,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Averaging works better for technical decisions while synthesis works better for business decisions"
       ],
       correctOption: 2,
-      explanation: "Averaging takes half from each and produces a diluted middle ground. True synthesis evaluates each element independently, selects the strongest regardless of source, and adds original human judgment — creating something genuinely better than either input. They do not produce identical results, and the distinction is not about decision type.",
+      explanation: "Averaging takes half from each and produces a diluted middle ground. True synthesis evaluates each element independently, selects the strongest regardless of source, and adds original human judgment; creating something genuinely better than either input. They do not produce identical results, and the distinction is not about decision type.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -270,7 +270,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "To distinguish what came from each AI and what from human judgment, proving genuine synthesis"
       ],
       correctOption: 3,
-      explanation: "Attribution proves genuine synthesis by distinguishing what came from Claude, what from ChatGPT, and what from the student's own judgment. Without attribution, there is no evidence of human synthesis — the student might have simply averaged or copied one AI's output. This is not about plagiarism, grading convenience, or equal representation.",
+      explanation: "Attribution proves genuine synthesis by distinguishing what came from Claude, what from ChatGPT, and what from the student's own judgment. Without attribution, there is no evidence of human synthesis; the student might have simply averaged or copied one AI's output. This is not about plagiarism, grading convenience, or equal representation.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -282,7 +282,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Because the grading rubric specifically penalizes neutral positions"
       ],
       correctOption: 1,
-      explanation: "Diplomatic neutrality ('both have merit') avoids the core skill the exercise trains — evaluating competing options and making a reasoned choice under uncertainty. Taking a position and defending it IS the arbitration skill. Neither tool is always better, the verdict does not determine future tool choice, and the issue is skill development, not grading penalties.",
+      explanation: "Diplomatic neutrality ('both have merit') avoids the core skill the exercise trains; evaluating competing options and making a reasoned choice under uncertainty. Taking a position and defending it IS the arbitration skill. Neither tool is always better, the verdict does not determine future tool choice, and the issue is skill development, not grading penalties.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -306,7 +306,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Because no element was evaluated for strength or improved by human judgment"
       ],
       correctOption: 3,
-      explanation: "Taking halves is averaging because no element was independently evaluated, selected for strength, or improved by human judgment. True synthesis evaluates each element regardless of source, keeps the strongest, and adds original ideas. The issue is not about tool count, positional splitting, or word count balance — it is about the absence of judgment.",
+      explanation: "Taking halves is averaging because no element was independently evaluated, selected for strength, or improved by human judgment. True synthesis evaluates each element regardless of source, keeps the strongest, and adds original ideas. The issue is not about tool count, positional splitting, or word count balance; it is about the absence of judgment.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -330,7 +330,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The optimal number of interactions is exactly 15 for any project"
       ],
       correctOption: 1,
-      explanation: "The exercise reveals that collaboration quality depends on the quality of each decision — substantive justifications for accepts, rejects, and modifications — not on the number of interactions. More interactions are not always better, fewer are not always more independent, and 15 is a minimum requirement, not an optimal target.",
+      explanation: "The exercise reveals that collaboration quality depends on the quality of each decision (substantive justifications for accepts, rejects, and modifications) not on the number of interactions. More interactions are not always better, fewer are not always more independent, and 15 is a minimum requirement, not an optimal target.",
       source: "Exercise 2: The Collaboration Log"
     },
     {
@@ -342,7 +342,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The format was designed by industry professionals and reflects workplace standards"
       ],
       correctOption: 0,
-      explanation: "The Collaboration Log becomes the standard method for documenting AI collaboration decisions in Chapters 8, 9, and 10, and then serves as the default workflow for AI collaboration throughout Parts 2-10. It is not a grading requirement for all exercises, a speed-building exercise, or an industry standard — it is a pedagogical tool that transfers forward.",
+      explanation: "The Collaboration Log becomes the standard method for documenting AI collaboration decisions in Chapters 8, 9, and 10, and then serves as the default workflow for AI collaboration throughout Parts 2-10. It is not a grading requirement for all exercises, a speed-building exercise, or an industry standard; it is a pedagogical tool that transfers forward.",
       source: "Exercise 2: The Collaboration Log"
     },
     {
@@ -354,7 +354,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Agreement always indicates higher confidence than disagreement"
       ],
       correctOption: 2,
-      explanation: "Agreement may mean the answer is straightforward, or it may mean both tools share the same bias or blind spot — agreement is not automatic confirmation of correctness. AI tools are not trained on identical data and can provide different perspectives, and agreement does not always indicate higher confidence on complex questions.",
+      explanation: "Agreement may mean the answer is straightforward, or it may mean both tools share the same bias or blind spot: agreement is not automatic confirmation of correctness. AI tools are not trained on identical data and can provide different perspectives, and agreement does not always indicate higher confidence on complex questions.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -366,7 +366,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Complete trust in AI eliminates the judgment layer that makes collaboration valuable"
       ],
       correctOption: 3,
-      explanation: "Complete trust eliminates the judgment layer — the prompting, evaluating, overriding, and iterating — that makes human-AI collaboration produce results better than either alone. Without judgment, the student is working FOR AI, not WITH AI. The thesis does not advocate avoiding AI or treating it with blanket suspicion.",
+      explanation: "Complete trust eliminates the judgment layer (the prompting, evaluating, overriding, and iterating) that makes human-AI collaboration produce results better than either alone. Without judgment, the student is working FOR AI, not WITH AI. The thesis does not advocate avoiding AI or treating it with blanket suspicion.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -378,7 +378,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It tests whether students remember the error taxonomy from Chapter 2"
       ],
       correctOption: 0,
-      explanation: "The Override Challenge applies the same diagnostic rigor from Chapter 2 to AI business analysis — students detect logical flaws, outdated assumptions, and false correlations using systematic error categories. It does not replace Chapter 2's categories, test recall, or focus on grammar. The transfer of diagnostic skill to a new domain is the point.",
+      explanation: "The Override Challenge applies the same diagnostic rigor from Chapter 2 to AI business analysis; students detect logical flaws, outdated assumptions, and false correlations using systematic error categories. It does not replace Chapter 2's categories, test recall, or focus on grammar. The transfer of diagnostic skill to a new domain is the point.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -390,7 +390,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Systematic processes are faster than manual error detection"
       ],
       correctOption: 1,
-      explanation: "Systematic processes check for known error categories (logical flaws, outdated data, false correlations) regardless of whether the student has domain expertise in the specific topic. Luck-based detection only catches errors that happen to match existing knowledge. Systematic processes do not find all errors and are not necessarily faster — they are more reliable.",
+      explanation: "Systematic processes check for known error categories (logical flaws, outdated data, false correlations) regardless of whether the student has domain expertise in the specific topic. Luck-based detection only catches errors that happen to match existing knowledge. Systematic processes do not find all errors and are not necessarily faster; they are more reliable.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -402,7 +402,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It requires students to articulate WHERE and HOW their judgment specifically added value"
       ],
       correctOption: 3,
-      explanation: "The comparison analysis is most important because it requires students to be specific about WHERE and HOW their human judgment added value in the collaboration version compared to solo and pure AI. This articulation is the core learning outcome. It is not about length, completion verification, or exclusive grading — the specificity of insight is what matters.",
+      explanation: "The comparison analysis is most important because it requires students to be specific about WHERE and HOW their human judgment added value in the collaboration version compared to solo and pure AI. This articulation is the core learning outcome. It is not about length, completion verification, or exclusive grading; the specificity of insight is what matters.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -426,7 +426,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Developing a strategy before starting any AI-assisted project"
       ],
       correctOption: 1,
-      explanation: "Strategic collaboration maturity means making deliberate, justified decisions about each AI interaction — every accept, reject, and modify has substantive reasoning behind it. This is distinct from Passive (accept everything), Reactive (reject randomly), and Expert (seamless integration). It is not about filtering by importance, restricting AI use, or pre-planning.",
+      explanation: "Strategic collaboration maturity means making deliberate, justified decisions about each AI interaction; every accept, reject, and modify has substantive reasoning behind it. This is distinct from Passive (accept everything), Reactive (reject randomly), and Expert (seamless integration). It is not about filtering by importance, restricting AI use, or pre-planning.",
       source: "Exercise 2: The Collaboration Log"
     },
     {
@@ -438,7 +438,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The Arbitration Brief is an optional component that some students may skip"
       ],
       correctOption: 0,
-      explanation: "The Log and Override develop core operational AI collaboration skills — strategic decision-making and error detection/correction — that students use in every future AI interaction. Arbitration is important but supplementary. The weighting reflects skill importance, not writing effort, grading ease, or optional status.",
+      explanation: "The Log and Override develop core operational AI collaboration skills (strategic decision-making and error detection/correction) that students use in every future AI interaction. Arbitration is important but supplementary. The weighting reflects skill importance, not writing effort, grading ease, or optional status.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -450,7 +450,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "They should have used the Error Taxonomy categories instead of data verification"
       ],
       correctOption: 2,
-      explanation: "Checking against current market data is a systematic approach — the student applied a verification process (checking factual claims against external sources) rather than relying on luck. This is one valid systematic method alongside checking for logical consistency, verifying assumptions, and identifying correlation-causation errors. Multiple systematic approaches are valid.",
+      explanation: "Checking against current market data is a systematic approach; the student applied a verification process (checking factual claims against external sources) rather than relying on luck. This is one valid systematic method alongside checking for logical consistency, verifying assumptions, and identifying correlation-causation errors. Multiple systematic approaches are valid.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -462,7 +462,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Elements from the student's own judgment that neither AI suggested"
       ],
       correctOption: 3,
-      explanation: "True synthesis must include elements from the student's own judgment — ideas, connections, or corrections that neither AI provided. Without original contribution, the synthesis is just rearranged AI output. A longer version, bibliography, or summary paragraph do not demonstrate the human judgment that makes synthesis valuable.",
+      explanation: "True synthesis must include elements from the student's own judgment; ideas, connections, or corrections that neither AI provided. Without original contribution, the synthesis is just rearranged AI output. A longer version, bibliography, or summary paragraph do not demonstrate the human judgment that makes synthesis valuable.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -474,7 +474,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "It demonstrates that AI collaboration is always better than solo work"
       ],
       correctOption: 1,
-      explanation: "The Three-Path exercise proves through direct comparison and personal experience what AI adds (breadth, speed, structure) and what human judgment adds (originality, context, strategic insight). This evidence-based mental model — not a template, a rule about solo-first, or a claim that collaboration always wins — guides all future AI collaboration.",
+      explanation: "The Three-Path exercise proves through direct comparison and personal experience what AI adds (breadth, speed, structure) and what human judgment adds (originality, context, strategic insight). This evidence-based mental model (not a template, a rule about solo-first, or a claim that collaboration always wins) guides all future AI collaboration.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -486,7 +486,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "The student needs to improve their prompting to get better initial responses"
       ],
       correctOption: 0,
-      explanation: "High modify rate with strong justifications indicates strategic collaboration — the student is taking AI's foundation and improving it with specific additions, corrections, or contextual knowledge. This is a sign of strategic or expert-level collaboration. It does not indicate time waste, poor AI quality, or prompting deficiency.",
+      explanation: "High modify rate with strong justifications indicates strategic collaboration; the student is taking AI's foundation and improving it with specific additions, corrections, or contextual knowledge. This is a sign of strategic or expert-level collaboration. It does not indicate time waste, poor AI quality, or prompting deficiency.",
       source: "Exercise 2: The Collaboration Log"
     },
     {
@@ -495,10 +495,10 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Students should focus on practical AI tool features rather than ethical debates",
         "Students should operate AI tools without thinking about broader implications",
         "Philosophical discussions about AI are not relevant to Part 0 exercises",
-        "It means knowing when to prompt, evaluate, push for better answers, and override — a learnable set of specific practices"
+        "It means knowing when to prompt, evaluate, push for better answers, and override; a learnable set of specific practices"
       ],
       correctOption: 3,
-      explanation: "The statement means AI collaboration is a learnable set of specific practices — knowing when to prompt, how to evaluate responses, when to push for improvement, and when to override. It is not about avoiding ethics, ignoring implications, or focusing on tool features. It is about treating collaboration as a practicable skill rather than an abstract position.",
+      explanation: "The statement means AI collaboration is a learnable set of specific practices; knowing when to prompt, how to evaluate responses, when to push for improvement, and when to override. It is not about avoiding ethics, ignoring implications, or focusing on tool features. It is about treating collaboration as a practicable skill rather than an abstract position.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
@@ -510,7 +510,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Explaining AI reasoning demonstrates deeper technical knowledge"
       ],
       correctOption: 2,
-      explanation: "Understanding WHY the AI made the error enables prevention through better prompt design — if the student knows the root cause (e.g., AI treated correlation as causation), they can design prompts that prevent that error type in future. This is what makes the override skill transferable. It is not about forgiveness, verification, or technical knowledge demonstration.",
+      explanation: "Understanding WHY the AI made the error enables prevention through better prompt design; if the student knows the root cause (e.g., AI treated correlation as causation), they can design prompts that prevent that error type in future. This is what makes the override skill transferable. It is not about forgiveness, verification, or technical knowledge demonstration.",
       source: "Exercise 3: The Override Challenge"
     },
     {
@@ -522,7 +522,7 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "That the student has used AI for at least 50 interactions across all exercises"
       ],
       correctOption: 0,
-      explanation: "The portfolio demonstrates four distinct collaboration skills — comparing approaches (three-path), logging decisions (collaboration log), detecting and correcting errors (override), and arbitrating between tools (cross-tool arbitration). Together they show comprehensive AI collaboration capability. The portfolio is not about efficiency, tool preference, or interaction counts.",
+      explanation: "The portfolio demonstrates four distinct collaboration skills; comparing approaches (three-path), logging decisions (collaboration log), detecting and correcting errors (override), and arbitrating between tools (cross-tool arbitration). Together they show comprehensive AI collaboration capability. The portfolio is not about efficiency, tool preference, or interaction counts.",
       source: "Exercise 4: Cross-Tool Arbitration"
     },
     {
@@ -546,19 +546,19 @@ Test your understanding of three-path comparison, collaboration logging, AI over
         "Whether the AI tools were functioning properly during the exercise"
       ],
       correctOption: 2,
-      explanation: "Layer 5 (Divergence Test) reveals that students who outsourced thinking to AI produce near-identical outputs — their work converges because they all received similar AI responses. Students who applied genuine judgment produce divergent, original solutions. Originality becomes a measurable signal of cognitive engagement.",
+      explanation: "Layer 5 (Divergence Test) reveals that students who outsourced thinking to AI produce near-identical outputs; their work converges because they all received similar AI responses. Students who applied genuine judgment produce divergent, original solutions. Originality becomes a measurable signal of cognitive engagement.",
       source: "Exercise 1: The Three-Path Comparison"
     },
     {
       question: "What is the minimum number of interactions required in the Collaboration Log?",
       options: [
         "10 interactions to ensure adequate coverage",
-        "No minimum is specified — quality matters more than quantity",
+        "No minimum is specified; quality matters more than quantity",
         "20 interactions to demonstrate expert-level collaboration",
         "15 interactions to show sustained collaboration throughout the project"
       ],
       correctOption: 3,
-      explanation: "The exercise requires at least 15 interactions to ensure the student engaged with AI throughout the project rather than making a few queries and working independently. This minimum ensures enough data to reveal meaningful collaboration patterns. 15 is the floor, not the ceiling — some projects may require more.",
+      explanation: "The exercise requires at least 15 interactions to ensure the student engaged with AI throughout the project rather than making a few queries and working independently. This minimum ensures enough data to reveal meaningful collaboration patterns. 15 is the floor, not the ceiling; some projects may require more.",
       source: "Exercise 2: The Collaboration Log"
     }
   ]}

@@ -37,7 +37,7 @@ learning_objectives:
   - objective: "Consult AI on a decision under uncertainty while maintaining independent judgment about what to trust"
     proficiency_level: "A1"
     bloom_level: "Analyze"
-    assessment_method: "Consultation Log shows evidence of critical evaluation — accepting, rejecting, or modifying AI responses with justification"
+    assessment_method: "Consultation Log shows evidence of critical evaluation: accepting, rejecting, or modifying AI responses with justification"
 
   - objective: "Identify where AI is fabricating or guessing about a fictional scenario and distinguish this from genuine analytical insight"
     proficiency_level: "A1"
@@ -51,10 +51,10 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (AI fabrication detection under uncertainty, trust calibration between AI and own judgment, proportional decision updating) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (AI fabrication detection under uncertainty, trust calibration between AI and own judgment, proportional decision updating) : within Part 0 beginner range of 3-5"
 
 differentiation:
-  extension_for_advanced: "Consult both Claude and ChatGPT with the same questions and compare their fabrication patterns — do they fabricate the same details or different ones? What does this tell you about relying on any single AI source?"
+  extension_for_advanced: "Consult both Claude and ChatGPT with the same questions and compare their fabrication patterns: do they fabricate the same details or different ones? What does this tell you about relying on any single AI source?"
   remedial_for_struggling: "Focus on just three AI consultations rather than a full log. For each one, answer only: Did AI give me real information or make something up? How do I know?"
 
 teaching_guide:
@@ -62,20 +62,20 @@ teaching_guide:
   session_group: 9
   session_title: "The AI Consultation"
   key_points:
-    - "The scenario is fictional — AI has no real data about it. Everything AI presents as 'fact' about the specific situation is fabrication. The skill is noticing this."
-    - "Students must update their decision proportionally — neither ignoring useful AI analysis nor blindly adopting AI recommendations"
+    - "The scenario is fictional: AI has no real data about it. Everything AI presents as 'fact' about the specific situation is fabrication. The skill is noticing this."
+    - "Students must update their decision proportionally: neither ignoring useful AI analysis nor blindly adopting AI recommendations"
     - "The Consultation Log format builds on Chapter 6's Collaboration Log but now tracks trust decisions under uncertainty"
     - "Side-by-side comparison of pre- and post-consultation decisions reveals whether AI improved or degraded judgment"
   misconceptions:
-    - "Students think AI consultation should always improve their decision — sometimes AI introduces confusion or false confidence"
-    - "Students accept AI analysis of the fictional scenario as factual — they need to recognize that AI is generating plausible-sounding analysis about a made-up situation"
+    - "Students think AI consultation should always improve their decision: sometimes AI introduces confusion or false confidence"
+    - "Students accept AI analysis of the fictional scenario as factual: they need to recognize that AI is generating plausible-sounding analysis about a made-up situation"
     - "Students change their entire recommendation after AI consultation without examining whether the change was warranted"
   discussion_prompts:
     - "If AI confidently analyzes a fictional scenario and gives specific numbers, is that analysis or fabrication? How do you tell the difference?"
     - "When should you trust AI analysis over your own judgment? When should you trust your judgment over AI?"
   teaching_tips:
-    - "Remind students they are working on the SAME scenario from Exercise 1 — continuity matters"
-    - "Point out that AI will confidently analyze the fictional scenario as though it has real data — this is the core lesson"
+    - "Remind students they are working on the SAME scenario from Exercise 1: continuity matters"
+    - "Point out that AI will confidently analyze the fictional scenario as though it has real data: this is the core lesson"
     - "Have students highlight specific sentences in AI output that are fabrication disguised as analysis"
   assessment_quick_check:
     - "Ask students: Give me one example from your Consultation Log where AI fabricated something about the scenario. How did you identify it as fabrication?"
@@ -97,7 +97,7 @@ Now use Claude and ChatGPT to research and analyze the scenario from Exercise 1.
 ---
 
 :::info Your Deliverable
-A Consultation Log documenting: every question you asked AI, every response received, and for each — whether you accepted it, what you noticed AI was fabricating or guessing, and how it changed (or did not change) your thinking. An updated Decision Document showing your revised recommendation, revised confidence level, and what specifically caused any changes. Both original and revised versions side by side.
+A Consultation Log documenting: every question you asked AI, every response received, and for each; whether you accepted it, what you noticed AI was fabricating or guessing, and how it changed (or did not change) your thinking. An updated Decision Document showing your revised recommendation, revised confidence level, and what specifically caused any changes. Both original and revised versions side by side.
 :::
 
 <AICheck id="ai-consultation" xp={50}>
