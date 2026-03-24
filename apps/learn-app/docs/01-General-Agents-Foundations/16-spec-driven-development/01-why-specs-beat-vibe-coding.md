@@ -76,21 +76,21 @@ teaching_guide:
   session_group: 1
   session_title: "Why Specifications Matter"
   key_points:
-    - "Three failure modes (context loss, assumption drift, pattern violations) are the chapter's diagnostic framework — students reference them in every subsequent lesson"
-    - "Vibe coding fails structurally, not from bad prompts — the compounding table (turns vs severity) is the key visual"
-    - "Specs solve all three failure modes by front-loading context — this connects directly to Chapter 15's context engineering principles"
+    - "Three failure modes (context loss, assumption drift, pattern violations) are the chapter's diagnostic framework: students reference them in every subsequent lesson"
+    - "Vibe coding fails structurally, not from bad prompts: the compounding table (turns vs severity) is the key visual"
+    - "Specs solve all three failure modes by front-loading context: this connects directly to Chapter 15's context engineering principles"
   misconceptions:
-    - "Students think vibe coding fails because they wrote bad prompts — emphasize the structural inevitability shown in the compounding table"
-    - "Students assume specs are only for coding — the report-writing example deliberately shows specs apply to any AI-assisted work"
-    - "Students confuse 'context loss' with 'AI forgetting' — Claude still has the tokens, but newer instructions receive more weight"
+    - "Students think vibe coding fails because they wrote bad prompts: emphasize the structural inevitability shown in the compounding table"
+    - "Students assume specs are only for coding: the report-writing example deliberately shows specs apply to any AI-assisted work"
+    - "Students confuse 'context loss' with 'AI forgetting': Claude still has the tokens, but newer instructions receive more weight"
   discussion_prompts:
-    - "Think of a time you iterated with AI and ended up worse than where you started — which failure mode was dominant?"
+    - "Think of a time you iterated with AI and ended up worse than where you started: which failure mode was dominant?"
     - "If Claude technically has all prior context in its window, why does context loss still happen?"
   teaching_tips:
-    - "Start with the report-writing scenario in paragraph 1 — every student has experienced this exact frustration"
+    - "Start with the report-writing scenario in paragraph 1: every student has experienced this exact frustration"
     - "The compounding table (Turn 1-5 through 16+) is worth drawing on a whiteboard to show how failure modes reinforce each other"
     - "Have students try Prompt 1 live and experience the drift firsthand before explaining the three failure modes"
-    - "Connect the Context Engineering table back to Chapter 15 — students should recognize these principles"
+    - "Connect the Context Engineering table back to Chapter 15: students should recognize these principles"
   assessment_quick_check:
     - "Name the three failure modes of vibe coding and give a one-sentence example of each"
     - "Explain why giving Claude more instructions mid-conversation can make output worse, not better"
@@ -98,11 +98,11 @@ teaching_guide:
 
 # Why Specs Beat Vibe Coding
 
-You ask Claude to write a report about personal AI employees. It generates a draft. You realize you wanted more focus on business ROI, so you ask for that. Claude rewrites—but now the technical details you liked are gone. You clarify, and Claude apologizes and adds them back—but the structure is completely different. Twenty minutes later, you have a document that technically addresses your topic but reads like three different authors with conflicting views.
+You ask Claude to write a report about personal AI employees. It generates a draft. You realize you wanted more focus on business ROI, so you ask for that. Claude rewrites,but now the technical details you liked are gone. You clarify, and Claude apologizes and adds them back,but the structure is completely different. Twenty minutes later, you have a document that technically addresses your topic but reads like three different authors with conflicting views.
 
 Sound familiar?
 
-This is **vibe coding**—the natural way people first approach AI assistants. You have a vague idea, you describe it, and AI generates something. You refine through conversation. Sometimes it works brilliantly. Other times, you spend more time correcting than you would have spent writing it yourself.
+This is **vibe coding:** the natural way people first approach AI assistants. You have a vague idea, you describe it, and AI generates something. You refine through conversation. Sometimes it works brilliantly. Other times, you spend more time correcting than you would have spent writing it yourself.
 
 The problem is not the AI. The problem is the workflow. Vibe coding fails systematically for substantial work, and understanding why reveals the solution.
 
@@ -131,7 +131,7 @@ Claude rewrites with heavy business focus, but drops the specific tool compariso
 **Turn 9:**
 "Bring back the tool comparisons, but keep the ROI focus."
 
-Claude attempts to merge both, but the structure becomes inconsistent—some sections are technical, others are business-focused.
+Claude attempts to merge both, but the structure becomes inconsistent,some sections are technical, others are business-focused.
 
 **Turn 14:**
 "Why does this read like a blog post? I needed something more like a research report with citations."
@@ -141,7 +141,7 @@ Claude apologizes and restructures, but the ROI analysis you refined is now buri
 **Turn 20:**
 You give up and start over.
 
-What went wrong? Not any single turn—each response was reasonable given the question asked. The failure is structural.
+What went wrong? Not any single turn,each response was reasonable given the question asked. The failure is structural.
 
 ## Three Failure Modes
 
@@ -149,7 +149,7 @@ Vibe coding fails in three predictable ways. Once you recognize these patterns, 
 
 ### 1. Context Loss: Each Iteration Loses Discoveries
 
-When you ask Claude to add ROI focus in Turn 5, it focuses on that request. The nuances you established in earlier turns—the specific tools you wanted compared, the technical depth you appreciated, the structure that was working—fade from attention. Not because Claude forgot (they're technically still in context), but because newer information receives more weight.
+When you ask Claude to add ROI focus in Turn 5, it focuses on that request. The nuances you established in earlier turns,the specific tools you wanted compared, the technical depth you appreciated, the structure that was working,fade from attention. Not because Claude forgot (they're technically still in context), but because newer information receives more weight.
 
 **The mechanism**: Each new request shifts focus. Previous decisions become background noise. With enough turns, early requirements are effectively invisible.
 
@@ -191,7 +191,7 @@ Turn 14 reveals the deepest problem. Claude wrote blog-style content because tha
 
 ## The Compounding Problem
 
-These three modes don't just occur—they amplify each other.
+These three modes don't just occur,they amplify each other.
 
 Context loss means you stop re-explaining constraints. Assumption drift means Claude fills those gaps with defaults. Pattern violations mean the defaults conflict with your architecture. By Turn 15, you're not iterating toward your goal. You're managing an increasingly divergent codebase.
 
@@ -214,13 +214,13 @@ In Chapter 15, you learned that context quality determines agent reliability. Th
 | Assumption drift   | Missing constraints in context (Ch 15, Lesson 5)     |
 | Pattern violations | Architecture not in working memory (Ch 15, Lesson 2) |
 
-Specifications solve these by applying context engineering systematically—front-loading the context Claude needs rather than discovering it through iteration. The spec becomes the **persistent, high-signal context** that Chapter 15 taught you to build.
+Specifications solve these by applying context engineering systematically,front-loading the context Claude needs rather than discovering it through iteration. The spec becomes the **persistent, high-signal context** that Chapter 15 taught you to build.
 
 ## The Insight: Claude Needs the Complete Picture Upfront
 
 The solution is surprisingly simple once you see the problem clearly.
 
-Claude can write your report correctly on the first try—if it knows:
+Claude can write your report correctly on the first try,if it knows:
 
 - **What exists**: Your current tables, patterns, and architecture
 - **What to build**: Specific requirements, not vague features
@@ -267,7 +267,7 @@ Look at the report you just wrote. List every assumption you made:
 For each assumption, what should you have asked me first?
 ```
 
-**What you're learning:** Claude made dozens of implicit decisions—general audience vs technical, blog format vs research report, breadth vs depth. These assumptions, not your topic, caused the iteration cycles. The questions Claude identifies are the outline of a specification.
+**What you're learning:** Claude made dozens of implicit decisions,general audience vs technical, blog format vs research report, breadth vs depth. These assumptions, not your topic, caused the iteration cycles. The questions Claude identifies are the outline of a specification.
 
 **Prompt 3: Preview the Solution**
 

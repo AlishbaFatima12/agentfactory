@@ -68,23 +68,23 @@ teaching_guide:
   session_group: 1
   session_title: "Understanding Context Engineering"
   key_points:
-    - "The 150-200 instruction limit is a hard cognitive ceiling for LLMs — Claude Code's system prompt already consumes ~50, leaving only 100-150 for CLAUDE.md"
+    - "The 150-200 instruction limit is a hard cognitive ceiling for LLMs: Claude Code's system prompt already consumes ~50, leaving only 100-150 for CLAUDE.md"
     - "The 4-question audit framework (Would Claude ask? Could Claude infer? Does it change? Is it a default?) is a reusable tool applied repeatedly in later lessons"
-    - "Progressive disclosure via file references is the key pattern — keep CLAUDE.md under 60 lines and let Claude read detailed files on demand"
-    - "The three-zone strategy (primacy/middle/recency) means position in CLAUDE.md matters as much as content — critical rules go top, workflows go bottom"
+    - "Progressive disclosure via file references is the key pattern: keep CLAUDE.md under 60 lines and let Claude read detailed files on demand"
+    - "The three-zone strategy (primacy/middle/recency) means position in CLAUDE.md matters as much as content: critical rules go top, workflows go bottom"
   misconceptions:
-    - "Students think more instructions means better AI output — the instruction limit means excess rules actively degrade compliance"
-    - "Students resist deleting CLAUDE.md content because it feels like losing control — emphasize moved-to-file content is still accessible, just not consuming budget"
-    - "Students confuse 'Claude knows this convention' with 'Claude will follow my specific version' — defaults need overriding only when your convention differs"
+    - "Students think more instructions means better AI output: the instruction limit means excess rules actively degrade compliance"
+    - "Students resist deleting CLAUDE.md content because it feels like losing control: emphasize moved-to-file content is still accessible, just not consuming budget"
+    - "Students confuse 'Claude knows this convention' with 'Claude will follow my specific version': defaults need overriding only when your convention differs"
   discussion_prompts:
     - "If 30-60% of enterprise context tokens add no value, what does that tell you about how most people use AI tools today?"
     - "Which of the four audit questions do you think would eliminate the most noise from YOUR current CLAUDE.md?"
     - "Why might a 50-line CLAUDE.md outperform a 300-line one even though it contains less information?"
   teaching_tips:
-    - "Start by having students count their current CLAUDE.md lines and instruction count — the gap between their count and the 150-200 ceiling creates urgency"
-    - "Walk through the audit table example as a class exercise before students do it solo — the SIGNAL/NOISE/PARTIAL classification needs calibration"
-    - "The before/after CLAUDE.md examples are the strongest teaching moments — show the 5-line review process vs the 1-line version side by side"
-    - "Budget 30+ minutes for the lab — students consistently underestimate how long a thorough audit takes"
+    - "Start by having students count their current CLAUDE.md lines and instruction count: the gap between their count and the 150-200 ceiling creates urgency"
+    - "Walk through the audit table example as a class exercise before students do it solo: the SIGNAL/NOISE/PARTIAL classification needs calibration"
+    - "The before/after CLAUDE.md examples are the strongest teaching moments: show the 5-line review process vs the 1-line version side by side"
+    - "Budget 30+ minutes for the lab: students consistently underestimate how long a thorough audit takes"
   assessment_quick_check:
     - "State the four audit questions from memory and apply one to a sample CLAUDE.md section"
     - "Explain progressive disclosure in one sentence and give an example of moving content to a reference file"
@@ -93,13 +93,13 @@ teaching_guide:
 
 # Signal vs Noise: Auditing Your Context for Quality
 
-Context has a budget—and that quality degrades as session window fills in with messages, tool definitions and CLAUDE.md. Now the question becomes: **how much of your CLAUDE.md is actually doing useful work?**
+Context has a budget,and that quality degrades as session window fills in with messages, tool definitions and CLAUDE.md. Now the question becomes: **how much of your CLAUDE.md is actually doing useful work?**
 
 The uncomfortable answer, backed by research across enterprise deployments:
 
-> "Across enterprise workloads, roughly 30% to 60% of tokens sent to models add no value." — Neal Patel
+> "Across enterprise workloads, roughly 30% to 60% of tokens sent to models add no value.". Neal Patel
 
-That means between one-third and two-thirds of your carefully crafted CLAUDE.md might be noise—content that consumes attention budget without improving output quality. Worse, that noise competes with signal for the limited attention available.
+That means between one-third and two-thirds of your carefully crafted CLAUDE.md might be noise,content that consumes attention budget without improving output quality. Worse, that noise competes with signal for the limited attention available.
 
 This lesson teaches you to tell the difference, and to engineer a CLAUDE.md that's lean, effective, and measurably better than a bloated one.
 
@@ -123,9 +123,9 @@ For each line, section, or instruction in your CLAUDE.md, ask these four questio
 
 ### Question 1: Would Claude ask me about this if I didn't include it?
 
-If the answer is yes—Claude would be uncertain, would ask for clarification, or would make the wrong assumption—then it's **SIGNAL**.
+If the answer is yes,Claude would be uncertain, would ask for clarification, or would make the wrong assumption,then it's **SIGNAL**.
 
-If the answer is no—Claude would proceed correctly without being told—then it's potentially **NOISE**.
+If the answer is no,Claude would proceed correctly without being told,then it's potentially **NOISE**.
 
 **Examples across domains:**
 
@@ -136,7 +136,7 @@ If the answer is no—Claude would proceed correctly without being told—then i
 
 ### Question 2: Could Claude figure this out from reading existing materials?
 
-If the information is already present in your workspace—in existing documents, configuration files, templates, or established patterns—then including it in CLAUDE.md is redundant. Claude will read those files anyway.
+If the information is already present in your workspace,in existing documents, configuration files, templates, or established patterns,then including it in CLAUDE.md is redundant. Claude will read those files anyway.
 
 **Examples across domains:**
 
@@ -147,7 +147,7 @@ If the information is already present in your workspace—in existing documents,
 
 ### Question 3: Does this change frequently?
 
-Information that changes often becomes stale in CLAUDE.md. Stale information is worse than no information—it creates context poisoning where Claude follows outdated rules.
+Information that changes often becomes stale in CLAUDE.md. Stale information is worse than no information,it creates context poisoning where Claude follows outdated rules.
 
 **Examples across domains:**
 
@@ -279,7 +279,7 @@ Jane Doe - CFO - jane@acme.com - Budget authority
 
 ## Position Matters: The Three-Zone Strategy
 
-A lean CLAUDE.md is necessary but not sufficient. Research on LLM attention patterns reveals a **U-shaped curve**: models pay significantly more attention to the beginning and end of their context window, while middle content receives approximately 30% less recall. This isn't a bug—it's how attention mechanisms work.
+A lean CLAUDE.md is necessary but not sufficient. Research on LLM attention patterns reveals a **U-shaped curve**: models pay significantly more attention to the beginning and end of their context window, while middle content receives approximately 30% less recall. This isn't a bug,it's how attention mechanisms work.
 
 ### The Three Zones
 
@@ -324,7 +324,7 @@ Run the review checklist at docs/review-process.md
 
 **If you'd be upset when the AI ignores it, don't put it in the middle.**
 
-Your most critical constraints belong in Zone 1 (top). Your workflow triggers belong in Zone 3 (bottom). Everything else—the reference material, the nice-to-haves, the detailed documentation—goes in Zone 2 or moves to external files entirely.
+Your most critical constraints belong in Zone 1 (top). Your workflow triggers belong in Zone 3 (bottom). Everything else,the reference material, the nice-to-haves, the detailed documentation,goes in Zone 2 or moves to external files entirely.
 
 This is why progressive disclosure matters even more than you might think: not only does it keep your CLAUDE.md lean, it keeps your high-attention zones reserved for high-priority content.
 
@@ -358,10 +358,10 @@ Then create `docs/review-process.md` with the full content.
 
 ### Why This Works
 
-1. **CLAUDE.md stays lean** — Under 60 lines, under instruction budget
-2. **Details load on demand** — Claude reads the file when relevant
-3. **Single source of truth** — Update docs/review-process.md once, not CLAUDE.md plus separate docs
-4. **Position-optimized** — The reference line can stay in high-attention zones; verbose content doesn't consume prime real estate
+1. **CLAUDE.md stays lean:** Under 60 lines, under instruction budget
+2. **Details load on demand:** Claude reads the file when relevant
+3. **Single source of truth:** Update docs/review-process.md once, not CLAUDE.md plus separate docs
+4. **Position-optimized:** The reference line can stay in high-attention zones; verbose content doesn't consume prime real estate
 
 ### Recommended Reference Structure
 
@@ -552,7 +552,7 @@ An audit without comparison testing is guesswork. You need empirical evidence th
 
 **Mistake 4: Forgetting position optimization**
 
-A lean CLAUDE.md still needs position engineering. Your 52 lines should have critical rules at the top and workflow instructions at the bottom—not signal buried in the middle.
+A lean CLAUDE.md still needs position engineering. Your 52 lines should have critical rules at the top and workflow instructions at the bottom,not signal buried in the middle.
 
 ## Try With AI
 
@@ -569,7 +569,7 @@ For each section, give a verdict: SIGNAL, NOISE, or PARTIAL.
 Then show me what a lean version would look like (under 60 lines).
 ```
 
-**What you're learning:** How to use AI as an audit partner. Claude can apply the 4-question framework to its own context—it knows what it would ask about, what it can infer, and what conventions it already follows. This prompt turns the audit from solo work into collaboration.
+**What you're learning:** How to use AI as an audit partner. Claude can apply the 4-question framework to its own context,it knows what it would ask about, what it can infer, and what conventions it already follows. This prompt turns the audit from solo work into collaboration.
 
 ### Prompt 2: Progressive Disclosure Refactor
 
@@ -602,7 +602,7 @@ If you can answer these confidently, my CLAUDE.md has sufficient signal.
 If you're uncertain, I've cut too much.
 ```
 
-**What you're learning:** Whether you've gone too far. A CLAUDE.md can be too lean—stripped of signal Claude actually needs. This prompt stress-tests your audit by checking whether essential information survived. If Claude can't answer these questions, you need to restore some content.
+**What you're learning:** Whether you've gone too far. A CLAUDE.md can be too lean,stripped of signal Claude actually needs. This prompt stress-tests your audit by checking whether essential information survived. If Claude can't answer these questions, you need to restore some content.
 
 ## Flashcards Study Aid
 

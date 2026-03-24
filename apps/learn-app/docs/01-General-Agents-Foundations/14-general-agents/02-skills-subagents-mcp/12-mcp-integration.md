@@ -62,22 +62,22 @@ teaching_guide:
   key_points:
     - "MCP completes the three-pillar architecture: CLAUDE.md (project context) + Skills (procedures) + MCP (external access) = Digital FTE"
     - "The phone directory analogy (approved contacts for specific expertise) is the key mental model for understanding MCP's role as safe, standardized external access"
-    - "Tool Search (auto since Claude Code 2.1.7+) reduces MCP overhead by 85% automatically — students should know this is built-in before worrying about optimization"
-    - "The 'When NOT to use MCP' section is as important as 'When to use' — security boundaries around private data and untrusted servers are non-negotiable"
+    - "Tool Search (auto since Claude Code 2.1.7+) reduces MCP overhead by 85% automatically; students should know this is built-in before worrying about optimization"
+    - "The 'When NOT to use MCP' section is as important as 'When to use'; security boundaries around private data and untrusted servers are non-negotiable"
   misconceptions:
-    - "Students think MCP replaces skills — use the expertise packs vs data pipes table to show they are complementary layers, not alternatives"
-    - "Students assume all MCP servers are safe to install — the security section explicitly warns against untrusted npm packages and requires source verification"
-    - "Students think MCP gives Claude unrestricted internet access — MCP provides structured, permission-controlled access through specific approved servers"
-    - "Students confuse MCP overhead with MCP usefulness — Tool Search handles baseline efficiency automatically, so overhead is not a reason to avoid MCP"
+    - "Students think MCP replaces skills; use the expertise packs vs data pipes table to show they are complementary layers, not alternatives"
+    - "Students assume all MCP servers are safe to install; the security section explicitly warns against untrusted npm packages and requires source verification"
+    - "Students think MCP gives Claude unrestricted internet access; MCP provides structured, permission-controlled access through specific approved servers"
+    - "Students confuse MCP overhead with MCP usefulness; Tool Search handles baseline efficiency automatically, so overhead is not a reason to avoid MCP"
   discussion_prompts:
-    - "The lesson shows Claude browsing Amazon and fetching docs — what external system would you connect to first in your work, and what would you use it for?"
-    - "The security section says 'never paste secrets into files' — why is this especially important when MCP servers can access external systems?"
-    - "CLAUDE.md gives context, Skills give procedures, MCP gives access — which of the three would be hardest to replace with the other two?"
+    - "The lesson shows Claude browsing Amazon and fetching docs; what external system would you connect to first in your work, and what would you use it for?"
+    - "The security section says 'never paste secrets into files'; why is this especially important when MCP servers can access external systems?"
+    - "CLAUDE.md gives context, Skills give procedures, MCP gives access; which of the three would be hardest to replace with the other two?"
   teaching_tips:
-    - "Run the two MCP installation commands live at the start of class — students seeing 'claude mcp add' succeed removes installation anxiety"
+    - "Run the two MCP installation commands live at the start of class; students seeing 'claude mcp add' succeed removes installation anxiety"
     - "Demo Workflow 1 (Amazon shopping) first because it produces visually interesting output that students immediately recognize as useful"
-    - "Use the Expert Insight box (Three Pillars) as a recap moment — draw the CLAUDE.md > Skills > MCP > Digital FTE diagram on the board"
-    - "For the security discussion, show a concrete example: 'claude mcp add mystery-tool some-random-npm-package' vs the verified Playwright command — make the risk tangible"
+    - "Use the Expert Insight box (Three Pillars) as a recap moment; draw the CLAUDE.md > Skills > MCP > Digital FTE diagram on the board"
+    - "For the security discussion, show a concrete example: 'claude mcp add mystery-tool some-random-npm-package' vs the verified Playwright command; make the risk tangible"
   assessment_quick_check:
     - "Complete this sentence: Skills provide ___, MCP provides ___"
     - "What command lists all MCP servers currently installed in your Claude Code?"
@@ -124,9 +124,9 @@ All of that data lives **outside your computer**. Claude Code can't reach it... 
 
 Imagine Claude Code is a brilliant assistant who works in your office (your computer).
 
-**Without MCP**: Your assistant can only use what's in the office—files on your desk, folders in your cabinet. That's it.
+**Without MCP**: Your assistant can only use what's in the office: files on your desk, folders in your cabinet. That's it.
 
-**With MCP**: You give your assistant a **phone directory** with approved contacts—a web browser expert, a documentation specialist, a database consultant. Now when your assistant needs outside information, they can call the right expert and get answers safely.
+**With MCP**: You give your assistant a **phone directory** with approved contacts: a web browser expert, a documentation specialist, a database consultant. Now when your assistant needs outside information, they can call the right expert and get answers safely.
 
 **MCP is that phone directory.** It connects Claude Code (your AI agent) to external tools and data sources in a **standardized, safe way**.
 
@@ -172,9 +172,9 @@ claude mcp add --transport stdio context7 npx @upstash/context7-mcp
 
 ---
 
-## Workflow 1: Shop Together — Find a Shirt on Amazon (Playwright MCP)
+## Workflow 1: Shop Together; Find a Shirt on Amazon (Playwright MCP)
 
-Goal: Ask Claude to browse Amazon and find a shirt that matches your preferences. No code—just a plain request.
+Goal: Ask Claude to browse Amazon and find a shirt that matches your preferences. No code: just a plain request.
 
 In Claude Code, say:
 
@@ -230,7 +230,7 @@ If you get an error:
 
 ---
 
-## Workflow 2: Learn What's New — Ask for MCP Docs (Context7 MCP)
+## Workflow 2: Learn What's New; Ask for MCP Docs (Context7 MCP)
 
 Goal: Ask Claude to use Context7 to fetch and summarize the latest resources about MCP in Claude Code.
 

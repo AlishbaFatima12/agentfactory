@@ -71,21 +71,21 @@ teaching_guide:
   session_group: 2
   session_title: "Persistent State and Knowledge Transfer"
   key_points:
-    - "The core insight is plan-on-disk enables context freedom — /clear destroys conversation but Tasks survive because they live in ~/.claude/tasks/, not in context"
-    - "Task dependencies form DAGs (Directed Acyclic Graphs) — completing a blocking task automatically unblocks dependents, enabling wave-based execution"
+    - "The core insight is plan-on-disk enables context freedom: /clear destroys conversation but Tasks survive because they live in ~/.claude/tasks/, not in context"
+    - "Task dependencies form DAGs (Directed Acyclic Graphs): completing a blocking task automatically unblocks dependents, enabling wave-based execution"
     - "Cross-session coordination via CLAUDE_CODE_TASK_LIST_ID enables parallel workflows like Writer/Reviewer patterns across multiple terminals"
-    - "Tasks track WHAT needs doing (action items), while progress files (lesson 07) track WHY (decisions and discoveries) — students need both"
+    - "Tasks track WHAT needs doing (action items), while progress files (lesson 07) track WHY (decisions and discoveries): students need both"
   misconceptions:
-    - "Students think /clear destroys their work — emphasize that Tasks survive because they are files on disk, not conversation state"
-    - "Students confuse Tasks with simple todo lists — Tasks have dependency graphs, cross-session sharing, and automatic unblocking that make them a coordination system"
-    - "Students try to call TaskCreate/TaskUpdate directly — they should describe what they need in natural language and let Claude handle the internal tool calls"
+    - "Students think /clear destroys their work: emphasize that Tasks survive because they are files on disk, not conversation state"
+    - "Students confuse Tasks with simple todo lists: Tasks have dependency graphs, cross-session sharing, and automatic unblocking that make them a coordination system"
+    - "Students try to call TaskCreate/TaskUpdate directly: they should describe what they need in natural language and let Claude handle the internal tool calls"
   discussion_prompts:
-    - "Think of a multi-step project in your domain — what would the dependency graph look like? Which tasks could run in parallel?"
+    - "Think of a multi-step project in your domain: what would the dependency graph look like? Which tasks could run in parallel?"
     - "Why is the plan-clear-execute pattern better than trying to keep everything in context and hoping quality doesn't degrade?"
   teaching_tips:
-    - "Start with the opening scenario — every student has experienced losing their plan after /clear, so the problem resonates immediately"
-    - "The DAG diagram (Tasks 1-4 with arrows) is worth drawing on a whiteboard — have students trace the execution order"
-    - "Have students do the lab step-by-step: create tasks, run /clear, then verify tasks survived — the 'aha' moment happens when they see persistence firsthand"
+    - "Start with the opening scenario: every student has experienced losing their plan after /clear, so the problem resonates immediately"
+    - "The DAG diagram (Tasks 1-4 with arrows) is worth drawing on a whiteboard: have students trace the execution order"
+    - "Have students do the lab step-by-step: create tasks, run /clear, then verify tasks survived: the 'aha' moment happens when they see persistence firsthand"
     - "The domain-specific examples (legal due diligence, marketing campaign, research synthesis) help non-technical students see relevance"
   assessment_quick_check:
     - "Where do Tasks physically live, and why does this matter for /clear?"
@@ -145,7 +145,7 @@ This is context engineering in action. You've learned that context fills up and 
 
 ## How You Work With Tasks
 
-You interact with tasks by talking to Claude. Claude uses internal tools (TaskCreate, TaskUpdate, TaskList, TaskGet) behind the scenes—you don't call these directly.
+You interact with tasks by talking to Claude. Claude uses internal tools (TaskCreate, TaskUpdate, TaskList, TaskGet) behind the scenes,you don't call these directly.
 
 ### Creating Tasks
 
@@ -218,7 +218,7 @@ or Claude marks it complete automatically after finishing the work.
 
 ## Why Tasks Survive /clear
 
-Tasks are stored as files in `~/.claude/tasks/`, not in your conversation. That's why they persist when you clear context—they're on disk, not in memory.
+Tasks are stored as files in `~/.claude/tasks/`, not in your conversation. That's why they persist when you clear context,they're on disk, not in memory.
 
 ## Dependency Graphs: Task DAGs
 
@@ -253,7 +253,7 @@ then run integration tests. The user service depends on auth being fixed.
 Create tasks with the right dependencies.
 ```
 
-Claude handles the internal mechanics—creating the tasks and wiring up the dependency graph. You describe WHAT you need; Claude figures out HOW to structure it.
+Claude handles the internal mechanics,creating the tasks and wiring up the dependency graph. You describe WHAT you need; Claude figures out HOW to structure it.
 
 ## What Filesystem Persistence Means for You
 
@@ -261,7 +261,7 @@ Because tasks live on disk (`~/.claude/tasks/`), you get three benefits:
 
 **1. Crash Recovery**: If your terminal crashes, your tasks persist. Resume your session, ask "What tasks do we have?", and continue where you left off.
 
-**2. Session Independence**: Tasks don't consume context tokens. A 50-task project plan uses zero tokens in your conversation—it's all on disk.
+**2. Session Independence**: Tasks don't consume context tokens. A 50-task project plan uses zero tokens in your conversation,it's all on disk.
 
 **3. Clear Freely**: Run `/clear` whenever context fills up. Your roadmap survives because it was never in context to begin with.
 
@@ -343,7 +343,7 @@ Task plan:
 3. **Wave 3**: Synthesis tasks run after their dependencies complete
 4. **Continue**: Each completed task automatically unblocks dependents
 
-**Why this works**: Each task runs with focused context. The agent drafting the executive summary doesn't inherit the noise from analyzing 50 contracts—it gets the cross-referenced findings and writes clearly. Context stays clean at every stage.
+**Why this works**: Each task runs with focused context. The agent drafting the executive summary doesn't inherit the noise from analyzing 50 contracts,it gets the cross-referenced findings and writes clearly. Context stays clean at every stage.
 
 This is the pattern: **plan → clear → delegate → synthesize**. The task system manages the coordination. You focus on the work.
 
@@ -494,7 +494,7 @@ Show me the tasks again.
 Mark the first task as done and show me what's now available.
 ```
 
-**What you're learning:** When a blocking task completes, dependent tasks automatically become available. This is the DAG in action—no manual coordination needed.
+**What you're learning:** When a blocking task completes, dependent tasks automatically become available. This is the DAG in action,no manual coordination needed.
 
 ### Prompt 4: Cross-Session Setup (Advanced)
 

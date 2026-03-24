@@ -101,27 +101,27 @@ teaching_guide:
   session_group: 6
   session_title: "Autonomous Workflows, Creator Practices, and Exercises"
   key_points:
-    - "Ralph Loop uses the Stop hook to intercept Claude's exit and reinject a continuation prompt — this is NOT a new concept but a specific application of hooks from Lesson 15"
-    - "The completion promise is static and uses exact string matching — it cannot be changed mid-loop, which is why the embedded <promise> pattern is recommended for reliability"
-    - "Max-iterations is the primary safety net, not the completion promise — students must always set a limit to prevent runaway cost"
+    - "Ralph Loop uses the Stop hook to intercept Claude's exit and reinject a continuation prompt; this is NOT a new concept but a specific application of hooks from Lesson 15"
+    - "The completion promise is static and uses exact string matching; it cannot be changed mid-loop, which is why the embedded <promise> pattern is recommended for reliability"
+    - "Max-iterations is the primary safety net, not the completion promise; students must always set a limit to prevent runaway cost"
     - "Good Ralph Loop candidates have 10+ expected iterations, objective verification (tests pass, build succeeds), and deterministic completion signals"
   misconceptions:
-    - "Students think Ralph Loop is AI making decisions about when to stop — actually it is a mechanical string-match check on Claude's output against a static completion promise"
-    - "Students assume any task benefits from autonomous iteration — tasks requiring human judgment, creative work, or multi-goal optimization are poor fits"
+    - "Students think Ralph Loop is AI making decisions about when to stop; actually it is a mechanical string-match check on Claude's output against a static completion promise"
+    - "Students assume any task benefits from autonomous iteration; tasks requiring human judgment, creative work, or multi-goal optimization are poor fits"
     - "Students underestimate cost: a 30-iteration loop can cost $30-60 in API credits, and overnight runs can exceed $100"
-    - "Students believe they can modify the completion promise during a loop — it is set once at the initial /ralph-loop command and cannot be changed"
+    - "Students believe they can modify the completion promise during a loop; it is set once at the initial /ralph-loop command and cannot be changed"
   discussion_prompts:
     - "Think of a task you did recently that required copying errors back to Claude multiple times. Would Ralph Loop have been appropriate? Apply the decision table criteria."
     - "What is the difference between automation that is safe to leave unattended and automation that requires periodic monitoring? Where does Ralph Loop fall?"
     - "If a loop is stuck repeating the same 3 errors, what does that tell you about the task design versus Claude's capability?"
   teaching_tips:
-    - "Walk through the Stop hook flow diagram step by step — trace the linting example from '47 problems' to '0 problems' showing each intercept point"
-    - "Have students write completion promises for 3 different scenarios BEFORE showing the examples — then compare their promises against the good/poor examples in the lesson"
+    - "Walk through the Stop hook flow diagram step by step; trace the linting example from '47 problems' to '0 problems' showing each intercept point"
+    - "Have students write completion promises for 3 different scenarios BEFORE showing the examples; then compare their promises against the good/poor examples in the lesson"
     - "Emphasize the cost table early: show students that a complex 80-iteration refactor can cost $80-150 before they get excited about running overnight loops"
     - "Use the Decision Table (Good Fit vs Poor Fit) as a classification exercise: give students 5 tasks and have them categorize each with justification"
   assessment_quick_check:
     - "What two conditions cause a Ralph Loop to stop iterating?"
-    - "Write a completion promise for 'fix all TypeScript errors in the project' — is yours objective, specific, and terminal?"
+    - "Write a completion promise for 'fix all TypeScript errors in the project'; is yours objective, specific, and terminal?"
     - "Why is --max-iterations the primary safety net rather than the completion promise?"
 
 # Legacy compatibility
@@ -146,9 +146,9 @@ You're cleaning up code quality issues in a project you inherited. Your linter f
 9. You run the linter: 7 problems remaining
 10. Repeat this cycle 6 more times
 
-After 30 minutes, you're frustrated. Not because Claude can't fix the errors—it can. But because you've become a **manual feedback loop operator**, running commands, copying output, and waiting for Claude to respond.
+After 30 minutes, you're frustrated. Not because Claude can't fix the errors: it can. But because you've become a **manual feedback loop operator**, running commands, copying output, and waiting for Claude to respond.
 
-**The question**: What if Claude could run the linter, see the errors, fix them, verify the fixes worked, and continue until all 47 problems are resolved—while you go get coffee?
+**The question**: What if Claude could run the linter, see the errors, fix them, verify the fixes worked, and continue until all 47 problems are resolved: while you go get coffee?
 
 **That's what Ralph Wiggum Loop solves.**
 
@@ -170,7 +170,7 @@ After 30 minutes, you're frustrated. Not because Claude can't fix the errors—i
 - Deployment debugging (staging environment issues)
 - Migration projects (database schema changes, API updates)
 
-These aren't edge cases—they're everyday workflows. Every developer faces iteration-heavy tasks weekly.
+These aren't edge cases: they're everyday workflows. Every developer faces iteration-heavy tasks weekly.
 
 ### When Manual Iteration Becomes a Bottleneck
 
@@ -187,9 +187,9 @@ These aren't edge cases—they're everyday workflows. Every developer faces iter
 
 ## What is Ralph Wiggum Loop?
 
-**Definition**: Ralph Wiggum Loop is a Claude Code plugin that enables **autonomous iteration**—Claude Code runs a task, checks the result, identifies what needs fixing, makes corrections, and repeats until a completion condition is met, all without your intervention.
+**Definition**: Ralph Wiggum Loop is a Claude Code plugin that enables **autonomous iteration**:Claude Code runs a task, checks the result, identifies what needs fixing, makes corrections, and repeats until a completion condition is met, all without your intervention.
 
-**Named after**: The Simpsons character Ralph Wiggum, known for cheerful persistence despite mistakes. The plugin embodies "try, fail, learn, repeat"—exactly what autonomous iteration requires.
+**Named after**: The Simpsons character Ralph Wiggum, known for cheerful persistence despite mistakes. The plugin embodies "try, fail, learn, repeat": exactly what autonomous iteration requires.
 
 ### Architecture: How It Works
 
@@ -269,7 +269,7 @@ Stop Hook: [SEES COMPLETION PROMISE] "You're actually done now."
 Session: [STOP - task complete]
 ```
 
-**The Pattern**: Stop hook acts as a **persistence layer**—it won't let Claude quit until success criteria are met.
+**The Pattern**: Stop hook acts as a **persistence layer**:it won't let Claude quit until success criteria are met.
 
 ### Technical Detail: How the Hook Reinjects Prompts
 
@@ -287,7 +287,7 @@ When Stop hook fires, it:
    - If yes → Inject prompt: "The task isn't complete yet. Review the output, identify what's wrong, fix it, and verify the result."
    - If no → Force stop with warning: "Max iterations reached. Stopping."
 
-**Why This Works**: Claude Code is stateful—it remembers the conversation. Each reinjection adds context about what failed, creating a **self-correcting loop** where Claude learns from previous attempts.
+**Why This Works**: Claude Code is stateful: it remembers the conversation. Each reinjection adds context about what failed, creating a **self-correcting loop** where Claude learns from previous attempts.
 
 ### Critical Technical Detail: Completion Promise is Static
 
@@ -300,7 +300,7 @@ This means:
 - ❌ You **cannot** have multiple conditions (no "DONE OR SUCCESS")
 - ✅ You **must** get it right at the initial `/ralph-loop` command
 
-The Stop hook checks for the **same exact string** on every iteration using exact string matching—there's no dynamic adaptation or smart detection.
+The Stop hook checks for the **same exact string** on every iteration using exact string matching: there's no dynamic adaptation or smart detection.
 
 **Why `--max-iterations` is Your Primary Safety Net**: Since the completion promise uses fragile exact string matching and cannot be changed during runtime, always rely on `--max-iterations` as your main safety mechanism. The completion promise is a success signal, not a safety mechanism.
 
@@ -308,7 +308,7 @@ The Stop hook checks for the **same exact string** on every iteration using exac
 
 ## Installing Ralph Wiggum Plugin
 
-The Ralph Wiggum plugin is available through Claude Code plugin marketplaces. This lesson teaches the standard marketplace installation approach—no custom development required.
+The Ralph Wiggum plugin is available through Claude Code plugin marketplaces. This lesson teaches the standard marketplace installation approach: no custom development required.
 
 ### Step 1: Add Marketplace
 
@@ -420,7 +420,7 @@ Not every task benefits from autonomous iteration. Here's how to decide:
 - **Why**: Loop will stall waiting for something Claude can't provide
 - **Better approach**: Complete setup manually first
 
-**The Golden Rule**: Ralph Loop excels when success is **objective**, **verifiable**, and **deterministic**—measurable by tools, not human judgment.
+**The Golden Rule**: Ralph Loop excels when success is **objective**, **verifiable**, and **deterministic**:measurable by tools, not human judgment.
 
 ---
 
@@ -526,7 +526,7 @@ Determine `--max-iterations` based on task complexity:
 | Medium (10-30 errors) | 30-40                    | $30-60        |
 | Complex (50+ errors)  | 50-80                    | $80-150       |
 
-**Conservative approach**: Start with 20 iterations. If the loop hits the limit without completing, you can restart with a higher limit—or break the task into smaller chunks.
+**Conservative approach**: Start with 20 iterations. If the loop hits the limit without completing, you can restart with a higher limit: or break the task into smaller chunks.
 
 ### Step 4: Run Your First Loop
 
@@ -696,7 +696,7 @@ All solve iteration fatigue, but with different architectures.
 
 **Q: Can I change the completion promise while the loop is running?**
 
-No. As explained in "How Stop Hooks Work," the `--completion-promise` parameter is static—set once at loop start using exact string matching. You cannot modify it during runtime or use multiple completion conditions. This is why the embedded `<promise>` pattern (Step 2) is critical for reliability.
+No. As explained in "How Stop Hooks Work," the `--completion-promise` parameter is static: set once at loop start using exact string matching. You cannot modify it during runtime or use multiple completion conditions. This is why the embedded `<promise>` pattern (Step 2) is critical for reliability.
 
 **Q: Can I use Ralph Loop without the plugin by manually reinjecting prompts?**
 
@@ -720,7 +720,7 @@ Let's explore how to apply Ralph Loop to your specific workflow:
 
 > "I want to use Ralph Loop for [YOUR SPECIFIC TASK]. Help me design safety guardrails: (1) What's a reasonable --max-iterations limit? (2) What could go wrong and how do I detect it early? (3) What should I put in CLAUDE.md to give Claude the context it needs? (4) How do I test this on a small scope before running on the full codebase?"
 
-**What you're learning**: Risk assessment and incremental validation—critical skills for production AI usage.
+**What you're learning**: Risk assessment and incremental validation: critical skills for production AI usage.
 
 ---
 
@@ -728,7 +728,7 @@ Let's explore how to apply Ralph Loop to your specific workflow:
 
 > "I'm running a Ralph Loop to [YOUR TASK], but after 8 iterations, Claude keeps hitting the same error: [DESCRIBE ERROR]. The completion promise is '[YOUR PROMISE]'. Why might Claude be stuck? How can I help it get unstuck without canceling the loop and starting over?"
 
-**What you're learning**: Debugging autonomous systems—recognizing when AI needs human intervention to break out of local optima.
+**What you're learning**: Debugging autonomous systems: recognizing when AI needs human intervention to break out of local optima.
 
 ---
 
@@ -736,7 +736,7 @@ Let's explore how to apply Ralph Loop to your specific workflow:
 
 **Workflow Impact**:
 
-Ralph Loop demonstrates **autonomous execution**—one of the core capabilities of Digital FTEs. When you package skills, specs, and autonomous iteration into an agent, you create systems that:
+Ralph Loop demonstrates **autonomous execution**:one of the core capabilities of Digital FTEs. When you package skills, specs, and autonomous iteration into an agent, you create systems that:
 
 - Start with a goal
 - Work toward completion independently
@@ -764,7 +764,7 @@ The same pattern powers production AI employees:
 - Customer support agents that iterate toward issue resolution
 - DevOps agents that iterate toward successful deployment
 
-Mastering Ralph Loop teaches you the mechanics of autonomous iteration—essential for building and selling Digital FTEs.
+Mastering Ralph Loop teaches you the mechanics of autonomous iteration: essential for building and selling Digital FTEs.
 
 
 ## Flashcards Study Aid

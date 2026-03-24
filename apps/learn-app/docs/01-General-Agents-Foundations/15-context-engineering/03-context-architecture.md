@@ -68,21 +68,21 @@ teaching_guide:
   session_group: 1
   session_title: "Understanding Context Engineering"
   key_points:
-    - "Four tools have four distinct loading patterns — CLAUDE.md always loads, Skills on-demand, Subagents in isolated context, Hooks externally with zero context cost"
+    - "Four tools have four distinct loading patterns: CLAUDE.md always loads, Skills on-demand, Subagents in isolated context, Hooks externally with zero context cost"
     - "The decision framework maps information type to tool: always-needed to CLAUDE.md, sometimes-needed to Skills, fresh-analysis to Subagents, deterministic to Hooks"
-    - "The marketing consultant example shows a 13x reduction in baseline context (7,300 to 550 tokens) — this quantifies why architecture matters"
+    - "The marketing consultant example shows a 13x reduction in baseline context (7,300 to 550 tokens): this quantifies why architecture matters"
   misconceptions:
-    - "Students think putting everything in CLAUDE.md is safest because Claude 'always sees it' — this actually dilutes attention and causes Claude to ignore important instructions"
-    - "Students confuse Skills with Subagents — Skills load into YOUR context on demand, Subagents run in their OWN isolated context and return summaries"
-    - "Students assume Hooks are advanced/optional — they are the simplest tool (zero context cost, deterministic) and should be the first choice for validation tasks"
+    - "Students think putting everything in CLAUDE.md is safest because Claude 'always sees it': this actually dilutes attention and causes Claude to ignore important instructions"
+    - "Students confuse Skills with Subagents: Skills load into YOUR context on demand, Subagents run in their OWN isolated context and return summaries"
+    - "Students assume Hooks are advanced/optional: they are the simplest tool (zero context cost, deterministic) and should be the first choice for validation tasks"
   discussion_prompts:
     - "In your own project, what information does Claude need for EVERY task vs only SOME tasks? How would you split it across tools?"
     - "Why would a 300-line CLAUDE.md with everything in it perform WORSE than a 50-line one with Skills handling the rest?"
   teaching_tips:
-    - "The four-tool loading table is the anchor of this lesson — have students copy it and reference it during the lab exercise"
-    - "Walk through the marketing consultant example end-to-end: inventory, tool assignment, cost calculation — this makes the abstract framework concrete"
-    - "Common mistake 1 (everything in CLAUDE.md) resonates with most students — ask who has a CLAUDE.md over 100 lines before presenting the fix"
-    - "The 13x reduction math is a strong persuasion moment — write the two numbers (7,300 vs 550) on the board side by side"
+    - "The four-tool loading table is the anchor of this lesson: have students copy it and reference it during the lab exercise"
+    - "Walk through the marketing consultant example end-to-end: inventory, tool assignment, cost calculation: this makes the abstract framework concrete"
+    - "Common mistake 1 (everything in CLAUDE.md) resonates with most students: ask who has a CLAUDE.md over 100 lines before presenting the fix"
+    - "The 13x reduction math is a strong persuasion moment: write the two numbers (7,300 vs 550) on the board side by side"
   assessment_quick_check:
     - "Name the four context tools and their loading patterns (when and what they load)"
     - "Given a piece of information, explain which tool you would use and why"
@@ -91,7 +91,7 @@ teaching_guide:
 
 # Context Architecture: The Complete System
 
-You learned HOW to create CLAUDE.md files, Skills, Subagents, and Hooks in Chapter 14. This lesson teaches WHY each exists and WHEN to use each one—as parts of a complete context management system.
+You learned HOW to create CLAUDE.md files, Skills, Subagents, and Hooks in Chapter 14. This lesson teaches WHY each exists and WHEN to use each one,as parts of a complete context management system.
 
 ## Four Tools, Four Loading Patterns
 
@@ -215,9 +215,9 @@ A marketing consultant uses Claude Code for campaign analysis:
 
 **Skills** (loaded when relevant):
 
-- `/competitor-analysis` — Framework for analyzing competitor campaigns
-- `/metrics-dashboard` — Standard metrics definitions and benchmarks
-- `/campaign-brief` — Template for new campaign proposals
+- `/competitor-analysis`. Framework for analyzing competitor campaigns
+- `/metrics-dashboard`. Standard metrics definitions and benchmarks
+- `/campaign-brief`. Template for new campaign proposals
 
 **Subagent** (isolated, returns summary):
 
@@ -353,9 +353,9 @@ Choose the highest-impact change and implement it:
 
 ## What You Learned
 
-1. **Four tools have four loading patterns** — CLAUDE.md always loads, Skills load on-demand, Subagents use isolated context, Hooks run externally
-2. **The decision framework** maps information type to appropriate tool — always-needed → CLAUDE.md, sometimes-needed → Skill, fresh-analysis → Subagent, deterministic → Hook
-3. **Context architecture dramatically reduces baseline load** — 10x+ reduction is achievable by distributing information appropriately
+1. **Four tools have four loading patterns:** CLAUDE.md always loads, Skills load on-demand, Subagents use isolated context, Hooks run externally
+2. **The decision framework** maps information type to appropriate tool; always-needed → CLAUDE.md, sometimes-needed → Skill, fresh-analysis → Subagent, deterministic → Hook
+3. **Context architecture dramatically reduces baseline load:** 10x+ reduction is achievable by distributing information appropriately
 4. **Common mistakes** include overloading CLAUDE.md, avoiding Subagents, unclear skill descriptions, and forgetting Hooks
 
 ## Try With AI

@@ -1,5 +1,5 @@
 ### Core Concept
-Unordered and ordered lists communicate whether items are **independent** (features, requirements—use bullets) or **dependent** (steps, sequences—use numbering), allowing AI agents to understand dependencies and generate appropriately independent vs sequential code.
+Unordered and ordered lists communicate whether items are **independent** (features, requirements: use bullets) or **dependent** (steps, sequences: use numbering), allowing AI agents to understand dependencies and generate appropriately independent vs sequential code.
 
 ### Key Mental Models
 - **Order Matters Test**: "Do these items need to happen in sequence?" YES = ordered (numbered), NO = unordered (bullets)
@@ -8,11 +8,11 @@ Unordered and ordered lists communicate whether items are **independent** (featu
 - **Nested lists vs more headings**: Use nested lists for closely related sub-items; use new headings when topics deserve their own section
 
 ### Critical Patterns
-- **Unordered syntax**: `-`, `*`, or `+` followed by space (`- item`)—all three are equivalent
-- **Ordered syntax**: `1.` followed by space (`1. step`)—markdown auto-renumbers (even `1. 1. 1.` renders as `1. 2. 3.`)
-- **Numbering behavior**: Starting with `11.` continues as `11, 12, 13...`—use this intentionally or start with `1.`
+- **Unordered syntax**: `-`, `*`, or `+` followed by space (`- item`): all three are equivalent
+- **Ordered syntax**: `1.` followed by space (`1. step`): markdown auto-renumbers (even `1. 1. 1.` renders as `1. 2. 3.`)
+- **Numbering behavior**: Starting with `11.` continues as `11, 12, 13...`: use this intentionally or start with `1.`
 - **Nested lists**: Indent with 2-4 spaces to create sub-items under parent items
-- **Blank line handling**: Adding blank lines between items may change rendering—be consistent
+- **Blank line handling**: Adding blank lines between items may change rendering: be consistent
 
 ### AI Collaboration Keys
 - **Feature count extraction**: AI counts items in unordered feature list to know how many functions to generate

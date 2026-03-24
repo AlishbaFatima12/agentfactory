@@ -74,24 +74,24 @@ teaching_guide:
   session_group: 2
   session_title: "First Conversations and Context Files"
   key_points:
-    - "LLMs are stateless — Claude Code re-sends the entire conversation history each call, and CLAUDE.md is the persistent layer on top of this"
+    - "LLMs are stateless; Claude Code re-sends the entire conversation history each call, and CLAUDE.md is the persistent layer on top of this"
     - "The Three Roles Framework (AI teaches you, you teach AI, convergence) is demonstrated live through the CLAUDE.md creation process"
-    - "AGENTS.md is the universal standard (donated to Linux Foundation Dec 2025) while CLAUDE.md is Claude-specific — students should create both"
+    - "AGENTS.md is the universal standard (donated to Linux Foundation Dec 2025) while CLAUDE.md is Claude-specific; students should create both"
     - "The 6 standard sections (overview, stack, structure, conventions, commands, notes) form a template students will reuse in every future project"
   misconceptions:
-    - "Students think CLAUDE.md gives Claude permanent memory — it does not; Claude re-reads the file fresh each session, which is why the file must be self-contained"
-    - "Students confuse CLAUDE.md with a README — CLAUDE.md is instructions FOR the AI, not documentation for humans"
-    - "Students think they need to write CLAUDE.md manually from scratch — the lesson explicitly teaches asking Claude to generate it from the codebase first"
-    - "Students assume AGENTS.md replaces CLAUDE.md — they complement each other with different scopes"
+    - "Students think CLAUDE.md gives Claude permanent memory; it does not; Claude re-reads the file fresh each session, which is why the file must be self-contained"
+    - "Students confuse CLAUDE.md with a README; CLAUDE.md is instructions FOR the AI, not documentation for humans"
+    - "Students think they need to write CLAUDE.md manually from scratch; the lesson explicitly teaches asking Claude to generate it from the codebase first"
+    - "Students assume AGENTS.md replaces CLAUDE.md; they complement each other with different scopes"
   discussion_prompts:
     - "If Claude re-reads CLAUDE.md every session, what happens when your project evolves but CLAUDE.md stays stale?"
     - "What information would you put in CLAUDE.md that you would never put in a README, and vice versa?"
     - "How does the Three Roles pattern (AI teaches you, you teach AI, convergence) change how you think about AI collaboration?"
   teaching_tips:
-    - "Have students create a minimal 2-section CLAUDE.md first, then ask Claude to review it — the AI's suggestions teach them what they missed"
-    - "Demo the 'stateless LLM' concept by exiting Claude, restarting, and asking a project question WITHOUT CLAUDE.md — then add it and show the difference"
-    - "The comparison table (AGENTS.md vs CLAUDE.md content) is worth projecting — students consistently put Claude-specific config in the wrong file"
-    - "After the lesson, have students swap projects and read each other's CLAUDE.md files — peer review catches vague or missing sections fast"
+    - "Have students create a minimal 2-section CLAUDE.md first, then ask Claude to review it; the AI's suggestions teach them what they missed"
+    - "Demo the 'stateless LLM' concept by exiting Claude, restarting, and asking a project question WITHOUT CLAUDE.md; then add it and show the difference"
+    - "The comparison table (AGENTS.md vs CLAUDE.md content) is worth projecting; students consistently put Claude-specific config in the wrong file"
+    - "After the lesson, have students swap projects and read each other's CLAUDE.md files; peer review catches vague or missing sections fast"
   assessment_quick_check:
     - "Ask students: Why does Claude not remember your conversation from yesterday, and how does CLAUDE.md solve this?"
     - "Have students name all 6 standard sections of CLAUDE.md without looking"
@@ -102,7 +102,7 @@ teaching_guide:
 
 Imagine this: You've been working with Claude Code on your Python project for weeks. Claude has learned your naming conventions, understood your project structure, and adapted to your coding style. You close the terminal for the evening.
 
-The next morning, you open a new Claude Code session and type a question about your project. Claude responds with generic advice—treating your project like it's starting fresh. You have to re-explain your tech stack, your directory structure, your team's conventions.
+The next morning, you open a new Claude Code session and type a question about your project. Claude responds with generic advice: treating your project like it's starting fresh. You have to re-explain your tech stack, your directory structure, your team's conventions.
 
 **This is context friction.** And it's a productivity killer.
 
@@ -114,7 +114,7 @@ Every session starts with zero context. You either repeat explanations repeatedl
 
 ## What Is CLAUDE.md?
 
-**CLAUDE.md is a simple markdown file placed in your project root that Claude Code automatically loads at the start of every session.** It contains the persistent context your AI companion needs—without you repeating it.
+**CLAUDE.md is a simple markdown file placed in your project root that Claude Code automatically loads at the start of every session.** It contains the persistent context your AI companion needs: without you repeating it.
 
 Think of it as a **persistent project brief** that travels with your code:
 
@@ -146,9 +146,9 @@ Claude Code is the interface you interact with. It calls an AI model (in this ca
 
 **The AI model has no memory between calls.**
 
-Close your terminal. Open a new Claude Code session tomorrow. Ask Claude about your project. Claude won't remember anything—not your tech stack, not your file structure, not even that you talked yesterday. Every new session starts completely blank.
+Close your terminal. Open a new Claude Code session tomorrow. Ask Claude about your project. Claude won't remember anything: not your tech stack, not your file structure, not even that you talked yesterday. Every new session starts completely blank.
 
-This is called being **"stateless."** Large Language Models (LLMs)—like those powering ChatGPT (OpenAI), Claude (Anthropic), and Gemini (Google)—don't store any state (memory, history, context) between requests. Each call is processed in complete isolation.
+This is called being **"stateless."** Large Language Models (LLMs): like those powering ChatGPT (OpenAI), Claude (Anthropic), and Gemini (Google): don't store any state (memory, history, context) between requests. Each call is processed in complete isolation.
 
 **"But my conversation seems continuous?"**
 
@@ -158,7 +158,7 @@ That's Claude Code doing extra work. Here's what actually happens:
 2. You send message #2 → Claude Code secretly bundles message #1 + #2 and sends _both_
 3. You send message #3 → Claude Code bundles #1 + #2 + #3 and sends _all three_
 
-The LLM reads the whole bundle fresh each time. It _looks_ like a continuous conversation because Claude Code re-sends the history with every message. But the LLM itself is still stateless—it's just being shown the full history repeatedly.
+The LLM reads the whole bundle fresh each time. It _looks_ like a continuous conversation because Claude Code re-sends the history with every message. But the LLM itself is still stateless: it's just being shown the full history repeatedly.
 
 Web apps like ChatGPT and Claude.ai use the same trick.
 
@@ -221,7 +221,7 @@ CLAUDE.md typically contains 6 sections. Use this structure as your template:
 
 ## How to Create Your CLAUDE.md
 
-You could type this all manually. Or—and this is the Claude Code way—**ask Claude to generate it for you.**
+You could type this all manually. Or: and this is the Claude Code way: **ask Claude to generate it for you.**
 
 Here's the process:
 
@@ -265,7 +265,7 @@ In the new session, ask Claude a question about your project:
 "What's the tech stack for this project?"
 ```
 
-**If Claude mentions your stack without you repeating it—CLAUDE.md loaded successfully.**
+**If Claude mentions your stack without you repeating it: CLAUDE.md loaded successfully.**
 
 ---
 
@@ -278,9 +278,9 @@ Here's what you've accomplished:
 - ✅ **No friction**: No re-explaining project structure, conventions, or setup
 - ✅ **Team alignment**: New team members read CLAUDE.md to understand the project
 
-This is the principle of **"specify once, benefit always"**—define your project context one time, and every future session starts with full understanding.
+This is the principle of **"specify once, benefit always"**:define your project context one time, and every future session starts with full understanding.
 
-In later lessons, you'll see how subagents (Lesson 11) and skills (Lesson 09) inherit and extend this CLAUDE.md context—making it the foundation for all Claude Code intelligence.
+In later lessons, you'll see how subagents (Lesson 11) and skills (Lesson 09) inherit and extend this CLAUDE.md context: making it the foundation for all Claude Code intelligence.
 
 #### 💬 AI Colearning Prompt
 
@@ -311,7 +311,7 @@ and describe what this project is about.
 
 Claude will read the folder, see all the modules, and create a CLAUDE.md tailored to your exercises. Approve the file when Claude proposes it.
 
-Now **exit Claude** (type `exit` or press `Ctrl+C`) and **start Claude again**. Ask: `"What do you know about this project?"` — Claude already knows, because it loaded your CLAUDE.md automatically. That's persistent context in action.
+Now **exit Claude** (type `exit` or press `Ctrl+C`) and **start Claude again**. Ask: `"What do you know about this project?"`; Claude already knows, because it loaded your CLAUDE.md automatically. That's persistent context in action.
 
 ### Modules 5-8
 
@@ -334,7 +334,7 @@ These modules build on Modules 1-4. If you haven't completed at least Module 1 a
 
 ## Co-Learning: Improving CLAUDE.md Together
 
-Let's see the **Three Roles Framework** in action—where you and Claude Code learn from each other to create a better CLAUDE.md.
+Let's see the **Three Roles Framework** in action: where you and Claude Code learn from each other to create a better CLAUDE.md.
 
 ### Stage 1: Your First Draft
 
@@ -423,7 +423,7 @@ How should we organize database-related files?"
 "Option 1—we separate concerns. Migrations are infrastructure, models are app code. Update it."
 ```
 
-**What just happened?** 🎓 **Neither of you** had the complete picture at start. Through conversation, you **converged** on the right solution—Claude offered options, you selected based on team context.
+**What just happened?** 🎓 **Neither of you** had the complete picture at start. Through conversation, you **converged** on the right solution: Claude offered options, you selected based on team context.
 
 ### The Result: Context Created Through Co-Learning
 
@@ -473,7 +473,7 @@ alembic/             # Database migrations
 - ✅ You taught Claude your team's specific patterns
 - ✅ You converged together on the right organization
 
-**This is the Three Roles Framework**—AI collaboration that makes both you and Claude smarter.
+**This is the Three Roles Framework**:AI collaboration that makes both you and Claude smarter.
 
 ---
 
@@ -504,9 +504,9 @@ A typical CLAUDE.md is 1-3 KB. Context is cheap; clarity is expensive. A well-or
 
 ## The Universal Standard: AGENTS.md
 
-You've learned how CLAUDE.md provides project context for Claude Code. But what about other AI coding agents—Cursor, GitHub Copilot, Gemini CLI, OpenAI Codex, and dozens more?
+You've learned how CLAUDE.md provides project context for Claude Code. But what about other AI coding agents: Cursor, GitHub Copilot, Gemini CLI, OpenAI Codex, and dozens more?
 
-**Enter AGENTS.md**—a universal standard that works across ALL AI coding tools.
+**Enter AGENTS.md**:a universal standard that works across ALL AI coding tools.
 
 ### What is AGENTS.md?
 
@@ -527,7 +527,7 @@ On December 9, 2025, something significant happened. OpenAI, Anthropic, and Bloc
 | **AGENTS.md** | OpenAI     | Universal project instructions for agents |
 | **Goose**     | Block      | Open-source agent framework               |
 
-This means AGENTS.md is now a **neutral, vendor-independent standard**—like how Kubernetes standardized containers or how HTTP standardized the web.
+This means AGENTS.md is now a **neutral, vendor-independent standard**:like how Kubernetes standardized containers or how HTTP standardized the web.
 
 ### The Best of Both Worlds
 
@@ -587,7 +587,7 @@ and add Claude-specific instructions separately."
 
 #### 🎓 Expert Insight
 
-> The AAIF announcement signals a maturing industry. Instead of every AI tool having its own context format, we're converging on standards. This is good for developers—write your project context once in AGENTS.md, and it works everywhere. Add Claude-specific power features in CLAUDE.md. One universal standard + one specialized configuration = maximum productivity.
+> The AAIF announcement signals a maturing industry. Instead of every AI tool having its own context format, we're converging on standards. This is good for developers: write your project context once in AGENTS.md, and it works everywhere. Add Claude-specific power features in CLAUDE.md. One universal standard + one specialized configuration = maximum productivity.
 
 #### 💬 AI Colearning Prompt
 
@@ -609,7 +609,7 @@ Let's create a CLAUDE.md file that eliminates context friction and makes every s
 
 > "Review the CLAUDE.md you just created. I need to add my team's specific constraints: [describe your specific conventions, patterns, or requirements]. Update the file to reflect these details, and ask me clarifying questions if anything is ambiguous."
 
-**What you're learning:** The Three Roles pattern in action—you teach Claude your domain knowledge (constraints, conventions) while Claude teaches you what good CLAUDE.md structure looks like.
+**What you're learning:** The Three Roles pattern in action: you teach Claude your domain knowledge (constraints, conventions) while Claude teaches you what good CLAUDE.md structure looks like.
 
 **🧪 Test Context Persistence:**
 

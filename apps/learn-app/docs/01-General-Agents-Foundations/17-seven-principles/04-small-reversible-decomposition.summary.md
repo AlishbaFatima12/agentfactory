@@ -1,6 +1,6 @@
 ### Core Concept
 
-Breaking complex problems into small, independently verifiable steps that can be easily rolled back is the key to managing complexity in agentic workflows. Like building with Lego bricks instead of sculpting clay—if something goes wrong, you pop off the bad brick instead of reworking the whole sculpture.
+Breaking complex problems into small, independently verifiable steps that can be easily rolled back is the key to managing complexity in agentic workflows. Like building with Lego bricks instead of sculpting clay,if something goes wrong, you pop off the bad brick instead of reworking the whole sculpture.
 
 ### Key Mental Models
 
@@ -12,7 +12,7 @@ Breaking complex problems into small, independently verifiable steps that can be
 
 ### Key Facts
 
-- **Cognitive limit**: Humans hold about 7±2 items in working memory—large changes exceed this
+- **Cognitive limit**: Humans hold about 7±2 items in working memory,large changes exceed this
 - **AI has context limits too**: Claude's context window means massive changes crowd out the understanding needed to complete them well
 - **Small iteration timeline**: Many small verified steps complete features faster with lower stress than big-batch approaches
 
@@ -25,14 +25,14 @@ Breaking complex problems into small, independently verifiable steps that can be
 
 ### Common Mistakes
 
-- Micro-commits (too fine-grained—group related tiny fixes into one atomic change)
-- Mixed concerns (unrelated changes in one commit—makes reverting one impossible)
-- Untested middle states (commits that don't compile—intermediate states should always work)
-- Skipping Step Zero (diving into implementation without a plan—leads to rework)
+- Micro-commits (too fine-grained,group related tiny fixes into one atomic change)
+- Mixed concerns (unrelated changes in one commit,makes reverting one impossible)
+- Untested middle states (commits that don't compile,intermediate states should always work)
+- Skipping Step Zero (diving into implementation without a plan,leads to rework)
 - Debugging instead of reverting (spending 30 minutes fixing when 30 seconds of revert would suffice)
 
 ### Connections
 
-- **Builds on**: Principle 3 (Verification)—small changes make verification tractable
-- **Leads to**: Principle 5 (State Persistence)—documenting decomposed plans in files ensures continuity
+- **Builds on**: Principle 3 (Verification),small changes make verification tractable
+- **Leads to**: Principle 5 (State Persistence),documenting decomposed plans in files ensures continuity
 - **Synergy**: Git commits are both decomposition units AND safety mechanisms (Principle 6)

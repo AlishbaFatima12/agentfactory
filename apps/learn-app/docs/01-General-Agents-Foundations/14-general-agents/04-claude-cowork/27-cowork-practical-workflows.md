@@ -95,7 +95,7 @@ teaching_guide:
 
 # Cowork in Action: Practical Workflows
 
-Setup is complete. Now let's see what Claude Cowork can actually _do_. These workflows demonstrate how agentic AI transforms knowledge work—from hours of manual clicking to minutes of conversation.
+Setup is complete. Now let's see what Claude Cowork can actually _do_. These workflows demonstrate how agentic AI transforms knowledge work: from hours of manual clicking to minutes of conversation.
 
 ---
 
@@ -166,7 +166,7 @@ Setup is complete. Now let's see what Claude Cowork can actually _do_. These wor
 
 **Result:** A complete weekly report in 3 minutes instead of 2 hours.
 
-**The business value:** This isn't just saving time—it's ensuring consistency. Every report follows the same format, every calculation is accurate, and you can review for insights rather than getting lost in spreadsheet mechanics.
+**The business value:** This isn't just saving time: it's ensuring consistency. Every report follows the same format, every calculation is accurate, and you can review for insights rather than getting lost in spreadsheet mechanics.
 
 ---
 
@@ -182,7 +182,7 @@ Setup is complete. Now let's see what Claude Cowork can actually _do_. These wor
 2. Arguments for and against [position]
 3. Common themes across sources
 4. Disagreements or contradictions between sources
-5. Gaps in information—questions that none of the sources address
+5. Gaps in information: questions that none of the sources address
    Create a summary document with citations for each point."
 
 **What Claude Does:**
@@ -205,7 +205,7 @@ Across these examples, you can see common patterns that make Cowork effective:
 
 ### Pattern 1: Explore First
 
-Claude begins by understanding what it's working with—scanning folders, reading file headers, identifying structure. This exploration phase ensures accurate execution.
+Claude begins by understanding what it's working with: scanning folders, reading file headers, identifying structure. This exploration phase ensures accurate execution.
 
 ### Pattern 2: Propose, Then Execute
 
@@ -266,7 +266,7 @@ Track the impact of Cowork workflows to understand their value:
 | **Weekly finance report**  | 2 hours every Monday | 5 minutes            | 24x time savings          |
 | **Research synthesis**     | 3+ days              | 30 minutes           | 144x faster               |
 
-The key insight: Cowork doesn't just speed up tasks—it makes tasks feasible that you'd otherwise skip or do poorly. Organizing a Downloads folder, synthesizing 65 documents, or generating formatted reports from raw data—these are tasks that often don't get done because they're too time-consuming manually.
+The key insight: Cowork doesn't just speed up tasks: it makes tasks feasible that you'd otherwise skip or do poorly. Organizing a Downloads folder, synthesizing 65 documents, or generating formatted reports from raw data: these are tasks that often don't get done because they're too time-consuming manually.
 
 ---
 
@@ -286,15 +286,15 @@ The key insight: Cowork doesn't just speed up tasks—it makes tasks feasible th
 
 **Apply the Four Workflow Patterns to Your Work:**
 
-> "The lesson describes four Cowork workflow patterns: Explore First, Propose Then Execute, Handle Variation, and Report Results. Pick a real task I do weekly that involves files or documents. Walk me through how each pattern would apply to that specific task — what would Claude explore, what would the proposal look like, what variations might it encounter, and what should the results report include? Write the complete Cowork prompt."
+> "The lesson describes four Cowork workflow patterns: Explore First, Propose Then Execute, Handle Variation, and Report Results. Pick a real task I do weekly that involves files or documents. Walk me through how each pattern would apply to that specific task; what would Claude explore, what would the proposal look like, what variations might it encounter, and what should the results report include? Write the complete Cowork prompt."
 
-**What you're learning:** Pattern application — translating abstract workflow patterns into concrete task design. The four patterns are a universal framework that applies to any Cowork task, not just the examples in this lesson.
+**What you're learning:** Pattern application; translating abstract workflow patterns into concrete task design. The four patterns are a universal framework that applies to any Cowork task, not just the examples in this lesson.
 
 **Measure the Automation Value:**
 
-> "Pick a task from my work and fill in this table: (1) How long does it take manually? (2) How often do I do it? (3) Does it ever get skipped because it takes too long? Now design the Cowork prompt for that task and estimate the automated time. What is the real value — is it pure time savings, or does automation make a previously-skipped task feasible?"
+> "Pick a task from my work and fill in this table: (1) How long does it take manually? (2) How often do I do it? (3) Does it ever get skipped because it takes too long? Now design the Cowork prompt for that task and estimate the automated time. What is the real value; is it pure time savings, or does automation make a previously-skipped task feasible?"
 
-**What you're learning:** Value assessment — understanding that automation value is not just speed improvement but also task feasibility. The most impactful Cowork workflows are often tasks that never got done manually.
+**What you're learning:** Value assessment; understanding that automation value is not just speed improvement but also task feasibility. The most impactful Cowork workflows are often tasks that never got done manually.
 
 ---
 

@@ -88,22 +88,22 @@ teaching_guide:
   session_group: 4
   session_title: "Capstone: Production-Quality Agents"
   key_points:
-    - "The decision tree maps specific symptoms to specific techniques — 'context > 70%' leads to compaction, 'multi-session' leads to progress files, 'workflow drift' leads to memory injection, 'multi-agent conflicts' leads to context isolation"
-    - "Message history dominates late sessions (50%+ of context budget), which is why conversations degrade — this quantifies the need for compaction and progress file architectures"
-    - "Four quality criteria (Consistency, Persistence, Scalability, Knowledge) define production-readiness — score below 3/5 on any means not ready for client deployment"
-    - "The difference between a $50/month chatbot and a $5,000/month Digital FTE is context engineering discipline, not model access — this connects the entire chapter back to the Agent Factory thesis"
+    - "The decision tree maps specific symptoms to specific techniques: 'context > 70%' leads to compaction, 'multi-session' leads to progress files, 'workflow drift' leads to memory injection, 'multi-agent conflicts' leads to context isolation"
+    - "Message history dominates late sessions (50%+ of context budget), which is why conversations degrade: this quantifies the need for compaction and progress file architectures"
+    - "Four quality criteria (Consistency, Persistence, Scalability, Knowledge) define production-readiness: score below 3/5 on any means not ready for client deployment"
+    - "The difference between a $50/month chatbot and a $5,000/month Digital FTE is context engineering discipline, not model access: this connects the entire chapter back to the Agent Factory thesis"
   misconceptions:
-    - "Students think they need to apply all techniques to every project — the decision tree exists specifically to diagnose which technique matches which problem"
-    - "Students conflate 'production-quality' with 'technically complex' — a well-optimized CLAUDE.md with progress files can outscore a system with vector databases but poor signal-to-noise ratio"
-    - "Students expect perfect quality scores (5/5) — production-ready means 3+ on all criteria with a plan for improvement, not perfection"
+    - "Students think they need to apply all techniques to every project: the decision tree exists specifically to diagnose which technique matches which problem"
+    - "Students conflate 'production-quality' with 'technically complex': a well-optimized CLAUDE.md with progress files can outscore a system with vector databases but poor signal-to-noise ratio"
+    - "Students expect perfect quality scores (5/5): production-ready means 3+ on all criteria with a plan for improvement, not perfection"
   discussion_prompts:
     - "If you were pitching your agent to a paying client in your domain, which quality criterion would matter most to them? Which would they never think to ask about?"
-    - "Walk through the decision tree with a real problem you have experienced — which branch did the diagnosis lead you to?"
+    - "Walk through the decision tree with a real problem you have experienced: which branch did the diagnosis lead you to?"
   teaching_tips:
-    - "Have students trace through all five domain scenarios (legal, marketing, research, consulting, development) in the decision tree — the repetition builds pattern recognition"
-    - "The budget allocation table showing how message history grows from 10% to 50% is a strong visual — draw the shift on a whiteboard"
-    - "The production agent lab should be started in class but continued across sessions — this demonstrates the multi-session techniques being taught"
-    - "The client pitch exercise (Prompt 2) forces students to translate technical quality into business value — this is the bridge to the Agent Factory thesis"
+    - "Have students trace through all five domain scenarios (legal, marketing, research, consulting, development) in the decision tree: the repetition builds pattern recognition"
+    - "The budget allocation table showing how message history grows from 10% to 50% is a strong visual: draw the shift on a whiteboard"
+    - "The production agent lab should be started in class but continued across sessions: this demonstrates the multi-session techniques being taught"
+    - "The client pitch exercise (Prompt 2) forces students to translate technical quality into business value: this is the bridge to the Agent Factory thesis"
   assessment_quick_check:
     - "Given a scenario where context is at 78% and you are mid-task, trace through the decision tree and state the recommended action"
     - "Name the four quality criteria and give one thing that affects each"
@@ -144,7 +144,7 @@ A well-engineered agent:
 - Scales to complex multi-step tasks without drift (context isolation)
 - Improves from use (memory consolidation)
 
-This is what clients pay for. Whether you're building a contract review assistant, a campaign planning agent, a literature synthesis tool, or a code reviewer—the value isn't raw intelligence. Everyone has access to that. Clients pay for reliability, consistency, and domain expertise that accumulates rather than resets.
+This is what clients pay for. Whether you're building a contract review assistant, a campaign planning agent, a literature synthesis tool, or a code reviewer,the value isn't raw intelligence. Everyone has access to that. Clients pay for reliability, consistency, and domain expertise that accumulates rather than resets.
 
 **This chapter gave you the quality control toolkit. This lesson shows you how to apply it.**
 
@@ -192,7 +192,7 @@ Is work distributed across multiple agents?
 └─ NO → Single agent workflow
 ```
 
-Each branch points to a specific lesson and technique. The decision tree isn't "which sounds good"—it's "what does the diagnosis say?"
+Each branch points to a specific lesson and technique. The decision tree isn't "which sounds good",it's "what does the diagnosis say?"
 
 ### Reading the Decision Tree
 
@@ -200,7 +200,7 @@ Let's trace through realistic scenarios across different domains.
 
 ---
 
-**Scenario A: Legal — Contract Review Assistant**
+**Scenario A: Legal. Contract Review Assistant**
 
 You're reviewing a complex commercial lease agreement. Your AI assistant has been running for 45 minutes, and it's starting to miss liability clauses it caught earlier.
 
@@ -212,7 +212,7 @@ Yes. You're in the orange zone. Compaction needed.
 
 **Decision 2: Is the task complete?**
 
-No—you're mid-review. You don't want to lose the context of which sections have been analyzed and what red flags were identified.
+No,you're mid-review. You don't want to lose the context of which sections have been analyzed and what red flags were identified.
 
 **Action:** `/compact Focus on the lease review findings and clauses already analyzed. Discard the tangent about formatting preferences from messages 12-18.`
 
@@ -220,7 +220,7 @@ Now you're back to ~40% utilization with the important context preserved.
 
 **Decision 3: Is this multi-session?**
 
-No—you'll finish this contract today.
+No,you'll finish this contract today.
 
 **No action needed** for progress files.
 
@@ -232,7 +232,7 @@ You started reviewing for "indemnification and liability risks" but Claude has s
 
 ---
 
-**Scenario B: Marketing — Campaign Planning Assistant**
+**Scenario B: Marketing. Campaign Planning Assistant**
 
 You're developing a product launch campaign. The AI has been helping for an hour, brainstorming messaging across multiple channels. Now its suggestions are becoming generic, losing the brand voice you established earlier.
 
@@ -244,13 +244,13 @@ Yes, approaching the danger zone. Proactive compaction recommended.
 
 **Decision 2: Is the task complete?**
 
-No—you've done social media but still need email sequences and landing page copy.
+No,you've done social media but still need email sequences and landing page copy.
 
 **Action:** `/compact Preserve: brand voice guidelines, approved messaging themes, target persona details. Discard: rejected tagline brainstorms, competitor research tangent.`
 
 **Decision 3: Is this multi-session?**
 
-Yes—this campaign will take several days to develop fully.
+Yes,this campaign will take several days to develop fully.
 
 **Action:** Create a progress file:
 
@@ -281,23 +281,23 @@ The suggestions lost your brand's distinctive voice. That's knowledge drift.
 
 ---
 
-**Scenario C: Research — Literature Synthesis Assistant**
+**Scenario C: Research. Literature Synthesis Assistant**
 
 You're synthesizing 30 papers for a systematic review. The AI has been helping categorize findings, but it's starting to misattribute claims to the wrong papers.
 
 **Decision 1: Is context > 70%?**
 
-Yes—you've loaded substantial paper summaries.
+Yes,you've loaded substantial paper summaries.
 
 **Decision 2: Is the task complete?**
 
-No—you're at paper 18 of 30.
+No,you're at paper 18 of 30.
 
 **Action:** `/compact Preserve: synthesis table with paper citations, methodology classification schema. Discard: detailed quotes from papers 1-10 (keep citations only).`
 
 **Decision 3: Is this multi-session?**
 
-Definitely—this is a week-long project.
+Definitely,this is a week-long project.
 
 **Action:** Your progress file should track which papers have been analyzed, key findings extracted, and where conflicts exist between sources.
 
@@ -305,41 +305,41 @@ Definitely—this is a week-long project.
 
 Attribution errors suggest memory pollution from overlapping contexts.
 
-**Action:** Consider multi-round processing—analyze 5 papers per session, produce a mini-synthesis, then combine syntheses in a final session with fresh context.
+**Action:** Consider multi-round processing,analyze 5 papers per session, produce a mini-synthesis, then combine syntheses in a final session with fresh context.
 
 ---
 
-**Scenario D: Consulting — Proposal Development Assistant**
+**Scenario D: Consulting. Proposal Development Assistant**
 
 You're developing a consulting proposal. The AI has been helping with the executive summary, scope definition, and pricing rationale. Now it's suggesting deliverables that don't match what you discussed with the client.
 
 **Decision 1: Is context > 70%?**
 
-Run `/context`. Moderate usage—not the primary issue.
+Run `/context`. Moderate usage,not the primary issue.
 
 **Decision 2: Is the task complete?**
 
-No—you still need the implementation timeline and team bios section.
+No,you still need the implementation timeline and team bios section.
 
 **No compaction needed** yet.
 
 **Decision 3: Is this multi-session?**
 
-Yes—proposals typically span multiple working sessions with client feedback loops.
+Yes,proposals typically span multiple working sessions with client feedback loops.
 
 **Action:** Create a progress file capturing: client requirements (from discovery call), agreed scope boundaries, pricing approach, and key differentiators.
 
 **Decision 4: Is workflow drifting?**
 
-Yes—the deliverables don't match client needs. Classic drift.
+Yes,the deliverables don't match client needs. Classic drift.
 
 **Action:** Re-inject the client requirements document. "Review the discovery call notes before suggesting deliverables. Every deliverable must trace to a stated client need."
 
 ---
 
-**Scenario E: Development — Code Review Assistant**
+**Scenario E: Development. Code Review Assistant**
 
-You're reviewing a large pull request. The AI has been running for 45 minutes, and quality is degrading—it's missing security issues it caught earlier.
+You're reviewing a large pull request. The AI has been running for 45 minutes, and quality is degrading,it's missing security issues it caught earlier.
 
 **Decision 1: Is context > 70%?**
 
@@ -349,13 +349,13 @@ Yes. Compaction needed.
 
 **Decision 2: Is the task complete?**
 
-No—you're mid-review.
+No,you're mid-review.
 
 **Action:** `/compact Focus on the PR review findings and files already analyzed. Discard the debugging tangent from messages 12-18.`
 
 **Decision 3: Is this multi-session?**
 
-No—you'll finish this review today.
+No,you'll finish this review today.
 
 **No action needed** for progress files.
 
@@ -367,7 +367,7 @@ You started reviewing for "security issues" but Claude has shifted to "code styl
 
 ---
 
-The decision tree didn't tell you to use every technique. It told you which ones match your situation—regardless of your domain.
+The decision tree didn't tell you to use every technique. It told you which ones match your situation,regardless of your domain.
 
 ## Context Budget Allocation
 
@@ -415,7 +415,7 @@ These percentages shift throughout a session:
 - Tool outputs: 27%
 - Reserve: 5%
 
-Notice how message history grows to dominate. This is why conversations degrade—the useful context (CLAUDE.md, tools) gets proportionally smaller as conversation noise accumulates.
+Notice how message history grows to dominate. This is why conversations degrade,the useful context (CLAUDE.md, tools) gets proportionally smaller as conversation noise accumulates.
 
 ## The Seven Token Budgeting Strategies
 
@@ -677,13 +677,13 @@ How do you know if your Digital FTE is production-ready? Apply these four criter
 
 Select an agent type that matches your expertise:
 
-- **Legal: Contract Review Assistant** — Reviews contracts against your firm's risk criteria, flags problematic clauses, suggests negotiation points based on your jurisdiction and practice area
-- **Marketing: Campaign Strategy Assistant** — Develops campaigns in your brand voice, maintains messaging consistency across channels, applies your audience segmentation methodology
-- **Research: Literature Synthesis Assistant** — Synthesizes academic papers per your methodology, maintains attribution accuracy, applies your quality assessment criteria
-- **Business: Process Improvement Assistant** — Analyzes workflows using your framework, identifies optimization opportunities, structures recommendations per your consulting methodology
-- **Development: Code Review Assistant** — Analyzes code against your team's standards, catches architectural violations, enforces your security requirements
+- **Legal: Contract Review Assistant:** Reviews contracts against your firm's risk criteria, flags problematic clauses, suggests negotiation points based on your jurisdiction and practice area
+- **Marketing: Campaign Strategy Assistant:** Develops campaigns in your brand voice, maintains messaging consistency across channels, applies your audience segmentation methodology
+- **Research: Literature Synthesis Assistant:** Synthesizes academic papers per your methodology, maintains attribution accuracy, applies your quality assessment criteria
+- **Business: Process Improvement Assistant:** Analyzes workflows using your framework, identifies optimization opportunities, structures recommendations per your consulting methodology
+- **Development: Code Review Assistant:** Analyzes code against your team's standards, catches architectural violations, enforces your security requirements
 
-The domain should be specific enough that generic agents fail. Your agent should have an unfair advantage because it knows YOUR context—your firm's standards, your industry's terminology, your methodology.
+The domain should be specific enough that generic agents fail. Your agent should have an unfair advantage because it knows YOUR context,your firm's standards, your industry's terminology, your methodology.
 
 ### Phase 1: Foundation (30 minutes)
 
@@ -1081,7 +1081,7 @@ Structure it as:
 This is how I'd pitch this to someone who might pay $5,000/month for it.
 ```
 
-**What you're learning:** Technical quality must translate to business value. Your context engineering discipline is invisible to clients—a law firm sees "catches 95% of liability issues," not "memory injection prevents drift." This prompt trains you to articulate value in terms that matter to buyers in YOUR industry, which is essential for the Agent Factory thesis of building sellable Digital FTEs.
+**What you're learning:** Technical quality must translate to business value. Your context engineering discipline is invisible to clients,a law firm sees "catches 95% of liability issues," not "memory injection prevents drift." This prompt trains you to articulate value in terms that matter to buyers in YOUR industry, which is essential for the Agent Factory thesis of building sellable Digital FTEs.
 
 ### Prompt 3: The Improvement Roadmap
 
@@ -1104,7 +1104,7 @@ Consider domain-specific factors:
 Prioritize by effort-to-impact ratio. I want the quick wins that move the needle most for my specific domain.
 ```
 
-**What you're learning:** Continuous improvement requires domain-aware prioritization. Not every improvement matters equally in every field. This prompt trains you to think economically about quality investments—maximizing impact per hour invested for your specific industry. You're learning that quality manufacturing is iterative, not one-shot.
+**What you're learning:** Continuous improvement requires domain-aware prioritization. Not every improvement matters equally in every field. This prompt trains you to think economically about quality investments,maximizing impact per hour invested for your specific industry. You're learning that quality manufacturing is iterative, not one-shot.
 
 ## Chapter Summary
 
@@ -1123,9 +1123,9 @@ You've completed the context engineering discipline. Here's what you now know:
 | 9      | Clean context beats dirty state for multi-agent      | Complex workflows with multiple specialized agents        |
 | 10     | Decision frameworks turn knowledge into practice     | Knowing WHICH technique for WHICH problem                 |
 
-This isn't abstract theory. You've built a production-quality agent for YOUR domain. You've measured its quality against concrete criteria. You've created artifacts you can show to clients—whether they're law firms, marketing agencies, research institutions, or engineering teams.
+This isn't abstract theory. You've built a production-quality agent for YOUR domain. You've measured its quality against concrete criteria. You've created artifacts you can show to clients,whether they're law firms, marketing agencies, research institutions, or engineering teams.
 
-The Agent Factory thesis is now operational: you know how to manufacture Digital FTEs with quality control. Whether your expertise is in contracts, campaigns, citations, or code—the discipline you've learned here applies to all of them.
+The Agent Factory thesis is now operational: you know how to manufacture Digital FTEs with quality control. Whether your expertise is in contracts, campaigns, citations, or code,the discipline you've learned here applies to all of them.
 
 Welcome to professional context engineering.
 

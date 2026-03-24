@@ -72,27 +72,27 @@ teaching_guide:
   session_group: 1
   session_title: "The AI Development Landscape"
   key_points:
-    - "The typist→orchestrator shift is the identity change students must internalize — your value moves from typing speed to judgment quality, and this reframe recurs throughout the book"
-    - "OODA Loop (Observe-Orient-Decide-Act) is the reasoning framework for ALL autonomous agents — it returns in Chapters 14, 16, 22, and 24 whenever agent behavior is discussed"
-    - "Satya Nadella's 'Full-Stack Builder' quote from Davos 2026 provides industry validation — this isn't theory, Microsoft is restructuring around it"
-    - "The five SDLC phases don't disappear with AI — human judgment shifts from execution to validation in each phase"
+    - "The typist→orchestrator shift is the identity change students must internalize; your value moves from typing speed to judgment quality, and this reframe recurs throughout the book"
+    - "OODA Loop (Observe-Orient-Decide-Act) is the reasoning framework for ALL autonomous agents; it returns in Chapters 14, 16, 22, and 24 whenever agent behavior is discussed"
+    - "Satya Nadella's 'Full-Stack Builder' quote from Davos 2026 provides industry validation; this isn't theory, Microsoft is restructuring around it"
+    - "The five SDLC phases don't disappear with AI; human judgment shifts from execution to validation in each phase"
   misconceptions:
-    - "Students think 'orchestrator' means 'doesn't need to understand code' — you still need programming knowledge to validate AI output, you just don't type 80% of it"
-    - "Students conflate OODA Loop with simple trial-and-error — OODA is structured reasoning with observation and orientation phases, not just 'try and see'"
-    - "Students assume Gen 4 (Agentic) replaces Gen 1-3 tools — each generation coexists; autocomplete (Gen 1) is still useful alongside autonomous agents (Gen 4)"
+    - "Students think 'orchestrator' means 'doesn't need to understand code'; you still need programming knowledge to validate AI output, you just don't type 80% of it"
+    - "Students conflate OODA Loop with simple trial-and-error; OODA is structured reasoning with observation and orientation phases, not just 'try and see'"
+    - "Students assume Gen 4 (Agentic) replaces Gen 1-3 tools; each generation coexists; autocomplete (Gen 1) is still useful alongside autonomous agents (Gen 4)"
   discussion_prompts:
-    - "If AI handles 80% of implementation, what happens to junior developer roles — do they become orchestrators faster or lose the learning opportunity?"
-    - "Nadella combined four roles into 'Full-Stack Builder' — what might your company's version of that combination look like?"
-    - "The lesson claims 140 hours drops to 33 hours for a typical project — where do you think the biggest time savings actually come from?"
+    - "If AI handles 80% of implementation, what happens to junior developer roles; do they become orchestrators faster or lose the learning opportunity?"
+    - "Nadella combined four roles into 'Full-Stack Builder'; what might your company's version of that combination look like?"
+    - "The lesson claims 140 hours drops to 33 hours for a typical project; where do you think the biggest time savings actually come from?"
   teaching_tips:
-    - "Start with the Typist vs Orchestrator comparison — have students identify which mode they currently work in before presenting the framework"
-    - "The Judgment Layer diagram (You on top, AI on bottom) is a clean whiteboard visual — draw it and add examples from students' own domains"
-    - "Walk through the OODA debugging example step by step — pause after 'OBSERVE: Read the error message' and ask what the agent does next before revealing"
-    - "The Gen 1-5 timeline table makes an excellent quiz anchor — students should be able to classify any AI tool they use"
+    - "Start with the Typist vs Orchestrator comparison; have students identify which mode they currently work in before presenting the framework"
+    - "The Judgment Layer diagram (You on top, AI on bottom) is a clean whiteboard visual; draw it and add examples from students' own domains"
+    - "Walk through the OODA debugging example step by step; pause after 'OBSERVE: Read the error message' and ask what the agent does next before revealing"
+    - "The Gen 1-5 timeline table makes an excellent quiz anchor; students should be able to classify any AI tool they use"
   assessment_quick_check:
     - "Ask students to classify a specific AI tool (e.g., GitHub Copilot autocomplete) into the correct generation with justification"
     - "Have students name the three capabilities an orchestrator needs (problem clarity, constraint awareness, quality standards)"
-    - "Ask: 'What does the OODA loop do that a simple chatbot response does not?' — tests understanding of iterative reasoning"
+    - "Ask: 'What does the OODA loop do that a simple chatbot response does not?'; tests understanding of iterative reasoning"
 
 # Generation metadata
 generated_by: "content-implementer v2.0.0 (part-1-consolidation)"
@@ -112,7 +112,7 @@ prerequisites:
 
 # From Coder to Orchestrator and the OODA Loop
 
-You've been coding for years. You sit down, you think through a problem, you type the solution. Maybe you check Stack Overflow, maybe you reference documentation, but the implementation work—turning ideas into working code—comes from your brain, through your fingers, into a file.
+You've been coding for years. You sit down, you think through a problem, you type the solution. Maybe you check Stack Overflow, maybe you reference documentation, but the implementation work: turning ideas into working code: comes from your brain, through your fingers, into a file.
 
 Now imagine this instead: You describe what you want to build. An AI system reads your actual project, understands your patterns, proposes specific changes, and executes them with your approval. It runs tests, sees errors, and iterates. Your role shifts from "I must write this" to "I must direct the writing of this."
 
@@ -122,7 +122,7 @@ This isn't science fiction. This is where software development is in 2026. And i
 
 ## The Evolution: From Typist to Orchestrator
 
-For decades, the primary skill in software development was **implementation**—your ability to type working code. A developer sat down with a problem and manually wrote database schemas, API endpoints, error handling logic, boilerplate authentication, styling and layouts.
+For decades, the primary skill in software development was **implementation**:your ability to type working code. A developer sat down with a problem and manually wrote database schemas, API endpoints, error handling logic, boilerplate authentication, styling and layouts.
 
 This was _necessary_ work. Someone had to write it. But 80% of what developers typed was either:
 
@@ -145,9 +145,9 @@ This shift from specialized implementation to holistic orchestration isn't just 
 In January 2026, speaking at the World Economic Forum in Davos, Microsoft CEO Satya Nadella described exactly this transformation. He explained how AI has collapsed the traditional silos that previously required distinct teams to coordinate.
 
 > _"We used to have product managers. We had designers, we had frontend engineers, and then we had backend engineers... So what we did is we sort of took those first four roles and combined them... and said, let's, they're all full-stack builders."_
-> — **Satya Nadella** (Davos, 2026)
+>; **Satya Nadella** (Davos, 2026)
 
-Nadella’s "Full-Stack Builder" is the industry term for the Orchestrator. It describes a developer who is no longer confined to a single layer of the stack. Because AI handles the implementation details of every layer—generating the CSS for the frontend, writing the SQL for the backend, and drafting the specs for the product manager—a single individual can now own the vertical slice of value that previously required four specialists to deliver.
+Nadella’s "Full-Stack Builder" is the industry term for the Orchestrator. It describes a developer who is no longer confined to a single layer of the stack. Because AI handles the implementation details of every layer: generating the CSS for the frontend, writing the SQL for the backend, and drafting the specs for the product manager: a single individual can now own the vertical slice of value that previously required four specialists to deliver.
 
 The **Typist** is limited by what they can manually code.
 The **Full-Stack Builder** is limited only by what they can orchestrate.
@@ -246,7 +246,7 @@ This requires three capabilities:
 
 ## The OODA Loop: How Autonomous Agents Think
 
-If you're going to orchestrate AI systems, you need to understand how they reason. The most powerful framework for this is the **OODA Loop**—a decision-making cycle developed by military strategist John Boyd and now fundamental to how autonomous agents operate.
+If you're going to orchestrate AI systems, you need to understand how they reason. The most powerful framework for this is the **OODA Loop**:a decision-making cycle developed by military strategist John Boyd and now fundamental to how autonomous agents operate.
 
 ### What Is the OODA Loop?
 
@@ -258,9 +258,9 @@ OODA stands for **Observe, Orient, Decide, Act**. It's a continuous cycle of:
 4. **Act**: Execute that decision
 5. **Repeat**: Observe the new state and continue
 
-Passive AI tools (like ChatGPT without file access) **predict**—they generate one response based on their training data.
+Passive AI tools (like ChatGPT without file access) **predict**:they generate one response based on their training data.
 
-Agentic AI tools (like Claude Code) **reason**—they cycle through the OODA Loop until they achieve their goal.
+Agentic AI tools (like Claude Code) **reason**:they cycle through the OODA Loop until they achieve their goal.
 
 ### OODA in Action: Debugging Example
 
@@ -290,7 +290,7 @@ ACT: Implement alternative fix
 
 ## Five Generations of AI Tools: The Path to Autonomy
 
-To understand where we are in **2026**, we need to trace how AI development tools evolved from simple helpers to the autonomous team members they are today. Each generation represents a fundamental expansion of scope—what the tool can tackle alone and how the human role has shifted from "coder" to "governor."
+To understand where we are in **2026**, we need to trace how AI development tools evolved from simple helpers to the autonomous team members they are today. Each generation represents a fundamental expansion of scope: what the tool can tackle alone and how the human role has shifted from "coder" to "governor."
 
 ---
 
@@ -323,7 +323,7 @@ To understand where we are in **2026**, we need to trace how AI development tool
 **What it does**: We have moved past the "early phase" into the maturity of **Agentic AI**. Tools like **Claude Code (Opus 4.5)** and **Gemini 3 CLI** are now the daily drivers for senior engineers.
 
 - **The MCP Revolution**: Using the **Model Context Protocol (MCP)**, agents now have "universal adapters" to connect to your databases, cloud logs, and Jira tickets.
-- **Multi-Step Orchestration**: Agents handle tasks that take hours—analyzing a bug, writing a fix, running the test suite, and submitting a PR—independently.
+- **Multi-Step Orchestration**: Agents handle tasks that take hours: analyzing a bug, writing a fix, running the test suite, and submitting a PR: independently.
 - **Performance**: As of Jan 2026, top models like **Gemini 3 Flash** are hitting **~76% accuracy** on the _SWE-bench Verified_ benchmark, solving 3 out of 4 real-world GitHub issues unassisted.
 - **Human role**: **Orchestrator.** You define the "Definition of Done" and review the final PR, managing the agent's "blast radius."
 
@@ -351,7 +351,7 @@ To understand where we are in **2026**, we need to trace how AI development tool
 
 ## How AI Transforms the Software Development Lifecycle
 
-The shift from typist to orchestrator affects every phase of software development. AI doesn't eliminate the five phases of the SDLC—**Planning**, **Coding**, **Testing**, **Deployment**, and **Operations**—but it fundamentally transforms _what happens in each one_ and _who does the work_.
+The shift from typist to orchestrator affects every phase of software development. AI doesn't eliminate the five phases of the SDLC: **Planning**, **Coding**, **Testing**, **Deployment**, and **Operations**:but it fundamentally transforms _what happens in each one_ and _who does the work_.
 
 ### Phase 1: Planning (Requirements → Specification)
 
@@ -457,7 +457,7 @@ Consider a typical project in both eras:
 - Operations: Ongoing (validating AI monitoring and incident response)
 - **Total for release: 33 hours**
 
-The developer isn't working less—they're working on _different things_ that have higher value.
+The developer isn't working less: they're working on _different things_ that have higher value.
 
 More importantly: The AI-orchestrated version produces _better outcomes_ because the orchestrator focuses on judgment and validation instead of being exhausted from 80+ hours of typing implementation code.
 
@@ -492,7 +492,7 @@ As an orchestrator, your skill priorities shift:
 3. Constraint analysis and tradeoffs
 4. Prompting and direction (getting AI to understand intent)
 
-You still need programming knowledge—you can't validate what you don't understand. But you're no longer spending 80% of your time typing implementations.
+You still need programming knowledge: you can't validate what you don't understand. But you're no longer spending 80% of your time typing implementations.
 
 ---
 
@@ -502,9 +502,9 @@ You still need programming knowledge—you can't validate what you don't underst
 
 > "I want to understand the difference between typist and orchestrator mindsets. Here's a scenario: I need to build a CSV importer that validates data before insertion.
 >
-> First, show me what a **typist approach** would look like—what they'd manually type (reading CSV, validation, error handling, retry logic).
+> First, show me what a **typist approach** would look like: what they'd manually type (reading CSV, validation, error handling, retry logic).
 >
-> Then, show me what an **orchestrator approach** would look like—what specification matters (what constitutes valid data? what happens on errors?), what constraints exist (file size? performance? data sensitivity?), and what they'd ask AI (write a clear direction, not a vague task).
+> Then, show me what an **orchestrator approach** would look like: what specification matters (what constitutes valid data? what happens on errors?), what constraints exist (file size? performance? data sensitivity?), and what they'd ask AI (write a clear direction, not a vague task).
 >
 > Which approach feels more scalable? Where does human judgment matter most? What would an orchestrator need to validate in AI's work?"
 
@@ -536,7 +536,7 @@ You still need programming knowledge—you can't validate what you don't underst
 >
 > After going through all 5 phases, which one shows the biggest time savings? Which one requires the most careful human oversight despite AI assistance?"
 
-**What you're learning:** How the orchestrator role applies across the entire software development lifecycle—not just in coding, but in planning, testing, deployment, and operations. You'll see where AI accelerates work and where human judgment remains indispensable.
+**What you're learning:** How the orchestrator role applies across the entire software development lifecycle: not just in coding, but in planning, testing, deployment, and operations. You'll see where AI accelerates work and where human judgment remains indispensable.
 
 ## Flashcards Study Aid
 

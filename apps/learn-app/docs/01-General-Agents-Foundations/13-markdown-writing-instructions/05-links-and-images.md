@@ -63,22 +63,22 @@ teaching_guide:
   session_group: 3
   session_title: "Links, Images & Complete Specifications"
   key_points:
-    - "Link [text](url) and image ![alt text](url) syntax differ by only the ! prefix — teach as a pair so students leverage pattern recognition"
-    - "Descriptive link text matters for AI: '[Python documentation](...)' provides context, '[click here](...)' provides none — AI cannot infer destination from vague text"
-    - "Bold (**must**) vs italic (*recommended*) signals requirement priority to AI — this semantic distinction directly affects implementation decisions"
-    - "This lesson completes the Task Tracker spec started in Lesson 2 — celebrate the achievement of building a full specification"
+    - "Link [text](url) and image ![alt text](url) syntax differ by only the ! prefix; teach as a pair so students leverage pattern recognition"
+    - "Descriptive link text matters for AI: '[Python documentation](...)' provides context, '[click here](...)' provides none; AI cannot infer destination from vague text"
+    - "Bold (**must**) vs italic (*recommended*) signals requirement priority to AI; this semantic distinction directly affects implementation decisions"
+    - "This lesson completes the Task Tracker spec started in Lesson 2; celebrate the achievement of building a full specification"
   misconceptions:
-    - "Students write 'click here' as link text — AI agents and screen readers cannot infer the destination from generic text"
-    - "Students forget the ! prefix for images, accidentally creating a link instead of an embedded image — 'show it here' (!) vs 'take me there' (no !)"
-    - "Students overuse bold emphasis making everything stand out equally — bold loses its signaling power when every other word is bold"
+    - "Students write 'click here' as link text; AI agents and screen readers cannot infer the destination from generic text"
+    - "Students forget the ! prefix for images, accidentally creating a link instead of an embedded image; 'show it here' (!) vs 'take me there' (no !)"
+    - "Students overuse bold emphasis making everything stand out equally; bold loses its signaling power when every other word is bold"
   discussion_prompts:
     - "If you were an AI reading a spec and saw **must** vs *recommended*, how would you prioritize your implementation work differently?"
     - "Why is descriptive alt text important even though modern AI can 'see' images? Think about how specs are processed as plain text files in coding workflows."
   teaching_tips:
-    - "Teach link and image syntax back-to-back — the ! prefix is the only difference, and students learn both faster when presented as a pair"
+    - "Teach link and image syntax back-to-back; the ! prefix is the only difference, and students learn both faster when presented as a pair"
     - "Use the 'Common Image Mistakes' section as a live error-spotting exercise before revealing the answers"
-    - "End with the 'Your First Complete Specification' section as a genuine celebration — students built a real spec across 4 lessons"
-    - "Connect the full chapter arc: Lesson 1 explained WHY markdown matters, Lessons 2-5 taught HOW — the finished Task Tracker spec is proof they can write specifications for AI"
+    - "End with the 'Your First Complete Specification' section as a genuine celebration; students built a real spec across 4 lessons"
+    - "Connect the full chapter arc: Lesson 1 explained WHY markdown matters, Lessons 2-5 taught HOW; the finished Task Tracker spec is proof they can write specifications for AI"
   assessment_quick_check:
     - "Ask students to write the syntax for a link and an image from memory, then identify the single-character difference"
     - "Give students a sentence with **bold** and *italic* terms and ask which are hard requirements vs recommendations"
@@ -165,10 +165,10 @@ See the [Python documentation](https://docs.python.org/) for more information.
 The [requests library documentation](https://requests.readthedocs.io/) has examples.
 ```
 
-**Why this matters for AI**: AI agents use link text to understand what the destination provides *without* following the link. `[Python documentation](...)` tells AI it's a language reference. `[click here](...)` provides zero context—AI must guess or follow the link (which it often can't do).
+**Why this matters for AI**: AI agents use link text to understand what the destination provides *without* following the link. `[Python documentation](...)` tells AI it's a language reference. `[click here](...)` provides zero context: AI must guess or follow the link (which it often can't do).
 
 :::info[Expert Insight]
-Links in specifications serve as **context anchors** for AI agents. When you link to library documentation, you're telling the AI: "This is the authoritative source for how this works." Some AI tools can fetch linked URLs to understand APIs better. Even when they can't, the link text provides semantic context—`[requests library](...)` tells the AI you're using the Python requests package, not just making generic "requests."
+Links in specifications serve as **context anchors** for AI agents. When you link to library documentation, you're telling the AI: "This is the authoritative source for how this works." Some AI tools can fetch linked URLs to understand APIs better. Even when they can't, the link text provides semantic context: `[requests library](...)` tells the AI you're using the Python requests package, not just making generic "requests."
 :::
 
 ---
@@ -197,7 +197,7 @@ Now readers can click through and see:
 - What JSON looks like
 - What sample outputs should look like
 
-Instead of describing resources, you're pointing directly to them — readers get answers in one click.
+Instead of describing resources, you're pointing directly to them; readers get answers in one click.
 
 :::tip[Pro-Tip: Reference-Style Links]
 For documents with many links, markdown supports reference-style links that keep your text clean:
@@ -231,7 +231,7 @@ Images help readers understand:
 
 ### The Syntax (Very Similar to Links!)
 
-Markdown images use almost the same syntax as links, with one difference — an exclamation mark `!` at the start:
+Markdown images use almost the same syntax as links, with one difference; an exclamation mark `!` at the start:
 
 ```text
 ![alt text](image-url)
@@ -269,7 +269,7 @@ Put images in a folder (like `images/` or `assets/`) and reference them with a r
 **For beginners**: Start with online image URLs. Later you can add local images to your projects.
 
 :::info[Expert Insight]
-**Important for AI-native development**: Modern AI models are multimodal—they CAN see images when given visual access. However, when AI reads your markdown files as text (common in coding workflows), it only sees the `![alt text](url)` syntax, not the actual image. Descriptive alt text serves two purposes: (1) accessibility for screen readers, and (2) providing context when AI processes your spec as a text file. Instead of `![screenshot](app.png)`, write `![Task list showing 3 pending items with checkboxes](app.png)`.
+**Important for AI-native development**: Modern AI models are multimodal: they CAN see images when given visual access. However, when AI reads your markdown files as text (common in coding workflows), it only sees the `![alt text](url)` syntax, not the actual image. Descriptive alt text serves two purposes: (1) accessibility for screen readers, and (2) providing context when AI processes your spec as a text file. Instead of `![screenshot](app.png)`, write `![Task list showing 3 pending items with checkboxes](app.png)`.
 :::
 
 ---
@@ -425,7 +425,7 @@ Test your understanding of links and images by building a real README section.
 
 ### Setup
 
-Use any AI assistant you have access to — ChatGPT, Claude, Gemini, or another tool.
+Use any AI assistant you have access to; ChatGPT, Claude, Gemini, or another tool.
 
 **Prompt 1 (Links Practice):**
 
@@ -565,7 +565,7 @@ For more info, [click here](https://docs.python.org/).
 See the [Python documentation](https://docs.python.org/) for more info.
 ```
 
-Descriptive link text tells both humans and AI what the destination provides — without needing to follow the link.
+Descriptive link text tells both humans and AI what the destination provides; without needing to follow the link.
 
 ### Mistake 2: Forgetting the `!` for Images
 
@@ -621,14 +621,14 @@ When you use links, images, and emphasis correctly in specifications, AI agents 
 4. **Generate appropriate placeholders** - When AI creates documentation, it follows your link/image patterns
 5. **Distinguish priority levels** - Bold (**must**) vs italic (*recommended*) helps AI decide what to implement first vs what is optional
 
-Together, these elements transform a basic specification into a rich brief — one that gives AI context, examples, and clear priorities to work from.
+Together, these elements transform a basic specification into a rich brief; one that gives AI context, examples, and clear priorities to work from.
 
 :::info[Expert Insight]
-Links, images, and emphasis each add a different dimension to your specifications. Links provide **context anchors** — connecting your spec to authoritative sources that AI can reference. Images provide **visual contracts** — showing what the result should look like. Emphasis provides **priority signals** — telling AI which requirements are non-negotiable and which are nice-to-have. Together, these elements transform a basic specification into a comprehensive brief that guides AI toward accurate, well-prioritized implementations.
+Links, images, and emphasis each add a different dimension to your specifications. Links provide **context anchors**; connecting your spec to authoritative sources that AI can reference. Images provide **visual contracts**; showing what the result should look like. Emphasis provides **priority signals**; telling AI which requirements are non-negotiable and which are nice-to-have. Together, these elements transform a basic specification into a comprehensive brief that guides AI toward accurate, well-prioritized implementations.
 :::
 
 :::note[How AI Processes Images]
-Modern AI models are multimodal and can view images directly when given visual access. However, in text-based workflows (like reading spec files), AI sees only the alt text and filename. Write descriptive alt text that works for both scenarios—it helps accessibility AND provides context regardless of how your document is processed.
+Modern AI models are multimodal and can view images directly when given visual access. However, in text-based workflows (like reading spec files), AI sees only the alt text and filename. Write descriptive alt text that works for both scenarios: it helps accessibility AND provides context regardless of how your document is processed.
 :::
 
 ---
@@ -637,7 +637,7 @@ Modern AI models are multimodal and can view images directly when given visual a
 
 Before we wrap up, here are additional markdown elements you'll encounter in real projects.
 
-### Tables — Comparing Options
+### Tables; Comparing Options
 
 Tables are useful when you need to compare features, list configurations, or show structured data:
 
@@ -657,9 +657,9 @@ Tables are useful when you need to compare features, list configurations, or sho
 | Collaboration  | No        | Yes      |
 | Export to PDF   | No        | Yes      |
 
-**Key rules**: Use `|` to separate columns and `---` to create the header row. Alignment is optional — the columns don't need to line up perfectly in your source file.
+**Key rules**: Use `|` to separate columns and `---` to create the header row. Alignment is optional; the columns don't need to line up perfectly in your source file.
 
-### Task Lists — Tracking Progress
+### Task Lists; Tracking Progress
 
 Task lists add checkboxes to track what's done. This is a GitHub Flavored Markdown (GFM) extension:
 
@@ -728,7 +728,7 @@ Your Task Tracker App specification now has everything an AI agent needs to unde
 
 ### Check Your Work
 
-Compare your specification against this reference. Don't worry if yours isn't identical — the important thing is that it has the right structure and elements.
+Compare your specification against this reference. Don't worry if yours isn't identical; the important thing is that it has the right structure and elements.
 
 <details>
 <summary><strong>Reference: Complete Task Tracker Specification (click to expand)</strong></summary>
@@ -817,8 +817,8 @@ No tasks yet. Use option 1 to add a task.
 
 **What to check in your version:**
 - One `#` title, four `##` sections, four `###` feature headings
-- Features use bullet lists (unordered — order doesn't matter)
-- Installation uses numbered list (ordered — sequence matters)
+- Features use bullet lists (unordered; order doesn't matter)
+- Installation uses numbered list (ordered; sequence matters)
 - Expected output uses fenced code blocks with `text` tag
 - At least one link with descriptive text (not "click here")
 - At least one image with descriptive alt text (not just "screenshot")
@@ -827,7 +827,7 @@ No tasks yet. Use option 1 to add a task.
 
 ### What's Next?
 
-In the **Chapter Quiz**, you'll test your markdown knowledge. Then in **Chapter 14**, you'll use these markdown skills to write real specifications for AI agents — turning structured documents into working software.
+In the **Chapter Quiz**, you'll test your markdown knowledge. Then in **Chapter 14**, you'll use these markdown skills to write real specifications for AI agents; turning structured documents into working software.
 
 
 ## Flashcards Study Aid

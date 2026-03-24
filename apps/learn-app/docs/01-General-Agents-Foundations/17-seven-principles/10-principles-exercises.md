@@ -52,7 +52,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (Principle Application Pattern, Diagnosis/Discovery Pattern, Multi-Principle Integration) — within B1 limit. Exercises reinforce existing L01-L07 knowledge."
+  assessment: "3 concepts (Principle Application Pattern, Diagnosis/Discovery Pattern, Multi-Principle Integration): within B1 limit. Exercises reinforce existing L01-L07 knowledge."
 
 differentiation:
   extension_for_advanced: "Complete all 3 capstone projects; attempt discovery exercises before reading the corresponding lesson"
@@ -87,9 +87,9 @@ teaching_guide:
 
 # Principles Exercises: Practice the Seven Principles
 
-You've read about the Seven Principles. You understand why bash verification matters, why code beats prose, why verification catches bugs before they reach production. But understanding principles and applying principles are different skills entirely. The gap between knowing the theory and having the muscle memory is where most people stall — they can explain what "small, reversible decomposition" means but still make monolithic commits when the pressure is on.
+You've read about the Seven Principles. You understand why bash verification matters, why code beats prose, why verification catches bugs before they reach production. But understanding principles and applying principles are different skills entirely. The gap between knowing the theory and having the muscle memory is where most people stall; they can explain what "small, reversible decomposition" means but still make monolithic commits when the pressure is on.
 
-These 17 exercises close that gap. Each module targets one principle with two exercises: a **guided** exercise where you know which principle to apply, and a **discovery** exercise where you diagnose what went wrong. Three skills run through every exercise: **principle recognition** (identifying which principle fits a scenario), **principle application** (using a principle to solve a concrete problem), and **workflow diagnosis** (spotting which principle was violated when something breaks). By the end, you won't need to think about which principle fits — you'll recognize the pattern instantly.
+These 17 exercises close that gap. Each module targets one principle with two exercises: a **guided** exercise where you know which principle to apply, and a **discovery** exercise where you diagnose what went wrong. Three skills run through every exercise: **principle recognition** (identifying which principle fits a scenario), **principle application** (using a principle to solve a concrete problem), and **workflow diagnosis** (spotting which principle was violated when something breaks). By the end, you won't need to think about which principle fits; you'll recognize the pattern instantly.
 
 :::info Download Exercise Files
 **[Download Principles Exercises (ZIP)](https://github.com/panaversity/claude-code-principles-exercises/releases/latest/download/principles-exercises.zip)**
@@ -106,11 +106,11 @@ If the download link doesn't work, visit the [repository releases page](https://
 The workflow for every exercise is the same:
 
 1. **Open the exercise folder** from the `claude-code-principles-exercises/` directory
-2. **Read the INSTRUCTIONS.md** inside the folder — it has setup steps and starter files
+2. **Read the INSTRUCTIONS.md** inside the folder; it has setup steps and starter files
 3. **Read the walkthrough below** for context on what you're practicing and why
 4. **Start Claude Code or Cowork** and point it at the exercise folder
-5. **Work through the exercise** — write your own prompts, don't just copy the starter
-6. **Reflect** using the questions provided — this is where the real learning happens
+5. **Work through the exercise:** write your own prompts, don't just copy the starter
+6. **Reflect** using the questions provided; this is where the real learning happens
 
 You don't need to complete all 17 in one sitting. Work through one module at a time. Each module targets a different principle.
 
@@ -118,8 +118,8 @@ You don't need to complete all 17 in one sitting. Work through one module at a t
 
 ## Tool Guide
 
-- Claude Code — Terminal-based, best for exercises involving bash commands, file verification, and multi-step workflows
-- Cowork — Desktop app, best for exercises involving document review and prompt design
+- Claude Code. Terminal-based, best for exercises involving bash commands, file verification, and multi-step workflows
+- Cowork. Desktop app, best for exercises involving document review and prompt design
 
 Most exercises work with either tool. Where one is clearly better, the exercise notes will say so.
 
@@ -129,15 +129,15 @@ Most exercises work with either tool. Where one is clearly better, the exercise 
 
 Use this for every exercise:
 
-1. **Identify** — Which principle applies to this scenario?
-2. **Diagnose** — What failure does this principle prevent?
-3. **Plan** — How will you apply this principle here?
-4. **Execute** — Apply the principle with Claude Code or Cowork
-5. **Verify** — Did it work? What changed compared to the no-principle approach?
-6. **Compare** — What would have happened WITHOUT the principle?
-7. **Generalize** — When else does this principle apply in your work?
+1. **Identify:** Which principle applies to this scenario?
+2. **Diagnose:** What failure does this principle prevent?
+3. **Plan:** How will you apply this principle here?
+4. **Execute:** Apply the principle with Claude Code or Cowork
+5. **Verify:** Did it work? What changed compared to the no-principle approach?
+6. **Compare:** What would have happened WITHOUT the principle?
+7. **Generalize:** When else does this principle apply in your work?
 
-This framework mirrors how professionals internalize any methodology: identify the pattern, apply it deliberately, then reflect on the result. Over time, the framework becomes invisible — you just do it.
+This framework mirrors how professionals internalize any methodology: identify the pattern, apply it deliberately, then reflect on the result. Over time, the framework becomes invisible; you just do it.
 
 ---
 
@@ -161,13 +161,13 @@ For each exercise, evaluate yourself on:
 
 <ExerciseCard id="1.1" title="Verify Before You Modify" />
 
-### Exercise 1.1 — Verify Before You Modify (Guided)
+### Exercise 1.1. Verify Before You Modify (Guided)
 
 **The Problem:**
 Open the `module-1-bash-is-the-key/exercise-1.1-server-detective/` folder. You'll find a project directory with a `README.md` describing a small website, several source files, and a config that controls the build. Someone wants to "update the styling" but hasn't told you which files handle styles or what build system is in use.
 
 **Your Task:**
-Before asking Claude to change anything, use bash commands to map the project: what files exist, what the build system is, where styles live, what the current output looks like. Then — and only then — write a prompt that gives Claude the context it needs to make the right change.
+Before asking Claude to change anything, use bash commands to map the project: what files exist, what the build system is, where styles live, what the current output looks like. Then (and only then) write a prompt that gives Claude the context it needs to make the right change.
 
 **What You'll Learn:**
 
@@ -192,7 +192,7 @@ After running `ls -la`, `cat package.json`, and `grep -r "styles" .`, try: "The 
 
 <ExerciseCard id="1.2" title="The Blind Refactor" />
 
-### Exercise 1.2 — The Blind Refactor (Discovery)
+### Exercise 1.2. The Blind Refactor (Discovery)
 
 **The Problem:**
 Open the `module-1-bash-is-the-key/exercise-1.2-deploy-disaster/` folder. You'll find a `session-log.md` describing what happened when someone asked Claude to "refactor the API routes into separate files" without first checking the project structure. Claude assumed an Express.js setup, but the project uses Hono. It created files in the wrong directory, imported non-existent modules, and broke the working server.
@@ -220,13 +220,13 @@ Read the session log. Identify every point where a single bash command would hav
 
 <ExerciseCard id="2.1" title="Spec vs. Prose" />
 
-### Exercise 2.1 — Spec vs. Prose (Guided)
+### Exercise 2.1. Spec vs. Prose (Guided)
 
 **The Problem:**
-Open the `module-2-code-as-interface/exercise-2.1-report-spec/` folder. You'll find `requirements.md` — a natural-language description of a data validation function. It says things like "make sure emails are valid," "names shouldn't be too long," and "ages need to make sense." Every phrase is ambiguous.
+Open the `module-2-code-as-interface/exercise-2.1-report-spec/` folder. You'll find `requirements.md`; a natural-language description of a data validation function. It says things like "make sure emails are valid," "names shouldn't be too long," and "ages need to make sense." Every phrase is ambiguous.
 
 **Your Task:**
-Write the requirements as code — a test file or type definition that specifies exactly what "valid email" means, exactly how long is "too long," and exactly what age range "makes sense." Give Claude both versions (prose and code) and compare the implementations.
+Write the requirements as code; a test file or type definition that specifies exactly what "valid email" means, exactly how long is "too long," and exactly what age range "makes sense." Give Claude both versions (prose and code) and compare the implementations.
 
 **What You'll Learn:**
 
@@ -251,17 +251,17 @@ After writing your test file: "Implement a validation function that passes all t
 
 <ExerciseCard id="2.2" title="The Interpretation Gap" />
 
-### Exercise 2.2 — The Interpretation Gap (Discovery)
+### Exercise 2.2. The Interpretation Gap (Discovery)
 
 **The Problem:**
-Open the `module-2-code-as-interface/exercise-2.2-lost-in-translation/` folder. You'll find two files: `prompt.md` (a natural-language request to "build a dashboard showing user activity") and `output-a.md` plus `output-b.md` — two completely different implementations Claude produced from the same prompt on different runs. One shows a table of login timestamps. The other shows a chart of feature usage frequency. Both are reasonable interpretations.
+Open the `module-2-code-as-interface/exercise-2.2-lost-in-translation/` folder. You'll find two files: `prompt.md` (a natural-language request to "build a dashboard showing user activity") and `output-a.md` plus `output-b.md`; two completely different implementations Claude produced from the same prompt on different runs. One shows a table of login timestamps. The other shows a chart of feature usage frequency. Both are reasonable interpretations.
 
 **Your Task:**
 Analyze why the same prompt produced two different outputs. Identify every ambiguous word in the prompt. Then write a code specification (interface definition, mock data structure, or test) that would force both runs to produce the same result.
 
 **What You'll Learn:**
 
-- That natural language doesn't just allow multiple interpretations — it guarantees them
+- That natural language doesn't just allow multiple interpretations; it guarantees them
 - How to spot ambiguity by comparing divergent outputs from the same input
 - The specific techniques (interfaces, test cases, mock data) that eliminate interpretation variance
 
@@ -269,7 +269,7 @@ Analyze why the same prompt produced two different outputs. Identify every ambig
 
 1. How many ambiguous terms did you find in the original prompt?
 2. Does your code specification leave any room for interpretation? Could you make it even tighter?
-3. What's the cost of ambiguity — how much time would the "wrong" implementation waste in a real project?
+3. What's the cost of ambiguity; how much time would the "wrong" implementation waste in a real project?
 
 ---
 
@@ -279,13 +279,13 @@ Analyze why the same prompt produced two different outputs. Identify every ambig
 
 <ExerciseCard id="3.1" title="Trust But Verify" />
 
-### Exercise 3.1 — Trust But Verify (Guided)
+### Exercise 3.1. Trust But Verify (Guided)
 
 **The Problem:**
-Open the `module-3-verification/exercise-3.1-data-audit/` folder. You'll find customer data files and transformation claims describing what was supposedly done to clean and restructure the data. Your job isn't to perform the transformation — it's to verify whether the claimed output is actually correct.
+Open the `module-3-verification/exercise-3.1-data-audit/` folder. You'll find customer data files and transformation claims describing what was supposedly done to clean and restructure the data. Your job isn't to perform the transformation; it's to verify whether the claimed output is actually correct.
 
 **Your Task:**
-After Claude produces the transformed data, verify it using bash commands — don't just scan it visually. Check row counts (`wc -l`), spot-check specific values (`grep`, `awk`), verify no data was lost, and confirm the format matches the spec. Find at least one error that visual inspection would miss.
+After Claude produces the transformed data, verify it using bash commands; don't just scan it visually. Check row counts (`wc -l`), spot-check specific values (`grep`, `awk`), verify no data was lost, and confirm the format matches the spec. Find at least one error that visual inspection would miss.
 
 **What You'll Learn:**
 
@@ -310,10 +310,10 @@ After the transformation: "Now verify the output: confirm the row count matches 
 
 <ExerciseCard id="3.2" title='The "Looks Done" Trap' />
 
-### Exercise 3.2 — The "Looks Done" Trap (Discovery)
+### Exercise 3.2. The "Looks Done" Trap (Discovery)
 
 **The Problem:**
-Open the `module-3-verification/exercise-3.2-silent-corruption/` folder. You'll find `completed-work.md` — a session log where someone asked Claude to build a simple REST API with 4 endpoints. Claude reported "Done! All endpoints implemented and working." The log shows Claude writing code and declaring success. But the `project/` subfolder contains the actual code, and there are 3 bugs hiding in plain sight.
+Open the `module-3-verification/exercise-3.2-silent-corruption/` folder. You'll find `completed-work.md`; a session log where someone asked Claude to build a simple REST API with 4 endpoints. Claude reported "Done! All endpoints implemented and working." The log shows Claude writing code and declaring success. But the `project/` subfolder contains the actual code, and there are 3 bugs hiding in plain sight.
 
 **Your Task:**
 Find all 3 bugs. For each one, explain what verification step would have caught it (e.g., "running `curl localhost:3000/users` would have returned a 500 error" or "running the test suite would have shown a failing assertion"). Then write the verification protocol that should follow every "Done!" declaration.
@@ -338,7 +338,7 @@ Find all 3 bugs. For each one, explain what verification step would have caught 
 
 <ExerciseCard id="4.1" title="Atomic Commits" />
 
-### Exercise 4.1 — Atomic Commits (Guided)
+### Exercise 4.1. Atomic Commits (Guided)
 
 **The Problem:**
 Open the `module-4-decomposition/exercise-4.1-migration-steps/` folder. You'll find a project that needs 5 changes: rename a database table, update the ORM model, update 3 API endpoints that reference the old name, update the tests, and update the documentation. Someone's instinct is to make all 5 changes in one commit.
@@ -357,7 +357,7 @@ Decompose this into 5 separate commits, each atomic and independently verifiable
 > "Rename the users table to accounts and update everything that references it."
 
 **Better Prompt (Build Toward This):**
-"We need to rename the `users` table to `accounts`. Break this into atomic steps. Step 1: Add a migration that renames the table. Verify with `npm run migrate && npm test`. Commit only if tests pass. Step 2: Update the ORM model. Verify the same way. Continue one step at a time — don't batch changes."
+"We need to rename the `users` table to `accounts`. Break this into atomic steps. Step 1: Add a migration that renames the table. Verify with `npm run migrate && npm test`. Commit only if tests pass. Step 2: Update the ORM model. Verify the same way. Continue one step at a time; don't batch changes."
 
 **Reflection Questions:**
 
@@ -369,10 +369,10 @@ Decompose this into 5 separate commits, each atomic and independently verifiable
 
 <ExerciseCard id="4.2" title="The Big-Bang Commit" />
 
-### Exercise 4.2 — The Big-Bang Commit (Discovery)
+### Exercise 4.2. The Big-Bang Commit (Discovery)
 
 **The Problem:**
-Open the `module-4-decomposition/exercise-4.2-big-bang-failure/` folder. You'll find `commit-diff.md` — a single massive commit that touched 14 files across 3 different concerns: a feature addition, a bug fix, and a style update. After deployment, users reported a regression. The team can't figure out which of the 14 file changes caused it because everything is tangled in one commit.
+Open the `module-4-decomposition/exercise-4.2-big-bang-failure/` folder. You'll find `commit-diff.md`; a single massive commit that touched 14 files across 3 different concerns: a feature addition, a bug fix, and a style update. After deployment, users reported a regression. The team can't figure out which of the 14 file changes caused it because everything is tangled in one commit.
 
 **Your Task:**
 Analyze the diff and untangle it. Identify which changes belong to the feature, which to the bug fix, and which to the style update. Propose a decomposition into 3+ atomic commits that would have made the regression isolatable. Explain how `git bisect` would have found the bug if the work had been decomposed.
@@ -381,7 +381,7 @@ Analyze the diff and untangle it. Identify which changes belong to the feature, 
 
 - How tangled commits make debugging exponentially harder
 - The technique of retroactively decomposing a monolithic change
-- Why "I'll commit everything at the end" is a false efficiency — it trades 5 minutes of discipline for hours of debugging
+- Why "I'll commit everything at the end" is a false efficiency; it trades 5 minutes of discipline for hours of debugging
 
 **Reflection Questions:**
 
@@ -397,7 +397,7 @@ Analyze the diff and untangle it. Identify which changes belong to the feature, 
 
 <ExerciseCard id="5.1" title="Build a CLAUDE.md" />
 
-### Exercise 5.1 — Build a CLAUDE.md (Guided)
+### Exercise 5.1. Build a CLAUDE.md (Guided)
 
 **The Problem:**
 Open the `module-5-persisting-state/exercise-5.1-decision-journal/` folder. You'll find multiple session transcripts from the same project plus a project-files directory. The earlier sessions establish conventions and make architectural decisions. The later sessions start from scratch and violate those conventions because the context was lost between sessions.
@@ -425,7 +425,7 @@ Read both transcripts. Extract every convention, decision, and project pattern f
 
 <ExerciseCard id="5.2" title="The Groundhog Day Sessions" />
 
-### Exercise 5.2 — The Groundhog Day Sessions (Discovery)
+### Exercise 5.2. The Groundhog Day Sessions (Discovery)
 
 **The Problem:**
 Open the `module-5-persisting-state/exercise-5.2-groundhog-day/` folder. You'll find three session transcripts from the same project, spaced weeks apart. Sessions 2 and 3 repeat Session 1's mistakes almost exactly: re-discovering the same bugs, re-establishing the same patterns, making the same wrong assumptions before correcting them. The developer wasted 40+ minutes across sessions relearning what they already knew.
@@ -453,10 +453,10 @@ Map the repeated work: which discoveries in Session 2 were already made in Sessi
 
 <ExerciseCard id="6.1" title="Write Permission Guardrails" />
 
-### Exercise 6.1 — Write Permission Guardrails (Guided)
+### Exercise 6.1. Write Permission Guardrails (Guided)
 
 **The Problem:**
-Open the `module-6-constraints-safety/exercise-6.1-sandbox-setup/` folder. You'll find `project-description.md` — a project with sensitive files (`.env` with API keys, `database/production.sql` with real data, `deploy/` with production deployment scripts). You want Claude to help with development but need to ensure it never reads, modifies, or deletes anything sensitive.
+Open the `module-6-constraints-safety/exercise-6.1-sandbox-setup/` folder. You'll find `project-description.md`; a project with sensitive files (`.env` with API keys, `database/production.sql` with real data, `deploy/` with production deployment scripts). You want Claude to help with development but need to ensure it never reads, modifies, or deletes anything sensitive.
 
 **Your Task:**
 Write a complete set of permission constraints: which files/directories Claude can freely access, which require confirmation, and which are completely off-limits. Then write a CLAUDE.md section that encodes these constraints, and test by asking Claude to do something that should be blocked.
@@ -484,10 +484,10 @@ Write a complete set of permission constraints: which files/directories Claude c
 
 <ExerciseCard id="6.2" title="The Unconstrained Agent" />
 
-### Exercise 6.2 — The Unconstrained Agent (Discovery)
+### Exercise 6.2. The Unconstrained Agent (Discovery)
 
 **The Problem:**
-Open the `module-6-constraints-safety/exercise-6.2-runaway-agent/` folder. You'll find `incident-report.md` — a post-mortem of an incident where an AI agent was given broad permissions on a project and caused damage: it deleted a cache directory that turned out to contain unversioned work, modified a config file that broke the CI pipeline, and made an API call to a production service during testing.
+Open the `module-6-constraints-safety/exercise-6.2-runaway-agent/` folder. You'll find `incident-report.md`; a post-mortem of an incident where an AI agent was given broad permissions on a project and caused damage: it deleted a cache directory that turned out to contain unversioned work, modified a config file that broke the CI pipeline, and made an API call to a production service during testing.
 
 **Your Task:**
 Read the incident report. For each damaging action, write the specific constraint that would have prevented it. Then design a complete permission model for this project that balances productivity with safety. Your model should cover: file access, command execution, external service access, and destructive operations.
@@ -512,10 +512,10 @@ Read the incident report. For each damaging action, write the specific constrain
 
 <ExerciseCard id="7.1" title="Add Progress Reporting" />
 
-### Exercise 7.1 — Add Progress Reporting (Guided)
+### Exercise 7.1. Add Progress Reporting (Guided)
 
 **The Problem:**
-Open the `module-7-observability/exercise-7.1-progress-tracker/` folder. You'll find `multi-step-task.md` — a task that requires Claude to perform 6 sequential steps (read files, analyze data, generate report, create charts, compile output, run verification). Without progress reporting, you'd see nothing until Claude declares "Done!" after several minutes.
+Open the `module-7-observability/exercise-7.1-progress-tracker/` folder. You'll find `multi-step-task.md`; a task that requires Claude to perform 6 sequential steps (read files, analyze data, generate report, create charts, compile output, run verification). Without progress reporting, you'd see nothing until Claude declares "Done!" after several minutes.
 
 **Your Task:**
 Rewrite the task prompt to require explicit progress reporting: Claude must announce each step before starting it, report what it found/produced, and summarize what's next. Execute the task with and without progress reporting and compare the experience.
@@ -524,7 +524,7 @@ Rewrite the task prompt to require explicit progress reporting: Claude must anno
 
 - How progress reporting transforms "black box" AI work into transparent collaboration
 - The specific prompt patterns that produce useful progress reports (not just "Step 3 done")
-- That observability isn't overhead — it's how you catch problems before they compound
+- That observability isn't overhead; it's how you catch problems before they compound
 
 **Starter Prompt:**
 
@@ -537,16 +537,16 @@ Rewrite the task prompt to require explicit progress reporting: Claude must anno
 
 1. Did progress reporting help you catch any issues mid-task that you would have missed in the final output?
 2. How much longer did the observable version take compared to the black-box version? Was the tradeoff worth it?
-3. What's the right level of reporting detail — every line, every step, or every phase?
+3. What's the right level of reporting detail; every line, every step, or every phase?
 
 ---
 
 <ExerciseCard id="7.2" title="The Opaque Session" />
 
-### Exercise 7.2 — The Opaque Session (Discovery)
+### Exercise 7.2. The Opaque Session (Discovery)
 
 **The Problem:**
-Open the `module-7-observability/exercise-7.2-black-box-debug/` folder. You'll find `activity-log.md` — an activity log from a Claude session where something went wrong. The developer asked Claude to "set up the testing framework," and 10 minutes later the project was in a broken state. The log shows file reads, writes, and command executions, but no explanation of reasoning or progress updates.
+Open the `module-7-observability/exercise-7.2-black-box-debug/` folder. You'll find `activity-log.md`; an activity log from a Claude session where something went wrong. The developer asked Claude to "set up the testing framework," and 10 minutes later the project was in a broken state. The log shows file reads, writes, and command executions, but no explanation of reasoning or progress updates.
 
 **Your Task:**
 Reconstruct what happened from the activity log alone. Identify the exact point where things went wrong. Then write the observability rules (progress reporting format, checkpoint requirements) that would have made the failure obvious in real time instead of requiring forensic analysis after the fact.
@@ -567,13 +567,13 @@ Reconstruct what happened from the activity log alone. Identify the exact point 
 
 ## Module 8: Integration Capstones
 
-> **Choose one (or more). These combine multiple principles — no starter prompts provided.**
+> **Choose one (or more). These combine multiple principles; no starter prompts provided.**
 
-Capstones are different from the exercises above. There are no guided prompts — you design the entire approach yourself. Each project requires applying 3 or more principles together to solve a realistic problem.
+Capstones are different from the exercises above. There are no guided prompts; you design the entire approach yourself. Each project requires applying 3 or more principles together to solve a realistic problem.
 
 <ExerciseCard id="A" title="Project Rescue" />
 
-### Capstone A — Project Rescue
+### Capstone A. Project Rescue
 
 Open the `module-8-integration/capstone-A-project-rescue/` folder. You'll find a broken project: tests are failing, the build is broken, the CLAUDE.md is out of date, there's no verification step in the workflow, and the last 3 commits are tangled messes. Your job is to rescue it.
 
@@ -583,13 +583,13 @@ Diagnose which principles were violated (there are at least 4). Fix the project 
 
 - How to diagnose multiple principle violations in a real project
 - That rescue operations require a specific order: verify state first, then fix, then prevent
-- How the principles reinforce each other — fixing one often reveals violations of another
+- How the principles reinforce each other; fixing one often reveals violations of another
 
 ---
 
 <ExerciseCard id="B" title="Workflow Design" />
 
-### Capstone B — Workflow Design
+### Capstone B. Workflow Design
 
 You've been hired to set up a new project for a small team. Open the `module-8-integration/capstone-B-workflow-design/` folder for the project brief. Your job is to design a complete AI-assisted development workflow from scratch.
 
@@ -605,9 +605,9 @@ Create a CLAUDE.md that encodes all 7 principles as project rules. Design a perm
 
 <ExerciseCard id="C" title="Your Own Project" />
 
-### Capstone C — Your Own Project
+### Capstone C. Your Own Project
 
-Pick a real project you're working on — personal, professional, or educational. Open the `module-8-integration/capstone-C-your-scenario/` folder for a self-assessment template.
+Pick a real project you're working on; personal, professional, or educational. Open the `module-8-integration/capstone-C-your-scenario/` folder for a self-assessment template.
 
 Audit your current workflow against all 7 principles. For each principle: rate yourself (1-4 using the rubric above), identify the biggest gap, and write one concrete change you'll make. Then implement the top 3 changes and run a real task using your improved workflow.
 
@@ -624,4 +624,4 @@ Unlike Capstones A and B, this one has real stakes. The changes you make apply t
 
 ## What's Next
 
-You've practiced the three core skills — **principle recognition**, **principle application**, and **workflow diagnosis** — across 17 exercises. These skills compound: every exercise builds intuition for recognizing when a principle applies and what happens when it's ignored. The Seven Principles aren't just concepts to remember for a quiz — they're habits that make every AI session more productive, predictable, and debuggable. Next in **Lesson 11: Chapter Quiz**, you'll test your conceptual understanding of all seven principles and their interactions. The quiz focuses on scenario-based reasoning — exactly the kind of diagnosis you practiced in the discovery exercises.
+You've practiced the three core skills; **principle recognition**, **principle application**, and **workflow diagnosis:** across 17 exercises. These skills compound: every exercise builds intuition for recognizing when a principle applies and what happens when it's ignored. The Seven Principles aren't just concepts to remember for a quiz; they're habits that make every AI session more productive, predictable, and debuggable. Next in **Lesson 11: Chapter Quiz**, you'll test your conceptual understanding of all seven principles and their interactions. The quiz focuses on scenario-based reasoning; exactly the kind of diagnosis you practiced in the discovery exercises.

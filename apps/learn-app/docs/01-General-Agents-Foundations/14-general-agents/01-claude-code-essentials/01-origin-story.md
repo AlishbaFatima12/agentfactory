@@ -61,19 +61,19 @@ teaching_guide:
   session_group: 1
   session_title: "Getting Started with Claude Code"
   key_points:
-    - "OODA loop is foundational — referenced again in Chapters 16, 22, and 24"
-    - "Product Overhang explains why capability existed before the product — this mental model recurs throughout the book"
+    - "OODA loop is foundational; referenced again in Chapters 16, 22, and 24"
+    - "Product Overhang explains why capability existed before the product; this mental model recurs throughout the book"
     - "General Agent vs Custom Agent distinction is the entire thesis of the book"
   misconceptions:
-    - "Students confuse General Agents with ChatGPT-style chatbots — emphasize the action-taking (agentic) difference"
+    - "Students confuse General Agents with ChatGPT-style chatbots; emphasize the action-taking (agentic) difference"
     - "Students think 'agentic' means 'smarter' rather than 'can take actions on files and systems'"
-    - "Students assume Claude Code requires coding skills — Cowork section addresses this"
+    - "Students assume Claude Code requires coding skills; Cowork section addresses this"
   discussion_prompts:
     - "What would change in your daily work if AI could see your actual files instead of you describing them?"
-    - "Can you think of other 'product overhangs' in technology — capabilities that existed but needed a better interface?"
+    - "Can you think of other 'product overhangs' in technology; capabilities that existed but needed a better interface?"
     - "Why do you think adoption hit 50% in 5 days internally at Anthropic?"
   teaching_tips:
-    - "Start with the ChatGPT copy-paste pain point — every student has experienced this"
+    - "Start with the ChatGPT copy-paste pain point; every student has experienced this"
     - "Demo the OODA loop live: show Claude reading a file, deciding what to do, acting, then correcting"
     - "The General Agent vs Custom Agent table is a good whiteboard moment"
   assessment_quick_check:
@@ -106,7 +106,7 @@ What if AI could simply _see_ your code?
 
 In September 2024, an engineer named Boris Cherny joined Anthropic and started an experiment. He gave Claude something it had never had before: direct access to the filesystem.
 
-What happened next revealed something the team hadn't anticipated. When Claude could read files, it didn't just answer questions better—it _explored_. Given access to a codebase, Claude naturally started reading files, following imports, understanding project structure. The behavior emerged without explicit instruction.
+What happened next revealed something the team hadn't anticipated. When Claude could read files, it didn't just answer questions better: it _explored_. Given access to a codebase, Claude naturally started reading files, following imports, understanding project structure. The behavior emerged without explicit instruction.
 
 Cherny had discovered what the team later called the "Product Overhang": the capability to be a genuine development partner already existed inside Claude. It was waiting. The model didn't need to become smarter. It needed a product that let it actually _see_ what developers were working on.
 
@@ -122,7 +122,7 @@ When Anthropic released it internally (November 2024), adoption was explosive: 2
 
 Productivity data: engineers averaged five pull requests per day (vs. one to two at typical companies). Pull request throughput jumped 67% even as the team grew from two to ten people.
 
-By mid-2025, Claude Code generated $500M+ annual run-rate—almost entirely from word-of-mouth ($1B by November 2025). The question: what made it spread so fast?
+By mid-2025, Claude Code generated $500M+ annual run-rate: almost entirely from word-of-mouth ($1B by November 2025). The question: what made it spread so fast?
 
 ---
 
@@ -136,7 +136,7 @@ Claude Code is **agentic**: you describe your goal, Claude reads your files, und
 
 ### General Agents vs. Custom Agents
 
-Claude Code is a **General Agent**—an AI that reasons through problems and takes action across domains. In Part 6, you'll build **Custom Agents** (using OpenAI SDK or Google ADK) for specific tasks. Here's the distinction:
+Claude Code is a **General Agent**:an AI that reasons through problems and takes action across domains. In Part 6, you'll build **Custom Agents** (using OpenAI SDK or Google ADK) for specific tasks. Here's the distinction:
 
 | Aspect      | General Agent (Claude Code)            | Custom Agent (SDK-built)              |
 | ----------- | -------------------------------------- | ------------------------------------- |
@@ -159,7 +159,7 @@ When Claude Code debugs, it cycles through:
 4. **Act**: Read files, run commands
 5. **Correct**: Adjust if the fix didn't work
 
-This **OODA Loop** (Observe, Orient, Decide, Act) repeats until the problem is solved. Claude Code doesn't just respond once—it keeps going.
+This **OODA Loop** (Observe, Orient, Decide, Act) repeats until the problem is solved. Claude Code doesn't just respond once: it keeps going.
 
 | ChatGPT (Prediction)     | Claude Code (Reasoning)         |
 | ------------------------ | ------------------------------- |
@@ -172,7 +172,7 @@ This **OODA Loop** (Observe, Orient, Decide, Act) repeats until the problem is s
 
 ## Why Terminal Integration Matters
 
-The terminal is where the agentic model works. Claude Code reads your actual files directly—no copy-paste needed. It runs tests, sees failures, and adjusts in real time. Changes go through Git (reviewable before execution), and every action is visible. You're reviewing proposals, not trusting a black box.
+The terminal is where the agentic model works. Claude Code reads your actual files directly: no copy-paste needed. It runs tests, sees failures, and adjusts in real time. Changes go through Git (reviewable before execution), and every action is visible. You're reviewing proposals, not trusting a black box.
 
 ---
 
@@ -180,9 +180,9 @@ The terminal is where the agentic model works. Claude Code reads your actual fil
 
 Before we continue, define: **Agent Skills**.
 
-A Skill is **encoded expertise**—a document (SKILL.md) that teaches Claude a precise procedure, reasoning pattern, or domain knowledge. Think of it as a "plugin for intelligence" you can create yourself.
+A Skill is **encoded expertise**:a document (SKILL.md) that teaches Claude a precise procedure, reasoning pattern, or domain knowledge. Think of it as a "plugin for intelligence" you can create yourself.
 
-Your domain expertise, encoded as a Skill, is intellectual property. When you create a Skill that automates financial audits, legal contract review, or sales outreach—that's not just a tool for yourself. That's **something you can sell**.
+Your domain expertise, encoded as a Skill, is intellectual property. When you create a Skill that automates financial audits, legal contract review, or sales outreach: that's not just a tool for yourself. That's **something you can sell**.
 
 In Lesson 33, we show you exactly how these Skills become revenue. For now: every Skill you build in this chapter is a potential product.
 
@@ -190,7 +190,7 @@ In Lesson 33, we show you exactly how these Skills become revenue. For now: ever
 
 ## What This Means for Developers
 
-Here's what's real: approximately ninety percent of Claude Code was written by Claude Code itself. Not because the AI is suddenly brilliant. Because the agentic model gives it the _access_ it needs. When AI can read code, understand patterns, run tests, and iterate—it becomes capable of complex work.
+Here's what's real: approximately ninety percent of Claude Code was written by Claude Code itself. Not because the AI is suddenly brilliant. Because the agentic model gives it the _access_ it needs. When AI can read code, understand patterns, run tests, and iterate: it becomes capable of complex work.
 
 ---
 
@@ -200,9 +200,9 @@ Claude Code proved that giving Claude filesystem access unlocked extraordinary c
 
 For developers, the terminal is home. For everyone else, it's a wall.
 
-When Anthropic released Claude Code, they expected developers to use it for coding. They did—and then quickly began using it for almost everything else. Non-technical users who struggled through the terminal setup discovered Claude Code could organize files, process documents, and automate research tasks.
+When Anthropic released Claude Code, they expected developers to use it for coding. They did: and then quickly began using it for almost everything else. Non-technical users who struggled through the terminal setup discovered Claude Code could organize files, process documents, and automate research tasks.
 
-In January 2026, Anthropic launched **Cowork**—the same agent architecture, the same filesystem access paradigm, wrapped in the familiar Claude Desktop interface.
+In January 2026, Anthropic launched **Cowork**:the same agent architecture, the same filesystem access paradigm, wrapped in the familiar Claude Desktop interface.
 
 | Aspect               | Claude Code                           | Cowork                                |
 | -------------------- | ------------------------------------- | ------------------------------------- |
@@ -220,21 +220,21 @@ The rest of this chapter covers both interfaces. You'll learn when to use each, 
 
 **🔍 Explore the Friction:**
 
-> "I use ChatGPT for coding help. Show me one workflow where copy-paste friction wastes time—maybe debugging an error or integrating a library. Then show what that same workflow looks like with filesystem access. What do I type? What does the AI see? What's different?"
+> "I use ChatGPT for coding help. Show me one workflow where copy-paste friction wastes time: maybe debugging an error or integrating a library. Then show what that same workflow looks like with filesystem access. What do I type? What does the AI see? What's different?"
 
 **What you're learning:** The concrete difference between passive AI (you describe code) and agentic AI (AI sees your code directly). This distinction shapes everything that follows.
 
 **💡 Understand Product Overhang:**
 
-> "Claude could already explore codebases—it just needed filesystem access. What other capabilities are locked inside AI models right now, waiting for the right product? Give me 2-3 examples."
+> "Claude could already explore codebases: it just needed filesystem access. What other capabilities are locked inside AI models right now, waiting for the right product? Give me 2-3 examples."
 
-**What you're learning:** How to spot "product overhang"—latent AI capabilities waiting for the right interface. This pattern-recognition skill helps you identify opportunities others miss.
+**What you're learning:** How to spot "product overhang": latent AI capabilities waiting for the right interface. This pattern-recognition skill helps you identify opportunities others miss.
 
 **🚀 Apply to Your Work:**
 
 > "I work on [your domain]. Based on the paradigm shift, what parts of my workflow involve the most copy-paste friction? Where would filesystem access help most?"
 
-**What you're learning:** Transferring the paradigm shift to your specific context. The goal isn't just understanding Claude Code—it's recognizing where agentic AI transforms YOUR work.
+**What you're learning:** Transferring the paradigm shift to your specific context. The goal isn't just understanding Claude Code: it's recognizing where agentic AI transforms YOUR work.
 
 **Note:** Start with non-sensitive projects. Review changes before accepting.
 

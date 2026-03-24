@@ -59,22 +59,22 @@ teaching_guide:
   session_group: 1
   session_title: "Foundation Principles"
   key_points:
-    - "Vercel's d0 case study is the proof point: BASH-only agent was 3.5x faster with 100% success rate vs 80% for the complex design — simplicity beats sophistication"
-    - "BASH is the key that unlocks all six other principles — without terminal access, verification, persistence, and observability are impossible"
-    - "The Unix philosophy (each tool does one thing, tools connect through pipes, everything is text) explains WHY BASH and LLMs are a natural fit — both operate on text"
+    - "Vercel's d0 case study is the proof point: BASH-only agent was 3.5x faster with 100% success rate vs 80% for the complex design: simplicity beats sophistication"
+    - "BASH is the key that unlocks all six other principles: without terminal access, verification, persistence, and observability are impossible"
+    - "The Unix philosophy (each tool does one thing, tools connect through pipes, everything is text) explains WHY BASH and LLMs are a natural fit: both operate on text"
     - "The command safety spectrum (read-only → creates → moves → deletes → system-level) is the practical framework students need for working with agents"
   misconceptions:
-    - "Students think 'Bash is the key' means they need to memorize terminal commands — the principle is about giving AI simple tools and room to reason, not human terminal expertise"
-    - "Students assume complex agent architectures must be better — the Vercel data directly contradicts this intuition"
-    - "Students fear terminal access means the AI can do anything unchecked — the permission model (read-only runs freely, destructive requires approval) addresses this"
+    - "Students think 'Bash is the key' means they need to memorize terminal commands: the principle is about giving AI simple tools and room to reason, not human terminal expertise"
+    - "Students assume complex agent architectures must be better: the Vercel data directly contradicts this intuition"
+    - "Students fear terminal access means the AI can do anything unchecked: the permission model (read-only runs freely, destructive requires approval) addresses this"
   discussion_prompts:
     - "Why did adding MORE tools to Vercel's d0 agent actually make it WORSE? What does this tell you about AI reasoning?"
-    - "Think of a task you currently do manually on your computer — what would change if an AI could run terminal commands to help?"
+    - "Think of a task you currently do manually on your computer: what would change if an AI could run terminal commands to help?"
   teaching_tips:
-    - "Start with the Vercel performance table — the numbers are striking enough to hook skeptics immediately"
-    - "Demo the 'without terminal access vs with terminal access' Q4 budget scenario live — the contrast between advising and acting is visceral"
-    - "The seven-principle preview list at the end shows how BASH enables everything else — worth highlighting as a chapter roadmap"
-    - "For non-technical students, the pipe example (grep | wc) is the minimal demo of composability — keep it to just this one example"
+    - "Start with the Vercel performance table: the numbers are striking enough to hook skeptics immediately"
+    - "Demo the 'without terminal access vs with terminal access' Q4 budget scenario live: the contrast between advising and acting is visceral"
+    - "The seven-principle preview list at the end shows how BASH enables everything else: worth highlighting as a chapter roadmap"
+    - "For non-technical students, the pipe example (grep | wc) is the minimal demo of composability: keep it to just this one example"
   assessment_quick_check:
     - "What were the performance differences between Vercel's complex agent design and the BASH-only design?"
     - "Name the three tenets of the Unix philosophy and explain why they make BASH and LLMs a natural fit"
@@ -83,7 +83,7 @@ teaching_guide:
 
 # Principle 1: Bash Is the Key
 
-> "What if BASH is all you need?" — Andrew Qu, Vercel Engineer, later popularized as "Bash is all you need" by Guillermo Rauch, CEO of Vercel
+> "What if BASH is all you need?". Andrew Qu, Vercel Engineer, later popularized as "Bash is all you need" by Guillermo Rauch, CEO of Vercel
 
 ## The Vercel Discovery
 
@@ -114,7 +114,7 @@ The results, measured across five representative queries, surprised everyone:
 
 The simpler version was 3.5x faster, achieved 100% success rate, and used fewer resources. All by doing less.
 
-> **Important nuance**: These results held for d0's specific use case—translating natural language into analytics queries over a known codebase. The principle isn't "BASH always wins"—it's that **simplicity wins when the model has room to reason**.
+> **Important nuance**: These results held for d0's specific use case,translating natural language into analytics queries over a known codebase. The principle isn't "BASH always wins",it's that **simplicity wins when the model has room to reason**.
 
 This isn't a fluke. It reveals something fundamental about how General Agents work best.
 
@@ -365,10 +365,10 @@ Before trusting any AI agent with terminal access, verify these safeguards:
 
 | What to Check | What to Look For |
 |---------------|------------------|
-| **Command visibility** | The agent shows you each command before or as it runs—no hidden operations |
+| **Command visibility** | The agent shows you each command before or as it runs,no hidden operations |
 | **Permission prompts** | Destructive commands (delete, move, overwrite) trigger explicit approval requests |
 | **Cancel capability** | You can press Escape or Ctrl+C to stop the agent mid-operation |
-| **Scope boundaries** | The agent respects folder limits—if you say "only in Downloads," it stays there |
+| **Scope boundaries** | The agent respects folder limits,if you say "only in Downloads," it stays there |
 | **Audit trail** | You can review a log of everything the agent did after a session |
 
 **Red flags to watch for:**
@@ -420,7 +420,7 @@ Then, tell me how you'd approach it with direct file system access.
 What's the actual difference in how we'd work together?
 ```
 
-**What you're learning:** You're experiencing the fundamental gap between "AI as advisor" (text only) and "AI as agent" (terminal access). The difference isn't intelligence—it's the ability to act. This is why bash is the key.
+**What you're learning:** You're experiencing the fundamental gap between "AI as advisor" (text only) and "AI as agent" (terminal access). The difference isn't intelligence,it's the ability to act. This is why bash is the key.
 
 ### Prompt 2: Understand Command Safety
 
@@ -453,7 +453,7 @@ Don't build anything complex. Show me how Unix philosophy
 (simple tools that combine) applies to this task.
 ```
 
-**What you're learning:** You're seeing the Unix philosophy in action—small, composable tools that solve real problems without complex frameworks. This is why Vercel removed 80% of their agent's tools: simple commands outperform specialized ones.
+**What you're learning:** You're seeing the Unix philosophy in action,small, composable tools that solve real problems without complex frameworks. This is why Vercel removed 80% of their agent's tools: simple commands outperform specialized ones.
 
 ### Safety Note
 

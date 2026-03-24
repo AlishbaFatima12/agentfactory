@@ -57,7 +57,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (Settings Hierarchy, Hook Events, Plugin Lifecycle) — within B1 limit. Exercises reinforce existing L14-L18 knowledge."
+  assessment: "3 concepts (Settings Hierarchy, Hook Events, Plugin Lifecycle), within B1 limit. Exercises reinforce existing L14-L18 knowledge."
 
 differentiation:
   extension_for_advanced: "Complete all 3 capstone projects; Exercise 5.2 (Advanced) bundles hooks, MCP, and agents into a single plugin"
@@ -68,23 +68,23 @@ teaching_guide:
   session_group: 6
   session_title: "Autonomous Workflows, Creator Practices, and Exercises"
   key_points:
-    - "Exercises are designed to start immediately after each corresponding lesson (Module 1 after L14, Module 2 after L15) — not saved for the end"
-    - "Each module pairs a hands-on exercise with a debug exercise — building AND diagnosing are both essential skills"
+    - "Exercises are designed to start immediately after each corresponding lesson (Module 1 after L14, Module 2 after L15). Not saved for the end"
+    - "Each module pairs a hands-on exercise with a debug exercise: building AND diagnosing are both essential skills"
     - "The Extensibility Workflow (Identify, Check, Configure, Test, Package, Share) mirrors a real plugin ecosystem lifecycle"
-    - "Capstones require combining settings, hooks, plugins, and automation with no guided prompts — this is the assessment of integrated understanding"
+    - "Capstones require combining settings, hooks, plugins, and automation with no guided prompts. This is the assessment of integrated understanding"
   misconceptions:
-    - "Students think they should complete all 15 exercises in one sitting — the lesson explicitly maps each module to a specific prior lesson for spaced practice"
-    - "Students skip the debug exercises (1.2, 2.2, 3.2, 7.2) because they seem less exciting — debugging skills are equally weighted in the assessment rubric"
-    - "Students use the starter prompts verbatim instead of building toward the 'Better Prompt' — the progression from starter to better prompt IS the learning"
-    - "Students attempt Capstone C without first auditing their actual setup — the self-assessment step reveals which extensibility features they have been ignoring"
+    - "Students think they should complete all 15 exercises in one sitting. The lesson explicitly maps each module to a specific prior lesson for spaced practice"
+    - "Students skip the debug exercises (1.2, 2.2, 3.2, 7.2) because they seem less exciting. Debugging skills are equally weighted in the assessment rubric"
+    - "Students use the starter prompts verbatim instead of building toward the 'Better Prompt'. The progression from starter to better prompt IS the learning"
+    - "Students attempt Capstone C without first auditing their actual setup. The self-assessment step reveals which extensibility features they have been ignoring"
   discussion_prompts:
     - "After completing Module 1, which settings scope did you find most confusing in practice? Was it the same one you predicted would be confusing?"
     - "In Exercise 7.2, the loop got stuck cycling through the same 3 errors. What does that tell you about the relationship between task design and autonomous iteration?"
   teaching_tips:
-    - "Assign Module 1 exercises immediately after teaching Lesson 14 — do not wait until all extensibility lessons are complete"
+    - "Assign Module 1 exercises immediately after teaching Lesson 14. Do not wait until all extensibility lessons are complete"
     - "Use Exercise 1.2 (trace the precedence bug) as a live debugging demonstration: show the three settings files and have the class trace the override before revealing the answer"
-    - "For Exercise 7.2 (stuck loop debug), have students identify the iteration where progress stopped before analyzing why — pattern recognition of 'stuck' vs 'progressing' is the key skill"
-    - "Capstone C (Your Workflow) is the highest-value exercise because changes apply to students' real setups — allocate extra time for this one"
+    - "For Exercise 7.2 (stuck loop debug), have students identify the iteration where progress stopped before analyzing why. Pattern recognition of 'stuck' vs 'progressing' is the key skill"
+    - "Capstone C (Your Workflow) is the highest-value exercise because changes apply to students' real setups. Allocate extra time for this one"
   assessment_quick_check:
     - "Which module should you complete immediately after finishing Lesson 15 (Hooks)?"
     - "In the assessment rubric, what score indicates you can create distributable marketplace plugins?"
@@ -93,9 +93,9 @@ teaching_guide:
 
 # Plugins & Extensibility Exercises: Settings, Hooks, Plugins, and Automation
 
-You've learned to configure settings across three scopes, create hooks that fire on events, discover and install plugins from the marketplace, and set up autonomous iteration loops. Each capability is powerful on its own. But the real leverage comes when they work together — settings that establish team standards, hooks that enforce them automatically, plugins that package everything for reuse, and Ralph Wiggum loops that iterate without babysitting.
+You've learned to configure settings across three scopes, create hooks that fire on events, discover and install plugins from the marketplace, and set up autonomous iteration loops. Each capability is powerful on its own. But the real leverage comes when they work together: settings that establish team standards, hooks that enforce them automatically, plugins that package everything for reuse, and Ralph Wiggum loops that iterate without babysitting.
 
-These 15 exercises are designed to start **as soon as you finish each lesson** — not all at once at the end. Module 1 practices what you learned in Lesson 14 (Settings). Module 2 practices Lesson 15 (Hooks). You don't need to wait until you've finished all the extensibility lessons to begin. Each module targets one capability with two exercises: a **hands-on** exercise where you build something real, and a **debug** exercise where you fix something broken. Three capstones at the end combine everything into complete systems.
+These 15 exercises are designed to start **as soon as you finish each lesson**, not all at once at the end. Module 1 practices what you learned in Lesson 14 (Settings). Module 2 practices Lesson 15 (Hooks). You don't need to wait until you've finished all the extensibility lessons to begin. Each module targets one capability with two exercises: a **hands-on** exercise where you build something real, and a **debug** exercise where you fix something broken. Three capstones at the end combine everything into complete systems.
 
 :::info Download Exercise Files
 **[Download Plugins Exercises (ZIP)](https://github.com/panaversity/claude-code-plugins-exercises/releases/latest/download/plugins-exercises.zip)**
@@ -122,18 +122,18 @@ If the download link doesn't work, visit the [repository releases page](https://
 The workflow for every exercise is the same:
 
 1. **Open the exercise folder** from the `claude-code-plugins-exercises/` directory
-2. **Read the INSTRUCTIONS.md** inside the folder — it has setup steps and starter files
+2. **Read the INSTRUCTIONS.md** inside the folder (it has setup steps and starter files)
 3. **Read the walkthrough below** for context on what you're practicing and why
 4. **Start Claude Code or Cowork** and point it at the exercise folder
-5. **Work through the exercise** — write your own prompts, don't just copy the starter
-6. **Reflect** using the questions provided — this is where the real learning happens
+5. **Work through the exercise**: write your own prompts, don't just copy the starter
+6. **Reflect** using the questions provided (this is where the real learning happens)
 
 ---
 
 ## Tool Guide
 
-- Claude Code — Terminal-based, best for settings configuration, hook scripting, and plugin packaging
-- Cowork — Desktop app, best for plugin evaluation and marketplace browsing
+- Claude Code: Terminal-based, best for settings configuration, hook scripting, and plugin packaging
+- Cowork: Desktop app, best for plugin evaluation and marketplace browsing
 
 Most exercises work with either tool. Where one is clearly better, the exercise notes will say so.
 
@@ -143,12 +143,12 @@ Most exercises work with either tool. Where one is clearly better, the exercise 
 
 Use this for every exercise:
 
-1. **Identify** — What capability do you need? (settings, hooks, plugin, automation)
-2. **Check** — Does a plugin or marketplace already have it?
-3. **Configure** — Set up settings, hooks, or install the plugin
-4. **Test** — Verify it works in your workflow
-5. **Package** — Bundle for reuse if you built something custom
-6. **Share** — Distribute via marketplace if valuable to others
+1. **Identify**: What capability do you need? (settings, hooks, plugin, automation)
+2. **Check**: Does a plugin or marketplace already have it?
+3. **Configure**: Set up settings, hooks, or install the plugin
+4. **Test**: Verify it works in your workflow
+5. **Package**: Bundle for reuse if you built something custom
+6. **Share**: Distribute via marketplace if valuable to others
 
 This workflow mirrors the real plugin ecosystem lifecycle: before building anything, check if it exists. After building something, package it so others don't have to rebuild it.
 
@@ -160,7 +160,7 @@ This workflow mirrors the real plugin ecosystem lifecycle: before building anyth
 
 <ExerciseCard id="1.1" title="Configure a Team Setup" />
 
-### Exercise 1.1 — Configure a Team Setup (Hands-on)
+### Exercise 1.1: Configure a Team Setup (Hands-on)
 
 **The Problem:**
 Open the `module-1-settings-hierarchy/exercise-1.1-multi-scope-config/` folder. You'll find a simulated team project with three developers who have different preferences: one wants verbose output, one wants minimal output, and the third wants custom permissions. The project itself needs consistent behavior regardless of who's working on it.
@@ -191,10 +191,10 @@ Create settings files at all three levels (user, project, local) that satisfy ev
 
 <ExerciseCard id="1.2" title="Trace the Precedence Bug" />
 
-### Exercise 1.2 — Trace the Precedence Bug (Debug)
+### Exercise 1.2: Trace the Precedence Bug (Debug)
 
 **The Problem:**
-Open the `module-1-settings-hierarchy/exercise-1.2-settings-conflict/` folder. You'll find a project where settings aren't behaving as expected. The developer configured `allowedTools` at the project level, but Claude keeps asking for permission on tools that should be auto-approved. Three settings files exist — but one of them has a subtle override that's causing the conflict.
+Open the `module-1-settings-hierarchy/exercise-1.2-settings-conflict/` folder. You'll find a project where settings aren't behaving as expected. The developer configured `allowedTools` at the project level, but Claude keeps asking for permission on tools that should be auto-approved. Three settings files exist, but one of them has a subtle override that's causing the conflict.
 
 **Your Task:**
 Read all three settings files. Trace through the precedence rules (local > project > user) to find which setting is winning and why. Fix the configuration so the intended behavior works. Document the precedence chain you traced.
@@ -219,7 +219,7 @@ Read all three settings files. Trace through the precedence rules (local > proje
 
 <ExerciseCard id="2.1" title="Build a Hook Suite" />
 
-### Exercise 2.1 — Build a Hook Suite (Hands-on)
+### Exercise 2.1:Build a Hook Suite (Hands-on)
 
 **The Problem:**
 Open the `module-2-hooks/exercise-2.1-event-automation/` folder. You'll find a project that needs three automated checks: (1) every time Claude tries to write a file, check that it doesn't contain API keys, (2) every time Claude finishes running a bash command, log the command to an audit file, and (3) when a user submits a prompt, check that it doesn't reference files outside the project directory.
@@ -231,14 +231,14 @@ Create a `.claude/settings.json` with a `hooks` configuration containing three h
 
 - The difference between PreToolUse, PostToolUse, and UserPromptSubmit events
 - How matchers filter which tool calls trigger a hook
-- That hooks run shell commands — so anything bash can do, a hook can automate
+- That hooks run shell commands, so anything bash can do, a hook can automate
 
 **Starter Prompt:**
 
 > "Help me create hooks that prevent secrets from being written, log bash commands, and validate prompt paths."
 
 **Better Prompt (Build Toward This):**
-"Create a `.claude/settings.json` with three hooks: (1) a `PreToolUse` hook with matcher `Write|Edit` that runs a script checking the file content for patterns like `API_KEY`, `SECRET`, `TOKEN` — if found, exit 2 to block the write; (2) a `PostToolUse` hook with matcher `Bash` that appends the command to `audit.log` with a timestamp; (3) a `UserPromptSubmit` hook that checks if the prompt references paths outside `$PWD` and warns if so. Create the hook scripts in `.claude/hooks/`."
+"Create a `.claude/settings.json` with three hooks: (1) a `PreToolUse` hook with matcher `Write|Edit` that runs a script checking the file content for patterns like `API_KEY`, `SECRET`, `TOKEN`; if found, exit 2 to block the write; (2) a `PostToolUse` hook with matcher `Bash` that appends the command to `audit.log` with a timestamp; (3) a `UserPromptSubmit` hook that checks if the prompt references paths outside `$PWD` and warns if so. Create the hook scripts in `.claude/hooks/`."
 
 **Reflection Questions:**
 
@@ -250,7 +250,7 @@ Create a `.claude/settings.json` with a `hooks` configuration containing three h
 
 <ExerciseCard id="2.2" title="Fix the Broken Hooks" />
 
-### Exercise 2.2 — Fix the Broken Hooks (Debug)
+### Exercise 2.2:Fix the Broken Hooks (Debug)
 
 **The Problem:**
 Open the `module-2-hooks/exercise-2.2-hook-failures/` folder. You'll find a `settings.json` with three hooks that are all broken. Bug 1: A PreToolUse hook fires on every tool call instead of just file writes. Bug 2: A PostToolUse hook script exists but has wrong permissions and never executes. Bug 3: A UserPromptSubmit hook references an environment variable that doesn't exist, causing silent failures.
@@ -262,7 +262,7 @@ Diagnose and fix all three bugs. For each bug, document: what the symptom was, w
 
 - The most common hook configuration mistakes (missing matchers, wrong permissions, missing env vars)
 - How to debug hooks by checking exit codes, permissions, and environment
-- That silent failures are the hardest bugs — a hook that doesn't fire looks the same as a hook that doesn't exist
+- That silent failures are the hardest bugs: a hook that doesn't fire looks the same as a hook that doesn't exist
 
 **Reflection Questions:**
 
@@ -278,23 +278,23 @@ Diagnose and fix all three bugs. For each bug, document: what the symptom was, w
 
 <ExerciseCard id="3.1" title="Build a Plugin Evaluation Matrix" />
 
-### Exercise 3.1 — Build a Plugin Evaluation Matrix (Hands-on)
+### Exercise 3.1:Build a Plugin Evaluation Matrix (Hands-on)
 
 **The Problem:**
-Open the `module-3-plugin-discovery/exercise-3.1-marketplace-explorer/` folder. You'll find `workflow-needs.md` — a document describing 5 workflow needs for a development team: automated commit messages, code review checklists, test coverage reporting, documentation generation, and dependency auditing.
+Open the `module-3-plugin-discovery/exercise-3.1-marketplace-explorer/` folder. You'll find `workflow-needs.md`, a document describing 5 workflow needs for a development team: automated commit messages, code review checklists, test coverage reporting, documentation generation, and dependency auditing.
 
 **Your Task:**
 For each workflow need, search the Claude Code plugin marketplace (using `/plugin` or the Discover tab) and find at least one plugin candidate. Create an evaluation matrix comparing each plugin on: functionality match, installation complexity, maintenance burden, and team fit. Recommend which plugins to install and which needs are better served by custom skills.
 
 :::note Marketplace Evolution
-The plugin marketplace is actively evolving. If you find fewer plugins than expected, that's normal — evaluate what's available and note gaps where custom skills would fill the need. The evaluation process matters more than finding a perfect match for every category.
+The plugin marketplace is actively evolving. If you find fewer plugins than expected, that's normal; evaluate what's available and note gaps where custom skills would fill the need. The evaluation process matters more than finding a perfect match for every category.
 :::
 
 **What You'll Learn:**
 
 - How to systematically evaluate plugins instead of installing the first one you find
 - The tradeoff between using an existing plugin vs. building a custom skill
-- That marketplace plugins vary in quality — evaluation criteria matter
+- That marketplace plugins vary in quality, and evaluation criteria matter
 
 **Starter Prompt:**
 
@@ -313,10 +313,10 @@ The plugin marketplace is actively evolving. If you find fewer plugins than expe
 
 <ExerciseCard id="3.2" title="Audit a Messy Plugin Setup" />
 
-### Exercise 3.2 — Audit a Messy Plugin Setup (Debug)
+### Exercise 3.2:Audit a Messy Plugin Setup (Debug)
 
 **The Problem:**
-Open the `module-3-plugin-discovery/exercise-3.2-plugin-audit/` folder. You'll find a project with 8 plugins installed — but the setup is a mess. Two plugins do the same thing (redundant), one plugin conflicts with a project hook, one is installed at the wrong scope (user vs. project), and one hasn't been updated in months. The developer doesn't know which plugins are actually useful.
+Open the `module-3-plugin-discovery/exercise-3.2-plugin-audit/` folder. You'll find a project with 8 plugins installed, but the setup is a mess. Two plugins do the same thing (redundant), one plugin conflicts with a project hook, one is installed at the wrong scope (user vs. project), and one hasn't been updated in months. The developer doesn't know which plugins are actually useful.
 
 **Your Task:**
 Audit the entire plugin setup. For each plugin, determine: what it does, whether it's redundant, whether it conflicts with anything else, and whether it's at the right scope. Produce a cleanup recommendation: which to keep, which to remove, and which to reconfigure.
@@ -341,13 +341,13 @@ Audit the entire plugin setup. For each plugin, determine: what it does, whether
 
 <ExerciseCard id="4.1" title="Install and Use Plugins" />
 
-### Exercise 4.1 — Install and Use Plugins (Hands-on)
+### Exercise 4.1:Install and Use Plugins (Hands-on)
 
 **The Problem:**
 Open the `module-4-plugin-usage/exercise-4.1-install-and-use/` folder. You'll find a project that needs two plugins: one for automated commit messages (like `commit-commands`) and one for code quality checks (like an LSP integration plugin). The project has a `README.md` explaining the team's commit message conventions and quality standards.
 
 **Your Task:**
-Install both plugins from the marketplace. Configure each one to match the team's conventions — the commit message plugin should follow the conventional commits format described in the README, and the quality plugin should check the standards listed there. Run both plugins on the sample code and verify they produce correct output.
+Install both plugins from the marketplace. Configure each one to match the team's conventions; the commit message plugin should follow the conventional commits format described in the README, and the quality plugin should check the standards listed there. Run both plugins on the sample code and verify they produce correct output.
 
 :::note Prerequisites
 Some plugins require external tools (Node.js, npm, language servers). If a plugin installation fails, check its dependencies first. The exercise README lists what you need installed.
@@ -357,14 +357,14 @@ Some plugins require external tools (Node.js, npm, language servers). If a plugi
 
 - The full install-configure-verify cycle for marketplace plugins
 - How to customize plugin behavior to match team conventions
-- That installation is only half the work — configuration determines whether a plugin helps or hurts
+- That installation is only half the work; configuration determines whether a plugin helps or hurts
 
 **Starter Prompt:**
 
 > "Install commit-commands and an LSP plugin, then configure them for our team conventions."
 
 **Better Prompt (Build Toward This):**
-"Read `README.md` for our team conventions. Then: (1) Install the commit-commands plugin with `/plugin install commit-commands`. (2) Configure it to use the conventional commits format from the README — prefixes should be `feat:`, `fix:`, `docs:`, `refactor:`. (3) Install an LSP-based quality plugin. (4) Test both: make a small code change, use the commit plugin to generate a message, and run the quality check. Show me the output from both."
+"Read `README.md` for our team conventions. Then: (1) Install the commit-commands plugin with `/plugin install commit-commands`. (2) Configure it to use the conventional commits format from the README: prefixes should be `feat:`, `fix:`, `docs:`, `refactor:`. (3) Install an LSP-based quality plugin. (4) Test both: make a small code change, use the commit plugin to generate a message, and run the quality check. Show me the output from both."
 
 **Reflection Questions:**
 
@@ -376,7 +376,7 @@ Some plugins require external tools (Node.js, npm, language servers). If a plugi
 
 <ExerciseCard id="4.2" title="Chain Plugins in a Workflow" />
 
-### Exercise 4.2 — Chain Plugins in a Workflow (Hands-on)
+### Exercise 4.2:Chain Plugins in a Workflow (Hands-on)
 
 **The Problem:**
 Open the `module-4-plugin-usage/exercise-4.2-plugin-workflow-chain/` folder. You'll find a development project where a typical workflow involves: write code, lint it, run tests, generate a commit message, and update the changelog. Each step could be handled by a separate plugin or hook.
@@ -387,7 +387,7 @@ Set up a workflow that chains multiple plugins together. When you finish writing
 **What You'll Learn:**
 
 - How to compose plugins and hooks into multi-step workflows
-- The importance of failure handling — what happens when step 2 fails?
+- The importance of failure handling: what happens when step 2 fails?
 - That workflow chains need clear sequencing and exit-on-failure semantics
 
 **Starter Prompt:**
@@ -411,10 +411,10 @@ Set up a workflow that chains multiple plugins together. When you finish writing
 
 <ExerciseCard id="5.1" title="Package Skills into a Plugin" />
 
-### Exercise 5.1 — Package Skills into a Plugin (Hands-on)
+### Exercise 5.1:Package Skills into a Plugin (Hands-on)
 
 **The Problem:**
-Open the `module-5-plugin-packaging/exercise-5.1-package-skills-plugin/` folder. You'll find three standalone skills in `.claude/skills/`: a code review skill, a documentation generator skill, and a test scaffolding skill. Each works independently, but they're not packaged as a plugin — they can't be installed by other projects or shared with teammates.
+Open the `module-5-plugin-packaging/exercise-5.1-package-skills-plugin/` folder. You'll find three standalone skills in `.claude/skills/`: a code review skill, a documentation generator skill, and a test scaffolding skill. Each works independently, but they're not packaged as a plugin, they can't be installed by other projects or shared with teammates.
 
 **Your Task:**
 Package all three skills into a single plugin. Create a `plugin.json` manifest with the correct structure: plugin name, version, description, author, and the list of included skills. Verify the plugin structure matches what the marketplace expects. Test by removing the original skills, installing from your plugin, and confirming all three skills still work.
@@ -442,17 +442,17 @@ Package all three skills into a single plugin. Create a `plugin.json` manifest w
 
 <ExerciseCard id="5.2" title="Package a Complete Bundle" />
 
-### Exercise 5.2 — Package a Complete Bundle (Advanced)
+### Exercise 5.2:Package a Complete Bundle (Advanced)
 
 **The Problem:**
-Open the `module-5-plugin-packaging/exercise-5.2-full-plugin-bundle/` folder. You'll find a more complex setup: skills, hooks, an MCP server configuration, and an agent definition. These work together as a system — the hooks enforce standards, the skills automate tasks, the MCP server provides external data, and the agent orchestrates everything.
+Open the `module-5-plugin-packaging/exercise-5.2-full-plugin-bundle/` folder. You'll find a more complex setup: skills, hooks, an MCP server configuration, and an agent definition. These work together as a system: the hooks enforce standards, the skills automate tasks, the MCP server provides external data, and the agent orchestrates everything.
 
 **Your Task:**
-Package the entire bundle into a single plugin that, when installed, sets up everything: all skills, hooks, MCP configuration, and agent definitions. The plugin should be self-contained — installing it on a fresh project should give the full system with no manual configuration.
+Package the entire bundle into a single plugin that, when installed, sets up everything: all skills, hooks, MCP configuration, and agent definitions. The plugin should be self-contained: installing it on a fresh project should give the full system with no manual configuration.
 
 **What You'll Learn:**
 
-- How plugins can bundle more than just skills — hooks, MCP, and agents are all packageable
+- How plugins can bundle more than just skills: hooks, MCP, and agents are all packageable
 - The challenge of packaging configuration that depends on external services (MCP servers)
 - That "self-contained" means thinking about dependencies and defaults
 
@@ -465,7 +465,7 @@ Package the entire bundle into a single plugin that, when installed, sets up eve
 
 **Reflection Questions:**
 
-1. What was the hardest part to package — skills, hooks, MCP, or agents? Why?
+1. What was the hardest part to package: skills, hooks, MCP, or agents? Why?
 2. How did you handle the MCP server's external dependency? Is your solution portable?
 3. Would a new user be able to install and use this plugin without contacting you? What documentation would help?
 
@@ -477,16 +477,16 @@ Package the entire bundle into a single plugin that, when installed, sets up eve
 
 <ExerciseCard id="7.1" title="Set Up an Autonomous Loop" />
 
-### Exercise 7.1 — Set Up an Autonomous Loop (Hands-on)
+### Exercise 7.1:Set Up an Autonomous Loop (Hands-on)
 
 **The Problem:**
-Open the `module-7-ralph-wiggum/exercise-7.1-autonomous-loop/` folder. You'll find a project with 12 test files, all failing. The failures are independent — each test has a small bug in the corresponding source file. Fixing them one at a time with manual prompts would require 12 separate interactions. This is a classic Ralph Wiggum candidate: clear completion criteria (all tests pass), many iterations, and each fix is independent.
+Open the `module-7-ralph-wiggum/exercise-7.1-autonomous-loop/` folder. You'll find a project with 12 test files, all failing. The failures are independent; each test has a small bug in the corresponding source file. Fixing them one at a time with manual prompts would require 12 separate interactions. This is a classic Ralph Wiggum candidate: clear completion criteria (all tests pass), many iterations, and each fix is independent.
 
 **Your Task:**
 Set up a Ralph Wiggum autonomous loop. Install the plugin if needed. Write a prompt with an embedded completion promise: "Keep iterating until all 12 tests pass. After each fix, run the test suite. Stop when all tests are green or after 15 iterations, whichever comes first." Run the loop and observe how it progresses.
 
 :::tip Setup Check
-Before starting, run `cd project && npm install && npm test` to confirm you see 12 failing tests. If the test runner isn't installed or errors look different than expected, resolve the setup first — the loop depends on consistent test output.
+Before starting, run `cd project && npm install && npm test` to confirm you see 12 failing tests. If the test runner isn't installed or errors look different than expected, resolve the setup first; the loop depends on consistent test output.
 :::
 
 **What You'll Learn:**
@@ -512,10 +512,10 @@ Before starting, run `cd project && npm install && npm test` to confirm you see 
 
 <ExerciseCard id="7.2" title="Debug a Stuck Loop" />
 
-### Exercise 7.2 — Debug a Stuck Loop (Debug)
+### Exercise 7.2:Debug a Stuck Loop (Debug)
 
 **The Problem:**
-Open the `module-7-ralph-wiggum/exercise-7.2-stuck-loop-debug/` folder. You'll find a session log from a Ralph Wiggum loop that got stuck. The developer asked Claude to "refactor all functions to use async/await and keep going until the linter is clean." The loop ran 20 iterations, never reached clean linter output, and burned through significant tokens. The log shows the same 3 linter errors appearing repeatedly — Claude fixes one, introduces another, and cycles endlessly.
+Open the `module-7-ralph-wiggum/exercise-7.2-stuck-loop-debug/` folder. You'll find a session log from a Ralph Wiggum loop that got stuck. The developer asked Claude to "refactor all functions to use async/await and keep going until the linter is clean." The loop ran 20 iterations, never reached clean linter output, and burned through significant tokens. The log shows the same 3 linter errors appearing repeatedly: Claude fixes one, introduces another, and cycles endlessly.
 
 **Your Task:**
 Analyze the session log to identify why the loop got stuck. Determine: (1) Was the completion promise achievable? (2) Was the iteration limit appropriate? (3) What caused the cyclic behavior? Then rewrite the prompt with a completion promise and constraints that would have prevented the infinite loop.
@@ -524,7 +524,7 @@ Analyze the session log to identify why the loop got stuck. Determine: (1) Was t
 
 - Why vague completion promises ("until the linter is clean") can be unachievable
 - How cyclic fixes indicate a fundamentally flawed loop design
-- The importance of progress checks — if no progress after N iterations, stop and reassess
+- The importance of progress checks: if no progress after N iterations, stop and reassess
 
 **Reflection Questions:**
 
@@ -536,15 +536,15 @@ Analyze the session log to identify why the loop got stuck. Determine: (1) Was t
 
 ## Module 8: Integration Capstones
 
-> **Choose one (or more). These combine multiple extensibility features — no starter prompts provided.**
+> **Choose one (or more). These combine multiple extensibility features. No starter prompts provided.**
 
-Capstones are different from the exercises above. There are no guided prompts — you design the entire approach yourself. Each project requires combining settings, hooks, plugins, and automation into a complete system.
+Capstones are different from the exercises above. There are no guided prompts; you design the entire approach yourself. Each project requires combining settings, hooks, plugins, and automation into a complete system.
 
 <ExerciseCard id="A" title="Full Plugin from Scratch" />
 
-### Capstone A — Full Plugin from Scratch
+### Capstone A:Full Plugin from Scratch
 
-Open the `module-8-capstones/capstone-A-full-plugin/` folder. You'll find a set of requirements for a plugin that doesn't exist yet: it should include 2 skills (one for API documentation generation, one for endpoint testing), 2 hooks (pre-commit validation and post-test reporting), and an MCP server integration for an external API. Build the entire plugin from scratch: skills, hooks, MCP config, and plugin.json manifest. Then create a `marketplace.json` that registers your plugin — making it discoverable and installable by others. Test by installing it on a fresh project from your marketplace.
+Open the `module-8-capstones/capstone-A-full-plugin/` folder. You'll find a set of requirements for a plugin that doesn't exist yet: it should include 2 skills (one for API documentation generation, one for endpoint testing), 2 hooks (pre-commit validation and post-test reporting), and an MCP server integration for an external API. Build the entire plugin from scratch: skills, hooks, MCP config, and plugin.json manifest. Then create a `marketplace.json` that registers your plugin, making it discoverable and installable by others. Test by installing it on a fresh project from your marketplace.
 
 **What You'll Learn:**
 
@@ -556,7 +556,7 @@ Open the `module-8-capstones/capstone-A-full-plugin/` folder. You'll find a set 
 
 <ExerciseCard id="B" title="Team Extensibility Kit" />
 
-### Capstone B — Team Extensibility Kit
+### Capstone B:Team Extensibility Kit
 
 Open the `module-8-capstones/capstone-B-team-extensibility-kit/` folder. You'll find profiles for a 3-person development team with different roles (frontend, backend, DevOps). Design a complete extensibility kit: project-level settings that enforce shared standards, user-level settings templates for each role, hooks for code quality and security, plugins for each role's specific workflow, and a CLAUDE.md that documents everything. The kit should be installable on a new project in under 5 minutes.
 
@@ -570,12 +570,12 @@ Open the `module-8-capstones/capstone-B-team-extensibility-kit/` folder. You'll 
 
 <ExerciseCard id="C" title="Your Workflow" />
 
-### Capstone C — Your Workflow
+### Capstone C:Your Workflow
 
 Open the `module-8-capstones/capstone-C-your-workflow/` folder for a self-assessment template. Audit your own Claude Code setup: what settings do you have? What hooks are running? What plugins are installed? What's missing? Then improve your setup by adding at least one item from each category: a setting you should have configured, a hook that would catch a mistake you've made before, and a plugin that would speed up your most common task. Document before and after.
 
 **What Makes This Special:**
-Unlike Capstones A and B, this one has real stakes. The changes you make apply to YOUR actual workflow. Most developers discover they're using less than 20% of Claude Code's extensibility features — this exercise closes that gap.
+Unlike Capstones A and B, this one has real stakes. The changes you make apply to YOUR actual workflow. Most developers discover they're using less than 20% of Claude Code's extensibility features; this exercise closes that gap.
 
 **What You'll Learn:**
 
@@ -603,4 +603,4 @@ After completing the exercises, evaluate yourself on each dimension:
 
 ## What's Next
 
-You've practiced the three core skills — **configuration management**, **plugin lifecycle**, and **automation design** — across 15 exercises. These skills compound: every exercise builds intuition for when to configure a setting, when to write a hook, when to install a plugin, and when to let Ralph Wiggum iterate autonomously. The extensibility features you practiced aren't extras — they're how professionals scale their Claude Code workflows from individual productivity to team-wide systems. Next in **Lesson 36: Chapter Quiz**, you'll test your understanding of all Chapter 14 concepts including settings, hooks, plugins, and autonomous iteration. This lesson complements the existing Lesson 6 (basics exercises) and Lesson 10 (skills exercises) — together they cover the full arc from problem-solving fundamentals to extensibility mastery.
+You've practiced the three core skills (**configuration management**, **plugin lifecycle**, and **automation design**) across 15 exercises. These skills compound: every exercise builds intuition for when to configure a setting, when to write a hook, when to install a plugin, and when to let Ralph Wiggum iterate autonomously. The extensibility features you practiced aren't extras; they're how professionals scale their Claude Code workflows from individual productivity to team-wide systems. Next in **Lesson 36: Chapter Quiz**, you'll test your understanding of all Chapter 14 concepts including settings, hooks, plugins, and autonomous iteration. This lesson complements the existing Lesson 6 (basics exercises) and Lesson 10 (skills exercises); together they cover the full arc from problem-solving fundamentals to extensibility mastery.

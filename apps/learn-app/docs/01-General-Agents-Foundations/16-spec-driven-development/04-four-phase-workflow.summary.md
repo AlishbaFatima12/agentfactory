@@ -1,12 +1,12 @@
 ### Core Concept
 
-SDD separates planning from execution through four sequential phases—Research, Specification, Refinement, Implementation—where each phase produces a concrete deliverable and the spec becomes the source of truth that survives session restarts.
+SDD separates planning from execution through four sequential phases,Research, Specification, Refinement, Implementation,where each phase produces a concrete deliverable and the spec becomes the source of truth that survives session restarts.
 
 ### Key Mental Models
 
 - **Planning vs Execution Separation**: Vibe coding interleaves planning and execution in one conversation; SDD front-loads all planning so implementation becomes execution of a well-understood plan
-- **Phase Gates Replace Approval Fatigue**: You review at transitions (after research, after spec, after refinement), not during every file edit—the spec already captures your intent
-- **Spec as External Memory**: Conversations vanish on restart; spec.md persists—it captures accumulated decisions so every new session builds on documented state
+- **Phase Gates Replace Approval Fatigue**: You review at transitions (after research, after spec, after refinement), not during every file edit,the spec already captures your intent
+- **Spec as External Memory**: Conversations vanish on restart; spec.md persists,it captures accumulated decisions so every new session builds on documented state
 
 ### Critical Patterns
 
@@ -16,9 +16,9 @@ SDD separates planning from execution through four sequential phases—Research,
 
 ### Common Mistakes
 
-- Thinking SDD is slower than vibe coding—SDD produces more durable artifacts in the same timeframe
-- Confusing "specification" with "to-do list"—specs include constraints, success criteria, and architecture, not just tasks
-- Expecting to run all four phases in one session—SDD is designed so the spec persists across sessions
+- Thinking SDD is slower than vibe coding,SDD produces more durable artifacts in the same timeframe
+- Confusing "specification" with "to-do list",specs include constraints, success criteria, and architecture, not just tasks
+- Expecting to run all four phases in one session,SDD is designed so the spec persists across sessions
 
 ### Connections
 

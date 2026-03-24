@@ -4,9 +4,9 @@ Claude Code uses a three-level settings hierarchy (user → project → local) w
 
 ### Key Mental Models
 
-- **Specificity Wins**: More specific context always overrides more general—local overrides project overrides user
+- **Specificity Wins**: More specific context always overrides more general: local overrides project overrides user
 - **Three Layers of Context**: User settings = personal defaults across all projects; Project settings = team-shared standards committed to git; Local settings = private experimentation that stays on your machine
-- **Configuration as Organizational Intelligence**: The hierarchy mirrors how teams organize knowledge—individual preferences, shared agreements, and safe experimentation spaces
+- **Configuration as Organizational Intelligence**: The hierarchy mirrors how teams organize knowledge: individual preferences, shared agreements, and safe experimentation spaces
 
 ### Critical Patterns
 
@@ -17,7 +17,7 @@ Claude Code uses a three-level settings hierarchy (user → project → local) w
 
 ### Common Mistakes
 
-- Deleting the `.claude/` directory thinking it's unimportant—this resets all project configuration
+- Deleting the `.claude/` directory thinking it's unimportant: this resets all project configuration
 - Committing `.claude/settings.local.json` to git, exposing personal/temporary settings to the team
 - Using project level for personal experiments instead of local level (pollutes team standards)
 

@@ -1,6 +1,6 @@
 ### Core Concept
 
-A project constitution (CLAUDE.md) defines immutable governance principles—architecture, quality, security, workflow—that Claude reads automatically every session, filling the gap between what specs describe (WHAT to build) and how everything must be built (HOW).
+A project constitution (CLAUDE.md) defines immutable governance principles,architecture, quality, security, workflow,that Claude reads automatically every session, filling the gap between what specs describe (WHAT to build) and how everything must be built (HOW).
 
 ### Key Mental Models
 
@@ -11,15 +11,15 @@ A project constitution (CLAUDE.md) defines immutable governance principles—arc
 ### Critical Patterns
 
 - Five standard categories: architecture principles, technology constraints, code quality standards, security requirements, workflow rules
-- Constitution must exist before Phase 1 research begins—research without governance boundaries may explore incompatible patterns
+- Constitution must exist before Phase 1 research begins,research without governance boundaries may explore incompatible patterns
 - Include "why" explanations with rules so Claude can extend principles correctly to unanticipated situations
-- Never update the constitution mid-task—finish current work under existing rules, then update for the next session
+- Never update the constitution mid-task,finish current work under existing rules, then update for the next session
 
 ### Common Mistakes
 
-- Treating the constitution as "just another spec"—it's governance, not feature description
-- Thinking you need a huge constitution to start—begin small, grow incrementally as standards emerge
-- Skipping the constitution because "specs are enough"—specs followed perfectly still produce wrong results when coding standards aren't defined
+- Treating the constitution as "just another spec",it's governance, not feature description
+- Thinking you need a huge constitution to start,begin small, grow incrementally as standards emerge
+- Skipping the constitution because "specs are enough",specs followed perfectly still produce wrong results when coding standards aren't defined
 
 ### Connections
 

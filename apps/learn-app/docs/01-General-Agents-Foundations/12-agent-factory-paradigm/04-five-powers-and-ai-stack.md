@@ -64,26 +64,26 @@ teaching_guide:
   session_group: 2
   session_title: "Agent Capabilities and Standards"
   key_points:
-    - "The Five Powers (See, Hear, Reason, Act, Remember) become a reusable analysis tool — students should be able to decompose any agentic system into these five capabilities"
-    - "The hotel booking comparison (14 manual steps vs 3 exchanges) is the most concrete demonstration of UX→Intent — use it as the lesson's anchor example"
-    - "MCP is the 'USB cable' and Skills are the 'App' — this analogy is critical for Lesson 5 where AAIF standards are covered in depth"
+    - "The Five Powers (See, Hear, Reason, Act, Remember) become a reusable analysis tool; students should be able to decompose any agentic system into these five capabilities"
+    - "The hotel booking comparison (14 manual steps vs 3 exchanges) is the most concrete demonstration of UX→Intent; use it as the lesson's anchor example"
+    - "MCP is the 'USB cable' and Skills are the 'App'; this analogy is critical for Lesson 5 where AAIF standards are covered in depth"
     - "The three-layer stack (Frontier Models → AI-First IDEs → Agent Skills) explains how the entire agentic ecosystem is composed"
   misconceptions:
-    - "Students think Five Powers means the agent must have ALL five to be useful — many effective agents only use 2-3 powers (e.g., Claude Code primarily uses Reason + Act)"
-    - "Students confuse 'Remember' with LLM memory — Remember is an application-level capability (stored preferences, history), not model memory (which is stateless per Lesson 2)"
-    - "Students think MCP is a product — MCP is a protocol/standard (like HTTP), not a tool you download and install"
+    - "Students think Five Powers means the agent must have ALL five to be useful; many effective agents only use 2-3 powers (e.g., Claude Code primarily uses Reason + Act)"
+    - "Students confuse 'Remember' with LLM memory; Remember is an application-level capability (stored preferences, history), not model memory (which is stateless per Lesson 2)"
+    - "Students think MCP is a product; MCP is a protocol/standard (like HTTP), not a tool you download and install"
   discussion_prompts:
-    - "Which of the Five Powers do you think is hardest to implement well — and which creates the most value when done right?"
+    - "Which of the Five Powers do you think is hardest to implement well; and which creates the most value when done right?"
     - "If you removed the 'Remember' power from the hotel booking agent, how would the experience change for a returning customer?"
     - "Why did the industry converge on MCP as a standard rather than letting each AI company build their own connector system?"
   teaching_tips:
-    - "Start with the 14-step hotel booking — have students count the steps in a workflow they do regularly, then reimagine it as 2-3 intent exchanges"
+    - "Start with the 14-step hotel booking; have students count the steps in a workflow they do regularly, then reimagine it as 2-3 intent exchanges"
     - "When teaching the Five Powers, map them onto Claude Code as a familiar reference: See (reads screenshots), Reason (OODA from Lesson 3), Act (writes files, runs tests), Remember (AGENTS.md)"
     - "The Predictive→Generative→Agentic evolution in Part 4 is a three-sentence summary worth repeating: Netflix predicts, ChatGPT generates, Claude Code acts"
-    - "Emphasize that the 2024 vs 2026 comparison table (Tool Silos vs Modular Stack) shows how fast the industry moved — students are learning current-state, not history"
+    - "Emphasize that the 2024 vs 2026 comparison table (Tool Silos vs Modular Stack) shows how fast the industry moved; students are learning current-state, not history"
   assessment_quick_check:
     - "Have students name all Five Powers from memory and give one example for each"
-    - "Ask: 'What is the difference between MCP and Agent Skills?' — expects the hands vs training analogy"
+    - "Ask: 'What is the difference between MCP and Agent Skills?'; expects the hands vs training analogy"
     - "Ask students to identify which layer of the AI stack their current tools belong to"
 
 # Generation metadata
@@ -102,9 +102,9 @@ prerequisites:
 
 # Five Powers and the Modern AI Stack
 
-Something fundamental is changing in how humans interact with software. For decades, we built interfaces—buttons, menus, forms—and trained users to navigate them. Success meant making interfaces "intuitive." But what if the interface disappeared entirely? What if users just stated what they wanted, and software figured out how to do it?
+Something fundamental is changing in how humans interact with software. For decades, we built interfaces: buttons, menus, forms: and trained users to navigate them. Success meant making interfaces "intuitive." But what if the interface disappeared entirely? What if users just stated what they wanted, and software figured out how to do it?
 
-This transformation is possible because AI has evolved through three phases: **Predictive AI** (forecasting from data), **Generative AI** (creating content), and now **Agentic AI** (autonomous action). The agentic era combines five capabilities—the **Five Powers**—with a modular **three-layer stack** that makes composition possible. Understanding both the capabilities (what agents can do) and the architecture (how they're built) is essential for building effective AI systems.
+This transformation is possible because AI has evolved through three phases: **Predictive AI** (forecasting from data), **Generative AI** (creating content), and now **Agentic AI** (autonomous action). The agentic era combines five capabilities: the **Five Powers**:with a modular **three-layer stack** that makes composition possible. Understanding both the capabilities (what agents can do) and the architecture (how they're built) is essential for building effective AI systems.
 
 This lesson unifies two foundational frameworks: the **Five Powers** that enable autonomous orchestration, and the **Modern AI Stack** that provides the technical foundation. Together, they explain both *why* the UX→Intent shift is happening now and *how* to build systems that leverage it.
 
@@ -165,7 +165,7 @@ The same goal, achieved differently:
 
 **User**: "I need a hotel in Chicago next Tuesday night for a client meeting downtown."
 
-**Agent**: "Found 3 options near downtown. Based on your preferences, I recommend the Hilton Garden Inn—quiet floor available, $189/night, free breakfast. Your usual king bed non-smoking room?"
+**Agent**: "Found 3 options near downtown. Based on your preferences, I recommend the Hilton Garden Inn: quiet floor available, $189/night, free breakfast. Your usual king bed non-smoking room?"
 
 **User**: "Yes, book it."
 
@@ -187,7 +187,7 @@ The same goal, achieved differently:
 
 Agentic AI can accomplish this transformation because it possesses five fundamental capabilities that, when combined, enable autonomous orchestration:
 
-### 1. 👁️ See — Visual Understanding
+### 1. 👁️ See; Visual Understanding
 
 **What it means:**
 - Process images, screenshots, documents, videos
@@ -200,7 +200,7 @@ Agentic AI can accomplish this transformation because it possesses five fundamen
 - AI extracting data from invoices and receipts
 - Agents clicking buttons by visually locating them on screen
 
-### 2. 👂 Hear — Audio Processing
+### 2. 👂 Hear; Audio Processing
 
 **What it means:**
 - Understand spoken requests (voice interfaces)
@@ -213,7 +213,7 @@ Agentic AI can accomplish this transformation because it possesses five fundamen
 - Meeting transcription and summarization
 - Customer service AI detecting frustration in tone
 
-### 3. 🧠 Reason — Complex Decision-Making
+### 3. 🧠 Reason; Complex Decision-Making
 
 **What it means:**
 - Analyze tradeoffs and constraints
@@ -226,7 +226,7 @@ Agentic AI can accomplish this transformation because it possesses five fundamen
 - AI debugging code by reasoning through error causes
 - Financial agents evaluating investment opportunities
 
-### 4. ⚡ Act — Execute and Orchestrate
+### 4. ⚡ Act; Execute and Orchestrate
 
 **What it means:**
 - Call APIs and use tools autonomously
@@ -239,7 +239,7 @@ Agentic AI can accomplish this transformation because it possesses five fundamen
 - Travel agents booking flights and hotels
 - E-commerce agents processing orders and tracking shipments
 
-### 5. 💾 Remember — Maintain Context and Learn
+### 5. 💾 Remember; Maintain Context and Learn
 
 **What it means:**
 - Store user preferences and history
@@ -278,15 +278,15 @@ Agentic AI can accomplish this transformation because it possesses five fundamen
 
 The Five Powers explain *what* agents can do. The Modern AI Stack explains *how* they're built. By early 2026, we have moved from "Chatbots with tools" to **Protocol-Driven Autonomous Workers**.
 
-### Layer 1: Frontier Models—The Reasoning Engines
+### Layer 1: Frontier Models: The Reasoning Engines
 
 * **Claude 4.5 / GPT-5.2 / Gemini 3:** The foundation. These models now feature "Native Agentic Reasoning," allowing them to pause, think, and call tools without needing a separate orchestration layer for simple tasks.
 
-### Layer 2: AI-First IDEs—The Context Orchestrators
+### Layer 2: AI-First IDEs: The Context Orchestrators
 
 * **Cursor / Windsurf / VS Code:** These tools no longer just "see" your code; they act as the **Skill Host**. They are the environment where the models, tools, and local file systems meet.
 
-### Layer 3: Agent Skills—The Autonomous Workers
+### Layer 3: Agent Skills: The Autonomous Workers
 
 This is the most significant change. Instead of "Custom Agents," we now build **Modular Skills**.
 
@@ -321,7 +321,7 @@ Everything in this stack is held together by **MCP**. In 2026, we have moved pas
 
 ---
 
-## Part 4: The Evolution—Why Now?
+## Part 4: The Evolution: Why Now?
 
 Understanding where we are helps explain why the UX→Intent shift is happening now.
 
@@ -347,7 +347,7 @@ AI evolved through three phases:
 
 **What it does**: Takes autonomous action to achieve goals
 
-**Breakthrough**: AI shifts from tool to teammate—from responding to orchestrating
+**Breakthrough**: AI shifts from tool to teammate: from responding to orchestrating
 
 **Example**: Claude Code editing files, running tests, committing changes *without asking for each step*
 
@@ -357,7 +357,7 @@ This evolution unlocked the Five Powers working together, making the UX→Intent
 
 ---
 
-## Part 5: The 2024 vs 2026 Shift—From Silos to Composition
+## Part 5: The 2024 vs 2026 Shift: From Silos to Composition
 
 ### 2024: Tool Silos (Monolithic)
 
@@ -421,7 +421,7 @@ Help me reimagine this as an agentic experience:
 Let's discover together: What makes this agentic vs. just automated?
 ```
 
-**What you're learning:** Intent modeling—thinking in goals and context rather than steps and clicks, plus mapping agentic capabilities to the Five Powers framework.
+**What you're learning:** Intent modeling: thinking in goals and context rather than steps and clicks, plus mapping agentic capabilities to the Five Powers framework.
 
 ### Exercise 2: Identify the Five Powers in Real Systems
 
@@ -446,7 +446,7 @@ Now map this system to the three-layer AI stack:
 - Is it a general agent or a custom agent (Layer 3)?
 ```
 
-**What you're learning:** System analysis—understanding how capabilities combine to create emergent behavior, and connecting capabilities to the technical infrastructure that enables them.
+**What you're learning:** System analysis: understanding how capabilities combine to create emergent behavior, and connecting capabilities to the technical infrastructure that enables them.
 
 ### Exercise 3: Map Your Current Tools to the Stack
 

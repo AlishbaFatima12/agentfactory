@@ -19,7 +19,7 @@ options: [
 "Specification gap from missing constraints"
 ],
 correctOption: 0,
-explanation: "This is context loss—each iteration loses discoveries from previous turns. The JWT implementation decisions were lost when focus shifted to OAuth. Context loss occurs when newer requests override earlier work because previous decisions fade from attention. Pattern violations would involve architectural conflicts; assumption drift involves reasonable but wrong guesses; specification gap isn't a defined failure mode.",
+explanation: "This is context loss,each iteration loses discoveries from previous turns. The JWT implementation decisions were lost when focus shifted to OAuth. Context loss occurs when newer requests override earlier work because previous decisions fade from attention. Pattern violations would involve architectural conflicts; assumption drift involves reasonable but wrong guesses; specification gap isn't a defined failure mode.",
 source: "Lesson 1: Why Specs Beat Vibe Coding"
 },
 {
@@ -31,7 +31,7 @@ options: [
 "Specification ambiguity from vague requirements"
 ],
 correctOption: 2,
-explanation: "This is pattern violations—generated code ignores existing project architecture. Without knowledge of your specific patterns (all user data in user_preferences), Claude applies general best practices that conflict with your design. Context loss involves losing previous decisions; assumption drift involves wrong guesses about requirements; specification ambiguity isn't a defined failure mode.",
+explanation: "This is pattern violations,generated code ignores existing project architecture. Without knowledge of your specific patterns (all user data in user_preferences), Claude applies general best practices that conflict with your design. Context loss involves losing previous decisions; assumption drift involves wrong guesses about requirements; specification ambiguity isn't a defined failure mode.",
 source: "Lesson 1: Why Specs Beat Vibe Coding"
 },
 {
@@ -43,7 +43,7 @@ options: [
 "Assumption drift from implicit defaults"
 ],
 correctOption: 3,
-explanation: "This is assumption drift—Claude made reasonable but wrong guesses about your requirements. Without explicit constraints, Claude fills gaps with sensible defaults that may not match your actual needs. Pattern violations involve architectural conflicts; context loss involves losing previous decisions; architecture mismatch isn't a defined failure mode.",
+explanation: "This is assumption drift,Claude made reasonable but wrong guesses about your requirements. Without explicit constraints, Claude fills gaps with sensible defaults that may not match your actual needs. Pattern violations involve architectural conflicts; context loss involves losing previous decisions; architecture mismatch isn't a defined failure mode.",
 source: "Lesson 1: Why Specs Beat Vibe Coding"
 },
 {
@@ -55,7 +55,7 @@ options: [
 "Specs automate the implementation process"
 ],
 correctOption: 1,
-explanation: "Specifications prevent failure modes by providing the complete picture upfront—what exists, what to build, what NOT to build, and success criteria. This addresses context loss (requirements persist), assumption drift (explicit constraints), and pattern violations (architecture documented). Specs don't eliminate iteration; they front-load the important decisions.",
+explanation: "Specifications prevent failure modes by providing the complete picture upfront,what exists, what to build, what NOT to build, and success criteria. This addresses context loss (requirements persist), assumption drift (explicit constraints), and pattern violations (architecture documented). Specs don't eliminate iteration; they front-load the important decisions.",
 source: "Lesson 1: Why Specs Beat Vibe Coding"
 },
 {
@@ -67,7 +67,7 @@ options: [
 "Spec-First with throwaway artifacts"
 ],
 correctOption: 3,
-explanation: "This is Spec-First—the most common level where specs guide implementation but are discarded afterward. The benefit is zero maintenance overhead; the cost is no specification exists for future reference. Spec-Anchored maintains both; Spec-as-Source regenerates code; Spec-Lite isn't a defined level.",
+explanation: "This is Spec-First,the most common level where specs guide implementation but are discarded afterward. The benefit is zero maintenance overhead; the cost is no specification exists for future reference. Spec-Anchored maintains both; Spec-as-Source regenerates code; Spec-Lite isn't a defined level.",
 source: "Lesson 2: The Three Levels of SDD"
 },
 {
@@ -79,7 +79,7 @@ options: [
 "Spec-Driven with compliance checks"
 ],
 correctOption: 0,
-explanation: "This is Spec-Anchored—both specification and code are maintained artifacts. The discipline requires spec changes before code changes and reviewer verification. This provides onboarding documentation and architectural records but doubles maintenance burden. Spec-First discards specs; Spec-as-Source regenerates code; Spec-Driven isn't a defined level.",
+explanation: "This is Spec-Anchored,both specification and code are maintained artifacts. The discipline requires spec changes before code changes and reviewer verification. This provides onboarding documentation and architectural records but doubles maintenance burden. Spec-First discards specs; Spec-as-Source regenerates code; Spec-Driven isn't a defined level.",
 source: "Lesson 2: The Three Levels of SDD"
 },
 {
@@ -91,7 +91,7 @@ options: [
 "Spec-Strict with edit protection"
 ],
 correctOption: 2,
-explanation: "This is Spec-as-Source—the most radical approach where specifications are the primary artifact and code is regenerated on demand. This experimental level (explored by Tessl) faces determinism challenges: identical specs don't produce identical code. Spec-Anchored maintains both; Spec-First is throwaway; Spec-Strict isn't defined.",
+explanation: "This is Spec-as-Source,the most radical approach where specifications are the primary artifact and code is regenerated on demand. This experimental level (explored by Tessl) faces determinism challenges: identical specs don't produce identical code. Spec-Anchored maintains both; Spec-First is throwaway; Spec-Strict isn't defined.",
 source: "Lesson 2: The Three Levels of SDD"
 },
 {
@@ -115,7 +115,7 @@ options: [
 "Spec-First with throwaway artifacts"
 ],
 correctOption: 3,
-explanation: "Spec-First is appropriate for personal projects without team coordination. The spec prevents vibe coding failures, ensures complete context, and results in working code—then gets discarded. No maintenance burden, but also no documentation for later. Spec-Anchored's overhead isn't justified; Spec-as-Source is experimental; no specs risks vibe coding failures.",
+explanation: "Spec-First is appropriate for personal projects without team coordination. The spec prevents vibe coding failures, ensures complete context, and results in working code,then gets discarded. No maintenance burden, but also no documentation for later. Spec-Anchored's overhead isn't justified; Spec-as-Source is experimental; no specs risks vibe coding failures.",
 source: "Lesson 2: The Three Levels of SDD"
 },
 {
@@ -127,7 +127,7 @@ options: [
 "Refinement, Research, Specification, Implementation"
 ],
 correctOption: 1,
-explanation: "Skipping Refinement means ambiguities in the spec are never surfaced before coding begins. These unresolved questions emerge during implementation—when changes are expensive rather than cheap. The correct sequence (Research, Specification, Refinement, Implementation) front-loads ambiguity resolution precisely to avoid mid-implementation pivots.",
+explanation: "Skipping Refinement means ambiguities in the spec are never surfaced before coding begins. These unresolved questions emerge during implementation,when changes are expensive rather than cheap. The correct sequence (Research, Specification, Refinement, Implementation) front-loads ambiguity resolution precisely to avoid mid-implementation pivots.",
 source: "Lesson 4: The Four-Phase Workflow"
 },
 {
@@ -199,7 +199,7 @@ options: [
 "To enable faster sequential processing"
 ],
 correctOption: 1,
-explanation: "Context isolation prevents cross-contamination. When Agent 2 investigates WebSockets, it doesn't carry assumptions from Agent 1's CRDT analysis. This means findings are independent—if one agent's approach is wrong, it doesn't affect others. Each agent starts clean and reports pure findings.",
+explanation: "Context isolation prevents cross-contamination. When Agent 2 investigates WebSockets, it doesn't carry assumptions from Agent 1's CRDT analysis. This means findings are independent,if one agent's approach is wrong, it doesn't affect others. Each agent starts clean and reports pure findings.",
 source: "Lesson 5: Phase 1 - Parallel Research"
 },
 {
@@ -211,7 +211,7 @@ options: [
 "The specification scope is too broad"
 ],
 correctOption: 0,
-explanation: "Conflicting findings indicate a genuine design decision. Agent 1 recommending approach A while Agent 3 recommends approach B means you have real options with tradeoffs. This is valuable information—you're not making assumptions that slip through. Conflicts surface decisions that need human judgment.",
+explanation: "Conflicting findings indicate a genuine design decision. Agent 1 recommending approach A while Agent 3 recommends approach B means you have real options with tradeoffs. This is valuable information,you're not making assumptions that slip through. Conflicts surface decisions that need human judgment.",
 source: "Lesson 5: Phase 1 - Parallel Research"
 },
 {
@@ -223,7 +223,7 @@ options: [
 "Broad general questions that produce flexible open results"
 ],
 correctOption: 1,
-explanation: "Effective decomposition creates independent threads where each agent can complete without information from others, each has a focused answerable question, and each knows scope boundaries. These two questions heavily overlap and are too vague—both could produce the same findings. Effective threads like 'token management', 'session handling', 'provider integration' are independent and bounded.",
+explanation: "Effective decomposition creates independent threads where each agent can complete without information from others, each has a focused answerable question, and each knows scope boundaries. These two questions heavily overlap and are too vague,both could produce the same findings. Effective threads like 'token management', 'session handling', 'provider integration' are independent and bounded.",
 source: "Lesson 5: Phase 1 - Parallel Research"
 },
 {
@@ -271,7 +271,7 @@ options: [
 "It focuses on positive outcomes only"
 ],
 correctOption: 1,
-explanation: "'Fast and reliable' cannot be tested. Effective criteria must be measurable: 'P95 latency < 100ms' instead of 'fast'; 'Zero data loss in conflict scenarios' instead of 'reliable.' If you can't write a test for a criterion, it's not a criterion—it's a wish.",
+explanation: "'Fast and reliable' cannot be tested. Effective criteria must be measurable: 'P95 latency < 100ms' instead of 'fast'; 'Zero data loss in conflict scenarios' instead of 'reliable.' If you can't write a test for a criterion, it's not a criterion,it's a wish.",
 source: "Lesson 6: Phase 2 - Writing Effective Specs"
 },
 {
@@ -283,7 +283,7 @@ options: [
 "Self-contained work explainable in one sentence"
 ],
 correctOption: 3,
-explanation: "Atomic means self-contained units of work you can explain to a junior developer in one sentence. 'Create /lib/cache.ts with LRU implementation' is atomic. 'Set up the system' is not—it's too vague to delegate. Atomic isn't about size or time but about clarity and completeness.",
+explanation: "Atomic means self-contained units of work you can explain to a junior developer in one sentence. 'Create /lib/cache.ts with LRU implementation' is atomic. 'Set up the system' is not,it's too vague to delegate. Atomic isn't about size or time but about clarity and completeness.",
 source: "Lesson 6: Phase 2 - Writing Effective Specs"
 },
 {
@@ -295,7 +295,7 @@ options: [
 "It doesn't specify the value type"
 ],
 correctOption: 1,
-explanation: "Specifications should describe behavior, not implementation. 'Use HashMap' prescribes HOW; 'Returns user by ID in O(1) time' describes WHAT behavior is needed. Claude often knows better implementation patterns—by specifying behavior, you get the benefit of its knowledge.",
+explanation: "Specifications should describe behavior, not implementation. 'Use HashMap' prescribes HOW; 'Returns user by ID in O(1) time' describes WHAT behavior is needed. Claude often knows better implementation patterns,by specifying behavior, you get the benefit of its knowledge.",
 source: "Lesson 6: Phase 2 - Writing Effective Specs"
 },
 {
@@ -307,7 +307,7 @@ options: [
 "Use the ask_user_question tool to surface any ambiguities before we implement"
 ],
 correctOption: 3,
-explanation: "'Use the ask_user_question tool to surface any ambiguities before we implement' triggers Claude's interview mode. This shifts Claude from implementation to investigation—it reads critically and asks questions about anything unclear, unstated, or problematic. The roles reverse: Claude asks, you answer.",
+explanation: "'Use the ask_user_question tool to surface any ambiguities before we implement' triggers Claude's interview mode. This shifts Claude from implementation to investigation,it reads critically and asks questions about anything unclear, unstated, or problematic. The roles reverse: Claude asks, you answer.",
 source: "Lesson 7: Phase 3 - Refinement via Interview"
 },
 {
@@ -331,7 +331,7 @@ options: [
 "Boundary Conditions limits"
 ],
 correctOption: 0,
-explanation: "Data migration questions fall under Data Decisions—how existing information transitions to the new system. Other data questions include schema mismatch handling and transition period management. Conflict Resolution covers multi-user scenarios; Pattern Selection covers architectural choices; Boundary Conditions covers limits.",
+explanation: "Data migration questions fall under Data Decisions,how existing information transitions to the new system. Other data questions include schema mismatch handling and transition period management. Conflict Resolution covers multi-user scenarios; Pattern Selection covers architectural choices; Boundary Conditions covers limits.",
 source: "Lesson 7: Phase 3 - Refinement via Interview"
 },
 {
@@ -350,7 +350,7 @@ source: "Lesson 7: Phase 3 - Refinement via Interview"
 question: "A developer reviews the interview transcript and notices Claude is asking variations of already-answered questions and flagging minor formatting preferences. What does this signal?",
 options: [
 "All five ambiguity categories have been fully addressed now",
-"Questions are becoming repetitive—the interview phase should end",
+"Questions are becoming repetitive,the interview phase should end",
 "Exactly ten questions have been asked and the limit is reached",
 "The specification has reached an adequate word count threshold"
 ],
@@ -379,7 +379,7 @@ options: [
 "To prevent error propagation across tasks"
 ],
 correctOption: 3,
-explanation: "Fresh context prevents error propagation. If a subagent makes a wrong assumption, that assumption dies with the subagent—it doesn't contaminate other tasks. In accumulated context, a wrong assumption in minute 5 affects code in minute 45. Context isolation contains failures.",
+explanation: "Fresh context prevents error propagation. If a subagent makes a wrong assumption, that assumption dies with the subagent,it doesn't contaminate other tasks. In accumulated context, a wrong assumption in minute 5 affects code in minute 45. Context isolation contains failures.",
 source: "Lesson 8: Phase 4 - Task-Based Implementation"
 },
 {
@@ -403,7 +403,7 @@ options: [
 "To provide backpressure that catches errors at the source"
 ],
 correctOption: 3,
-explanation: "Pre-commit hooks provide backpressure—quality gates that slow implementation when quality drops. If typecheck fails, the commit is rejected. If tests fail, the subagent must fix issues before proceeding. This prevents broken code from entering the repository even when AI writes it.",
+explanation: "Pre-commit hooks provide backpressure,quality gates that slow implementation when quality drops. If typecheck fails, the commit is rejected. If tests fail, the subagent must fix issues before proceeding. This prevents broken code from entering the repository even when AI writes it.",
 source: "Lesson 8: Phase 4 - Task-Based Implementation"
 },
 {
@@ -427,19 +427,19 @@ options: [
 "Tasks run in random order with automatic dependency resolution"
 ],
 correctOption: 1,
-explanation: "When tasks have linear dependencies (2 needs 1's output, 3 needs 2's output), they must run sequentially. You cannot start Task 2 until Task 1 completes. This is why dependency analysis matters—it determines parallel versus sequential execution.",
+explanation: "When tasks have linear dependencies (2 needs 1's output, 3 needs 2's output), they must run sequentially. You cannot start Task 2 until Task 1 completes. This is why dependency analysis matters,it determines parallel versus sequential execution.",
 source: "Lesson 8: Phase 4 - Task-Based Implementation"
 },
 {
 question: "A developer evaluates a task: 'Fix the null pointer exception on line 47 of auth.ts.' Should they use SDD for this task?",
 options: [
-"Yes—files affected exceeds five so SDD is required here",
-"No—this task is a single-file bug fix and skips SDD",
+"Yes,files affected exceeds five so SDD is required here",
+"No,this task is a single-file bug fix and skips SDD",
 "Only for production-critical systems regardless of scope",
 "Yes, when the team has more than five active members"
 ],
 correctOption: 0,
-explanation: "The heuristic states: 'IF files_affected > 5 OR requirements_unclear OR learning_new_tech: Use SDD.' This task is a single-file bug fix with a clear problem—SDD overhead (research, spec, interview, tasks) would take longer than the fix itself. The correct answer maps to the 'ELSE IF single_file AND bug_fix: Skip SDD' branch of the heuristic.",
+explanation: "The heuristic states: 'IF files_affected > 5 OR requirements_unclear OR learning_new_tech: Use SDD.' This task is a single-file bug fix with a clear problem,SDD overhead (research, spec, interview, tasks) would take longer than the fix itself. The correct answer maps to the 'ELSE IF single_file AND bug_fix: Skip SDD' branch of the heuristic.",
 source: "Lesson 9: The Decision Framework"
 },
 {
@@ -463,7 +463,7 @@ options: [
 "Consult with your team members before deciding anything"
 ],
 correctOption: 2,
-explanation: "For judgment calls, start with a lightweight spec (just constraints and success criteria). If writing it reveals complexity—'Wait, how DO we handle existing data?'—expand to full specification. If it feels sufficient, proceed directly. This 80/20 approach balances effort and value.",
+explanation: "For judgment calls, start with a lightweight spec (just constraints and success criteria). If writing it reveals complexity,'Wait, how DO we handle existing data?',expand to full specification. If it feels sufficient, proceed directly. This 80/20 approach balances effort and value.",
 source: "Lesson 9: The Decision Framework"
 },
 {
@@ -499,7 +499,7 @@ options: [
 "When the technology stack is unfamiliar"
 ],
 correctOption: 1,
-explanation: "Exploratory prototyping—'What if we visualized this differently?'—benefits from rapid iteration. You're discovering the problem, not implementing a solution. Vibe coding serves exploration. Once you discover what works, THEN write a specification for production implementation.",
+explanation: "Exploratory prototyping,'What if we visualized this differently?',benefits from rapid iteration. You're discovering the problem, not implementing a solution. Vibe coding serves exploration. Once you discover what works, THEN write a specification for production implementation.",
 source: "Lesson 9: The Decision Framework"
 },
 {
@@ -511,7 +511,7 @@ options: [
 "Skip fixing and focus on documentation"
 ],
 correctOption: 2,
-explanation: "Production incidents require immediate action, not spec documents. Fix it first, document later. However, the follow-up—'Prevent this class of failure'—is exactly the unclear-requirement task where SDD excels. Incident response is direct; long-term fix benefits from specification.",
+explanation: "Production incidents require immediate action, not spec documents. Fix it first, document later. However, the follow-up,'Prevent this class of failure',is exactly the unclear-requirement task where SDD excels. Incident response is direct; long-term fix benefits from specification.",
 source: "Lesson 9: The Decision Framework"
 },
 {
@@ -523,7 +523,7 @@ options: [
 "Version control works better with specifications"
 ],
 correctOption: 0,
-explanation: "Large refactors benefit from specifications as anchors that prevent drift. Without a spec, you might chase side effects four directories deep with no clear picture of changes. The spec defines the end state upfront—each task references it, preventing well-intentioned tangents.",
+explanation: "Large refactors benefit from specifications as anchors that prevent drift. Without a spec, you might chase side effects four directories deep with no clear picture of changes. The spec defines the end state upfront,each task references it, preventing well-intentioned tangents.",
 source: "Lesson 9: The Decision Framework"
 },
 {
@@ -559,7 +559,7 @@ options: [
 "Specification gap where missing constraints led to wrong output"
 ],
 correctOption: 1,
-explanation: "By Turn 14, the developer discovers Claude wrote blog-style content when they needed a research report with citations. This is assumption drift—Claude filled the gap in 'report format' with a reasonable but wrong default. Early turns seemed like progress but accumulated wrong assumptions about audience and structure. Without explicit format constraints, Claude defaulted to what 'report' typically means.",
+explanation: "By Turn 14, the developer discovers Claude wrote blog-style content when they needed a research report with citations. This is assumption drift,Claude filled the gap in 'report format' with a reasonable but wrong default. Early turns seemed like progress but accumulated wrong assumptions about audience and structure. Without explicit format constraints, Claude defaulted to what 'report' typically means.",
 source: "Lesson 1: Why Specs Beat Vibe Coding"
 },
 {
@@ -571,7 +571,7 @@ options: [
 "Context loss is faster while assumption drift is slower"
 ],
 correctOption: 1,
-explanation: "Context loss means previous decisions fade from attention—features that worked stop working after unrelated changes. Assumption drift means Claude fills gaps with reasonable but wrong defaults—generated code works but doesn't match your actual needs. Both compound but in different ways.",
+explanation: "Context loss means previous decisions fade from attention,features that worked stop working after unrelated changes. Assumption drift means Claude fills gaps with reasonable but wrong defaults,generated code works but doesn't match your actual needs. Both compound but in different ways.",
 source: "Lesson 1: Why Specs Beat Vibe Coding"
 },
 {
@@ -583,7 +583,7 @@ options: [
 "Turns 16+"
 ],
 correctOption: 3,
-explanation: "By Turn 16+, context loss becomes Critical, assumption drift becomes Architectural, and pattern violations Require Rewrite. The three failure modes amplify each other—by this point, you're not iterating toward your goal but managing an increasingly divergent codebase.",
+explanation: "By Turn 16+, context loss becomes Critical, assumption drift becomes Architectural, and pattern violations Require Rewrite. The three failure modes amplify each other,by this point, you're not iterating toward your goal but managing an increasingly divergent codebase.",
 source: "Lesson 1: Why Specs Beat Vibe Coding"
 },
 {
@@ -595,7 +595,7 @@ options: [
 "Both are only suitable for small projects"
 ],
 correctOption: 2,
-explanation: "Both MDD and Spec-as-Source face the same fundamental challenge: generated code needs manual patches for edge cases, models/specs can't express all implementation concerns, and the abstraction leaks—requiring developers to understand both the specification layer AND the generated code layer.",
+explanation: "Both MDD and Spec-as-Source face the same fundamental challenge: generated code needs manual patches for edge cases, models/specs can't express all implementation concerns, and the abstraction leaks,requiring developers to understand both the specification layer AND the generated code layer.",
 source: "Lesson 2: The Three Levels of SDD"
 },
 {
@@ -619,16 +619,16 @@ options: [
 "A refinement interview to surface ambiguities"
 ],
 correctOption: 1,
-explanation: "The spec was followed correctly—it described what to build. What's missing is a constitution (CLAUDE.md) that defines how everything must be built: function length limits, type hint requirements, error message patterns. The constitution fills the gap between correct feature behavior and consistent code quality.",
+explanation: "The spec was followed correctly,it described what to build. What's missing is a constitution (CLAUDE.md) that defines how everything must be built: function length limits, type hint requirements, error message patterns. The constitution fills the gap between correct feature behavior and consistent code quality.",
 source: "Lesson 3: The Project Constitution"
 },
 {
 question: "A developer puts 'Use PostgreSQL for all data storage' in their project constitution. Another developer argues this belongs in the feature specification. Who is correct?",
 options: [
-"The first developer—technology constraints belong in the constitution",
-"The second developer—database choices are feature-specific decisions",
-"Both are wrong—database choices belong in the research phase",
-"Neither—it depends on the project size"
+"The first developer,technology constraints belong in the constitution",
+"The second developer,database choices are feature-specific decisions",
+"Both are wrong,database choices belong in the research phase",
+"Neither,it depends on the project size"
 ],
 correctOption: 0,
 explanation: "Technology constraints that apply across all features belong in the constitution, not individual specs. If every service must use PostgreSQL, putting it in the constitution prevents Claude from proposing SQLite as a shortcut in any spec. Feature specs describe what to build; the constitution defines the immutable environment.",
@@ -643,7 +643,7 @@ options: [
 "After Phase 3 Refinement, when standards are clear"
 ],
 correctOption: 2,
-explanation: "The constitution must exist before Phase 1 research begins. Research agents need governance boundaries to know what 'good findings' means. Without the constitution, research may explore architecturally incompatible patterns, and specs may include decisions that contradict your standards—contradictions that only surface during expensive implementation.",
+explanation: "The constitution must exist before Phase 1 research begins. Research agents need governance boundaries to know what 'good findings' means. Without the constitution, research may explore architecturally incompatible patterns, and specs may include decisions that contradict your standards,contradictions that only surface during expensive implementation.",
 source: "Lesson 3: The Project Constitution"
 },
 {
@@ -655,7 +655,7 @@ options: [
 "Task dependencies were not properly ordered"
 ],
 correctOption: 1,
-explanation: "This illustrates cross-agent inconsistency. Both agents followed the spec correctly—the spec described what to build, not how. A constitution defining 'all async operations use async/await' would have ensured consistency without requiring agents to communicate. Shared governance replaces coordination.",
+explanation: "This illustrates cross-agent inconsistency. Both agents followed the spec correctly,the spec described what to build, not how. A constitution defining 'all async operations use async/await' would have ensured consistency without requiring agents to communicate. Shared governance replaces coordination.",
 source: "Lesson 3: The Project Constitution"
 },
 {
@@ -667,7 +667,7 @@ options: [
 "Whichever CLAUDE.md is closest to the current file"
 ],
 correctOption: 1,
-explanation: "Claude reads CLAUDE.md at three locations: global (~/.claude/CLAUDE.md), project root (./CLAUDE.md), and subdirectories relevant to the current context. The two main levels compose—global is read first, then project. Project principles extend and override global where they conflict.",
+explanation: "Claude reads CLAUDE.md at three locations: global (~/.claude/CLAUDE.md), project root (./CLAUDE.md), and subdirectories relevant to the current context. The two main levels compose,global is read first, then project. Project principles extend and override global where they conflict.",
 source: "Lesson 3: The Project Constitution"
 }
 ]}

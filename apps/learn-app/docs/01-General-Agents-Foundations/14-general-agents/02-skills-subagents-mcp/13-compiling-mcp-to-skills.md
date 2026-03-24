@@ -62,21 +62,21 @@ teaching_guide:
   key_points:
     - "The code execution pattern (SKILL.md + local scripts) achieves 98% token reduction by running MCP operations outside Claude's context window entirely"
     - "Three-stage loading for compiled skills (discovery at 30 tokens, activation at 150 tokens, execution at 0 tokens) extends the three-level architecture from Lesson 08"
-    - "Skills can contain decision logic that guides Claude on when to use Tool Search vs compiled patterns — this makes skills intelligent advisors, not just executors"
+    - "Skills can contain decision logic that guides Claude on when to use Tool Search vs compiled patterns; this makes skills intelligent advisors, not just executors"
     - "The decision framework (simple/infrequent = Tool Search, complex/repeated/filtered = compile) gives students a concrete rubric for real-world choices"
   misconceptions:
-    - "Students think every MCP server should be compiled into a skill — the decision framework explicitly says low-overhead, infrequent-use MCP servers are fine as-is"
-    - "Students confuse token savings with functionality loss — compiled skills provide the same results as direct MCP, just through local execution instead of context-window processing"
-    - "Students think they need to write mcp-client.py themselves — the Skills Lab provides pre-built compiled skills; this lesson teaches usage and understanding, not creation"
-    - "Students assume Tool Search and compilation are competing approaches — they are complementary, and the 'Skills as Intelligent Guides' section shows skills orchestrating both"
+    - "Students think every MCP server should be compiled into a skill; the decision framework explicitly says low-overhead, infrequent-use MCP servers are fine as-is"
+    - "Students confuse token savings with functionality loss; compiled skills provide the same results as direct MCP, just through local execution instead of context-window processing"
+    - "Students think they need to write mcp-client.py themselves; the Skills Lab provides pre-built compiled skills; this lesson teaches usage and understanding, not creation"
+    - "Students assume Tool Search and compilation are competing approaches; they are complementary, and the 'Skills as Intelligent Guides' section shows skills orchestrating both"
   discussion_prompts:
-    - "The lesson shows 98% token reduction — if you had 5 MCP servers, how would you decide which ones to compile vs leave as direct MCP?"
-    - "The meta-pattern shows skills containing decision logic about when they should activate — what other kinds of 'self-awareness' could you build into skills?"
-    - "Compiled skills are portable across Claude Code, OpenAI Codex, and Goose — what does cross-agent portability mean for how you invest time in building skills?"
+    - "The lesson shows 98% token reduction; if you had 5 MCP servers, how would you decide which ones to compile vs leave as direct MCP?"
+    - "The meta-pattern shows skills containing decision logic about when they should activate; what other kinds of 'self-awareness' could you build into skills?"
+    - "Compiled skills are portable across Claude Code, OpenAI Codex, and Goose; what does cross-agent portability mean for how you invest time in building skills?"
   teaching_tips:
     - "Run Steps 2 and 3 (direct MCP vs compiled skill) back-to-back on the same task so students see the token difference in real time"
-    - "Use the token comparison table (15,000-24,000 vs 150-200 tokens) as the lesson's anchor number — write it on the board and reference it throughout"
-    - "The 'Skills as Intelligent Guides' SKILL.md example showing when-to-use-what logic is the most advanced concept — save it for the second half of class when students have hands-on context"
+    - "Use the token comparison table (15,000-24,000 vs 150-200 tokens) as the lesson's anchor number; write it on the board and reference it throughout"
+    - "The 'Skills as Intelligent Guides' SKILL.md example showing when-to-use-what logic is the most advanced concept; save it for the second half of class when students have hands-on context"
     - "Connect back to Lesson 08's three-level loading: discovery/activation/execution maps directly to compiled skills' discovery/activation/local-execution pattern"
   assessment_quick_check:
     - "What is the approximate token cost of a compiled skill's SKILL.md vs direct MCP tool definitions?"
@@ -112,7 +112,7 @@ But what if you need:
 
 This lesson shows you the next level: **compile MCP servers into lean skills** that run operations locally and return only filtered results.
 
-And here's the key insight: **skills can guide Claude on which approach to use**—automatically selecting Tool Search for simple queries and compiled patterns for complex workflows.
+And here's the key insight: **skills can guide Claude on which approach to use**:automatically selecting Tool Search for simple queries and compiled patterns for complex workflows.
 
 ![skills-mcp](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-05/skills-mcp.png)
 
@@ -128,13 +128,13 @@ Skills you compile here work across all three agents.
 When Claude Code loads an MCP server, it eagerly loads ALL tool definitions upfront. Here's the real impact from Anthropic's engineering blog:
 
 > "Tool descriptions occupy more context window space, increasing response time and costs. For agents with thousands of tools, this means processing hundreds of thousands of tokens before reading a request."
-> — Anthropic, [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp)
+>; Anthropic, [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp)
 
 :::info Context
 The quote above describes MCP behavior before Tool Search (January 2026).
 Claude Code now handles 85% of this automatically via Tool Search.
 
-This lesson covers the remaining 15%—and how to build skills that
+This lesson covers the remaining 15%: and how to build skills that
 intelligently orchestrate both approaches.
 :::
 
@@ -144,7 +144,7 @@ intelligently orchestrate both approaches.
 - **2-hour meeting workflow**: Fetching transcript from Google Drive and attaching to Salesforce = **50,000 additional tokens** for repeated data processing
 - **Compiled skill approach**: Reduces to **~2,000 tokens (98.7% reduction)**
 
-**The math for a single MCP server**: Playwright MCP loads approximately 5,000-8,000 tokens of tool definitions. Use it 3 times in a session? That's 15,000-24,000 tokens of overhead—before you've accomplished anything.
+**The math for a single MCP server**: Playwright MCP loads approximately 5,000-8,000 tokens of tool definitions. Use it 3 times in a session? That's 15,000-24,000 tokens of overhead: before you've accomplished anything.
 
 #### 💬 AI Colearning Prompt
 
@@ -397,7 +397,7 @@ scripts/           # Scripts Claude executes locally
 Let's try a second compiled skill that demonstrates a different use case: **fetching library documentation with intelligent filtering**. This skill wraps the Context7 MCP server and reduces tokens by 60-90% through content-type filtering.
 
 :::note No Programming Required
-You don't need to understand the code in the documentation—you're learning how **token reduction** works, not React or Next.js. Focus on the numbers: how many tokens before vs after.
+You don't need to understand the code in the documentation: you're learning how **token reduction** works, not React or Next.js. Focus on the numbers: how many tokens before vs after.
 :::
 
 ### What fetch-library-docs Does
@@ -408,7 +408,7 @@ When developers need documentation, they typically ask questions like:
 - "Show me examples of useState"
 - "What's the API for fetch in JavaScript?"
 
-**Without the skill**: Context7 MCP returns everything—examples, explanations, API references, troubleshooting—consuming thousands of tokens.
+**Without the skill**: Context7 MCP returns everything: examples, explanations, API references, troubleshooting: consuming thousands of tokens.
 
 **With the skill**: You specify what you need (`setup`, `examples`, `api-ref`), and the skill filters locally, returning only relevant content.
 
@@ -517,7 +517,7 @@ scripts/           # Shell scripts that call Context7 MCP locally
   └── extract-*.sh       # Content-type specific filters
 ```
 
-**Key insight**: The filtering happens in shell scripts (local execution), not in Claude's context. This is why tokens are saved—heavy processing stays outside the conversation.
+**Key insight**: The filtering happens in shell scripts (local execution), not in Claude's context. This is why tokens are saved: heavy processing stays outside the conversation.
 
 #### 💬 AI Colearning Prompt
 
@@ -653,9 +653,9 @@ Now you have three approaches. Here's when to use each:
 
 ## What's Ahead
 
-You've experienced compiled skills and their massive token reduction—up to 98% savings while preserving full functionality. You understand the code execution pattern and why it works.
+You've experienced compiled skills and their massive token reduction: up to 98% savings while preserving full functionality. You understand the code execution pattern and why it works.
 
-**Lesson 14: Settings Hierarchy** introduces the three-level configuration system that lets you control permissions, share team standards, and customize Claude Code across projects—tying together all the features you've learned (CLAUDE.md, skills, subagents, MCP) into a cohesive, configurable system.
+**Lesson 14: Settings Hierarchy** introduces the three-level configuration system that lets you control permissions, share team standards, and customize Claude Code across projects: tying together all the features you've learned (CLAUDE.md, skills, subagents, MCP) into a cohesive, configurable system.
 
 **In advanced lessons**, you'll learn to create your own compiled skills using skill-creator, compiling other MCP servers (Google Drive, Database, etc.) and designing custom workflows. The skills you use from Skills Lab now become templates for creating your own later.
 
@@ -665,10 +665,10 @@ You've experienced compiled skills and their massive token reduction—up to 98%
 
 Research and tools supporting this lesson:
 
-- [Anthropic: Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) — Architecture for local execution + context reduction
-- [Armin Ronacher: Skills vs Dynamic MCP Loadouts](https://lucumr.pocoo.org/2025/12/13/skills-vs-mcp/) — Token efficiency analysis and pattern recommendations
-- [SmartScope: MCP Code Execution Deep Dive](https://smartscope.blog/en/blog/mcp-code-execution-agent-design/) — Detailed compilation workflow examples
-- [Claude Code Documentation: MCP Integration](https://docs.anthropic.com/claude-code/mcp) — Official MCP protocol reference
+- [Anthropic: Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp); Architecture for local execution + context reduction
+- [Armin Ronacher: Skills vs Dynamic MCP Loadouts](https://lucumr.pocoo.org/2025/12/13/skills-vs-mcp/); Token efficiency analysis and pattern recommendations
+- [SmartScope: MCP Code Execution Deep Dive](https://smartscope.blog/en/blog/mcp-code-execution-agent-design/); Detailed compilation workflow examples
+- [Claude Code Documentation: MCP Integration](https://docs.anthropic.com/claude-code/mcp); Official MCP protocol reference
 
 ---
 
@@ -678,13 +678,13 @@ Research and tools supporting this lesson:
 
 > "I've downloaded the Skills Lab. Guide me through using the browsing-with-playwright skill to extract product names from an e-commerce site. Show me the token savings compared to direct MCP."
 
-**What you're learning:** How compiled skills execute locally, reducing round-trips and token overhead. The skill does what MCP would do—but more efficiently.
+**What you're learning:** How compiled skills execute locally, reducing round-trips and token overhead. The skill does what MCP would do: but more efficiently.
 
 **Measure Token Reduction:**
 
 > "I used browsing-with-playwright skill for 3 browser operations. Calculate the token savings: (1) Estimate tokens if I used Playwright MCP directly, (2) Estimate tokens with browsing-with-playwright skill, (3) Show percentage reduction with explanation."
 
-**What you're learning:** Quantifying efficiency gains—the skill of measuring token consumption. This matters when you're optimizing production workflows for cost.
+**What you're learning:** Quantifying efficiency gains: the skill of measuring token consumption. This matters when you're optimizing production workflows for cost.
 
 ### fetch-library-docs Skill
 
@@ -692,7 +692,7 @@ Research and tools supporting this lesson:
 
 > "Use fetch-library-docs skill to look up React useState. First fetch with --content-type examples, then with --content-type api-ref. Compare the outputs and explain why they're different sizes."
 
-**What you're learning:** Content-type filtering as a token optimization technique—get exactly what you need, not everything available.
+**What you're learning:** Content-type filtering as a token optimization technique: get exactly what you need, not everything available.
 
 **Compare Token Savings:**
 
@@ -704,7 +704,7 @@ Research and tools supporting this lesson:
 
 > "I have these MCP servers installed: [list]. For each, should I look for a compiled skill or use direct MCP? Use the decision framework to recommend."
 
-**What you're learning:** The decision framework in practice—when compilation helps vs. when it's overkill. Not every MCP needs a skill.
+**What you're learning:** The decision framework in practice: when compilation helps vs. when it's overkill. Not every MCP needs a skill.
 
 **Compare Direct MCP vs Compiled Skill:**
 

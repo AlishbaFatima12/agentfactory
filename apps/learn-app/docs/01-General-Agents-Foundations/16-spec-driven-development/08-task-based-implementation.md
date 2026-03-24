@@ -84,20 +84,20 @@ teaching_guide:
   key_points:
     - "The core prompt ('You are the main agent and your subagents are your devs') transforms Claude from solo coder to orchestrated development team"
     - "Context isolation solves two named problems: Agent Amnesia (progress lost on restart) and Context Pollution (accumulated errors contaminate later work)"
-    - "Atomic commits per task create rollback boundaries — if task 7 fails, tasks 1-6 are safely committed"
+    - "Atomic commits per task create rollback boundaries: if task 7 fails, tasks 1-6 are safely committed"
     - "Backpressure via pre-commit hooks ensures even AI-written code passes quality gates before entering the repository"
   misconceptions:
-    - "Students think subagents share context with the main agent — each subagent starts completely fresh, which is the entire point"
-    - "Students assume more tasks means better decomposition — tasks should be 5-15 minutes each; too granular creates coordination overhead"
-    - "Students think task-based implementation is always better — for a two-line bug fix, the overhead of task extraction isn't justified"
+    - "Students think subagents share context with the main agent: each subagent starts completely fresh, which is the entire point"
+    - "Students assume more tasks means better decomposition: tasks should be 5-15 minutes each; too granular creates coordination overhead"
+    - "Students think task-based implementation is always better: for a two-line bug fix, the overhead of task extraction isn't justified"
   discussion_prompts:
     - "Looking at the alexop.dev results (14 tasks, 45 minutes, 0 rollbacks), what would have happened in a single-session approach if task 10 introduced a bug?"
     - "When does the overhead of task extraction and subagent coordination NOT pay off?"
   teaching_tips:
     - "The contamination timeline (minute 10 assumption → minute 55 failure) vs isolation timeline is the best visual to draw on the whiteboard"
-    - "Have students set up a real pre-commit hook with husky — the hands-on experience of seeing a commit rejected is memorable"
-    - "The alexop.dev results table is concrete proof — 14 commits in 45 minutes with zero rollbacks makes the pattern real"
-    - "Walk through the dependency graph drawing exercise from the lab — students need to see parallel vs sequential visually"
+    - "Have students set up a real pre-commit hook with husky: the hands-on experience of seeing a commit rejected is memorable"
+    - "The alexop.dev results table is concrete proof: 14 commits in 45 minutes with zero rollbacks makes the pattern real"
+    - "Walk through the dependency graph drawing exercise from the lab: students need to see parallel vs sequential visually"
   assessment_quick_check:
     - "What's the implementation prompt pattern, and what does 'You are the main agent' specifically trigger?"
     - "Explain how atomic commits per task enable surgical rollbacks that single-session implementation cannot"
@@ -130,7 +130,7 @@ This prompt triggers a specific behavior mode in Claude Code. Let's break down w
 
 **Step 1: Task Extraction**
 
-Claude reads your specification and extracts the implementation checklist. Each checkbox becomes a task. Dependencies between tasks are identified—some must complete before others can start.
+Claude reads your specification and extracts the implementation checklist. Each checkbox becomes a task. Dependencies between tasks are identified,some must complete before others can start.
 
 **Step 2: Subagent Delegation**
 
@@ -165,11 +165,11 @@ The main agent orchestrates. The subagents execute. Tasks provide the coordinati
 
 ## Why Context Isolation Matters
 
-Chapter 15 (Lesson 9) introduced context isolation—why subagents use clean slates. Here we see that principle in action, solving two named problems from the SDD research literature:
+Chapter 15 (Lesson 9) introduced context isolation,why subagents use clean slates. Here we see that principle in action, solving two named problems from the SDD research literature:
 
-**Agent Amnesia**: Starting a new session mid-task loses all progress unless documented. The specification and task list persist across sessions, providing external memory that survives restarts. This is why Phase 2 produces a written spec—it's your insurance against amnesia.
+**Agent Amnesia**: Starting a new session mid-task loses all progress unless documented. The specification and task list persist across sessions, providing external memory that survives restarts. This is why Phase 2 produces a written spec,it's your insurance against amnesia.
 
-**Context Pollution**: A full context window causes agents to drop discovered bugs instead of tracking them. Fresh subagent context per task prevents accumulated errors from propagating. The Tasks system you learned in Chapter 15 (Lesson 4) enables this—persistent state that coordinates isolated subagents.
+**Context Pollution**: A full context window causes agents to drop discovered bugs instead of tracking them. Fresh subagent context per task prevents accumulated errors from propagating. The Tasks system you learned in Chapter 15 (Lesson 4) enables this,persistent state that coordinates isolated subagents.
 
 Consider what happens without isolation:
 
@@ -193,7 +193,7 @@ Result: Roll back task 4, fix schema in task 1, tasks 2-3 still valid
 
 Each subagent starts with clean context. If it makes a wrong assumption, that assumption dies with the subagent. The contamination doesn't spread to other tasks.
 
-**Parallel execution benefit**: Tasks without dependencies can run simultaneously. Task 2 doesn't need to wait for task 1 if they're independent. The main agent can spawn multiple subagents working in parallel—like a development team where each developer handles their assigned feature.
+**Parallel execution benefit**: Tasks without dependencies can run simultaneously. Task 2 doesn't need to wait for task 1 if they're independent. The main agent can spawn multiple subagents working in parallel,like a development team where each developer handles their assigned feature.
 
 ## The Backpressure Pattern
 
@@ -208,7 +208,7 @@ pnpm typecheck && pnpm lint && pnpm test-run
 
 When a subagent attempts to commit, this hook runs automatically. If typechecking fails, the commit is rejected. If linting fails, the commit is rejected. If tests fail, the commit is rejected.
 
-The subagent must fix the issues before the commit succeeds. This prevents broken code from entering the repository—even when AI is writing it.
+The subagent must fix the issues before the commit succeeds. This prevents broken code from entering the repository,even when AI is writing it.
 
 **Setting up pre-commit hooks:**
 
@@ -221,7 +221,7 @@ pnpm exec husky init
 echo "pnpm typecheck && pnpm lint && pnpm test-run" > .husky/pre-commit
 ```
 
-Now every commit—whether from you or from a subagent—must pass the quality gates.
+Now every commit,whether from you or from a subagent,must pass the quality gates.
 
 ## Real Results: The alexop.dev Implementation
 
@@ -255,7 +255,7 @@ Compare this to a single-session approach: 45 minutes of accumulated context wou
 - Quick prototype or exploration (not production code)
 - Entire implementation fits in single commit
 
-The overhead of task extraction and subagent coordination isn't free. For a two-line bug fix, just fix it directly. For a feature implementation with database changes, API updates, and frontend modifications—use tasks.
+The overhead of task extraction and subagent coordination isn't free. For a two-line bug fix, just fix it directly. For a feature implementation with database changes, API updates, and frontend modifications,use tasks.
 
 ## Lab: Task Decomposition
 
@@ -283,7 +283,7 @@ Take a specification (your own or from previous labs) and extract its task struc
    Task 2 (utils) ──┴─> Task 4 (tests)
    ```
 
-Don't implement yet—just map the structure. Understanding task relationships before implementation prevents mid-execution surprises.
+Don't implement yet,just map the structure. Understanding task relationships before implementation prevents mid-execution surprises.
 
 ## Try With AI
 

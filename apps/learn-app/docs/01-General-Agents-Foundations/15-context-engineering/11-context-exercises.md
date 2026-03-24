@@ -56,7 +56,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 0
-  assessment: "Pure application — all concepts taught in L01-L10"
+  assessment: "Pure application: all concepts taught in L01-L10"
 
 differentiation:
   extension_for_advanced: "Capstone C: Forensics challenge diagnosing 3 failing agents with different context problems"
@@ -67,22 +67,22 @@ teaching_guide:
   session_group: 4
   session_title: "Capstone: Production-Quality Agents"
   key_points:
-    - "This is a measurement-driven exercise lab — students apply every technique from Lessons 1-10 and score the results using a consistent rubric at each stage"
+    - "This is a measurement-driven exercise lab: students apply every technique from Lessons 1-10 and score the results using a consistent rubric at each stage"
     - "The Contract Review Agent starts broken (missing red flags, contradicting itself, forgetting requirements) and improves measurably as each context engineering technique is applied"
     - "The progression from Module 1 (diagnosis) through Module 7 (multi-agent coordination) mirrors the chapter's lesson sequence, reinforcing each concept through practice"
-    - "No new concepts are introduced — this is pure application of the full context engineering toolkit learned throughout the chapter"
+    - "No new concepts are introduced. This is pure application of the full context engineering toolkit learned throughout the chapter"
   misconceptions:
-    - "Students think exercises are optional supplementary practice — this is the chapter closer where concepts become measurable skills, and the quality scores prove the techniques work"
-    - "Students skip measurement steps because they seem tedious — the before/after scores ARE the learning, showing quantified impact of each technique"
-    - "Students try to jump to advanced modules without completing diagnosis modules first — Module 1-3 (rot diagnosis, signal audit, architecture) are prerequisites for everything after"
+    - "Students think exercises are optional supplementary practice. This is the chapter closer where concepts become measurable skills, and the quality scores prove the techniques work"
+    - "Students skip measurement steps because they seem tedious. The before/after scores ARE the learning, showing quantified impact of each technique"
+    - "Students try to jump to advanced modules without completing diagnosis modules first. Module 1-3 (rot diagnosis, signal audit, architecture) are prerequisites for everything after"
   discussion_prompts:
     - "After running the same three test tasks at each stage, which technique produced the largest measurable improvement? Was it the one you expected?"
     - "How would you adapt the Contract Review Agent exercises to your own professional domain?"
   teaching_tips:
-    - "Emphasize that every module follows the same pattern: apply technique, then measure — this measurement discipline is the meta-skill being taught"
-    - "Have students download the exercise files at the start of class to avoid setup delays — the ZIP contains all starter files and instructions per module"
-    - "The three capstones at the end are the real assessment — Capstone A (build your own domain agent) is the minimum, Capstone C (forensics) is the stretch goal"
-    - "Budget at least 4 hours across multiple sessions — this is a 240-minute exercise set that demonstrates multi-session work in practice"
+    - "Emphasize that every module follows the same pattern: apply technique, then measure. This measurement discipline is the meta-skill being taught"
+    - "Have students download the exercise files at the start of class to avoid setup delays. The ZIP contains all starter files and instructions per module"
+    - "The three capstones at the end are the real assessment: Capstone A (build your own domain agent) is the minimum, Capstone C (forensics) is the stretch goal"
+    - "Budget at least 4 hours across multiple sessions. This is a 240-minute exercise set that demonstrates multi-session work in practice"
   assessment_quick_check:
     - "After Module 3, what was your agent's quality score compared to the broken starting state?"
     - "Which context engineering technique produced the largest single improvement in your measurements?"
@@ -116,9 +116,9 @@ Unlike standalone exercises where each problem is independent, the Context Lab i
 1. **Read the module folder** from the `context-exercises/` directory
 2. **Read INSTRUCTIONS.md** inside the folder for setup steps and starter files
 3. **Read the walkthrough below** for context on what you are practicing and why
-4. **Apply the technique** (Exercise X.1) — make the specific change described
-5. **Measure the result** (Exercise X.2) — re-run benchmark tasks, score output, compare to previous module
-6. **Record your scores** in the tracking spreadsheet provided — this is your evidence of improvement
+4. **Apply the technique** (Exercise X.1): make the specific change described
+5. **Measure the result** (Exercise X.2): re-run benchmark tasks, score output, compare to previous module
+6. **Record your scores** in the tracking spreadsheet provided; this is your evidence of improvement
 7. **Reflect** on what changed and why
 
 You do not need to complete all 7 modules in one sitting. Each module takes 20-40 minutes. But you must complete them **in order** because each module builds on the previous one.
@@ -127,8 +127,8 @@ You do not need to complete all 7 modules in one sitting. Each module takes 20-4
 
 ## Tool Guide
 
-- **Claude Code** — Best for all exercises. Terminal-based interaction lets you test context changes, run /clear, manage sessions, and observe context behavior directly.
-- **Cowork** — Suitable for the contract review tasks themselves, but Claude Code is required for exercises involving /clear, /compact, progress files, and multi-agent patterns.
+- **Claude Code:** Best for all exercises. Terminal-based interaction lets you test context changes, run /clear, manage sessions, and observe context behavior directly.
+- **Cowork:** Suitable for the contract review tasks themselves, but Claude Code is required for exercises involving /clear, /compact, progress files, and multi-agent patterns.
 
 ---
 
@@ -154,11 +154,11 @@ The starter agent typically scores 25-35 out of 60. By Module 7, students routin
 
 > **Technique:** Diagnosing the four types of context rot (Lesson 1)
 >
-> **What you will learn:** How to identify accumulation, contradiction, staleness, and poisoning in a real CLAUDE.md — and why each type degrades agent performance differently.
+> **What you will learn:** How to identify accumulation, contradiction, staleness, and poisoning in a real CLAUDE.md, and why each type degrades agent performance differently.
 
 <ExerciseCard id="1.1" title="Rot Audit" />
 
-### Exercise 1.1 — Rot Audit
+### Exercise 1.1: Rot Audit
 
 **The Setup:**
 Open the `module-1-context-rot/exercise-1.1-rot-audit/` folder. You will find a `starter-agent/` directory containing a CLAUDE.md, several rules files, and a skills directory. This is your Contract Review Agent in its broken starting state. The CLAUDE.md is 650 lines long and was accumulated over months of ad-hoc additions by multiple team members.
@@ -166,15 +166,15 @@ Open the `module-1-context-rot/exercise-1.1-rot-audit/` folder. You will find a 
 **Your Task:**
 Read the entire CLAUDE.md and categorize every section into one of four rot types:
 
-- **Accumulation** — content that was added over time without removing what it replaced (duplicate rules, overlapping instructions)
-- **Contradiction** — instructions that conflict with each other (e.g., "always use formal tone" vs. "keep it casual and accessible")
-- **Staleness** — content that was accurate when written but is now outdated (references to deprecated tools, old team members, changed processes)
-- **Poisoning** — content that actively causes wrong behavior (incorrect examples, misleading heuristics, rules that produce bad output)
+- **Accumulation:** content that was added over time without removing what it replaced (duplicate rules, overlapping instructions)
+- **Contradiction:** instructions that conflict with each other (e.g., "always use formal tone" vs. "keep it casual and accessible")
+- **Staleness:** content that was accurate when written but is now outdated (references to deprecated tools, old team members, changed processes)
+- **Poisoning:** content that actively causes wrong behavior (incorrect examples, misleading heuristics, rules that produce bad output)
 
 Produce a rot report: a table listing each section, its rot type, and the specific harm it causes. Count the total instructions and estimate what percentage are signal vs. noise.
 
 **What to Expect:**
-Most students find the starter CLAUDE.md contains 15-25% signal. The rest is rot. The most dangerous category is usually poisoning — instructions that look helpful but actively degrade output quality. Staleness is the most common by volume.
+Most students find the starter CLAUDE.md contains 15-25% signal. The rest is rot. The most dangerous category is usually poisoning: instructions that look helpful but actively degrade output quality. Staleness is the most common by volume.
 
 **Reflection Questions:**
 
@@ -186,13 +186,13 @@ Most students find the starter CLAUDE.md contains 15-25% signal. The rest is rot
 
 <ExerciseCard id="1.2" title="Baseline Measurement" />
 
-### Exercise 1.2 — Baseline Measurement
+### Exercise 1.2: Baseline Measurement
 
 **The Setup:**
 Open the `module-1-context-rot/exercise-1.2-baseline-measurement/` folder. You will find three benchmark contract files and a scoring template. The benchmark contracts are designed to test different aspects of review quality: Contract A has obvious liability issues, Contract B has subtle inconsistencies between clauses, and Contract C has standard terms that should NOT be flagged (testing for false positives).
 
 **Your Task:**
-Run all three benchmark contracts through the starter agent (with the broken CLAUDE.md from Exercise 1.1). For each output, score it on the 4-criteria rubric. Record your scores in the provided tracking spreadsheet. This is your **Module 1 baseline** — every future module will be compared against these scores.
+Run all three benchmark contracts through the starter agent (with the broken CLAUDE.md from Exercise 1.1). For each output, score it on the 4-criteria rubric. Record your scores in the provided tracking spreadsheet. This is your **Module 1 baseline**; every future module will be compared against these scores.
 
 **What to Expect:**
 Typical baseline scores range from 25-35 out of 60. The agent usually catches the obvious issues in Contract A but misses the subtle inconsistencies in Contract B and produces false positives on Contract C. Consistency scores tend to be lowest because contradictory CLAUDE.md instructions produce contradictory output.
@@ -213,18 +213,18 @@ Typical baseline scores range from 25-35 out of 60. The agent usually catches th
 
 <ExerciseCard id="2.1" title="Four-Question Audit" />
 
-### Exercise 2.1 — Four-Question Audit
+### Exercise 2.1: Four-Question Audit
 
 **The Setup:**
 Open the `module-2-signal-noise/exercise-2.1-four-question-audit/` folder. You will find the CLAUDE.md from Module 1 plus the 4-question audit framework. The four questions are: (1) Would Claude ask about this if not told? (2) Is this specific enough to act on? (3) Does this change Claude's default behavior? (4) Can compliance be verified?
 
 **Your Task:**
-Apply the 4-question audit to every instruction in the CLAUDE.md. Remove everything that fails all four questions. Compress everything that passes some questions but not all. Keep only content where all four questions answer "yes." Your target is a CLAUDE.md of approximately 400 words — down from the original 650 lines.
+Apply the 4-question audit to every instruction in the CLAUDE.md. Remove everything that fails all four questions. Compress everything that passes some questions but not all. Keep only content where all four questions answer "yes." Your target is a CLAUDE.md of approximately 400 words, down from the original 650 lines.
 
 Be ruthless. "Write high-quality reviews" fails all four questions (Claude already tries to write high-quality output, it is not specific, it does not change defaults, and compliance cannot be verified). "Flag any clause where liability exceeds 2x contract value" passes all four (Claude would not apply this threshold unprompted, it is specific, it changes behavior, and you can check compliance).
 
 **What to Expect:**
-Students typically reduce the CLAUDE.md from 650 lines to 40-60 lines. The process is uncomfortable — it feels like you are throwing away important information. The measurement in Exercise 2.2 will show that less is more.
+Students typically reduce the CLAUDE.md from 650 lines to 40-60 lines. The process is uncomfortable; it feels like you are throwing away important information. The measurement in Exercise 2.2 will show that less is more.
 
 **Reflection Questions:**
 
@@ -236,7 +236,7 @@ Students typically reduce the CLAUDE.md from 650 lines to 40-60 lines. The proce
 
 <ExerciseCard id="2.2" title="Quality Comparison" />
 
-### Exercise 2.2 — Quality Comparison
+### Exercise 2.2: Quality Comparison
 
 **The Setup:**
 Open the `module-2-signal-noise/exercise-2.2-quality-comparison/` folder. Use the same three benchmark contracts from Module 1, but now run them through the agent with your optimized CLAUDE.md.
@@ -245,7 +245,7 @@ Open the `module-2-signal-noise/exercise-2.2-quality-comparison/` folder. Use th
 Re-run all three benchmark contracts. Score each output on the same 4-criteria rubric. Compare every score to your Module 1 baseline. Calculate the improvement per criterion and overall.
 
 **What to Expect:**
-Students typically see a 8-15 point improvement (out of 60) from signal optimization alone. The biggest gains are usually in Consistency (removing contradictions eliminates contradictory output) and Actionability (specific instructions produce specific recommendations). Completeness may stay flat or even dip slightly — you will recover it in Module 3 when you redistribute removed content to the right tools.
+Students typically see a 8-15 point improvement (out of 60) from signal optimization alone. The biggest gains are usually in Consistency (removing contradictions eliminates contradictory output) and Actionability (specific instructions produce specific recommendations). Completeness may stay flat or even dip slightly, but you will recover it in Module 3 when you redistribute removed content to the right tools.
 
 **Reflection Questions:**
 
@@ -263,7 +263,7 @@ Students typically see a 8-15 point improvement (out of 60) from signal optimiza
 
 <ExerciseCard id="3.1" title="Tool Mapping" />
 
-### Exercise 3.1 — Tool Mapping
+### Exercise 3.1: Tool Mapping
 
 **The Setup:**
 Open the `module-3-architecture/exercise-3.1-tool-mapping/` folder. You will find the content you removed in Module 2 plus a tool mapping worksheet. The worksheet lists each context tool (CLAUDE.md Zones 1/2/3, Skills, Hooks, Subagents, External Files) with its characteristics: when it is loaded, how many tokens it consumes, and what it is best for.
@@ -271,7 +271,7 @@ Open the `module-3-architecture/exercise-3.1-tool-mapping/` folder. You will fin
 **Your Task:**
 Take every piece of content you removed from CLAUDE.md in Module 2 and map it to the correct tool:
 
-- **Zone 1 (top of CLAUDE.md):** Critical constraints that must always apply — the 3-5 rules that should never be forgotten
+- **Zone 1 (top of CLAUDE.md):** Critical constraints that must always apply: the 3-5 rules that should never be forgotten
 - **Zone 2 (middle of CLAUDE.md):** Reference material consulted when relevant
 - **Zone 3 (bottom of CLAUDE.md):** Workflow triggers and session initialization protocols
 - **Skills:** Domain expertise that should be loaded on demand (e.g., specific legal review checklists)
@@ -294,7 +294,7 @@ Most students distribute content roughly: 30% stays in CLAUDE.md (across all thr
 
 <ExerciseCard id="3.2" title="Token Budget" />
 
-### Exercise 3.2 — Token Budget
+### Exercise 3.2: Token Budget
 
 **The Setup:**
 Open the `module-3-architecture/exercise-3.2-token-budget/` folder. You will find a token budget calculator and instructions for estimating the token cost of your architecture.
@@ -322,11 +322,11 @@ The distributed architecture typically uses 40-60% fewer tokens at session start
 
 > **Technique:** Task DAGs and tacit knowledge extraction (Lessons 4-5)
 >
-> **What you will learn:** How to make your agent's work survive session boundaries — so that /clear does not destroy accumulated understanding.
+> **What you will learn:** How to make your agent's work survive session boundaries so that /clear does not destroy accumulated understanding.
 
 <ExerciseCard id="4.1" title="Tasks and Knowledge" />
 
-### Exercise 4.1 — Tasks and Knowledge
+### Exercise 4.1: Tasks and Knowledge
 
 **The Setup:**
 Open the `module-4-persistence/exercise-4.1-tasks-and-knowledge/` folder. You will find a multi-session contract review scenario: a complex 50-page vendor agreement that requires analysis across multiple sessions. The scenario includes session transcripts showing how a naive agent loses context between sessions.
@@ -336,10 +336,10 @@ Design two persistence artifacts for the Contract Review Agent:
 
 1. **Task DAG:** Decompose the 50-page contract review into a dependency graph of tasks. Which sections can be reviewed independently? Which require understanding from earlier sections (e.g., definitions in Section 1 affect interpretation of liability in Section 15)? Express this as a task file with dependencies and completion status.
 
-2. **Tacit Knowledge File:** Read the session transcripts and extract every piece of domain knowledge the agent discovered during review — interpretation of ambiguous clauses, relationships between sections, client-specific preferences. Encode these as explicit rules in a knowledge file that a fresh session can read.
+2. **Tacit Knowledge File:** Read the session transcripts and extract every piece of domain knowledge the agent discovered during review (interpretation of ambiguous clauses, relationships between sections, client-specific preferences). Encode these as explicit rules in a knowledge file that a fresh session can read.
 
 **What to Expect:**
-The task DAG typically has 8-12 tasks with 3-5 dependency chains. Students often underestimate dependencies — Section 15 (liability) depends not just on Section 1 (definitions) but also Section 8 (scope of work) because liability limits reference deliverable categories. The tacit knowledge file usually captures 10-15 rules that were implicit in the session transcripts.
+The task DAG typically has 8-12 tasks with 3-5 dependency chains. Students often underestimate dependencies. Section 15 (liability) depends not just on Section 1 (definitions) but also Section 8 (scope of work) because liability limits reference deliverable categories. The tacit knowledge file usually captures 10-15 rules that were implicit in the session transcripts.
 
 **Reflection Questions:**
 
@@ -351,7 +351,7 @@ The task DAG typically has 8-12 tasks with 3-5 dependency chains. Students often
 
 <ExerciseCard id="4.2" title="Survival Test" />
 
-### Exercise 4.2 — Survival Test
+### Exercise 4.2: Survival Test
 
 **The Setup:**
 Open the `module-4-persistence/exercise-4.2-survival-test/` folder. You will find instructions for the survival test: run a partial contract review session, execute /clear, then resume and verify continuity.
@@ -359,7 +359,7 @@ Open the `module-4-persistence/exercise-4.2-survival-test/` folder. You will fin
 **Your Task:**
 Conduct this three-phase test:
 
-1. **Phase 1 (Pre-clear):** Start a session with your Contract Review Agent (using the Module 3 architecture + Module 4 persistence files). Review Contract A partially — complete 3 of the task DAG items. Note specific findings and decisions.
+1. **Phase 1 (Pre-clear):** Start a session with your Contract Review Agent (using the Module 3 architecture + Module 4 persistence files). Review Contract A partially, completing 3 of the task DAG items. Note specific findings and decisions.
 
 2. **Phase 2 (The clear):** Execute `/clear` to wipe the conversation context. This simulates a session boundary.
 
@@ -368,7 +368,7 @@ Conduct this three-phase test:
 Score the post-clear session on the same 4-criteria rubric and compare to pre-clear quality.
 
 **What to Expect:**
-With well-designed persistence files, post-clear quality typically scores within 2-3 points of pre-clear quality. The most common failure is losing tacit knowledge — findings that were discovered during Phase 1 but not captured in the knowledge file. Students who wrote thorough knowledge files in Exercise 4.1 see nearly perfect continuity.
+With well-designed persistence files, post-clear quality typically scores within 2-3 points of pre-clear quality. The most common failure is losing tacit knowledge: findings that were discovered during Phase 1 but not captured in the knowledge file. Students who wrote thorough knowledge files in Exercise 4.1 see nearly perfect continuity.
 
 **Reflection Questions:**
 
@@ -386,7 +386,7 @@ With well-designed persistence files, post-clear quality typically scores within
 
 <ExerciseCard id="5.1" title="Zone Monitoring" />
 
-### Exercise 5.1 — Zone Monitoring
+### Exercise 5.1: Zone Monitoring
 
 **The Setup:**
 Open the `module-5-lifecycle/exercise-5.1-zone-monitoring/` folder. You will find a 25-turn contract review session script and a zone monitoring worksheet. The worksheet tracks context utilization at each turn: how much is system prompt, CLAUDE.md, conversation history, tool outputs, and reserve.
@@ -404,19 +404,19 @@ Plot these on the utilization curve. Identify the turn where utilization crosses
 Add a progress file that the agent updates every 5 turns with: current task state, key findings since last update, and context health assessment.
 
 **What to Expect:**
-Most agents cross 60% utilization between turns 15-20, depending on how many files they read. The progress file adds 200-400 tokens per update but pays for itself by enabling effective compaction later. Students often discover that tool outputs (reading contract sections) are the biggest context consumer — not conversation history.
+Most agents cross 60% utilization between turns 15-20, depending on how many files they read. The progress file adds 200-400 tokens per update but pays for itself by enabling effective compaction later. Students often discover that tool outputs (reading contract sections) are the biggest context consumer, not conversation history.
 
 **Reflection Questions:**
 
 1. At which turn did utilization cross 60%? Was it sooner or later than you expected?
-2. What was the biggest context consumer — conversation history, tool outputs, or something else?
+2. What was the biggest context consumer: conversation history, tool outputs, or something else?
 3. How would you redesign the workflow to delay the 60% threshold?
 
 ---
 
 <ExerciseCard id="5.2" title="Compaction Strategy" />
 
-### Exercise 5.2 — Compaction Strategy
+### Exercise 5.2: Compaction Strategy
 
 **The Setup:**
 Open the `module-5-lifecycle/exercise-5.2-compaction-strategy/` folder. You will find compaction instruction templates and a comparison framework.
@@ -445,11 +445,11 @@ Naive compaction typically loses 30-50% of critical context. Structured compacti
 
 > **Technique:** Designing a memory corpus for domain expertise (Lesson 8)
 >
-> **What you will learn:** How to build a persistent memory layer that makes your agent smarter over time — so turn 20 reviews are better than turn 1 reviews.
+> **What you will learn:** How to build a persistent memory layer that makes your agent smarter over time, so turn 20 reviews are better than turn 1 reviews.
 
 <ExerciseCard id="6.1" title="Memory Corpus" />
 
-### Exercise 6.1 — Memory Corpus
+### Exercise 6.1: Memory Corpus
 
 **The Setup:**
 Open the `module-6-memory/exercise-6.1-memory-corpus/` folder. You will find a set of 10 previously reviewed contracts with annotated findings. These represent the "experience" your agent should learn from. You will also find a memory corpus template.
@@ -464,19 +464,19 @@ Design a memory corpus for the contract review domain. For each of the 10 previo
 Organize these into a searchable memory structure. Define the injection strategy: which memories should be injected via hooks (PreToolUse), which should live in the knowledge file (always available), and which should be retrieved on-demand from external files.
 
 **What to Expect:**
-Students typically extract 25-40 memories from the 10 contracts. The hardest part is deciding granularity — a memory that is too broad ("watch out for liability clauses") is noise, while one that is too narrow ("Contract #3, Section 12.4(b) had a typo") is not transferable. The best memories are pattern-level: specific enough to act on, general enough to apply to new contracts.
+Students typically extract 25-40 memories from the 10 contracts. The hardest part is deciding granularity: a memory that is too broad ("watch out for liability clauses") is noise, while one that is too narrow ("Contract #3, Section 12.4(b) had a typo") is not transferable. The best memories are pattern-level: specific enough to act on, general enough to apply to new contracts.
 
 **Reflection Questions:**
 
 1. How many memories did you extract? How many were patterns vs. precedents vs. heuristics?
 2. Which injection strategy did you choose for each type? Why?
-3. How would you handle memory conflicts — when a new contract contradicts a previously learned pattern?
+3. How would you handle memory conflicts, when a new contract contradicts a previously learned pattern?
 
 ---
 
 <ExerciseCard id="6.2" title="Drift Measurement" />
 
-### Exercise 6.2 — Drift Measurement
+### Exercise 6.2: Drift Measurement
 
 **The Setup:**
 Open the `module-6-memory/exercise-6.2-drift-measurement/` folder. You will find instructions for a controlled comparison test.
@@ -491,7 +491,7 @@ Run a controlled experiment:
 The key question: does your memory injection system maintain quality as the session progresses, or does accumulated conversation history dilute the injected memories?
 
 **What to Expect:**
-With well-designed memory injection, turn 20 quality should be equal to or better than turn 1 — the agent has more context from the session's work. Without proper injection, turn 20 quality typically degrades by 3-5 points as conversation history crowds out memory content. Students who implemented deduplication in their hook design see the most stable results.
+With well-designed memory injection, turn 20 quality should be equal to or better than turn 1, because the agent has more context from the session's work. Without proper injection, turn 20 quality typically degrades by 3-5 points as conversation history crowds out memory content. Students who implemented deduplication in their hook design see the most stable results.
 
 **Reflection Questions:**
 
@@ -505,11 +505,11 @@ With well-designed memory injection, turn 20 quality should be equal to or bette
 
 > **Technique:** Multi-agent pipeline with clean context boundaries (Lesson 9)
 >
-> **What you will learn:** How to split a complex review into parallel specialist agents that produce better results than a single generalist — by keeping each agent's context clean and focused.
+> **What you will learn:** How to split a complex review into parallel specialist agents that produce better results than a single generalist by keeping each agent's context clean and focused.
 
 <ExerciseCard id="7.1" title="Pipeline Design" />
 
-### Exercise 7.1 — Pipeline Design
+### Exercise 7.1: Pipeline Design
 
 **The Setup:**
 Open the `module-7-isolation/exercise-7.1-pipeline-design/` folder. You will find a complex contract (Contract E) that requires expertise in three domains: legal terms, financial analysis, and operational feasibility. You will also find a pipeline design template.
@@ -518,9 +518,9 @@ Open the `module-7-isolation/exercise-7.1-pipeline-design/` folder. You will fin
 Split the Contract Review Agent into a multi-agent pipeline:
 
 1. **Orchestrator:** Receives the contract, delegates to specialists, synthesizes findings
-2. **Legal Reviewer:** Analyzes legal terms, liability, compliance — with legal-specific CLAUDE.md and skills
-3. **Financial Analyst:** Analyzes pricing, payment terms, financial risk — with finance-specific context
-4. **Operations Assessor:** Analyzes implementation timeline, resource requirements, feasibility — with operations-specific context
+2. **Legal Reviewer:** Analyzes legal terms, liability, compliance, with legal-specific CLAUDE.md and skills
+3. **Financial Analyst:** Analyzes pricing, payment terms, financial risk, with finance-specific context
+4. **Operations Assessor:** Analyzes implementation timeline, resource requirements, feasibility, with operations-specific context
 
 For each agent, define:
 
@@ -535,7 +535,7 @@ For the orchestrator, define:
 - How it handles conflicts between specialists
 
 **What to Expect:**
-The biggest design challenge is the orchestrator's synthesis prompt. Students who simply concatenate specialist outputs get confused results. Students who define structured return formats (Summary, Key Findings, Risk Level, Recommendations) and synthesize by category get clean, coherent final reports. The shared constraints document is often overlooked but critical — without it, specialists make incompatible assumptions.
+The biggest design challenge is the orchestrator's synthesis prompt. Students who simply concatenate specialist outputs get confused results. Students who define structured return formats (Summary, Key Findings, Risk Level, Recommendations) and synthesize by category get clean, coherent final reports. The shared constraints document is often overlooked but critical; without it, specialists make incompatible assumptions.
 
 **Reflection Questions:**
 
@@ -547,7 +547,7 @@ The biggest design challenge is the orchestrator's synthesis prompt. Students wh
 
 <ExerciseCard id="7.2" title="Clean vs. Dirty" />
 
-### Exercise 7.2 — Clean vs. Dirty
+### Exercise 7.2: Clean vs. Dirty
 
 **The Setup:**
 Open the `module-7-isolation/exercise-7.2-clean-vs-dirty/` folder. You will find instructions for a head-to-head comparison test.
@@ -561,30 +561,30 @@ Run Contract E through two architectures and compare:
 Compare scores across all four criteria. Pay special attention to Accuracy (does the dirty-slate agent conflate legal and financial concepts?) and Consistency (does it maintain clear boundaries between analysis domains?).
 
 **What to Expect:**
-The clean-slate pipeline typically scores 5-10 points higher than the dirty-slate single agent. The largest gains are in Accuracy and Consistency — isolated contexts prevent the cross-contamination that happens when legal, financial, and operational reasoning share the same attention space. Completeness often improves too, because specialists catch domain-specific issues that a generalist overlooks.
+The clean-slate pipeline typically scores 5-10 points higher than the dirty-slate single agent. The largest gains are in Accuracy and Consistency, because isolated contexts prevent the cross-contamination that happens when legal, financial, and operational reasoning share the same attention space. Completeness often improves too, because specialists catch domain-specific issues that a generalist overlooks.
 
 **Reflection Questions:**
 
 1. Where did the clean-slate pipeline outperform the dirty-slate agent most? Does this match the theory from Lesson 9?
-2. Did the dirty-slate agent make any errors that were clearly caused by context contamination — where information from one domain corrupted analysis in another?
+2. Did the dirty-slate agent make any errors that were clearly caused by context contamination, where information from one domain corrupted analysis in another?
 3. What is the overhead cost (latency, complexity) of the multi-agent pipeline? Is the quality improvement worth it?
 
 ---
 
 ## Capstone Projects
 
-> **Choose one (or more). These combine all seven modules — no step-by-step guidance provided.**
+> **Choose one (or more). These combine all seven modules with no step-by-step guidance provided.**
 
-Capstones are different from the module exercises. There are no guided walkthroughs — you design the entire approach yourself. Each project requires applying multiple context engineering techniques together to solve a realistic problem.
+Capstones are different from the module exercises. There are no guided walkthroughs, and you design the entire approach yourself. Each project requires applying multiple context engineering techniques together to solve a realistic problem.
 
 <ExerciseCard id="A" title="Your Domain Agent" />
 
-### Capstone A — Your Domain Agent
+### Capstone A: Your Domain Agent
 
 Open the `capstone-A-your-domain-agent/` folder. You will find a project template and self-assessment rubric.
 
 **The Challenge:**
-Build a production-quality agent for **your own profession or domain** using all seven context engineering techniques. This is not a contract review agent — it is an agent that does work you actually need done. A teacher might build a lesson planning agent. A marketer might build a campaign review agent. A developer might build a code review agent.
+Build a production-quality agent for **your own profession or domain** using all seven context engineering techniques. This is not a contract review agent; it is an agent that does work you actually need done. A teacher might build a lesson planning agent. A marketer might build a campaign review agent. A developer might build a code review agent.
 
 Apply every technique from the Context Lab:
 
@@ -601,7 +601,7 @@ Apply every technique from the Context Lab:
 
 <ExerciseCard id="B" title="Context Relay" />
 
-### Capstone B — Context Relay
+### Capstone B: Context Relay
 
 Open the `capstone-B-context-relay/` folder. You will find a 3-session project specification.
 
@@ -618,7 +618,7 @@ Execute a complex project across three separate Claude Code sessions. The projec
 
 <ExerciseCard id="C" title="Forensics Challenge" />
 
-### Capstone C — Forensics Challenge
+### Capstone C: Forensics Challenge
 
 Open the `capstone-C-forensics-challenge/` folder. You will find three broken agents, each failing for a different context engineering reason.
 
@@ -630,7 +630,7 @@ Diagnose each agent's failure without being told what is wrong. For each agent:
 3. Identify the root cause using context engineering principles
 4. Fix the agent and verify the fix with a re-test
 
-The three agents have different problems — one is a rot issue, one is an architecture issue, and one is an isolation issue. You must determine which is which.
+The three agents have different problems: one is a rot issue, one is an architecture issue, and one is an isolation issue. You must determine which is which.
 
 **Scoring:** For each agent, assess: (1) Did you correctly identify the failure type? (2) Was your root cause analysis accurate? (3) Did your fix resolve the problem without introducing new issues?
 
@@ -640,13 +640,13 @@ The three agents have different problems — one is a rot issue, one is an archi
 
 Use this rubric to evaluate your overall context engineering skill after completing the modules. This is also the rubric for Capstone A.
 
-| Criteria                    | Beginner (1)                                | Developing (2)                               | Proficient (3)                                                                      | Advanced (4)                                                                                   |
-| --------------------------- | ------------------------------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| **Context Diagnosis**       | Cannot identify rot types                   | Identifies rot but cannot classify by type   | Identifies and classifies all four rot types; produces actionable rot report        | Spots rot proactively; predicts which instructions will rot fastest                            |
-| **Architecture Design**     | Everything in one CLAUDE.md                 | Uses CLAUDE.md zones but nothing else        | Maps content to correct tools; calculates token budget impact                       | Designs adaptive architectures where context loads dynamically based on task                   |
-| **Persistence Engineering** | No persistence — loses everything on /clear | Basic progress file with task list           | Task DAG with dependencies + tacit knowledge extraction; survives /clear cleanly    | Designs persistence that improves over time as more sessions contribute knowledge              |
-| **Lifecycle Management**    | No awareness of context utilization         | Monitors utilization but compacts reactively | Proactive compaction strategy with structured instructions; manages all three zones | Designs compaction protocols that are automated via hooks and progress files                   |
-| **Advanced Patterns**       | No memory or isolation                      | Basic memory file; single-agent only         | Memory corpus with injection strategy; multi-agent pipeline with clean handoff      | Memory with deduplication and decay; isolation patterns optimized for domain-specific analysis |
+| Criteria                    | Beginner (1)                               | Developing (2)                               | Proficient (3)                                                                      | Advanced (4)                                                                                   |
+| --------------------------- | ------------------------------------------ | -------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **Context Diagnosis**       | Cannot identify rot types                  | Identifies rot but cannot classify by type   | Identifies and classifies all four rot types; produces actionable rot report        | Spots rot proactively; predicts which instructions will rot fastest                            |
+| **Architecture Design**     | Everything in one CLAUDE.md                | Uses CLAUDE.md zones but nothing else        | Maps content to correct tools; calculates token budget impact                       | Designs adaptive architectures where context loads dynamically based on task                   |
+| **Persistence Engineering** | No persistence; loses everything on /clear | Basic progress file with task list           | Task DAG with dependencies + tacit knowledge extraction; survives /clear cleanly    | Designs persistence that improves over time as more sessions contribute knowledge              |
+| **Lifecycle Management**    | No awareness of context utilization        | Monitors utilization but compacts reactively | Proactive compaction strategy with structured instructions; manages all three zones | Designs compaction protocols that are automated via hooks and progress files                   |
+| **Advanced Patterns**       | No memory or isolation                     | Basic memory file; single-agent only         | Memory corpus with injection strategy; multi-agent pipeline with clean handoff      | Memory with deduplication and decay; isolation patterns optimized for domain-specific analysis |
 
 ---
 
@@ -668,4 +668,4 @@ If you completed all seven modules in order, you now have a complete measurement
 
 ## What's Next
 
-You have practiced the three core skills — **context diagnosis** (identifying what is wrong with an agent's context), **context architecture** (designing where information should live), and **context engineering** (building production-quality context systems) — across 14 exercises and up to 3 capstones. These skills compound: every exercise builds intuition for recognizing context problems and knowing which technique to apply. Context engineering is not a one-time setup activity — it is an ongoing discipline that separates agents that degrade over time from agents that improve over time. Next in **Lesson 12: Chapter Quiz**, you will test your conceptual understanding of all context engineering principles and their interactions. The quiz focuses on scenario-based reasoning — exactly the kind of diagnosis you practiced throughout the Context Lab.
+You have practiced the three core skills (**context diagnosis**, identifying what is wrong with an agent's context; **context architecture**, designing where information should live; and **context engineering**, building production-quality context systems) across 14 exercises and up to 3 capstones. These skills compound: every exercise builds intuition for recognizing context problems and knowing which technique to apply. Context engineering is not a one-time setup activity; it is an ongoing discipline that separates agents that degrade over time from agents that improve over time. Next in **Lesson 12: Chapter Quiz**, you will test your conceptual understanding of all context engineering principles and their interactions. The quiz focuses on scenario-based reasoning, exactly the kind of diagnosis you practiced throughout the Context Lab.

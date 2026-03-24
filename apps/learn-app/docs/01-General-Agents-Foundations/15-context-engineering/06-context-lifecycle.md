@@ -87,23 +87,23 @@ teaching_guide:
   session_group: 2
   session_title: "Persistent State and Knowledge Transfer"
   key_points:
-    - "The Context Zones Framework (Green/Yellow/Orange/Red/Black) gives students actionable thresholds — 70% is the critical cliff where quality starts degrading"
-    - "The /clear vs /compact decision hinges on context quality, not just size — poisoned context (outdated decisions, wrong directions) should be cleared, not compacted"
-    - "Custom compaction instructions are the power move — telling Claude exactly what to preserve and discard prevents losing critical decisions during compression"
+    - "The Context Zones Framework (Green/Yellow/Orange/Red/Black) gives students actionable thresholds: 70% is the critical cliff where quality starts degrading"
+    - "The /clear vs /compact decision hinges on context quality, not just size: poisoned context (outdated decisions, wrong directions) should be cleared, not compacted"
+    - "Custom compaction instructions are the power move: telling Claude exactly what to preserve and discard prevents losing critical decisions during compression"
     - "The save checkpoint pattern (externalize progress, then compact) combines with session persistence (--continue, --resume) for work spanning multiple sessions"
   misconceptions:
-    - "Students think /compact is always better than /clear because it preserves more — but compacting poisoned context preserves the poison along with useful information"
-    - "Students wait until Red/Black zone to act — emphasize that Orange (70%) is the optimal intervention point, not an early warning"
-    - "Students assume compaction preserves everything important automatically — without custom instructions, Claude uses its own judgment which may miss domain-specific priorities"
-    - "Students think the 3-day rule is arbitrary — old sessions accumulate drift, implicit assumptions, and stale references that make resuming harder than starting fresh"
+    - "Students think /compact is always better than /clear because it preserves more: but compacting poisoned context preserves the poison along with useful information"
+    - "Students wait until Red/Black zone to act: emphasize that Orange (70%) is the optimal intervention point, not an early warning"
+    - "Students assume compaction preserves everything important automatically: without custom instructions, Claude uses its own judgment which may miss domain-specific priorities"
+    - "Students think the 3-day rule is arbitrary: old sessions accumulate drift, implicit assumptions, and stale references that make resuming harder than starting fresh"
   discussion_prompts:
     - "Think of a time your AI session degraded in quality. At what point did you notice? Was it too late to compact effectively?"
     - "In your domain, what specific decisions or findings would you ALWAYS want to preserve during compaction? What would you always discard?"
   teaching_tips:
-    - "The Context Zones ASCII diagram is a strong visual anchor — redraw it on the board with colors and have students identify which zone they are usually in when they notice problems"
-    - "Walk through the decision tree step by step with a real scenario — the branching logic (is task complete? is context poisoned?) makes the /clear vs /compact choice concrete"
-    - "The domain-specific compaction examples (legal, marketing, research, consulting, development) are essential — have each student write their own custom compaction template"
-    - "The monitoring lab should be done with real work — tracking context growth over 30+ minutes creates the urgency that abstract teaching cannot"
+    - "The Context Zones ASCII diagram is a strong visual anchor: redraw it on the board with colors and have students identify which zone they are usually in when they notice problems"
+    - "Walk through the decision tree step by step with a real scenario: the branching logic (is task complete? is context poisoned?) makes the /clear vs /compact choice concrete"
+    - "The domain-specific compaction examples (legal, marketing, research, consulting, development) are essential: have each student write their own custom compaction template"
+    - "The monitoring lab should be done with real work: tracking context growth over 30+ minutes creates the urgency that abstract teaching cannot"
   assessment_quick_check:
     - "Name the five context zones and the action required for each"
     - "Given a scenario where you changed direction mid-session, should you /clear or /compact? Why?"
@@ -116,11 +116,11 @@ You've learned why context matters (Lesson 1), how the attention budget works (L
 
 Now comes the operational question: **What do you actually DO when context becomes a problem?**
 
-Whether you're a lawyer deep into contract review, a marketer building a campaign, a researcher synthesizing literature, or a developer debugging code—the principles are identical. Context fills up. Quality degrades. You need to decide: reset or compress?
+Whether you're a lawyer deep into contract review, a marketer building a campaign, a researcher synthesizing literature, or a developer debugging code,the principles are identical. Context fills up. Quality degrades. You need to decide: reset or compress?
 
 You've seen `/clear` and `/compact` in Chapter 14. You know they exist. But knowing commands isn't the same as knowing strategy. Should you clear now or compact? Should you preserve this tangent or let it go? Is 65% utilization fine or concerning?
 
-This lesson gives you the decision frameworks for context lifecycle management—when to reset, when to compress, how to customize compaction, and how to persist work across sessions.
+This lesson gives you the decision frameworks for context lifecycle management,when to reset, when to compress, how to customize compaction, and how to persist work across sessions.
 
 ## The Context Zones Framework
 
@@ -149,7 +149,7 @@ CONTEXT ZONES FRAMEWORK
 
 - **50%**: Research shows this is roughly where you should start paying attention. Context is accumulating faster than you might realize.
 - **70%**: The cliff. Quality starts degrading here. Compacting at 70% preserves most of your work while maintaining quality.
-- **85%**: Emergency territory. Compaction becomes increasingly difficult as you approach the limit—there's less room for the compacted summary.
+- **85%**: Emergency territory. Compaction becomes increasingly difficult as you approach the limit,there's less room for the compacted summary.
 - **95%**: Too late for graceful compaction. The overhead of compaction itself might push you over. Reset is safer.
 
 **Checking your zone:**
@@ -322,7 +322,7 @@ This becomes your default compaction behavior. Claude will follow these prioriti
 
 ## Session Persistence Commands
 
-Context lifecycle isn't just within sessions—it's across them. Sometimes you close the terminal and need to return.
+Context lifecycle isn't just within sessions,it's across them. Sometimes you close the terminal and need to return.
 
 | Command             | Function                                      | Use When                                       |
 | ------------------- | --------------------------------------------- | ---------------------------------------------- |
@@ -381,7 +381,7 @@ Switch to session number, or 'cancel':
 
 ## The 3-Day Rule
 
-Conversations have a viability window. After roughly 3-4 days, a session typically becomes un-resumable—too many tangents, too much accumulated drift, too many implicit assumptions that no longer hold.
+Conversations have a viability window. After roughly 3-4 days, a session typically becomes un-resumable,too many tangents, too much accumulated drift, too many implicit assumptions that no longer hold.
 
 **Signs a session has expired:**
 
@@ -603,7 +603,7 @@ Messages to Orange zone = (140,000 - starting_tokens) / tokens_per_10_messages *
 Example: (140,000 - 12,456) / 8,000 * 10 = 159 messages to Orange
 ```
 
-This is your compaction cadence—roughly how many messages before you need to compact.
+This is your compaction cadence,roughly how many messages before you need to compact.
 
 **Deliverable:** A completed monitoring log showing your typical context growth pattern, with calculated compaction cadence for your workflow.
 
@@ -611,17 +611,17 @@ This is your compaction cadence—roughly how many messages before you need to c
 
 ## What You Learned
 
-This lesson gave you the operational framework for context lifecycle management—applicable whether you're reviewing contracts, building campaigns, synthesizing research, or writing code:
+This lesson gave you the operational framework for context lifecycle management,applicable whether you're reviewing contracts, building campaigns, synthesizing research, or writing code:
 
 1. **Context Zones** provide actionable thresholds: Green (work freely), Yellow (monitor), Orange (compact now), Red (emergency), Black (reset required).
 
 2. **/clear vs /compact** have distinct use cases: clear when task is complete or context is poisoned; compact when you need to preserve decisions and continue.
 
-3. **Custom compaction instructions** let you guide what survives: preserve key decisions, discard rejected explorations. The specific content varies by domain—liability assessments for legal, audience segments for marketing, thematic analysis for research, architecture decisions for development.
+3. **Custom compaction instructions** let you guide what survives: preserve key decisions, discard rejected explorations. The specific content varies by domain,liability assessments for legal, audience segments for marketing, thematic analysis for research, architecture decisions for development.
 
 4. **Session persistence** (--continue, --resume, /resume) lets you work across terminal sessions, but sessions expire after roughly 3 days.
 
-5. **The save checkpoint pattern** combines external saves with compaction—externalize progress (notes, documents, commits) before reducing context.
+5. **The save checkpoint pattern** combines external saves with compaction,externalize progress (notes, documents, commits) before reducing context.
 
 The next lesson (Long-Horizon Work) builds on this foundation. You'll learn how to structure work that spans multiple sessions, using progress files and session architecture to maintain continuity beyond what context alone can provide.
 
@@ -640,7 +640,7 @@ Run /context and tell me:
 Help me understand my current context state.
 ```
 
-**What you're learning:** Context awareness in practice. Before you can make good /clear vs /compact decisions, you need to accurately assess your current state. This prompt practices zone identification and context triage—the foundation of lifecycle management.
+**What you're learning:** Context awareness in practice. Before you can make good /clear vs /compact decisions, you need to accurately assess your current state. This prompt practices zone identification and context triage,the foundation of lifecycle management.
 
 ### Prompt 2: Compaction Decision Scenario
 
@@ -721,7 +721,7 @@ From our conversation, identify:
 Then explain what I might lose even with good compaction instructions, so I know what to document externally before compacting.
 ```
 
-**What you're learning:** Compaction instruction crafting. Effective compaction requires understanding both what you want to keep AND what will inevitably be lost. This prompt practices creating precise compaction instructions while acknowledging the tradeoffs—preparing you to use external documentation (progress files, saved notes, commits) as backup.
+**What you're learning:** Compaction instruction crafting. Effective compaction requires understanding both what you want to keep AND what will inevitably be lost. This prompt practices creating precise compaction instructions while acknowledging the tradeoffs,preparing you to use external documentation (progress files, saved notes, commits) as backup.
 
 
 ## Flashcards Study Aid

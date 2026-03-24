@@ -11,7 +11,7 @@ slides:
 
 Welcome to the foundational chapter that establishes the mental models you need for AI-native development. This chapter consolidates the essential concepts into a focused, 10-lesson journey that will transform how you think about building software with AI.
 
-By the end of this chapter, you'll understand not just _that_ AI is changing software development, but _how to think about this transformation strategically_. You'll see why 2026 is a genuine inflection point, what the Agent Factory paradigm is, and how to position yourself to build Digital FTEs—AI-powered agents that work 24/7 and generate recurring revenue.
+By the end of this chapter, you'll understand not just _that_ AI is changing software development, but _how to think about this transformation strategically_. You'll see why 2026 is a genuine inflection point, what the Agent Factory paradigm is, and how to position yourself to build Digital FTEs: AI-powered agents that work 24/7 and generate recurring revenue.
 
 ## 📚 Teaching Aid
 
@@ -54,4 +54,4 @@ This chapter builds your conceptual framework through four integrated progressio
 - The four value propositions: Enabler, Implementer, Custom Developer, Workflow Disruptor
 - Outcome-based pricing models and consultative selling
 
-The transformation of software development is underway. The question isn't whether AI will change how you build—it's whether you'll lead or follow.
+The transformation of software development is underway. The question isn't whether AI will change how you build: it's whether you'll lead or follow.

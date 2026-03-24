@@ -115,7 +115,7 @@ Think of the AI as a junior developer with infinite energy but no institutional 
 - Guardrails (what NOT to do)
 - Verification (did it work?)
 
-Your job is no longer typing—it's directing, reviewing, and approving. The seven principles are your management framework.
+Your job is no longer typing,it's directing, reviewing, and approving. The seven principles are your management framework.
 
 ```
                     THE DIRECTOR'S LOOP
@@ -490,7 +490,7 @@ Not all principles are equally important for every task. Use this guide to prior
 
 ### Template 1b: When the Fix Fails
 
-What happens when step 6 (verification) fails? Don't panic—follow this recovery path:
+What happens when step 6 (verification) fails? Don't panic,follow this recovery path:
 
 ```
 6. AI verifies with tests → TESTS FAIL
@@ -604,7 +604,7 @@ Count how many principles you're actively applying (1 point per principle with a
 | **5-6** | Agent Architect | Professional grade. You're managing AI effectively. Fine-tune for efficiency.                 |
 | **7**   | Master Director | Full integration. You've internalized the principles. Now optimize and teach others.          |
 
-**Where to start if you're at 0-2**: Begin with just two principles—Verification (always test) and Observability (always see what AI did). These two alone prevent most disasters.
+**Where to start if you're at 0-2**: Begin with just two principles,Verification (always test) and Observability (always see what AI did). These two alone prevent most disasters.
 
 ## Why This Integration Matters
 
@@ -630,9 +630,9 @@ All seven principles derive from one meta-principle:
 
 **General agents are most effective when they leverage computing fundamentals rather than fighting against them.**
 
-File systems, shells, code execution, version control—these aren't limitations to work around. They're the foundations that enable reliable, debuggable, powerful agent workflows.
+File systems, shells, code execution, version control,these aren't limitations to work around. They're the foundations that enable reliable, debuggable, powerful agent workflows.
 
-Claude Code makes this explicit through the terminal interface. Cowork makes it accessible through a GUI. But underneath, they're running on the same principles—the same Claude Agent SDK, the same reasoning engine, the same fundamental approach to problem-solving through computing primitives.
+Claude Code makes this explicit through the terminal interface. Cowork makes it accessible through a GUI. But underneath, they're running on the same principles,the same Claude Agent SDK, the same reasoning engine, the same fundamental approach to problem-solving through computing primitives.
 
 ## Choosing Your Interface Based on Principles
 
@@ -649,7 +649,7 @@ Both interfaces support all seven principles. Choose based on your task characte
 | Programmatic precision  | Best choice (code/scripts)    | Good (structured prompts)      |
 | Non-technical users     | Requires terminal comfort     | Best choice (familiar desktop) |
 
-The choice isn't "which is better"—it's "which fits this task." Many workflows benefit from using both: Claude Code for implementation, Cowork for documentation and review.
+The choice isn't "which is better",it's "which fits this task." Many workflows benefit from using both: Claude Code for implementation, Cowork for documentation and review.
 
 ## The Director's Tip: Invoke Principles Explicitly
 
@@ -746,7 +746,7 @@ These seven principles form the foundation for effective problem-solving with Ge
 - **Browser-based automation** (Principles 3, 6, 7)
 - **Building Custom Agents** (All principles at scale)
 
-Each workflow will demonstrate how the principles combine in practice, using whichever interface—Claude Code or Cowork—best fits the task. The principles don't change; only their application deepens.
+Each workflow will demonstrate how the principles combine in practice, using whichever interface,Claude Code or Cowork,best fits the task. The principles don't change; only their application deepens.
 
 
 ## Flashcards Study Aid

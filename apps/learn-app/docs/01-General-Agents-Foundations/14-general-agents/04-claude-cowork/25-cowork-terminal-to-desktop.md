@@ -91,7 +91,7 @@ teaching_guide:
 
 # From Terminal to Desktop: The Cowork Story
 
-Claude Code changed how developers work with AI. But developers aren't the only ones who need AI assistance. Researchers, analysts, writers, managers—anyone who works with documents and data—faces the same friction: copy-pasting context into chat windows, repeating the same tasks, losing work between sessions.
+Claude Code changed how developers work with AI. But developers aren't the only ones who need AI assistance. Researchers, analysts, writers, managers: anyone who works with documents and data: faces the same friction: copy-pasting context into chat windows, repeating the same tasks, losing work between sessions.
 
 **Claude Cowork** brings the same agentic architecture to the familiar desktop interface.
 
@@ -107,7 +107,7 @@ Claude Cowork is **agentic AI in the Claude Desktop app** (available on macOS an
 - **Work with documents** in their native formats (Word, Excel, PDF, PowerPoint)
 - **Maintain context** across your entire workspace
 
-The key difference from web chat: **Cowork is an agent, not a chatbot**. It doesn't just respond—it acts.
+The key difference from web chat: **Cowork is an agent, not a chatbot**. It doesn't just respond: it acts.
 
 ---
 
@@ -131,13 +131,13 @@ With Claude Cowork:
 3. Tell Claude what you need
 4. Claude reads files, makes changes directly
 
-The difference isn't just convenience—it's **capability**. When Claude can see your entire folder structure, it can make connections between documents that you might miss.
+The difference isn't just convenience: it's **capability**. When Claude can see your entire folder structure, it can make connections between documents that you might miss.
 
 ---
 
 ## Code vs. Cowork: Same Foundation
 
-Both products are built on the **Claude Agent SDK**—the same underlying technology that enables agentic behavior. The Claude Desktop app now offers three tabs—**Chat**, **Cowork**, and **Code**—each optimized for different work:
+Both products are built on the **Claude Agent SDK**:the same underlying technology that enables agentic behavior. The Claude Desktop app now offers three tabs: **Chat**, **Cowork**, and **Code**:each optimized for different work:
 
 | Aspect              | Claude Code                               | Claude Cowork                        |
 | ------------------- | ----------------------------------------- | ------------------------------------ |
@@ -154,13 +154,13 @@ Skills work across both platforms. A Skill you create for Claude Code can be use
 
 ## The Knowledge Worker Advantage
 
-Developers already had tools to automate work—scripts, macros, IDE integrations. Knowledge workers had fewer options:
+Developers already had tools to automate work: scripts, macros, IDE integrations. Knowledge workers had fewer options:
 
 - **Office macros**: Powerful but require programming knowledge
 - **No-code tools**: Limited to predefined workflows
 - **Manual work**: Time-consuming and error-prone
 
-Claude Cowork fills this gap. You don't write code—you describe what you need, in plain language, and Claude handles the implementation.
+Claude Cowork fills this gap. You don't write code: you describe what you need, in plain language, and Claude handles the implementation.
 
 **Example**: Instead of writing a Python script to rename 500 files according to a pattern, you tell Claude: "Rename all these files to format [DATE]-[DESCRIPTION].pdf" and Cowork handles it.
 
@@ -215,7 +215,7 @@ Unlike the terminal where actions happen invisibly, Cowork shows you exactly wha
 
 ## The Convergence Path
 
-This convergence has already happened. The Claude Desktop app now houses three tabs—**Chat**, **Cowork**, and **Code**—in a single application. Developers and knowledge workers share the same app; they just use different tabs. The Code tab gives developers a graphical interface to Claude Code without opening a terminal, while the Cowork tab gives knowledge workers agentic file access without writing code.
+This convergence has already happened. The Claude Desktop app now houses three tabs: **Chat**, **Cowork**, and **Code**:in a single application. Developers and knowledge workers share the same app; they just use different tabs. The Code tab gives developers a graphical interface to Claude Code without opening a terminal, while the Cowork tab gives knowledge workers agentic file access without writing code.
 
 Skills you build in one tab work across all tabs. A Skill created in Claude Code (CLI or Desktop Code tab) can be used in Cowork, and vice versa. The three-tab model means you pick the right mode for each task, not the right application.
 
@@ -227,13 +227,13 @@ Skills you build in one tab work across all tabs. A Skill created in Claude Code
 
 > "I work with [describe your documents and files]. Show me one workflow where copy-pasting to chat creates friction. What would change if Claude could access those files directly? Give me a specific example."
 
-**What you're learning:** Workflow analysis—identifying where agentic AI creates value. This skill helps you recognize opportunities for automation in your daily work.
+**What you're learning:** Workflow analysis: identifying where agentic AI creates value. This skill helps you recognize opportunities for automation in your daily work.
 
 **Compare the Interfaces:**
 
 > "Create a comparison table: What can I do in Claude Code that I can't do in Cowork? What can I do in Cowork that I can't do in Code? When would I choose each?"
 
-**What you're learning:** Tool selection—understanding that different interfaces serve different use cases. The same underlying AI, optimized for different contexts.
+**What you're learning:** Tool selection: understanding that different interfaces serve different use cases. The same underlying AI, optimized for different contexts.
 
 ---
 

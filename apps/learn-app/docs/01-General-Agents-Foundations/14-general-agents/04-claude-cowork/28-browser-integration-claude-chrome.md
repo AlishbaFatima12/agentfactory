@@ -98,7 +98,7 @@ teaching_guide:
 
 # Browser Integration: Claude in Chrome
 
-Your documents and files are one part of your work. The web is another. Research, web applications, email, collaboration tools—much of knowledge work happens in the browser. Claude's browser integration extends agentic capabilities to your web-based workflows.
+Your documents and files are one part of your work. The web is another. Research, web applications, email, collaboration tools: much of knowledge work happens in the browser. Claude's browser integration extends agentic capabilities to your web-based workflows.
 
 ---
 
@@ -166,7 +166,7 @@ When you activate Claude on a webpage:
 1. **Page Analysis**: Claude reads the page content, structure, and available interactive elements
 2. **Context Understanding**: Claude identifies the page type (email client, form, article, etc.) and relevant information
 3. **Action Planning**: Claude determines what actions are needed based on your request
-4. **Execution**: The extension performs the actions—clicking, typing, navigating
+4. **Execution**: The extension performs the actions: clicking, typing, navigating
 5. **Verification**: Claude confirms the results and asks for next steps
 
 This loop continues until your task is complete.
@@ -315,13 +315,13 @@ Enterprise and Team administrators can set allowlists and blocklists to control 
 
 > "List 3 web-based tasks I do regularly that involve repetitive clicking, typing, or navigating between pages (e.g., email cleanup, dashboard data extraction, form filling, research across multiple sites). For each one, estimate: how long it takes manually, how often I do it, and whether Claude's browser automation could handle it given the speed and limitation constraints from this lesson."
 
-**What you're learning:** Task-tool matching — applying the speed considerations and limitation constraints from this lesson to real browser tasks. Not every web task benefits from automation; identifying the right candidates prevents frustration.
+**What you're learning:** Task-tool matching; applying the speed considerations and limitation constraints from this lesson to real browser tasks. Not every web task benefits from automation; identifying the right candidates prevents frustration.
 
 **Design a Browser Workflow with the Five-Step Loop:**
 
 > "Pick one browser task from my list. Map it to Claude's five-step browser loop: What would Page Analysis find? What Context Understanding is needed? What Action Plan would Claude propose? What Execution steps happen? How would Verification confirm success? Write the complete prompt and flag any steps where I'd need to handle authentication or CAPTCHAs manually."
 
-**What you're learning:** Workflow design for browser automation — thinking through each step of the browser loop before executing. This planning prevents the most common browser automation failures (authentication blocks, CAPTCHA interruptions, dynamic content issues).
+**What you're learning:** Workflow design for browser automation; thinking through each step of the browser loop before executing. This planning prevents the most common browser automation failures (authentication blocks, CAPTCHA interruptions, dynamic content issues).
 
 ---
 

@@ -68,22 +68,22 @@ teaching_guide:
   session_group: 2
   session_title: "Deep-Dive into SDD Phases"
   key_points:
-    - "The role reversal is the key insight — in refinement, Claude asks questions and you answer, which surfaces gaps you didn't know existed"
+    - "The role reversal is the key insight: in refinement, Claude asks questions and you answer, which surfaces gaps you didn't know existed"
     - "The 10x cost multiplier table (5 min during spec → 8-16 hours in production) is the most persuasive argument for why this phase can't be skipped"
     - "Five ambiguity categories (data decisions, conflict resolution, pattern selection, failure recovery, boundary conditions) give students a repeatable checklist"
     - "The 'handle conflicts optimistically' example shows how a two-word ambiguity can cost three days of refactoring"
   misconceptions:
-    - "Students think refinement means 'Claude proofreading the spec' — it's Claude interrogating your unstated assumptions, not checking grammar"
-    - "Students skip refinement because their spec 'feels complete' — the whole point is surfacing assumptions so natural you didn't think to write them down"
-    - "Students get annoyed by Claude's questions and cut the interview short — annoyance often signals you haven't thought through those decisions"
+    - "Students think refinement means 'Claude proofreading the spec': it's Claude interrogating your unstated assumptions, not checking grammar"
+    - "Students skip refinement because their spec 'feels complete': the whole point is surfacing assumptions so natural you didn't think to write them down"
+    - "Students get annoyed by Claude's questions and cut the interview short: annoyance often signals you haven't thought through those decisions"
   discussion_prompts:
-    - "Think of a project where a 'small detail' you didn't specify upfront caused a major rework — which ambiguity category did it fall into?"
+    - "Think of a project where a 'small detail' you didn't specify upfront caused a major rework: which ambiguity category did it fall into?"
     - "Why is it harder to find your own unstated assumptions than to find someone else's?"
   teaching_tips:
-    - "Have students run the interview prompt live on their Lesson 6 spec — the experience of Claude finding real gaps is more convincing than any lecture"
-    - "The cost multiplier table is worth dwelling on — ask students to estimate their own 'most expensive late-found ambiguity'"
+    - "Have students run the interview prompt live on their Lesson 6 spec: the experience of Claude finding real gaps is more convincing than any lecture"
+    - "The cost multiplier table is worth dwelling on: ask students to estimate their own 'most expensive late-found ambiguity'"
     - "Walk through the report-spec interview example step by step: question → answer → spec update. Show how three questions prevented three rewrites"
-    - "The 'when to stop' section prevents analysis paralysis — emphasize that implementation details are not design decisions"
+    - "The 'when to stop' section prevents analysis paralysis: emphasize that implementation details are not design decisions"
   assessment_quick_check:
     - "Name the five ambiguity categories and give an example question for each"
     - "What's the prompt pattern that triggers Claude's interview mode, and why does the role reversal matter?"
@@ -110,7 +110,7 @@ When you give this instruction, Claude shifts from implementation mode to invest
 
 **What makes this different from conversation:**
 
-In normal prompting, you ask questions and Claude answers. In the interview pattern, the roles reverse. Claude asks questions and you answer. This shift matters because Claude can identify gaps you didn't know existed—assumptions so natural to you that you didn't think to document them.
+In normal prompting, you ask questions and Claude answers. In the interview pattern, the roles reverse. Claude asks questions and you answer. This shift matters because Claude can identify gaps you didn't know existed,assumptions so natural to you that you didn't think to document them.
 
 ## Why Ambiguities Are Expensive
 
@@ -126,7 +126,7 @@ Consider what happens when an ambiguity survives to implementation:
 
 The 10x multiplier is conservative. A decision that takes 10 minutes to clarify in an interview can cost days when discovered after deployment.
 
-**Real example:** A developer's specification said "handle conflicts optimistically." The developer meant "last write wins." Claude interpreted this as "prompt user to resolve." Implementation proceeded with user prompts. The developer discovered this three days later during testing. Refactoring took an entire afternoon—time that a single interview question would have prevented.
+**Real example:** A developer's specification said "handle conflicts optimistically." The developer meant "last write wins." Claude interpreted this as "prompt user to resolve." Implementation proceeded with user prompts. The developer discovered this three days later during testing. Refactoring took an entire afternoon,time that a single interview question would have prevented.
 
 ## The Five Ambiguity Categories
 
@@ -150,7 +150,7 @@ What happens when systems disagree:
 - If two users edit simultaneously, who wins?
 - What happens when local and server state diverge?
 
-**Why this matters:** Every multi-user or distributed system faces conflicts. The absence of a stated strategy means Claude chooses one—possibly not the one you wanted.
+**Why this matters:** Every multi-user or distributed system faces conflicts. The absence of a stated strategy means Claude chooses one,possibly not the one you wanted.
 
 ### 3. Pattern Selection
 
@@ -160,7 +160,7 @@ Which approach among valid alternatives:
 - Should we use the approach from [reference A] or [reference B]?
 - Given your performance requirements, which architecture fits?
 
-**Why this matters:** Research often surfaces multiple valid approaches. Without explicit selection, Claude picks based on its training distribution—not your project's needs.
+**Why this matters:** Research often surfaces multiple valid approaches. Without explicit selection, Claude picks based on its training distribution,not your project's needs.
 
 ### 4. Failure Recovery
 
@@ -197,7 +197,7 @@ relevant to CTO decision-making.
 
 **Claude's interview questions:**
 
-> Question 1: For the tool comparison—should we include pricing? Enterprise pricing is often confidential or negotiated. Do we use list prices, price ranges, or skip pricing entirely?
+> Question 1: For the tool comparison,should we include pricing? Enterprise pricing is often confidential or negotiated. Do we use list prices, price ranges, or skip pricing entirely?
 
 Your answer: "Include list prices where public, note 'contact for enterprise pricing' otherwise. CTOs need ballpark numbers to budget."
 
@@ -281,9 +281,9 @@ You don't need to fill every checkbox for every specification. A small utility s
 
 The interview phase ends when:
 
-1. **Questions become repetitive** — Claude asks variations of questions you've already answered
-2. **New questions are trivial** — Questions about details that don't affect architecture
-3. **Specification feels complete** — You can read through it and imagine implementation without guessing
+1. **Questions become repetitive:** Claude asks variations of questions you've already answered
+2. **New questions are trivial:** Questions about details that don't affect architecture
+3. **Specification feels complete:** You can read through it and imagine implementation without guessing
 
 If Claude's questions feel like implementation details rather than design decisions, you're ready for Phase 4.
 
@@ -312,7 +312,7 @@ Take a specification you've written (or use the one from Lesson 5's lab). Run it
 
 4. **Check the checklist.** Which categories did Claude's questions address? Which categories weren't relevant to your spec?
 
-The goal isn't to fill checkboxes—it's to surface decisions you hadn't consciously made.
+The goal isn't to fill checkboxes,it's to surface decisions you hadn't consciously made.
 
 ## Try With AI
 
@@ -329,7 +329,7 @@ Focus on decisions that would cause rewrites if wrong:
 - What decision are they trying to make after reading this?
 ```
 
-**What you're learning:** The interview surfaces implicit assumptions. "CTOs evaluating AI tools" is vague—a startup CTO has different concerns than an enterprise CTO. Each answer sharpens the spec and prevents writing for the wrong audience.
+**What you're learning:** The interview surfaces implicit assumptions. "CTOs evaluating AI tools" is vague,a startup CTO has different concerns than an enterprise CTO. Each answer sharpens the spec and prevents writing for the wrong audience.
 
 **Prompt 2: Update Spec with Decisions**
 

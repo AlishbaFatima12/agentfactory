@@ -4,20 +4,20 @@ Markdown is structured text that creates a bridge between human intent (what you
 ### Key Mental Models
 - **Structured vs Unstructured**: Structured text (markdown) removes ambiguity by using explicit labels (headings, lists) that AI agents can parse; unstructured paragraphs force AI to guess
 - **Three-Layer AIDD**: Markdown is Layer 1 (your intent specification) → AI Reasoning (Layer 2) → Code Generation (Layer 3)
-- **Intent Layer Philosophy**: You control the spec; AI implements it. Change the spec, AI rebuilds to match—this keeps you in control
+- **Intent Layer Philosophy**: You control the spec; AI implements it. Change the spec, AI rebuilds to match: this keeps you in control
 - **Dual-Nature Format**: Markdown is simultaneously human-readable (no special software) and machine-parseable (structured for AI agents)
 
 ### Critical Patterns
 - **Specification Quality Effect**: Same information as unstructured paragraph vs markdown structure produces dramatically different AI outputs
 - **GitHub README Convention**: Professional developers use markdown for README.md files (not Word/TXT) because it's version-control friendly and renders beautifully
 - **Markdown Flavors**: CommonMark is the base standard; GitHub Flavored Markdown (GFM) adds tables, task lists, and strikethrough
-- **Semantic Meaning in Structure**: Headings and lists communicate semantic meaning—AI extracts this structure to understand scope, dependencies, and relationships
+- **Semantic Meaning in Structure**: Headings and lists communicate semantic meaning: AI extracts this structure to understand scope, dependencies, and relationships
 
 ### AI Collaboration Keys
-- **LLM Tokenization**: Structured markdown gives AI clearer token boundaries and "attention cues"—a heading like `## Features` tells the model everything below relates to features
+- **LLM Tokenization**: Structured markdown gives AI clearer token boundaries and "attention cues": a heading like `## Features` tells the model everything below relates to features
 - **Structure parsing**: AI uses markdown structure to identify scope, dependencies, and relationships between requirements
 - **Specification by example**: Showing expected output in code blocks gives AI concrete targets instead of interpretations
-- **Verification is critical**: AI makes mistakes—always verify AI responses against lesson rules and test specific claims
+- **Verification is critical**: AI makes mistakes: always verify AI responses against lesson rules and test specific claims
 
 ### Common Mistakes
 - Treating markdown as "just formatting" rather than specification language that AI parses

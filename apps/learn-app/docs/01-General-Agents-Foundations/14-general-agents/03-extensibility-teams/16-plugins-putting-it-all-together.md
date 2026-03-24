@@ -79,23 +79,23 @@ teaching_guide:
   session_group: 5
   session_title: "Settings, Hooks, and Plugin Synthesis"
   key_points:
-    - "A plugin bundles skills, commands, agents, hooks, and MCP servers into one installable package — students must understand it is a packaging format, not a new concept"
+    - "A plugin bundles skills, commands, agents, hooks, and MCP servers into one installable package; students must understand it is a packaging format, not a new concept"
     - "The official Anthropic marketplace is pre-configured; students can browse with /plugin immediately without any setup"
     - "Installation scope matters: User scope follows you everywhere, Project scope shares with team, Local scope is just you on this repo"
     - "Students create their own plugin by adding a .claude-plugin/plugin.json manifest (4 required fields) and a marketplace.json for distribution"
   misconceptions:
-    - "Students think plugins are a separate system from skills and hooks — actually plugins just bundle the same components they already know into distributable packages"
-    - "Students confuse plugin (a folder with capabilities) with marketplace (a catalog listing multiple plugins) — the app vs app-store distinction"
-    - "Students assume creating a plugin requires coding — the minimum plugin.json has only 4 fields: name, description, version, author"
-    - "Students expect all marketplace plugins to work out of the box — LSP plugins require language server binaries installed on the system"
+    - "Students think plugins are a separate system from skills and hooks; actually plugins just bundle the same components they already know into distributable packages"
+    - "Students confuse plugin (a folder with capabilities) with marketplace (a catalog listing multiple plugins); the app vs app-store distinction"
+    - "Students assume creating a plugin requires coding; the minimum plugin.json has only 4 fields: name, description, version, author"
+    - "Students expect all marketplace plugins to work out of the box; LSP plugins require language server binaries installed on the system"
   discussion_prompts:
     - "You have skills, hooks, and an MCP config that work well together in your project. What would change if you packaged them as a plugin versus keeping them as loose files?"
     - "When should you install an existing plugin versus building a custom skill? What is your decision threshold?"
   teaching_tips:
-    - "Have students run /plugin before any explanation — seeing the marketplace UI first makes the concept concrete before the theory"
+    - "Have students run /plugin before any explanation; seeing the marketplace UI first makes the concept concrete before the theory"
     - "Use the commit-commands install exercise as the demonstration: it takes under 2 minutes and shows the full install-use cycle"
-    - "Walk through the plugin directory structure diagram carefully — students need to know that components go at root level, not inside .claude-plugin/"
-    - "Connect the three installation scopes back to Lesson 14's settings hierarchy — same user/project/local pattern, reinforcing the mental model"
+    - "Walk through the plugin directory structure diagram carefully; students need to know that components go at root level, not inside .claude-plugin/"
+    - "Connect the three installation scopes back to Lesson 14's settings hierarchy; same user/project/local pattern, reinforcing the mental model"
   assessment_quick_check:
     - "What are the 4 required fields in a plugin.json manifest?"
     - "What is the difference between User scope and Project scope when installing a plugin?"
@@ -144,7 +144,7 @@ A **plugin** bundles multiple Claude Code components into one installable packag
 /plugin install github@claude-plugins-official
 ```
 
-Done. GitHub integration works—including MCP config, any bundled skills, and automation hooks.
+Done. GitHub integration works: including MCP config, any bundled skills, and automation hooks.
 
 **The principle**: Check what exists before building from scratch.
 
@@ -194,7 +194,7 @@ Use **Tab** to switch between tabs:
 
 ## Try It Now: Install Your First Plugin
 
-Let's install **commit-commands**—a plugin that helps with git workflows.
+Let's install **commit-commands**:a plugin that helps with git workflows.
 
 ### Option 1: Use the UI
 
@@ -247,7 +247,7 @@ After installing **commit-commands**, make a small change to any file, then run:
 
 ### Code Intelligence Plugins
 
-These use the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) (LSP)—the same technology that powers VS Code's code intelligence.
+These use the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) (LSP): the same technology that powers VS Code's code intelligence.
 
 **After installing** (e.g., `typescript-lsp`), Claude can:
 
@@ -460,7 +460,7 @@ Your Skills Lab is now a plugin.
 
 **Why have marketplaces at all?**
 
-You _could_ share plugins without a marketplace—just tell someone to clone your repo and use `--plugin-dir`. But marketplaces provide:
+You _could_ share plugins without a marketplace: just tell someone to clone your repo and use `--plugin-dir`. But marketplaces provide:
 
 - **Discovery**: Browse what's available instead of knowing exact repo URLs
 - **Organization**: Group related plugins (your team's tools, a company's integrations)
@@ -518,7 +518,7 @@ To share your plugin with others, create a marketplace:
 
 ### What's Next
 
-You can now discover, install, and **create** plugins—the complete lifecycle. Lesson 17 introduces the **Ralph Wiggum Loop**—an autonomous iteration pattern where Claude validates and refines its own work. You'll see how to combine everything you've learned (skills, subagents, hooks, and your own plugins) into self-correcting workflows.
+You can now discover, install, and **create** plugins: the complete lifecycle. Lesson 17 introduces the **Ralph Wiggum Loop**:an autonomous iteration pattern where Claude validates and refines its own work. You'll see how to combine everything you've learned (skills, subagents, hooks, and your own plugins) into self-correcting workflows.
 
 ---
 
@@ -528,43 +528,43 @@ You can now discover, install, and **create** plugins—the complete lifecycle. 
 
 > "Run /plugin and show me what's in the Discover tab. What categories of plugins are available? Which ones would be useful for [your work: web development / Python / data analysis]?"
 
-**What you're learning:** Plugin discovery—understanding what capability extensions exist before building from scratch. The ecosystem often has what you need.
+**What you're learning:** Plugin discovery: understanding what capability extensions exist before building from scratch. The ecosystem often has what you need.
 
 **📦 Install and Test:**
 
 > "Help me install the commit-commands plugin. After it's installed, walk me through using /commit-commands:commit to commit a change. What other commands does this plugin provide?"
 
-**What you're learning:** The full plugin workflow—from installation through verification. Knowing the complete cycle builds confidence with new plugins.
+**What you're learning:** The full plugin workflow: from installation through verification. Knowing the complete cycle builds confidence with new plugins.
 
 **🔌 Code Intelligence:**
 
 > "I write [TypeScript / Python / Rust / Go]. Help me install the LSP plugin for my language. What do I need to install on my system first? After installation, show me how Claude can now jump to definitions and find references."
 
-**What you're learning:** How plugins add capabilities Claude doesn't have natively—in this case, language-server-level code understanding.
+**What you're learning:** How plugins add capabilities Claude doesn't have natively: in this case, language-server-level code understanding.
 
 **🔗 External Integration:**
 
 > "I want to connect Claude to [GitHub / Slack / Linear]. Help me install the appropriate plugin. What capabilities does it add? Show me an example of using it."
 
-**What you're learning:** Platform integration through plugins—extending Claude's reach to external services without writing custom MCP servers.
+**What you're learning:** Platform integration through plugins: extending Claude's reach to external services without writing custom MCP servers.
 
 **⚖️ Plugin Decision:**
 
 > "I need Claude to help with [describe your task]. Should I: (a) install an existing plugin, (b) create a custom skill, (c) just ask Claude directly? Help me decide based on what's available in the marketplace."
 
-**What you're learning:** The build vs. buy decision for AI capabilities—when to use existing solutions vs. creating custom ones.
+**What you're learning:** The build vs. buy decision for AI capabilities: when to use existing solutions vs. creating custom ones.
 
 **📦 Package Your Skills:**
 
 > "Help me package my Skills Lab directory as a plugin. Create the plugin.json manifest, organize my skills into the correct directory structure, and test it with --plugin-dir."
 
-**What you're learning:** Plugin creation workflow—turning your existing Claude Code components into shareable, installable packages.
+**What you're learning:** Plugin creation workflow: turning your existing Claude Code components into shareable, installable packages.
 
 **🌐 Create Your Marketplace:**
 
 > "I have a plugin ready. Help me create a marketplace.json file, push it to GitHub, and show me how others can install my plugin."
 
-**What you're learning:** Plugin distribution—sharing your work with teammates or the broader community through marketplace catalogs.
+**What you're learning:** Plugin distribution: sharing your work with teammates or the broader community through marketplace catalogs.
 
 
 ## Flashcards Study Aid

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: "The Two-Way Problem: Getting Tacit Knowledge In and Out"
-description: "How to transfer what's in your head to the AI, and how to extract understanding from what the AI generates—the bidirectional knowledge challenge of AI collaboration for any professional domain"
+description: "How to transfer what's in your head to the AI, and how to extract understanding from what the AI generates,the bidirectional knowledge challenge of AI collaboration for any professional domain"
 keywords:
   [
     "tacit knowledge",
@@ -85,24 +85,24 @@ teaching_guide:
   session_group: 2
   session_title: "Persistent State and Knowledge Transfer"
   key_points:
-    - "The Two-Way Problem is bidirectional: Professional -> AI (transfer tacit knowledge) AND AI -> Professional (extract understanding) — most students only think about the first direction"
-    - "Tacit knowledge is what experienced professionals carry but never document — the unwritten rules, historical context, and relationship dynamics that shape real decisions"
-    - "Documents for AI consumption must be structurally different from human documents — explicit constraints, the 'why' behind decisions, and concrete examples instead of references to shared experience"
+    - "The Two-Way Problem is bidirectional: Professional -> AI (transfer tacit knowledge) AND AI -> Professional (extract understanding): most students only think about the first direction"
+    - "Tacit knowledge is what experienced professionals carry but never document: the unwritten rules, historical context, and relationship dynamics that shape real decisions"
+    - "Documents for AI consumption must be structurally different from human documents: explicit constraints, the 'why' behind decisions, and concrete examples instead of references to shared experience"
     - "Memory scoping (global vs session) prevents both noise accumulation (too much persisted) and repetitive re-explanation (too little persisted)"
   misconceptions:
-    - "Students think all their knowledge is already in their documentation — the verbal exercise reveals huge amounts of undocumented expertise they did not realize they had"
-    - "Students focus only on getting knowledge INTO the AI and neglect the extraction direction — they accept AI deliverables without understanding the reasoning behind them"
-    - "Students want to persist everything as global memory — emphasize that 'we are reviewing the Johnson contract' is session context that becomes noise tomorrow"
-    - "Students think examples-based encoding is more work than rules — it is actually more effective because AI pattern-matches better against concrete examples than vague principles"
+    - "Students think all their knowledge is already in their documentation: the verbal exercise reveals huge amounts of undocumented expertise they did not realize they had"
+    - "Students focus only on getting knowledge INTO the AI and neglect the extraction direction: they accept AI deliverables without understanding the reasoning behind them"
+    - "Students want to persist everything as global memory: emphasize that 'we are reviewing the Johnson contract' is session context that becomes noise tomorrow"
+    - "Students think examples-based encoding is more work than rules: it is actually more effective because AI pattern-matches better against concrete examples than vague principles"
   discussion_prompts:
     - "What would go wrong in your work if a competent new colleague started without any verbal briefing from you? That gap is your tacit knowledge."
     - "Have you ever used an AI-generated deliverable you could not fully explain to a colleague? What was the risk in that?"
-    - "In your domain, what is the most dangerous piece of tacit knowledge — the one that causes the biggest problems when someone does not have it?"
+    - "In your domain, what is the most dangerous piece of tacit knowledge: the one that causes the biggest problems when someone does not have it?"
   teaching_tips:
-    - "The verbal recording exercise is the highest-impact activity in this lesson — budget 10+ minutes and have students actually record themselves explaining their project to an imaginary new colleague"
-    - "Use the 'For Humans' vs 'For AI' document comparisons as a side-by-side exercise — have students identify what changed and why"
-    - "The Rubber Duck Test (explain it back to the AI) is powerful for the extraction direction — demonstrate it live with a complex AI-generated output"
-    - "Start with domain examples closest to your audience — legal, marketing, research, or software — so tacit knowledge feels concrete rather than abstract"
+    - "The verbal recording exercise is the highest-impact activity in this lesson: budget 10+ minutes and have students actually record themselves explaining their project to an imaginary new colleague"
+    - "Use the 'For Humans' vs 'For AI' document comparisons as a side-by-side exercise: have students identify what changed and why"
+    - "The Rubber Duck Test (explain it back to the AI) is powerful for the extraction direction: demonstrate it live with a complex AI-generated output"
+    - "Start with domain examples closest to your audience: legal, marketing, research, or software. so tacit knowledge feels concrete rather than abstract"
   assessment_quick_check:
     - "Name both directions of the Two-Way Problem and explain why each is challenging"
     - "Give one example of tacit knowledge from your domain that is NOT in any documentation"
@@ -111,15 +111,15 @@ teaching_guide:
 
 # The Two-Way Problem: Getting Tacit Knowledge In and Out
 
-You've been in your role for three years. You know why things are done a certain way—not because it's written down, but because you were there when the decisions got made.
+You've been in your role for three years. You know why things are done a certain way,not because it's written down, but because you were there when the decisions got made.
 
 Maybe you're a lawyer who knows which judges prefer concise briefs versus detailed ones, which opposing counsel will negotiate in good faith, and which contract clauses your firm has learned to avoid after a costly dispute five years ago. Maybe you're a marketing director who knows that this particular client hates the word "synergy," that their CEO responds better to data than stories, and that the Q4 campaign failed not because of the creative but because of timing with their product launch. Maybe you're a research scientist who knows which methodologies your reviewers trust, which citation styles signal credibility in your field, and which collaborators actually respond to emails.
 
 None of this is documented. It lives in your head, in email threads nobody will ever search, in the institutional memory of colleagues who were there when the decisions got made.
 
-Now you're working with AI. It can read your documents. It can follow your instructions. But it doesn't know _why_. It doesn't carry the weight of decisions that shaped your practice. It treats every contract clause, every client, every methodology as equally neutral—without the context that makes your expertise valuable.
+Now you're working with AI. It can read your documents. It can follow your instructions. But it doesn't know _why_. It doesn't carry the weight of decisions that shaped your practice. It treats every contract clause, every client, every methodology as equally neutral,without the context that makes your expertise valuable.
 
-This is the Two-Way Problem—and solving it is the difference between an AI that helps you and an AI that actually understands your work.
+This is the Two-Way Problem,and solving it is the difference between an AI that helps you and an AI that actually understands your work.
 
 ## The Two-Way Problem
 
@@ -128,15 +128,15 @@ Greg Foster, writing about the real bottlenecks in AI-assisted work, identified 
 | Direction              | Challenge                | Why It's Hard                                                                                                                              |
 | ---------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Professional -> AI** | Transfer tacit knowledge | Documentation records what someone thought to write down, not the dozens of micro-decisions that shaped current practice                   |
-| **AI -> Professional** | Extract understanding    | Reviewing AI-generated work takes different cognitive effort—you're reverse-engineering intent from output rather than following reasoning |
+| **AI -> Professional** | Extract understanding    | Reviewing AI-generated work takes different cognitive effort,you're reverse-engineering intent from output rather than following reasoning |
 
 Both directions matter. If you can't get your knowledge into the AI, it makes decisions that violate unwritten rules. If you can't extract understanding from what the AI produces, you're using deliverables you don't fully comprehend.
 
-Most professionals focus only on the first direction. They spend hours crafting instructions and system prompts. But the second direction—actually understanding what the AI created—gets neglected. The result is work products where the AI understands the reasoning better than the humans responsible for defending or maintaining them.
+Most professionals focus only on the first direction. They spend hours crafting instructions and system prompts. But the second direction,actually understanding what the AI created,gets neglected. The result is work products where the AI understands the reasoning better than the humans responsible for defending or maintaining them.
 
 ## What IS Tacit Knowledge?
 
-Tacit knowledge is what experienced professionals carry that never makes it into documentation. It's the unwritten rules—the stuff you'd tell a new colleague over coffee but would never think to write down.
+Tacit knowledge is what experienced professionals carry that never makes it into documentation. It's the unwritten rules,the stuff you'd tell a new colleague over coffee but would never think to write down.
 
 **Examples of tacit knowledge across domains:**
 
@@ -156,11 +156,11 @@ Tacit knowledge is what experienced professionals carry that never makes it into
 - Formal decision records
 - Onboarding materials and handbooks
 
-The distinction matters because AI systems can read documentation. What they can't read is the knowledge that never got documented—the context that makes documentation make sense.
+The distinction matters because AI systems can read documentation. What they can't read is the knowledge that never got documented,the context that makes documentation make sense.
 
-**A Legal Example:** Your instructions say "Use standard indemnification language." That's explicit knowledge. But the tacit knowledge is: "We use standard language except for this client, who had a $2M claim two years ago, so we always add carve-outs for gross negligence—but only on service agreements, not licensing deals." Without that context, AI might use standard language where it shouldn't.
+**A Legal Example:** Your instructions say "Use standard indemnification language." That's explicit knowledge. But the tacit knowledge is: "We use standard language except for this client, who had a $2M claim two years ago, so we always add carve-outs for gross negligence,but only on service agreements, not licensing deals." Without that context, AI might use standard language where it shouldn't.
 
-**A Marketing Example:** Your brand guide says "Use conversational tone." That's explicit knowledge. But the tacit knowledge is: "Conversational means different things for different audiences—our B2B clients want professional-conversational, while the consumer brand can be casual. And the CEO hates exclamation points." Without that context, AI might produce copy that's technically on-brand but wrong for the audience.
+**A Marketing Example:** Your brand guide says "Use conversational tone." That's explicit knowledge. But the tacit knowledge is: "Conversational means different things for different audiences,our B2B clients want professional-conversational, while the consumer brand can be casual. And the CEO hates exclamation points." Without that context, AI might produce copy that's technically on-brand but wrong for the audience.
 
 **A Software Example:** Your CLAUDE.md says "Use async/await for database calls." That's explicit knowledge. But the tacit knowledge is: "We switched to async because of connection pool issues during traffic spikes, but only on the product catalog service. The user service still uses sync calls because it's read-heavy and the added complexity wasn't worth it." Without that context, AI might refactor code that's actually fine.
 
@@ -338,7 +338,7 @@ _For AI:_
 
 ---
 
-The AI versions across all domains share common characteristics: they're explicit about constraints, include the "why" behind decisions, and call out what NOT to do. They're not trying to be comprehensive—they're trying to transfer the tacit knowledge that shapes decisions.
+The AI versions across all domains share common characteristics: they're explicit about constraints, include the "why" behind decisions, and call out what NOT to do. They're not trying to be comprehensive,they're trying to transfer the tacit knowledge that shapes decisions.
 
 ### Strategy 2: Encoded Preferences (Examples Over Rules)
 
@@ -530,7 +530,7 @@ Not all knowledge should persist. The key question: **Should this affect future 
 
 Global memory shapes how AI works on your projects generally. Session memory shapes what it's working on right now.
 
-The danger of over-globalizing: if you persist too much, your memories become noisy. "We're reviewing the Johnson contract" isn't a preference—it's current context that will be irrelevant tomorrow.
+The danger of over-globalizing: if you persist too much, your memories become noisy. "We're reviewing the Johnson contract" isn't a preference,it's current context that will be irrelevant tomorrow.
 
 The danger of under-globalizing: if you don't persist enough, you re-explain the same preferences every session. "I already told you this client prefers bullet points" shouldn't happen.
 
@@ -538,7 +538,7 @@ The danger of under-globalizing: if you don't persist enough, you re-explain the
 
 The second direction of the Two-Way Problem: how do you extract understanding from what the AI generates?
 
-This direction gets less attention, but it's equally important. When AI produces a complex deliverable—a contract, a campaign strategy, a research analysis, or code—you need to understand it well enough to defend it, modify it, and explain it to others.
+This direction gets less attention, but it's equally important. When AI produces a complex deliverable,a contract, a campaign strategy, a research analysis, or code,you need to understand it well enough to defend it, modify it, and explain it to others.
 
 ### Strategy 1: Require Explanations
 
@@ -658,7 +658,7 @@ _Marketing:_
 - Likely objections and responses
 ```
 
-This structure forces AI to articulate the knowledge that would otherwise stay implicit. You're not just getting a deliverable—you're getting a knowledge transfer document.
+This structure forces AI to articulate the knowledge that would otherwise stay implicit. You're not just getting a deliverable,you're getting a knowledge transfer document.
 
 ### Strategy 3: Progressive Review
 
@@ -719,7 +719,7 @@ Let me explain it back to you, and correct me if I'm wrong:
 Did I get that right? What did I miss or misunderstand?
 ```
 
-This reveals gaps in your understanding. If you can't explain it, you don't understand it. And if you don't understand it, you shouldn't use it—whether it's a contract clause you'll need to defend, a campaign strategy you'll need to present, or code you'll need to maintain.
+This reveals gaps in your understanding. If you can't explain it, you don't understand it. And if you don't understand it, you shouldn't use it,whether it's a contract clause you'll need to defend, a campaign strategy you'll need to present, or code you'll need to maintain.
 
 ## Lab: Tacit Knowledge Extraction
 
@@ -749,7 +749,7 @@ This lab works for any professional domain. Select the context closest to your w
 
 **Step 1: Record the Explanation (10 minutes)**
 
-Imagine a competent new colleague is joining tomorrow. They can read documents and understand standard procedures—but they don't know the history, the relationships, or the unwritten rules.
+Imagine a competent new colleague is joining tomorrow. They can read documents and understand standard procedures,but they don't know the history, the relationships, or the unwritten rules.
 
 Record yourself explaining your project/client/engagement to them.
 
@@ -865,7 +865,7 @@ Does the AI behave as an informed colleague would?
 
 ## The Connection to Context Engineering
 
-This lesson addresses the human side of context engineering. Previous lessons taught you about attention budgets, position sensitivity, and signal-to-noise ratios. This lesson teaches you about the content itself—what knowledge to put in context and how to get knowledge back out.
+This lesson addresses the human side of context engineering. Previous lessons taught you about attention budgets, position sensitivity, and signal-to-noise ratios. This lesson teaches you about the content itself,what knowledge to put in context and how to get knowledge back out.
 
 **Without tacit knowledge transfer, your Digital FTE is a generic chatbot. With it, your Digital FTE becomes a domain expert worth paying for.**
 
@@ -880,7 +880,7 @@ The Two-Way Problem sits at the center of effective AI collaboration:
 | **L5: Tacit Knowledge** | **What context to encode**     | **How to identify and transfer tacit knowledge**  |
 | L6: Lifecycle           | When to refresh context        | When tacit knowledge becomes stale                |
 
-Without tacit knowledge, your context is shallow—technically correct but missing the wisdom that makes work effective. Without strategies for extraction, you're using deliverables you don't fully understand.
+Without tacit knowledge, your context is shallow,technically correct but missing the wisdom that makes work effective. Without strategies for extraction, you're using deliverables you don't fully understand.
 
 ## Try With AI
 
@@ -947,7 +947,7 @@ After classifying, explain the general principle: How do you decide what's
 global vs session-scoped?
 ```
 
-**What you're learning:** The skill of memory scoping. Not all knowledge should persist—over-globalizing creates noise; under-globalizing causes repetition. This prompt helps you develop intuition for the distinction and apply it to real knowledge items.
+**What you're learning:** The skill of memory scoping. Not all knowledge should persist,over-globalizing creates noise; under-globalizing causes repetition. This prompt helps you develop intuition for the distinction and apply it to real knowledge items.
 
 
 ## Flashcards Study Aid

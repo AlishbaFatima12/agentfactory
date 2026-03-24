@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: "Mid-Stream Memory: Injecting Context at Execution Time"
-description: "How to prevent workflow drift by injecting relevant memories at the right moment—ensuring AI has the context it needs for what it's doing NOW, not what you started doing"
+description: "How to prevent workflow drift by injecting relevant memories at the right moment,ensuring AI has the context it needs for what it's doing NOW, not what you started doing"
 keywords:
   [
     "memory injection",
@@ -69,22 +69,22 @@ teaching_guide:
   session_group: 3
   session_title: "Long-Horizon Work and Memory Systems"
   key_points:
-    - "Workflow drift is the core problem — memories injected at turn 1 become irrelevant by turn 20 because the AI's intent evolves during multi-step reasoning"
+    - "Workflow drift is the core problem: memories injected at turn 1 become irrelevant by turn 20 because the AI's intent evolves during multi-step reasoning"
     - "Two injection timing strategies serve different purposes: UserPromptSubmit for session-wide baseline context, PreToolUse for execution-time relevance that adapts as work evolves"
-    - "The AI's thinking blocks are the ideal query for semantic memory retrieval — they contain current intent, not the original prompt"
-    - "A focused memory corpus of 10-20 high-value memories outperforms a large collection of noise — specificity beats comprehensiveness"
+    - "The AI's thinking blocks are the ideal query for semantic memory retrieval: they contain current intent, not the original prompt"
+    - "A focused memory corpus of 10-20 high-value memories outperforms a large collection of noise: specificity beats comprehensiveness"
   misconceptions:
-    - "Students think injecting more context at the start solves the relevance problem — it actually makes it worse by consuming attention budget with information that becomes irrelevant"
-    - "Students confuse memory injection with CLAUDE.md — CLAUDE.md is static context loaded at session start, memory injection is dynamic context loaded at the moment of relevance"
-    - "Students want to build complex vector database systems before understanding the concept — the 25-line Python script demonstrates the pattern; complexity can come later"
+    - "Students think injecting more context at the start solves the relevance problem: it actually makes it worse by consuming attention budget with information that becomes irrelevant"
+    - "Students confuse memory injection with CLAUDE.md: CLAUDE.md is static context loaded at session start, memory injection is dynamic context loaded at the moment of relevance"
+    - "Students want to build complex vector database systems before understanding the concept: the 25-line Python script demonstrates the pattern; complexity can come later"
   discussion_prompts:
-    - "Think of your last complex AI workflow — at what point did the AI start ignoring your initial instructions? That is likely where workflow drift took over."
+    - "Think of your last complex AI workflow: at what point did the AI start ignoring your initial instructions? That is likely where workflow drift took over."
     - "What domain knowledge would be most valuable if it appeared exactly when you needed it, rather than being present the entire session?"
   teaching_tips:
-    - "The employee analogy (9am briefing vs just-in-time colleague) is the strongest opening — it makes workflow drift intuitive before the technical explanation"
-    - "Walk through the legal or marketing multi-turn example step by step — have students identify at each turn what memories would be most relevant vs what was originally injected"
-    - "The memory corpus design exercise is where learning solidifies — have students write 3 memories from their own domain using the Summary/Context/Pattern/When to Apply structure"
-    - "For the optional technical track, the 25-line Python hook is intentionally simple — resist the urge to add complexity until students see the basic pattern working"
+    - "The employee analogy (9am briefing vs just-in-time colleague) is the strongest opening: it makes workflow drift intuitive before the technical explanation"
+    - "Walk through the legal or marketing multi-turn example step by step: have students identify at each turn what memories would be most relevant vs what was originally injected"
+    - "The memory corpus design exercise is where learning solidifies: have students write 3 memories from their own domain using the Summary/Context/Pattern/When to Apply structure"
+    - "For the optional technical track, the 25-line Python hook is intentionally simple: resist the urge to add complexity until students see the basic pattern working"
   assessment_quick_check:
     - "Explain workflow drift in one sentence using an example from your domain"
     - "When would you use UserPromptSubmit vs PreToolUse injection timing, and why?"
@@ -95,7 +95,7 @@ teaching_guide:
 
 Imagine an employee who gets reminded of relevant company policies exactly when making decisions, not just at the start of the day.
 
-At 9am, you brief them: "Here are our quality standards, client preferences, and the project scope." Perfect. By 3pm, they're making a critical decision—but the morning briefing has faded. They remember the general direction but not the specific constraint that matters right now.
+At 9am, you brief them: "Here are our quality standards, client preferences, and the project scope." Perfect. By 3pm, they're making a critical decision,but the morning briefing has faded. They remember the general direction but not the specific constraint that matters right now.
 
 Now imagine a different employee. Every time they're about to make a decision, a helpful colleague appears: "Hey, remember the Johnson incident? Here's what you need to know for this exact situation." That's memory injection.
 
@@ -146,7 +146,7 @@ Claude Code's hook system offers two points where you can inject context:
 
 **UserPromptSubmit** happens once per user message. It's synchronous with your input. The memories it injects reflect what you asked for at that moment.
 
-**PreToolUse** happens potentially many times per user message. Each time the AI is about to use a tool—reading a document, searching files, editing content—this hook fires. That means you get multiple opportunities to inject relevant context throughout the workflow.
+**PreToolUse** happens potentially many times per user message. Each time the AI is about to use a tool,reading a document, searching files, editing content,this hook fires. That means you get multiple opportunities to inject relevant context throughout the workflow.
 
 The key insight: The AI's thinking evolves during the reasoning process. By turn 20, the AI's thinking block contains intent and reasoning about what it's about to do next. That thinking is the perfect query for semantic memory.
 
@@ -200,7 +200,7 @@ Embedding that thinking finds:
 - ROI calculation standards your company uses
 - Past campaign performance benchmarks
 
-Again—exactly what turn 20 needs, not what turn 1 needed.
+Again,exactly what turn 20 needs, not what turn 1 needed.
 
 ## Why Thinking Blocks Matter
 
@@ -417,7 +417,7 @@ This exercise makes workflow drift concrete and visible.
 
 **Step 1: Brainstorm High-Value Memories**
 
-Based on your workflow analysis, list 15-20 memories that would have helped at different points. Don't worry about format yet—just capture the knowledge.
+Based on your workflow analysis, list 15-20 memories that would have helped at different points. Don't worry about format yet,just capture the knowledge.
 
 **Step 2: Categorize by Relevance Pattern**
 
@@ -466,7 +466,7 @@ Pick your highest-value situationally relevant memories and structure them:
 
 ### Part 3: Simple Hook Implementation (Optional, 20 min)
 
-For those comfortable with Python, here's a minimal memory injection hook. No vector databases or embeddings—just read a markdown file and inject it.
+For those comfortable with Python, here's a minimal memory injection hook. No vector databases or embeddings,just read a markdown file and inject it.
 
 #### Step 1: Create Your Memory File
 
@@ -585,7 +585,7 @@ The simple version works. Start there. Add complexity only when you need it.
 
 **Problem: Memories too generic**
 
-Solution: Make memories specific. Instead of "communicate clearly with clients," write "Acme Corp's GC requires dollar ranges in risk summaries—never use vague terms like 'significant exposure.'"
+Solution: Make memories specific. Instead of "communicate clearly with clients," write "Acme Corp's GC requires dollar ranges in risk summaries,never use vague terms like 'significant exposure.'"
 
 **Problem: Too much context injected**
 
