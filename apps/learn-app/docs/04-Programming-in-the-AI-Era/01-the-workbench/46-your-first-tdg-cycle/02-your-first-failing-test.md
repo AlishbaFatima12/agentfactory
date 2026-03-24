@@ -75,9 +75,9 @@ James opens his editor. He knows what TDG looks like from Lesson 1 -- he read th
 
 Emma glances at his screen. "What are you writing?"
 
-"The function. celsius_to_fahrenheit. I know the formula -- multiply by nine-fifths, add thirty-two."
+James does not look up. "The function. celsius_to_fahrenheit. I know the formula -- multiply by nine-fifths, add thirty-two."
 
-"So you are skipping the specification."
+Emma raises an eyebrow. "So you are skipping the specification."
 
 "Why would I specify something I already know? That is like writing a purchase order for a pen that is already on my desk." He keeps typing.
 
@@ -89,15 +89,15 @@ James writes the body, saves the file, and runs pyright. Zero errors. He grins. 
 
 James pauses. "Because I know the formula."
 
-"You know *a* formula. Is it `celsius * 9 / 5 + 32` or `celsius * 9/5 + 32` or `(celsius * 9) / 5 + 32`? They look the same. Are they?"
+Emma pulls up three versions on her screen. "You know *a* formula. Is it `celsius * 9 / 5 + 32` or `celsius * 9/5 + 32` or `(celsius * 9) / 5 + 32`? They look the same. Are they?"
 
 James stares at the three versions. Operator precedence. He is not actually sure they all produce the same result. "Okay, let me think... actually, I think they do in Python because multiplication and division have the same precedence and go left to right. But I am not a hundred percent sure."
 
-"And that is why you write the tests first. The tests do not care about your confidence. They check the number."
+Emma sits back. "And that is why you write the tests first. The tests do not care about your confidence. They check the number."
 
 James deletes the function body. Types the three dots. Opens the test file. "Stub and tests. Then I let the tests prove it."
 
-"Now you are writing the specification, not the implementation."
+Emma nods. "Now you are writing the specification, not the implementation."
 
 ---
 
@@ -285,63 +285,7 @@ Two tools, two different jobs. Pyright checks the *shape* (types are consistent)
 
 ## What You Just Wrote
 
-Count the lines you wrote:
-
-```python
-# smartnotes/temperature.py (1 line)
-def celsius_to_fahrenheit(celsius: float) -> float: ...
-
-# tests/test_temperature.py (5 lines)
-from smartnotes.temperature import celsius_to_fahrenheit
-
-def test_freezing_point():
-    assert celsius_to_fahrenheit(0.0) == 32.0
-
-def test_boiling_point():
-    assert celsius_to_fahrenheit(100.0) == 212.0
-```
-
 Six lines total. One stub. Two tests. One import. That is your specification. In Lesson 3, you will prompt Claude Code to fill in the `...` with a real implementation, run the tests again, and see GREEN.
-
----
-
-## Exercises
-
-### Exercise 1: Predict the pyright result
-
-What happens if you change the stub to use `pass` instead of `...`?
-
-```python
-def celsius_to_fahrenheit(celsius: float) -> float:
-    pass
-```
-
-Predict: will `uv run pyright` still report 0 errors? Why or why not?
-
-<details>
-<summary>Check your prediction</summary>
-
-Pyright reports an error. With `pass`, pyright treats this as a real function body that returns `None`. But the annotation says `-> float`. `None` is not a `float`, so pyright flags a type error: "Function with declared return type 'float' must return a value on all code paths." The `...` avoids this because pyright treats it as a stub, not a real body.
-
-</details>
-
-### Exercise 2: A third test case
-
-There is a temperature where Celsius and Fahrenheit are the same number: **-40**. Write a third test:
-
-```python
-def test_crossover_point():
-    assert celsius_to_fahrenheit(-40.0) == -40.0
-```
-
-Add it to your test file. Predict: will this test also fail (RED) when you run pytest? Why?
-
-<details>
-<summary>Check your prediction</summary>
-
-Yes, it fails -- for the same reason the other two fail. The function body is still `...`, so it returns `None`. The assert checks `None == -40.0`, which is `False`. All three tests are RED. The implementation does not exist yet.
-
-</details>
 
 ---
 
@@ -427,13 +371,13 @@ Create the stub and tests in your SmartNotes project. Run `uv run pyright` and `
 
 ### Investigate
 
-Look at the pytest output. The error says `assert None == 2.54`. Explain in one sentence *why* the function returns `None`. Use the Error Taxonomy from Chapter 43: is this a type error, a logic error, or a specification error?
+The error says `assert None == 2.54`. Explain in one sentence *why* the function returns `None`.
 
-**Answer:** It is none of the three -- it is an *incomplete implementation*. The function has no body, so Python returns `None` by default. The specification (tests) is correct. The implementation simply does not exist yet. This is the expected state at Step 2 of the TDG loop.
+**Error Taxonomy:** This is not a type, logic, or specification error -- it is an *incomplete implementation*. The `...` body means Python returns `None` by default. This is the expected state at Step 2 of TDG.
 
 ### Modify
 
-Change `test_one_foot` to check a different value -- say, 6 inches. The formula is: centimeters = inches × 2.54. Calculate `6.0 × 2.54` by hand. Write the expected value. Update the assertion. Predict: will pyright still pass? Will pytest still fail?
+Change `test_one_foot` to check 6 inches instead. Calculate `6.0 × 2.54` by hand, update the assertion. Predict: will pyright still pass? Will pytest still fail?
 
 ### Make [Mastery Gate]
 

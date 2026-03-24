@@ -58,23 +58,35 @@ differentiation:
 
 # From Reading to Specifying -- What Is TDG?
 
-James stares at the five lines of Python on Emma's screen. A function name. A type annotation. Three dots where the body should be. Two assertions underneath.
+Emma turns her laptop toward James. On the screen:
 
-"Wait, that is the whole specification?" he says. "At my old job, our project specs were thirty-page documents that nobody read."
+```python
+def celsius_to_fahrenheit(celsius: float) -> float: ...
+
+def test_freezing():
+    assert celsius_to_fahrenheit(0.0) == 32.0
+
+def test_boiling():
+    assert celsius_to_fahrenheit(100.0) == 212.0
+```
+
+"That is the whole specification," she says.
+
+James counts the lines. "Five lines? At my old job, our project specs were thirty-page documents that nobody read."
 
 Emma almost smiles. "How many of those specs got implemented exactly as written?"
 
-"...Maybe none."
+James shrugs. "...Maybe none."
 
-"Five lines. What do you think each one does?"
+Emma taps the screen. "What do you think each line does?"
 
-James leans forward. "Okay, let me work through this. The function name says what it does. The types say what goes in and comes out. The three dots mean the body is empty. And the two assertions say what the answers should be."
+James leans forward. "Okay, let me work through this. The first line names the function and says it takes a float and returns a float. The three dots mean the body is empty -- no implementation yet. And the two test functions say what the correct answers must be: zero Celsius is thirty-two Fahrenheit, a hundred Celsius is two-twelve."
 
-"And then?"
+Emma waits. "And then?"
 
-"Hang on. If the body is empty, you tell Claude Code to fill it in. It reads the types and the tests and writes the implementation." He pauses. "That is SDD. But the specification is Python instead of English."
+"If the body is empty, you tell Claude Code to fill it in. It reads the types and the tests and writes the formula." He pauses. "That is SDD. But the specification is Python instead of English."
 
-"You already knew that. You just needed to see it."
+Emma nods. "You already knew that. You just needed to see it."
 
 ---
 

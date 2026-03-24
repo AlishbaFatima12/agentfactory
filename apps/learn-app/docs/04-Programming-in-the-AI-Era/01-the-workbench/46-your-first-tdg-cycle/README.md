@@ -93,3 +93,7 @@ Five words total across two chapters. That is enough to specify, generate, and v
 - **Chapter 45: Reading Python** -- You must be able to read type-annotated Python, predict output, and build trace tables. Every lesson in this chapter requires those skills.
 - **Chapter 44: The Development Environment** -- You must have uv, pyright, ruff, pytest, and Git installed in your SmartNotes project.
 - **[Chapter 16: Spec-Driven Development with Claude Code](/docs/General-Agents-Foundations/spec-driven-development)** -- You must understand the SDD workflow: specification before implementation, verification after generation. TDG is SDD expressed in Python instead of English.
+
+:::note Works with any AI coding assistant
+Examples in this chapter use Claude Code, but the TDG loop works with any AI coding assistant that can read your files and generate code -- GitHub Copilot, Cursor, Windsurf, or others. The loop is tool-agnostic: you write the specification, any AI generates, your tests verify.
+:::

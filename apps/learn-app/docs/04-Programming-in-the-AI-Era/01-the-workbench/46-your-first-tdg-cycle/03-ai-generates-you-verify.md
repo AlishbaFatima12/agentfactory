@@ -72,15 +72,15 @@ Green. Both tests pass. James sits back. Five lines of specification. One line o
 
 When Emma comes back, James shows her the terminal. "Green," he says. "Both tests pass. We are done, right?"
 
-"What does the generated code do?"
+Emma sets down her coffee. "What does the generated code do?"
 
 "It converts Celsius to Fahrenheit. The tests prove it."
 
-"The tests prove it returns the right number for zero and a hundred. What about every other number?"
+Emma crosses her arms. "The tests prove it returns the right number for zero and a hundred. What about every other number?"
 
 James hesitates. "Okay, let me look at the actual line." He reads it again. "It multiplies celsius by 9, divides by 5, adds 32. That is the formula."
 
-"And if I give it minus forty?"
+Emma leans against the desk. "And if I give it minus forty?"
 
 James does the math in his head. Minus forty times nine is minus three sixty. Divided by five is minus seventy-two. Plus thirty-two is... minus forty. "Minus forty. The same number. That is weird."
 

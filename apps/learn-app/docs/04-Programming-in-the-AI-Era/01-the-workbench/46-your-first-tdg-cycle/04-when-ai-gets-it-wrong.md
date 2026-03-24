@@ -73,17 +73,17 @@ He walks over to Emma's desk. "It failed. I think the loop is broken."
 
 Emma does not look up from her screen. "Good."
 
-"Good? One of my tests is red."
+James frowns. "Good? One of my tests is red."
 
 "I shipped a bug like this once," she says, turning to face him. "A billing function. Integer division instead of float division. Rounded every invoice down."
 
-"How long before someone noticed?"
+James raises an eyebrow. "How long before someone noticed?"
 
 "Three weeks. Four hundred incorrect invoices." She pauses. "Your tests found it in three seconds."
 
 James looks back at his terminal. "Okay, but I do not even know what went wrong yet. I just see the red."
 
-"What do the two lines after the `>` say?"
+Emma turns her screen toward him. "What do the two lines after the `>` say?"
 
 He reads them. "It says the function returned 1 instead of 1.666... Oh. It dropped the decimal part. That is floor division -- I remember that from Chapter 45."
 
@@ -237,18 +237,16 @@ Does the logic make sense? Division is the right operation: total words divided 
 
 ## Iteration Is Normal
 
-AI does not always get it right on the first attempt. This is not a flaw in TDG -- it is a feature. The tests catch the mistake immediately. You read the failure. You re-prompt with specific information. AI fixes it.
-
-Martin Fowler, author of *Refactoring*, observed that AI coding assistants "rarely provide the exact functionality we need after a single prompt." The iteration loop is built into the method:
+AI does not always get it right on the first attempt. This is not a flaw in TDG -- it is a feature. The iteration loop is built into the method:
 
 ```
 Specify → Generate → Verify → [if FAIL] → Read failure → Re-prompt → Verify
 ```
 
-The key insight: **your tests are the safety net.** Without them, the floor division bug would have silently rounded every reading time down. With them, it was caught in three seconds and fixed in one re-prompt.
+**Your tests are the safety net.** Without them, the floor division bug would have silently rounded every reading time down. With them, it was caught in three seconds and fixed in one re-prompt.
 
 :::note Keep it simple for now
-This lesson covers one re-prompt for one clear error. Real-world debugging -- where the failure is ambiguous, the error involves multiple functions, or the fix introduces new bugs -- comes in Phase 4. For now, the pattern is: read the failure, name the problem, re-prompt with specifics.
+This lesson covers one re-prompt for one clear error. Real-world debugging -- where the failure is ambiguous or the fix introduces new bugs -- comes in Phase 4.
 :::
 
 ---
@@ -272,15 +270,7 @@ Pick one function from this menu and complete a full TDG cycle:
 - Returns the time in minutes as a `float`
 - Test cases: `seconds_to_minutes(120) == 2.0`, `seconds_to_minutes(90) == 1.5`
 
-For whichever function you choose:
-
-1. Write the stub with `...`
-2. Write two tests
-3. Run pyright (should pass) and pytest (should fail -- RED)
-4. Prompt Claude Code
-5. Run pytest (should pass -- GREEN)
-6. **Read** the generated code with PRIMM: predict the result for a third input, verify
-7. If the first attempt fails, **read the failure and re-prompt** -- that is the iteration loop in action
+Follow the same TDG steps from Lesson 3: stub, tests, pyright, pytest (RED), prompt, pytest (GREEN), read with PRIMM. If the first attempt fails, read the failure and re-prompt -- that is the iteration loop in action.
 
 ---
 
@@ -432,11 +422,18 @@ Can you re-prompt Claude Code after a failure with specific information about wh
 
 ---
 
-If you scored **Developing** on any dimension, go back to that lesson's exercises and repeat the cycle. For specification quality, write three more stubs with tests. For failure diagnosis, ask Claude Code to generate code with deliberate bugs and practice reading the failures.
+**Developing** on any dimension? Repeat that lesson's exercises. **Competent** across all five? You are ready for the next chapter. **Fluent**? You are doing what professional developers do with AI coding tools.
 
-If you scored **Competent** across all five, you have the foundation. The TDG loop works. The tools work. Your reading skills work. You are ready for the next chapter.
+---
 
-If you scored **Fluent**, you are doing what professional developers do with AI coding tools: specifying intent precisely, verifying output critically, and iterating efficiently when AI gets it wrong. That is exactly the skill this chapter was designed to build.
+## Common Mistakes
+
+| Mistake | What Goes Wrong | How to Avoid It |
+|---------|----------------|-----------------|
+| Using `print()` instead of `return` | Tests cannot check printed output -- `assert` needs a return value | "Print is for people. Return is for reuse." Every TDG function uses `return` |
+| Using `pass` instead of `...` in stubs | Pyright treats `pass` as real code and flags a type error for non-None return types | Use `...` (ellipsis) for stubs -- pyright trusts the annotations |
+| Using `//` instead of `/` | Floor division drops decimals: `500 // 300` gives `1`, not `1.666...` | Use `/` for true division when the return type is `float` |
+| Trusting GREEN without reading the code | Tests only check the cases you wrote -- the function could be wrong for other inputs | Always apply PRIMM after GREEN: predict output for a new input, then verify |
 
 ---
 
