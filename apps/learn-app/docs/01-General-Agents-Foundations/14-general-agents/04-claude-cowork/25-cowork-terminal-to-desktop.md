@@ -99,11 +99,11 @@ Claude Code changed how developers work with AI. But developers aren't the only 
 
 ## What Claude Cowork Actually Is
 
-Claude Cowork is an **autonomous background agent** in the Claude Desktop app (available on macOS with Apple Silicon M1+ and Windows). The official description captures the shift: "An autonomous background agent that works on tasks in a cloud VM with its own environment. It can run independently while you do other work."
+Claude Cowork is an **autonomous agent** in the Claude Desktop app (available on macOS with Apple Silicon M1+ and Windows). It runs locally on your machine, accesses your files directly, and works independently in the background while you do other things.
 
 Unlike the web interface where Claude can only see what you paste, Cowork can:
 
-- **Run tasks autonomously** in a cloud VM, even while you do other work
+- **Run tasks autonomously** in the background, even while you do other work
 - **Read files directly** from folders you approve
 - **Navigate your filesystem** to find related documents
 - **Execute actions** like creating, modifying, and organizing files
@@ -151,7 +151,7 @@ Both products are built on the **Claude Agent SDK**, the same underlying technol
 | **Interface**       | Terminal/CLI and Desktop Code tab         | Desktop Cowork tab                             |
 | **Primary Users**   | Developers                                | Knowledge workers                              |
 | **Best For**        | Writing code, running tests, debugging    | Documents, reports, analysis, autonomous tasks |
-| **File Access**     | Direct filesystem via terminal or Desktop | Direct filesystem via Desktop + cloud VM       |
+| **File Access**     | Direct filesystem via terminal or Desktop | Direct filesystem via Desktop app              |
 | **Built-in Skills** | Code-specific (git, npm, testing)         | Document-specific (docx, xlsx, pptx)           |
 | **Subscription**    | Pro, Max, Teams, or Enterprise            | Pro, Max, Teams, or Enterprise                 |
 | **Execution**       | Interactive (you review each change)      | Autonomous background or interactive           |

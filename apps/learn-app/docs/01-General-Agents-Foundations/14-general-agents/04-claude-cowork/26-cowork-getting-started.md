@@ -131,7 +131,7 @@ The Desktop app is your gateway to Cowork. Unlike the web interface, it has dire
 Claude Desktop has three tabs across the top of the window:
 
 - **Chat**: General conversation with no file access, similar to claude.ai
-- **Cowork**: An autonomous background agent that works on tasks in a cloud VM with its own environment; it can run independently while you do other work
+- **Cowork**: An autonomous agent that works on tasks locally through the Desktop app; it runs in the background while you do other work
 - **Code**: An interactive coding assistant with direct access to your local files, where you review and approve each change in real time
 
 Select the **Cowork** tab when you want Claude to work with files on your computer. You'll know you're in Cowork mode when you see the folder access panel.

@@ -9,7 +9,7 @@ cards:
   - id: "ch14-cowork-terminal-to-desktop-001"
     type: recall
     front: "What is Claude Cowork?"
-    back: "An autonomous background agent in the Claude Desktop app that works on tasks in a cloud VM with its own environment, available on macOS (Apple Silicon M1+) and Windows."
+    back: "An autonomous agent in the Claude Desktop app that works on tasks locally on your machine, running independently in the background. Available on macOS (Apple Silicon M1+) and Windows."
     tags: [claude-cowork, definition]
     difficulty: "basic"
 

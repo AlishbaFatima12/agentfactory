@@ -1,6 +1,6 @@
 ### Core Concept
 
-Claude Cowork is an autonomous background agent in the Claude Desktop app. It runs tasks independently in a cloud VM, works while you do other things, and notifies you when it finishes or needs input. This is a fundamental shift from interactive file manipulation to autonomous task execution.
+Claude Cowork is an autonomous agent in the Claude Desktop app. It runs tasks locally on your machine, works independently in the background while you do other things, and notifies you when it finishes or needs input. This is a fundamental shift from interactive file manipulation to autonomous task execution.
 
 ### Key Mental Models
 
