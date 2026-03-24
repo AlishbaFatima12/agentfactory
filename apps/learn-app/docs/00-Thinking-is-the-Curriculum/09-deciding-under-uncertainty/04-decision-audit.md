@@ -31,13 +31,13 @@ skills:
     category: "Conceptual"
     bloom_level: "Evaluate"
     digcomp_area: "Critical Thinking"
-    measurable_at_this_level: "Student can assess their own thinking patterns with accuracy — neither too harsh nor too generous — and generate specific, actionable improvement recommendations"
+    measurable_at_this_level: "Student can assess their own thinking patterns with accuracy: neither too harsh nor too generous: and generate specific, actionable improvement recommendations"
 
 learning_objectives:
   - objective: "Audit your own decision process across multiple stages, identifying where calibration was accurate and where it was off"
     proficiency_level: "A1"
     bloom_level: "Evaluate"
-    assessment_method: "AI Check evaluates whether the student's self-assessment is accurate — not too hard, not too easy on themselves"
+    assessment_method: "AI Check evaluates whether the student's self-assessment is accurate: not too hard, not too easy on themselves"
 
   - objective: "Identify the specific heuristics you relied on and evaluate whether they helped or hurt your decision quality"
     proficiency_level: "A1"
@@ -47,11 +47,11 @@ learning_objectives:
   - objective: "Generate specific, actionable improvement recommendations for future decision-making under uncertainty"
     proficiency_level: "A1"
     bloom_level: "Create"
-    assessment_method: "AI Check rates recommendations for specificity and actionability — vague recommendations score low"
+    assessment_method: "AI Check rates recommendations for specificity and actionability: vague recommendations score low"
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (decision auditing as meta-cognitive skill, heuristic identification, calibration accuracy assessment) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (decision auditing as meta-cognitive skill, heuristic identification, calibration accuracy assessment) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "Compare your decision audit with a classmate's. Where do your heuristic patterns differ? Can you identify each other's blind spots better than you can identify your own?"
@@ -62,20 +62,20 @@ teaching_guide:
   session_group: 9
   session_title: "The Decision Audit"
   key_points:
-    - "The Decision Audit is a meta-cognitive skill that can be applied to any decision process — students should treat it as a reusable tool"
-    - "Writing the audit WITHOUT AI first is critical — it forces genuine self-reflection before getting external assessment"
-    - "The AI check on the self-audit reveals meta-cognitive blind spots — places where students think they are strong but are actually weak"
-    - "Improvement recommendations must be specific enough to act on — 'be more careful' is not actionable"
+    - "The Decision Audit is a meta-cognitive skill that can be applied to any decision process: students should treat it as a reusable tool"
+    - "Writing the audit WITHOUT AI first is critical: it forces genuine self-reflection before getting external assessment"
+    - "The AI check on the self-audit reveals meta-cognitive blind spots: places where students think they are strong but are actually weak"
+    - "Improvement recommendations must be specific enough to act on : 'be more careful' is not actionable"
   misconceptions:
     - "Students write the audit as a narrative of what happened rather than an analysis of their decision process"
-    - "Students are either too harsh (everything was wrong) or too generous (everything was fine) in self-assessment — calibrated self-assessment is the skill"
-    - "Students confuse 'the decision turned out wrong' with 'the decision process was bad' — good process can produce bad outcomes and vice versa"
+    - "Students are either too harsh (everything was wrong) or too generous (everything was fine) in self-assessment: calibrated self-assessment is the skill"
+    - "Students confuse 'the decision turned out wrong' with 'the decision process was bad' : good process can produce bad outcomes and vice versa"
   discussion_prompts:
     - "Is it possible to make a good decision that leads to a bad outcome? How would a decision audit distinguish between the two?"
     - "Why does the exercise require you to write the audit WITHOUT AI before getting AI feedback?"
   teaching_tips:
-    - "Frame the Decision Audit as the most transferable skill in this chapter — it applies to every project decision in Parts 2-10"
-    - "Point out that this is Exercise 4 reviewing Exercises 1-3 — the same retrospective pattern used in Chapter 2 and Chapter 8"
+    - "Frame the Decision Audit as the most transferable skill in this chapter: it applies to every project decision in Parts 2-10"
+    - "Point out that this is Exercise 4 reviewing Exercises 1-3: the same retrospective pattern used in Chapter 2 and Chapter 8"
     - "Emphasize that the Chapter Deliverable is the complete Decision-Making Portfolio, not just this exercise"
   assessment_quick_check:
     - "Ask students: Name one heuristic you relied on. Did it help or hurt? How do you know?"
@@ -92,7 +92,7 @@ The Decision Audit uses your **Confidence Calibration** skills from [Chapter 2, 
 
 ### What You Do
 
-After all information is revealed, conduct a full retrospective audit of your decision process. Where was your confidence calibrated correctly? Where was it miscalibrated? What heuristics served you well and which led you astray? Write this audit without AI — then use AI to check your self-assessment.
+After all information is revealed, conduct a full retrospective audit of your decision process. Where was your confidence calibrated correctly? Where was it miscalibrated? What heuristics served you well and which led you astray? Write this audit without AI; then use AI to check your self-assessment.
 
 ---
 
@@ -144,7 +144,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that the most valuable skill in decision-making is accurate self-assessment. You cannot improve a process you do not understand. The AI check on your self-audit reveals your meta-cognitive blind spots — places where you think you are strong but are actually weak, or vice versa. The **Decision Audit** is a reusable meta-cognitive tool you will apply to every major project decision in Parts 2-10.
+You learn that the most valuable skill in decision-making is accurate self-assessment. You cannot improve a process you do not understand. The AI check on your self-audit reveals your meta-cognitive blind spots; places where you think you are strong but are actually weak, or vice versa. The **Decision Audit** is a reusable meta-cognitive tool you will apply to every major project decision in Parts 2-10.
 
 :::info Chapter Deliverable
 A **Decision-Making Portfolio** containing: (1) the sealed initial Decision Document with confidence and reversal triggers, (2) the Consultation Log with updated decision, (3) the post-information-drop revision with Process Document, (4) the Decision Audit (self-assessment + AI assessment), and (5) all AI feedback.
@@ -158,7 +158,7 @@ A **Decision-Making Portfolio** containing: (1) the sealed initial Decision Docu
 | Initial decision quality (reasoning under uncertainty)        |  15%   | Is the recommendation reasonable given available information? Is the reasoning sound?                        |
 | Reversal trigger specificity                                  |  10%   | Is the trigger specific and testable, or vague?                                                              |
 | Consultation Log quality (evidence of critical AI evaluation) |  20%   | Did the student critically evaluate AI output, identifying fabrication and making justified trust decisions? |
-| Information drop response (proportional updating)             |  25%   | Did the student adapt proportionally — neither anchoring nor overreacting?                                   |
+| Information drop response (proportional updating)             |  25%   | Did the student adapt proportionally; neither anchoring nor overreacting?                                   |
 | Decision Audit depth and accuracy                             |  20%   | Is the self-assessment accurate? Are improvement recommendations specific and actionable?                    |
 | AI feedback integration                                       |  10%   | Did the student engage seriously with AI feedback across all exercises?                                      |
 

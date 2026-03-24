@@ -16,7 +16,7 @@ Teaching is the ultimate test of understanding. If you can explain something to 
 
 ### Common Mistakes
 
-- Preparing by memorizing facts instead of understanding connections — unexpected "why" questions expose this instantly
+- Preparing by memorizing facts instead of understanding connections; unexpected "why" questions expose this instantly
 - Treating unanswered questions as failures rather than diagnostic information about where learning was incomplete
 - Thinking the grade is about presentation skills rather than depth of understanding demonstrated
 

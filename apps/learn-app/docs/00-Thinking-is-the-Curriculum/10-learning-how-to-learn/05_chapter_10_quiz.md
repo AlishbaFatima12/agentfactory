@@ -30,7 +30,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "It is untestable and unrealistic for 72 hours"
       ],
       correctOption: 3,
-      explanation: "Complete understanding is neither testable nor achievable in 72 hours — a good definition specifies what you can demonstrably do, like 'analyze a drug interaction case.' Option A is about difficulty, not definition quality. Option C discourages ambition unnecessarily. Option B is wrong because AI can assess domain knowledge. A testable threshold calibrated to available time is the core skill.",
+      explanation: "Complete understanding is neither testable nor achievable in 72 hours; a good definition specifies what you can demonstrably do, like 'analyze a drug interaction case.' Option A is about difficulty, not definition quality. Option C discourages ambition unnecessarily. Option B is wrong because AI can assess domain knowledge. A testable threshold calibrated to available time is the core skill.",
       source: "Exercise 1: The Learning Plan"
     },
     {
@@ -42,7 +42,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "AI tools work better with focused topic queries"
       ],
       correctOption: 2,
-      explanation: "Time is finite and explicit skip decisions force prioritization — without them, students spread too thin and reach no real competence. Option A focuses on AI rather than learning strategy. Option B is about grading, not learning. Option D focuses on AI tool use. The skill is knowing what NOT to invest time in, which requires understanding your priorities.",
+      explanation: "Time is finite and explicit skip decisions force prioritization; without them, students spread too thin and reach no real competence. Option A focuses on AI rather than learning strategy. Option B is about grading, not learning. Option D focuses on AI tool use. The skill is knowing what NOT to invest time in, which requires understanding your priorities.",
       source: "Exercise 1: The Learning Plan"
     },
     {
@@ -54,11 +54,11 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "They underestimate the total time available"
       ],
       correctOption: 1,
-      explanation: "Equal allocation fails because foundations need front-loading — spending the same time on basics and advanced topics means insufficient grounding in either. Option A focuses on tools, not phases. Option C describes a different problem. Option D is about total time, not allocation. Efficient learning front-loads fundamentals so later phases build on solid ground.",
+      explanation: "Equal allocation fails because foundations need front-loading; spending the same time on basics and advanced topics means insufficient grounding in either. Option A focuses on tools, not phases. Option C describes a different problem. Option D is about total time, not allocation. Efficient learning front-loads fundamentals so later phases build on solid ground.",
       source: "Exercise 1: The Learning Plan"
     },
     {
-      question: "What is the primary assessment instrument in the 72-Hour Sprint — the domain analysis or the Learning Log?",
+      question: "What is the primary assessment instrument in the 72-Hour Sprint; the domain analysis or the Learning Log?",
       options: [
         "The Learning Log reveals the actual learning process",
         "The domain analysis shows final competence",
@@ -66,7 +66,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Neither, the AI feedback is most important"
       ],
       correctOption: 0,
-      explanation: "The Learning Log is the primary assessment instrument because it reveals how you learned — efficiency, waste, breakthroughs, and self-corrections — while the analysis only shows what you learned. Option B is about output, not process. Option C is wrong because the log is weighted more heavily. Option D is wrong because AI feedback supports rather than replaces assessment. Process evidence matters more than output quality.",
+      explanation: "The Learning Log is the primary assessment instrument because it reveals how you learned (efficiency, waste, breakthroughs, and self-corrections) while the analysis only shows what you learned. Option B is about output, not process. Option C is wrong because the log is weighted more heavily. Option D is wrong because AI feedback supports rather than replaces assessment. Process evidence matters more than output quality.",
       source: "Exercise 2: The 72-Hour Sprint"
     },
     {
@@ -78,7 +78,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "At hour 36 you can still change strategy; at hour 72 you cannot"
       ],
       correctOption: 3,
-      explanation: "The mid-point timing allows strategic adjustment while there is still time to implement changes — at the end, reflection is retrospective only. Option A focuses on memory, not strategy. Option C focuses on instructor needs, not learning design. Option B makes an unsupported claim about AI. Mid-course corrections require remaining time to have any impact on the learning outcome.",
+      explanation: "The mid-point timing allows strategic adjustment while there is still time to implement changes; at the end, reflection is retrospective only. Option A focuses on memory, not strategy. Option C focuses on instructor needs, not learning design. Option B makes an unsupported claim about AI. Mid-course corrections require remaining time to have any impact on the learning outcome.",
       source: "Exercise 2: The 72-Hour Sprint"
     },
     {
@@ -90,7 +90,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "The student has strong meta-learning skills already"
       ],
       correctOption: 2,
-      explanation: "Genuine learning in an unfamiliar domain should produce confusion and course corrections, not smooth sailing — 'everything is fine' suggests insufficient depth or honest reflection. Option A takes the claim at face value. Option B assumes early completion. Option D contradicts the evidence. Real learning in unknown territory always produces surprises.",
+      explanation: "Genuine learning in an unfamiliar domain should produce confusion and course corrections, not smooth sailing : 'everything is fine' suggests insufficient depth or honest reflection. Option A takes the claim at face value. Option B assumes early completion. Option D contradicts the evidence. Real learning in unknown territory always produces surprises.",
       source: "Exercise 2: The 72-Hour Sprint"
     },
     {
@@ -114,7 +114,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Frequent logging reveals learning patterns across the full sprint"
       ],
       correctOption: 3,
-      explanation: "Twenty entries spanning the full period reveal the actual learning trajectory — its efficiency, waste, breakthroughs, and pivots — which sparse logging would miss. Option A focuses on effort rather than insight. Option C is about statistics, not learning design. Option B is about grading mechanics. The log is evidence of learning process, not just completion.",
+      explanation: "Twenty entries spanning the full period reveal the actual learning trajectory (its efficiency, waste, breakthroughs, and pivots) which sparse logging would miss. Option A focuses on effort rather than insight. Option C is about statistics, not learning design. Option B is about grading mechanics. The log is evidence of learning process, not just completion.",
       source: "Exercise 2: The 72-Hour Sprint"
     },
     {
@@ -138,7 +138,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "The exercise tests presentation skills, not knowledge"
       ],
       correctOption: 2,
-      explanation: "Without AI, students must rely on what they actually internalized — looking things up would mask the gap between genuine understanding and surface memorization. Option A is about distraction, not assessment design. Option B makes an unfounded claim. Option D is wrong because the exercise tests understanding, not presentation. The constraint reveals whether learning occurred or was simulated.",
+      explanation: "Without AI, students must rely on what they actually internalized; looking things up would mask the gap between genuine understanding and surface memorization. Option A is about distraction, not assessment design. Option B makes an unfounded claim. Option D is wrong because the exercise tests understanding, not presentation. The constraint reveals whether learning occurred or was simulated.",
       source: "Exercise 3: Teach It Back"
     },
     {
@@ -162,7 +162,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Unexpected questions test broader domain coverage"
       ],
       correctOption: 0,
-      explanation: "Prepared content can be memorized without deep understanding, but unexpected questions force real-time reasoning that only works with genuine comprehension. Option B focuses on difficulty rather than revelation. Option C is extreme — some preparation helps. Option D is about breadth, not depth. The 5 minutes of Q&A often reveal more about understanding than the 10-minute prepared session.",
+      explanation: "Prepared content can be memorized without deep understanding, but unexpected questions force real-time reasoning that only works with genuine comprehension. Option B focuses on difficulty rather than revelation. Option C is extreme; some preparation helps. Option D is about breadth, not depth. The 5 minutes of Q&A often reveal more about understanding than the 10-minute prepared session.",
       source: "Exercise 3: Teach It Back"
     },
     {
@@ -174,7 +174,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "A targeted plan to fill the student's most critical gaps"
       ],
       correctOption: 3,
-      explanation: "The 'Next 20 Hours' plan targets specific knowledge gaps revealed by the teach-back — what to study to fill the most critical deficiencies. Option A is too ambitious for 20 hours. Option C is wrong because the two serve different purposes. Option B is about grading, not learning continuation. The plan gives a precise roadmap for continued learning based on demonstrated gaps.",
+      explanation: "The 'Next 20 Hours' plan targets specific knowledge gaps revealed by the teach-back; what to study to fill the most critical deficiencies. Option A is too ambitious for 20 hours. Option C is wrong because the two serve different purposes. Option B is about grading, not learning continuation. The plan gives a precise roadmap for continued learning based on demonstrated gaps.",
       source: "Exercise 3: Teach It Back"
     },
     {
@@ -186,7 +186,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "A summary of the 72-hour sprint experience"
       ],
       correctOption: 1,
-      explanation: "The Personal Learning Framework is a reusable, one-page document containing your optimal learning sequence, confusion protocol, AI guidelines, and self-assessment triggers — your operating system for future learning. Option A is about assessment, not learning. Option C is about AI prompts, not a comprehensive framework. Option D is about one experience, not a transferable tool. It is described as the single most important deliverable of Part 0.",
+      explanation: "The Personal Learning Framework is a reusable, one-page document containing your optimal learning sequence, confusion protocol, AI guidelines, and self-assessment triggers; your operating system for future learning. Option A is about assessment, not learning. Option C is about AI prompts, not a comprehensive framework. Option D is about one experience, not a transferable tool. It is described as the single most important deliverable of Part 0.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -210,7 +210,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "It summarizes all content from Chapters 1 through 10"
       ],
       correctOption: 0,
-      explanation: "Parts 2-10 constantly introduce unfamiliar concepts. The framework gives you a tested method for handling all of them — it transfers where domain-specific knowledge does not. Option B is about grading weight, not importance. Option C is about difficulty, not transferability. Option D is about summarization, not forward utility. Domain knowledge expires but the meta-learning process transfers to everything.",
+      explanation: "Parts 2-10 constantly introduce unfamiliar concepts. The framework gives you a tested method for handling all of them; it transfers where domain-specific knowledge does not. Option B is about grading weight, not importance. Option C is about difficulty, not transferability. Option D is about summarization, not forward utility. Domain knowledge expires but the meta-learning process transfers to everything.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -222,7 +222,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "The planned learning strategy versus what actually happened"
       ],
       correctOption: 3,
-      explanation: "The retrospective compares planned strategy to actual execution — where the plan worked, where it failed, and what to do differently. Option A is about peer comparison, not self-reflection. Option C focuses on AI, not the student's own plan. Option B compares two different deliverables rather than plan versus reality. The value is in the gaps between intention and execution.",
+      explanation: "The retrospective compares planned strategy to actual execution; where the plan worked, where it failed, and what to do differently. Option A is about peer comparison, not self-reflection. Option C focuses on AI, not the student's own plan. Option B compares two different deliverables rather than plan versus reality. The value is in the gaps between intention and execution.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -234,7 +234,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Retrospectives must include negative self-assessment"
       ],
       correctOption: 2,
-      explanation: "Learning an unfamiliar domain in 72 hours always produces surprises — perfect plan execution suggests either insufficient depth or dishonest reflection. Option A is too prescriptive. Option B is wrong because failure is not the design goal. Option D imposes negativity rather than honesty. The honest response to genuine learning should include at least some unexpected challenges.",
+      explanation: "Learning an unfamiliar domain in 72 hours always produces surprises; perfect plan execution suggests either insufficient depth or dishonest reflection. Option A is too prescriptive. Option B is wrong because failure is not the design goal. Option D imposes negativity rather than honesty. The honest response to genuine learning should include at least some unexpected challenges.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -258,11 +258,11 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "A record of all confusion experienced during learning"
       ],
       correctOption: 0,
-      explanation: "A confusion protocol is a documented procedure for what to do when stuck — concrete steps, not vague advice like 'try harder.' Option B is about past confusion, not future procedures. Option C is about AI testing, not learning strategy. Option D is a record, not a protocol. The protocol is the most practically useful component when you are stuck in a future chapter.",
+      explanation: "A confusion protocol is a documented procedure for what to do when stuck; concrete steps, not vague advice like 'try harder.' Option B is about past confusion, not future procedures. Option C is about AI testing, not learning strategy. Option D is a record, not a protocol. The protocol is the most practically useful component when you are stuck in a future chapter.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
-      question: "Why does the meta-learning cycle follow plan, execute, teach, reflect — rather than just plan and execute?",
+      question: "Why does the meta-learning cycle follow plan, execute, teach, reflect; rather than just plan and execute?",
       options: [
         "Teaching and reflecting add more graded deliverables",
         "Plan and execute alone are insufficient for earning full marks",
@@ -306,7 +306,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Same structure, now tracking learning instead of a business problem"
       ],
       correctOption: 3,
-      explanation: "The Learning Log uses the same accept/reject/modify tracking structure from the Collaboration Log but applies it to a learning process — the familiar format now serves a new purpose. Option A is wrong because the structure is the same. Option C is wrong because AI usage tracking is retained. Option B is wrong because no diagrams are added. The progression shows how one framework adapts to different contexts.",
+      explanation: "The Learning Log uses the same accept/reject/modify tracking structure from the Collaboration Log but applies it to a learning process; the familiar format now serves a new purpose. Option A is wrong because the structure is the same. Option C is wrong because AI usage tracking is retained. Option B is wrong because no diagrams are added. The progression shows how one framework adapts to different contexts.",
       source: "Exercise 2: The 72-Hour Sprint"
     },
     {
@@ -330,7 +330,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "The peer questions should have been pre-approved"
       ],
       correctOption: 1,
-      explanation: "Memorization produces fragile knowledge that breaks under probing — isolated facts lack the causal links needed for reasoning about 'why' and 'how.' Option A blames the questions rather than the learning approach. Option C assumes more time would fix a structural problem. Option D undermines the purpose of unexpected questions. The fix is restructuring the learning approach, not extending preparation time.",
+      explanation: "Memorization produces fragile knowledge that breaks under probing; isolated facts lack the causal links needed for reasoning about 'why' and 'how.' Option A blames the questions rather than the learning approach. Option C assumes more time would fix a structural problem. Option D undermines the purpose of unexpected questions. The fix is restructuring the learning approach, not extending preparation time.",
       source: "Exercise 3: Teach It Back"
     },
     {
@@ -342,7 +342,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "AI questions are easier than peer questions"
       ],
       correctOption: 2,
-      explanation: "AI playing a student who asks progressively harder questions simulates the Q&A component that reveals understanding depth — the critical assessment mechanism. Option A makes an unsupported comparison. Option B is too absolute. Option D is wrong because AI questions can be quite challenging. The goal is preserving the teach-back's assessment power for learners without peer access.",
+      explanation: "AI playing a student who asks progressively harder questions simulates the Q&A component that reveals understanding depth; the critical assessment mechanism. Option A makes an unsupported comparison. Option B is too absolute. Option D is wrong because AI questions can be quite challenging. The goal is preserving the teach-back's assessment power for learners without peer access.",
       source: "Exercise 3: Teach It Back"
     },
     {
@@ -354,7 +354,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Personal Learning Framework at 15 percent weight"
       ],
       correctOption: 0,
-      explanation: "Teaching session performance is weighted at 25% — the highest single component — because it is the most demanding and revealing test of whether genuine learning occurred. Option B is the lowest at 15%. Option C is 20%. Option D is 15%. The weighting reflects that teaching under unexpected questioning is the hardest evidence of learning to fake.",
+      explanation: "Teaching session performance is weighted at 25% (the highest single component) because it is the most demanding and revealing test of whether genuine learning occurred. Option B is the lowest at 15%. Option C is 20%. Option D is 15%. The weighting reflects that teaching under unexpected questioning is the hardest evidence of learning to fake.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -366,7 +366,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Every other skill eventually becomes obsolete, but learning how to learn does not"
       ],
       correctOption: 3,
-      explanation: "Every tool, framework, and best practice will eventually change. The student who can learn the next thing stays relevant indefinitely — meta-learning is the only skill with unlimited shelf life. Option A confuses sequence with importance (it is taught last, not first). Option C is true but not the reason for the label. Option B narrows meta-learning to coding when it applies universally.",
+      explanation: "Every tool, framework, and best practice will eventually change. The student who can learn the next thing stays relevant indefinitely; meta-learning is the only skill with unlimited shelf life. Option A confuses sequence with importance (it is taught last, not first). Option C is true but not the reason for the label. Option B narrows meta-learning to coding when it applies universally.",
       source: "Exercise 1: The Learning Plan"
     },
     {
@@ -378,7 +378,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Which AI tools you will have consulted"
       ],
       correctOption: 2,
-      explanation: "A testable competence threshold specifies what you can demonstrably do — like 'analyze a drug interaction and identify three risks' — calibrated to the 72 hours available. Option A uses grades rather than demonstrated capability. Option B measures effort, not competence. Option D focuses on tools, not learning outcomes. The definition must be both testable and realistic for the time constraint.",
+      explanation: "A testable competence threshold specifies what you can demonstrably do (like 'analyze a drug interaction and identify three risks') calibrated to the 72 hours available. Option A uses grades rather than demonstrated capability. Option B measures effort, not competence. Option D focuses on tools, not learning outcomes. The definition must be both testable and realistic for the time constraint.",
       source: "Exercise 1: The Learning Plan"
     },
     {
@@ -390,7 +390,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Unfamiliar domains produce better Learning Logs"
       ],
       correctOption: 1,
-      explanation: "Starting from zero makes every aspect of the learning process visible — strategy choices, resource decisions, confusion moments, and breakthroughs — which would be invisible if students already knew the domain. Option A is subjective. Option C is about fairness, not learning design. Option D makes an unsupported causal claim. The exercise is about the process of learning, not the content learned.",
+      explanation: "Starting from zero makes every aspect of the learning process visible (strategy choices, resource decisions, confusion moments, and breakthroughs) which would be invisible if students already knew the domain. Option A is subjective. Option C is about fairness, not learning design. Option D makes an unsupported causal claim. The exercise is about the process of learning, not the content learned.",
       source: "Exercise 1: The Learning Plan"
     },
     {
@@ -402,7 +402,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Moments where the student identified and fixed their own misunderstandings"
       ],
       correctOption: 3,
-      explanation: "Self-correction entries capture moments where the student recognized and fixed their own misunderstandings — evidence of active learning rather than passive consumption. Option A is about AI corrections, not self-correction. Option C is about instructor feedback. Option B is about analysis editing. Self-corrections in the log are among the strongest indicators that genuine learning occurred.",
+      explanation: "Self-correction entries capture moments where the student recognized and fixed their own misunderstandings; evidence of active learning rather than passive consumption. Option A is about AI corrections, not self-correction. Option C is about instructor feedback. Option B is about analysis editing. Self-corrections in the log are among the strongest indicators that genuine learning occurred.",
       source: "Exercise 2: The 72-Hour Sprint"
     },
     {
@@ -426,7 +426,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Entries that reference multiple domains beyond the assigned one"
       ],
       correctOption: 1,
-      explanation: "Sequential reading without confusion or self-correction suggests passive consumption — real learning in an unfamiliar domain always produces moments of confusion and course correction. Option A describes genuine learning, not studying. Option C is too narrow. Option D is about scope, not learning quality. Smooth, confusion-free logs suggest the student did not engage deeply enough to discover their misunderstandings.",
+      explanation: "Sequential reading without confusion or self-correction suggests passive consumption; real learning in an unfamiliar domain always produces moments of confusion and course correction. Option A describes genuine learning, not studying. Option C is too narrow. Option D is about scope, not learning quality. Smooth, confusion-free logs suggest the student did not engage deeply enough to discover their misunderstandings.",
       source: "Exercise 2: The 72-Hour Sprint"
     },
     {
@@ -438,7 +438,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "To generate enough questions to fill the 5-minute window"
       ],
       correctOption: 2,
-      explanation: "Progressive difficulty probes from surface recall to deep understanding — basic questions verify vocabulary while harder ones test causal understanding and connections. Option A focuses on difficulty for its own sake. Option B assumes precise matching is the goal. Option D focuses on time-filling. The progression reveals exactly where understanding transitions from solid to fragile.",
+      explanation: "Progressive difficulty probes from surface recall to deep understanding; basic questions verify vocabulary while harder ones test causal understanding and connections. Option A focuses on difficulty for its own sake. Option B assumes precise matching is the goal. Option D focuses on time-filling. The progression reveals exactly where understanding transitions from solid to fragile.",
       source: "Exercise 3: Teach It Back"
     },
     {
@@ -450,7 +450,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "AI tools cannot assess meta-learning skills accurately"
       ],
       correctOption: 0,
-      explanation: "The 10% weight reflects that AI feedback integration supports but does not replace the core process skills — learning strategy, execution, teaching, and reflection. Option B is wrong because AI feedback is still valued. Option C makes assumptions about student behavior. Option D makes an unsupported claim about AI capabilities. The grading structure prioritizes demonstrated process skills.",
+      explanation: "The 10% weight reflects that AI feedback integration supports but does not replace the core process skills; learning strategy, execution, teaching, and reflection. Option B is wrong because AI feedback is still valued. Option C makes assumptions about student behavior. Option D makes an unsupported claim about AI capabilities. The grading structure prioritizes demonstrated process skills.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -462,7 +462,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "The framework provides a reusable method for handling unfamiliar concepts"
       ],
       correctOption: 3,
-      explanation: "The framework is an operating system metaphor — just as an OS provides the platform for running applications, the framework provides the method for learning any new domain encountered in Parts 2-10. Option A takes 'operating system' literally. Option C is about grading mechanics. Option B is about prerequisite enforcement. The framework's value is in its reusability across every future encounter with unfamiliar material.",
+      explanation: "The framework is an operating system metaphor; just as an OS provides the platform for running applications, the framework provides the method for learning any new domain encountered in Parts 2-10. Option A takes 'operating system' literally. Option C is about grading mechanics. Option B is about prerequisite enforcement. The framework's value is in its reusability across every future encounter with unfamiliar material.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -474,7 +474,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "They standardize assessment across all students"
       ],
       correctOption: 1,
-      explanation: "Self-assessment triggers define specific criteria for knowing when you have learned enough — without them, you either stop too early or study indefinitely. Option A implies automation that does not exist. Option C is wrong because they complement, not replace, AI feedback. Option D focuses on standardization, not personal utility. The triggers are personal — calibrated to your learning style and the domain's demands.",
+      explanation: "Self-assessment triggers define specific criteria for knowing when you have learned enough; without them, you either stop too early or study indefinitely. Option A implies automation that does not exist. Option C is wrong because they complement, not replace, AI feedback. Option D focuses on standardization, not personal utility. The triggers are personal; calibrated to your learning style and the domain's demands.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -486,7 +486,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "They should reference only AI-based learning tools"
       ],
       correctOption: 2,
-      explanation: "Prioritization criteria are transferable principles — like 'start with official documentation before tutorials' or 'prefer sources that explain why, not just how' — that apply to any domain. Option A is about logistics, not learning strategy. Option B is domain-specific listing, not reusable criteria. Option D is too narrow. The criteria should help you choose good resources in a domain you have never encountered before.",
+      explanation: "Prioritization criteria are transferable principles (like 'start with official documentation before tutorials' or 'prefer sources that explain why, not just how') that apply to any domain. Option A is about logistics, not learning strategy. Option B is domain-specific listing, not reusable criteria. Option D is too narrow. The criteria should help you choose good resources in a domain you have never encountered before.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -498,7 +498,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "To frame the Personal Learning Framework as immediately practical"
       ],
       correctOption: 3,
-      explanation: "The reference frames the framework as immediately practical — not an academic exercise but a tool that will be needed soon and often. Option A uses fear motivation rather than utility framing. Option C focuses on difficulty rather than preparation. Option B is about positioning, not purpose. The most important outcome is not domain knowledge but the framework you built to handle what comes next.",
+      explanation: "The reference frames the framework as immediately practical; not an academic exercise but a tool that will be needed soon and often. Option A uses fear motivation rather than utility framing. Option C focuses on difficulty rather than preparation. Option B is about positioning, not purpose. The most important outcome is not domain knowledge but the framework you built to handle what comes next.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -510,7 +510,7 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "Compliance with all exercise formatting requirements"
       ],
       correctOption: 0,
-      explanation: "The portfolio shows the complete cycle — plan, execute, teach, reflect — revealing how meta-learning skill developed across all four phases. No single exercise captures this arc. Option B focuses on effort, not skill. Option C is about individual quality, not the trajectory. Option D focuses on formatting. The portfolio's value is in the visible progression from prediction through reality to transferable principles.",
+      explanation: "The portfolio shows the complete cycle (plan, execute, teach, reflect) revealing how meta-learning skill developed across all four phases. No single exercise captures this arc. Option B focuses on effort, not skill. Option C is about individual quality, not the trajectory. Option D focuses on formatting. The portfolio's value is in the visible progression from prediction through reality to transferable principles.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -518,11 +518,11 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
       options: [
         "The framework needs more specific domain details",
         "The student should learn a second domain to improve it",
-        "The framework is a plan, not a framework — it lacks transferable principles",
+        "The framework is a plan, not a framework; it lacks transferable principles",
         "Nothing is wrong; frameworks are always domain-specific"
       ],
       correctOption: 2,
-      explanation: "A domain-specific document is a plan, not a framework. A true framework contains transferable principles that help you learn ANY new domain — if it only works for pharmacology, it has not abstracted the learning process. Option A would make it more specific, not more transferable. Option B addresses a symptom, not the core issue. Option D contradicts the exercise's explicit design goal of transferability.",
+      explanation: "A domain-specific document is a plan, not a framework. A true framework contains transferable principles that help you learn ANY new domain; if it only works for pharmacology, it has not abstracted the learning process. Option A would make it more specific, not more transferable. Option B addresses a symptom, not the core issue. Option D contradicts the exercise's explicit design goal of transferability.",
       source: "Exercise 4: Strategy Retrospective"
     },
     {
@@ -534,11 +534,11 @@ Test your understanding of meta-learning, learning strategy design, the 72-hour 
         "It creates the Learning Plan for the student to follow"
       ],
       correctOption: 1,
-      explanation: "The AI Check identifies mistakes in your strategy, evaluates resource choices, assesses time allocation realism, and suggests the most important concepts to master — all before you start. Option A is about grading, not improvement. Option C would bypass the learning process. Option D would replace the student's thinking with AI's. The AI improves your plan, not replaces it.",
+      explanation: "The AI Check identifies mistakes in your strategy, evaluates resource choices, assesses time allocation realism, and suggests the most important concepts to master; all before you start. Option A is about grading, not improvement. Option C would bypass the learning process. Option D would replace the student's thinking with AI's. The AI improves your plan, not replaces it.",
       source: "Exercise 1: The Learning Plan"
     },
     {
-      question: "Why does the chapter say 'this chapter does not teach a subject — it teaches the process of mastering subjects'?",
+      question: "Why does the chapter say 'this chapter does not teach a subject; it teaches the process of mastering subjects'?",
       options: [
         "To clarify that the transferable process is more valuable than any single domain",
         "To explain why no specific domain content is covered",

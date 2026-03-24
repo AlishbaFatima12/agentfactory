@@ -13,14 +13,14 @@ slides:
 
 **Core Skill:** Question Formulation
 
-Most students type the first thing that comes to mind into an AI tool and accept whatever comes back. This chapter trains you to treat question formulation as a disciplined practice. A vague question produces a vague answer. A precise, layered question produces insight. This is not about prompt engineering — it is about thinking clearly enough to know what you actually need to know.
+Most students type the first thing that comes to mind into an AI tool and accept whatever comes back. This chapter trains you to treat question formulation as a disciplined practice. A vague question produces a vague answer. A precise, layered question produces insight. This is not about prompt engineering; it is about thinking clearly enough to know what you actually need to know.
 
 ## Teaching Aid
 
 ## What You Will Learn
 
 - How to commit your thinking in writing before touching AI (the Prediction Lock)
-- How to rank questions by diagnostic power — which questions actually reveal root causes
+- How to rank questions by diagnostic power; which questions actually reveal root causes
 - How to document AI interactions as a Reasoning Receipt showing critical engagement
 - How to evaluate someone else's questions and discover patterns invisible in your own work
 - How to defend your analysis under live questioning without AI access
@@ -36,4 +36,4 @@ Most students type the first thing that comes to mind into an AI tool and accept
 
 ## Chapter Deliverable
 
-A **Question Quality Portfolio** containing all four exercise deliverables plus a final reflection on your question formulation growth. The business scenario answer is worth 0% — the thinking process is the entire grade.
+A **Question Quality Portfolio** containing all four exercise deliverables plus a final reflection on your question formulation growth. The business scenario answer is worth 0%; the thinking process is the entire grade.

@@ -1,5 +1,5 @@
 ### Core Concept
-The Learning Log reveals the difference between studying and learning. Studying is consuming information. Learning is internalizing it well enough to apply, self-correct, and teach. The log is the primary assessment instrument — it matters more than the domain analysis it produces.
+The Learning Log reveals the difference between studying and learning. Studying is consuming information. Learning is internalizing it well enough to apply, self-correct, and teach. The log is the primary assessment instrument; it matters more than the domain analysis it produces.
 
 ### Key Mental Models
 - **Process Over Output**: The domain analysis shows what you learned; the Learning Log shows how. A polished analysis produced by AI copying reveals nothing about learning quality. The log's self-corrections and confusions are evidence of genuine learning.
@@ -14,7 +14,7 @@ The Learning Log reveals the difference between studying and learning. Studying 
 
 ### Common Mistakes
 - Treating the Learning Log as busywork rather than the primary deliverable
-- Writing a mid-point reflection that says "everything is fine" — genuine learning produces confusion and course corrections
+- Writing a mid-point reflection that says "everything is fine"; genuine learning produces confusion and course corrections
 - Using AI to write the domain analysis instead of using it to learn the material
 - Skipping the self-correction column because it feels like admitting failure
 

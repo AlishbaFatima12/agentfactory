@@ -45,7 +45,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (hidden assumptions, assumption categorization by source, complementary blind spots) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (hidden assumptions, assumption categorization by source, complementary blind spots) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "For each high-risk assumption, design a test that could verify or invalidate it before implementation. Which assumptions are testable and which require a leap of faith?"
@@ -56,20 +56,20 @@ teaching_guide:
   session_group: 4
   session_title: "Assumption Autopsy"
   key_points:
-    - "Every solution is built on assumptions the solver did not know they were making — the autopsy makes these visible"
+    - "Every solution is built on assumptions the solver did not know they were making: the autopsy makes these visible"
     - "The four-category map (self-only, AI-only, both, neither) reveals a consistent pattern: humans catch contextual assumptions (cultural, personal) while AI catches structural assumptions (logical, systemic)"
-    - "Category (d) — found by neither but identified during merge — is the most valuable category, emerging only from the synthesis process"
-    - "This technique (Assumption Autopsy) is referenced in Chapters 8 and 9 — students will build on it throughout the book"
+    - "Category (d) : found by neither but identified during merge: is the most valuable category, emerging only from the synthesis process"
+    - "This technique (Assumption Autopsy) is referenced in Chapters 8 and 9: students will build on it throughout the book"
   misconceptions:
-    - "Students think listing assumptions means questioning them — listing is step one; evaluating risk level (reasonable, risky, needs testing) is the actual analysis"
-    - "Students are embarrassed by the assumptions AI finds that they missed — frame this as complementary intelligence, not personal failure"
-    - "Students assume all hidden assumptions are equally dangerous — risk assessment (what happens if this assumption is wrong?) is critical"
+    - "Students think listing assumptions means questioning them: listing is step one; evaluating risk level (reasonable, risky, needs testing) is the actual analysis"
+    - "Students are embarrassed by the assumptions AI finds that they missed: frame this as complementary intelligence, not personal failure"
+    - "Students assume all hidden assumptions are equally dangerous: risk assessment (what happens if this assumption is wrong?) is critical"
   discussion_prompts:
     - "What types of assumptions did you consistently catch that AI missed? What does that pattern tell you about the structural differences in how humans and AI reason?"
-    - "Which category (d) assumptions — found by neither until the merge process — were most surprising? Why did neither human nor AI thinking surface them independently?"
+    - "Which category (d) assumptions: found by neither until the merge process: were most surprising? Why did neither human nor AI thinking surface them independently?"
   teaching_tips:
-    - "Have students use both Claude and ChatGPT for assumption identification — different AI tools surface different assumptions"
-    - "The merge process itself generates new insights (category d) — encourage students to spend real time on the merge, not just concatenate lists"
+    - "Have students use both Claude and ChatGPT for assumption identification: different AI tools surface different assumptions"
+    - "The merge process itself generates new insights (category d) : encourage students to spend real time on the merge, not just concatenate lists"
     - "Connect this back to Chapter 3's cascade mapping: assumptions are the invisible inputs to every causal chain in a system"
   assessment_quick_check:
     - "Ask students: Name one assumption from each category (a through d). Which category was hardest to find examples for?"
