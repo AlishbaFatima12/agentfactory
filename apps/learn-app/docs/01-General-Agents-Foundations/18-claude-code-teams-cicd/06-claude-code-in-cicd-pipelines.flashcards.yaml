@@ -1,0 +1,30 @@
+flashcards:
+  - front: "(Exam Q10) Your CI pipeline runs 'claude \"Analyze this pull request for security issues\"' and hangs indefinitely. What is the fix?"
+    back: "Add the -p flag: claude -p \"Analyze this pull request for security issues\". The -p (or --print) flag runs Claude Code in non-interactive mode. It processes the prompt, outputs to stdout, and exits. The other options (CLAUDE_HEADLESS, --batch, stdin redirect) are not real Claude Code features."
+
+  - front: "What is the difference between the 'result' field and the 'structured_output' field in --output-format json?"
+    back: "'result' contains Claude's free-text response. 'structured_output' appears only when --json-schema is provided and contains output conforming to the specified schema. Both are in the same JSON response alongside session_id and usage metadata."
+
+  - front: "What does --bare mode do in Claude Code, and why use it in CI?"
+    back: "--bare skips auto-discovery of hooks, skills, plugins, MCP servers, and CLAUDE.md files. It makes CI runs reproducible across machines because only flags you pass explicitly take effect. No teammate's ~/.claude configuration or project MCP servers will interfere."
+
+  - front: "How do you pre-approve tools for Claude Code in a CI pipeline?"
+    back: "Use --allowedTools with a comma-separated list: --allowedTools \"Read,Edit,Bash(git diff *)\". The trailing * enables prefix matching. The space before * matters: 'Bash(git diff *)' allows 'git diff --staged' but 'Bash(git diff*)' would also match 'git diff-index'."
+
+  - front: "Why should the CI review session be separate from the code generation session?"
+    back: "Session context isolation. The generator session retains its reasoning context and is biased toward its own decisions. An independent review session sees only the code, not the reasoning, making it more likely to catch unvalidated assumptions, missed edge cases, and pattern inconsistencies."
+
+  - front: "(Exam Q11) Your team has two CI workflows: a blocking pre-merge check and an overnight technical debt report. Your manager wants to switch both to the Message Batches API for 50% cost savings. What do you recommend?"
+    back: "Use batch processing for the overnight report only. Keep real-time calls for the pre-merge check. The Batches API has processing times up to 24 hours with no guaranteed latency SLA, making it unsuitable for blocking checks where developers wait for results."
+
+  - front: "How do you avoid duplicate PR comments when running CI reviews on every push?"
+    back: "Feed prior review findings back into the next run. Fetch existing review comments with 'gh pr view', include them in the prompt, and instruct Claude to report only new issues or issues from the prior review that are still unresolved in the current code."
+
+  - front: "What goes in the 'CI Review Standards' section of CLAUDE.md?"
+    back: "Three things: 1) What to report (security issues, race conditions, missing validation), 2) What NOT to report (style issues handled by linters, TODO comments, missing docs), 3) Testing standards (frameworks, fixtures, edge case expectations). This focuses Claude on what matters and reduces noise."
+
+  - front: "How do you provide existing test files to Claude in CI to avoid suggesting duplicate test scenarios?"
+    back: "Include existing tests in the prompt using @ references: claude -p \"Generate additional tests for src/auth.py. Here are existing tests: @tests/test_auth.py. Only suggest tests for scenarios NOT already covered.\" This prevents AI-generated tests from duplicating your existing suite."
+
+  - front: "What is the minimal GitHub Actions configuration for Claude Code using the official action?"
+    back: "Use anthropics/claude-code-action@v1 with just the anthropic_api_key secret. It automatically responds to @claude mentions in PR and issue comments. For automated reviews on every PR, add a 'prompt' parameter with review instructions."

@@ -1,0 +1,45 @@
+flashcards:
+  - front: "Where do you place a command file so every team member who clones the repo gets it?"
+    back: "In `.claude/commands/` (project-scoped) or `.claude/skills/` in the project repository. These are shared via version control."
+
+  - front: "What is the difference between a command and a skill in Claude Code?"
+    back: "Both create `/slash-commands`. Commands are single markdown files in `.claude/commands/`. Skills are directories in `.claude/skills/` with a `SKILL.md` file, supporting optional YAML frontmatter and additional files (templates, scripts, examples)."
+
+  - front: "What does `context: fork` do in skill frontmatter?"
+    back: "It runs the skill in an isolated subagent. The subagent does all the work and returns a summary to the main conversation. This prevents verbose output from consuming the main conversation's context window."
+
+  - front: "When should you use `context: fork`?"
+    back: "When a skill scans many files and produces long output, when brainstorming alternatives, or when doing exploratory analysis. Do NOT use it for reference knowledge skills (the subagent cannot see your current conversation) or when you need back-and-forth interaction."
+
+  - front: "What does the `allowed-tools` frontmatter field do?"
+    back: "It restricts which tools Claude can use during skill execution. For example, `allowed-tools: Read, Grep, Glob` creates a read-only skill. `Bash(npm audit*)` allows only bash commands starting with `npm audit`."
+
+  - front: "What does `argument-hint` do in skill frontmatter?"
+    back: "It provides an autocomplete hint shown when developers type the skill name. For example, `argument-hint: \"[issue-number]\"` tells the developer to provide an issue number when invoking the skill."
+
+  - front: "How do you access individual arguments passed to a skill?"
+    back: "Use `$ARGUMENTS[0]` (or shorthand `$0`) for the first argument, `$ARGUMENTS[1]` (or `$1`) for the second, etc. `$ARGUMENTS` without an index gives all arguments."
+
+  - front: "Where do personal skills live, and who can see them?"
+    back: "In `~/.claude/skills/<name>/SKILL.md`. They are available across all your projects but invisible to teammates."
+
+  - front: "When skills share the same name across levels, which one wins?"
+    back: "Higher-priority locations win: enterprise > personal > project. If a skill and a command share the same name, the skill takes precedence."
+
+  - front: "What does `disable-model-invocation: true` do?"
+    back: "It prevents Claude from automatically invoking the skill. Only the user can trigger it by typing `/skill-name`. Use this for skills with side effects like deploying or committing."
+
+  - front: "What does `user-invocable: false` do?"
+    back: "It hides the skill from the `/` menu so users cannot invoke it directly. Only Claude can invoke it when relevant. Use this for background knowledge that is not actionable as a command."
+
+  - front: "When should configuration go in CLAUDE.md versus a custom skill?"
+    back: "CLAUDE.md: universal standards that apply to every task (code style, naming conventions). Skills: on-demand actions with specific triggers (code review, test generation, dependency audits). If it always applies, CLAUDE.md. If it is triggered on demand, skill."
+
+  - front: "What is the `$ARGUMENTS` placeholder in a skill file?"
+    back: "It gets replaced with whatever the user types after the skill name. If the skill content does not include `$ARGUMENTS`, Claude Code appends `ARGUMENTS: <input>` to the end of the skill content."
+
+  - front: "What is the SKILL.md file format?"
+    back: "YAML frontmatter between `---` markers (name, description, context, allowed-tools, argument-hint, etc.) followed by markdown content with instructions Claude follows when the skill is invoked."
+
+  - front: "How can a skill include supporting files like templates or scripts?"
+    back: "Create them in the skill directory alongside SKILL.md (e.g., `my-skill/template.md`, `my-skill/scripts/validate.sh`). Reference them from SKILL.md so Claude knows what they contain and when to load them."

@@ -1,7 +1,7 @@
 ---
 title: "Chapter 18: Claude Code for Teams, CI/CD & Advanced Configuration"
 sidebar_position: 18
-description: "Transform Claude Code from a solo productivity tool into shared engineering infrastructure with team configuration, path-specific rules, custom skills, CI/CD pipelines, and multi-pass review workflows"
+description: "Transform Claude Code from a solo productivity tool into shared engineering infrastructure with team configuration, path-specific rules, custom skills, advanced hooks, CI/CD pipelines, and multi-pass review workflows"
 keywords:
   [
     claude code,
@@ -14,6 +14,8 @@ keywords:
     iterative refinement,
     multi-pass review,
     session management,
+    hooks,
+    advanced hooks,
   ]
 ---
 
@@ -33,6 +35,7 @@ By the end of this chapter, you'll be able to:
 - Integrate Claude Code into CI/CD pipelines with `-p`, `--output-format json`, and `--json-schema`
 - Design multi-pass review architectures that overcome single-session attention limitations
 - Manage sessions with `--resume`, `fork_session`, and `/compact`
+- Configure advanced hook types (prompt, http, agent) and leverage the full set of 20+ hook events
 
 ## Chapter Structure
 
@@ -41,13 +44,14 @@ By the end of this chapter, you'll be able to:
 3. **Custom Skills with Frontmatter:** context: fork, allowed-tools, argument-hint; skills vs CLAUDE.md decision framework
 4. **Plan Mode vs Direct Execution:** when to use each, the Explore subagent, combining modes, the exam's decision tree
 5. **Iterative Refinement Techniques:** concrete I/O examples, test-driven iteration, interview pattern, single message vs sequential
-6. **Claude Code in CI/CD Pipelines:** the `-p` flag, `--output-format json` + `--json-schema`, CLAUDE.md as CI context, avoiding duplicate comments
-7. **Multi-Pass Review Architecture:** self-review limitations, per-file + cross-file passes, session context isolation, confidence self-reporting
-8. **Session Management. Resume, Fork, and Recovery:** named sessions, fork_session, /compact, informing resumed sessions about changes
+6. **Advanced Hook Types and Events:** prompt hooks (LLM evaluation), http hooks (POST to endpoints), agent hooks (subagent verification), the full 20+ event catalog beyond Chapter 14's five core events
+7. **Claude Code in CI/CD Pipelines:** the `-p` flag, `--output-format json` + `--json-schema`, CLAUDE.md as CI context, avoiding duplicate comments
+8. **Multi-Pass Review Architecture:** self-review limitations, per-file + cross-file passes, session context isolation, confidence self-reporting
+9. **Session Management. Resume, Fork, and Recovery:** named sessions, fork_session, /compact, informing resumed sessions about changes
 
 ## Prerequisites
 
-- Chapter 14: General Agents (Claude Code fundamentals)
+- Chapter 14: General Agents (CLAUDE.md basics from Lesson 5, Skills from Lessons 8-9, Settings hierarchy from Lesson 14, command hooks from Lesson 15)
 - Chapter 16: Spec-Driven Development with Claude Code
 
 ## Chapter Deliverables
@@ -62,7 +66,7 @@ By the end of this chapter, you'll be able to:
 
 This chapter covers **Claude Certified Architect. Foundations** exam domains:
 
-- **Domain 3** (20%): Task Statements 3.1-3.6. CLAUDE.md hierarchy, custom skills, path rules, plan mode, iterative refinement, CI/CD
+- **Domain 3** (20%): Task Statements 3.1-3.6. CLAUDE.md hierarchy, custom skills, path rules, advanced hooks, plan mode, iterative refinement, CI/CD
 - **Domain 4** (20%): Task Statement 4.6. Multi-pass review architecture
 - Directly covers Sample Questions 6, 10, 11, 12
 - Covers exam Scenarios 2 (Code Generation) and 5 (Claude Code for CI)
