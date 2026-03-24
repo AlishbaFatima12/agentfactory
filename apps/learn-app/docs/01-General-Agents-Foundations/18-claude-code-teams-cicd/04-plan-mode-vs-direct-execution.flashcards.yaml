@@ -1,4 +1,9 @@
-flashcards:
+deck:
+  id: "ch18-04-plan-mode-vs-direct-execution"
+  title: "Plan Mode vs Direct Execution"
+  version: 1
+
+cards:
   - front: "When should you use plan mode instead of direct execution?"
     back: "When multiple valid approaches exist, the change spans many files, architectural decisions must be made, or the sequence of changes matters. Examples: monolith restructuring, library migration across 45+ files, database schema redesign."
 

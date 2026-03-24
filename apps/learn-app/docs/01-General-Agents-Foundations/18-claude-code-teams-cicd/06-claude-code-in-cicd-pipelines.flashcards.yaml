@@ -1,4 +1,9 @@
-flashcards:
+deck:
+  id: "ch18-06-claude-code-in-cicd-pipelines"
+  title: "Claude Code in CI/CD Pipelines"
+  version: 1
+
+cards:
   - front: "(Exam Q10) Your CI pipeline runs 'claude \"Analyze this pull request for security issues\"' and hangs indefinitely. What is the fix?"
     back: "Add the -p flag: claude -p \"Analyze this pull request for security issues\". The -p (or --print) flag runs Claude Code in non-interactive mode. It processes the prompt, outputs to stdout, and exits. The other options (CLAUDE_HEADLESS, --batch, stdin redirect) are not real Claude Code features."
 

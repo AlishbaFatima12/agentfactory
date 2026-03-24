@@ -1,6 +1,8 @@
-title: "Path-Specific Rules with Glob Patterns"
-chapter: 18
-lesson: 2
+deck:
+  id: "ch18-02-path-specific-rules-with-glob-patterns"
+  title: "Path-Specific Rules with Glob Patterns"
+  version: 1
+
 cards:
   - front: "What YAML frontmatter field makes a .claude/rules/ file load conditionally?"
     back: "The paths field, containing an array of glob patterns. Rules with paths load only when Claude reads files matching those patterns."

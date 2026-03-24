@@ -1,4 +1,9 @@
-flashcards:
+deck:
+  id: "ch18-07-multi-pass-review-architecture"
+  title: "Multi-Pass Review Architecture"
+  version: 1
+
+cards:
   - front: "Why does self-review fail when a Claude Code session reviews its own generated code?"
     back: "The session retains its full reasoning context (why it chose each approach, why it skipped certain handling). This makes it less likely to question its own decisions. An independent instance with no prior context reads only the code and evaluates it on its merits."
 

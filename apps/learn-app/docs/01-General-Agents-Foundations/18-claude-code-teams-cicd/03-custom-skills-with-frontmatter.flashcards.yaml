@@ -1,4 +1,9 @@
-flashcards:
+deck:
+  id: "ch18-03-custom-skills-with-frontmatter"
+  title: "Custom Skills with Frontmatter"
+  version: 1
+
+cards:
   - front: "Where do you place a command file so every team member who clones the repo gets it?"
     back: "In `.claude/commands/` (project-scoped) or `.claude/skills/` in the project repository. These are shared via version control."
 

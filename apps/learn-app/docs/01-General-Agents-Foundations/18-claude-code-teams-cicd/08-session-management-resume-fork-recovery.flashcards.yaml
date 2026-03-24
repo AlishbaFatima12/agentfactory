@@ -1,4 +1,9 @@
-flashcards:
+deck:
+  id: "ch18-08-session-management-resume-fork-recovery"
+  title: "Session Management: Resume, Fork, Recovery"
+  version: 1
+
+cards:
   - front: "What is the difference between claude --continue and claude --resume?"
     back: "--continue resumes the most recent conversation in the current directory (fast, no selection). --resume opens an interactive session picker showing all recent sessions with metadata, or resumes a specific session by name (claude --resume session-name)."
 

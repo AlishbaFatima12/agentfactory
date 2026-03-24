@@ -1,3 +1,8 @@
+deck:
+  id: "ch14-25-channels-event-driven-automation"
+  title: "Channels: Event-Driven Automation"
+  version: 1
+
 cards:
   - front: "What is a channel in Claude Code?"
     back: "An MCP server that pushes events into a running Claude Code session from external systems (CI, Telegram, Discord, webhooks). Unlike standard MCP servers that wait for Claude to call their tools, channels send unsolicited notifications when something happens."

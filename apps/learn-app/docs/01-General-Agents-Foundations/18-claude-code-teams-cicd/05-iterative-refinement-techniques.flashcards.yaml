@@ -1,4 +1,9 @@
-flashcards:
+deck:
+  id: "ch18-05-iterative-refinement-techniques"
+  title: "Iterative Refinement Techniques"
+  version: 1
+
+cards:
   - front: "You told Claude 'normalize the dates in this CSV' and got the wrong date format. What is the most effective fix?"
     back: "Provide 2-3 concrete input/output examples showing the exact transformation you want. For example: Input: 'March 5th, 2024' -> Output: '2024-03-05'. I/O examples eliminate the ambiguity that prose descriptions cannot resolve."
 

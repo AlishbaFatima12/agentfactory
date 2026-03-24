@@ -1,6 +1,8 @@
-title: "Computer Use: Let Claude Control Your Screen"
-chapter: 14
-lesson: 33
+deck:
+  id: "ch14-33-computer-use-let-claude-control-your-screen"
+  title: "Computer Use: Let Claude Control Your Screen"
+  version: 1
+
 cards:
   - front: "What three requirements must be met before you can use Computer Use in Cowork?"
     back: "1. Mac with Apple Silicon (M1 or later). 2. Claude Pro or Max subscription. 3. Claude Desktop app installed and running."

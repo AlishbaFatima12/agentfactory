@@ -1,6 +1,8 @@
-title: "The CLAUDE.md Configuration Hierarchy"
-chapter: 18
-lesson: 1
+deck:
+  id: "ch18-01-claude-md-configuration-hierarchy"
+  title: "The CLAUDE.md Configuration Hierarchy"
+  version: 1
+
 cards:
   - front: "What are the three levels of the CLAUDE.md configuration hierarchy?"
     back: "User (~/.claude/CLAUDE.md), Project (./CLAUDE.md or ./.claude/CLAUDE.md), and Directory (CLAUDE.md in any subdirectory). More specific levels take precedence over broader ones."
