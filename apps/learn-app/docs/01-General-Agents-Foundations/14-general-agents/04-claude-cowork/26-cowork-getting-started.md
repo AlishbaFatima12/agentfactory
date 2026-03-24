@@ -111,7 +111,7 @@ Before you begin, ensure you have:
 | **Claude Desktop** | Latest version from claude.ai/download                                        |
 | **Work to do**     | Documents, files, or data you want to work with                               |
 
-**Why the subscription requirement?** Cowork's agentic capabilities (filesystem access, document processing, autonomous cloud execution) require significant infrastructure. The Pro and Max tiers support this enhanced functionality.
+**Why the subscription requirement?** Cowork's agentic capabilities (filesystem access, document processing, autonomous background execution) require significant infrastructure. The Pro and Max tiers support this enhanced functionality.
 
 ---
 

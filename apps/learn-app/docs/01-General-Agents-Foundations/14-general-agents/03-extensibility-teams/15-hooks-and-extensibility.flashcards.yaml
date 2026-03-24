@@ -1,7 +1,7 @@
 deck:
   id: ch14-15-hooks
   title: 'Hooks: Event-Driven Automation'
-  description: Flashcards covering Claude Code hooks — event types, exit codes, configuration, and automation patterns.
+  description: Flashcards covering Claude Code hooks -- event types, exit codes, configuration, and automation patterns.
   tags:
   - hooks
   - automation
@@ -67,7 +67,7 @@ cards:
 - id: ch14-15-hooks-009
   difficulty: intermediate
   front: What matcher pattern would trigger a hook only for Write or Edit tool calls?
-  back: '"Write|Edit" — the pipe character acts as OR between tool names.'
+  back: '"Write|Edit" -- the pipe character acts as OR between tool names.'
   tags: *id002
 - id: ch14-15-hooks-010
   difficulty: advanced

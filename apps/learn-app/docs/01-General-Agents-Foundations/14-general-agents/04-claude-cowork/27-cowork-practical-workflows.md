@@ -263,9 +263,9 @@ The workflows you design above don't have to be one-time operations. Cowork supp
 
 Desktop tasks support hourly, daily, weekday, and weekly frequencies with configurable permission modes. Cloud tasks run on Anthropic infrastructure and continue even if your computer is off. Either way, the workflows you design become persistent processes that keep working for you.
 
-### Cloud and Remote Sessions
+### Cloud and Remote Sessions (Code Tab)
 
-Sessions can run on Anthropic-managed cloud infrastructure. They continue even if you close the app, shut down your computer, or switch devices. You can monitor remote sessions from claude.ai/code or the Claude mobile app. This changes a fundamental assumption: you no longer need to be at your desk for Cowork to work on your behalf.
+The Code tab supports remote sessions that run on Anthropic-managed cloud infrastructure. They continue even if you close the app, shut down your computer, or switch devices. You can monitor remote sessions from claude.ai/code or the Claude mobile app. Note that Cowork itself runs locally on your machine; remote/cloud sessions are a Code tab feature. For Cowork tasks that must run when your computer is off, use cloud scheduled tasks instead.
 
 ---
 

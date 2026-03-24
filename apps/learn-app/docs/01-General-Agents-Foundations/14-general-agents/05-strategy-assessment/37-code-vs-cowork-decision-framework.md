@@ -317,7 +317,7 @@ Start: What's your primary task?
 | Capability                    | Claude Code (terminal/IDE) | Claude Code (web/desktop app) | Claude Cowork                |
 | ----------------------------- | -------------------------- | ----------------------------- | ---------------------------- |
 | **Read/write files**          | ✓                          | ✓                             | ✓                            |
-| **Run commands**              | ✓ (terminal)               | ✓ (cloud VM)                  | ✓ (limited)                  |
+| **Run commands**              | ✓ (terminal)               | ✓ (remote session)            | ✓ (limited)                  |
 | **Git operations**            | ✓ native                   | ✓                             | ✗                            |
 | **Document Skills**           | Basic                      | Basic                         | Full (docx, xlsx, pptx, pdf) |
 | **Browser integration**       | ✗                          | ✗                             | ✓                            |

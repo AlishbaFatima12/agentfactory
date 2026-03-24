@@ -428,7 +428,7 @@ How should we organize database-related files?"
 **You respond:**
 
 ```
-"Option 1—we separate concerns. Migrations are infrastructure, models are app code. Update it."
+"Option 1 -- we separate concerns. Migrations are infrastructure, models are app code. Update it."
 ```
 
 **What just happened?** 🎓 **Neither of you** had the complete picture at start. Through conversation, you **converged** on the right solution: Claude offered options, you selected based on team context.

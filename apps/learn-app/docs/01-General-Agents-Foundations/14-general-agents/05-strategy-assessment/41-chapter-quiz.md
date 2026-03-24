@@ -817,7 +817,7 @@ options: [
 "Cowork integrates with Microsoft Office while ChatGPT only works with Google Workspace"
 ],
 correctOption: 1,
-explanation: "Option B captures Cowork's defining differentiator: it is not a chatbot you interact with turn-by-turn. Cowork is an autonomous background agent that works on tasks in a cloud VM with its own environment. You assign work, and it executes independently, notifying you when done. This positions Cowork as a Digital FTE (Full-Time Equivalent) for knowledge work, not merely a better chat interface. Option A may be partially true but misses the architectural distinction. Option C is misleading because both use frontier-class models. Option D is factually incorrect. The key insight is agency: Cowork acts, not just advises.",
+explanation: "Option B captures Cowork's defining differentiator: it is not a chatbot you interact with turn-by-turn. Cowork is an autonomous background agent that works on tasks locally on your desktop, running independently while you do other work. You assign work, and it executes independently, notifying you when done. This positions Cowork as a Digital FTE (Full-Time Equivalent) for knowledge work, not merely a better chat interface. Option A may be partially true but misses the architectural distinction. Option C is misleading because both use frontier-class models. Option D is factually incorrect. The key insight is agency: Cowork acts, not just advises.",
 source: "Lesson 25: From Terminal to Desktop: The Cowork Story"
 },
 {
