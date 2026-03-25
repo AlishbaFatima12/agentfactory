@@ -320,6 +320,10 @@ Is the task well-scoped?
 **Exam Q5** presents a scenario where a developer needs to restructure a monolith into microservices. The correct answer is plan mode. The exam tests whether you can identify that multi-file architectural changes with multiple valid approaches require investigation and planning before execution. A single-file bug fix with a clear stack trace is direct execution.
 :::
 
+:::tip Permission Mode Complements Execution Mode
+The execution mode (plan vs direct) controls what Claude investigates before acting. The **permission mode** controls how much autonomy Claude has when executing. For long-running tasks where you approve a plan and then want uninterrupted implementation, consider **auto mode** (`claude --enable-auto-mode`, then Shift+Tab). Auto mode uses a safety classifier to block destructive actions while allowing routine file edits and test runs through automatically. This pairs well with the Explore-Plan-Execute pattern: you approve the plan, then auto mode lets Claude implement it without pausing for permission on every file. See Chapter 14, Lesson 14 for the full permission modes spectrum.
+:::
+
 ---
 
 ## When Plan Mode Saves Time (Not Wastes It)

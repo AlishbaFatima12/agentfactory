@@ -410,6 +410,44 @@ The `.claude/` directory is how Claude Code stores project customization. Deleti
 
 ---
 
+## Permission Modes: From Manual to Autonomous
+
+Settings control not just what Claude can access, but how much freedom Claude has when using tools. Claude Code offers four permission modes, each giving Claude a different level of autonomy:
+
+| Mode | What Happens | Best For |
+| :--- | :--- | :--- |
+| **default** | Claude asks permission before every tool use | Learning, sensitive projects |
+| **acceptEdits** | Claude reads and edits files freely; still asks for Bash commands | Daily development |
+| **auto** | A safety classifier screens each action; safe actions proceed, risky ones get blocked | Long-running tasks where constant interruptions slow you down |
+| **bypassPermissions** | Claude runs everything without asking (use only in isolated environments) | CI/CD pipelines, containers |
+
+You can cycle between modes during a session by pressing **Shift+Tab**.
+
+### Auto Mode: The Safety-First Middle Ground
+
+Auto mode (released March 2026) sits between "ask every time" and "skip all checks." Instead of relying on you to approve every action, auto mode uses a **classifier** that evaluates each tool call before it runs:
+
+- **Safe actions** (reading files, running tests, editing code) proceed automatically
+- **Risky actions** (mass file deletion, accessing credentials, destructive commands) get blocked, and Claude tries an alternative approach
+- **Ambiguous actions**: if Claude repeatedly attempts blocked actions, it falls back to asking you for permission
+
+**How to enable auto mode:**
+
+- **CLI**: Run `claude --enable-auto-mode`, then press Shift+Tab to cycle to it
+- **Settings**: Toggle in Settings > Claude Code
+- **Enterprise admins**: Disable organization-wide with `"disableAutoMode": "disable"` in managed settings
+
+Auto mode reduces risk compared to `bypassPermissions` but does not eliminate it entirely. Anthropic recommends using it in isolated environments for maximum safety. It works with both Sonnet 4.6 and Opus 4.6.
+
+:::tip When to Use Each Mode
+- **Exploring a new codebase**: default (you want to see everything Claude does)
+- **Active development session**: acceptEdits (trust file changes, verify shell commands)
+- **Multi-hour refactoring or autonomous tasks**: auto (minimize interruptions; the classifier guards the rails)
+- **CI/CD pipelines**: bypassPermissions with `--allowedTools` restrictions (no human present)
+:::
+
+---
+
 ## Not Configuring Yet: This Is Part 6 Content
 
 This lesson teaches you that **settings exist and how the hierarchy works**. You don't need to configure them yet. Basic Claude Code usage works perfectly fine with defaults.
