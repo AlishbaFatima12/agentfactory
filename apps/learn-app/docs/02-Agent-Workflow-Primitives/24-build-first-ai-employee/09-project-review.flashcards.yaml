@@ -1,0 +1,51 @@
+deck:
+  id: "ch24-09-project-review"
+  title: "Project Review"
+  description: "Self-assessment of the AI employee build: tier checklists, gap analysis between design and implementation, and next-step planning."
+  tags: ['nanoclaw', 'assessment', 'portfolio', 'reflection', 'self-evaluation']
+  version: 1
+
+cards:
+  - id: "ch24-09-001"
+    type: recall
+    difficulty: "basic"
+    front: "What five deliverables must the Bronze tier checklist verify?"
+    back: "1) CLAUDE.md with profession-specific identity, 2) custom SKILL.md with 5+ domain decision rules, 3) working channel or MCP connection, 4) conversation-log.md with 3-5 real professional tasks, 5) evaluation.md with completed rubric and honest reflection."
+    tags: ['bronze', 'checklist', 'deliverables']
+
+  - id: "ch24-09-002"
+    type: recall
+    difficulty: "intermediate"
+    front: "What four additional deliverables does the Silver tier require beyond Bronze?"
+    back: "scheduler-config.md (scheduled task design), hitl-boundaries.md (4+ categorized actions with domain reasoning), memory-config.md (action log and knowledge store schemas), and domain-report-sample.md (autonomous report with 2+ sources and a proactive recommendation)."
+    tags: ['silver', 'checklist', 'deliverables']
+
+  - id: "ch24-09-003"
+    type: thinking
+    difficulty: "intermediate"
+    front: "What is the purpose of comparing your Layer 3 design with what you actually built?"
+    back: "BECAUSE there is always a gap between plan and execution; understanding why that gap exists teaches more about the design process than the plan itself. THEREFORE the reflection reveals which assumptions were wrong, which skills were harder to encode than expected, and how the design should evolve."
+    why: "What does the size of the gap between plan and execution tell you about your planning process?"
+    tags: ['gap-analysis', 'reflection', 'design-vs-implementation']
+
+  - id: "ch24-09-004"
+    type: recall
+    difficulty: "intermediate"
+    front: "What does the lesson identify as the hardest part of encoding professional expertise into an AI system?"
+    back: "Articulating the judgment calls you make unconsciously every day. Most people discover that the challenge is not the technology but rather making explicit the knowledge they did not know they had."
+    tags: ['tacit-knowledge', 'expertise-encoding', 'insight']
+
+  - id: "ch24-09-005"
+    type: recall
+    difficulty: "basic"
+    front: "What makes a next-step plan actionable versus vague?"
+    back: "Vague: 'add scheduling.' Actionable: 'build a weekly cash flow report skill that reads bank CSV and invoice spreadsheet.' Actionable plans name the specific work, the data sources, and the format."
+    tags: ['next-steps', 'actionable-planning', 'specificity']
+
+  - id: "ch24-09-006"
+    type: recall
+    difficulty: "intermediate"
+    front: "What four Gold-tier items go beyond the Silver checklist?"
+    back: "1) Three groups with distinct CLAUDE.md files (admin, professional work, client-facing), 2) isolation test results proving non-admin groups cannot access restricted data, 3) system architecture diagram, 4) demonstrated memory isolation between groups."
+    tags: ['gold', 'checklist', 'deliverables']
+

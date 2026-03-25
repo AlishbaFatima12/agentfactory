@@ -1,0 +1,51 @@
+deck:
+  id: "ch24-00-the-project-brief"
+  title: "The Project Brief"
+  description: "Key concepts for scoping an AI employee project: tier selection, Layer 3 design mapping, and repository structure."
+  tags: ['nanoclaw', 'project-scoping', 'ai-employee', 'tiers']
+  version: 1
+
+cards:
+  - id: "ch24-00-001"
+    type: recall
+    difficulty: "basic"
+    front: "What are the three achievement tiers for the AI employee project, and roughly how long does each take?"
+    back: "Bronze (~3 hours): identity + one skill + WhatsApp + proof of work. Silver (~6 hours): Bronze plus scheduling, boundaries, memory, and a domain report. Gold (~9 hours): Silver plus multi-group architecture with per-group isolation."
+    tags: ['tiers', 'project-scoping']
+
+  - id: "ch24-00-002"
+    type: recall
+    difficulty: "basic"
+    front: "What three elements should your Layer 3 design from the NanoClaw Hands-On Setup lesson contain?"
+    back: "3+ agent skills (domain expertise to encode), 3+ MCP servers (external connections the employee needs), and domain vocabulary and rules specific to your field."
+    tags: ['layer-3', 'design', 'planning']
+
+  - id: "ch24-00-003"
+    type: recall
+    difficulty: "basic"
+    front: "What is the correct directory structure for the nanoclaw-employee project repository?"
+    back: "nanoclaw-employee/ with groups/global/CLAUDE.md (shared rules), groups/main/CLAUDE.md (profession-specific identity), .claude/skills/ (custom skills), README.md, conversation-log.md, and evaluation.md."
+    tags: ['repository', 'structure']
+
+  - id: "ch24-00-004"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why should you choose which skill to implement first based on 'most value in a single conversation'?"
+    back: "BECAUSE the Bronze tier requires proving your employee works in a real interaction, THEREFORE picking the highest-value skill means your first test produces genuinely useful output rather than a trivial demo."
+    why: "What would happen if you picked the easiest skill instead of the most valuable one?"
+    tags: ['skill-selection', 'bronze', 'strategy']
+
+  - id: "ch24-00-005"
+    type: recall
+    difficulty: "intermediate"
+    front: "What distinguishes the Gold tier from Silver in terms of architecture?"
+    back: "Gold adds multi-group architecture with per-group isolation: separate groups (e.g., admin, work, client-facing) each with distinct identities, permissions, and data boundaries within one NanoClaw installation."
+    tags: ['gold-tier', 'multi-group', 'isolation']
+
+  - id: "ch24-00-006"
+    type: recall
+    difficulty: "basic"
+    front: "What does the README.md in your project repository need to state?"
+    back: "Your profession, your chosen tier, and when you plan to complete each lesson."
+    tags: ['repository', 'documentation']
+

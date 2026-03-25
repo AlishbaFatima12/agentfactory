@@ -1,0 +1,58 @@
+deck:
+  id: "ch24-08-capstone-prove-professional-value"
+  title: "Prove Professional Value"
+  description: "Silver-tier autonomous reports with multi-source synthesis, and Gold-tier multi-group architecture with isolation and data boundaries."
+  tags: ['nanoclaw', 'capstone', 'silver', 'gold', 'report', 'multi-group', 'architecture']
+  version: 1
+
+cards:
+  - id: "ch24-08-001"
+    type: recall
+    difficulty: "basic"
+    front: "What four criteria must a Silver-tier autonomous report meet?"
+    back: "1) Runs on schedule and delivers through a configured channel, 2) reads from 2+ data sources, 3) contains at least one proactive recommendation the employee spotted without being asked, 4) meets professional quality standards (you would share it with a boss or client)."
+    tags: ['silver', 'report', 'success-criteria']
+
+  - id: "ch24-08-002"
+    type: recall
+    difficulty: "intermediate"
+    front: "What is the difference between a summary and a synthesis in the context of the autonomous report?"
+    back: "A summary recaps information from a single source. A synthesis cross-references multiple data sources to find patterns, anomalies, or insights that no single source reveals on its own (e.g., bank data plus outstanding invoices reveals cash flow risk)."
+    tags: ['synthesis', 'summary', 'distinction']
+
+  - id: "ch24-08-003"
+    type: recall
+    difficulty: "basic"
+    front: "What three groups must the Gold-tier multi-group architecture contain?"
+    back: "main (admin and system control with full data access), a professional work group (domain tasks with appropriate data access), and a client-facing group (limited scope with restricted data access)."
+    tags: ['gold', 'multi-group', 'architecture']
+
+  - id: "ch24-08-004"
+    type: recall
+    difficulty: "intermediate"
+    front: "What does 'memory isolation' mean in the Gold architecture?"
+    back: "Each group has independent action logs and knowledge stores. Non-admin groups cannot query the admin group's action log or knowledge entries. For example, corrections about Client A's preferences never leak to Client B's group."
+    tags: ['memory-isolation', 'data-boundaries', 'gold']
+
+  - id: "ch24-08-005"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why does the lesson say 'a report you would not show your boss is not a report worth generating'?"
+    back: "BECAUSE the purpose of autonomous reporting is to deliver real professional value, not demonstrate technical capability. THEREFORE professional quality standards are the true success metric: if you would not act on the report or share it, the automation has not achieved its goal."
+    why: "How do you calibrate 'professional quality' for your specific domain?"
+    tags: ['quality-standard', 'professional-value', 'evaluation']
+
+  - id: "ch24-08-006"
+    type: recall
+    difficulty: "intermediate"
+    front: "How should you test isolation in the Gold architecture?"
+    back: "From the non-admin group, attempt an admin action (like modifying system config) and verify it fails. From the external group, attempt to query the admin group's action_log or knowledge store and verify the data is unavailable."
+    tags: ['isolation-testing', 'gold', 'verification']
+
+  - id: "ch24-08-007"
+    type: recall
+    difficulty: "basic"
+    front: "What makes the action log a natural data source for the Silver report?"
+    back: "The action log already records everything the employee did autonomously. A daily digest of these actions ('here is everything I did today without asking you') is the simplest report that proves professional value. Combining it with one external source fulfills the 2-source requirement."
+    tags: ['action-log', 'report', 'data-source']
+

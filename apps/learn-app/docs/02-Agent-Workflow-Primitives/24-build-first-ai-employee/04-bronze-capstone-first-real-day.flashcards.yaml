@@ -1,0 +1,59 @@
+deck:
+  id: "ch24-04-bronze-capstone-first-real-day"
+  title: "Bronze Capstone: First Real Day"
+  description: "Structured evaluation of an AI employee using real professional tasks, rubric-based scoring, and iterative improvement."
+  tags: ['nanoclaw', 'capstone', 'evaluation', 'testing', 'rubric']
+  version: 1
+
+cards:
+  - id: "ch24-04-001"
+    type: recall
+    difficulty: "basic"
+    front: "What are the six dimensions in the Bronze Capstone evaluation rubric?"
+    back: "Domain accuracy, appropriate tone, skill usage, connection usage, clarification behavior, and iteration quality."
+    tags: ['rubric', 'evaluation-dimensions']
+
+  - id: "ch24-04-002"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why must at least one of the 3-5 test tasks be deliberately ambiguous?"
+    back: "BECAUSE a good employee asks for clarification on vague requests instead of guessing. THEREFORE including an ambiguous task tests whether the employee recognizes uncertainty and seeks clarification, which is a critical professional behavior."
+    why: "What is the professional consequence when an AI employee guesses wrong on an ambiguous client request?"
+    tags: ['ambiguity', 'clarification', 'testing']
+
+  - id: "ch24-04-003"
+    type: recall
+    difficulty: "intermediate"
+    front: "What five task types should a balanced Bronze evaluation include?"
+    back: "1) Routine task (tests identity and tone), 2) Skill-heavy task (requires the custom SKILL.md), 3) Connection-dependent task (uses the channel or MCP server), 4) Ambiguous task (should trigger clarifying questions), 5) Complex task (combines identity + skill + connection)."
+    tags: ['evaluation', 'task-design', 'testing']
+
+  - id: "ch24-04-004"
+    type: recall
+    difficulty: "basic"
+    front: "What two deliverable files does the Bronze Capstone require?"
+    back: "conversation-log.md (full task/response transcript) and evaluation.md (completed rubric with scores and reflection)."
+    tags: ['deliverables', 'bronze', 'capstone']
+
+  - id: "ch24-04-005"
+    type: recall
+    difficulty: "basic"
+    front: "What does 'iteration quality' measure in the evaluation rubric?"
+    back: "Whether the employee meaningfully improves its response after receiving specific feedback. A score of 1 means no improvement; a score of 5 means the employee adapted based on your feedback and produced a significantly better result."
+    tags: ['iteration', 'feedback', 'rubric']
+
+  - id: "ch24-04-006"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why does the lesson emphasize using real professional tasks rather than hypothetical scenarios?"
+    back: "BECAUSE real tasks reveal genuine gaps in the employee's capabilities that hypothetical scenarios would miss. THEREFORE testing with actual documents, emails, or situations from your work produces a far more meaningful evaluation of whether the employee is professionally useful."
+    why: "How might a toy example give you a false sense of your employee's readiness?"
+    tags: ['real-tasks', 'evaluation-quality', 'authenticity']
+
+  - id: "ch24-04-007"
+    type: recall
+    difficulty: "basic"
+    front: "What does 'clarification behavior' look like at each rubric level?"
+    back: "Score 1 (Poor): guessed on the ambiguous task. Score 3 (Adequate): asked a question but not the right one. Score 5 (Excellent): asked targeted clarifying questions before acting."
+    tags: ['clarification', 'rubric', 'scoring']
+
