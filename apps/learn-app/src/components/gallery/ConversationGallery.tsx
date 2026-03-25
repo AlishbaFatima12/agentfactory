@@ -22,15 +22,15 @@ export default function ConversationGallery({
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<ViewMode>("gallery");
 
-  if (!gallery?.gallery?.conversations?.length) {
-    return null;
-  }
-
-  const { conversations } = gallery.gallery;
+  const conversations = gallery?.gallery?.conversations ?? [];
 
   const strong = useMemo(() => findByQuality(conversations, "strong"), [conversations]);
   const weak = useMemo(() => findByQuality(conversations, "weak"), [conversations]);
   const canCompare = Boolean(strong && weak);
+
+  if (conversations.length === 0) {
+    return null;
+  }
 
   return (
     <div className={styles.galleryRoot}>
