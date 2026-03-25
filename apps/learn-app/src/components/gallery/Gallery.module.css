@@ -381,6 +381,32 @@
   color: var(--ifm-color-primary);
 }
 
+/* ── Student Content Highlighting ── */
+.studentHighlight {
+  display: inline;
+  background: rgba(59, 130, 246, 0.08);
+  border-radius: 4px;
+  padding: 0.1rem 0.15rem;
+}
+
+[data-theme="dark"] .studentHighlight {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+.studentHighlightLabel {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(59, 130, 246, 0.7);
+  margin-bottom: 0.15rem;
+}
+
+[data-theme="dark"] .studentHighlightLabel {
+  color: rgba(59, 130, 246, 0.85);
+}
+
 /* ── Comparison View ── */
 .comparison {
   margin-top: 0.85rem;

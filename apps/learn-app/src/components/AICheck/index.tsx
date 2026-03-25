@@ -13,7 +13,13 @@ import { useAuth } from "@/contexts/AuthContext";
 import { submitExercise, ExerciseSubmitError } from "@/lib/progress-api";
 import { getAuthHeaders } from "@/lib/api-utils";
 import type { ExerciseSubmitResponse, ScoreCard } from "@/lib/progress-types";
-import { CheckCircle2, ExternalLink, Loader2, AlertCircle } from "lucide-react";
+import {
+  CheckCircle2,
+  ExternalLink,
+  Loader2,
+  AlertCircle,
+  Copy,
+} from "lucide-react";
 import styles from "./AICheck.module.css";
 
 // ── Types ──
@@ -493,6 +499,20 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     ],
   );
 
+  const handleCopyPrompt = useCallback(() => {
+    const prompt = composePrompt(children, fieldValues);
+    navigator.clipboard
+      .writeText(prompt)
+      .then(() => {
+        setToast("Prompt copied to clipboard");
+        setTimeout(() => setToast(null), 3000);
+      })
+      .catch(() => {
+        setToast("Could not copy to clipboard");
+        setTimeout(() => setToast(null), 5000);
+      });
+  }, [children, fieldValues]);
+
   const handleAiOutputChange = useCallback(
     (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       setAiOutput(e.target.value);
@@ -742,6 +762,17 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
                   <br />
                   Come back when you have your BEST evaluation.
                 </p>
+                {allFieldsFilled && (
+                  <button
+                    className={styles.copyPromptBtn}
+                    onClick={handleCopyPrompt}
+                    type="button"
+                    aria-label="Copy assembled prompt to clipboard"
+                  >
+                    <Copy size={14} />
+                    Copy prompt
+                  </button>
+                )}
                 <div className={styles.providerButtons}>
                   {PROVIDERS.map((p) => (
                     <motion.button

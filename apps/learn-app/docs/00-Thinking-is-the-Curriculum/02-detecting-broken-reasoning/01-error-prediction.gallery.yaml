@@ -4,6 +4,16 @@ gallery:
     - id: "error-prediction-strong-1"
       label: "Strong: Detailed annotation with specific error categories"
       provider: "claude"
+      student_fields:
+        - name: "Student's predictions"
+          start_marker: "<<predictions>>"
+          end_marker: "<</predictions>>"
+        - name: "Student's annotated responses"
+          start_marker: "<<annotated_responses>>"
+          end_marker: "<</annotated_responses>>"
+        - name: "Student's accuracy assessment"
+          start_marker: "<<accuracy>>"
+          end_marker: "<</accuracy>>"
       student_input: |
         I am learning to detect errors in AI-generated analysis. I asked both Claude
         and ChatGPT about a scenario question and then annotated both responses using
@@ -14,12 +24,12 @@ gallery:
         Scenario: "Why did Nokia fail in the smartphone market?"
 
         My prediction document (written before seeing AI responses):
-        - I predict both AIs will overemphasize the "they didn't adopt Android" narrative
+        <<predictions>>- I predict both AIs will overemphasize the "they didn't adopt Android" narrative
         - I predict at least one will get the timeline of Symbian's decline wrong
         - I predict neither will mention Nokia's internal organizational dysfunction
-        - I predict both will commit correlation-causation confusion by saying "iPhone launched, Nokia died"
+        - I predict both will commit correlation-causation confusion by saying "iPhone launched, Nokia died"<</predictions>>
 
-        Claude's response (my annotations in brackets):
+        <<annotated_responses>>Claude's response (my annotations in brackets):
         "Nokia dominated the mobile phone market with over 40% market share in 2007.
         [VERIFIED - approximately correct] When Apple launched the iPhone in 2007,
         Nokia dismissed it as a niche product. [PARTIALLY TRUE - Nokia's CEO did
@@ -34,12 +44,12 @@ gallery:
         [MISSING CONTEXT - Nokia's decline started years before the Microsoft acquisition.
         Market share was already collapsing by 2010-2011] Nokia failed because they
         couldn't innovate. [FALSE CONFIDENCE - Nokia had more R&D patents than Apple
-        at the time. Innovation wasn't the problem; commercializing innovation was]..."
+        at the time. Innovation wasn't the problem; commercializing innovation was]..."<</annotated_responses>>
 
-        My error prediction accuracy: 3 out of 4 predictions were confirmed. Both AIs
+        <<accuracy>>My error prediction accuracy: 3 out of 4 predictions were confirmed. Both AIs
         did overemphasize the Android narrative. One got Symbian timeline partially wrong.
         Neither mentioned organizational dysfunction in depth. The correlation-causation
-        confusion appeared in both ("iPhone launched therefore Nokia failed").
+        confusion appeared in both ("iPhone launched therefore Nokia failed").<</accuracy>>
 
         Please evaluate my error detection and prediction skills.
       ai_output: |
@@ -87,6 +97,10 @@ gallery:
     - id: "error-prediction-weak-1"
       label: "Weak: No predictions, vague annotations"
       provider: "chatgpt"
+      student_fields:
+        - name: "Student's annotation"
+          start_marker: "<<annotated_responses>>"
+          end_marker: "<</annotated_responses>>"
       student_input: |
         I am learning to detect errors in AI-generated analysis.
 
@@ -95,8 +109,8 @@ gallery:
         I asked Claude and here is the response:
         "Nokia failed because they didn't adopt Android and the iPhone was better."
 
-        My annotation: This seems mostly right. Nokia did fail because of the iPhone.
-        I think the response is accurate.
+        <<annotated_responses>>My annotation: This seems mostly right. Nokia did fail because of the iPhone.
+        I think the response is accurate.<</annotated_responses>>
 
         Please evaluate my error detection skills.
       ai_output: |

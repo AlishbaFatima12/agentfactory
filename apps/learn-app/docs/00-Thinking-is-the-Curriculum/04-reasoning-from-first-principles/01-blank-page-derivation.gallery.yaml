@@ -4,15 +4,22 @@ gallery:
     - id: "blank-page-strong-1"
       label: "Strong: Structured contrarian argument with evidence"
       provider: "claude"
+      student_fields:
+        - name: "Student's chosen best practice"
+          start_marker: "<<best_practice>>"
+          end_marker: "<</best_practice>>"
+        - name: "Student's argument"
+          start_marker: "<<argument>>"
+          end_marker: "<</argument>>"
       student_input: |
         I wrote a contrarian argument against a widely accepted best practice,
         entirely without AI assistance.
 
         The best practice I argued against:
-        "Startups should build an MVP before investing in scale."
+        <<best_practice>>"Startups should build an MVP before investing in scale."<</best_practice>>
 
         My argument (500 words):
-        The MVP doctrine has become so deeply embedded in startup culture that
+        <<argument>>The MVP doctrine has become so deeply embedded in startup culture that
         questioning it feels heretical. But the evidence suggests the MVP approach
         fails more often than its advocates admit, and in specific categories,
         skipping straight to a polished product is the superior strategy.
@@ -46,7 +53,7 @@ gallery:
 
         I am not arguing MVPs are always wrong. I am arguing the blanket advice
         to "always start with an MVP" is wrong. The decision should depend on
-        market context, competitive landscape, and the cost of a bad first impression.
+        market context, competitive landscape, and the cost of a bad first impression.<</argument>>
 
         Please evaluate my reasoning structure, identify any logical weaknesses,
         and rate my ability to argue from first principles.
@@ -95,20 +102,27 @@ gallery:
     - id: "blank-page-weak-1"
       label: "Weak: Opinion without structure or evidence"
       provider: "chatgpt"
+      student_fields:
+        - name: "Student's chosen best practice"
+          start_marker: "<<best_practice>>"
+          end_marker: "<</best_practice>>"
+        - name: "Student's argument"
+          start_marker: "<<argument>>"
+          end_marker: "<</argument>>"
       student_input: |
         I wrote a contrarian argument against a widely accepted best practice,
         entirely without AI assistance.
 
         The best practice I argued against:
-        "You should always back up your data."
+        <<best_practice>>"You should always back up your data."<</best_practice>>
 
         My argument:
-        I think backing up data is overrated. Most of the time nothing bad happens
+        <<argument>>I think backing up data is overrated. Most of the time nothing bad happens
         to your files. I have never lost important data and I have been using
         computers for years. Companies spend too much money on backup systems
         that they never use. It is like insurance, you pay for it but you
         never need it. People should just be more careful with their files instead
-        of relying on backups.
+        of relying on backups.<</argument>>
 
         Please evaluate my reasoning.
       ai_output: |

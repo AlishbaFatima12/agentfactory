@@ -1,7 +1,82 @@
 import React, { useState } from "react";
-import type { GalleryConversation } from "./types";
+import type { GalleryConversation, StudentField } from "./types";
 import ScoreVisualization from "./ScoreVisualization";
 import styles from "./Gallery.module.css";
+
+interface TextSegment {
+  text: string;
+  isStudentContent: boolean;
+  label?: string;
+}
+
+export function parseStudentContent(
+  input: string,
+  fields?: StudentField[],
+): TextSegment[] {
+  if (!fields || fields.length === 0) {
+    return [{ text: input, isStudentContent: false }];
+  }
+
+  const segments: TextSegment[] = [];
+  let remaining = input;
+
+  // Build a combined regex that matches any field's start_marker
+  // Process the string left-to-right, finding the earliest marker each iteration
+  while (remaining.length > 0) {
+    let earliestIdx = Infinity;
+    let earliestField: StudentField | null = null;
+
+    for (const field of fields) {
+      const idx = remaining.indexOf(field.start_marker);
+      if (idx !== -1 && idx < earliestIdx) {
+        earliestIdx = idx;
+        earliestField = field;
+      }
+    }
+
+    if (!earliestField || earliestIdx === Infinity) {
+      // No more markers found
+      segments.push({ text: remaining, isStudentContent: false });
+      break;
+    }
+
+    // Push text before the marker
+    if (earliestIdx > 0) {
+      segments.push({
+        text: remaining.slice(0, earliestIdx),
+        isStudentContent: false,
+      });
+    }
+
+    // Find the end of the student content
+    const afterStart =
+      earliestIdx + earliestField.start_marker.length;
+    const endMarker = earliestField.end_marker ?? earliestField.start_marker;
+    const endIdx = remaining.indexOf(endMarker, afterStart);
+
+    if (endIdx === -1) {
+      // No closing marker: treat rest as student content
+      segments.push({
+        text: remaining.slice(afterStart),
+        isStudentContent: true,
+        label: earliestField.name,
+      });
+      break;
+    }
+
+    segments.push({
+      text: remaining.slice(afterStart, endIdx),
+      isStudentContent: true,
+      label: earliestField.name,
+    });
+
+    remaining = remaining.slice(endIdx + endMarker.length);
+  }
+
+  return segments.length > 0
+    ? segments
+    : [{ text: input, isStudentContent: false }];
+}
 
 function providerBadge(provider: string) {
   const normalized = provider.toLowerCase();
@@ -59,7 +134,21 @@ export default function ConversationCard({
           <div className={styles.convSection}>
             <div className={styles.convSectionLabel}>Student Prompt</div>
             <div className={styles.convSectionContent}>
-              {conversation.student_input}
+              {parseStudentContent(
+                conversation.student_input,
+                conversation.student_fields,
+              ).map((seg, i) =>
+                seg.isStudentContent ? (
+                  <span key={i} className={styles.studentHighlight}>
+                    <span className={styles.studentHighlightLabel}>
+                      {seg.label ?? "Student\u2019s input"}
+                    </span>
+                    {seg.text}
+                  </span>
+                ) : (
+                  <span key={i}>{seg.text}</span>
+                ),
+              )}
             </div>
           </div>
 

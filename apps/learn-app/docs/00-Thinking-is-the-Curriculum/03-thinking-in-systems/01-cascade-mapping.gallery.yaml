@@ -1,0 +1,218 @@
+gallery:
+  exercise_id: "cascade-mapping"
+  conversations:
+    - id: "cascade-mapping-strong-1"
+      label: "Strong: Multi-domain cascade with feedback loops and knowledge drain analysis"
+      provider: "claude"
+      student_fields:
+        - name: "Student's scenario"
+          start_marker: "<<scenario>>"
+          end_marker: "<</scenario>>"
+        - name: "Student's cascade map"
+          start_marker: "<<cascade_map>>"
+          end_marker: "<</cascade_map>>"
+      student_input: |
+        I am a student learning systems thinking. Before using AI, I created a
+        cascade map tracing consequences of a decision across five domains with
+        feedback loops.
+
+        The scenario I chose:
+
+        <<scenario>>A major bank decides to replace all loan officers with AI agents.<</scenario>>
+
+        Please:
+        (1) Evaluate the completeness of my map -- which important effects or
+        domains did I miss?
+        (2) Rate each of my feedback loops: are they logically sound? Would
+        they actually occur?
+        (3) Identify at least 3 second or third-order effects I missed that
+        are non-obvious but important.
+        (4) Rate the overall sophistication of my systems thinking from
+        Beginner / Developing / Proficient / Advanced.
+        (5) Do any of my causal chains have logical errors -- effects that
+        would not actually follow from the cause I described?
+
+        Here is my cascade map:
+
+        <<cascade_map>>Central Decision: Replace all loan officers with AI agents at a major bank.
+
+        DOMAIN 1 [Employees]:
+        - 1st-order: Loan officers lose their jobs (estimated 8,000-12,000 positions eliminated across branches).
+        - 2nd-order: Remaining staff experience anxiety and reduced morale, leading to higher turnover in adjacent roles like branch managers and relationship advisors.
+        - 3rd-order: The bank loses institutional knowledge about local market conditions, borrower reliability patterns, and community relationships that experienced loan officers carried. This "knowledge drain" cannot be replicated by training data alone because it includes unrecorded judgment calls.
+
+        DOMAIN 2 [Customers]:
+        - 1st-order: Faster loan processing times (AI can evaluate applications in minutes rather than days).
+        - 2nd-order: Customers with non-standard income profiles (freelancers, small business owners, gig workers) face higher rejection rates because AI models trained on traditional employment data underweight irregular income patterns.
+        - 3rd-order: Rejected customers migrate to fintech competitors or predatory lenders, creating a bifurcated market where creditworthy non-traditional borrowers are systematically excluded from mainstream banking.
+
+        DOMAIN 3 [Competitors]:
+        - 1st-order: Competing banks face pressure to adopt similar AI systems to match processing speed and cost structure.
+        - 2nd-order: Smaller community banks that cannot afford AI systems differentiate by offering "human-first" lending, attracting the customers rejected by AI systems.
+        - 3rd-order: A new competitive segment emerges: "relationship banking" becomes a premium service rather than the default, restructuring the entire industry's value proposition.
+
+        DOMAIN 4 [Regulators]:
+        - 1st-order: Fair lending regulators (CFPB, OCC) investigate potential algorithmic bias in AI loan decisions, particularly disparate impact on protected classes.
+        - 2nd-order: New compliance requirements emerge mandating explainability for AI lending decisions, increasing the cost and complexity of maintaining AI systems.
+        - 3rd-order: Regulatory burden creates barriers to entry for smaller banks attempting AI adoption, consolidating the industry further toward large institutions that can absorb compliance costs.
+
+        DOMAIN 5 [Internal Knowledge]:
+        - 1st-order: The bank's lending expertise shifts from distributed human judgment to centralized algorithmic models.
+        - 2nd-order: The ability to handle novel lending situations (pandemic relief loans, disaster recovery lending, emerging industry financing) degrades because AI models lack training data for unprecedented scenarios.
+        - 3rd-order: When the next financial crisis creates conditions outside the training data, the bank has no human expertise to fall back on, creating a single point of failure.
+
+        FEEDBACK LOOP 1 (Dampening): Cost savings from replacing loan officers -> bank reduces branch staffing further -> service quality declines for complex transactions -> high-value customers leave for competitors offering personal service -> revenue declines -> pressure to cut more costs -> further staff reduction. This is dampening because the cost savings are progressively eroded by revenue loss from customer attrition.
+
+        FEEDBACK LOOP 2 (Amplifying): AI rejection of non-traditional borrowers -> those borrowers go to fintech competitors -> fintech competitors grow and attract more mainstream customers -> bank loses market share -> bank doubles down on AI efficiency to cut costs further -> AI criteria become even more rigid -> more borrowers rejected. This is amplifying because each cycle intensifies the competitive threat.
+
+        FEEDBACK LOOP 3 (Dampening): Regulatory scrutiny of AI decisions -> bank adds explainability layers -> explainability requirements slow down AI processing -> processing speed advantage over human officers shrinks -> original business case weakens -> pressure to reduce compliance investment -> regulatory scrutiny increases. This is dampening because the regulatory response counteracts the efficiency gains that motivated the decision.
+
+        I think my map is fairly thorough but I may be overemphasizing the negative effects. I also struggled with whether the knowledge drain in Domain 5 would really matter in practice, since AI models can be retrained. But I believe novel situations genuinely present a problem because you cannot train on data that does not exist yet.<</cascade_map>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        This is an impressive cascade map that demonstrates genuine systems thinking. Let me evaluate each dimension:
+
+        (1) Completeness:
+        Your coverage across all five domains is strong. You correctly identified the critical knowledge drain issue in Domain 5, which most students miss entirely. However, I notice a few gaps:
+        - You did not address the impact on the bank's brand and public perception (could be a 6th domain or nested under Customers).
+        - You missed the labor market effects: 8,000-12,000 displaced loan officers represent a talent pool that competitors and fintechs will recruit, potentially strengthening your rivals.
+        - The impact on loan portfolio quality over time is absent. If AI approves different risk profiles than human officers did, the bank's overall default rate may shift in unexpected directions.
+
+        (2) Feedback Loop Evaluation:
+        Loop 1 (Dampening, cost-service spiral): 8/10. Logically sound. Each step follows causally from the previous one. The dampening classification is correct; the mechanism genuinely counteracts the original benefit. One refinement: the speed of this loop matters. Customer attrition from reduced service typically takes 18-24 months to manifest, so the bank may not recognize the pattern until it is deeply entrenched.
+
+        Loop 2 (Amplifying, fintech migration): 9/10. Excellent. This captures a real competitive dynamic happening in banking right now. The amplifying classification is correct because each cycle makes the next iteration more severe. The observation that AI criteria become "more rigid" under cost pressure is particularly insightful.
+
+        Loop 3 (Dampening, regulatory drag): 7/10. The logic is sound, but the last step ("pressure to reduce compliance investment") is weaker. Banks generally cannot reduce compliance investment once regulators are watching. A more likely path: regulatory burden increases costs, which reduces the ROI of AI, which makes the business case harder to justify for further AI expansion.
+
+        (3) Non-obvious effects you missed:
+        1. Training data decay: As human loan officers disappear, the pipeline of human judgment data that originally trained the AI models also disappears. Future model retraining will be based on AI-generated decisions, creating a feedback loop where the model trains on its own outputs. This is known as "model collapse" in machine learning.
+        2. Community development impact: Loan officers in smaller branches often served as informal economic advisors to local businesses. Their removal reduces the bank's role in community economic development, potentially triggering local government backlash or CRA (Community Reinvestment Act) compliance issues.
+        3. Insurance and liability shift: When a human loan officer makes a bad lending decision, the bank has established liability frameworks. When an AI makes the same decision, liability becomes legally ambiguous, potentially exposing the bank to novel litigation.
+
+        (4) Overall sophistication: Proficient, approaching Advanced. Your map demonstrates multi-level thinking with genuine feedback loops (not linear chains mislabeled as loops). The distinction between amplifying and dampening loops shows methodological understanding. To reach Advanced, you would need to quantify the relative strength of competing loops and predict which would dominate under different conditions.
+
+        (5) Logical errors:
+        No outright logical errors in your causal chains. One potential weakness: in Domain 2, you state that AI "underweight irregular income patterns" as a certainty. In practice, some AI models handle non-traditional income better than human officers who rely on heuristics. This causal link should be qualified as "likely" rather than certain, since it depends on the specific model architecture and training data.
+
+        Thinking Score Card:
+        - Independent Thinking: 8/10. You built a comprehensive map before consulting AI, and your self-critical closing paragraph shows you were genuinely reasoning through the problem rather than listing obvious effects.
+        - Critical Evaluation: 8/10. Your feedback loops include mechanism explanations, not just labels. You correctly identified the dampening vs. amplifying distinction in each loop.
+        - Reasoning Depth: 9/10. Third-order effects like knowledge drain during novel crises and the emergence of "relationship banking as premium service" show multi-level causal reasoning.
+        - Originality: 8/10. The knowledge drain angle (Domain 5, 3rd-order) and the bifurcated market insight (Domain 2, 3rd-order) are non-obvious connections that go beyond standard analysis.
+        - Self-Awareness: 8/10. Your closing paragraph honestly flags your uncertainty about whether knowledge drain matters in practice. This kind of self-assessment, identifying specific doubts rather than vague disclaimers, is exactly what self-awareness looks like.
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 8
+        reasoning_depth: 9
+        originality: 8
+        self_awareness: 8
+      commentary: >
+        This submission succeeds because the student built a genuinely interconnected map rather than five separate lists.
+        The feedback loops are real loops with circularity, not linear chains: each one returns to influence the
+        original decision or its preconditions. The "knowledge drain" insight in Domain 5 shows the student thinking
+        about what is lost when human expertise is removed, not just what is gained from automation. The closing
+        self-assessment ("I may be overemphasizing the negative effects") demonstrates honest calibration rather
+        than false confidence.
+
+    - id: "cascade-mapping-weak-1"
+      label: "Weak: Surface-level effects without feedback loops or deeper analysis"
+      provider: "chatgpt"
+      student_fields:
+        - name: "Student's scenario"
+          start_marker: "<<scenario>>"
+          end_marker: "<</scenario>>"
+        - name: "Student's cascade map"
+          start_marker: "<<cascade_map>>"
+          end_marker: "<</cascade_map>>"
+      student_input: |
+        I am a student learning systems thinking. Before using AI, I created a
+        cascade map tracing consequences of a decision across five domains with
+        feedback loops.
+
+        The scenario I chose:
+
+        <<scenario>>A hospital network decides to use AI for all initial patient triage, removing human nurses from the first point of contact.<</scenario>>
+
+        Please:
+        (1) Evaluate the completeness of my map -- which important effects or
+        domains did I miss?
+        (2) Rate each of my feedback loops: are they logically sound? Would
+        they actually occur?
+        (3) Identify at least 3 second or third-order effects I missed that
+        are non-obvious but important.
+        (4) Rate the overall sophistication of my systems thinking from
+        Beginner / Developing / Proficient / Advanced.
+        (5) Do any of my causal chains have logical errors -- effects that
+        would not actually follow from the cause I described?
+
+        Here is my cascade map:
+
+        <<cascade_map>>Central Decision: Use AI for patient triage instead of nurses.
+
+        Employees: Nurses will lose their triage jobs. This will be bad for morale.
+
+        Customers (Patients): Patients will get faster triage. Some patients might not like talking to a computer.
+
+        Competitors: Other hospitals might do the same thing.
+
+        I couldn't think of effects for regulators or internal knowledge so I skipped those.
+
+        Feedback loops: I think there is a feedback loop where if patients don't like AI triage they will complain and the hospital might change back. That is the main loop I could find.<</cascade_map>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        Thank you for your effort. Let me provide honest feedback on your cascade map.
+
+        (1) Completeness:
+        Your map covers only 3 of the required 5 domains, and the coverage within those three domains is quite thin. Here is what is missing:
+
+        Regulators (skipped entirely): Healthcare is one of the most heavily regulated industries. AI triage decisions could trigger scrutiny from CMS, state medical boards, and malpractice insurers. If an AI misses a critical symptom and a patient suffers harm, the liability question alone could reshape the entire initiative.
+
+        Internal Knowledge (skipped entirely): Triage nurses develop pattern recognition over years of practice. They notice when a patient "looks wrong" even when vital signs are normal. This tacit clinical knowledge would be lost, and it is extremely difficult to encode into training data.
+
+        Within the domains you did cover, each has only first-order effects with no mechanism explanations:
+        - "Nurses will lose their triage jobs" does not explain how many, over what timeline, or what second-order effects follow from that displacement.
+        - "Patients will get faster triage" assumes AI is faster without questioning whether speed is the right metric for triage accuracy.
+        - "Other hospitals might do the same thing" is a possibility, not an analyzed effect with consequences.
+
+        (2) Feedback Loop Evaluation:
+        The loop you described ("patients complain, hospital changes back") is not really a feedback loop in the systems thinking sense. It is a linear reaction: cause leads to complaint leads to reversal. A true feedback loop would show how the effect circles back to influence the conditions that created it. For example: AI triage misses subtle symptoms in elderly patients, leading to worse outcomes, leading to malpractice lawsuits, leading to higher insurance premiums, leading to cost pressure, leading to more AI adoption to cut costs, leading to more missed symptoms. That is a genuine amplifying feedback loop.
+
+        (3) Non-obvious effects you missed:
+        1. Nurse deskilling: Nurses who no longer perform triage lose their assessment skills over time. If the hospital needs to revert to human triage (during system outages or for complex cases), the nurses may no longer be competent to do so.
+        2. Patient data quality degradation: Human triage nurses often gather contextual information through conversation (patient is nervous, smells of alcohol, mentioned a recent trip abroad). AI triage systems that rely on structured inputs miss this unstructured but clinically valuable data.
+        3. Emergency department flow disruption: Triage sets the pace for the entire ED. If AI triage is faster but less accurate in severity assessment, downstream resources (beds, specialists, imaging) get misallocated, creating bottlenecks that worsen overall care.
+
+        (4) Overall sophistication: Beginner. The map does not demonstrate systems thinking because it lacks interconnections between domains, mechanism explanations, second or third-order effects, and genuine feedback loops. The analysis stays at the surface level of "X will happen" without exploring why, how much, or what happens next.
+
+        (5) Logical errors:
+        "Patients will get faster triage" assumes speed without evidence. Depending on the AI system, triage might actually take longer for patients who struggle with digital interfaces (elderly, non-English speakers, those with cognitive impairments). This is not so much a logical error as an unexamined assumption.
+
+        Thinking Score Card:
+        - Independent Thinking: 3/10. The map was attempted independently, but the analysis did not progress beyond listing obvious first-order effects.
+        - Critical Evaluation: 2/10. No evaluation of whether the stated effects would actually occur, no mechanism explanations, and no consideration of competing dynamics.
+        - Reasoning Depth: 2/10. Only first-order effects are present. The exercise required second and third-order effects, and the submission includes none.
+        - Originality: 3/10. The effects listed (job losses, faster service, competitors copying) are the most commonly cited and do not reflect original analysis.
+        - Self-Awareness: 3/10. The student acknowledged skipping two domains ("I couldn't think of effects") but did not attempt to work through the difficulty or explain what made those domains hard to analyze.
+      scores:
+        independent_thinking: 3
+        critical_evaluation: 2
+        reasoning_depth: 2
+        originality: 3
+        self_awareness: 3
+      commentary: >
+        This submission illustrates the difference between listing effects and mapping a system. The student
+        produced three isolated observations ("nurses lose jobs," "patients get faster triage," "competitors
+        might copy") without any connections between domains or depth within them. The single feedback loop
+        described is actually a linear reaction, not a circular dynamic. Skipping two of five required domains
+        without attempting them signals shallow engagement with the exercise. Compare the mechanism-free
+        "this will be bad for morale" with the strong example's detailed knowledge drain analysis, where
+        each effect includes a specific explanation of why it follows from the previous one.

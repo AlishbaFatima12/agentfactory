@@ -13,6 +13,12 @@ export interface GalleryScores {
   self_awareness: number;
 }
 
+export interface StudentField {
+  name: string;
+  start_marker: string;
+  end_marker?: string;
+}
+
 export interface GalleryConversation {
   id: string;
   label: string;
@@ -21,6 +27,7 @@ export interface GalleryConversation {
   ai_output: string;
   scores: GalleryScores;
   commentary: string;
+  student_fields?: StudentField[];
 }
 
 export interface GalleryData {

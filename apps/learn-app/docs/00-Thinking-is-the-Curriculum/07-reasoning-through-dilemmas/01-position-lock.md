@@ -178,6 +178,8 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
+<ConversationGallery />
+
 <details>
 <summary>Deliverable Template (click to expand)</summary>
 
