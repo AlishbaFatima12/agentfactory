@@ -70,6 +70,8 @@ def test_boiling():
     assert celsius_to_fahrenheit(100.0) == 212.0
 ```
 
+Two words you already know from Chapter 45: **`def`** means "define a function" and **`assert`** means "insist this is true -- fail loudly if it is not."
+
 "That is the whole specification," she says.
 
 James counts the lines. "Five lines? At my old job, our project specs were thirty-page documents that nobody read."
@@ -98,7 +100,7 @@ Think back to Chapter 16. You learned a three-step workflow called Spec-Driven D
 2. **Claude Code builds it** -- reading your description and generating the result
 3. **You check the result** -- reading what Claude Code produced and deciding if it matches what you asked for
 
-You have been doing this in every chapter since. The only thing that changes now is **step 1** -- how you describe what you want:
+You have been doing this in every chapter since. This chapter's version of the same workflow is called **Test-Driven Generation (TDG)** -- the only thing that changes is **step 1**, how you describe what you want:
 
 | | SDD (Chapter 16) | TDG (This Chapter) |
 |---|-------------------|---------------------|
@@ -118,7 +120,7 @@ def test_boiling():
     assert celsius_to_fahrenheit(100.0) == 212.0
 ```
 
-Five lines. The function signature says what it does. The `-> float` says what it returns. The `...` says the body is empty. The two tests say what the correct answers must be. That is the specification -- more precise than any English paragraph could be.
+Five lines. The function signature says what it does. The **`-> float`** says what it returns. The **`...`** says the body is empty. The two tests say what the correct answers must be. That is the specification -- **more precise than any English paragraph could be**.
 
 :::note If you have never written code before
 You are not expected to write these five lines yet. This lesson is about understanding the *loop* -- reading, not doing. Lesson 2 teaches the three new vocabulary words (`return`, `-> float`, `...`) one at a time, and you will write your first specification there. For now, just read and follow along.
@@ -130,13 +132,13 @@ You are not expected to write these five lines yet. This lesson is about underst
 
 TDG follows five steps. You will use this exact loop in every lesson of this chapter -- and in every chapter after this one.
 
-**Step 1 -- Specify.** Write a function stub (name, types, `...` body) and two test assertions. This is your specification. It says *what* the function must do without saying *how*.
+**Step 1 -- Specify.** Write a function stub -- the function's name, its types, and `...` where the body should be -- plus two test assertions. A **stub** is a placeholder: it defines the function's shape but leaves the body empty for AI to fill in. This is your specification. It says *what* the function must do without saying *how*.
 
-**Step 2 -- Check types.** Run `uv run pyright`. The type checker must pass. If pyright reports an error, your specification has a type problem -- fix it before going further. (This is like running a spell-check on your English spec.)
+**Step 2 -- Check types.** Run **`uv run pyright`**. The type checker must pass. If pyright reports an error, your specification has a type problem -- fix it before going further. (This is like running a spell-check on your English spec.)
 
 **Step 3 -- Generate.** Tell Claude Code: "Implement the function that passes these tests. Do not modify the tests." AI reads your types and tests, then writes the function body.
 
-**Step 4 -- Verify.** Run `uv run pytest -v`. The tests must pass. If they fail, go back to Step 3 and re-prompt. If they pass, go to Step 5.
+**Step 4 -- Verify.** Run **`uv run pytest -v`**. The tests must pass. If they fail, go back to Step 3 and re-prompt. If they pass, go to Step 5.
 
 **Step 5 -- Read.** Apply PRIMM from Chapter 45. Read the generated code. Predict what it does for a new input. Build a trace table if the logic is not obvious. This is where your Chapter 45 skills earn their keep -- you do not trust AI output; you verify it with your eyes.
 
@@ -188,7 +190,7 @@ $ uv run pyright
 0 errors, 0 warnings, 0 informations
 ```
 
-Pyright passes. Why? Because `...` (the ellipsis) makes the function a *stub* -- pyright trusts the type annotations and ignores the missing body. The types are consistent: `n: int` goes in, `-> int` comes out. No type errors.
+Pyright passes. Why? Because **`...` (the ellipsis)** makes the function a *stub* -- pyright trusts the type annotations and ignores the missing body. The types are consistent: `n: int` goes in, `-> int` comes out. No type errors.
 
 ### Step 3 -- Generate
 
@@ -207,7 +209,7 @@ def double(n: int) -> int:
     return n * 2
 ```
 
-One line of implementation. `return n * 2` -- the function hands back `n` multiplied by 2.
+One line of implementation. **`return n * 2`** -- the function hands back `n` multiplied by 2. (You will learn what `return` does in Lesson 2.)
 
 ### Step 4 -- Verify
 
@@ -219,7 +221,7 @@ tests/test_math_helpers.py::test_double_zero PASSED
 2 passed
 ```
 
-Both tests pass. The green bar. The function does what the specification demanded.
+Both tests pass. **GREEN** -- the function does what the specification demanded.
 
 ### Step 5 -- Read (PRIMM)
 
@@ -237,7 +239,7 @@ Does this match your understanding of "double"? Yes -- multiplying by 2 doubles 
 
 Count the lines. You wrote 5 lines of specification (1 stub + 2 tests + 2 assertions). AI generated 2 lines of implementation. The ratio is small here because the function is small. In later chapters, your specifications will be 5-10 lines and AI will generate 20-50 lines. The ratio grows, but the loop stays the same.
 
-This is the productivity claim behind TDG: your 5 lines of specification leverage AI to produce correct, tested, type-checked code. You write the *what*. AI writes the *how*. Pytest and pyright verify the result. Your Chapter 45 skills let you read and understand what AI wrote.
+This is the core idea behind TDG: **your 5 lines of specification leverage AI to produce correct, tested, type-checked code.** You write the *what*. AI writes the *how*. Pytest and pyright verify the result. Your Chapter 45 skills let you read and understand what AI wrote.
 
 :::tip If you already know TDD
 If you have used Test-Driven Development before, TDG is the same discipline -- Red-Green-Refactor -- but AI writes the Green step. Your role shifts from implementation to verification. Kent Beck described TDD in 1999 (*Extreme Programming Explained*) and the 2003 book *Test-Driven Development: By Example*. TDG is an emergent adaptation of that discipline for AI-assisted development, described by multiple practitioners since 2023.
@@ -255,7 +257,7 @@ You might wonder: does writing tests actually improve what AI generates? Yes. Re
 
 - Anthropic, the company behind Claude Code, calls test-driven development "the single strongest pattern for working with agentic coding tools." Their recommendation: write the tests first, confirm they fail, commit them, then ask AI to implement.
 
-The pattern is consistent: tests are better specifications than English. They are precise, unambiguous, and machine-verifiable. When you give AI a test suite, it generates better code than when you describe what you want in words.
+The pattern is consistent: **tests are better specifications than English.** They are precise, unambiguous, and machine-verifiable. When you give AI a test suite, it generates better code than when you describe what you want in words.
 
 :::note One counterintuitive finding
 A 2025 study (TENET) tested TDG at the scale of entire code repositories and found something surprising: a *concise, diverse* test suite outperforms a comprehensive one. Two well-chosen tests produce better AI output than ten redundant tests. More is not always better -- clarity beats quantity. This is why this chapter starts with two assertions per function, not twenty.
@@ -273,7 +275,7 @@ If you completed Chapter 16, you already know the three-phase SDD workflow. TDG 
 | **Implementation** | Claude Code generated files from your spec | Claude Code generates the function body from your stub + tests |
 | **Verification** | You reviewed the output against your spec | pytest checks automatically; you read the code with PRIMM |
 
-The method is the same. The precision is higher. English specifications can be ambiguous -- "convert the temperature" could mean Celsius to Fahrenheit or Fahrenheit to Celsius. A Python test that says `assert celsius_to_fahrenheit(0.0) == 32.0` cannot be misunderstood.
+The method is the same. The precision is higher. English specifications can be ambiguous -- "convert the temperature" could mean Celsius to Fahrenheit or Fahrenheit to Celsius. A Python test that says `assert celsius_to_fahrenheit(0.0) == 32.0` **cannot be misunderstood**.
 
 ---
 

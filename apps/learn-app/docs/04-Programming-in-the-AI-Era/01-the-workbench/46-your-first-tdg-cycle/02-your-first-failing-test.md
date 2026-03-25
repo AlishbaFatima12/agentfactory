@@ -105,9 +105,9 @@ In Lesson 1, you read a complete TDG cycle and understood the five-step loop. No
 
 ## Word 1: `return`
 
-In Chapter 45, you learned `def` (labels a function) and `assert` (insists something is true). Now the third word: `return`.
+In Chapter 45, you learned **`def`** (labels a function) and **`assert`** (insists something is true). Now the third word: **`return`**.
 
-`return` hands a value back from a function. When Python reaches a `return` statement, it stops the function and sends the value back to wherever the function was called.
+**`return` hands a value back from a function.** When Python reaches a `return` statement, it stops the function and sends the value back to wherever the function was called.
 
 Here is the simplest example:
 
@@ -127,7 +127,7 @@ The function runs, hits `return "Hello, SmartNotes"`, and hands that string back
 
 ### Print is for people. Return is for reuse.
 
-This is the single most common confusion for beginners. `print()` displays a value on your screen. `return` hands a value back to the code that called the function. They look similar but do completely different things.
+This is the **single most common confusion** for beginners. **`print()` displays a value on your screen. `return` hands a value back to the code that called the function.** They look similar but do completely different things.
 
 | | `print()` | `return` |
 |---|-----------|----------|
@@ -136,7 +136,7 @@ This is the single most common confusion for beginners. `print()` displays a val
 | **Can a test use it?** | No -- `assert` cannot check what was printed | Yes -- `assert` checks the returned value |
 | **Analogy** | A cashier reading your total out loud | A cashier handing you the receipt |
 
-Why does this matter for TDG? Because `assert` checks the value a function *returns*, not what it *prints*. If your function prints the answer instead of returning it, the test cannot verify anything. Every function you specify with TDG must use `return`.
+Why does this matter for TDG? Because **`assert` checks the value a function *returns*, not what it *prints*.** If your function prints the answer instead of returning it, the test cannot verify anything. Every function you specify with TDG must use `return`.
 
 :::note If you have never written code before
 Think of a function like a calculator button. You push 5, it shows 10. The `return` is the moment the calculator shows the answer -- it hands the result back to you. Without `return`, the calculator does the math inside but never shows the answer. `print` is like the calculator reading the number aloud -- helpful for you, but another program cannot hear it.
@@ -150,7 +150,7 @@ Think of a function like a calculator button. You push 5, it shows 10. The `retu
 
 ## Word 2: `-> float`
 
-You saw type annotations in Chapter 45: `name: str = "Zia"` tells pyright that `name` is a string. The `-> float` annotation does the same thing for a function's return value.
+You saw type annotations in Chapter 45: `name: str = "Zia"` tells pyright that `name` is a string. The **`-> float`** annotation does the same thing for a function's return value.
 
 ```python
 def celsius_to_fahrenheit(celsius: float) -> float:
@@ -174,7 +174,7 @@ You already know these four types from Chapter 45. The arrow `->` just applies t
 
 ## Word 3: `...` (Ellipsis)
 
-The ellipsis -- three dots -- is Python's way of saying "intentionally empty." When you write:
+The ellipsis -- three dots -- is Python's way of saying **"intentionally empty."** When you write:
 
 ```python
 def celsius_to_fahrenheit(celsius: float) -> float: ...
@@ -190,7 +190,7 @@ Python has another "do nothing" keyword: `pass`. But for TDG, `...` is the right
 
 - **`pass`** = pyright treats the function as *real code* with no return statement. Since the annotation says `-> float` but the function returns nothing (None), pyright reports a **type error**.
 
-The difference matters. You want pyright to pass at Step 2 of the TDG loop so you can focus on one thing at a time: first the types (pyright), then the implementation (Claude Code), then the tests (pytest). Using `...` lets you separate those steps cleanly.
+The difference matters. You want pyright to pass at Step 2 of the TDG loop so you can **focus on one thing at a time**: first the types (pyright), then the implementation (Claude Code), then the tests (pytest). Using `...` lets you separate those steps cleanly.
 
 ---
 
@@ -268,7 +268,7 @@ E       assert None == 32.0
 2 failed
 ```
 
-Both tests fail. The function returned `None` -- because the body is `...`, there is no `return` statement, so Python returns `None` by default. The assert insists the result should be `32.0`, but it got `None`. The test fails loudly.
+Both tests fail. The function returned **`None`** -- because the body is `...`, there is no `return` statement, so Python returns `None` by default. The assert insists the result should be `32.0`, but it got `None`. **The test fails loudly.**
 
 **This is correct.** The failing test is not a mistake. It is the starting point. In test-driven development, this is called **RED** -- the tests fail because the implementation does not exist yet. Your specification is complete. The tests define what "correct" means. The implementation is AI's job.
 
@@ -279,13 +279,13 @@ Here is where you stand:
 | `uv run pyright` | 0 errors | Types are consistent -- the stub is valid |
 | `uv run pytest` | 2 FAILED | No implementation yet -- tests cannot pass |
 
-Two tools, two different jobs. Pyright checks the *shape* (types are consistent). Pytest checks the *behavior* (the function does what the tests demand). Right now, the shape is right but the behavior is missing. That is exactly where you want to be before asking AI to generate.
+**Two tools, two different jobs.** Pyright checks the *shape* (types are consistent). Pytest checks the *behavior* (the function does what the tests demand). Right now, the shape is right but the behavior is missing. **That is exactly where you want to be before asking AI to generate.**
 
 ---
 
 ## What You Just Wrote
 
-Six lines total. One stub. Two tests. One import. That is your specification. In Lesson 3, you will prompt Claude Code to fill in the `...` with a real implementation, run the tests again, and see GREEN.
+**Six lines total.** One stub. Two tests. One import. That is your complete specification. In Lesson 3, you will prompt Claude Code to fill in the `...` with a real implementation, run the tests again, and see **GREEN**.
 
 ---
 
@@ -361,7 +361,7 @@ Pyright: **0 errors**. The stub uses `...`, so pyright treats it as a valid stub
 
 Pytest: **2 FAILED**. The body is `...`, so the function returns `None`. Both assertions check `None` against a float value. Both fail.
 
-If you predicted both correctly with confidence 4-5, you understand the pyright/pytest split -- the key insight of this lesson.
+If you predicted both correctly with confidence 4-5, you understand **the pyright/pytest split** -- the key insight of this lesson.
 
 </details>
 
