@@ -115,9 +115,9 @@ def test_fractional_result():
     assert reading_time_minutes(500, 300) == 1.6666666666666667
 ```
 
-**Test 1:** 1000 words at 200 words per minute = 5.0 minutes. Clean division.
+**Test 1:** 1000 words at 200 words per minute = 5.0 minutes. **Clean division.**
 
-**Test 2:** 500 words at 300 words per minute = 1.666... minutes. The result is not a round number. The return type is `float`, so the function must return the full fractional value.
+**Test 2:** 500 words at 300 words per minute = 1.666... minutes. The result is **not a round number**. The return type is `float`, so the function must return the full fractional value.
 
 ### Step 2 -- Check Types
 
@@ -143,7 +143,7 @@ def reading_time_minutes(word_count: int, words_per_minute: int) -> float:
     return word_count // words_per_minute
 ```
 
-Notice the `//`. That is floor division -- the operator you learned in Chapter 45, Lesson 1. It drops the decimal. `500 // 300` gives `1`, not `1.666...`.
+Notice the **`//`**. That is **floor division** -- the operator you learned in Chapter 45, Lesson 1. It drops the decimal. `500 // 300` gives `1`, not `1.666...`.
 
 ### Step 4 -- Verify (FAIL)
 
@@ -161,7 +161,7 @@ E       assert 1 == 1.6666666666666667
 
 The first test passes: `1000 // 200` equals `5`, which equals `5.0`. The floor division did not matter because the result was already a whole number.
 
-The second test fails: `500 // 300` equals `1`, but the test expects `1.6666666666666667`. Floor division threw away the fractional part.
+The second test **fails**: `500 // 300` equals `1`, but the test expects `1.6666666666666667`. **Floor division threw away the fractional part.**
 
 ---
 
@@ -174,10 +174,10 @@ The pytest output tells you everything you need to know. Focus on two lines:
 E       assert 1 == 1.6666666666666667
 ```
 
-- The `>` line shows which assertion failed.
-- The `E` line shows the mismatch: the function returned `1`, but the test expected `1.6666666666666667`.
+- The **`>` line** shows which assertion failed.
+- The **`E` line** shows the mismatch: the function returned `1`, but the test expected `1.6666666666666667`.
 
-**Error Taxonomy:** This is a **logic error** -- the function computes the wrong value. The types are correct (`int` inputs, `float` output), and the specification is correct (the test values are right). The implementation used the wrong operator: `//` (floor division) instead of `/` (true division).
+**Error Taxonomy:** This is a **logic error** -- the function computes the wrong value. The types are correct (`int` inputs, `float` output), and the specification is correct (the test values are right). The implementation used the **wrong operator**: **`//` (floor division)** instead of **`/` (true division)**.
 
 You already know the difference. In Chapter 45, Lesson 1, you predicted that `10 // 3` equals `3` (not `3.333...`). The same concept appears here -- `//` drops the decimal, `/` keeps it.
 
@@ -194,7 +194,7 @@ instead of 1.6666666666666667. The issue is integer division
 fractional part is preserved. Do not modify the tests.
 ```
 
-You are not asking AI to figure out the problem. You are telling it what is wrong and what to fix. Your Chapter 45 reading skills let you diagnose the issue. The re-prompt is specific: it names the failing test, states the wrong value, identifies the cause, and requests the fix.
+You are **not asking AI to figure out the problem**. You are telling it what is wrong and what to fix. Your Chapter 45 reading skills let you diagnose the issue. The re-prompt is specific: it **names the failing test**, **states the wrong value**, **identifies the cause**, and **requests the fix**.
 
 ### Second Attempt
 
@@ -205,7 +205,7 @@ def reading_time_minutes(word_count: int, words_per_minute: int) -> float:
     return word_count / words_per_minute
 ```
 
-One character changed: `//` became `/`. Run the tests:
+**One character changed**: `//` became `/`. Run the tests:
 
 ```
 $ uv run pytest tests/test_reading.py -v
@@ -215,7 +215,7 @@ tests/test_reading.py::test_fractional_result PASSED
 2 passed
 ```
 
-**GREEN.** Both tests pass. The fix was one character, but the reading -- identifying *why* it failed and *what* to change -- required your understanding of floor division vs true division.
+**GREEN.** Both tests pass. The fix was one character, but the reading -- identifying *why* it failed and *what* to change -- required **your understanding** of floor division vs true division.
 
 ---
 
@@ -237,13 +237,13 @@ Does the logic make sense? Division is the right operation: total words divided 
 
 ## Iteration Is Normal
 
-AI does not always get it right on the first attempt. This is not a flaw in TDG -- it is a feature. The iteration loop is built into the method:
+**AI does not always get it right on the first attempt.** This is not a flaw in TDG -- it is a feature. The iteration loop is **built into the method**:
 
 ```
 Specify → Generate → Verify → [if FAIL] → Read failure → Re-prompt → Verify
 ```
 
-**Your tests are the safety net.** Without them, the floor division bug would have silently rounded every reading time down. With them, it was caught in three seconds and fixed in one re-prompt.
+**Your tests are the safety net.** Without them, the floor division bug would have silently rounded every reading time down. With them, it was **caught in three seconds** and **fixed in one re-prompt**.
 
 :::note Keep it simple for now
 This lesson covers one re-prompt for one clear error. Real-world debugging -- where the failure is ambiguous or the fix introduces new bugs -- comes in Phase 4.
@@ -422,7 +422,7 @@ Can you re-prompt Claude Code after a failure with specific information about wh
 
 ---
 
-**Developing** on any dimension? Repeat that lesson's exercises. **Competent** across all five? You are ready for the next chapter. **Fluent**? You are doing what professional developers do with AI coding tools.
+**Developing** on any dimension? Repeat that lesson's exercises. **Competent** across all five? You are ready for the next chapter. **Fluent**? You are doing what **professional developers do with AI coding tools**.
 
 ---
 
@@ -453,9 +453,9 @@ Can you re-prompt Claude Code after a failure with specific information about wh
 
 ## Looking Ahead
 
-You have completed your first TDG cycles. You can specify a function, prompt AI to implement it, verify the result, and iterate when it fails. The method stays the same from here forward. Every chapter in Part 4 applies this loop to new domains -- strings, collections, control flow, classes. The functions get more complex. The tests get more interesting. The AI-generated code gets longer. But the loop never changes: Specify. Check types. Generate. Verify. Read.
+You have completed your first TDG cycles. You can specify a function, prompt AI to implement it, verify the result, and iterate when it fails. The method stays the same from here forward. Every chapter in Part 4 applies this loop to new domains -- strings, collections, control flow, classes. The functions get more complex. The tests get more interesting. The AI-generated code gets longer. But **the loop never changes: Specify. Check types. Generate. Verify. Read.**
 
-The method stays the same. The problems get bigger. And you are ready.
+**The method stays the same. The problems get bigger. And you are ready.**
 
 ---
 

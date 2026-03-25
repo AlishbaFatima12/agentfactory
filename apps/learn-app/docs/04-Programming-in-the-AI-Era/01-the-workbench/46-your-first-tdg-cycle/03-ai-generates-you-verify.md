@@ -92,7 +92,7 @@ James adds a third test before Emma finishes her coffee.
 
 ## Step 3: Generate
 
-In Lesson 2, you wrote a function stub and two tests. Pyright passed (types are valid). Pytest failed (no implementation). You are at the RED stage -- exactly where the TDG loop says you should be.
+In Lesson 2, you wrote a function stub and two tests. **Pyright passed** (types are valid). **Pytest failed** (no implementation). You are at the **RED** stage -- exactly where the TDG loop says you should be.
 
 Now you move to Step 3: ask Claude Code to write the implementation.
 
@@ -104,7 +104,7 @@ smartnotes/temperature.py so that all tests in
 tests/test_temperature.py pass. Do not modify the tests.
 ```
 
-That last sentence -- "Do not modify the tests" -- is important. AI sometimes tries to change the tests instead of fixing the implementation. Your tests are the specification. They define what "correct" means. The implementation must match them, not the other way around.
+That last sentence -- **"Do not modify the tests"** -- is important. AI sometimes tries to change the tests instead of fixing the implementation. **Your tests are the specification.** They define what "correct" means. The implementation must match them, not the other way around.
 
 :::note Commit your tests first
 Before prompting AI, commit your test file to Git: `git add tests/test_temperature.py && git commit -m "test: add celsius_to_fahrenheit specification"`. This way, if AI modifies the tests despite your instruction, you can see the change in `git diff` and restore the original. Your specification is sacred -- protect it.
@@ -119,7 +119,7 @@ def celsius_to_fahrenheit(celsius: float) -> float:
     return celsius * 9 / 5 + 32
 ```
 
-One line of implementation. The formula: multiply by 9, divide by 5, add 32. This is the standard Celsius-to-Fahrenheit conversion formula: **F = C × 9/5 + 32**.
+**One line of implementation.** The formula: multiply by 9, divide by 5, add 32. This is the standard Celsius-to-Fahrenheit conversion formula: **F = C × 9/5 + 32**.
 
 ---
 
@@ -146,7 +146,7 @@ tests/test_temperature.py::test_boiling_point PASSED
 
 ## Step 5: Read (PRIMM)
 
-The tests pass, but you are not done. Step 5 says: read the generated code. Apply PRIMM from Chapter 45. Do not just trust the green bar -- understand *how* the implementation works.
+The tests pass, but **you are not done**. Step 5 says: read the generated code. Apply PRIMM from Chapter 45. **Do not just trust the green bar** -- understand *how* the implementation works.
 
 ### Predict
 
@@ -159,7 +159,7 @@ Work it out by hand:
 - `333.0 / 5` = `66.6`
 - `66.6 + 32` = `98.6`
 
-Your prediction: `98.6`. That is the well-known body temperature in Fahrenheit. The formula checks out.
+Your prediction: **`98.6`**. That is the well-known body temperature in Fahrenheit. The formula checks out.
 
 **Predict:** What does `celsius_to_fahrenheit(-40.0)` return?
 
@@ -168,7 +168,7 @@ Work it out:
 - `-360.0 / 5` = `-72.0`
 - `-72.0 + 32` = `-40.0`
 
-Your prediction: `-40.0`. The same number. This is the crossover point where Celsius and Fahrenheit are equal. If your prediction matches your domain knowledge, the implementation is correct.
+Your prediction: **`-40.0`**. The same number. This is the **crossover point** where Celsius and Fahrenheit are equal. If your prediction matches your domain knowledge, the implementation is correct.
 
 ### Trace Table
 
@@ -194,7 +194,7 @@ Count what happened:
 - **AI wrote**: 1 line (the return statement with the formula)
 - **Total working code**: 7 lines, fully tested, type-checked
 
-This is a tiny example. The ratio is 6:1 -- you wrote more than AI. But the ratio flips as functions get more complex. In later chapters, your specification will stay around 5-10 lines while AI generates 20, 30, or 50 lines of implementation. Your leverage grows. The loop stays the same.
+This is a tiny example. The ratio is 6:1 -- you wrote more than AI. But **the ratio flips as functions get more complex**. In later chapters, your specification will stay around 5-10 lines while AI generates 20, 30, or 50 lines of implementation. **Your leverage grows. The loop stays the same.**
 
 ---
 
@@ -202,11 +202,11 @@ This is a tiny example. The ratio is 6:1 -- you wrote more than AI. But the rati
 
 Why read the generated code at all? The tests pass. Pyright is clean. Why not just move on?
 
-Because tests only check the cases you wrote. Your two tests check 0°C and 100°C. They do not check -40°C, 37°C, or 1000°C. A function could pass both tests but still be wrong for other inputs -- for example, if AI hardcoded `return 32.0` for the first test case and `return 212.0` for the second. That would pass both tests but fail for every other input.
+Because **tests only check the cases you wrote**. Your two tests check 0°C and 100°C. They do not check -40°C, 37°C, or 1000°C. A function could pass both tests but still be wrong for other inputs -- for example, if AI hardcoded `return 32.0` for the first test case and `return 212.0` for the second. That would pass both tests but fail for every other input.
 
-This is the trust gap. The Stack Overflow 2025 developer survey found that 66% of developers say their biggest frustration with AI-generated code is "solutions that are almost right." The code compiles, the obvious tests pass, but there is a subtle flaw you do not notice until production.
+This is **the trust gap**. The Stack Overflow 2025 developer survey found that **66% of developers** say their biggest frustration with AI-generated code is **"solutions that are almost right."** The code compiles, the obvious tests pass, but there is a subtle flaw you do not notice until production.
 
-Reading the generated code is how you close the trust gap. The tests verify the cases you specified. Your PRIMM reading verifies the logic. Together, they give you confidence that the function works for *all* inputs, not just the two you tested.
+**Reading the generated code is how you close the trust gap.** The tests verify the cases you specified. Your PRIMM reading verifies the logic. Together, they give you confidence that the function works for *all* inputs, not just the two you tested.
 
 ---
 
@@ -244,7 +244,7 @@ You just completed a full TDG cycle with guidance. Now do one independently.
 6. Run `uv run pytest` -- should be GREEN.
 7. **Read** the generated code. Predict: what does `fahrenheit_to_celsius(98.6)` return? (Hint: it should be 37.0 -- normal body temperature.)
 
-If you completed all seven steps and your prediction in step 7 was correct, you have done a full TDG cycle independently. That is the mastery gate for this lesson.
+If you completed all seven steps and your prediction in step 7 was correct, you have done a **full TDG cycle independently**. That is the **mastery gate** for this lesson.
 
 ---
 
@@ -326,7 +326,7 @@ Create the stub and tests for `km_to_miles`. Use the test values from your predi
 
 Read the generated implementation. Is the conversion factor accurate? (The actual factor is approximately 0.621371 -- check whether AI used this value or a rounded version like 0.62.) If AI rounded, is the rounding acceptable for your tests?
 
-**Error Taxonomy:** If the tests fail because of floating-point precision (e.g., `6.21371` vs `6.213710000000001`), classify this as a *precision error* -- a subtype of logic error caused by floating-point arithmetic. In later chapters, you will learn to use `pytest.approx()` for these cases.
+**Error Taxonomy:** If the tests fail because of floating-point precision (e.g., `6.21371` vs `6.213710000000001`), classify this as a **precision error** -- a subtype of logic error caused by floating-point arithmetic. In later chapters, you will learn to use `pytest.approx()` for these cases.
 
 ### Modify
 
