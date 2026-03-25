@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import AgentFactoryExplorer from "./agent-factory-explorer";
+import CoworkExplorer from "./cowork-explorer";
 
 const HASH_TO_ID = {
   "#claude-code": "agent-factory",
@@ -19,7 +20,7 @@ const explorers = [
     label: "Claude Code Project Lab",
     component: AgentFactoryExplorer,
   },
-  { id: "cowork", label: "Cowork Project Lab", component: null },
+  { id: "cowork", label: "Cowork Project Lab", component: CoworkExplorer },
 ];
 
 function getInitialFromHash() {
@@ -115,18 +116,12 @@ export default function ExplorerPage() {
                 background: "none",
                 border: "none",
                 borderBottom:
-                  active === id
-                    ? "2px solid #c47a50"
-                    : "2px solid transparent",
+                  active === id ? "2px solid #c47a50" : "2px solid transparent",
                 padding: "8px 18px",
                 fontSize: 13,
                 fontWeight: active === id ? 700 : 400,
                 fontFamily: "'JetBrains Mono', monospace",
-                color: !component
-                  ? "#ddd"
-                  : active === id
-                    ? "#fff"
-                    : "#f0ebe4",
+                color: !component ? "#ddd" : active === id ? "#fff" : "#f0ebe4",
                 cursor: component ? "pointer" : "default",
                 opacity: component ? 1 : 0.5,
                 transition: "all 0.15s",
@@ -156,11 +151,7 @@ export default function ExplorerPage() {
           <button
             onClick={() => {
               setFullscreen(false);
-              window.history.replaceState(
-                null,
-                "",
-                window.location.pathname,
-              );
+              window.history.replaceState(null, "", window.location.pathname);
             }}
             style={{
               background: "none",
@@ -217,9 +208,10 @@ export default function ExplorerPage() {
             }}
             style={{
               background: active === id ? "var(--primary, #1a3a6a)" : "none",
-              border: active === id
-                ? "1px solid var(--primary, #1a3a6a)"
-                : "1px solid var(--border, #e0e0e0)",
+              border:
+                active === id
+                  ? "1px solid var(--primary, #1a3a6a)"
+                  : "1px solid var(--border, #e0e0e0)",
               borderRadius: 6,
               padding: "10px 20px",
               fontSize: 14,
