@@ -1678,11 +1678,11 @@ function HomeView(props) {
                     marginTop: 6,
                     background: C.cardBg,
                     border: "1px solid " + C.cardBorder,
-                    borderRadius: 12,
-                    padding: "8px 0",
-                    width: 340,
+                    borderRadius: 14,
+                    padding: "6px 0",
+                    width: 290,
                     zIndex: 100,
-                    boxShadow: "0 8px 32px rgba(0,0,0,.4)",
+                    boxShadow: "0 6px 24px rgba(0,0,0,.5)",
                   },
                 },
                 React.createElement(
@@ -1719,7 +1719,7 @@ function HomeView(props) {
                         setHover(null);
                       },
                       style: {
-                        padding: "8px 16px",
+                        padding: "6px 14px",
                         cursor: "pointer",
                         background:
                           hover === "drop-" + i
@@ -1729,12 +1729,20 @@ function HomeView(props) {
                     },
                     React.createElement(
                       "div",
-                      { style: { fontSize: 13, color: C.text } },
+                      {
+                        style: { fontSize: 13, color: C.text, lineHeight: 1.3 },
+                      },
                       p.name,
                     ),
                     React.createElement(
                       "div",
-                      { style: { fontSize: 11, color: C.textMuted } },
+                      {
+                        style: {
+                          fontSize: 10,
+                          color: C.textMuted,
+                          lineHeight: 1.3,
+                        },
+                      },
                       p.path,
                     ),
                   );
@@ -1743,11 +1751,11 @@ function HomeView(props) {
                   "div",
                   {
                     style: {
-                      padding: "8px 16px",
+                      padding: "6px 14px",
                       borderTop: "1px solid " + C.border,
                       marginTop: 4,
                       cursor: "pointer",
-                      fontSize: 13,
+                      fontSize: 12,
                       color: C.textDim,
                     },
                   },
@@ -1757,7 +1765,7 @@ function HomeView(props) {
                   "div",
                   {
                     style: {
-                      padding: "8px 16px",
+                      padding: "6px 14px",
                       display: "flex",
                       justifyContent: "space-between",
                       alignItems: "center",
@@ -7189,11 +7197,11 @@ function SearchOverlay(props) {
         },
         style: {
           background: C.cardBg,
-          borderRadius: 16,
-          width: 520,
-          maxHeight: 500,
+          borderRadius: 14,
+          width: 480,
+          maxHeight: 460,
           border: "1px solid " + C.cardBorder,
-          boxShadow: "0 16px 48px rgba(0,0,0,.6)",
+          boxShadow: "0 10px 36px rgba(0,0,0,.5)",
           overflow: "hidden",
         },
       },
@@ -7202,17 +7210,17 @@ function SearchOverlay(props) {
         "div",
         {
           style: {
-            padding: "14px 18px",
+            padding: "12px 16px",
             borderBottom: "1px solid " + C.border,
             display: "flex",
             alignItems: "center",
             gap: 10,
           },
         },
-        React.createElement(IconSearch, { size: 16, color: C.textMuted }),
+        React.createElement(IconSearch, { size: 15, color: C.textMuted }),
         React.createElement(
           "span",
-          { style: { fontSize: 14, color: C.textMuted, flex: 1 } },
+          { style: { fontSize: 13, color: C.textMuted, flex: 1 } },
           "Search chats and projects",
         ),
       ),
