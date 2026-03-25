@@ -5057,6 +5057,81 @@ function ScheduledView(props) {
       ),
       " in any existing task to set one up.",
     ),
+    // Info bar (always visible)
+    React.createElement(
+      "div",
+      {
+        style: {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "10px 16px",
+          borderRadius: 10,
+          background: C.cardBg,
+          border: "1px solid " + C.cardBorder,
+          marginBottom: 20,
+        },
+      },
+      React.createElement(
+        "div",
+        { style: { display: "flex", alignItems: "center", gap: 8 } },
+        React.createElement(
+          "div",
+          {
+            style: {
+              width: 20,
+              height: 20,
+              borderRadius: "50%",
+              border: "1px solid " + C.yellow,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 10,
+              color: C.yellow,
+            },
+          },
+          "\u26a0",
+        ),
+        React.createElement(
+          "span",
+          { style: { fontSize: 13, color: C.textDim } },
+          "Scheduled tasks only run while your computer is awake.",
+        ),
+      ),
+      React.createElement(
+        "div",
+        { style: { display: "flex", alignItems: "center", gap: 8 } },
+        React.createElement(
+          "span",
+          { style: { fontSize: 13, color: C.text } },
+          "Keep awake",
+        ),
+        React.createElement(
+          "div",
+          {
+            style: {
+              width: 36,
+              height: 20,
+              borderRadius: 10,
+              background: C.green,
+              position: "relative",
+              cursor: "pointer",
+            },
+          },
+          React.createElement("div", {
+            style: {
+              width: 16,
+              height: 16,
+              borderRadius: "50%",
+              background: "#fff",
+              position: "absolute",
+              top: 2,
+              right: 2,
+            },
+          }),
+        ),
+      ),
+    ),
     // Show task card if created, otherwise empty state
     created
       ? React.createElement(
