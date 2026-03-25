@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/supply-chain-procurement/six-dimension-vendor-assessment
 sidebar_position: 4
 title: "Six-Dimension Vendor Assessment"
-description: "Go beyond classification — run a full six-dimension assessment across Commercial, Operational, Financial, Compliance, Strategic, and Geopolitical dimensions using the /vendor-assess skill to surface the risks your annual review never finds"
+description: "Go beyond classification: run a full six-dimension assessment across Commercial, Operational, Financial, Compliance, Strategic, and Geopolitical dimensions using the /vendor-assess skill to surface the risks your annual review never finds"
 keywords:
   [
     "vendor assessment",
@@ -59,36 +59,36 @@ learning_objectives:
   - objective: "Run a full /vendor-assess assessment and produce a ranked action plan from the output"
     proficiency_level: "B2"
     bloom_level: "Analyze"
-    assessment_method: "Student submits a /vendor-assess output for a real or realistic vendor, with a ranked action list of at least three items showing owner, action, and deadline — prioritised by risk severity"
+    assessment_method: "Student submits a /vendor-assess output for a real or realistic vendor, with a ranked action list of at least three items showing owner, action, and deadline: prioritised by risk severity"
 
 cognitive_load:
   new_concepts: 6
   concepts_list:
-    - "Commercial dimension — contract status, pricing model, payment terms, IP clauses"
-    - "Operational dimension — OTD, lead time variance, quality rejection rate, capacity"
-    - "Financial dimension — revenue trend, credit rating, DSO, financial visibility"
-    - "Compliance dimension — certifications, sanctions screening, modern slavery, GDPR"
-    - "Strategic dimension — switching cost, relationship investment, innovation contribution"
-    - "Geopolitical / Sustainability dimension — country risk, Scope 3, Tier 2 visibility"
-  assessment: "6 concepts at B1-B2 level — at the upper boundary. Load is managed by using the KIFTL running example throughout, anchoring each dimension in familiar vendor data before introducing the framework label. Students who completed Lesson 3 have already processed the classification layer, so the assessment dimensions are additive rather than foundational."
+    - "Commercial dimension: contract status, pricing model, payment terms, IP clauses"
+    - "Operational dimension; OTD, lead time variance, quality rejection rate, capacity"
+    - "Financial dimension: revenue trend, credit rating, DSO, financial visibility"
+    - "Compliance dimension: certifications, sanctions screening, modern slavery, GDPR"
+    - "Strategic dimension: switching cost, relationship investment, innovation contribution"
+    - "Geopolitical / Sustainability dimension: country risk, Scope 3, Tier 2 visibility"
+  assessment: "6 concepts at B1-B2 level: at the upper boundary. Load is managed by using the KIFTL running example throughout, anchoring each dimension in familiar vendor data before introducing the framework label. Students who completed Lesson 3 have already processed the classification layer, so the assessment dimensions are additive rather than foundational."
 
 differentiation:
-  extension_for_advanced: "The vendor-assessment.md SKILL.md configures dimension weights by tier — Strategic vendors receive full six-dimension coverage while Commodity vendors receive only Commercial and Operational. Research how weighted scoring models work in enterprise vendor management systems (Ariba, Jaggaer, Coupa). What are the tradeoffs of equal-weight vs. tier-weighted assessment? How would you modify the SKILL.md to express different weights for each dimension by tier?"
-  remedial_for_struggling: "Focus on three dimensions first: Operational (OTD and quality — these have clear numbers from ERP), Commercial (contract status and expiry — verifiable from your records), and Strategic (sole-source vs. alternatives — a binary question). If you can answer the OTD, contract expiry, and dependency questions for a vendor, you have covered the most actionable risk signals. The remaining three dimensions (Financial, Compliance, Geopolitical) add depth once you have the fundamentals."
+  extension_for_advanced: "The vendor-assessment.md SKILL.md configures dimension weights by tier; Strategic vendors receive full six-dimension coverage while Commodity vendors receive only Commercial and Operational. Research how weighted scoring models work in enterprise vendor management systems (Ariba, Jaggaer, Coupa). What are the tradeoffs of equal-weight vs. tier-weighted assessment? How would you modify the SKILL.md to express different weights for each dimension by tier?"
+  remedial_for_struggling: "Focus on three dimensions first: Operational (OTD and quality: these have clear numbers from ERP), Commercial (contract status and expiry: verifiable from your records), and Strategic (sole-source vs. alternatives: a binary question). If you can answer the OTD, contract expiry, and dependency questions for a vendor, you have covered the most actionable risk signals. The remaining three dimensions (Financial, Compliance, Geopolitical) add depth once you have the fundamentals."
 
 teaching_guide:
   key_points:
-    - "Classification (Lesson 3) determines the depth of assessment — Strategic vendors get all six dimensions at full depth; Commodity vendors get Commercial and Operational only"
-    - "Financial dimension is the most commonly skipped — and for sole-source vendors, zero financial visibility is a critical risk, not a documentation gap"
-    - "Operational data lives in your ERP — the skill needs MCP access or you paste the data; it cannot retrieve ERP data that is not connected"
-    - "The assessment output is only as good as the data provided — a six-dimension framework with zero financial data still flags the gap explicitly"
+    - "Classification (Lesson 3) determines the depth of assessment; Strategic vendors get all six dimensions at full depth; Commodity vendors get Commercial and Operational only"
+    - "Financial dimension is the most commonly skipped: and for sole-source vendors, zero financial visibility is a critical risk, not a documentation gap"
+    - "Operational data lives in your ERP: the skill needs MCP access or you paste the data; it cannot retrieve ERP data that is not connected"
+    - "The assessment output is only as good as the data provided: a six-dimension framework with zero financial data still flags the gap explicitly"
   misconceptions:
-    - "A good OTD score means this vendor is low risk. Correction: operational performance is one of six dimensions. A vendor with 97% OTD and zero financial visibility is still a critical risk — the OTD score simply means they are delivering well today. It says nothing about whether they will exist next year."
+    - "A good OTD score means this vendor is low risk. Correction: operational performance is one of six dimensions. A vendor with 97% OTD and zero financial visibility is still a critical risk: the OTD score simply means they are delivering well today. It says nothing about whether they will exist next year."
     - "The /vendor-assess output is the final verdict. Correction: the output is a structured analysis of the data you provided. It flags gaps where data is missing and recommends actions. The quality of the analysis depends entirely on the quality of the input data."
     - "Compliance dimension only applies to regulated industries. Correction: sanctions screening applies to every vendor, regardless of industry. Processing an invoice from a sanctioned entity creates legal exposure. Modern slavery statements are a UK statutory requirement above the threshold. These are universal obligations."
   discussion_prompts:
-    - "For your most critical vendor, which of the six dimensions gives you the least visibility? What would it cost — in time and money — to get that visibility? Is that cost proportionate to the risk?"
-    - "The financial dimension requires requesting audited accounts from private vendors. What is your organisation's current practice — and what would a vendor's refusal to provide accounts tell you?"
+    - "For your most critical vendor, which of the six dimensions gives you the least visibility? What would it cost: in time and money: to get that visibility? Is that cost proportionate to the risk?"
+    - "The financial dimension requires requesting audited accounts from private vendors. What is your organisation's current practice: and what would a vendor's refusal to provide accounts tell you?"
   teaching_tips:
     - "Walk through the full KIFTL assessment output line by line before the exercise. Students should understand every flag before they try to run their own assessment."
     - "The configuration step (Step 3 of the exercise) is where most value is created. Encourage students to use real thresholds from their organisation, not the defaults. A threshold that does not match operational reality generates false alarms."
@@ -96,15 +96,15 @@ teaching_guide:
 
 # Six-Dimension Vendor Assessment
 
-You classified KIFTL as a Tier 4 Bottleneck in Lesson 3. You know it is your most dangerous low-spend vendor — sole-source dependency, 84% on-time delivery, no qualified backup. But classification only answers the question "what kind of vendor is this?" The assessment answers the question "what exactly is wrong, and what do I do about it?"
+You classified KIFTL as a Tier 4 Bottleneck in Lesson 3. You know it is your most dangerous low-spend vendor: sole-source dependency, 84% on-time delivery, no qualified backup. But classification only answers the question "what kind of vendor is this?" The assessment answers the question "what exactly is wrong, and what do I do about it?"
 
-This lesson takes the classification you built and converts it into an actionable risk picture across six dimensions: Commercial, Operational, Financial, Compliance, Strategic, and Geopolitical/Sustainability. Each dimension has its own data sources, its own flags, and its own recommended actions. Together, they give you a complete picture of a vendor relationship — the kind of picture that should inform every contract renewal, every review meeting, and every procurement decision that touches this vendor.
+This lesson takes the classification you built and converts it into an actionable risk picture across six dimensions: Commercial, Operational, Financial, Compliance, Strategic, and Geopolitical/Sustainability. Each dimension has its own data sources, its own flags, and its own recommended actions. Together, they give you a complete picture of a vendor relationship: the kind of picture that should inform every contract renewal, every review meeting, and every procurement decision that touches this vendor.
 
 The `/vendor-assess` skill runs this assessment systematically. Your job is to provide the data, interpret the output, configure the thresholds that reflect your organisation's risk tolerance, and turn findings into ranked actions.
 
-## Why Six Dimensions — Not One
+## Why Six Dimensions; Not One
 
-A single KPI — say, on-time delivery — creates a dangerous illusion of control. A vendor with 97% OTD can still fail catastrophically if:
+A single KPI: say, on-time delivery: creates a dangerous illusion of control. A vendor with 97% OTD can still fail catastrophically if:
 
 - Their contract expires next month with an auto-renewal clause you missed (Commercial)
 - Their only manufacturing facility is in a country facing export restrictions (Geopolitical)
@@ -114,7 +114,7 @@ A single KPI — say, on-time delivery — creates a dangerous illusion of contr
 
 Each of these failures can occur while the OTD number looks healthy. Six-dimension assessment exists to prevent you from optimising one metric while ignoring five others.
 
-The depth of assessment is determined by the vendor's classification tier. Strategic vendors receive a full assessment across all six dimensions at maximum depth. Tactical vendors receive Commercial, Operational, and Financial at standard depth. Commodity vendors receive Commercial and Operational only. Bottleneck vendors — despite low spend — receive the same depth as Strategic vendors, because their failure risk justifies it.
+The depth of assessment is determined by the vendor's classification tier. Strategic vendors receive a full assessment across all six dimensions at maximum depth. Tactical vendors receive Commercial, Operational, and Financial at standard depth. Commodity vendors receive Commercial and Operational only. Bottleneck vendors: despite low spend: receive the same depth as Strategic vendors, because their failure risk justifies it.
 
 ## The Six Dimensions
 
@@ -127,13 +127,13 @@ Key data points:
 | Factor             | What You Are Looking For                       | Red Flag                                           |
 | ------------------ | ---------------------------------------------- | -------------------------------------------------- |
 | Contract status    | Active / expiring / auto-renewal               | Auto-renewal without documented notice window      |
-| Expiry date        | Days until expiry                              | < 90 days — immediate action required              |
+| Expiry date        | Days until expiry                              | < 90 days: immediate action required              |
 | Pricing model      | Fixed / index-linked / open book               | Fixed price on commodity category (index exposure) |
 | Payment terms      | Standard for sector/market                     | Unusually short terms creating cash pressure       |
 | Volume commitments | Minimum order quantities; penalty clauses      | Minimum commitment below your forecast volume      |
-| IP ownership       | Especially for manufactured-to-spec components | Your design, their tooling — who owns it?          |
+| IP ownership       | Especially for manufactured-to-spec components | Your design, their tooling: who owns it?          |
 
-For KIFTL: their contract shows a fixed price agreement that expires with the contract. The stainless steel index has moved roughly 12% since the agreement was signed — KIFTL is absorbing that exposure now, but at contract renewal, they will correct it. Commercial risk: medium. The more pressing issue is that the auto-renewal clause means the contract renews automatically if you miss the 60-day notice window — and your team has not reviewed it in two years.
+For KIFTL: their contract shows a fixed price agreement that expires with the contract. The stainless steel index has moved roughly 12% since the agreement was signed; KIFTL is absorbing that exposure now, but at contract renewal, they will correct it. Commercial risk: medium. The more pressing issue is that the auto-renewal clause means the contract renews automatically if you miss the 60-day notice window: and your team has not reviewed it in two years.
 
 ### Dimension 2: Operational
 
@@ -148,27 +148,27 @@ Data sources: Your ERP (goods receipt dates vs. PO delivery dates), your QMS (qu
 | Lead time variance         | ±6 days    | ±3 days   | ⚠️ High variance   |
 | Quality rejection rate     | 2.3%       | &lt;1.5%     | ⚠️ Elevated        |
 
-An OTD of 84% means roughly one in six deliveries is late. For a sole-source supplier of production-critical fasteners, this is not a mild concern — it is a production disruption risk that occurs approximately every six weeks. The 2.3% quality rejection rate adds further pressure: industry standard for fasteners is below 1.5%.
+An OTD of 84% means roughly one in six deliveries is late. For a sole-source supplier of production-critical fasteners, this is not a mild concern: it is a production disruption risk that occurs approximately every six weeks. The 2.3% quality rejection rate adds further pressure: industry standard for fasteners is below 1.5%.
 
 :::caution Declining Trends Matter as Much as Thresholds
-A vendor at 91% OTD (above a 90% threshold) is technically compliant. But if that 91% is down from 96% eighteen months ago, the trajectory matters. The `/vendor-assess` skill flags declining trends even when the current number is within threshold — because trajectory predicts where you will be at the next review.
+A vendor at 91% OTD (above a 90% threshold) is technically compliant. But if that 91% is down from 96% eighteen months ago, the trajectory matters. The `/vendor-assess` skill flags declining trends even when the current number is within threshold: because trajectory predicts where you will be at the next review.
 :::
 
 ### Dimension 3: Financial
 
 Financial assessment answers: "Is this vendor financially viable for the foreseeable future?"
 
-For publicly listed vendors, this is a structured analysis of public filings and analyst commentary. For private vendors — which includes most mid-market suppliers — it requires requesting audited accounts directly.
+For publicly listed vendors, this is a structured analysis of public filings and analyst commentary. For private vendors: which includes most mid-market suppliers: it requires requesting audited accounts directly.
 
 Key signals:
 
 - **Revenue trend** (last 3 years): growing / stable / declining
-- **Profitability**: EBIT margin trajectory — below 3% signals marginal viability
+- **Profitability**: EBIT margin trajectory: below 3% signals marginal viability
 - **Debt to equity**: deteriorating ratio = increasing financial stress
 - **Days Sales Outstanding (DSO)**: lengthening DSO = cash pressure (they are not collecting from their customers)
-- **Credit rating**: Creditsafe / D&B — any downgrade or adverse flag
+- **Credit rating**: Creditsafe / D&B: any downgrade or adverse flag
 
-For KIFTL: they are a private Pakistani manufacturer. No public filings. No credit score available from UK databases. Financial visibility: zero. This is a critical risk flag — not because they are necessarily financially distressed, but because you have no way to know. For a sole-source vendor, "I don't know" on financial health is itself a risk.
+For KIFTL: they are a private Pakistani manufacturer. No public filings. No credit score available from UK databases. Financial visibility: zero. This is a critical risk flag: not because they are necessarily financially distressed, but because you have no way to know. For a sole-source vendor, "I don't know" on financial health is itself a risk.
 
 The correct action: request the last two years of audited accounts as a condition of contract renewal. If they refuse, that is important information.
 
@@ -178,14 +178,14 @@ Compliance assessment answers: "Are we exposed to legal or regulatory risk throu
 
 | Compliance Area        | What to Check                           | Critical Trigger                          |
 | ---------------------- | --------------------------------------- | ----------------------------------------- |
-| Quality certifications | ISO 9001 / sector-specific              | Expired — immediate escalation            |
-| Sanctions screening    | OFAC, EU, UK HMT lists                  | Any match — stop all activity immediately |
+| Quality certifications | ISO 9001 / sector-specific              | Expired: immediate escalation            |
+| Sanctions screening    | OFAC, EU, UK HMT lists                  | Any match: stop all activity immediately |
 | Modern Slavery Act     | UK statutory statement (>£36M turnover) | Absent where required                     |
 | Data protection        | GDPR/DPA where data is shared           | No DPA in place                           |
 | Trade compliance       | Export licences; import documentation   | Missing documentation                     |
 | ESG / ethical sourcing | Scope 3 disclosure; conflict minerals   | Sector-specific triggers                  |
 
-For KIFTL: ISO 9001 certification status is not confirmed in your records. Pakistan PDPA compliance needs verification if any personal data flows through the relationship. Trade compliance documentation should be checked against the import records. None of these are confirmed red flags yet — they are gaps in documentation that need resolution.
+For KIFTL: ISO 9001 certification status is not confirmed in your records. Pakistan PDPA compliance needs verification if any personal data flows through the relationship. Trade compliance documentation should be checked against the import records. None of these are confirmed red flags yet: they are gaps in documentation that need resolution.
 
 :::danger Sanctions Screening Is Not Optional
 If `/vendor-assess` returns a sanctions match against OFAC, EU, or UK HMT lists: stop all processing immediately. Do not pay the next invoice. Do not proceed with any outstanding orders. Escalate to your Finance Director and Legal team. Processing a transaction with a sanctioned entity creates criminal liability regardless of whether you knew about the sanction.
@@ -197,14 +197,14 @@ Strategic assessment answers: "How dependent are we on this vendor, and what wou
 
 | Factor                  | KIFTL Position                                 |
 | ----------------------- | ---------------------------------------------- |
-| Dependency              | Sole-source — no alternative qualified         |
+| Dependency              | Sole-source: no alternative qualified         |
 | Switching timeline      | 90+ days minimum (qualification required)      |
 | Switching cost          | Tooling, sampling, testing, production ramp-up |
 | Relationship investment | 6-year relationship; institutional knowledge   |
 | Innovation contribution | None documented                                |
 | Strategic alignment     | No joint planning in evidence                  |
 
-KIFTL scores maximum on dependency risk. The switching timeline exceeds 90 days, meaning any supply disruption would cause a production halt of at least 3 months if you had to qualify a new supplier from scratch. This is the same finding that drove the Bottleneck classification in Lesson 3 — the strategic dimension formalises it with the full remediation picture.
+KIFTL scores maximum on dependency risk. The switching timeline exceeds 90 days, meaning any supply disruption would cause a production halt of at least 3 months if you had to qualify a new supplier from scratch. This is the same finding that drove the Bottleneck classification in Lesson 3: the strategic dimension formalises it with the full remediation picture.
 
 ### Dimension 6: Geopolitical / Sustainability
 
@@ -213,12 +213,12 @@ Geopolitical assessment answers: "Are there country-level or supply chain depth 
 | Factor                   | What to Assess                                                  |
 | ------------------------ | --------------------------------------------------------------- |
 | Country risk             | Political stability; trade restriction risk; sanctions exposure |
-| Currency risk            | Contract currency vs. payment currency — are you exposed?       |
+| Currency risk            | Contract currency vs. payment currency: are you exposed?       |
 | Supply chain depth       | Do you know KIFTL's own suppliers (Tier 2)?                     |
-| Carbon footprint         | Scope 3 reporting — increasingly mandatory for listed buyers    |
+| Carbon footprint         | Scope 3 reporting: increasingly mandatory for listed buyers    |
 | Geographic concentration | Are all your fastener suppliers in the same country?            |
 
-For KIFTL: Pakistan carries moderate country risk — trade relationships are subject to political volatility, and currency movement between PKR and GBP/USD is material over a multi-year contract. No Tier 2 visibility means you do not know where KIFTL sources their steel. If their steel supplier faces an export restriction, you have no early warning. This is the "unknown unknowns" dimension — worth documenting even when no flags are active.
+For KIFTL: Pakistan carries moderate country risk: trade relationships are subject to political volatility, and currency movement between PKR and GBP/USD is material over a multi-year contract. No Tier 2 visibility means you do not know where KIFTL sources their steel. If their steel supplier faces an export restriction, you have no early warning. This is the "unknown unknowns" dimension: worth documenting even when no flags are active.
 
 ## Using `/vendor-assess` for Full Assessment
 
@@ -310,7 +310,7 @@ RECOMMENDED ACTIONS — RANKED BY URGENCY
 ```
 
 :::note Your output will vary
-The exact wording depends on the data you provide and the thresholds configured in your `supply-chain.local.md`. The teaching point is the structure — each dimension produces findings and each finding has a specific recommended action with a timeline. The output is a work plan, not just an analysis.
+The exact wording depends on the data you provide and the thresholds configured in your `supply-chain.local.md`. The teaching point is the structure: each dimension produces findings and each finding has a specific recommended action with a timeline. The output is a work plan, not just an analysis.
 :::
 
 ## Exercise: Six-Dimension Assessment Deep Dive (Exercise 1, Part B)
@@ -321,10 +321,10 @@ The exact wording depends on the data you provide and the thresholds configured 
 **Goal:** Configure your risk thresholds and run full six-dimension assessments on your top strategic vendors
 
 :::note Prerequisites
-This exercise builds directly on the vendor classification register you created in [Exercise 1, Part A (Lesson 3)](./03-vendor-classification-kraljic.md). You need your completed five-vendor classification register before continuing. If you have not completed it, do so before proceeding — the assessment depth and thresholds depend on the tier assignments you made there.
+This exercise builds directly on the vendor classification register you created in [Exercise 1, Part A (Lesson 3)](./03-vendor-classification-kraljic.md). You need your completed five-vendor classification register before continuing. If you have not completed it, do so before proceeding: the assessment depth and thresholds depend on the tier assignments you made there.
 :::
 
-### Step 1 — Configure Your Risk Thresholds
+### Step 1; Configure Your Risk Thresholds
 
 Before running assessments, configure your organisation's thresholds in `supply-chain.local.md`. Open Cowork and run:
 
@@ -342,7 +342,7 @@ The skill will walk you through a configuration interview covering:
 
 Work through the interview to produce a `supply-chain.local.md` configuration tailored to your organisation. If you do not have a real organisation to configure for, use these defaults as a starting point and adjust them to reflect a hypothetical manufacturing company.
 
-### Step 2 — Gather Data for Your Top 5 Vendors
+### Step 2; Gather Data for Your Top 5 Vendors
 
 For each of your five vendors from Exercise 1 (Part A), collect:
 
@@ -352,7 +352,7 @@ For each of your five vendors from Exercise 1 (Part A), collect:
 - Certification status: ISO 9001 or equivalent
 - Dependency: sole-source / dual-source / panel
 
-### Step 3 — Run `/vendor-assess` for Each Strategic Vendor
+### Step 3; Run `/vendor-assess` for Each Strategic Vendor
 
 For each Strategic or Bottleneck vendor from your classification register, run a full assessment:
 
@@ -371,19 +371,19 @@ Certifications: [ISO status]
 Country: [Vendor country]
 ```
 
-Record the risk summary for each vendor — specifically the Critical and High flags.
+Record the risk summary for each vendor: specifically the Critical and High flags.
 
-### Step 4 — Identify Your Most Dangerous Bottleneck Vendor
+### Step 4; Identify Your Most Dangerous Bottleneck Vendor
 
-From your classification register, select your highest-risk Bottleneck vendor — the one with the greatest operational dependency and the least current management attention. Run a full six-dimension assessment.
+From your classification register, select your highest-risk Bottleneck vendor: the one with the greatest operational dependency and the least current management attention. Run a full six-dimension assessment.
 
 For the assessment findings, answer these three questions:
 
 1. What is the single most important risk this vendor presents?
-2. What one action would reduce that risk most — and what would it cost?
+2. What one action would reduce that risk most: and what would it cost?
 3. What early warning signal would tell you this risk is materialising before it becomes a crisis?
 
-### Step 5 — Build Your Ranked Action List
+### Step 5; Build Your Ranked Action List
 
 Consolidate the findings across all your assessments into a single ranked action list. Format:
 
@@ -393,9 +393,9 @@ Consolidate the findings across all your assessments into a single ranked action
 | 2        |        |        |       |          |
 | 3        |        |        |       |          |
 
-Rank by risk severity: critical findings first, then high, then medium. Within each severity level, rank by feasibility (quick wins first). The output of this step is your vendor risk work plan — the document you would present to your CPO or CFO.
+Rank by risk severity: critical findings first, then high, then medium. Within each severity level, rank by feasibility (quick wins first). The output of this step is your vendor risk work plan: the document you would present to your CPO or CFO.
 
-**Deliverable:** Completed `supply-chain.local.md` configuration, six-dimension assessment outputs for all Strategic and Bottleneck vendors from your classification register, a full deep-dive assessment for your highest-risk Bottleneck vendor, and a ranked action list with owners and deadlines. Save your classification register with assessments added — you will reference it in Lesson 13 (Vendor Exit Protocol) when planning the exit for your highest-risk vendor.
+**Deliverable:** Completed `supply-chain.local.md` configuration, six-dimension assessment outputs for all Strategic and Bottleneck vendors from your classification register, a full deep-dive assessment for your highest-risk Bottleneck vendor, and a ranked action list with owners and deadlines. Save your classification register with assessments added: you will reference it in Lesson 13 (Vendor Exit Protocol) when planning the exit for your highest-risk vendor.
 
 :::note Keep This File
 The assessed vendor register you build here is referenced in [Lesson 7 (Supplier Risk)](./07-supplier-risk-five-dimensions.md), where you add risk scoring to each assessment. It is also the foundation for [Lesson 13 (Vendor Exit Protocol)](./13-vendor-exit-protocol.md), Exercise 8.
@@ -463,7 +463,7 @@ Design a triage approach:
 Produce a triage protocol as a structured document.
 ```
 
-**What you are learning:** In a portfolio acquisition scenario, you cannot run full assessments on 40 vendors simultaneously. Triage design requires understanding which dimensions surface the most critical risks fastest — and which data you can obtain without vendor cooperation (public filings, sanctions screening) vs. which requires vendor engagement (audited accounts, certification copies).
+**What you are learning:** In a portfolio acquisition scenario, you cannot run full assessments on 40 vendors simultaneously. Triage design requires understanding which dimensions surface the most critical risks fastest: and which data you can obtain without vendor cooperation (public filings, sanctions screening) vs. which requires vendor engagement (audited accounts, certification copies).
 :::
 
 ## Flashcards Study Aid

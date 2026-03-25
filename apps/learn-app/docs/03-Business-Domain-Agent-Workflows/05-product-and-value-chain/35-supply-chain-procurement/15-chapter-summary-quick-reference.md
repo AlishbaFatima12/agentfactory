@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/supply-chain-procurement/chapter-summary-quick-reference
 sidebar_position: 15
 title: "Chapter Summary and Quick Reference"
-description: "The connected supply chain intelligence layer — what Chapter 35 built, the 8 commands and 5 agents at a glance, key performance thresholds, and references for further study"
+description: "The connected supply chain intelligence layer: what Chapter 35 built, the 8 commands and 5 agents at a glance, key performance thresholds, and references for further study"
 keywords:
   [
     "supply chain summary",
@@ -37,7 +37,7 @@ learning_objectives:
     bloom_level: "Remember"
     assessment_method: "Given 8 supply chain scenarios (one per command type), student correctly matches each to its command without consulting lesson notes"
 
-  - objective: "Explain the central insight of Chapter 35 — that every supply chain problem is an information problem — and relate it to the three structural failures"
+  - objective: "Explain the central insight of Chapter 35: that every supply chain problem is an information problem: and relate it to the three structural failures"
     proficiency_level: "B1"
     bloom_level: "Understand"
     assessment_method: "Student can trace a supply chain failure scenario back to its information gap and identify which structural failure category it belongs to"
@@ -50,26 +50,26 @@ learning_objectives:
 cognitive_load:
   new_concepts: 0
   concepts_list: []
-  assessment: "This is a consolidation lesson — no new concepts. The cognitive work is integration: connecting what was learned across 14 lessons into a coherent mental model of the connected supply chain intelligence layer."
+  assessment: "This is a consolidation lesson: no new concepts. The cognitive work is integration: connecting what was learned across 14 lessons into a coherent mental model of the connected supply chain intelligence layer."
 
 differentiation:
   extension_for_advanced: "Review the cross-reference map from the architecture spec. Which exercises built artifacts that subsequent exercises depended on? What does the dependency chain reveal about the order in which you would deploy these capabilities in a real organisation? Write a 90-day deployment roadmap that prioritises the capabilities with the highest ROI for your organisation's specific failure profile."
-  remedial_for_struggling: "Start with the three structural failures from Lesson 1 and the command table in this summary. For each failure, identify the commands that address it. That mapping is the core of the chapter — if you have that, you have the architecture."
+  remedial_for_struggling: "Start with the three structural failures from Lesson 1 and the command table in this summary. For each failure, identify the commands that address it. That mapping is the core of the chapter: if you have that, you have the architecture."
 
 teaching_guide:
   key_points:
-    - "The central insight — supply chain problems are information problems first — ties all 14 lessons together"
+    - "The central insight: supply chain problems are information problems first: ties all 14 lessons together"
     - "The quick reference tables are the primary deliverable of this lesson; students should bookmark this page"
-    - "The 'what does not change' section is as important as the technical content — human judgment and relationships remain the variables AI cannot replace"
-    - "The exercise dependency chain (Ex 1 → Ex 6 and Ex 8, Ex 2 → Ex 6) is worth reviewing — it reflects the real-world order in which capabilities compound"
+    - "The 'what does not change' section is as important as the technical content: human judgment and relationships remain the variables AI cannot replace"
+    - "The exercise dependency chain (Ex 1 → Ex 6 and Ex 8, Ex 2 → Ex 6) is worth reviewing: it reflects the real-world order in which capabilities compound"
   misconceptions:
     - "The plugin replaces procurement judgment. Correction: The plugin surfaces intelligence and manages routine exceptions. Supplier relationships, negotiations, and crisis responses still require people."
     - "You need all 8 commands to start. Correction: Most organisations start with 2-3 commands that address their worst failure (typically /invoice-reconcile or /supplier-risk) and expand from there."
   discussion_prompts:
     - "Which of the 8 capabilities would deliver the most value in your organisation in the next 90 days? What data would you need to connect via MCP to make it work?"
-    - "Looking at what this chapter built — vendor lifecycle management, reconciliation, risk monitoring, logistics optimisation, spend analytics, agents — which piece feels most foreign to your current procurement practice?"
+    - "Looking at what this chapter built: vendor lifecycle management, reconciliation, risk monitoring, logistics optimisation, spend analytics, agents: which piece feels most foreign to your current procurement practice?"
   teaching_tips:
-    - "Use this lesson as a review session — ask students which capability surprised them most and which they are most confident using"
+    - "Use this lesson as a review session: ask students which capability surprised them most and which they are most confident using"
     - "The quick reference table is worth printing; it is the reference students will consult during real deployments"
 ---
 
@@ -79,9 +79,9 @@ teaching_guide:
 
 Every supply chain problem is an information problem before it is an operational problem.
 
-The invoice exception that causes a late payment was an information gap — a price change not communicated to accounts payable. The supply disruption was an information gap — a supplier's financial stress not monitored. The logistics overpayment was an information gap — a better rate available but not reviewed since the last contract cycle. The stock-out was an information gap — a demand forecast error not caught by the inventory monitoring layer.
+The invoice exception that causes a late payment was an information gap: a price change not communicated to accounts payable. The supply disruption was an information gap: a supplier's financial stress not monitored. The logistics overpayment was an information gap: a better rate available but not reviewed since the last contract cycle. The stock-out was an information gap: a demand forecast error not caught by the inventory monitoring layer.
 
-Claude, connected to operational data systems via MCP and guided by the institutional knowledge encoded in `supply-chain.local.md`, transforms supply chain operations from reactive to anticipatory. The vendor does not become distressed overnight — the signals appear weeks before the crisis. The invoice exception is a pattern, not a one-off — the agent identifies the pattern before Finance does. The logistics rate is no longer optimal — the agent detects this when the fuel index moves, not when the annual contract review arrives.
+Claude, connected to operational data systems via MCP and guided by the institutional knowledge encoded in `supply-chain.local.md`, transforms supply chain operations from reactive to anticipatory. The vendor does not become distressed overnight: the signals appear weeks before the crisis. The invoice exception is a pattern, not a one-off: the agent identifies the pattern before Finance does. The logistics rate is no longer optimal: the agent detects this when the fuel index moves, not when the annual contract review arrives.
 
 ---
 
@@ -89,12 +89,12 @@ Claude, connected to operational data systems via MCP and guided by the institut
 
 | #   | Capability                                                                                                      | Delivered By                                 | Lesson         |
 | --- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------- |
-| 1   | Vendor lifecycle management — onboarding assessment through continuous monitoring to exit planning              | `/vendor-assess`                             | L03, L04, L13  |
-| 2   | Invoice reconciliation — from manual exception management to straight-through processing with pattern detection | `/invoice-reconcile`                         | L05, L06       |
-| 3   | Supplier risk monitoring — five dimensions, Tier 2 visibility, continuous signals, CPO-ready briefs             | `/supplier-risk`                             | L07            |
-| 4   | Logistics optimisation — carrier performance, lane efficiency, carbon awareness, network design                 | `/logistics-brief`, `/supply-network-design` | L08, L09       |
-| 5   | Spend analytics — price consistency, vendor consolidation, market benchmarking                                  | `/spend-analysis`                            | L10            |
-| 6   | Vendor communications — dispute notices, corrective action requests, exit protocols                             | `/vendor-communicate`                        | L11, L13       |
+| 1   | Vendor lifecycle management: onboarding assessment through continuous monitoring to exit planning              | `/vendor-assess`                             | L03, L04, L13  |
+| 2   | Invoice reconciliation: from manual exception management to straight-through processing with pattern detection | `/invoice-reconcile`                         | L05, L06       |
+| 3   | Supplier risk monitoring: five dimensions, Tier 2 visibility, continuous signals, CPO-ready briefs             | `/supplier-risk`                             | L07            |
+| 4   | Logistics optimisation: carrier performance, lane efficiency, carbon awareness, network design                 | `/logistics-brief`, `/supply-network-design` | L08, L09       |
+| 5   | Spend analytics: price consistency, vendor consolidation, market benchmarking                                  | `/spend-analysis`                            | L10            |
+| 6   | Vendor communications: dispute notices, corrective action requests, exit protocols                             | `/vendor-communicate`                        | L11, L13       |
 | 7   | Five persistent agents running the supply chain intelligence layer continuously                                 | All 5 agents                                 | L12            |
 | 8   | Eight exercises building the institutional knowledge layer from scratch                                         | All 8 skills + agents                        | L14 (capstone) |
 
@@ -142,7 +142,7 @@ These defaults appear across the chapter exercises. Override them in `supply-cha
 | **Commodity vendor OTD**                     | ≥ 85%                         | L08           |
 | **Invoice straight-through rate** (target)   | ≥ 95%                         | L06           |
 | **Standard invoice tolerance**               | 2% or £50 (lesser)            | L05           |
-| **Strategic vendor tolerance**               | 1% — tighter threshold        | L05           |
+| **Strategic vendor tolerance**               | 1%: tighter threshold        | L05           |
 | **Auto-approve discrepancy**                 | < £25                         | L05           |
 | **Escalate discrepancy**                     | > £500                        | L05           |
 | **Bottleneck vendor review frequency**       | Quarterly                     | L03           |
@@ -179,7 +179,7 @@ Capstone (L14): integrates all 8 exercises into one end-to-end scenario
 
 Supplier relationships are built by people. The negotiation that secured the best terms for your most important contract was a human conversation. The visit to a distressed supplier's facility that turned the relationship around required a person on a plane. The creative solution to a sudden supply disruption required someone who understood the operation deeply enough to improvise.
 
-AI surfaces the intelligence and manages the routine. People make the relationships and the judgment calls. The supply-chain plugin is the connective tissue — continuous, exhaustive, consistent — that frees your procurement team from the data-retrieval work so they can do the work that requires judgment.
+AI surfaces the intelligence and manages the routine. People make the relationships and the judgment calls. The supply-chain plugin is the connective tissue: continuous, exhaustive, consistent: that frees your procurement team from the data-retrieval work so they can do the work that requires judgment.
 
 ---
 
@@ -187,7 +187,7 @@ AI surfaces the intelligence and manages the routine. People make the relationsh
 
 | Resource                                                                                                       | Description                                                                                                                                 |
 | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Vendor Governance Plugin](https://github.com/ricardodevis/it-vendor-provision)                                | Open-source IT vendor provision architecture by Ricardo Devis — the architectural inspiration for this chapter's vendor management approach |
+| [Vendor Governance Plugin](https://github.com/ricardodevis/it-vendor-provision)                                | Open-source IT vendor provision architecture by Ricardo Devis: the architectural inspiration for this chapter's vendor management approach |
 | [Supply Chain Optimisation Agent](https://samirsaci.com/how-i-deployed-an-ai-agent)                            | Samir Saci's published work on AI-native supply chain network design and optimisation                                                       |
 | [Pipe17 MCP Integration](https://pipe17.com/ai/mcp)                                                            | MCP integration layer for connecting Claude to ERP and logistics platforms                                                                  |
 | [Oracle Supplier Risk AI](https://blogs.oracle.com/ai-and-datascience/supplier-risks-assessment)               | Oracle's approach to AI-assisted supplier risk assessment                                                                                   |

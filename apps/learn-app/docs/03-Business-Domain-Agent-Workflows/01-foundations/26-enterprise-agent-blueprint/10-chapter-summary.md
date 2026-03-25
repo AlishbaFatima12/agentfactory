@@ -25,7 +25,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Digital Literacy"
-    measurable_at_this_level: "Student can trace the full architecture of a Cowork plugin — plugin package components, three owners, three context levels, four governance mechanisms — and explain how each element connects to the others in a coherent deployment system"
+    measurable_at_this_level: "Student can trace the full architecture of a Cowork plugin, plugin package components, three owners, three context levels, four governance mechanisms, and explain how each element connects to the others in a coherent deployment system"
 
   - name: "Assess Plugin Readiness for a Domain Workflow"
     proficiency_level: "B1"
@@ -48,31 +48,31 @@ learning_objectives:
 cognitive_load:
   new_concepts: 0
   concepts_list: []
-  assessment: "Synthesis lesson — no new concepts introduced; integrates and connects frameworks from lessons 1-9 into a coherent deployment architecture"
+  assessment: "Synthesis lesson; no new concepts introduced; integrates and connects frameworks from lessons 1-9 into a coherent deployment architecture"
 
 differentiation:
   extension_for_advanced: "Draft a complete deployment plan for a plugin in your domain: identify the SKILL.md sections you would need to write, the connectors required, the governance configuration, the shadow mode rubric, and the HITL gates. Use every element from this chapter's architecture in the plan."
-  remedial_for_struggling: "Focus on the ownership table from Lesson 8. For each component — SKILL.md, connectors (.mcp.json), commands and agents, governance — write one sentence: who owns it and what they do. If you can write those four sentences accurately, you have the operational core of the chapter."
+  remedial_for_struggling: "Focus on the ownership table from Lesson 8. For each component (SKILL.md, connectors (.mcp.json), commands and agents, governance) write one sentence: who owns it and what they do. If you can write those four sentences accurately, you have the operational core of the chapter."
 
 teaching_guide:
   lesson_type: "core"
   session_group: 3
   session_title: "Architecture, Ownership, and What Comes Next"
   key_points:
-    - "The plugin components are not parallel — they have a hierarchy: SKILL.md is the intelligence, the manifest and settings define the deployment environment, connectors are the data infrastructure"
-    - "The chapter's central insight is that a domain expert can deploy a production-grade agent without writing code — because the SKILL.md is plain English and the other components are owned by IT and administrators"
-    - "Governance is not the end of the chapter — it is what makes everything else deployable in regulated industries"
+    - "The plugin components are not parallel: they have a hierarchy: SKILL.md is the intelligence, the manifest and settings define the deployment environment, connectors are the data infrastructure"
+    - "The chapter's central insight is that a domain expert can deploy a production-grade agent without writing code: because the SKILL.md is plain English and the other components are owned by IT and administrators"
+    - "Governance is not the end of the chapter: it is what makes everything else deployable in regulated industries"
     - "Chapter 27 addresses the one gap this chapter deliberately left open: how to extract and encode domain expertise into the SKILL.md"
   misconceptions:
-    - "Students may think they now know how to write a production SKILL.md — this chapter taught the architecture; Chapter 27 teaches the extraction methodology"
-    - "Students may underestimate the SKILL.md's criticality — it is the component that determines whether the plugin is trustworthy, not merely functional"
-    - "Students may see the ownership model as organisational formality — it is the mechanism that makes failures diagnosable and prevents slow degradation"
+    - "Students may think they now know how to write a production SKILL.md: this chapter taught the architecture; Chapter 27 teaches the extraction methodology"
+    - "Students may underestimate the SKILL.md's criticality: it is the component that determines whether the plugin is trustworthy, not merely functional"
+    - "Students may see the ownership model as organisational formality: it is the mechanism that makes failures diagnosable and prevents slow degradation"
   discussion_prompts:
     - "Which of the nine components or mechanisms from this chapter do you expect to be most difficult to configure for your domain? What makes it difficult?"
     - "If you were explaining the plugin package structure to a colleague who had not taken this course, how would you describe it in two sentences?"
   teaching_tips:
-    - "The decision chain table is the most useful teaching artefact in this summary — use it to walk through the chapter's logic in sequence before students attempt the Try With AI prompts"
-    - "The bridge to Chapter 27 should be presented as the answer to an obvious question: 'I now understand the architecture — but how do I actually write a good SKILL.md?' Frame Chapter 27 as the methodology that answers that question"
+    - "The decision chain table is the most useful teaching artefact in this summary: use it to walk through the chapter's logic in sequence before students attempt the Try With AI prompts"
+    - "The bridge to Chapter 27 should be presented as the answer to an obvious question: 'I now understand the architecture; but how do I actually write a good SKILL.md?' Frame Chapter 27 as the methodology that answers that question"
   assessment_checks:
     - question: "Name the main components of a Cowork plugin package and their owners."
       expected_response: "Skills/SKILL.md (knowledge worker), connectors/.mcp.json (IT/developer), commands and agents (developer), manifest/plugin.json (developer). The knowledge worker also owns validation during shadow mode; the administrator owns governance configuration."
@@ -84,9 +84,9 @@ teaching_guide:
 
 # Chapter Summary
 
-This chapter began with three layers: a Cowork plugin is a self-contained directory of components (the format Anthropic designed), knowledge-work plugins use that format to turn a general-purpose agent into a domain specialist (what the official plugins do), and Panaversity's enterprise readiness evaluation model assesses whether the result is production-ready. It ends with a complete deployment architecture. The nine lessons between those two points did not add complexity for its own sake — each one answered a question that the previous lesson raised. The definition raised the question of what the intelligence layer actually looks like. The intelligence layer raised the question of how the plugin infrastructure is configured. The infrastructure raised the question of what happens when the SKILL.md and higher-level policies conflict. That question required the context hierarchy. The context hierarchy pointed to the governance layer. The governance layer required the ownership model to be useful in practice. And the ownership model opened the question of what happens when the expertise encoded in a SKILL.md is generalisable beyond a single organisation.
+This chapter began with three layers: a Cowork plugin is a self-contained directory of components (the format Anthropic designed), knowledge-work plugins use that format to turn a general-purpose agent into a domain specialist (what the official plugins do), and Panaversity's enterprise readiness evaluation model assesses whether the result is production-ready. It ends with a complete deployment architecture. The nine lessons between those two points did not add complexity for its own sake: each one answered a question that the previous lesson raised. The definition raised the question of what the intelligence layer actually looks like. The intelligence layer raised the question of how the plugin infrastructure is configured. The infrastructure raised the question of what happens when the SKILL.md and higher-level policies conflict. That question required the context hierarchy. The context hierarchy pointed to the governance layer. The governance layer required the ownership model to be useful in practice. And the ownership model opened the question of what happens when the expertise encoded in a SKILL.md is generalisable beyond a single organisation.
 
-That chain is the chapter. Understanding it as a chain — not as nine separate lessons — is the synthesis this summary is for.
+That chain is the chapter. Understanding it as a chain (not as nine separate lessons) is the synthesis this summary is for.
 
 ## The Architecture in Sequence
 
@@ -108,25 +108,25 @@ Each lesson answered a specific question. Each answer led directly to the next q
 
 Reading the nine lessons as a sequence reveals three insights that no individual lesson states on its own.
 
-The first is that the SKILL.md is not one component among many — it is the component that everything else serves. The manifest and settings configure the environment in which the SKILL.md operates. The connectors supply the data the SKILL.md instructs the agent to use. The governance layer enforces the boundaries the SKILL.md defines. Remove the SKILL.md and you have deployment infrastructure without intelligence. A well-written SKILL.md makes the rest of the architecture useful. A poorly written one makes it unreliable regardless of how correctly the other components are configured.
+The first is that the SKILL.md is not one component among many: it is the component that everything else serves. The manifest and settings configure the environment in which the SKILL.md operates. The connectors supply the data the SKILL.md instructs the agent to use. The governance layer enforces the boundaries the SKILL.md defines. Remove the SKILL.md and you have deployment infrastructure without intelligence. A well-written SKILL.md makes the rest of the architecture useful. A poorly written one makes it unreliable regardless of how correctly the other components are configured.
 
 The second insight is that the knowledge worker's role is authorial, not technical. Writing the SKILL.md requires domain expertise, not programming ability. Reviewing the .mcp.json to verify connector scope requires infrastructure literacy, not systems engineering. Designing the shadow mode rubric requires knowing what accuracy means in the domain, not statistical training. Identifying the HITL gates requires understanding which decisions carry professional accountability, not governance theory. The chapter's architecture was designed with a deliberate non-negotiable: the person who holds the domain expertise should be able to deploy without depending on technical intermediaries for the core intelligence layer.
 
-The third insight is that governance is not the end of the deployment story — it is the beginning of the trust story. Shadow mode, audit trails, and HITL gates do not exist to limit what an agent can do. They exist to produce the evidence that allows a sceptical compliance function, a cautious general counsel, or a regulated industry's oversight body to permit the agent to do more. The 30-day shadow mode period produces the corpus that justifies autonomous operation. The audit log turns a potential compliance incident into a documented, defensible process. Governance is what converts a promising demonstration into a deployable system.
+The third insight is that governance is not the end of the deployment story: it is the beginning of the trust story. Shadow mode, audit trails, and HITL gates do not exist to limit what an agent can do. They exist to produce the evidence that allows a sceptical compliance function, a cautious general counsel, or a regulated industry's oversight body to permit the agent to do more. The 30-day shadow mode period produces the corpus that justifies autonomous operation. The audit log turns a potential compliance incident into a documented, defensible process. Governance is what converts a promising demonstration into a deployable system.
 
 ## The Component That Determines Everything
 
 Of the eight components in the ownership table, one is owned entirely by the knowledge worker, is written entirely in plain English, determines the agent's identity, scope, and operating logic, and is the component most likely to drift from production reality without disciplined maintenance. That component is the SKILL.md.
 
-The chapter taught the architecture around it. The PQP Framework — Persona, Questions, Principles — gave the structure. The annotated financial research example in Lesson 5 showed what production quality looks like. The ownership model in Lesson 8 established that maintaining it is an ongoing professional responsibility, not a one-time authorship task.
+The chapter taught the architecture around it. The PQP Framework (Persona, Questions, Principles) gave the structure. The annotated financial research example in Lesson 5 showed what production quality looks like. The ownership model in Lesson 8 established that maintaining it is an ongoing professional responsibility, not a one-time authorship task.
 
-What the chapter did not teach is how to extract the domain expertise that goes into it. Writing a production-quality SKILL.md requires articulating, often for the first time in explicit form, the professional standards, decision-making logic, escalation thresholds, and quality criteria that ordinarily exist as institutional memory and professional judgement. This is the hardest part of the process — not because the SKILL.md is technically complex, but because making tacit expertise explicit is genuinely difficult work. The chapter showed the structure. Chapter 27 teaches the methodology for producing the content.
+What the chapter did not teach is how to extract the domain expertise that goes into it. Writing a production-quality SKILL.md requires articulating, often for the first time in explicit form, the professional standards, decision-making logic, escalation thresholds, and quality criteria that ordinarily exist as institutional memory and professional judgement. This is the hardest part of the process; not because the SKILL.md is technically complex, but because making tacit expertise explicit is genuinely difficult work. The chapter showed the structure. Chapter 27 teaches the methodology for producing the content.
 
 ## Self-Assessment Checklist
 
 Before continuing, verify that you can answer these questions with specificity. Generic answers indicate a concept that needs review.
 
-- [ ] **The plugin package structure**: Can you name the main components of a plugin package, their owners, and what each one does — without conflating the intelligence layer with the infrastructure layer?
+- [ ] **The plugin package structure**: Can you name the main components of a plugin package, their owners, and what each one does: without conflating the intelligence layer with the infrastructure layer?
 - [ ] **The PQP Framework**: Can you describe what each of the three SKILL.md sections does and explain, for each one, what happens to the agent when that section is missing or poorly written?
 - [ ] **Source integrity and uncertainty calibration**: Can you explain why these are domain-specific principles rather than generic quality standards, and identify what failure mode each one prevents?
 - [ ] **The three-level context hierarchy**: Can you describe the diagnostic sequence and explain why starting at the SKILL.md level is almost always the wrong place to begin?
@@ -138,7 +138,7 @@ If any of these are uncertain, revisit the relevant lesson before continuing. Ch
 
 ## What Comes Next
 
-Chapter 27 opens the methodology. Where this chapter gave you the complete architecture of a Cowork plugin and established what a production-quality SKILL.md looks like, Chapter 27 gives you the process for producing one. The Knowledge Extraction Method is a structured approach to making tacit expertise explicit — to taking the professional judgement that exists in a domain expert's head and translating it into the Persona, Questions, and Principles that determine what a deployed agent does.
+Chapter 27 opens the methodology. Where this chapter gave you the complete architecture of a Cowork plugin and established what a production-quality SKILL.md looks like, Chapter 27 gives you the process for producing one. The Knowledge Extraction Method is a structured approach to making tacit expertise explicit: to taking the professional judgement that exists in a domain expert's head and translating it into the Persona, Questions, and Principles that determine what a deployed agent does.
 
 The architecture does not change. The plugin package structure, the context hierarchy, the governance layer, and the ownership model are the permanent infrastructure. Chapter 27 is about the most critical act within that infrastructure: authoring the document that gives the agent its intelligence.
 
@@ -167,7 +167,7 @@ Identify any gaps where I would need information I do not currently
 have to answer one of these questions.
 ```
 
-**What you're learning:** How to apply the complete chapter architecture to a real deployment scenario. This synthesis exercise forces you to use every element — SKILL.md, connectors, governance, ownership — in sequence for a specific workflow, revealing which parts of the architecture you have understood deeply and which remain abstract.
+**What you're learning:** How to apply the complete chapter architecture to a real deployment scenario. This synthesis exercise forces you to use every element (SKILL.md, connectors, governance, ownership) in sequence for a specific workflow, revealing which parts of the architecture you have understood deeply and which remain abstract.
 
 ### Prompt 2: Comparative Architecture Analysis
 
@@ -189,7 +189,7 @@ Explain why the same architectural framework produces very different
 governance profiles for these two use cases.
 ```
 
-**What you're learning:** How the chapter's architecture adapts to context. The plugin package structure, governance layer, and ownership model are consistent across deployments — but their configuration varies significantly based on stakes, regulatory environment, and user profile. Comparing two contrasting cases makes this adaptation concrete rather than theoretical.
+**What you're learning:** How the chapter's architecture adapts to context. The plugin package structure, governance layer, and ownership model are consistent across deployments; but their configuration varies significantly based on stakes, regulatory environment, and user profile. Comparing two contrasting cases makes this adaptation concrete rather than theoretical.
 
 ### Prompt 3: Bridge to Chapter 27
 
@@ -213,7 +213,7 @@ mode it prevents (not aspirational).
 This is preparation for Chapter 27's Knowledge Extraction Method.
 ```
 
-**What you're learning:** The gap between understanding the SKILL.md's architecture and being able to write one is the gap that Chapter 27 addresses. This prompt simulates the extraction process that Chapter 27 will teach systematically — surfacing tacit expertise through structured questioning and translating it into specific, actionable Principles. Starting the process before Chapter 27 makes the methodology more immediately applicable when you encounter it.
+**What you're learning:** The gap between understanding the SKILL.md's architecture and being able to write one is the gap that Chapter 27 addresses. This prompt simulates the extraction process that Chapter 27 will teach systematically: surfacing tacit expertise through structured questioning and translating it into specific, actionable Principles. Starting the process before Chapter 27 makes the methodology more immediately applicable when you encounter it.
 
 ## Flashcards Study Aid
 

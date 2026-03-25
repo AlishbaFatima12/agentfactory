@@ -1,6 +1,6 @@
 deck:
   id: "ch35-vendor-classification-kraljic"
-  title: "Vendor Classification — The Kraljic Matrix"
+  title: "Vendor Classification; The Kraljic Matrix"
   description: "Recall and reasoning cards covering the two-axis Kraljic framework, four vendor tiers, KIFTL worked example, and the bottleneck trap."
   tags: ["supply-chain", "kraljic", "vendor-classification", "bottleneck", "strategic-vendor"]
   version: 2
@@ -26,7 +26,7 @@ cards:
 
   - id: "ch35-vendor-classification-kraljic-004"
     front: "What is the defining characteristic of a Bottleneck vendor (Tier 4)?"
-    back: "High supply risk combined with low profit impact — low spend, but sole-source or near-sole-source dependency with no qualified alternatives."
+    back: "High supply risk combined with low profit impact: low spend, but sole-source or near-sole-source dependency with no qualified alternatives."
     tags: ["bottleneck", "tier-4"]
     difficulty: "basic"
 
@@ -38,7 +38,7 @@ cards:
 
   - id: "ch35-vendor-classification-kraljic-006"
     front: "KIFTL supplies $30,000/year of production-critical fasteners with no qualified alternative. What is its Kraljic classification and why?"
-    back: "Tier 4 — Bottleneck. Low spend = low profit impact. Sole-source dependency = high supply risk. Spend does not determine risk."
+    back: "Tier 4; Bottleneck. Low spend = low profit impact. Sole-source dependency = high supply risk. Spend does not determine risk."
     tags: ["bottleneck", "kiftl-example"]
     difficulty: "basic"
 
@@ -56,7 +56,7 @@ cards:
 
   - id: "ch35-vendor-classification-kraljic-009"
     front: "When should a vendor's Kraljic classification be updated?"
-    back: "At least annually, and always after a significant supply market change — new alternatives qualify or existing ones exit, strategic priorities shift, or supply risk changes."
+    back: "At least annually, and always after a significant supply market change: new alternatives qualify or existing ones exit, strategic priorities shift, or supply risk changes."
     tags: ["classification", "dynamic"]
     difficulty: "basic"
 
@@ -75,7 +75,7 @@ cards:
 
   - id: "ch35-vendor-classification-kraljic-012"
     front: "Why does using spend alone as a risk proxy create a systematic blind spot for Bottleneck vendors?"
-    back: "Spend measures financial exposure, not operational vulnerability. Low-spend sole-source vendors are overlooked because the spend signal gives no warning — but their failure halts production, making them more dangerous than high-spend vendors with multiple alternatives."
+    back: "Spend measures financial exposure, not operational vulnerability. Low-spend sole-source vendors are overlooked because the spend signal gives no warning: but their failure halts production, making them more dangerous than high-spend vendors with multiple alternatives."
     tags: ["bottleneck", "spend-vs-risk"]
     difficulty: "advanced"
     why: "What question better captures operational risk than 'how much do we spend with this vendor'?"

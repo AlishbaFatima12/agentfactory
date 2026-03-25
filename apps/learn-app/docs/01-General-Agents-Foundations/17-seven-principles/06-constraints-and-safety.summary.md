@@ -1,6 +1,6 @@
 ### Core Concept
 
-Constraints enable autonomy—thoughtful safety measures and guardrails are what allow you to give AI systems meaningful power without risking damage. The paradox: when you trust the safety model, you give agents more autonomy. Without constraints, you'd never let them do meaningful work.
+Constraints enable autonomy,thoughtful safety measures and guardrails are what allow you to give AI systems meaningful power without risking damage. The paradox: when you trust the safety model, you give agents more autonomy. Without constraints, you'd never let them do meaningful work.
 
 ### Key Mental Models
 
@@ -32,6 +32,6 @@ Constraints enable autonomy—thoughtful safety measures and guardrails are what
 
 ### Connections
 
-- **Builds on**: Principle 5 (State Persistence)—safety rules encoded in CLAUDE.md become persistent and automatic
-- **Leads to**: Principle 7 (Observability)—constraints only effective if you can see when they're triggered
+- **Builds on**: Principle 5 (State Persistence),safety rules encoded in CLAUDE.md become persistent and automatic
+- **Leads to**: Principle 7 (Observability),constraints only effective if you can see when they're triggered
 - **Synergy with P4**: Git commits are both decomposition units AND reversibility mechanisms

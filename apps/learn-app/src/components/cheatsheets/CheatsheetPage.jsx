@@ -1,6 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 import ClaudeCodeCheatsheet from "./claude-code-cheatsheet";
 import CoworkCheatsheet from "./cowork-cheatsheet";
+import OpenClawCheatsheet from "./openclaw-cheatsheet";
+import OpenShellCheatsheet from "./openshell-cheatsheet";
+import NemoClawCheatsheet from "./nemoclaw-cheatsheet";
 import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 
 const palette = {
@@ -24,6 +27,24 @@ const topics = [
     hash: "cowork",
     label: "Cowork",
     component: CoworkCheatsheet,
+  },
+  {
+    id: "openclaw",
+    hash: "openclaw",
+    label: "OpenClaw",
+    component: OpenClawCheatsheet,
+  },
+  {
+    id: "nemoclaw",
+    hash: "nemoclaw",
+    label: "NemoClaw",
+    component: NemoClawCheatsheet,
+  },
+  {
+    id: "openshell",
+    hash: "openshell",
+    label: "OpenShell",
+    component: OpenShellCheatsheet,
   },
 ];
 

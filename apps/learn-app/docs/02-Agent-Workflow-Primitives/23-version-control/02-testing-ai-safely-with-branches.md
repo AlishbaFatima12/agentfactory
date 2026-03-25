@@ -3,7 +3,7 @@ sidebar_position: 2
 chapter: 23
 lesson: 2
 title: "Testing AI Safely with Branches"
-description: "Use branches to test multiple ideas without risking your working project — your agent's tool for parallel experimentation"
+description: "Use branches to test multiple ideas without risking your working project: your agent's tool for parallel experimentation"
 duration_minutes: 45
 keywords:
   [git branches, parallel testing, merge, feature branch, experimentation]
@@ -77,26 +77,26 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Create two competing branches for the same feature, compare their diffs side by side, and argue which approach is better before merging one"
-  remedial_for_struggling: "Work with only one branch at a time — create it, make one change, switch back to main to see it disappear, then merge. Add a second branch only after the first merge succeeds"
+  remedial_for_struggling: "Work with only one branch at a time: create it, make one change, switch back to main to see it disappear, then merge. Add a second branch only after the first merge succeeds"
 
 teaching_guide:
   lesson_type: "core"
   session_group: 1
   session_title: "Git Foundations"
   key_points:
-    - "Branches are parallel timelines — changes on one are invisible to others until merged"
+    - "Branches are parallel timelines: changes on one are invisible to others until merged"
     - "The file disappearing when switching to main is the most powerful discovery moment"
     - "The create-test-merge-delete workflow is the safe experimentation pattern"
-    - "Branch naming communicates intent — feature/, experiment/, bugfix/"
+    - "Branch naming communicates intent: feature/, experiment/, bugfix/"
   misconceptions:
-    - "Students think creating a branch copies all files — it only creates a pointer to the current commit"
-    - "Students fear merging will overwrite main — Git merges add changes, it doesn't replace"
-    - "Students think they must always branch — for small confident changes, committing directly is fine"
+    - "Students think creating a branch copies all files: it only creates a pointer to the current commit"
+    - "Students fear merging will overwrite main: Git merges add changes, it doesn't replace"
+    - "Students think they must always branch: for small confident changes, committing directly is fine"
   discussion_prompts:
     - "You ask AI for two different approaches to solve a problem. How would you test both safely?"
     - "When would you commit directly to main instead of creating a branch?"
   teaching_tips:
-    - "Let students discover the file disappearing when switching branches — don't explain it in advance"
+    - "Let students discover the file disappearing when switching branches: don't explain it in advance"
     - "The Three Roles should feel like natural conversation, not a labeled framework"
   assessment_quick_check:
     - "What happens to files on a branch when you switch back to main?"
@@ -113,9 +113,9 @@ version: "2.0.0"
 
 Sarah needs two versions of her fundraiser flyer. One is formal for corporate sponsors. One is casual for social media. She doesn't want to lose either while working on both.
 
-In the real world, you'd make two copies of the file. In Git, you create two **branches** — parallel versions of your entire project that can't interfere with each other.
+In the real world, you'd make two copies of the file. In Git, you create two **branches**: parallel versions of your entire project that can't interfere with each other.
 
-> **"Branches let you live in two timelines at once — and only keep the one that works."**
+> **"Branches let you live in two timelines at once, and only keep the one that works."**
 
 ---
 
@@ -123,7 +123,7 @@ In the real world, you'd make two copies of the file. In Git, you create two **b
 
 You've used Track Changes to compare different versions of a document. Branches take that idea further. Instead of tracking changes to one file, a branch creates a parallel version of your _entire project_.
 
-Your `main` branch is the "real" version — the one you trust. When you create a new branch, Git creates a new label pointing to the current snapshot. It feels like a copy because you can edit safely without touching `main`. If the changes work, you merge them back. If they don't, you throw away the branch name. The original is untouched.
+Your `main` branch is the "real" version: the one you trust. When you create a new branch, Git creates a new label pointing to the current snapshot. It feels like a copy because you can edit safely without touching `main`. If the changes work, you merge them back. If they don't, you throw away the branch name. The original is untouched.
 
 ![Branch diagram showing main branch (stable) with feature branches diverging for development, then merging back after review](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-20/branch-workflow-diagram.png)
 
@@ -214,9 +214,9 @@ git commit -m "Add casual flyer for social media"
 
 Now Sarah has three versions of her project:
 
-- `main` — the original, no flyer yet
-- `formal-flyer` — formal version for sponsors
-- `casual-flyer` — casual version for social media
+- `main`: the original, no flyer yet
+- `formal-flyer`: formal version for sponsors
+- `casual-flyer`: casual version for social media
 
 Each exists independently. She can switch between them to compare.
 
@@ -245,7 +245,7 @@ Fast-forward
  1 file changed, 2 insertions(+)
 ```
 
-"Fast-forward" means `main` hadn't changed since you branched off — Git simply moved `main` forward to include the new commits. No merging was needed because there was nothing to merge _with_.
+"Fast-forward" means `main` hadn't changed since you branched off: Git simply moved `main` forward to include the new commits. No merging was needed because there was nothing to merge _with_.
 
 The casual flyer now exists on `main`. Verify:
 
@@ -274,9 +274,9 @@ The branch names are deleted. The commits from `casual-flyer` are preserved in `
 
 Good branch names tell you what's happening at a glance:
 
-- `feature/formal-flyer` — adding something new
-- `experiment/new-layout` — testing a risky idea
-- `bugfix/broken-budget` — fixing a problem
+- `feature/formal-flyer`: adding something new
+- `experiment/new-layout`: testing a risky idea
+- `bugfix/broken-budget`: fixing a problem
 
 Bad names like `branch1` or `test` tell you nothing in a week. Name branches by what they do, not when you made them.
 
@@ -317,7 +317,7 @@ That's what the next lesson solves.
 
 **Practice comparison workflows:**
 
-> "I want to test two different approaches to a project — one simple and one advanced. Walk me through the branch workflow: create both branches, work on each one, compare results, merge the winner, and clean up. Include the exact commands my agent would run."
+> "I want to test two different approaches to a project: one simple and one advanced. Walk me through the branch workflow: create both branches, work on each one, compare results, merge the winner, and clean up. Include the exact commands my agent would run."
 
 **Explore naming conventions:**
 
@@ -325,7 +325,7 @@ That's what the next lesson solves.
 
 **Know when NOT to branch:**
 
-> "I'm tempted to create a branch for every tiny change. Give me five realistic scenarios and for each one, tell me whether I should branch or commit directly to main — and explain why. Help me build instinct for when branching is overkill."
+> "I'm tempted to create a branch for every tiny change. Give me five realistic scenarios and for each one, tell me whether I should branch or commit directly to main, and explain why. Help me build instinct for when branching is overkill."
 
 ---
 

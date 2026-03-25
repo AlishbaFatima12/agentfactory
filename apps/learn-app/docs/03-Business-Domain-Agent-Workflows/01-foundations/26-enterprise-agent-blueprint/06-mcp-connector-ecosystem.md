@@ -36,7 +36,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can independently produce a plain-language custom connector specification that identifies the system, data scope, query types, and required permissions — sufficient for a developer to build from"
+    measurable_at_this_level: "Student can independently produce a plain-language custom connector specification that identifies the system, data scope, query types, and required permissions: sufficient for a developer to build from"
 
   - name: "Plan Connector Dependencies for Deployment"
     proficiency_level: "B1"
@@ -59,7 +59,7 @@ learning_objectives:
   - objective: "Draft a custom connector specification and estimate development effort based on the underlying system's API maturity"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student can produce a connector specification that names the system, defines scope, lists query types, and assigns permissions — and correctly estimate development effort based on the underlying system's API maturity"
+    assessment_method: "Student can produce a connector specification that names the system, defines scope, lists query types, and assigns permissions: and correctly estimate development effort based on the underlying system's API maturity"
 
 cognitive_load:
   new_concepts: 3
@@ -67,7 +67,7 @@ cognitive_load:
     - "Production connector categories (across Anthropic's 24 official plugins: productivity, sales, legal, finance, data, bio-research, and more)"
     - "Connector scoping (folder-level, site-level, mailbox-level, row-level security)"
     - "Custom connector commissioning process and specification format"
-  assessment: "3 concepts at A2-B1 level — within the 5-7 cognitive limit for the target proficiency band. The connector table serves as a reference to reduce working memory load during initial reading."
+  assessment: "3 concepts at A2-B1 level: within the 5-7 cognitive limit for the target proficiency band. The connector table serves as a reference to reduce working memory load during initial reading."
 
 differentiation:
   extension_for_advanced: "Research the MCP specification itself and identify what it would take to build a connector to a system in your domain that does not yet have one. Draft both the connector specification and a technical summary of the API endpoints you would need to expose."
@@ -78,44 +78,44 @@ teaching_guide:
   session_group: 3
   session_title: "The Connector Ecosystem"
   key_points:
-    - "The marketplace connector ecosystem covers most enterprise integration needs — students should default to marketplace connectors before considering custom"
-    - "Custom connectors require a commissioning process: knowledge worker specifies, IT builds — this is not self-service and requires explicit project planning time"
+    - "The marketplace connector ecosystem covers most enterprise integration needs: students should default to marketplace connectors before considering custom"
+    - "Custom connectors require a commissioning process: knowledge worker specifies, IT builds: this is not self-service and requires explicit project planning time"
     - "Licensing requirements for financial and legal connectors are external dependencies that must be resolved before connector commissioning begins"
-    - "Connector scoping is a security feature, not a limitation — it protects data access to what was explicitly configured"
+    - "Connector scoping is a security feature, not a limitation: it protects data access to what was explicitly configured"
   misconceptions:
-    - "Students may assume all connectors are available out of the box — financial and legal connectors require licensed subscriptions that the organisation must already hold"
-    - "Students may think they can configure connectors themselves in .mcp.json — connectors are IT-owned infrastructure, the knowledge worker specifies requirements in plain language and IT builds"
-    - "Students may conflate connector scoping with connector capability — a Confluence connector scoped to one space is not a less capable connector, it is a correctly configured one"
+    - "Students may assume all connectors are available out of the box: financial and legal connectors require licensed subscriptions that the organisation must already hold"
+    - "Students may think they can configure connectors themselves in .mcp.json: connectors are IT-owned infrastructure, the knowledge worker specifies requirements in plain language and IT builds"
+    - "Students may conflate connector scoping with connector capability: a Confluence connector scoped to one space is not a less capable connector, it is a correctly configured one"
   discussion_prompts:
     - "Which systems in your current role would need MCP connectors for your agent to be useful? Are those systems in the marketplace?"
     - "If your most important system is not in the marketplace, what would your plain-language specification look like? What data access would you need?"
     - "Have you ever waited on an IT integration to move forward with a project? How would knowing the connector timeline have changed your planning?"
   teaching_tips:
-    - "Walk through the connector table domain-by-domain — students recognise their own domain's connectors most readily, and that recognition builds confidence in the ecosystem's breadth"
-    - "Use the Revit example as the pivot point between marketplace and custom — it is concrete enough to make the distinction vivid"
-    - "Emphasise that connector scoping is configured by IT, not chosen by the knowledge worker — this prevents students from assuming they have unlimited access once a connector is present"
+    - "Walk through the connector table domain-by-domain: students recognise their own domain's connectors most readily, and that recognition builds confidence in the ecosystem's breadth"
+    - "Use the Revit example as the pivot point between marketplace and custom: it is concrete enough to make the distinction vivid"
+    - "Emphasise that connector scoping is configured by IT, not chosen by the knowledge worker: this prevents students from assuming they have unlimited access once a connector is present"
   assessment_checks:
     - question: "What is the difference between a marketplace connector and a custom connector?"
-      expected_response: "A marketplace connector is a pre-built, maintained MCP connector available for standard enterprise systems (HubSpot, Jira, Snowflake, etc.). A custom connector is built specifically for a system not available in the marketplace — the knowledge worker specifies what data access is needed and IT builds it."
+      expected_response: "A marketplace connector is a pre-built, maintained MCP connector available for standard enterprise systems (HubSpot, Jira, Snowflake, etc.). A custom connector is built specifically for a system not available in the marketplace: the knowledge worker specifies what data access is needed and IT builds it."
     - question: "Why is the Revit connector a custom connector rather than a marketplace connector?"
-      expected_response: "Revit is a domain-specific engineering design tool and each organisation's Revit environment is configured differently. There is no generalised Revit connector in the marketplace — a developer builds a custom connector tailored to the specific organisation's Revit setup and data structures."
+      expected_response: "Revit is a domain-specific engineering design tool and each organisation's Revit environment is configured differently. There is no generalised Revit connector in the marketplace: a developer builds a custom connector tailored to the specific organisation's Revit setup and data structures."
     - question: "A knowledge worker wants to connect their agent to their company's on-premises ERP system from 2009. How should they plan the connector timeline?"
-      expected_response: "Legacy systems with sparse documentation, older protocols, or custom schemas take significantly longer to integrate than systems with modern REST APIs. The knowledge worker should work with IT to estimate a realistic timeline based on the specific system's characteristics, and ensure connector commissioning is on the critical path — starting before SKILL.md development because it typically takes longer."
+      expected_response: "Legacy systems with sparse documentation, older protocols, or custom schemas take significantly longer to integrate than systems with modern REST APIs. The knowledge worker should work with IT to estimate a realistic timeline based on the specific system's characteristics, and ensure connector commissioning is on the critical path: starting before SKILL.md development because it typically takes longer."
 ---
 
 # The MCP Connector Ecosystem
 
-In Lesson 3, you saw that connectors are the integration infrastructure of a Cowork plugin — declared in the `.mcp.json` file, they wire the agent to enterprise systems by handling authentication and translating data into formats the agent can reason over. That lesson established what connectors do. This lesson maps what connectors exist.
+In Lesson 3, you saw that connectors are the integration infrastructure of a Cowork plugin: declared in the `.mcp.json` file, they wire the agent to enterprise systems by handling authentication and translating data into formats the agent can reason over. That lesson established what connectors do. This lesson maps what connectors exist.
 
-Anthropic launched the Cowork plugin ecosystem with 11 official plugins in January 2026, expanding to 24 by February 2026. These plugins — available at [claude.com/plugins](https://claude.com/plugins) and published in the [knowledge-work-plugins repository](https://github.com/anthropics/knowledge-work-plugins) — span productivity, sales, customer support, product management, marketing, legal, finance, data analytics, enterprise search, and bio-research domains. Each plugin bundles connectors to the enterprise systems that domain requires.
+Anthropic launched the Cowork plugin ecosystem with 11 official plugins in January 2026, expanding to 24 by February 2026. These plugins: available at [claude.com/plugins](https://claude.com/plugins) and published in the [knowledge-work-plugins repository](https://github.com/anthropics/knowledge-work-plugins): span productivity, sales, customer support, product management, marketing, legal, finance, data analytics, enterprise search, and bio-research domains. Each plugin bundles connectors to the enterprise systems that domain requires.
 
 The question every domain professional asks when designing their agent is whether the system they most need to integrate with is already connected. For most enterprise environments, the answer is yes. For systems genuinely specific to your organisation's configuration or industry tooling, there is a commissioning process. Understanding both sides of this picture is the prerequisite for building a realistic deployment plan.
 
-This lesson is a reference lesson. The connector table is designed to be consulted, not memorised. What you should take from it is the landscape — which categories of integration exist, what access types they provide, and where the official ecosystem's coverage ends.
+This lesson is a reference lesson. The connector table is designed to be consulted, not memorised. What you should take from it is the landscape; which categories of integration exist, what access types they provide, and where the official ecosystem's coverage ends.
 
 ## The Official Connector Ecosystem
 
-The connectors below represent the verified ecosystem as of February 2026, drawn from Anthropic's official plugin announcements and the knowledge-work-plugins repository. Connectors are declared in the plugin's `.mcp.json` file and configured by IT — the knowledge worker specifies what they need in plain language, and the technical implementation follows.
+The connectors below represent the verified ecosystem as of February 2026, drawn from Anthropic's official plugin announcements and the knowledge-work-plugins repository. Connectors are declared in the plugin's `.mcp.json` file and configured by IT: the knowledge worker specifies what they need in plain language, and the technical implementation follows.
 
 ### Core Enterprise Connectors
 
@@ -154,9 +154,9 @@ These connectors serve specific industry verticals and are bundled with Anthropi
 | Category                    | Connector          | Plugin Context           | Key Feature / Note                                                   |
 | --------------------------- | ------------------ | ------------------------ | -------------------------------------------------------------------- |
 | **Financial Data**          | LSEG               | Finance plugin           | Market data and financial analytics (London Stock Exchange Group)    |
-| **Financial Data**          | S&P Global         | Finance plugin           | Credit ratings, market intelligence — licensed subscription required |
-| **Financial Data**          | FactSet            | Finance plugin           | Financial data and analytics — licensed subscription required        |
-| **Financial Data**          | MSCI               | Finance plugin           | ESG and index data — licensed subscription required                  |
+| **Financial Data**          | S&P Global         | Finance plugin           | Credit ratings, market intelligence: licensed subscription required |
+| **Financial Data**          | FactSet            | Finance plugin           | Financial data and analytics: licensed subscription required        |
+| **Financial Data**          | MSCI               | Finance plugin           | ESG and index data: licensed subscription required                  |
 | **Legal**                   | LegalZoom          | Legal plugin             | Legal document workflows                                             |
 | **Legal**                   | DocuSign           | Legal plugin             | Contract workflows, signature status, document repositories          |
 | **Bio-Research**            | PubMed             | Bio-research plugin      | Biomedical literature search                                         |
@@ -167,19 +167,19 @@ These connectors serve specific industry verticals and are bundled with Anthropi
 | **Contracting / Signature** | DocuSign           | Multiple plugins         | Contract workflows and e-signature                                   |
 | **Enterprise Search**       | (plugin-managed)   | Enterprise-search plugin | Cross-system search using tool-agnostic placeholder pattern          |
 
-A notable pattern in the official repository is the **tool-agnostic placeholder**: several plugins define connector slots that can be filled with whichever system the enterprise uses. The enterprise-search plugin, for example, defines search capabilities without hardcoding a specific search provider — the organisation plugs in their own.
+A notable pattern in the official repository is the **tool-agnostic placeholder**: several plugins define connector slots that can be filled with whichever system the enterprise uses. The enterprise-search plugin, for example, defines search capabilities without hardcoding a specific search provider: the organisation plugs in their own.
 
 ### What the Ecosystem Covers
 
-The CRM and sales connectors — HubSpot, Clay, ZoomInfo, Close — cover the major sales workflow systems. The communication connectors — Gmail, Slack, Microsoft 365 — handle the messaging platforms found in most enterprises. Knowledge connectors — Notion, Google Drive, Box, Egnyte — provide access to document repositories with folder-level and site-level scoping.
+The CRM and sales connectors (HubSpot, Clay, ZoomInfo, Close) cover the major sales workflow systems. The communication connectors (Gmail, Slack, Microsoft 365) handle the messaging platforms found in most enterprises. Knowledge connectors (Notion, Google Drive, Box, Egnyte) provide access to document repositories with folder-level and site-level scoping.
 
-The data and analytics connectors — Snowflake, Databricks, BigQuery, Amplitude — provide read access to data warehouses and analytics platforms. Snowflake additionally supports row-level security, meaning data access can be governed at the row level according to existing security policies.
+The data and analytics connectors (Snowflake, Databricks, BigQuery, Amplitude) provide read access to data warehouses and analytics platforms. Snowflake additionally supports row-level security, meaning data access can be governed at the row level according to existing security policies.
 
-The workflow connectors — Jira, Linear, Asana, monday.com, ClickUp — cover the major project management platforms. An agent can read sprint status, create follow-up tickets, or track task completion across these systems.
+The workflow connectors (Jira, Linear, Asana, monday.com, ClickUp) cover the major project management platforms. An agent can read sprint status, create follow-up tickets, or track task completion across these systems.
 
-For financial services, the LSEG, S&P Global, FactSet, and MSCI connectors provide access to market data, credit analytics, ESG scores, and index data. A critical dependency applies here: these connectors require the organisation to already hold licensed subscriptions to the respective data services. The MCP connector provides the integration layer — it does not grant access to data the organisation has not licensed.
+For financial services, the LSEG, S&P Global, FactSet, and MSCI connectors provide access to market data, credit analytics, ESG scores, and index data. A critical dependency applies here: these connectors require the organisation to already hold licensed subscriptions to the respective data services. The MCP connector provides the integration layer: it does not grant access to data the organisation has not licensed.
 
-For bio-research, the PubMed, ClinicalTrials.gov, ChEMBL, Benchling, and BioRender connectors support literature search, trial registry access, chemical databases, R&D platforms, and scientific illustration — covering the core workflow of life science research teams.
+For bio-research, the PubMed, ClinicalTrials.gov, ChEMBL, Benchling, and BioRender connectors support literature search, trial registry access, chemical databases, R&D platforms, and scientific illustration: covering the core workflow of life science research teams.
 
 For legal workflows, LegalZoom and DocuSign cover document creation and contract execution. Box and Egnyte serve as document management systems commonly used in legal departments for secure file storage and sharing.
 
@@ -187,7 +187,7 @@ For legal workflows, LegalZoom and DocuSign cover document creation and contract
 
 The marketplace covers the systems that appear on most enterprise software inventories. But enterprise environments are not homogeneous. Many organisations run systems that are either too niche for a generalised connector to be viable, or configured in ways that are specific enough to require a connector built for their particular installation.
 
-The Revit connector listed in the table is an example. Revit is Autodesk's building information modelling software, used heavily in architecture, engineering, and construction. There is no generalised Revit connector in the marketplace, because each organisation's Revit environment is structured differently — different project hierarchies, different custom parameters, different data schemas. A developer builds a custom Revit MCP server tailored to the specific organisation's Revit installation, exposing BIM data as queryable structured data. The knowledge worker who uses that connector experiences it the same way as any marketplace connector — they specify what they need in their SKILL.md and the agent queries it — but the connector itself was built specifically for their environment. Chapter 33 covers the construction and engineering domain in detail, including the Revit connector architecture.
+The Revit connector listed in the table is an example. Revit is Autodesk's building information modelling software, used heavily in architecture, engineering, and construction. There is no generalised Revit connector in the marketplace, because each organisation's Revit environment is structured differently: different project hierarchies, different custom parameters, different data schemas. A developer builds a custom Revit MCP server tailored to the specific organisation's Revit installation, exposing BIM data as queryable structured data. The knowledge worker who uses that connector experiences it the same way as any marketplace connector: they specify what they need in their SKILL.md and the agent queries it; but the connector itself was built specifically for their environment. Chapter 33 covers the construction and engineering domain in detail, including the Revit connector architecture.
 
 The commissioning process for a custom connector follows a consistent pattern. The knowledge worker specifies what they need in plain language: which system to connect to, what data should be accessible, what query types the agent will need to run, and what permissions are appropriate. The developer takes that specification and builds. The knowledge worker does not write code; they write requirements.
 
@@ -205,7 +205,7 @@ A sufficient plain-language specification addresses four questions:
 
 Custom connector development timelines depend on the underlying system's API maturity. Systems with well-documented REST APIs, active developer communities, and clear authentication flows are significantly faster to integrate than legacy systems with sparse documentation, older protocols, or custom schemas that require reverse-engineering.
 
-The key planning insight is that connector commissioning is on the critical path. A plugin that requires a custom connector cannot go live until that connector is built and tested. Connector commissioning and SKILL.md development can run in parallel — but connector commissioning must start first, because it typically takes longer. Work with your IT team to estimate timelines based on the specific system's characteristics rather than applying generic benchmarks.
+The key planning insight is that connector commissioning is on the critical path. A plugin that requires a custom connector cannot go live until that connector is built and tested. Connector commissioning and SKILL.md development can run in parallel; but connector commissioning must start first, because it typically takes longer. Work with your IT team to estimate timelines based on the specific system's characteristics rather than applying generic benchmarks.
 
 ## Try With AI
 
@@ -258,7 +258,7 @@ Help me build a realistic deployment timeline that:
 4. Identifies any licensing requirements that must be resolved before connector activation
 ```
 
-**What you're learning:** How to build a realistic deployment plan that treats connector timelines as planning facts rather than optimistic estimates. Connector dependencies are frequently the longest lead-time item in a plugin deployment — mapping them early prevents planning surprises.
+**What you're learning:** How to build a realistic deployment plan that treats connector timelines as planning facts rather than optimistic estimates. Connector dependencies are frequently the longest lead-time item in a plugin deployment: mapping them early prevents planning surprises.
 
 ## Flashcards Study Aid
 

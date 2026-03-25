@@ -2,7 +2,7 @@
 
 ## What You Learned
 
-Customer discovery is the first and most important step in the DLA Stack — it converts assumptions about customer needs into evidence-based insight. You learned how to synthesise raw interview notes into a Jobs-to-be-Done map (functional, emotional, and related jobs), rank pain points by frequency times severity, craft non-obvious insight statements, and frame the problem using the "How Might We" format. The `/discovery` skill accelerates the synthesis pipeline without replacing the customer conversation itself.
+Customer discovery is the first and most important step in the DLA Stack ; it converts assumptions about customer needs into evidence-based insight. You learned how to synthesise raw interview notes into a Jobs-to-be-Done map (functional, emotional, and related jobs), rank pain points by frequency times severity, craft non-obvious insight statements, and frame the problem using the "How Might We" format. The `/discovery` skill accelerates the synthesis pipeline without replacing the customer conversation itself.
 
 ## Key Takeaways
 
@@ -14,4 +14,4 @@ Customer discovery is the first and most important step in the DLA Stack — it 
 
 ## Next
 
-In [Lesson 4](./04-hundred-ideas-one-hour.md), you will take the problem statement from this lesson and generate 100 ideas in one hour using the `/idea` skill — then score, shortlist, and pressure-test the best ones.
+In [Lesson 4](./04-hundred-ideas-one-hour.md), you will take the problem statement from this lesson and generate 100 ideas in one hour using the `/idea` skill; then score, shortlist, and pressure-test the best ones.

@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint/the-intelligence-layer-skill-md
 sidebar_position: 2
-title: "The Intelligence Layer — SKILL.md"
-description: "Understand the three sections of the SKILL.md file — Persona, Questions, and Principles — and explain why each section matters functionally for producing a reliable, domain-specific agent"
+title: "The Intelligence Layer: SKILL.md"
+description: "Understand the three sections of the SKILL.md file (Persona, Questions, and Principles) and explain why each section matters functionally for producing a reliable, domain-specific agent"
 keywords:
   [
     "SKILL.md",
@@ -35,7 +35,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Understand"
     digcomp_area: "Communication and Collaboration"
-    measurable_at_this_level: "Student can describe the function of each of the three sections — Persona, Questions, Principles — and explain, with at least one domain-specific example, why each section matters for agent reliability"
+    measurable_at_this_level: "Student can describe the function of each of the three sections (Persona, Questions, Principles) and explain, with at least one domain-specific example, why each section matters for agent reliability"
 
   - name: "Distinguish Persona from Rules"
     proficiency_level: "A2"
@@ -57,7 +57,7 @@ learning_objectives:
     bloom_level: "Understand"
     assessment_method: "Student can describe SKILL.md in their own words, correctly identifying it as plain English authored by a domain expert, not a developer"
 
-  - objective: "Describe the function of each section of the Persona–Questions–Principles Framework — Persona, Questions, and Principles — with a concrete domain example for each"
+  - objective: "Describe the function of each section of the Persona–Questions–Principles Framework (Persona, Questions, and Principles) with a concrete domain example for each"
     proficiency_level: "A2"
     bloom_level: "Understand"
     assessment_method: "Student can walk through each section and explain what it does and why it matters, using examples from at least two different professional domains"
@@ -75,7 +75,7 @@ cognitive_load:
     - "Persona as professional identity specification"
     - "Questions as scope document (in-scope and out-of-scope)"
     - "Principles as domain-specific operating logic"
-  assessment: "5 concepts at A2 level — within the 5-7 cognitive limit for this tier. Concepts are sequenced progressively: SKILL.md first (what it is), then the Agent Skills specification and frontmatter (how it is discovered), then Persona (who the agent is), then Questions (what it does), then Principles (how it decides). Each concept builds on the previous without requiring new prerequisites."
+  assessment: "5 concepts at A2 level: within the 5-7 cognitive limit for this tier. Concepts are sequenced progressively: SKILL.md first (what it is), then the Agent Skills specification and frontmatter (how it is discovered), then Persona (who the agent is), then Questions (what it does), then Principles (how it decides). Each concept builds on the previous without requiring new prerequisites."
 
 differentiation:
   extension_for_advanced: "Take a domain you know well and draft a one-paragraph Persona for an agent in that domain. Ask yourself: if this agent encountered a query that was technically within its scope but felt ethically uncomfortable, how would the Persona guide its response? Revise the Persona until you are satisfied with how it would govern that edge case."
@@ -86,43 +86,43 @@ teaching_guide:
   session_group: 1
   session_title: "The Three Components"
   key_points:
-    - "The SKILL.md is plain English authored by a domain expert — this is the defining feature that separates it from code or configuration"
-    - "Persona governs ambiguous situations through identity, not rules — a well-specified Persona is more powerful than a long list of individual instructions"
-    - "The Questions section defines both what the agent CAN handle and what it should redirect — the out-of-scope boundary is as important as the in-scope list"
-    - "Principles must be domain-specific operating logic, not generic platitudes — 'be accurate' is not a principle; 'flag any clause referencing jurisdiction outside England and Wales' is a principle"
-    - "This lesson teaches WHAT the sections are and why they matter — Lesson 5 will show a complete, annotated example"
+    - "The SKILL.md is plain English authored by a domain expert: this is the defining feature that separates it from code or configuration"
+    - "Persona governs ambiguous situations through identity, not rules: a well-specified Persona is more powerful than a long list of individual instructions"
+    - "The Questions section defines both what the agent CAN handle and what it should redirect: the out-of-scope boundary is as important as the in-scope list"
+    - "Principles must be domain-specific operating logic, not generic platitudes: 'be accurate' is not a principle; 'flag any clause referencing jurisdiction outside England and Wales' is a principle"
+    - "This lesson teaches WHAT the sections are and why they matter: Lesson 5 will show a complete, annotated example"
   misconceptions:
-    - "Students almost universally assume SKILL.md is a code or configuration file — the word 'file' and the '.md' extension trigger this assumption. Emphasise repeatedly that it is a structured English document written by a domain expert, not a developer. A compliance officer can write it. A project manager can write it. A doctor can write it."
-    - "Students may think the Persona section is a marketing exercise or a brand voice document — it is a functional specification. Precision in the Persona shapes how the agent behaves in situations no individual rule anticipated"
-    - "Students may assume the Questions section is just a topic list — it is a scope document that must define what the agent will NOT handle, not just what it will. An agent without a defined out-of-scope boundary will attempt queries it cannot handle well"
-    - "Students often write Principles that are too generic to be useful ('be helpful', 'be accurate') — domain-specific constraints are the ones that produce reliable, trustworthy agent behaviour"
+    - "Students almost universally assume SKILL.md is a code or configuration file: the word 'file' and the '.md' extension trigger this assumption. Emphasise repeatedly that it is a structured English document written by a domain expert, not a developer. A compliance officer can write it. A project manager can write it. A doctor can write it."
+    - "Students may think the Persona section is a marketing exercise or a brand voice document: it is a functional specification. Precision in the Persona shapes how the agent behaves in situations no individual rule anticipated"
+    - "Students may assume the Questions section is just a topic list: it is a scope document that must define what the agent will NOT handle, not just what it will. An agent without a defined out-of-scope boundary will attempt queries it cannot handle well"
+    - "Students often write Principles that are too generic to be useful ('be helpful', 'be accurate'): domain-specific constraints are the ones that produce reliable, trustworthy agent behaviour"
   discussion_prompts:
     - "Think of a domain you know well. If you were writing the Persona section for an agent in that domain, what would the most important identity constraints be? What authority should the agent project? What should it never claim to be?"
     - "Consider an agent built for your organisation. What are the five most important things it should always redirect to a human? What would happen if those were missing from the Questions section?"
     - "Have you ever dealt with a situation where a general-purpose AI gave you confident-sounding output in an area where it had no grounded expertise? How would a well-written Questions section with a clear out-of-scope boundary have changed that experience?"
   teaching_tips:
     - "The misconception that SKILL.md is code is so persistent that it is worth naming explicitly at the start of the lesson and revisiting at the end"
-    - "Use the contrast between generic principles ('be accurate') and domain-specific principles ('flag clauses referencing jurisdiction outside England and Wales') as a concrete exercise — it makes the difference immediately visible"
+    - "Use the contrast between generic principles ('be accurate') and domain-specific principles ('flag clauses referencing jurisdiction outside England and Wales') as a concrete exercise: it makes the difference immediately visible"
     - "The financial research agent, legal contract triage agent, and BIM coordination agent are the most illustrative examples for the Persona section because they represent three very different authority levels and relationship types"
-    - "Remind students that Lesson 5 will show them a complete, annotated SKILL.md — this lesson is about understanding why each section exists, not yet about writing one"
+    - "Remind students that Lesson 5 will show them a complete, annotated SKILL.md: this lesson is about understanding why each section exists, not yet about writing one"
   assessment_checks:
     - question: "What is a SKILL.md file and who writes it?"
       expected_response: "A plain-English document that tells an agent who it is, what it knows, how to behave, and what it should never do. It is written by a domain expert, not a developer or engineer."
     - question: "Why is Persona described as more powerful than a list of rules for governing ambiguous situations?"
-      expected_response: "Rules govern anticipated situations. A Persona governs unanticipated ones. When an agent encounters a query no individual rule covers, its professional identity — as defined in the Persona section — shapes its response. A vague Persona produces inconsistent agents; a precise Persona produces predictable, trustworthy ones."
+      expected_response: "Rules govern anticipated situations. A Persona governs unanticipated ones. When an agent encounters a query no individual rule covers, its professional identity (as defined in the Persona section) shapes its response. A vague Persona produces inconsistent agents; a precise Persona produces predictable, trustworthy ones."
     - question: "Why is the out-of-scope boundary in the Questions section as important as the in-scope list?"
-      expected_response: "An agent without a defined out-of-scope boundary will attempt to answer queries it cannot handle reliably, producing confident-sounding outputs in areas where it has no grounded expertise. The out-of-scope boundary defines where the agent redirects rather than responds — which is critical for trust in high-stakes professional domains."
+      expected_response: "An agent without a defined out-of-scope boundary will attempt to answer queries it cannot handle reliably, producing confident-sounding outputs in areas where it has no grounded expertise. The out-of-scope boundary defines where the agent redirects rather than responds; which is critical for trust in high-stakes professional domains."
     - question: "Give an example of a generic principle and a domain-specific principle. What makes the domain-specific one better?"
-      expected_response: "Generic: 'Be accurate.' Domain-specific: 'Flag any contract clause that references a jurisdiction outside England and Wales.' The domain-specific principle is actionable — the agent knows exactly what to look for and what to do. The generic principle is aspirational — it gives the agent no concrete guidance on what 'accurate' means in this context."
+      expected_response: "Generic: 'Be accurate.' Domain-specific: 'Flag any contract clause that references a jurisdiction outside England and Wales.' The domain-specific principle is actionable: the agent knows exactly what to look for and what to do. The generic principle is aspirational: it gives the agent no concrete guidance on what 'accurate' means in this context."
 ---
 
-# The Intelligence Layer — SKILL.md
+# The Intelligence Layer: SKILL.md
 
-In Lesson 1, you established three layers of what a Cowork plugin is: a self-contained directory of components (the format), a knowledge-work specialisation that turns a general-purpose agent into a domain expert (what Anthropic's official plugins do with it), and an enterprise readiness evaluation model (Panaversity's framework for assessing production readiness). You learned that plugins arrive from the marketplace as ready-made packages containing skills, connectors, commands, agents, hooks, and a manifest — and that your contribution is the part no one else can write: the SKILL.md that encodes how your organisation actually works. Now it is time to understand what you are actually responsible for. The SKILL.md is the intelligence layer of the plugin. Everything the agent knows about who it is, what it does, and how it decides — that is yours to write.
+In Lesson 1, you established three layers of what a Cowork plugin is: a self-contained directory of components (the format), a knowledge-work specialisation that turns a general-purpose agent into a domain expert (what Anthropic's official plugins do with it), and an enterprise readiness evaluation model (Panaversity's framework for assessing production readiness). You learned that plugins arrive from the marketplace as ready-made packages containing skills, connectors, commands, agents, hooks, and a manifest: and that your contribution is the part no one else can write: the SKILL.md that encodes how your organisation actually works. Now it is time to understand what you are actually responsible for. The SKILL.md is the intelligence layer of the plugin. Everything the agent knows about who it is, what it does, and how it decides: that is yours to write.
 
-The description "intelligence layer" is deliberate. The manifest identifies the plugin. The connectors wire it to enterprise systems. The commands and agents provide workflow infrastructure. None of these makes the agent intelligent in any domain-specific sense. Intelligence — the ability to apply domain expertise to real professional situations — comes from the SKILL.md. A compliance agent and a financial research agent might run on identical connector infrastructure, behind identical governance settings, with identical commands. What makes them different, and what makes each of them useful, is the SKILL.md.
+The description "intelligence layer" is deliberate. The manifest identifies the plugin. The connectors wire it to enterprise systems. The commands and agents provide workflow infrastructure. None of these makes the agent intelligent in any domain-specific sense. Intelligence: the ability to apply domain expertise to real professional situations: comes from the SKILL.md. A compliance agent and a financial research agent might run on identical connector infrastructure, behind identical governance settings, with identical commands. What makes them different, and what makes each of them useful, is the SKILL.md.
 
-This lesson explains the structure of that document. There are three sections, each with a distinct function: Persona, Questions, and Principles. Understanding what each section does — and why the specifics matter — is the prerequisite for everything in this chapter. Lesson 5 will show you a complete, annotated example. This lesson shows you the architecture and the reasoning behind it.
+This lesson explains the structure of that document. There are three sections, each with a distinct function: Persona, Questions, and Principles. Understanding what each section does (and why the specifics matter) is the prerequisite for everything in this chapter. Lesson 5 will show you a complete, annotated example. This lesson shows you the architecture and the reasoning behind it.
 
 ## What a SKILL.md Is (and Is Not)
 
@@ -130,7 +130,7 @@ Before covering the three sections, it is worth stating clearly what a SKILL.md 
 
 A SKILL.md is a structured Markdown file with YAML frontmatter followed by body content written in English. The frontmatter is a short header block that declares metadata the platform uses to discover and manage the skill. The body of the document tells the agent who it is, what it knows, how to behave in the situations it will encounter, and what it must never do. Writing a SKILL.md requires no programming ability. It requires domain expertise.
 
-The YAML frontmatter follows the [Agent Skills specification](https://agentskills.io/specification) — an open standard originated by Anthropic and now adopted by Microsoft, OpenAI, Cursor, GitHub, VS Code, Gemini CLI, and over 25 tools across the industry. The required fields are minimal:
+The YAML frontmatter follows the [Agent Skills specification](https://agentskills.io/specification): an open standard originated by Anthropic and now adopted by Microsoft, OpenAI, Cursor, GitHub, VS Code, Gemini CLI, and over 25 tools across the industry. The required fields are minimal:
 
 | Field           | Required | What It Does                                                                                                     |
 | --------------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -141,12 +141,12 @@ The YAML frontmatter follows the [Agent Skills specification](https://agentskill
 | `compatibility` | No       | Environment requirements (intended product, required packages, network access).                                  |
 | `metadata`      | No       | Arbitrary key-value pairs for additional information (author, version, etc.).                                    |
 
-The `description` field deserves attention. Agents load only the `name` and `description` of every available skill at startup — a progressive disclosure model that keeps context lean. When a task matches a skill's description, the agent loads the full body content. A vague description means the agent may not activate the skill when it should. A precise description — one that includes specific keywords and use cases — ensures the agent recognises relevant tasks reliably.
+The `description` field deserves attention. Agents load only the `name` and `description` of every available skill at startup: a progressive disclosure model that keeps context lean. When a task matches a skill's description, the agent loads the full body content. A vague description means the agent may not activate the skill when it should. A precise description (one that includes specific keywords and use cases) ensures the agent recognises relevant tasks reliably.
 
 | What people assume SKILL.md is                    | What SKILL.md actually is                                                        |
 | ------------------------------------------------- | -------------------------------------------------------------------------------- |
-| A configuration file with settings and parameters | Structured Markdown with YAML frontmatter — identity, scope, and operating logic |
-| Written by a developer or ML engineer             | Written by a domain expert — a lawyer, analyst, architect, or clinician          |
+| A configuration file with settings and parameters | Structured Markdown with YAML frontmatter: identity, scope, and operating logic |
+| Written by a developer or ML engineer             | Written by a domain expert: a lawyer, analyst, architect, or clinician          |
 | Code that executes when the agent runs            | Text that the agent reads and applies to every interaction                       |
 | A technical artefact managed by IT                | A professional document managed by the knowledge worker who owns the domain      |
 
@@ -154,21 +154,21 @@ This distinction matters because it determines who can build useful agents. A se
 
 ## The Persona–Questions–Principles Framework
 
-The [Agent Skills specification](https://agentskills.io/specification) — the open standard adopted by Cursor, VS Code, GitHub, OpenAI Codex, Gemini CLI, and 25+ tools — defines the SKILL.md format but imposes no restrictions on how you structure the body content. It says: "Write whatever helps agents perform the task effectively." That flexibility is deliberate. Skills range from simple checklists to complex domain workflows, and the standard accommodates all of them.
+The [Agent Skills specification](https://agentskills.io/specification), the open standard adopted by Cursor, VS Code, GitHub, OpenAI Codex, Gemini CLI, and 25+ tools, defines the SKILL.md format but imposes no restrictions on how you structure the body content. It says: "Write whatever helps agents perform the task effectively." That flexibility is deliberate. Skills range from simple checklists to complex domain workflows, and the standard accommodates all of them.
 
-For enterprise domain agents, however, that open canvas benefits from structure. The agentskills.io standard defines the format. PQP is our methodology for structuring the body content for enterprise domain agents. We call it the **Persona–Questions–Principles Framework** (PQP Framework for short). It has three sections: Persona, Questions, and Principles. Each section performs a specific function, and each section requires a specific kind of thinking to write well. This is not the only way to structure a SKILL.md — but for the enterprise use cases this chapter addresses, it is the approach that produces the most reliable, auditable agents.
+For enterprise domain agents, however, that open canvas benefits from structure. The agentskills.io standard defines the format. PQP is our methodology for structuring the body content for enterprise domain agents. We call it the **Persona–Questions–Principles Framework** (PQP Framework for short). It has three sections: Persona, Questions, and Principles. Each section performs a specific function, and each section requires a specific kind of thinking to write well. This is not the only way to structure a SKILL.md; but for the enterprise use cases this chapter addresses, it is the approach that produces the most reliable, auditable agents.
 
 | Section        | What It Defines                                                        | Who Benefits                                                   |
 | -------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
 | **Persona**    | Professional identity, authority, tone, relationship to user           | The agent's behaviour in unanticipated situations              |
-| **Questions**  | Scope — what the agent handles and what it redirects                   | The reliability boundary of the agent's expertise              |
+| **Questions**  | Scope; what the agent handles and what it redirects                   | The reliability boundary of the agent's expertise              |
 | **Principles** | Operating logic, constraints, escalation thresholds, quality standards | The agent's decision-making in complex or contested situations |
 
-None of these sections is optional. Remove the Persona and the agent has no reliable identity to fall back on when a query does not fit any anticipated pattern. Remove the Questions section and the agent has no boundary — it will attempt queries it cannot handle well. Remove the Principles and the agent has no operating logic for the hard cases, where the right answer is not obvious.
+None of these sections is optional. Remove the Persona and the agent has no reliable identity to fall back on when a query does not fit any anticipated pattern. Remove the Questions section and the agent has no boundary: it will attempt queries it cannot handle well. Remove the Principles and the agent has no operating logic for the hard cases, where the right answer is not obvious.
 
 ## Persona: Identity as Functional Specification
 
-The Persona section defines who the agent is in professional terms. Not what it can do — who it is. This is a functional specification, not a marketing exercise. The distinction matters.
+The Persona section defines who the agent is in professional terms. Not what it can do: who it is. This is a functional specification, not a marketing exercise. The distinction matters.
 
 A marketing exercise describes the agent in appealing terms. A functional specification describes the agent in terms that govern behaviour. Consider the difference between these two Persona statements:
 
@@ -176,9 +176,9 @@ A marketing exercise describes the agent in appealing terms. A functional specif
 
 "A senior equity research analyst with fifteen years of experience covering FTSE-listed financial services companies. Analytical, precise, and direct. I work with portfolio managers and investment directors who need data-grounded analysis on short notice. I cite sources, flag uncertainty explicitly, and do not speculate beyond what the data supports."
 
-Both describe a financial research agent. Only the second one governs how the agent will behave when a portfolio manager asks a question the evidence does not clearly answer. The first Persona produces an agent that will try to be helpful — which, in the absence of data, means generating plausible-sounding speculation. The second Persona produces an agent that will say "the data does not support a confident position on this" because that is what a senior analyst with a reputation to protect would say.
+Both describe a financial research agent. Only the second one governs how the agent will behave when a portfolio manager asks a question the evidence does not clearly answer. The first Persona produces an agent that will try to be helpful: which, in the absence of data, means generating plausible-sounding speculation. The second Persona produces an agent that will say "the data does not support a confident position on this" because that is what a senior analyst with a reputation to protect would say.
 
-This is the central insight about the Persona section: **identity governs ambiguous situations more reliably than rules.** Rules govern situations that were anticipated when the rules were written. Professional identity governs situations that were not anticipated, because it provides the agent with a stable reference point — "what would a professional of this standing, in this relationship, do here?" — that is more robust than any finite list of instructions.
+This is the central insight about the Persona section: **identity governs ambiguous situations more reliably than rules.** Rules govern situations that were anticipated when the rules were written. Professional identity governs situations that were not anticipated, because it provides the agent with a stable reference point ("what would a professional of this standing, in this relationship, do here?") that is more robust than any finite list of instructions.
 
 The Persona section answers four questions:
 
@@ -189,19 +189,19 @@ The Persona section answers four questions:
 | What is its characteristic tone?           | Determines how it handles disagreement, uncertainty, and complexity |
 | What will it never claim to be?            | Sets the boundaries of its professional identity                    |
 
-Consider how these answers differ across domains. A legal contract triage agent describes itself as a legal professional who flags risk clearly and defers to qualified counsel on matters requiring independent legal advice — not an authority, but a rigorous first-pass reviewer. A BIM coordination agent for construction describes itself as a project coordinator who understands all disciplines and escalates when a structural decision falls outside its competence. A clinical pharmacology agent describes itself as a specialist who flags drug interactions against evidence-based thresholds and always defers to the prescribing clinician on patient-specific decisions.
+Consider how these answers differ across domains. A legal contract triage agent describes itself as a legal professional who flags risk clearly and defers to qualified counsel on matters requiring independent legal advice; not an authority, but a rigorous first-pass reviewer. A BIM coordination agent for construction describes itself as a project coordinator who understands all disciplines and escalates when a structural decision falls outside its competence. A clinical pharmacology agent describes itself as a specialist who flags drug interactions against evidence-based thresholds and always defers to the prescribing clinician on patient-specific decisions.
 
-In each case, the professional identity does more work than any individual rule could. When a user asks the legal agent for a definitive answer on a contested clause, the agent's identity — "I flag risk clearly and defer to qualified counsel" — determines the response without requiring a rule that says "if user asks for a definitive legal opinion, respond by...". The Persona handles this implicitly, because that is what a legal professional in that relationship would do.
+In each case, the professional identity does more work than any individual rule could. When a user asks the legal agent for a definitive answer on a contested clause, the agent's identity ("I flag risk clearly and defer to qualified counsel") determines the response without requiring a rule that says "if user asks for a definitive legal opinion, respond by...". The Persona handles this implicitly, because that is what a legal professional in that relationship would do.
 
 ## Questions: Scope as a Two-Sided Document
 
-The Questions section defines what the agent is for. Not in broad terms, but in specific ones: which tasks it handles, how it handles them, and — critically — what falls outside its remit.
+The Questions section defines what the agent is for. Not in broad terms, but in specific ones: which tasks it handles, how it handles them, and (critically) what falls outside its remit.
 
 The last of these is the most commonly underspecified. Domain experts writing their first SKILL.md tend to think of the Questions section as a list of capabilities. It is better understood as a scope document, and a scope document has two sides: in-scope and out-of-scope.
 
-The cost of underspecification in this section is measurable. An agent without a well-defined scope will attempt to answer queries it cannot handle well. This produces confident-sounding outputs in areas where it has no grounded expertise — which is a technical description of hallucination in a professional context. A financial research agent that strays into tax advice because no one specified that tax advice was out of scope will produce tax analysis that sounds authoritative and is functionally unreliable. A contract triage agent that ventures into employment law because no one specified that employment law fell outside its competence will produce employment law analysis with the same problem.
+The cost of underspecification in this section is measurable. An agent without a well-defined scope will attempt to answer queries it cannot handle well. This produces confident-sounding outputs in areas where it has no grounded expertise; which is a technical description of hallucination in a professional context. A financial research agent that strays into tax advice because no one specified that tax advice was out of scope will produce tax analysis that sounds authoritative and is functionally unreliable. A contract triage agent that ventures into employment law because no one specified that employment law fell outside its competence will produce employment law analysis with the same problem.
 
-The out-of-scope boundary defines where the agent redirects rather than responds. This is not a limitation — it is a quality guarantee. An agent with a tight, well-defined scope is more trustworthy precisely because it knows where it stops. Users who understand its scope can rely on its outputs within that scope. Users who receive a redirect know they need to look elsewhere. Both outcomes are more useful than confident-sounding output in an area where the agent has no grounded expertise.
+The out-of-scope boundary defines where the agent redirects rather than responds. This is not a limitation: it is a quality guarantee. An agent with a tight, well-defined scope is more trustworthy precisely because it knows where it stops. Users who understand its scope can rely on its outputs within that scope. Users who receive a redirect know they need to look elsewhere. Both outcomes are more useful than confident-sounding output in an area where the agent has no grounded expertise.
 
 Consider what a well-specified Questions section looks like for different domains:
 
@@ -212,13 +212,13 @@ Consider what a well-specified Questions section looks like for different domain
 | **Clinical pharmacology** | Drug interaction checking against approved formulary; dosage verification against weight and renal function; contraindication flagging | Prescribing decisions; patient-specific risk assessment; off-formulary authorisations                                |
 | **BIM coordination**      | Clash detection across structural, MEP, and architectural models; specification compliance checking; RFI preparation                   | Structural engineering sign-off; cost estimates; planning authority submissions                                      |
 
-In each case, the out-of-scope items are not arbitrary. They are the areas where the agent's grounded expertise ends and where professional liability, clinical risk, or regulatory accountability begins. The Questions section does not just describe what the agent knows — it maps the boundary of where its knowledge is reliable.
+In each case, the out-of-scope items are not arbitrary. They are the areas where the agent's grounded expertise ends and where professional liability, clinical risk, or regulatory accountability begins. The Questions section does not just describe what the agent knows: it maps the boundary of where its knowledge is reliable.
 
 ## Principles: Operating Logic for Hard Cases
 
 The Principles section defines how the agent applies its knowledge in practice. This is where operating constraints, escalation thresholds, quality standards, and decision-making logic live.
 
-The critical distinction here is between generic principles and domain-specific principles. Generic principles — "be accurate," "be helpful," "be transparent" — are aspirational statements that give the agent no concrete guidance on what accuracy, helpfulness, or transparency means in a specific professional context. Domain-specific principles are actionable: they tell the agent exactly what to look for, what to prioritise, and what constitutes a situation that requires escalation.
+The critical distinction here is between generic principles and domain-specific principles. Generic principles ("be accurate," "be helpful," "be transparent") are aspirational statements that give the agent no concrete guidance on what accuracy, helpfulness, or transparency means in a specific professional context. Domain-specific principles are actionable: they tell the agent exactly what to look for, what to prioritise, and what constitutes a situation that requires escalation.
 
 Compare these approaches across domains:
 
@@ -230,7 +230,7 @@ Compare these approaches across domains:
 
 **Domain-specific (functional):** "Flag any clause that modifies the indemnity cap below the contract value, any jurisdiction reference outside England and Wales, any penalty clause with an uncapped liability provision, and any force majeure clause that excludes circumstances beyond a narrowly defined list. For each flag, state the risk and the recommended action."
 
-The difference is not merely stylistic. Generic principles require the agent to determine what "accurate" means in each new situation, producing inconsistent results. Domain-specific principles tell the agent what accuracy looks like in this domain, for this type of output, against these quality standards — producing consistent, reviewable results.
+The difference is not merely stylistic. Generic principles require the agent to determine what "accurate" means in each new situation, producing inconsistent results. Domain-specific principles tell the agent what accuracy looks like in this domain, for this type of output, against these quality standards: producing consistent, reviewable results.
 
 The Principles section also contains escalation thresholds: the operating constraints that define when the agent should stop acting autonomously and refer to a human. These thresholds are domain-specific for the same reason. An escalation threshold for a financial research agent is not the same as an escalation threshold for a clinical pharmacology agent.
 
@@ -241,9 +241,9 @@ The Principles section also contains escalation thresholds: the operating constr
 | **Healthcare**            | Any interaction flagged as a critical drug interaction by the approved formulary; any dosage outside the validated range for the patient's renal function category |
 | **Architecture/BIM**      | Any structural coordination issue that a qualified structural engineer has not reviewed; any clash that cannot be resolved without changing the structural grid    |
 
-In each case, the escalation threshold is defined by the professional standard for that domain — not by a generic rule about when AI should involve a human. A contract that has a complex indemnity structure requires a qualified solicitor to review, not because AI is generally unreliable, but because that specific type of decision carries professional liability that requires human accountability.
+In each case, the escalation threshold is defined by the professional standard for that domain; not by a generic rule about when AI should involve a human. A contract that has a complex indemnity structure requires a qualified solicitor to review, not because AI is generally unreliable, but because that specific type of decision carries professional liability that requires human accountability.
 
-The Principles section is also where domain-specific data sourcing rules live. Financial research agents specify which data sources are approved and what happens when a query cannot be answered from approved sources. Legal agents specify which jurisdictions their analysis covers. Clinical agents specify which formulary they check against. These are not generic quality controls — they are the operating constraints that make the agent's outputs auditable and trustworthy.
+The Principles section is also where domain-specific data sourcing rules live. Financial research agents specify which data sources are approved and what happens when a query cannot be answered from approved sources. Legal agents specify which jurisdictions their analysis covers. Clinical agents specify which formulary they check against. These are not generic quality controls: they are the operating constraints that make the agent's outputs auditable and trustworthy.
 
 ## Why Specificity Is the Work
 
@@ -251,7 +251,7 @@ The common thread across all three sections is specificity. A vague Persona prod
 
 Writing a production-quality SKILL.md is therefore not a formatting exercise. It is a knowledge extraction exercise. The domain expert writing a SKILL.md must articulate, often for the first time in explicit form, the professional standards, decision-making logic, and escalation thresholds that ordinarily exist as institutional memory and professional judgement. This is difficult work. It is also, as Chapter 27 will show, a learnable process with structured techniques.
 
-The good news is that the difficulty of writing a SKILL.md is the difficulty of articulating domain expertise — not the difficulty of learning to code. The compliance officer who has spent a career developing a feel for which clauses represent genuine risk does not need to learn Python to encode that expertise in a SKILL.md. They need to learn how to make their tacit knowledge explicit. That is a different skill, and one they already have more than they realise.
+The good news is that the difficulty of writing a SKILL.md is the difficulty of articulating domain expertise; not the difficulty of learning to code. The compliance officer who has spent a career developing a feel for which clauses represent genuine risk does not need to learn Python to encode that expertise in a SKILL.md. They need to learn how to make their tacit knowledge explicit. That is a different skill, and one they already have more than they realise.
 
 ## Try With AI
 

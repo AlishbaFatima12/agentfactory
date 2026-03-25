@@ -26,7 +26,7 @@ cards:
 
   - id: "ch36-10-backlog-prioritization-frameworks-004"
     front: "What is the Strategic Override Test?"
-    back: "Ask: is there any item that scored low that you would build anyway? If yes, write the override reason explicitly — CEO commitment, competitive necessity, technical prerequisite, or enterprise deal dependency. Document overrides as overrides, not as inflated scores."
+    back: "Ask: is there any item that scored low that you would build anyway? If yes, write the override reason explicitly; CEO commitment, competitive necessity, technical prerequisite, or enterprise deal dependency. Document overrides as overrides, not as inflated scores."
     tags: ["strategic-override", "override-test"]
     difficulty: "basic"
 
@@ -38,7 +38,7 @@ cards:
 
   - id: "ch36-10-backlog-prioritization-frameworks-006"
     front: "What is the 'What Would We Regret?' Test?"
-    back: "Ignore all scores. Ask: which item, if we shipped nothing else this quarter, would our best customers be most grateful for? If this differs from the RICE #1, investigate the gap — it is either a data quality issue (fix the score) or a strategic weight RICE cannot capture (document as override)."
+    back: "Ignore all scores. Ask: which item, if we shipped nothing else this quarter, would our best customers be most grateful for? If this differs from the RICE #1, investigate the gap: it is either a data quality issue (fix the score) or a strategic weight RICE cannot capture (document as override)."
     tags: ["regret-test"]
     difficulty: "advanced"
 
@@ -62,18 +62,18 @@ cards:
 
   - id: "ch36-10-backlog-prioritization-frameworks-010"
     front: "When should a low-confidence, high-effort item have a discovery spike?"
-    back: "Almost always. If confidence is below 50% and effort is above 3 sprints, a 2-week discovery spike is far cheaper than discovering the assumption was wrong 4 sprints into the build. Discovery spikes are not delays — they are risk reduction."
+    back: "Almost always. If confidence is below 50% and effort is above 3 sprints, a 2-week discovery spike is far cheaper than discovering the assumption was wrong 4 sprints into the build. Discovery spikes are not delays: they are risk reduction."
     tags: ["low-confidence-high-effort", "high-effort-item", "low-confidence"]
     difficulty: "intermediate"
 
   - id: "ch36-10-backlog-prioritization-frameworks-011"
     front: "What does Kano model distinguish between?"
-    back: "Basic needs (table-stakes — users churn without them), performance needs (more is better — users reward you proportionally), and delighters (unexpected value — users love them but didn't ask for them). Useful for understanding customer demand structure, not for ranking features against each other."
+    back: "Basic needs (table-stakes: users churn without them), performance needs (more is better: users reward you proportionally), and delighters (unexpected value: users love them but didn't ask for them). Useful for understanding customer demand structure, not for ranking features against each other."
     tags: ["kano-model", "model-distinguish"]
     difficulty: "advanced"
 
   - id: "ch36-10-backlog-prioritization-frameworks-012"
     front: "What is the most important section of the quarterly priority decision that PMs most often omit?"
-    back: "'Explicitly Not Building This Quarter' — with one-sentence rationale for each rejected item. Without it, rejected ideas resurface in every planning meeting because they were never formally closed."
+    back: "'Explicitly Not Building This Quarter': with one-sentence rationale for each rejected item. Without it, rejected ideas resurface in every planning meeting because they were never formally closed."
     tags: ["important-section", "quarterly-priority", "decision"]
     difficulty: "intermediate"

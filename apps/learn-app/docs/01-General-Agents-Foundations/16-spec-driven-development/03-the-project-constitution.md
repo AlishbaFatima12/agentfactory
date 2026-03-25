@@ -66,19 +66,19 @@ differentiation:
 teaching_guide:
   key_points:
     - "Specs describe WHAT to build; constitutions describe HOW everything must be built"
-    - "CLAUDE.md is read automatically — no invocation needed"
+    - "CLAUDE.md is read automatically: no invocation needed"
     - "Global + project constitutions compose with project overriding global"
     - "Five categories: architecture, technology, quality, security, workflow"
     - "Constitution must exist BEFORE Phase 1 research begins"
   misconceptions:
-    - "Constitution is just another spec — it's governance, not feature description"
-    - "You need a huge constitution to start — start small, grow incrementally"
+    - "Constitution is just another spec: it's governance, not feature description"
+    - "You need a huge constitution to start: start small, grow incrementally"
   discussion_prompts:
     - "What standards do you enforce through code review that could be in a constitution?"
     - "When would you put a rule in global vs project constitution?"
   teaching_tips:
     - "Connect to Lesson 2's three levels: constitution operates at ALL levels"
-    - "The table comparing with/without constitution is the key visual — dwell on it"
+    - "The table comparing with/without constitution is the key visual: dwell on it"
     - "Lessons 4-8 will reference the constitution as the coordination system"
   assessment_quick_check:
     - "Can the student explain why two subagents with the same spec but no constitution might produce inconsistent code?"
@@ -86,11 +86,11 @@ teaching_guide:
 
 # The Project Constitution
 
-In Lesson 2, you learned that specifications come in three levels—Spec-First, Spec-Anchored, and Spec-as-Source. Every level shares the same problem: specs describe _what you're building_, but nothing tells Claude _how you always build things_.
+In Lesson 2, you learned that specifications come in three levels,Spec-First, Spec-Anchored, and Spec-as-Source. Every level shares the same problem: specs describe _what you're building_, but nothing tells Claude _how you always build things_.
 
 Consider what happens without this distinction. You write a spec for a new API endpoint. It says what the endpoint does, what it returns, how errors are handled. Claude implements it correctly against the spec. But the function is 80 lines long, and your team's standard is 40. There are no type hints, and your codebase is fully typed. The error messages are inconsistent with every other endpoint in your system. The spec was followed perfectly. The result is still wrong.
 
-This is the gap the project constitution fills. The spec describes a feature. The constitution defines the immutable principles that govern how _every_ feature is built—across sessions, across subagents, across the entire lifespan of a project. It's the difference between describing what a building should contain and defining the structural codes every wall must meet.
+This is the gap the project constitution fills. The spec describes a feature. The constitution defines the immutable principles that govern how _every_ feature is built,across sessions, across subagents, across the entire lifespan of a project. It's the difference between describing what a building should contain and defining the structural codes every wall must meet.
 
 ## What a Constitution Is
 
@@ -104,9 +104,9 @@ Think of it this way. Your spec for a new authentication feature describes the l
 
 Claude Code supports constitutions at two levels, and understanding both changes how you think about governance.
 
-**Project-level** (`./CLAUDE.md`) — Lives in your repository. Version-controlled alongside your code. Specific to this project's architecture, standards, and constraints. When you clone the repo, the constitution comes with it. When the team updates it, everyone's next Claude session inherits the change.
+**Project-level** (`./CLAUDE.md`). Lives in your repository. Version-controlled alongside your code. Specific to this project's architecture, standards, and constraints. When you clone the repo, the constitution comes with it. When the team updates it, everyone's next Claude session inherits the change.
 
-**Global-level** (`~/.claude/CLAUDE.md`) — Lives in your home directory. Applies to every project you work on, across every repo. This is where you encode your personal or organizational standards that never change: your preferred code style, documentation conventions, the way you always want Claude to ask clarifying questions before proceeding, your security requirements that apply everywhere.
+**Global-level** (`~/.claude/CLAUDE.md`). Lives in your home directory. Applies to every project you work on, across every repo. This is where you encode your personal or organizational standards that never change: your preferred code style, documentation conventions, the way you always want Claude to ask clarifying questions before proceeding, your security requirements that apply everywhere.
 
 The two levels compose. When Claude starts a session, it reads your global constitution first, then the project constitution. Project principles extend and override global principles where they conflict. You get universal standards everywhere, with project-specific refinements where needed.
 
@@ -126,15 +126,15 @@ A constitution is not a spec. It does not describe features. It does not list ta
 
 Most constitutions cover five categories:
 
-**Architecture principles** — The structural rules your codebase must follow. Not "build a microservices architecture for this feature"—that's a spec decision. Rather: "services communicate only through defined interfaces, never by importing from each other's internals." These are the architectural laws that apply regardless of what you're building.
+**Architecture principles:** The structural rules your codebase must follow. Not "build a microservices architecture for this feature",that's a spec decision. Rather: "services communicate only through defined interfaces, never by importing from each other's internals." These are the architectural laws that apply regardless of what you're building.
 
-**Technology constraints** — Your locked choices. Language version, framework, database, auth approach. If every service must use PostgreSQL, that belongs in the constitution—not because you're specifying a feature, but because you never want Claude to propose SQLite as a convenient shortcut.
+**Technology constraints:** Your locked choices. Language version, framework, database, auth approach. If every service must use PostgreSQL, that belongs in the constitution,not because you're specifying a feature, but because you never want Claude to propose SQLite as a convenient shortcut.
 
-**Code quality standards** — The measurable properties every piece of generated code must have. Function length limits. Type safety requirements. Required documentation. Test coverage thresholds. These standards prevent specification gaps from becoming quality gaps: even when a spec doesn't mention testing, the constitution ensures tests are written.
+**Code quality standards:** The measurable properties every piece of generated code must have. Function length limits. Type safety requirements. Required documentation. Test coverage thresholds. These standards prevent specification gaps from becoming quality gaps: even when a spec doesn't mention testing, the constitution ensures tests are written.
 
-**Security requirements** — Non-negotiables that apply everywhere. No secrets in code. Input validation at every external boundary. Audit logging for state changes. These belong in the constitution, not individual specs, because forgetting to include them in a spec should not mean they're optional.
+**Security requirements:** Non-negotiables that apply everywhere. No secrets in code. Input validation at every external boundary. Audit logging for state changes. These belong in the constitution, not individual specs, because forgetting to include them in a spec should not mean they're optional.
 
-**Workflow rules** — How Claude should behave procedurally. When to ask clarifying questions versus proceeding. How to handle ambiguity in a spec. Commit message format. Whether to propose alternatives or implement exactly what was specified. These shape Claude's collaborative behavior across all sessions.
+**Workflow rules:** How Claude should behave procedurally. When to ask clarifying questions versus proceeding. How to handle ambiguity in a spec. Commit message format. Whether to propose alternatives or implement exactly what was specified. These shape Claude's collaborative behavior across all sessions.
 
 Here is what a project constitution looks like in practice:
 
@@ -178,13 +178,13 @@ Here is what a project constitution looks like in practice:
 - When you identify a pattern violation against this constitution, flag it explicitly
 ```
 
-This is a complete, usable constitution. Notice what it does not contain: any feature description, any user story, any business logic. It is purely structural—the DNA that every feature implementation inherits.
+This is a complete, usable constitution. Notice what it does not contain: any feature description, any user story, any business logic. It is purely structural,the DNA that every feature implementation inherits.
 
 ## When to Write the Constitution
 
 The constitution must exist before Phase 1 research begins. This ordering is not arbitrary.
 
-Research produces findings. Findings inform your spec. Your spec defines what gets built. If the constitution doesn't exist when research runs, the spec may include architectural decisions that contradict your standards—and those contradictions only surface during implementation, when they're expensive to fix.
+Research produces findings. Findings inform your spec. Your spec defines what gets built. If the constitution doesn't exist when research runs, the spec may include architectural decisions that contradict your standards,and those contradictions only surface during implementation, when they're expensive to fix.
 
 The correct sequence is:
 
@@ -194,7 +194,7 @@ Constitution  →  Research  →  Spec  →  Refinement  →  Implementation
 
 Think of the constitution as the coordinate system. Research, specification, and implementation all operate within it. Without the coordinate system defined first, agents during the research phase may explore patterns that are architecturally incompatible with your project. The constitution bounds what "good findings" means before anyone starts looking.
 
-For new projects, you write the constitution during setup—before you've written a single line of production code. For existing projects, you write the constitution by documenting the principles already implicit in your codebase. The principles were always there; the constitution makes them explicit and enforced.
+For new projects, you write the constitution during setup,before you've written a single line of production code. For existing projects, you write the constitution by documenting the principles already implicit in your codebase. The principles were always there; the constitution makes them explicit and enforced.
 
 ## The Constitution as Governance Across Agents
 
@@ -202,7 +202,7 @@ This is where the constitution's value becomes clearest in an agentic workflow. 
 
 Without a constitution, Subagent 1 might implement its task using async/await patterns. Subagent 2, working in parallel with no knowledge of Subagent 1's choices, might use callbacks. Both implementations are technically correct. Together, they produce an inconsistent codebase. Your code review becomes an archaeology project, reconstructing the principles neither agent knew to follow.
 
-With a constitution, both agents read the same rules before starting. Async patterns are specified. Naming conventions are defined. Testing standards are explicit. Consistency doesn't depend on agents communicating with each other—it's guaranteed by shared governance from the start.
+With a constitution, both agents read the same rules before starting. Async patterns are specified. Naming conventions are defined. Testing standards are explicit. Consistency doesn't depend on agents communicating with each other,it's guaranteed by shared governance from the start.
 
 | Aspect                      | Without Constitution                  | With Constitution                      |
 | --------------------------- | ------------------------------------- | -------------------------------------- |
@@ -214,9 +214,9 @@ With a constitution, both agents read the same rules before starting. Async patt
 
 ## Maintaining the Constitution
 
-A constitution is a living document, but it changes slowly. Feature specs change with every sprint. The constitution changes when your fundamental architectural thinking changes—which is rare.
+A constitution is a living document, but it changes slowly. Feature specs change with every sprint. The constitution changes when your fundamental architectural thinking changes,which is rare.
 
-When you need to update it, follow one rule: change the constitution before you change the code. If you decide to switch from callbacks to async/await as your universal pattern, update the constitution first. The next Claude session will implement under the new standard. Old code that violates the new standard is technical debt you can address incrementally—but new code will be consistent from the moment the constitution changes.
+When you need to update it, follow one rule: change the constitution before you change the code. If you decide to switch from callbacks to async/await as your universal pattern, update the constitution first. The next Claude session will implement under the new standard. Old code that violates the new standard is technical debt you can address incrementally,but new code will be consistent from the moment the constitution changes.
 
 Never update the constitution mid-task. If a task reveals that a constitutional principle needs revision, finish the task under the current constitution, then update it for the next session. Changing the rules while the game is in progress produces inconsistent output.
 
@@ -224,9 +224,9 @@ Never update the constitution mid-task. If a task reveals that a constitutional 
 
 Since the constitution lives in `CLAUDE.md`, understanding what Claude does with this file matters.
 
-Claude reads `CLAUDE.md` files at three locations: your global `~/.claude/CLAUDE.md`, any `CLAUDE.md` in your project root, and any `CLAUDE.md` files in subdirectories relevant to the current working context. You can use this hierarchy intentionally—a subdirectory containing your API layer can have its own `CLAUDE.md` that adds API-specific principles to the project-level constitution.
+Claude reads `CLAUDE.md` files at three locations: your global `~/.claude/CLAUDE.md`, any `CLAUDE.md` in your project root, and any `CLAUDE.md` files in subdirectories relevant to the current working context. You can use this hierarchy intentionally,a subdirectory containing your API layer can have its own `CLAUDE.md` that adds API-specific principles to the project-level constitution.
 
-The file is plain Markdown. No special syntax, no required structure. Claude reads it as natural language. This means you can write principles in whatever form is clearest—lists, prose, tables, or code examples showing correct versus incorrect patterns. The clearest constitutions are usually a mix: headers to organize categories, brief prose to explain intent, and code snippets to illustrate the standard unambiguously.
+The file is plain Markdown. No special syntax, no required structure. Claude reads it as natural language. This means you can write principles in whatever form is clearest,lists, prose, tables, or code examples showing correct versus incorrect patterns. The clearest constitutions are usually a mix: headers to organize categories, brief prose to explain intent, and code snippets to illustrate the standard unambiguously.
 
 ```markdown
 ## Good constitution entry — shows not just the rule, but why and how
@@ -254,7 +254,7 @@ The "why" matters. Claude can follow a rule it doesn't understand, but a rule wi
 
 ## Try With AI
 
-**Running Example:** You're continuing to build "Personal AI Employees in 2026"—a research report for CTOs. Before starting research on that topic, you need a constitution for your reporting projects.
+**Running Example:** You're continuing to build "Personal AI Employees in 2026",a research report for CTOs. Before starting research on that topic, you need a constitution for your reporting projects.
 
 **Prompt 1: Draft a Constitution from Your Standards**
 
@@ -275,7 +275,7 @@ For each principle, include a brief "why" so agents
 understand the intent, not just the rule.
 ```
 
-**What you're learning:** Notice how your implicit standards—things you'd correct without thinking—become explicit constitutional principles. The "no speculation" rule you'd catch in revision becomes a standard Claude won't violate in generation. The spec you haven't written yet will inherit these principles automatically.
+**What you're learning:** Notice how your implicit standards,things you'd correct without thinking,become explicit constitutional principles. The "no speculation" rule you'd catch in revision becomes a standard Claude won't violate in generation. The spec you haven't written yet will inherit these principles automatically.
 
 **Prompt 2: Test the Constitution Against a Spec**
 
@@ -297,7 +297,7 @@ in ways that would force you to make assumptions that
 might violate the constitution.
 ```
 
-**What you're learning:** The constitution acts as a lens that surfaces spec gaps you didn't see. "No speculation" in the constitution immediately highlights that "AI coding tools in 2026" is ambiguous—does it include tools announced but not released? "All claims cited" means the spec needs to specify what source types are acceptable. The constitution finds the gaps before research begins.
+**What you're learning:** The constitution acts as a lens that surfaces spec gaps you didn't see. "No speculation" in the constitution immediately highlights that "AI coding tools in 2026" is ambiguous,does it include tools announced but not released? "All claims cited" means the spec needs to specify what source types are acceptable. The constitution finds the gaps before research begins.
 
 **Prompt 3: Build Your Global Constitution**
 
@@ -318,7 +318,7 @@ Draft a global CLAUDE.md that captures these preferences
 and explains how the project-level override should work.
 ```
 
-**What you're learning:** The global constitution captures preferences you'd otherwise re-explain at the start of every project. "Ask one clarifying question when ambiguous" is the kind of workflow preference that belongs globally—you want it everywhere, and specifying it once means you never forget to include it in a project setup.
+**What you're learning:** The global constitution captures preferences you'd otherwise re-explain at the start of every project. "Ask one clarifying question when ambiguous" is the kind of workflow preference that belongs globally,you want it everywhere, and specifying it once means you never forget to include it in a project setup.
 
 ## Flashcards Study Aid
 

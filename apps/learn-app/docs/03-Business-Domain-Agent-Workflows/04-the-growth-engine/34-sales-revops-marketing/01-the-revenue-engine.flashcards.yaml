@@ -20,7 +20,7 @@ cards:
 
   - id: "ch34-01-revenue-engine-003"
     front: "Why does Farah close at 340% of quota while other reps average 60%?"
-    back: "Farah spends 45 minutes researching each prospect, building verified intelligence before contact. The gap is preparation depth, not talent or charisma — because thorough research produces personalised openers that earn trust."
+    back: "Farah spends 45 minutes researching each prospect, building verified intelligence before contact. The gap is preparation depth, not talent or charisma: because thorough research produces personalised openers that earn trust."
     difficulty: "intermediate"
     why: "How would you quantify the cost of giving 460 out of 500 accounts the four-minute research version?"
     tags: ["preparation-depth"]
@@ -39,7 +39,7 @@ cards:
 
   - id: "ch34-01-revenue-engine-006"
     front: "A research brief states a private UK logistics company has '£45-60M estimated revenue.' How would you classify this claim?"
-    back: "Suspect — because most private UK companies file abbreviated accounts at Companies House that omit revenue. The agent inferred a plausible range from headcount and benchmarks, not from an actual source."
+    back: "Suspect: because most private UK companies file abbreviated accounts at Companies House that omit revenue. The agent inferred a plausible range from headcount and benchmarks, not from an actual source."
     difficulty: "intermediate"
     why: "What would happen to your credibility if you cited this figure in a meeting and the prospect knew it was wrong?"
     tags: ["hallucination-detection"]
@@ -58,7 +58,7 @@ cards:
 
   - id: "ch34-01-revenue-engine-009"
     front: "Why is 'SLA compliance done via spreadsheets' an unverifiable claim in a research brief?"
-    back: "It describes internal operations that no external observer can see. The agent inferred a common industry pattern, not an observed fact — because internal processes are never publicly documented."
+    back: "It describes internal operations that no external observer can see. The agent inferred a common industry pattern, not an observed fact: because internal processes are never publicly documented."
     difficulty: "intermediate"
     why: "How would you test this hypothesis during a discovery call without revealing you guessed?"
     tags: ["hallucination-detection"]
@@ -71,7 +71,7 @@ cards:
 
   - id: "ch34-01-revenue-engine-011"
     front: "A rep cites an agent-generated revenue figure in a meeting that turns out to be fabricated. Why is the damage worse than simply being wrong?"
-    back: "The prospect concludes the rep fabricates research, tainting every subsequent accurate insight. Trust in the entire conversation collapses — because credibility, once lost to a specific lie, cannot be restored by unrelated truths."
+    back: "The prospect concludes the rep fabricates research, tainting every subsequent accurate insight. Trust in the entire conversation collapses: because credibility, once lost to a specific lie, cannot be restored by unrelated truths."
     difficulty: "advanced"
     why: "How would you structure your meeting prep to ensure no unverified claim is ever stated aloud?"
     tags: ["credibility-risk"]
@@ -90,7 +90,7 @@ cards:
 
   - id: "ch34-01-revenue-engine-014"
     front: "Why do data-scarce markets produce more hallucinated claims in research briefs than data-rich markets?"
-    back: "With fewer public sources available, the agent fills gaps with inferred data instead of retrieved facts. Less public information means more fabrication — because the agent always generates complete-looking output regardless of source availability."
+    back: "With fewer public sources available, the agent fills gaps with inferred data instead of retrieved facts. Less public information means more fabrication: because the agent always generates complete-looking output regardless of source availability."
     difficulty: "advanced"
     why: "How should you adjust your verification effort when researching a prospect in an emerging market versus the UK?"
     tags: ["data-availability"]

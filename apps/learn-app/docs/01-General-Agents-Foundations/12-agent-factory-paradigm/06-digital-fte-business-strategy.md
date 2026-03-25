@@ -74,24 +74,24 @@ teaching_guide:
   session_group: 3
   session_title: "Business Strategy and Development Methodology"
   key_points:
-    - "Sarah vs Marcus is the central parable — Sarah used AI as a productivity tool and got displaced; Marcus encoded his expertise as a product and captured value"
+    - "Sarah vs Marcus is the central parable; Sarah used AI as a productivity tool and got displaced; Marcus encoded his expertise as a product and captured value"
     - "The 90/10 moat concept is counter-intuitive: the 90% AI can do is worthless as a differentiator; the 10% only you can verify is where all the value concentrates"
-    - "Four monetization models (Subscription, Success Fee, License, Marketplace) aren't mutually exclusive — the hybrid strategies section shows how real businesses combine them"
-    - "Shadow mode deployment (parallel human+agent, then gradual handoff) is the responsible way to deploy Digital FTEs — this pattern returns in Parts 5-7"
+    - "Four monetization models (Subscription, Success Fee, License, Marketplace) aren't mutually exclusive; the hybrid strategies section shows how real businesses combine them"
+    - "Shadow mode deployment (parallel human+agent, then gradual handoff) is the responsible way to deploy Digital FTEs; this pattern returns in Parts 5-7"
   misconceptions:
-    - "Students think 'prompt engineering' is a defensible moat — the lesson explicitly debunks this: knowing how to prompt is easy; knowing what the answer should look like is the real moat"
-    - "Students assume Digital FTEs always replace humans — Scenario 3 (insurance claims) shows when the economics DON'T work due to liability risk"
-    - "Students think Marketplace is the easiest revenue model — it has the lowest barrier but 70% revenue split and brutal discovery challenges"
-    - "Students confuse PPP (Piggyback Protocol Pivot) with simple white-labeling — PPP is a phased strategy: enter via incumbents, validate, then pivot to independence"
+    - "Students think 'prompt engineering' is a defensible moat; the lesson explicitly debunks this: knowing how to prompt is easy; knowing what the answer should look like is the real moat"
+    - "Students assume Digital FTEs always replace humans; Scenario 3 (insurance claims) shows when the economics DON'T work due to liability risk"
+    - "Students think Marketplace is the easiest revenue model; it has the lowest barrier but 70% revenue split and brutal discovery challenges"
+    - "Students confuse PPP (Piggyback Protocol Pivot) with simple white-labeling; PPP is a phased strategy: enter via incumbents, validate, then pivot to independence"
   discussion_prompts:
-    - "Think about your current role — are you more like Sarah (using AI to be faster) or Marcus (encoding expertise into a product)? What would it take to switch?"
+    - "Think about your current role; are you more like Sarah (using AI to be faster) or Marcus (encoding expertise into a product)? What would it take to switch?"
     - "If a single agent error in your domain could cost $100K+, does that mean you should never build a Digital FTE for it, or just deploy differently?"
     - "Which monetization model would you start with for YOUR domain expertise, and what would trigger you to switch to a hybrid?"
   teaching_tips:
-    - "Open with Sarah's story — let students react before revealing Marcus's alternative. The contrast creates the 'aha moment'"
-    - "The Snakes and Ladders framework benefits from a visual — draw the four layers as a game board showing where to climb (Layers 2-3) and where to avoid (Layer 1)"
-    - "Walk through ONE full economic scenario slowly (Scenario 1: customer support) before comparing all three — let students do the math themselves"
-    - "The six Red Flag signals at the end are a practical safety checklist — emphasize that 'when to say no' is as important as 'when to build'"
+    - "Open with Sarah's story; let students react before revealing Marcus's alternative. The contrast creates the 'aha moment'"
+    - "The Snakes and Ladders framework benefits from a visual; draw the four layers as a game board showing where to climb (Layers 2-3) and where to avoid (Layer 1)"
+    - "Walk through ONE full economic scenario slowly (Scenario 1: customer support) before comparing all three; let students do the math themselves"
+    - "The six Red Flag signals at the end are a practical safety checklist; emphasize that 'when to say no' is as important as 'when to build'"
   assessment_quick_check:
     - "Ask students to explain the difference between Sarah's and Marcus's approach to AI in one sentence"
     - "Have students name which monetization model fits a highly regulated enterprise customer and why"
@@ -123,7 +123,7 @@ Unlike a simple "tool" (which requires a human to operate it), a Digital FTE rep
 
 ### The Productivity Trap: Sarah's Story
 
-Sarah is a financial analyst who discovers Claude Code/Claude Cowork. She starts using it daily—"Help me analyze this revenue trend," "Summarize these earnings reports," "Create a forecast model." The AI helps her work faster. Her productivity increases 40%. She's excited.
+Sarah is a financial analyst who discovers Claude Code/Claude Cowork. She starts using it daily: "Help me analyze this revenue trend," "Summarize these earnings reports," "Create a forecast model." The AI helps her work faster. Her productivity increases 40%. She's excited.
 
 Then a financial startup launches a Digital FTE that automates revenue analysis, report summarization, and forecasting. The tool costs **$500/month**. Sarah's salary is **$120,000/year** (roughly **$10,000/month**).
 
@@ -144,7 +144,7 @@ He works with Claude Code/Claude Cowork to build a Digital FTE that encodes his 
 - Identifying risk areas specific to his vertical.
 - Generating compliance reports in his signature style.
 
-This Digital FTE doesn't compete with generic financial tools or healthcare software platforms. It competes with Marcus's labor directly—**but Marcus owns it.**
+This Digital FTE doesn't compete with generic financial tools or healthcare software platforms. It competes with Marcus's labor directly: **but Marcus owns it.**
 
 He can license it to hospital networks, sell it to compliance consulting firms, or build a subscription service around it. The tool is worth millions because it encodes Marcus's 15 years of knowledge into a **Digital FTE** that works 24/7 without needing him.
 
@@ -161,9 +161,9 @@ This lesson teaches you how to make the same transition: from using AI tools to 
 
 ### The Generalist-to-Specialist Transition
 
-The market doesn't need another productivity tool. The market needs Digital FTEs that encode expertise in domains humans care about: healthcare, finance, law, manufacturing, sales, marketing, operations. Each domain has specialists—people like Marcus—who have built 10+ years of expertise that generic tools can't replicate.
+The market doesn't need another productivity tool. The market needs Digital FTEs that encode expertise in domains humans care about: healthcare, finance, law, manufacturing, sales, marketing, operations. Each domain has specialists: people like Marcus: who have built 10+ years of expertise that generic tools can't replicate.
 
-**What generic AI tools cannot do:** Generic AI tools (Claude Code, OpenAI Codex, Gemini CLI) excel at broad, general reasoning. Ask them to write Python, summarize text, brainstorm ideas—they're world-class. But ask them something deeply specialized:
+**What generic AI tools cannot do:** Generic AI tools (Claude Code, OpenAI Codex, Gemini CLI) excel at broad, general reasoning. Ask them to write Python, summarize text, brainstorm ideas: they're world-class. But ask them something deeply specialized:
 
 - "Audit this healthcare organization against the 47 HIPAA compliance requirements specific to their patient care model"
 - "Review this legal contract and identify the three clauses that matter for venture debt, given our specific cap table structure"
@@ -175,7 +175,7 @@ The moat isn't "I know how to use Claude better than you." The moat is "I know t
 
 **What do we mean by Moat?** In business strategy, a **Moat** (a concept popularized by Warren Buffett) is a defensive barrier that protects your business from competitors.
 
-In our context, the "competitor" is not just other people—it is **generic, out-of-the-box AI**.
+In our context, the "competitor" is not just other people: it is **generic, out-of-the-box AI**.
 
 Here is the breakdown of what that specific "10% Moat" means and why it protects you.
 
@@ -201,7 +201,7 @@ Our arguement is that for any complex task, the work is split into two parts:
 - **The 10% (The Moat - High Value):**
 - This is the nuance, the edge cases, the political context, and the "gut check" based on experience.
 - **The Defense:** Generic AI is trained on _averages_. It does not know that a specific regulation is rarely enforced in this specific county, or that a certain financial metric is misleading during a merger.
-- **Result:** Only you—with your 10 years of experience—can spot where the AI is wrong or shallow. That ability to filter, correct, and elevate the AI's output is your moat.
+- **Result:** Only you: with your 10 years of experience: can spot where the AI is wrong or shallow. That ability to filter, correct, and elevate the AI's output is your moat.
 
 ### 3. Why "Prompt Engineering" is NOT a Moat
 
@@ -228,13 +228,13 @@ We explicitly note: _"The moat isn't 'I know how to use Claude better than you.'
 
 **Why specialists win:**
 
-1. **Network effects** — Specialists in legal build credibility with law firms. Specialists in finance build relationships with CFOs. Generic tool makers have no vertical credibility.
+1. **Network effects**; Specialists in legal build credibility with law firms. Specialists in finance build relationships with CFOs. Generic tool makers have no vertical credibility.
 
-2. **Regulatory moats** — A healthcare Digital FTE needs HIPAA compliance, HITRUST certification, and healthcare-specific validation. Generic tools are too risky for regulated verticals. Specialists who understand the regulatory landscape can navigate where commodities can't.
+2. **Regulatory moats**; A healthcare Digital FTE needs HIPAA compliance, HITRUST certification, and healthcare-specific validation. Generic tools are too risky for regulated verticals. Specialists who understand the regulatory landscape can navigate where commodities can't.
 
-3. **Switching costs** — Once a hospital integrates your compliance Digital FTE into their processes, switching to a generic tool means losing all the customization, training, and institutional knowledge.
+3. **Switching costs**; Once a hospital integrates your compliance Digital FTE into their processes, switching to a generic tool means losing all the customization, training, and institutional knowledge.
 
-4. **Compounding improvement** — Each customer gives you more data about what works in your vertical. Your Digital FTE gets smarter. Generic tools stay generic.
+4. **Compounding improvement**; Each customer gives you more data about what works in your vertical. Your Digital FTE gets smarter. Generic tools stay generic.
 
 Your expertise becomes a competitive moat that generic tools literally cannot cross.
 
@@ -262,7 +262,7 @@ This focus produces remarkable economics:
 
 **Layer 3: Custom Agents for Vertical Markets (The Middle Rungs)**
 
-Once you climb to Layer 2, you reach where real money accumulates. This is where Custom Agents—AI systems engineered for one task extremely well, with guardrails and customer-ready reliability—solve industry-specific problems.
+Once you climb to Layer 2, you reach where real money accumulates. This is where Custom Agents: AI systems engineered for one task extremely well, with guardrails and customer-ready reliability: solve industry-specific problems.
 
 **Finance:** A subagent that reads regulatory documents, integrates with Bloomberg terminals, and executes trades within risk parameters. A solo developer building this could capture $100M+ in annual revenue by reaching 100-200 major financial firms.
 
@@ -341,7 +341,7 @@ _Company:_ Insurance claims adjudication
 
 _With Digital FTE:_
 
-- **Cost:** $1,500/month—sounds great
+- **Cost:** $1,500/month: sounds great
 - **Reality:** If the agent errs on 2-3 claims/month, potential liability is $200K-$300K
 - **The math breaks:** Saving $3,500/month doesn't offset liability risk
 
@@ -398,7 +398,7 @@ Digital FTEs don't match human accuracy at first deployment. Be honest:
 | Availability  | 40 hrs/week          | 168 hrs/week          | 168 hrs/week          |
 | Cost per task | $40                  | $2.60                 | $2.60                 |
 
-The honest conversation: "In month one, we'll start at 78% accuracy with human oversight. We'll run this in 'shadow mode'—your team sees what the Digital FTE would do and validates decisions. By month 6, we'll hit 94% accuracy and move to 'autonomous mode' for routine cases with escalation for edge cases."
+The honest conversation: "In month one, we'll start at 78% accuracy with human oversight. We'll run this in 'shadow mode': your team sees what the Digital FTE would do and validates decisions. By month 6, we'll hit 94% accuracy and move to 'autonomous mode' for routine cases with escalation for edge cases."
 
 **Why this works:** Clients appreciate transparency. They expect the first 60 days to be tuning, not perfection. The cost is so low that even with human validation, it still beats pure human labor.
 
@@ -410,7 +410,7 @@ Remember the 90-10 principle: **90% mechanical work** (handling requests, format
 
 Result: The same expertise output, 20% of the cost, and 5x the capacity.
 
-This is why Instagram had 13 people building a $1B company, WhatsApp had 55 people building a $19B company, and your domain expertise becomes infinitely more valuable—**because your judgment is now leveraged across thousands of digital workers.**
+This is why Instagram had 13 people building a $1B company, WhatsApp had 55 people building a $19B company, and your domain expertise becomes infinitely more valuable: **because your judgment is now leveraged across thousands of digital workers.**
 
 ---
 
@@ -420,7 +420,7 @@ This is why Instagram had 13 people building a $1B company, WhatsApp had 55 peop
 
 There are four ways to monetize a Digital FTE. Your choice determines how fast you reach profitability, how much you interact with clients, your risk exposure, and how much the client trusts your solution.
 
-**The shift:** Traditional SaaS charges per seat—$150/user/month for CRM, $30/user/month for project management. The client pays for _access to tools_, then still needs humans to do the work. Digital FTEs flip this model. Instead of selling tool access, you sell task completion. The business model shifts from "pay for seats" to "pay for outcomes."
+**The shift:** Traditional SaaS charges per seat: $150/user/month for CRM, $30/user/month for project management. The client pays for _access to tools_, then still needs humans to do the work. Digital FTEs flip this model. Instead of selling tool access, you sell task completion. The business model shifts from "pay for seats" to "pay for outcomes."
 
 #### Model 1: Subscription (The Recurring Revenue Play)
 
@@ -720,7 +720,7 @@ While MCP standardizes _access_ to the incumbent systems, **Agent Skills** stand
 - **Outcome:** Returns success status and enrollment ID.
 
 **The "Expert-in-the-Middle":**
-Phase 1 places an expert human proxy—embodied as an AI Agent—between the user and incumbent systems. This agent utilizes the **Agent Skills** registry to execute tasks. Because the skills are standardized, the agent doesn't care if the underlying system is Salesforce or HubSpot; it simply calls the `create_lead` skill.
+Phase 1 places an expert human proxy: embodied as an AI Agent: between the user and incumbent systems. This agent utilizes the **Agent Skills** registry to execute tasks. Because the skills are standardized, the agent doesn't care if the underlying system is Salesforce or HubSpot; it simply calls the `create_lead` skill.
 
 ---
 
@@ -799,21 +799,21 @@ Your Custom Agents must be smarter than general-purpose AI. A general ChatGPT co
 
 **There are two paths to achieving this 99% domain expertise:**
 
-**Path 1: Fine-Tuned Models** — Training the underlying model (Claude, Gemini, ChatGPT) on domain-specific data: financial earnings reports, healthcare clinical literature, education curriculum standards. The model learns the language, patterns, and nuances of your domain at a deep level.
+**Path 1: Fine-Tuned Models**; Training the underlying model (Claude, Gemini, ChatGPT) on domain-specific data: financial earnings reports, healthcare clinical literature, education curriculum standards. The model learns the language, patterns, and nuances of your domain at a deep level.
 
 _Strengths:_ Deeply understands domain language and patterns; handles ambiguity better; less prompt engineering needed
 _Challenges:_ Requires large domain-specific datasets; expensive to create and update; longer iteration cycles
 
-**Path 2: Vertical Reusable Intelligence with Sub-agents and Agent Skills** — Instead of training the model, you encode domain expertise in specialized prompts, workflows, and integration logic. Think of it as building a "skill library" that teaches general AI how to behave like a domain expert.
+**Path 2: Vertical Reusable Intelligence with Sub-agents and Agent Skills**; Instead of training the model, you encode domain expertise in specialized prompts, workflows, and integration logic. Think of it as building a "skill library" that teaches general AI how to behave like a domain expert.
 
 _Strengths:_ Faster to build and iterate; more transparent and debuggable; easier to update when domain rules change; works well when expertise is procedural
 _Challenges:_ Requires careful prompt engineering and workflow design; may need more tokens per request; less effective for highly ambiguous domains
 
 Both paths work. Both are defensible. The choice depends on your resources, timeline, and the characteristics of your vertical market. Many successful companies use both together.
 
-**Why intelligence is the new competitive asset:** Remember how Instagram had 13 employees building a $1B company? Because they accumulated intelligence—deep understanding of why people share photos, what features drive engagement, how to prioritize through noise. That accumulated knowledge was their moat. Competitors with more employees and resources couldn't replicate what Instagram understood about human behavior because understanding takes time.
+**Why intelligence is the new competitive asset:** Remember how Instagram had 13 employees building a $1B company? Because they accumulated intelligence: deep understanding of why people share photos, what features drive engagement, how to prioritize through noise. That accumulated knowledge was their moat. Competitors with more employees and resources couldn't replicate what Instagram understood about human behavior because understanding takes time.
 
-In AI-driven markets, the same principle applies. Intelligence (accumulated domain knowledge) has replaced effort as the source of competitive advantage. A generic AI system available to everyone creates no defensibility. But AI enhanced with your months and years of accumulated knowledge—whether encoded as fine-tuned models or vertical intelligence—creates a barrier competitors cannot quickly overcome.
+In AI-driven markets, the same principle applies. Intelligence (accumulated domain knowledge) has replaced effort as the source of competitive advantage. A generic AI system available to everyone creates no defensibility. But AI enhanced with your months and years of accumulated knowledge: whether encoded as fine-tuned models or vertical intelligence: creates a barrier competitors cannot quickly overcome.
 
 **Requirement 2: Deep Integrations with Existing Systems**
 
@@ -839,7 +839,7 @@ All three elements must work together. This is why PPP matters: it systematicall
 
 ### When NOT to Use AI Agents
 
-You understand strategy and requirements. You can identify opportunities where AI agents create value. Now comes the harder skill: recognizing when agents would create unacceptable risk—and saying no.
+You understand strategy and requirements. You can identify opportunities where AI agents create value. Now comes the harder skill: recognizing when agents would create unacceptable risk: and saying no.
 
 **Six Common Pitfalls:**
 
@@ -922,17 +922,17 @@ The safest way to deploy a Digital FTE in high-risk domains is **shadow mode**: 
 
 Sometimes you discover mid-project that an agent idea shouldn't exist. Red flags that indicate stopping is better than proceeding:
 
-**Signal 1: Insufficient Audit Trail Feasibility** — If you cannot log agent reasoning and decisions due to system constraints, stop. An agent you can't audit creates liability you cannot defend.
+**Signal 1: Insufficient Audit Trail Feasibility**; If you cannot log agent reasoning and decisions due to system constraints, stop. An agent you can't audit creates liability you cannot defend.
 
-**Signal 2: Irreplaceable Human Judgment** — If decisions require judgment that no training dataset contains (unique context, specialized expertise, ethical judgment calls), an agent will fail. Solo experts can't be automated; they can only be augmented.
+**Signal 2: Irreplaceable Human Judgment**; If decisions require judgment that no training dataset contains (unique context, specialized expertise, ethical judgment calls), an agent will fail. Solo experts can't be automated; they can only be augmented.
 
-**Signal 3: Regulatory Uncertainty** — If no clear guidance exists on whether automation is allowed, don't guess. Consult compliance experts before building.
+**Signal 3: Regulatory Uncertainty**; If no clear guidance exists on whether automation is allowed, don't guess. Consult compliance experts before building.
 
-**Signal 4: High-Consequence Errors** — If a single agent error causes severe harm (patient death, financial ruin, discrimination), the deployment cost of adequate validation exceeds the automation benefit.
+**Signal 4: High-Consequence Errors**; If a single agent error causes severe harm (patient death, financial ruin, discrimination), the deployment cost of adequate validation exceeds the automation benefit.
 
-**Signal 5: Adversarial Pressure** — If stakeholders pressure you to skip validation ("We need this live NOW"), stop and escalate. Time pressure is the enemy of security.
+**Signal 5: Adversarial Pressure**; If stakeholders pressure you to skip validation ("We need this live NOW"), stop and escalate. Time pressure is the enemy of security.
 
-**Signal 6: Untrained or Biased Data** — If training data contains human biases, the agent will perpetuate that bias at scale.
+**Signal 6: Untrained or Biased Data**; If training data contains human biases, the agent will perpetuate that bias at scale.
 
 **Decision Framework:**
 
@@ -944,7 +944,7 @@ Sometimes you discover mid-project that an agent idea shouldn't exist. Red flags
 
 ## Try With AI: Design Your Digital FTE Business Strategy
 
-Use your AI companion to build an executable Digital FTE business strategy. Work through these three prompts sequentially—they build on each other and target different strategic skills.
+Use your AI companion to build an executable Digital FTE business strategy. Work through these three prompts sequentially: they build on each other and target different strategic skills.
 
 ### Prompt 1: Positioning Exercise (Assess Your Competitive Landscape)
 

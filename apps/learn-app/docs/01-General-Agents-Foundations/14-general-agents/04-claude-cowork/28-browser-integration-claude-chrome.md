@@ -56,16 +56,16 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "1.0.0"
+version: "1.1.0"
 
 # Legacy compatibility (Docusaurus)
 prerequisites:
   - "Completion of Lesson 27: Cowork in Action"
-  - "Google Chrome browser installed"
-  - "Claude Desktop with Cowork enabled"
+  - "Google Chrome or Microsoft Edge browser installed"
+  - "Claude Desktop, Claude Code CLI, or VS Code extension"
 
 teaching_guide:
   lesson_type: "core"
@@ -98,13 +98,13 @@ teaching_guide:
 
 # Browser Integration: Claude in Chrome
 
-Your documents and files are one part of your work. The web is another. Research, web applications, email, collaboration tools—much of knowledge work happens in the browser. Claude's browser integration extends agentic capabilities to your web-based workflows.
+Your documents and files are one part of your work. The web is another. Research, web applications, email, and collaboration tools all live in the browser. Claude's browser integration extends agentic capabilities to your web-based workflows.
 
 ---
 
 ## What Browser Integration Enables
 
-With the Claude Chrome extension (currently in beta), Claude can:
+With the Claude browser extension (currently in beta, available for Google Chrome and Microsoft Edge), Claude can:
 
 - **Read the current page** to understand context
 - **Navigate between pages** following links and patterns
@@ -126,25 +126,35 @@ The extension creates a bridge between Claude's reasoning and your browser's ren
 
 ### Step 1: Install the Extension
 
-1. Open Chrome and navigate to the Chrome Web Store
-2. Search for "Claude Browser Integration" or use the direct link from claude.ai
-3. Click "Add to Chrome" and confirm the installation
+1. Open Google Chrome or Microsoft Edge and navigate to the Chrome Web Store
+2. Search for **"Claude"** (the extension name is simply "Claude") or use the direct link: [chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn)
+3. Click "Add to Chrome" (or "Add to Edge") and confirm the installation
 4. Pin the extension to your toolbar for easy access
 
-### Step 2: Pair with Claude Desktop
+You need version 1.0.36 or higher of the extension.
 
-The extension is an **optional pairing tool** that extends Claude Desktop's capabilities to the browser. Claude Desktop works fully without the extension -- the extension adds browser automation on top.
+:::note Supported Browsers
+Chrome integration works with **Google Chrome** and **Microsoft Edge**. It is not yet supported on Brave, Arc, or other Chromium-based browsers. WSL (Windows Subsystem for Linux) is also not supported.
+:::
 
-To pair them:
+### Step 2: Connect to Claude
+
+The extension works with Claude Desktop, the Claude Code CLI (`claude --chrome`), and the VS Code extension. Claude Desktop works fully without the browser extension; the extension adds browser automation on top.
+
+**To pair with Claude Desktop:**
 
 1. Open Claude Desktop
 2. In the extension popup, click "Connect to Desktop"
 3. Approve the connection request
 4. Verify the connection status shows "Connected"
 
-The extension acts as a remote control -- Claude Desktop does the actual reasoning, while the extension executes browser actions.
+**To use from the CLI:** Run `claude --chrome` to start a session with browser tools enabled, or type `/chrome` in an existing session.
 
-> **Model availability:** Pro users get Haiku 4.5 for browser automation. Max, Team Premium, and Enterprise users can choose their model (Haiku 4.5, Sonnet 4.5, or Opus 4.5) based on task complexity.
+**To use from VS Code:** The extension is available automatically when installed. No additional flag is needed.
+
+The extension acts as a bridge: Claude does the actual reasoning, while the extension executes browser actions.
+
+> **Model availability:** Pro users get Haiku 4.5 for browser automation. Max, Teams, and Enterprise users can choose their model (Haiku 4.5, Sonnet 4.6, or Opus 4.6) based on task complexity.
 
 ### Step 3: Grant Permissions
 
@@ -166,7 +176,7 @@ When you activate Claude on a webpage:
 1. **Page Analysis**: Claude reads the page content, structure, and available interactive elements
 2. **Context Understanding**: Claude identifies the page type (email client, form, article, etc.) and relevant information
 3. **Action Planning**: Claude determines what actions are needed based on your request
-4. **Execution**: The extension performs the actions—clicking, typing, navigating
+4. **Execution**: The extension performs the actions: clicking, typing, navigating
 5. **Verification**: Claude confirms the results and asks for next steps
 
 This loop continues until your task is complete.
@@ -315,13 +325,13 @@ Enterprise and Team administrators can set allowlists and blocklists to control 
 
 > "List 3 web-based tasks I do regularly that involve repetitive clicking, typing, or navigating between pages (e.g., email cleanup, dashboard data extraction, form filling, research across multiple sites). For each one, estimate: how long it takes manually, how often I do it, and whether Claude's browser automation could handle it given the speed and limitation constraints from this lesson."
 
-**What you're learning:** Task-tool matching — applying the speed considerations and limitation constraints from this lesson to real browser tasks. Not every web task benefits from automation; identifying the right candidates prevents frustration.
+**What you're learning:** Task-tool matching; applying the speed considerations and limitation constraints from this lesson to real browser tasks. Not every web task benefits from automation; identifying the right candidates prevents frustration.
 
 **Design a Browser Workflow with the Five-Step Loop:**
 
 > "Pick one browser task from my list. Map it to Claude's five-step browser loop: What would Page Analysis find? What Context Understanding is needed? What Action Plan would Claude propose? What Execution steps happen? How would Verification confirm success? Write the complete prompt and flag any steps where I'd need to handle authentication or CAPTCHAs manually."
 
-**What you're learning:** Workflow design for browser automation — thinking through each step of the browser loop before executing. This planning prevents the most common browser automation failures (authentication blocks, CAPTCHA interruptions, dynamic content issues).
+**What you're learning:** Workflow design for browser automation; thinking through each step of the browser loop before executing. This planning prevents the most common browser automation failures (authentication blocks, CAPTCHA interruptions, dynamic content issues).
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 14
 title: "The Revenue Engine Sprint"
-description: "Run the complete revenue engine end-to-end — research, score, and outreach 5 new prospects, build a full campaign with content calendar, and produce the revenue dashboard — assembling every plugin, skill, and diagnostic from Lessons 1 through 13 into a timed capstone sprint"
+description: "Run the complete revenue engine end-to-end: research, score, and outreach 5 new prospects, build a full campaign with content calendar, and produce the revenue dashboard: assembling every plugin, skill, and diagnostic from Lessons 1 through 13 into a timed capstone sprint"
 keywords:
   [
     "revenue engine sprint",
@@ -29,14 +29,14 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can run the complete revenue engine — ICP validation, 5-prospect research-and-score sprint, outreach generation with Five Laws audit, campaign brief with content calendar, and revenue dashboard — in a single timed session, connecting every stage's output to the next"
+    measurable_at_this_level: "Student can run the complete revenue engine; ICP validation, 5-prospect research-and-score sprint, outreach generation with Five Laws audit, campaign brief with content calendar, and revenue dashboard: in a single timed session, connecting every stage's output to the next"
 
   - name: "Diagnose All Five Agent Output Taxonomy Errors Under Time Pressure"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Information and Data Literacy"
-    measurable_at_this_level: "Student can identify and classify Hallucinated Data, Miscalibrated Scoring, Compliance Gap, Over-Automation, and Context Loss errors while running the sprint — not in post-hoc review but during live execution"
+    measurable_at_this_level: "Student can identify and classify Hallucinated Data, Miscalibrated Scoring, Compliance Gap, Over-Automation, and Context Loss errors while running the sprint: not in post-hoc review but during live execution"
 
   - name: "Adapt the Revenue Engine to a New Business Context"
     proficiency_level: "B2"
@@ -46,10 +46,10 @@ skills:
     measurable_at_this_level: "Student can reconfigure the revenue engine for a different industry, identifying which components transfer directly, which need reconfiguration, and which are industry-specific"
 
 learning_objectives:
-  - objective: "Complete the full revenue engine sprint — ICP validation through revenue dashboard — in under 45 minutes, producing connected outputs at every stage"
+  - objective: "Complete the full revenue engine sprint; ICP validation through revenue dashboard: in under 45 minutes, producing connected outputs at every stage"
     proficiency_level: "B2"
     bloom_level: "Create"
-    assessment_method: "Student completes the sprint and produces: 5 research briefs, 5 lead scores, 3 outreach messages, 1 call summary, 1 campaign brief with content calendar, and 1 revenue dashboard configuration — all connected through the NexaFlow pipeline"
+    assessment_method: "Student completes the sprint and produces: 5 research briefs, 5 lead scores, 3 outreach messages, 1 call summary, 1 campaign brief with content calendar, and 1 revenue dashboard configuration: all connected through the NexaFlow pipeline"
 
   - objective: "Identify and classify at least 3 Agent Output Taxonomy errors during live sprint execution"
     proficiency_level: "B2"
@@ -66,7 +66,7 @@ cognitive_load:
   concepts_list:
     - "Sprint execution under time pressure (assembling known components against the clock)"
     - "Revenue engine transferability (what is universal vs business-specific)"
-  assessment: "2 new concepts only. This is the capstone — every other concept was taught in L01-L13. Low new concept count is intentional. The challenge is synthesis and execution speed, not new learning."
+  assessment: "2 new concepts only. This is the capstone: every other concept was taught in L01-L13. Low new concept count is intentional. The challenge is synthesis and execution speed, not new learning."
 
 differentiation:
   extension_for_advanced: "Complete ALL 7 exercises including bonus exercises. Then run the full sprint for your own business with real prospects, real pipeline data, and real campaign goals. Document what you would change about the revenue engine for your industry."
@@ -77,7 +77,7 @@ differentiation:
 
 Thirteen lessons. Research, scoring, outreach, sequences, briefs, content, campaigns, analysis, compliance, agents, dashboards. Every piece of the revenue engine is built. This is the sprint that proves it works.
 
-No new concepts in this lesson. Every skill, every command, every diagnostic framework appeared in Lessons 1 through 13. What changes here is the mode of operation. In prior lessons you ran individual components and evaluated their output in isolation. In this sprint you assemble the complete engine and run it against five fresh prospects, a full campaign, and the revenue dashboard — all in a single session. The clock is running. Errors compound across stages. Your job is to execute, evaluate, and correct in real time.
+No new concepts in this lesson. Every skill, every command, every diagnostic framework appeared in Lessons 1 through 13. What changes here is the mode of operation. In prior lessons you ran individual components and evaluated their output in isolation. In this sprint you assemble the complete engine and run it against five fresh prospects, a full campaign, and the revenue dashboard: all in a single session. The clock is running. Errors compound across stages. Your job is to execute, evaluate, and correct in real time.
 
 The sprint has three parts. Part A builds the research-to-meeting pipeline for five new prospects. Part B constructs a campaign with a content calendar. Part C produces the revenue dashboard. Four exercises are required. Three are bonus extensions. Complete the required exercises first, then take on the bonus work if time permits.
 
@@ -112,7 +112,7 @@ below 60, the ICP has drifted — identify which dimension is
 miscalibrated.
 ```
 
-**What to look for:** Every closed-won deal should score above 60. If DataStream scores 52 because the ICP's revenue threshold is set at $10M and DataStream is a $3M company — but they bought anyway — your revenue threshold is filtering out real buyers. That is Miscalibrated Scoring from Lesson 3: the model penalises a dimension that does not predict buying behaviour.
+**What to look for:** Every closed-won deal should score above 60. If DataStream scores 52 because the ICP's revenue threshold is set at $10M and DataStream is a $3M company: but they bought anyway: your revenue threshold is filtering out real buyers. That is Miscalibrated Scoring from Lesson 3: the model penalises a dimension that does not predict buying behaviour.
 
 **If calibration has drifted:** Edit the offending ICP section in `sales-marketing.local.md`. Re-score. Confirm all five closed-won deals now score above 60 without loosening criteria so broadly that obviously poor-fit companies also pass.
 
@@ -122,7 +122,7 @@ miscalibrated.
 
 Five new prospects. Full pipeline from research through outreach. This is the engine running at speed.
 
-**Step 1 — Generate or select 5 prospects:**
+**Step 1; Generate or select 5 prospects:**
 
 If you have real prospects from your own pipeline, use them. Otherwise, generate five fresh companies in NexaFlow's target market:
 
@@ -138,15 +138,15 @@ primary logistics service, and one recent business event
 (funding, expansion, executive hire, or technology change).
 ```
 
-**Step 2 — Research and score all 5:**
+**Step 2; Research and score all 5:**
 
-Research each company using the prospect-research skill, then score each with the lead-scoring skill. As research briefs arrive, flag any claims you cannot verify — funding amounts, employee counts, technology stack details. Mark each flagged claim as **Hallucinated Data** or **Verifiable**. Do not stop the sprint to verify. Flag and continue.
+Research each company using the prospect-research skill, then score each with the lead-scoring skill. As research briefs arrive, flag any claims you cannot verify: funding amounts, employee counts, technology stack details. Mark each flagged claim as **Hallucinated Data** or **Verifiable**. Do not stop the sprint to verify. Flag and continue.
 
-**Step 3 — Rank and select top 3:**
+**Step 3; Rank and select top 3:**
 
 Rank all five by composite score. Select the top 3 for outreach.
 
-**Step 4 — Generate outreach for the top 3:**
+**Step 4; Generate outreach for the top 3:**
 
 For each of the top 3 prospects, generate Five Laws-compliant outreach using the `outreach` skill. After each message is generated, run a quick Five Laws audit:
 
@@ -160,7 +160,7 @@ For each of the top 3 prospects, generate Five Laws-compliant outreach using the
 
 If any message fails a law, fix it before moving on.
 
-**Step 5 — Call summary for the #1 prospect:**
+**Step 5; Call summary for the #1 prospect:**
 
 Take your highest-scoring prospect. Run `/call-summary` using this hypothetical meeting data:
 
@@ -175,7 +175,7 @@ Generate a call summary for a 25-minute discovery call with
 - Next step: technical demo in 2 weeks
 ```
 
-Review the call summary. Does it reference specific findings from the research brief? Or is it generic? If it reads like "Great meeting, they have budget and a timeline" without referencing the specific pain point, technology stack, or champion name from the research — that is **Context Loss**. The intelligence existed. The summary did not use it.
+Review the call summary. Does it reference specific findings from the research brief? Or is it generic? If it reads like "Great meeting, they have budget and a timeline" without referencing the specific pain point, technology stack, or champion name from the research: that is **Context Loss**. The intelligence existed. The summary did not use it.
 
 **Deliverable:** 5 research briefs, 5 lead scores with ranking, 3 outreach messages with Five Laws audits, 1 call summary. Flagged errors noted inline.
 
@@ -196,7 +196,7 @@ Each touch must:
 - Include an exit condition (what signal means STOP)
 ```
 
-After the sequence is generated, evaluate each touch against the Five Laws. A common failure: touches 4 through 6 become generic because the agent runs out of specific research findings to reference. Touch 1 says "I noticed your Series A announcement last month." Touch 5 says "I wanted to follow up on my previous message." That quality decay across the sequence is a form of **Context Loss** — the research intelligence was consumed by early touches and not replenished for later ones.
+After the sequence is generated, evaluate each touch against the Five Laws. A common failure: touches 4 through 6 become generic because the agent runs out of specific research findings to reference. Touch 1 says "I noticed your Series A announcement last month." Touch 5 says "I wanted to follow up on my previous message." That quality decay across the sequence is a form of **Context Loss**: the research intelligence was consumed by early touches and not replenished for later ones.
 
 Also check for **Over-Automation**: does the sequence include exit conditions? If the prospect responds "Not interested" after Touch 2, does Touch 3 still fire? If there are no stop rules defined, the sequence will continue past a negative signal. Add exit conditions if they are missing:
 
@@ -233,9 +233,9 @@ Channels: LinkedIn, email, content marketing, 1 regional event
 
 Review the campaign brief. Three things to evaluate:
 
-**Channel allocation realism.** If the agent allocates $8,000 to "a logistics trade show in Karachi," verify that number. A booth at ITCN Asia or a logistics-specific conference may cost $3,000 to $15,000 depending on the event. If the budget assumption is fabricated, that is **Hallucinated Data** embedded in your campaign plan — every downstream decision built on that budget allocation inherits the error.
+**Channel allocation realism.** If the agent allocates $8,000 to "a logistics trade show in Karachi," verify that number. A booth at ITCN Asia or a logistics-specific conference may cost $3,000 to $15,000 depending on the event. If the budget assumption is fabricated, that is **Hallucinated Data** embedded in your campaign plan: every downstream decision built on that budget allocation inherits the error.
 
-**Audience sizing.** The brief should estimate total addressable audience. If it says "approximately 2,400 VP Operations at mid-market logistics companies across Pakistan, UAE, and UK" — is that number sourced or invented? LinkedIn Sales Navigator can verify this count. If the number is fabricated, your CPL projections are built on fabricated denominators.
+**Audience sizing.** The brief should estimate total addressable audience. If it says "approximately 2,400 VP Operations at mid-market logistics companies across Pakistan, UAE, and UK": is that number sourced or invented? LinkedIn Sales Navigator can verify this count. If the number is fabricated, your CPL projections are built on fabricated denominators.
 
 **Content calendar.** After the campaign brief is generated, build the content calendar:
 
@@ -253,9 +253,9 @@ Week-by-week schedule. For each week, specify:
 
 ---
 
-### Exercise 5: Content Factory — 10 Assets (Bonus)
+### Exercise 5: Content Factory; 10 Assets (Bonus)
 
-Take the campaign's cornerstone asset — a blog post or whitepaper on logistics data infrastructure. Multiply it into 10 derivative assets:
+Take the campaign's cornerstone asset: a blog post or whitepaper on logistics data infrastructure. Multiply it into 10 derivative assets:
 
 ```
 Take this cornerstone asset and produce 10 derivative pieces:
@@ -271,7 +271,7 @@ Take this cornerstone asset and produce 10 derivative pieces:
 10. Executive summary (150 words for board-level audience)
 ```
 
-After generating all 10, run `/brand-review` on three key pieces — the LinkedIn post, the sales one-pager, and the executive summary.
+After generating all 10, run `/brand-review` on three key pieces: the LinkedIn post, the sales one-pager, and the executive summary.
 
 **What to evaluate:** Are the 10 pieces genuinely different formats, or are they the same 300 words with different headers? The LinkedIn post should use conversational tone. The sales one-pager should lead with numbers. The executive summary should be dense and jargon-appropriate for a board audience. If all ten read like the blog post reformatted, the multiplication produced quantity without quality.
 
@@ -310,7 +310,7 @@ Generate a 3-scenario revenue forecast for NexaFlow Q2 2026:
 
 From the forecast output, produce deal health briefs for the top 3 opportunities. Each brief should include: the deal name, current stage, probability assessment, risk factors, and the one action most likely to advance the deal this week.
 
-**What to evaluate:** Compare the agent's probability assessment against the CRM's stored probability. If the CRM says Crescent Freight is at 60% but the agent says 35% because the deal has been in Proposal stage for 34 days with no activity — which assessment is more accurate? The CRM stores the rep's subjective estimate. The agent applies objective criteria. Neither is always right. The value is in the gap between them. A 25-point gap means someone needs to investigate.
+**What to evaluate:** Compare the agent's probability assessment against the CRM's stored probability. If the CRM says Crescent Freight is at 60% but the agent says 35% because the deal has been in Proposal stage for 34 days with no activity: which assessment is more accurate? The CRM stores the rep's subjective estimate. The agent applies objective criteria. Neither is always right. The value is in the gap between them. A 25-point gap means someone needs to investigate.
 
 ---
 
@@ -318,7 +318,7 @@ From the forecast output, produce deal health briefs for the top 3 opportunities
 
 Configure the Revenue Reporting Agent from Lesson 13 with all metrics, then produce two outputs.
 
-**Output 1 — Weekly dashboard:**
+**Output 1; Weekly dashboard:**
 
 ```
 Configure the revenue-reporting-agent for NexaFlow with these metrics:
@@ -342,7 +342,7 @@ Forecast metrics:
 Produce the weekly dashboard for the week of March 10-14, 2026.
 ```
 
-**Output 2 — Executive email:**
+**Output 2; Executive email:**
 
 ```
 Generate a weekly executive email for NexaFlow's CEO.
@@ -354,7 +354,7 @@ Requirements:
 - Close with the one action the sales team needs to take this week
 ```
 
-**Output 3 — Leading indicator alert:**
+**Output 3; Leading indicator alert:**
 
 Define one leading indicator alert that the dashboard should monitor continuously:
 
@@ -396,7 +396,7 @@ future pipeline decline — the revenue impact won't appear for
 | **Over-Automation**       | L06          | Add exit conditions to sequences and human gates to agent workflows        |
 | **Context Loss**          | L07          | Trace intelligence flow across pipeline stages and identify where it drops |
 
-The division of labour that runs through every lesson: the agent researches, drafts, and recommends. The sales professional decides and sends. That boundary — inform versus act — is what makes the revenue engine trustworthy at scale.
+The division of labour that runs through every lesson: the agent researches, drafts, and recommends. The sales professional decides and sends. That boundary: inform versus act: is what makes the revenue engine trustworthy at scale.
 
 ---
 
@@ -433,7 +433,7 @@ At the end, tell me:
 - Which pipeline stage had the lowest output quality and why
 ```
 
-**What you are learning:** Execution speed and error detection under pressure. The first time through this sprint, you will likely spend 40-50 minutes. The second time, with a tuned ICP and familiar pipeline, it should take 20-25 minutes. The gap between first and second run measures how much of the sprint is setup versus execution — and setup time drops to near zero once your configuration is dialled in.
+**What you are learning:** Execution speed and error detection under pressure. The first time through this sprint, you will likely spend 40-50 minutes. The second time, with a tuned ICP and familiar pipeline, it should take 20-25 minutes. The gap between first and second run measures how much of the sprint is setup versus execution: and setup time drops to near zero once your configuration is dialled in.
 
 ### Prompt 2: Transfer to a Different Industry
 
@@ -456,7 +456,7 @@ Build a migration checklist: every config file, skill, and
 command that needs to change, and what the change is.
 ```
 
-**What you are learning:** Revenue engine portability. The Five Laws apply to any B2B outreach. The three-dimension scoring model (Fit + Timing + Engagement) works across industries — only the criteria within each dimension change. The pipeline stages are universal. What changes between industries is the ICP content, the compliance framework, the content formats that resonate with the audience, and the data sources for research. Understanding what transfers and what requires reconfiguration is the difference between rebuilding the engine from scratch for each client and reconfiguring an existing system in an afternoon.
+**What you are learning:** Revenue engine portability. The Five Laws apply to any B2B outreach. The three-dimension scoring model (Fit + Timing + Engagement) works across industries: only the criteria within each dimension change. The pipeline stages are universal. What changes between industries is the ICP content, the compliance framework, the content formats that resonate with the audience, and the data sources for research. Understanding what transfers and what requires reconfiguration is the difference between rebuilding the engine from scratch for each client and reconfiguring an existing system in an afternoon.
 
 ### Prompt 3: Apply to Your Business
 

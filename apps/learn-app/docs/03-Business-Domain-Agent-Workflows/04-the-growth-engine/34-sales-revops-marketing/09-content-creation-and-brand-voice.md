@@ -116,7 +116,7 @@ Persona-specific voice:
 
 The extension's content-creation skill reads this configuration when generating any content. Without it, the agent writes generic B2B marketing copy. With it, the agent writes like NexaFlow.
 
-**Why this matters:** Every downstream asset inherits the brand voice config. If the config says "no marketing fluff," the LinkedIn article avoids language like "synergistic solutions." If the persona guide says "VP Operations wants metrics," the agent includes throughput numbers instead of vision statements. Brand voice is to content what ICP is to the pipeline — get it right once and everything downstream improves.
+**Why this matters:** Every downstream asset inherits the brand voice config. If the config says "no marketing fluff," the LinkedIn article avoids language like "synergistic solutions." If the persona guide says "VP Operations wants metrics," the agent includes throughput numbers instead of vision statements. Brand voice is to content what ICP is to the pipeline: get it right once and everything downstream improves.
 
 ---
 
@@ -165,7 +165,7 @@ This command runs without the extension. It analyses the article for brand consi
 | Recommendations   | Specific fixes to improve consistency | Each recommendation references a specific paragraph or phrase       |
 
 :::note Your output will vary
-The consistency score depends on your brand voice configuration from earlier in this lesson. The teaching point is the _iterate loop_: run `/brand-review`, apply recommendations, run again. The goal is a consistency score above 90 before moving to multiplication. If the tone feels too polished or too generic, iterate on the config, not the article — the article is a symptom, the config is the cause.
+The consistency score depends on your brand voice configuration from earlier in this lesson. The teaching point is the _iterate loop_: run `/brand-review`, apply recommendations, run again. The goal is a consistency score above 90 before moving to multiplication. If the tone feels too polished or too generic, iterate on the config, not the article: the article is a symptom, the config is the cause.
 :::
 
 ---
@@ -228,13 +228,13 @@ Not every asset will pass brand voice on first generation. The pattern Zara has 
 | Webinar outline  | NEEDS EDITING                    | Structure good but talking points need operator depth    |
 | Cold email hook  | NEEDS EDITING                    | Defaults to generic hooks without prospect specificity   |
 | Social carousel  | NEEDS EDITING                    | Slide count good but each slide needs tightening         |
-| CEO social posts | NEEDS EDITING                    | CEO voice is distinct from brand voice — requires tuning |
+| CEO social posts | NEEDS EDITING                    | CEO voice is distinct from brand voice: requires tuning |
 | Ad copy          | REDO on 2-3 variants             | Compression loses brand nuance                           |
 | Subject lines    | REDO on 3-4 variants             | Short-form writing is hardest for AI to get brand-right  |
 
 Run `/brand-review` on any asset rated NEEDS EDITING or REDO. The assets requiring the most iteration are the ones furthest from the cornerstone format. Short-form content (subject lines, ad copy, CEO posts) loses brand nuance because compression strips context.
 
-Before finalizing any content piece, scan the output for every banned word (leverage, synergy, robust, seamless, game-changing, etc.) and replace with concrete alternatives — "solution" becomes the actual product name, "robust" becomes the specific quality being described. If the prompt specifies a particular CTA, use that exact CTA; do not substitute a generic alternative.
+Before finalizing any content piece, scan the output for every banned word (leverage, synergy, robust, seamless, game-changing, etc.) and replace with concrete alternatives: "solution" becomes the actual product name, "robust" becomes the specific quality being described. If the prompt specifies a particular CTA, use that exact CTA; do not substitute a generic alternative.
 
 ---
 
@@ -251,7 +251,7 @@ specific metrics: 3 UK distribution centres, 12% YoY volume growth,
 current WMS approaching capacity at 850K parcels/month.
 ```
 
-The `create-an-asset` skill produces an interactive HTML deliverable — not a flat document but something with expandable sections, embedded calculations, or comparison tables that Meridian's team can navigate.
+The `create-an-asset` skill produces an interactive HTML deliverable: not a flat document but something with expandable sections, embedded calculations, or comparison tables that Meridian's team can navigate.
 
 **What to expect:** The `create-an-asset` skill produces an interactive HTML deliverable. Your output will vary, but look for these sections:
 
@@ -265,7 +265,7 @@ The `create-an-asset` skill produces an interactive HTML deliverable — not a f
 | Next Step               | Clear CTA with calendar link or contact | Low-friction action the prospect can take immediately  |
 
 :::note Your output will vary
-The one-pager content depends entirely on which prospect you chose and what data exists in your demo-data.md. The teaching point is the _comparison_ between text-based content multiplication (volume play — seconds to produce for every prospect) and interactive assets (precision play — minutes to produce for high-value shortlist deals).
+The one-pager content depends entirely on which prospect you chose and what data exists in your demo-data.md. The teaching point is the _comparison_ between text-based content multiplication (volume play: seconds to produce for every prospect) and interactive assets (precision play: minutes to produce for high-value shortlist deals).
 :::
 
 **Compare the two sales assets:**
@@ -273,12 +273,12 @@ The one-pager content depends entirely on which prospect you chose and what data
 | Dimension         | Text One-Pager (from multiplication) | Interactive One-Pager (create-an-asset)        |
 | ----------------- | ------------------------------------ | ---------------------------------------------- |
 | Format            | Flat text, PDF-ready                 | Interactive HTML with expandable sections      |
-| Prospect-specific | Generic — works for any logistics co | Specific — prospect's metrics, locations, pain |
+| Prospect-specific | Generic: works for any logistics co | Specific: prospect's metrics, locations, pain |
 | Shareable         | Email attachment                     | Link or embedded in proposal                   |
-| Differentiation   | Low — competitors send similar PDFs  | High — interactive format stands out           |
+| Differentiation   | Low: competitors send similar PDFs  | High: interactive format stands out           |
 | Production time   | 30 seconds (from multiplication)     | 2 minutes (from create-an-asset)               |
 
-The text one-pager from content multiplication is a volume play — produce it for every prospect in seconds. The interactive one-pager from `create-an-asset` is a precision play — produce it for high-value enterprise prospects where differentiation justifies the extra two minutes.
+The text one-pager from content multiplication is a volume play: produce it for every prospect in seconds. The interactive one-pager from `create-an-asset` is a precision play: produce it for high-value enterprise prospects where differentiation justifies the extra two minutes.
 
 ---
 
@@ -288,11 +288,11 @@ With all assets generated, do a final brand consistency sweep. For each asset, a
 
 The assets most likely to drift:
 
-1. **CEO social posts** — CEO voice is personal and strategic. The agent defaults to the company brand voice, which is operational. Fix by adding "Write in the CEO's voice: strategic, forward-looking, competitive positioning" to the prompt.
+1. **CEO social posts**; CEO voice is personal and strategic. The agent defaults to the company brand voice, which is operational. Fix by adding "Write in the CEO's voice: strategic, forward-looking, competitive positioning" to the prompt.
 
-2. **Ad copy** — Compression strips context. A 15-word headline cannot carry the same operator depth as a 1,200-word article. Fix by running `/brand-review` on each variant and discarding any that score below 75.
+2. **Ad copy**; Compression strips context. A 15-word headline cannot carry the same operator depth as a 1,200-word article. Fix by running `/brand-review` on each variant and discarding any that score below 75.
 
-3. **Subject lines** — Same compression problem as ad copy. Fix by generating 15 variants and keeping the 8 that pass brand review.
+3. **Subject lines**; Same compression problem as ad copy. Fix by generating 15 variants and keeping the 8 that pass brand review.
 
 Everything else should pass with minor edits. The cornerstone carries the brand voice DNA. Assets closest to the cornerstone format (newsletter, FAQ) inherit it naturally. Assets furthest from it (short-form, CEO voice) need targeted iteration.
 
@@ -301,9 +301,9 @@ Everything else should pass with minor edits. The cornerstone carries the brand 
 ## What You Built
 
 1. Brand voice configuration in `sales-marketing.local.md` (tone, pillars, persona guides)
-2. 1 cornerstone LinkedIn article — SEO-audited and brand-reviewed
-3. 10 derivative assets across channels — each evaluated for brand consistency
-4. 1 interactive sales one-pager for Meridian Logistics via `create-an-asset` — deployable with a proposal
+2. 1 cornerstone LinkedIn article; SEO-audited and brand-reviewed
+3. 10 derivative assets across channels: each evaluated for brand consistency
+4. 1 interactive sales one-pager for Meridian Logistics via `create-an-asset`: deployable with a proposal
 5. Content multiplication skill: 1 piece of thinking becomes 10 distribution-ready assets
 6. Used base `/brand-review`, `/seo-audit` commands and the `create-an-asset` Sales plugin skill
 
@@ -330,7 +330,7 @@ After generating:
    Which need the most iteration?
 ```
 
-**What you are learning:** The full content production loop — cornerstone creation, brand audit, iteration, and multiplication. Tracking first-generation pass rates teaches you which asset types reliably inherit brand voice and which always need iteration. This calibrates your expectations so you budget editing time correctly.
+**What you are learning:** The full content production loop: cornerstone creation, brand audit, iteration, and multiplication. Tracking first-generation pass rates teaches you which asset types reliably inherit brand voice and which always need iteration. This calibrates your expectations so you budget editing time correctly.
 
 ### Prompt 2 (Adapt)
 
@@ -366,4 +366,4 @@ For each asset, rate:
 What is your brand voice pass rate? Which assets drift most?
 ```
 
-**What you are learning:** How to apply the content engine to your own context. The brand voice config is the critical variable — if your pass rate is low, the config needs tightening (more specific tone guidance, clearer pillar definitions, sharper persona distinctions). If your pass rate is high, your config is doing its job. This diagnostic skill transfers to any business, not just NexaFlow.
+**What you are learning:** How to apply the content engine to your own context. The brand voice config is the critical variable: if your pass rate is low, the config needs tightening (more specific tone guidance, clearer pillar definitions, sharper persona distinctions). If your pass rate is high, your config is doing its job. This diagnostic skill transfers to any business, not just NexaFlow.

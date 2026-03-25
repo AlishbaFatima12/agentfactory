@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/supply-chain-procurement/logistics-carrier-performance
 sidebar_position: 8
 title: "Logistics and Carrier Performance"
-description: "Optimise your logistics network across four dimensions — route efficiency, carrier performance, network design, and sustainability — using the /logistics-brief skill and the logistics-intelligence-agent to turn static routing decisions into continuous re-evaluation"
+description: "Optimise your logistics network across four dimensions: route efficiency, carrier performance, network design, and sustainability: using the /logistics-brief skill and the logistics-intelligence-agent to turn static routing decisions into continuous re-evaluation"
 keywords:
   [
     "logistics",
@@ -64,11 +64,11 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Four logistics dimensions — route efficiency, carrier performance, network design, sustainability"
-    - "Carrier scorecard — OTD, damage rate, cost per kg, track-and-trace as composite performance metrics"
-    - "Lane analysis — origin-destination optimisation balancing cost, transit, and carbon"
-    - "Expedited freight root cause classification — five categories, each requiring a different intervention"
-    - "The 10% rule — expedited freight exceeding 10% of logistics spend signals an upstream problem"
+    - "Four logistics dimensions: route efficiency, carrier performance, network design, sustainability"
+    - "Carrier scorecard; OTD, damage rate, cost per kg, track-and-trace as composite performance metrics"
+    - "Lane analysis: origin-destination optimisation balancing cost, transit, and carbon"
+    - "Expedited freight root cause classification: five categories, each requiring a different intervention"
+    - "The 10% rule: expedited freight exceeding 10% of logistics spend signals an upstream problem"
   assessment: "5 concepts at B1 level. The four dimensions provide a clean scaffold; the carrier scorecard and lane analysis are direct applications; expedited freight is the most analytical concept and the most valuable insight. Within the 7-10 limit."
 
 differentiation:
@@ -77,35 +77,35 @@ differentiation:
 
 teaching_guide:
   key_points:
-    - "Static routing is a hidden cost — carrier selection and lane assignments made at contract time gradually become sub-optimal as market conditions change"
+    - "Static routing is a hidden cost: carrier selection and lane assignments made at contract time gradually become sub-optimal as market conditions change"
     - "Expedited freight above 10% of logistics spend is a diagnostic signal, not a logistics problem to solve with more premium capacity"
-    - "Cost per shipment is misleading — always use cost per kg to compare carriers handling different shipment sizes"
-    - "Carbon assessment is increasingly a compliance requirement, not just a sustainability aspiration — Scope 3 reporting mandates are expanding"
+    - "Cost per shipment is misleading: always use cost per kg to compare carriers handling different shipment sizes"
+    - "Carbon assessment is increasingly a compliance requirement, not just a sustainability aspiration; Scope 3 reporting mandates are expanding"
   misconceptions:
     - "Our carrier contracts are reviewed annually so our routing is up to date. Correction: annual review frequency does not reflect how fast carrier performance, pricing, and route availability can change. Real-time scorecard data reveals performance gaps that exist between contract reviews."
-    - "Premium freight is a logistics department problem. Correction: 73% of expedited orders in the example originate from one business unit's inventory positioning failure. Expedited freight is often a symptom of a planning, inventory, or supplier management problem upstream — solving it at the logistics level masks the real issue."
-    - "A carrier with a lower cost per kg is always better. Correction: a carrier with a lower cost per kg but a 83% OTD rate like Evri in the example is generating cost elsewhere — customer service escalations, damage claims, and compensation. Total cost of carrier failure exceeds the freight cost difference."
+    - "Premium freight is a logistics department problem. Correction: 73% of expedited orders in the example originate from one business unit's inventory positioning failure. Expedited freight is often a symptom of a planning, inventory, or supplier management problem upstream: solving it at the logistics level masks the real issue."
+    - "A carrier with a lower cost per kg is always better. Correction: a carrier with a lower cost per kg but a 83% OTD rate like Evri in the example is generating cost elsewhere: customer service escalations, damage claims, and compensation. Total cost of carrier failure exceeds the freight cost difference."
   discussion_prompts:
-    - "What percentage of your current logistics spend is on expedited shipments? Do you know why each expedited order was necessary — and whether the root cause was a logistics failure or an upstream problem?"
-    - "When did your organisation last conduct a full lane analysis? What has changed since then — new customers, new suppliers, carrier performance shifts?"
+    - "What percentage of your current logistics spend is on expedited shipments? Do you know why each expedited order was necessary: and whether the root cause was a logistics failure or an upstream problem?"
+    - "When did your organisation last conduct a full lane analysis? What has changed since then: new customers, new suppliers, carrier performance shifts?"
   teaching_tips:
-    - "The UK carrier comparison example (DPD vs. Evri vs. Royal Mail vs. own fleet) is concrete and memorable. Walk through it in detail — students respond well to real numbers that reveal counterintuitive results (own fleet has best service but costs 33% more than DPD)."
+    - "The UK carrier comparison example (DPD vs. Evri vs. Royal Mail vs. own fleet) is concrete and memorable. Walk through it in detail: students respond well to real numbers that reveal counterintuitive results (own fleet has best service but costs 33% more than DPD)."
     - "The expedited freight rule is the lesson's most valuable insight for most students. Ask: 'Hands up if your logistics team has ever been asked to find more premium freight capacity to solve a recurring problem.' Then explain why that request is usually solving the wrong problem."
 ---
 
 # Logistics and Carrier Performance
 
-Your logistics team just finished a carrier performance review. Evri, which handles 30% of your London-to-Manchester volume, has an on-time delivery rate of 83.4% — down from 89.2% last quarter. Damage rate has doubled. The carrier is cheap: £1.45 per kg versus DPD at £1.84.
+Your logistics team just finished a carrier performance review. Evri, which handles 30% of your London-to-Manchester volume, has an on-time delivery rate of 83.4%: down from 89.2% last quarter. Damage rate has doubled. The carrier is cheap: £1.45 per kg versus DPD at £1.84.
 
 Your logistics manager says: keep Evri for the cost saving, ask them to improve.
 
-Before agreeing, check one more number: 14% of your total logistics spend is on expedited shipments — same-day and next-day premium delivery — primarily from one business unit. Your logistics team has been asked to source more premium capacity to cover the shortfall.
+Before agreeing, check one more number: 14% of your total logistics spend is on expedited shipments: same-day and next-day premium delivery: primarily from one business unit. Your logistics team has been asked to source more premium capacity to cover the shortfall.
 
-This lesson teaches you to read both situations correctly. The Evri problem is a carrier performance problem — the scorecard makes the decision obvious. The expedited freight problem is not a logistics problem at all. Buying more premium capacity solves nothing. The answer is somewhere upstream.
+This lesson teaches you to read both situations correctly. The Evri problem is a carrier performance problem: the scorecard makes the decision obvious. The expedited freight problem is not a logistics problem at all. Buying more premium capacity solves nothing. The answer is somewhere upstream.
 
 ## The Four Dimensions of Logistics Optimisation
 
-Most organisations treat logistics as a fixed cost, renegotiated at contract renewal and largely ignored between reviews. The result is that route assignments made 18 months ago — when carrier performance, fuel surcharges, and demand patterns were different — are still running today, accumulating avoidable cost with every shipment.
+Most organisations treat logistics as a fixed cost, renegotiated at contract renewal and largely ignored between reviews. The result is that route assignments made 18 months ago: when carrier performance, fuel surcharges, and demand patterns were different: are still running today, accumulating avoidable cost with every shipment.
 
 Samir Saci's published work in AI-driven supply chain optimisation demonstrates that analytical exercises which previously required weeks of consulting engagement can now be run continuously and conversationally. The `/logistics-brief` skill brings this capability to your Cowork session.
 
@@ -113,7 +113,7 @@ Samir Saci's published work in AI-driven supply chain optimisation demonstrates 
 
 For any origin-destination pair in your network: what is the cost, transit time, carbon footprint, and reliability profile of every available route and mode combination? When did you last verify that your current arrangement is still optimal?
 
-Route efficiency analysis answers these questions at the lane level — not the network level. Network-level design is Dimension 3 and requires its own workflow (Lesson 9).
+Route efficiency analysis answers these questions at the lane level: not the network level. Network-level design is Dimension 3 and requires its own workflow (Lesson 9).
 
 ### Dimension 2: Carrier Performance
 
@@ -123,14 +123,14 @@ Which of your approved carriers is performing best right now? The carrier scorec
 | ------------------------------- | ---------------------------------------------------------------- | -------------------------------- |
 | **OTD rate**                    | % of shipments delivered on or before promised date              | OTD ≥ 95%: excellent; &lt;90%: FLAG |
 | **Damage rate**                 | % of shipments with reported damage or claim                     | &lt;0.2%: excellent; >0.5%: FLAG    |
-| **Cost per kg**                 | Normalised freight cost (not per shipment — normalises for size) | Benchmark against market rate    |
+| **Cost per kg**                 | Normalised freight cost (not per shipment: normalises for size) | Benchmark against market rate    |
 | **Track-and-trace reliability** | % of shipments with real-time tracking events                    | ≥ 98%: excellent; &lt;95%: FLAG     |
 
 Carrier performance is not static. A carrier performing at 94% OTD at contract signing can deteriorate to 83% twelve months later as they over-expand their network or face operational problems. The scorecard catches this.
 
 ### Dimension 3: Network Design
 
-Where are your warehouses, distribution centres, and cross-docking points positioned relative to your current demand patterns? Network design is the strategic dimension — reviewing whether your physical infrastructure is optimally located relative to your supply origins and customer destinations. This dimension is covered in depth in Lesson 9.
+Where are your warehouses, distribution centres, and cross-docking points positioned relative to your current demand patterns? Network design is the strategic dimension: reviewing whether your physical infrastructure is optimally located relative to your supply origins and customer destinations. This dimension is covered in depth in Lesson 9.
 
 ### Dimension 4: Sustainability
 
@@ -143,7 +143,7 @@ What is the carbon footprint of your current logistics network? This was once an
 | Rail (electric) | 20–30                          |
 | Sea (container) | 10–15                          |
 
-Mode shift from road to rail on high-volume lanes can reduce emissions by 60-75% per tonne-km — often with minimal transit time impact on appropriate routes.
+Mode shift from road to rail on high-volume lanes can reduce emissions by 60-75% per tonne-km: often with minimal transit time impact on appropriate routes.
 
 ## The `/logistics-brief` Workflow
 
@@ -162,7 +162,7 @@ The skill handles all four logistics analysis types. Each is invoked with a `typ
         for our top 3 distribution lanes.
 ```
 
-**Sample output — carrier scorecard:**
+**Sample output: carrier scorecard:**
 
 ```
 CARRIER PERFORMANCE BRIEF — Q1 2026
@@ -216,7 +216,7 @@ TOTAL IDENTIFIED SAVINGS: £5,400/month (£64,800/year)
 ════════════════════════════════════════════════════════════
 ```
 
-The scorecard makes the Evri decision clear. The overall score of 2.9/5 — driven by the below-threshold OTD and elevated damage rate — is not a marginal call. The £0.39/kg cost saving over DPD is more than offset by the downstream cost of 17% late deliveries (customer service, compensation, redelivery) and the reputational risk of B2B customers receiving damaged goods.
+The scorecard makes the Evri decision clear. The overall score of 2.9/5: driven by the below-threshold OTD and elevated damage rate: is not a marginal call. The £0.39/kg cost saving over DPD is more than offset by the downstream cost of 17% late deliveries (customer service, compensation, redelivery) and the reputational risk of B2B customers receiving damaged goods.
 
 ## Expedited Freight: Logistics Symptom, Upstream Problem
 
@@ -229,13 +229,13 @@ The five root cause categories:
 | **Late supplier delivery**      | Supplier missed their delivery, forcing expedited onward shipment | Supplier corrective action (procurement problem, not logistics) |
 | **Demand forecast error**       | Demand was higher than forecast; inventory depleted early         | Improve forecasting or safety stock levels (planning problem)   |
 | **Inventory positioning error** | Stock was in the wrong location relative to demand                | Review distribution network and stock positioning               |
-| **Customer emergency**          | Customer had an unexpected urgent requirement                     | Valid commercial reason — this is acceptable expedited spend    |
+| **Customer emergency**          | Customer had an unexpected urgent requirement                     | Valid commercial reason: this is acceptable expedited spend    |
 | **Production planning error**   | Internal scheduling created late production completion            | Operations management problem                                   |
 
-For the example data above: 73% of expedited orders originate from one business unit, and the root cause analysis points to inventory positioning — the business unit is running with insufficient safety stock relative to demand volatility. The correct intervention is reviewing safety stock levels at that site, not sourcing more premium freight capacity. Buying more expedited capacity would solve nothing and would cost £24,000+ per year to maintain.
+For the example data above: 73% of expedited orders originate from one business unit, and the root cause analysis points to inventory positioning: the business unit is running with insufficient safety stock relative to demand volatility. The correct intervention is reviewing safety stock levels at that site, not sourcing more premium freight capacity. Buying more expedited capacity would solve nothing and would cost £24,000+ per year to maintain.
 
 :::caution The Expedited Freight Trap
-Expedited freight is expensive. The instinct is to manage it as a logistics cost — negotiate better premium rates, qualify more premium carriers, manage the budget. This is treating the symptom. If expedited freight exceeds 10% of your total logistics spend, the logistics team is funding an upstream process failure. Find the root cause in procurement, planning, or operations — and fix it there.
+Expedited freight is expensive. The instinct is to manage it as a logistics cost: negotiate better premium rates, qualify more premium carriers, manage the budget. This is treating the symptom. If expedited freight exceeds 10% of your total logistics spend, the logistics team is funding an upstream process failure. Find the root cause in procurement, planning, or operations: and fix it there.
 :::
 
 ## Lane and Carbon Analysis
@@ -257,7 +257,7 @@ For carbon assessment:
                  scope3-reporting:"required/not required"
 ```
 
-The carbon assessment identifies your highest-emission routes and evaluates mode-shift options — for example, moving a high-volume London-to-Edinburgh lane from road to rail would reduce emissions significantly at minimal transit time increase on that corridor.
+The carbon assessment identifies your highest-emission routes and evaluates mode-shift options: for example, moving a high-volume London-to-Edinburgh lane from road to rail would reduce emissions significantly at minimal transit time increase on that corridor.
 
 ## The Logistics Intelligence Agent
 
@@ -268,7 +268,7 @@ The `logistics-intelligence-agent` automates continuous carrier performance moni
 - Alert routing: who receives performance alerts and at what threshold
 - Reporting frequency: weekly or monthly performance digest
 
-The agent's value is catching a carrier like Evri before the quarterly review. A 6-percentage-point OTD decline over a quarter can be caught at the 2-point mark if monitoring is continuous — giving you time to renegotiate or reroute before customer impact accumulates.
+The agent's value is catching a carrier like Evri before the quarterly review. A 6-percentage-point OTD decline over a quarter can be caught at the 2-point mark if monitoring is continuous: giving you time to renegotiate or reroute before customer impact accumulates.
 
 ## Exercise: Logistics Optimisation Analysis (Exercise 4)
 
@@ -277,7 +277,7 @@ The agent's value is catching a carrier like Evri before the quarterly review. A
 **Plugin commands:** `/logistics-brief`, `/spend-analysis`
 **Goal:** Identify and quantify the top 3 logistics cost reduction opportunities
 
-### Step 1 — Data Collection
+### Step 1; Data Collection
 
 Pull from your TMS or logistics records for the last 90 days:
 
@@ -287,7 +287,7 @@ Pull from your TMS or logistics records for the last 90 days:
 - Expedited shipment volume and cost (premium freight total)
 - Fuel surcharge amounts paid versus contracted rates
 
-### Step 2 — Carrier Performance Analysis
+### Step 2; Carrier Performance Analysis
 
 ```
 /logistics-brief type:"carrier-performance"
@@ -297,7 +297,7 @@ Pull from your TMS or logistics records for the last 90 days:
 
 For each carrier, compare actual OTD against contracted SLA, actual cost against contracted rate (identifying any rate creep or fuel surcharge over-application), and damage and claim rate. Classify each carrier: Outperforming / Compliant / Underperforming / Review-required.
 
-### Step 3 — Lane Optimisation
+### Step 3; Lane Optimisation
 
 For your top 5 highest-volume lanes:
 
@@ -310,7 +310,7 @@ For your top 5 highest-volume lanes:
 
 For each lane: is the current carrier and mode the best available option? When was this last evaluated? Have carrier performance or market conditions changed?
 
-### Step 4 — Expedited Freight Analysis
+### Step 4; Expedited Freight Analysis
 
 If your expedited freight cost is more than 10% of total logistics spend:
 
@@ -318,7 +318,7 @@ If your expedited freight cost is more than 10% of total logistics spend:
 - What events trigger expedited shipments? (Late supplier delivery, forecast error, inventory positioning error, customer emergency, production planning error?)
 - Quantify: if you reduced expedited freight by 50%, what is the annual saving? What would need to change upstream to achieve it?
 
-### Step 5 — Carbon Footprint Assessment
+### Step 5; Carbon Footprint Assessment
 
 ```
 /logistics-brief type:"carbon-assessment"
@@ -352,7 +352,7 @@ Our top lane (Birmingham → London, 420 shipments/week) is currently
 3. Recommend the optimal lane routing and estimate the annual saving.
 ```
 
-**What you are learning:** The carrier scorecard converts four metrics into an actionable classification. The lane routing recommendation is the output — but the scorecard is the input that makes it defensible.
+**What you are learning:** The carrier scorecard converts four metrics into an actionable classification. The lane routing recommendation is the output: but the scorecard is the input that makes it defensible.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -391,7 +391,7 @@ Your current network is 95% road freight (HGV).
    what carrier data do you need, and what methodology would you use?
 ```
 
-**What you are learning:** Carbon reduction targets require the same analytical rigour as cost reduction targets. Lane selection, mode availability, and service trade-offs are procurement and logistics decisions — not just sustainability team decisions.
+**What you are learning:** Carbon reduction targets require the same analytical rigour as cost reduction targets. Lane selection, mode availability, and service trade-offs are procurement and logistics decisions: not just sustainability team decisions.
 :::
 
 ## Flashcards Study Aid

@@ -7,11 +7,11 @@ title: "Part 1: General Agents: Foundations"
 
 You've heard the headlines. AI will write all the code. The end of programming as we know it. Every developer needs to learn AI or get left behind.
 
-It's easy to dismiss this as hype—another cycle of breathless predictions that fizzle into disappointment.
+It's easy to dismiss this as hype,another cycle of breathless predictions that fizzle into disappointment.
 
 **But 2026 is different.**
 
-Three independent trends are converging simultaneously: AI capability has reached production quality, mainstream adoption has passed the tipping point, and enterprises are betting billions on AI-native architecture. The evidence isn't coming from marketing teams—it's from academic competitions, industry-wide surveys, venture-backed startups, and billion-dollar acquisition decisions.
+Three independent trends are converging simultaneously: AI capability has reached production quality, mainstream adoption has passed the tipping point, and enterprises are betting billions on AI-native architecture. The evidence isn't coming from marketing teams,it's from academic competitions, industry-wide surveys, venture-backed startups, and billion-dollar acquisition decisions.
 
 This part establishes the mental models and practical skills you need for AI-native development. By the end of Part 1, you'll understand not just _that_ AI is changing software development, but _how to think about this transformation strategically_ and _how to work with General Agents effectively_.
 
@@ -21,13 +21,13 @@ Part 1 consists of seven chapters that build from concepts to communication to t
 
 ### Chapter 12: The AI Agent Factory Paradigm (Conceptual Foundation)
 
-**Foundational Concepts (Lessons 1-3)**: You'll examine concrete evidence proving 2025 is a genuine inflection point—ICPC perfect scores, 84% developer adoption, $3 trillion economy transformation. You'll understand the three core operational constraints of LLMs (statelessness, probabilistic outputs, context limits) that shape all AI-native development, and learn how your role evolves from coder to orchestrator through the OODA Loop.
+**Foundational Concepts (Lessons 1-3)**: You'll examine concrete evidence proving 2025 is a genuine inflection point,ICPC perfect scores, 84% developer adoption, $3 trillion economy transformation. You'll understand the three core operational constraints of LLMs (statelessness, probabilistic outputs, context limits) that shape all AI-native development, and learn how your role evolves from coder to orchestrator through the OODA Loop.
 
 **Technical Architecture (Lessons 4-5)**: You'll learn the Five Powers that enable autonomous agents (See, Hear, Reason, Act, Remember), the three-layer AI development stack, and the AIFF standards ecosystem (MCP, AGENTS.md, Agent Skills) that makes Digital FTEs possible.
 
 **Business Strategy (Lessons 6-7)**: You'll discover how to position your domain expertise as a competitive moat, understand the Digital FTE business model and monetization strategies, and master the nine pillars of AI-Driven Development (AIDD).
 
-**Methodology & Synthesis (Lessons 8-9)**: You'll learn Spec-Driven Development—specifications as the new syntax—and how to orchestrate AI collaboration across the development lifecycle. Lesson 9 synthesizes everything into a coherent vision for building Digital FTEs.
+**Methodology & Synthesis (Lessons 8-9)**: You'll learn Spec-Driven Development,specifications as the new syntax,and how to orchestrate AI collaboration across the development lifecycle. Lesson 9 synthesizes everything into a coherent vision for building Digital FTEs.
 
 **Enterprise Sales (Lesson 10)**: You'll learn how to sell your Digital FTE solutions to enterprise customers in the $100-400 billion agentic AI market. You'll understand the four value propositions (Enabler, Implementer, Custom Developer, Workflow Disruptor), master consultative selling and outcome-based pricing, and learn to position yourself for the six factors enterprises prioritize when choosing AI service providers.
 
@@ -51,7 +51,7 @@ Now that you understand _why_ AI-driven development matters and _how_ to write c
 
 ### Chapter 15: Effective Context Engineering with General Agents
 
-You've learned the tools. Now learn WHY they work and WHEN to use each one. Chapter 15 introduces **Context Engineering**—the quality control discipline for Digital FTE manufacturing.
+You've learned the tools. Now learn WHY they work and WHEN to use each one. Chapter 15 introduces **Context Engineering:** the quality control discipline for Digital FTE manufacturing.
 
 **Foundation (Lessons 1-3)**: You'll understand why context quality determines agent value, learn the U-shaped attention curve and 70% threshold, and discover why Claude "forgets" things in the middle of long conversations (position sensitivity research).
 
@@ -63,7 +63,7 @@ You've learned the tools. Now learn WHY they work and WHEN to use each one. Chap
 
 ### Chapter 16: Spec-Driven Development with Claude Code
 
-Chapter 16 introduces **Spec-Driven Development (SDD)**—the methodology that transforms AI coding assistants from sophisticated autocomplete tools into production-grade development partners.
+Chapter 16 introduces **Spec-Driven Development (SDD):** the methodology that transforms AI coding assistants from sophisticated autocomplete tools into production-grade development partners.
 
 **From Vibe Coding to Specifications**: You'll understand why conversational "vibe coding" breaks down for production systems and how specifications as primary artifacts solve context loss, assumption drift, and architectural inconsistency.
 
@@ -75,13 +75,15 @@ Chapter 16 introduces **Spec-Driven Development (SDD)**—the methodology that t
 
 Chapter 17 synthesizes learnings from Chapters 12-16 into actionable problem-solving principles that generalize across all General Agent workflows.
 
-**The Principles (Lessons 1-7)**: You'll master Bash is the Key, Code as Universal Interface, Verification as Core Step, Small Reversible Decomposition, Persisting State in Files, Constraints and Safety, and Observability. Each principle is explored in both Claude Code (terminal) and Claude Cowork (desktop) contexts—showing how these are truly _General Agent_ principles, not tool-specific tricks.
+**The Principles (Lessons 1-7)**: You'll master Bash is the Key, Code as Universal Interface, Verification as Core Step, Small Reversible Decomposition, Persisting State in Files, Constraints and Safety, and Observability. Each principle is explored in both Claude Code (terminal) and Claude Cowork (desktop) contexts,showing how these are truly _General Agent_ principles, not tool-specific tricks.
 
 **Integration (Lesson 8)**: You'll discover the Meta-Principle underlying all seven (general agents leverage computing fundamentals), see how principles combine in real-world workflows, and learn a decision framework for choosing between Code and Cowork based on task characteristics.
 
-### Chapter 18: Meet Your First AI Employee
+### Chapter 18: Claude Code for Teams, CI/CD & Advanced Configuration
 
-Before you build domain skills, experience what you're building toward. Chapter 18 introduces OpenClaw — the fastest-growing AI Employee project with 209,000+ GitHub stars. You'll install it, delegate real tasks via WhatsApp or Telegram, explore its architecture (six universal agent patterns), and understand the security implications. This isn't a demo — it's a working system that validates everything you learned in Chapters 12-17.
+Chapter 18 covers advanced Claude Code configuration for team workflows, CI/CD integration, and production deployment patterns. This chapter bridges the gap between individual Claude Code mastery (Chapters 14-17) and the agent-building work that follows.
+
+> **Note:** The original Chapter 18 content ("Meet Your First AI Employee" (OpenClaw)) has moved to [Chapter 56 in Part 5: Building OpenClaw Apps](../05-Building-OpenClaw-Apps/56-meet-your-first-ai-employee/README.md).
 
 ## The Agent Factory Paradigm
 
@@ -91,11 +93,11 @@ The Agent Factory paradigm changes everything about how you think about building
 - **Custom Agents** (built with SDKs) are specialized products deployed at scale
 - **Digital FTEs** are AI Agents engineered to own entire business functions
 
-The critical insight: **General Agents BUILD Custom Agents.** Claude Code isn't competing with the OpenAI SDK—it's using Claude Code to build the Custom Agents you'll deploy.
+The critical insight: **General Agents BUILD Custom Agents.** Claude Code isn't competing with the OpenAI SDK,it's using Claude Code to build the Custom Agents you'll deploy.
 
 ## A Note on Approach
 
-Every lesson includes "Try With AI" sections where you apply concepts to your own domain. This isn't abstract theory—it's immediately actionable.
+Every lesson includes "Try With AI" sections where you apply concepts to your own domain. This isn't abstract theory,it's immediately actionable.
 
 By the end of this part, you'll be able to:
 
@@ -111,6 +113,6 @@ By the end of this part, you'll be able to:
 10. **Articulate** your path forward through the rest of this book
 11. **Experience** a working AI Employee and identify the six universal agent patterns
 
-The transformation of software development is underway. The question isn't whether AI will change how you build—it's whether you'll lead or follow.
+The transformation of software development is underway. The question isn't whether AI will change how you build,it's whether you'll lead or follow.
 
 Let's begin.

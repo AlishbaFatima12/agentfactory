@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/ai-transformation-ca-cpa-practice/domain-assurance-services
 sidebar_position: 4
-title: "Domain 3 — Assurance Services"
+title: "Domain 3: Assurance Services"
 description: "Examine how AI transforms assurance services from sampling-based audit to population-level testing, explore Gen-AI and agentic capabilities for audit documentation, contract analysis, risk identification, and continuous monitoring, and build an AI-assisted audit risk assessment"
 keywords:
   [
@@ -48,7 +48,7 @@ skills:
     measurable_at_this_level: "Student can use Cowork to prepare a risk assessment for a listed company, design audit procedures for revenue recognition, specify a continuous monitoring programme, let a reusable skill emerge from the analysis conversation, and review and test that skill's reusability across engagements"
 
 learning_objectives:
-  - objective: "Explain the fundamental shift from sampling-based to population-level audit testing, and describe why this changes the epistemics of assurance — from probabilistic conclusions to deterministic findings"
+  - objective: "Explain the fundamental shift from sampling-based to population-level audit testing, and describe why this changes the epistemics of assurance: from probabilistic conclusions to deterministic findings"
     proficiency_level: "A2"
     bloom_level: "Understand"
     assessment_method: "Student can articulate the difference between 'we tested a sample and found no errors' and 'we tested every transaction and found these specific anomalies,' and explain the implications for audit standards, methodology, and the auditor's opinion"
@@ -61,7 +61,7 @@ learning_objectives:
   - objective: "Execute an AI-assisted audit risk assessment workflow, identifying significant risks of material misstatement, designing audit procedures, and specifying a continuous monitoring programme"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Practice Exercise 3 — producing a structured risk assessment, revenue recognition audit questions, a continuous monitoring specification, and a reusable skill created through the analysis conversation, then reviewed in Customize → Skills and tested on a different engagement"
+    assessment_method: "Student completes Practice Exercise 3: producing a structured risk assessment, revenue recognition audit questions, a continuous monitoring specification, and a reusable skill created through the analysis conversation, then reviewed in Customize → Skills and tested on a different engagement"
 
 cognitive_load:
   new_concepts: 6
@@ -72,7 +72,7 @@ cognitive_load:
     - "Gen-AI contract analysis and risk identification"
     - "Autonomous audit agent"
     - "Continuous audit agent"
-  assessment: "6 concepts at A2-B1 level. Students enter from Lesson 3 with the domain analysis pattern well established (concept box, Gen-AI vs Agentic, real-world deployments, exercise). The materiality and sampling concept box is the anchor — it introduces the epistemological shift that makes AI audit fundamentally different from traditional audit, not just faster."
+  assessment: "6 concepts at A2-B1 level. Students enter from Lesson 3 with the domain analysis pattern well established (concept box, Gen-AI vs Agentic, real-world deployments, exercise). The materiality and sampling concept box is the anchor: it introduces the epistemological shift that makes AI audit fundamentally different from traditional audit, not just faster."
 
 differentiation:
   extension_for_advanced: "Research the regulatory position on AI in audit in your jurisdiction. Does your audit standards body (IAASB, PCAOB, FRC) permit or restrict the use of AI in audit evidence gathering? Write a one-page analysis of the regulatory barriers to autonomous audit agents, distinguishing between what the technology can do and what the standards currently allow."
@@ -83,35 +83,35 @@ teaching_guide:
   session_group: 2
   session_title: "The Assurance Transformation"
   key_points:
-    - "Assurance is the most regulated CA/CPA domain — audit is a statutory function with specific legal requirements, making the consequences of AI failure most severe here"
+    - "Assurance is the most regulated CA/CPA domain: audit is a statutory function with specific legal requirements, making the consequences of AI failure most severe here"
     - "The fundamental shift is epistemological: AI moves audit from probabilistic (sampling) to deterministic (population testing), changing the nature of assurance itself"
-    - "Gen-AI already assists with documentation, contract analysis, and risk identification — the labour-intensive aspects of audit execution"
+    - "Gen-AI already assists with documentation, contract analysis, and risk identification: the labour-intensive aspects of audit execution"
     - "Agentic systems will execute audit procedures autonomously and enable continuous real-time monitoring rather than annual retrospective examination"
   misconceptions:
-    - "Students may assume AI replaces the auditor — in reality, AI executes procedures while the auditor exercises professional judgment, manages client relationships, and signs the opinion"
-    - "Students may think population testing eliminates the need for materiality — materiality still determines which findings matter to users, even when every transaction is examined"
-    - "Students may confuse KPMG Clara (audit execution platform) with MindBridge (financial anomaly detection) — Clara is an integrated audit workflow platform; MindBridge specialises in transaction-level anomaly analysis"
+    - "Students may assume AI replaces the auditor: in reality, AI executes procedures while the auditor exercises professional judgment, manages client relationships, and signs the opinion"
+    - "Students may think population testing eliminates the need for materiality: materiality still determines which findings matter to users, even when every transaction is examined"
+    - "Students may confuse KPMG Clara (audit execution platform) with MindBridge (financial anomaly detection). Clara is an integrated audit workflow platform; MindBridge specialises in transaction-level anomaly analysis"
   discussion_prompts:
     - "If an AI agent can test every transaction in a population, does the concept of audit sampling become obsolete? Or does sampling serve a purpose beyond just being the only practical option for humans?"
     - "Consider the audit opinion you sign (or will sign). The opinion says the financial statements are 'free from material misstatement.' How does the meaning of that phrase change when the evidence base shifts from a tested sample to a tested population?"
   teaching_tips:
-    - "The concept box on materiality and sampling is the most important pedagogical moment in this lesson — it introduces an epistemological shift, not just a technological one"
-    - "Connect the junior auditor displacement discussion to students' own career concerns — this is where the lesson becomes personal and motivating"
-    - "The exercise Step 3 (continuous monitoring specification) bridges from traditional annual audit to the future state — emphasise that this is where competitive advantage lies"
+    - "The concept box on materiality and sampling is the most important pedagogical moment in this lesson: it introduces an epistemological shift, not just a technological one"
+    - "Connect the junior auditor displacement discussion to students' own career concerns: this is where the lesson becomes personal and motivating"
+    - "The exercise Step 3 (continuous monitoring specification) bridges from traditional annual audit to the future state: emphasise that this is where competitive advantage lies"
   assessment_checks:
     - question: "How does AI change the epistemics of audit assurance?"
-      expected_response: "Traditional audit uses sampling — testing a representative subset of transactions and extrapolating to the full population. The conclusion is probabilistic: we are reasonably assured that no material misstatement exists. AI audit agents can test every transaction in the population. The conclusion becomes deterministic: we tested everything and found these specific anomalies. This is a fundamental change in the nature of audit evidence, with implications for audit standards, methodology, and the meaning of the auditor's opinion."
+      expected_response: "Traditional audit uses sampling: testing a representative subset of transactions and extrapolating to the full population. The conclusion is probabilistic: we are reasonably assured that no material misstatement exists. AI audit agents can test every transaction in the population. The conclusion becomes deterministic: we tested everything and found these specific anomalies. This is a fundamental change in the nature of audit evidence, with implications for audit standards, methodology, and the meaning of the auditor's opinion."
     - question: "What is the difference between an autonomous audit agent and a continuous audit agent?"
-      expected_response: "An autonomous audit agent executes audit procedures — extracting data, running analytical procedures, testing reconciliations, selecting and testing samples, documenting results — and produces a draft audit file for senior review. It automates the execution of a traditional annual audit. A continuous audit agent monitors financial transactions in real time, flagging anomalies and potential misstatements as they occur throughout the year, rather than examining them retrospectively after year-end. The autonomous agent changes how audit is done; the continuous agent changes when audit is done."
+      expected_response: "An autonomous audit agent executes audit procedures (extracting data, running analytical procedures, testing reconciliations, selecting and testing samples, documenting results) and produces a draft audit file for senior review. It automates the execution of a traditional annual audit. A continuous audit agent monitors financial transactions in real time, flagging anomalies and potential misstatements as they occur throughout the year, rather than examining them retrospectively after year-end. The autonomous agent changes how audit is done; the continuous agent changes when audit is done."
 ---
 
-# Domain 3 — Assurance Services
+# Domain 3: Assurance Services
 
 > _"The auditor's core professional skill is not testing transactions. It is identifying what could go wrong before designing how to test it. AI executes the testing; the auditor frames the risk."_
 
-In Lesson 3, you examined tax and non-assurance advisory and saw how the compliance/advisory bifurcation determines which parts of tax practice AI can automate and which parts require professional judgment. Now you turn to the domain that defines the CA/CPA profession's public interest role: assurance services. This is the domain most protected by regulation — and also the domain where the consequences of AI failure are most severe.
+In Lesson 3, you examined tax and non-assurance advisory and saw how the compliance/advisory bifurcation determines which parts of tax practice AI can automate and which parts require professional judgment. Now you turn to the domain that defines the CA/CPA profession's public interest role: assurance services. This is the domain most protected by regulation: and also the domain where the consequences of AI failure are most severe.
 
-What makes assurance different from the domains you have examined so far is not just the volume of work AI can automate. It is that AI changes the fundamental nature of audit evidence. For over a century, auditors have examined samples of transactions because examining every transaction was physically impossible. AI removes that constraint. The shift from sampling to population testing is not an incremental improvement. It is an epistemological change — a change in what we can know and how confidently we can know it.
+What makes assurance different from the domains you have examined so far is not just the volume of work AI can automate. It is that AI changes the fundamental nature of audit evidence. For over a century, auditors have examined samples of transactions because examining every transaction was physically impossible. AI removes that constraint. The shift from sampling to population testing is not an incremental improvement. It is an epistemological change: a change in what we can know and how confidently we can know it.
 
 ## What This Domain Covers
 
@@ -119,19 +119,19 @@ Assurance services encompass three sub-categories, each with distinct AI impact 
 
 | Sub-Category        | What It Involves                                                                                | Regulatory Context                                     |
 | ------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| **External audit**  | Independent examination of financial statements to give users confidence they are true and fair | Statutory requirement — legal consequences for failure |
-| **Internal audit**  | Assessing the effectiveness of governance, risk management, and internal controls               | Governance function — reports to audit committee       |
-| **Other assurance** | Reviews, agreed-upon procedures, specialist assurance on non-financial information              | Engagement-specific — less standardised                |
+| **External audit**  | Independent examination of financial statements to give users confidence they are true and fair | Statutory requirement: legal consequences for failure |
+| **Internal audit**  | Assessing the effectiveness of governance, risk management, and internal controls               | Governance function: reports to audit committee       |
+| **Other assurance** | Reviews, agreed-upon procedures, specialist assurance on non-financial information              | Engagement-specific: less standardised                |
 
-:::info Audit Materiality and Sampling — Why AI Changes the Epistemics of Audit
+:::info Audit Materiality and Sampling: Why AI Changes the Epistemics of Audit
 
-**Materiality** is the threshold below which a misstatement in financial statements is considered unlikely to influence users' decisions. Auditors set a materiality threshold — typically 5% of pre-tax profit or 1% of revenue, depending on the entity — and design their audit work to provide reasonable assurance that no misstatement above this threshold exists.
+**Materiality** is the threshold below which a misstatement in financial statements is considered unlikely to influence users' decisions. Auditors set a materiality threshold (typically 5% of pre-tax profit or 1% of revenue, depending on the entity) and design their audit work to provide reasonable assurance that no misstatement above this threshold exists.
 
-**Audit sampling** is the practice of examining a subset of transactions rather than every transaction, to form a conclusion about the full population. Traditional audit sampling is statistical — selecting a representative sample, testing it, and extrapolating results to the whole population.
+**Audit sampling** is the practice of examining a subset of transactions rather than every transaction, to form a conclusion about the full population. Traditional audit sampling is statistical: selecting a representative sample, testing it, and extrapolating results to the whole population.
 
-**Why AI changes both:** An AI audit agent does not sample — it can examine every transaction in the population. This shifts the audit from probabilistic ("we tested a sample and found no errors") to deterministic ("we tested every transaction and found these specific anomalies"). This is a fundamental change in the epistemics of audit assurance, with significant implications for audit standards, methodology, and the nature of the auditor's opinion.
+**Why AI changes both:** An AI audit agent does not sample: it can examine every transaction in the population. This shifts the audit from probabilistic ("we tested a sample and found no errors") to deterministic ("we tested every transaction and found these specific anomalies"). This is a fundamental change in the epistemics of audit assurance, with significant implications for audit standards, methodology, and the nature of the auditor's opinion.
 
-The materiality concept remains relevant even with population testing — it still determines which findings are significant enough to report. But the evidence base on which the auditor forms an opinion changes from extrapolation to comprehensive examination.
+The materiality concept remains relevant even with population testing: it still determines which findings are significant enough to report. But the evidence base on which the auditor forms an opinion changes from extrapolation to comprehensive examination.
 
 :::
 
@@ -139,34 +139,34 @@ The materiality concept remains relevant even with population testing — it sti
 
 Three Gen-AI capabilities are already reducing the labour burden of audit execution.
 
-**Audit documentation.** The documentation burden in external audit — working papers, audit programmes, risk assessments, conclusions — is enormous and largely standardised. Gen-AI tools draft standard working paper sections, populate testing templates, summarise the results of audit procedures, and produce first drafts of conclusions. The auditor reviews and signs off. Documentation time is dramatically reduced.
+**Audit documentation.** The documentation burden in external audit (working papers, audit programmes, risk assessments, conclusions) is enormous and largely standardised. Gen-AI tools draft standard working paper sections, populate testing templates, summarise the results of audit procedures, and produce first drafts of conclusions. The auditor reviews and signs off. Documentation time is dramatically reduced.
 
-**Contract analysis.** Reviewing contracts for key terms — revenue recognition implications, lease classification, contingent liabilities, related party transactions — is a high-volume, document-intensive task. Gen-AI tools read contracts, extract relevant clauses, and flag items requiring auditor attention far faster than manual review.
+**Contract analysis.** Reviewing contracts for key terms (revenue recognition implications, lease classification, contingent liabilities, related party transactions) is a high-volume, document-intensive task. Gen-AI tools read contracts, extract relevant clauses, and flag items requiring auditor attention far faster than manual review.
 
-**Risk identification and analysis.** Producing the risk assessment for an audit engagement — identifying what could go wrong in the financial statements, assessing the likelihood and magnitude of potential misstatement, and designing the audit response — draws on understanding the client's business, its industry, and its control environment. Gen-AI tools synthesise publicly available information about the client and its sector, identify industry-specific risks, and produce a structured risk register for auditor review.
+**Risk identification and analysis.** Producing the risk assessment for an audit engagement (identifying what could go wrong in the financial statements, assessing the likelihood and magnitude of potential misstatement, and designing the audit response) draws on understanding the client's business, its industry, and its control environment. Gen-AI tools synthesise publicly available information about the client and its sector, identify industry-specific risks, and produce a structured risk register for auditor review.
 
 ## Agentic AI Capabilities Approaching Production
 
 Two agentic systems represent the next stage of audit transformation.
 
-**Autonomous audit agent.** This agent executes audit procedures autonomously — extracting data from the client's accounting system, running analytical procedures, testing reconciliations, selecting and testing transactions, documenting the results, and producing a draft audit file for senior review. The audit partner reviews conclusions and signs the audit opinion; much of the execution work is autonomous.
+**Autonomous audit agent.** This agent executes audit procedures autonomously: extracting data from the client's accounting system, running analytical procedures, testing reconciliations, selecting and testing transactions, documenting the results, and producing a draft audit file for senior review. The audit partner reviews conclusions and signs the audit opinion; much of the execution work is autonomous.
 
-**Continuous audit agent.** Rather than conducting an annual audit after year-end, this agent monitors financial transactions in real time — flagging anomalies, unusual patterns, and potential misstatements as they occur. This shifts audit from an annual retrospective exercise to a continuous assurance function. The implications are profound: instead of discovering problems months after they occurred, the client and auditor are alerted in real time.
+**Continuous audit agent.** Rather than conducting an annual audit after year-end, this agent monitors financial transactions in real time: flagging anomalies, unusual patterns, and potential misstatements as they occur. This shifts audit from an annual retrospective exercise to a continuous assurance function. The implications are profound: instead of discovering problems months after they occurred, the client and auditor are alerted in real time.
 
 ## Real-World Deployments
 
 | Platform          | What It Does                                                                                                          | Current Stage                                                                                                                                                                   |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **KPMG Clara**    | Analyses entire populations of transactions, identifies anomalies, assists audit execution at scale                   | AI-integrated audit platform — deployed to 95,000+ auditors globally; AI agents streamlining expense vouching and financial disclosure preparation; built on Microsoft Azure AI |
-| **MindBridge AI** | Autonomously analyses financial transactions, identifies anomalies, flags potential risks across 100% of transactions | AI-driven population analysis — partnered with Genpact (Feb 2026) for global audit analytics; VEON partnership (Jan 2026) for financial analytics and internal controls         |
+| **KPMG Clara**    | Analyses entire populations of transactions, identifies anomalies, assists audit execution at scale                   | AI-integrated audit platform: deployed to 95,000+ auditors globally; AI agents streamlining expense vouching and financial disclosure preparation; built on Microsoft Azure AI |
+| **MindBridge AI** | Autonomously analyses financial transactions, identifies anomalies, flags potential risks across 100% of transactions | AI-driven population analysis: partnered with Genpact (Feb 2026) for global audit analytics; VEON partnership (Jan 2026) for financial analytics and internal controls         |
 
-The distinction between these platforms matters. KPMG Clara is an integrated audit workflow platform — it manages the end-to-end audit process and is adding AI capabilities progressively. MindBridge specialises in transaction-level anomaly detection — it analyses 100% of financial data using statistical methods, machine learning, and deep learning to identify risks that sampling-based approaches would miss. Together, they illustrate the two vectors of AI audit transformation: making the workflow more efficient (Clara) and making the evidence base more comprehensive (MindBridge).
+The distinction between these platforms matters. KPMG Clara is an integrated audit workflow platform (it manages the end-to-end audit process and is adding AI capabilities progressively. MindBridge specialises in transaction-level anomaly detection) it analyses 100% of financial data using statistical methods, machine learning, and deep learning to identify risks that sampling-based approaches would miss. Together, they illustrate the two vectors of AI audit transformation: making the workflow more efficient (Clara) and making the evidence base more comprehensive (MindBridge).
 
 ## The Practitioner Impact
 
-Junior audit roles — document collection, data extraction, sample testing, working paper preparation — face the most immediate displacement. Senior roles shift from supervising execution to reviewing AI outputs, exercising professional judgment on complex areas, and managing client relationships.
+Junior audit roles (document collection, data extraction, sample testing, working paper preparation) face the most immediate displacement. Senior roles shift from supervising execution to reviewing AI outputs, exercising professional judgment on complex areas, and managing client relationships.
 
-The economics change significantly. An audit that currently requires 500 staff hours might require 150 hours of senior professional review and 350 hours of AI execution. The firm that can price this productively — and demonstrate to regulators that AI execution meets the required standard of evidence — holds a significant competitive advantage.
+The economics change significantly. An audit that currently requires 500 staff hours might require 150 hours of senior professional review and 350 hours of AI execution. The firm that can price this productively (and demonstrate to regulators that AI execution meets the required standard of evidence) holds a significant competitive advantage.
 
 :::tip Global Perspective
 
@@ -174,13 +174,13 @@ The economics change significantly. An audit that currently requires 500 staff h
 
 **US (PCAOB):** The Public Company Accounting Oversight Board sets audit standards for US-listed companies. PCAOB standards have historically been more prescriptive than ISA. The US market's emphasis on internal controls (SOX Section 404) creates specific opportunities for continuous monitoring agents.
 
-**UK (FRC):** The Financial Reporting Council oversees audit quality in the UK. The UK's audit reform agenda, including proposals for stronger corporate governance, creates an environment where AI-enhanced assurance may be viewed favourably — provided it demonstrably improves audit quality rather than merely reducing cost.
+**UK (FRC):** The Financial Reporting Council oversees audit quality in the UK. The UK's audit reform agenda, including proposals for stronger corporate governance, creates an environment where AI-enhanced assurance may be viewed favourably: provided it demonstrably improves audit quality rather than merely reducing cost.
 
 :::
 
 ## Practice Exercise 3: AI-Assisted Audit Risk Assessment (35 min)
 
-**What you'll build:** A structured audit risk assessment workpaper, revenue recognition analysis, a continuous monitoring specification — and a reusable skill that encodes your sector-specific audit expertise, created through the natural workflow of doing the analysis, not as a separate writing task.
+**What you'll build:** A structured audit risk assessment workpaper, revenue recognition analysis, a continuous monitoring specification: and a reusable skill that encodes your sector-specific audit expertise, created through the natural workflow of doing the analysis, not as a separate writing task.
 
 **Requirements:** Cowork (any Claude plan). [**Download the exercise data zip**](https://github.com/panaversity/ca-cpa-practice-agents/releases/latest/download/ca-cpa-exercise-data.zip) and add the Crescent Textiles entity profile (`exercises/entity-profiles/crescent-textiles.md`) and trial balance (`exercises/trial-balances/textile-manufacturer-tb.csv`) to your Cowork project folder. Alternatively, use publicly available financial information about any listed company in a sector you know.
 
@@ -188,7 +188,7 @@ The economics change significantly. An audit that currently requires 500 staff h
 
    _"Prepare an audit risk assessment for [Company Name] based on its most recent annual report. Structure the output as: (1) significant risks of material misstatement for each major financial statement line, (2) assessment of inherent risk for each significant risk, (3) the audit procedures most likely to address each risk effectively."_
 
-   If you loaded the exercise data, Cowork reads the entity profile and trial balance from your project folder automatically. Review the output — does it identify risks specific to this company and sector, or generic audit risks that could apply to any entity?
+   If you loaded the exercise data, Cowork reads the entity profile and trial balance from your project folder automatically. Review the output: does it identify risks specific to this company and sector, or generic audit risks that could apply to any entity?
 
 2. **Deep-dive on revenue.** Continue the same conversation:
 
@@ -198,29 +198,29 @@ The economics change significantly. An audit that currently requires 500 staff h
 
    _"If you were designing a continuous audit monitoring programme for this company, which three transaction types or account balances would you monitor in real time, and what anomalies would trigger an alert? Write this as if you were specifying it for an AI monitoring agent."_
 
-4. **Let the skill emerge from the work.** You have now done substantive audit analysis — risk identification, revenue deep-dive, monitoring design. Ask Cowork to encode what it learned:
+4. **Let the skill emerge from the work.** You have now done substantive audit analysis: risk identification, revenue deep-dive, monitoring design. Ask Cowork to encode what it learned:
 
    _"Write a skill instruction for the risk identification step: encode the three most important sector-specific audit risks for this company's industry, with the indicators that would cause each risk to be elevated."_
 
-   Cowork creates the skill as a file artifact. This is the key insight: **the skill crystallises from practitioner work, not from a blank-page writing exercise.** The conversation you just had — identifying real risks, specifying real thresholds, designing real monitoring logic — is what gives the skill its substance.
+   Cowork creates the skill as a file artifact. This is the key insight: **the skill crystallises from practitioner work, not from a blank-page writing exercise.** The conversation you just had (identifying real risks, specifying real thresholds, designing real monitoring logic) is what gives the skill its substance.
 
-   ![A Cowork session showing the audit risk assessment conversation — the entity profile, trial balance, and risk analysis are in the project context, and the skill emerges as a file artifact from the analysis](/img/ch30-cowork-audit-risk-session.png)
+   ![A Cowork session showing the audit risk assessment conversation: the entity profile, trial balance, and risk analysis are in the project context, and the skill emerges as a file artifact from the analysis](/img/ch30-cowork-audit-risk-session.png)
 
-5. **Review and customise.** Open **Customize → Skills** in the Cowork sidebar. Your new skill appears under **My Skills**. Read its description and examine what Cowork encoded — the risk categories, the elevation indicators, the detection thresholds. Ask yourself:
+5. **Review and customise.** Open **Customize → Skills** in the Cowork sidebar. Your new skill appears under **My Skills**. Read its description and examine what Cowork encoded: the risk categories, the elevation indicators, the detection thresholds. Ask yourself:
    - Are the thresholds specific enough? (e.g., "revenue spike > 2.5 standard deviations from trailing 30-day average" vs. "unusual revenue increase")
    - Do the indicators reference concrete data sources? (e.g., "bill of lading date vs. invoice date" vs. "shipping documents")
    - Would a junior auditor with this skill catch risks that sampling-based approaches would miss?
 
    Edit anything that needs tightening. The skill is yours to refine.
 
-   ![The Customize → Skills panel showing the textile-audit-risk-id skill under My Skills — the skill description, elevation indicators, and detection thresholds are visible and editable](/img/ch30-cowork-skill-in-customize.png)
+   ![The Customize → Skills panel showing the textile-audit-risk-id skill under My Skills: the skill description, elevation indicators, and detection thresholds are visible and editable](/img/ch30-cowork-skill-in-customize.png)
 
 6. **Test reusability.** Start a new Cowork task for a different company or sector. Invoke your skill and ask Cowork to run a risk identification using it. Does the skill generalise, or is it too narrowly tied to the original entity? If it breaks on a new engagement, that tells you which parts encode genuine sector expertise and which parts were entity-specific details that should have been parameterised.
 
-**Check your work:** The risk assessment (Step 1) should identify company-specific and sector-specific risks, not generic audit risks. The monitoring specification (Step 3) should define measurable thresholds and alert conditions, not vague instructions. The skill (Steps 4–5) should encode sector expertise that would take a junior auditor years to develop — with concrete elevation indicators drawn from real financial data, not abstract descriptions. The reusability test (Step 6) is the ultimate check: a skill that only works for one company is a template; a skill that works across the sector is encoded expertise.
+**Check your work:** The risk assessment (Step 1) should identify company-specific and sector-specific risks, not generic audit risks. The monitoring specification (Step 3) should define measurable thresholds and alert conditions, not vague instructions. The skill (Steps 4–5) should encode sector expertise that would take a junior auditor years to develop: with concrete elevation indicators drawn from real financial data, not abstract descriptions. The reusability test (Step 6) is the ultimate check: a skill that only works for one company is a template; a skill that works across the sector is encoded expertise.
 
 :::tip From Conversation to Reusable Asset
-This exercise demonstrates the core Agent Factory pattern: domain expertise encoded as a skill through the natural act of doing expert work. You did not sit down to "write a skill from scratch" — you did audit analysis, and the skill emerged from that analysis. In Lesson 12 (Assurance Practice Lab), you will build on this pattern with more complex multi-step audit workflows.
+This exercise demonstrates the core Agent Factory pattern: domain expertise encoded as a skill through the natural act of doing expert work. You did not sit down to "write a skill from scratch": you did audit analysis, and the skill emerged from that analysis. In Lesson 12 (Assurance Practice Lab), you will build on this pattern with more complex multi-step audit workflows.
 :::
 
 :::info Curated Deployment Links
@@ -257,7 +257,7 @@ Use language appropriate for a CA/CPA student who understands
 audit methodology but has not yet worked with AI audit tools.
 ```
 
-**What you are learning:** The sampling-to-population shift is not just about volume — it changes the logical structure of audit evidence. By working through a concrete example with specific numbers, you develop an intuition for why this is an epistemological change rather than merely a technological one. The question about whether population testing eliminates audit risk is particularly important — it does not, because audit risk includes factors beyond sampling risk.
+**What you are learning:** The sampling-to-population shift is not just about volume (it changes the logical structure of audit evidence. By working through a concrete example with specific numbers, you develop an intuition for why this is an epistemological change rather than merely a technological one. The question about whether population testing eliminates audit risk is particularly important) it does not, because audit risk includes factors beyond sampling risk.
 
 ### Prompt 2: Autonomous Audit Agent Specification
 
@@ -283,7 +283,7 @@ Structure this as a Cowork skill specification. Include at least
 three escalation conditions where human judgment is essential.
 ```
 
-**What you are learning:** Specifying an autonomous audit agent forces you to decompose a familiar audit procedure into explicit steps with decision criteria. The escalation conditions are the most valuable part — they encode the professional judgment boundaries that prevent the agent from making decisions that require human expertise. This is the same specification discipline from Chapter 27, applied to the audit domain.
+**What you are learning:** Specifying an autonomous audit agent forces you to decompose a familiar audit procedure into explicit steps with decision criteria. The escalation conditions are the most valuable part: they encode the professional judgment boundaries that prevent the agent from making decisions that require human expertise. This is the same specification discipline from Chapter 27, applied to the audit domain.
 
 ### Prompt 3: Continuous Assurance Business Case
 
@@ -314,7 +314,7 @@ Model the economics:
 Present the analysis with a recommendation.
 ```
 
-**What you are learning:** The commercial implications of AI in audit extend beyond efficiency. By modelling the economics at firm level — including the competitive dynamics of first-mover advantage — you develop the strategic judgment that partners and senior managers need. The competitive scenario in point 4 is particularly important: it shows why adopting continuous monitoring is not optional for firms that want to maintain market position.
+**What you are learning:** The commercial implications of AI in audit extend beyond efficiency. By modelling the economics at firm level (including the competitive dynamics of first-mover advantage) you develop the strategic judgment that partners and senior managers need. The competitive scenario in point 4 is particularly important: it shows why adopting continuous monitoring is not optional for firms that want to maintain market position.
 
 ## Flashcards Study Aid
 
@@ -322,4 +322,4 @@ Present the analysis with a recommendation.
 
 ---
 
-Continue to [Lesson 5: Domain 4 — Management Accounting and Financial Management ->](./05-domain-management-accounting.md)
+Continue to [Lesson 5: Domain 4: Management Accounting and Financial Management ->](./05-domain-management-accounting.md)

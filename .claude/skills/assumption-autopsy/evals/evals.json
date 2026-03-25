@@ -1,0 +1,117 @@
+{
+  "skill": "assumption-autopsy",
+  "version": "1.0.0",
+  "test_cases": [
+    {
+      "id": "business",
+      "name": "SaaS Launch for Law Firms",
+      "category": "business_strategy",
+      "prompt": "We're planning to launch a subscription SaaS product for small law firms at $99/month. Our assumptions are: law firms want cloud-based tools, $99 is affordable, we can acquire customers through LinkedIn ads. What assumptions are we missing?",
+      "mode": "output",
+      "expectations": [
+        {
+          "id": "E1",
+          "text": "Output produces a 4-category assumption matrix with sections for (a) Human Only, (b) AI Only, (c) Both, and (d) Emerged During Merge"
+        },
+        {
+          "id": "E2",
+          "text": "Output categorizes at least 3 assumptions the user missed (category b items) that are substantive, not trivial"
+        },
+        {
+          "id": "E3",
+          "text": "Output assigns risk levels (reasonable, risky, or needs testing) to each assumption"
+        },
+        {
+          "id": "E4",
+          "text": "Output identifies at least 2 testable assumptions with concrete test methods, timelines, or decision thresholds"
+        },
+        {
+          "id": "E5",
+          "text": "Output distinguishes between contextual assumptions (market, cultural) and structural assumptions (technical, systemic, scale)"
+        },
+        {
+          "id": "E6",
+          "text": "Category (d) contains at least 1 genuine emergent assumption that is not a restatement of items from other categories"
+        },
+        {
+          "id": "E7",
+          "text": "Output identifies critical path assumptions -- which assumptions, if wrong, would invalidate the entire plan"
+        }
+      ]
+    },
+    {
+      "id": "engineering",
+      "name": "PostgreSQL for Real-Time Analytics",
+      "category": "technical_architecture",
+      "prompt": "Our team decided to use PostgreSQL for our real-time analytics pipeline processing 10M events/day. Help me audit the assumptions behind this choice.",
+      "mode": "output",
+      "expectations": [
+        {
+          "id": "E1",
+          "text": "Output produces a 4-category assumption matrix with sections for (a) Human Only, (b) AI Only, (c) Both, and (d) Emerged During Merge"
+        },
+        {
+          "id": "E2",
+          "text": "Output categorizes at least 3 assumptions the user missed (category b items) covering structural/technical dimensions"
+        },
+        {
+          "id": "E3",
+          "text": "Output assigns risk levels (reasonable, risky, or needs testing) to each assumption"
+        },
+        {
+          "id": "E4",
+          "text": "Output identifies at least 2 testable assumptions with concrete test methods such as benchmarks, load tests, or prototypes"
+        },
+        {
+          "id": "E5",
+          "text": "Output distinguishes between contextual assumptions (team skills, organizational) and structural assumptions (performance, scalability, data model)"
+        },
+        {
+          "id": "E6",
+          "text": "Category (d) contains at least 1 genuine emergent assumption not restated from other categories"
+        },
+        {
+          "id": "E7",
+          "text": "Output identifies critical path assumptions -- which assumptions, if wrong, would invalidate the architecture choice"
+        }
+      ]
+    },
+    {
+      "id": "edge-case",
+      "name": "Career Change - Consulting Business",
+      "category": "personal_decision",
+      "prompt": "I'm planning to quit my job and start a consulting business. I think I can replace my income within 6 months. What am I not seeing?",
+      "mode": "output",
+      "expectations": [
+        {
+          "id": "E1",
+          "text": "Output produces a 4-category assumption matrix with sections for (a) Human Only, (b) AI Only, (c) Both, and (d) Emerged During Merge"
+        },
+        {
+          "id": "E2",
+          "text": "Output categorizes at least 3 assumptions the user missed covering financial, market, and personal dimensions"
+        },
+        {
+          "id": "E3",
+          "text": "Output assigns risk levels (reasonable, risky, or needs testing) to each assumption"
+        },
+        {
+          "id": "E4",
+          "text": "Output identifies at least 2 testable assumptions with concrete test methods such as freelance trial, client pipeline validation, or financial runway analysis"
+        },
+        {
+          "id": "E5",
+          "text": "Output distinguishes between contextual assumptions (personal situation, network) and structural assumptions (market demand, pricing, sales cycle)"
+        },
+        {
+          "id": "E6",
+          "text": "Category (d) contains at least 1 genuine emergent assumption not restated from other categories"
+        },
+        {
+          "id": "E7",
+          "text": "Output identifies critical path assumptions -- which assumptions, if wrong, would make the career change fail"
+        }
+      ]
+    }
+  ]
+}

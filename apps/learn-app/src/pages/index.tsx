@@ -3,6 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import Translate from "@docusaurus/Translate";
 import Layout from "@theme/Layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -48,39 +49,37 @@ function HomepageHeader() {
             {/* Semantic Badge */}
             <div className="flex items-center gap-3 mb-8">
               <span className="font-mono text-xs font-bold tracking-widest uppercase text-muted-foreground/80 px-2 py-1 border border-border bg-muted/20">
-                AI-First Future
+                <Translate id="homepage.badge.aiFirst">AI-First Future</Translate>
               </span>
               <span className="w-12 h-[1px] bg-border"></span>
               <span className="font-mono text-xs text-muted-foreground/60 tracking-wider">
-                BUILD & MONETIZE DIGITAL FTEs
+                <Translate id="homepage.badge.buildMonetize">BUILD & MONETIZE DIGITAL FTEs</Translate>
               </span>
             </div>
 
             {/* Heading */}
             <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-foreground leading-[1.0] uppercase">
-                THE AI AGENT <br />
+                <Translate id="homepage.title">THE AI AGENT</Translate> <br />
                 <span className="text-primary block text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight mt-1">
-                  FACTORY
+                  <Translate id="homepage.title.factory">FACTORY</Translate>
                 </span>
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground font-normal leading-[1.6] max-w-xl">
-                The{" "}
+                <Translate id="homepage.subtitle.start">The</Translate>{" "}
                 <span className="text-foreground font-medium">
-                  Spec-Driven Blueprint
+                  <Translate id="homepage.subtitle.specDriven">Spec-Driven Blueprint</Translate>
                 </span>{" "}
-                for Building and Monetizing Digital FTEs&mdash;
+                <Translate id="homepage.subtitle.for">for Building and Monetizing Digital FTEs—</Translate>
                 <span className="text-foreground font-medium">
-                  Reliable AI Agents
+                  <Translate id="homepage.subtitle.reliable">Reliable AI Agents</Translate>
                 </span>{" "}
-                You Can Trust, Deploy, and Scale.
+                <Translate id="homepage.subtitle.you">You Can Trust, Deploy, and Scale.</Translate>
               </p>
               <p className="text-xs sm:text-sm text-muted-foreground/70 font-normal leading-[1.5] max-w-xl -mt-1 sm:-mt-2">
-                A practical framework for engineers, domain professionals
-                (accountants, finance managers, marketing professions, etc. ),
-                enterprise leaders, startup founders, product architects, and
-                operational teams building the next generation of AI-powered
-                organizations.
+                <Translate id="homepage.description">
+                  A practical framework for engineers, domain professionals (accountants, finance managers, marketing professions, etc. ), enterprise leaders, startup founders, product architects, and operational teams building the next generation of AI-powered organizations.
+                </Translate>
               </p>
             </div>
 
@@ -96,7 +95,7 @@ function HomepageHeader() {
                     to="/docs/about"
                     className="flex items-center gap-2 sm:gap-3"
                   >
-                    START READING{" "}
+                    <Translate id="homepage.button.startReading">START READING</Translate>{" "}
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
                   </Link>
                 </Button>
@@ -106,7 +105,9 @@ function HomepageHeader() {
                   size="lg"
                   className="h-11 sm:h-14 px-5 sm:px-8 text-sm sm:text-lg font-bold rounded-none transition-all"
                 >
-                  <Link to="https://panaversity.org/">Explore Panaversity</Link>
+                  <Link to="https://panaversity.org/">
+                    <Translate id="homepage.button.explorePanaversity">Explore Panaversity</Translate>
+                  </Link>
                 </Button>
               </div>
               {/* Social Proof - Premium Live Indicator */}
@@ -124,14 +125,14 @@ function HomepageHeader() {
                   18,294
                 </span>
                 <span className="text-sm text-muted-foreground">
-                  professionals learning
+                  <Translate id="homepage.learners">professionals learning</Translate>
                 </span>
                 <span className="w-[1px] h-4 bg-border mx-1"></span>
                 <Link
                   to="/reviews"
                   className="text-sm font-bold text-primary hover:text-primary/80 transition-colors flex items-center gap-1.5"
                 >
-                  Live AI Reviews
+                  <Translate id="homepage.liveReviews">Live AI Reviews</Translate>
                   <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
@@ -139,7 +140,7 @@ function HomepageHeader() {
               {/* Co-Authors - Premium Chip Design */}
               <div className="flex flex-col gap-3 mt-4">
                 <span className="text-[10px] font-bold tracking-widest text-muted-foreground/60 uppercase pl-1">
-                  Co-Authored by
+                  <Translate id="homepage.coAuthoredBy">Co-Authored by</Translate>
                 </span>
 
                 <div className="flex flex-wrap items-center gap-3 allow-rounded">
@@ -202,7 +203,8 @@ function HomepageHeader() {
                     className="flex items-center gap-1 ml-1 px-2 py-1 text-[10px] font-medium text-muted-foreground hover:text-primary transition-colors animate-scale-in opacity-0"
                     style={{ animationDelay: "500ms" }}
                   >
-                    & AI Agents <ArrowRight className="w-3 h-3 ml-0.5" />
+                    <Translate id="homepage.aiAgents">& AI Agents</Translate>
+                    <ArrowRight className="w-3 h-3 ml-0.5" />
                   </Link>
                 </div>
               </div>
@@ -244,8 +246,8 @@ function Feature({
   description,
   icon: Icon,
 }: {
-  title: string;
-  description: string;
+  title: ReactNode;
+  description: ReactNode;
   icon: React.ElementType;
 }) {
   return (
@@ -272,14 +274,16 @@ function AISpectrumSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            Understanding AI Development
+            <Translate id="homepage.spectrum.title">Understanding AI Development</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            The AI Development Spectrum
+            <Translate id="homepage.spectrum.heading">The AI Development Spectrum</Translate>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Three distinct approaches to AI in software development. This book
-            teaches you both AI-Driven and AI-Native development.
+            <Translate id="homepage.spectrum.description">
+              Three distinct approaches to AI in software development. This book
+              teaches you both AI-Driven and AI-Native development.
+            </Translate>
           </p>
         </div>
 
@@ -290,33 +294,31 @@ function AISpectrumSection() {
             <CardContent className="flex flex-col h-full p-6">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-foreground">
-                  AI Assisted
+                  <Translate id="homepage.spectrum.aiAssisted">AI Assisted</Translate>
                 </h3>
                 <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-                  AI as Helper
+                  <Translate id="homepage.spectrum.aiAssistedRole">AI as Helper</Translate>
                 </p>
               </div>
               <p className="text-muted-foreground mb-6 flex-grow">
-                AI improves your productivity with code completion, debugging
-                assistance, and documentation generation.
+                <Translate id="homepage.spectrum.aiAssistedDesc">
+                  AI improves your productivity with code completion, debugging
+                  assistance, and documentation generation.
+                </Translate>
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Code completion &
-                  suggestions
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet1">Code completion & suggestions</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Bug detection &
-                  debugging
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet2">Bug detection & debugging</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Documentation
-                  generation
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet3">Documentation generation</Translate>
                 </li>
               </ul>
               <div className="mt-auto pt-4 border-t text-xs text-muted-foreground">
-                <strong className="text-foreground">Example:</strong> Using
-                Copilot to build a React website faster
+                <strong className="text-foreground"><Translate id="homepage.spectrum.example1Label">Example:</Translate></strong> <Translate id="homepage.spectrum.example1">Using Copilot to build a React website faster</Translate>
               </div>
             </CardContent>
           </Card>
@@ -331,32 +333,32 @@ function AISpectrumSection() {
                 Covered
               </Badge>
               <div className="mb-4">
-                <h3 className="text-xl font-bold text-foreground">AI Driven</h3>
+                <h3 className="text-xl font-bold text-foreground">
+                  <Translate id="homepage.spectrum.aiDriven">AI Driven</Translate>
+                </h3>
                 <p className="text-sm font-medium text-primary uppercase tracking-wide">
-                  AI as Co-Creator
+                  <Translate id="homepage.spectrum.aiDrivenRole">AI as Co-Creator</Translate>
                 </p>
               </div>
               <p className="text-muted-foreground mb-6 flex-grow">
-                AI generates significant code from specifications. You act as
-                architect, director, and reviewer.
+                <Translate id="homepage.spectrum.aiDrivenDesc">
+                  AI generates significant code from specifications. You act as
+                  architect, director, and reviewer.
+                </Translate>
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Code generation
-                  from specs
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet4">Code generation from specs</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Automated testing
-                  & optimization
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet5">Automated testing & optimization</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Architecture from
-                  requirements
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet6">Architecture from requirements</Translate>
                 </li>
               </ul>
               <div className="mt-auto pt-4 border-t text-xs text-muted-foreground">
-                <strong className="text-foreground">Example:</strong> Writing a
-                spec for a REST API, AI generates complete FastAPI backend
+                <strong className="text-foreground"><Translate id="homepage.spectrum.example1Label">Example:</Translate></strong> <Translate id="homepage.spectrum.example2">Writing a spec for a REST API, AI generates complete FastAPI backend</Translate>
               </div>
             </CardContent>
           </Card>
@@ -366,32 +368,32 @@ function AISpectrumSection() {
             <CardContent className="flex flex-col h-full p-6">
               <Badge className="absolute top-4 right-4">Ultimate Goal</Badge>
               <div className="mb-4">
-                <h3 className="text-xl font-bold text-foreground">AI Native</h3>
+                <h3 className="text-xl font-bold text-foreground">
+                  <Translate id="homepage.spectrum.aiNative">AI Native</Translate>
+                </h3>
                 <p className="text-sm font-medium text-primary uppercase tracking-wide">
-                  AI IS the Software
+                  <Translate id="homepage.spectrum.aiNativeRole">AI IS the Software</Translate>
                 </p>
               </div>
               <p className="text-muted-foreground mb-6 flex-grow">
-                Applications architected around AI capabilities. LLMs and agents
-                are core functional components.
+                <Translate id="homepage.spectrum.aiNativeDesc">
+                  Applications architected around AI capabilities. LLMs and agents
+                  are core functional components.
+                </Translate>
               </p>
               <ul className="space-y-2 mb-6 text-sm text-muted-foreground">
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Natural language
-                  interfaces
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet7">Natural language interfaces</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Intelligent
-                  automation & reasoning
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet8">Intelligent automation & reasoning</Translate>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2 text-primary">•</span>Agent
-                  orchestration systems
+                  <span className="mr-2 text-primary">•</span><Translate id="homepage.spectrum.bullet9">Agent orchestration systems</Translate>
                 </li>
               </ul>
               <div className="mt-auto pt-4 border-t text-xs text-muted-foreground">
-                <strong className="text-foreground">Example:</strong> Building a
-                customer support agent that autonomously resolves tickets
+                <strong className="text-foreground"><Translate id="homepage.spectrum.example1Label">Example:</Translate></strong> <Translate id="homepage.spectrum.example3">Building a customer support agent that autonomously resolves tickets</Translate>
               </div>
             </CardContent>
           </Card>
@@ -401,20 +403,20 @@ function AISpectrumSection() {
         <div className="flex items-center justify-center gap-4">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-muted-foreground/30" />
-            <span className="text-sm text-muted-foreground">Helper</span>
+            <span className="text-sm text-muted-foreground"><Translate id="homepage.flow.helper">Helper</Translate></span>
           </div>
           <div className="w-12 h-px bg-border" />
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-primary" />
             <span className="text-sm font-medium text-foreground">
-              Co-Creator
+              <Translate id="homepage.flow.coCreator">Co-Creator</Translate>
             </span>
           </div>
           <div className="w-12 h-px bg-border" />
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-primary" />
             <span className="text-sm font-medium text-foreground">
-              Core System
+              <Translate id="homepage.flow.coreSystem">Core System</Translate>
             </span>
           </div>
         </div>
@@ -433,16 +435,15 @@ function FeaturesSection() {
             <div className="flex items-center gap-2 mb-4">
               <div className="w-2 h-2 bg-primary"></div>
               <span className="font-mono text-xs font-bold text-primary uppercase tracking-widest">
-                Core Pillars
+                <Translate id="homepage.features.badge">Core Pillars</Translate>
               </span>
             </div>
             <h2 className="text-4xl font-black tracking-tight text-foreground uppercase">
-              What Makes This Book Different
+              <Translate id="homepage.features.heading">What Makes This Book Different</Translate>
             </h2>
           </div>
           <p className="text-muted-foreground max-w-lg text-sm font-mono text-right md:text-right hidden md:block">
-            // A comprehensive, production-focused approach <br /> to co-learn
-            with AI in spec-driven way
+            // <Translate id="homepage.features.comment">A comprehensive, production-focused approach to co-learn with AI in spec-driven way</Translate>
           </p>
         </div>
 
@@ -450,33 +451,33 @@ function FeaturesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/40 border border-border/40">
           <Feature
             icon={Bot}
-            title="Co-Learning Philosophy"
-            description="Learn alongside AI agents. Not just using AI as a tool, but co-creating where both human and AI learn together."
+            title={<Translate id="homepage.feature.coLearning">Co-Learning Philosophy</Translate>}
+            description={<Translate id="homepage.feature.coLearningDesc">Learn alongside AI agents. Not just using AI as a tool, but co-creating where both human and AI learn together.</Translate>}
           />
           <Feature
             icon={Code}
-            title="Dual Language Mastery"
-            description="Python for reasoning & intelligence, TypeScript for interaction & UI. Master the bilingual AI-native stack."
+            title={<Translate id="homepage.feature.dualLanguage">Dual Language Mastery</Translate>}
+            description={<Translate id="homepage.feature.dualLanguageDesc">Python for reasoning & intelligence, TypeScript for interaction & UI. Master the bilingual AI-native stack.</Translate>}
           />
           <Feature
             icon={GitBranch}
-            title="Spec-Driven Development"
-            description="Write specifications that both humans and AI understand. Specs become executable blueprints for intelligent systems."
+            title={<Translate id="homepage.feature.specDriven">Spec-Driven Development</Translate>}
+            description={<Translate id="homepage.feature.specDrivenDesc">Write specifications that both humans and AI understand. Specs become executable blueprints for intelligent systems.</Translate>}
           />
           <Feature
             icon={Layers}
-            title="Agentic AI Systems"
-            description="Build with OpenAI Agents SDK and Google ADK. Create agents that reason, act, and collaborate autonomously."
+            title={<Translate id="homepage.feature.agentic">Agentic AI Systems</Translate>}
+            description={<Translate id="homepage.feature.agenticDesc">Build with OpenAI Agents SDK and Google ADK. Create agents that reason, act, and collaborate autonomously.</Translate>}
           />
           <Feature
             icon={Server}
-            title="Production-Ready Architecture"
-            description="Cloud-native deployment with Docker, Kubernetes, Dapr, and Ray. Scalable, secure, fault-tolerant systems."
+            title={<Translate id="homepage.feature.architecture">Production-Ready Architecture</Translate>}
+            description={<Translate id="homepage.feature.architectureDesc">Cloud-native deployment with Docker, Kubernetes, Dapr, and Ray. Scalable, secure, fault-tolerant systems.</Translate>}
           />
           <Feature
             icon={GraduationCap}
-            title="Complete Learning Journey"
-            description="46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production."
+            title={<Translate id="homepage.feature.journey">Complete Learning Journey</Translate>}
+            description={<Translate id="homepage.feature.journeyDesc">46 comprehensive chapters from programming basics to deploying enterprise agentic AI systems in production.</Translate>}
           />
         </div>
       </div>
@@ -488,49 +489,44 @@ function MaturityLevelsSection() {
   const levels = [
     {
       number: 1,
-      title: "AI Awareness",
-      subtitle: "Experimenting",
-      impact: "10-20% productivity gains",
-      description:
-        "Individual developers experimenting with AI coding tools. Early AI Assisted Development.",
-      approach: "AI Assisted (Individual)",
+      title: <Translate id="homepage.maturity.level1">AI Awareness</Translate>,
+      subtitle: <Translate id="homepage.maturity.level1.subtitle">Experimenting</Translate>,
+      impact: <Translate id="homepage.maturity.level1.impact">10-20% productivity gains</Translate>,
+      description: <Translate id="homepage.maturity.level1.description">Individual developers experimenting with AI coding tools. Early AI Assisted Development.</Translate>,
+      approach: <Translate id="homepage.maturity.level1.approach">AI Assisted (Individual)</Translate>,
     },
     {
       number: 2,
-      title: "AI Adoption",
-      subtitle: "Standardizing",
-      impact: "30-40% productivity boost",
-      description:
-        "Organization-wide adoption with governance. Established guidelines and security policies.",
-      approach: "AI Assisted (Team)",
+      title: <Translate id="homepage.maturity.level2">AI Adoption</Translate>,
+      subtitle: <Translate id="homepage.maturity.level2.subtitle">Standardizing</Translate>,
+      impact: <Translate id="homepage.maturity.level2.impact">30-40% productivity boost</Translate>,
+      description: <Translate id="homepage.maturity.level2.description">Organization-wide adoption with governance. Established guidelines and security policies.</Translate>,
+      approach: <Translate id="homepage.maturity.level2.approach">AI Assisted (Team)</Translate>,
     },
     {
       number: 3,
-      title: "AI Integration",
-      subtitle: "Transforming Workflows",
-      impact: "2-3x faster development",
-      description:
-        "AI-Driven Development practices. Specs become living documentation. Workflows redesigned around AI collaboration.",
-      approach: "AI Driven (Workflow)",
+      title: <Translate id="homepage.maturity.level3">AI Integration</Translate>,
+      subtitle: <Translate id="homepage.maturity.level3.subtitle">Transforming Workflows</Translate>,
+      impact: <Translate id="homepage.maturity.level3.impact">2-3x faster development</Translate>,
+      description: <Translate id="homepage.maturity.level3.description">AI-Driven Development practices. Specs become living documentation. Workflows redesigned around AI collaboration.</Translate>,
+      approach: <Translate id="homepage.maturity.level3.approach">AI Driven (Workflow)</Translate>,
     },
     {
       number: 4,
-      title: "AI-Native Products",
-      subtitle: "Building Intelligence",
-      impact: "New capabilities unlocked",
-      description:
-        "Products where AI/LLMs are core components. Agent orchestration, natural language interfaces, intelligent systems.",
-      approach: "AI Native (Product)",
+      title: <Translate id="homepage.maturity.level4">AI-Native Products</Translate>,
+      subtitle: <Translate id="homepage.maturity.level4.subtitle">Building Intelligence</Translate>,
+      impact: <Translate id="homepage.maturity.level4.impact">New capabilities unlocked</Translate>,
+      description: <Translate id="homepage.maturity.level4.description">Products where AI/LLMs are core components. Agent orchestration, natural language interfaces, intelligent systems.</Translate>,
+      approach: <Translate id="homepage.maturity.level4.approach">AI Native (Product)</Translate>,
       focus: true,
     },
     {
       number: 5,
-      title: "AI-First Enterprise",
-      subtitle: "Living in the Future",
-      impact: "10x productivity",
-      description:
-        "Entire organization AI-native. Custom models, self-improving systems, AI embedded in every aspect.",
-      approach: "AI Native (Enterprise)",
+      title: <Translate id="homepage.maturity.level5">AI-First Enterprise</Translate>,
+      subtitle: <Translate id="homepage.maturity.level5.subtitle">Living in the Future</Translate>,
+      impact: <Translate id="homepage.maturity.level5.impact">10x productivity</Translate>,
+      description: <Translate id="homepage.maturity.level5.description">Entire organization AI-native. Custom models, self-improving systems, AI embedded in every aspect.</Translate>,
+      approach: <Translate id="homepage.maturity.level5.approach">AI Native (Enterprise)</Translate>,
     },
   ];
 
@@ -540,14 +536,16 @@ function MaturityLevelsSection() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            Your AI Journey
+            <Translate id="homepage.maturity.badge">Your AI Journey</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Organizational AI Maturity Levels
+            <Translate id="homepage.maturity.heading">Organizational AI Maturity Levels</Translate>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Where does your organization stand? Understanding these levels helps
-            you chart your path forward.
+            <Translate id="homepage.maturity.description">
+              Where does your organization stand? Understanding these levels helps
+              you chart your path forward.
+            </Translate>
           </p>
         </div>
 
@@ -602,9 +600,9 @@ function MaturityLevelsSection() {
         <div className="mt-12 text-center">
           <p className="text-muted-foreground">
             <strong className="text-foreground">
-              This book prepares you for Levels 3-4:
+              <Translate id="homepage.maturity.cta">This book prepares you for Levels 3-4:</Translate>
             </strong>{" "}
-            Master AI-Driven workflows and build AI-Native products
+            <Translate id="homepage.maturity.ctaDescription">Master AI-Driven workflows and build AI-Native products</Translate>
           </p>
         </div>
       </div>
@@ -615,44 +613,47 @@ function MaturityLevelsSection() {
 function ParadigmShift() {
   const traditionalItems = [
     {
-      title: "Instruction-Based",
-      desc: "Tell computers exactly what to do with precise syntax",
-    },
-    { title: "Solo Coding", desc: "Developer writes every line manually" },
-    {
-      title: "Documentation as Afterthought",
-      desc: "Specs are static contracts written post-facto",
+      title: <Translate id="homepage.paradigm.item1.traditional">Instruction-Based</Translate>,
+      desc: <Translate id="homepage.paradigm.item1.desc">Tell computers exactly what to do with precise syntax</Translate>,
     },
     {
-      title: "Linear Learning",
-      desc: "Learn syntax → Build simple projects → Slowly scale",
+      title: <Translate id="homepage.paradigm.item2.traditional">Solo Coding</Translate>,
+      desc: <Translate id="homepage.paradigm.item2.desc">Developer writes every line manually</Translate>,
     },
     {
-      title: "Code-First",
-      desc: "Focus on implementation details from day one",
+      title: <Translate id="homepage.paradigm.item3.traditional">Documentation as Afterthought</Translate>,
+      desc: <Translate id="homepage.paradigm.item3.desc">Specs are static contracts written post-facto</Translate>,
+    },
+    {
+      title: <Translate id="homepage.paradigm.item4.traditional">Linear Learning</Translate>,
+      desc: <Translate id="homepage.paradigm.item4.desc">Learn syntax → Build simple projects → Slowly scale</Translate>,
+    },
+    {
+      title: <Translate id="homepage.paradigm.item5.traditional">Code-First</Translate>,
+      desc: <Translate id="homepage.paradigm.item5.desc">Focus on implementation details from day one</Translate>,
     },
   ];
 
   const aiNativeItems = [
     {
-      title: "Intent-Based",
-      desc: "Describe what you want; AI reasons how to build it",
+      title: <Translate id="homepage.paradigm.item1.aiNative">Intent-Based</Translate>,
+      desc: <Translate id="homepage.paradigm.item1.aiNativeDesc">Describe what you want; AI reasons how to build it</Translate>,
     },
     {
-      title: "Co-Learning Partnership",
-      desc: "You and AI teach each other through iteration",
+      title: <Translate id="homepage.paradigm.item2.aiNative">Co-Learning Partnership</Translate>,
+      desc: <Translate id="homepage.paradigm.item2.aiNativeDesc">You and AI teach each other through iteration</Translate>,
     },
     {
-      title: "Specs as Living Blueprints",
-      desc: "Specifications drive code, tests, and documentation",
+      title: <Translate id="homepage.paradigm.item3.aiNative">Specs as Living Blueprints</Translate>,
+      desc: <Translate id="homepage.paradigm.item3.aiNativeDesc">Specifications drive code, tests, and documentation</Translate>,
     },
     {
-      title: "Production-First Learning",
-      desc: "Build real agentic systems from day one",
+      title: <Translate id="homepage.paradigm.item4.aiNative">Production-First Learning</Translate>,
+      desc: <Translate id="homepage.paradigm.item4.aiNativeDesc">Build real agentic systems from day one</Translate>,
     },
     {
-      title: "Architecture-First",
-      desc: "Design intelligent collaborations, not just code",
+      title: <Translate id="homepage.paradigm.item5.aiNative">Architecture-First</Translate>,
+      desc: <Translate id="homepage.paradigm.item5.aiNativeDesc">Design intelligent collaborations, not just code</Translate>,
     },
   ];
 
@@ -662,17 +663,19 @@ function ParadigmShift() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            The Great Shift
+            <Translate id="homepage.paradigm.badge">The Great Shift</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            From Automation to Intelligence
+            <Translate id="homepage.paradigm.title">From Automation to Intelligence</Translate>
             <br />
-            <span className="text-primary">From Coding to Co-Creating</span>
+            <span className="text-primary"><Translate id="homepage.paradigm.subtitle">From Coding to Co-Creating</Translate></span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            AI-native development is not about replacing developers—it's about
-            amplifying intelligence. Learn to collaborate with reasoning
-            entities that learn with you.
+            <Translate id="homepage.paradigm.description">
+              AI-native development is not about replacing developers—it's about
+              amplifying intelligence. Learn to collaborate with reasoning
+              entities that learn with you.
+            </Translate>
           </p>
         </div>
 
@@ -683,10 +686,10 @@ function ParadigmShift() {
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-foreground">
-                  Traditional Development
+                  <Translate id="homepage.paradigm.traditional.heading">Traditional Development</Translate>
                 </h3>
                 <p className="text-muted-foreground uppercase text-xs font-medium tracking-wider mt-1">
-                  The automation era
+                  <Translate id="homepage.paradigm.traditional.subtitle">The automation era</Translate>
                 </p>
               </div>
               <ul className="space-y-4">
@@ -719,10 +722,10 @@ function ParadigmShift() {
               <Badge className="absolute top-4 right-4">The Future</Badge>
               <div className="text-center mb-6">
                 <h3 className="text-xl font-bold text-foreground">
-                  AI-Native Way
+                  <Translate id="homepage.paradigm.aiNative.heading">AI-Native Way</Translate>
                 </h3>
                 <p className="text-primary uppercase text-xs font-medium tracking-wider mt-1">
-                  The intelligence era
+                  <Translate id="homepage.paradigm.aiNative.subtitle">The intelligence era</Translate>
                 </p>
               </div>
               <ul className="space-y-4">
@@ -746,39 +749,39 @@ function ParadigmShift() {
 function DigitalFTEComparison() {
   const comparisonData = [
     {
-      feature: "Availability",
+      feature: <Translate id="homepage.fte.feature">Availability</Translate>,
       human: "40 hours/week",
-      digital: "168 hours/week (24/7)",
+      digital: <Translate id="homepage.fte.item1.digital">168 hours/week (24/7)</Translate>,
       highlight: true,
     },
     {
-      feature: "Monthly Cost",
+      feature: <Translate id="homepage.fte.feature2">Monthly Cost</Translate>,
       human: "$4,000 – $8,000+",
-      digital: "$500 – $2,000",
+      digital: <Translate id="homepage.fte.item2.digital">$500 – $2,000</Translate>,
       highlight: true,
     },
     {
-      feature: "Ramp-up Time",
+      feature: <Translate id="homepage.fte.feature3">Ramp-up Time</Translate>,
       human: "3 – 6 months",
-      digital: "Instant deployment",
+      digital: <Translate id="homepage.fte.item3.digital">Instant deployment</Translate>,
       highlight: false,
     },
     {
-      feature: "Consistency",
+      feature: <Translate id="homepage.fte.feature4">Consistency</Translate>,
       human: "Variable (85–95%)",
-      digital: "Predictable (99%+)",
+      digital: <Translate id="homepage.fte.item4.digital">Predictable (99%+)</Translate>,
       highlight: false,
     },
     {
-      feature: "Scaling",
+      feature: <Translate id="homepage.fte.feature5">Scaling</Translate>,
       human: "Linear (hire 10 for 10x)",
-      digital: "Exponential (instant clone)",
+      digital: <Translate id="homepage.fte.item5.digital">Exponential (instant clone)</Translate>,
       highlight: true,
     },
     {
-      feature: "Cost per Task",
+      feature: <Translate id="homepage.fte.feature6">Cost per Task</Translate>,
       human: "$30 – $60",
-      digital: "$3 – $6",
+      digital: <Translate id="homepage.fte.item6.digital">$3 – $6</Translate>,
       highlight: true,
     },
   ];
@@ -789,15 +792,15 @@ function DigitalFTEComparison() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            The ROI of Autonomy
+            <Translate id="homepage.fte.badge">The ROI of Autonomy</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Human FTE vs Digital FTE
+            <Translate id="homepage.fte.heading">Human FTE vs Digital FTE</Translate>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A Digital FTE works 168 hours a week with zero fatigue. That's{" "}
-            <span className="text-foreground font-semibold">4x the output</span>{" "}
-            at a fraction of the cost.
+            <Translate id="homepage.fte.description">A Digital FTE works 168 hours a week with zero fatigue. That's</Translate> {" "}
+            <span className="text-foreground font-semibold"><Translate id="homepage.fte.output">4x the output</Translate></span>{" "}
+            <Translate id="homepage.fte.cost">at a fraction of the cost.</Translate>
           </p>
         </div>
 
@@ -806,13 +809,13 @@ function DigitalFTEComparison() {
           <div className="grid grid-cols-3 gap-px bg-border/40 border border-border/40 overflow-hidden">
             {/* Header Row */}
             <div className="bg-muted/50 p-4 font-bold text-foreground text-sm uppercase tracking-wide">
-              Feature
+              <Translate id="homepage.fte.feature">Feature</Translate>
             </div>
             <div className="bg-muted/50 p-4 font-bold text-foreground text-sm uppercase tracking-wide text-center">
-              Human FTE
+              <Translate id="homepage.fte.human">Human FTE</Translate>
             </div>
             <div className="bg-primary/10 p-4 font-bold text-primary text-sm uppercase tracking-wide text-center border-l-2 border-primary">
-              Digital FTE
+              <Translate id="homepage.fte.digital">Digital FTE</Translate>
             </div>
 
             {/* Data Rows */}
@@ -871,6 +874,10 @@ function MonetizationModels() {
   const models = [
     {
       icon: "💼",
+      titleId: "homepage.monetize.model1.title",
+      priceId: "homepage.monetize.model1.price",
+      descId: "homepage.monetize.model1.description",
+      bestForId: "homepage.monetize.model1.bestFor",
       title: "Digital FTE Subscription",
       price: "$1k+/month",
       description:
@@ -879,6 +886,10 @@ function MonetizationModels() {
     },
     {
       icon: "🎯",
+      titleId: "homepage.monetize.model2.title",
+      priceId: "homepage.monetize.model2.price",
+      descId: "homepage.monetize.model2.description",
+      bestForId: "homepage.monetize.model2.bestFor",
       title: "Success Fee",
       price: "Pay-per-result",
       description:
@@ -887,6 +898,10 @@ function MonetizationModels() {
     },
     {
       icon: "📜",
+      titleId: "homepage.monetize.model3.title",
+      priceId: "homepage.monetize.model3.price",
+      descId: "homepage.monetize.model3.description",
+      bestForId: "homepage.monetize.model3.bestFor",
       title: "License the Recipe",
       price: "Annual/Perpetual",
       description:
@@ -895,6 +910,10 @@ function MonetizationModels() {
     },
     {
       icon: "🏪",
+      titleId: "homepage.monetize.model4.title",
+      priceId: "homepage.monetize.model4.price",
+      descId: "homepage.monetize.model4.description",
+      bestForId: "homepage.monetize.model4.bestFor",
       title: "Skill Marketplace",
       price: "Volume-based",
       description: "Sell modular expertise packs via OpenAI Apps or SkillPort.",
@@ -908,16 +927,15 @@ function MonetizationModels() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
-            Monetize Your Expertise
+            <Translate id="homepage.monetize.badge">Monetize Your Expertise</Translate>
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Four Ways to Profit from AI Agents
+            <Translate id="homepage.monetize.heading">Four Ways to Profit from AI Agents</Translate>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Your domain knowledge—whether in sales, legal, finance, or any
-            field—can become a{" "}
+            <Translate id="homepage.monetize.description">Your domain knowledge—whether in sales, legal, finance, or any field—can become a</Translate> {" "}
             <span className="text-foreground font-semibold">
-              recurring revenue stream
+              <Translate id="homepage.monetize.recurringRevenue">recurring revenue stream</Translate>
             </span>
             .
           </p>
@@ -933,20 +951,20 @@ function MonetizationModels() {
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="text-4xl mb-4">{model.icon}</div>
                 <h3 className="text-lg font-bold text-foreground mb-1">
-                  {model.title}
+                  <Translate id={model.titleId}>{model.title}</Translate>
                 </h3>
                 <p className="text-primary font-semibold text-sm mb-3">
-                  {model.price}
+                  <Translate id={model.priceId}>{model.price}</Translate>
                 </p>
                 <p className="text-muted-foreground text-sm flex-grow mb-4">
-                  {model.description}
+                  <Translate id={model.descId}>{model.description}</Translate>
                 </p>
                 <div className="pt-3 border-t border-border/40">
                   <span className="text-xs text-muted-foreground">
                     Best for:{" "}
                   </span>
                   <span className="text-xs text-foreground font-medium">
-                    {model.bestFor}
+                    <Translate id={model.bestForId}>{model.bestFor}</Translate>
                   </span>
                 </div>
               </CardContent>
@@ -967,46 +985,39 @@ function AgentFactoryThesis() {
           <div className="text-6xl text-primary/30 mb-6">"</div>
 
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground leading-tight mb-8">
-            Build <span className="text-primary">Digital FTEs</span> that work{" "}
-            <span className="text-primary">24/7</span>. Your domain
-            expertise—whether in sales, legal, finance, or healthcare—becomes an
-            autonomous AI agent that never sleeps.
+            <Translate id="homepage.thesis.heading">Build Digital FTEs that work 24/7. Your domain expertise—whether in sales, legal, finance, or healthcare—becomes an autonomous AI agent that never sleeps.</Translate>
           </h2>
 
           <p className="text-lg text-muted-foreground mb-8">
-            Transform your knowledge into scalable digital products that
-            generate
+            <Translate id="homepage.thesis.subheading">Transform your knowledge into scalable digital products that generate</Translate>
             <span className="text-foreground font-semibold">
               {" "}
-              recurring revenue
+              <Translate id="homepage.thesis.recurringRevenue">recurring revenue</Translate>
             </span>{" "}
-            while you sleep.
+            <Translate id="homepage.thesis.subheadingEnd">while you sleep.</Translate>
           </p>
 
           {/* Three Pillars */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="p-6 border border-border/40 bg-background">
               <div className="text-2xl mb-3">🏭</div>
-              <h3 className="font-bold text-foreground mb-2">Manufacture</h3>
+              <h3 className="font-bold text-foreground mb-2"><Translate id="homepage.thesis.manufacture.title">Manufacture</Translate></h3>
               <p className="text-sm text-muted-foreground">
-                Use AI Coding Agents (Claude Code) to build your expertise into
-                deployable agents
+                <Translate id="homepage.thesis.manufacture.desc">Use AI Coding Agents (Claude Code) to build your expertise into deployable agents</Translate>
               </p>
             </div>
             <div className="p-6 border border-border/40 bg-background">
               <div className="text-2xl mb-3">📦</div>
-              <h3 className="font-bold text-foreground mb-2">Package</h3>
+              <h3 className="font-bold text-foreground mb-2"><Translate id="homepage.thesis.package.title">Package</Translate></h3>
               <p className="text-sm text-muted-foreground">
-                Bundle into production-ready Digital FTEs with OpenAI or
-                Anthropic Agent SDKs
+                <Translate id="homepage.thesis.package.desc">Bundle into production-ready Digital FTEs with OpenAI or Anthropic Agent SDKs</Translate>
               </p>
             </div>
             <div className="p-6 border border-border/40 bg-background">
               <div className="text-2xl mb-3">💰</div>
-              <h3 className="font-bold text-foreground mb-2">Monetize</h3>
+              <h3 className="font-bold text-foreground mb-2"><Translate id="homepage.thesis.monetize.title">Monetize</Translate></h3>
               <p className="text-sm text-muted-foreground">
-                Sell as managed subscriptions, success fees, or enterprise
-                licenses
+                <Translate id="homepage.thesis.monetize.desc">Sell as managed subscriptions, success fees, or enterprise licenses</Translate>
               </p>
             </div>
           </div>
@@ -1021,11 +1032,10 @@ function FinalCTA() {
     <section className="py-24 border-b border-border/40 bg-background">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 text-center pt-12 pb-12 min-h-[400px] flex flex-col items-center justify-center">
         <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-          Ready to Build Your Agent Factory?
+          <Translate id="homepage.cta.heading">Ready to Build Your Agent Factory?</Translate>
         </h3>
         <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Transform your domain expertise into Digital FTEs that work 24/7 and
-          generate recurring revenue
+          <Translate id="homepage.cta.description">Transform your domain expertise into Digital FTEs that work 24/7 and generate recurring revenue</Translate>
         </p>
         <Button
           variant="outline"

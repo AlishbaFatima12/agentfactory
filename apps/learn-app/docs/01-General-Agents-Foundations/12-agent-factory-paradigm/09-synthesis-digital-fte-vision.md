@@ -61,24 +61,24 @@ teaching_guide:
   session_group: 4
   session_title: "SDD, Synthesis, and Enterprise Sales"
   key_points:
-    - "The Tools→Teammates→Digital FTEs progression is the chapter's thesis in three words — a tool waits for prompts, a teammate reasons, a Digital FTE owns an entire function 24/7"
-    - "AI amplifies your habits — this is the most actionable insight: clear specs + AI = excellent fast results; vague ideas + AI = terrible fast results"
+    - "The Tools→Teammates→Digital FTEs progression is the chapter's thesis in three words; a tool waits for prompts, a teammate reasons, a Digital FTE owns an entire function 24/7"
+    - "AI amplifies your habits; this is the most actionable insight: clear specs + AI = excellent fast results; vague ideas + AI = terrible fast results"
     - "The component table (Brain=Model, Hands=MCP, Training=Skills, Shift=Autonomous Loop) shows exactly what transforms a General Agent into a Digital FTE"
   misconceptions:
-    - "Students think 'Digital FTE' means an AI that replaces a human 1:1 — a Digital FTE owns a function (like tier-1 support), not a person's entire job"
-    - "Students hear 'discipline matters more with AI' and think it means AI is unreliable — it means AI is a powerful amplifier that magnifies whatever approach you bring"
-    - "Students think Vibe Coding is always wrong — it has legitimate uses for learning and prototyping, the problem is using it for production"
+    - "Students think 'Digital FTE' means an AI that replaces a human 1:1; a Digital FTE owns a function (like tier-1 support), not a person's entire job"
+    - "Students hear 'discipline matters more with AI' and think it means AI is unreliable; it means AI is a powerful amplifier that magnifies whatever approach you bring"
+    - "Students think Vibe Coding is always wrong; it has legitimate uses for learning and prototyping, the problem is using it for production"
   discussion_prompts:
     - "If AI amplifies both good and bad habits, what ONE habit change would have the biggest positive impact on your AI collaboration?"
-    - "What repetitive function in your organization could become a Digital FTE — and what's the first thing you'd need to specify?"
+    - "What repetitive function in your organization could become a Digital FTE; and what's the first thing you'd need to specify?"
   teaching_tips:
-    - "This is a short synthesis lesson — spend less time lecturing and more time connecting concepts from previous lessons"
-    - "The amplification table (Clear specs → Excellent fast vs Vague requirements → Terrible fast) is the single most memorable visual — project it and let students react"
-    - "Use the 'How Everything Connects' table as a chapter recap — walk through each row and ask students to explain the connection"
-    - "End by presenting the choice (Path A: Vibe Coding vs Path B: SDD) — this sets the stakes for the rest of the book"
+    - "This is a short synthesis lesson; spend less time lecturing and more time connecting concepts from previous lessons"
+    - "The amplification table (Clear specs → Excellent fast vs Vague requirements → Terrible fast) is the single most memorable visual; project it and let students react"
+    - "Use the 'How Everything Connects' table as a chapter recap; walk through each row and ask students to explain the connection"
+    - "End by presenting the choice (Path A: Vibe Coding vs Path B: SDD); this sets the stakes for the rest of the book"
   assessment_quick_check:
     - "Ask students to explain the difference between an AI tool and a Digital FTE in one sentence"
-    - "Ask: 'Does AI make discipline more or less important, and why?' — the correct answer is 'more important because AI amplifies whatever approach you bring'"
+    - "Ask: 'Does AI make discipline more or less important, and why?'; the correct answer is 'more important because AI amplifies whatever approach you bring'"
 
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
@@ -98,7 +98,7 @@ Here is the refined synthesis, incorporating the requirement for 24/7 autonomous
 
 You've traveled through eight lessons that established a new mental model for software development. You've seen the evidence of an inflection point, understood the fundamental constraints of LLMs, and learned the scale of transformation. You've learned how the **Agent Factory** paradigm works, what makes AI agents powerful, and how to structure work for AI collaboration.
 
-Now it's time to see where this leads—and the critical choice you face.
+Now it's time to see where this leads: and the critical choice you face.
 
 ### From Tools to Teammates
 
@@ -106,13 +106,13 @@ Throughout this chapter, we've been building toward a realization that changes h
 
 - **Traditional View:** AI is a tool. You prompt it, it responds, you use the output.
 - **Agent Factory View:** AI agents are teammates. They reason, remember, act, and improve.
-- **Digital FTE View:** AI agents become **Digital Full-Time Employees**—specialized digital workers that handle entire functions within your organization.
+- **Digital FTE View:** AI agents become **Digital Full-Time Employees**:specialized digital workers that handle entire functions within your organization.
 
 ### The Evolution: Generalists vs. Digital FTEs
 
 A common question arises: _Can’t a powerful General Agent (like Claude Code) act as a Digital FTE?_
 
-The answer is **yes**, provided it is moved out of the "chat box" and into a production environment. A General Agent becomes a Digital FTE when you augment its raw reasoning with **Agent Skills** and **MCP (Model Context Protocol)**, and—crucially—deploy it to run **autonomously 24/7**.
+The answer is **yes**, provided it is moved out of the "chat box" and into a production environment. A General Agent becomes a Digital FTE when you augment its raw reasoning with **Agent Skills** and **MCP (Model Context Protocol)**, and: crucially: deploy it to run **autonomously 24/7**.
 
 | Component             | Role in the Digital FTE                                                                                        |
 | --------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -123,7 +123,7 @@ The answer is **yes**, provided it is moved out of the "chat box" and into a pro
 
 ### The New Standard of Work
 
-A **Digital FTE** is the total package: a Custom Agent (or a Generalist with specific MCP and Agent Skills integrations) engineered to **own a specific function**—such as continuous security auditing, real-time code review, or automated tier-1 support.
+A **Digital FTE** is the total package: a Custom Agent (or a Generalist with specific MCP and Agent Skills integrations) engineered to **own a specific function**:such as continuous security auditing, real-time code review, or automated tier-1 support.
 
 > **The FTE Threshold:** It isn't just about what the agent _can_ do, but _how_ it exists. A tool waits for a prompt; a Digital FTE monitors its domain, identifies needs, and executes solutions with the reliability and persistence you'd expect from a human team member.
 
@@ -172,7 +172,7 @@ AI is an amplifier. It amplifies your good habits _and_ your bad habits. It acce
 
 If you write clear specifications, AI executes them precisely and quickly.
 
-If you work from vague ideas, AI generates confident-looking code that's wrong in subtle ways—faster than you can catch the errors.
+If you work from vague ideas, AI generates confident-looking code that's wrong in subtle ways: faster than you can catch the errors.
 
 **This is why Spec-Driven Development matters more in the AI era, not less.**
 
@@ -182,7 +182,7 @@ The concepts from this chapter form an integrated system:
 
 | Lesson | Core Concept               | Connection to Digital FTEs                                                                                |
 | ------ | -------------------------- | --------------------------------------------------------------------------------------------------------- |
-| 1      | 2025 Inflection Point      | AI coding is production-ready—Digital FTEs are now practical                                              |
+| 1      | 2025 Inflection Point      | AI coding is production-ready: Digital FTEs are now practical                                              |
 | 2      | Three Core LLM Constraints | Understanding statelessness, probabilistic outputs, and context limits shapes how you design Digital FTEs |
 | 3      | From Coder to Orchestrator | You manage Digital FTEs, you don't compete with them                                                      |
 | 4      | Five Powers & AI Stack     | Digital FTEs combine See, Hear, Reason, Act, Remember via MCP                                             |
@@ -227,11 +227,11 @@ This book teaches Path B.
 
 In this chapter, you learned:
 
-1. **The 2025 Inflection Point** (Lesson 1): Concrete evidence that AI coding reached production quality—ICPC perfect scores, 84% developer adoption, $3 trillion economy transformation.
+1. **The 2025 Inflection Point** (Lesson 1): Concrete evidence that AI coding reached production quality: ICPC perfect scores, 84% developer adoption, $3 trillion economy transformation.
 
 2. **Three Core Operational Constraints of LLMs** (Lesson 2): LLMs are stateless (no memory between sessions), probabilistic (variable outputs from identical inputs), and context-limited (finite working memory). These constraints explain why methodologies like SDD, AGENTS.md, and context engineering exist.
 
-3. **From Coder to Orchestrator** (Lesson 3): Your role shifts from typing code to directing AI. The 10% you contribute—judgment, specifications, validation—becomes infinitely more valuable.
+3. **From Coder to Orchestrator** (Lesson 3): Your role shifts from typing code to directing AI. The 10% you contribute: judgment, specifications, validation: becomes infinitely more valuable.
 
 4. **The Five Powers & AI Stack** (Lesson 4): Agents combine See, Hear, Reason, Act, and Remember via a three-layer stack (Frontier Models → AI-First IDEs → Development Agents) connected by MCP.
 
@@ -243,11 +243,11 @@ In this chapter, you learned:
 
 8. **Spec-Driven Development** (Lesson 8): The four-phase methodology (specify → clarify → plan → implement) that makes AI collaboration effective.
 
-9. **The Digital FTE Vision** (this lesson): Custom Agents and General Agents can become Digital Full-Time Employees. AI amplifies your habits—so discipline matters more, not less.
+9. **The Digital FTE Vision** (this lesson): Custom Agents and General Agents can become Digital Full-Time Employees. AI amplifies your habits: so discipline matters more, not less.
 
 10. **Selling Agentic AI Services** (Lesson 10): The $100-400 billion market opportunity, enterprise buying patterns, four value propositions, and outcome-based pricing models for selling your Digital FTE solutions.
 
-You now have the mental models for AI-native development—and the business strategy to monetize them.
+You now have the mental models for AI-native development: and the business strategy to monetize them.
 
 **Next**: Lesson 10: Selling Agentic AI Services teaches you how to bring your Digital FTE capabilities to market, covering enterprise sales positioning, the four value propositions, and outcome-based commercial models.
 

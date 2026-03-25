@@ -4,7 +4,7 @@ title: "Give Your Employee a Memory"
 chapter: 24
 lesson: 7
 duration_minutes: 40
-description: "Add persistent memory using SQLite tables for action logging, knowledge storage, and correction capture — a closed feedback loop where your employee learns from its mistakes"
+description: "Add persistent memory using SQLite tables for action logging, knowledge storage, and correction capture: a closed feedback loop where your employee learns from its mistakes"
 keywords:
   [
     "persistent memory",
@@ -67,20 +67,20 @@ cognitive_load:
 
 differentiation:
   extension_for_advanced: "Add a confidence_score column to knowledge rows. When the employee acts on low-confidence knowledge, it flags the action for review. Implement a 'knowledge audit' command listing stored knowledge sorted by confidence."
-  remedial_for_struggling: "Start with the action log only — one table, one INSERT instruction in CLAUDE.md. Get 3 actions logged before attempting the knowledge store."
+  remedial_for_struggling: "Start with the action log only: one table, one INSERT instruction in CLAUDE.md. Get 3 actions logged before attempting the knowledge store."
 ---
 
 # Give Your Employee a Memory
 
-Your employee knows boundaries. It knows when to act and when to ask. But every time a session ends, it forgets everything — every correction you gave, every preference you expressed, every mistake it made. Tomorrow it will make the same errors you corrected today.
+Your employee knows boundaries. It knows when to act and when to ask. But every time a session ends, it forgets everything: every correction you gave, every preference you expressed, every mistake it made. Tomorrow it will make the same errors you corrected today.
 
 This is the gap between a capable employee and one that actually improves. In Prove Professional Value, you will need your employee to spot patterns and make proactive recommendations. An employee with no memory of past interactions cannot spot patterns. It has no past to draw from.
 
-The solution is a closed feedback loop: the employee acts, logs what it did, receives your corrections, persists those corrections as structured knowledge, and behaves differently next time. This loop applies three of the Seven Principles you learned in Part 1. Principle 5 (Structured Persistent State) graduates your employee's memory from text files to proper database tables. Principle 7 (Observability) gives you a structured audit trail of every autonomous action. Principle 3 (Verification) closes the loop — your corrections become the verification signal that steers future behavior.
+The solution is a closed feedback loop: the employee acts, logs what it did, receives your corrections, persists those corrections as structured knowledge, and behaves differently next time. This loop applies three of the Seven Principles you learned in Part 1. Principle 5 (Structured Persistent State) graduates your employee's memory from text files to proper database tables. Principle 7 (Observability) gives you a structured audit trail of every autonomous action. Principle 3 (Verification) closes the loop: your corrections become the verification signal that steers future behavior.
 
-In Structured Data and Persistent Storage, you learned schema design, constraints, CRUD operations, and transactions using SQLAlchemy and PostgreSQL on Neon. Here you apply the same concepts — column types, NOT NULL, CHECK constraints, INSERT/SELECT — but with SQLite instead of PostgreSQL. Why SQLite? Because NanoClaw already uses SQLite internally for its own message history and task scheduling. Your employee's memory tables live alongside NanoClaw's own database in the group's persistent storage. The syntax is simpler (no ORM, no cloud connection), but the design principles transfer directly: schema contracts reject bad data, constraints make impossible states impossible, and queries answer questions without new code.
+In Structured Data and Persistent Storage, you learned schema design, constraints, CRUD operations, and transactions using SQLAlchemy and PostgreSQL on Neon. Here you apply the same concepts: column types, NOT NULL, CHECK constraints, INSERT/SELECT, but with SQLite instead of PostgreSQL. Why SQLite? Because NanoClaw already uses SQLite internally for its own message history and task scheduling. Your employee's memory tables live alongside NanoClaw's own database in the group's persistent storage. The syntax is simpler (no ORM, no cloud connection), but the design principles transfer directly: schema contracts reject bad data, constraints make impossible states impossible, and queries answer questions without new code.
 
-The extraction of structured knowledge from your natural-language corrections also builds on Computation and Data Extraction. In that chapter, you directed your agent to pull structured fields from messy text — amounts from bank statements, categories from descriptions. Here you apply the same pattern: extracting structured facts (subject, predicate, object) from your natural-language corrections like "Client X prefers bullet points."
+The extraction of structured knowledge from your natural-language corrections also builds on Computation and Data Extraction. In that chapter, you directed your agent to pull structured fields from messy text: amounts from bank statements, categories from descriptions. Here you apply the same pattern: extracting structured facts (subject, predicate, object) from your natural-language corrections like "Client X prefers bullet points."
 
 ## The Challenge
 
@@ -95,40 +95,40 @@ Give your employee persistent memory so it logs autonomous actions, remembers co
 
 ### Deliverables
 
-- `memory-config.md` — schema designs and CLAUDE.md additions for memory behavior
+- `memory-config.md`: schema designs and CLAUDE.md additions for memory behavior
 - Updated `groups/main/CLAUDE.md` with logging and correction instructions
 
 ## Use Case Gallery
 
-**Accountant** — The action log records every expense categorization, invoice summary, and report generation. The knowledge store accumulates client preferences: "Client X prefers detailed line items, not category totals." Next time the employee generates a report for Client X, it checks the knowledge store and formats accordingly.
+**Accountant**: The action log records every expense categorization, invoice summary, and report generation. The knowledge store accumulates client preferences: "Client X prefers detailed line items, not category totals." Next time the employee generates a report for Client X, it checks the knowledge store and formats accordingly.
 
-**Teacher** — The action log records every lesson plan generated, curriculum gap flagged, and resource compiled. The knowledge store learns from corrections: "Grade 5 needs simpler vocabulary than Grade 8 — rewrite any lesson plan using words a 10-year-old would know." The employee checks this before generating Grade 5 content.
+**Teacher**: The action log records every lesson plan generated, curriculum gap flagged, and resource compiled. The knowledge store learns from corrections: "Grade 5 needs simpler vocabulary than Grade 8: rewrite any lesson plan using words a 10-year-old would know." The employee checks this before generating Grade 5 content.
 
-**Consultant** — The action log records every research summary sent, client status update compiled, and meeting note drafted. The knowledge store captures communication preferences: "CEO prefers bullet points under 5 items — never send paragraphs." The employee restructures all CEO-bound output to match.
+**Consultant**: The action log records every research summary sent, client status update compiled, and meeting note drafted. The knowledge store captures communication preferences: "CEO prefers bullet points under 5 items, never send paragraphs." The employee restructures all CEO-bound output to match.
 
-**Recruiter** — The action log records every resume screened, outreach template drafted, and pipeline report generated. The knowledge store learns evaluation criteria: "Engineering team values open source contributions — always check GitHub profiles and mention notable repos." The employee highlights this in future candidate summaries.
+**Recruiter**: The action log records every resume screened, outreach template drafted, and pipeline report generated. The knowledge store learns evaluation criteria: "Engineering team values open source contributions, always check GitHub profiles and mention notable repos." The employee highlights this in future candidate summaries.
 
 ## Hints
 
 <details>
-<summary>Level 1 — Think about what to remember</summary>
+<summary>Level 1: Think about what to remember</summary>
 
 Your employee needs two categories of memory:
 
-**Things it DID** (the action log). This answers the question: "What have you been doing?" Every autonomous action — sending a message, generating a report, categorizing a file — gets a row. This is Principle 7 (Observability) made concrete: you can audit your employee's behavior with a SQL query instead of scrolling through chat history.
+**Things it DID** (the action log). This answers the question: "What have you been doing?" Every autonomous action (sending a message, generating a report, categorizing a file) gets a row. This is Principle 7 (Observability) made concrete: you can audit your employee's behavior with a SQL query instead of scrolling through chat history.
 
-**Things it LEARNED** (the knowledge store). This answers the question: "What do you know about my preferences?" Every correction you give — "no, format it as bullets" or "always check the deadline before committing" — becomes a structured fact. This is Principle 5 (Structured Persistent State): real knowledge stored in tables with constraints, not scattered across conversation logs.
+**Things it LEARNED** (the knowledge store). This answers the question: "What do you know about my preferences?" Every correction you give: "no, format it as bullets" or "always check the deadline before committing": becomes a structured fact. This is Principle 5 (Structured Persistent State): real knowledge stored in tables with constraints, not scattered across conversation logs.
 
-Both use the schema design concepts from Structured Data and Persistent Storage — column types, constraints, NOT NULL, CHECK — applied to SQLite instead of PostgreSQL. The design thinking is the same; the syntax is simpler.
+Both use the schema design concepts from Structured Data and Persistent Storage (column types, constraints, NOT NULL, CHECK) applied to SQLite instead of PostgreSQL. The design thinking is the same; the syntax is simpler.
 
-**Where does the database live?** NanoClaw mounts each group's directory (`groups/main/`) as writable storage inside the container at `/workspace/group`. Files your employee creates there persist on the host filesystem and survive container restarts. Your SQLite database file goes here — it is as persistent as your `CLAUDE.md` and `SKILL.md` files.
+**Where does the database live?** NanoClaw mounts each group's directory (`groups/main/`) as writable storage inside the container at `/workspace/group`. Files your employee creates there persist on the host filesystem and survive container restarts. Your SQLite database file goes here: it is as persistent as your `CLAUDE.md` and `SKILL.md` files.
 
-Also consider: **who** is allowed to write corrections? For now, only you should be able to modify the knowledge store. The action log is append-only — your employee writes to it, and you read from it.
+Also consider: **who** is allowed to write corrections? For now, only you should be able to modify the knowledge store. The action log is append-only: your employee writes to it, and you read from it.
 
 </details>
 
 <details>
-<summary>Level 2 — Ask your AI to help design the schema</summary>
+<summary>Level 2: Ask your AI to help design the schema</summary>
 
 Open a conversation with Claude and try this prompt:
 
@@ -156,7 +156,7 @@ Then write CLAUDE.md instructions that tell the employee to:
 
 Review the AI's schema against what you learned in Structured Data and Persistent Storage. Are the constraints appropriate? Are the column types right? Adjust before implementing.
 
-Here is what a working correction-capture instruction looks like in CLAUDE.md. Use this as a starting template — adapt the wording and examples for your profession:
+Here is what a working correction-capture instruction looks like in CLAUDE.md. Use this as a starting template: adapt the wording and examples for your profession:
 
 ```markdown
 ## Correction Capture
@@ -175,16 +175,16 @@ it should be..."), do this:
 4. Confirm: "Got it, I have noted that [subject] [predicate] [object]."
 ```
 
-The key insight: your employee needs to **detect** that a message is a correction (not a new task), **extract** the structured fact, and **persist** it. The CLAUDE.md instruction must be explicit about all three steps — if you leave any step implicit, the agent will skip it inconsistently.
+The key insight: your employee needs to **detect** that a message is a correction (not a new task), **extract** the structured fact, and **persist** it. The CLAUDE.md instruction must be explicit about all three steps: if you leave any step implicit, the agent will skip it inconsistently.
 
 </details>
 
 <details>
-<summary>Level 3 — Step-by-step implementation</summary>
+<summary>Level 3: Step-by-step implementation</summary>
 
 **Step 1: Create the database**
 
-NanoClaw agents run Claude Code inside containers. Your agent can execute SQLite commands using the `sqlite3` CLI or Python scripts. The group directory (`groups/main/`) is mounted as writable storage at `/workspace/group` inside the container — files you create there persist on the host filesystem and survive container restarts, just like your `CLAUDE.md`.
+NanoClaw agents run Claude Code inside containers. Your agent can execute SQLite commands using the `sqlite3` CLI or Python scripts. The group directory (`groups/main/`) is mounted as writable storage at `/workspace/group` inside the container: files you create there persist on the host filesystem and survive container restarts, just like your `CLAUDE.md`.
 
 Create the database and both tables. You can do this by asking your employee to run the SQL, or by running it yourself on the host:
 
@@ -239,7 +239,7 @@ Knowledge table:
 
 **Step 3: Add CLAUDE.md instructions**
 
-Add these sections to your `groups/main/CLAUDE.md`. Be explicit — your employee executes these as `sqlite3` commands against `/workspace/group/memory.db`:
+Add these sections to your `groups/main/CLAUDE.md`. Be explicit: your employee executes these as `sqlite3` commands against `/workspace/group/memory.db`:
 
 ```markdown
 ## Memory System
@@ -285,7 +285,7 @@ Trigger 3 autonomous actions (send a message, generate a summary, categorize som
 
 **Step 5: Test the correction loop**
 
-Give your employee 2 corrections during normal work. For example: "No, always use bullet points for Client X" or "Grade 5 needs simpler vocabulary." Then trigger a task that should use that knowledge. Verify the employee's behavior changed — it should now apply the correction without being reminded. If the correction is not picked up, check the knowledge table: `sqlite3 groups/main/memory.db "SELECT * FROM knowledge"` — if the row is missing, refine your correction-capture instruction to be more explicit about detection triggers.
+Give your employee 2 corrections during normal work. For example: "No, always use bullet points for Client X" or "Grade 5 needs simpler vocabulary." Then trigger a task that should use that knowledge. Verify the employee's behavior changed: it should now apply the correction without being reminded. If the correction is not picked up, check the knowledge table: `sqlite3 groups/main/memory.db "SELECT * FROM knowledge"`: if the row is missing, refine your correction-capture instruction to be more explicit about detection triggers.
 
 **Step 6: Document in `memory-config.md`**
 

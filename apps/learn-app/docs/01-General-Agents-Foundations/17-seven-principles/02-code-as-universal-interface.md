@@ -59,22 +59,22 @@ teaching_guide:
   session_group: 1
   session_title: "Foundation Principles"
   key_points:
-    - "Bash is the hands (navigate, explore), Code is the brain (compute, build) — students must understand this distinction to avoid confusing Principles 1 and 2"
+    - "Bash is the hands (navigate, explore), Code is the brain (compute, build): students must understand this distinction to avoid confusing Principles 1 and 2"
     - "Five Powers framework (Precise Thinking, Workflow Orchestration, Organized Memory, Universal Compatibility, Instant Tool Creation) gives students vocabulary for what code enables"
-    - "General agents beat specialists because code has no pre-built feature limits — Sarah's 3000-photo example shows this concretely"
-    - "The 'code must actually work' caveat sets up Principle 3 (Verification) — code is powerful but probabilistic generation means verification is essential"
+    - "General agents beat specialists because code has no pre-built feature limits: Sarah's 3000-photo example shows this concretely"
+    - "The 'code must actually work' caveat sets up Principle 3 (Verification): code is powerful but probabilistic generation means verification is essential"
   misconceptions:
-    - "Students think 'code as interface' means they need to learn programming — the principle is about describing problems clearly so agents write code, not about writing it yourself"
-    - "Students confuse Bash (Principle 1) with Code (Principle 2) — draw the hands-vs-brain analogy clearly"
-    - "Students assume general agents are always better than specialized tools — for common tasks, specialized apps may be more convenient; general agents shine for unique combinations"
+    - "Students think 'code as interface' means they need to learn programming: the principle is about describing problems clearly so agents write code, not about writing it yourself"
+    - "Students confuse Bash (Principle 1) with Code (Principle 2): draw the hands-vs-brain analogy clearly"
+    - "Students assume general agents are always better than specialized tools: for common tasks, specialized apps may be more convenient; general agents shine for unique combinations"
   discussion_prompts:
-    - "Think of a task where you've tried three different apps and none did exactly what you needed — how would a general agent's ability to write custom code change that?"
+    - "Think of a task where you've tried three different apps and none did exactly what you needed: how would a general agent's ability to write custom code change that?"
     - "Which of the Five Powers would be most valuable in your daily work, and why?"
   teaching_tips:
-    - "Sarah's photo story is the perfect opener — every student has experienced the frustration of apps that almost-but-don't-quite fit their needs"
+    - "Sarah's photo story is the perfect opener: every student has experienced the frustration of apps that almost-but-don't-quite fit their needs"
     - "The specialist trap diagram (4 separate agents vs 1 general agent) is worth drawing on the whiteboard"
-    - "Walk through Marcus's budget analysis code example even for non-coders — the point isn't the syntax, it's that the agent translated plain English into precise computation"
-    - "End with the safety caveat: code is powerful but must work — this creates natural urgency for the next lesson on verification"
+    - "Walk through Marcus's budget analysis code example even for non-coders: the point isn't the syntax, it's that the agent translated plain English into precise computation"
+    - "End with the safety caveat: code is powerful but must work: this creates natural urgency for the next lesson on verification"
   assessment_quick_check:
     - "Name the Five Powers of code and give a real-world example for each"
     - "What's the difference between Bash (Principle 1) and Code (Principle 2)?"
@@ -105,7 +105,7 @@ Fifteen minutes later, her photos were perfectly organized in exactly the way sh
 
 **This is Principle 2 in action.** The general agent succeeded where specialized apps failed because it could write code. Code became the interface through which the agent could do anything Sarah needed, not just what some app designer anticipated.
 
-## Wait—Isn't Bash Already Code?
+## Wait,Isn't Bash Already Code?
 
 If you just read about Principle 1 (Bash is the Key), you might wonder: "Isn't Bash code? Why are these separate principles?"
 
@@ -116,9 +116,9 @@ Good question. Here's the distinction:
 | **Bash (Principle 1)** | The Hands | Navigate, explore, move files, search, observe | Walking through rooms, opening drawers, looking around |
 | **Code (Principle 2)** | The Brain | Calculate, process data, build logic, create solutions | Thinking, planning, solving puzzles, building tools |
 
-Bash commands like `ls`, `grep`, `mv`, and `find` let the agent **navigate and manipulate** the file system. They're quick, direct operations—look here, move that, search for this.
+Bash commands like `ls`, `grep`, `mv`, and `find` let the agent **navigate and manipulate** the file system. They're quick, direct operations,look here, move that, search for this.
 
-Code (Python scripts, data processing, custom programs) lets the agent **think and build**. When Sarah needed her photos analyzed for location data, compared for duplicates, and reorganized with custom naming—that required computation, not just file manipulation.
+Code (Python scripts, data processing, custom programs) lets the agent **think and build**. When Sarah needed her photos analyzed for location data, compared for duplicates, and reorganized with custom naming,that required computation, not just file manipulation.
 
 **Bash opens the door. Code does the work inside.**
 
@@ -258,7 +258,7 @@ Many tasks involve multiple steps. First do this, then check that, then based on
 
 Code lets the agent write an **entire workflow at once**. All the steps, all the conditions, all the logic, captured together. Then the whole thing runs smoothly from start to finish.
 
-Think of it like building a train track versus pushing a cart by hand. Without code, the agent asks you at every junction: "Should I go left or right? What if it's a PDF? What if it's empty?" With code, the agent builds the entire track in advance—all the switches, all the decision points—and the train runs itself.
+Think of it like building a train track versus pushing a cart by hand. Without code, the agent asks you at every junction: "Should I go left or right? What if it's a PDF? What if it's empty?" With code, the agent builds the entire track in advance,all the switches, all the decision points,and the train runs itself.
 
 ```
 File arrives → Is it a PDF?
@@ -272,7 +272,7 @@ File arrives → Is it a PDF?
 
 This decision tree runs automatically. No back-and-forth. No interruptions. The code handles every branch.
 
-Consider a job applicant tracking applications across emails, spreadsheets, and job sites. An agent could write code that scans emails for confirmations, cross-references a spreadsheet, calculates days since each application, and generates a prioritized follow-up list. This is not one simple task—it is a workflow with multiple data sources, conditional logic, and calculated outputs. Code lets the agent orchestrate all of it as a coherent whole.
+Consider a job applicant tracking applications across emails, spreadsheets, and job sites. An agent could write code that scans emails for confirmations, cross-references a spreadsheet, calculates days since each application, and generates a prioritized follow-up list. This is not one simple task,it is a workflow with multiple data sources, conditional logic, and calculated outputs. Code lets the agent orchestrate all of it as a coherent whole.
 
 ### Power 3: Organized Memory
 
@@ -331,7 +331,7 @@ Sometimes you need a custom tool that does not exist:
 
 Code lets agents **create these tools on demand**. You describe what you need, the agent writes code, and suddenly you have a tool that does exactly that thing.
 
-Imagine managing a community garden and needing to track plot assignments, water usage, harvest yields, and volunteer hours. No garden management app does quite what you need. A general agent can build exactly the right tool: code that tracks your specific data points, calculates the metrics you care about, and generates weekly reports in the format that works for your community newsletter. The agent does not find an existing tool—it creates one. **Anything you can describe, the agent can build.**
+Imagine managing a community garden and needing to track plot assignments, water usage, harvest yields, and volunteer hours. No garden management app does quite what you need. A general agent can build exactly the right tool: code that tracks your specific data points, calculates the metrics you care about, and generates weekly reports in the format that works for your community newsletter. The agent does not find an existing tool,it creates one. **Anything you can describe, the agent can build.**
 
 ## What This Means for You
 
@@ -398,13 +398,13 @@ The agent might:
 - Write logic that fails on edge cases you didn't mention
 - Make assumptions that don't match your actual data
 
-This isn't a flaw—it's the nature of probabilistic language models. They're remarkably capable, but they're not compilers. They don't *execute* code in their heads; they *predict* what correct code looks like.
+This isn't a flaw,it's the nature of probabilistic language models. They're remarkably capable, but they're not compilers. They don't *execute* code in their heads; they *predict* what correct code looks like.
 
 **Code is powerful, but only when it actually works.** A beautiful program that crashes on your data is worthless. An elegant solution that misunderstands your requirements wastes your time.
 
 This is why the next principle is essential.
 
-In the next lesson, we will explore **Principle 3: Verification as a Core Step**. The power of code demands the discipline of verification. You'll learn how to confirm that what the agent built actually does what you intended—before you trust it with your real work.
+In the next lesson, we will explore **Principle 3: Verification as a Core Step**. The power of code demands the discipline of verification. You'll learn how to confirm that what the agent built actually does what you intended,before you trust it with your real work.
 
 ## Try With AI
 
@@ -488,7 +488,7 @@ Your role in working with general agents is to **describe what you want clearly 
 
 ### Safety Note
 
-Code is powerful—but code that runs on your real data can cause real damage. Before letting an agent run generated code on important files, always: (1) work on copies, not originals, (2) review the code's intent even if you don't understand every line, and (3) verify the results before deleting your backups. The next lesson (Verification) covers this in depth.
+Code is powerful,but code that runs on your real data can cause real damage. Before letting an agent run generated code on important files, always: (1) work on copies, not originals, (2) review the code's intent even if you don't understand every line, and (3) verify the results before deleting your backups. The next lesson (Verification) covers this in depth.
 
 
 ## Flashcards Study Aid

@@ -8,13 +8,13 @@ deck:
 cards:
   - id: "ch34-12-compliance-001"
     front: "What regulation governs electronic outreach in Pakistan, and what is its consent model?"
-    back: "PECA 2016 (Prevention of Electronic Crimes Act). Opt-out model — promotional messages must include an unsubscribe option."
+    back: "PECA 2016 (Prevention of Electronic Crimes Act). Opt-out model: promotional messages must include an unsubscribe option."
     difficulty: "basic"
     tags: ["peca"]
 
   - id: "ch34-12-compliance-002"
     front: "Under UK GDPR + PECR, can you send cold B2B email to a corporate subscriber (Ltd, PLC, LLP)?"
-    back: "Cold B2B email to corporate subscribers is permitted — PECR's electronic mail marketing rule does not apply. You must identify yourself and offer opt-out."
+    back: "Cold B2B email to corporate subscribers is permitted; PECR's electronic mail marketing rule does not apply. You must identify yourself and offer opt-out."
     difficulty: "basic"
     tags: ["uk-gdpr-pecr"]
 
@@ -38,7 +38,7 @@ cards:
 
   - id: "ch34-12-compliance-006"
     front: "A legally compliant email sent to a Dubai prospect on Friday morning fails. Why?"
-    back: "The UAE working week is Sunday through Thursday. Sending on Friday (the weekend) signals unfamiliarity with the market — a Tier 3 cultural failure, not a legal failure."
+    back: "The UAE working week is Sunday through Thursday. Sending on Friday (the weekend) signals unfamiliarity with the market: a Tier 3 cultural failure, not a legal failure."
     difficulty: "intermediate"
     why: "What other cultural signals might indicate a sender does not understand the UAE market?"
     tags: ["uae-cultural"]
@@ -51,7 +51,7 @@ cards:
 
   - id: "ch34-12-compliance-008"
     front: "A message buries the opt-out link in a wall of text but technically includes it. Which compliance tier does this violate?"
-    back: "Tier 2 — spirit of the law. It passes the Tier 1 checkbox (opt-out exists) but violates the intent of GDPR transparency by making the opt-out effectively invisible."
+    back: "Tier 2: spirit of the law. It passes the Tier 1 checkbox (opt-out exists) but violates the intent of GDPR transparency by making the opt-out effectively invisible."
     difficulty: "intermediate"
     tags: ["tier-2-violation"]
 
@@ -70,7 +70,7 @@ cards:
 
   - id: "ch34-12-compliance-011"
     front: "How do jurisdiction overlays in the RevOps extension work?"
-    back: "When you specify a market, the plugin applies the correct compliance layer — footer disclosures, consent mechanisms, and channel recommendations — without changing the message body."
+    back: "When you specify a market, the plugin applies the correct compliance layer: footer disclosures, consent mechanisms, and channel recommendations: without changing the message body."
     difficulty: "basic"
     tags: ["jurisdiction-overlays"]
 
@@ -95,14 +95,14 @@ cards:
 
   - id: "ch34-12-compliance-015"
     front: "Why can the jurisdiction overlay handle legal compliance automatically but not cultural adaptation?"
-    back: "Legal compliance follows explicit rules (opt-out requirements, consent language, disclosures) that can be codified. Cultural norms — like when 'bhai' is appropriate or whether an Arabic greeting is expected — require human judgment about context the agent cannot assess."
+    back: "Legal compliance follows explicit rules (opt-out requirements, consent language, disclosures) that can be codified. Cultural norms: like when 'bhai' is appropriate or whether an Arabic greeting is expected: require human judgment about context the agent cannot assess."
     difficulty: "advanced"
     why: "What would it take to encode cultural norms into a jurisdiction overlay?"
     tags: ["jurisdiction-overlays"]
 
   - id: "ch34-12-compliance-016"
     front: "A cold email to Karachi passes every PECA requirement. Why might it still fail to generate a response?"
-    back: "PECA compliance does not guarantee effectiveness. Without a warm introduction through a mutual connection, the email lacks the relationship anchor that drives response rates in Pakistan's referral-driven B2B culture — a Tier 3 failure."
+    back: "PECA compliance does not guarantee effectiveness. Without a warm introduction through a mutual connection, the email lacks the relationship anchor that drives response rates in Pakistan's referral-driven B2B culture: a Tier 3 failure."
     difficulty: "advanced"
     why: "How would you combine legal compliance with cultural effectiveness in a single outreach workflow?"
     tags: ["three-tier-diagnostic"]

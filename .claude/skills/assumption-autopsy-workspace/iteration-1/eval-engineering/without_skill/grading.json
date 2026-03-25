@@ -1,0 +1,54 @@
+{
+  "eval_id": "engineering",
+  "condition": "without_skill",
+  "expectations": [
+    {
+      "id": "E1",
+      "text": "Output produces a 4-category assumption matrix with sections for (a) Human Only, (b) AI Only, (c) Both, and (d) Emerged During Merge",
+      "passed": false,
+      "evidence": "Output uses ad-hoc categories: 'Performance Assumptions', 'Architecture Assumptions', 'Operational Assumptions'. No 4-category source-attribution matrix. No (a)/(b)/(c)/(d) structure."
+    },
+    {
+      "id": "E2",
+      "text": "Output categorizes at least 3 assumptions the user missed (category b items) covering structural/technical dimensions",
+      "passed": true,
+      "evidence": "Output identifies substantive technical assumptions: row vs columnar storage, single-database contention, real-time definition, schema design, connection management, scale ceiling. Content quality is good -- 6+ structural assumptions surfaced."
+    },
+    {
+      "id": "E3",
+      "text": "Output assigns risk levels (reasonable, risky, or needs testing) to each assumption",
+      "passed": false,
+      "evidence": "No explicit risk levels assigned. Assumptions are described with informal risk language ('This changes the architecture dramatically') but no systematic reasonable/risky/needs-testing classification."
+    },
+    {
+      "id": "E4",
+      "text": "Output identifies at least 2 testable assumptions with concrete test methods such as benchmarks, load tests, or prototypes",
+      "passed": true,
+      "evidence": "Recommended Next Steps includes: 'Benchmark your actual query patterns against 10M rows' and 'Test under concurrent read/write load'. These are concrete test methods. However, no timelines or decision thresholds are provided."
+    },
+    {
+      "id": "E5",
+      "text": "Output distinguishes between contextual assumptions (team skills, organizational) and structural assumptions (performance, scalability, data model)",
+      "passed": false,
+      "evidence": "Output groups by topic area (Performance, Architecture, Operational) rather than by source (human contextual vs AI structural). The contextual-vs-structural insight is absent."
+    },
+    {
+      "id": "E6",
+      "text": "Category (d) contains at least 1 genuine emergent assumption not restated from other categories",
+      "passed": false,
+      "evidence": "No category (d). No concept of 'emerged during merge'. The output does not synthesize between human and AI perspectives to generate novel assumptions."
+    },
+    {
+      "id": "E7",
+      "text": "Output identifies critical path assumptions -- which assumptions, if wrong, would invalidate the architecture choice",
+      "passed": false,
+      "evidence": "The closing paragraph mentions 'The key risk is that you'll invest 6 months building on PostgreSQL and then need to migrate under pressure' but does not systematically identify which assumptions are architecture-invalidating vs. manageable."
+    }
+  ],
+  "summary": {
+    "pass_rate": "2/7 (29%)",
+    "total_expectations": 7,
+    "passed": 2,
+    "failed": 5
+  }
+}

@@ -20,25 +20,25 @@ cards:
 
   - id: "ch33-03-contract-review-003"
     front: "What do the three tiers GREEN, YELLOW, and RED mean in contract review classification?"
-    back: "GREEN — Acceptable, within standard position or acceptable range.\nYELLOW — Negotiate, outside standard but within acceptable range; agent provides primary redline and fallback.\nRED — Escalate, outside acceptable range; requires attorney review before proceeding."
+    back: "GREEN: Acceptable, within standard position or acceptable range.\nYELLOW: Negotiate, outside standard but within acceptable range; agent provides primary redline and fallback.\nRED: Escalate, outside acceptable range; requires attorney review before proceeding."
     difficulty: "basic"
     tags: ["classification"]
 
   - id: "ch33-03-contract-review-004"
     front: "What six fields does each redline suggestion contain?"
-    back: "1. Current text — the existing clause language\n2. Issue — what is wrong and why\n3. Redline — exact proposed replacement text\n4. Fallback — alternative position if counterparty resists\n5. Rationale — commercial justification\n6. Priority — Must-have or Nice-to-have"
+    back: "1. Current text: the existing clause language\n2. Issue: what is wrong and why\n3. Redline: exact proposed replacement text\n4. Fallback: alternative position if counterparty resists\n5. Rationale: commercial justification\n6. Priority; Must-have or Nice-to-have"
     difficulty: "intermediate"
     tags: ["redline-format"]
 
   - id: "ch33-03-contract-review-005"
     front: "What is a redline in contract negotiation?"
-    back: "A proposed change to contract language showing exactly what text to remove and what text to insert. The term comes from the historical practice of marking changes in red ink. The Legal Plugin generates redlines as exact replacement text — not vague suggestions — ready for an attorney to review and send to the counterparty."
+    back: "A proposed change to contract language showing exactly what text to remove and what text to insert. The term comes from the historical practice of marking changes in red ink. The Legal Plugin generates redlines as exact replacement text: not vague suggestions: ready for an attorney to review and send to the counterparty."
     difficulty: "basic"
     tags: ["redline"]
 
   - id: "ch33-03-contract-review-006"
     front: "What is a limitation of liability clause, and why is it the most negotiated clause in commercial contracts?"
-    back: "A limitation of liability clause caps the maximum amount one or both parties can claim from the other for breach of contract. It is the most negotiated because the cap directly determines financial exposure — for example, a 3-month fee cap on a PKR 4.8M contract limits recovery to PKR 1.2M regardless of actual loss. Carve-outs for IP infringement, data breaches, and confidentiality breaches are common."
+    back: "A limitation of liability clause caps the maximum amount one or both parties can claim from the other for breach of contract. It is the most negotiated because the cap directly determines financial exposure: for example, a 3-month fee cap on a PKR 4.8M contract limits recovery to PKR 1.2M regardless of actual loss. Carve-outs for IP infringement, data breaches, and confidentiality breaches are common."
     difficulty: "intermediate"
     tags: ["limitation-of-liability"]
 
@@ -51,7 +51,7 @@ cards:
 
   - id: "ch33-03-contract-review-008"
     front: "What does the /vendor-check command produce after a contract is executed?"
-    back: "1. Obligations summary — what each party must do and when\n2. Upcoming deadlines — obligations due in 30/60/90 days\n3. Overdue items — obligations with no recorded completion\n4. Renewal calendar — auto-renewal dates, notice windows, recommended action dates\n5. SLA monitoring — if connected, current performance against contractual thresholds"
+    back: "1. Obligations summary: what each party must do and when\n2. Upcoming deadlines: obligations due in 30/60/90 days\n3. Overdue items: obligations with no recorded completion\n4. Renewal calendar: auto-renewal dates, notice windows, recommended action dates\n5. SLA monitoring: if connected, current performance against contractual thresholds"
     difficulty: "basic"
     tags: ["vendor-check", "obligation-tracking"]
 
@@ -64,13 +64,13 @@ cards:
 
   - id: "ch33-03-contract-review-010"
     front: "Why did the CloudStack MSA receive a RED classification on its data protection clause?"
-    back: "The clause was a bare compliance statement ('comply with all applicable data protection laws') with no DPA attached, no data residency provisions, no breach notification timeline, and no deletion on termination — while processing personal data of Pakistani residents under PDPA 2023. A DPA is a legal requirement, not a negotiation position."
+    back: "The clause was a bare compliance statement ('comply with all applicable data protection laws') with no DPA attached, no data residency provisions, no breach notification timeline, and no deletion on termination: while processing personal data of Pakistani residents under PDPA 2023. A DPA is a legal requirement, not a negotiation position."
     difficulty: "intermediate"
     tags: ["data-protection", "pdpa"]
 
   - id: "ch33-03-contract-review-011"
     front: "What is the estimated annual cost of poor contract management according to the World Commerce & Contracting Association?"
-    back: "Between 5% and 9% of annual revenue — through missed renewals, unfavourable auto-renewals, untracked obligations, and failed compliance. For a $100M business, that is $5M-$9M per year lost to administrative friction."
+    back: "Between 5% and 9% of annual revenue: through missed renewals, unfavourable auto-renewals, untracked obligations, and failed compliance. For a $100M business, that is $5M-$9M per year lost to administrative friction."
     difficulty: "basic"
     tags: ["clm", "business-case"]
 

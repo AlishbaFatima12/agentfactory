@@ -8,14 +8,14 @@ Five interview questions, asked in order, reliably surface the three kinds of ta
 
 ### Critical Patterns
 - The order matters: specific cases first (to establish episodic mode), quality differential second (to define the standard), process third (to map the workflow), escalation fourth (to set boundaries), mentorship fifth (to capture unwritten rules)
-- Follow-up questions are as important as the primary questions — "Has the order ever changed? When?" surfaces the exceptions that are often the most valuable knowledge
+- Follow-up questions are as important as the primary questions: "Has the order ever changed? When?" surfaces the exceptions that are often the most valuable knowledge
 - The credit analyst's answers to each question produce concrete SKILL.md material, not abstract principles
 
 ### Common Mistakes
 - Starting with general questions ("How do you do your job?") which activate semantic memory and produce textbook answers
 - Skipping follow-up questions, which is where the exceptions and edge cases surface
-- Treating the five questions as a checklist rather than a structured conversation — each answer should inform the follow-ups
+- Treating the five questions as a checklist rather than a structured conversation: each answer should inform the follow-ups
 
 ### Connections
 - **Builds on**: Lesson 1 established why structured extraction is necessary; this lesson provides the specific interview framework
-- **Leads to**: Lesson 3 teaches how to conduct the interview operationally — briefing, note-taking, and the north star summary
+- **Leads to**: Lesson 3 teaches how to conduct the interview operationally: briefing, note-taking, and the north star summary

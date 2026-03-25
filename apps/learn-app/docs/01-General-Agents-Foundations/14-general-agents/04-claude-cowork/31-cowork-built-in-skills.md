@@ -60,32 +60,32 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "1.0.0"
+version: "1.1.0"
 
 teaching_guide:
   lesson_type: "hands-on"
   session_group: 10
   session_title: "Practical Skills and the Code-vs-Cowork Decision"
   key_points:
-    - "Built-in Skills (docx, xlsx, pptx, pdf) are pre-installed — students do not need to create or configure them"
+    - "Built-in Skills (docx, xlsx, pptx, pdf) are pre-installed; students do not need to create or configure them"
     - "The Capability Matrix table is the key reference: pdf is read-only (no create/edit), tracked changes only work in docx, formulas only in xlsx"
-    - "Built-in Skills handle format mechanics while custom Skills handle domain reasoning — combining both is where Cowork becomes most powerful"
+    - "Built-in Skills handle format mechanics while custom Skills handle domain reasoning; combining both is where Cowork becomes most powerful"
     - "Each format has specific limitations students must know: macros not supported in docx, Power Query not preserved in xlsx, animations lost in pptx, password-protected pdfs unreadable"
   misconceptions:
-    - "Students think built-in Skills can create PDFs — the pdf Skill is extraction-only (read), not creation"
-    - "Students assume Claude can execute macros or VBA in Word documents — it cannot; macros are ignored"
-    - "Students confuse built-in Skills with custom Skills — built-in handle file format operations, custom encode domain-specific reasoning"
+    - "Students think built-in Skills can create PDFs; the pdf Skill is extraction-only (read), not creation"
+    - "Students assume Claude can execute macros or VBA in Word documents; it cannot; macros are ignored"
+    - "Students confuse built-in Skills with custom Skills; built-in handle file format operations, custom encode domain-specific reasoning"
   discussion_prompts:
     - "Which document format do you work with most often, and what is one repetitive task in that format that a built-in Skill could automate?"
     - "When would you combine a built-in Skill (like docx) with a custom Skill (like 'legal contract review'), and why is the combination more valuable than either alone?"
   teaching_tips:
-    - "Project the Capability Matrix table and have students identify which cells would matter most for their daily work — this personalizes an abstract table"
+    - "Project the Capability Matrix table and have students identify which cells would matter most for their daily work; this personalizes an abstract table"
     - "Run a live demo: create a simple docx or xlsx using a prompt from the lesson, then show the actual output to demonstrate format fidelity"
-    - "Use the 'When to Use Built-in vs. Custom Skills' section as a sorting exercise — give students 5 scenarios and have them categorize each"
-    - "Highlight the tracked changes feature in docx as a practical collaboration bridge — Claude edits with track changes so the human reviews changes, not rewrites"
+    - "Use the 'When to Use Built-in vs. Custom Skills' section as a sorting exercise; give students 5 scenarios and have them categorize each"
+    - "Highlight the tracked changes feature in docx as a practical collaboration bridge; Claude edits with track changes so the human reviews changes, not rewrites"
   assessment_quick_check:
     - "Which built-in Skill is read-only and cannot create new files?"
     - "Name one limitation of the xlsx Skill when working with complex spreadsheets."
@@ -100,7 +100,7 @@ prerequisites:
 
 # Built-in Skills: Documents, Spreadsheets, Presentations
 
-Earlier in this chapter, you learned how to create custom Skills—encoded expertise that teaches Claude specific procedures. But Cowork also comes with **built-in Skills** for common document formats. These are pre-installed capabilities that work out of the box.
+Earlier in this chapter, you learned how to create custom Skills: encoded expertise that teaches Claude specific procedures. But Cowork also comes with **built-in Skills** for common document formats. These are pre-installed capabilities that work out of the box.
 
 ---
 
@@ -115,14 +115,18 @@ Built-in Skills are domain-specific capabilities Anthropic has developed and opt
 | **pptx** | .pptx      | Create and edit PowerPoint presentations |
 | **pdf**  | .pdf       | Extract text and structure from PDFs     |
 
-These Skills are pre-installed—you don't need to create or configure them. They're automatically available when working with these file types in Cowork.
+These Skills are pre-installed: you don't need to create or configure them. They're automatically available when working with these file types in Cowork.
 
-The Skills library continues to grow. Beyond the four document-focused Skills detailed in this lesson, Cowork now includes:
+The Skills library continues to grow. Beyond the four document-focused Skills detailed in this lesson, Cowork includes additional capabilities:
 
-- **canvas-design** — Create and edit visual designs and diagrams directly in Cowork
-- **skill-creator** — Build custom Skills from within Cowork itself (a meta-skill for creating new Skills without leaving the interface)
+- **canvas-design**: Create and edit visual designs and diagrams directly in Cowork
+- **skill-creator**: Build custom Skills from within Cowork itself (a meta-skill for creating new Skills without leaving the interface)
 
-An open-source community is also building and sharing Skills at [github.com/anthropics/skills](https://github.com/anthropics/skills), which means the Skills ecosystem extends well beyond Anthropic's built-in offerings.
+You can also browse and install third-party Skills through the Plugin system (click **+** > **Plugins** > **Add plugin** in the desktop app). An open-source community builds and shares Skills at [github.com/anthropics/skills](https://github.com/anthropics/skills), extending the ecosystem beyond Anthropic's built-in offerings.
+
+:::tip Skills Ecosystem
+The Skills available in Cowork change as the platform evolves. Use the **+** > **Slash commands** menu in the desktop app to see what Skills are currently available in your session, including built-in, project, and plugin-provided Skills.
+:::
 
 ---
 
@@ -309,7 +313,7 @@ An open-source community is also building and sharing Skills at [github.com/anth
 - Built-in capabilities don't cover your use case
 - You want to encode expertise that applies across document types
 
-**Skills within the Plugin architecture:** Skills are now one component within Cowork's Plugin system. A Plugin can bundle multiple Skills — both built-in and custom — together with Connectors and slash commands into a complete workflow package. For example, a "Legal Review" Plugin might combine the built-in docx Skill with a custom contract-analysis Skill and a court-filing Connector. See Lesson 29 for how Plugins, Skills, and Connectors fit together.
+**Skills within the Plugin architecture:** Skills are now one component within Cowork's Plugin system. A Plugin can bundle multiple Skills (both built-in and custom) together with Connectors and slash commands into a complete workflow package. For example, a "Legal Review" Plugin might combine the built-in docx Skill with a custom contract-analysis Skill and a court-filing Connector. See Lesson 29 for how Plugins, Skills, and Connectors fit together.
 
 ### Cross-App Orchestration
 
@@ -319,7 +323,7 @@ Built-in Skills become most powerful when chained across applications. Cowork ca
 
 > "Read the Q4 sales data from 'quarterly-results.xlsx'. Identify the top 5 regions by revenue and the 3 fastest-growing product lines. Then create a PowerPoint presentation called 'q4-executive-summary.pptx' with: a title slide, a chart slide showing regional performance (using the xlsx data), a slide highlighting growth trends, and an action items slide. Use the formatting style from 'template.pptx' if it exists."
 
-Claude uses the xlsx Skill to read and analyze the spreadsheet, then the pptx Skill to create the presentation — passing the analysis context between formats without you exporting, reformatting, or copy-pasting anything.
+Claude uses the xlsx Skill to read and analyze the spreadsheet, then the pptx Skill to create the presentation; passing the analysis context between formats without you exporting, reformatting, or copy-pasting anything.
 
 **Other cross-app patterns:**
 
@@ -386,21 +390,21 @@ The key insight: individual Skills handle format mechanics, but cross-app orches
 
 **Design a Cross-App Workflow:**
 
-> "I work with [describe your document types — e.g., Excel reports, Word proposals, PDF contracts, PowerPoint decks]. Design a workflow where Claude chains two or more built-in Skills together: read data from one format, process it, and output in another. Include the exact prompt I would use and explain which Skills handle which step."
+> "I work with [describe your document types, e.g., Excel reports, Word proposals, PDF contracts, PowerPoint decks]. Design a workflow where Claude chains two or more built-in Skills together: read data from one format, process it, and output in another. Include the exact prompt I would use and explain which Skills handle which step."
 
-**What you're learning:** Cross-app orchestration design — understanding how to chain built-in Skills across document formats to eliminate the manual copy-paste-reformat cycle. This is where built-in Skills create the most time savings.
+**What you're learning:** Cross-app orchestration design; understanding how to chain built-in Skills across document formats to eliminate the manual copy-paste-reformat cycle. This is where built-in Skills create the most time savings.
 
 **Combine Built-in and Custom Skills for Real Work:**
 
 > "Pick a task I do that requires both format handling (creating or editing a docx/xlsx/pptx) AND domain-specific reasoning (e.g., financial analysis, legal review, technical documentation standards). Design a workflow that uses a built-in Skill for the format work and describes what a custom Skill would add for the domain reasoning. What would the combined output look like compared to using either alone?"
 
-**What you're learning:** Skill composition — understanding why format mechanics (built-in) and domain expertise (custom) are separate capabilities that multiply each other's value when combined.
+**What you're learning:** Skill composition; understanding why format mechanics (built-in) and domain expertise (custom) are separate capabilities that multiply each other's value when combined.
 
 ---
 
 ## What's Next
 
-You've explored Cowork's interface, workflows, browser integration, connectors, and built-in Skills. The final lesson in this Cowork section brings everything together with a decision framework—helping you choose between Claude Code and Claude Cowork for any given task, and understanding when to use both together.
+You've explored Cowork's interface, workflows, browser integration, connectors, and built-in Skills. The final lesson in this Cowork section brings everything together with a decision framework: helping you choose between Claude Code and Claude Cowork for any given task, and understanding when to use both together.
 
 ## Flashcards Study Aid
 

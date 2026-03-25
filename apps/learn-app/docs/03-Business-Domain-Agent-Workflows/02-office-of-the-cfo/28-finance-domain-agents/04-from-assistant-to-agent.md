@@ -112,11 +112,11 @@ This lesson crosses that boundary. When Claude operates through the Cowork platf
 :::caution Prerequisites: Cowork Access
 This lesson requires the **Claude desktop app** with **Cowork** enabled. Cowork is available on **Pro, Max, Team, and Enterprise plans**.
 
-1. **Install the Claude desktop app** if you have not already — download it from [claude.ai/download](https://claude.ai/download) for macOS or Windows.
-2. **Switch to the Cowork tab.** Open the Claude desktop app and select the **Cowork** tab. If you do not see it, your plan may not include Cowork — check your subscription at [claude.ai/settings](https://claude.ai/settings).
-3. **Install the Finance plugin.** In the Cowork sidebar, click **Customize** → **Browse plugins**. Find the **Finance** plugin and click **Install**. The plugin bundles skills, slash commands, and connector definitions into a single package — the workflows are ready to use immediately.
+1. **Install the Claude desktop app** if you have not already: download it from [claude.ai/download](https://claude.ai/download) for macOS or Windows.
+2. **Switch to the Cowork tab.** Open the Claude desktop app and select the **Cowork** tab. If you do not see it, your plan may not include Cowork: check your subscription at [claude.ai/settings](https://claude.ai/settings).
+3. **Install the Finance plugin.** In the Cowork sidebar, click **Customize** → **Browse plugins**. Find the **Finance** plugin and click **Install**. The plugin bundles skills, slash commands, and connector definitions into a single package: the workflows are ready to use immediately.
 4. **Connect a working folder.** Click **Work in a folder** and select (or create) a folder on your computer for this lesson's practice files (e.g., `finance-practice/`). This gives Claude a place to read and write the sample financial data you will generate next.
-5. **Enable connectors for enterprise data (optional).** Cowork can read and create Excel, PowerPoint, Word, and PDF files directly through built-in file skills — no connectors needed for these. From the **Customize** menu, select **Connectors** only if your workflows need to reach enterprise systems like your ERP or data warehouse. The plugin references connector categories like `~~erp` and `~~data warehouse` — once you enable the matching connector, those workflows pull data automatically. Some connectors require a separate subscription or API key from the provider. For enterprise deployments, your IT team can pre-provision connectors through the admin console.
+5. **Enable connectors for enterprise data (optional).** Cowork can read and create Excel, PowerPoint, Word, and PDF files directly through built-in file skills: no connectors needed for these. From the **Customize** menu, select **Connectors** only if your workflows need to reach enterprise systems like your ERP or data warehouse. The plugin references connector categories like `~~erp` and `~~data warehouse`: once you enable the matching connector, those workflows pull data automatically. Some connectors require a separate subscription or API key from the provider. For enterprise deployments, your IT team can pre-provision connectors through the admin console.
    :::
 
 ## Verify the Install
@@ -201,7 +201,7 @@ The plugin uses category placeholders (`~~erp`, `~~data warehouse`, `~~analytics
 
 You are a controller starting the March close. The workflow spans seven business days, and each day maps to a specific command or skill in the finance plugin. Walk through the full cycle to see how the five commands and the close-management skill work together.
 
-**Day 1: Close kickoff.** You tell Claude: _"Let's start the March close."_ You do not invoke a command — the close-management skill activates automatically. It produces a close checklist with task owners, deadlines, and dependencies. Throughout the close, this skill stays active in the background, flagging whether items are resolved, whether they block downstream tasks, and who owns them.
+**Day 1: Close kickoff.** You tell Claude: _"Let's start the March close."_ You do not invoke a command: the close-management skill activates automatically. It produces a close checklist with task owners, deadlines, and dependencies. Throughout the close, this skill stays active in the background, flagging whether items are resolved, whether they block downstream tasks, and who owns them.
 
 **Day 3: Bank reconciliation.** The USD operating account shows a $3,420 discrepancy between the GL and the bank statement. You type:
 
@@ -233,7 +233,7 @@ Claude generates the entry: debit Bank Charges Expense $840, credit Cash -- USD 
 /variance-analysis revenue Q1 vs budget
 ```
 
-Claude decomposes the revenue variance into volume, price, and mix drivers across your product lines. The CFO wants to know why revenue is $35K below budget — now you can explain: volume was on plan, but average selling price fell 7% due to promotional discounting in one product line.
+Claude decomposes the revenue variance into volume, price, and mix drivers across your product lines. The CFO wants to know why revenue is $35K below budget: now you can explain: volume was on plan, but average selling price fell 7% due to promotional discounting in one product line.
 
 **Day 6: Management P&L.**
 
@@ -249,7 +249,7 @@ Claude produces the management P&L with current month, prior month, YTD actual, 
 /sox-testing revenue-recognition 2025-Q1
 ```
 
-Claude generates a SOX 404 control testing workpaper: control description, testing methodology, sample selection criteria, test steps, and spaces for test results and exceptions. This is a framework — the qualified auditor selects the actual samples, performs the tests, and documents the conclusions.
+Claude generates a SOX 404 control testing workpaper: control description, testing methodology, sample selection criteria, test steps, and spaces for test results and exceptions. This is a framework: the qualified auditor selects the actual samples, performs the tests, and documents the conclusions.
 
 Five commands, one skill, seven business days. Each command produces a deliverable that feeds the next phase. The close-management skill ties them together by tracking what is done, what is outstanding, and what blocks downstream work.
 
@@ -293,7 +293,7 @@ Five commands, one skill, seven business days. Each command produces a deliverab
 
 3. Run `/sox-testing procure-to-pay 2025-Q1`. Compare the two workpapers: what is structurally similar, and what differs between revenue cycle and expenditure cycle testing?
 
-**The discipline:** SOX workpapers are frameworks, not conclusions. The plugin generates the testing structure — control description, sample methodology, and test steps. A qualified auditor selects the actual samples, executes the tests, and documents the results. The plugin saves hours of document setup; professional judgment on control effectiveness remains human.
+**The discipline:** SOX workpapers are frameworks, not conclusions. The plugin generates the testing structure: control description, sample methodology, and test steps. A qualified auditor selects the actual samples, executes the tests, and documents the results. The plugin saves hours of document setup; professional judgment on control effectiveness remains human.
 
 ## Try With AI
 
@@ -375,4 +375,4 @@ Help me:
 
 ---
 
-Continue to [Lesson 5: Financial Analysis — The Core Plugin →](./05-financial-analysis-the-core-plugin.md)
+Continue to [Lesson 5: Financial Analysis: The Core Plugin →](./05-financial-analysis-the-core-plugin.md)

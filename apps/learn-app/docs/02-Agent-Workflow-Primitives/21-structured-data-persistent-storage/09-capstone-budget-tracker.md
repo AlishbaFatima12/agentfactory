@@ -12,7 +12,7 @@ skills:
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can direct an agent through schema, CRUD, transactions, deployment, and verification — all in one end-to-end flow"
+    measurable_at_this_level: "Student can direct an agent through schema, CRUD, transactions, deployment, and verification: all in one end-to-end flow"
   - name: "Operational Judgment"
     proficiency_level: "B1"
     category: "Applied"
@@ -30,7 +30,7 @@ learning_objectives:
     assessment_method: "Student can block or approve release based on verification gate output, not gut feeling"
 cognitive_load:
   new_concepts: 2
-  assessment: "2 new concepts (evidence bundle, release gate) — all other concepts are integration of previously learned material"
+  assessment: "2 new concepts (evidence bundle, release gate): all other concepts are integration of previously learned material"
 differentiation:
   extension_for_advanced: "Add a CI/CD pipeline that automatically runs the evidence bundle and blocks deployment on any gate failure. Compare your evidence bundle with a teammate's."
   remedial_for_struggling: "Run the capstone sequence one step at a time. Focus on getting each step to pass before moving to the next. The evidence bundle is just collecting proof of what you already know how to do."
@@ -39,23 +39,23 @@ teaching_guide:
   session_group: 3
   session_title: "Cloud Deployment and Verification"
   key_points:
-    - "The capstone introduces no new concepts — it proves all chapter primitives (schema, CRUD, rollback, Neon, verification) hold together under one roof"
+    - "The capstone introduces no new concepts: it proves all chapter primitives (schema, CRUD, rollback, Neon, verification) hold together under one roof"
     - "An evidence bundle is a JSON artifact that lets another engineer verify readiness without asking questions or trusting verbal claims"
-    - "'Ready for demo' means happy path passes; 'ready for release' means failure paths and verification gate also pass — precise language matters"
+    - "'Ready for demo' means happy path passes; 'ready for release' means failure paths and verification gate also pass: precise language matters"
     - "Publishing despite a blocked verification status is a release process failure, not a query problem"
   misconceptions:
-    - "Students think the capstone is a new thing to learn — it is integration of existing primitives, not new concepts"
-    - "Students confuse 'it runs without errors' with 'ready for release' — the evidence bundle requires failure-path proof, not just happy-path demos"
-    - "Students want to skip the forced rollback drill because 'it already worked in lesson 4' — proving it works in the integrated system is the point"
-    - "Students think the evidence bundle is bureaucratic overhead — it is the difference between 'I think it works' and 'here is proof it works'"
+    - "Students think the capstone is a new thing to learn: it is integration of existing primitives, not new concepts"
+    - "Students confuse 'it runs without errors' with 'ready for release': the evidence bundle requires failure-path proof, not just happy-path demos"
+    - "Students want to skip the forced rollback drill because 'it already worked in lesson 4': proving it works in the integrated system is the point"
+    - "Students think the evidence bundle is bureaucratic overhead: it is the difference between 'I think it works' and 'here is proof it works'"
   discussion_prompts:
     - "What is the difference between a demo and a release? Why does that distinction matter for anything touching money?"
     - "Could another engineer rerun your evidence bundle without asking you any questions? What would make that possible?"
   teaching_tips:
-    - "Have students run the full 7-step capstone sequence end-to-end — the sequential discipline (stop and fix on any failure) teaches operational maturity"
-    - "The evidence pipeline diagram is the lesson's structural backbone — walk through it gate by gate and connect each to the lesson where it was taught"
-    - "Celebrate the journey: in lesson 0 they had a script that broke with a second user; now they have a cloud-deployed, verified system — make this contrast explicit"
-    - "The self-review questions are a powerful wrap-up activity — have students answer honestly and identify their weakest gate"
+    - "Have students run the full 7-step capstone sequence end-to-end: the sequential discipline (stop and fix on any failure) teaches operational maturity"
+    - "The evidence pipeline diagram is the lesson's structural backbone: walk through it gate by gate and connect each to the lesson where it was taught"
+    - "Celebrate the journey: in lesson 0 they had a script that broke with a second user; now they have a cloud-deployed, verified system: make this contrast explicit"
+    - "The self-review questions are a powerful wrap-up activity: have students answer honestly and identify their weakest gate"
   assessment_quick_check:
     - "Name the five gates in the evidence pipeline in order"
     - "What is the difference between 'ready for demo' and 'ready for release'?"
@@ -122,11 +122,11 @@ Five gates. One chain. If any gate fails, you stop and fix before continuing. No
 
 ## Directing the Monthly Summary
 
-Tell your agent to produce a grouped monthly summary using a single database call — no loops, no separate per-category queries.
+Tell your agent to produce a grouped monthly summary using a single database call: no loops, no separate per-category queries.
 
 :::conversation[What you tell the agent]
 Generate Alice's January 2024 expense summary grouped by category, sorted by highest total first.
-Use one database call — no per-category loops.
+Use one database call: no per-category loops.
 Return category name, expense count, and total for each group.
 Show the query count in the output so I can verify it used one call.
 :::
@@ -149,7 +149,7 @@ Output:
   Queries used: 1
 ```
 
-"Queries used: 1" is the signal that matters. One database call produced the full grouped report. Compare that to the Computation & Data Extraction approach: nested loops, manual grouping, custom sorting — all doing what one SQL query handles natively.
+"Queries used: 1" is the signal that matters. One database call produced the full grouped report. Compare that to the Computation & Data Extraction approach: nested loops, manual grouping, custom sorting: all doing what one SQL query handles natively.
 :::
 
 ## Directing the Release Gate
@@ -239,7 +239,7 @@ Before you call this done, answer these honestly:
 - Are all critical thresholds explicit (the $0.01 tolerance, the blocked status rules)?
 - Did you demonstrate at least one failure path, not only success?
 - Could a reviewer trace from your requirement description to the agent's output to the evidence artifact quickly?
-- Did you describe requirements clearly enough that the agent built what you intended on the first try — or did you need to refine?
+- Did you describe requirements clearly enough that the agent built what you intended on the first try, or did you need to refine?
 
 If any answer is "no," the capstone is still in progress.
 

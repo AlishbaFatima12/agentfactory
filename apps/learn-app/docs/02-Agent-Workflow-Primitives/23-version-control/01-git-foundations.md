@@ -3,7 +3,7 @@ sidebar_position: 1
 chapter: 23
 lesson: 1
 title: "Git Foundations"
-description: "Understand Git as a snapshot system for your entire project — learn how your agent tracks changes, stages files, and undoes mistakes"
+description: "Understand Git as a snapshot system for your entire project: learn how your agent tracks changes, stages files, and undoes mistakes"
 duration_minutes: 55
 keywords: [git, version control, commit, staging, undo, restore, diff]
 
@@ -79,7 +79,7 @@ cognitive_load:
     - "git status (your agent's view of what changed)"
     - "git diff (comparing two snapshots side by side)"
     - "Three levels of undo (unstaged, staged, committed)"
-  assessment: "6 concepts (at A1 limit) — merged from two lessons"
+  assessment: "6 concepts (at A1 limit): merged from two lessons"
 
 differentiation:
   extension_for_advanced: "Explore git log --oneline --graph to visualize branch history; experiment with interactive staging using git add -p to commit partial file changes"
@@ -90,22 +90,22 @@ teaching_guide:
   session_group: 1
   session_title: "Git Foundations"
   key_points:
-    - "Git photographs your entire project, not individual files — every commit captures the full state"
-    - "The staging area is like packing a suitcase — you choose what goes in before closing it"
+    - "Git photographs your entire project, not individual files: every commit captures the full state"
+    - "The staging area is like packing a suitcase: you choose what goes in before closing it"
     - "Three undo levels cover every mistake: restore for unstaged, restore --staged for staged, reset for committed"
-    - "Commands are framed as 'what your agent does' — reader learns to recognize, not memorize"
+    - "Commands are framed as 'what your agent does': reader learns to recognize, not memorize"
   misconceptions:
-    - "Students think git add saves the file — it only stages it; commit creates the permanent snapshot"
-    - "Students fear git restore will delete their file — it only reverts content to the last committed version"
-    - "Students confuse git reset HEAD (unstage) with git reset --hard (destroy) — the --hard flag is dangerous"
-    - "Students think they need to memorize commands — the agent handles syntax; they need to understand concepts"
+    - "Students think git add saves the file: it only stages it; commit creates the permanent snapshot"
+    - "Students fear git restore will delete their file: it only reverts content to the last committed version"
+    - "Students confuse git reset HEAD (unstage) with git reset --hard (destroy): the --hard flag is dangerous"
+    - "Students think they need to memorize commands: the agent handles syntax; they need to understand concepts"
   discussion_prompts:
     - "If Git photographs your entire project every time you commit, what happens if you never take a photo?"
     - "Why does Git make you choose which files to include in each snapshot instead of automatically saving everything?"
   teaching_tips:
-    - "The Ctrl+Z hook is relatable for everyone — let students feel the gap between single-file undo and project-wide undo"
-    - "The deliberate mistake exercise is the lesson's emotional peak — let students break something and feel the relief of recovery"
-    - "Frame every command as 'what your agent does' — students learn to direct, not memorize"
+    - "The Ctrl+Z hook is relatable for everyone: let students feel the gap between single-file undo and project-wide undo"
+    - "The deliberate mistake exercise is the lesson's emotional peak: let students break something and feel the relief of recovery"
+    - "Frame every command as 'what your agent does': students learn to direct, not memorize"
   assessment_quick_check:
     - "What is the difference between saving a file and committing in Git?"
     - "You modified a file and want to throw away your changes. What do you tell your agent?"
@@ -127,12 +127,12 @@ Now open a project folder with 47 files. Ask Claude Code to reorganize them. It 
 
 > **"Ctrl+Z works for one file. Git works for your entire life's work."**
 
-In 1998, someone at Pixar accidentally ran a delete command on the Toy Story 2 production files. The animation studio lost 90% of two years of work in seconds. Their backup system had silently failed weeks earlier. The entire movie was saved only because one employee, Galyn Susman, had a copy on her home computer — she'd been working remotely while caring for her newborn. Without that stroke of luck, one of the most beloved animated films ever made would have been lost forever. ([Source](https://thenextweb.com/news/how-pixars-toy-story-2-was-deleted-twice-once-by-technology-and-again-for-its-own-good))
+In 1998, someone at Pixar accidentally ran a delete command on the Toy Story 2 production files. The animation studio lost 90% of two years of work in seconds. Their backup system had silently failed weeks earlier. The entire movie was saved only because one employee, Galyn Susman, had a copy on her home computer: she'd been working remotely while caring for her newborn. Without that stroke of luck, one of the most beloved animated films ever made would have been lost forever. ([Source](https://thenextweb.com/news/how-pixars-toy-story-2-was-deleted-twice-once-by-technology-and-again-for-its-own-good))
 
 Version control exists because of disasters like this.
 
 :::tip[Prerequisites]
-Before following along, complete the **Before You Start** setup in the [chapter introduction](./) — you need Git installed, a GitHub account, and a one-time Git configuration.
+Before following along, complete the **Before You Start** setup in the [chapter introduction](./): you need Git installed, a GitHub account, and a one-time Git configuration.
 :::
 
 ---
@@ -173,7 +173,7 @@ echo "Volunteers: Sarah, Maya, Jordan" > volunteers.txt
 git init
 ```
 
-**What this means**: `git init` creates a hidden `.git` folder inside your project. This folder is Git's brain — it stores your entire project history. Delete `.git` and you lose all your snapshots. Keep it safe.
+**What this means**: `git init` creates a hidden `.git` folder inside your project. This folder is Git's brain: it stores your entire project history. Delete `.git` and you lose all your snapshots. Keep it safe.
 
 You can see it yourself:
 
@@ -316,11 +316,11 @@ git reset --hard
 
 Everything goes back to normal. The broken budget is fixed. She exhales.
 
-Then she checks the volunteer list — the one she spent yesterday afternoon updating. **It's gone too.** `git reset --hard` doesn't undo one file. It resets *everything* to the last commit. Her volunteer updates weren't committed yet. They're gone. Actually gone.
+Then she checks the volunteer list: the one she spent yesterday afternoon updating. **It's gone too.** `git reset --hard` doesn't undo one file. It resets *everything* to the last commit. Her volunteer updates weren't committed yet. They're gone. Actually gone.
 
 Sarah just learned the most expensive lesson in version control: **the nuclear option doesn't have a confirmation dialog.**
 
-There's a better way. Git has three levels of undo — each one more powerful than the last, each one more dangerous. The key is choosing the smallest tool for the job.
+There's a better way. Git has three levels of undo: each one more powerful than the last, each one more dangerous. The key is choosing the smallest tool for the job.
 
 ---
 
@@ -346,7 +346,7 @@ Check the file:
 cat budget.txt
 ```
 
-The original budget is back. The bad edit is gone. The file still exists — Git just rewound it to the last committed version.
+The original budget is back. The bad edit is gone. The file still exists: Git just rewound it to the last committed version.
 
 ### Scenario 2: You staged the wrong file
 
@@ -378,7 +378,7 @@ The commit disappears from history. Your files stay in the working directory. Yo
 
 :::caution
 
-`git reset --hard HEAD~1` deletes the commit **and** throws away all file changes. This is what happened to Sarah's volunteer list — the nuclear option with no confirmation dialog. Only use it when you're certain you want to erase everything.
+`git reset --hard HEAD~1` deletes the commit **and** throws away all file changes. This is what happened to Sarah's volunteer list: the nuclear option with no confirmation dialog. Only use it when you're certain you want to erase everything.
 
 :::
 
@@ -393,9 +393,9 @@ The commit disappears from history. Your files stay in the working directory. Yo
 
 ---
 
-Sarah's project is safe — she can undo bad edits, unstage mistakes, and roll back commits. But she learned something the hard way: one wrong command wiped out work she hadn't committed yet. What if she could try risky ideas in a completely separate space, where mistakes can't touch her real project?
+Sarah's project is safe: she can undo bad edits, unstage mistakes, and roll back commits. But she learned something the hard way: one wrong command wiped out work she hadn't committed yet. What if she could try risky ideas in a completely separate space, where mistakes can't touch her real project?
 
-That's what branches solve — and that's the next lesson.
+That's what branches solve, and that's the next lesson.
 
 ---
 

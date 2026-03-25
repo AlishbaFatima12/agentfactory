@@ -7,8 +7,8 @@ deck:
 
 cards:
   - id: "ch35-vendor-exit-protocol-001"
-    front: "What are the four exit trigger categories — and how do they differ in warning period?"
-    back: "Financial distress (weeks to months of signals available), quality failure (compounding over months), geopolitical event (variable — can be sudden), strategic sourcing change (planned, within your control). Warning period determines the response timeline and whether emergency measures are needed."
+    front: "What are the four exit trigger categories: and how do they differ in warning period?"
+    back: "Financial distress (weeks to months of signals available), quality failure (compounding over months), geopolitical event (variable: can be sudden), strategic sourcing change (planned, within your control). Warning period determines the response timeline and whether emergency measures are needed."
     tags: ["exit-triggers", "warning-period"]
     difficulty: "basic"
 
@@ -20,19 +20,19 @@ cards:
 
   - id: "ch35-vendor-exit-protocol-003"
     front: "Why must Days 1-7 of a vendor exit focus on financial and asset security rather than finding a replacement?"
-    back: "If the vendor enters formal insolvency (administration, receivership), recovery of outstanding orders, prepayments, and company-owned tooling becomes legally complex. The window to act before formal insolvency is narrow — securing assets and outstanding orders takes priority over sourcing alternatives."
+    back: "If the vendor enters formal insolvency (administration, receivership), recovery of outstanding orders, prepayments, and company-owned tooling becomes legally complex. The window to act before formal insolvency is narrow: securing assets and outstanding orders takes priority over sourcing alternatives."
     tags: ["days-1-7", "financial-security"]
     difficulty: "intermediate"
 
   - id: "ch35-vendor-exit-protocol-004"
-    front: "What does emergency sourcing compress — and what does it NOT compress?"
-    back: "Emergency sourcing compresses the timeline for finding and engaging an alternative. It does NOT compress qualification requirements. ISO 9001, sample approval, capacity confirmation — all still apply. A bridge arrangement at premium cost buys time for proper qualification rather than waiving standards."
+    front: "What does emergency sourcing compress: and what does it NOT compress?"
+    back: "Emergency sourcing compresses the timeline for finding and engaging an alternative. It does NOT compress qualification requirements. ISO 9001, sample approval, capacity confirmation: all still apply. A bridge arrangement at premium cost buys time for proper qualification rather than waiving standards."
     tags: ["emergency-sourcing", "qualification"]
     difficulty: "intermediate"
 
   - id: "ch35-vendor-exit-protocol-005"
     front: "What three distinct communications are required in a vendor exit scenario?"
-    back: "1. Internal brief to operations, production, and finance — factual, action-oriented. 2. Transition notice to the exiting vendor — acknowledging closure, confirming outstanding orders, requiring tooling and IP recovery. 3. Emergency outreach to alternative vendors — urgent but professional, factual, without revealing organisational distress."
+    back: "1. Internal brief to operations, production, and finance: factual, action-oriented. 2. Transition notice to the exiting vendor: acknowledging closure, confirming outstanding orders, requiring tooling and IP recovery. 3. Emergency outreach to alternative vendors: urgent but professional, factual, without revealing organisational distress."
     tags: ["communication-plan", "three-communications"]
     difficulty: "intermediate"
 
@@ -44,37 +44,37 @@ cards:
 
   - id: "ch35-vendor-exit-protocol-007"
     front: "What is the critical risk of sending an adversarial exit communication to a Bottleneck vendor?"
-    back: "The exiting vendor holds company-owned tooling, technical specifications, IP, and quality records. A cooperative transition recovers these assets. An adversarial approach gives the vendor reason to delay or withhold transfer — potentially trapping critical assets in an insolvent estate."
+    back: "The exiting vendor holds company-owned tooling, technical specifications, IP, and quality records. A cooperative transition recovers these assets. An adversarial approach gives the vendor reason to delay or withhold transfer: potentially trapping critical assets in an insolvent estate."
     tags: ["exit-notice", "tooling-ip-recovery"]
     difficulty: "intermediate"
 
   - id: "ch35-vendor-exit-protocol-008"
     front: "When should exit planning begin for a Bottleneck vendor showing systematic operational decline?"
-    back: "Immediately — before a formal exit notification arrives. When a Bottleneck vendor shows declining OTD, increased partial deliveries, or financial signals, the responsible action is to begin alternative qualification immediately. The goal is to have an alternative ready before you need it, not after."
+    back: "Immediately: before a formal exit notification arrives. When a Bottleneck vendor shows declining OTD, increased partial deliveries, or financial signals, the responsible action is to begin alternative qualification immediately. The goal is to have an alternative ready before you need it, not after."
     tags: ["bottleneck-vendor", "early-action"]
     difficulty: "intermediate"
 
   - id: "ch35-vendor-exit-protocol-009"
     front: "What is the relationship between Exercise 8 (Lesson 13) and Exercise 1 (Lesson 3)?"
-    back: "Exercise 8 selects the highest-risk Bottleneck vendor from the classification register built in Exercise 1. The exit scenario is built around that specific vendor — making the exercise personal and revealing whether the student has qualified an alternative in the time since Exercise 1."
+    back: "Exercise 8 selects the highest-risk Bottleneck vendor from the classification register built in Exercise 1. The exit scenario is built around that specific vendor: making the exercise personal and revealing whether the student has qualified an alternative in the time since Exercise 1."
     tags: ["exercise-dependency"]
     difficulty: "basic"
 
   - id: "ch35-vendor-exit-protocol-010"
-    front: "In a financial distress exit, what is the Days 8-30 priority — and why does it differ from Days 1-7?"
-    back: "Days 8-30: Emergency RFQ, bridge supply identification, internal communications, and formal transition notice to the exiting vendor. Days 1-7 secured your financial position (outstanding orders, prepayments, assets). Days 8-30 begin the supply continuity response — you cannot do bridge sourcing safely until you know your financial exposure."
+    front: "In a financial distress exit, what is the Days 8-30 priority: and why does it differ from Days 1-7?"
+    back: "Days 8-30: Emergency RFQ, bridge supply identification, internal communications, and formal transition notice to the exiting vendor. Days 1-7 secured your financial position (outstanding orders, prepayments, assets). Days 8-30 begin the supply continuity response: you cannot do bridge sourcing safely until you know your financial exposure."
     tags: ["60-day-timeline", "short-term-mitigation"]
     difficulty: "intermediate"
 
   - id: "ch35-vendor-exit-protocol-011"
     front: "Your operations team wants to immediately use an unqualified alternative vendor to avoid a production stop. Your quality team says qualification takes 8 weeks. What is the correct procurement response?"
-    back: "The correct response is a bridge arrangement — a qualified temporary source at premium cost — to buy the time for proper qualification. Qualification requirements cannot be waived because of urgency. Accepting an unqualified source creates product liability, regulatory, and insurance exposure that outlasts the supply emergency."
+    back: "The correct response is a bridge arrangement: a qualified temporary source at premium cost: to buy the time for proper qualification. Qualification requirements cannot be waived because of urgency. Accepting an unqualified source creates product liability, regulatory, and insurance exposure that outlasts the supply emergency."
     tags: ["emergency-sourcing", "qualification"]
     difficulty: "advanced"
     why: "Why does waiving qualification standards in an emergency create greater long-term risk than accepting a temporary production disruption?"
 
   - id: "ch35-vendor-exit-protocol-012"
     front: "What distinguishes a planned exit (strategic sourcing consolidation) from an emergency exit (vendor closure) in terms of process?"
-    back: "The process is the same — five output sections from /vendor-assess exit mode, three communication types, post-mortem. The difference is lead time: a planned exit has months to execute; an emergency exit has days to weeks. Lead time determines timeline compression, not which steps can be skipped."
+    back: "The process is the same: five output sections from /vendor-assess exit mode, three communication types, post-mortem. The difference is lead time: a planned exit has months to execute; an emergency exit has days to weeks. Lead time determines timeline compression, not which steps can be skipped."
     tags: ["planned-exit", "emergency-exit"]
     difficulty: "intermediate"

@@ -8,7 +8,7 @@ deck:
 cards:
   - id: "ch35-plugin-architecture-installation-001"
     front: "How many specialist skills does the supply-chain plugin contain?"
-    back: "8 skills. Each is directly addressable — there is no router skill."
+    back: "8 skills. Each is directly addressable: there is no router skill."
     tags: ["plugin", "skills"]
     difficulty: "basic"
 
@@ -26,7 +26,7 @@ cards:
 
   - id: "ch35-plugin-architecture-installation-004"
     front: "What happens if you type /reconcile instead of /invoice-reconcile in Cowork?"
-    back: "You may get unexpected behaviour — /reconcile is not the plugin command. Always use /invoice-reconcile."
+    back: "You may get unexpected behaviour; /reconcile is not the plugin command. Always use /invoice-reconcile."
     tags: ["plugin", "command-naming"]
     difficulty: "basic"
 
@@ -56,26 +56,26 @@ cards:
 
   - id: "ch35-plugin-architecture-installation-009"
     front: "Which plugin skill addresses all three structural failures simultaneously?"
-    back: "/supply-chain-brief — the weekly executive intelligence dashboard integrates vendor health, invoice, logistics, and spend signals."
+    back: "/supply-chain-brief: the weekly executive intelligence dashboard integrates vendor health, invoice, logistics, and spend signals."
     tags: ["plugin", "structural-failures"]
     difficulty: "intermediate"
 
   - id: "ch35-plugin-architecture-installation-010"
     front: "Why does the supply-chain plugin have no router skill, unlike other chapter plugins?"
-    back: "Each of the 8 skills is directly addressable by name — supply chain workflows are distinct enough that users invoke the relevant skill directly rather than routing through a dispatcher."
+    back: "Each of the 8 skills is directly addressable by name: supply chain workflows are distinct enough that users invoke the relevant skill directly rather than routing through a dispatcher."
     tags: ["plugin", "architecture"]
     difficulty: "intermediate"
 
   - id: "ch35-plugin-architecture-installation-011"
     front: "Why is supply-chain.local.md more important than default plugin settings for most organisations?"
-    back: "The plugin ships with generic defaults. Local configuration encodes your organisation's policies — thresholds, currencies, tier counts, tolerances — making every skill behave correctly for your context rather than a hypothetical baseline."
+    back: "The plugin ships with generic defaults. Local configuration encodes your organisation's policies: thresholds, currencies, tier counts, tolerances: making every skill behave correctly for your context rather than a hypothetical baseline."
     tags: ["local-config", "plugin"]
     difficulty: "intermediate"
     why: "What is the risk of deploying the plugin with defaults rather than completing the local configuration?"
 
   - id: "ch35-plugin-architecture-installation-012"
     front: "A CPO wants to deploy the plugin globally with 3 regional teams using different currencies and ERP instances. Why does supply-chain.local.md create a configuration challenge?"
-    back: "A single local file assumes one organisational context. Multi-region deployments need region-specific thresholds, currencies, and ERP endpoints — the plugin architecture must be extended or each region must maintain its own configuration instance."
+    back: "A single local file assumes one organisational context. Multi-region deployments need region-specific thresholds, currencies, and ERP endpoints: the plugin architecture must be extended or each region must maintain its own configuration instance."
     tags: ["local-config", "multi-region"]
     difficulty: "advanced"
     why: "Which plugin commands would benefit most from regional configuration vs. global defaults?"

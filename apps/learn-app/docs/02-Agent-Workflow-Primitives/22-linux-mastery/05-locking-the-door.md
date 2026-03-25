@@ -5,7 +5,7 @@ chapter: 22
 lesson: 5
 layer: L2
 duration_minutes: 30
-description: "Secure your agent's server with dedicated users, proper file permissions, and SSH keys — because an unkillable agent running as root is a disaster waiting to happen"
+description: "Secure your agent's server with dedicated users, proper file permissions, and SSH keys: because an unkillable agent running as root is a disaster waiting to happen"
 keywords:
   [
     "security",
@@ -76,7 +76,7 @@ cognitive_load:
     - "File permission model (three levels of keycards)"
     - "SSH keys vs passwords (fingerprints vs house keys)"
     - "Least privilege (mailbox key, not front door key)"
-  assessment: "4 concepts at A2-B1 boundary — connects back to L2 permission reading and forward to Ch24 deployment security"
+  assessment: "4 concepts at A2-B1 boundary: connects back to L2 permission reading and forward to Ch24 deployment security"
 
 differentiation:
   extension_for_advanced: "Explore UFW (Uncomplicated Firewall) to restrict which ports accept connections. Set up fail2ban to automatically block IP addresses after repeated failed login attempts."
@@ -87,19 +87,19 @@ teaching_guide:
   session_group: 2
   session_title: "Security Hardening"
   key_points:
-    - "The 47,000 failed login attempts hook makes security feel real and urgent — this isn't theoretical"
-    - "Connecting back to L2 permission reading (drwxr-xr-x) gives students a payoff — they already know how to read these"
-    - "The chmod/chown commands are presented as 'tell Claude Code' not 'type this' — consistency with L2 pattern"
+    - "The 47,000 failed login attempts hook makes security feel real and urgent: this isn't theoretical"
+    - "Connecting back to L2 permission reading (drwxr-xr-x) gives students a payoff: they already know how to read these"
+    - "The chmod/chown commands are presented as 'tell Claude Code' not 'type this': consistency with L2 pattern"
     - "Disabling password SSH is the highest-impact security change with the lowest effort"
   misconceptions:
-    - "Students think 'nobody would hack my little server' — the failed login count proves bots attack everything"
-    - "Students confuse file ownership (chown) with file permissions (chmod) — ownership is WHO, permissions is WHAT"
-    - "Students think SSH keys are complicated — the analogy of fingerprint vs house key makes the concept accessible"
+    - "Students think 'nobody would hack my little server': the failed login count proves bots attack everything"
+    - "Students confuse file ownership (chown) with file permissions (chmod): ownership is WHO, permissions is WHAT"
+    - "Students think SSH keys are complicated: the analogy of fingerprint vs house key makes the concept accessible"
   discussion_prompts:
     - "If your agent has root access and gets compromised, what could an attacker do? What if it only has access to its own directory?"
     - "Why do companies require SSH keys instead of passwords for server access?"
   teaching_tips:
-    - "The failed login count is the hook — if possible, demonstrate on a real server or show realistic numbers"
+    - "The failed login count is the hook: if possible, demonstrate on a real server or show realistic numbers"
     - "Draw the permission model on the board: three columns (owner/group/other) x three rows (read/write/execute)"
     - "The .env permission check is a practical exercise every student should try on their own setup"
   assessment_quick_check:
@@ -148,7 +148,7 @@ Forty-seven thousand attempts. From IP addresses in six countries. Automated bot
 
 None had succeeded. Yet.
 
-Marcus's agent had root access. If even one bot had guessed the password, the attacker would have had complete control over the server. Not just the agent — everything. The database. The other services. The ability to install malware, mine cryptocurrency, or launch attacks on other servers.
+Marcus's agent had root access. If even one bot had guessed the password, the attacker would have had complete control over the server. Not just the agent: everything. The database. The other services. The ability to install malware, mine cryptocurrency, or launch attacks on other servers.
 
 > **"Security isn't a feature. It's a constraint that makes everything else possible."**
 
@@ -162,9 +162,9 @@ Think of a server like a building with restricted areas. Every person who enters
 
 **Root** is the master key. It opens every door in the building. The server room, the executive offices, the supply closet, the safe. If someone steals the master key, they own the building.
 
-Your agent doesn't need a master key. It needs a badge that opens one office — its own directory — and nothing else.
+Your agent doesn't need a master key. It needs a badge that opens one office; it's own directory, and nothing else.
 
-**What you tell Claude Code**: "Create a dedicated user called agentuser for running my competitor-tracker agent. It shouldn't have a password or a home directory — it's only for running the service."
+**What you tell Claude Code**: "Create a dedicated user called agentuser for running my competitor-tracker agent. It shouldn't have a password or a home directory; it's only for running the service."
 
 **What the agent does**:
 
@@ -198,7 +198,7 @@ Each group can have three types of access:
 
 So `rwxr-xr-x` means: owner can do everything, group can read and execute, others can read and execute. And `-rw-r--r--` means: owner can read and write, everyone else can only read.
 
-Now look at Ali's `.env` file — the one with his database password and API keys:
+Now look at Ali's `.env` file: the one with his database password and API keys:
 
 **What you tell Claude Code**: "Check the permissions on my .env file."
 
@@ -230,9 +230,9 @@ sudo chmod 600 /opt/agents/competitor-tracker/.env
 
 **What this means**:
 
-- `chown -R agentuser:agentuser` — Change ownership of the directory and everything inside it to agentuser. The `-R` means recursive — every file and subdirectory.
-- `chmod 750` on the directory — Owner (agentuser) can do everything. Group members can read and enter the directory. Others get nothing.
-- `chmod 600` on `.env` — Owner can read and write. Nobody else can do anything. The database password is locked down.
+- `chown -R agentuser:agentuser`: Change ownership of the directory and everything inside it to agentuser. The `-R` means recursive: every file and subdirectory.
+- `chmod 750` on the directory: Owner (agentuser) can do everything. Group members can read and enter the directory. Others get nothing.
+- `chmod 600` on `.env`: Owner can read and write. Nobody else can do anything. The database password is locked down.
 
 Verify:
 
@@ -250,11 +250,11 @@ ls -la /opt/agents/competitor-tracker/.env
 
 ## Concept 3: Keys Beat Passwords
 
-Ali connects to Dev's server with a password. Every time he SSHes in, he types it. The problem: passwords can be guessed. That's what those 47,000 bots were doing — guessing passwords.
+Ali connects to Dev's server with a password. Every time he SSHes in, he types it. The problem: passwords can be guessed. That's what those 47,000 bots were doing: guessing passwords.
 
 SSH keys work differently. Instead of a password you remember, you generate a **key pair**: a private key (stays on your laptop, never shared) and a public key (goes on the server).
 
-Think of it this way. A password is a house key — anyone who sees it can make a copy. An SSH key is a fingerprint scanner — even if someone sees you use it, they can't replicate your fingerprint.
+Think of it this way. A password is a house key: anyone who sees it can make a copy. An SSH key is a fingerprint scanner, even if someone sees you use it, they can't replicate your fingerprint.
 
 **What you tell Claude Code**: "Set up SSH key authentication. Generate a key pair on my local machine, copy the public key to the server, and then disable password authentication."
 
@@ -266,8 +266,8 @@ ssh-keygen -t ed25519 -C "ali@laptop"
 
 This creates two files:
 
-- `~/.ssh/id_ed25519` — Your private key. Never share this. Never move this.
-- `~/.ssh/id_ed25519.pub` — Your public key. Safe to share. Put it on every server you need access to.
+- `~/.ssh/id_ed25519`. Your private key. Never share this. Never move this.
+- `~/.ssh/id_ed25519.pub`. Your public key. Safe to share. Put it on every server you need access to.
 
 **What the agent does to copy the key**:
 
@@ -325,7 +325,7 @@ The agent now runs as a dedicated, limited user with access only to its own dire
 
 ---
 
-Sunday night. Agent deployed. Unkillable. Locked down. Ali checks the dashboard — the latest report is empty. The agent ran on schedule but produced nothing. Something broke. Board meeting at 9 AM.
+Sunday night. Agent deployed. Unkillable. Locked down. Ali checks the dashboard: the latest report is empty. The agent ran on schedule but produced nothing. Something broke. Board meeting at 9 AM.
 
 ---
 
@@ -339,7 +339,7 @@ If the permissions show -rw-r--r--, explain why that's a security
 risk. What should the permissions be instead? Fix them.
 ```
 
-**What you're practicing:** Reading permissions on real files and identifying security gaps. The most common server vulnerability isn't a sophisticated hack — it's a readable secrets file.
+**What you're practicing:** Reading permissions on real files and identifying security gaps. The most common server vulnerability isn't a sophisticated hack; it's a readable secrets file.
 
 ### Prompt 2: Read-Only Access for a Colleague
 

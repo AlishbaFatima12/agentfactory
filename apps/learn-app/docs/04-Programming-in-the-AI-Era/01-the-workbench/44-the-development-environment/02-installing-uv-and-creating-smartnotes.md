@@ -2,7 +2,19 @@
 sidebar_position: 2
 title: "Installing uv and Creating SmartNotes"
 description: "Install uv on any platform and create the SmartNotes project with a single command, connecting package management to Axiom I: Shell as Orchestrator."
-keywords: ["uv", "install uv", "uv init", "python project", "smartnotes", "package manager", "pyproject.toml", "python-version", "uv run", "shell orchestrator"]
+keywords:
+  [
+    "uv",
+    "install uv",
+    "uv init",
+    "python project",
+    "smartnotes",
+    "package manager",
+    "pyproject.toml",
+    "python-version",
+    "uv run",
+    "shell orchestrator",
+  ]
 chapter: 44
 lesson: 2
 duration_minutes: 25
@@ -79,14 +91,14 @@ James is quiet for a moment. "The python.org installer is the official way," he 
 
 Before uv existed, setting up a Python project required coordinating multiple tools that knew nothing about each other. Each tool handled one piece of the puzzle, and the pieces did not fit together cleanly. This fragmentation matters even more when you work with AI assistants -- an AI can scaffold a project in seconds, but if the environment is not reproducible, the code it generates will only work on the machine that generated it.
 
-| Task | Without uv | With uv |
-|------|-----------|---------|
-| Install Python | Download from python.org, manage PATH manually | `uv python install 3.12` |
-| Create virtual environment | `python -m venv .venv`, then activate it per-platform | Automatic on first `uv run` |
-| Install packages | `pip install requests`, no lockfile | `uv add requests` (updates pyproject.toml + lockfile + venv) |
-| Pin Python version | Create `.python-version` by hand, hope pyenv reads it | `uv init` creates it automatically |
-| Reproducible environments | `pip freeze > requirements.txt`, pray versions match | `uv.lock` generated automatically, cross-platform |
-| Run project code | Activate venv first, then `python main.py` | `uv run main.py` (handles everything) |
+| Task                       | Without uv                                            | With uv                                                      |
+| -------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| Install Python             | Download from python.org, manage PATH manually        | `uv python install 3.12`                                     |
+| Create virtual environment | `python -m venv .venv`, then activate it per-platform | Automatic on first `uv run`                                  |
+| Install packages           | `pip install requests`, no lockfile                   | `uv add requests` (updates pyproject.toml + lockfile + venv) |
+| Pin Python version         | Create `.python-version` by hand, hope pyenv reads it | `uv init` creates it automatically                           |
+| Reproducible environments  | `pip freeze > requirements.txt`, pray versions match  | `uv.lock` generated automatically, cross-platform            |
+| Run project code           | Activate venv first, then `python main.py`            | `uv run main.py` (handles everything)                        |
 
 The old workflow required five separate tools: python.org installer, venv, pip, pip-tools (for lockfiles), and pyenv (for version management). Each maintained by different teams, with different release schedules, different configuration formats, and different assumptions about where files should live. When something broke, the debugging started with the question: "Which tool caused this?"
 
@@ -103,35 +115,45 @@ A **virtual environment** is like a private toolbox for one project. The tools i
 Installation takes one command. The command differs by platform. For the latest instructions, see the [official uv installation guide](https://docs.astral.sh/uv/getting-started/installation/).
 
 :::tip Windows (PowerShell)
+
 ```powershell
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
+
 :::
 
 :::tip macOS / Linux (curl)
+
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
+
 :::
 
 :::tip macOS (Homebrew alternative)
+
 ```bash
 brew install uv
 ```
+
 :::
 
 :::tip Windows (WinGet alternative)
 Requires [Windows App Installer](https://apps.microsoft.com/detail/9nblggh4nns1) (pre-installed on Windows 11, may need manual install on Windows 10).
+
 ```powershell
 winget install --id=astral-sh.uv -e
 ```
+
 :::
 
 :::tip Any platform — pip fallback
 If you already have Python installed, you can bootstrap uv with pip. You are using pip to install the tool that replaces pip — this is fine as a one-time bootstrap.
+
 ```bash
 pip install uv
 ```
+
 :::
 
 After installation, verify it worked:
@@ -182,7 +204,7 @@ That single command verifies the Python version, creates or syncs the virtual en
 
 SmartNotes is the project you will build across every chapter from here forward. It starts as a single file. By the end of the course, it will be a full application with types, tests, a database, an API, and deployment configuration. Right now, you create its foundation.
 
-It is worth knowing where SmartNotes is going. In later chapters, SmartNotes will grow into an AI-powered agent: one that can ingest your notes, reason over them, surface connections you did not notice, and eventually run without you present. In Part 6, you will see what it takes to package a project like this into a Digital FTE -- an autonomous agent you can deploy, monitor, and sell as a managed product. The `pyproject.toml` you are about to configure is the same file that will declare your agent's dependencies in production. The test suite you will write with pytest is the same mechanism that will verify your agent's behavior before you give it autonomous access to a user's data. This is not a toy project you will discard after Chapter 43. Build it carefully.
+It is worth knowing where SmartNotes is going. In later chapters, SmartNotes will grow into an AI-powered agent: one that can ingest your notes, reason over them, surface connections you did not notice, and eventually run without you present. In Part 7, you will see what it takes to package a project like this into a Digital FTE -- an autonomous agent you can deploy, monitor, and sell as a managed product. The `pyproject.toml` you are about to configure is the same file that will declare your agent's dependencies in production. The test suite you will write with pytest is the same mechanism that will verify your agent's behavior before you give it autonomous access to a user's data. This is not a toy project you will discard after Chapter 43. Build it carefully.
 
 Open your terminal and run:
 
@@ -292,6 +314,7 @@ smartnotes/
 **Quick Check**: After running `uv run main.py`, two new items appeared: `.venv/` and `uv.lock`. One should be committed to Git and the other should not. Which is which, and why?
 
 :::info Checkpoint: Your SmartNotes project should now look like this
+
 ```
 smartnotes/
 ├── .gitignore
@@ -302,6 +325,7 @@ smartnotes/
 ├── pyproject.toml
 └── uv.lock             ← created by uv run
 ```
+
 If you see all seven items, you are on track. If anything is missing, re-read the steps above before continuing.
 :::
 
@@ -311,12 +335,12 @@ If you see all seven items, you are on track. If anything is missing, re-read th
 
 James almost fell into four traps on his first day. Each one is a habit from older tutorials that uv makes unnecessary.
 
-| Anti-Pattern | What It Looks Like | Why It Fails | The Fix |
-|---|---|---|---|
-| **Installing Python from python.org** | Downloading the installer, running it, adding Python to PATH manually | Different developers end up with different Python versions. PATH conflicts cause mysterious errors. No way to pin a version per project. | Let uv manage Python. `uv python install 3.12` if needed, but `uv init` and `uv run` handle versioning automatically. |
-| **Using pip directly** | `pip install requests` outside a project context | Installs packages globally, polluting the system Python. No lockfile, no reproducibility. Different machines get different versions. | Always use `uv add` inside a project. It updates `pyproject.toml`, generates `uv.lock`, and syncs the virtual environment in one step. |
-| **Activating virtual environments manually** | `source .venv/bin/activate` on Mac/Linux or `.venv\Scripts\activate` on Windows | Platform-specific commands that students forget or get wrong. Leads to "it works on my machine" problems when someone forgets to activate. | Use `uv run` instead. It runs commands inside the project environment automatically. No activation required, no platform differences. |
-| **Ignoring `.python-version`** | Not creating the file, or creating it but not using a tool that reads it | Team members use whatever Python version they have installed. Code that works on 3.12 breaks silently on 3.10 because of syntax or library differences. | `uv init` creates `.python-version` automatically. uv reads it on every command. The version is always consistent. |
+| Anti-Pattern                                 | What It Looks Like                                                              | Why It Fails                                                                                                                                            | The Fix                                                                                                                                |
+| -------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Installing Python from python.org**        | Downloading the installer, running it, adding Python to PATH manually           | Different developers end up with different Python versions. PATH conflicts cause mysterious errors. No way to pin a version per project.                | Let uv manage Python. `uv python install 3.12` if needed, but `uv init` and `uv run` handle versioning automatically.                  |
+| **Using pip directly**                       | `pip install requests` outside a project context                                | Installs packages globally, polluting the system Python. No lockfile, no reproducibility. Different machines get different versions.                    | Always use `uv add` inside a project. It updates `pyproject.toml`, generates `uv.lock`, and syncs the virtual environment in one step. |
+| **Activating virtual environments manually** | `source .venv/bin/activate` on Mac/Linux or `.venv\Scripts\activate` on Windows | Platform-specific commands that students forget or get wrong. Leads to "it works on my machine" problems when someone forgets to activate.              | Use `uv run` instead. It runs commands inside the project environment automatically. No activation required, no platform differences.  |
+| **Ignoring `.python-version`**               | Not creating the file, or creating it but not using a tool that reads it        | Team members use whatever Python version they have installed. Code that works on 3.12 breaks silently on 3.10 because of syntax or library differences. | `uv init` creates `.python-version` automatically. uv reads it on every command. The version is always consistent.                     |
 
 ---
 
@@ -398,7 +422,7 @@ Run `uv init smartnotes`, then list the files. Compare to your prediction -- wha
 
 ### Investigate
 
-For each file in the project directory, write one sentence about what you *think* it does. Then look inside `.venv/` (run `ls .venv/` on Mac/Linux or `dir .venv` on Windows). Ask your AI assistant:
+For each file in the project directory, write one sentence about what you _think_ it does. Then look inside `.venv/` (run `ls .venv/` on Mac/Linux or `dir .venv` on Windows). Ask your AI assistant:
 
 ```
 I looked inside .venv/ and saw: [paste what you saw].

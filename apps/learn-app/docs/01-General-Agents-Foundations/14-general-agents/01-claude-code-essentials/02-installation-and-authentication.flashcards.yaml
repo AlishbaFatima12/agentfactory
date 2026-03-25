@@ -3,7 +3,7 @@ deck:
   title: "Installing and Authenticating Claude Code"
   description: "Key concepts from Claude Code installation methods, authentication paths, security practices, and system diagnostics."
   tags: ["installation", "authentication", "security", "claude-code"]
-  version: 1
+  version: 2
 
 cards:
   - id: "ch14-02-installation-auth-001"
@@ -16,14 +16,14 @@ cards:
   - id: "ch14-02-installation-auth-002"
     type: recall
     front: "What is the current status of npm-based Claude Code installation?"
-    back: "Deprecated — use the native installation method when possible."
+    back: "Deprecated — use the native installation method when possible. Requires Node.js 18+."
     tags: ["installation", "npm", "deprecated"]
     difficulty: "basic"
 
   - id: "ch14-02-installation-auth-003"
     type: recall
     front: "What are the three Claude Code authentication paths?"
-    back: "1. Claude App (subscription)\n2. Console API (pay-per-use)\n3. Enterprise (Bedrock/Vertex/Foundry)"
+    back: "1. Claude App (subscription)\n2. Console API (pay-per-use)\n3. Enterprise (Bedrock/Vertex/Microsoft Foundry)"
     tags: ["authentication", "setup"]
     difficulty: "basic"
 
@@ -80,3 +80,39 @@ cards:
     tags: ["installation", "npm", "maintenance"]
     difficulty: "advanced"
     why: "How does depending on a deprecated installation method affect your ability to stay current with new features?"
+
+  - id: "ch14-02-installation-auth-011"
+    type: recall
+    front: "Can you use Claude Code with the free Claude.ai plan?"
+    back: "No. The free Claude.ai plan does not include Claude Code access. You need at least a Pro subscription ($20/month), a Console API account, or a free backend (Lesson 3)."
+    tags: ["authentication", "free-plan", "subscription"]
+    difficulty: "basic"
+
+  - id: "ch14-02-installation-auth-012"
+    type: thinking
+    front: "Why do Homebrew installations of Claude Code NOT auto-update, while native installations do?"
+    back: "BECAUSE Homebrew manages its own package versions independently from the application's built-in updater, THEREFORE Homebrew users must run `brew upgrade claude-code` manually to receive new versions."
+    tags: ["homebrew", "auto-update", "installation"]
+    difficulty: "intermediate"
+    why: "What could go wrong if you assume your Homebrew-installed Claude Code is up to date?"
+
+  - id: "ch14-02-installation-auth-013"
+    type: recall
+    front: "What is the minimum RAM requirement for Claude Code?"
+    back: "4 GB."
+    tags: ["requirements", "system"]
+    difficulty: "basic"
+
+  - id: "ch14-02-installation-auth-014"
+    type: recall
+    front: "What Windows command installs Claude Code via WinGet?"
+    back: "`winget install Anthropic.ClaudeCode`"
+    tags: ["installation", "windows", "winget"]
+    difficulty: "basic"
+
+  - id: "ch14-02-installation-auth-015"
+    type: recall
+    front: "What is the recommended way to disable Claude Code auto-updates persistently?"
+    back: "Add `\"DISABLE_AUTOUPDATER\": \"1\"` to the `env` section of your `settings.json` file."
+    tags: ["auto-update", "configuration"]
+    difficulty: "intermediate"

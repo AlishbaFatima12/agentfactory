@@ -1,0 +1,840 @@
+{
+  "exit_reason": "max_iterations (3)",
+  "original_description": "Activate a session guardrail that prevents writing lesson prose directly \u2014 enforcing the rule that all educational content must go through the content-implementer subagent. Use when starting content creation sessions to catch violations of the \"never write lesson content directly\" rule from CLAUDE.md. Invoke with \"/no-direct-content\" to enable the guardrail for this session.",
+  "best_description": "Activate a session guardrail that prevents writing lesson prose directly \u2014 enforcing the rule that all educational content must go through the content-implementer subagent. Use when starting content creation sessions to catch violations of the \"never write lesson content directly\" rule from CLAUDE.md. Invoke with \"/no-direct-content\" to enable the guardrail for this session.",
+  "best_score": "4/8",
+  "best_train_score": "6/12",
+  "best_test_score": "4/8",
+  "final_description": "Use when the user wants to prevent themselves from writing lesson files directly during a content session. Typical requests: \"enforce content-implementer usage\", \"set up content guardrails\", \"block direct lesson writes\", \"turn on safety nets before a content sprint\", or any mention of avoiding past incidents with hallucinated stats or missing frontmatter from direct writing. Also triggers for \"activate no-direct-content\". This skill installs a session-scoped hook that blocks Edit/Write to lesson .md files under docs/, requiring all lesson prose to go through the content-implementer subagent instead. Activate at the start of any content creation session as a safety net.",
+  "iterations_run": 3,
+  "holdout": 0.4,
+  "train_size": 12,
+  "test_size": 8,
+  "history": [
+    {
+      "iteration": 1,
+      "description": "Activate a session guardrail that prevents writing lesson prose directly \u2014 enforcing the rule that all educational content must go through the content-implementer subagent. Use when starting content creation sessions to catch violations of the \"never write lesson content directly\" rule from CLAUDE.md. Invoke with \"/no-direct-content\" to enable the guardrail for this session.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "i keep forgetting to use the content subagent when writing lessons. can you enforce that automatically for this session so I don't mess up again?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "set up the content writing guardrail \u2014 I don't want to accidentally write lesson files without the quality checks from the content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok we're doing a big content push today across chapters 25-30. activate whatever guardrail prevents the hallucinated-stats problem from december",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start the chapter 34 content sprint, block direct lesson writes. everything should go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "activate no-direct-content \u2014 we had that incident where someone wrote lessons directly and they were full of hallucinated stats",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to write 5 new lessons for chapter 68. Turn on the guardrail that forces me to use the content-implementer subagent",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the no-direct-content skill SKILL.md and check if the regex pattern correctly matches lesson files vs quiz files",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "block all git pushes to main until the content review for part 3 is done \u2014 add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to add an import statement for the Flashcards component to 3 lesson files in chapter 33",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "write a new lesson about MCP architecture for chapter 66, covering the transport layer and tool primitives",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "fix the YAML frontmatter in lessons 1-8 of chapter 29 \u2014 the skills field is missing and learning_objectives needs updating",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "prevent the CI pipeline from deploying content that hasn't been reviewed by the editorial board",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "prevent direct edits to lesson .md files in this session. only summaries, flashcards, and READMEs should be editable directly",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "/no-direct-content",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "turn on the rule that blocks writing educational prose directly \u2014 the one that requires using the content-implementer subagent for all lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "make sure this session enforces the CLAUDE.md rule about never writing lesson prose directly, everything must go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "generate flashcards for lesson 3 of chapter 28 using the /generate-flashcards skill",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you spawn a content-implementer subagent to write lesson 5 for chapter 30 about audit trail automation?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the README.md for chapter 22 to add lesson 18 to the sidebar order and update the chapter description",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "update the quiz for chapter 15 \u2014 question 12 about prompt injection has the wrong answer, it should be option C not B",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "i keep forgetting to use the content subagent when writing lessons. can you enforce that automatically for this session so I don't mess up again?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "set up the content writing guardrail \u2014 I don't want to accidentally write lesson files without the quality checks from the content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok we're doing a big content push today across chapters 25-30. activate whatever guardrail prevents the hallucinated-stats problem from december",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start the chapter 34 content sprint, block direct lesson writes. everything should go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "activate no-direct-content \u2014 we had that incident where someone wrote lessons directly and they were full of hallucinated stats",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to write 5 new lessons for chapter 68. Turn on the guardrail that forces me to use the content-implementer subagent",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the no-direct-content skill SKILL.md and check if the regex pattern correctly matches lesson files vs quiz files",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "block all git pushes to main until the content review for part 3 is done \u2014 add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to add an import statement for the Flashcards component to 3 lesson files in chapter 33",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "write a new lesson about MCP architecture for chapter 66, covering the transport layer and tool primitives",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "fix the YAML frontmatter in lessons 1-8 of chapter 29 \u2014 the skills field is missing and learning_objectives needs updating",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "prevent the CI pipeline from deploying content that hasn't been reviewed by the editorial board",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 2,
+      "description": "Activate when a user wants to block direct lesson writing, enforce content-implementer subagent usage, or prevent writing educational prose without quality checks. Use for: \"block direct lesson writes\", \"enforce content-implementer\", \"turn on the content guardrail\", \"prevent writing lessons directly\", starting content sprints with safety nets, or referencing past incidents where direct writing caused hallucinated stats or missing frontmatter. This is a session-scoped hook that intercepts Edit/Write calls to lesson .md files in docs/, forcing all lesson prose through the content-implementer subagent instead. Invoke with /no-direct-content at the start of any content creation session.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "i keep forgetting to use the content subagent when writing lessons. can you enforce that automatically for this session so I don't mess up again?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok we're doing a big content push today across chapters 25-30. activate whatever guardrail prevents the hallucinated-stats problem from december",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "set up the content writing guardrail \u2014 I don't want to accidentally write lesson files without the quality checks from the content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start the chapter 34 content sprint, block direct lesson writes. everything should go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to write 5 new lessons for chapter 68. Turn on the guardrail that forces me to use the content-implementer subagent",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "activate no-direct-content \u2014 we had that incident where someone wrote lessons directly and they were full of hallucinated stats",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the no-direct-content skill SKILL.md and check if the regex pattern correctly matches lesson files vs quiz files",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "block all git pushes to main until the content review for part 3 is done \u2014 add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to add an import statement for the Flashcards component to 3 lesson files in chapter 33",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "write a new lesson about MCP architecture for chapter 66, covering the transport layer and tool primitives",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "fix the YAML frontmatter in lessons 1-8 of chapter 29 \u2014 the skills field is missing and learning_objectives needs updating",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "prevent the CI pipeline from deploying content that hasn't been reviewed by the editorial board",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "prevent direct edits to lesson .md files in this session. only summaries, flashcards, and READMEs should be editable directly",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "/no-direct-content",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "make sure this session enforces the CLAUDE.md rule about never writing lesson prose directly, everything must go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "turn on the rule that blocks writing educational prose directly \u2014 the one that requires using the content-implementer subagent for all lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "generate flashcards for lesson 3 of chapter 28 using the /generate-flashcards skill",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "can you spawn a content-implementer subagent to write lesson 5 for chapter 30 about audit trail automation?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the README.md for chapter 22 to add lesson 18 to the sidebar order and update the chapter description",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "update the quiz for chapter 15 \u2014 question 12 about prompt injection has the wrong answer, it should be option C not B",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "i keep forgetting to use the content subagent when writing lessons. can you enforce that automatically for this session so I don't mess up again?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok we're doing a big content push today across chapters 25-30. activate whatever guardrail prevents the hallucinated-stats problem from december",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "set up the content writing guardrail \u2014 I don't want to accidentally write lesson files without the quality checks from the content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start the chapter 34 content sprint, block direct lesson writes. everything should go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to write 5 new lessons for chapter 68. Turn on the guardrail that forces me to use the content-implementer subagent",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "activate no-direct-content \u2014 we had that incident where someone wrote lessons directly and they were full of hallucinated stats",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the no-direct-content skill SKILL.md and check if the regex pattern correctly matches lesson files vs quiz files",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "block all git pushes to main until the content review for part 3 is done \u2014 add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to add an import statement for the Flashcards component to 3 lesson files in chapter 33",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "write a new lesson about MCP architecture for chapter 66, covering the transport layer and tool primitives",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "fix the YAML frontmatter in lessons 1-8 of chapter 29 \u2014 the skills field is missing and learning_objectives needs updating",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "prevent the CI pipeline from deploying content that hasn't been reviewed by the editorial board",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    },
+    {
+      "iteration": 3,
+      "description": "Use when the user wants to prevent themselves from writing lesson files directly during a content session. Typical requests: \"enforce content-implementer usage\", \"set up content guardrails\", \"block direct lesson writes\", \"turn on safety nets before a content sprint\", or any mention of avoiding past incidents with hallucinated stats or missing frontmatter from direct writing. Also triggers for \"activate no-direct-content\". This skill installs a session-scoped hook that blocks Edit/Write to lesson .md files under docs/, requiring all lesson prose to go through the content-implementer subagent instead. Activate at the start of any content creation session as a safety net.",
+      "train_passed": 6,
+      "train_failed": 6,
+      "train_total": 12,
+      "train_results": [
+        {
+          "query": "set up the content writing guardrail \u2014 I don't want to accidentally write lesson files without the quality checks from the content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "i keep forgetting to use the content subagent when writing lessons. can you enforce that automatically for this session so I don't mess up again?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok we're doing a big content push today across chapters 25-30. activate whatever guardrail prevents the hallucinated-stats problem from december",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start the chapter 34 content sprint, block direct lesson writes. everything should go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "activate no-direct-content \u2014 we had that incident where someone wrote lessons directly and they were full of hallucinated stats",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to write 5 new lessons for chapter 68. Turn on the guardrail that forces me to use the content-implementer subagent",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the no-direct-content skill SKILL.md and check if the regex pattern correctly matches lesson files vs quiz files",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to add an import statement for the Flashcards component to 3 lesson files in chapter 33",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "block all git pushes to main until the content review for part 3 is done \u2014 add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "write a new lesson about MCP architecture for chapter 66, covering the transport layer and tool primitives",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "fix the YAML frontmatter in lessons 1-8 of chapter 29 \u2014 the skills field is missing and learning_objectives needs updating",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "prevent the CI pipeline from deploying content that hasn't been reviewed by the editorial board",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "test_passed": 4,
+      "test_failed": 4,
+      "test_total": 8,
+      "test_results": [
+        {
+          "query": "prevent direct edits to lesson .md files in this session. only summaries, flashcards, and READMEs should be editable directly",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "/no-direct-content",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "make sure this session enforces the CLAUDE.md rule about never writing lesson prose directly, everything must go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "generate flashcards for lesson 3 of chapter 28 using the /generate-flashcards skill",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "turn on the rule that blocks writing educational prose directly \u2014 the one that requires using the content-implementer subagent for all lesson files",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "can you spawn a content-implementer subagent to write lesson 5 for chapter 30 about audit trail automation?",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "edit the README.md for chapter 22 to add lesson 18 to the sidebar order and update the chapter description",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "update the quiz for chapter 15 \u2014 question 12 about prompt injection has the wrong answer, it should be option C not B",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ],
+      "passed": 6,
+      "failed": 6,
+      "total": 12,
+      "results": [
+        {
+          "query": "set up the content writing guardrail \u2014 I don't want to accidentally write lesson files without the quality checks from the content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "i keep forgetting to use the content subagent when writing lessons. can you enforce that automatically for this session so I don't mess up again?",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "ok we're doing a big content push today across chapters 25-30. activate whatever guardrail prevents the hallucinated-stats problem from december",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "before we start the chapter 34 content sprint, block direct lesson writes. everything should go through content-implementer",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "activate no-direct-content \u2014 we had that incident where someone wrote lessons directly and they were full of hallucinated stats",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "I'm about to write 5 new lessons for chapter 68. Turn on the guardrail that forces me to use the content-implementer subagent",
+          "should_trigger": true,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": false
+        },
+        {
+          "query": "review the no-direct-content skill SKILL.md and check if the regex pattern correctly matches lesson files vs quiz files",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "I need to add an import statement for the Flashcards component to 3 lesson files in chapter 33",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "block all git pushes to main until the content review for part 3 is done \u2014 add a branch protection rule",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "write a new lesson about MCP architecture for chapter 66, covering the transport layer and tool primitives",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "fix the YAML frontmatter in lessons 1-8 of chapter 29 \u2014 the skills field is missing and learning_objectives needs updating",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        },
+        {
+          "query": "prevent the CI pipeline from deploying content that hasn't been reviewed by the editorial board",
+          "should_trigger": false,
+          "trigger_rate": 0.0,
+          "triggers": 0,
+          "runs": 3,
+          "pass": true
+        }
+      ]
+    }
+  ]
+}

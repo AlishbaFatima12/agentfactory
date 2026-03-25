@@ -85,7 +85,7 @@ differentiation:
 
 # Campaign Strategy and the Content Calendar
 
-In Lesson 9, you built NexaFlow's content engine — 10 assets from one cornerstone piece, each audited for brand consistency. Content drives awareness. But awareness without a plan is noise. This lesson turns content into a campaign with measurable lead generation targets.
+In Lesson 9, you built NexaFlow's content engine; 10 assets from one cornerstone piece, each audited for brand consistency. Content drives awareness. But awareness without a plan is noise. This lesson turns content into a campaign with measurable lead generation targets.
 
 NexaFlow needs 50 qualified leads in Q2. Budget: PKR 7 million (~$25,000 USD). Team: Zara (content marketer), one freelance designer, four sales reps. No events budget. The question is concrete: how do you turn $25,000 into 50 leads that the sales team will actually work?
 
@@ -105,9 +105,9 @@ Break it down:
 | **Budget**         | PKR 7M (~$25,000 USD)                              |
 | **Timeline**       | 12 weeks                                           |
 | **Team**           | Zara (content), 1 freelance designer, 4 sales reps |
-| **Constraint**     | No events budget — digital and content only        |
+| **Constraint**     | No events budget: digital and content only        |
 
-The constraint matters. With no events budget, you cannot attend conferences or sponsor meetups — channels that L08's campaign relied on. Every lead must come through digital content, paid advertising, or direct outreach. This changes the channel mix fundamentally.
+The constraint matters. With no events budget, you cannot attend conferences or sponsor meetups: channels that L08's campaign relied on. Every lead must come through digital content, paid advertising, or direct outreach. This changes the channel mix fundamentally.
 
 ## Running /campaign-plan
 
@@ -149,24 +149,24 @@ When the RevOps extension is installed, the extension's `campaign-planning` skil
 | Content localisation  | Market-specific content hooks and references          | Each market gets culturally relevant messaging angles               |
 
 :::note Your output will vary
-The extension overlay depends on your ICP configuration and market selection. The teaching point is that the same budget produces different strategies in different markets — what works in Pakistan (WhatsApp, lower CPM) does not work in the UK (higher CPM, email-preferred). Evaluate whether the extension's market-specific guidance matches your knowledge of each market.
+The extension overlay depends on your ICP configuration and market selection. The teaching point is that the same budget produces different strategies in different markets: what works in Pakistan (WhatsApp, lower CPM) does not work in the UK (higher CPM, email-preferred). Evaluate whether the extension's market-specific guidance matches your knowledge of each market.
 :::
 
 ### Evaluating the Brief
 
 Read the brief with three questions:
 
-**Is the channel mix appropriate for each market?** LinkedIn Ads work differently in Pakistan versus the UK. In Pakistan, LinkedIn CPM is $3-4 — you get high impression volume cheaply. In the UK, CPM is $45-65 — the same budget buys far fewer impressions. The brief splits LinkedIn Ads into two line items (PK/UAE and UK) with different budgets. That is appropriate. But check the WhatsApp allocation: the brief correctly notes that WhatsApp is a B2B channel in Pakistan but not in the UK. If the agent had allocated WhatsApp budget to the UK market, you would flag that as a market mismatch.
+**Is the channel mix appropriate for each market?** LinkedIn Ads work differently in Pakistan versus the UK. In Pakistan, LinkedIn CPM is $3-4: you get high impression volume cheaply. In the UK, CPM is $45-65: the same budget buys far fewer impressions. The brief splits LinkedIn Ads into two line items (PK/UAE and UK) with different budgets. That is appropriate. But check the WhatsApp allocation: the brief correctly notes that WhatsApp is a B2B channel in Pakistan but not in the UK. If the agent had allocated WhatsApp budget to the UK market, you would flag that as a market mismatch.
 
 **Does the team have capacity to execute?** Zara is one content marketer. The brief calls for 4 blog posts, 2 case studies, and 12 LinkedIn articles in weeks 1-2. That is 18 pieces of content in 10 business days. Even using the content engine from L09 (multiplying one cornerstone into derivatives), 18 pieces in two weeks is aggressive for one person. Evaluate whether the content sprint is realistic or whether it needs 3 weeks instead of 2.
 
-**Are the KPIs leading indicators or vanity metrics?** LinkedIn follower growth (300) is a vanity metric — it measures awareness, not pipeline. Cost per lead ($500) is a leading indicator — it tells you whether the campaign economics work before you reach the 50-lead target. Pipeline value ($250K+) is a lagging indicator — you will not know this until deals progress through the funnel. The brief mixes all three types, which is correct. A brief with only vanity metrics (impressions, clicks, followers) would signal a weak measurement plan.
+**Are the KPIs leading indicators or vanity metrics?** LinkedIn follower growth (300) is a vanity metric: it measures awareness, not pipeline. Cost per lead ($500) is a leading indicator: it tells you whether the campaign economics work before you reach the 50-lead target. Pipeline value ($250K+) is a lagging indicator: you will not know this until deals progress through the funnel. The brief mixes all three types, which is correct. A brief with only vanity metrics (impressions, clicks, followers) would signal a weak measurement plan.
 
 Every channel allocation must include a rationale connecting to what has worked or not worked historically. Channels with evidence of ROI earn more budget. Channels that failed previously are excluded or minimized with explicit reference to why.
 
 ## Building the Email Nurture Track
 
-Every campaign needs an email nurture track — the sequence of emails that keeps prospects engaged between the first click and the sales conversation. Run `/email-sequence` from the base marketing plugin:
+Every campaign needs an email nurture track: the sequence of emails that keeps prospects engaged between the first click and the sales conversation. Run `/email-sequence` from the base marketing plugin:
 
 ```
 /email-sequence --type nurture \
@@ -180,7 +180,7 @@ Every campaign needs an email nurture track — the sequence of emails that keep
 
 | Section               | Intent                                     | What to Verify                                                                         |
 | --------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| Sequence header       | Segment, email count, timeline             | Generic audience — not individualised                                                  |
+| Sequence header       | Segment, email count, timeline             | Generic audience: not individualised                                                  |
 | 6 emails over 6 weeks | Progressive engagement from welcome to CTA | Each email has a distinct purpose (welcome → pain point → proof → objection → urgency) |
 | Exit condition        | When to stop the sequence                  | Basic: unsubscribe or reply                                                            |
 
@@ -210,7 +210,7 @@ Compare both outputs side by side. The base sequence treats all prospects identi
 
 The base plugin gives you a functional sequence. The extension gives you a personalised one. The practical difference: a base sequence treats 50 prospects identically. An extension sequence adapts to each prospect's market, company size, and engagement behaviour. If your CRM has enrichment data from L04, the extension uses it. If your CRM is empty, the extension falls back to base-level personalisation.
 
-Which version should you use? If you have enrichment data and your deal size justifies per-prospect personalisation, use the extension. If you are sending to a large list where individual personalisation is not cost-effective, the base plugin is sufficient. For NexaFlow's 50-lead target, the extension is worth it — each lead represents a potential enterprise deal.
+Which version should you use? If you have enrichment data and your deal size justifies per-prospect personalisation, use the extension. If you are sending to a large list where individual personalisation is not cost-effective, the base plugin is sufficient. For NexaFlow's 50-lead target, the extension is worth it: each lead represents a potential enterprise deal.
 
 ## Building the Content Calendar
 
@@ -233,20 +233,20 @@ The extension's `content-calendar` skill auto-activates and produces a structure
 | ------- | ------------------------------------------------ | ----------------------------------------------------------- |
 | Week    | Publication timing                               | Entries spread evenly across 12 weeks                       |
 | Title   | Content topic                                    | Relevant to your ICP's pain points, not generic marketing   |
-| Format  | Content type (blog, carousel, case study, email) | Mix of formats — not all blog posts                         |
-| Persona | Target reader (VP Ops, COO, CEO)                 | Balance across personas — not all targeting one role        |
+| Format  | Content type (blog, carousel, case study, email) | Mix of formats: not all blog posts                         |
+| Persona | Target reader (VP Ops, COO, CEO)                 | Balance across personas: not all targeting one role        |
 | Channel | Distribution platform                            | Market-appropriate (WhatsApp for PK, LinkedIn for UK, etc.) |
 | CTA     | Call to action                                   | Each entry has a specific next step, not just "learn more"  |
 
 :::note Your output will vary
-The calendar content depends on your brand voice config, ICP, and campaign brief. The teaching point is _evaluating_ the calendar for three things: (1) volume vs capacity — can your team sustain the weekly entry count for 12 weeks? (2) persona balance — are both VP Ops and COO represented? (3) market-specific content — does each market get entries calibrated to its regulatory and operational context?
+The calendar content depends on your brand voice config, ICP, and campaign brief. The teaching point is _evaluating_ the calendar for three things: (1) volume vs capacity: can your team sustain the weekly entry count for 12 weeks? (2) persona balance: are both VP Ops and COO represented? (3) market-specific content: does each market get entries calibrated to its regulatory and operational context?
 :::
 
 Three things to evaluate in the calendar:
 
-**Volume versus capacity.** The calendar shows 3 entries per week. With Zara producing content and a freelance designer handling visual assets, 3 pieces per week is sustainable — each piece takes roughly a day to produce using the content engine from L09 (generate, audit, refine). If the calendar had 6 entries per week, Zara would be overloaded. Evaluate whether your team can sustain the weekly volume for the full 12 weeks without quality degradation.
+**Volume versus capacity.** The calendar shows 3 entries per week. With Zara producing content and a freelance designer handling visual assets, 3 pieces per week is sustainable: each piece takes roughly a day to produce using the content engine from L09 (generate, audit, refine). If the calendar had 6 entries per week, Zara would be overloaded. Evaluate whether your team can sustain the weekly volume for the full 12 weeks without quality degradation.
 
-**Persona balance.** Count the VP Ops entries versus the COO entries. If 80% target VP Ops, the campaign under-serves the COO persona. Both personas appear in the target audience. Each should see content that speaks to their specific pain — operational efficiency for VP Ops, cost reduction for COO.
+**Persona balance.** Count the VP Ops entries versus the COO entries. If 80% target VP Ops, the campaign under-serves the COO persona. Both personas appear in the target audience. Each should see content that speaks to their specific pain: operational efficiency for VP Ops, cost reduction for COO.
 
 **Market-specific content.** The UK blog post (week 3) references post-Brexit supply chain challenges. The UAE LinkedIn article references free zones. The PK WhatsApp broadcast targets fleet operators. Each market gets content calibrated to its regulatory and operational context. If all 36+ entries used the same generic messaging, the calendar would waste budget on content that does not resonate locally.
 
@@ -276,7 +276,7 @@ Notice that different channels have different pause thresholds. UK LinkedIn has 
 ## What You Built
 
 1. A complete 12-week campaign brief with budget allocation across channels and markets
-2. An email nurture sequence — and the ability to compare base plugin output against the extension's personalised version
+2. An email nurture sequence: and the ability to compare base plugin output against the extension's personalised version
 3. A weekly content calendar with 36+ entries, each tagged by persona, channel, and CTA
 4. A measurement framework with pause thresholds, reallocation triggers, and metric owners
 5. The judgment to evaluate a campaign brief critically: is the channel mix realistic for this market, this budget, and this team?

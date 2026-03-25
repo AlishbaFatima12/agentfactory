@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I've decided to rewrite our backend in Rust. Poke holes in this decision",
+    "should_trigger": true
+  },
+  {
+    "query": "We're going to adopt a 4-day work week. Stress test this before I present to the board",
+    "should_trigger": true
+  },
+  {
+    "query": "I think we should fire our biggest client — they're more trouble than they're worth. Challenge my thinking",
+    "should_trigger": true
+  },
+  {
+    "query": "Play devil's advocate on our decision to go fully remote",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm recommending we acquire this startup for $10M. Is this defensible?",
+    "should_trigger": true
+  },
+  {
+    "query": "Our CTO wants to build vs buy. I disagree. Help me pressure-test my position before the meeting",
+    "should_trigger": true
+  },
+  {
+    "query": "I've written this ADR for moving to event sourcing. Review and challenge it",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm taking the position that we should delay the launch by 3 months. Stress test this",
+    "should_trigger": true
+  },
+  {
+    "query": "Before I commit to this architecture, try to break my reasoning",
+    "should_trigger": true
+  },
+  {
+    "query": "I believe we should open-source our core product. Try to convince me I'm wrong",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me write a technical specification for our new auth system",
+    "should_trigger": false
+  },
+  {
+    "query": "What's the best way to implement pagination in GraphQL?",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a roadmap for our Q4 product development",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to set up load testing for our API",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a blog post about our engineering culture",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me design a microservices communication pattern",
+    "should_trigger": false
+  },
+  {
+    "query": "What should I include in my annual performance review?",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a runbook for handling production incidents",
+    "should_trigger": false
+  },
+  {
+    "query": "Help me write a job description for a senior engineer",
+    "should_trigger": false
+  },
+  {
+    "query": "What monitoring tools should we use for our Kubernetes cluster?",
+    "should_trigger": false
+  }
+]

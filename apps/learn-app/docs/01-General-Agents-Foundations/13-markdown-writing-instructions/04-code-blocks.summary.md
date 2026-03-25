@@ -1,11 +1,11 @@
 ### Core Concept
-Code blocks (fenced with triple backticks and language tags) provide **specification by example**—showing exact expected output and code format so AI agents see concrete targets instead of interpretations, reducing ambiguity dramatically.
+Code blocks (fenced with triple backticks and language tags) provide **specification by example**:showing exact expected output and code format so AI agents see concrete targets instead of interpretations, reducing ambiguity dramatically.
 
 ### Key Mental Models
 - **Specification by Example**: Showing expected output in a code block is clearer than describing it in prose
 - **Language Tags as Context**: `python`, `bash`, `text` tags tell AI which language to generate and which syntax applies
 - **Exact vs Abstract**: Abstract: "show current temperature"; Exact: code block showing actual output format
-- **Semantic Anchoring**: Code blocks are "anchor points"—when AI sees expected output, it has a concrete target to implement against
+- **Semantic Anchoring**: Code blocks are "anchor points": when AI sees expected output, it has a concrete target to implement against
 
 ### Critical Patterns
 - **Fenced syntax**: Triple backticks ``` at start and end; content between treated literally
@@ -18,7 +18,7 @@ Code blocks (fenced with triple backticks and language tags) provide **specifica
 - **Output specification**: Code blocks showing expected output give AI unambiguous implementation targets
 - **Language clarity**: Language tags prevent AI from mixing syntaxes (Python code vs bash commands)
 - **Edge cases**: Include code blocks showing edge cases (empty lists, error states) so AI handles them
-- **Mental model alignment**: Code blocks in specs become the "acceptance test"—AI knows it succeeded when output matches
+- **Mental model alignment**: Code blocks in specs become the "acceptance test": AI knows it succeeded when output matches
 
 ### Common Mistakes
 - Forgetting closing triple backticks (leaves code block unclosed)

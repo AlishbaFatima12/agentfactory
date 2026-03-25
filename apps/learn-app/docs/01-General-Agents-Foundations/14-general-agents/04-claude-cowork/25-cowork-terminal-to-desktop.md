@@ -52,10 +52,10 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "1.0.0"
+version: "1.1.0"
 
 # Legacy compatibility (Docusaurus)
 prerequisites:
@@ -91,7 +91,7 @@ teaching_guide:
 
 # From Terminal to Desktop: The Cowork Story
 
-Claude Code changed how developers work with AI. But developers aren't the only ones who need AI assistance. Researchers, analysts, writers, managers—anyone who works with documents and data—faces the same friction: copy-pasting context into chat windows, repeating the same tasks, losing work between sessions.
+Claude Code changed how developers work with AI. But developers aren't the only ones who need AI assistance. Researchers, analysts, writers, and managers all face the same friction: copy-pasting context into chat windows, repeating the same tasks, losing work between sessions.
 
 **Claude Cowork** brings the same agentic architecture to the familiar desktop interface.
 
@@ -99,15 +99,22 @@ Claude Code changed how developers work with AI. But developers aren't the only 
 
 ## What Claude Cowork Actually Is
 
-Claude Cowork is **agentic AI in the Claude Desktop app** (available on macOS and Windows). Unlike the web interface where Claude can only see what you paste, Cowork can:
+Claude Cowork is an **autonomous agent** in the Claude Desktop app (available on macOS with Apple Silicon M1+ and Windows). It runs locally on your machine, accesses your files directly, and works independently in the background while you do other things.
 
+Unlike the web interface where Claude can only see what you paste, Cowork can:
+
+- **Run tasks autonomously** in the background, even while you do other work
 - **Read files directly** from folders you approve
 - **Navigate your filesystem** to find related documents
 - **Execute actions** like creating, modifying, and organizing files
 - **Work with documents** in their native formats (Word, Excel, PDF, PowerPoint)
 - **Maintain context** across your entire workspace
 
-The key difference from web chat: **Cowork is an agent, not a chatbot**. It doesn't just respond—it acts.
+The key difference from web chat: **Cowork is an agent, not a chatbot**. It doesn't just respond; it acts. And unlike earlier versions that required you to watch and approve each step, Cowork now works independently in the background and notifies you when it finishes or needs your input.
+
+:::caution Apple Silicon Required (macOS)
+The Cowork tab requires **Apple Silicon (M1 or later)** on macOS. Intel Macs can use the Claude Desktop app for Chat, but cannot access the Cowork tab. On Windows, Cowork is available on all supported hardware (x64 and ARM64).
+:::
 
 ---
 
@@ -131,22 +138,23 @@ With Claude Cowork:
 3. Tell Claude what you need
 4. Claude reads files, makes changes directly
 
-The difference isn't just convenience—it's **capability**. When Claude can see your entire folder structure, it can make connections between documents that you might miss.
+The difference isn't just convenience; it's **capability**. When Claude can see your entire folder structure, it can make connections between documents that you might miss.
 
 ---
 
 ## Code vs. Cowork: Same Foundation
 
-Both products are built on the **Claude Agent SDK**—the same underlying technology that enables agentic behavior. The Claude Desktop app now offers three tabs—**Chat**, **Cowork**, and **Code**—each optimized for different work:
+Both products are built on the **Claude Agent SDK**, the same underlying technology that enables agentic behavior. The Claude Desktop app now offers three tabs (**Chat**, **Cowork**, and **Code**), each optimized for different work:
 
-| Aspect              | Claude Code                               | Claude Cowork                        |
-| ------------------- | ----------------------------------------- | ------------------------------------ |
-| **Interface**       | Terminal/CLI and Desktop Code tab         | Desktop Cowork tab                   |
-| **Primary Users**   | Developers                                | Knowledge workers                    |
-| **Best For**        | Writing code, running tests, debugging    | Documents, reports, analysis         |
-| **File Access**     | Direct filesystem via terminal or Desktop | Direct filesystem via Desktop        |
-| **Built-in Skills** | Code-specific (git, npm, testing)         | Document-specific (docx, xlsx, pptx) |
-| **Requires**        | Available in both CLI and Desktop         | No technical background              |
+| Aspect              | Claude Code                               | Claude Cowork                                  |
+| ------------------- | ----------------------------------------- | ---------------------------------------------- |
+| **Interface**       | Terminal/CLI and Desktop Code tab         | Desktop Cowork tab                             |
+| **Primary Users**   | Developers                                | Knowledge workers                              |
+| **Best For**        | Writing code, running tests, debugging    | Documents, reports, analysis, autonomous tasks |
+| **File Access**     | Direct filesystem via terminal or Desktop | Direct filesystem via Desktop app              |
+| **Built-in Skills** | Code-specific (git, npm, testing)         | Document-specific (docx, xlsx, pptx)           |
+| **Subscription**    | Pro, Max, Teams, or Enterprise            | Pro, Max, Teams, or Enterprise                 |
+| **Execution**       | Interactive (you review each change)      | Autonomous background or interactive           |
 
 Skills work across both platforms. A Skill you create for Claude Code can be used in Claude Cowork, and vice versa. They're the same AI with different interfaces.
 
@@ -154,13 +162,13 @@ Skills work across both platforms. A Skill you create for Claude Code can be use
 
 ## The Knowledge Worker Advantage
 
-Developers already had tools to automate work—scripts, macros, IDE integrations. Knowledge workers had fewer options:
+Developers already had tools to automate work: scripts, macros, IDE integrations. Knowledge workers had fewer options:
 
 - **Office macros**: Powerful but require programming knowledge
 - **No-code tools**: Limited to predefined workflows
 - **Manual work**: Time-consuming and error-prone
 
-Claude Cowork fills this gap. You don't write code—you describe what you need, in plain language, and Claude handles the implementation.
+Claude Cowork fills this gap. You don't write code. You describe what you need in plain language, and Claude handles the implementation.
 
 **Example**: Instead of writing a Python script to rename 500 files according to a pattern, you tell Claude: "Rename all these files to format [DATE]-[DESCRIPTION].pdf" and Cowork handles it.
 
@@ -213,9 +221,21 @@ Unlike the terminal where actions happen invisibly, Cowork shows you exactly wha
 
 ---
 
+## Dispatch: Assign Tasks from Anywhere
+
+Dispatch is a persistent conversation with Claude that lives in the Cowork tab. You message a task from your phone (or desktop), and Claude decides how to handle it: development work routes to the Code tab, while knowledge work (research, document editing, spreadsheet analysis) stays in Cowork.
+
+This changes the interaction model entirely. You are no longer sitting at your desk watching Claude organize files. You assign work from your phone while commuting, and Claude works on your desktop. When it finishes or needs approval, you get a push notification.
+
+**Requirements:** Pro or Max plan, latest Claude Desktop and Claude mobile app. Dispatch is not available on Team or Enterprise plans.
+
+**Why this matters for knowledge workers:** Dispatch turns Cowork from a tool you use into an employee you manage. Combined with Computer Use (Claude controlling your screen on macOS, currently a research preview), Scheduled Tasks (recurring automation), and Plugins (external service access), Cowork becomes a concrete example of the **Digital FTE** for non-developers: an autonomous agent that works independently, handles knowledge tasks across multiple applications, and reports back when done.
+
+---
+
 ## The Convergence Path
 
-This convergence has already happened. The Claude Desktop app now houses three tabs—**Chat**, **Cowork**, and **Code**—in a single application. Developers and knowledge workers share the same app; they just use different tabs. The Code tab gives developers a graphical interface to Claude Code without opening a terminal, while the Cowork tab gives knowledge workers agentic file access without writing code.
+This convergence has already happened. The Claude Desktop app now houses three tabs, Chat, Cowork, and Code, in a single application. Developers and knowledge workers share the same app; they just use different tabs. The Code tab gives developers a graphical interface to Claude Code without opening a terminal, while the Cowork tab gives knowledge workers agentic file access without writing code.
 
 Skills you build in one tab work across all tabs. A Skill created in Claude Code (CLI or Desktop Code tab) can be used in Cowork, and vice versa. The three-tab model means you pick the right mode for each task, not the right application.
 
@@ -227,13 +247,13 @@ Skills you build in one tab work across all tabs. A Skill created in Claude Code
 
 > "I work with [describe your documents and files]. Show me one workflow where copy-pasting to chat creates friction. What would change if Claude could access those files directly? Give me a specific example."
 
-**What you're learning:** Workflow analysis—identifying where agentic AI creates value. This skill helps you recognize opportunities for automation in your daily work.
+**What you're learning:** Workflow analysis: identifying where agentic AI creates value. This skill helps you recognize opportunities for automation in your daily work.
 
 **Compare the Interfaces:**
 
 > "Create a comparison table: What can I do in Claude Code that I can't do in Cowork? What can I do in Cowork that I can't do in Code? When would I choose each?"
 
-**What you're learning:** Tool selection—understanding that different interfaces serve different use cases. The same underlying AI, optimized for different contexts.
+**What you're learning:** Tool selection: understanding that different interfaces serve different use cases. The same underlying AI, optimized for different contexts.
 
 ---
 

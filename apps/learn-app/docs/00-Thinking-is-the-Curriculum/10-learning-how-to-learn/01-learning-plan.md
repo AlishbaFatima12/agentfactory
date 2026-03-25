@@ -42,7 +42,7 @@ learning_objectives:
   - objective: "Define a testable standard for 'enough' competence in the new domain, calibrated to the available time"
     proficiency_level: "A1"
     bloom_level: "Evaluate"
-    assessment_method: "AI Check rates whether the definition of enough is appropriately scoped — neither too ambitious nor too shallow for 72 hours"
+    assessment_method: "AI Check rates whether the definition of enough is appropriately scoped: neither too ambitious nor too shallow for 72 hours"
 
   - objective: "Predict the biggest challenges in learning an unfamiliar domain and plan for how to handle them"
     proficiency_level: "A1"
@@ -51,7 +51,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (learning strategy design, resource prioritization, explicit skip decisions, testable competence definition) — within Part 0 beginner range of 3-5"
+  assessment: "4 concepts (learning strategy design, resource prioritization, explicit skip decisions, testable competence definition) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "Create two competing learning plans with different strategies (breadth-first vs. depth-first) and predict which will produce better results. After the 72-hour sprint, evaluate which strategy would have been superior"
@@ -62,21 +62,21 @@ teaching_guide:
   session_group: 10
   session_title: "The Learning Plan"
   key_points:
-    - "The Learning Plan IS a Prediction Lock — it is a prediction about your own learning process, committed before you begin"
-    - "The 'what to skip' decision is as important as the 'what to learn' decision — beginners try to learn everything and end up mastering nothing"
+    - "The Learning Plan IS a Prediction Lock: it is a prediction about your own learning process, committed before you begin"
+    - "The 'what to skip' decision is as important as the 'what to learn' decision: beginners try to learn everything and end up mastering nothing"
     - "The definition of 'enough' forces students to think about what competence actually means in a time-constrained context"
-    - "AI feedback on the plan reveals common beginner mistakes — jumping to advanced material, unrealistic time allocation, wrong resource choices"
+    - "AI feedback on the plan reveals common beginner mistakes: jumping to advanced material, unrealistic time allocation, wrong resource choices"
   misconceptions:
-    - "Students think the plan should be perfect before starting — the plan is a prediction to be tested, not a rigid schedule"
+    - "Students think the plan should be perfect before starting: the plan is a prediction to be tested, not a rigid schedule"
     - "Students allocate equal time to all phases instead of front-loading foundations"
     - "Students define 'enough' as 'know everything' instead of a realistic competence threshold for 72 hours"
   discussion_prompts:
     - "Why does this exercise make you plan BEFORE learning anything? What would be different if you planned after 10 hours of studying?"
     - "What is the difference between 'I will skip advanced topics' and 'I will skip advanced topics BECAUSE they require prerequisites I will not have time to build'?"
   teaching_tips:
-    - "Assign domains that are genuinely unfamiliar — pharmacology for developers, supply chain for accountants, constitutional law for designers"
-    - "Emphasize that this plan carries forward to Exercise 2 (the 72-hour sprint) — the plan will be tested against reality"
-    - "The Deliverable Template is detailed — use the collapsible format so it does not overwhelm the page"
+    - "Assign domains that are genuinely unfamiliar: pharmacology for developers, supply chain for accountants, constitutional law for designers"
+    - "Emphasize that this plan carries forward to Exercise 2 (the 72-hour sprint) : the plan will be tested against reality"
+    - "The Deliverable Template is detailed: use the collapsible format so it does not overwhelm the page"
   assessment_quick_check:
     - "Ask students: What are you explicitly choosing NOT to learn? Why?"
     - "Ask students: How will you know when you have learned 'enough'? Give me a specific, testable answer."
@@ -84,7 +84,7 @@ teaching_guide:
 
 # Learning How to Learn
 
-> _The half-life of any specific skill is shrinking. The student who can learn the next thing — quickly, independently, and critically — will outlast every student who only learned this thing._
+> _The half-life of any specific skill is shrinking. The student who can learn the next thing (quickly, independently, and critically) will outlast every student who only learned this thing._
 
 :::note Building On Previous Chapters
 This capstone chapter calls on everything: you will use **question formulation** ([Chapter 1](../01-asking-better-questions/01-prediction-lock.md)) to design your learning plan, **error detection** ([Chapter 2](../02-detecting-broken-reasoning/01-error-prediction.md)) to evaluate AI's teaching, **systems thinking** ([Chapter 3](../03-thinking-in-systems/01-cascade-mapping.md)) to understand how concepts connect, **first principles** ([Chapter 4](../04-reasoning-from-first-principles/01-blank-page-derivation.md)) to build understanding from foundations, and **AI collaboration** ([Chapter 6](../06-working-with-ai-not-for-ai/01-three-path-comparison.md)) to learn efficiently without becoming dependent.
@@ -97,12 +97,16 @@ This is the capstone chapter because it is the skill underneath all the others. 
 **Layers Used:** Layer 1 (Predict Before You Prompt)
 
 :::note Building On Previous Exercises
-Your learning plan is a **Prediction Lock** — a prediction about your own learning process, committed before you begin. You will use the same format from [Chapter 1, Exercise 1](../01-asking-better-questions/01-prediction-lock.md).
+Your learning plan is a **Prediction Lock**; a prediction about your own learning process, committed before you begin. You will use the same format from [Chapter 1, Exercise 1](../01-asking-better-questions/01-prediction-lock.md).
 :::
 
 ### What You Do
 
 You are assigned a domain you have never studied: pharmacology for a developer, supply chain logistics for an accountant, constitutional law for a designer. Before learning anything, write a Learning Plan: how will you approach this? What will you learn first? What resources will you prioritize? How will you know when you know enough? What will you explicitly skip?
+
+:::tip Solo Learner Alternative
+If no domain is assigned by an instructor, choose a field you have never studied but find genuinely interesting. Good choices: a discipline far from your own (e.g., if you are in tech, try marine biology or urban planning; if you are in business, try astrophysics or linguistics). The less you know, the better this exercise works.
+:::
 
 ---
 
@@ -169,7 +173,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that learning itself requires a strategy. Most people dive in randomly. By planning first and checking that plan with AI, you develop the meta-skill of designing your own learning process — which will be essential every time you encounter new technology, new frameworks, or new domains in the rest of this book.
+You learn that learning itself requires a strategy. Most people dive in randomly. By planning first and checking that plan with AI, you develop the meta-skill of designing your own learning process; which will be essential every time you encounter new technology, new frameworks, or new domains in the rest of this book.
 
 ## Flashcards Study Aid
 

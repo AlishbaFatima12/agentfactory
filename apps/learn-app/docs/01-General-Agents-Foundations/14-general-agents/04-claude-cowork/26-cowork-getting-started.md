@@ -56,16 +56,16 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "1.0.0"
+version: "1.1.0"
 
 # Legacy compatibility (Docusaurus)
 prerequisites:
   - "Completion of Lesson 25: From Terminal to Desktop"
-  - "macOS or Windows (x64) computer"
-  - "Anthropic subscription (Pro, Max, Team Premium, or Enterprise required for Cowork)"
+  - "macOS (Apple Silicon M1+) or Windows (x64/ARM64) computer"
+  - "Anthropic subscription (Pro, Max, Teams, or Enterprise required for Cowork)"
 
 teaching_guide:
   lesson_type: "hands-on"
@@ -79,14 +79,14 @@ teaching_guide:
   misconceptions:
     - "Students grant access to their entire home directory for convenience -- the best practices section specifically warns against this and recommends dedicated workspace folders"
     - "Students think Cowork mode is always on -- they need to explicitly switch from Chat mode to Cowork mode, and the folder access panel confirms which mode is active"
-    - "Students on Windows should ensure they have x64 architecture and admin privileges for initial setup -- Windows support launched February 2026"
+    - "Students on Windows (x64 or ARM64) should ensure they have admin privileges for initial setup. Students on Intel Macs cannot use the Cowork tab (Apple Silicon M1+ required)."
   discussion_prompts:
     - "The approval workflow requires confirmation for writes but not reads. Why is this asymmetry the right default? When might you want reads to require approval too?"
     - "Compare the folder access permission model to how you grant app permissions on your phone. What design principles are shared?"
   teaching_tips:
     - "Have students create the test folder with the provided bash commands before class so setup does not consume session time"
     - "Walk through the approval workflow table as a security exercise: for each operation type, ask students what could go wrong without approval"
-    - "If Windows users are in the class, ensure they have x64 architecture and admin privileges before class. Use the troubleshooting section for platform-specific setup issues"
+    - "If Windows users are in the class, ensure they have admin privileges before class. Both x64 and ARM64 are supported. macOS users need Apple Silicon (M1+) for the Cowork tab. Use the troubleshooting section for platform-specific setup issues"
     - "Use the 'Common First Tasks' table as a choose-your-own-adventure: let each student pick one task that matches their daily work and try it live"
   assessment_quick_check:
     - "Name the three panels in the Cowork interface and describe what each shows during a file organization task"
@@ -104,14 +104,14 @@ Claude Cowork transforms how you work with documents and files. But before you c
 
 Before you begin, ensure you have:
 
-| Requirement        | Details                                                                                         |
-| ------------------ | ----------------------------------------------------------------------------------------------- |
-| **Subscription**   | Claude Pro, Max, Team Premium, or Enterprise (free tier and Team Standard don't include Cowork) |
-| **Platform**       | macOS or Windows (x64)                                                                          |
-| **Claude Desktop** | Latest version from claude.ai/download                                                          |
-| **Work to do**     | Documents, files, or data you want to work with                                                 |
+| Requirement        | Details                                                                       |
+| ------------------ | ----------------------------------------------------------------------------- |
+| **Subscription**   | Claude Pro, Max, Teams, or Enterprise (the free tier does not include Cowork) |
+| **Platform**       | macOS (Apple Silicon M1+) or Windows (x64 and ARM64)                          |
+| **Claude Desktop** | Latest version from claude.ai/download                                        |
+| **Work to do**     | Documents, files, or data you want to work with                               |
 
-**Why the subscription requirement?** Cowork's agentic capabilities—filesystem access, document processing, persistent context—require significant infrastructure. The Pro and Max tiers support this enhanced functionality.
+**Why the subscription requirement?** Cowork's agentic capabilities (filesystem access, document processing, autonomous background execution) require significant infrastructure. The Pro and Max tiers support this enhanced functionality.
 
 ---
 
@@ -122,7 +122,7 @@ Before you begin, ensure you have:
 1. Visit claude.ai/download
 2. Download the Claude Desktop app for your platform (macOS or Windows)
 3. Install and launch the application
-4. Sign in with your Anthropic account (Pro, Max, Team Premium, or Enterprise)
+4. Sign in with your Anthropic account (Pro, Max, Teams, or Enterprise)
 
 The Desktop app is your gateway to Cowork. Unlike the web interface, it has direct access to your filesystem with your permission.
 
@@ -130,15 +130,15 @@ The Desktop app is your gateway to Cowork. Unlike the web interface, it has dire
 
 Claude Desktop has three tabs across the top of the window:
 
-- **Chat**: Standard conversation (web-like behavior)
-- **Cowork**: Agentic mode with filesystem access
-- **Code**: Developer-focused terminal interface
+- **Chat**: General conversation with no file access, similar to claude.ai
+- **Cowork**: An autonomous agent that works on tasks locally through the Desktop app; it runs in the background while you do other work
+- **Code**: An interactive coding assistant with direct access to your local files, where you review and approve each change in real time
 
 Select the **Cowork** tab when you want Claude to work with files on your computer. You'll know you're in Cowork mode when you see the folder access panel.
 
 ### Step 3: Grant Folder Access
 
-The first time you use Cowork, Claude will ask for folder access. This is a critical security boundary—Claude can only access folders you explicitly approve.
+The first time you use Cowork, Claude will ask for folder access. This is a critical security boundary: Claude can only access folders you explicitly approve.
 
 **To grant access:**
 
@@ -193,7 +193,7 @@ You can preview, download, or open artifacts directly from this panel.
 
 Let's put Cowork to work with a practical first task: organizing a messy folder.
 
-**Setup:** Pick a real folder you already have — your Downloads folder, a project folder with mixed files, or any workspace that could use organization. Grant Claude Cowork access to that folder.
+**Setup:** Pick a real folder you already have; your Downloads folder, a project folder with mixed files, or any workspace that could use organization. Grant Claude Cowork access to that folder.
 
 **Task:** In Claude Cowork, ask:
 
@@ -242,7 +242,7 @@ Claude will:
 3. Generate relevant placeholder content
 4. Show you the result in the Artifacts panel
 
-You can then open the document in Word to see a properly formatted file—not just text, but actual document structure.
+You can then open the document in Word to see a properly formatted file: not just text, but actual document structure.
 
 ---
 
@@ -265,7 +265,7 @@ As you start using Cowork, keep these safety principles in mind:
 
 1. **Start Small**: Begin with a test folder, not your important documents
 2. **Review Carefully**: Always read the execution plan before approving
-3. **Backup First**: Cowork is powerful—back up important data before major operations
+3. **Backup First**: Cowork is powerful, so back up important data before major operations
 4. **Revoke Access**: Remove folder permissions when you're done with a project
 5. **Watch the Panel**: Keep an eye on the Execution Panel to understand what Claude is doing
 
@@ -275,9 +275,13 @@ As you start using Cowork, keep these safety principles in mind:
 
 **Issue: Cowork mode doesn't appear**
 
-- Ensure you're on Pro, Max, Team Premium, or Enterprise subscription
+- Ensure you're on a Pro, Max, Teams, or Enterprise subscription
 - Update Claude Desktop to the latest version
 - Sign out and sign back in
+
+**Issue: Cowork tab not available on macOS**
+
+- The Cowork tab requires **Apple Silicon (M1 or later)**. Intel Macs cannot access Cowork. You can still use the Chat tab and install the CLI version of Claude Code separately.
 
 **Issue: Folder access denied**
 
@@ -287,13 +291,13 @@ As you start using Cowork, keep these safety principles in mind:
 
 **Issue: Claude Desktop won't launch on Windows**
 
-- Verify you are running Windows x64 (ARM is not supported)
-- Windows S Mode is not supported—switch to standard Windows first
+- Both x64 and ARM64 architectures are supported
+- Windows S Mode is not supported; switch to standard Windows first
 - Run the installer as Administrator if the initial install fails
 
 **Issue: Operations are slow**
 
-- Large folders take time to scan—be patient with the initial read
+- Large folders take time to scan: be patient with the initial read
 - Complex operations (like analyzing hundreds of files) may take time
 - Check the Execution Panel for progress information
 
@@ -303,15 +307,15 @@ As you start using Cowork, keep these safety principles in mind:
 
 **Plan Your First Real Cowork Task:**
 
-> "I work with [describe your actual documents and files]. What is one task I do weekly that involves organizing, processing, or creating files? Design the Cowork prompt I would use — include what folder to grant access to, what outcome I want, and what constraints matter (e.g., don't delete anything, preserve folder structure)."
+> "I work with [describe your actual documents and files]. What is one task I do weekly that involves organizing, processing, or creating files? Design the Cowork prompt I would use; include what folder to grant access to, what outcome I want, and what constraints matter (e.g., don't delete anything, preserve folder structure)."
 
-**What you're learning:** Task design for agentic AI — translating a real work need into a specific, safe Cowork prompt. The folder access decision and constraint specification are the skills that make Cowork effective from day one.
+**What you're learning:** Task design for agentic AI; translating a real work need into a specific, safe Cowork prompt. The folder access decision and constraint specification are the skills that make Cowork effective from day one.
 
 **Test the Approval Workflow:**
 
 > "In your granted folder, ask Claude to rename 3 files using a consistent naming pattern. Before approving, read the Execution Panel carefully: What files will change? What will the new names be? Approve only if every change looks correct. Then describe what you observed in the propose-approve-execute cycle."
 
-**What you're learning:** Approval workflow fluency — the habit of reading the execution plan before clicking approve. This is the single most important safety skill for Cowork, and practicing it on a small operation builds the reflex before you attempt bulk operations.
+**What you're learning:** Approval workflow fluency; the habit of reading the execution plan before clicking approve. This is the single most important safety skill for Cowork, and practicing it on a small operation builds the reflex before you attempt bulk operations.
 
 ---
 

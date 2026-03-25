@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: "Prospect Intelligence and ICP Calibration"
-description: "Turn intuitive sales knowledge into a data-driven ICP configuration using closed-won deal analysis, the persona-icp skill, and competitive positioning — then validate the ICP by scoring known deals and building research briefs for five target prospects"
+description: "Turn intuitive sales knowledge into a data-driven ICP configuration using closed-won deal analysis, the persona-icp skill, and competitive positioning: then validate the ICP by scoring known deals and building research briefs for five target prospects"
 keywords:
   [
     "ICP",
@@ -75,7 +75,7 @@ cognitive_load:
   assessment: "6 concepts at B1 level. The key conceptual shift is using closed-won deals to derive the ICP rather than building it from intuition alone. Concepts build sequentially: analyse deals, extract patterns, configure ICP, validate, then apply to new prospects."
 
 differentiation:
-  extension_for_advanced: "Build two ICPs — one for NexaFlow's Pakistan market and one for their UK expansion. Run the same 5 prospects through both ICPs. How do the scores differ? What does this tell you about market-specific ICP tuning?"
+  extension_for_advanced: "Build two ICPs: one for NexaFlow's Pakistan market and one for their UK expansion. Run the same 5 prospects through both ICPs. How do the scores differ? What does this tell you about market-specific ICP tuning?"
   remedial_for_struggling: "Focus on the closed-won analysis prompt and the ICP configuration. If the agent produces a complete ICP and your 5 closed-won deals score 60+, you have the foundation for L03."
 ---
 
@@ -83,9 +83,9 @@ differentiation:
 
 In Lesson 1, you installed the Revenue Engine, ran your first research brief, and learned to spot hallucinated data. Now you will turn Farah's intuition into a data-driven ICP that the agent can use on every prospect in the pipeline.
 
-Farah is NexaFlow's top rep. She closes at 340% of quota while the other three reps average 60%. Ask her to describe her ideal customer and she says "mid-size 3PL, growing fast, legacy systems, new VP trying to make their mark." Ask her to explain why she passes on certain prospects and she says "you just know." That gut-level pattern recognition is real and valuable — but it lives in one person's head. When Farah is on leave, the team reverts to the generic pitch. When NexaFlow hires rep number five, there is no playbook to hand over.
+Farah is NexaFlow's top rep. She closes at 340% of quota while the other three reps average 60%. Ask her to describe her ideal customer and she says "mid-size 3PL, growing fast, legacy systems, new VP trying to make their mark." Ask her to explain why she passes on certain prospects and she says "you just know." That gut-level pattern recognition is real and valuable: but it lives in one person's head. When Farah is on leave, the team reverts to the generic pitch. When NexaFlow hires rep number five, there is no playbook to hand over.
 
-This lesson extracts the patterns from NexaFlow's 20 best deals and encodes them into a configuration file that every rep — and every agent command — can use. By the end, you will have a validated ICP, a complete `sales-marketing.local.md`, and five ranked research briefs for NexaFlow's target prospects.
+This lesson extracts the patterns from NexaFlow's 20 best deals and encodes them into a configuration file that every rep: and every agent command: can use. By the end, you will have a validated ICP, a complete `sales-marketing.local.md`, and five ranked research briefs for NexaFlow's target prospects.
 
 ## Analysing the Closed-Won Deals
 
@@ -111,16 +111,16 @@ sales cycle length?
 | Negative patterns  | Patterns from lost or stalled deals              | Patterns reference your actual demo data                       |
 
 :::note Your output will vary
-Since you generated the demo data in L01, the specific numbers and company names will differ from another student's. The teaching point is the _structure_ of the analysis — five measurable dimensions extracted from deal data — not the exact percentages.
+Since you generated the demo data in L01, the specific numbers and company names will differ from another student's. The teaching point is the _structure_ of the analysis: five measurable dimensions extracted from deal data: not the exact percentages.
 :::
 
-Review your output against these sections. Farah's "you just know" is now decomposed into measurable dimensions — employee sweet spots, persona patterns, trigger events, cycle lengths. These are the signals that separate NexaFlow's closed-won customers from the rest of the market.
+Review your output against these sections. Farah's "you just know" is now decomposed into measurable dimensions: employee sweet spots, persona patterns, trigger events, cycle lengths. These are the signals that separate NexaFlow's closed-won customers from the rest of the market.
 
-Notice what the data reveals that intuition does not. The trigger event breakdown shows that system failures produce the fastest sales cycles (18 days average). Farah knows this instinctively — she prioritises prospects who just had an outage. But the other reps do not know to look for that signal. The ICP will encode it.
+Notice what the data reveals that intuition does not. The trigger event breakdown shows that system failures produce the fastest sales cycles (18 days average). Farah knows this instinctively: she prioritises prospects who just had an outage. But the other reps do not know to look for that signal. The ICP will encode it.
 
 ## Building the ICP
 
-Now convert those patterns into a structured ICP configuration. The `persona-icp` skill auto-activates when you work through ICP prompts — you do not need to invoke it by name.
+Now convert those patterns into a structured ICP configuration. The `persona-icp` skill auto-activates when you work through ICP prompts: you do not need to invoke it by name.
 
 ```
 Use the persona-icp skill to build an ICP definition for NexaFlow
@@ -146,10 +146,10 @@ Include:
 | Data sources     | Where to find each signal type                           | Sources are real, verifiable platforms (LinkedIn, Companies House, etc.) |
 
 :::note Your output will vary
-The ICP dimensions are derived from YOUR demo data, so the specific industries, employee ranges, and trigger events will differ between students. The teaching point is the _structure_ — five ICP dimensions with ranked priorities — not the exact values.
+The ICP dimensions are derived from YOUR demo data, so the specific industries, employee ranges, and trigger events will differ between students. The teaching point is the _structure_: five ICP dimensions with ranked priorities: not the exact values.
 :::
 
-Review the output against the closed-won analysis. Does the ICP capture the patterns you identified? Two things to check immediately. First, the employee range (50-400) should encompass 18 of 20 closed-won deals — if it misses more than 2, widen it. Second, the high-priority timing signals should map to the trigger events from your analysis. If "system failure" appeared in 4 of 20 deals but the ICP omits it, add it.
+Review the output against the closed-won analysis. Does the ICP capture the patterns you identified? Two things to check immediately. First, the employee range (50-400) should encompass 18 of 20 closed-won deals: if it misses more than 2, widen it. Second, the high-priority timing signals should map to the trigger events from your analysis. If "system failure" appeared in 4 of 20 deals but the ICP omits it, add it.
 
 ## Completing sales-marketing.local.md
 
@@ -187,7 +187,7 @@ Then continue with:
 Apply these changes directly to the file.
 ```
 
-Run that prompt and let the agent update `sales-marketing.local.md` directly. Every skill in the Revenue Engine — prospect research, lead scoring, `/competitive-brief` — now reads this configuration and filters its output through NexaFlow's context.
+Run that prompt and let the agent update `sales-marketing.local.md` directly. Every skill in the Revenue Engine: prospect research, lead scoring, `/competitive-brief`: now reads this configuration and filters its output through NexaFlow's context.
 
 ## Validating the ICP Against Known Deals
 
@@ -253,10 +253,10 @@ SUMMARY: All 5 deals score 60+ (HOT)
 All five deals scored 60 or above. The ICP is validated against known outcomes.
 
 :::warning If Any Deal Scores Below 60
-You are scoring historical deals to validate the ICP, not to prioritise them for outreach. If your best deals do not score HOT, your ICP definition is wrong — not the deals. The lead-scoring skill is designed for prospects, not closed-won deals. This is a calibration exercise that works because Fit scores are retrospective. Go back to the ICP and find the missing dimension. Common fixes: widening the employee range, adding an industry vertical you overlooked, or adding a timing signal that the analysis surfaced but the ICP omitted.
+You are scoring historical deals to validate the ICP, not to prioritise them for outreach. If your best deals do not score HOT, your ICP definition is wrong: not the deals. The lead-scoring skill is designed for prospects, not closed-won deals. This is a calibration exercise that works because Fit scores are retrospective. Go back to the ICP and find the missing dimension. Common fixes: widening the employee range, adding an industry vertical you overlooked, or adding a timing signal that the analysis surfaced but the ICP omitted.
 :::
 
-Notice Deal 2 — Gulf Chain scored lower on technographics because they had a modern stack, not legacy systems. This is useful feedback. Not all closed-won customers match the "legacy TMS" signal. You might add "Operational complexity exceeding current tooling capacity" as an additional positive technographic signal to catch companies like Gulf Chain that have modern infrastructure but still need workflow automation at scale.
+Notice Deal 2; Gulf Chain scored lower on technographics because they had a modern stack, not legacy systems. This is useful feedback. Not all closed-won customers match the "legacy TMS" signal. You might add "Operational complexity exceeding current tooling capacity" as an additional positive technographic signal to catch companies like Gulf Chain that have modern infrastructure but still need workflow automation at scale.
 
 ## Deep Research on 5 Prospects
 
@@ -322,7 +322,7 @@ Meridian Logistics (Leeds, UK)
 
 The difference is structural, not a reflection of company quality. UK companies file annual accounts at Companies House, making revenue and director information public by law. Pakistani companies file with SECP, but the filing requirements are lighter and media coverage of mid-market companies is thinner.
 
-This matters for your sales process. For the Karachi prospect, the agent supplements public data with inference — and inference means higher hallucination risk. Apply the three detection rules from Lesson 1 more aggressively on briefs with thin public data. For the London prospect, the agent has richer verified sources, so the brief is more reliable — but you still check financial claims against Companies House filings rather than trusting the agent's numbers.
+This matters for your sales process. For the Karachi prospect, the agent supplements public data with inference: and inference means higher hallucination risk. Apply the three detection rules from Lesson 1 more aggressively on briefs with thin public data. For the London prospect, the agent has richer verified sources, so the brief is more reliable: but you still check financial claims against Companies House filings rather than trusting the agent's numbers.
 
 When the AE provides information that cannot be independently verified (e.g., "he came from Stripe I think"), the brief must either verify it with a source or explicitly flag it as user-provided and requiring verification. Never present unverified AE input as confirmed fact.
 
@@ -358,7 +358,7 @@ LOWEST SCORER: Coastal Freight (52 fit, 42 total)
   → Recommendation: REMOVE from pipeline
 ```
 
-The ranking reveals something counterintuitive. Meridian — a UK company outside NexaFlow's primary geography — scores highest because data availability and timing strength compensate for the geographic distance. This is the ICP working as designed: it separates signal from noise and lets you make decisions based on dimensions, not gut feeling.
+The ranking reveals something counterintuitive. Meridian: a UK company outside NexaFlow's primary geography: scores highest because data availability and timing strength compensate for the geographic distance. This is the ICP working as designed: it separates signal from noise and lets you make decisions based on dimensions, not gut feeling.
 
 ## Competitive Positioning
 
@@ -443,7 +443,7 @@ Identify: firmographics, technographics, timing signals, persona
 profiles, and negative signals.
 ```
 
-**What you're learning:** How closed-won analysis reveals patterns that intuitive sellers like Farah know implicitly but cannot articulate. The agent decomposes "you just know" into measurable dimensions — employee range, trigger events, buyer personas — that can be taught, configured, and scaled across the team.
+**What you're learning:** How closed-won analysis reveals patterns that intuitive sellers like Farah know implicitly but cannot articulate. The agent decomposes "you just know" into measurable dimensions: employee range, trigger events, buyer personas: that can be taught, configured, and scaled across the team.
 
 ### Prompt 2 (Adapt)
 
@@ -453,7 +453,7 @@ demo data. Rank them by total fit. For the lowest-scoring prospect,
 identify which ICP dimensions they fail on.
 ```
 
-**What you're learning:** An ICP is a diagnostic tool — it tells you not just WHO to pursue but WHY some prospects are weak. When the lowest-scoring prospect fails on firmographics versus timing versus persona, the diagnosis is different and the response is different. Firmographic failure means remove from pipeline. Timing failure means monitor and revisit. Persona failure means find a different entry point.
+**What you're learning:** An ICP is a diagnostic tool: it tells you not just WHO to pursue but WHY some prospects are weak. When the lowest-scoring prospect fails on firmographics versus timing versus persona, the diagnosis is different and the response is different. Firmographic failure means remove from pipeline. Timing failure means monitor and revisit. Persona failure means find a different entry point.
 
 ### Prompt 3 (Apply)
 

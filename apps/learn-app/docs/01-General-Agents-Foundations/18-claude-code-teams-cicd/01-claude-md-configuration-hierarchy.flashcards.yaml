@@ -1,0 +1,47 @@
+deck:
+  id: "ch18-01-claude-md-configuration-hierarchy"
+  title: "The CLAUDE.md Configuration Hierarchy"
+  version: 1
+
+cards:
+  - front: "What are the three levels of the CLAUDE.md configuration hierarchy?"
+    back: "User (~/.claude/CLAUDE.md), Project (./CLAUDE.md or ./.claude/CLAUDE.md), and Directory (CLAUDE.md in any subdirectory). More specific levels take precedence over broader ones."
+
+  - front: "Where does the user-level CLAUDE.md file live, and is it shared with teammates?"
+    back: "~/.claude/CLAUDE.md. It is NOT shared via git; it is personal to your machine and applies across all projects."
+
+  - front: "When do directory-level CLAUDE.md files load into context?"
+    back: "On demand, when Claude reads files in that subdirectory. They do NOT load at session start like user-level and project-level files."
+
+  - front: "What command shows every instruction file loaded in the current session?"
+    back: "/memory. It lists all CLAUDE.md files, .claude/rules/ files, and auto memory status. Use it to diagnose configuration issues."
+
+  - front: "What is the @import syntax in CLAUDE.md, and how do paths resolve?"
+    back: "Use @path/to/file to reference external files. Relative paths resolve relative to the file containing the import, not the working directory. Supports up to 5 levels of nesting."
+
+  - front: "What is the difference between CLAUDE.md and settings.json?"
+    back: "CLAUDE.md provides behavioral instructions (code style, architecture). settings.json enforces technical configuration (permissions, hooks, MCP servers). CLAUDE.md shapes behavior; settings.json enforces rules."
+
+  - front: "What happens to CLAUDE.md instructions after running /compact?"
+    back: "CLAUDE.md fully survives compaction. Claude re-reads CLAUDE.md from disk and re-injects it fresh. Only conversational instructions (not in any file) are lost."
+
+  - front: "What is the recommended maximum length for a CLAUDE.md file?"
+    back: "Under 200 lines. Longer files consume more context tokens and reduce adherence. Split large files using @import or .claude/rules/ topic files."
+
+  - front: "A new team member's Claude behaves differently from everyone else's. What should you check first?"
+    back: "Their user-level ~/.claude/CLAUDE.md may have conflicting instructions. Have them run /memory and compare loaded files with another team member."
+
+  - front: "What is the purpose of the .claude/rules/ directory?"
+    back: "Organizing instructions into modular, topic-specific files. Each .md file covers one topic. Files without a paths field load at session start; files with paths load conditionally."
+
+  - front: "How do you run /init, and what does it produce?"
+    back: "Run /init inside Claude Code. It analyzes your codebase and generates a starting CLAUDE.md with build commands, test instructions, and conventions. If one already exists, it suggests improvements."
+
+  - front: "In a monorepo, where should you put instructions specific to the frontend package?"
+    back: "In a directory-level CLAUDE.md at packages/web/CLAUDE.md (or similar). This file loads on demand when Claude works in that directory, keeping instructions scoped."
+
+  - front: "What is the precedence order when CLAUDE.md instructions conflict across levels?"
+    back: "Managed policy (highest) > Project-level > User-level (lowest). More specific scopes take priority over broader ones."
+
+  - front: "Can you reference a personal file from a shared project CLAUDE.md?"
+    back: "Yes. Use @~/.claude/my-preferences.md in the project CLAUDE.md. Teammates without that file simply skip the import. This layers personal preferences on top of team standards."

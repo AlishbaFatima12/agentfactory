@@ -67,24 +67,24 @@ teaching_guide:
   session_group: 3
   session_title: "Practical Exercises and Problem Solving"
   key_points:
-    - "Non-determinism is the motivating problem — run the same LinkedIn prompt twice and get different results, which is why skills exist"
-    - "Skills encode reasoning patterns and personal style, not just saved prompts — the distinction between 'paste a template' and 'loaded expertise' is critical"
+    - "Non-determinism is the motivating problem; run the same LinkedIn prompt twice and get different results, which is why skills exist"
+    - "Skills encode reasoning patterns and personal style, not just saved prompts; the distinction between 'paste a template' and 'loaded expertise' is critical"
     - "The two activation modes (automatic detection vs explicit invocation) should both be demonstrated so students see that skills are not just slash commands"
-    - "This lesson is preparation for Lesson 08 (skill concepts) and 09 (skill creation) — students leave with a mapped procedure ready to encode"
+    - "This lesson is preparation for Lesson 08 (skill concepts) and 09 (skill creation); students leave with a mapped procedure ready to encode"
   misconceptions:
-    - "Students think skills are just saved prompts they paste in — the lesson explicitly addresses this: skills include reasoning patterns, examples, and constraints, not just text"
-    - "Students confuse CLAUDE.md (project context) with skills (personal style and procedures) — the Two Problems Two Solutions table is the key distinction"
-    - "Students think they need to code to create skills — skills are markdown files with instructions, no programming required"
-    - "Students assume automatic activation is unreliable — demo it live to show Claude consistently matches tasks to the right skill"
+    - "Students think skills are just saved prompts they paste in; the lesson explicitly addresses this: skills include reasoning patterns, examples, and constraints, not just text"
+    - "Students confuse CLAUDE.md (project context) with skills (personal style and procedures); the Two Problems Two Solutions table is the key distinction"
+    - "Students think they need to code to create skills; skills are markdown files with instructions, no programming required"
+    - "Students assume automatic activation is unreliable; demo it live to show Claude consistently matches tasks to the right skill"
   discussion_prompts:
     - "After running the LinkedIn prompt with and without the internal-comms skill, what specific differences did you notice in tone, structure, and engagement hooks?"
     - "If skills encode your personal style, what happens when two team members have conflicting skills for the same task?"
     - "What three repetitive tasks from your life would benefit most from a skill, and what would 'your way' look like for each?"
   teaching_tips:
-    - "The with-vs-without skill comparison is the centerpiece — run the LinkedIn prompt live without the skill, then with it, and ask students to spot every difference"
-    - "Have students download the Skills Lab and try internal-comms before you explain the theory — experience first, concepts second"
-    - "The 'Mapping Your First Procedure' exercise at the end produces the input for Lesson 09 — collect student procedure maps and verify they are specific enough before moving on"
-    - "The Matrix analogy resonates strongly — use it as shorthand for the rest of the chapter: 'loading a skill is like Trinity loading the helicopter program'"
+    - "The with-vs-without skill comparison is the centerpiece; run the LinkedIn prompt live without the skill, then with it, and ask students to spot every difference"
+    - "Have students download the Skills Lab and try internal-comms before you explain the theory; experience first, concepts second"
+    - "The 'Mapping Your First Procedure' exercise at the end produces the input for Lesson 09; collect student procedure maps and verify they are specific enough before moving on"
+    - "The Matrix analogy resonates strongly; use it as shorthand for the rest of the chapter: 'loading a skill is like Trinity loading the helicopter program'"
   assessment_quick_check:
     - "Ask students: What is the difference between a saved prompt and a skill?"
     - "Have students name their chosen repetitive task and describe their personal style for it in two sentences"
@@ -95,7 +95,7 @@ teaching_guide:
 
 Ask Claude to write a LinkedIn post about learning AI. Now ask again with the exact same words.
 
-You'll get different results. Not wrong—just different. Different structure, different tone, different emoji choices.
+You'll get different results. Not wrong: just different. Different structure, different tone, different emoji choices.
 
 Try it yourself:
 
@@ -111,7 +111,7 @@ This isn't a bug. It's how AI models work.
 
 ## Why AI Outputs Vary
 
-AI models like Claude are **non-deterministic**—the same input can produce different outputs each time.
+AI models like Claude are **non-deterministic**:the same input can produce different outputs each time.
 
 **Non-deterministic** simply means "not guaranteed to give the same result." When you roll a die, you can't predict the exact number. When you ask an AI model the same question twice, you can't predict the exact wording of the response.
 
@@ -142,7 +142,7 @@ Or maybe it's study notes: "When I process lecture notes, create a summary first
 
 You might think: "I should save this prompt somewhere and paste it each time."
 
-That instinct is 10% of the answer—and missing 90% of the opportunity.
+That instinct is 10% of the answer: and missing 90% of the opportunity.
 
 ---
 
@@ -150,11 +150,11 @@ That instinct is 10% of the answer—and missing 90% of the opportunity.
 
 You have your unique way of doing things. Your LinkedIn posts get more engagement when you follow your personal style. Your study notes work better when organized your way. Your emails get responses when structured a certain way.
 
-That knowledge lives in your head. Every time you ask Claude for help, you explain your preferences—then they're gone when the session ends.
+That knowledge lives in your head. Every time you ask Claude for help, you explain your preferences: then they're gone when the session ends.
 
 What if you could teach Claude your style once and have it apply automatically, forever?
 
-That's what skills do. Not saving keystrokes—**preserving your personal touch**. You invest once in documenting how you work, and Claude applies your style consistently across every future task.
+That's what skills do. Not saving keystrokes: **preserving your personal touch**. You invest once in documenting how you work, and Claude applies your style consistently across every future task.
 
 ---
 
@@ -177,9 +177,9 @@ This constrains drift because Claude isn't reinventing your structure and prefer
 
 - **Your exact structure** (not reinvented each time)
 - **Your specific examples** (showing what you want)
-- **Your preferences documented** (not remembered—written down)
+- **Your preferences documented** (not remembered: written down)
 
-The result: Claude's output still varies (that's inherent to non-determinism), but it stays within YOUR boundaries. Every LinkedIn post has your tone, your emoji style, your engagement hooks—because your skill defines them.
+The result: Claude's output still varies (that's inherent to non-determinism), but it stays within YOUR boundaries. Every LinkedIn post has your tone, your emoji style, your engagement hooks: because your skill defines them.
 
 Think of it like the difference between asking a stranger for directions versus asking someone who knows your neighborhood. The stranger gives generic advice. Your neighbor knows your shortcuts.
 
@@ -196,16 +196,16 @@ That personalized touch is the difference between generic output and YOUR output
 
 **Claude without skills**: A brilliant assistant who helps with anything but always uses a generic approach.
 
-**Claude with skills**: Your personalized assistant. When you mention LinkedIn, Claude doesn't think "how to write a post?" It thinks "friendly-professional tone, 2-3 emojis, end with question"—because that's YOUR style, loaded automatically.
+**Claude with skills**: Your personalized assistant. When you mention LinkedIn, Claude doesn't think "how to write a post?" It thinks "friendly-professional tone, 2-3 emojis, end with question": because that's YOUR style, loaded automatically.
 
-**Simple definition**: A skill is a folder with a `SKILL.md` file containing your instructions for a specific task—your tone, your structure, your preferences—so Claude creates output that sounds like you.
+**Simple definition**: A skill is a folder with a `SKILL.md` file containing your instructions for a specific task: your tone, your structure, your preferences: so Claude creates output that sounds like you.
 
 :::tip The Matrix Analogy
-Remember the scene in _The Matrix_ where Trinity needs to fly a helicopter? She doesn't know how—until Tank uploads the B-212 helicopter pilot program directly into her mind. Seconds later, she's an expert pilot.
+Remember the scene in _The Matrix_ where Trinity needs to fly a helicopter? She doesn't know how: until Tank uploads the B-212 helicopter pilot program directly into her mind. Seconds later, she's an expert pilot.
 
 ![matrix-skill-loading](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-05/matrix-skill-loading.png)
 
-Skills work the same way. When you ask Claude to help with LinkedIn posts and you have a LinkedIn skill, Claude instantly "loads" your expertise—your tone, your structure, your preferences. The knowledge transfers in milliseconds, ready to use.
+Skills work the same way. When you ask Claude to help with LinkedIn posts and you have a LinkedIn skill, Claude instantly "loads" your expertise: your tone, your structure, your preferences. The knowledge transfers in milliseconds, ready to use.
 
 **Trinity (Agent) + Helicopter Program (Skill) = Instant Expert Pilot**
 **Claude (Agent) + Your LinkedIn Skill = Instant Expert in YOUR Style**
@@ -239,7 +239,7 @@ The Skills Lab contains two types of skills:
 
 - `docx`, `pdf`, `pptx`, `xlsx` - These document skills run Python scripts on your machine
 
-Don't have Python? No problem! We'll use `internal-comms` in this lesson—it works perfectly without any extra setup. You'll install Python in [Chapter 16](/docs/Coding-for-Problem-Solving/introduction-to-python/) and unlock the document skills then.
+Don't have Python? No problem! We'll use `internal-comms` in this lesson: it works perfectly without any extra setup. You'll install Python in [Chapter 16](/docs/Coding-for-Problem-Solving/introduction-to-python/) and unlock the document skills then.
 :::
 
 ### Step 1: Download the Skills Lab
@@ -273,7 +273,7 @@ how to build intelligent agents that can automate tasks and enhance productivity
 #AI #MachineLearning #ArtificialIntelligence
 ```
 
-This is okay—but it's generic. No personality, no engagement hook.
+This is okay: but it's generic. No personality, no engagement hook.
 
 ### Step 3: Now Try With the Internal-Comms Skill
 
@@ -382,13 +382,13 @@ Once you have Python installed (covered in [Chapter 16](/docs/Coding-for-Problem
 
 ## Real Example: The Study Notes Assistant
 
-Skills work for any repeated task—especially student workflows.
+Skills work for any repeated task: especially student workflows.
 
 **The problem:** A university student struggled with organizing lecture notes. They'd type notes during class or download lecture slides, but the information was messy and unstructured. When exam time came, they had pages of disorganized content.
 
 **The solution:** They created a skill that transforms their raw lecture notes into structured study materials.
 
-**Important:** Claude Code works with text, not video. This skill processes text-based notes you already have—from typed notes, lecture slides, or transcripts.
+**Important:** Claude Code works with text, not video. This skill processes text-based notes you already have: from typed notes, lecture slides, or transcripts.
 
 Here's what the skill does:
 
@@ -535,7 +535,7 @@ That's your personal style guide ready to become a skill!
 
 > "I want to create a skill for [your chosen task]. Let's practice! Ask me questions about how I like to do this task. Then show me how you'd describe my style as a simple guide someone else could follow."
 
-**What you're learning:** The interview-based approach to skill design. Claude asks questions, you provide expertise—this Three Roles pattern creates better skills than writing alone.
+**What you're learning:** The interview-based approach to skill design. Claude asks questions, you provide expertise: this Three Roles pattern creates better skills than writing alone.
 
 
 ## Flashcards Study Aid

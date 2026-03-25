@@ -151,10 +151,10 @@ Engagement) and classify the lead.
 | Action recommendation  | Next step for this prospect                         | Recommendation matches classification                                  |
 
 :::note Your output will vary
-The agent's scores depend on your demo-data.md content and ICP configuration. The teaching point is the _structure_ — three independent dimensions with sub-scores — not the exact numbers. If Meridian scores HOT (75+), the ICP is working. If it scores lower than expected, check which dimension is dragging the score.
+The agent's scores depend on your demo-data.md content and ICP configuration. The teaching point is the _structure_: three independent dimensions with sub-scores: not the exact numbers. If Meridian scores HOT (75+), the ICP is working. If it scores lower than expected, check which dimension is dragging the score.
 :::
 
-If Meridian scores HOT, examine the dimension breakdown to understand why. The Fit dimension should reflect industry match, company size, and tech stack signals from demo-data.md. The Timing dimension should capture trigger events like contract wins and leadership changes. Engagement will typically be moderate for fictional prospects — limited public data means lower website and content interaction scores.
+If Meridian scores HOT, examine the dimension breakdown to understand why. The Fit dimension should reflect industry match, company size, and tech stack signals from demo-data.md. The Timing dimension should capture trigger events like contract wins and leadership changes. Engagement will typically be moderate for fictional prospects: limited public data means lower website and content interaction scores.
 
 Now score the remaining four prospects. Run each one through the same prompt, substituting the prospect details from your Lesson 2 research briefs.
 

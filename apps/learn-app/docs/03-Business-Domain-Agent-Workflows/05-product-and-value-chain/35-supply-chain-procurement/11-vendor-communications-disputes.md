@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/supply-chain-procurement/vendor-communications-disputes
 sidebar_position: 11
 title: "Vendor Communications & Disputes"
-description: "Draft professional vendor communications — from invoice dispute notices to corrective action requests and exit notices — using the /vendor-communicate skill to maintain tone, precision, and legal defensibility"
+description: "Draft professional vendor communications: from invoice dispute notices to corrective action requests and exit notices: using the /vendor-communicate skill to maintain tone, precision, and legal defensibility"
 keywords:
   [
     "vendor communication",
@@ -56,49 +56,49 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Invoice Dispute Notice — facts-based, specific variance reference, payment intent"
-    - "Corrective Action Request (CAR) — formal performance breach, root cause required, timeline"
-    - "Contract Non-Renewal Notice — notice period compliance, transition requirements"
-    - "Emergency Supply Assurance Request — risk-triggered, written assurance required"
-    - "Vendor Exit Notice — planned transition, IP/tooling recovery, mutual terms"
-  assessment: "5 communication types at B1 level — manageable because each follows the same underlying principle (factual, specific, actionable) with type-specific structure. The lesson teaches a pattern first, then applies it across five variants. The worked examples anchor each type concretely."
+    - "Invoice Dispute Notice: facts-based, specific variance reference, payment intent"
+    - "Corrective Action Request (CAR): formal performance breach, root cause required, timeline"
+    - "Contract Non-Renewal Notice: notice period compliance, transition requirements"
+    - "Emergency Supply Assurance Request: risk-triggered, written assurance required"
+    - "Vendor Exit Notice: planned transition, IP/tooling recovery, mutual terms"
+  assessment: "5 communication types at B1 level: manageable because each follows the same underlying principle (factual, specific, actionable) with type-specific structure. The lesson teaches a pattern first, then applies it across five variants. The worked examples anchor each type concretely."
 
 differentiation:
   extension_for_advanced: "Research the legal difference between a dispute notice and a formal claim under contract. At what point does a procurement dispute become a legal dispute requiring counsel involvement? Draft the internal escalation protocol that determines when the CPO must involve Legal, and build it into the authority table."
-  remedial_for_struggling: "Focus on two principles: (1) every communication must reference specific PO numbers, dates, and data — not general complaints; (2) the required action must be explicit and time-bound. If you can identify what went wrong, cite the evidence, and state what you need by when, you have the core of every communication type."
+  remedial_for_struggling: "Focus on two principles: (1) every communication must reference specific PO numbers, dates, and data: not general complaints; (2) the required action must be explicit and time-bound. If you can identify what went wrong, cite the evidence, and state what you need by when, you have the core of every communication type."
 
 teaching_guide:
   key_points:
-    - "All five communication types share one principle: state facts, never blame — the vendor cannot dispute data"
-    - "Authority levels are not bureaucracy — they reflect legal exposure and relationship stakes"
+    - "All five communication types share one principle: state facts, never blame: the vendor cannot dispute data"
+    - "Authority levels are not bureaucracy: they reflect legal exposure and relationship stakes"
     - "The invoice dispute notice has no tone: it is an accounting document, not a grievance"
-    - "A CAR is a formal legal document — the clock starts when it is sent; ensure the date is correct"
-    - "Emergency Supply Assurance Requests are sent before there is a problem, not after — they are a risk management tool"
+    - "A CAR is a formal legal document: the clock starts when it is sent; ensure the date is correct"
+    - "Emergency Supply Assurance Requests are sent before there is a problem, not after: they are a risk management tool"
   misconceptions:
     - "Vendor communications should be firm/assertive. Correction: professional procurement communications are factual, not firm. Emotional or assertive language gives the vendor grounds to dispute the process rather than the substance."
-    - "A CAR is a warning letter. Correction: a CAR is a formal documented request for a corrective action plan — it is a contractual notice under the supply agreement, not a warning. Its purpose is to trigger a documented resolution process, not to signal displeasure."
-    - "Non-renewal notices can be sent any time before the contract ends. Correction: most supply agreements include a notice period (typically 30-90 days). Missing the notice deadline may legally extend the contract — often for another full term. The Procurement Calendar Agent exists to prevent this."
+    - "A CAR is a warning letter. Correction: a CAR is a formal documented request for a corrective action plan: it is a contractual notice under the supply agreement, not a warning. Its purpose is to trigger a documented resolution process, not to signal displeasure."
+    - "Non-renewal notices can be sent any time before the contract ends. Correction: most supply agreements include a notice period (typically 30-90 days). Missing the notice deadline may legally extend the contract: often for another full term. The Procurement Calendar Agent exists to prevent this."
   discussion_prompts:
-    - "Your highest-spend vendor has missed OTD targets for six consecutive weeks. You have sent three informal emails. Nothing has changed. What is the procurement case for sending a formal CAR rather than another informal email — and what are the risks if you do not?"
-    - "A vendor calls to inform you that their bank details have changed and asks you to update your payment system. Your AP inbox also received a PDF 'invoice' with different bank details. What is the correct procurement response — and why does the vendor-communication skill specifically list this as a NEVER DO?"
+    - "Your highest-spend vendor has missed OTD targets for six consecutive weeks. You have sent three informal emails. Nothing has changed. What is the procurement case for sending a formal CAR rather than another informal email: and what are the risks if you do not?"
+    - "A vendor calls to inform you that their bank details have changed and asks you to update your payment system. Your AP inbox also received a PDF 'invoice' with different bank details. What is the correct procurement response: and why does the vendor-communication skill specifically list this as a NEVER DO?"
   teaching_tips:
     - "Walk through the CAR template line by line. Students often underestimate the specificity required: not 'OTD has been poor' but 'OTD against the 95% contractual SLA averaged 82.3% over the 8-week period from [date] to [date], a shortfall of 12.7 percentage points.'"
-    - "The Emergency Supply Assurance Request is counterintuitive — students ask 'why would we tell the vendor we're worried?' The answer is that written assurance creates a documented record. If the vendor later fails to supply, you have evidence they confirmed capacity and the failure was unexpected."
+    - "The Emergency Supply Assurance Request is counterintuitive: students ask 'why would we tell the vendor we're worried?' The answer is that written assurance creates a documented record. If the vendor later fails to supply, you have evidence they confirmed capacity and the failure was unexpected."
 ---
 
 # Vendor Communications & Disputes
 
 Your Accounts Payable team has been chasing the same invoice variance for three weeks. The vendor insists the price was agreed verbally. Your category manager disagrees. The emails back and forth have become increasingly defensive, and no one can find a clear record of what was agreed. Meanwhile, the invoice sits unpaid, the vendor is threatening to put your account on hold, and your operations team is asking whether the next delivery is at risk.
 
-This situation is entirely avoidable. Every supplier relationship, at some point, produces a discrepancy — a price that does not match the PO, a delivery that falls short of the SLA, a contract nearing expiry with no decision made. What determines whether a discrepancy becomes a manageable administrative matter or a relationship-damaging dispute is not the size of the variance. It is the quality and speed of the communication.
+This situation is entirely avoidable. Every supplier relationship, at some point, produces a discrepancy: a price that does not match the PO, a delivery that falls short of the SLA, a contract nearing expiry with no decision made. What determines whether a discrepancy becomes a manageable administrative matter or a relationship-damaging dispute is not the size of the variance. It is the quality and speed of the communication.
 
-The `/vendor-communicate` skill provides five communication templates for the five most common procurement scenarios. Each template is built on the same principle: state facts, reference specific data, state what you need, and state when you need it by. No blame, no emotion, no ambiguity. This lesson teaches when to use each type — and what the output should contain.
+The `/vendor-communicate` skill provides five communication templates for the five most common procurement scenarios. Each template is built on the same principle: state facts, reference specific data, state what you need, and state when you need it by. No blame, no emotion, no ambiguity. This lesson teaches when to use each type: and what the output should contain.
 
 ## The Five Communication Types
 
 ### Type 1: Invoice Dispute Notice
 
-**When to use:** An invoice has a discrepancy that cannot be approved — a price that does not match the PO, a quantity invoiced that exceeds the goods receipt, or an unauthorised charge with no purchase order reference. Payment is held until the dispute is resolved.
+**When to use:** An invoice has a discrepancy that cannot be approved: a price that does not match the PO, a quantity invoiced that exceeds the goods receipt, or an unauthorised charge with no purchase order reference. Payment is held until the dispute is resolved.
 
 The Invoice Dispute Notice is an accounting document. Its purpose is to trigger a specific resolution (credit note, revised invoice, or supporting evidence) within a defined timeframe, while confirming that the undisputed portion will be paid normally.
 
@@ -115,12 +115,12 @@ The Invoice Dispute Notice is an accounting document. Its purpose is to trigger 
 
 ### Type 2: Corrective Action Request (CAR)
 
-**When to use:** A vendor's performance has breached a contractual KPI — on-time delivery below threshold, quality rejection rate above threshold, or another measurable SLA — and the breach has persisted beyond your informal escalation path. The CAR is a formal notice under the supply agreement requiring the vendor to produce a documented corrective action plan.
+**When to use:** A vendor's performance has breached a contractual KPI: on-time delivery below threshold, quality rejection rate above threshold, or another measurable SLA: and the breach has persisted beyond your informal escalation path. The CAR is a formal notice under the supply agreement requiring the vendor to produce a documented corrective action plan.
 
 A CAR is not a complaint letter. It is a legal document that starts a clock. If the vendor fails to respond or fails to implement the plan, you have documented grounds for contract termination or compensation claims.
 
 **Required elements:**
-- CAR reference number (CAR-[Year]-[N]) — for tracking
+- CAR reference number (CAR-[Year]-[N]): for tracking
 - KPI name, contractual threshold, actual performance, shortfall
 - Period covered with supporting data reference (ERP report, QMS record)
 - Deadline for written corrective action plan (typically 10-14 calendar days)
@@ -132,10 +132,10 @@ A CAR is not a complaint letter. It is a legal document that starts a clock. If 
 
 ### Type 3: Contract Non-Renewal Notice
 
-**When to use:** You are exercising the right not to renew a contract upon expiry — because you are retendering, consolidating to another vendor, or ending the relationship for strategic reasons. The notice must be sent before the contractual notice deadline (typically 60-90 days before contract expiry).
+**When to use:** You are exercising the right not to renew a contract upon expiry: because you are retendering, consolidating to another vendor, or ending the relationship for strategic reasons. The notice must be sent before the contractual notice deadline (typically 60-90 days before contract expiry).
 
 :::caution Notice Deadline is Non-Negotiable
-Missing the notice deadline can legally extend the contract for a further full term — often 12 months. The Procurement Calendar Agent (Lesson 12) exists specifically to ensure this never happens. If you are approaching a notice deadline with no decision, that is a CPO-level escalation, not a category manager task.
+Missing the notice deadline can legally extend the contract for a further full term: often 12 months. The Procurement Calendar Agent (Lesson 12) exists specifically to ensure this never happens. If you are approaching a notice deadline with no decision, that is a CPO-level escalation, not a category manager task.
 :::
 
 **Required elements:**
@@ -144,13 +144,13 @@ Missing the notice deadline can legally extend the contract for a further full t
 - Contract expiry date
 - Confirmation that all POs issued before the notice will be honoured
 - Request for transition support and timeline
-- Positive close (where appropriate — preserve the relationship professionally)
+- Positive close (where appropriate: preserve the relationship professionally)
 
 **Authority level:** CPO sign-off, with Legal review recommended
 
 ### Type 4: Emergency Supply Assurance Request
 
-**When to use:** You have received a signal — financial news about the vendor, a restructuring announcement, disruption at one of their key raw material suppliers, or an industry event — that could potentially affect their ability to supply you. You are not certain there is a problem. You are asking the vendor to formally confirm there is not.
+**When to use:** You have received a signal: financial news about the vendor, a restructuring announcement, disruption at one of their key raw material suppliers, or an industry event: that could potentially affect their ability to supply you. You are not certain there is a problem. You are asking the vendor to formally confirm there is not.
 
 The Emergency Supply Assurance Request is a risk management tool, not a confrontation. Its purpose is to obtain written confirmation of supply capability on the record. If the vendor subsequently fails to supply, you have evidence that they formally confirmed capacity and the failure was unexpected.
 
@@ -164,26 +164,26 @@ The Emergency Supply Assurance Request is a risk management tool, not a confront
 
 ### Type 5: Vendor Exit Notice (Planned Transition)
 
-**When to use:** You have made the decision to transition a category to a different vendor or supply model. This notice initiates the planned wind-down of the current relationship. It is distinct from a non-renewal notice (which exercises a contractual right) — an exit notice covers the transition mechanics: timeline, outstanding orders, and the recovery of any company-owned tooling, intellectual property, or documentation.
+**When to use:** You have made the decision to transition a category to a different vendor or supply model. This notice initiates the planned wind-down of the current relationship. It is distinct from a non-renewal notice (which exercises a contractual right): an exit notice covers the transition mechanics: timeline, outstanding orders, and the recovery of any company-owned tooling, intellectual property, or documentation.
 
 :::danger Tooling and IP First
-Before sending any exit notice, confirm what company-owned assets — tooling, moulds, specifications, intellectual property — are in the vendor's possession. The notice must include explicit requirements for their return by a specific date. Failing to address tooling recovery before exit can create legal disputes that outlast the commercial relationship by years.
+Before sending any exit notice, confirm what company-owned assets: tooling, moulds, specifications, intellectual property: are in the vendor's possession. The notice must include explicit requirements for their return by a specific date. Failing to address tooling recovery before exit can create legal disputes that outlast the commercial relationship by years.
 :::
 
 **Required elements:**
 - Decision to transition and the nature of the alternative arrangement
 - Transition period and final purchase order date
 - Fulfilment requirements through the transition period
-- Explicit list of transition requirements: tooling return, IP transfer, documentation handover — each with a specific date
+- Explicit list of transition requirements: tooling return, IP transfer, documentation handover: each with a specific date
 - Reference offer (where appropriate)
 
 **Authority level:** CPO and Finance Director sign-off
 
 ## Using `/vendor-communicate`
 
-The `/vendor-communicate` command activates the vendor-communication skill. You specify the communication type and provide the relevant data — the skill formats the communication to the correct template standard.
+The `/vendor-communicate` command activates the vendor-communication skill. You specify the communication type and provide the relevant data: the skill formats the communication to the correct template standard.
 
-**Worked example — Invoice Dispute Notice.**
+**Worked example; Invoice Dispute Notice.**
 
 You have received Invoice INV-2024-1147 from AlphaSteel Corp for £48,250. Your PO (PO-2024-0892) was for £46,800. The goods receipt confirms delivery matched the PO specification. The overage of £1,450 has no contractual basis.
 
@@ -219,7 +219,7 @@ You have received Invoice INV-2024-1147 from AlphaSteel Corp for £48,250. Your 
 The communication the skill produces will have the correct structure and professional tone. Your job is to verify that all the factual elements are present and accurate. The exact phrasing is less important than the completeness of the data references.
 :::
 
-**Worked example — Corrective Action Request.**
+**Worked example; Corrective Action Request.**
 
 Your OTD monitoring shows that PrecisionCast Ltd, a Bottleneck vendor, has delivered on time in only 71% of shipments over the past 8 weeks, against a contractual SLA of 92%.
 
@@ -247,16 +247,16 @@ Regardless of communication type, verify these standards in every `/vendor-commu
 
 | Standard | What to Check |
 | --- | --- |
-| **Factual** | All numbers, dates, and references are accurate — no estimates or approximations |
-| **Specific** | PO number, invoice number, CAR reference — all cited explicitly |
-| **Actionable** | The required action is unambiguous — there is no room for the vendor to ask "what do you need from us?" |
-| **Time-bound** | A deadline is stated — not "as soon as possible" but a specific date |
-| **Proportionate** | The tone matches the severity — a first dispute notice is not the same as a final notice before termination |
+| **Factual** | All numbers, dates, and references are accurate: no estimates or approximations |
+| **Specific** | PO number, invoice number, CAR reference: all cited explicitly |
+| **Actionable** | The required action is unambiguous: there is no room for the vendor to ask "what do you need from us?" |
+| **Time-bound** | A deadline is stated: not "as soon as possible" but a specific date |
+| **Proportionate** | The tone matches the severity: a first dispute notice is not the same as a final notice before termination |
 | **Sign-off** | The correct authority level has reviewed and signed before sending |
 
 ## Tone Calibration
 
-Every communication the skill produces will use professional, factual language. This is intentional — procurement communications should read like accounting documents, not like complaints.
+Every communication the skill produces will use professional, factual language. This is intentional: procurement communications should read like accounting documents, not like complaints.
 
 | Wrong | Right |
 | --- | --- |
@@ -287,7 +287,7 @@ Undisputed payment: £22,000 to be processed on standard 30-day terms
 The communication should be addressed to the vendor's Accounts team. Category Manager to sign.
 ```
 
-**What you are learning:** The dispute notice formula — specific invoice reference, PO basis, quantity/price data, required action, deadline, undisputed payment confirmation. Every element that is missing gives the vendor room to ask a question rather than resolve the issue.
+**What you are learning:** The dispute notice formula: specific invoice reference, PO basis, quantity/price data, required action, deadline, undisputed payment confirmation. Every element that is missing gives the vendor room to ask a question rather than resolve the issue.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -326,7 +326,7 @@ is required before sending? What specific written assurance are you
 seeking?
 ```
 
-**What you are learning:** The Emergency Supply Assurance Request is a pre-emptive risk tool — sent when there is a signal, not a confirmed problem. Knowing when to send it (and what to request) is a judgment call that balances relationship management against operational risk.
+**What you are learning:** The Emergency Supply Assurance Request is a pre-emptive risk tool: sent when there is a signal, not a confirmed problem. Knowing when to send it (and what to request) is a judgment call that balances relationship management against operational risk.
 :::
 
 ## Flashcards Study Aid

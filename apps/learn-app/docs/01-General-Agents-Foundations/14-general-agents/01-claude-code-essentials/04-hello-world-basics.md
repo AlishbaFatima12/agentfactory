@@ -67,25 +67,25 @@ teaching_guide:
   session_group: 2
   session_title: "First Conversations and Context Files"
   key_points:
-    - "This is the 'aha moment' lesson — students go from reading about Claude Code to actually using it for the first time"
+    - "This is the 'aha moment' lesson; students go from reading about Claude Code to actually using it for the first time"
     - "The approval pattern (Enter to accept, Esc to reject) is introduced here and governs all future interactions"
-    - "The Five Extension Tools preview table maps every future lesson — students should bookmark it as their roadmap"
-    - "Natural language is the interface — students do not need to learn command syntax, just describe what they want"
+    - "The Five Extension Tools preview table maps every future lesson; students should bookmark it as their roadmap"
+    - "Natural language is the interface; students do not need to learn command syntax, just describe what they want"
   misconceptions:
-    - "Students think they need special syntax or commands to talk to Claude — the whole point is natural language conversation"
-    - "Students confuse 'approval workflow' with 'Claude being unsure' — Claude asks permission because of the security model, not uncertainty"
-    - "Students think the Five Extension Tools table means they need to learn all five tools now — it is a preview, not a prerequisite"
+    - "Students think they need special syntax or commands to talk to Claude; the whole point is natural language conversation"
+    - "Students confuse 'approval workflow' with 'Claude being unsure'; Claude asks permission because of the security model, not uncertainty"
+    - "Students think the Five Extension Tools table means they need to learn all five tools now; it is a preview, not a prerequisite"
   discussion_prompts:
     - "How does the approval pattern change your trust relationship with AI compared to tools that just execute without asking?"
     - "What was surprising about your first conversation with Claude Code compared to using ChatGPT or other AI tools?"
     - "Looking at the Five Extension Tools table, which tool do you think will be most useful for YOUR work and why?"
   teaching_tips:
-    - "Have every student type 'claude' and get a response before moving on — do not proceed until 100% have a working session"
-    - "The 'Where am I?' prompt is deliberately simple — use it to surface any remaining installation issues from Lessons 2-3"
+    - "Have every student type 'claude' and get a response before moving on; do not proceed until 100% have a working session"
+    - "The 'Where am I?' prompt is deliberately simple; use it to surface any remaining installation issues from Lessons 2-3"
     - "When demoing the AI news search example, reject the first proposal with Esc to show students that steering is safe and expected"
-    - "Point at the Five Extension Tools table and say 'this is your chapter roadmap' — it reduces anxiety about upcoming complexity"
+    - "Point at the Five Extension Tools table and say 'this is your chapter roadmap'; it reduces anxiety about upcoming complexity"
   assessment_quick_check:
-    - "Ask students to describe what happened when they typed their first prompt — did Claude ask for approval before acting?"
+    - "Ask students to describe what happened when they typed their first prompt; did Claude ask for approval before acting?"
     - "Have students press Esc on a proposed action and describe what happened next"
     - "Ask: What is the difference between Claude reading a file and Claude creating a file in terms of the approval workflow?"
 ---
@@ -94,7 +94,7 @@ teaching_guide:
 
 You've installed Claude Code your General Agent. Now it's time to actually use it.
 
-This lesson isn't about learning complex features. It's about having your first real conversation with Claude and realizing it's not intimidating—it's actually natural.
+This lesson isn't about learning complex features. It's about having your first real conversation with Claude and realizing it's not intimidating: it's actually natural.
 
 ---
 
@@ -119,6 +119,14 @@ You'll see a prompt. It looks something like:
 
 This is where you talk to Claude. In natural language. No special syntax. No commands you need to memorize.
 
+:::tip Voice Input
+Prefer speaking over typing? Type `/voice` to enable push-to-talk voice dictation. Hold the Space bar, speak naturally, and your transcript inserts at the cursor. Useful for longer instructions or accessibility needs.
+:::
+
+:::tip Output Styles
+Try typing `/config` and switching to **Learning** mode. In this mode, Claude explains its decisions and marks code sections with `TODO(human)` for you to complete yourself. Great for building real understanding instead of just copy-pasting.
+:::
+
 ---
 
 ## Your First Questions: Orient Yourself
@@ -139,7 +147,7 @@ Now ask what Claude can do:
 
 Claude will explain it naturally. Not a manual. Not technical jargon. Just what's possible.
 
-**What you're learning:** Claude responds to natural language. You're not "commanding"—you're asking questions and conversing.
+**What you're learning:** Claude responds to natural language. You're not "commanding": you're asking questions and conversing.
 
 ---
 
@@ -179,11 +187,10 @@ Notice that Claude didn't just do things. **It asked first.**
 
 This is the permission model. Every time Claude wants to:
 
-- **Read** a file
 - **Write** or create a file
-- **Run** a command
+- **Run** a terminal command
 
-It shows you exactly what it's about to do and waits for your approval.
+It shows you exactly what it's about to do and waits for your approval. (Reading files does not require approval, since it is a read-only operation.)
 
 Press `[Enter]` to approve. Press `[Esc]` to reject.
 
@@ -194,7 +201,7 @@ If you reject, you can ask Claude to try differently. That's steering.
 ---
 
 :::tip Ready to Practice?
-Head to **Lesson 06: Practical Problem-Solving Exercises** for 27 hands-on exercises with complete walkthroughs. You'll organize messy files, analyze data, create documents, and build problem-solving skills — all with one-click exercise downloads and step-by-step guidance.
+Head to **Lesson 06: Practical Problem-Solving Exercises** for 27 hands-on exercises with complete walkthroughs. You'll organize messy files, analyze data, create documents, and build problem-solving skills; all with one-click exercise downloads and step-by-step guidance.
 :::
 
 ---
@@ -208,7 +215,7 @@ Once you master basic conversations, you'll start asking more ambitious question
 - _"How do I enforce my team's naming conventions automatically?"_
 - _"How do I give Claude access to my company's database?"_
 
-This is where Claude's extension tools come in. You don't need to understand them yet—just know they exist.
+This is where Claude's extension tools come in. You don't need to understand them yet: just know they exist.
 
 ### The Five Extension Tools at a Glance
 
@@ -220,7 +227,7 @@ This is where Claude's extension tools come in. You don't need to understand the
 | **External systems & data** (APIs, databases, websites) | **MCP**       | Lessons 12-13  |
 | **Automated quality gates & safety rules**              | **Hook**      | Lesson 15      |
 
-**Here's the pattern:** You learn each tool individually (Lessons 5-15), then in Lesson 18, you'll see how an expert combines them in a production workflow—like a manager building a team, not a developer writing functions.
+**Here's the pattern:** You learn each tool individually (Lessons 5-15), then in Lesson 18, you'll see how an expert combines them in a production workflow: like a manager building a team, not a developer writing functions.
 
 ### Why This Matters Now
 
@@ -242,14 +249,13 @@ You're building a **mental model**. The tools are the same; the architecture is 
 
 **Create something real:**
 
-> "Ask Claude to search for recent breakthroughs in your field of interest and save them to a file. Use natural language—describe what you want, not how to do it."
+> "Ask Claude to search for recent breakthroughs in your field of interest and save them to a file. Use natural language: describe what you want, not how to do it."
 
 **Test the approval workflow:**
 
 > "Ask Claude to create a file, and when it asks for approval, press Esc to reject. Then ask it to do something different. Notice how Claude adapts without frustration."
 
 **Next Up:** Now that you're comfortable conversing with Claude, let's teach Claude about YOUR preferences.
-
 
 ## Flashcards Study Aid
 

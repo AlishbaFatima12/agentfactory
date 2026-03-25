@@ -14,7 +14,7 @@ slides:
 **Core Skill:** Verification and Discernment
 
 :::note Building On Previous Chapters
-You will use the **Question Formulation** skill from [Chapter 1](../01-asking-better-questions/01-prediction-lock.md) to design your error-detection queries. The **Reasoning Receipt** format you learned carries forward — annotating AI output becomes second nature from here on.
+You will use the **Question Formulation** skill from [Chapter 1](../01-asking-better-questions/01-prediction-lock.md) to design your error-detection queries. The **Reasoning Receipt** format you learned carries forward; annotating AI output becomes second nature from here on.
 :::
 
 This chapter trains you to become a systematic error detector. Not vague skepticism ("don't trust AI") but precise, categorized analysis of where and how reasoning breaks. You will develop an Error Taxonomy that you carry through the rest of the book and apply to every AI interaction.
@@ -36,7 +36,7 @@ This chapter trains you to become a systematic error detector. Not vague skeptic
 | 1 | [The Error Prediction](./01-error-prediction.md) | Layer 1, Layer 2 | Error prediction document + annotated AI responses |
 | 2 | [The Contradiction Test](./02-contradiction-test.md) | Layer 4, Layer 6 | Three-draft analysis with evolution notes |
 | 3 | [Build It, Then Break It](./03-build-it-break-it.md) | Layer 5, Layer 3 | Domain expertise annotations + cross-domain verification |
-| 4 | [Confidence Calibration](./04-confidence-calibration.md) | Layer 1, Layer 6 | 20-claim Confidence Calibration Chart |
+| 4 | [Confidence Calibration](./04-confidence-calibration.md) | Layer 1, Layer 6 | 10-claim Confidence Calibration Chart |
 
 ## Chapter Deliverable
 

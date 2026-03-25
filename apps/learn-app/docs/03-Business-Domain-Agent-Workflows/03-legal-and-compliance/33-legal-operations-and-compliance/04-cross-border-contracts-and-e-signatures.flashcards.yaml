@@ -14,7 +14,7 @@ cards:
 
   - id: "ch33-04-cross-border-002"
     front: "Name the five cross-border pitfalls that recur in every multi-jurisdictional contract."
-    back: "1. Governing law vs mandatory local law — governing law does not override local regulations.\n2. Arbitration enforceability gaps — not all jurisdictions enforce foreign arbitral awards equally.\n3. Data transfer mechanism gaps — a DPA referencing EU SCCs may be insufficient elsewhere.\n4. Tax withholding obligations — cross-border services frequently trigger withholding tax.\n5. Language precedence — in UAE mainland and Saudi Arabia, the Arabic version may prevail in court."
+    back: "1. Governing law vs mandatory local law: governing law does not override local regulations.\n2. Arbitration enforceability gaps: not all jurisdictions enforce foreign arbitral awards equally.\n3. Data transfer mechanism gaps: a DPA referencing EU SCCs may be insufficient elsewhere.\n4. Tax withholding obligations: cross-border services frequently trigger withholding tax.\n5. Language precedence: in UAE mainland and Saudi Arabia, the Arabic version may prevail in court."
     difficulty: "intermediate"
     tags: ["five-pitfalls", "cross-border"]
 
@@ -32,7 +32,7 @@ cards:
 
   - id: "ch33-04-cross-border-005"
     front: "Why is Step 4 (cross-referencing) the most valuable step in multi-overlay loading?"
-    back: "Cross-referencing compares each clause against every loaded overlay and flags conflicts — for example, a data protection clause that satisfies UAE PDPL but violates Pakistan's PDPA, or an IP assignment clause that works under UAE law but fails under Pakistan's copyright framework. A UAE-law overlay alone would not flag Pakistan's FBR withholding tax, and a Pakistan overlay alone would not flag the Arabic-prevails risk in UAE mainland courts."
+    back: "Cross-referencing compares each clause against every loaded overlay and flags conflicts: for example, a data protection clause that satisfies UAE PDPL but violates Pakistan's PDPA, or an IP assignment clause that works under UAE law but fails under Pakistan's copyright framework. A UAE-law overlay alone would not flag Pakistan's FBR withholding tax, and a Pakistan overlay alone would not flag the Arabic-prevails risk in UAE mainland courts."
     difficulty: "advanced"
     tags: ["multi-overlay", "cross-referencing"]
 
@@ -44,13 +44,13 @@ cards:
 
   - id: "ch33-04-cross-border-007"
     front: "What are the five checks in the pre-signature checklist before routing a contract for execution?"
-    back: "1. Final form confirmed — correct version, no tracked changes or comments remaining.\n2. Entity names verified — match official registration exactly, consistent throughout the document.\n3. Signature blocks aligned — with authorised signers confirmed.\n4. All exhibits and schedules attached — SOW, DPA, IP assignment, payment milestones.\n5. Internal approvals completed — board resolution (if required), GC sign-off, finance sign-off."
+    back: "1. Final form confirmed: correct version, no tracked changes or comments remaining.\n2. Entity names verified: match official registration exactly, consistent throughout the document.\n3. Signature blocks aligned: with authorised signers confirmed.\n4. All exhibits and schedules attached; SOW, DPA, IP assignment, payment milestones.\n5. Internal approvals completed: board resolution (if required), GC sign-off, finance sign-off."
     difficulty: "intermediate"
     tags: ["pre-signature", "checklist"]
 
   - id: "ch33-04-cross-border-008"
     front: "What is the most common cause of contracts requiring re-execution?"
-    back: "Entity name mismatch — where the legal entity name in the contract does not exactly match the official registration. This is the single most frequent cause of contracts requiring re-execution, making it a costly and embarrassing delay."
+    back: "Entity name mismatch: where the legal entity name in the contract does not exactly match the official registration. This is the single most frequent cause of contracts requiring re-execution, making it a costly and embarrassing delay."
     difficulty: "basic"
     tags: ["entity-name", "execution-errors"]
 
@@ -62,18 +62,18 @@ cards:
 
   - id: "ch33-04-cross-border-010"
     front: "What happens automatically after a contract is filed in the repository post-execution?"
-    back: "The agent extracts obligations and sets up monitoring automatically: payment milestones, audit rights, renewal alerts, and compliance deadlines are tracked. This connects directly to the /vendor-check workflow — the contract moves from 'negotiated and signed' to 'actively monitored' without additional configuration."
+    back: "The agent extracts obligations and sets up monitoring automatically: payment milestones, audit rights, renewal alerts, and compliance deadlines are tracked. This connects directly to the /vendor-check workflow: the contract moves from 'negotiated and signed' to 'actively monitored' without additional configuration."
     difficulty: "intermediate"
     tags: ["post-execution", "obligation-extraction"]
 
   - id: "ch33-04-cross-border-011"
     front: "In the NexGen/Al-Faisal worked example, which cross-border pitfalls were flagged and at what status?"
-    back: "Mandatory local law conflicts: RED — three data protection frameworks apply simultaneously.\nArbitration enforceability: GREEN — all three jurisdictions are New York Convention signatories.\nData transfer mechanism gaps: RED — no cross-border transfer mechanisms specified.\nTax withholding obligations: RED — Pakistan FBR + Saudi 5% withholding, AED 200,000+ exposure.\nLanguage precedence: YELLOW — Arabic prevails risk in UAE mainland courts."
+    back: "Mandatory local law conflicts: RED: three data protection frameworks apply simultaneously.\nArbitration enforceability: GREEN: all three jurisdictions are New York Convention signatories.\nData transfer mechanism gaps: RED: no cross-border transfer mechanisms specified.\nTax withholding obligations: RED: Pakistan FBR + Saudi 5% withholding, AED 200,000+ exposure.\nLanguage precedence: YELLOW: Arabic prevails risk in UAE mainland courts."
     difficulty: "advanced"
     tags: ["worked-example", "pitfall-mapping"]
 
   - id: "ch33-04-cross-border-012"
     front: "Why does a governing law clause NOT exempt parties from local regulatory obligations?"
-    back: "A governing law clause resolves which law interprets the contract — it does not override mandatory local employment law, consumer protection law, or data localisation requirements in the jurisdiction where services are performed. For example, a contract governed by English law still requires compliance with Pakistan's PDPA 2023 for data processed in Pakistan and Saudi PDPL for data subjects in Saudi Arabia."
+    back: "A governing law clause resolves which law interprets the contract: it does not override mandatory local employment law, consumer protection law, or data localisation requirements in the jurisdiction where services are performed. For example, a contract governed by English law still requires compliance with Pakistan's PDPA 2023 for data processed in Pakistan and Saudi PDPL for data subjects in Saudi Arabia."
     difficulty: "intermediate"
     tags: ["governing-law", "mandatory-local-law"]

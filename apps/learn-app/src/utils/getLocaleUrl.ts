@@ -1,7 +1,10 @@
 /**
  * Pure function for locale URL computation.
- * Replaces Docusaurus's useAlternatePageUtils which computes
- * a double prefix (/ur/ur/) when building with BASE_URL="/ur/".
+ * Handles GitHub Pages baseUrl structure: /repo-name/[locale]/path
+ * Converts paths like /agent-factory-book/ → /agent-factory-book/ur/
+ *
+ * Uses localeConfigs[locale].path (not raw locale ID) so alias paths
+ * like ur → urdu are supported.
  */
 export function getLocaleUrl({
   pathname,
@@ -9,19 +12,40 @@ export function getLocaleUrl({
   targetLocale,
   defaultLocale,
   localeConfigs,
+  baseUrl = '/',
 }: {
   pathname: string;
   currentLocale: string;
   targetLocale: string;
   defaultLocale: string;
-  localeConfigs: Record<string, { path?: string }>;
+  localeConfigs: Record<string, { path?: string; [key: string]: unknown }>;
+  baseUrl?: string;
 }): string {
+  // For the current locale, use the configured path or fallback to locale name
   const currentPath = localeConfigs[currentLocale]?.path ?? currentLocale;
-  const targetPath = localeConfigs[targetLocale]?.path ?? targetLocale;
 
-  let result = pathname;
+  // Clean up baseUrl: if Docusaurus already appended the current locale to it (e.g. /agent-factory-book/ur/)
+  // we want to strip that so we have the pure root baseUrl.
+  let rootBasePath = baseUrl.replace(/\/$/, '');
 
-  // Strip current locale prefix if not default locale
+  if (currentLocale !== defaultLocale) {
+    const localeSuffix = `/${currentPath}`;
+    if (rootBasePath.endsWith(localeSuffix)) {
+      rootBasePath = rootBasePath.slice(0, -localeSuffix.length);
+    }
+  }
+
+  // Extract the part of pathname after the active base path
+  const activeBasePath = baseUrl.replace(/\/$/, '');
+  let pathAfterBase = pathname;
+  if (activeBasePath && pathname.startsWith(activeBasePath)) {
+    pathAfterBase = pathname.slice(activeBasePath.length) || '/';
+  }
+
+  let result = pathAfterBase;
+
+  // Strip current locale prefix if we didn't strip it via activeBasePath
+  // (e.g., if pathname didn't perfectly match activeBasePath for some reason)
   if (currentLocale !== defaultLocale) {
     const prefix = `/${currentPath}/`;
     if (result.startsWith(prefix)) {
@@ -31,14 +55,20 @@ export function getLocaleUrl({
     }
   }
 
-  // Add target locale prefix (with double-prefix guard)
+  // Add target locale prefix only if target locale is NOT the default locale
+  const targetPath = localeConfigs[targetLocale]?.path ?? targetLocale;
   if (
     targetLocale !== defaultLocale &&
     !result.startsWith(`/${targetPath}/`) &&
     result !== `/${targetPath}`
   ) {
-    result = `/${targetPath}${result}`;
+    if (result === '/') {
+      result = `/${targetPath}/`;
+    } else {
+      result = `/${targetPath}${result}`;
+    }
   }
 
-  return result;
+  // Reconstruct with root base path
+  return `${rootBasePath}${result}`;
 }

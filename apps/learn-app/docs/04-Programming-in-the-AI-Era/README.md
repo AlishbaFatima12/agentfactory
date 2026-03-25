@@ -5,6 +5,8 @@ title: "Part 4: Programming in the AI Era"
 
 # Part 4: Programming in the AI Era
 
+![why_learn_programming](../../static/img/why-learn-programing.png)
+
 If AI can write code, why should you learn programming?
 
 It is the most common question in 2026. And the answer is counterintuitive: programming has become **more important, not less** -- but what programming means has fundamentally changed.
@@ -25,6 +27,9 @@ GitClear's 2025 analysis of 211 million lines of code from Google, Microsoft, Me
 :::
 
 This part inverts the traditional order. You learn to read before you write. You learn types before syntax. You learn testing before building. And you learn it all through a single method that defines programming in the AI era: **Test-Driven Generation (TDG)**.
+
+![programming_in_ai_era](../../static/img/programming-in-ai-era.png)
+
 
 ## Before You Begin
 
@@ -47,23 +52,27 @@ OLD:  Write syntax → Build things → Maybe test → Ship
 
 NEW:  Requirements → Types → Test Criteria & Failing Tests → Generate → Verify & Iterate → Ship
 ```
+![old_vs_new](../../static/img/old-vs-new.png)
 
 This workflow is the programmer's version of the [10-80-10 rule](https://agentfactory.panaversity.org/docs/thesis#the-10-80-10-rule-the-operating-rhythm-of-the-ai-workforce) from the thesis: humans own the first 10% — defining intent, writing type contracts, and specifying correctness criteria as failing tests; AI handles the middle 80% — generating the implementation; humans own the final 10% — verifying behavior, diagnosing failures, and deciding when it ships.
 
 These six steps are not sequential phases you hand off and forget. They are a loop -- and AI is present throughout. What changes across the steps is who is driving. Here is the full loop at a glance -- if some terms are unfamiliar, the note box below the table explains each one:
 
-| Step             | What happens                                                                             | Who leads | AI role                                        |
-| ---------------- | ---------------------------------------------------------------------------------------- | --------- | ---------------------------------------------- |
-| Requirements     | Decide what you're building -- what it does, what it accepts, what it returns            | Human     | Assists: spots gaps, challenges assumptions    |
-| Types            | Describe your data and functions precisely -- labels that tell AI the shape of your code | Human     | Assists: suggests structures, validates design |
-| Test Criteria & Failing Tests    | Write checks that define "correct" -- they fail because nothing is built yet             | Human     | Assists: suggests cases you missed             |
-| Generate         | AI writes the code to pass your checks                                                   | AI        | Leads: produces full implementation            |
-| Verify & Iterate | Run your checks, read failures, debug, refine, repeat until everything passes            | Human     | Assists: explains errors, refines output       |
-| Ship             | Save your work, automated pipeline verifies, deploy                                      | Human     | Assists: security review, changelog            |
+| Step                          | What happens                                                                             | Who leads | AI role                                        |
+| ----------------------------- | ---------------------------------------------------------------------------------------- | --------- | ---------------------------------------------- |
+| Requirements                  | Decide what you're building -- what it does, what it accepts, what it returns            | Human     | Assists: spots gaps, challenges assumptions    |
+| Types                         | Describe your data and functions precisely -- labels that tell AI the shape of your code | Human     | Assists: suggests structures, validates design |
+| Test Criteria & Failing Tests | Write checks that define "correct" -- they fail because nothing is built yet             | Human     | Assists: suggests cases you missed             |
+| Generate                      | AI writes the code to pass your checks                                                   | AI        | Leads: produces full implementation            |
+| Verify & Iterate              | Run your checks, read failures, debug, refine, repeat until everything passes            | Human     | Assists: explains errors, refines output       |
+| Ship                          | Save your work, automated pipeline verifies, deploy                                      | Human     | Assists: security review, changelog            |
+
+![tdg_cycle](../../static/img/tdg-cycle.png)
 
 The key insight: you never start from a blank page, and you never accept output blindly. You start with a requirement and end with a passing test suite. Everything in between is a collaboration -- but the intent, the correctness criteria, and the final verification are yours.
 
 ### Why do humans write the tests?
+
 In TDG, tests are not verification — they are specification. When you write assert total_with_tax(100.0, 0.15) == 115.0, you are not checking code that already exists. You are declaring what correct means before any implementation exists. That declaration is the requirement. If you delegate it to AI, you have delegated the requirement — and you are now verifying AI-generated code against AI-generated expectations. You have no independent signal. The test must come from a human mind that understands the domain, because the test is the only artifact in the entire cycle that defines ground truth. AI can suggest edge cases you missed. AI can help you write the test syntax. But the decision about what correct looks like is yours — that is the 10% that makes the other 90% trustworthy.
 
 :::note If you're new to programming
@@ -128,7 +137,7 @@ Steps 1--3 build your reading fluency. Steps 4--5 are the TDG cycle. By the end 
 Notice that you _see_ and _read_ before you are asked to _do_ anything. This is deliberate. You will not be thrown into writing tests or specifying types without first understanding what they look like and how they work. Every new concept is shown to you, explained, and practiced through prediction exercises before you use it yourself.
 :::
 
-## The SmartNotes Project
+## Your SmartNotes Project For Part 4
 
 **SmartNotes is a Personal AI Knowledge Base** -- your own note-taking tool that understands what you wrote. You save notes, tag and categorize them, search by meaning (not just keywords), and ask AI to summarize or connect ideas across notes. By the end of Phase 8, SmartNotes is a complete application with a command-line tool, a web API, a database, AI-powered search, and an automated pipeline that verifies every change -- a portfolio-grade project you built yourself.
 
@@ -149,23 +158,25 @@ Each phase produces a working version of SmartNotes. By the end of Phase 8, you 
 
 ## The Nine Phases
 
+![nine_phases](../../static/img/nine-phases.png)
+
 Part 4 is organized into nine phases. Each phase gives you a new capability, and your role evolves from passive reader to full system architect. The TDG cycle runs through every phase -- what changes is how much of it you own and how deeply you can specify.
 
 :::note How long will this take?
 Each phase takes roughly 1-2 weeks at a few hours per day. The full Part 4 is designed for 3-5 months of steady practice. Some phases (1 and 4) are shorter; others (5 and 6) are longer because they cover more ground. Go at your own pace -- building a strong foundation matters more than speed.
 :::
 
-| Phase | Title                                              | Your Role         | Chapters  |
-| ----- | -------------------------------------------------- | ----------------- | --------- |
-| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 42-46  |
-| 2     | [Specify with Types](specify-with-types)           | Specifier         | Ch 47-50  |
-| 3     | [Tests as Specification](tests-as-specification)   | Verifier          | Ch 51-54  |
-| 4     | [Debug & Master](debug-and-master)                 | Debugger          | Ch 55-56  |
-| 5     | [The Python Object Model](the-python-object-model) | Modeler           | Ch 57-60  |
-| 6     | [Real-World Python](real-world-python)             | Practitioner      | Ch 61-63  |
-| 7     | [CLI & Concurrency](cli-and-concurrency)           | Tool Builder      | Ch 64-65  |
-| 8     | [Production Systems](production-systems)           | Shipping Engineer | Ch 66-67  |
-| 9     | [Capstone](capstone)                               | Architect         | Ch 68-69  |
+| Phase | Title                                              | Your Role         | Chapters |
+| ----- | -------------------------------------------------- | ----------------- | -------- |
+| 1     | [The Workbench](the-workbench)                     | Reader            | Ch 42-46 |
+| 2     | [Specify with Types](specify-with-types)           | Specifier         | Ch 47-50 |
+| 3     | [Tests as Specification](tests-as-specification)   | Verifier          | Ch 51-54 |
+| 4     | [Debug & Master](debug-and-master)                 | Debugger          | Ch 55-56 |
+| 5     | [The Python Object Model](the-python-object-model) | Modeler           | Ch 57-60 |
+| 6     | [Real-World Python](real-world-python)             | Practitioner      | Ch 61-63 |
+| 7     | [CLI & Concurrency](cli-and-concurrency)           | Tool Builder      | Ch 64-65 |
+| 8     | [Production Systems](production-systems)           | Shipping Engineer | Ch 66-67 |
+| 9     | [Capstone](capstone)                               | Architect         | Ch 68-69 |
 
 **Deliverables**: SDD specification documents, type definitions, object model diagram, passing test suites, AI-generated and human-verified implementation, security audit, green CI pipeline, and a deployed QuizForge application with CLI, API, and AI features. You finish Part 4 with two portfolio-grade projects -- SmartNotes (guided) and QuizForge (independent) -- proving you can drive the complete TDG cycle at production scale.
 
@@ -186,7 +197,7 @@ By the end of Part 4, you will be able to:
 
 ## What's Next
 
-After completing Part 4, continue to **Part 5: Building Custom Agents** where you apply your Python skills and axiom-grounded thinking to build production AI agents with SDKs like OpenAI Agents SDK, Google ADK, and the Anthropic SDK. The async patterns you mastered in Phase 7, the typed interfaces you designed in Phase 5, the security review skills from Phase 8, and the testing discipline you built in Phase 3 feed directly into agent development.
+After completing Part 4, continue to **Part 6: Building Agent Factories** where you apply your Python skills and axiom-grounded thinking to build production AI agents with SDKs like OpenAI Agents SDK, Google ADK, and the Anthropic SDK. The async patterns you mastered in Phase 7, the typed interfaces you designed in Phase 5, the security review skills from Phase 8, and the testing discipline you built in Phase 3 feed directly into agent development.
 
 The transformation of software development is underway. You are not just learning a language. You are learning to direct and verify the AI systems that write it. SmartNotes and QuizForge are the proof that you can.
 

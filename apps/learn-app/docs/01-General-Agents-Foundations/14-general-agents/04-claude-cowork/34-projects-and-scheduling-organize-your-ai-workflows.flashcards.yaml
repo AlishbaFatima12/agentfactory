@@ -1,0 +1,41 @@
+deck:
+  id: "ch14-34-projects-and-scheduling-organize-your-ai-workflows"
+  title: "Projects and Scheduling: Organize Your AI Workflows"
+  version: 1
+
+cards:
+  - front: "What are the four components of a Cowork project?"
+    back: "Instructions (rules Claude follows for every task), Context (local folders, linked Chat projects, URLs), Scheduled tasks (recurring automations), and Memory (Claude remembers across tasks within the project)."
+
+  - front: "How do project instructions in Cowork compare to CLAUDE.md in Claude Code?"
+    back: "They serve the same purpose: persistent rules that shape Claude's behavior across all tasks. CLAUDE.md is a file in your repository; project instructions are set in the Cowork project settings. Both apply automatically without repeating them each time."
+
+  - front: "What is the scope of project memory in Cowork?"
+    back: "Memory is scoped per-project. Claude remembers context from previous tasks within the same project, but memory does not transfer between different projects."
+
+  - front: "What are the three ways to create a Cowork project?"
+    back: "Start from scratch (new folder and instructions), import from a Claude Chat project (pulls in existing instructions and files), or use an existing folder on your computer as context."
+
+  - front: "What happens when you archive a Cowork project?"
+    back: "Archiving removes the project from the sidebar but preserves all local files and folders on your computer. Nothing is deleted. Archived projects can be restored later."
+
+  - front: "What are the two methods for creating a scheduled task in Cowork?"
+    back: "Method 1: Type /schedule in a task to launch the scheduling skill conversationally. Method 2: Click Scheduled in the left sidebar, then + New task, and fill in the form with task name, prompt, frequency, and optional working folder."
+
+  - front: "What frequency options are available for Cowork scheduled tasks?"
+    back: "Hourly, daily, weekly, weekdays (Monday through Friday), or manual (on-demand only, triggered by clicking Run now)."
+
+  - front: "What is the critical limitation of Cowork desktop scheduled tasks?"
+    back: "They only run while your computer is awake and the Cowork app is open. If the computer sleeps or the app is closed during a scheduled run, the task is skipped and fires automatically when the app reopens."
+
+  - front: "How does Cowork desktop scheduling differ from Claude Code /loop?"
+    back: "/loop is session-scoped (dies when you exit), has a 3-day expiry, supports any cron expression, and is best for quick polling during active dev work. Cowork scheduling survives app restarts, has no expiry, offers fixed frequency options, and is best for recurring knowledge-work automations."
+
+  - front: "When should you use cloud scheduled tasks instead of Cowork desktop scheduling?"
+    back: "When tasks must run even if your computer is off or asleep. Cloud scheduled tasks run on Anthropic's infrastructure and execute regardless of your machine's state. Available via /schedule in Claude Code or the claude.ai web interface."
+
+  - front: "What is the recommended workflow for building a scheduled automation in Cowork?"
+    back: "Three steps: (1) Create a project with clear instructions, (2) test the workflow manually by running it as a regular task and refining instructions, (3) schedule the task only after the manual run produces good results."
+
+  - front: "Why is project memory scoped per-project rather than global across all projects?"
+    back: "Per-project scoping keeps contexts clean and prevents unrelated information from bleeding across different work areas. One big project gives Claude maximum memory; focused projects keep domains separated."

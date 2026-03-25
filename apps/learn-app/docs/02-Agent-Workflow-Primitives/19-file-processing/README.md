@@ -14,11 +14,11 @@ You have 847 files in your Downloads folder. You need one of them by Friday. Thr
 
 You could spend an afternoon sorting manually. Or you could describe the problem in one sentence and let an agent handle it in 30 seconds.
 
-But here's what this chapter is _actually_ about: it's not about files. Files are the training ground. The real skill is learning to **direct** an AI agent — when to trust it, when to verify, when to demand a preview, and when to just do it yourself. Every pattern you learn here transfers to email management, project organization, data pipelines, and any domain where you work with General Agents.
+But here's what this chapter is _actually_ about: it's not about files. Files are the training ground. The real skill is learning to **direct** an AI agent: when to trust it, when to verify, when to demand a preview, and when to just do it yourself. Every pattern you learn here transfers to email management, project organization, data pipelines, and any domain where you work with General Agents.
 
-By the end, you'll have a reusable prompt toolkit and — more importantly — the instinct to demand safety, verification, and scripts from every agent interaction. Most people prompt blindly and hope for the best. You're about to learn the systematic approach.
+By the end, you'll have a reusable prompt toolkit and (more importantly) the instinct to demand safety, verification, and scripts from every agent interaction. Most people prompt blindly and hope for the best. You're about to learn the systematic approach.
 
-In Chapter 17, you learned the Four-Phase Workflow for Claude Code sessions: **Explore → Plan → Implement → Commit**. File processing expands this into a seven-step framework: **Survey → Backup → Design Rules → Test → Execute → Verify → Document**. The extra steps exist because file operations are irreversible — a moved file is moved, a renamed file is renamed. The Four-Phase Workflow assumed version control as your safety net. Here, your files don't have `git revert`, so backups, testing, and verification become explicit steps instead.
+In Chapter 17, you learned the Four-Phase Workflow for Claude Code sessions: **Explore → Plan → Implement → Commit**. File processing expands this into a seven-step framework: **Survey → Backup → Design Rules → Test → Execute → Verify → Document**. The extra steps exist because file operations are irreversible: a moved file is moved, a renamed file is renamed. The Four-Phase Workflow assumed version control as your safety net. Here, your files don't have `git revert`, so backups, testing, and verification become explicit steps instead.
 
 ## 📚 Teaching Aid
 
@@ -32,7 +32,7 @@ By the end of this chapter, you'll be able to:
 | Request safety-first operations | "Back up important files before making changes"          |
 | Design organization systems     | "Create categories that make sense for my workflow"      |
 | Automate batch operations       | "Rename these 100 screenshots with a consistent pattern" |
-| Recover from mistakes           | "Something went wrong — compare against my backup"       |
+| Recover from mistakes           | "Something went wrong: compare against my backup"       |
 | Search intelligently            | "Find that PDF from 2023 about taxes"                    |
 
 This isn't about learning bash. It's about learning to work effectively with General Agents.

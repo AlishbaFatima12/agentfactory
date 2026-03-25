@@ -1,5 +1,5 @@
 ### Core Concept
-CLAUDE.md, Skills, Subagents, and Hooks are four distinct context management tools—each loads differently and costs differently. Proper architecture distributes information across them to reduce baseline context load by 10x or more.
+CLAUDE.md, Skills, Subagents, and Hooks are four distinct context management tools,each loads differently and costs differently. Proper architecture distributes information across them to reduce baseline context load by 10x or more.
 
 ### Key Mental Models
 - **Four Loading Patterns**: CLAUDE.md loads at session start (every request). Skills load descriptions at start but full content only when invoked. Subagents use isolated context (zero main session cost). Hooks run externally (zero context cost).
@@ -8,8 +8,8 @@ CLAUDE.md, Skills, Subagents, and Hooks are four distinct context management too
 
 ### Critical Patterns
 - Keep CLAUDE.md under 60 lines with always-on context; move domain workflows to Skills
-- Delegate research-heavy tasks to Subagents—your main context only receives summaries, not raw data
-- Use Hooks for deterministic validation (linting, formatting)—no LLM overhead for tasks that don't require reasoning
+- Delegate research-heavy tasks to Subagents,your main context only receives summaries, not raw data
+- Use Hooks for deterministic validation (linting, formatting),no LLM overhead for tasks that don't require reasoning
 
 ### Common Mistakes
 - Everything in CLAUDE.md: 300+ line files cause attention dilution and ignored instructions

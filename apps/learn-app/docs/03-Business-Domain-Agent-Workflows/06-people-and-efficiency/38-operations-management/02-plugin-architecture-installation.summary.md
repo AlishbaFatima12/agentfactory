@@ -1,6 +1,6 @@
 # Summary: Plugin Architecture and Installation
 
-**Lesson 2 of Chapter 38 — Operations Management**
+**Lesson 2 of Chapter 38, Operations Management**
 
 ## Core Purpose
 
@@ -10,7 +10,7 @@ This lesson establishes the operational foundation for the entire chapter. It in
 
 Chapter 38 uses two plugins with zero capability overlap:
 
-**Official Operations plugin** (Anthropic, `knowledge-work-plugins/operations`) covers the standard operational workflows: `/vendor-review` for vendor portfolio audits and SLA scorecards; `/process-doc` and `/runbook` for process documentation and SOPs; `/change-request` for change impact assessment and rollback planning; `/status-report` for leadership reporting. Three auto-skills (`compliance-tracking`, `risk-assessment`, `process-optimization`) activate from keyword patterns in natural prompts — they are never invoked as slash commands.
+**Official Operations plugin** (Anthropic, `knowledge-work-plugins/operations`) covers the standard operational workflows: `/vendor-review` for vendor portfolio audits and SLA scorecards; `/process-doc` and `/runbook` for process documentation and SOPs; `/change-request` for change impact assessment and rollback planning; `/status-report` for leadership reporting. Three auto-skills (`compliance-tracking`, `risk-assessment`, `process-optimization`) activate from keyword patterns in natural prompts; they are never invoked as slash commands.
 
 **Custom Operations Intelligence plugin** (Panaversity, `agentfactory-business-plugins/operations-intelligence`) covers the gaps: `/audit` for audit preparation and evidence packaging; `/contract` for obligation extraction and risk flagging; `/incident` for post-mortems and Five Whys analysis; `/metrics` for metrics framework design. Four persistent agents (vendor-watchdog, process-health, compliance-monitor, change-tracker) monitor the operations portfolio continuously between manual exercises.
 

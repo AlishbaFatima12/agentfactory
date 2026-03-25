@@ -1,8 +1,8 @@
-# Lesson 15 Summary: Capstone — Build Your Innovation OS
+# Lesson 15 Summary: Capstone: Build Your Innovation OS
 
 ## What you learned
 
-This lesson is integration, not instruction. You assembled everything from the prior 14 lessons into a single coherent file — `innov.local.md` — the venture context that makes every plugin skill and persistent agent specific to your venture. Without this file, the Innovation OS is a set of general-purpose tools. With it, every tool becomes a venture-specific intelligence system.
+This lesson is integration, not instruction. You assembled everything from the prior 14 lessons into a single coherent file, `innov.local.md`: the venture context that makes every plugin skill and persistent agent specific to your venture. Without this file, the Innovation OS is a set of general-purpose tools. With it, every tool becomes a venture-specific intelligence system.
 
 ## Key takeaways
 

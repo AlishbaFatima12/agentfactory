@@ -67,22 +67,22 @@ teaching_guide:
   session_group: 3
   session_title: "Safety and Integration"
   key_points:
-    - "The safety paradox: constraints ENABLE autonomy — you give AI more freedom precisely because you have guardrails in place"
-    - "The simplest sandbox is a git branch — students don't need Docker or staging environments to work safely"
+    - "The safety paradox: constraints ENABLE autonomy: you give AI more freedom precisely because you have guardrails in place"
+    - "The simplest sandbox is a git branch: students don't need Docker or staging environments to work safely"
     - "Five-layer defense in depth (technical limits → permissions → environment → process → human) means no single failure is catastrophic"
     - "The emergency cheat sheet (Ctrl+C, git status, git checkout -- ., git reset --hard) should be memorized or printed"
   misconceptions:
-    - "Students think safety measures slow them down — the trust gradualism section shows that good safety actually accelerates work by enabling more autonomy over time"
-    - "Students assume they need Docker/staging for sandboxing — git branch is 90% of the safety most people need, emphasized in the lesson"
-    - "Students think 'Permissive' mode means 'no safety' — even permissive mode requires approval for destructive operations"
+    - "Students think safety measures slow them down: the trust gradualism section shows that good safety actually accelerates work by enabling more autonomy over time"
+    - "Students assume they need Docker/staging for sandboxing: git branch is 90% of the safety most people need, emphasized in the lesson"
+    - "Students think 'Permissive' mode means 'no safety': even permissive mode requires approval for destructive operations"
   discussion_prompts:
     - "Have you ever had an AI tool do something you didn't expect or approve? Which layer of defense would have caught it?"
-    - "Why is 'constraints enable autonomy' paradoxical but true — and can you think of non-AI examples of this principle?"
+    - "Why is 'constraints enable autonomy' paradoxical but true: and can you think of non-AI examples of this principle?"
   teaching_tips:
-    - "The emergency cheat sheet is the most immediately useful takeaway — have students print it or screenshot it during class"
+    - "The emergency cheat sheet is the most immediately useful takeaway: have students print it or screenshot it during class"
     - "The defense-in-depth diagram is worth drawing layer by layer, explaining what each protects against"
-    - "Walk through the 'AI deleted wrong directory' incident example step by step — students learn from near-disasters better than from theory"
-    - "Trust gradualism (4 phases over 3+ months) sets realistic expectations — don't rush to full autonomy"
+    - "Walk through the 'AI deleted wrong directory' incident example step by step: students learn from near-disasters better than from theory"
+    - "Trust gradualism (4 phases over 3+ months) sets realistic expectations: don't rush to full autonomy"
   assessment_quick_check:
     - "Name the five layers of defense in depth and what each protects against"
     - "What's the simplest sandboxing approach, and why is it sufficient for most use cases?"
@@ -91,13 +91,13 @@ teaching_guide:
 
 # Principle 6: Constraints and Safety
 
-You give an AI system access to your codebase. It's working well—making helpful changes, running tests, suggesting improvements. Then you notice something odd in git history. The AI deleted a directory you didn't ask it to touch. It ran commands you don't remember approving. It's refactoring code you specifically said not to change.
+You give an AI system access to your codebase. It's working well,making helpful changes, running tests, suggesting improvements. Then you notice something odd in git history. The AI deleted a directory you didn't ask it to touch. It ran commands you don't remember approving. It's refactoring code you specifically said not to change.
 
-This isn't science fiction—these are real incidents that have happened. AI systems are powerful, and power without constraints is dangerous.
+This isn't science fiction,these are real incidents that have happened. AI systems are powerful, and power without constraints is dangerous.
 
-This principle is about **balancing capability with safety**. You want AI to be effective—but not so effective it causes damage. You want autonomy—but not so much autonomy that you lose control. The solution is thoughtful constraints and safety measures.
+This principle is about **balancing capability with safety**. You want AI to be effective,but not so effective it causes damage. You want autonomy,but not so much autonomy that you lose control. The solution is thoughtful constraints and safety measures.
 
-> **The Safety Mantra**: "As long as I haven't `git push`ed, I am the master of my machine." Everything the AI does locally can be undone. Uncommitted changes can be reverted. Commits can be reset. The moment of no return is the push—and you control that moment.
+> **The Safety Mantra**: "As long as I haven't `git push`ed, I am the master of my machine." Everything the AI does locally can be undone. Uncommitted changes can be reverted. Commits can be reset. The moment of no return is the push,and you control that moment.
 
 ## The Risk Spectrum: Understanding What Can Go Wrong
 
@@ -113,7 +113,7 @@ AI deletes or overwrites important data:
 - Database changes without backups
 
 **Impact**: Hours to weeks of lost work
-**Likelihood**: Medium—AI follows instructions literally
+**Likelihood**: Medium,AI follows instructions literally
 
 ### Category 2: Security Vulnerabilities
 
@@ -125,7 +125,7 @@ AI introduces security issues:
 - Dependency confusion attacks
 
 **Impact**: System compromise, data breach
-**Likelihood**: Medium—AI doesn't automatically think like an attacker
+**Likelihood**: Medium,AI doesn't automatically think like an attacker
 
 ### Category 3: Cost Overruns
 
@@ -137,7 +137,7 @@ AI generates expensive operations:
 - Unintended large-scale operations
 
 **Impact**: Unexpected cloud bills
-**Likelihood**: Low—AI tries to be efficient, but doesn't know costs
+**Likelihood**: Low,AI tries to be efficient, but doesn't know costs
 
 ### Category 4: Reputation Damage
 
@@ -149,7 +149,7 @@ AI makes changes that affect users:
 - Privacy violations
 
 **Impact**: Lost trust, user churn
-**Likelihood**: Low—but high impact
+**Likelihood**: Low,but high impact
 
 ### Category 5: Workflow Disruption
 
@@ -161,11 +161,11 @@ AI interferes with team processes:
 - Makes conflicting changes across branches
 
 **Impact**: Team friction, lost productivity
-**Likelihood**: Medium—AI doesn't know team context
+**Likelihood**: Medium,AI doesn't know team context
 
 ## The Safety Hierarchy: Defense in Depth
 
-No single safety measure is sufficient. You need layers—each protecting against different failure modes.
+No single safety measure is sufficient. You need layers,each protecting against different failure modes.
 
 ```
 ┌───────────────────────────────────────────┐
@@ -259,7 +259,7 @@ No single safety measure is sufficient. You need layers—each protecting agains
 # Testing in isolated environment first
 ```
 
-**Protects against**: All categories—final safety net
+**Protects against**: All categories,final safety net
 
 ## Permission Models: Choosing Your Safety Level
 
@@ -396,7 +396,7 @@ Before you worry about Docker containers or staging environments, know this: **a
 git checkout -b ai-experiment
 ```
 
-That's it. Now the AI can do whatever it wants—and you can throw it all away with `git checkout main && git branch -D ai-experiment`. No Docker knowledge required. No DevOps complexity. Just git.
+That's it. Now the AI can do whatever it wants,and you can throw it all away with `git checkout main && git branch -D ai-experiment`. No Docker knowledge required. No DevOps complexity. Just git.
 
 Start here. Graduate to more sophisticated sandboxes only when you need them.
 
@@ -525,7 +525,7 @@ Despite all precautions, things will go wrong. Have a plan.
 | **Nuclear reset**            | `git reset --hard HEAD`   | Discards everything since last commit   |
 | **Undo last commit**         | `git reset --hard HEAD~1` | Removes the most recent commit entirely |
 
-Print this. Tape it to your monitor. When panic hits, you won't remember—but you can read.
+Print this. Tape it to your monitor. When panic hits, you won't remember,but you can read.
 
 ### Immediate Actions
 
@@ -577,9 +577,9 @@ Paradoxically, **constraints enable autonomy**. When you have good safety measur
 - You can focus on high-level direction rather than worrying
 - AI can be more effective without risking disaster
 
-Without safety measures, you're constantly on edge—afraid to let AI do anything meaningful. With safety measures, you can collaborate confidently.
+Without safety measures, you're constantly on edge,afraid to let AI do anything meaningful. With safety measures, you can collaborate confidently.
 
-The goal isn't to prevent AI from doing anything. The goal is to prevent AI from doing **certain things**—while enabling everything else.
+The goal isn't to prevent AI from doing anything. The goal is to prevent AI from doing **certain things:** while enabling everything else.
 
 ## Prompt-Based Safety: Guardrails in Your Instructions
 
@@ -595,7 +595,7 @@ cloud deployments, external service requests), stop and tell me
 the estimated cost. Don't proceed until I approve.
 ```
 
-This catches the invisible risks—the $500 API bill from an infinite loop, the runaway cloud instance.
+This catches the invisible risks,the $500 API bill from an infinite loop, the runaway cloud instance.
 
 ### The Guardrail Prompt Template
 
@@ -621,9 +621,9 @@ Customize this template for your specific project and risk tolerance.
 
 ## This Principle in Both Interfaces
 
-In Claude Code, you configure constraints through permission flags, CLAUDE.md restrictions, and hooks. In Cowork, constraints are built into the GUI—confirmation dialogs and folder-level access controls.
+In Claude Code, you configure constraints through permission flags, CLAUDE.md restrictions, and hooks. In Cowork, constraints are built into the GUI,confirmation dialogs and folder-level access controls.
 
-**In Cowork**: The confirmation dialogs ARE the constraint system. When Cowork asks "Should I delete this file?", it's implementing the same safety principle that Claude Code's permission model provides. You don't configure them—you respond to them.
+**In Cowork**: The confirmation dialogs ARE the constraint system. When Cowork asks "Should I delete this file?", it's implementing the same safety principle that Claude Code's permission model provides. You don't configure them,you respond to them.
 
 **The paradox applies equally**: In both interfaces, constraints enable capability. When you trust the safety model, you give the agent more autonomy. Without constraints, you'd never let either agent do meaningful work on important files.
 
@@ -678,7 +678,7 @@ Also, help me understand:
 - What would cause me to tighten restrictions?
 ```
 
-**What you're learning**: How to choose appropriate permission models based on context and experience. You're learning to calibrate autonomy based on trust and risk—balancing safety with effectiveness.
+**What you're learning**: How to choose appropriate permission models based on context and experience. You're learning to calibrate autonomy based on trust and risk,balancing safety with effectiveness.
 
 ### Prompt 3: Sandbox Setup
 
@@ -704,11 +704,11 @@ Design a sandbox setup that includes:
 After we design it, help me actually set it up step by step.
 ```
 
-**What you're learning**: How to create isolated environments where AI can work safely. You're learning to structure your workflow so that AI experimentation never puts production at risk—enabling confident collaboration.
+**What you're learning**: How to create isolated environments where AI can work safely. You're learning to structure your workflow so that AI experimentation never puts production at risk,enabling confident collaboration.
 
 ### Safety Note
 
-When in doubt, start with more restrictions and ease into autonomy. It's always easier to loosen constraints later than to recover from a preventable incident. The best safety measure is a cautious approach—especially when you're just starting with AI collaboration.
+When in doubt, start with more restrictions and ease into autonomy. It's always easier to loosen constraints later than to recover from a preventable incident. The best safety measure is a cautious approach,especially when you're just starting with AI collaboration.
 
 
 ## Flashcards Study Aid

@@ -8,19 +8,19 @@ deck:
 cards:
   - id: "ch33-10-intake-monitoring-001"
     front: "What is the fundamental difference between a Legal Ops Agent and a document tool?"
-    back: "A document tool takes a single input and produces a single output (e.g., contract in, redline report out). A Legal Ops Agent is a persistent, multi-step workflow that manages a process end-to-end — accepting inputs, making routing decisions, tracking progress, escalating when deadlines approach, and maintaining state across interactions."
+    back: "A document tool takes a single input and produces a single output (e.g., contract in, redline report out). A Legal Ops Agent is a persistent, multi-step workflow that manages a process end-to-end: accepting inputs, making routing decisions, tracking progress, escalating when deadlines approach, and maintaining state across interactions."
     difficulty: "basic"
     tags: ["agent-vs-tool"]
 
   - id: "ch33-10-intake-monitoring-002"
     front: "What five steps does the Contract Intake Agent follow?"
-    back: "1. Receive document — extract metadata (counterparty, type, business unit, urgency, value)\n2. Classify document type — route to appropriate protocol (NDA, MSA, employment, unknown)\n3. Apply triage and routing — assign tier, notify appropriate reviewer\n4. Track progress — check status daily, escalate if SLA breached\n5. On execution — save to repository, set obligation reminders, set renewal calendar entry"
+    back: "1. Receive document: extract metadata (counterparty, type, business unit, urgency, value)\n2. Classify document type: route to appropriate protocol (NDA, MSA, employment, unknown)\n3. Apply triage and routing: assign tier, notify appropriate reviewer\n4. Track progress: check status daily, escalate if SLA breached\n5. On execution: save to repository, set obligation reminders, set renewal calendar entry"
     difficulty: "intermediate"
     tags: ["intake-workflow"]
 
   - id: "ch33-10-intake-monitoring-003"
     front: "What percentage of legal operations capacity does coordination overhead consume, and why does this matter?"
-    back: "Coordination overhead — chasing, tracking, escalating, and reporting — consumes 40-60% of legal operations capacity. Automating this transforms the legal function structurally, not just incrementally. The agent eliminates the work that should never have required human attention."
+    back: "Coordination overhead: chasing, tracking, escalating, and reporting: consumes 40-60% of legal operations capacity. Automating this transforms the legal function structurally, not just incrementally. The agent eliminates the work that should never have required human attention."
     difficulty: "intermediate"
     tags: ["coordination-overhead"]
 
@@ -38,7 +38,7 @@ cards:
 
   - id: "ch33-10-intake-monitoring-006"
     front: "What four safety rules ('NEVER DO THESE') apply to the Contract Intake Agent?"
-    back: "1. NEVER approve a contract for execution — human authorised signatory only\n2. NEVER route a RED item to Tier 1, regardless of business pressure\n3. NEVER skip metadata extraction — required for compliance log\n4. NEVER send legal advice to the requesting business unit — send routing decisions and timelines only"
+    back: "1. NEVER approve a contract for execution: human authorised signatory only\n2. NEVER route a RED item to Tier 1, regardless of business pressure\n3. NEVER skip metadata extraction: required for compliance log\n4. NEVER send legal advice to the requesting business unit: send routing decisions and timelines only"
     difficulty: "intermediate"
     tags: ["safety-rules"]
 
@@ -50,7 +50,7 @@ cards:
 
   - id: "ch33-10-intake-monitoring-008"
     front: "What does RAG status mean in the context of regulatory monitoring?"
-    back: "RED — immediate action required, regulatory change with near-term enforcement or compliance gap\nAMBER/YELLOW — requires planning, regulatory development within 6 months or consultation response needed\nGREEN — no changes requiring action in this area"
+    back: "RED: immediate action required, regulatory change with near-term enforcement or compliance gap\nAMBER/YELLOW: requires planning, regulatory development within 6 months or consultation response needed\nGREEN: no changes requiring action in this area"
     difficulty: "basic"
     tags: ["rag-status"]
 

@@ -47,7 +47,7 @@ learning_objectives:
   - objective: "Design a four-week validation plan that tests TIER 1 assumptions first at lowest cost"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces a week-by-week validation plan where Week 1-2 tests are MVT Level 1-2 (conversation or landing page — no building required) and Week 3-4 may include MVT Level 3-4. No TIER 3 assumption appears in Week 1-2."
+    assessment_method: "Student produces a week-by-week validation plan where Week 1-2 tests are MVT Level 1-2 (conversation or landing page; no building required) and Week 3-4 may include MVT Level 3-4. No TIER 3 assumption appears in Week 1-2."
 
   - objective: "Distinguish between ASSUMED, ANECDOTAL, and VALIDATED evidence quality for venture assumptions"
     proficiency_level: "B1"
@@ -57,49 +57,49 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Assumption map — making implicit bets explicit before committing resources"
-    - "Three risk tiers — EXISTENTIAL, SERIOUS, IMPORTANT based on directional impact if wrong"
-    - "Evidence quality — ASSUMED vs ANECDOTAL vs VALIDATED — what counts as proof"
-    - "MVT hierarchy — five levels from conversation to functional MVP ordered by cost"
-    - "Test prioritisation — sequence validation by risk tier and cost, not by convenience"
+    - "Assumption map, making implicit bets explicit before committing resources"
+    - "Three risk tiers, EXISTENTIAL, SERIOUS, IMPORTANT based on directional impact if wrong"
+    - "Evidence quality, ASSUMED vs ANECDOTAL vs VALIDATED: what counts as proof"
+    - "MVT hierarchy: five levels from conversation to functional MVP ordered by cost"
+    - "Test prioritisation, sequence validation by risk tier and cost, not by convenience"
   assessment: "5 concepts at B1 level is within cognitive limits. The pipeline from assumption identification → tier classification → evidence assessment → test design → prioritisation is a single linear flow, which reduces working memory load despite the conceptual depth of each stage."
 
 differentiation:
   extension_for_advanced: "After mapping your own venture's assumptions, analyse a failed startup in your industry. What were the TIER 1 assumptions they were implicitly making? Which of those assumptions turned out to be wrong? Could a cheap test have revealed this before they committed six months of development?"
-  remedial_for_struggling: "Focus on finding your three TIER 1 (Existential) assumptions first. Ask yourself: 'If I found out this was wrong tomorrow, would I change direction?' Write down three things that answer YES. Everything else is TIER 2 or TIER 3. The full 20+ assumption map can come later — start with the three things that could kill the venture."
+  remedial_for_struggling: "Focus on finding your three TIER 1 (Existential) assumptions first. Ask yourself: 'If I found out this was wrong tomorrow, would I change direction?' Write down three things that answer YES. Everything else is TIER 2 or TIER 3. The full 20+ assumption map can come later; start with the three things that could kill the venture."
 
 teaching_guide:
   key_points:
-    - "The assumption map is not pessimism — it is the act of making bets explicit so you can test them cheaply"
+    - "The assumption map is not pessimism; it is the act of making bets explicit so you can test them cheaply"
     - "Most ventures fail not because the product was bad but because the market or business model assumptions were wrong and no one tested them early"
-    - "TIER 1 assumptions must be tested before building — any MVP that does not test a TIER 1 assumption is not a minimum viable product"
-    - "VALIDATED means payment or sustained usage, not enthusiasm — 'they loved it' is not validation"
-    - "The cheapest test is always a conversation — the most expensive is a built product"
+    - "TIER 1 assumptions must be tested before building, any MVP that does not test a TIER 1 assumption is not a minimum viable product"
+    - "VALIDATED means payment or sustained usage, not enthusiasm, 'they loved it' is not validation"
+    - "The cheapest test is always a conversation: the most expensive is a built product"
   misconceptions:
     - "A complete assumption map means you have identified every risk. Correction: you have identified the risks you can currently see. New assumptions will emerge from the pilot. The map is a living document, not a completed checklist."
     - "You need to validate all assumptions before building. Correction: you only need to validate TIER 1 assumptions before building the MVP. TIER 2 and TIER 3 are validated through the MVP pilot."
-    - "Evidence quality is binary — either validated or not. Correction: the ASSUMED→ANECDOTAL→VALIDATED progression is a spectrum. Anecdotal evidence (3 customers mentioned this in interviews) reduces risk even if it does not eliminate it."
+    - "Evidence quality is binary, either validated or not. Correction: the ASSUMED→ANECDOTAL→VALIDATED progression is a spectrum. Anecdotal evidence (3 customers mentioned this in interviews) reduces risk even if it does not eliminate it."
   discussion_prompts:
     - "Think about a product you use at work that was clearly built without customer discovery. What assumptions did the builders make that turned out to be wrong? Could a simple conversation have surfaced any of those assumptions before they were baked into the product?"
     - "The cheapest test is a conversation. Why do most teams skip conversations and start building? What organisational incentives push toward building before validating?"
   teaching_tips:
-    - "The most powerful teaching moment: ask students which of their assumptions they are most confident about. Then ask why. Most 'confident' assumptions are ASSUMED — they have never actually asked a customer. This gap between confidence and evidence is the lesson."
+    - "The most powerful teaching moment: ask students which of their assumptions they are most confident about. Then ask why. Most 'confident' assumptions are ASSUMED; they have never actually asked a customer. This gap between confidence and evidence is the lesson."
     - "Use the AP automation TIER 1 example (A-001: will CFOs pay $500/month) to illustrate that the most important assumption is also the simplest to test: ask 5 people if they would sign an LOI."
 ---
 
 # The Assumption Stack
 
-The most dangerous thing an entrepreneur can do is build something for six months before testing their core assumptions. And yet most teams do exactly this — they mistake construction for progress, confusing the act of building with the act of learning.
+The most dangerous thing an entrepreneur can do is build something for six months before testing their core assumptions. And yet most teams do exactly this; they mistake construction for progress, confusing the act of building with the act of learning.
 
-The Lean Startup methodology begins with a different premise: your new venture is not a business yet. It is a portfolio of unproven assumptions. Every line of code you write, every feature you design, and every hire you make is a bet that specific assumptions about your customer, your market, and your technology are correct. The question is not whether you have assumptions — you do, many of them. The question is whether you make them explicit before you bet the company on them.
+The Lean Startup methodology begins with a different premise: your new venture is not a business yet. It is a portfolio of unproven assumptions. Every line of code you write, every feature you design, and every hire you make is a bet that specific assumptions about your customer, your market, and your technology are correct. The question is not whether you have assumptions; you do, many of them. The question is whether you make them explicit before you bet the company on them.
 
 In Lesson 4, you selected an idea and ran a pressure test. Each objection in that test corresponds to one or more hidden assumptions. Now you make every assumption explicit, score it by risk, and design the cheapest possible test for each.
 
 ## Why Assumptions Kill Ventures
 
-Research on venture failure is unambiguous: the most common cause of failure is not bad execution — it is building something customers do not want or will not pay for. Both of these are assumption failures. The team assumed that customers had a particular problem with sufficient severity; they assumed customers would pay a particular price; they assumed their technical approach would achieve sufficient accuracy. None of these were tested before six months of construction.
+Research on venture failure is unambiguous: the most common cause of failure is not bad execution; it is building something customers do not want or will not pay for. Both of these are assumption failures. The team assumed that customers had a particular problem with sufficient severity; they assumed customers would pay a particular price; they assumed their technical approach would achieve sufficient accuracy. None of these were tested before six months of construction.
 
-The assumption map is the antidote. It does not prevent you from being wrong — it ensures you discover you are wrong before you have spent six months building the answer to the wrong question.
+The assumption map is the antidote. It does not prevent you from being wrong ; it ensures you discover you are wrong before you have spent six months building the answer to the wrong question.
 
 | Without an Assumption Map                          | With an Assumption Map                             |
 | -------------------------------------------------- | -------------------------------------------------- |
@@ -112,29 +112,29 @@ The assumption map is the antidote. It does not prevent you from being wrong —
 
 The `/hypothesis` skill uses five categories to ensure completeness. Starting with all five prevents the most common failure mode: teams that map only product assumptions and miss business model or customer assumptions.
 
-**Customer assumptions** — who they are, what they want, how they behave
+**Customer assumptions:** who they are, what they want, how they behave
 - The customer segment you identified is real and reachable
 - They have the pain you think they have, with the severity you think
 - They are actively trying to solve this problem (not just mildly aware of it)
 - They have the authority and budget to buy a solution
 
-**Problem assumptions** — is the problem worth solving?
+**Problem assumptions:** is the problem worth solving?
 - The problem is frequent enough to justify a dedicated solution
 - Current solutions are genuinely inadequate (not just sub-optimal)
 - Customers are willing to change their behaviour to solve it
 
-**Solution assumptions** — does your approach work?
+**Solution assumptions:** does your approach work?
 - Your solution technically works as designed
 - Customers can and will use it (adoption)
 - It solves the problem at the quality level customers need
 
-**Business model assumptions** — can you make money?
+**Business model assumptions:** can you make money?
 - Customers will pay your assumed price
 - You can acquire customers at your assumed cost
 - Customers will stay (churn assumption is survivable)
 - Your gross margin is achievable
 
-**Technical assumptions** — can you build it?
+**Technical assumptions:** can you build it?
 - The core technology works at the required accuracy and scale
 - You can build it with the team you have in the time you have
 
@@ -160,9 +160,9 @@ Each assumption carries an evidence quality score that reflects how much you act
 
 - **ASSUMED**: No external evidence. You believe this is true based on reasoning, intuition, or analogy.
 - **ANECDOTAL**: Some external evidence, but not systematic. A few customer conversations, one industry report, or your own experience suggests this is true.
-- **VALIDATED**: Systematic behavioural evidence. Customers paid for it OR used it repeatedly without prompting. "They said they would use it" is not VALIDATED — it is ANECDOTAL at best.
+- **VALIDATED**: Systematic behavioural evidence. Customers paid for it OR used it repeatedly without prompting. "They said they would use it" is not VALIDATED; it is ANECDOTAL at best.
 
-The assumption map makes the gap between confidence and evidence visible. Most teams discover they feel highly confident about assumptions that are actually ASSUMED — they have never directly tested the claim with a customer.
+The assumption map makes the gap between confidence and evidence visible. Most teams discover they feel highly confident about assumptions that are actually ASSUMED; they have never directly tested the claim with a customer.
 
 ## The Minimum Viable Test (MVT) Hierarchy
 
@@ -182,7 +182,7 @@ Most TIER 1 assumptions can be tested at Level 1 or 2. The question "would you s
 
 ## The AP Automation Assumption Map
 
-**Worked example.** Using the selected idea from Lesson 4 — WhatsApp approval workflow SaaS for mid-market CFOs at $500/month — you build the full assumption map:
+**Worked example.** Using the selected idea from Lesson 4, WhatsApp approval workflow SaaS for mid-market CFOs at $500/month; you build the full assumption map:
 
 ```
 /hypothesis
@@ -194,9 +194,9 @@ AI-powered PO matching, WhatsApp-integrated approval workflows,
 and real-time AP dashboard. $500/month.
 
 For each assumption, score:
-- Risk tier (TIER 1/2/3) — if wrong, does the company fail/pivot/optimise?
+- Risk tier (TIER 1/2/3); if wrong, does the company fail/pivot/optimise?
 - Evidence quality (ASSUMED/ANECDOTAL/VALIDATED)
-- Cheapest test — minimum viable test level and specific test design
+- Cheapest test, minimum viable test level and specific test design
 - Test cost: time + money estimate
 ```
 
@@ -206,7 +206,7 @@ For each assumption, score:
 ASSUMPTION MAP
 Venture: AP Automation SaaS | Stage: Pre-MVP
 ════════════════════════════════════════════════════════════
-TIER 1 — EXISTENTIAL ASSUMPTIONS (if wrong, pivot required)
+TIER 1, EXISTENTIAL ASSUMPTIONS (if wrong, pivot required)
 
  A-001: CFOs will pay $500/month for this solution
  Risk: 🔴 HIGH | Evidence: ASSUMED
@@ -214,7 +214,7 @@ TIER 1 — EXISTENTIAL ASSUMPTIONS (if wrong, pivot required)
    If real willingness-to-pay is $150/month, the unit economics collapse.
  Cheapest test: Ask 5 pilot prospects: "If this existed today, would you
    sign a letter of intent at $500/month before we build?"
-   Get signed LOIs — not verbal commitments.
+   Get signed LOIs, not verbal commitments.
    Time: 2 weeks | Cost: $0
 
  A-002: AI-powered PO matching can achieve >90% accuracy on
@@ -235,7 +235,7 @@ TIER 1 — EXISTENTIAL ASSUMPTIONS (if wrong, pivot required)
    yourself, or would it need sign-off?"
    Time: 1 week | Cost: $0
 
-TIER 2 — SERIOUS ASSUMPTIONS (if wrong, product changes significantly)
+TIER 2, SERIOUS ASSUMPTIONS (if wrong, product changes significantly)
 
  A-004: WhatsApp integration is technically feasible via WhatsApp
      Business API at acceptable cost per message
@@ -259,7 +259,7 @@ TIER 2 — SERIOUS ASSUMPTIONS (if wrong, product changes significantly)
    integration on Day 1, reprioritise roadmap.
    Time: 1 week | Cost: $0
 
-TIER 3 — IMPORTANT ASSUMPTIONS (if wrong, optimisation required)
+TIER 3, IMPORTANT ASSUMPTIONS (if wrong, optimisation required)
 
  A-007: Customer acquisition cost via LinkedIn outreach is <$5,000
  A-008: Customer success can be managed by 1 person for first 50 customers
@@ -267,45 +267,45 @@ TIER 3 — IMPORTANT ASSUMPTIONS (if wrong, optimisation required)
  A-010: Net Promoter Score > 40 at 90 days (customers will refer others)
 
 TEST PRIORITY ORDER:
- Week 1-2: A-001 (price) + A-003 (buying authority) — zero-cost conversations
- Week 3-4: A-002 (AI accuracy) — technical spike with real invoice data
- Week 5-6: A-004 (WhatsApp integration) — technical proof-of-concept
- Month 3+: A-005, A-006, A-007 — validated during pilot
+ Week 1-2: A-001 (price) + A-003 (buying authority), zero-cost conversations
+ Week 3-4: A-002 (AI accuracy), technical spike with real invoice data
+ Week 5-6: A-004 (WhatsApp integration), technical proof-of-concept
+ Month 3+: A-005, A-006, A-007, validated during pilot
 ════════════════════════════════════════════════════════════
 ```
 
-Notice the test priority: the two TIER 1 assumptions that cost nothing to test (A-001 and A-003) come first. The technical spike (A-002) comes second — it costs developer time but not product build time. The pilot-validated assumptions come last. This sequence means that if A-001 (price) fails in Week 1, you have spent two hours on conversations, not two months on code.
+Notice the test priority: the two TIER 1 assumptions that cost nothing to test (A-001 and A-003) come first. The technical spike (A-002) comes second ; it costs developer time but not product build time. The pilot-validated assumptions come last. This sequence means that if A-001 (price) fails in Week 1, you have spent two hours on conversations, not two months on code.
 
 :::info The Evidence Quality Gap
-After building the assumption map, most teams discover a pattern: their highest-confidence assumptions are also their most critical assumptions — and yet the evidence quality is ASSUMED. This gap between confidence and evidence is the most important output of the exercise. Confidence without evidence is just a well-articulated guess.
+After building the assumption map, most teams discover a pattern: their highest-confidence assumptions are also their most critical assumptions , and yet the evidence quality is ASSUMED. This gap between confidence and evidence is the most important output of the exercise. Confidence without evidence is just a well-articulated guess.
 :::
 
 :::note For Intrapreneurs
-Inside an existing organisation, TIER 1 assumptions have a different shape. They often include: "The innovation committee will approve this for a pilot" (organisational authority), "The IT department will allow this integration with existing systems" (technical gatekeeping), and "The target internal users will actually adopt this rather than continuing with the current process" (change management). Test these assumptions before building — an internal sponsor conversation is as cheap as an external customer conversation.
+Inside an existing organisation, TIER 1 assumptions have a different shape. They often include: "The innovation committee will approve this for a pilot" (organisational authority), "The IT department will allow this integration with existing systems" (technical gatekeeping), and "The target internal users will actually adopt this rather than continuing with the current process" (change management). Test these assumptions before building: an internal sponsor conversation is as cheap as an external customer conversation.
 :::
 
 ## Exercise: Hypothesis Stress-Test (Part 1)
 
-**Type:** Lean Startup — Hypothesis
+**Type:** Lean Startup, Hypothesis
 **Time:** 40 minutes
 **Goal:** Build a 20+ assumption map for your selected idea from Lesson 4 and design a 4-week validation plan
 
-**From Exercise 1 (Lesson 4), you have:** a selected idea with a two-paragraph rationale and a pressure test with 5 objections. Each objection contains at least one hidden assumption — start your map from there.
+**From Exercise 1 (Lesson 4), you have:** a selected idea with a two-paragraph rationale and a pressure test with 5 objections. Each objection contains at least one hidden assumption; start your map from there.
 
-**Step 1 — Assumption brainstorm (10 minutes).**
+**Step 1, Assumption brainstorm (10 minutes).**
 
-Using the 5 categories (Customer, Problem, Solution, Business Model, Technical), list every assumption embedded in your selected idea. Start with the pressure test objections from Lesson 4 — each one is a TIER 1 or TIER 2 assumption. Then expand to all five categories.
+Using the 5 categories (Customer, Problem, Solution, Business Model, Technical), list every assumption embedded in your selected idea. Start with the pressure test objections from Lesson 4: each one is a TIER 1 or TIER 2 assumption. Then expand to all five categories.
 
 Target: 20-30 assumptions. If you have fewer than 15, you are not thinking hard enough.
 
-**Step 2 — Risk scoring and test design (20 minutes).**
+**Step 2, Risk scoring and test design (20 minutes).**
 
 ```
 /hypothesis
 Build a complete assumption map for my venture.
 
 Venture: [Your idea in 2-3 sentences]
-Target customer: [Specific — role, company size, context]
+Target customer: [Specific, role, company size, context]
 Assumptions: [Paste your list]
 
 For each assumption:
@@ -318,7 +318,7 @@ For each assumption:
 - Test cost: time + money estimate
 ```
 
-**Step 3 — Test prioritisation and 4-week validation plan (10 minutes).**
+**Step 3, Test prioritisation and 4-week validation plan (10 minutes).**
 
 ```
 /hypothesis
@@ -326,13 +326,13 @@ My top 5 highest-risk assumptions (from the map above) are:
 [List A-001 through A-005 with their descriptions]
 
 Design a 4-week validation plan:
-- Week 1: cheapest tests only — what can I test in conversations this week?
-- Week 2: next cheapest — what can I build or prototype quickly?
+- Week 1: cheapest tests only: what can I test in conversations this week?
+- Week 2: next cheapest: what can I build or prototype quickly?
 - Weeks 3-4: what requires building a small proof-of-concept?
 - Pivot criteria: what result in each week would trigger a pivot conversation?
 ```
 
-**Deliverable:** Full assumption map (20+ assumptions) with tier classifications and evidence quality scores, plus a 4-week validation plan. Save this — it is the direct input to Lesson 6 (MVP scoping) and the exercises in Lesson 7 (Build-Measure-Learn).
+**Deliverable:** Full assumption map (20+ assumptions) with tier classifications and evidence quality scores, plus a 4-week validation plan. Save this; it is the direct input to Lesson 6 (MVP scoping) and the exercises in Lesson 7 (Build-Measure-Learn).
 
 :::note Keep This File
 Your assumption map drives everything in Lessons 6 and 7. The MVP you scope in Lesson 6 exists to test your TIER 1 assumptions. The pilot results you analyse in Lesson 7 will update the status of each assumption from ASSUMED to VALIDATED or INVALIDATED. Keep this in your Cowork session.
@@ -343,7 +343,7 @@ Your assumption map drives everything in Lessons 6 and 7. The MVP you scope in L
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Run the chapter's worked example:
+**Reproduce:** Run the chapter's worked example:
 
 ```
 /hypothesis
@@ -365,7 +365,7 @@ and why).
 
 **What you are learning:** Notice how many TIER 1 assumptions can be tested in a 30-minute conversation (zero cost). The test priority order reveals that most teams should be having conversations, not writing code, in weeks 1 and 2.
 
-**Adapt** — Build an assumption map for a different venture type:
+**Adapt:** Build an assumption map for a different venture type:
 
 ```
 /hypothesis
@@ -381,9 +381,9 @@ For each assumption: Tier + evidence quality + cheapest test.
 Produce the 4-week validation plan.
 ```
 
-**What you are learning:** Notice how the assumption map changes shape for a two-sided marketplace versus a SaaS product. There are now two sets of TIER 1 assumptions — one for the buyer side and one for the supply side. A marketplace must validate both simultaneously.
+**What you are learning:** Notice how the assumption map changes shape for a two-sided marketplace versus a SaaS product. There are now two sets of TIER 1 assumptions: one for the buyer side and one for the supply side. A marketplace must validate both simultaneously.
 
-**Apply** — Build your own assumption map:
+**Apply:** Build your own assumption map:
 
 ```
 /hypothesis
@@ -403,7 +403,7 @@ assumptions across all 5 categories to reach 20+ total.
 Score each and produce a 4-week validation plan.
 ```
 
-**What you are learning:** The objections from your Lesson 4 pressure test are not abstract risks — they are specific assumptions you can test cheaply. Mapping them formally surfaces the test design and cost, which often reveals that the "scariest" risks can be tested for free in a single afternoon.
+**What you are learning:** The objections from your Lesson 4 pressure test are not abstract risks; they are specific assumptions you can test cheaply. Mapping them formally surfaces the test design and cost, which often reveals that the "scariest" risks can be tested for free in a single afternoon.
 :::
 
 ## Flashcards Study Aid
@@ -412,4 +412,4 @@ Score each and produce a 4-week validation plan.
 
 ---
 
-Continue to [Lesson 6: MVP — The Minimum That Validates →](./06-mvp-the-minimum-that-validates.md)
+Continue to [Lesson 6: MVP. The Minimum That Validates →](./06-mvp-the-minimum-that-validates.md)

@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/trade-partnership-finance
 sidebar_position: 8
-title: "Trade & Partnership Finance — Salam, Istisna'a, Mudaraba, Musharaka"
+title: "Trade & Partnership Finance: Salam, Istisna'a, Mudaraba, Musharaka"
 description: "Apply the accounting treatment for salam (advance purchase), istisna'a (construction finance), mudaraba (profit-sharing investment), and full musharaka (joint venture), comparing AAOIFI and IFRS treatments, and generate multi-product journal entries for a single construction project"
 keywords:
   [
@@ -53,17 +53,17 @@ learning_objectives:
   - objective: "Generate the complete journal entry sequences for salam (AAOIFI FAS 7) and istisna'a (AAOIFI FAS 10) transactions, including parallel structures and the percentage of completion method for construction contracts"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 5 Steps 1-2 — producing istisna'a percentage of completion entries under IFRS 15 and salam receivable entries under AAOIFI FAS 7"
+    assessment_method: "Student completes Exercise 5 Steps 1-2: producing istisna'a percentage of completion entries under IFRS 15 and salam receivable entries under AAOIFI FAS 7"
 
   - objective: "Calculate a mudaraba profit pool distribution using weightage tables, Profit Equalisation Reserve, and Investment Risk Reserve, producing the final allocation between bank and investment account holders"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student completes Exercise 5 Step 3 — building a 3-tier weightage table with PER/IRR mechanics and computing the investment fund's profit share"
+    assessment_method: "Student completes Exercise 5 Step 3: building a 3-tier weightage table with PER/IRR mechanics and computing the investment fund's profit share"
 
   - objective: "Analyse why musharaka arrangements typically fail the SPPI test under IFRS 9, explain the FVTPL classification consequence, and contrast this with AAOIFI FAS 4 treatment where musharaka investments are carried at historical cost adjusted for profit/loss"
     proficiency_level: "B1"
     bloom_level: "Analyze"
-    assessment_method: "Student completes Exercise 5 Step 4-5 — generating musharaka entries under AAOIFI FAS 4 and producing a comparison showing how all four products interact in one project with different accounting standards governing each"
+    assessment_method: "Student completes Exercise 5 Step 4-5: generating musharaka entries under AAOIFI FAS 4 and producing a comparison showing how all four products interact in one project with different accounting standards governing each"
 
 cognitive_load:
   new_concepts: 9
@@ -77,18 +77,18 @@ cognitive_load:
     - "PER and IRR smoothing mechanisms"
     - "Musharaka capital and profit/loss sharing rules"
     - "IFRS 9 SPPI test failure for musharaka"
-  assessment: "9 concepts at B1 level. This lesson covers four products — more than previous single-product lessons — but students enter from Lessons 4-7 with the dual-framework comparison methodology already internalised. The four products are presented as two pairs (trade finance: salam + istisna'a; partnership finance: mudaraba + musharaka) to reduce cognitive load through structural grouping. The exercise integrates all four into one scenario, reinforcing connections rather than adding isolated concepts."
+  assessment: "9 concepts at B1 level. This lesson covers four products (more than previous single-product lessons) but students enter from Lessons 4-7 with the dual-framework comparison methodology already internalised. The four products are presented as two pairs (trade finance: salam + istisna'a; partnership finance: mudaraba + musharaka) to reduce cognitive load through structural grouping. The exercise integrates all four into one scenario, reinforcing connections rather than adding isolated concepts."
 
 differentiation:
-  extension_for_advanced: "Research the AAOIFI debate on whether parallel salam constitutes a prohibited sale of what one does not possess (bay' ma'dum). Read AAOIFI Shariah Standard 10 on salam and write a one-page analysis explaining why the two contracts must be legally independent — and what evidence an auditor would seek to confirm independence. Then examine a real-world sukuk al-salam structure and explain how the salam receivable is securitised."
-  remedial_for_struggling: "Focus on salam and musharaka only — the simplest trade product and the simplest partnership product. For salam: write the three journal entries (advance payment, delivery, resale) for a bank that pays 100,000 upfront for wheat to be delivered in 6 months and sells it for 110,000. For musharaka: two partners contribute 60,000 and 40,000. Profit of 20,000 is shared 50/50 by agreement; a loss of 15,000 is shared 60/40 (strictly by capital ratio). Write the entries for both outcomes."
+  extension_for_advanced: "Research the AAOIFI debate on whether parallel salam constitutes a prohibited sale of what one does not possess (bay' ma'dum). Read AAOIFI Shariah Standard 10 on salam and write a one-page analysis explaining why the two contracts must be legally independent: and what evidence an auditor would seek to confirm independence. Then examine a real-world sukuk al-salam structure and explain how the salam receivable is securitised."
+  remedial_for_struggling: "Focus on salam and musharaka only: the simplest trade product and the simplest partnership product. For salam: write the three journal entries (advance payment, delivery, resale) for a bank that pays 100,000 upfront for wheat to be delivered in 6 months and sells it for 110,000. For musharaka: two partners contribute 60,000 and 40,000. Profit of 20,000 is shared 50/50 by agreement; a loss of 15,000 is shared 60/40 (strictly by capital ratio). Write the entries for both outcomes."
 ---
 
-# Trade & Partnership Finance — Salam, Istisna'a, Mudaraba, Musharaka
+# Trade & Partnership Finance: Salam, Istisna'a, Mudaraba, Musharaka
 
-In Lesson 7, you worked through takaful — Islamic insurance — and the IFRS 17 challenges it creates. Lessons 4 through 7 each focused on a single product: murabaha, ijarah, sukuk, and takaful. Those four products represent the majority of Islamic banking balance sheets, but four important product types remain: **salam** (advance purchase), **istisna'a** (construction finance), **mudaraba** (profit-sharing investment), and **full musharaka** (joint venture). These are the products that fund commodity trading desks, infrastructure projects, and investment pools — and they introduce accounting mechanics that murabaha and ijarah do not.
+In Lesson 7, you worked through takaful: Islamic insurance: and the IFRS 17 challenges it creates. Lessons 4 through 7 each focused on a single product: murabaha, ijarah, sukuk, and takaful. Those four products represent the majority of Islamic banking balance sheets, but four important product types remain: **salam** (advance purchase), **istisna'a** (construction finance), **mudaraba** (profit-sharing investment), and **full musharaka** (joint venture). These are the products that fund commodity trading desks, infrastructure projects, and investment pools: and they introduce accounting mechanics that murabaha and ijarah do not.
 
-This lesson covers all four in two pairs. The first pair — salam and istisna'a — are **trade finance** products where the bank funds the purchase or construction of a tangible asset. The second pair — mudaraba and musharaka — are **partnership finance** products where the bank provides capital and shares in the profit or loss of the venture. Each pair shares structural similarities that make them easier to learn together than in isolation.
+This lesson covers all four in two pairs. The first pair: salam and istisna'a: are **trade finance** products where the bank funds the purchase or construction of a tangible asset. The second pair: mudaraba and musharaka: are **partnership finance** products where the bank provides capital and shares in the profit or loss of the venture. Each pair shares structural similarities that make them easier to learn together than in isolation.
 
 ## Trade Finance: Salam (AAOIFI FAS 7)
 
@@ -98,45 +98,45 @@ Four Shariah requirements must be satisfied:
 
 | Requirement              | Detail                                                                             |
 | ------------------------ | ---------------------------------------------------------------------------------- |
-| **Full advance payment** | The bank must pay the entire price at contract date — no staged payments permitted |
+| **Full advance payment** | The bank must pay the entire price at contract date: no staged payments permitted |
 | **Fungible commodity**   | The subject must be a commodity describable by specification (wheat, steel, oil)   |
 | **Precise delivery**     | Delivery date, location, and quality specifications must be fixed                  |
 | **May not yet exist**    | Unlike murabaha, the commodity need not exist at contract date                     |
 
 :::info Salam Journal Entry Sequence
 
-**Step 1 — Advance payment at contract date:**
+**Step 1: Advance payment at contract date:**
 Dr: Salam Receivable | Full contract price
 Cr: Cash | Full contract price
 
-**Step 2 — Commodity delivered at maturity:**
+**Step 2: Commodity delivered at maturity:**
 Dr: Salam Commodity (Inventory) | Fair value at delivery
 Cr: Salam Receivable | Contract price
 (Any difference = gain or loss recognised immediately)
 
-**Step 3 — Bank sells the commodity:**
+**Step 3: Bank sells the commodity:**
 Dr: Cash | Sale proceeds
 Cr: Salam Commodity | Carrying amount
 Cr/Dr: Gain or Loss on Salam | Difference
 
-**Parallel salam:** The bank can hedge by entering a second salam as seller of the same commodity to a third party. The two contracts **must be legally independent** — linking them creates a prohibited back-to-back arrangement.
+**Parallel salam:** The bank can hedge by entering a second salam as seller of the same commodity to a third party. The two contracts **must be legally independent**: linking them creates a prohibited back-to-back arrangement.
 
 :::
 
 ## Trade Finance: Istisna'a (AAOIFI FAS 10)
 
-Istisna'a is the Islamic equivalent of construction finance. The bank contracts to have an asset **manufactured or constructed** and delivers it to the customer. Unlike salam, payment may be **deferred or staged** — the customer can pay in milestones as construction progresses.
+Istisna'a is the Islamic equivalent of construction finance. The bank contracts to have an asset **manufactured or constructed** and delivers it to the customer. Unlike salam, payment may be **deferred or staged**: the customer can pay in milestones as construction progresses.
 
-The critical accounting difference from all other Islamic products is **revenue recognition**. Istisna'a uses the **percentage of completion** method — arithmetically identical to IFRS 15 over-time recognition. The AAOIFI-specific requirement is that each milestone must include an explicit **Shariah compliance confirmation** alongside the financial measurement; IFRS 15 does not require this.
+The critical accounting difference from all other Islamic products is **revenue recognition**. Istisna'a uses the **percentage of completion** method: arithmetically identical to IFRS 15 over-time recognition. The AAOIFI-specific requirement is that each milestone must include an explicit **Shariah compliance confirmation** alongside the financial measurement; IFRS 15 does not require this.
 
 | Element                    | AAOIFI FAS 10                              | IFRS 15                               |
 | -------------------------- | ------------------------------------------ | ------------------------------------- |
 | **Revenue method**         | Percentage of completion                   | Over-time recognition                 |
 | **Milestone confirmation** | Financial + Shariah compliance             | Financial only                        |
-| **Loss-making contracts**  | Recognise full expected loss immediately   | Same — IAS 37 / IFRS 15 onerous rules |
-| **Parallel istisna'a**     | Gross presentation (doubles balance sheet) | Same — principal vs agent assessment  |
+| **Loss-making contracts**  | Recognise full expected loss immediately   | Same: IAS 37 / IFRS 15 onerous rules |
+| **Parallel istisna'a**     | Gross presentation (doubles balance sheet) | Same: principal vs agent assessment  |
 
-In a **parallel istisna'a**, the bank sits between the customer and the contractor. The bank has an istisna'a contract with the customer (selling the completed asset) and a separate istisna'a contract with the contractor (commissioning the build). Both contracts must be independent. Parallel istisna'a usually requires **gross presentation** on the balance sheet — the bank recognises both the asset under construction and the receivable from the customer, which can significantly increase balance sheet size.
+In a **parallel istisna'a**, the bank sits between the customer and the contractor. The bank has an istisna'a contract with the customer (selling the completed asset) and a separate istisna'a contract with the contractor (commissioning the build). Both contracts must be independent. Parallel istisna'a usually requires **gross presentation** on the balance sheet: the bank recognises both the asset under construction and the receivable from the customer, which can significantly increase balance sheet size.
 
 ## Partnership Finance: Mudaraba (AAOIFI FAS 3)
 
@@ -158,16 +158,16 @@ Two reserve mechanisms smooth returns:
 - **PER (Profit Equalisation Reserve):** Portion of gross income set aside before distribution. Smooths returns across periods so IAH don't see volatile month-to-month fluctuations.
 - **IRR (Investment Risk Reserve):** Portion of IAH income set aside as buffer against future capital losses. Protects IAH principal without violating the mudaraba rule that the capital provider bears loss.
 
-**Balance sheet treatment:** IAH funds appear as **"Equity of Investment Account Holders"** — a separate category between liabilities and equity. This is unique to Islamic banks; conventional bank balance sheets have no equivalent line item.
+**Balance sheet treatment:** IAH funds appear as **"Equity of Investment Account Holders"**: a separate category between liabilities and equity. This is unique to Islamic banks; conventional bank balance sheets have no equivalent line item.
 
 ## Partnership Finance: Full Musharaka (AAOIFI FAS 4)
 
-In full musharaka, **all parties contribute capital and management**. Profits are shared per an agreed ratio (which may differ from the capital ratio). Losses are shared **strictly in proportion to capital** — this is a non-negotiable Shariah rule.
+In full musharaka, **all parties contribute capital and management**. Profits are shared per an agreed ratio (which may differ from the capital ratio). Losses are shared **strictly in proportion to capital**: this is a non-negotiable Shariah rule.
 
 | Musharaka Type  | Structure                                              |
 | --------------- | ------------------------------------------------------ |
-| **Permanent**   | Indefinite joint venture — all parties remain invested |
-| **Running**     | Short-term revolving arrangement — capital recycled    |
+| **Permanent**   | Indefinite joint venture: all parties remain invested |
+| **Running**     | Short-term revolving arrangement: capital recycled    |
 | **Diminishing** | Gradual buy-out (covered in Lesson 5 under ijarah IMB) |
 
 :::info Musharaka Journal Entry Sequence
@@ -188,7 +188,7 @@ Cr: Musharaka Investment | Bank's capital proportion (reduces carrying value)
 
 :::
 
-**IFRS classification challenge:** Most musharaka arrangements **fail the SPPI test** (Solely Payments of Principal and Interest) under IFRS 9. Musharaka returns are profit shares, not interest — they depend on the venture's performance, not a contractual rate. This means musharaka investments are typically classified at **FVTPL (Fair Value Through Profit or Loss)** under IFRS, requiring mark-to-market accounting. Under AAOIFI FAS 4, musharaka investments are carried at historical cost adjusted for the bank's share of undistributed profit or loss — a fundamentally different measurement basis.
+**IFRS classification challenge:** Most musharaka arrangements **fail the SPPI test** (Solely Payments of Principal and Interest) under IFRS 9. Musharaka returns are profit shares, not interest (they depend on the venture's performance, not a contractual rate. This means musharaka investments are typically classified at **FVTPL (Fair Value Through Profit or Loss)** under IFRS, requiring mark-to-market accounting. Under AAOIFI FAS 4, musharaka investments are carried at historical cost adjusted for the bank's share of undistributed profit or loss) a fundamentally different measurement basis.
 
 ## Comparing All Four Products
 
@@ -203,20 +203,20 @@ Cr: Musharaka Investment | Bank's capital proportion (reduces carrying value)
 
 :::info Exercise Requirements
 
-**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Plugin:** Islamic Finance Domain Agents (install once: see Lesson 3)
 :::
 
-## Practice Exercise 5: Trade & Partnership Finance — Construction Project Across Jurisdictions
+## Practice Exercise 5: Trade & Partnership Finance: Construction Project Across Jurisdictions
 
-**What you will build:** A multi-product accounting package for a single construction project that uses all four products — istisna'a for construction, parallel salam for materials, mudaraba for investment capital, and musharaka for equity participation.
+**What you will build:** A multi-product accounting package for a single construction project that uses all four products: istisna'a for construction, parallel salam for materials, mudaraba for investment capital, and musharaka for equity participation.
 
 **Requirements:** Cowork or Claude (any plan). 45 minutes.
 
 **Scenario:** A UAE construction company needs to build a hospital complex worth AED 200 million. The Islamic bank structures the financing using a combination of istisna'a (construction phase) and parallel salam (materials procurement). An investment fund provides mudaraba capital (AED 80M) and the bank and a partner each contribute AED 60M in a musharaka arrangement for the remaining equity.
 
-1. **Istisna'a accounting (UAE — IFRS).** Tell your AI assistant: _"I am working on a UAE entity using IFRS. Structure an istisna'a contract for a hospital construction project worth AED 200 million. Apply IFRS 15 over-time recognition with three milestones (30%, 60%, 100% completion). Generate the journal entries at each milestone, including the revenue and cost recognition. Show the parallel istisna'a gross presentation on the balance sheet."_
+1. **Istisna'a accounting (UAE: IFRS).** Tell your AI assistant: _"I am working on a UAE entity using IFRS. Structure an istisna'a contract for a hospital construction project worth AED 200 million. Apply IFRS 15 over-time recognition with three milestones (30%, 60%, 100% completion). Generate the journal entries at each milestone, including the revenue and cost recognition. Show the parallel istisna'a gross presentation on the balance sheet."_
 
-2. **Parallel salam (Bahrain — AAOIFI FAS 7).** Tell your AI assistant: _"The materials supplier is in Bahrain. The bank enters a salam contract paying AED 25 million in advance for steel and construction materials to be delivered in 6 months. Generate the salam receivable entries under AAOIFI FAS 7 — advance payment, delivery, and resale to the construction project at AED 26.5 million. Then show the parallel salam where the bank hedges by entering a second salam as seller."_
+2. **Parallel salam (Bahrain (AAOIFI FAS 7).** Tell your AI assistant: _"The materials supplier is in Bahrain. The bank enters a salam contract paying AED 25 million in advance for steel and construction materials to be delivered in 6 months. Generate the salam receivable entries under AAOIFI FAS 7) advance payment, delivery, and resale to the construction project at AED 26.5 million. Then show the parallel salam where the bank hedges by entering a second salam as seller."_
 
 3. **Mudaraba distribution.** Tell your AI assistant: _"The investment fund provides AED 80 million as rabb ul mal. The bank is mudarib with a 25% mudarib share. The pool has three account types with weightages: 3-month deposits (weight 0.70), 6-month deposits (weight 0.85), 12-month deposits (weight 1.00). Total pool income is AED 6.2 million. PER contribution is 2% of gross income; IRR is 1% of IAH share. Calculate the complete profit distribution showing each step of the six-step process."_
 
@@ -228,13 +228,13 @@ Cr: Musharaka Investment | Bank's capital proportion (reduces carrying value)
 
 :::tip Global Perspective
 
-**Salam** is most commonly used in commodity-rich jurisdictions — Bahrain, Sudan, and parts of Southeast Asia. Agricultural salam (wheat, rice, palm oil) and metals salam (steel, aluminium) are the dominant structures.
+**Salam** is most commonly used in commodity-rich jurisdictions: Bahrain, Sudan, and parts of Southeast Asia. Agricultural salam (wheat, rice, palm oil) and metals salam (steel, aluminium) are the dominant structures.
 
-**Istisna'a** is the backbone of Islamic infrastructure finance. The UAE, Saudi Arabia, and Malaysia have all used istisna'a structures for major construction projects. In Malaysia, istisna'a often appears alongside sukuk al-istisna'a — construction-backed Islamic bonds.
+**Istisna'a** is the backbone of Islamic infrastructure finance. The UAE, Saudi Arabia, and Malaysia have all used istisna'a structures for major construction projects. In Malaysia, istisna'a often appears alongside sukuk al-istisna'a: construction-backed Islamic bonds.
 
-**Mudaraba** is universal — every Islamic bank uses it for investment account structures. The profit pool calculation varies by jurisdiction: Malaysian banks tend to use simpler weightage tables; Gulf banks often use more granular multi-tier structures.
+**Mudaraba** is universal: every Islamic bank uses it for investment account structures. The profit pool calculation varies by jurisdiction: Malaysian banks tend to use simpler weightage tables; Gulf banks often use more granular multi-tier structures.
 
-**Musharaka** in its full form is less common in retail banking but critical in corporate and project finance. Diminishing musharaka (covered in Lesson 5) is far more prevalent in retail — particularly for home finance in the UK and Malaysia.
+**Musharaka** in its full form is less common in retail banking but critical in corporate and project finance. Diminishing musharaka (covered in Lesson 5) is far more prevalent in retail: particularly for home finance in the UK and Malaysia.
 
 :::
 
@@ -262,7 +262,7 @@ Questions:
 Work through this for a UAE entity using IFRS.
 ```
 
-**What you are learning:** The choice between salam and istisna'a is one of the most important structuring decisions in Islamic trade finance. Salam requires full advance payment and works for fungible commodities; istisna'a allows staged payment and works for manufactured or constructed assets. Understanding when to use each — and the risk profile each creates — is a core competency for Islamic finance practitioners.
+**What you are learning:** The choice between salam and istisna'a is one of the most important structuring decisions in Islamic trade finance. Salam requires full advance payment and works for fungible commodities; istisna'a allows staged payment and works for manufactured or constructed assets. Understanding when to use each (and the risk profile each creates) is a core competency for Islamic finance practitioners.
 
 ### Prompt 2: Adapt
 
@@ -292,7 +292,7 @@ Calculate the complete 6-step profit distribution:
 Show all intermediate calculations.
 ```
 
-**What you are learning:** The mudaraba profit pool is the engine of Islamic deposit-taking. Unlike conventional interest calculation (straightforward rate x principal x time), mudaraba distribution involves a multi-step waterfall with reserves. PER smooths returns across periods; IRR protects capital. Understanding this calculation is essential because it drives the returns that IAH actually receive — and it is the primary source of Shariah audit findings when banks make errors in weightage application or reserve calculations.
+**What you are learning:** The mudaraba profit pool is the engine of Islamic deposit-taking. Unlike conventional interest calculation (straightforward rate x principal x time), mudaraba distribution involves a multi-step waterfall with reserves. PER smooths returns across periods; IRR protects capital. Understanding this calculation is essential because it drives the returns that IAH actually receive: and it is the primary source of Shariah audit findings when banks make errors in weightage application or reserve calculations.
 
 ### Prompt 3: Apply
 
@@ -323,7 +323,7 @@ produces different financial statement impacts depending on
 whether AAOIFI or IFRS governs.
 ```
 
-**What you are learning:** Musharaka is where the Islamic finance and IFRS frameworks diverge most sharply. The SPPI test was designed for conventional debt instruments — principal plus interest. Musharaka returns are profit shares that depend on the venture's performance, which is fundamentally different from contractual interest. This means most musharaka investments end up at FVTPL under IFRS, creating income statement volatility that does not exist under AAOIFI. Understanding this divergence is critical for any practitioner working across jurisdictions.
+**What you are learning:** Musharaka is where the Islamic finance and IFRS frameworks diverge most sharply. The SPPI test was designed for conventional debt instruments: principal plus interest. Musharaka returns are profit shares that depend on the venture's performance, which is fundamentally different from contractual interest. This means most musharaka investments end up at FVTPL under IFRS, creating income statement volatility that does not exist under AAOIFI. Understanding this divergence is critical for any practitioner working across jurisdictions.
 
 ## Flashcards Study Aid
 

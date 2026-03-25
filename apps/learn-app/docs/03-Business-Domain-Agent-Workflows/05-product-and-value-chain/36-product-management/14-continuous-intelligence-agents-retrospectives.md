@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/product-management/continuous-intelligence-agents-retrospectives
 sidebar_position: 14
-title: "Continuous Intelligence — Agents & Retrospectives"
-description: "Learn to run structured product retrospectives using /retro and deploy three persistent PM agents — research intelligence, stakeholder update, and roadmap coherence — to automate the ongoing intelligence and communication layer of product management"
+title: "Continuous Intelligence; Agents & Retrospectives"
+description: "Learn to run structured product retrospectives using /retro and deploy three persistent PM agents: research intelligence, stakeholder update, and roadmap coherence: to automate the ongoing intelligence and communication layer of product management"
 keywords:
   [
     "product management",
@@ -24,7 +24,7 @@ skills:
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can invoke /retro with outcome, delivery, and team data, receive a four-section retrospective document, and convert each 'what went wrong' into a specific, testable process improvement — not a vague intention"
+    measurable_at_this_level: "Student can invoke /retro with outcome, delivery, and team data, receive a four-section retrospective document, and convert each 'what went wrong' into a specific, testable process improvement: not a vague intention"
 
   - name: "Configure and deploy three persistent PM agents (research intelligence, stakeholder update, roadmap coherence) using /schedule"
     proficiency_level: "C1"
@@ -34,7 +34,7 @@ skills:
     measurable_at_this_level: "Student can configure all three agents with escalation thresholds and monitoring schedules, deploy them using /schedule, and verify that each agent produces a first output in the correct format"
 
 learning_objectives:
-  - objective: "Run a sprint retrospective for InsightFlow Sprint 1 using /retro and produce four-section output — Did it solve the problem, Did we build it as intended, Were the metrics right, What would we do differently"
+  - objective: "Run a sprint retrospective for InsightFlow Sprint 1 using /retro and produce four-section output; Did it solve the problem, Did we build it as intended, Were the metrics right, What would we do differently"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
     assessment_method: "Student invokes /retro with illustrative Sprint 1 outcome data and confirms the output includes: a clear verdict on problem-solving, specific delivery assessment, metric quality rating, and at least two specific (not vague) process improvement commitments"
@@ -47,7 +47,7 @@ learning_objectives:
   - objective: "Deploy the research intelligence, stakeholder update, and roadmap coherence agents with configured schedules and escalation thresholds"
     proficiency_level: "C1"
     bloom_level: "Create"
-    assessment_method: "Student deploys all three agents using /schedule and verifies that each agent produces a first output — research digest, three-version stakeholder update queue, or coherence report"
+    assessment_method: "Student deploys all three agents using /schedule and verifies that each agent produces a first output: research digest, three-version stakeholder update queue, or coherence report"
 
 cognitive_load:
   new_concepts: 5
@@ -57,7 +57,7 @@ cognitive_load:
     - "Research Intelligence Agent: continuous signal monitoring with escalation thresholds"
     - "Stakeholder Update Agent: automated three-version weekly updates with PM review gate"
     - "Roadmap Coherence Agent: three weekly checks (orphan detection, coverage, sprint alignment)"
-  assessment: "5 concepts at B2-C1 level. This is the capstone lesson — students have data from the full cycle (L03-L13) to retrospect on. The retro concepts build on L13's metrics work. The agent deployment is new and technically higher-level — students are configuring real persistent components, not running one-off commands."
+  assessment: "5 concepts at B2-C1 level. This is the capstone lesson: students have data from the full cycle (L03-L13) to retrospect on. The retro concepts build on L13's metrics work. The agent deployment is new and technically higher-level: students are configuring real persistent components, not running one-off commands."
 
 differentiation:
   extension_for_advanced: "After deploying all three agents, design the escalation workflow that connects them. When the Research Intelligence Agent flags a cross-channel signal (support + NPS + feature requests), what happens next? Draft the PM decision tree: at what signal strength do you trigger a problem brief (/brief)? At what point does the Stakeholder Update Agent need to draft a customer communication? At what sprint composition does the Roadmap Coherence Agent alert the EM? Formalise this as a decision tree in your product.local.md."
@@ -65,22 +65,22 @@ differentiation:
 
 teaching_guide:
   key_points:
-    - "A retrospective without outcome data produces blame and wishful thinking, not learning — the four retro questions are only answerable if you have collected adoption data, delivery data, and metric movement data"
+    - "A retrospective without outcome data produces blame and wishful thinking, not learning: the four retro questions are only answerable if you have collected adoption data, delivery data, and metric movement data"
     - "The difference between a useful retrospective and a useless one is specificity: 'communicate better' is decoration, 'engineering lead must confirm architecture notes in PRD before REVIEW status' is a rule that changes behaviour"
-    - "Persistent agents do not replace PM judgment — the Stakeholder Update Agent produces drafts, the PM reviews and approves. The Research Intelligence Agent surfaces signals, the PM decides whether to act. Agents remove the mechanical work, not the decision-making"
+    - "Persistent agents do not replace PM judgment: the Stakeholder Update Agent produces drafts, the PM reviews and approves. The Research Intelligence Agent surfaces signals, the PM decides whether to act. Agents remove the mechanical work, not the decision-making"
     - "The three agents together form a continuous intelligence layer: Research watches what users experience, Stakeholder Update communicates what is happening, Roadmap Coherence ensures what is being built still matches what was committed"
   misconceptions:
-    - "Agents make decisions for the PM. Correction: Agents surface information, draft documents, and flag anomalies — all for PM review. The PM review gate in the Stakeholder Update Agent is not optional. The escalation in the Research Intelligence Agent means 'bring this to the PM's attention', not 'act on this automatically'."
-    - "A retro should focus on what went wrong. Correction: A good retro documents what went well with equal rigour — to protect those patterns in future work. The NEVER DO rule from the /retro skill: never produce a retro that only documents what went wrong."
+    - "Agents make decisions for the PM. Correction: Agents surface information, draft documents, and flag anomalies: all for PM review. The PM review gate in the Stakeholder Update Agent is not optional. The escalation in the Research Intelligence Agent means 'bring this to the PM's attention', not 'act on this automatically'."
+    - "A retro should focus on what went wrong. Correction: A good retro documents what went well with equal rigour: to protect those patterns in future work. The NEVER DO rule from the /retro skill: never produce a retro that only documents what went wrong."
   discussion_prompts:
-    - "The Research Intelligence Agent flags a cross-channel signal: the same dashboard performance complaint appears in 8 support tickets, 3 NPS detractor responses, and has 47 votes on Canny this week — up from 12 last week. The threshold for immediate escalation is 'appearing in all three channels'. What do you do? What does the agent do versus what do you decide?"
-    - "Your retro finds that your L06 feature spec was ambiguous on the error handling requirements — leading to 3 support tickets post-launch. The weak statement is 'write clearer specs'. What is the strong process improvement you would add to your product.local.md?"
+    - "The Research Intelligence Agent flags a cross-channel signal: the same dashboard performance complaint appears in 8 support tickets, 3 NPS detractor responses, and has 47 votes on Canny this week: up from 12 last week. The threshold for immediate escalation is 'appearing in all three channels'. What do you do? What does the agent do versus what do you decide?"
+    - "Your retro finds that your L06 feature spec was ambiguous on the error handling requirements: leading to 3 support tickets post-launch. The weak statement is 'write clearer specs'. What is the strong process improvement you would add to your product.local.md?"
   teaching_tips:
-    - "The retro works best when students bring their actual L03-L13 artifacts — the problem brief, the sprint plan, the metrics review. The retrospective is most valuable as a reflective exercise on the real cycle they have built, not a hypothetical."
-    - "When teaching agent deployment, emphasise the PM review gate as a quality control mechanism, not overhead. The Stakeholder Update Agent's value is saving the PM from generating three versions manually — but auto-sending without review would destroy stakeholder trust in a single incident."
+    - "The retro works best when students bring their actual L03-L13 artifacts: the problem brief, the sprint plan, the metrics review. The retrospective is most valuable as a reflective exercise on the real cycle they have built, not a hypothetical."
+    - "When teaching agent deployment, emphasise the PM review gate as a quality control mechanism, not overhead. The Stakeholder Update Agent's value is saving the PM from generating three versions manually: but auto-sending without review would destroy stakeholder trust in a single incident."
 ---
 
-# Continuous Intelligence — Agents & Retrospectives
+# Continuous Intelligence; Agents & Retrospectives
 
 You have completed one full product management cycle for InsightFlow's Workflow Builder initiative. From the problem brief (L03) through the metrics review (L13), you have built a complete chain of PM artifacts: a discovery brief, user research synthesis, a competitive brief, a feature spec, a PRD, user stories, a roadmap, a prioritised backlog, a sprint plan, stakeholder updates, and a metrics review.
 
@@ -88,9 +88,9 @@ Now comes the work that most PM processes skip: closing the loop. Did the work a
 
 This lesson has two parts:
 
-**Part 1: Retrospective** — Use the `/retro` command from the custom **product-strategy** plugin to run a structured four-question retrospective on Sprint 1 of the Workflow Builder initiative.
+**Part 1: Retrospective**; Use the `/retro` command from the custom **product-strategy** plugin to run a structured four-question retrospective on Sprint 1 of the Workflow Builder initiative.
 
-**Part 2: Deploy Three Persistent Agents** — Deploy the research intelligence, stakeholder update, and roadmap coherence agents to automate the ongoing intelligence and communication layer — so that the next cycle starts with better inputs than this one.
+**Part 2: Deploy Three Persistent Agents**; Deploy the research intelligence, stakeholder update, and roadmap coherence agents to automate the ongoing intelligence and communication layer: so that the next cycle starts with better inputs than this one.
 
 ## Part 1: Product Retrospectives
 
@@ -105,7 +105,7 @@ The `/retro` command structures retrospectives around four questions that connec
 | **Q1: Did it solve the problem?**     | Were we right about the user need? Did the feature change what it was supposed to change? | Clear verdict with evidence: SOLVED / PARTIALLY SOLVED / NOT SOLVED / TOO EARLY TO TELL |
 | **Q2: Did we build it as intended?**  | Was the spec good enough? Did engineering deliver what was specified?                     | Assessment against delivery data: on time, scope maintained, ACs met                    |
 | **Q3: Were the metrics right?**       | Were the success metrics measuring the right things? Did we have a failure threshold?     | Metric quality rating: HIGH / MEDIUM / LOW, with specific learning                      |
-| **Q4: What would we do differently?** | Not "what went wrong" — what specific process change would you make if you started today? | Specific, testable process improvement — not a vague intention                          |
+| **Q4: What would we do differently?** | Not "what went wrong": what specific process change would you make if you started today? | Specific, testable process improvement: not a vague intention                          |
 
 ### Data Required Before Running a Retro
 
@@ -287,15 +287,15 @@ Q4: WHAT WOULD WE DO DIFFERENTLY?
 
 Before closing the retrospective, check against the `/retro` skill's NEVER DO rules:
 
-**NEVER run a retro without outcome data** — this retro has adoption data (47 users, 71% completion), delivery data (1 day late, spec quality ratings), and support data. If you are missing outcome data, the retro should wait.
+**NEVER run a retro without outcome data**: this retro has adoption data (47 users, 71% completion), delivery data (1 day late, spec quality ratings), and support data. If you are missing outcome data, the retro should wait.
 
-**NEVER produce only what went wrong** — the retro above includes clear ✅ signals: support ticket reduction exceeded target, delivery was nearly on time, spec quality was HIGH for WF-001/002, zero P0 bugs. Protecting what works is as important as fixing what does not.
+**NEVER produce only what went wrong**: the retro above includes clear ✅ signals: support ticket reduction exceeded target, delivery was nearly on time, spec quality was HIGH for WF-001/002, zero P0 bugs. Protecting what works is as important as fixing what does not.
 
-**NEVER close without a product.local.md update** — the retro above adds two specific rules to quality standards. If nothing changes in product.local.md after a retro, the retro was a review exercise, not a learning exercise.
+**NEVER close without a product.local.md update**: the retro above adds two specific rules to quality standards. If nothing changes in product.local.md after a retro, the retro was a review exercise, not a learning exercise.
 
 ## Part 2: Deploying Three Persistent PM Agents
 
-One-off commands give you answers when you ask. Persistent agents give you intelligence continuously — monitoring signals you would miss, drafting communications you would not have time to write, and flagging drift before it becomes a crisis.
+One-off commands give you answers when you ask. Persistent agents give you intelligence continuously: monitoring signals you would miss, drafting communications you would not have time to write, and flagging drift before it becomes a crisis.
 
 The three PM agents in the custom **product-strategy** plugin form a continuous intelligence layer:
 
@@ -311,9 +311,9 @@ The three PM agents in the custom **product-strategy** plugin form a continuous 
 
 **Weekly workflow:**
 
-1. Pull support ticket themes from the last 7 days — categorise, compare to prior week, flag any category up >50%
-2. Pull NPS detractor verbatim — find themes appearing in >20% of detractor responses
-3. Pull feature request votes — sort by total votes + velocity, flag any crossing a vote threshold
+1. Pull support ticket themes from the last 7 days: categorise, compare to prior week, flag any category up >50%
+2. Pull NPS detractor verbatim: find themes appearing in >20% of detractor responses
+3. Pull feature request votes: sort by total votes + velocity, flag any crossing a vote threshold
 4. Cross-channel detection: any problem appearing in support AND NPS AND feature requests = systemic issue, escalate immediately
 
 **Escalation thresholds:**
@@ -339,8 +339,8 @@ Signal 1: [Theme] — 🔴 ESCALATE / 🟡 MONITOR / 🟢 NOTED
 
 **NEVER DO rules for this agent:**
 
-- Never surface a single user complaint as a signal — one complaint is noise; three is a pattern; five is a signal
-- Never omit the trend comparison — a declining signal is different from a growing one
+- Never surface a single user complaint as a signal: one complaint is noise; three is a pattern; five is a signal
+- Never omit the trend comparison: a declining signal is different from a growing one
 - Never produce a digest without a recommended action per signal
 - Never mark a cross-channel signal as low priority
 
@@ -356,14 +356,14 @@ Signal 1: [Theme] — 🔴 ESCALATE / 🟡 MONITOR / 🟢 NOTED
 **Weekly workflow:**
 
 1. Pull status of all active features from project tracking (MCP: Jira/Linear/Notion)
-2. Compare to prior week — detect status changes, shipped items, new risks
+2. Compare to prior week: detect status changes, shipped items, new risks
 3. Generate three versions (executive, engineering, customer-facing)
-4. Queue all three for **PM review and approval** — never auto-send
+4. Queue all three for **PM review and approval**: never auto-send
 
 **The PM review gate is not optional.** Every version waits for PM approval before distribution. The agent removes the mechanical work of generating three versions. The PM removes errors, adjusts tone, and approves distribution. This division preserves stakeholder trust while saving the PM's time.
 
-**Triggered update — customer-committed feature:**
-When any feature with a customer commitment changes status, the agent immediately generates a draft customer communication and flags it as "review required" — not sent, but queued with high urgency.
+**Triggered update: customer-committed feature:**
+When any feature with a customer commitment changes status, the agent immediately generates a draft customer communication and flags it as "review required": not sent, but queued with high urgency.
 
 **NEVER DO rules for this agent:**
 
@@ -377,17 +377,17 @@ When any feature with a customer commitment changes status, the agent immediatel
 
 **Three weekly checks:**
 
-**Check 1 — Backlog Orphan Detection**
-Any backlog item added in the last 7 days without a roadmap theme tag gets flagged to the PM: "New item without roadmap theme — assign to a theme or mark as maintenance/tech debt."
+**Check 1; Backlog Orphan Detection**
+Any backlog item added in the last 7 days without a roadmap theme tag gets flagged to the PM: "New item without roadmap theme: assign to a theme or mark as maintenance/tech debt."
 
-**Check 2 — Roadmap Coverage**
+**Check 2; Roadmap Coverage**
 Every NOW (current quarter) roadmap item is checked for spec status:
 
-- REFINED spec ✅ — ready for sprint
-- DRAFT spec ⚠️ — not sprint-ready, PM to move to REVIEW
-- NO SPEC ❌ — cannot enter sprint planning, immediate flag
+- REFINED spec ✅: ready for sprint
+- DRAFT spec ⚠️: not sprint-ready, PM to move to REVIEW
+- NO SPEC ❌: cannot enter sprint planning, immediate flag
 
-**Check 3 — Sprint Alignment**
+**Check 3; Sprint Alignment**
 Current sprint's story points are classified:
 
 - Roadmap-tagged: on track
@@ -398,9 +398,9 @@ If off-roadmap work exceeds 30%, the agent alerts PM and EM: "Current sprint has
 
 **NEVER DO rules for this agent:**
 
-- Never classify maintenance or bug fixes as "off-roadmap" — they are expected and separately tracked
-- Never flag every untagged item as a crisis — surface them weekly for PM triage
-- Never enforce 100% roadmap alignment — some sprint flexibility is healthy; the threshold is >30%, not >0%
+- Never classify maintenance or bug fixes as "off-roadmap": they are expected and separately tracked
+- Never flag every untagged item as a crisis: surface them weekly for PM triage
+- Never enforce 100% roadmap alignment: some sprint flexibility is healthy; the threshold is >30%, not >0%
 - Never produce a report without recommended actions
 
 ### Deploying Agents with /schedule
@@ -482,7 +482,7 @@ PM action required: Review and act on required actions by Thursday EOD.
 ```
 
 :::note Keep This File
-The process improvement rules from your retro, and the escalation thresholds you configure for the three agents, should be saved in your product.local.md. These agents work best when product.local.md is current — it provides the context (team structure, stakeholder map, customer commitments) that makes each agent's output specific to your product rather than generic.
+The process improvement rules from your retro, and the escalation thresholds you configure for the three agents, should be saved in your product.local.md. These agents work best when product.local.md is current: it provides the context (team structure, stakeholder map, customer commitments) that makes each agent's output specific to your product rather than generic.
 :::
 
 ## The Full PM Cycle, Automated
@@ -498,13 +498,13 @@ Looking back at the InsightFlow journey from L03 to L14, here is where the three
 | L13     | Monthly metrics review revealed activation drop | Research Intelligence: weekly digest might have caught friction signals earlier        |
 | L14     | Retro found missing NPS baseline                | Roadmap Coherence: would have flagged "no baseline measurement" in spec coverage check |
 
-Agents do not replace the judgment in any of these steps. They give you better inputs, faster — so your judgment is informed by richer data.
+Agents do not replace the judgment in any of these steps. They give you better inputs, faster: so your judgment is informed by richer data.
 
 ## Try With AI
 
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Prompt 1 — Reproduce** (apply what you just learned):
+**Prompt 1; Reproduce** (apply what you just learned):
 
 ```
 Run a product retrospective on InsightFlow's Workflow Builder Sprint 1.
@@ -532,9 +532,9 @@ produce a STRONG process improvement (specific rule), not a weak one
 Close with two product.local.md updates.
 ```
 
-**What you're learning:** Practising the full /retro workflow with real data from the sprint you planned in L11. The evaluation test is whether the process improvements are specific enough to change behaviour — "be more careful" fails, "add error state copy as required spec section before REVIEW status" passes.
+**What you're learning:** Practising the full /retro workflow with real data from the sprint you planned in L11. The evaluation test is whether the process improvements are specific enough to change behaviour: "be more careful" fails, "add error state copy as required spec section before REVIEW status" passes.
 
-**Prompt 2 — Adapt** (change the context):
+**Prompt 2; Adapt** (change the context):
 
 ```
 A different team ran a retrospective on their SSO feature launch.
@@ -551,9 +551,9 @@ Then: What is the product.local.md update you would add from this
 retro finding?
 ```
 
-**What you're learning:** The specificity conversion exercise — taking a real-world vague retro output and making it actionable. This is the hardest part of running retros well.
+**What you're learning:** The specificity conversion exercise: taking a real-world vague retro output and making it actionable. This is the hardest part of running retros well.
 
-**Prompt 3 — Apply** (connect to your domain):
+**Prompt 3; Apply** (connect to your domain):
 
 ```
 Think of a feature you or your team shipped in the last 3-6 months.
@@ -572,7 +572,7 @@ Update, Roadmap Coherence) would have caught the issue earlier if it
 had been deployed before this feature shipped?
 ```
 
-**What you're learning:** The full retro applied to real experience. The final question connects retrospective learning to agent configuration — what escalation thresholds would you set, given what this retrospective taught you?
+**What you're learning:** The full retro applied to real experience. The final question connects retrospective learning to agent configuration: what escalation thresholds would you set, given what this retrospective taught you?
 
 ## Exercise: Sprint 1 Retro + Agent Deployment
 
@@ -580,16 +580,16 @@ had been deployed before this feature shipped?
 **Commands:** `/retro` + `/schedule` (for agent deployment)
 **Time:** 45 minutes
 
-**Step 1 — Gather your data**
+**Step 1; Gather your data**
 
 Before running /retro, compile:
 
 - Original problem (from your L03 brief)
 - Target outcome (from your L06 spec)
-- Sprint 1 outcome data (from your L13 metrics review — activation, support tickets, NPS if available)
+- Sprint 1 outcome data (from your L13 metrics review: activation, support tickets, NPS if available)
 - Delivery assessment from L11 (on time? scope maintained? spec quality?)
 
-**Step 2 — Run /retro on Sprint 1**
+**Step 2; Run /retro on Sprint 1**
 
 ```
 /retro
@@ -609,7 +609,7 @@ Delivery data:
 issues flagged by engineering?]
 ```
 
-**Step 3 — Evaluate the retro output**
+**Step 3; Evaluate the retro output**
 
 Verify:
 
@@ -620,7 +620,7 @@ Verify:
 
 If any process improvement is weak, prompt: "Rewrite process improvement [N] as a specific, testable rule in this format: On the next feature, at [step], the PM must [action] before [proceeding]."
 
-**Step 4 — Deploy all three agents**
+**Step 4; Deploy all three agents**
 
 Using `/schedule`, deploy each agent with InsightFlow-specific configuration:
 
@@ -654,7 +654,7 @@ Config:
   Output: /pm-inbox/coherence/
 ```
 
-**Step 5 — Verify first output**
+**Step 5; Verify first output**
 
 After deploying each agent, prompt it to produce its first output:
 
@@ -677,9 +677,9 @@ Evaluate each agent's output against its NEVER DO rules.
 
 ## What You Built
 
-You completed the final loop of InsightFlow's product management cycle. Part 1 produced a four-question retrospective on Sprint 1 — with a clear verdict on problem-solving, a delivery assessment, a metric quality evaluation, and at least two specific process improvement rules that update product.local.md. Part 2 deployed three persistent agents that automate the ongoing intelligence and communication layer: the Research Intelligence Agent monitors user signals weekly, the Stakeholder Update Agent generates three-version updates for PM review, and the Roadmap Coherence Agent checks three dimensions of backlog and sprint alignment.
+You completed the final loop of InsightFlow's product management cycle. Part 1 produced a four-question retrospective on Sprint 1: with a clear verdict on problem-solving, a delivery assessment, a metric quality evaluation, and at least two specific process improvement rules that update product.local.md. Part 2 deployed three persistent agents that automate the ongoing intelligence and communication layer: the Research Intelligence Agent monitors user signals weekly, the Stakeholder Update Agent generates three-version updates for PM review, and the Roadmap Coherence Agent checks three dimensions of backlog and sprint alignment.
 
-Together, these agents mean the next product cycle starts with better inputs: current user signal intelligence, consistent stakeholder communications, and proactive drift detection — rather than discovering problems retrospectively.
+Together, these agents mean the next product cycle starts with better inputs: current user signal intelligence, consistent stakeholder communications, and proactive drift detection: rather than discovering problems retrospectively.
 
 ## Flashcards Study Aid
 

@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/intrapreneurship-innovation-agents/mvp-the-minimum-that-validates
 sidebar_position: 6
-title: "MVP — The Minimum That Validates"
+title: "MVP: The Minimum That Validates"
 description: "Scope an MVP that tests your top three critical assumptions, build an explicit feature in/out list, define measurable success and failure criteria, and produce a week-by-week build plan using the /hypothesis skill"
 keywords:
   [
@@ -57,23 +57,23 @@ learning_objectives:
 cognitive_load:
   new_concepts: 4
   concepts_list:
-    - "MVP purpose — the minimum test of critical assumptions, not the minimum product"
-    - "Feature inclusion criteria — every included feature must test a critical assumption"
-    - "Success and failure criteria — specific and measurable, not subjective"
-    - "Build plan — week-by-week milestones that end at pilot onboarding, not at 'done'"
-  assessment: "4 concepts at B1 level. This lesson is intentionally narrower than L05 — the assumption map is already built; the task now is to apply it to a concrete scoping decision. The cognitive load is in judgment application, not new framework acquisition."
+    - "MVP purpose: the minimum test of critical assumptions, not the minimum product"
+    - "Feature inclusion criteria: every included feature must test a critical assumption"
+    - "Success and failure criteria, specific and measurable, not subjective"
+    - "Build plan, week-by-week milestones that end at pilot onboarding, not at 'done'"
+  assessment: "4 concepts at B1 level. This lesson is intentionally narrower than L05: the assumption map is already built; the task now is to apply it to a concrete scoping decision. The cognitive load is in judgment application, not new framework acquisition."
 
 differentiation:
-  extension_for_advanced: "After scoping the MVP, calculate the cost of being wrong about each TIER 1 assumption. If A-001 (price) is wrong, how much development time will you have wasted? If A-002 (AI accuracy) is wrong? This cost-of-being-wrong analysis helps teams understand what the MVP is actually insuring against — and whether a cheaper test could have replaced some of the build."
-  remedial_for_struggling: "Focus on the exclusion list first. Write down everything you would love to build, then strike everything that does not test a TIER 1 assumption. What is left is the MVP. Most teams find the exclusion exercise harder than the inclusion exercise — that is the point."
+  extension_for_advanced: "After scoping the MVP, calculate the cost of being wrong about each TIER 1 assumption. If A-001 (price) is wrong, how much development time will you have wasted? If A-002 (AI accuracy) is wrong? This cost-of-being-wrong analysis helps teams understand what the MVP is actually insuring against , and whether a cheaper test could have replaced some of the build."
+  remedial_for_struggling: "Focus on the exclusion list first. Write down everything you would love to build, then strike everything that does not test a TIER 1 assumption. What is left is the MVP. Most teams find the exclusion exercise harder than the inclusion exercise that is the point."
 
 teaching_guide:
   key_points:
-    - "MVP is not 'minimum product' — it is 'minimum test of the most critical assumptions at the lowest cost'"
-    - "The exclusion list is as important as the inclusion list — what you choose NOT to build defines the MVP"
-    - "Success criteria must be specific and numerical — 'users like it' is not a success criterion"
-    - "Failure criteria are not failure — they are the pre-agreed trigger for a pivot conversation"
-    - "The build plan ends at pilot onboarding — not at a shipped product"
+    - "MVP is not 'minimum product'; it is 'minimum test of the most critical assumptions at the lowest cost'"
+    - "The exclusion list is as important as the inclusion list: what you choose NOT to build defines the MVP"
+    - "Success criteria must be specific and numerical, 'users like it' is not a success criterion"
+    - "Failure criteria are not failure; they are the pre-agreed trigger for a pivot conversation"
+    - "The build plan ends at pilot onboarding, not at a shipped product"
   misconceptions:
     - "The MVP should have all core features, just with lower quality. Correction: the MVP should have only the features that test critical assumptions. A feature that is well-executed but tests nothing critical is still scope creep."
     - "Once you define success criteria, you must hit all of them to continue. Correction: success criteria define the expected outcome. If you hit some but not others, the partial result is a learning. The key question is what the pattern of results tells you."
@@ -82,15 +82,15 @@ teaching_guide:
     - "Think about a product you have used that clearly had too many features at launch. What were the features that should have been cut? What assumptions would a smaller MVP have tested earlier?"
     - "The exclusion list includes ERP integration for the AP automation MVP. Why? What assumption does that exclusion reflect?"
   teaching_tips:
-    - "The AP automation exclusion list (6 features out) is often more interesting to students than the inclusion list (5 features in). Walking through each excluded feature — and why it tests nothing critical — builds the intuition for the exclusion exercise."
+    - "The AP automation exclusion list (6 features out) is often more interesting to students than the inclusion list (5 features in). Walking through each excluded feature , and why it tests nothing critical, builds the intuition for the exclusion exercise."
     - "The failure criteria are the most emotionally difficult part. Teams resist writing explicit failure triggers because it feels like planning to fail. Reframe: writing failure criteria means you made the pivot decision before you were emotionally invested in the outcome."
 ---
 
-# MVP — The Minimum That Validates
+# MVP: The Minimum That Validates
 
-The MVP (Minimum Viable Product) is the most misunderstood concept in startup methodology. Teams build products that are "minimum" in the sense that they cut every feature they could not finish in time — and call the resulting incomplete product their MVP. This is not minimum viable thinking. It is scope management with better marketing.
+The MVP (Minimum Viable Product) is the most misunderstood concept in startup methodology. Teams build products that are "minimum" in the sense that they cut every feature they could not finish in time , and call the resulting incomplete product their MVP. This is not minimum viable thinking. It is scope management with better marketing.
 
-The real MVP is not the minimum product you could ship. It is the minimum product that tests your most critical assumptions at the lowest possible cost. These are very different things. An MVP might be a landing page, a concierge service, or a five-feature SaaS application — depending on which assumptions you need to test. The question that defines the MVP is not "what is the smallest thing we can build?" It is "what is the smallest thing we need to build to learn whether our critical assumptions are correct?"
+The real MVP is not the minimum product you could ship. It is the minimum product that tests your most critical assumptions at the lowest possible cost. These are very different things. An MVP might be a landing page, a concierge service, or a five-feature SaaS application, depending on which assumptions you need to test. The question that defines the MVP is not "what is the smallest thing we can build?" It is "what is the smallest thing we need to build to learn whether our critical assumptions are correct?"
 
 In Lesson 5, you mapped your assumptions and ranked them by risk. Now you scope the smallest product that tests the top three.
 
@@ -111,7 +111,7 @@ This reframing changes how you approach the feature list. The question is never 
 
 ## Feature Inclusion Criteria
 
-A feature belongs in the MVP if — and only if — it tests a TIER 1 or TIER 2 assumption from your assumption map.
+A feature belongs in the MVP if , and only if ; it tests a TIER 1 or TIER 2 assumption from your assumption map.
 
 The test: for every feature candidate, ask:
 1. Which specific assumption does this test?
@@ -125,17 +125,17 @@ The exclusion list is equally important. For every excluded feature, document: (
 ## Success and Failure Criteria
 
 Success criteria define what "the MVP worked" means. They must be:
-- **Specific** — a number, not a description
-- **Measurable** — observable directly from pilot data
-- **Tied to assumptions** — each criterion validates or invalidates a specific assumption
+- **Specific:** a number, not a description
+- **Measurable:** observable directly from pilot data
+- **Tied to assumptions:** each criterion validates or invalidates a specific assumption
 
-Failure criteria define the pre-agreed trigger for a pivot conversation. Writing failure criteria before the pilot is the most important discipline in the MVP design process. After six weeks of working with pilot customers, the team is emotionally attached to the idea. Failure criteria were written when you were not attached — they are the instructions you left yourself for when objectivity is hardest to maintain.
+Failure criteria define the pre-agreed trigger for a pivot conversation. Writing failure criteria before the pilot is the most important discipline in the MVP design process. After six weeks of working with pilot customers, the team is emotionally attached to the idea. Failure criteria were written when you were not attached; they are the instructions you left yourself for when objectivity is hardest to maintain.
 
-Failure criteria are not failures. They are the pre-agreed point at which the data tells you to change direction — before you have invested another six months in the wrong direction.
+Failure criteria are not failures. They are the pre-agreed point at which the data tells you to change direction, before you have invested another six months in the wrong direction.
 
 ## The AP Automation MVP
 
-**Worked example.** With the assumption map from Lesson 5 — TIER 1 assumptions A-001 (price), A-002 (AI accuracy), A-003 (buying authority) — you scope the minimum viable product:
+**Worked example.** With the assumption map from Lesson 5, TIER 1 assumptions A-001 (price), A-002 (AI accuracy), A-003 (buying authority); you scope the minimum viable product:
 
 ```
 /hypothesis
@@ -150,8 +150,8 @@ Target: 3 paying pilot customers at $500/month each.
 
 Design the MVP:
 1. Minimum feature set (what is absolutely necessary to test critical
-   assumptions — and which assumption each feature tests)
-2. Features explicitly excluded (and why — what do they NOT test
+   assumptions , and which assumption each feature tests)
+2. Features explicitly excluded (and why: what do they NOT test
    that makes them non-critical for the MVP?)
 3. Success criteria (specific, measurable, tied to assumptions)
 4. Failure criteria (specific triggers for pivot conversation)
@@ -173,57 +173,57 @@ use a new tool in their daily workflow?
 MINIMUM FEATURE SET (build these; nothing else):
 
  FEATURE 1: Invoice ingestion from email + WhatsApp
- Tests: Foundation for all other features — without this, nothing works
+ Tests: Foundation for all other features, without this, nothing works
  Spec: Forward any invoice to a dedicated email address or WhatsApp number;
    system extracts: vendor name, amount, invoice number, date.
    Human override allowed at this stage.
 
  FEATURE 2: AI-powered PO matching with confidence score
- Tests: A-002 directly — the core technical claim
+ Tests: A-002 directly: the core technical claim
  Spec: Match extracted invoice data to open POs in uploaded Excel.
    Show: matched PO, confidence %, unmatched items.
-   Human override is fine — perfect accuracy not required.
+   Human override is fine, perfect accuracy not required.
 
  FEATURE 3: WhatsApp approval workflow
  Tests: A-005 (adoption) via the channel finance teams already use
  Spec: When invoice is ready for approval, send WhatsApp message to CFO:
-   "[Vendor]: $[X] — Invoice #[N] — Match: 97% confidence.
+   "[Vendor]: $[X], Invoice #[N], Match: 97% confidence.
    Reply APPROVE or REJECT."
    Log the response with timestamp and phone number.
 
- FEATURE 4: Simple AP dashboard (web only — no mobile app)
+ FEATURE 4: Simple AP dashboard (web only; no mobile app)
  Tests: Whether CFOs value real-time visibility
  Spec: Table of all invoices, status (pending/approved/paid),
    total outstanding, this month's payments. Export to CSV.
 
  FEATURE 5: Manual payment processing confirmation
- Tests: Closing the workflow loop — but no automated bank integration
+ Tests: Closing the workflow loop , but no automated bank integration
  Spec: User manually marks invoice as "paid." System logs date and
    generates a payment record.
 
 EXPLICITLY EXCLUDED (do not build in 8 weeks):
 
- ✗ ERP integration — tests A-006 (ERP dependency) which is TIER 2;
+ ✗ ERP integration, tests A-006 (ERP dependency) which is TIER 2;
    manual CSV export is sufficient to validate the MVP learning
- ✗ Mobile app — web is sufficient; mobile is an adoption assumption
+ ✗ Mobile app, web is sufficient; mobile is an adoption assumption
    that does not need to be tested before proving core value
- ✗ Multi-currency — all pilots are single-currency; no learning
+ ✗ Multi-currency, all pilots are single-currency; no learning
    from adding complexity without a multi-currency pilot
- ✗ Advanced reporting — basic dashboard sufficient; detailed reports
+ ✗ Advanced reporting, basic dashboard sufficient; detailed reports
    are a TIER 3 feature that does not affect core validation
- ✗ Automated bank payments — significant regulatory complexity;
+ ✗ Automated bank payments, significant regulatory complexity;
    tests no critical assumption in the 8-week window
- ✗ OCR for handwritten invoices — approximately 70% of invoices
+ ✗ OCR for handwritten invoices, approximately 70% of invoices
    are digital; handwritten is V2 if pilots reveal it as critical
 
 SUCCESS CRITERIA (pivot-or-continue decision at Week 8):
- ✓ 3 signed pilot agreements at $500/month — validates A-001
- ✓ AI matching accuracy >90% on pilot customer invoices — validates
+ ✓ 3 signed pilot agreements at $500/month, validates A-001
+ ✓ AI matching accuracy >90% on pilot customer invoices, validates
    A-002 (partially; 95% is V1 target, 90% is MVP acceptable)
- ✓ >70% of invoices processed through system by Week 4 of pilot —
+ ✓ >70% of invoices processed through system by Week 4 of pilot,
    validates A-005
  ✓ At least 1 CFO says: "I would be comfortable showing this to
-   my auditor" — validates the emotional job from discovery
+   my auditor", validates the emotional job from discovery
 
 FAILURE CRITERIA (triggers pivot conversation):
  ✗ Cannot sign 3 pilots at $500/month → A-001 wrong; pivot on price or
@@ -242,21 +242,21 @@ FAILURE CRITERIA (triggers pivot conversation):
 ════════════════════════════════════════════════════════════
 ```
 
-The exclusion list deserves attention. Six features are explicitly out — not because they are bad features, but because they test no critical assumption in the eight-week window. ERP integration might be the most commercially significant feature in V1, but it tests A-006 (ERP dependency), which is a TIER 2 assumption. The pilot will tell you whether customers need ERP integration before they will renew. You do not need to build it to learn that.
+The exclusion list deserves attention. Six features are explicitly out, not because they are bad features, but because they test no critical assumption in the eight-week window. ERP integration might be the most commercially significant feature in V1, but it tests A-006 (ERP dependency), which is a TIER 2 assumption. The pilot will tell you whether customers need ERP integration before they will renew. You do not need to build it to learn that.
 
 :::note For Intrapreneurs
-For intrapreneurs, the MVP is often a pilot programme with one internal team or one existing customer segment — not a deployed product. Your "build plan" may be a staffing request and a timeline rather than a development sprint. And your "success criteria" may be adoption metrics and qualitative feedback rather than payment at a specific price point. The structure is identical: define what you are testing, what success looks like, and what would trigger a direction change.
+For intrapreneurs, the MVP is often a pilot programme with one internal team or one existing customer segment , not a deployed product. Your "build plan" may be a staffing request and a timeline rather than a development sprint. And your "success criteria" may be adoption metrics and qualitative feedback rather than payment at a specific price point. The structure is identical: define what you are testing, what success looks like, and what would trigger a direction change.
 :::
 
 ## Exercise: MVP Scoping (Exercise 3, Part 2)
 
-**Type:** Lean Startup — MVP Design
+**Type:** Lean Startup, MVP Design
 **Time:** 40 minutes
 **Goal:** Design the minimum viable product for your venture using the assumption map from Lesson 5
 
 **From Exercise 3 Part 1 (Lesson 5), you have:** a full assumption map with TIER 1/2/3 classifications and a 4-week validation plan. Your top 3 TIER 1 assumptions are the scope boundary for this exercise.
 
-**Step 4 — MVP scoping using `/hypothesis`.**
+**Step 4, MVP scoping using `/hypothesis`.**
 
 ```
 /hypothesis
@@ -264,15 +264,15 @@ Design the minimum viable product for my venture.
 
 Venture: [Your idea from Lesson 4, 2-3 sentences]
 Team: [Your team size and skills]
-Time budget: [Your available time — e.g., 6 weeks, 3 months]
+Time budget: [Your available time, e.g., 6 weeks, 3 months]
 Top 3 critical assumptions to test:
   A-001: [Description]
   A-002: [Description]
   A-003: [Description]
 
 Design the MVP:
-1. Minimum feature set — for each feature, which assumption it tests
-2. Explicit exclusion list — for each excluded feature, why it tests
+1. Minimum feature set, for each feature, which assumption it tests
+2. Explicit exclusion list, for each excluded feature, why it tests
    no critical assumption at this stage
 3. Success criteria (specific and measurable, tied to assumptions)
 4. Failure criteria (specific thresholds that trigger pivot conversation)
@@ -292,7 +292,7 @@ Review the output. For each included feature, ask: "If I removed this feature, w
 - Week-by-week build plan
 
 :::note Keep This File
-Your MVP design feeds directly into Lesson 7 (Build-Measure-Learn). When you complete your pilot, you will analyse the results against the success and failure criteria you defined here. Save this document — the pre-pilot criteria are the objective baseline you will need when the post-pilot data comes in and emotional attachment makes objectivity difficult.
+Your MVP design feeds directly into Lesson 7 (Build-Measure-Learn). When you complete your pilot, you will analyse the results against the success and failure criteria you defined here. Save this document: the pre-pilot criteria are the objective baseline you will need when the post-pilot data comes in and emotional attachment makes objectivity difficult.
 :::
 
 ## Try With AI
@@ -300,7 +300,7 @@ Your MVP design feeds directly into Lesson 7 (Build-Measure-Learn). When you com
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Run the chapter's worked example:
+**Reproduce:** Run the chapter's worked example:
 
 ```
 /hypothesis
@@ -322,9 +322,9 @@ Design:
 5. 8-week build plan
 ```
 
-**What you are learning:** Notice how the exclusion list (6 features out) is longer than the inclusion list (5 features in). This is intentional — the AP automation MVP is designed to test assumptions with a small feature set, not to build a complete product. The rationale for each exclusion is as important as the feature list itself.
+**What you are learning:** Notice how the exclusion list (6 features out) is longer than the inclusion list (5 features in). This is intentional: the AP automation MVP is designed to test assumptions with a small feature set, not to build a complete product. The rationale for each exclusion is as important as the feature list itself.
 
-**Adapt** — Scope an MVP with different constraints:
+**Adapt:** Scope an MVP with different constraints:
 
 ```
 /hypothesis
@@ -342,9 +342,9 @@ Design the MVP with feature in/out list, success/failure criteria,
 and 4-week build plan.
 ```
 
-**What you are learning:** A two-sided marketplace MVP has double the critical assumptions — one set for each side of the market. Notice how the success criteria must reflect both: designer acquisition AND buyer activation. A marketplace that signs 100 designers but no buyers has not validated anything critical.
+**What you are learning:** A two-sided marketplace MVP has double the critical assumptions: one set for each side of the market. Notice how the success criteria must reflect both: designer acquisition AND buyer activation. A marketplace that signs 100 designers but no buyers has not validated anything critical.
 
-**Apply** — Design your own MVP:
+**Apply:** Design your own MVP:
 
 ```
 /hypothesis
@@ -359,8 +359,8 @@ Top 3 critical assumptions from my Lesson 5 map:
 3. [A-003 description]
 
 Design the MVP:
-1. Minimum feature set — each feature must map to a critical assumption
-2. Explicit exclusion list — features I am choosing NOT to build and why
+1. Minimum feature set: each feature must map to a critical assumption
+2. Explicit exclusion list, features I am choosing NOT to build and why
 3. Specific, measurable success criteria
 4. Failure criteria with pivot implications
 5. Week-by-week build plan

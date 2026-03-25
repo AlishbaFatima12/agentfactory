@@ -45,7 +45,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (error prediction before prompting, 8-category Error Taxonomy, line-by-line annotation, predicted vs. actual error comparison) — at upper end of Part 0 beginner range"
+  assessment: "4 concepts (error prediction before prompting, 8-category Error Taxonomy, line-by-line annotation, predicted vs. actual error comparison) : at upper end of Part 0 beginner range"
 
 differentiation:
   extension_for_advanced: "After completing the exercise, research one claim that AI got wrong. Find the correct information from primary sources and write a 100-word explanation of why AI produced the error."
@@ -56,18 +56,18 @@ teaching_guide:
   session_group: 2
   session_title: "The Error Prediction"
   key_points:
-    - "Error detection is a trainable skill with specific categories, not just vague skepticism — the taxonomy gives students a precise vocabulary for AI failures"
+    - "Error detection is a trainable skill with specific categories, not just vague skepticism: the taxonomy gives students a precise vocabulary for AI failures"
     - "Predicting errors BEFORE prompting AI builds an internal model of where AI fails, which is far more valuable than catching errors after the fact"
     - "The 8-category taxonomy covers the most common AI failure modes: factual error, logical gap, false confidence, missing context, correlation-causation confusion, outdated information, fabricated citation, cultural blind spot"
   misconceptions:
-    - "Students think error detection means finding 'wrong facts' — the taxonomy reveals that logical gaps, false confidence, and missing context are equally important error types"
-    - "Students over-flag items as errors because they disagree with the AI's conclusion — disagreement is not the same as an error; the taxonomy requires categorization"
+    - "Students think error detection means finding 'wrong facts' : the taxonomy reveals that logical gaps, false confidence, and missing context are equally important error types"
+    - "Students over-flag items as errors because they disagree with the AI's conclusion: disagreement is not the same as an error; the taxonomy requires categorization"
   discussion_prompts:
     - "Which error type was most common across both AI responses? Why do you think AI tools are particularly prone to that type?"
     - "Were your error predictions accurate? What does the gap between predicted and actual errors tell you about your understanding of AI limitations?"
   teaching_tips:
-    - "Display the Error Taxonomy as a reference card that students keep visible during annotation — memorization is not the goal; consistent application is"
-    - "Have students share their most surprising error find with the class — errors that seem obviously wrong in hindsight but were initially convincing teach the most"
+    - "Display the Error Taxonomy as a reference card that students keep visible during annotation: memorization is not the goal; consistent application is"
+    - "Have students share their most surprising error find with the class: errors that seem obviously wrong in hindsight but were initially convincing teach the most"
   assessment_quick_check:
     - "Can the student explain the difference between a 'factual error' and 'false confidence' with an example from their annotation?"
     - "Did the student's prediction document identify at least one error type that actually appeared in the AI output?"
@@ -81,7 +81,7 @@ import TabItem from "@theme/TabItem";
 > _AI sounds confident whether it is right or wrong. The student who cannot tell the difference is more dangerous with AI than without it._
 
 :::note Building On Previous Chapters
-You will use the **Question Formulation** skill from [Chapter 1](../01-asking-better-questions/01-prediction-lock.md) to design your error-detection queries. The **Reasoning Receipt** format you learned carries forward — annotating AI output becomes second nature from here on.
+You will use the **Question Formulation** skill from [Chapter 1](../01-asking-better-questions/01-prediction-lock.md) to design your error-detection queries. The **Reasoning Receipt** format you learned carries forward; annotating AI output becomes second nature from here on.
 :::
 
 This chapter trains you to become a systematic error detector. Not vague skepticism ("don't trust AI") but precise, categorized analysis of where and how reasoning breaks. You will develop an Error Taxonomy that you carry through the rest of the book and apply to every AI interaction.
@@ -111,19 +111,19 @@ You used the **Prediction Lock** format in [Chapter 1, Exercise 1](../01-asking-
 
 ### What You Do
 
-**Step 1 — Write your sealed prediction (no AI).** Before prompting any AI, write down:
+**Step 1. Write your sealed prediction (~15 min, no AI).** Before prompting any AI, write down:
 
 - What you think the correct analysis involves (key factors, tradeoffs, data needed)
 - Where you predict AI will be **strong** in its analysis
-- Where you predict AI will **make errors** or miss important context — name the specific Error Taxonomy categories you expect
+- Where you predict AI will **make errors** or miss important context: focus on three categories to start: **factual error**, **false confidence**, and **missing context**. The remaining five categories are in the table above for reference, but these three are the easiest to spot
 
 This is your prediction document. Write it before moving to Step 2.
 
-**Step 2 — Get two AI responses.** Choose a scenario below, then prompt both Claude and ChatGPT with the identical question. Save both full responses.
+**Step 2. Get two AI responses (~10 min).** Choose a scenario below, then prompt both Claude and ChatGPT with the identical question. Save both full responses.
 
-**Step 3 — Annotate line by line.** Go through each AI response sentence by sentence. For every claim, label it using the Error Taxonomy above (factual error, logical gap, false confidence, etc.). If a sentence is correct, mark it as "no error detected."
+**Step 3. Annotate the key claims (~20 min).** Read through each AI response. Pick the 5 strongest claims and the 5 most suspicious claims: 10 total across both responses. For each, label it using the Error Taxonomy above. If a claim is correct, mark it "no error detected."
 
-**Step 4 — Build your comparison table.** Compare your predictions from Step 1 against the actual errors you found in Step 3 (see template below). Count how many of each error type you found across both tools.
+**Step 4. Build your comparison table (~10 min).** Compare your predictions from Step 1 against the actual errors you found in Step 3 (see template below). Count how many of each error type you found across both tools.
 
 ### Choose Your Scenario
 
@@ -149,7 +149,7 @@ Choose one.
 :::info Your Deliverable
 
 1. Your sealed prediction document (written before AI) listing expected strengths and error types
-2. Two annotated AI responses with every sentence labeled using the Error Taxonomy
+2. Two AI responses with your 10 key claims annotated using the Error Taxonomy
 3. A comparison table: predicted errors vs. actual errors found (see template below)
 4. A count of each error type found across both tools
    :::
@@ -249,7 +249,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that error detection is a trainable skill with specific categories, not just a vague feeling that something is off. By predicting AI errors before seeing them, you develop an internal model of where AI fails. The AI self-check reveals your own blind spots — the error types you consistently miss — which is exactly the information you need to improve.
+You learn that error detection is a trainable skill with specific categories, not just a vague feeling that something is off. By predicting AI errors before seeing them, you develop an internal model of where AI fails. The AI self-check reveals your own blind spots (the error types you consistently miss) which is exactly the information you need to improve.
 
 ## Flashcards Study Aid
 

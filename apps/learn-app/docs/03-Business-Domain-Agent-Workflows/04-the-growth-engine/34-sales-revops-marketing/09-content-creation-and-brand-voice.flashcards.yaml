@@ -64,7 +64,7 @@ cards:
 
   - id: "ch34-09-content-brand-010"
     front: "Zara writes better than LogiTrack's team but LogiTrack outpublishes NexaFlow. Why is the gap not about quality of thinking?"
-    back: "The gap is production capacity. Zara cannot outproduce a team of four by working harder — she needs a different operating model that multiplies one piece of thinking into many assets."
+    back: "The gap is production capacity. Zara cannot outproduce a team of four by working harder: she needs a different operating model that multiplies one piece of thinking into many assets."
     difficulty: "intermediate"
     why: "What changes when you measure content output per hour of original thinking versus per hour of production?"
     tags: ["production-capacity"]

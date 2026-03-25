@@ -38,7 +38,7 @@ cards:
 
   - id: "ch36-03-discovery-briefs-framing-problems-006"
     front: "What is the NEVER DO rule about Discovery Briefs?"
-    back: "Never write a Discovery Brief without explicit discovery questions that have clear, answerable answers. 'Explore user needs' is too vague — each question must name what to investigate and how."
+    back: "Never write a Discovery Brief without explicit discovery questions that have clear, answerable answers. 'Explore user needs' is too vague: each question must name what to investigate and how."
     tags: ["discovery-briefs", "never", "rule"]
     difficulty: "intermediate"
 
@@ -74,7 +74,7 @@ cards:
 
   - id: "ch36-03-discovery-briefs-framing-problems-012"
     front: "What should a PM do when the AI-generated brief contains solution language in THE PROBLEM section?"
-    back: "Identify the solution language specifically, then prompt the agent to rewrite the section describing only the observable pain and current behaviour — no feature names, no 'users need a way to...' phrasing."
+    back: "Identify the solution language specifically, then prompt the agent to rewrite the section describing only the observable pain and current behaviour: no feature names, no 'users need a way to...' phrasing."
     tags: ["ai-generated-brief", "brief-contains", "ai-generated"]
     difficulty: "intermediate"
 

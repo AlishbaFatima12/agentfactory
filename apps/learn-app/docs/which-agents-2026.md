@@ -121,7 +121,7 @@ Created by Peter Steinberger and backed by **OpenAI** and **Vercel**, OpenClaw b
 
 OpenClaw is fully open source (MIT license). You run it on your own machine, pick your own AI model (Claude, GPT, DeepSeek, or others), and extend it with over 5,700 community-built skills from the ClawHub marketplace. Its personality is configured through a simple Markdown file called SOUL.md — the same format you'll learn to write specifications in throughout this book.
 
-_Chapter 18 walks you through setting up your first AI employee with OpenClaw._
+_Chapter 56 walks you through setting up your first AI employee with OpenClaw._
 
 ---
 
@@ -131,9 +131,9 @@ _Chapter 18 walks you through setting up your first AI employee with OpenClaw._
 
 **Think of it as:** OpenClaw with a locked door. Every AI employee runs inside its own sealed container on your machine — a walled-off environment where it can only see the files you explicitly allow, with no internet access unless you grant it. This isn't a software setting; it's enforced by the operating system itself (Linux containers on Linux, Apple Containers on macOS).
 
-NanoClaw connects to WhatsApp, Telegram, Slack, Discord, and Gmail. It has persistent memory, scheduled jobs (daily briefings, weekly reports, pipeline monitoring), and is the first personal AI assistant to support **agent swarms** — teams of specialized AI employees that collaborate inside your chat. It runs directly on Anthropic's Agents SDK, the same framework you'll learn to build with in Part 5.
+NanoClaw connects to WhatsApp, Telegram, Slack, Discord, and Gmail. It has persistent memory, scheduled jobs (daily briefings, weekly reports, pipeline monitoring), and is the first personal AI assistant to support **agent swarms** — teams of specialized AI employees that collaborate inside your chat. It runs directly on Anthropic's Agents SDK, the same framework you'll learn to build with in Part 6.
 
-_Part 5 teaches you to build custom AI employees with the same framework that powers NanoClaw._
+_Part 6 teaches you to build custom AI employees with the same framework that powers NanoClaw._
 
 ---
 
@@ -151,7 +151,7 @@ Security remains a top concern in 2026. NanoClaw's sealed-container approach (no
 | **Part 2** — Workflow Primitives          | File processing, data extraction, version control  | Claude Code         | —           |
 | **Part 3** — Business Domains             | Finance, legal, marketing, operations workflows    | Claude Cowork       | Claude Code |
 | **Part 4** — Natural Language Programming | Typescript, Python development, testing, debugging | Claude Code         | Codex       |
-| **Part 5** — Building Custom AI Employees | Frameworks, tool protocols, databases, evaluation  | Claude Code         | NanoClaw    |
+| **Part 6** — Building Agent Factories     | Frameworks, tool protocols, databases, evaluation  | Claude Code         | NanoClaw    |
 
 ---
 

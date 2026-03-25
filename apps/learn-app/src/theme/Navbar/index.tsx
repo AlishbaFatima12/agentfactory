@@ -7,6 +7,7 @@ import NavbarAuth from "@/components/NavbarAuth";
 import { LocaleDropdown } from "@/components/LocaleDropdown";
 import { ModeToggle } from "@/components/ModeToggle";
 import { SearchBar } from "@/components/SearchBar";
+import { useVoiceReadingOptional } from "@/contexts/VoiceReadingContext";
 import {
   Sheet,
   SheetContent,
@@ -15,17 +16,26 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, BookOpen, Layers, Lightbulb, X } from "lucide-react";
+import {
+  Menu,
+  BookOpen,
+  Layers,
+  Lightbulb,
+  X,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const { siteConfig } = useDocusaurusContext();
   const location = useLocation();
   const secondaryMenu = useNavbarSecondaryMenu();
-  const isDocPage = location.pathname.startsWith("/docs");
+  const isDocPage = /^(\/[a-z]{2}(-[A-Za-z]+)?)?\/docs/.test(location.pathname);
   const isHomepage = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const voiceCtx = useVoiceReadingOptional();
 
   // Handle scroll state for glass effect intensity
   useEffect(() => {
@@ -97,11 +107,39 @@ export default function Navbar() {
 
           {/* RIGHT: Actions */}
           <div className="flex items-center gap-2">
-            {/* Theme Toggle - Already uses Button variant="ghost" size="icon" */}
-            <ModeToggle />
+            {/* Theme Toggle — desktop only; mobile shows in Sheet */}
+            <div className="hidden docs:block">
+              <ModeToggle />
+            </div>
 
-            {/* Language Dropdown */}
-            <LocaleDropdown />
+            {/* Listen button — doc pages only */}
+            {voiceCtx && isDocPage && (
+              <Button
+                variant="ghost"
+                size="icon"
+                className={cn(
+                  "hidden docs:flex",
+                  voiceCtx.isPlaying && "navbar-listen-active",
+                )}
+                onClick={voiceCtx.toggleSpeech}
+                title={voiceCtx.isPlaying ? "Stop Reading" : "Listen"}
+                aria-label={
+                  voiceCtx.isPlaying ? "Stop reading aloud" : "Read page aloud"
+                }
+                aria-pressed={voiceCtx.isPlaying}
+              >
+                {voiceCtx.isPlaying ? (
+                  <VolumeX className="w-4 h-4" />
+                ) : (
+                  <Volume2 className="w-4 h-4" />
+                )}
+              </Button>
+            )}
+
+            {/* Language Dropdown — desktop only; mobile shows in Sheet */}
+            <div className="hidden docs:block">
+              <LocaleDropdown />
+            </div>
 
             {/* Auth - Already uses Button variants */}
             <NavbarAuth />
@@ -129,10 +167,35 @@ export default function Navbar() {
                   <SearchBar enableShortcut={false} />
                 </div>
 
-                {/* Mobile Language Dropdown */}
-                <div className="px-4 py-3 border-b border-border shrink-0">
+                {/* Mobile Language Dropdown + Theme Toggle */}
+                <div className="px-4 py-3 border-b border-border shrink-0 flex items-center gap-2">
                   <LocaleDropdown />
+                  <ModeToggle />
                 </div>
+
+                {/* Mobile Listen Button */}
+                {voiceCtx && (
+                  <div className="px-4 py-3 border-b border-border shrink-0">
+                    <Button
+                      variant="ghost"
+                      className={cn(
+                        "w-full justify-start gap-2",
+                        voiceCtx.isPlaying && "navbar-listen-active",
+                      )}
+                      onClick={() => {
+                        voiceCtx.toggleSpeech();
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      {voiceCtx.isPlaying ? (
+                        <VolumeX className="w-4 h-4" />
+                      ) : (
+                        <Volume2 className="w-4 h-4" />
+                      )}
+                      {voiceCtx.isPlaying ? "Stop Reading" : "Listen to Page"}
+                    </Button>
+                  </div>
+                )}
 
                 {/* Content - either doc sidebar or generic nav */}
                 <div className="flex-1 overflow-y-auto">
@@ -177,7 +240,6 @@ export default function Navbar() {
                           Resources
                         </Link>
                       </Button>
-
                     </nav>
                   )}
                 </div>

@@ -20,7 +20,7 @@ options: [
 "Both jurisdictions use IFRS 9 effective interest rate mechanics so both the numbers and labels should be identical"
 ],
 correctOption: 2,
-explanation: "The router-product-overlay architecture separates accounting mechanics (product skill) from compliance presentation (jurisdiction overlay). The arithmetic — effective profit rate calculation — is identical under AAOIFI FAS 28 and IFRS 9. The overlay changes labels: 'Murabaha Income' in Bahrain vs 'Profit from Home Finance' in the UK. AAOIFI does not require higher mark-ups — mark-up is commercial, not framework-driven. The UK subsidiary reports under IFRS, not AAOIFI. The labels are deliberately different because each jurisdiction has distinct compliance requirements.",
+explanation: "The router-product-overlay architecture separates accounting mechanics (product skill) from compliance presentation (jurisdiction overlay). The arithmetic: effective profit rate calculation: is identical under AAOIFI FAS 28 and IFRS 9. The overlay changes labels: 'Murabaha Income' in Bahrain vs 'Profit from Home Finance' in the UK. AAOIFI does not require higher mark-ups: mark-up is commercial, not framework-driven. The UK subsidiary reports under IFRS, not AAOIFI. The labels are deliberately different because each jurisdiction has distinct compliance requirements.",
 source: "Lesson 1: Why Islamic Finance Needs Jurisdiction-Aware Agents"
 },
 {
@@ -44,7 +44,7 @@ options: [
 "Separation enables adding new jurisdictions by creating an overlay file without modifying any existing product skill logic"
 ],
 correctOption: 3,
-explanation: "The separation of concerns enables extensibility. Adding Turkey requires only a new turkey-tfrs.md overlay — no changes to the murabaha, ijarah, or sukuk product skill files. Token limits and update frequency are secondary benefits, not the architectural reason. AAOIFI has no requirement about how agent skill files are structured.",
+explanation: "The separation of concerns enables extensibility. Adding Turkey requires only a new turkey-tfrs.md overlay: no changes to the murabaha, ijarah, or sukuk product skill files. Token limits and update frequency are secondary benefits, not the architectural reason. AAOIFI has no requirement about how agent skill files are structured.",
 source: "Lesson 3: The Plugin Architecture"
 },
 {
@@ -56,7 +56,7 @@ options: [
 "An IFRS measurement error that affects the calculated income amount"
 ],
 correctOption: 1,
-explanation: "Using 'Interest Income' instead of 'Murabaha Income' in Bahrain is a compliance violation, not a preference. The Central Bank of Bahrain's rulebook prohibits interest-based terminology in IFI financial statements. This is not a judgment call for the SSB — it is a clearly defined regulatory rule. It does not affect the calculated amount (arithmetic is identical), only the compliance status of the presentation.",
+explanation: "Using 'Interest Income' instead of 'Murabaha Income' in Bahrain is a compliance violation, not a preference. The Central Bank of Bahrain's rulebook prohibits interest-based terminology in IFI financial statements. This is not a judgment call for the SSB: it is a clearly defined regulatory rule. It does not affect the calculated amount (arithmetic is identical), only the compliance status of the presentation.",
 source: "Lesson 1: Why Islamic Finance Needs Jurisdiction-Aware Agents"
 },
 {
@@ -80,7 +80,7 @@ options: [
 "The asset is reclassified as inventory pending the lessee's exercise of the purchase option"
 ],
 correctOption: 0,
-explanation: "Under AAOIFI FAS 32, the leased asset stays on the lessor's balance sheet because the lessee pays for usufruct (right to use), not ownership. Depreciation uses the asset's useful life, not the lease term — even if the useful life exceeds the lease term. Under IFRS 16, the lessor would typically derecognise the asset, which creates the most consequential AAOIFI-IFRS balance sheet divergence.",
+explanation: "Under AAOIFI FAS 32, the leased asset stays on the lessor's balance sheet because the lessee pays for usufruct (right to use), not ownership. Depreciation uses the asset's useful life, not the lease term: even if the useful life exceeds the lease term. Under IFRS 16, the lessor would typically derecognise the asset, which creates the most consequential AAOIFI-IFRS balance sheet divergence.",
 source: "Lesson 5: Ijarah and IMB"
 },
 {
@@ -92,7 +92,7 @@ options: [
 "It allows the lessor to apply different accounting standards to each component of the arrangement"
 ],
 correctOption: 1,
-explanation: "The separation is a Shariah requirement. The lease contract and the ownership transfer promise must be legally independent — the lease cannot be conditional on the transfer, and vice versa. This is not about liability reduction or accounting standard application. FAS 32 does not mandate separate documents for all arrangements — this is specific to the IMB structure where combining them would create a prohibited conditional sale.",
+explanation: "The separation is a Shariah requirement. The lease contract and the ownership transfer promise must be legally independent (the lease cannot be conditional on the transfer, and vice versa. This is not about liability reduction or accounting standard application. FAS 32 does not mandate separate documents for all arrangements) this is specific to the IMB structure where combining them would create a prohibited conditional sale.",
 source: "Lesson 5: Ijarah and IMB"
 },
 {
@@ -104,7 +104,7 @@ options: [
 "Amortised cost because the fixed distributions and face-value redemption pass the SPPI test"
 ],
 correctOption: 3,
-explanation: "Ijarah sukuk with fixed rental distributions and a purchase undertaking at face value typically pass the SPPI test — the cash flows are solely payments of principal and interest-equivalent. This allows amortised cost classification if the business model is hold-to-collect. Not all sukuk are equity instruments — ijarah sukuk have debt-like characteristics. The purchase undertaking creates an obligation for the issuer, not the investor.",
+explanation: "Ijarah sukuk with fixed rental distributions and a purchase undertaking at face value typically pass the SPPI test (the cash flows are solely payments of principal and interest-equivalent. This allows amortised cost classification if the business model is hold-to-collect. Not all sukuk are equity instruments) ijarah sukuk have debt-like characteristics. The purchase undertaking creates an obligation for the issuer, not the investor.",
 source: "Lesson 6: Sukuk"
 },
 {
@@ -116,19 +116,19 @@ options: [
 "It receives the same amortised cost classification because the underlying assets are identical"
 ],
 correctOption: 2,
-explanation: "Musharakah sukuk with variable profit-linked distributions fail the SPPI test because the cash flows depend on venture performance, not a contractual rate. This forces FVTPL classification, creating income statement volatility. Ijarah sukuk with fixed rentals pass SPPI. Sukuk ownership structure does not automatically make them equity under IAS 32 — classification depends on the contractual cash flow characteristics.",
+explanation: "Musharakah sukuk with variable profit-linked distributions fail the SPPI test because the cash flows depend on venture performance, not a contractual rate. This forces FVTPL classification, creating income statement volatility. Ijarah sukuk with fixed rentals pass SPPI. Sukuk ownership structure does not automatically make them equity under IAS 32: classification depends on the contractual cash flow characteristics.",
 source: "Lesson 6: Sukuk"
 },
 {
 question: "In a takaful arrangement, a participant pays contributions into the common fund. During the year, claims exceed contributions and the fund enters deficit. What mechanism addresses this?",
 options: [
-"The operator provides a qard hasan — an interest-free loan to the fund — which is a receivable on the operator's balance sheet",
+"The operator provides a qard hasan (an interest-free loan to the fund) which is a receivable on the operator's balance sheet",
 "The operator absorbs the deficit as an operating expense because the operator bears all insurance risk",
 "Participants are required to make additional mandatory contributions to restore the fund to solvency",
 "The regulator injects capital into the fund under the takaful guarantee scheme"
 ],
 correctOption: 0,
-explanation: "Qard hasan (benevolent loan) is the standard mechanism. The operator lends to the Participants' Fund interest-free. The loan appears as a receivable on the operator's books — not as an expense. The fundamental principle of takaful is that participants (not the operator) collectively bear risk. Additional participant contributions may occur but are not the primary mechanism. Regulators do not inject capital into takaful funds.",
+explanation: "Qard hasan (benevolent loan) is the standard mechanism. The operator lends to the Participants' Fund interest-free. The loan appears as a receivable on the operator's books; not as an expense. The fundamental principle of takaful is that participants (not the operator) collectively bear risk. Additional participant contributions may occur but are not the primary mechanism. Regulators do not inject capital into takaful funds.",
 source: "Lesson 7: Takaful and IFRS 17"
 },
 {
@@ -140,7 +140,7 @@ options: [
 "The takaful regulator determines the insurer designation and different jurisdictions assign it to different parties"
 ],
 correctOption: 1,
-explanation: "In conventional insurance, the insurer clearly bears the risk. In takaful, participants collectively bear risk through the common fund; the operator earns wakala fees for management. IFRS 17 asks 'who bears insurance risk?' — and the answer is the participant pool, not a single legal entity. This creates genuine ambiguity about which entity's financial statements should reflect the insurance contract. IFRS 17 was not specifically designed for mutual insurance, and regulator designation is not the primary complexity.",
+explanation: "In conventional insurance, the insurer clearly bears the risk. In takaful, participants collectively bear risk through the common fund; the operator earns wakala fees for management. IFRS 17 asks 'who bears insurance risk?', and the answer is the participant pool, not a single legal entity. This creates genuine ambiguity about which entity's financial statements should reflect the insurance contract. IFRS 17 was not specifically designed for mutual insurance, and regulator designation is not the primary complexity.",
 source: "Lesson 7: Takaful and IFRS 17"
 },
 {
@@ -152,7 +152,7 @@ options: [
 "The difference between fair value at delivery and original contract price is recognised as a gain or loss immediately"
 ],
 correctOption: 3,
-explanation: "When the commodity is delivered, it is recorded at fair value. Any difference between the fair value at delivery and the salam receivable (original contract price) is recognised as an immediate gain or loss. The bank bears commodity price risk between payment and delivery — this risk materialises at the delivery date. Renegotiating the price would violate the original contract terms, and deferral is not permitted for this type of recognition.",
+explanation: "When the commodity is delivered, it is recorded at fair value. Any difference between the fair value at delivery and the salam receivable (original contract price) is recognised as an immediate gain or loss. The bank bears commodity price risk between payment and delivery: this risk materialises at the delivery date. Renegotiating the price would violate the original contract terms, and deferral is not permitted for this type of recognition.",
 source: "Lesson 8: Trade & Partnership Finance"
 },
 {
@@ -200,7 +200,7 @@ options: [
 "MFRS which is substantively equivalent to IFRS with additional Islamic disclosure guidance from MASB"
 ],
 correctOption: 3,
-explanation: "Malaysia applies MFRS (Malaysian Financial Reporting Standards), which is substantively equivalent to IFRS. MASB (Malaysian Accounting Standards Board) determined that conventional MFRS could be applied to Islamic transactions with additional disclosures. Malaysia does not use AAOIFI for accounting — a common misconception given Malaysia's importance in Islamic finance. AAOIFI Shariah standards are voluntary guidance only.",
+explanation: "Malaysia applies MFRS (Malaysian Financial Reporting Standards), which is substantively equivalent to IFRS. MASB (Malaysian Accounting Standards Board) determined that conventional MFRS could be applied to Islamic transactions with additional disclosures. Malaysia does not use AAOIFI for accounting: a common misconception given Malaysia's importance in Islamic finance. AAOIFI Shariah standards are voluntary guidance only.",
 source: "Lesson 9: Malaysia Sukuk"
 },
 {
@@ -212,7 +212,7 @@ options: [
 "As off-balance-sheet because the SPV structure separates the obligation from the issuer's balance sheet"
 ],
 correctOption: 2,
-explanation: "Despite the 'musharakah' (partnership) Shariah label, fixed distributions plus a redemption undertaking at face value create a contractual obligation to deliver cash — meeting the IAS 32 definition of a financial liability. The distributions are finance cost, not equity distributions. The Shariah characterisation does not override the accounting substance. SPV structures with purchase undertakings typically fail derecognition tests, keeping sukuk on the issuer's balance sheet.",
+explanation: "Despite the 'musharakah' (partnership) Shariah label, fixed distributions plus a redemption undertaking at face value create a contractual obligation to deliver cash: meeting the IAS 32 definition of a financial liability. The distributions are finance cost, not equity distributions. The Shariah characterisation does not override the accounting substance. SPV structures with purchase undertakings typically fail derecognition tests, keeping sukuk on the issuer's balance sheet.",
 source: "Lesson 9: Malaysia Sukuk"
 },
 {
@@ -224,7 +224,7 @@ options: [
 "The Hanafi formula always produces a larger obligation because liquid assets include cash and receivables"
 ],
 correctOption: 0,
-explanation: "The ZATCA equity-based formula and the Hanafi liquid-assets formula start from opposite sides of the balance sheet. For a bank with large long-term investments, ZATCA deducts those investments from equity (reducing the base), while the Hanafi formula excludes them because they are not liquid (also reducing its base, but differently). The results can diverge materially. Neither formula always produces a larger number — the outcome depends on the specific balance sheet composition.",
+explanation: "The ZATCA equity-based formula and the Hanafi liquid-assets formula start from opposite sides of the balance sheet. For a bank with large long-term investments, ZATCA deducts those investments from equity (reducing the base), while the Hanafi formula excludes them because they are not liquid (also reducing its base, but differently). The results can diverge materially. Neither formula always produces a larger number: the outcome depends on the specific balance sheet composition.",
 source: "Lesson 10: Saudi Arabia"
 },
 {
@@ -245,10 +245,10 @@ options: [
 "Regulatory relief allowing Islamic banks to hold less capital against home finance exposures than conventional banks",
 "A tax advantage for Islamic finance customers as an incentive to grow the UK Islamic banking sector",
 "Stamp duty exemption removing all property transfer taxes from diminishing musharaka transactions entirely",
-"Tax equivalence ensuring the Islamic product is taxed identically to a conventional mortgage — neither advantaged nor disadvantaged"
+"Tax equivalence ensuring the Islamic product is taxed identically to a conventional mortgage: neither advantaged nor disadvantaged"
 ],
 correctOption: 3,
-explanation: "HMRC's Finance Act 2005 provisions ensure tax equivalence, not advantage. Diminishing musharaka rental is taxed as interest-equivalent. SDLT relief prevents double stamp duty (the two transactions inherent in DM), but does not exempt from SDLT entirely. PRA applies identical Basel III capital requirements — no regulatory relief for Islamic banks. The principle is level playing field, not preferential treatment.",
+explanation: "HMRC's Finance Act 2005 provisions ensure tax equivalence, not advantage. Diminishing musharaka rental is taxed as interest-equivalent. SDLT relief prevents double stamp duty (the two transactions inherent in DM), but does not exempt from SDLT entirely. PRA applies identical Basel III capital requirements: no regulatory relief for Islamic banks. The principle is level playing field, not preferential treatment.",
 source: "Lesson 11: UK Islamic Banking"
 },
 {
@@ -272,7 +272,7 @@ options: [
 "Revenue recognition is deferred until the sukuk matures to match the timing of the Islamic finance cash flows"
 ],
 correctOption: 2,
-explanation: "The Contractor Independence Principle states: only parties to the Islamic finance contract adjust their accounting. The contractor is outside the Shariah contract — they have a standard construction agreement with the SPV or government. They apply normal IFRS revenue recognition. The question 'Is this party a signatory to the Shariah contract?' determines whether any Islamic finance accounting adjustments apply.",
+explanation: "The Contractor Independence Principle states: only parties to the Islamic finance contract adjust their accounting. The contractor is outside the Shariah contract: they have a standard construction agreement with the SPV or government. They apply normal IFRS revenue recognition. The question 'Is this party a signatory to the Shariah contract?' determines whether any Islamic finance accounting adjustments apply.",
 source: "Lesson 12: Nigeria Sovereign Sukuk"
 },
 {
@@ -284,7 +284,7 @@ options: [
 "Apply meaningful Stage 1 ECL provisions because sub-investment-grade sovereign credit risk is measurable and not negligible"
 ],
 correctOption: 3,
-explanation: "Nigerian sovereign sukuk reflects actual sovereign credit risk. Nigeria's sub-investment-grade rating means Stage 1 ECL provisions are measurable and not negligible — unlike AAA sovereigns where provisions are minimal. Sovereign debt is not automatically risk-free under IFRS 9. Sub-investment grade does not automatically mean Stage 3 (that requires significant increase in credit risk since initial recognition). Asset-backing does not eliminate credit risk.",
+explanation: "Nigerian sovereign sukuk reflects actual sovereign credit risk. Nigeria's sub-investment-grade rating means Stage 1 ECL provisions are measurable and not negligible: unlike AAA sovereigns where provisions are minimal. Sovereign debt is not automatically risk-free under IFRS 9. Sub-investment grade does not automatically mean Stage 3 (that requires significant increase in credit risk since initial recognition). Asset-backing does not eliminate credit risk.",
 source: "Lesson 12: Nigeria Sovereign Sukuk"
 },
 {
@@ -296,19 +296,19 @@ options: [
 "As a charge to shareholders' equity reflecting the bank's own zakat obligation computed on depositor funds"
 ],
 correctOption: 1,
-explanation: "Pakistani banks act as agents for the Central Zakat Administration — they deduct 2.5% from qualifying accounts and remit to CZA. The entry is a liability-to-liability pass-through: debit depositor liability, credit payable to CZA. It never touches the bank's income statement or equity because the bank has no obligation — it is merely the collection mechanism. The zakat is the depositor's personal religious obligation, not the bank's expense.",
+explanation: "Pakistani banks act as agents for the Central Zakat Administration (they deduct 2.5% from qualifying accounts and remit to CZA. The entry is a liability-to-liability pass-through: debit depositor liability, credit payable to CZA. It never touches the bank's income statement or equity because the bank has no obligation) it is merely the collection mechanism. The zakat is the depositor's personal religious obligation, not the bank's expense.",
 source: "Lesson 13: Global Zakat"
 },
 {
 question: "A company has a debt-to-total-assets ratio of 30%. Under SC Malaysia's screening methodology (which uses total assets as the denominator), the company passes the financial ratio screen. Under MSCI's methodology (which uses market capitalisation as the denominator), the same company fails during a share price decline. What explains this divergence?",
 options: [
-"The denominator difference — total assets are stable while market capitalisation fluctuates with share price causing threshold breaches during downturns",
+"The denominator difference: total assets are stable while market capitalisation fluctuates with share price causing threshold breaches during downturns",
 "SC Malaysia uses a more lenient debt threshold of 40% compared to MSCI's stricter threshold of 25% for the same ratio",
 "MSCI counts more types of debt in the numerator including contingent liabilities that SC Malaysia excludes entirely",
 "The divergence is a calculation error because both methodologies should produce identical results from the same financial data"
 ],
 correctOption: 0,
-explanation: "The denominator divergence is the critical difference. SC Malaysia and Tadawul use total assets (relatively stable). MSCI and AAOIFI use market capitalisation (volatile). When share price drops, market cap shrinks, the ratio increases — potentially breaching the threshold even though the company's actual debt has not changed. This means the same company with unchanged financials can be compliant under one methodology and non-compliant under another.",
+explanation: "The denominator divergence is the critical difference. SC Malaysia and Tadawul use total assets (relatively stable). MSCI and AAOIFI use market capitalisation (volatile). When share price drops, market cap shrinks, the ratio increases: potentially breaching the threshold even though the company's actual debt has not changed. This means the same company with unchanged financials can be compliant under one methodology and non-compliant under another.",
 source: "Lesson 14: Shariah Portfolio Screening"
 },
 {
@@ -316,11 +316,11 @@ question: "A Shariah-compliant investment fund holds shares in a company whose n
 options: [
 "The fund must divest within 90 days because any NPI above zero disqualifies the holding from all Shariah-compliant portfolios",
 "No obligation because the 3% falls below the universal 5% NPI exclusion threshold so the holding is fully permissible",
-"A mandatory purification obligation — the fund must donate each holding's dividend multiplied by the company's NPI percentage to charity",
+"A mandatory purification obligation: the fund must donate each holding's dividend multiplied by the company's NPI percentage to charity",
 "The fund may retain dividends but must disclose the NPI percentage in annual reports to investors"
 ],
 correctOption: 2,
-explanation: "The company passes the 5% NPI threshold (3% < 5%), so it remains eligible for inclusion. However, any NPI above zero creates a mandatory purification obligation. The fund calculates each holding's dividend multiplied by the company's NPI percentage and donates that amount to charity. Purification cannot be retained or offset against other income. Disclosure alone is insufficient — the actual donation must occur.",
+explanation: "The company passes the 5% NPI threshold (3% < 5%), so it remains eligible for inclusion. However, any NPI above zero creates a mandatory purification obligation. The fund calculates each holding's dividend multiplied by the company's NPI percentage and donates that amount to charity. Purification cannot be retained or offset against other income. Disclosure alone is insufficient: the actual donation must occur.",
 source: "Lesson 14: Shariah Portfolio Screening"
 },
 {
@@ -332,7 +332,7 @@ options: [
 "ROE and leverage ratios change materially because the equity denominator shrinks under IFRS when IAH funds move to liabilities"
 ],
 correctOption: 3,
-explanation: "IAH reclassification is the single most material AAOIFI-IFRS divergence. Under AAOIFI, IAH are a separate category (effectively expanding the equity-like denominator). Under IFRS, IAH are liabilities (shrinking the equity denominator). This produces a multi-percentage-point ROE difference that is entirely an accounting artifact — actual profitability is identical. The ROE difference does not reflect performance; it reflects framework choice.",
+explanation: "IAH reclassification is the single most material AAOIFI-IFRS divergence. Under AAOIFI, IAH are a separate category (effectively expanding the equity-like denominator). Under IFRS, IAH are liabilities (shrinking the equity denominator). This produces a multi-percentage-point ROE difference that is entirely an accounting artifact: actual profitability is identical. The ROE difference does not reflect performance; it reflects framework choice.",
 source: "Lesson 15: AAOIFI vs IFRS Capstone"
 },
 {
@@ -356,7 +356,7 @@ options: [
 "The parent's external auditor selects the framework based on which produces the most conservative financial position"
 ],
 correctOption: 2,
-explanation: "The industry answer is IFRS primary with AAOIFI supplementary disclosures. The majority of subsidiaries and international investors require IFRS. The Bahrain parent adds AAOIFI supplementary disclosures to satisfy CBB requirements. Converting all subsidiaries to AAOIFI would create unnecessary complexity. Triple consolidation is impractical. The auditor does not select the framework — management and the board make this governance decision.",
+explanation: "The industry answer is IFRS primary with AAOIFI supplementary disclosures. The majority of subsidiaries and international investors require IFRS. The Bahrain parent adds AAOIFI supplementary disclosures to satisfy CBB requirements. Converting all subsidiaries to AAOIFI would create unnecessary complexity. Triple consolidation is impractical. The auditor does not select the framework: management and the board make this governance decision.",
 source: "Lesson 16: Cross-Border Consolidation"
 },
 {
@@ -380,7 +380,7 @@ options: [
 "The transaction may be commodity murabaha (tawarruq) which some Shariah authorities prohibit as a disguised interest-bearing loan"
 ],
 correctOption: 3,
-explanation: "When the customer never intends physical delivery, the commodity purchase may serve no economic purpose beyond providing an Islamic-compliant label for what is effectively a cash loan. This is tawarruq (commodity murabaha), which some Shariah authorities prohibit. The concern is substance over form — whether the asset transaction has real economic purpose or is merely a structuring mechanism. There is no AAOIFI ban on mobile transactions or mandatory holding period for murabaha.",
+explanation: "When the customer never intends physical delivery, the commodity purchase may serve no economic purpose beyond providing an Islamic-compliant label for what is effectively a cash loan. This is tawarruq (commodity murabaha), which some Shariah authorities prohibit. The concern is substance over form: whether the asset transaction has real economic purpose or is merely a structuring mechanism. There is no AAOIFI ban on mobile transactions or mandatory holding period for murabaha.",
 source: "Lesson 17: Islamic Fintech"
 },
 {
@@ -392,7 +392,7 @@ options: [
 "No standard clearly applies because fintech advisory platforms were not contemplated when IFRS 15 was drafted"
 ],
 correctOption: 1,
-explanation: "Robo-advisory fees are service revenue — the platform provides portfolio management services with identifiable performance obligations. IFRS 15 applies straightforwardly. IFRS 9 governs the financial instruments themselves, not the advisory fees earned for managing them. AAOIFI FAS 3 may describe the Shariah structure, but the accounting standard for fee recognition is IFRS 15. This is a 'clear' case — no interpretation gap exists.",
+explanation: "Robo-advisory fees are service revenue (the platform provides portfolio management services with identifiable performance obligations. IFRS 15 applies straightforwardly. IFRS 9 governs the financial instruments themselves, not the advisory fees earned for managing them. AAOIFI FAS 3 may describe the Shariah structure, but the accounting standard for fee recognition is IFRS 15. This is a 'clear' case) no interpretation gap exists.",
 source: "Lesson 17: Islamic Fintech"
 },
 {
@@ -401,7 +401,7 @@ options: [
 "Thirteen router configuration files plus twelve jurisdiction mapping tables for multi-country regulatory compliance",
 "Twenty-five product skills with one file per AAOIFI Financial Accounting Standard covering the complete AAOIFI corpus",
 "Twelve product skills covering all Islamic finance product families plus thirteen jurisdiction overlays for routing",
-"Twenty-five jurisdiction overlays — one for each country in the Global Standards Map plus five additional emerging markets"
+"Twenty-five jurisdiction overlays: one for each country in the Global Standards Map plus five additional emerging markets"
 ],
 correctOption: 2,
 explanation: "The 25-file library consists of 12 product skills (covering murabaha, ijarah, sukuk, takaful, commodities, banking operations, profit distribution, deposit products, investments, real estate, insurance, and fintech) plus 13 jurisdiction overlays (Bahrain, Saudi Arabia, Malaysia, UAE, UK, Pakistan, Egypt, Senegal, Nigeria, Turkey, Indonesia, Brunei, Singapore). The global router sits above and dispatches to the appropriate product and overlay.",
@@ -416,7 +416,7 @@ options: [
 "An infrastructure problem with the plugin installation that can be resolved by reinstalling the skill files"
 ],
 correctOption: 0,
-explanation: "A single routing failure means every query for that jurisdiction will use the wrong framework. If the router sends Malaysia queries to the Bahrain overlay, every Malaysian output will have AAOIFI labels instead of MFRS labels — systematically non-compliant. There is no error correction layer or fallback logic — the router either routes correctly or it does not. The 13-query test suite exists precisely because deployment without validation is speculative.",
+explanation: "A single routing failure means every query for that jurisdiction will use the wrong framework. If the router sends Malaysia queries to the Bahrain overlay, every Malaysian output will have AAOIFI labels instead of MFRS labels (systematically non-compliant. There is no error correction layer or fallback logic) the router either routes correctly or it does not. The 13-query test suite exists precisely because deployment without validation is speculative.",
 source: "Lesson 18: Full Skill Library Capstone"
 },
 {
@@ -440,7 +440,7 @@ options: [
 "A fixed wakala fee for managing the underwriting fund plus a share of investment profits from the participants' fund under mudaraba terms"
 ],
 correctOption: 3,
-explanation: "The hybrid model — most common globally — splits the operator's revenue into two streams. The wakala fee is fixed and earned for managing underwriting (accepting contributions, processing claims). The mudaraba share is variable and earned from investment returns on the participants' fund. Two sets of accounts are needed: operator statements (showing fee revenue) and participants' fund statements (showing contributions, claims, and investment income).",
+explanation: "The hybrid model (most common globally) splits the operator's revenue into two streams. The wakala fee is fixed and earned for managing underwriting (accepting contributions, processing claims). The mudaraba share is variable and earned from investment returns on the participants' fund. Two sets of accounts are needed: operator statements (showing fee revenue) and participants' fund statements (showing contributions, claims, and investment income).",
 source: "Lesson 7: Takaful and IFRS 17"
 },
 {
@@ -452,7 +452,7 @@ options: [
 "The purchase undertaking has no impact on derecognition because it is a Shariah requirement not an IFRS accounting consideration"
 ],
 correctOption: 0,
-explanation: "A purchase undertaking at face value means the issuer will buy back the assets at maturity for the original price. This means the issuer has not transferred substantially all risks and rewards — the derecognition test under IFRS fails. The assets remain on the issuer's balance sheet and the sukuk proceeds are recorded as a financial liability. The SPV's legal ownership is overridden by the substance-over-form principle in IFRS.",
+explanation: "A purchase undertaking at face value means the issuer will buy back the assets at maturity for the original price. This means the issuer has not transferred substantially all risks and rewards: the derecognition test under IFRS fails. The assets remain on the issuer's balance sheet and the sukuk proceeds are recorded as a financial liability. The SPV's legal ownership is overridden by the substance-over-form principle in IFRS.",
 source: "Lesson 6: Sukuk"
 },
 {
@@ -476,19 +476,19 @@ options: [
 "Net financing margin or net profit margin because interest-based terminology is prohibited in all Islamic finance output"
 ],
 correctOption: 3,
-explanation: "The router encodes prohibited terms that must never appear in any Islamic finance output, regardless of jurisdiction. 'Net Interest Margin' is replaced with 'net financing margin' or 'net profit margin.' This applies in all jurisdictions — even IFRS jurisdictions that use effective interest rate mechanics. The prohibition is on terminology, not measurement. 'Net yield margin' and 'net spread margin' are not the specified replacement terms.",
+explanation: "The router encodes prohibited terms that must never appear in any Islamic finance output, regardless of jurisdiction. 'Net Interest Margin' is replaced with 'net financing margin' or 'net profit margin.' This applies in all jurisdictions: even IFRS jurisdictions that use effective interest rate mechanics. The prohibition is on terminology, not measurement. 'Net yield margin' and 'net spread margin' are not the specified replacement terms.",
 source: "Lesson 3: The Plugin Architecture"
 },
 {
 question: "Pakistan requires full conversion of its banking system to Islamic finance by 2028. What unique challenge does this create for the jurisdiction overlay?",
 options: [
 "Pakistan must create an entirely new Regime 4 because no existing regime accommodates full banking system conversion",
-"Pakistan straddles Regimes 1 and 2 — IFRS-primary accounting with mandatory AAOIFI Shariah compliance and SBP-specific disclosure requirements",
+"Pakistan straddles Regimes 1 and 2: IFRS-primary accounting with mandatory AAOIFI Shariah compliance and SBP-specific disclosure requirements",
 "The overlay must include conventional banking accounting rules alongside Islamic rules to handle the transition period",
 "Pakistan's overlay is identical to Bahrain's because both mandate AAOIFI as the primary accounting framework"
 ],
 correctOption: 1,
-explanation: "Pakistan is the most complex reference case because it applies IFRS for accounting measurement (Regime 2) but AAOIFI Shariah standards are mandatory via SBP's Shariah Governance Framework (Regime 1 element). The overlay must handle IFRS measurement with AAOIFI-informed terminology and SBP-specific disclosures. It is not identical to Bahrain (which is pure AAOIFI) and does not require a new regime — it is a hybrid within the existing framework.",
+explanation: "Pakistan is the most complex reference case because it applies IFRS for accounting measurement (Regime 2) but AAOIFI Shariah standards are mandatory via SBP's Shariah Governance Framework (Regime 1 element). The overlay must handle IFRS measurement with AAOIFI-informed terminology and SBP-specific disclosures. It is not identical to Bahrain (which is pure AAOIFI) and does not require a new regime: it is a hybrid within the existing framework.",
 source: "Lesson 2: The Global Standards Map"
 },
 {
@@ -496,23 +496,23 @@ question: "Green sukuk in Malaysia combine Islamic asset-backing principles with
 options: [
 "Green sukuk must be classified at FVTPL to enable continuous fair value monitoring of the environmental impact metrics",
 "Green sukuk receive preferential risk weights under MFRS 9 reducing the ECL provision requirements for sustainable instruments",
-"It does not change measurement at all — green sukuk use identical MFRS 9 recognition and measurement as non-green sukuk",
+"It does not change measurement at all: green sukuk use identical MFRS 9 recognition and measurement as non-green sukuk",
 "Green sukuk use MFRS 9 for measurement but add IFRS S2 climate-related disclosures that affect the carrying amount"
 ],
 correctOption: 2,
-explanation: "The green label changes disclosures only — use-of-proceeds tracking and impact reporting are additional disclosure requirements. MFRS 9 recognition, measurement, and classification are identical for green and non-green sukuk. There are no preferential risk weights for green instruments under MFRS 9. FVTPL classification is determined by SPPI test results, not the green label. Climate disclosures do not affect carrying amounts.",
+explanation: "The green label changes disclosures only: use-of-proceeds tracking and impact reporting are additional disclosure requirements. MFRS 9 recognition, measurement, and classification are identical for green and non-green sukuk. There are no preferential risk weights for green instruments under MFRS 9. FVTPL classification is determined by SPPI test results, not the green label. Climate disclosures do not affect carrying amounts.",
 source: "Lesson 9: Malaysia Sukuk"
 },
 {
 question: "In Bahrain, an Islamic bank depreciates an ijarah asset over 25 years (the asset's useful life) even though the lease term is only 10 years. Under AAOIFI FAS 32, is this correct?",
 options: [
-"Yes — AAOIFI requires depreciation over the asset's useful life even when the useful life exceeds the lease term",
-"No — AAOIFI requires depreciation over the shorter of the lease term or useful life to match the income recognition period",
-"No — AAOIFI requires depreciation over the lease term because the asset reverts to the lessor at lease end",
-"Yes — but only if the bank can demonstrate that the asset will be re-leased after the initial lease expires"
+"Yes: AAOIFI requires depreciation over the asset's useful life even when the useful life exceeds the lease term",
+"No. AAOIFI requires depreciation over the shorter of the lease term or useful life to match the income recognition period",
+"No. AAOIFI requires depreciation over the lease term because the asset reverts to the lessor at lease end",
+"Yes: but only if the bank can demonstrate that the asset will be re-leased after the initial lease expires"
 ],
 correctOption: 0,
-explanation: "Under AAOIFI FAS 32, the lessor retains the ijarah asset on its balance sheet and depreciates it over the asset's useful life — not the lease term. This is a deliberate AAOIFI position reflecting the Shariah view that the lessor remains the owner. This creates a book loss when ownership transfers at lease end under IMB, which is intentional, not an error. Re-lease demonstration is not required.",
+explanation: "Under AAOIFI FAS 32, the lessor retains the ijarah asset on its balance sheet and depreciates it over the asset's useful life; not the lease term. This is a deliberate AAOIFI position reflecting the Shariah view that the lessor remains the owner. This creates a book loss when ownership transfers at lease end under IMB, which is intentional, not an error. Re-lease demonstration is not required.",
 source: "Lesson 5: Ijarah and IMB"
 },
 {
@@ -524,7 +524,7 @@ options: [
 "Musharaka returns are profit shares that depend on venture performance and fail the IFRS 9 SPPI test forcing mark-to-market accounting"
 ],
 correctOption: 3,
-explanation: "Musharaka returns depend on venture performance — they are profit shares, not contractual interest. This means they fail the SPPI test (Solely Payments of Principal and Interest) under IFRS 9, forcing FVTPL classification with mark-to-market accounting. Under AAOIFI FAS 4, musharaka investments are carried at historical cost adjusted for the bank's share of undistributed profit or loss. AAOIFI does not use historical cost for all investments, and the FVTPL classification is not voluntary in this case.",
+explanation: "Musharaka returns depend on venture performance: they are profit shares, not contractual interest. This means they fail the SPPI test (Solely Payments of Principal and Interest) under IFRS 9, forcing FVTPL classification with mark-to-market accounting. Under AAOIFI FAS 4, musharaka investments are carried at historical cost adjusted for the bank's share of undistributed profit or loss. AAOIFI does not use historical cost for all investments, and the FVTPL classification is not voluntary in this case.",
 source: "Lesson 8: Trade & Partnership Finance"
 },
 {
@@ -536,19 +536,19 @@ options: [
 "They specify transactions that Islamic banks are prohibited from executing under Shariah law globally"
 ],
 correctOption: 1,
-explanation: "NEVER rules define what the agent must never do in a specific context — prohibited terms ('Interest Income' in Bahrain), prohibited classifications ('Loans and Advances' for AAOIFI receivables), and prohibited actions (proceeding without jurisdiction identification). They are compliance guardrails in the skill files, not deprecated features, test cases, or global Shariah prohibitions.",
+explanation: "NEVER rules define what the agent must never do in a specific context: prohibited terms ('Interest Income' in Bahrain), prohibited classifications ('Loans and Advances' for AAOIFI receivables), and prohibited actions (proceeding without jurisdiction identification). They are compliance guardrails in the skill files, not deprecated features, test cases, or global Shariah prohibitions.",
 source: "Lesson 18: Full Skill Library Capstone"
 },
 {
 question: "The three prohibitions of Islamic finance are riba, gharar, and maysir. A fixed-rate mortgage violates one of these prohibitions. Which one and what is the Islamic finance alternative?",
 options: [
-"Riba — because the predetermined interest on the loan is the definition of prohibited interest — the alternative is diminishing musharaka co-ownership",
-"Gharar — because the total repayment amount is uncertain until the loan matures creating excessive contractual ambiguity",
-"Maysir — because the borrower is speculating on future property values creating a gambling-equivalent financial arrangement",
-"All three simultaneously — because conventional mortgages inherently violate every foundational principle of Islamic finance"
+"Riba (because the predetermined interest on the loan is the definition of prohibited interest) the alternative is diminishing musharaka co-ownership",
+"Gharar, because the total repayment amount is uncertain until the loan matures creating excessive contractual ambiguity",
+"Maysir, because the borrower is speculating on future property values creating a gambling-equivalent financial arrangement",
+"All three simultaneously, because conventional mortgages inherently violate every foundational principle of Islamic finance"
 ],
 correctOption: 0,
-explanation: "A fixed-rate mortgage charges predetermined interest on the lending of money — this is the definition of riba (prohibited interest). The Islamic alternative is diminishing musharaka: the bank and customer co-own the property, the customer gradually buys the bank's share, and the customer pays rent for the bank's portion. Gharar refers to excessive uncertainty in contracts, and maysir refers to speculation/gambling — neither is the primary violation here.",
+explanation: "A fixed-rate mortgage charges predetermined interest on the lending of money (this is the definition of riba (prohibited interest). The Islamic alternative is diminishing musharaka: the bank and customer co-own the property, the customer gradually buys the bank's share, and the customer pays rent for the bank's portion. Gharar refers to excessive uncertainty in contracts, and maysir refers to speculation/gambling) neither is the primary violation here.",
 source: "Lesson 1: Why Islamic Finance Needs Jurisdiction-Aware Agents"
 },
 {
@@ -560,7 +560,7 @@ options: [
 "The base finance plugin which automatically detects the user's jurisdiction and adjusts all financial terminology"
 ],
 correctOption: 2,
-explanation: "The jurisdiction overlay is responsible for labels, classifications, and presentation. The product skill handles the accounting mechanics (which are the same — the receivable amount is identical). The router identifies the jurisdiction and loads the correct overlay, but it does not contain the classification rules itself. The base finance plugin provides general accounting commands without jurisdiction-specific modifications.",
+explanation: "The jurisdiction overlay is responsible for labels, classifications, and presentation. The product skill handles the accounting mechanics (which are the same: the receivable amount is identical). The router identifies the jurisdiction and loads the correct overlay, but it does not contain the classification rules itself. The base finance plugin provides general accounting commands without jurisdiction-specific modifications.",
 source: "Lesson 3: The Plugin Architecture"
 },
 {
@@ -572,7 +572,7 @@ options: [
 "Charitable funds collected from non-Shariah-compliant income that must be distributed to approved charitable organisations"
 ],
 correctOption: 1,
-explanation: "Equity of Investment Account Holders represents funds from depositors who have entered mudaraba or musharaka arrangements with the bank. These depositors theoretically bear investment risk and share profits — they are not guaranteed a return like conventional depositors. Under AAOIFI, these funds are neither pure liabilities (return not guaranteed) nor pure equity (depositors have limited governance rights), creating the unique third category.",
+explanation: "Equity of Investment Account Holders represents funds from depositors who have entered mudaraba or musharaka arrangements with the bank. These depositors theoretically bear investment risk and share profits: they are not guaranteed a return like conventional depositors. Under AAOIFI, these funds are neither pure liabilities (return not guaranteed) nor pure equity (depositors have limited governance rights), creating the unique third category.",
 source: "Lesson 2: The Global Standards Map"
 },
 {
@@ -584,7 +584,7 @@ options: [
 "Common errors practitioners make, conditions that constitute Shariah breaches, and audit procedures for verification"
 ],
 correctOption: 3,
-explanation: "Method A's three questions target: (1) common errors practitioners make with this product/jurisdiction, (2) conditions that constitute Shariah breaches requiring SSB escalation, and (3) audit procedures for verification. These questions are designed to extract the practical, compliance-critical knowledge that distinguishes expert practitioners from generalists — exactly the knowledge that skill files need to encode.",
+explanation: "Method A's three questions target: (1) common errors practitioners make with this product/jurisdiction, (2) conditions that constitute Shariah breaches requiring SSB escalation, and (3) audit procedures for verification. These questions are designed to extract the practical, compliance-critical knowledge that distinguishes expert practitioners from generalists: exactly the knowledge that skill files need to encode.",
 source: "Lesson 18: Full Skill Library Capstone"
 },
 {
@@ -596,7 +596,7 @@ options: [
 "Istisna'a sukuk where investors fund construction directly and receive returns from completed infrastructure usage"
 ],
 correctOption: 0,
-explanation: "Nigeria's sovereign sukuk use ijarah structures backed by road infrastructure. The government sells road assets to an SPV, the SPV issues sukuk, and the government leases the roads back from the SPV, paying periodic rental that funds sukuk distributions. This is the most established sovereign sukuk structure globally — it provides clear asset-backing and predictable cash flows that pass the IFRS 9 SPPI test.",
+explanation: "Nigeria's sovereign sukuk use ijarah structures backed by road infrastructure. The government sells road assets to an SPV, the SPV issues sukuk, and the government leases the roads back from the SPV, paying periodic rental that funds sukuk distributions. This is the most established sovereign sukuk structure globally: it provides clear asset-backing and predictable cash flows that pass the IFRS 9 SPPI test.",
 source: "Lesson 12: Nigeria Sovereign Sukuk"
 },
 {

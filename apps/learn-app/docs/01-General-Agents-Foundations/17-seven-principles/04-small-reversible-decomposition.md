@@ -4,7 +4,7 @@ title: "Principle 4: Small, Reversible Decomposition"
 chapter: 17
 lesson: 4
 duration_minutes: 30
-description: "Breaking problems into small, reversible steps—the key to managing complexity and enabling iteration"
+description: "Breaking problems into small, reversible steps,the key to managing complexity and enabling iteration"
 keywords: ["decomposition", "reversibility", "iteration", "small steps", "agentic workflow", "debugging"]
 
 # HIDDEN SKILLS METADATA
@@ -59,22 +59,22 @@ teaching_guide:
   session_group: 2
   session_title: "Workflow Principles"
   key_points:
-    - "The debugging cost table (10 lines = 5 min, 10000 lines = days) is the mathematical proof that small changes win — exponential not linear growth"
+    - "The debugging cost table (10 lines = 5 min, 10000 lines = days) is the mathematical proof that small changes win: exponential not linear growth"
     - "Atomic changes must pass three tests: independently verifiable, makes sense alone, revertable without breaking other work"
-    - "Four decomposition strategies (vertical, horizontal, dependency-first, test-first) give students specific approaches — not just 'make it smaller'"
-    - "AI amplifies the need for small steps because it makes plausible mistakes and generates code fast — easy to accept too much at once"
+    - "Four decomposition strategies (vertical, horizontal, dependency-first, test-first) give students specific approaches: not just 'make it smaller'"
+    - "AI amplifies the need for small steps because it makes plausible mistakes and generates code fast: easy to accept too much at once"
   misconceptions:
-    - "Students think small steps are slower than big batches — the iteration timeline (2-3 days, low stress) vs batch timeline (7 days, high stress) disproves this"
-    - "Students confuse 'small' with 'trivial' — micro-commits (fix typo, fix typo again) are an anti-pattern; each commit should be a meaningful logical unit"
-    - "Students think reversibility only means 'undo' — it also enables experimentation, because you can try approaches safely knowing you can roll back"
+    - "Students think small steps are slower than big batches: the iteration timeline (2-3 days, low stress) vs batch timeline (7 days, high stress) disproves this"
+    - "Students confuse 'small' with 'trivial': micro-commits (fix typo, fix typo again) are an anti-pattern; each commit should be a meaningful logical unit"
+    - "Students think reversibility only means 'undo': it also enables experimentation, because you can try approaches safely knowing you can roll back"
   discussion_prompts:
-    - "Think of a time you made a large change and something broke — how long did it take to find the bug? How would atomic commits have changed that?"
-    - "Of the four decomposition strategies, which fits your current project best — and why?"
+    - "Think of a time you made a large change and something broke: how long did it take to find the bug? How would atomic commits have changed that?"
+    - "Of the four decomposition strategies, which fits your current project best: and why?"
   teaching_tips:
-    - "The monolithic vs atomic ASCII diagram is the most powerful visual — draw it on the whiteboard with the checkmarks and X showing exactly where the bug is"
-    - "The Lego vs clay analogy resonates with everyone — use it to explain why atomic changes are swappable while monolithic changes ripple"
-    - "Have students practice the 'Step Zero' prompt pattern on a real feature — decomposing WITH the AI before writing any code"
-    - "The three anti-patterns (micro-commits, mixed concerns, untested middle states) are common student mistakes — cover them preventively"
+    - "The monolithic vs atomic ASCII diagram is the most powerful visual: draw it on the whiteboard with the checkmarks and X showing exactly where the bug is"
+    - "The Lego vs clay analogy resonates with everyone: use it to explain why atomic changes are swappable while monolithic changes ripple"
+    - "Have students practice the 'Step Zero' prompt pattern on a real feature: decomposing WITH the AI before writing any code"
+    - "The three anti-patterns (micro-commits, mixed concerns, untested middle states) are common student mistakes: cover them preventively"
   assessment_quick_check:
     - "What three questions does the atomic change checklist ask, and what do you do if any answer is 'no'?"
     - "Explain why ten 10-line changes are faster to debug than one 100-line change"
@@ -85,9 +85,9 @@ teaching_guide:
 
 You've seen this happen: Someone makes a large, complex change involving multiple files, new dependencies, and refactored architecture. They deploy it. Something breaks. Where's the problem? Is it the new library? The refactored code? The interaction between components? They spend hours debugging, eventually reverting everything and starting over.
 
-Now imagine a different approach: The same work is done as ten small changes, each committed separately. Each change is tested before moving to the next. When something breaks, you know exactly which change caused it—you revert that one commit and keep the rest.
+Now imagine a different approach: The same work is done as ten small changes, each committed separately. Each change is tested before moving to the next. When something breaks, you know exactly which change caused it,you revert that one commit and keep the rest.
 
-The difference is **small, reversible decomposition**—breaking problems into small, independently verifiable steps that can be easily rolled back. This is the key to managing complexity in agentic workflows.
+The difference is **small, reversible decomposition:** breaking problems into small, independently verifiable steps that can be easily rolled back. This is the key to managing complexity in agentic workflows.
 
 ## Why Small Steps Win: The Psychology and Mathematics of Decomposition
 
@@ -117,7 +117,7 @@ With 10 small changes of 10 lines each:
 - Total: 50 minutes maximum
 - Most changes: no debugging needed (tested immediately)
 
-**The insight**: Ten small, tested changes are faster than one large change even before accounting for debugging—because you catch issues immediately, when context is fresh.
+**The insight**: Ten small, tested changes are faster than one large change even before accounting for debugging,because you catch issues immediately, when context is fresh.
 
 ### The AI Amplification Effect
 
@@ -167,7 +167,7 @@ An **atomic change** is the smallest unit of work that:
 Add user authentication with OAuth, JWT tokens, password reset,
 and email verification
 ```
-Not atomic—too many concerns, hard to verify, hard to revert if partly broken.
+Not atomic,too many concerns, hard to verify, hard to revert if partly broken.
 
 **Atomic**: One concern per commit
 ```
@@ -190,9 +190,9 @@ If any answer is "no," decompose further.
 
 ## Reversibility: The Safety Net That Enables Experimentation
 
-Reversibility means you can undo a change without side effects. This is what enables safe experimentation—you can try something knowing you can always go back.
+Reversibility means you can undo a change without side effects. This is what enables safe experimentation,you can try something knowing you can always go back.
 
-> **The "Revert, Don't Fix" Mindset**: Beginners try to fix broken code by adding more code. Pros revert to the last working state and try a different approach. Reverting isn't failure—it's a strategic retreat that saves hours of debugging.
+> **The "Revert, Don't Fix" Mindset**: Beginners try to fix broken code by adding more code. Pros revert to the last working state and try a different approach. Reverting isn't failure,it's a strategic retreat that saves hours of debugging.
 
 ### Git as Reversibility Mechanism
 
@@ -392,10 +392,10 @@ Total: 2-3 days, low stress, continuous progress
 | Aspect | Large Batch | Small Iterations |
 |--------|-------------|------------------|
 | **Feedback** | Delayed until complete | Immediate each iteration |
-| **Debugging** | Hard—isolate from many changes | Easy—only last change could be broken |
-| **Motivation** | Low—no visible progress for days | High—each iteration produces results |
-| **Risk** | High—everything or nothing | Low—each step is tested |
-| **Course correction** | Difficult—committed to large change | Easy—change direction anytime |
+| **Debugging** | Hard,isolate from many changes | Easy,only last change could be broken |
+| **Motivation** | Low,no visible progress for days | High,each iteration produces results |
+| **Risk** | High,everything or nothing | Low,each step is tested |
+| **Course correction** | Difficult,committed to large change | Easy,change direction anytime |
 
 ## Working with AI: Prompting for Small, Reversible Steps
 
@@ -504,7 +504,7 @@ Intermediate states don't work. Can't revert to a working state easily.
 
 ## Why This Principle Matters: Complexity Management
 
-Software complexity grows faster than code size. A 1,000-line program isn't 10x more complex than a 100-line program—it's often 100x more complex due to interactions between components.
+Software complexity grows faster than code size. A 1,000-line program isn't 10x more complex than a 100-line program,it's often 100x more complex due to interactions between components.
 
 Small, reversible decomposition manages this complexity by:
 - **Limiting scope**: Each change fits in your head
@@ -513,11 +513,11 @@ Small, reversible decomposition manages this complexity by:
 - **Reducing risk**: You can always roll back
 - **Enabling experimentation**: Try something, learn, revert if needed
 
-Without decomposition, you're constantly fighting complexity. With it, complexity becomes manageable—one small step at a time.
+Without decomposition, you're constantly fighting complexity. With it, complexity becomes manageable,one small step at a time.
 
 ## This Principle in Both Interfaces
 
-Decomposition applies universally—whether you're building software or producing documents. In Claude Code, each step is one function and one commit. In Cowork, each step is one section or one file. The mechanism differs; the principle is identical.
+Decomposition applies universally,whether you're building software or producing documents. In Claude Code, each step is one function and one commit. In Cowork, each step is one section or one file. The mechanism differs; the principle is identical.
 
 **In Cowork**: When creating a long document, don't ask for the entire thing at once. Ask for the outline first (verify it). Then ask for section 1 (verify it). Then section 2. This way, if section 3 goes wrong, you don't lose sections 1-2.
 
@@ -603,7 +603,7 @@ Then, let's actually build the feature using approach B and see how it feels.
 
 ### Safety Note
 
-`git reset --hard` and `git revert` are powerful recovery tools—but they can also destroy work if used carelessly. Before running any reset command, always check `git status` and `git stash` any uncommitted work you want to keep. The "revert, don't fix" mindset only works if you have clean commits to revert to.
+`git reset --hard` and `git revert` are powerful recovery tools,but they can also destroy work if used carelessly. Before running any reset command, always check `git status` and `git stash` any uncommitted work you want to keep. The "revert, don't fix" mindset only works if you have clean commits to revert to.
 
 
 ## Flashcards Study Aid

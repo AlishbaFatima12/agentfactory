@@ -92,6 +92,8 @@ This is a solid foundation. But nothing in this table prevents you from asking A
 
 You will learn enhancements 1-4 in this lesson (the core mechanics of working with AI at each stage) and enhancements 5-9 across the next two lessons — self-assessment tools and professional connections in Lesson 3, and teaching methods with classroom and solo modes in Lesson 4.
 
+![ai_plus_layer_cake](../../../../static/img/ai-plus-layer-cake.png)
+
 PRIMM-AI+ is tool-agnostic. Claude Code, Cursor, GitHub Copilot, Gemini CLI -- the boundaries work the same way regardless of which AI coding assistant you use. **The method is the constant. The AI tool is the variable.** This book uses Claude Code as the primary partner because it integrates with the Spec-Driven Development workflow you learned in Chapter 16, but every principle transfers.
 
 ---
@@ -168,6 +170,8 @@ The table below makes the boundaries concrete. The Right column shows prompts th
 
 When you catch yourself about to use a prompt from the Wrong column, pause and rephrase. **The Right column prompts produce learning. The Wrong column prompts produce output.**
 
+![partner_vs_crutch](../../../../static/img/partner-vs-crutch.png)
+
 ---
 
 ## AI-Free Checkpoints
@@ -190,6 +194,12 @@ The rules for AI-free checkpoints are simple:
 
 There is a large gap between truly understanding something and merely recognizing it when AI explains it. The checkpoints make that gap visible.
 
+
+
+![ai_access_levels](../../../../static/img/ai-access-levels.png)
+
+
+
 ---
 
 ## Mastery Gates
@@ -201,6 +211,11 @@ Emma holds up a hand. "Can you explain how the greeting message gets built — n
 James hesitates. "It... puts the words together?"
 
 "That's _what_. How does the `+` operator join them? Why does the comma appear where it does? What controls the order?" She waits. James cannot answer. "That's why we have gates. You're not ready for Modify yet."
+
+
+![mastery_gates_flow](../../../../static/img/mastery-gates-flow.png)
+
+
 
 Each stage transition has a formal requirement. You cannot (or rather, should not) move to the next stage until the gate condition is met:
 
@@ -326,6 +341,8 @@ You have now completed a full PRIMM-AI+ cycle: predicted with a confidence score
 ## The Five PRIMM-AI+ Rules
 
 Emma pulls out a card with five rules printed on it. "Keep this next to your keyboard. Every time you catch yourself breaking one, stop and fix it. These are not suggestions — they are the difference between learning and pretending to learn."
+
+![five_rules_card](../../../../static/img/five-rules-card.png)
 
 These rules are operational discipline, not suggestions. Each one prevents a specific failure mode in AI-assisted learning.
 

@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/operations-management/compliance-tracking-obligations-evidence
 sidebar_position: 7
-title: "Compliance Tracking — Obligations and Evidence"
+title: "Compliance Tracking: Obligations and Evidence"
 description: "Map every compliance obligation your organisation carries, assign owners, assess controls and evidence, and surface the gaps before a regulator does"
 keywords:
   [
@@ -63,42 +63,42 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Compliance drift — the silent process by which compliant controls become non-compliant"
-    - "Obligation structure — regulatory, contractual, and standards obligations as three distinct layers"
-    - "Five-status classification — CURRENT, REVIEW NEEDED, PARTIAL, GAP, URGENT"
-    - "Evidence standard — CURRENT status requires specific cited evidence, not assertions"
-    - "Remediation prioritisation — ranking gaps by regulatory consequence, breach risk, and effort"
+    - "Compliance drift: the silent process by which compliant controls become non-compliant"
+    - "Obligation structure, regulatory, contractual, and standards obligations as three distinct layers"
+    - "Five-status classification, CURRENT, REVIEW NEEDED, PARTIAL, GAP, URGENT"
+    - "Evidence standard, CURRENT status requires specific cited evidence, not assertions"
+    - "Remediation prioritisation, ranking gaps by regulatory consequence, breach risk, and effort"
   assessment: "5 concepts at B1/B2 level is appropriate. The status classification and evidence standard are the conceptual core and require careful attention; the others support application. Students at this stage of Part 3 have sufficient framework familiarity to absorb this volume."
 
 differentiation:
   extension_for_advanced: "After completing the obligation map, run a regulatory monitoring prompt: ask Cowork to identify recent regulatory changes in your jurisdiction that may affect your obligation map. For each change identified, assess whether your current controls still address the updated requirement or whether a REVIEW NEEDED or GAP status is appropriate."
-  remedial_for_struggling: "Focus on two things: (1) the five-status classification — can you explain what distinguishes PARTIAL from GAP? If a control exists but has evidence gaps, that is PARTIAL. If no effective control exists, that is GAP. (2) The evidence standard — the single rule that CURRENT requires specific cited evidence. If you can apply those two concepts, you have the core skill."
+  remedial_for_struggling: "Focus on two things: (1) the five-status classification, can you explain what distinguishes PARTIAL from GAP? If a control exists but has evidence gaps, that is PARTIAL. If no effective control exists, that is GAP. (2) The evidence standard: the single rule that CURRENT requires specific cited evidence. If you can apply those two concepts, you have the core skill."
 
 teaching_guide:
   key_points:
-    - "Compliance drift is invisible — organisations believe they are compliant because they were compliant at the last audit, not because they have verified current status"
-    - "The five-status standard is a forcing function — it prevents organisations from marking everything CURRENT by requiring cited evidence for each CURRENT obligation"
-    - "Evidence location matters as much as evidence existence — evidence nobody can locate on audit day is functionally absent"
-    - "The compliance map is only useful if it produces a prioritised action list — a map without a remediation plan is an audit artefact, not a management tool"
+    - "Compliance drift is invisible, organisations believe they are compliant because they were compliant at the last audit, not because they have verified current status"
+    - "The five-status standard is a forcing function ; it prevents organisations from marking everything CURRENT by requiring cited evidence for each CURRENT obligation"
+    - "Evidence location matters as much as evidence existence, evidence nobody can locate on audit day is functionally absent"
+    - "The compliance map is only useful if it produces a prioritised action list: a map without a remediation plan is an audit artefact, not a management tool"
   misconceptions:
     - "Compliance is a one-time exercise. Correction: compliance is a continuous state that requires ongoing monitoring. A control that was effective last year may have drifted if a regulation changed, a system changed, or the person who ran the control left."
-    - "If we have not been fined, we must be compliant. Correction: regulatory enforcement is lagging — organisations can be non-compliant for years before a regulator identifies it. The compliance map should reflect actual current state, not assumed state."
+    - "If we have not been fined, we must be compliant. Correction: regulatory enforcement is lagging, organisations can be non-compliant for years before a regulator identifies it. The compliance map should reflect actual current state, not assumed state."
     - "The compliance-tracking auto-skill is invoked with a slash command. Correction: it activates automatically from keywords like 'compliance', 'obligations', 'regulatory' in natural prompts. Students should never type /compliance-tracking."
   discussion_prompts:
     - "Which of the five statuses is most dangerous: GAP or URGENT? In what scenario might PARTIAL be the most deceptive status?"
     - "If you were a regulator reviewing a compliance map, what would cause you the most concern: an organisation that shows several PARTIAL and REVIEW NEEDED items honestly, or one that shows everything as CURRENT?"
   teaching_tips:
-    - "Open with a real-world compliance drift scenario — a regulation changes, nobody notices, the control is never updated. Ask students to estimate how long before the organisation realises. This makes compliance drift concrete before the five-status framework is introduced."
+    - "Open with a real-world compliance drift scenario: a regulation changes, nobody notices, the control is never updated. Ask students to estimate how long before the organisation realises. This makes compliance drift concrete before the five-status framework is introduced."
     - "The evidence standard rule ('CURRENT requires cited evidence') is the hardest concept to enforce. Role-play as a regulator reviewing the student's map and ask: 'Show me the evidence for this CURRENT obligation.' Students who cannot point to specific documents understand why the rule exists."
 ---
 
-# Compliance Tracking — Obligations and Evidence
+# Compliance Tracking: Obligations and Evidence
 
-The FCA supervisory visit is six weeks away. The lead compliance officer has spent the last three weeks assembling evidence — pulling documents from three different shared drives, emailing colleagues who own controls they have never formally documented, and discovering, on week two, that the PEP screening provider contract lapsed four months ago. The organisation believed it was compliant with AML obligations because it was compliant at the last audit. Nobody had verified what had changed since then.
+The FCA supervisory visit is six weeks away. The lead compliance officer has spent the last three weeks assembling evidence, pulling documents from three different shared drives, emailing colleagues who own controls they have never formally documented, and discovering, on week two, that the PEP screening provider contract lapsed four months ago. The organisation believed it was compliant with AML obligations because it was compliant at the last audit. Nobody had verified what had changed since then.
 
-This is compliance drift. It does not arrive announced. A regulation changes and the control addressing the old version is never updated. A team member leaves, taking with them the knowledge of how a control works. A software system is upgraded, removing a check that was embedded in the old workflow. The organisation continues operating, continues signing compliance attestations, continues believing it is covered — until something forces a real assessment.
+This is compliance drift. It does not arrive announced. A regulation changes and the control addressing the old version is never updated. A team member leaves, taking with them the knowledge of how a control works. A software system is upgraded, removing a check that was embedded in the old workflow. The organisation continues operating, continues signing compliance attestations, continues believing it is covered, until something forces a real assessment.
 
-The problem is not that organisations ignore compliance. It is that nobody has a complete, current, verified view: every obligation, who owns it, whether the control is effective, what evidence exists to demonstrate it, and when it was last assessed. This lesson teaches you to build that view — systematically, with structured AI assistance, so that the answer is never "we think we comply" but "here is the evidence, dated last month, verified by the named owner."
+The problem is not that organisations ignore compliance. It is that nobody has a complete, current, verified view: every obligation, who owns it, whether the control is effective, what evidence exists to demonstrate it, and when it was last assessed. This lesson teaches you to build that view, systematically, with structured AI assistance, so that the answer is never "we think we comply" but "here is the evidence, dated last month, verified by the named owner."
 
 :::tip Plugin Setup Reminder
 This exercise requires the **Operations** plugin (official) and the **Operations Intelligence** plugin (custom). If you have not installed them, follow the instructions in the [Chapter 38 prerequisites](./README.md#prerequisites) before continuing.
@@ -114,13 +114,13 @@ Every organisation carries three layers of compliance obligations:
 | **Contractual**           | Client SLA obligations, data handling clauses, insurance conditions                | Operations, Legal          |
 | **Standards/Internal**    | ISO certification requirements, board governance commitments, internal policies    | CISO, Board Secretary, COO |
 
-Organisations typically have good awareness of their regulatory layer — there are named owners, compliance teams, and periodic reviews. The contractual and standards layers drift more silently. The client SLA that requires 4-hour P1 incident notification was signed two years ago; the incident response procedure does not mention it. The ISO 27001 surveillance audit requires evidence of annual risk assessment; the risk assessment was completed but filed in a location nobody can now locate.
+Organisations typically have good awareness of their regulatory layer, there are named owners, compliance teams, and periodic reviews. The contractual and standards layers drift more silently. The client SLA that requires 4-hour P1 incident notification was signed two years ago; the incident response procedure does not mention it. The ISO 27001 surveillance audit requires evidence of annual risk assessment; the risk assessment was completed but filed in a location nobody can now locate.
 
 Compliance drift accelerates at three predictable triggers:
 
-1. **Personnel change** — the person who owned a control leaves without documenting it
-2. **Regulatory change** — a regulation updates and the control addressing the old version is not updated
-3. **System change** — a technical upgrade removes a control that was embedded in the old system's workflow
+1. **Personnel change:** the person who owned a control leaves without documenting it
+2. **Regulatory change:** a regulation updates and the control addressing the old version is not updated
+3. **System change:** a technical upgrade removes a control that was embedded in the old system's workflow
 
 The compliance map does not prevent these changes. It makes them visible quickly, so the organisation can respond before a regulator does.
 
@@ -136,7 +136,7 @@ Every obligation in the compliance map carries one of five statuses. The five-st
 | **GAP**             | 🔴     | No effective control; evidence absent or cannot be located; known control failure               | Remediate before next regulatory touchpoint   |
 | **URGENT**          | 🔴     | Active breach likely or confirmed; regulatory deadline within 30 days and gap exists; regulator has signalled review | Stop. Escalate. Act immediately.  |
 
-**The evidence standard for CURRENT status:** "We comply with UK GDPR" is an assertion. "Privacy notice updated [date], ROPA at [location], last reviewed [date] by [DPO]" is evidence. CURRENT status requires cited, locatable evidence — not a declaration of belief. An obligation where the evidence cannot be located must be rated PARTIAL at best, regardless of the organisation's confidence.
+**The evidence standard for CURRENT status:** "We comply with UK GDPR" is an assertion. "Privacy notice updated [date], ROPA at [location], last reviewed [date] by [DPO]" is evidence. CURRENT status requires cited, locatable evidence , not a declaration of belief. An obligation where the evidence cannot be located must be rated PARTIAL at best, regardless of the organisation's confidence.
 
 :::caution Never Mark CURRENT Without Evidence
 The most common compliance map failure is optimistic CURRENT status on obligations where the evidence is assumed to exist but has not been verified. A PARTIAL that is honestly labelled gives you a remediation priority. A CURRENT that is incorrectly labelled gives you false confidence and a regulator surprise.
@@ -144,7 +144,7 @@ The most common compliance map failure is optimistic CURRENT status on obligatio
 
 ## Building the Compliance Obligation Map
 
-The `compliance-tracking` auto-skill activates from keywords like "compliance", "obligations", "regulatory", "control", and "GDPR" in natural-language prompts. You do not type a slash command — you describe what you need and the skill activates automatically.
+The `compliance-tracking` auto-skill activates from keywords like "compliance", "obligations", "regulatory", "control", and "GDPR" in natural-language prompts. You do not type a slash command; you describe what you need and the skill activates automatically.
 
 **Worked example.** You are the Operations Manager at a 200-person UK professional services firm. The firm is regulated by the FCA for investment management activities and is subject to UK GDPR, Companies Act, AML regulations (MLR 2017), and holds ISO 27001 certification. Client contracts include SLA and data handling obligations. You type:
 
@@ -153,7 +153,7 @@ Map our compliance obligations for a UK professional services firm.
 We are subject to:
 - FCA regulation (COBS, SYSC, SM&CR)
 - UK GDPR (Data Protection Act 2018)
-- AML regulations (MLR 2017) — note: our PEP screening provider
+- AML regulations (MLR 2017), note: our PEP screening provider
   contract lapsed 4 months ago; currently screening manually
 - Companies Act 2006 (statutory filings)
 - ISO 27001 (surveillance audit due in 3 months)
@@ -164,7 +164,7 @@ response times (2 responses missed 30-day deadline last quarter),
 and SM&CR annual certification cycle due next month.
 ```
 
-**What to expect:** A structured obligation map organised by framework, with each obligation carrying a status, an owner, a control description, evidence reference, and — where status is not CURRENT — a specific action with owner and deadline.
+**What to expect:** A structured obligation map organised by framework, with each obligation carrying a status, an owner, a control description, evidence reference, and: where status is not CURRENT: a specific action with owner and deadline.
 
 A well-formed compliance map output looks like this:
 
@@ -175,20 +175,20 @@ Organisation: [Firm] | Jurisdiction: UK | Date: [Date]
 
 ── REGULATORY OBLIGATIONS ──────────────────────────────────
 
-FRAMEWORK: FCA — Investment Management (COBS, SYSC, SM&CR)
+FRAMEWORK: FCA, Investment Management (COBS, SYSC, SM&CR)
 
-  OBL-REG-001: Conduct of Business (COBS) — treating customers fairly
+  OBL-REG-001: Conduct of Business (COBS), treating customers fairly
     Owner:     Chief Compliance Officer
     Control:   Client suitability process; complaint management; T&C documentation
     Evidence:  Complaint log; suitability assessments; training records; T&C versions
-    Status:    🟢 CURRENT — last reviewed [date]
+    Status:    🟢 CURRENT, last reviewed [date]
     Next review: [date]
 
-  OBL-REG-002: Senior Manager Regime (SM&CR) — annual certification
+  OBL-REG-002: Senior Manager Regime (SM&CR), annual certification
     Owner:     CEO / Board
     Control:   Approved persons register; responsibilities map; annual certification
     Evidence:  FCA register entries; certification records dated [date]
-    Status:    🟡 REVIEW NEEDED — certification cycle due within 30 days
+    Status:    🟡 REVIEW NEEDED, certification cycle due within 30 days
     Action:    Initiate annual certification by [date]; assign to HR + CCO
 
 FRAMEWORK: UK GDPR (Data Protection Act 2018)
@@ -202,37 +202,37 @@ FRAMEWORK: UK GDPR (Data Protection Act 2018)
   OBL-DPR-002: Data Subject Rights (access, erasure, portability)
     Owner:     DPO + Operations
     Control:   DSR procedure; response tracking; 30-day deadline management
-    Evidence:  DSR log — 2 responses missed 30-day deadline in Q[N]
-    Status:    🟡 PARTIAL — procedure exists but deadline management has gaps
+    Evidence:  DSR log, 2 responses missed 30-day deadline in Q[N]
+    Status:    🟡 PARTIAL, procedure exists but deadline management has gaps
     Action:    Add calendar alerts for approaching DSR deadlines; review procedure
                Owner: DPO | Deadline: [date]
 
 FRAMEWORK: Anti-Money Laundering (MLR 2017)
 
-  OBL-AML-001: Customer Due Diligence (CDD) — PEP/Sanctions Screening
+  OBL-AML-001: Customer Due Diligence (CDD), PEP/Sanctions Screening
     Owner:     MLRO
     Control:   Onboarding KYC process; PEP/sanctions screening
     Evidence:  KYC records current; PEP screening provider contract LAPSED [date]
                Manual screening in place but not validated against provider standards
-    Status:    🔴 URGENT — PEP screening contract expired 4 months ago;
+    Status:    🔴 URGENT, PEP screening contract expired 4 months ago;
                manual process has NOT been validated; HIGH regulatory breach risk
-    Action:    IMMEDIATE — renew PEP screening provider or implement validated
+    Action:    IMMEDIATE, renew PEP screening provider or implement validated
                alternative. Escalate to CCO and COO today.
                Owner: MLRO | Deadline: within 5 business days
 
 ── CONTRACTUAL OBLIGATIONS ─────────────────────────────────
 
-  OBL-CTR-001: Service availability — 99.5% uptime
+  OBL-CTR-001: Service availability, 99.5% uptime
     Owner:     Head of Technology
     Control:   Infrastructure monitoring; incident response; monthly reporting
-    Evidence:  Monthly uptime reports — 99.8% average last quarter
+    Evidence:  Monthly uptime reports, 99.8% average last quarter
     Status:    🟢 CURRENT
 
   OBL-CTR-002: Incident notification — <4hr P1 notification
     Owner:     Operations
     Control:   Incident response procedure; client notification list
-    Evidence:  Incident log — 1 breach last quarter: 6hr notification
-    Status:    🟡 PARTIAL — procedure exists; one breach last quarter
+    Evidence:  Incident log, 1 breach last quarter: 6hr notification
+    Status:    🟡 PARTIAL, procedure exists; one breach last quarter
     Action:    Add automated alert trigger at 2hr mark; review procedure
                Owner: Operations Manager | Deadline: [date]
 
@@ -240,7 +240,7 @@ FRAMEWORK: Anti-Money Laundering (MLR 2017)
 
   OBL-ISO-001: ISO 27001 annual surveillance audit (BSI)
     Owner:     CISO
-    Status:    🟡 REVIEW NEEDED — surveillance audit due in 3 months;
+    Status:    🟡 REVIEW NEEDED, surveillance audit due in 3 months;
                evidence pack assembly not yet started
     Action:    Begin evidence pack assembly; assign Lesson 8 audit prep
 
@@ -251,16 +251,16 @@ FRAMEWORK: Anti-Money Laundering (MLR 2017)
   🔴 GAP / URGENT:            2 (8%)
 
   PRIORITY ACTIONS:
-  1. 🔴 URGENT:  AML PEP screening — renew provider | MLRO | 5 business days
-  2. 🟡 HIGH:    SM&CR certification — initiate process | CEO + CCO | [date]
-  3. 🟡 HIGH:    ISO 27001 — begin evidence pack assembly | CISO | [date]
-  4. 🟡 MEDIUM:  DSR procedure — add deadline alerts | DPO | [date]
-  5. 🟡 MEDIUM:  Incident notification — automate 2hr trigger | Ops Mgr | [date]
+  1. 🔴 URGENT:  AML PEP screening, renew provider | MLRO | 5 business days
+  2. 🟡 HIGH:    SM&CR certification, initiate process | CEO + CCO | [date]
+  3. 🟡 HIGH:    ISO 27001, begin evidence pack assembly | CISO | [date]
+  4. 🟡 MEDIUM:  DSR procedure, add deadline alerts | DPO | [date]
+  5. 🟡 MEDIUM:  Incident notification, automate 2hr trigger | Ops Mgr | [date]
 ════════════════════════════════════════════════════════════
 ```
 
 :::info Why the AML Gap Is Rated URGENT, Not GAP
-The PEP screening provider contract lapsed four months ago. Manual screening is in place — a control exists. But the manual process has not been validated against the standards the provider was meeting. Under MLR 2017, this is not a partial compliance state — it is a potential breach of the CDD obligation. With an FCA supervisory visit approaching, this escalates from GAP to URGENT: active breach risk exists, and the regulator has indicated they will review AML controls.
+The PEP screening provider contract lapsed four months ago. Manual screening is in place: a control exists. But the manual process has not been validated against the standards the provider was meeting. Under MLR 2017, this is not a partial compliance state; it is a potential breach of the CDD obligation. With an FCA supervisory visit approaching, this escalates from GAP to URGENT: active breach risk exists, and the regulator has indicated they will review AML controls.
 :::
 
 ## Evaluating the Compliance Map Output
@@ -269,11 +269,11 @@ The compliance map is only useful if it is honest. Your job when reviewing the o
 
 **What to evaluate:**
 
-- **CURRENT status evidence** — For every obligation marked CURRENT, has the output cited specific, locatable evidence (document name, location, date)? Any CURRENT without a specific evidence citation should be downgraded to REVIEW NEEDED.
-- **Status logic** — Does the AI correctly distinguish PARTIAL (control exists, evidence gaps) from GAP (no effective control)? Check the AML and DSR entries specifically.
-- **Missing frameworks** — Has the output included all the frameworks you specified? Compliance maps commonly omit contractual and standards obligations, focusing only on regulatory ones.
-- **Action specificity** — For every non-CURRENT obligation, does the action identify a named owner, a specific action, and a deadline? "Review compliance" is not an action. "DPO to add calendar alerts for DSR deadlines by [date]" is an action.
-- **Priority logic** — Is the AML gap rated as the highest priority? An URGENT obligation that is buried below REVIEW NEEDED items in the priority list suggests the AI did not apply the regulatory consequence weighting correctly.
+- **CURRENT status evidence:** For every obligation marked CURRENT, has the output cited specific, locatable evidence (document name, location, date)? Any CURRENT without a specific evidence citation should be downgraded to REVIEW NEEDED.
+- **Status logic:** Does the AI correctly distinguish PARTIAL (control exists, evidence gaps) from GAP (no effective control)? Check the AML and DSR entries specifically.
+- **Missing frameworks:** Has the output included all the frameworks you specified? Compliance maps commonly omit contractual and standards obligations, focusing only on regulatory ones.
+- **Action specificity:** For every non-CURRENT obligation, does the action identify a named owner, a specific action, and a deadline? "Review compliance" is not an action. "DPO to add calendar alerts for DSR deadlines by [date]" is an action.
+- **Priority logic:** Is the AML gap rated as the highest priority? An URGENT obligation that is buried below REVIEW NEEDED items in the priority list suggests the AI did not apply the regulatory consequence weighting correctly.
 
 ## Building the Evidence Inventory
 
@@ -296,22 +296,22 @@ has left the organisation.
 
 | Evidence Element      | Red Flag                                                                      |
 | --------------------- | ----------------------------------------------------------------------------- |
-| **Document age**      | Any evidence >12 months old — requires REVIEW NEEDED reassessment             |
-| **Storage location**  | "Someone's local drive" or "the old server" — not accessible under audit      |
-| **Reviewer status**   | Named reviewer has left the organisation — evidence may be unverified         |
+| **Document age**      | Any evidence >12 months old, requires REVIEW NEEDED reassessment             |
+| **Storage location**  | "Someone's local drive" or "the old server", not accessible under audit      |
+| **Reviewer status**   | Named reviewer has left the organisation, evidence may be unverified         |
 | **Version currency**  | Document version predates the last significant regulatory change in the area  |
 
 ## Remediation Planning for Gaps
 
-For GAP and PARTIAL obligations, the compliance map is the starting point — not the deliverable. The deliverable is a prioritised remediation plan that closes the gaps before the next regulatory touchpoint.
+For GAP and PARTIAL obligations, the compliance map is the starting point , not the deliverable. The deliverable is a prioritised remediation plan that closes the gaps before the next regulatory touchpoint.
 
 ```
 Build a remediation plan for the GAP and PARTIAL obligations in our
 compliance map. Prioritise by:
-1. Regulatory consequence — FCA and AML gaps before administrative obligations
-2. Breach risk — obligations where non-compliance is already active
-3. Time sensitivity — obligations with approaching deadlines
-4. Effort to close — quick wins that reduce headline risk fast
+1. Regulatory consequence, FCA and AML gaps before administrative obligations
+2. Breach risk, obligations where non-compliance is already active
+3. Time sensitivity, obligations with approaching deadlines
+4. Effort to close, quick wins that reduce headline risk fast
 
 For each item, provide: action, owner, target date, estimated effort,
 and what CURRENT evidence will look like when complete.
@@ -321,31 +321,31 @@ and what CURRENT evidence will look like when complete.
 
 | Priority | Criterion                                                              | Example from worked case          |
 | -------- | ---------------------------------------------------------------------- | --------------------------------- |
-| P1       | Active breach risk + regulatory enforcement consequence                | AML PEP screening — URGENT        |
-| P2       | Regulatory deadline approaching + significant gap                      | SM&CR certification — 30 days     |
-| P3       | Audit approaching + evidence pack incomplete                           | ISO 27001 — 3 months to audit     |
+| P1       | Active breach risk + regulatory enforcement consequence                | AML PEP screening, URGENT        |
+| P2       | Regulatory deadline approaching + significant gap                      | SM&CR certification, 30 days     |
+| P3       | Audit approaching + evidence pack incomplete                           | ISO 27001, 3 months to audit     |
 | P4       | Partial controls + evidence gaps + no immediate deadline               | DSR procedure, incident alerts    |
 
 :::note Keep This File
-The compliance obligation map you build here feeds directly into two later lessons. **Lesson 8 (Audit Preparation)** uses this map as the foundation for your evidence inventory and audit preparation plan — the audit preparation prompt begins: "Use the compliance map from Lesson 7 as your starting point." **Lesson 12 (Persistent Agents)** deploys a compliance-monitor agent that tracks these obligations continuously, alerting you when review dates are due and evidence is aging. Keep this Cowork session open.
+The compliance obligation map you build here feeds directly into two later lessons. **Lesson 8 (Audit Preparation)** uses this map as the foundation for your evidence inventory and audit preparation plan: the audit preparation prompt begins: "Use the compliance map from Lesson 7 as your starting point." **Lesson 12 (Persistent Agents)** deploys a compliance-monitor agent that tracks these obligations continuously, alerting you when review dates are due and evidence is aging. Keep this Cowork session open.
 :::
 
-## Exercise: Map Compliance Obligations (Exercise 4 — Part 1)
+## Exercise: Map Compliance Obligations (Exercise 4, Part 1)
 
 **Type:** Compliance management
 **Time:** 45 minutes
-**Plugin skill:** Official `compliance-tracking` auto-skill (activated by natural prompts — no slash command)
+**Plugin skill:** Official `compliance-tracking` auto-skill (activated by natural prompts; no slash command)
 **Goal:** A complete compliance obligation map for a UK professional services firm, with five-status classification, an evidence inventory for CURRENT obligations, and a prioritised remediation plan for gaps
 
-### Step 1 — Define Your Compliance Landscape
+### Step 1: Define Your Compliance Landscape
 
 You are the Operations Manager at a 200-person UK professional services firm. The firm is subject to:
 
-- **FCA regulation** — if the firm provides investment advice or manages investments; if not, use Companies Act 2006 as the primary regulatory framework
-- **UK GDPR** (DPA 2018) — data protection obligations for client and employee data
-- **AML regulations** (MLR 2017) — if financial services; or substitute sector-relevant AML equivalent
-- **ISO 27001** — the firm holds certification; surveillance audit is due in 3 months
-- **Client SLAs** — 99.5% uptime, &lt;4hr P1 incident notification, quarterly reporting
+- **FCA regulation:** if the firm provides investment advice or manages investments; if not, use Companies Act 2006 as the primary regulatory framework
+- **UK GDPR** (DPA 2018), data protection obligations for client and employee data
+- **AML regulations** (MLR 2017); if financial services; or substitute sector-relevant AML equivalent
+- **ISO 27001:** the firm holds certification; surveillance audit is due in 3 months
+- **Client SLAs:** 99.5% uptime, &lt;4hr P1 incident notification, quarterly reporting
 
 Before prompting, assess your known gaps honestly. For this exercise, assume:
 
@@ -353,7 +353,7 @@ Before prompting, assess your known gaps honestly. For this exercise, assume:
 - Two DSR responses missed the 30-day deadline last quarter
 - SM&CR annual certification cycle is due within 30 days
 
-### Step 2 — Run the Compliance Mapping Prompt
+### Step 2: Run the Compliance Mapping Prompt
 
 ```
 Map our compliance obligations for a UK professional services firm.
@@ -377,17 +377,17 @@ action with named owner and deadline.
 Include a compliance dashboard with total counts and priority actions.
 ```
 
-### Step 3 — Evaluate the Output
+### Step 3: Evaluate the Output
 
 **What to evaluate:**
 
-- Has the output identified any obligations you did not specify? (A well-calibrated compliance map for an FCA-regulated firm should include COBS, SYSC, SM&CR, and any Consumer Duty obligations — not just the ones you listed.)
-- Is every CURRENT obligation accompanied by specific, locatable evidence — not just an assertion of compliance?
+- Has the output identified any obligations you did not specify? (A well-calibrated compliance map for an FCA-regulated firm should include COBS, SYSC, SM&CR, and any Consumer Duty obligations , not just the ones you listed.)
+- Is every CURRENT obligation accompanied by specific, locatable evidence , not just an assertion of compliance?
 - Is the AML PEP screening gap correctly classified as URGENT (not merely GAP or PARTIAL)? If the AI has classified it as PARTIAL, push back: "The PEP screening gap has been open for 4 months with no validated alternative. Reassess as URGENT given the FCA visit timeline."
 - Does the compliance dashboard total match the obligation count in the map?
-- Are the priority actions in the correct order — regulatory breach risk first, administrative gaps last?
+- Are the priority actions in the correct order, regulatory breach risk first, administrative gaps last?
 
-### Step 4 — Build the Evidence Inventory
+### Step 4: Build the Evidence Inventory
 
 For the CURRENT obligations in your map, run a second prompt:
 
@@ -404,7 +404,7 @@ non-accessible location, or where the reviewer has left.
 
 Review the output: does it reveal any CURRENT obligations where the evidence is older than expected, stored in a location that may not be accessible, or associated with a reviewer who has since left?
 
-### Step 5 — Prioritise the Remediation Plan
+### Step 5: Prioritise the Remediation Plan
 
 Run a third prompt:
 
@@ -416,7 +416,7 @@ owner, specific action, target completion date, and what completed
 evidence will look like.
 ```
 
-**Deliverable:** A completed compliance obligation map with five-status classification, an evidence inventory confirming CURRENT obligation evidence is locatable and current, and a prioritised remediation plan for all non-CURRENT obligations. Save this Cowork session — you will use this map in Lesson 8 (Audit Preparation).
+**Deliverable:** A completed compliance obligation map with five-status classification, an evidence inventory confirming CURRENT obligation evidence is locatable and current, and a prioritised remediation plan for all non-CURRENT obligations. Save this Cowork session; you will use this map in Lesson 8 (Audit Preparation).
 
 ## Try With AI
 
@@ -426,9 +426,9 @@ evidence will look like.
 ```
 Map our compliance obligations for a small UK technology startup.
 We are subject to:
-- UK GDPR — we handle customer personal data
-- Companies Act 2006 — statutory filings and director duties
-- ISO 27001 — we are pursuing certification (not yet certified)
+- UK GDPR; we handle customer personal data
+- Companies Act 2006, statutory filings and director duties
+- ISO 27001; we are pursuing certification (not yet certified)
 
 We have 3 staff members who each "own" multiple compliance areas.
 Known gaps: our ROPA (Record of Processing Activities) has not been
@@ -439,7 +439,7 @@ Map our obligations with owner, control, evidence, and status.
 Include a compliance dashboard and prioritised actions.
 ```
 
-**What you are learning:** Applying the obligation map to a simpler scenario builds the pattern before tackling a complex regulated environment. Notice how even a three-person startup with basic obligations will typically surface 10-15 items — and how the ROPA and privacy notice gaps immediately show as PARTIAL or REVIEW NEEDED.
+**What you are learning:** Applying the obligation map to a simpler scenario builds the pattern before tackling a complex regulated environment. Notice how even a three-person startup with basic obligations will typically surface 10-15 items , and how the ROPA and privacy notice gaps immediately show as PARTIAL or REVIEW NEEDED.
 
 **Adapt**: Modify the scenario to match your organisation.
 
@@ -457,7 +457,7 @@ Flag any obligation where the status should be URGENT or GAP.
 Include a compliance dashboard and prioritised remediation actions.
 ```
 
-**What you are learning:** The act of writing out your known gaps honestly — before the AI responds — is itself a compliance discipline. It forces you to acknowledge what you know is not current, rather than allowing the map to reflect only what you want to believe.
+**What you are learning:** The act of writing out your known gaps honestly, before the AI responds: is itself a compliance discipline. It forces you to acknowledge what you know is not current, rather than allowing the map to reflect only what you want to believe.
 
 **Apply**: Extend to a new situation the lesson didn't cover directly.
 
@@ -477,7 +477,7 @@ Draft the board-level compliance status report. It should be:
   compliance specialists
 ```
 
-**What you are learning:** Translating a detailed obligation map into board-level communication is a distinct skill from building the map itself. The board does not need to see every obligation — they need to understand the overall posture, the top risks, and whether the organisation is moving in the right direction. This prompt tests whether you can make that translation.
+**What you are learning:** Translating a detailed obligation map into board-level communication is a distinct skill from building the map itself. The board does not need to see every obligation; they need to understand the overall posture, the top risks, and whether the organisation is moving in the right direction. This prompt tests whether you can make that translation.
 :::
 
 ## Flashcards Study Aid
@@ -486,4 +486,4 @@ Draft the board-level compliance status report. It should be:
 
 ---
 
-Continue to [Lesson 8: Audit Preparation — Evidence and Mock Review →](./08-audit-preparation-evidence-mock-review.md)
+Continue to [Lesson 8: Audit Preparation: Evidence and Mock Review →](./08-audit-preparation-evidence-mock-review.md)

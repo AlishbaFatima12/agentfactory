@@ -57,7 +57,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (live defence without AI, counter-argument response, chapter-level reflection) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (live defence without AI, counter-argument response, chapter-level reflection) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "After writing your 200-word response to the strongest counter-argument, feed your response back to AI and ask it to attack your defence. Write a second 200-word response to this counter-counter-argument."
@@ -68,18 +68,18 @@ teaching_guide:
   session_group: 1
   session_title: "Live Defence"
   key_points:
-    - "The live defence is where outsourced thinking collapses — students who genuinely thought through their analysis can defend it; those who copied AI cannot"
+    - "The live defence is where outsourced thinking collapses: students who genuinely thought through their analysis can defend it; those who copied AI cannot"
     - "The combination of human questioning (unpredictable) and AI counter-arguments (systematic) tests thinking from every angle"
-    - "The chapter reflection is not busywork — it is where students consolidate their learning about question formulation as a skill"
+    - "The chapter reflection is not busywork: it is where students consolidate their learning about question formulation as a skill"
   misconceptions:
-    - "Students think the defence is about having the right answer — it is about being able to explain and justify their reasoning process"
+    - "Students think the defence is about having the right answer: it is about being able to explain and justify their reasoning process"
     - "Students treat AI counter-arguments as attacks to survive rather than opportunities to strengthen their thinking"
   discussion_prompts:
     - "What was the hardest question you received during your defence? Why was it hard?"
     - "Did the AI counter-arguments attack the same weaknesses your peers identified, or different ones?"
   teaching_tips:
     - "Brief panelists to ask 'why' and 'what would change your mind' questions rather than factual recall questions"
-    - "Time the defence strictly — 10 minutes forces focused, direct answers rather than rambling deflection"
+    - "Time the defence strictly: 10 minutes forces focused, direct answers rather than rambling deflection"
   assessment_quick_check:
     - "Can the student explain the single biggest weakness in their own analysis without prompting?"
     - "Does the 200-word counter-argument response address the specific attack or deflect to a different point?"
@@ -93,31 +93,31 @@ This exercise uses the analysis you wrote in [Exercise 3 (The Divergence Test)](
 
 ### What You Do
 
-#### Phase 1 — Live Defence (no AI access)
+#### Phase 1 . Live Defence (no AI access)
 
-**Step 1 — Present to your peer panel.** Form a panel of 3-4 students. Present your analysis from Exercise 3. The panel has 10 minutes to question you: Why did you ask this question and not that one? What would change your diagnosis? Where did AI help and where did it mislead you? You may not use any AI tools during this phase.
+**Step 1. Present to your peer panel.** Form a panel of 3-4 students. Present your analysis from Exercise 3. The panel has 10 minutes to question you: Why did you ask this question and not that one? What would change your diagnosis? Where did AI help and where did it mislead you? You may not use any AI tools during this phase.
 
-**Step 2 — Collect peer feedback.** Each panelist fills out a feedback form noting 2 strengths and 2 weaknesses they observed in your defence.
+**Step 2. Collect peer feedback.** Each panelist fills out a feedback form noting 2 strengths and 2 weaknesses they observed in your defence.
 
 :::tip Solo Learner Alternative
 Submit your analysis to AI with this prompt: "You are a tough but fair examiner. Ask me 5 challenging questions about my analysis, one at a time. Wait for my response before asking the next question. Challenge weak answers. Do not let me off easy." Conduct the full Q&A exchange in a single conversation. Submit the complete transcript as your defence record in place of the peer feedback form. Then proceed with Phase 2.
 :::
 
-#### Phase 2 — AI Counter-Arguments
+#### Phase 2 . AI Counter-Arguments
 
-**Step 3 — Generate counter-arguments.** Paste your analysis into the AICheck below. The AI will generate the 3 strongest counter-arguments to your work and identify your biggest blind spot.
+**Step 3. Generate counter-arguments.** Paste your analysis into the AICheck below. The AI will generate the 3 strongest counter-arguments to your work and identify your biggest blind spot.
 
-**Step 4 — Respond to the strongest attack (200 words).** Read all 3 counter-arguments. Pick the strongest one — the one that genuinely threatens your analysis — and write a 200-word response defending your position with specific evidence and reasoning. Do not deflect to a different point; address the attack directly.
+**Step 4. Respond to the strongest attack (200 words).** Read all 3 counter-arguments. Pick the strongest one (the one that genuinely threatens your analysis) and write a 200-word response defending your position with specific evidence and reasoning. Do not deflect to a different point; address the attack directly.
 
-#### Phase 3 — Chapter Reflection
+#### Phase 3 . Chapter Reflection
 
-**Step 5 — Write your final reflection (150 words).** Looking back across all four exercises in this chapter, answer: What would you change about your question formulation process? What did you learn about your own thinking habits?
+**Step 5. Write your final reflection (150 words).** Looking back across all four exercises in this chapter, answer: What would you change about your question formulation process? What did you learn about your own thinking habits?
 
 ---
 
 :::info Your Deliverable
 
-1. Peer feedback form (each panelist: 2 strengths + 2 weaknesses) — or solo learner Q&A transcript
+1. Peer feedback form (each panelist: 2 strengths + 2 weaknesses); or solo learner Q&A transcript
 2. Your 200-word response to the strongest AI counter-argument
 3. Your 150-word chapter reflection on question formulation growth
    :::
@@ -187,7 +187,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that understanding your own work is completely different from producing it. The live defence exposes whether you truly thought through your analysis or outsourced it to AI. The AI counter-arguments then push you further — can you defend your position against systematic attack? The combination of human questioning (unpredictable) and AI counter-arguments (systematic) tests your thinking from every angle.
+You learn that understanding your own work is completely different from producing it. The live defence exposes whether you truly thought through your analysis or outsourced it to AI. The AI counter-arguments then push you further; can you defend your position against systematic attack? The combination of human questioning (unpredictable) and AI counter-arguments (systematic) tests your thinking from every angle.
 
 ---
 

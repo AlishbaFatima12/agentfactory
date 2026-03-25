@@ -55,7 +55,7 @@ teaching_guide:
     - "If you could go back and redo one chapter to improve your weakest dimension, which would it be?"
   teaching_tips:
     - "Have students share their strongest improvement and biggest remaining gap in pairs -- hearing others' growth patterns normalizes the experience and creates closure"
-    - "Explicitly connect the Growth Map to Part 1: 'When you evaluate an AI architecture in Part 5, you will use the same Reasoning Depth skill measured here. When you decide between two deployment strategies, you will use Chapter 9's Decision Audit'"
+    - "Explicitly connect the Growth Map to Part 1: 'When you evaluate an AI architecture in Part 6, you will use the same Reasoning Depth skill measured here. When you decide between two deployment strategies, you will use Chapter 9's Decision Audit'"
     - "This is the final lesson in Part 0. End with the closing quote and a moment of transition. Students should feel equipped, not finished"
   assessment_quick_check:
     - "Verify every student has a completed Growth Map with all five dimensions filled in before moving to Part 1"

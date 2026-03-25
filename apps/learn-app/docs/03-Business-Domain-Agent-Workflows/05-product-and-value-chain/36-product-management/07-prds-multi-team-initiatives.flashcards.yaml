@@ -38,7 +38,7 @@ cards:
 
   - id: "ch36-07-prds-multi-team-initiatives-006"
     front: "What is the custom product-strategy plugin command for generating a PRD?"
-    back: "/prd — from the custom product-strategy plugin. Different from the official product-management plugin's /write-spec, which generates individual feature specs."
+    back: "/prd: from the custom product-strategy plugin. Different from the official product-management plugin's /write-spec, which generates individual feature specs."
     tags: ["custom-product-strategy", "product-strategy-plugin", "product-strategy"]
     difficulty: "basic"
 
@@ -50,7 +50,7 @@ cards:
 
   - id: "ch36-07-prds-multi-team-initiatives-008"
     front: "Why must the engineering lead sign off on Section 6 (Technical Architecture Notes)?"
-    back: "A PRD with unconfirmed architecture notes has an unverified technical foundation. The most common cause of PRD-to-sprint failures is discovering architectural constraints after APPROVED status — when the initiative is fully committed."
+    back: "A PRD with unconfirmed architecture notes has an unverified technical foundation. The most common cause of PRD-to-sprint failures is discovering architectural constraints after APPROVED status: when the initiative is fully committed."
     tags: ["engineering-lead", "lead-sign", "section"]
     difficulty: "intermediate"
 
@@ -68,7 +68,7 @@ cards:
 
   - id: "ch36-07-prds-multi-team-initiatives-011"
     front: "What is the NEVER DO rule about PRD success metrics?"
-    back: "NEVER define success metrics after launch — they must be in the PRD before the first sprint starts. Post-launch metric definition allows rationalisation of results rather than measurement against a pre-committed standard."
+    back: "NEVER define success metrics after launch: they must be in the PRD before the first sprint starts. Post-launch metric definition allows rationalisation of results rather than measurement against a pre-committed standard."
     tags: ["prd-success", "success-metrics", "never"]
     difficulty: "intermediate"
 

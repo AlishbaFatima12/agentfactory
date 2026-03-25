@@ -23,7 +23,7 @@ skills:
     category: "Conceptual"
     bloom_level: "Analyze"
     digcomp_area: "Critical Thinking"
-    measurable_at_this_level: "Student can identify the base constraints of a novel problem — facts that are true regardless of the approach chosen — and distinguish them from assumptions"
+    measurable_at_this_level: "Student can identify the base constraints of a novel problem: facts that are true regardless of the approach chosen: and distinguish them from assumptions"
 
   - name: "First Principles Solution Design"
     proficiency_level: "A1"
@@ -45,10 +45,10 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 4
-  assessment: "4 concepts (base constraints vs. assumptions, derivation chains, novel problem solving without references, human-AI solution comparison) — within Part 0 beginner range of 3-5"
+  assessment: "4 concepts (base constraints vs. assumptions, derivation chains, novel problem solving without references, human-AI solution comparison) : within Part 0 beginner range of 3-5"
 
 differentiation:
-  extension_for_advanced: "After comparing your solution with AI's, identify the philosophical assumptions underlying each approach. Your solution likely optimizes for one definition of 'fairness' while AI optimizes for another — name both and argue for yours"
+  extension_for_advanced: "After comparing your solution with AI's, identify the philosophical assumptions underlying each approach. Your solution likely optimizes for one definition of 'fairness' while AI optimizes for another: name both and argue for yours"
   remedial_for_struggling: "Start by listing 5 facts about the problem that are undeniably true. These are your base constraints. Then ask: given ONLY these facts, what must any solution include? Build from there"
 
 teaching_guide:
@@ -56,20 +56,20 @@ teaching_guide:
   session_group: 4
   session_title: "First Principles vs. AI"
   key_points:
-    - "This is a 45-minute, no-AI, no-internet exercise — students must derive a solution from nothing but the problem statement and their own reasoning"
-    - "The First Principles Worksheet structure (constraints, assumptions, derivation chain, solution) is the key deliverable format — it makes reasoning visible and auditable"
+    - "This is a 45-minute, no-AI, no-internet exercise: students must derive a solution from nothing but the problem statement and their own reasoning"
+    - "The First Principles Worksheet structure (constraints, assumptions, derivation chain, solution) is the key deliverable format: it makes reasoning visible and auditable"
     - "Comparing against AI reveals whether the student produced genuine first-principles thinking or unconsciously borrowed familiar patterns"
     - "The constraint identification skill becomes foundational for every design and architecture decision in the rest of the book"
   misconceptions:
-    - "Students confuse constraints with assumptions — constraints are true regardless of approach (limited supply), assumptions are choices (equal access is fairest)"
-    - "Students jump to solutions without documenting the derivation chain — the chain IS the exercise, not the solution"
-    - "Students think 'novel problem' means there is no good answer — there are many good answers, each following from different constraint prioritization"
+    - "Students confuse constraints with assumptions: constraints are true regardless of approach (limited supply), assumptions are choices (equal access is fairest)"
+    - "Students jump to solutions without documenting the derivation chain: the chain IS the exercise, not the solution"
+    - "Students think 'novel problem' means there is no good answer: there are many good answers, each following from different constraint prioritization"
   discussion_prompts:
     - "How did your solution differ from AI's? Can you trace the difference back to a specific constraint or assumption where you diverged?"
     - "Was your solution more original than AI's, or did you unconsciously reproduce a common pattern? How can you tell the difference?"
   teaching_tips:
-    - "Enforce the 45-minute time limit and no-tool constraint — the discomfort of reasoning from nothing is the pedagogical point"
-    - "The First Principles Worksheet template helps students who freeze when faced with a blank page — provide it at the start"
+    - "Enforce the 45-minute time limit and no-tool constraint: the discomfort of reasoning from nothing is the pedagogical point"
+    - "The First Principles Worksheet template helps students who freeze when faced with a blank page: provide it at the start"
     - "After the exercise, compare 3-4 student solutions. The divergence between them (vs. AI's convergent output) demonstrates the Divergence Test principle"
   assessment_quick_check:
     - "Ask students to state their derivation chain in 3 sentences: From constraint X and assumption Y, it follows that Z. Therefore, the solution must include W."
@@ -187,7 +187,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn what it feels like to reason from nothing — no patterns to borrow, no AI to lean on. Comparing your solution to AI's reveals whether you produced genuine first-principles thinking or unconsciously borrowed familiar patterns. The constraint identification skill becomes foundational for every design and architecture decision in the rest of the book.
+You learn what it feels like to reason from nothing; no patterns to borrow, no AI to lean on. Comparing your solution to AI's reveals whether you produced genuine first-principles thinking or unconsciously borrowed familiar patterns. The constraint identification skill becomes foundational for every design and architecture decision in the rest of the book.
 
 ## Flashcards Study Aid
 

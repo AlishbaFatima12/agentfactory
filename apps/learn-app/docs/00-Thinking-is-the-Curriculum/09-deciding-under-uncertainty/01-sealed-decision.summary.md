@@ -1,6 +1,6 @@
 ### Core Concept
 
-Deciding under uncertainty is a skill, not a guess. The quality of your decision comes from calibrated confidence, ranked information gaps, and specific reversal triggers — not from having all the data.
+Deciding under uncertainty is a skill, not a guess. The quality of your decision comes from calibrated confidence, ranked information gaps, and specific reversal triggers; not from having all the data.
 
 ### Key Mental Models
 
@@ -18,10 +18,10 @@ Deciding under uncertainty is a skill, not a guess. The quality of your decision
 ### Common Mistakes
 
 - Writing vague reversal triggers ("I'd change if things get worse") instead of testable ones ("I'd change if Q3 revenue drops below $2M")
-- Treating low confidence as a sign of a bad decision — sometimes 55% is the best anyone can do with the data available
+- Treating low confidence as a sign of a bad decision; sometimes 55% is the best anyone can do with the data available
 - Listing missing information by category (more market data, more customer data) instead of by how much it would change the decision
 
 ### Connections
 
 - **Builds on**: Prediction Lock (Chapter 1), Confidence Calibration (Chapter 2), Assumption Autopsy (Chapter 4)
-- **Leads to**: AI Consultation (Exercise 2), Information Drop (Exercise 3), and Decision Audit (Exercise 4) — all using the same scenario
+- **Leads to**: AI Consultation (Exercise 2), Information Drop (Exercise 3), and Decision Audit (Exercise 4); all using the same scenario

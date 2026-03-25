@@ -289,7 +289,7 @@ The agent routes through `aml-cdd-edd` and `kyc-risk-rating` to produce a risk c
 | EDD requirements        | Lists the additional due diligence steps required                        | Senior management approval, source of wealth, beneficial ownership chain, enhanced monitoring |
 
 :::note Your output will vary
-The specific risk factors depend on the customer profile you provide. The teaching point is the classification methodology — any single EDD trigger mandates enhanced due diligence, and the agent identifies triggers but the human makes the onboarding accept/reject decision.
+The specific risk factors depend on the customer profile you provide. The teaching point is the classification methodology: any single EDD trigger mandates enhanced due diligence, and the agent identifies triggers but the human makes the onboarding accept/reject decision.
 :::
 
 Rachel reviews the PEP screening result against her bank's PEP database and confirms the risk rating, then escalates the file to senior management for the onboarding approval decision -- which the agent cannot make.

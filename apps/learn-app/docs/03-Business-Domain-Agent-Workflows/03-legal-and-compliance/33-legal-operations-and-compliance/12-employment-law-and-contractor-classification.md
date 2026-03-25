@@ -110,7 +110,7 @@ enforceable and compliant in both jurisdictions.
 | Holistic risk summary                          | Overall recommendation with negotiation priority                                  | Should recommend escalation if structural issues (no local entity) create non-compliance from day one                         |
 
 :::note Your output will vary
-The specific clauses flagged and the applicable employment statutes depend on the jurisdictions involved. Focus on whether the agent identifies mandatory statutory protections in the employee's jurisdiction and treats them as non-negotiable — unlike commercial contracts where every clause is potentially negotiable. The teaching point is that employment contracts trigger an entirely different set of RED flags because they intersect with mandatory statutory protections that do not exist in commercial law.
+The specific clauses flagged and the applicable employment statutes depend on the jurisdictions involved. Focus on whether the agent identifies mandatory statutory protections in the employee's jurisdiction and treats them as non-negotiable: unlike commercial contracts where every clause is potentially negotiable. The teaching point is that employment contracts trigger an entirely different set of RED flags because they intersect with mandatory statutory protections that do not exist in commercial law.
 :::
 
 Compare this output to the vendor contract review you ran in Lesson 3. The CloudStack SaaS review flagged a limitation of liability cap and an auto-renewal clause. This employment review flags employer registration, tax withholding, and non-compete enforceability. The difference is not complexity -- it is category. Employment contracts trigger an entirely different set of RED flags because they intersect with mandatory statutory protections that do not exist in commercial law.
@@ -282,4 +282,4 @@ Where do you disagree, and what additional facts would resolve
 the disagreement?
 ```
 
-**What you are learning:** Contractor classification is one of the highest-risk areas in employment law because the consequences of getting it wrong — back taxes, benefits liability, penalties — are severe and retroactive. The agent applies the jurisdiction's legal test, but classification ultimately depends on the reality of the working relationship, not the contract language. Your judgment about the actual working arrangement is information the agent cannot access.
+**What you are learning:** Contractor classification is one of the highest-risk areas in employment law because the consequences of getting it wrong: back taxes, benefits liability, penalties: are severe and retroactive. The agent applies the jurisdiction's legal test, but classification ultimately depends on the reality of the working relationship, not the contract language. Your judgment about the actual working arrangement is information the agent cannot access.

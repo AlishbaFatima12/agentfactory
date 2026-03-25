@@ -56,22 +56,22 @@ teaching_guide:
   session_group: 3
   session_title: "Skills Architecture and Hands-On Practice"
   key_points:
-    - "The description field in YAML frontmatter is the single most important line — it determines when Claude activates the skill automatically"
+    - "The description field in YAML frontmatter is the single most important line; it determines when Claude activates the skill automatically"
     - "The description formula (action verb + input type + output type + trigger conditions) gives students a repeatable pattern for every skill they build"
     - "The co-learning cycle (AI as Teacher suggesting improvements, Student as Teacher specifying constraints) is the Three Roles Framework applied to skill creation"
-    - "skill-creator is a meta-skill — a skill that creates other skills — and most students should use it rather than writing SKILL.md from scratch"
+    - "skill-creator is a meta-skill; a skill that creates other skills; and most students should use it rather than writing SKILL.md from scratch"
   misconceptions:
-    - "Students write descriptions that are too vague ('helps with notes') or too narrow ('summarizes Zoom meetings from marketing') — walk through the good vs bad examples explicitly"
-    - "Students think the first version of a skill should be perfect — the co-learning cycle section explicitly teaches that iteration is the expected workflow"
-    - "Students skip YAML frontmatter and write only the markdown body — emphasize that without frontmatter, Claude cannot discover or auto-activate the skill"
+    - "Students write descriptions that are too vague ('helps with notes') or too narrow ('summarizes Zoom meetings from marketing'); walk through the good vs bad examples explicitly"
+    - "Students think the first version of a skill should be perfect; the co-learning cycle section explicitly teaches that iteration is the expected workflow"
+    - "Students skip YAML frontmatter and write only the markdown body; emphasize that without frontmatter, Claude cannot discover or auto-activate the skill"
   discussion_prompts:
-    - "You mapped a personal procedure in Lesson 07 — what was hardest about translating your implicit knowledge into explicit written instructions?"
-    - "The lesson shows AI suggesting SEO considerations and word count targets — when should you accept AI suggestions vs override with your own constraints?"
-    - "If you shared your skill with 10 classmates, what would break first — the instructions, the description, or the examples?"
+    - "You mapped a personal procedure in Lesson 07; what was hardest about translating your implicit knowledge into explicit written instructions?"
+    - "The lesson shows AI suggesting SEO considerations and word count targets; when should you accept AI suggestions vs override with your own constraints?"
+    - "If you shared your skill with 10 classmates, what would break first; the instructions, the description, or the examples?"
   teaching_tips:
-    - "Have students write a description BEFORE reading the formula, then rewrite it using the formula — the before/after comparison is powerful"
-    - "The blog-planner example in Step 2 is complete and copy-pasteable — use it as a live demo, then have students modify it for their own domain"
-    - "Run the co-learning cycle live: have a student share their skill, then ask Claude to review it in front of the class — the suggestions are always insightful"
+    - "Have students write a description BEFORE reading the formula, then rewrite it using the formula; the before/after comparison is powerful"
+    - "The blog-planner example in Step 2 is complete and copy-pasteable; use it as a live demo, then have students modify it for their own domain"
+    - "Run the co-learning cycle live: have a student share their skill, then ask Claude to review it in front of the class; the suggestions are always insightful"
     - "Pair students for the refinement section: one plays 'AI as Teacher' (suggesting improvements) while the other plays 'Student as Teacher' (specifying constraints)"
   assessment_quick_check:
     - "Write a one-sentence skill description using the formula: action verb + input + output + trigger conditions"
@@ -101,7 +101,7 @@ You've experienced skills in action. You've mapped a procedure worth encoding. N
 
 ![skills-strategic-value](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-05/skills-strategic-value.png)
 
-This lesson takes you from understanding skills to creating them. By the end, you'll have a working skill in your `.claude/skills/` folder—and know how to use Claude itself to create more.
+This lesson takes you from understanding skills to creating them. By the end, you'll have a working skill in your `.claude/skills/` folder: and know how to use Claude itself to create more.
 
 :::tip Markdown Refresher
 Skills are written in Markdown with YAML frontmatter. If you're not comfortable with headings, bullet points, code blocks, or YAML syntax, take 15 minutes to review **Chapter 13: Markdown for AI-Native Development** before continuing. You'll write better skills with that foundation.
@@ -118,7 +118,7 @@ Every skill lives in a folder. The folder contains one required file: `SKILL.md`
 └── SKILL.md    ← This is what you create
 ```
 
-That's it. A skill can be a single markdown file. The simplicity is intentional—anyone can create one.
+That's it. A skill can be a single markdown file. The simplicity is intentional: anyone can create one.
 
 ### The Two Parts of SKILL.md
 
@@ -170,13 +170,29 @@ Brief bullets, not transcription.
 
 That's a complete skill. No scripts required. No complex setup. Just clear instructions in a format Claude can read.
 
+:::caution Skills with Side Effects
+If your skill performs actions with real-world consequences (deploying code, sending messages, committing to git), add `disable-model-invocation: true` to the YAML frontmatter:
+
+```yaml
+---
+name: "deploy-production"
+description: "Deploy the current branch to production..."
+disable-model-invocation: true
+---
+```
+
+Without this flag, Claude may auto-trigger the skill whenever your conversation matches its description. For a deploy skill, that means an accidental production deployment. With the flag set, only you can invoke it (by typing `/deploy-production`).
+
+A related field, `user-invocable: false`, hides a skill from the `/` menu entirely. Use this for background-knowledge skills that should inform Claude's behavior without appearing as commands.
+:::
+
 ---
 
 ## The Fast Way: Let Claude Build Your Skill
 
 Here's the power move: use Claude to create skills for you.
 
-Remember the Skills Lab you downloaded in Lesson 07? It includes a `skill-creator` skill—a meta-skill for creating other skills.
+Remember the Skills Lab you downloaded in Lesson 07? It includes a `skill-creator` skill: a meta-skill for creating other skills.
 
 From the skills lab directory:
 
@@ -207,7 +223,7 @@ Use the skill-creator to build this into a proper skill.
 
 The skill-creator guides you through understanding your procedure, writing effective descriptions, and generating a complete SKILL.md file. **This is how most people should create skills.**
 
-The rest of this lesson teaches you what's happening under the hood—useful for refining skills and understanding why they work.
+The rest of this lesson teaches you what's happening under the hood: useful for refining skills and understanding why they work.
 
 ---
 
@@ -425,14 +441,24 @@ What's different? Should we update the skill to match my real style?
 
 ---
 
+:::note Commands and Skills Are Now the Same System
+If you encounter references to `.claude/commands/` files (in older tutorials or this book's later chapters), those work the same way as skills. A file at `.claude/commands/deploy.md` and a skill at `.claude/skills/deploy/SKILL.md` both create a `/deploy` command. The commands directory was merged into the skills system, so you only need to learn one approach.
+:::
+
+:::tip Skill Budget: When Skills Get Excluded
+If you install many skills, Claude may not discover all of them. Skill descriptions share a character budget (roughly 2% of the context window). When the budget fills up, some skills are silently excluded.
+
+Run `/context` to check if any skills were dropped. If you see a warning about excluded skills, consider removing unused ones or shortening descriptions.
+:::
+
 ## The Bigger Picture
 
-Skills you create now become building blocks for larger systems. In Part 6, you'll build **Custom Agents** using SDKs—and skills you create here integrate directly into those agents. **Skills are reusable intellectual property** that compound in value.
+Skills you create now become building blocks for larger systems. In Part 6, you'll build **Custom Agents** using SDKs, and skills you create here integrate directly into those agents. **Skills are reusable intellectual property** that compound in value.
 
 ---
 
 :::tip Ready to Practice?
-Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that take you from writing your first skills to building complete skill suites — with one-click exercise downloads and step-by-step guidance.
+Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that take you from writing your first skills to building complete skill suites; with one-click exercise downloads and step-by-step guidance.
 :::
 
 ---
@@ -443,7 +469,7 @@ Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that tak
 
 > "I have a procedure I want to encode as a skill: [describe your procedure from Lesson 07]. Walk me through creating a SKILL.md file. Help me write: (1) an effective description that triggers at the right times, (2) clear instructions Claude can follow, (3) quality criteria that match my standards, (4) an example input/output."
 
-**What you're learning:** The complete skill creation workflow—from procedure to SKILL.md. This is the hands-on application of Lesson 08's architecture.
+**What you're learning:** The complete skill creation workflow: from procedure to SKILL.md. This is the hands-on application of Lesson 08's architecture.
 
 **Use Skill-Creator:**
 
@@ -462,7 +488,6 @@ Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that tak
 > "I work on [describe your project type]. Help me identify 3-5 skills I should create that would work together. For each skill, suggest: what it does, when it activates, and how it complements the others."
 
 **What you're learning:** How to think in skill ecosystems, not isolated tools. Skills that complement each other create more value than skills that work alone.
-
 
 ## Flashcards Study Aid
 

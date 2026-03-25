@@ -121,7 +121,7 @@ That is Agent Teams. Where subagents (Lesson 11) are fire-and-forget workers tha
 
 ## Enable Agent Teams
 
-Agent Teams is an experimental feature. Add this to your VS Code `settings.json` or Claude Code settings:
+Agent Teams is an experimental feature requiring **Claude Code v2.1.32 or later**. Add this to your VS Code `settings.json` or Claude Code settings:
 
 ```json
 {
@@ -138,7 +138,7 @@ Agent Teams is an experimental feature. Add this to your VS Code `settings.json`
 Agent Teams supports two display modes:
 
 - **In-process** (default): all teammates run inside your main terminal. Use **Shift+Up/Down** to select a teammate and type to message them directly. Works in any terminal.
-- **Split panes**: each teammate gets its own pane. You can see everyone's output at once and click into a pane to interact directly. Requires `tmux` or iTerm2.
+- **Split panes**: each teammate gets its own pane. You can see everyone's output at once and click into a pane to interact directly. Requires `tmux` or iTerm2. Split-pane mode is **not supported** in VS Code's integrated terminal, Windows Terminal, or Ghostty.
 
 Set the mode in your `settings.json`:
 
@@ -485,6 +485,16 @@ Teams are powerful but introduce coordination complexity. Five common failure mo
 **What it looks like**: A deliverable sits "in progress" while the teammate waits for input or is stuck in a loop.
 
 **Fix**: Check the teammate's view (**Shift+Up/Down**). Send a direct message to redirect or unstick it. If needed, inspect the task files at `~/.claude/tasks/*/` to check dependency status.
+
+### Known Limitations
+
+Beyond the failure modes above, be aware of these architectural constraints:
+
+- **No session resumption**: If a teammate crashes or the session restarts, in-process teammates cannot be recovered. You must recreate the team.
+- **One team per session**: A Claude Code session supports a single active team at a time.
+- **No nested teams**: A teammate cannot itself create sub-teams.
+- **Lead is fixed**: The lead agent is set at team creation and cannot be changed mid-session.
+- **Permissions set at spawn**: Each teammate inherits its permission level when created; you cannot escalate permissions later.
 
 ---
 

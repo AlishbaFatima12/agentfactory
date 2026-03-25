@@ -2,7 +2,19 @@
 sidebar_position: 1
 title: "Why the Toolchain Comes First"
 description: "Professional Python development starts with five tools, not with syntax. Learn the discipline stack and how each tool connects to the axioms from Chapter 43."
-keywords: ["python toolchain", "discipline stack", "uv", "pyright", "ruff", "pytest", "git", "development environment", "package manager", "static analysis"]
+keywords:
+  [
+    "python toolchain",
+    "discipline stack",
+    "uv",
+    "pyright",
+    "ruff",
+    "pytest",
+    "git",
+    "development environment",
+    "package manager",
+    "static analysis",
+  ]
 chapter: 44
 lesson: 1
 duration_minutes: 20
@@ -50,7 +62,7 @@ differentiation:
 
 # Why the Toolchain Comes First
 
-This chapter is about five tools. The projects here are small -- SmartNotes is a learning vehicle. But the toolchain you build in this chapter is the exact same toolchain you will use in Part 6 when you build your first Digital FTE -- an autonomous AI agent that runs in production, handles real work, and can be sold as a product. The habits you form now determine the quality of the agents you ship later.
+This chapter is about five tools. The projects here are small -- SmartNotes is a learning vehicle. But the toolchain you build in this chapter is the exact same toolchain you will use in Part 7 when you build your first Digital FTE -- an autonomous AI agent that runs in production, handles real work, and can be sold as a product. The habits you form now determine the quality of the agents you ship later.
 
 Chapter 43 ended with ten axioms -- a complete engineering philosophy for working with AI-generated code. You know the principles. You understand why the shell orchestrates, why types are guardrails, why tests are specifications. But principles on paper do not ship software. It is time to build the workbench.
 
@@ -66,18 +78,18 @@ She opens a whiteboard and draws five boxes in a row, connected by arrows. "Befo
 
 ## The Problem Without a Toolchain
 
-James's mistake is universal. It is not a beginner mistake -- it is a *default* mistake. Every developer who has skipped tooling setup has encountered the same sequence: write code, run it locally, declare it finished, watch it fail on someone else's machine. The Python ecosystem makes this especially easy because Python is forgiving by design. It does not require type annotations. It does not enforce import hygiene. It does not demand a project manifest. A `.py` file with valid syntax will run, and Python will not warn you about the ten things that will break when someone else tries to run it.
+James's mistake is universal. It is not a beginner mistake -- it is a _default_ mistake. Every developer who has skipped tooling setup has encountered the same sequence: write code, run it locally, declare it finished, watch it fail on someone else's machine. The Python ecosystem makes this especially easy because Python is forgiving by design. It does not require type annotations. It does not enforce import hygiene. It does not demand a project manifest. A `.py` file with valid syntax will run, and Python will not warn you about the ten things that will break when someone else tries to run it.
 
 The failure modes are predictable and expensive.
 
-| Failure Mode | What Happens | Cost |
-|---|---|---|
-| **Wrong Python version** | Code uses f-strings (3.6+) but teammate has 3.5 installed | Hours debugging syntax errors that "should not exist" |
-| **Missing dependencies** | Code imports a library that exists only in the author's global environment | "Works on my machine" becomes the team's unofficial motto |
-| **No code quality checks** | Unused imports, inconsistent formatting, obvious bugs slip through | Code reviews devolve into style arguments instead of design discussions |
-| **No type checking** | A function receives an integer when it expects a string; Python runs it anyway | Bug surfaces in production at 2am, not in the editor at 2pm |
-| **No tests** | Code "works" but nobody can prove it does what it should | Every change is a gamble -- does the old behavior still hold? |
-| **No version control** | A bad edit overwrites the working version with no way to recover | One mistake destroys hours of work permanently |
+| Failure Mode               | What Happens                                                                   | Cost                                                                    |
+| -------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
+| **Wrong Python version**   | Code uses f-strings (3.6+) but teammate has 3.5 installed                      | Hours debugging syntax errors that "should not exist"                   |
+| **Missing dependencies**   | Code imports a library that exists only in the author's global environment     | "Works on my machine" becomes the team's unofficial motto               |
+| **No code quality checks** | Unused imports, inconsistent formatting, obvious bugs slip through             | Code reviews devolve into style arguments instead of design discussions |
+| **No type checking**       | A function receives an integer when it expects a string; Python runs it anyway | Bug surfaces in production at 2am, not in the editor at 2pm             |
+| **No tests**               | Code "works" but nobody can prove it does what it should                       | Every change is a gamble -- does the old behavior still hold?           |
+| **No version control**     | A bad edit overwrites the working version with no way to recover               | One mistake destroys hours of work permanently                          |
 
 Each of these failures maps to a missing tool. Each tool maps to an axiom James already knows. The gap between knowing the axiom and practicing it is the toolchain.
 
@@ -89,13 +101,13 @@ Each of these failures maps to a missing tool. Each tool maps to an axiom James 
 
 The five tools form a system. Removing any one of them leaves a gap that willpower cannot reliably fill.
 
-| Tool | What It Does | Without It |
-|---|---|---|
-| **uv** | Manages Python versions, virtual environments, and dependencies in one command | Fragmented tools (pip, pyenv, poetry, virtualenv), version conflicts, "works on my machine" |
-| **pyright** | Checks type annotations before code runs | Type errors surface in production instead of in the editor |
-| **ruff** | Lints code for bugs and formats it for consistency | Style debates in code review, hidden bugs, inconsistent codebase |
-| **pytest** | Runs tests that define what "correct" means | No way to verify code does what it should; every change is a gamble |
-| **Git** | Tracks every change, making all work reversible | One bad edit can destroy hours of progress with no recovery |
+| Tool        | What It Does                                                                   | Without It                                                                                  |
+| ----------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
+| **uv**      | Manages Python versions, virtual environments, and dependencies in one command | Fragmented tools (pip, pyenv, poetry, virtualenv), version conflicts, "works on my machine" |
+| **pyright** | Checks type annotations before code runs                                       | Type errors surface in production instead of in the editor                                  |
+| **ruff**    | Lints code for bugs and formats it for consistency                             | Style debates in code review, hidden bugs, inconsistent codebase                            |
+| **pytest**  | Runs tests that define what "correct" means                                    | No way to verify code does what it should; every change is a gamble                         |
+| **Git**     | Tracks every change, making all work reversible                                | One bad edit can destroy hours of progress with no recovery                                 |
 
 These tools are not optional recommendations. They are the infrastructure that makes professional Python development possible. A carpenter does not decide whether to use a workbench -- the workbench is where the work happens. The discipline stack is where Python development happens. Every chapter from here forward assumes all five tools are installed and working.
 
@@ -107,15 +119,15 @@ You may have used pip, venv, and pyenv as separate tools -- or poetry, conda, or
 
 ## The Axiom-Tool Connection
 
-Each tool in the discipline stack is the physical implementation of an axiom from Chapter 43. The axioms describe *what matters*. The tools enforce *that it happens*. James already understands the principles. Now he sees what turns those principles into daily practice.
+Each tool in the discipline stack is the physical implementation of an axiom from Chapter 43. The axioms describe _what matters_. The tools enforce _that it happens_. James already understands the principles. Now he sees what turns those principles into daily practice.
 
-| Tool | Axiom | How the Tool Enforces the Axiom |
-|---|---|---|
-| **uv** | **I -- Shell as Orchestrator** | One command orchestrates Python version management, virtual environments, dependency resolution, and script execution. Where developers once needed pip, pyenv, poetry, and virtualenv as separate tools, uv replaces all of them from the shell. |
-| **pyright** | **V -- Types Are Guardrails** | Pyright walks along every type annotation in your code and reports which guardrails are missing -- before the code ever runs. In the AI era, where code is generated fast, types are how you verify that generated code handles data correctly. |
-| **pytest** | **VII -- Tests Are the Specification** | `assert func(3) == 4` is not just a check. It is a specification: "this function, given 3, must return 4." Tests do not verify that code runs. They verify that code does what you specified it should do. |
-| **Git** | **VIII -- Version Control is Memory** | Every `git commit` is a checkpoint you can return to. Without Git, one bad change destroys everything with no way back. With Git, every state of the project is preserved permanently. |
-| **ruff** | **IX -- Verification is a Pipeline** | Axiom IX says verification should be automated infrastructure, not a checklist you remember to follow. Ruff is the first stage in that pipeline -- it catches style issues and bugs before pyright checks types and pytest checks behavior. Together, the three tools chain into a single command (`ruff check && pyright && pytest`) that enforces quality automatically. |
+| Tool        | Axiom                                  | How the Tool Enforces the Axiom                                                                                                                                                                                                                                                                                                                                            |
+| ----------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **uv**      | **I -- Shell as Orchestrator**         | One command orchestrates Python version management, virtual environments, dependency resolution, and script execution. Where developers once needed pip, pyenv, poetry, and virtualenv as separate tools, uv replaces all of them from the shell.                                                                                                                          |
+| **pyright** | **V -- Types Are Guardrails**          | Pyright walks along every type annotation in your code and reports which guardrails are missing -- before the code ever runs. In the AI era, where code is generated fast, types are how you verify that generated code handles data correctly.                                                                                                                            |
+| **pytest**  | **VII -- Tests Are the Specification** | `assert func(3) == 4` is not just a check. It is a specification: "this function, given 3, must return 4." Tests do not verify that code runs. They verify that code does what you specified it should do.                                                                                                                                                                 |
+| **Git**     | **VIII -- Version Control is Memory**  | Every `git commit` is a checkpoint you can return to. Without Git, one bad change destroys everything with no way back. With Git, every state of the project is preserved permanently.                                                                                                                                                                                     |
+| **ruff**    | **IX -- Verification is a Pipeline**   | Axiom IX says verification should be automated infrastructure, not a checklist you remember to follow. Ruff is the first stage in that pipeline -- it catches style issues and bugs before pyright checks types and pytest checks behavior. Together, the three tools chain into a single command (`ruff check && pyright && pytest`) that enforces quality automatically. |
 
 James studies the table. He traces his finger across the rows. Five axioms, five tools. But something nags at him.
 
@@ -143,13 +155,13 @@ Every lesson in this chapter builds on a single project: **SmartNotes**, a perso
 
 Here is the roadmap for this chapter:
 
-| Lesson | What You Do | SmartNotes After This Lesson |
-|---|---|---|
-| **Lesson 2** | Install uv, create the project | Empty project with `pyproject.toml` and `main.py` |
-| **Lesson 3** | Configure `pyproject.toml`, install dev tools | All five tools configured in one file |
-| **Lesson 4** | Run ruff, read lint and format output | Code quality checks passing |
-| **Lesson 5** | Run pyright, read type checking output | Type safety checks passing |
-| **Lesson 6** | Write first test, run pytest, read pass/fail output | Tests verifying code behavior |
+| Lesson       | What You Do                                          | SmartNotes After This Lesson                       |
+| ------------ | ---------------------------------------------------- | -------------------------------------------------- |
+| **Lesson 2** | Install uv, create the project                       | Empty project with `pyproject.toml` and `main.py`  |
+| **Lesson 3** | Configure `pyproject.toml`, install dev tools        | All five tools configured in one file              |
+| **Lesson 4** | Run ruff, read lint and format output                | Code quality checks passing                        |
+| **Lesson 5** | Run pyright, read type checking output               | Type safety checks passing                         |
+| **Lesson 6** | Write first test, run pytest, read pass/fail output  | Tests verifying code behavior                      |
 | **Lesson 7** | Initialize Git, make first commit, run full pipeline | Complete workbench: lint, type check, test, commit |
 
 For now, SmartNotes is a promise: by the end of this chapter, your terminal will show three green tool outputs and a clean Git commit. That is what a professional Python workbench looks like.
@@ -168,12 +180,12 @@ The third is **"No linter."** A developer writes code that runs correctly but co
 
 The fourth is **"Test later."** A developer writes 500 lines of code, then plans to add tests "when things stabilize." Things never stabilize. The code grows. The developer's memory of what each function should do fades. When a bug appears, there is no specification to test against -- only the developer's increasingly uncertain recollection of the original intent.
 
-| Anti-Pattern | The Mistake | The Cost | The Fix |
-|---|---|---|---|
-| **"Just pip install"** | Installing packages globally instead of per-project | Dependency conflicts across projects, unreproducible environments | Use `uv add` to install into the project's isolated environment |
-| **"No virtual environment"** | Running code with system Python | Code works locally but fails everywhere else | Let `uv run` handle environment isolation automatically |
-| **"No linter"** | Skipping automated code quality checks | Style debates in review, hidden bugs, inconsistent code | Configure ruff in `pyproject.toml`, run it on every change |
-| **"Test later"** | Writing code first, planning tests "when stable" | Specifications fade from memory, bugs have no baseline to catch them | Write the first test before writing the first feature |
+| Anti-Pattern                 | The Mistake                                         | The Cost                                                             | The Fix                                                         |
+| ---------------------------- | --------------------------------------------------- | -------------------------------------------------------------------- | --------------------------------------------------------------- |
+| **"Just pip install"**       | Installing packages globally instead of per-project | Dependency conflicts across projects, unreproducible environments    | Use `uv add` to install into the project's isolated environment |
+| **"No virtual environment"** | Running code with system Python                     | Code works locally but fails everywhere else                         | Let `uv run` handle environment isolation automatically         |
+| **"No linter"**              | Skipping automated code quality checks              | Style debates in review, hidden bugs, inconsistent code              | Configure ruff in `pyproject.toml`, run it on every change      |
+| **"Test later"**             | Writing code first, planning tests "when stable"    | Specifications fade from memory, bugs have no baseline to catch them | Write the first test before writing the first feature           |
 
 ### Why This Matters More in the AI Era
 
@@ -257,7 +269,7 @@ Compare the AI's answer to your original list. Which tools stuck in your memory 
 
 Think about James's story from the start of this lesson -- he pushed code that worked on his machine, but it broke on Emma's. In your own words, write one sentence for each tool explaining what it would have caught. Then ask your AI assistant the same question and compare.
 
-Now try to sort the problems using the **Error Taxonomy**: was the missing dependency a *type error*, a *logic error*, or a *data/edge-case error*? Write your best guess before reading on. (Hint: code that works in one environment but breaks in another is usually a data/edge-case error.)
+Now try to sort the problems using the **Error Taxonomy**: was the missing dependency a _type error_, a _logic error_, or a _data/edge-case error_? Write your best guess before reading on. (Hint: code that works in one environment but breaks in another is usually a data/edge-case error.)
 
 ### Modify
 
@@ -265,7 +277,7 @@ The table in this lesson has five rows -- one per tool. Add a sixth row: what to
 
 ### Make
 
-Without looking at this lesson, write one paragraph explaining to a friend why you should set up tools *before* learning Python syntax. Show your paragraph to your AI assistant and ask: "What did I miss?" The goal is not perfection -- it is producing your own explanation and improving it with feedback.
+Without looking at this lesson, write one paragraph explaining to a friend why you should set up tools _before_ learning Python syntax. Show your paragraph to your AI assistant and ask: "What did I miss?" The goal is not perfection -- it is producing your own explanation and improving it with feedback.
 
 ---
 

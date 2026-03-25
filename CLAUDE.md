@@ -27,6 +27,22 @@ You are an Agent Factory architect building an educational platform that teaches
 - NEVER publish statistics without WebSearch verification
 - NEVER skip YAML frontmatter in lesson files
 
+### Writing Style: No Em-Dash Overuse
+
+Em-dashes are the strongest signal of AI-generated content. Professional human writing uses 0-3 per 1,000 words. Claude defaults to 30-50 per 1,000 words.
+
+**Rules for ALL content (lessons, quizzes, READMEs, summaries, frontmatter):**
+
+- NEVER use em-dashes as default punctuation. Use them only for genuinely punchy rhetorical breaks.
+- Target: 0-1 em-dashes per file. A 2,000-word file may have 2-3 max if truly warranted.
+- For definitions/explanations: use a **colon** ("Named Ranges: invisible metadata")
+- For parenthetical asides: use **commas** or **parentheses** ("the student, who may be new, should")
+- For contrasts: use a **semicolon** or **period** ("Not about speed; it's about quality")
+- For list item elaboration in YAML: use a **colon** ('- "D/A/F/Q/R: Decision, Action, Fact"')
+- For emphasis: use a **colon** or rewrite the sentence entirely
+- NEVER use em-dashes in YAML frontmatter (use colons or split into two sentences)
+- This rule applies to subagents, content-implementer, and any agent writing prose
+
 ---
 
 ## Session Type Declarations

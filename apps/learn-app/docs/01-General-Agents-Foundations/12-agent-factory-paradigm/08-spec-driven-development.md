@@ -59,28 +59,28 @@ teaching_guide:
   session_group: 4
   session_title: "SDD, Synthesis, and Enterprise Sales"
   key_points:
-    - "The Core Equation is the lesson's thesis: 'Vague Idea + AI = 5+ iterations' vs 'Clear Specification + AI = 1-2 iterations' — this single insight justifies the entire SDD methodology"
+    - "The Core Equation is the lesson's thesis: 'Vague Idea + AI = 5+ iterations' vs 'Clear Specification + AI = 1-2 iterations'; this single insight justifies the entire SDD methodology"
     - "The six-phase workflow (Specify→Clarify→Plan→Tasks→Implement→Validate) is the exact process students will use throughout the rest of the book"
-    - "SDD vs Vibe Coding is NOT 'SDD always wins' — the decision framework shows when each approach is appropriate (exploration vs production)"
+    - "SDD vs Vibe Coding is NOT 'SDD always wins'; the decision framework shows when each approach is appropriate (exploration vs production)"
     - "The four qualities of good specifications (clarity, completeness, constraints, testability) serve as a checklist students should internalize"
   misconceptions:
-    - "Students think SDD means 'write a long document before coding' — SDD specs are precise and concise, not verbose PRDs"
-    - "Students assume SDD eliminates all iteration — 1-2 refinement cycles are still expected, but they're refinement within bounds, not discovery from scratch"
-    - "Students think Non-Goals are negative — Non-Goals prevent scope creep and are as important as goals for keeping AI focused"
-    - "Students confuse the Clarify phase with asking the AI questions — Clarify is about YOU identifying what's ambiguous before the AI starts implementing"
+    - "Students think SDD means 'write a long document before coding'; SDD specs are precise and concise, not verbose PRDs"
+    - "Students assume SDD eliminates all iteration; 1-2 refinement cycles are still expected, but they're refinement within bounds, not discovery from scratch"
+    - "Students think Non-Goals are negative; Non-Goals prevent scope creep and are as important as goals for keeping AI focused"
+    - "Students confuse the Clarify phase with asking the AI questions; Clarify is about YOU identifying what's ambiguous before the AI starts implementing"
   discussion_prompts:
-    - "Think of a recent project where you discovered a requirement late — what would the specification have looked like if you'd written it upfront?"
-    - "The lesson says 'Your primary skill is no longer writing code — it's writing specifications.' Do you agree or disagree, and why?"
-    - "When is Vibe Coding actually the RIGHT approach — and how do you know when to switch to SDD?"
+    - "Think of a recent project where you discovered a requirement late; what would the specification have looked like if you'd written it upfront?"
+    - "The lesson says 'Your primary skill is no longer writing code; it's writing specifications.' Do you agree or disagree, and why?"
+    - "When is Vibe Coding actually the RIGHT approach; and how do you know when to switch to SDD?"
   teaching_tips:
-    - "Start with the Developer A vs Developer B comparison — it's the most compelling argument for SDD because both developers are skilled, the difference is process"
-    - "Walk through the User Registration specification example in full — it's concrete enough that students can see exactly what a good spec looks like"
-    - "The 'Without SDD vs With SDD' code conversation comparison is a live demo opportunity — show both approaches with the same AI tool"
-    - "Spend time on the four Common Mistakes — students will make all of them, so calling them out explicitly now saves time later"
+    - "Start with the Developer A vs Developer B comparison; it's the most compelling argument for SDD because both developers are skilled, the difference is process"
+    - "Walk through the User Registration specification example in full; it's concrete enough that students can see exactly what a good spec looks like"
+    - "The 'Without SDD vs With SDD' code conversation comparison is a live demo opportunity; show both approaches with the same AI tool"
+    - "Spend time on the four Common Mistakes; students will make all of them, so calling them out explicitly now saves time later"
   assessment_quick_check:
     - "Ask students to name the six phases of SDD in order"
-    - "Have students evaluate this success criterion: 'Make it fast' — what's wrong with it and how would they fix it?"
-    - "Ask: 'When should you skip SDD entirely?' — tests understanding of the decision framework (learning experiments, trivial changes)"
+    - "Have students evaluate this success criterion: 'Make it fast'; what's wrong with it and how would they fix it?"
+    - "Ask: 'When should you skip SDD entirely?'; tests understanding of the decision framework (learning experiments, trivial changes)"
 
 # Generation metadata
 generated_by: "content-implementer v3.0.0 (Part 1 consolidation)"
@@ -102,7 +102,7 @@ Imagine two developers starting the same project on the same day.
 
 **Developer B** spends day one writing a specification. They define exactly what authentication means in their context: what security requirements matter, what edge cases exist, what success looks like. They clarify ambiguities before writing a single line of code. Then they hand that specification to an AI agent. Two weeks later, they have a complete, tested implementation. They spend months two and three building features, not fixing bugs.
 
-Both developers are skilled. Both worked hard. But Developer B practiced **Spec-Driven Development (SDD)**—a methodology that prioritizes clear thinking before implementation.
+Both developers are skilled. Both worked hard. But Developer B practiced **Spec-Driven Development (SDD)**:a methodology that prioritizes clear thinking before implementation.
 
 The difference isn't coding ability. It's process.
 
@@ -127,11 +127,11 @@ When you provide a vague idea, the AI must guess. Each guess is an opportunity f
 
 SDD wasn't practical twenty years ago. Writing specifications took as long as writing code. But AI changes the equation:
 
-- **AI generates code faster than humans write it**—if the requirements are clear
-- **AI handles implementation details**—syntax, libraries, frameworks
-- **You focus on what humans do best**—design, architecture, business logic
+- **AI generates code faster than humans write it**:if the requirements are clear
+- **AI handles implementation details**:syntax, libraries, frameworks
+- **You focus on what humans do best**:design, architecture, business logic
 
-The bottleneck shifted from implementation to specification. Your primary skill is no longer writing code—it's writing specifications that guide AI implementation.
+The bottleneck shifted from implementation to specification. Your primary skill is no longer writing code: it's writing specifications that guide AI implementation.
 
 ## The SDD Workflow: Six Phases
 
@@ -423,7 +423,7 @@ Good: "Passes OWASP Top 10 security checklist, no critical vulnerabilities"
 
 ## SDD vs Vibe Coding
 
-"Vibe Coding" is writing code based on intuition—trying things, seeing what works, iterating reactively. SDD is thinking systematically—specifying first, then implementing.
+"Vibe Coding" is writing code based on intuition: trying things, seeing what works, iterating reactively. SDD is thinking systematically: specifying first, then implementing.
 
 | Aspect | Vibe Coding | Spec-Driven Development |
 |--------|-------------|-------------------------|
@@ -459,7 +459,7 @@ Not every project needs full SDD. Use this decision framework:
 - **Team projects**: Multiple developers need shared understanding
 - **AI-assisted development**: You're using AI agents for implementation
 
-**Example**: Building a payment processing system—use full SDD. Security matters, edge cases are critical, and errors cost money.
+**Example**: Building a payment processing system: use full SDD. Security matters, edge cases are critical, and errors cost money.
 
 ### Use Lightweight SDD When:
 
@@ -467,7 +467,7 @@ Not every project needs full SDD. Use this decision framework:
 - **Prototype code**: Exploratory work that will be discarded
 - **Well-understood patterns**: CRUD APIs, basic web pages
 
-**Example**: Building a CSV parser for a one-time data migration—use lightweight SDD. Write down input format, output format, and error handling, then implement.
+**Example**: Building a CSV parser for a one-time data migration: use lightweight SDD. Write down input format, output format, and error handling, then implement.
 
 ### Skip SDD When:
 
@@ -475,7 +475,7 @@ Not every project needs full SDD. Use this decision framework:
 - **Throwaway prototypes**: Code that won't reach production
 - **Trivial changes**: Fixing a typo, updating a color
 
-**Example**: Updating button color from blue to green—just make the change.
+**Example**: Updating button color from blue to green: just make the change.
 
 ## Validation Practices and Quality Gates
 
@@ -679,7 +679,7 @@ The core insight: **In the agentic era, how clearly you think before you code de
 
 SDD isn't bureaucracy. It's acceleration. By thinking systematically upfront, you eliminate the iterations that slow you down. You ship faster, with fewer bugs, and more confidence.
 
-Your new role: specification engineer and system architect. AI's role: implementation partner. Together, you build what matters—faster than ever before.
+Your new role: specification engineer and system architect. AI's role: implementation partner. Together, you build what matters: faster than ever before.
 
 
 ## Flashcards Study Aid

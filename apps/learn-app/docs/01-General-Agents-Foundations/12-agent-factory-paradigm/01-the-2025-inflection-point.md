@@ -59,84 +59,84 @@ teaching_guide:
   session_group: 1
   session_title: "The AI Development Landscape"
   key_points:
-    - "Agent Maturity Model (Incubator→Specialist) is the central framework of this book — it recurs in every part from Chapter 14 through Part 7"
-    - "Convergent evidence pattern (academia + surveys + startups + acquisitions) teaches students how to evaluate tech claims — a skill used repeatedly in later lessons"
-    - "General Agents BUILD Custom Agents — this is not a choice between two alternatives but an evolutionary progression, and misunderstanding this leads to premature specialization"
-    - "The $3 trillion developer economy stat anchors the 'why this matters' — connect it to students' own careers"
+    - "Agent Maturity Model (Incubator→Specialist) is the central framework of this book; it recurs in every part from Chapter 14 through Part 7"
+    - "Convergent evidence pattern (academia + surveys + startups + acquisitions) teaches students how to evaluate tech claims; a skill used repeatedly in later lessons"
+    - "General Agents BUILD Custom Agents; this is not a choice between two alternatives but an evolutionary progression, and misunderstanding this leads to premature specialization"
+    - "The $3 trillion developer economy stat anchors the 'why this matters'; connect it to students' own careers"
   misconceptions:
-    - "Students confuse General Agents with 'inferior' agents — emphasize that General Agents are incubators, not lesser versions of Custom Agents"
-    - "Students think 'Custom Agent' means 'customized ChatGPT' — Custom Agents are SDK-built production systems with guardrails, not prompt-tuned chatbots"
-    - "Students assume they must choose General OR Custom — the entire paradigm is sequential: incubate first, then specialize"
+    - "Students confuse General Agents with 'inferior' agents; emphasize that General Agents are incubators, not lesser versions of Custom Agents"
+    - "Students think 'Custom Agent' means 'customized ChatGPT'; Custom Agents are SDK-built production systems with guardrails, not prompt-tuned chatbots"
+    - "Students assume they must choose General OR Custom; the entire paradigm is sequential: incubate first, then specialize"
   discussion_prompts:
-    - "What would happen if a company tried to build a Custom Agent without any incubation phase — what requirements would they miss?"
-    - "Can you think of a task in your current work that's stuck in 'perpetual incubation' — where you keep prototyping but never ship to production?"
-    - "The lesson mentions 'software disrupts software' — why does self-disruption move faster than external disruption?"
+    - "What would happen if a company tried to build a Custom Agent without any incubation phase; what requirements would they miss?"
+    - "Can you think of a task in your current work that's stuck in 'perpetual incubation'; where you keep prototyping but never ship to production?"
+    - "The lesson mentions 'software disrupts software'; why does self-disruption move faster than external disruption?"
   teaching_tips:
-    - "Start with the ICPC competition story — a perfect score by AI surpassing 139 human teams is viscerally compelling and immediately establishes that this is real, not hype"
-    - "The Agent Factory diagram (Incubator→Specialist with feedback loop) is a whiteboard-worthy visual — draw it and reference it throughout the chapter"
-    - "Use the 'Recognizing Your Current Stage' diagnostic questions as an interactive exercise — have students classify 3-4 real projects"
-    - "Spend extra time on the Evolution in Action section (Phase 1-5) — this concrete customer support walkthrough makes the abstract model tangible"
+    - "Start with the ICPC competition story; a perfect score by AI surpassing 139 human teams is viscerally compelling and immediately establishes that this is real, not hype"
+    - "The Agent Factory diagram (Incubator→Specialist with feedback loop) is a whiteboard-worthy visual; draw it and reference it throughout the chapter"
+    - "Use the 'Recognizing Your Current Stage' diagnostic questions as an interactive exercise; have students classify 3-4 real projects"
+    - "Spend extra time on the Evolution in Action section (Phase 1-5); this concrete customer support walkthrough makes the abstract model tangible"
   assessment_quick_check:
     - "Ask students to explain the difference between a General Agent and a Custom Agent in one sentence each"
     - "Have students name three independent sources of evidence for the 2025 inflection point (not vendor claims)"
-    - "Ask: 'What is premature specialization and why is it dangerous?' — tests understanding of the anti-pattern"
+    - "Ask: 'What is premature specialization and why is it dangerous?'; tests understanding of the anti-pattern"
 ---
 
 # The 2025 Inflection Point and The Agent Maturity Model
 
-You've seen the headlines: "AI will write all the code," "The end of programming as we know it," "Every developer needs to learn AI or get left behind." It's easy to dismiss this as hype—another cycle of breathless predictions that fizzle into disappointment.
+You've seen the headlines: "AI will write all the code," "The end of programming as we know it," "Every developer needs to learn AI or get left behind." It's easy to dismiss this as hype: another cycle of breathless predictions that fizzle into disappointment.
 
-But 2025 was genuinely different. Three independent trends converged simultaneously: AI capability reached production quality, mainstream adoption passed the tipping point, and enterprises are betting billions on AI-native architecture. The evidence didn't just come from marketing teams—it came from academic competitions, industry-wide surveys, venture-backed startups, and billion-dollar acquisition decisions.
+But 2025 was genuinely different. Three independent trends converged simultaneously: AI capability reached production quality, mainstream adoption passed the tipping point, and enterprises are betting billions on AI-native architecture. The evidence didn't just come from marketing teams: it came from academic competitions, industry-wide surveys, venture-backed startups, and billion-dollar acquisition decisions.
 
 This convergence creates a fundamental question: **How do you actually build AI products?**
 
-The answer surprises most developers. They expect a single methodology—one right way to build. Instead, they discover an evolutionary process where AI systems mature through distinct stages. **General Agents** serve as incubators—fertile environments where raw requirements transform into functional logic through rapid iteration. Once patterns stabilize and requirements crystallize, **Custom Agents** emerge as specialists—purpose-built systems optimized for reliability, speed, and governance.
+The answer surprises most developers. They expect a single methodology: one right way to build. Instead, they discover an evolutionary process where AI systems mature through distinct stages. **General Agents** serve as incubators: fertile environments where raw requirements transform into functional logic through rapid iteration. Once patterns stabilize and requirements crystallize, **Custom Agents** emerge as specialists: purpose-built systems optimized for reliability, speed, and governance.
 
-This isn't a choice between two alternatives. It's a progression. The incubator gives birth to the specialist. Understanding this evolution—and knowing where you are in it—is the core strategic insight of the Agent Factory paradigm. This lesson introduces both the evidence for the transformation and the maturity model that structures everything you'll learn in this book.
+This isn't a choice between two alternatives. It's a progression. The incubator gives birth to the specialist. Understanding this evolution: and knowing where you are in it: is the core strategic insight of the Agent Factory paradigm. This lesson introduces both the evidence for the transformation and the maturity model that structures everything you'll learn in this book.
 
 
 ## The 2025 Inflection Point: Convergent Evidence
 
-Let's establish why 2025 represents a genuine inflection point. The evidence comes from independent, credible sources—all pointing in the same direction.
+Let's establish why 2025 represents a genuine inflection point. The evidence comes from independent, credible sources: all pointing in the same direction.
 
 ### Capability Breakthroughs: From Autocomplete to Problem-Solving
 
-In September 2025, something unprecedented happened at the ICPC World Finals in Baku, Azerbaijan—the most prestigious competitive programming competition in the world. An OpenAI ensemble achieved a **perfect score, solving all 12 problems correctly** within the 5-hour time limit—surpassing the winning human team from St. Petersburg State University, which solved 11 of 12 problems to claim first place among the 139 competing university teams. Google DeepMind's Gemini 2.5 Deep Think achieved **gold-medal performance, solving 10 of 12 problems**—close to the human champions. Most remarkably, Problem C—a complex optimization task involving liquid distribution through interconnected ducts—was solved by both OpenAI and Gemini but by **none of the 139 human teams**.
+In September 2025, something unprecedented happened at the ICPC World Finals in Baku, Azerbaijan: the most prestigious competitive programming competition in the world. An OpenAI ensemble achieved a **perfect score, solving all 12 problems correctly** within the 5-hour time limit: surpassing the winning human team from St. Petersburg State University, which solved 11 of 12 problems to claim first place among the 139 competing university teams. Google DeepMind's Gemini 2.5 Deep Think achieved **gold-medal performance, solving 10 of 12 problems**:close to the human champions. Most remarkably, Problem C: a complex optimization task involving liquid distribution through interconnected ducts: was solved by both OpenAI and Gemini but by **none of the 139 human teams**.
 
-Competitive programming problems require understanding complex requirements, designing efficient algorithms, implementing solutions under time pressure, and debugging edge cases. These aren't code completion tasks—they distinguish exceptional programmers from good ones.
+Competitive programming problems require understanding complex requirements, designing efficient algorithms, implementing solutions under time pressure, and debugging edge cases. These aren't code completion tasks: they distinguish exceptional programmers from good ones.
 
-The GDPval Benchmark from September 2025 confirms this trend. Claude Opus 4.1 (the frontier model at the time) achieved a **49% win rate** against human expert programmers, while GPT-5 reached **40.6%**. Eighteen months ago, the best AI models scored below 15% on similar benchmarks. This is exponential improvement, not incremental progress. (By January 2026, the frontier has advanced further—Claude Opus 4.5, GPT-5.2, and Gemini 3 Pro represent the current generation.)
+The GDPval Benchmark from September 2025 confirms this trend. Claude Opus 4.1 (the frontier model at the time) achieved a **49% win rate** against human expert programmers, while GPT-5 reached **40.6%**. Eighteen months ago, the best AI models scored below 15% on similar benchmarks. This is exponential improvement, not incremental progress. (By January 2026, the frontier has advanced further: Claude Opus 4.5, GPT-5.2, and Gemini 3 Pro represent the current generation.)
 
-Industry leadership confirms the shift. Dario Amodei, CEO of Anthropic, stated that "AI will be writing 90% of the code" within months—extrapolating from what he observed at Anthropic, where developers increasingly orchestrate AI-generated code rather than writing it manually. Sundar Pichai, Google's CEO, reported that AI tools increased developer productivity by 10% across Google's engineering organization. At Google's scale, that's equivalent to adding 8,000 full-time developers overnight.
+Industry leadership confirms the shift. Dario Amodei, CEO of Anthropic, stated that "AI will be writing 90% of the code" within months: extrapolating from what he observed at Anthropic, where developers increasingly orchestrate AI-generated code rather than writing it manually. Sundar Pichai, Google's CEO, reported that AI tools increased developer productivity by 10% across Google's engineering organization. At Google's scale, that's equivalent to adding 8,000 full-time developers overnight.
 
 ### Mainstream Adoption: From Niche to Normal
 
-The Stack Overflow 2025 Developer Survey revealed **84% of professional developers use or plan to use AI coding tools, with 51% reporting daily use**. This isn't adoption by tech-forward startups—this is mainstream professional practice. The question has shifted from "Should I try AI tools?" to "Which AI tool fits my workflow?"
+The Stack Overflow 2025 Developer Survey revealed **84% of professional developers use or plan to use AI coding tools, with 51% reporting daily use**. This isn't adoption by tech-forward startups: this is mainstream professional practice. The question has shifted from "Should I try AI tools?" to "Which AI tool fits my workflow?"
 
 The DORA 2025 Report provides enterprise-level data:
 - **90% adoption rate** among development professionals (up 14% year-over-year)
 - **2 hours per day median usage**: Developers spend roughly one-quarter of their workday collaborating with AI
 - **Quality maintained**: Teams report maintained or improved code quality, not degradation
 
-Two hours per day isn't occasional use—that's integrated into daily workflow like email or version control. AI assistance has become foundational infrastructure.
+Two hours per day isn't occasional use: that's integrated into daily workflow like email or version control. AI assistance has become foundational infrastructure.
 
 ### Enterprise Productization: From Experiment to Strategy
 
-Y Combinator's Winter 2025 batch revealed a critical signal: **25% of startups incorporated AI-generated code as their primary development approach**, with some teams reporting **95% of their codebase written by AI systems**. These aren't hobbyist projects—they're venture-backed companies betting their business on AI-native development because it's faster and more scalable than traditional coding.
+Y Combinator's Winter 2025 batch revealed a critical signal: **25% of startups incorporated AI-generated code as their primary development approach**, with some teams reporting **95% of their codebase written by AI systems**. These aren't hobbyist projects: they're venture-backed companies betting their business on AI-native development because it's faster and more scalable than traditional coding.
 
-In September 2025, Workday announced a **$1.1 billion acquisition of Sana**, a company building AI-powered workplace agents. Workday—serving 10,000+ enterprise customers—didn't buy talent or technology. They bought AI agents as core product architecture, signaling that enterprise software companies are betting billions that AI agents require ground-up platform redesign.
+In September 2025, Workday announced a **$1.1 billion acquisition of Sana**, a company building AI-powered workplace agents. Workday: serving 10,000+ enterprise customers: didn't buy talent or technology. They bought AI agents as core product architecture, signaling that enterprise software companies are betting billions that AI agents require ground-up platform redesign.
 
 You see similar patterns across the industry: GitHub evolved Copilot from autocomplete to full-codebase agents; Microsoft integrated AI deeply into Visual Studio and Azure DevOps; JetBrains redesigned IDE architecture for AI-native workflows. These are multi-year platform bets by companies that move slowly and carefully.
 
 ### The Convergent Evidence Pattern
 
 Notice what validates these signals:
-- **Academic benchmarks** (ICPC World Finals, GDPval)—independent competitions, not vendor claims
-- **Third-party research** (Stack Overflow, DORA)—industry-wide data, not single-company results
-- **Startup economics** (Y Combinator)—founders betting capital based on what works
-- **Financial decisions** (Workday acquisition)—executives risking real money, not making predictions
+- **Academic benchmarks** (ICPC World Finals, GDPval): independent competitions, not vendor claims
+- **Third-party research** (Stack Overflow, DORA): industry-wide data, not single-company results
+- **Startup economics** (Y Combinator): founders betting capital based on what works
+- **Financial decisions** (Workday acquisition): executives risking real money, not making predictions
 
-When you see the same signal from academia, independent surveys, startup founders, and multi-billion dollar corporations, you're looking at convergent validation—independent sources reaching the same conclusion.
+When you see the same signal from academia, independent surveys, startup founders, and multi-billion dollar corporations, you're looking at convergent validation: independent sources reaching the same conclusion.
 
 ## The $3 Trillion Developer Economy
 
@@ -144,29 +144,29 @@ Why does this inflection point matter? Consider the scale of what's being disrup
 
 Approximately **30 million professional software developers** exist globally, with an average economic value of **$100,000 per year** (salary, benefits, productivity multipliers). Do the math: 30 million × $100,000 = **$3 trillion developer economy**.
 
-This isn't abstract GDP. This is the annual economic output of software developers worldwide. Every productivity gain ripples across this entire market. When AI doubles developer throughput—or changes what "developer" means—it's restructuring a $3 trillion economy in real-time.
+This isn't abstract GDP. This is the annual economic output of software developers worldwide. Every productivity gain ripples across this entire market. When AI doubles developer throughput: or changes what "developer" means: it's restructuring a $3 trillion economy in real-time.
 
 ### Software Disrupts Software
 
 Here's what makes this transformation unique: **Software is the only industry that disrupts itself.**
 
-Agriculture was disrupted by external force (mechanical tractors). Manufacturing was disrupted by external force (robots and automation). Transportation is being disrupted by external force (electric powertrains and autonomous vehicles). But software disrupts software—the tools that build software change how software gets built.
+Agriculture was disrupted by external force (mechanical tractors). Manufacturing was disrupted by external force (robots and automation). Transportation is being disrupted by external force (electric powertrains and autonomous vehicles). But software disrupts software: the tools that build software change how software gets built.
 
-Why is this important? **Self-disruption is faster and more complete than external disruption.** When agriculture faced tractors, farmers could adapt gradually—some modernized, some didn't, the industry transitioned over decades. But when software disrupts itself, there's no "adapt gradually" option. Your development tools, workflow, and mental models all shift simultaneously.
+Why is this important? **Self-disruption is faster and more complete than external disruption.** When agriculture faced tractors, farmers could adapt gradually: some modernized, some didn't, the industry transitioned over decades. But when software disrupts itself, there's no "adapt gradually" option. Your development tools, workflow, and mental models all shift simultaneously.
 
-Consider the SaaS industry. SaaS solved the *deployment* problem—you didn't need to install software, manage updates, or provision servers. AI agents solve the *intelligence* problem—they don't just help humans do cognitive work, they *do* the work. A company paying $150/user/month for CRM software still needs humans to input data, analyze reports, and follow up with leads. An AI sales agent does those tasks directly. The business model shifts from "pay for tools" to "pay for outcomes"—and companies built around per-seat licensing face pressure from solutions that charge per result.
+Consider the SaaS industry. SaaS solved the *deployment* problem: you didn't need to install software, manage updates, or provision servers. AI agents solve the *intelligence* problem: they don't just help humans do cognitive work, they *do* the work. A company paying $150/user/month for CRM software still needs humans to input data, analyze reports, and follow up with leads. An AI sales agent does those tasks directly. The business model shifts from "pay for tools" to "pay for outcomes": and companies built around per-seat licensing face pressure from solutions that charge per result.
 
 ### The Opportunity Window
 
 Technology transitions create brief windows where early adopters gain permanent advantages. In AI-native software development, that window is **right now (2026)** and closing fast.
 
-Consider previous transitions: The web (1995-2005)—developers who learned web technologies in 1996-1998 became industry leaders; those who waited until 2003 fought to catch up. Mobile (2008-2015)—iOS developers in 2009 had massive career advantage over 2012 arrivals. Cloud (2010-2018)—early AWS engineers shaped the entire era; late arrivals learned someone else's conventions.
+Consider previous transitions: The web (1995-2005): developers who learned web technologies in 1996-1998 became industry leaders; those who waited until 2003 fought to catch up. Mobile (2008-2015): iOS developers in 2009 had massive career advantage over 2012 arrivals. Cloud (2010-2018): early AWS engineers shaped the entire era; late arrivals learned someone else's conventions.
 
-Each transition had a 3-5 year window where advantage was decisive. We're at year 1-2 of the AI-native development transition. If you learn now, you're learning during the specification-writing phase—when the field is determining best practices, when you can contribute to shaping methodology, when your expertise compounds fastest. If you wait until 2027-2028, you'll be learning someone else's settled conventions, competing with people who've already built intuition.
+Each transition had a 3-5 year window where advantage was decisive. We're at year 1-2 of the AI-native development transition. If you learn now, you're learning during the specification-writing phase: when the field is determining best practices, when you can contribute to shaping methodology, when your expertise compounds fastest. If you wait until 2027-2028, you'll be learning someone else's settled conventions, competing with people who've already built intuition.
 
 ### What Traditional Education Misses
 
-Most computer science education isn't preparing you for AI-native development. Traditional CS programs teach syntax mastery, algorithm optimization, manual debugging, design patterns, and full-stack knowledge—all skills that mattered when humans wrote code line-by-line.
+Most computer science education isn't preparing you for AI-native development. Traditional CS programs teach syntax mastery, algorithm optimization, manual debugging, design patterns, and full-stack knowledge: all skills that mattered when humans wrote code line-by-line.
 
 What should CS education teach instead? **Specification writing** (clear specifications determine implementation quality), **prompting & collaboration** (directing AI requires clarity about what you want), **agent design** (your value shifts from typing code to orchestrating intelligent agents), **system thinking** (understanding how components interact matters more than implementing each), and **validation & testing** (you evaluate AI output; testing becomes quality control, not bug finding).
 
@@ -243,7 +243,7 @@ This is fundamentally different from the old way of working with AI:
 
 ### How the Incubator Works: Dynamic Planning
 
-In the context of agentic development, we call this **dynamic planning**—the agent plans from scratch without pre-defined templates. You provide no prior examples, no scripts, no rigid step-by-step instructions. Just a goal.
+In the context of agentic development, we call this **dynamic planning**:the agent plans from scratch without pre-defined templates. You provide no prior examples, no scripts, no rigid step-by-step instructions. Just a goal.
 
 Because General Agents have reasoning capabilities, they can decompose your goal into subtasks on the fly. You say "Build a registration system" and the agent thinks: *"Okay, I need a database schema, then an API endpoint, then a frontend form, then validation logic..."*
 
@@ -571,7 +571,7 @@ Then help me understand: What does convergent validation mean, and why is it str
 than single-source claims?
 ```
 
-**What you're learning**: Critical evaluation of technology claims—developing a "smell test" for hype versus genuine breakthroughs. You're learning to distinguish marketing narratives from validated evidence by asking probing questions about sources, incentives, and cross-validation.
+**What you're learning**: Critical evaluation of technology claims: developing a "smell test" for hype versus genuine breakthroughs. You're learning to distinguish marketing narratives from validated evidence by asking probing questions about sources, incentives, and cross-validation.
 
 ### Prompt 2: Path Evaluation (Decision Framework)
 
@@ -593,7 +593,7 @@ Ask me these questions to figure it out:
 Then recommend: General Agent, Custom Agent, or both in sequence.
 ```
 
-**What you're learning**: Applying the Agent Maturity Model decision framework to real problems. You're learning to evaluate development scenarios through the lens of problem definition, usage frequency, production constraints, and exploration needs—and choosing the right approach based on tradeoffs, not hype.
+**What you're learning**: Applying the Agent Maturity Model decision framework to real problems. You're learning to evaluate development scenarios through the lens of problem definition, usage frequency, production constraints, and exploration needs: and choosing the right approach based on tradeoffs, not hype.
 
 ### Prompt 3: Personal Positioning (Where Am I in This Transition?)
 
@@ -624,7 +624,7 @@ so we can figure out a personal learning strategy.
 
 ### What is the Agent Factory paradigm?
 
-The Agent Factory is an evolutionary model for AI development where General Agents (like Claude Code) serve as "incubators" that explore requirements and prototype solutions, then give birth to Custom Agents (built with SDKs like OpenAI Agents SDK or Claude Agent SDK) that operate as production "specialists." The factory never stops—each deployment generates feedback that improves existing agents and spawns new ones.
+The Agent Factory is an evolutionary model for AI development where General Agents (like Claude Code) serve as "incubators" that explore requirements and prototype solutions, then give birth to Custom Agents (built with SDKs like OpenAI Agents SDK or Claude Agent SDK) that operate as production "specialists." The factory never stops: each deployment generates feedback that improves existing agents and spawns new ones.
 
 ### What is the difference between General Agents and Custom Agents?
 
@@ -632,7 +632,7 @@ General Agents are multi-purpose reasoning tools optimized for flexibility and e
 
 ### What is a Digital FTE?
 
-A Digital FTE (Full-Time Equivalent) is an AI employee that performs real work autonomously under human supervision. Unlike traditional software that augments human tasks, a Digital FTE completes tasks end-to-end—processing support tickets, analyzing documents, generating reports. Digital FTEs work 168 hours per week at a fraction of human cost, typically $500-2,000/month versus $4,000-8,000+ for human employees.
+A Digital FTE (Full-Time Equivalent) is an AI employee that performs real work autonomously under human supervision. Unlike traditional software that augments human tasks, a Digital FTE completes tasks end-to-end: processing support tickets, analyzing documents, generating reports. Digital FTEs work 168 hours per week at a fraction of human cost, typically $500-2,000/month versus $4,000-8,000+ for human employees.
 
 ### Why is 2025 considered an inflection point for AI development?
 

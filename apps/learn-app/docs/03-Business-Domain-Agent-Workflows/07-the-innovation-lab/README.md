@@ -1,9 +1,9 @@
 ---
-title: "VII — The Innovation Lab"
+title: "VII: The Innovation Lab"
 sidebar_position: 0
 ---
 
-# Section VII — The Innovation Lab
+# Section VII: The Innovation Lab
 
 ### Chapter 40: Where Mastery of Enterprise AI Becomes the Foundation for Building New Ventures
 

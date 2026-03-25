@@ -8,13 +8,13 @@ deck:
 cards:
   - id: "ch36-05-competitive-intelligence-001"
     front: "What are the four tiers of the competitive landscape and what does each tier mean?"
-    back: "Direct: same problem, same users, same approach (your comparison-set competitors). Indirect: same problem, different approach (often the most dangerous — free, already installed). Adjacent: different problem today but could expand into your space. Substitute: entirely different approach to the same underlying need."
+    back: "Direct: same problem, same users, same approach (your comparison-set competitors). Indirect: same problem, different approach (often the most dangerous: free, already installed). Adjacent: different problem today but could expand into your space. Substitute: entirely different approach to the same underlying need."
     tags: ["competitive-landscape", "tier-mean", "tiers"]
     difficulty: "intermediate"
 
   - id: "ch36-05-competitive-intelligence-002"
     front: "Why is Excel/Google Sheets often the most strategically important competitor for a B2B analytics tool?"
-    back: "Excel is free, already installed, already trusted, and has zero switching cost. Prospects who do not buy your product are not mostly buying a direct competitor — most are continuing to use spreadsheets. Ignoring indirect competitors misses the market reality."
+    back: "Excel is free, already installed, already trusted, and has zero switching cost. Prospects who do not buy your product are not mostly buying a direct competitor: most are continuing to use spreadsheets. Ignoring indirect competitors misses the market reality."
     tags: ["excel/google-sheets", "sheets-often", "strategically"]
     difficulty: "intermediate"
 
@@ -26,7 +26,7 @@ cards:
 
   - id: "ch36-05-competitive-intelligence-004"
     front: "What is the honesty check for a feature comparison matrix from /competitive-brief?"
-    back: "Ask: would a prospect who has evaluated both products find this matrix credible? A matrix that rates your product Strong everywhere is not credible. At least some areas where competitors are Adequate or Strong (and you are Weak or Absent) must appear — otherwise the analysis reflects bias, not reality."
+    back: "Ask: would a prospect who has evaluated both products find this matrix credible? A matrix that rates your product Strong everywhere is not credible. At least some areas where competitors are Adequate or Strong (and you are Weak or Absent) must appear: otherwise the analysis reflects bias, not reality."
     tags: ["honesty-check", "feature-comparison", "matrix"]
     difficulty: "intermediate"
 
@@ -50,7 +50,7 @@ cards:
 
   - id: "ch36-05-competitive-intelligence-008"
     front: "What are the four message architecture levels in positioning analysis?"
-    back: "Level 1 — Category (what category do they claim?), Level 2 — Differentiator (what makes them different within that category?), Level 3 — Value Proposition (what outcome do they promise?), Level 4 — Proof Points (what evidence do they provide?)."
+    back: "Level 1; Category (what category do they claim?), Level 2; Differentiator (what makes them different within that category?), Level 3; Value Proposition (what outcome do they promise?), Level 4; Proof Points (what evidence do they provide?)."
     tags: ["message-architecture", "architecture-levels", "positioning"]
     difficulty: "basic"
 
@@ -68,12 +68,12 @@ cards:
 
   - id: "ch36-05-competitive-intelligence-011"
     front: "In the L05 worked example, what does the feature matrix reveal about the workflow automation space?"
-    back: "Both InsightFlow and AutoDash are Absent for workflow automation (trigger-based automations, no-code workflow builder). WorkflowIQ has only a Weak foothold (alert rules). This means the automation space is unclaimed — InsightFlow has a strategic window to be first to own the position in this segment."
+    back: "Both InsightFlow and AutoDash are Absent for workflow automation (trigger-based automations, no-code workflow builder). WorkflowIQ has only a Weak foothold (alert rules). This means the automation space is unclaimed; InsightFlow has a strategic window to be first to own the position in this segment."
     tags: ["l05-worked", "feature-matrix", "reveal"]
     difficulty: "intermediate"
 
   - id: "ch36-05-competitive-intelligence-012"
     front: "What is 'non-consumption' and why does it matter in competitive analysis?"
-    back: "Non-consumption is when users solve their need by doing nothing with software — using manual processes, spreadsheets, or workarounds instead. It is often the largest competitive segment. Understanding what the manual alternative looks like tells you what 'good enough without software' means, and sets the bar your product must clear."
+    back: "Non-consumption is when users solve their need by doing nothing with software: using manual processes, spreadsheets, or workarounds instead. It is often the largest competitive segment. Understanding what the manual alternative looks like tells you what 'good enough without software' means, and sets the bar your product must clear."
     tags: ["competitive-analysis", "non-consumption", "matter"]
     difficulty: "advanced"

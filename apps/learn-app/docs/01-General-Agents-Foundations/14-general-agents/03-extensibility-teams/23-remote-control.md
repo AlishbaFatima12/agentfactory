@@ -2,7 +2,7 @@
 slug: /General-Agents-Foundations/general-agents/remote-control
 sidebar_position: 23
 title: "Remote Control: Sessions Without Boundaries"
-description: "Control Claude Code sessions from any device — monitor long-running tasks from your phone, pair with colleagues remotely, and keep sessions alive across network changes"
+description: "Control Claude Code sessions from any device; monitor long-running tasks from your phone, pair with colleagues remotely, and keep sessions alive across network changes"
 keywords:
   [
     remote control,
@@ -67,7 +67,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (remote session lifecycle, relay architecture, multi-device workflow design) — within B1 limit of 10"
+  assessment: "3 concepts (remote session lifecycle, relay architecture, multi-device workflow design); within B1 limit of 10"
 
 differentiation:
   extension_for_advanced: "Combine Remote Control with worktrees and agent teams for multi-device team orchestration"
@@ -89,23 +89,23 @@ teaching_guide:
   session_group: 8
   session_title: "Worktrees and Remote Sessions"
   key_points:
-    - "Remote Control runs code LOCALLY on your machine — the relay only passes messages, not code execution"
-    - "Architecture is outbound HTTPS only — no inbound ports, no firewall changes needed"
-    - "The tmux survival trick prevents session death when terminal closes — essential for long-running tasks"
+    - "Remote Control runs code LOCALLY on your machine; the relay only passes messages, not code execution"
+    - "Architecture is outbound HTTPS only; no inbound ports, no firewall changes needed"
+    - "The tmux survival trick prevents session death when terminal closes; essential for long-running tasks"
     - "Decision framework: Remote Control for monitoring/mobile, Web for no-machine access, terminal for full control"
   misconceptions:
-    - "Students think Remote Control runs code in the cloud — it runs locally, the relay is just a message bridge"
-    - "Students assume closing the terminal is safe during remote sessions — it kills the local process and ends the session"
-    - "Students confuse Remote Control with Claude Code on the Web — Web is fully cloud-hosted, Remote Control requires your local machine"
+    - "Students think Remote Control runs code in the cloud; it runs locally, the relay is just a message bridge"
+    - "Students assume closing the terminal is safe during remote sessions; it kills the local process and ends the session"
+    - "Students confuse Remote Control with Claude Code on the Web; Web is fully cloud-hosted, Remote Control requires your local machine"
   discussion_prompts:
     - "When would you want to monitor a Claude session from your phone? What kinds of tasks benefit from walk-away monitoring?"
     - "Why does Anthropic require a Pro/Max subscription for Remote Control instead of supporting API keys?"
   teaching_tips:
-    - "The tmux survival trick is the single most valuable technique — demonstrate it live by closing the terminal and showing the session persists"
+    - "The tmux survival trick is the single most valuable technique; demonstrate it live by closing the terminal and showing the session persists"
     - "Use the 6-scenario comparison table as a quick decision exercise: read each scenario and have students choose the right tool"
     - "The CI/CD runner analogy makes the architecture click immediately for students with DevOps experience"
   assessment_quick_check:
-    - "Where does code actually execute during a Remote Control session — on your machine or in the cloud?"
+    - "Where does code actually execute during a Remote Control session; on your machine or in the cloud?"
     - "What happens to a Remote Control session if your machine loses network for 15 minutes?"
     - "Name one scenario where Remote Control is better than Claude Code on the Web, and one where Web is better"
 ---
@@ -146,6 +146,22 @@ This command supports two optional flags:
 - `--verbose` -- show detailed connection and session logs
 - `--sandbox` / `--no-sandbox` -- enable or disable filesystem and network isolation during the session
 
+### From an Interactive Session with Remote Control Enabled
+
+Start a normal interactive Claude Code session with Remote Control active from the start:
+
+```bash
+claude --remote-control
+```
+
+Or the shorthand:
+
+```bash
+claude --rc
+```
+
+This combines the convenience of an interactive session (you can type normally in the terminal) with Remote Control already enabled. You can also add `--name "refactor-auth"` to give the session a descriptive title visible in claude.ai/code.
+
 ### From an Existing Session
 
 Already deep into a conversation and realize you need to leave? Use the slash command:
@@ -174,7 +190,7 @@ Once a Remote Control session is active, connect from any device in three ways:
 
 The conversation stays in sync across all connected devices. You can send messages from your terminal, browser, and phone interchangeably.
 
-**Subscription requirement**: Remote Control requires a Pro or Max plan. It is not available on Team or Enterprise plans, and API keys are not supported. If you are not on a supported plan, the command will not work.
+**Subscription requirement**: Remote Control is available on all plans (Pro, Max, Team, and Enterprise). On Team and Enterprise plans, an admin must enable it before individual users can access it. API keys are not supported. If you are not on a supported plan or your admin has not enabled it, the command will not work.
 
 ---
 
@@ -339,9 +355,9 @@ This gives you: isolated branch work (worktree) + persistent process (tmux) + mo
 
 **What it looks like**: You run `claude remote-control` and get an error, or the session starts but no remote device can connect.
 
-**Why it happens**: Remote Control requires a Pro or Max plan. It does not work with API keys, Team plans, or Enterprise plans. You also need to be logged in via `/login`.
+**Why it happens**: Remote Control requires a paid plan. It does not work with API keys. On Team and Enterprise plans, an admin must enable Remote Control before individual users can access it. You also need to be logged in via `/login`.
 
-**Fix**: Verify your subscription tier. Run `claude` and use `/login` to authenticate through claude.ai. Make sure you have accepted the workspace trust dialog by running `claude` in your project directory at least once.
+**Fix**: Verify your subscription tier. On Team or Enterprise plans, check with your admin that Remote Control is enabled. Run `claude` and use `/login` to authenticate through claude.ai. Make sure you have accepted the workspace trust dialog by running `claude` in your project directory at least once.
 
 ---
 
@@ -393,7 +409,7 @@ Verify the session continued running the entire time.
 
 **What you're learning:** How to make Remote Control sessions survive terminal closure. This is the single most important technique for long-running tasks -- without it, closing your laptop kills the session.
 
-**Exercise 3: Power Combo — Worktree + Remote Control + Phone Monitoring**
+**Exercise 3: Power Combo; Worktree + Remote Control + Phone Monitoring**
 
 In your terminal:
 

@@ -1,7 +1,7 @@
 deck:
   id: ch14-15-hooks
   title: 'Hooks: Event-Driven Automation'
-  description: Flashcards covering Claude Code hooks — event types, exit codes, configuration, and automation patterns.
+  description: Flashcards covering Claude Code hooks -- event types, exit codes, configuration, and automation patterns.
   tags:
   - hooks
   - automation
@@ -67,7 +67,7 @@ cards:
 - id: ch14-15-hooks-009
   difficulty: intermediate
   front: What matcher pattern would trigger a hook only for Write or Edit tool calls?
-  back: '"Write|Edit" — the pipe character acts as OR between tool names.'
+  back: '"Write|Edit" -- the pipe character acts as OR between tool names.'
   tags: *id002
 - id: ch14-15-hooks-010
   difficulty: advanced
@@ -94,3 +94,25 @@ cards:
   tags:
   - hooks
   - data-flow
+- id: ch14-15-hooks-013
+  difficulty: intermediate
+  front: What are the four hook types in Claude Code?
+  back: 'command (shell script), http (POST to URL), prompt (single-turn LLM evaluation), and agent (spawns a subagent with tool access).'
+  tags:
+  - hooks
+  - hook-types
+- id: ch14-15-hooks-014
+  difficulty: intermediate
+  front: Why are prompt and agent hook types significant compared to command hooks?
+  back: BECAUSE command hooks can only run deterministic scripts, THEREFORE prompt and agent hooks enable AI-powered judgment in hook decisions, turning hooks from rule-based to intelligence-based.
+  why: Distinguishes deterministic automation from AI-powered verification.
+  tags:
+  - hooks
+  - hook-types
+- id: ch14-15-hooks-015
+  difficulty: basic
+  front: How many hook events does Claude Code support in total?
+  back: Over 20 hook events. This lesson teaches the five main ones; Chapter 18 covers the rest.
+  tags:
+  - hooks
+  - event-types

@@ -85,24 +85,24 @@ teaching_guide:
   session_group: 6
   session_title: "Autonomous Workflows, Creator Practices, and Exercises"
   key_points:
-    - "Context window degradation is the unifying constraint behind ALL best practices — parallel sessions, /clear, subagents for investigation, and Plan Mode all manage this one resource"
+    - "Context window degradation is the unifying constraint behind ALL best practices; parallel sessions, /clear, subagents for investigation, and Plan Mode all manage this one resource"
     - "The CLAUDE.md self-writing technique ('Update your CLAUDE.md so you don't make that mistake again') turns every correction into permanent institutional memory"
-    - "Claude-reviews-Claude uses a fresh session (Session B) to review the plan from Session A — the fresh context catches blind spots the cluttered writer session missed"
+    - "Claude-reviews-Claude uses a fresh session (Session B) to review the plan from Session A; the fresh context catches blind spots the cluttered writer session missed"
     - "Boris's '15-20 sessions' is expert-level; students should start with 2-3 parallel sessions and scale up as they build the habit"
   misconceptions:
-    - "Students think they need 15+ parallel sessions like Boris to be productive — the lesson explicitly says start with 2-3; the principle is parallelism, not volume"
-    - "Students confuse Plan Mode (aligning understanding before execution) with being cautious — Boris uses Plan Mode for EVERY non-trivial task, not just when unsure"
-    - "Students assume the self-writing CLAUDE.md technique only works for code projects — it applies equally to knowledge work, writing conventions, and domain-specific rules"
-    - "Students think 'use Opus 4.5 with thinking for everything' means faster models are always worse — the insight is about total task time including corrections, not per-response speed"
+    - "Students think they need 15+ parallel sessions like Boris to be productive; the lesson explicitly says start with 2-3; the principle is parallelism, not volume"
+    - "Students confuse Plan Mode (aligning understanding before execution) with being cautious; Boris uses Plan Mode for EVERY non-trivial task, not just when unsure"
+    - "Students assume the self-writing CLAUDE.md technique only works for code projects; it applies equally to knowledge work, writing conventions, and domain-specific rules"
+    - "Students think 'use Opus 4.5 with thinking for everything' means faster models are always worse; the insight is about total task time including corrections, not per-response speed"
   discussion_prompts:
     - "Boris says 10-20% of his sessions are abandoned. How does that change your attitude toward starting fresh versus pushing through a confused session?"
     - "What is one correction you have given Claude in the past week that could have been captured as a CLAUDE.md rule? Write the rule now."
     - "Which practice from this lesson would have the highest impact on YOUR current workflow if you adopted it tomorrow?"
   teaching_tips:
-    - "Open with the context window constraint table — it provides the 'why' for every technique and prevents students from seeing practices as disconnected tips"
+    - "Open with the context window constraint table; it provides the 'why' for every technique and prevents students from seeing practices as disconnected tips"
     - "Have students try the Claude-reviews-Claude pattern live in class: Session A writes a plan, Session B reviews it as a staff engineer, then compare the improvement"
-    - "The 'Mapping the Complete Workflow' table at the end is an excellent review tool — have students match each practice to the lesson where they learned the underlying concept"
-    - "Encourage students to create their first /session-review skill before leaving class — it takes 5 minutes and establishes the session hygiene habit immediately"
+    - "The 'Mapping the Complete Workflow' table at the end is an excellent review tool; have students match each practice to the lesson where they learned the underlying concept"
+    - "Encourage students to create their first /session-review skill before leaving class; it takes 5 minutes and establishes the session hygiene habit immediately"
   assessment_quick_check:
     - "Name the single constraint that unifies all Claude Code best practices discussed in this lesson"
     - "What is the exact phrase Boris recommends saying to Claude after every correction?"
@@ -116,11 +116,11 @@ prerequisites:
 
 # The Creator's Workflow: Claude Code Best Practices
 
-Boris Cherny, creator and head of Claude Code at Anthropic, has shared detailed insights into how he and his team use the tool in production. While Boris works primarily in software development, the practices his team has refined reveal universal patterns that transform Claude Code from a capable assistant into a force multiplier—regardless of your domain.
+Boris Cherny, creator and head of Claude Code at Anthropic, has shared detailed insights into how he and his team use the tool in production. While Boris works primarily in software development, the practices his team has refined reveal universal patterns that transform Claude Code from a capable assistant into a force multiplier: regardless of your domain.
 
 What makes these practices valuable isn't exotic techniques. It's seeing how the features you've learned in this chapter combine into a production workflow that lets one person operate like a small team.
 
-This lesson maps the Claude Code team's workflow to everything you've learned—and connects it to the [official Claude Code best practices](https://code.claude.com/docs/en/best-practices)—showing you what expert-level usage looks like in practice. Where techniques are developer-specific, we'll note the equivalent approach for knowledge workers.
+This lesson maps the Claude Code team's workflow to everything you've learned: and connects it to the [official Claude Code best practices](https://code.claude.com/docs/en/best-practices): showing you what expert-level usage looks like in practice. Where techniques are developer-specific, we'll note the equivalent approach for knowledge workers.
 
 ---
 
@@ -154,17 +154,17 @@ Boris maintains 15-20 concurrent sessions in his workflow. The key insight from 
 
 > "It's the single biggest productivity unlock, and the top tip from the team."
 >
-> — Boris Cherny
+>; Boris Cherny
 
 :::info The Core Principle
-Boris runs many sessions because he manages a massive software product. **You do not need this many.** Start with 2-3. The principle is about _parallel workstreams_—like having multiple assistants working different problems simultaneously.
+Boris runs many sessions because he manages a massive software product. **You do not need this many.** Start with 2-3. The principle is about _parallel workstreams_: like having multiple assistants working different problems simultaneously.
 :::
 
 **How to run parallel sessions:**
 
 | If you're a...       | Approach                                                                                     |
 | -------------------- | -------------------------------------------------------------------------------------------- |
-| **Developer**        | Use git worktrees or separate checkouts—each directory gets its own Claude session           |
+| **Developer**        | Use git worktrees or separate checkouts: each directory gets its own Claude session           |
 | **Knowledge worker** | Open multiple browser tabs on claude.ai/code, or use Claude Desktop with separate workspaces |
 | **Anyone**           | Simply open multiple terminal windows in different project folders                           |
 
@@ -184,23 +184,23 @@ cd ../experiment && claude     # Session 3 (new terminal)
 
 **Why parallel directories work better than switching:**
 
-- **Switching contexts loses Claude's memory** — when you change projects, Claude loses the conversation
-- **Parallel directories = parallel contexts** — each session maintains its own conversation history
-- **Work doesn't conflict** — until you explicitly combine results
+- **Switching contexts loses Claude's memory**; when you change projects, Claude loses the conversation
+- **Parallel directories = parallel contexts**; each session maintains its own conversation history
+- **Work doesn't conflict**; until you explicitly combine results
 
 **Pro tips from the team:**
 
 - Set up shell aliases (`za`, `zb`, `zc`) to hop between worktrees in one keystroke
-- Keep a dedicated "analysis" worktree for reading logs and running queries—no code changes
+- Keep a dedicated "analysis" worktree for reading logs and running queries: no code changes
 - Use `/statusline` to always show context usage and current git branch in your status bar
-- Color-code and name your terminal tabs—one tab per task/worktree
+- Color-code and name your terminal tabs: one tab per task/worktree
 
 **Start small:** Begin with 3 parallel sessions before scaling. The cognitive overhead of managing many sessions takes practice.
 
 **Connection to Chapter Concepts:**
 
 - **Lesson 01 (Origin Story)**: The agentic paradigm means Claude works autonomously. Parallel sessions multiply this agency.
-- **Lesson 11 (Subagents)**: Each session is like a subagent with a specific task—research in one, drafting in another, review in a third.
+- **Lesson 11 (Subagents)**: Each session is like a subagent with a specific task: research in one, drafting in another, review in a third.
 
 ---
 
@@ -210,7 +210,7 @@ Boris activates Plan Mode (Shift+Tab twice) for every non-trivial task. He itera
 
 > "A good plan is really important!"
 >
-> — Boris Cherny
+>; Boris Cherny
 
 **The Pattern:**
 
@@ -222,7 +222,7 @@ Boris activates Plan Mode (Shift+Tab twice) for every non-trivial task. He itera
 
 **Why this works**: When you spend time on planning, you align Claude's understanding with your intent. The investment in planning pays off through faster, more accurate execution. No wasted iterations fixing misunderstandings.
 
-**When things go sideways**: The moment something goes wrong, switch back to Plan Mode and re-plan. Don't keep pushing through a confused execution. Some team members also explicitly tell Claude to enter Plan Mode for verification steps—not just for the initial build.
+**When things go sideways**: The moment something goes wrong, switch back to Plan Mode and re-plan. Don't keep pushing through a confused execution. Some team members also explicitly tell Claude to enter Plan Mode for verification steps: not just for the initial build.
 
 ### The Claude-Reviews-Claude Pattern
 
@@ -230,7 +230,7 @@ A powerful technique from the Claude Code team involves using separate sessions 
 
 > "One person has one Claude write the plan, then they spin up a second Claude to review it as a staff engineer."
 >
-> — Boris Cherny
+>; Boris Cherny
 
 **The workflow:**
 
@@ -280,9 +280,9 @@ The key practice: **when Claude makes a mistake, document it immediately**.
 
 > "Anytime we see Claude do something incorrectly we add it to the CLAUDE.md, so Claude knows not to do it next time."
 >
-> — Boris Cherny
+>; Boris Cherny
 
-They also use GitHub's `@.claude` tagging feature during code reviews—when a reviewer sees Claude could have done better, they update CLAUDE.md as part of the review process.
+They also use GitHub's `@.claude` tagging feature during code reviews: when a reviewer sees Claude could have done better, they update CLAUDE.md as part of the review process.
 
 ### Let Claude Write Its Own Rules
 
@@ -290,7 +290,7 @@ One of the most actionable techniques from the Claude Code team:
 
 > "After every correction, end with: 'Update your CLAUDE.md so you don't make that mistake again.' Claude is eerily good at writing rules for itself."
 >
-> — Boris Cherny
+>; Boris Cherny
 
 **Example flow:**
 
@@ -345,7 +345,7 @@ The Claude Code team applies a simple but powerful heuristic:
 
 > "If you do something more than once a day, turn it into a skill."
 >
-> — Boris Cherny
+>; Boris Cherny
 
 :::tip Skill Architecture
 Every skill can be **user-invoked** (you type `/skill-name`) or **agent-invoked** (Claude uses it automatically). Use `disable-model-invocation: true` to restrict a skill to manual invocation only.
@@ -353,7 +353,7 @@ Every skill can be **user-invoked** (you type `/skill-name`) or **agent-invoked*
 
 ### Session-End Review Skills
 
-Boris recommends building a skill you run at the end of every session—while the context is still fresh:
+Boris recommends building a skill you run at the end of every session: while the context is still fresh:
 
 > "Build a skill and run it at the end of every session."
 
@@ -403,7 +403,7 @@ Review what we accomplished this session:
 Output as a brief session summary I can save.
 ```
 
-**The habit:** Before closing any session, run your review skill. The context is fresh—Claude remembers exactly what you discussed and can spot things you might have missed.
+**The habit:** Before closing any session, run your review skill. The context is fresh: Claude remembers exactly what you discussed and can spot things you might have missed.
 
 ### Building Your Skill Portfolio
 
@@ -446,20 +446,20 @@ Boris uses custom subagents for his most common workflows:
 
 > "I think of subagents as automating the most common workflows that I do for most PRs."
 >
-> — Boris Cherny
+>; Boris Cherny
 
-**The Investigation Pattern**: Beyond PR workflows, subagents keep your main context clean. When Claude researches a codebase, it reads many files—all consuming your context. Instead:
+**The Investigation Pattern**: Beyond PR workflows, subagents keep your main context clean. When Claude researches a codebase, it reads many files: all consuming your context. Instead:
 
 ```
 Use subagents to investigate how our authentication system handles
 token refresh, and whether we have any existing OAuth utilities.
 ```
 
-The subagent explores in its own context window, reads relevant files, and reports back with findings—all without cluttering your main conversation.
+The subagent explores in its own context window, reads relevant files, and reports back with findings: all without cluttering your main conversation.
 
 **Throw more compute at problems**: Append "use subagents" to any request where you want Claude to parallelize the work. Claude will spin up multiple subagents to tackle different aspects simultaneously.
 
-**Advanced: Route permissions to Opus 4.5 via hook**: Some team members route permission requests through an Opus 4.5 hook that scans for attacks and auto-approves safe operations—letting Claude work more autonomously while maintaining security.
+**Advanced: Route permissions to Opus 4.5 via hook**: Some team members route permission requests through an Opus 4.5 hook that scans for attacks and auto-approves safe operations: letting Claude work more autonomously while maintaining security.
 
 **Connection to Chapter Concepts:**
 
@@ -473,7 +473,7 @@ This might be the most important insight from Boris's workflow:
 
 > "Probably the most important thing to get great results out of Claude Code: give Claude a way to verify its work. If Claude has that feedback loop, it will 2-3x the quality of the final result."
 >
-> — Boris Cherny
+>; Boris Cherny
 
 **How he implements this:**
 
@@ -481,11 +481,11 @@ This might be the most important insight from Boris's workflow:
 - Opens a browser, tests the interface, iterates until the code works and UX feels good
 - Domain-specific verification ranges from simple (running bash commands) to complex (browser or phone simulator testing)
 
-**The Philosophy**: You don't trust AI output—you instrument it. Give Claude tools to check its own work, and quality improves dramatically.
+**The Philosophy**: You don't trust AI output: you instrument it. Give Claude tools to check its own work, and quality improves dramatically.
 
 **Connection to Chapter Concepts:**
 
-- **Lesson 12 (MCP Integration)**: MCP tools can include verification capabilities—testing endpoints, validating outputs, checking UI state
+- **Lesson 12 (MCP Integration)**: MCP tools can include verification capabilities: testing endpoints, validating outputs, checking UI state
 - **Lesson 15 (Hooks)**: Hooks can trigger automated verification after Claude makes changes
 
 ---
@@ -521,7 +521,7 @@ Boris explicitly avoids `--dangerously-skip-permissions`. Instead, he uses `/per
 
 These permissions are checked into `.claude/settings.json` and shared with the entire team.
 
-**Why this matters**: Skip permissions trades safety for convenience. Pre-allowed permissions give you the convenience while maintaining the safety boundary—Claude still asks before running unknown commands.
+**Why this matters**: Skip permissions trades safety for convenience. Pre-allowed permissions give you the convenience while maintaining the safety boundary: Claude still asks before running unknown commands.
 
 **Connection to Chapter Concepts:**
 
@@ -544,7 +544,7 @@ The Claude Code team has developed patterns for letting Claude solve problems in
 
 **Don't micromanage**: Instead of prescribing exact steps, describe the outcome you want. Claude often finds better solutions than you would have specified.
 
-**Connect to your data**: Enable MCP integrations (Slack, Google Drive, Notion) so Claude can pull context directly. Zero context switching—Claude reads the source material, investigates, and produces the solution.
+**Connect to your data**: Enable MCP integrations (Slack, Google Drive, Notion) so Claude can pull context directly. Zero context switching: Claude reads the source material, investigates, and produces the solution.
 
 ---
 
@@ -571,7 +571,7 @@ Beyond the basics, the Claude Code team uses specific prompting techniques that 
 
 The Claude Code team has refined their environment for optimal Claude usage. These principles apply whether you're in a terminal or browser:
 
-**Status visibility**: Use `/statusline` to always show context usage. Know at a glance how much context you've consumed—this helps you decide when to `/clear` or start fresh.
+**Status visibility**: Use `/statusline` to always show context usage. Know at a glance how much context you've consumed: this helps you decide when to `/clear` or start fresh.
 
 **Visual organization**:
 
@@ -587,18 +587,18 @@ The Claude Code team has refined their environment for optimal Claude usage. The
 
 ## Research & Data Analysis
 
-Claude Code can become your research and analysis interface—you describe what you want to know, Claude figures out how to get it:
+Claude Code can become your research and analysis interface: you describe what you want to know, Claude figures out how to get it:
 
 | If you're a...       | How Claude helps                                                         |
 | -------------------- | ------------------------------------------------------------------------ |
-| **Developer**        | Query databases via CLI (BigQuery, Postgres)—no SQL needed               |
+| **Developer**        | Query databases via CLI (BigQuery, Postgres): no SQL needed               |
 | **Analyst**          | Pull metrics, generate reports, create visualizations from raw data      |
 | **Researcher**       | Search across documents, synthesize findings, identify patterns          |
 | **Knowledge worker** | Query your connected tools (Google Drive, Notion, Slack) for information |
 
 > "Personally, I haven't written a line of SQL in 6+ months."
 >
-> — Boris Cherny
+>; Boris Cherny
 
 **The pattern**: If there's a way to access your data (CLI, MCP, API, or even files), Claude can query it for you. Build a skill that knows how to access your data sources, and analytics becomes conversational.
 
@@ -608,7 +608,7 @@ Claude Code can become your research and analysis interface—you describe what 
 
 > "I use Opus 4.5 with thinking for everything. It's the best coding model I've ever used, and even though it's bigger & slower than Sonnet, since you have to steer it less and it's better at tool use, it is almost always faster than using a smaller model in the end."
 >
-> — Boris Cherny
+>; Boris Cherny
 
 **The Counterintuitive Insight**: A "wrong fast answer" costs more time than a "right slow answer." Opus 4.5 requires less correction and iteration, making total task completion faster despite slower per-response times.
 
@@ -616,7 +616,7 @@ Claude Code can become your research and analysis interface—you describe what 
 
 ## Session Management: Course-Correct and Recover
 
-The official best practices emphasize aggressive session management. Claude Code's conversations are persistent and reversible—use this to your advantage.
+The official best practices emphasize aggressive session management. Claude Code's conversations are persistent and reversible: use this to your advantage.
 
 **Course-Correct Early:**
 
@@ -631,7 +631,7 @@ claude --continue    # Resume the most recent conversation
 claude --resume      # Select from recent conversations
 ```
 
-Use `/rename` to give sessions descriptive names (`"oauth-migration"`, `"debugging-memory-leak"`) so you can find them later. Treat sessions like branches—different workstreams can have separate, persistent contexts.
+Use `/rename` to give sessions descriptive names (`"oauth-migration"`, `"debugging-memory-leak"`) so you can find them later. Treat sessions like branches: different workstreams can have separate, persistent contexts.
 
 **When to Clear**: If you've corrected Claude more than twice on the same issue, the context is cluttered with failed approaches. Run `/clear` and start fresh with a more specific prompt that incorporates what you learned.
 
@@ -645,11 +645,11 @@ The Claude Code team recommends a specific configuration for anyone who wants to
 
 > "Enable the 'Explanatory' or 'Learning' output style in /config to have Claude explain the _why_ behind its changes."
 >
-> — Boris Cherny
+>; Boris Cherny
 
 **Enable Learning Mode:**
 
-Run `/config` and set the output style to "Explanatory" or "Learning". Now Claude doesn't just make changes—it teaches you what it's doing and why.
+Run `/config` and set the output style to "Explanatory" or "Learning". Now Claude doesn't just make changes: it teaches you what it's doing and why.
 
 **Before (default mode):**
 
@@ -697,7 +697,7 @@ Claude creates an interactive HTML file you can share with teammates or referenc
 - Creating training materials
 - Understanding work you inherited from others
 
-**ASCII diagrams for quick understanding**: Ask Claude to draw ASCII diagrams of new protocols and codebases. Sometimes a quick text diagram is faster than generating HTML—great for understanding data flows, state machines, or API relationships.
+**ASCII diagrams for quick understanding**: Ask Claude to draw ASCII diagrams of new protocols and codebases. Sometimes a quick text diagram is faster than generating HTML: great for understanding data flows, state machines, or API relationships.
 
 **Spaced-repetition learning skill**: Build a skill where you explain your understanding, Claude asks follow-up questions to fill gaps, and stores the result. This creates active recall practice that deepens learning over time.
 
@@ -729,14 +729,14 @@ Here's how these techniques map to what you've learned:
 | Learning output style       | Team        | /config        | Have Claude explain the _why_ behind changes                 |
 | Visual presentations        | Team        | Learning       | HTML onboarding for unfamiliar material                      |
 | ASCII diagrams              | Team        | Learning       | Quick text diagrams for flows and relationships              |
-| Voice dictation             | Team        | Workspace      | Speak 3x faster than typing—more detail = better output      |
+| Voice dictation             | Team        | Workspace      | Speak 3x faster than typing: more detail = better output      |
 | `/statusline` config        | Team        | Workspace      | Always show context usage at a glance                        |
 | Conversational research     | Team        | MCP            | Query data sources through natural language                  |
 | PostToolUse hooks           | Team        | L15            | Automate consistent formatting or checks                     |
 | `/permissions` over skip    | Team        | L14            | Pre-allow safe operations, share with team                   |
 | `/clear` between tasks      | Official    | Session mgmt   | Reset context for fresh starts                               |
-| `/rewind` for recovery      | Official    | Session mgmt   | Checkpoints are reversible—experiment freely                 |
-| 10-20% session abandonment  | Team        | Session mgmt   | Some sessions fail—that's normal                             |
+| `/rewind` for recovery      | Official    | Session mgmt   | Checkpoints are reversible: experiment freely                 |
+| 10-20% session abandonment  | Team        | Session mgmt   | Some sessions fail: that's normal                             |
 | Opus 4.5 choice             | Team        | L14            | Optimize for total iteration time, not speed                 |
 
 ---
@@ -753,7 +753,7 @@ The official documentation catalogs failure patterns observed across many users.
 | **Trust-then-verify gap**    | Plausible-looking output that doesn't handle edge cases                    | Always provide verification methods                                    |
 | **Infinite exploration**     | Asked Claude to "investigate" without scoping; context fills with reads    | Scope investigations narrowly or use subagents                         |
 
-**Meta-pattern**: Most failures stem from context pollution—either too much irrelevant information, or failed approaches cluttering the conversation. When in doubt, start fresh.
+**Meta-pattern**: Most failures stem from context pollution: either too much irrelevant information, or failed approaches cluttering the conversation. When in doubt, start fresh.
 
 ---
 
@@ -763,11 +763,11 @@ Looking at Boris's workflow and the official best practices, five principles eme
 
 **1. Context is the Constraint**
 
-Every technique traces back to managing the context window. Worktrees, subagents for investigation, `/clear` between tasks, Plan Mode—all prevent context pollution. Internalize this and the "why" behind every practice becomes clear.
+Every technique traces back to managing the context window. Worktrees, subagents for investigation, `/clear` between tasks, Plan Mode: all prevent context pollution. Internalize this and the "why" behind every practice becomes clear.
 
 **2. Parallelization Over Optimization**
 
-Multiple simple sessions outperform one overloaded session. Don't try to make one conversation do everything—distribute work across parallel Claude instances using worktrees.
+Multiple simple sessions outperform one overloaded session. Don't try to make one conversation do everything: distribute work across parallel Claude instances using worktrees.
 
 **3. Plan Mode Discipline**
 
@@ -775,11 +775,11 @@ Planning isn't training wheels. It's the foundation. Boris uses it for every non
 
 **4. Self-Evolving Documentation**
 
-CLAUDE.md isn't static. It grows with every correction. The magic phrase—"Update your CLAUDE.md so you don't make that mistake again"—turns every mistake into institutional memory.
+CLAUDE.md isn't static. It grows with every correction. The magic phrase: "Update your CLAUDE.md so you don't make that mistake again": turns every mistake into institutional memory.
 
 **5. Verification Infrastructure**
 
-Quality comes from feedback loops, not hope. Give Claude ways to check its work—through MCP tools, hooks, subagents, or browser automation. Verification creates the iteration loop that produces excellent results.
+Quality comes from feedback loops, not hope. Give Claude ways to check its work: through MCP tools, hooks, subagents, or browser automation. Verification creates the iteration loop that produces excellent results.
 
 ---
 
@@ -843,7 +843,7 @@ I want to understand things better as I work. Help me:
 3. Create an HTML presentation explaining [a topic you're learning]
 ```
 
-**What you're learning:** How to use Claude Code for learning, not just doing—perfect for onboarding and understanding unfamiliar material.
+**What you're learning:** How to use Claude Code for learning, not just doing: perfect for onboarding and understanding unfamiliar material.
 
 **🔍 Analyze Your Current Practice:**
 
@@ -853,7 +853,7 @@ I've been using [describe your typical usage pattern]. What's the biggest gap?
 Which technique would have the most impact if I adopted it?
 ```
 
-**What you're learning:** Self-assessment against expert practice—identifying your highest-leverage improvement opportunity.
+**What you're learning:** Self-assessment against expert practice: identifying your highest-leverage improvement opportunity.
 
 
 ## Flashcards Study Aid

@@ -68,7 +68,7 @@ cognitive_load:
   new_concepts: 7
   concepts_list:
     - "Jurisdiction overlay as compliance configuration"
-    - "PECA 2016 (Pakistan — opt-out model, WhatsApp-first culture)"
+    - "PECA 2016 (Pakistan: opt-out model, WhatsApp-first culture)"
     - "UK GDPR + PECR (B2B email to corporate subscribers, TPS for calls)"
     - "UAE PDPL Federal Decree-Law No. 45/2021 (consent-based, WhatsApp acceptable)"
     - "Cultural mismatch (legal compliance =/= cultural appropriateness)"

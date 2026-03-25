@@ -76,7 +76,7 @@ cognitive_load:
     - "systemd unit files (the service job description)"
     - "Restart policies (what happens when the agent crashes)"
     - "Resource limits (preventing runaway memory usage)"
-  assessment: "4 concepts at the A2-B1 boundary — the most critical lesson in the chapter for Ch24 dependency"
+  assessment: "4 concepts at the A2-B1 boundary: the most critical lesson in the chapter for Ch24 dependency"
 
 differentiation:
   extension_for_advanced: "Explore systemd timers as an alternative to cron for scheduled agent execution. Compare Type=simple vs Type=forking for different agent architectures."
@@ -87,21 +87,21 @@ teaching_guide:
   session_group: 2
   session_title: "Making Agents Production-Ready"
   key_points:
-    - "The process-vs-service distinction is the core insight — everything else follows from understanding why the OS needs to manage your agent"
-    - "The annotated unit file is the lesson centerpiece — every line matters and students will reference this in Ch24"
-    - "The drama moment (close terminal, reconnect, agent still alive) is the emotional peak — let students feel the triumph"
-    - "Resource limits prevent a single buggy agent from taking down the entire server — this is production thinking"
+    - "The process-vs-service distinction is the core insight: everything else follows from understanding why the OS needs to manage your agent"
+    - "The annotated unit file is the lesson centerpiece: every line matters and students will reference this in Ch24"
+    - "The drama moment (close terminal, reconnect, agent still alive) is the emotional peak: let students feel the triumph"
+    - "Resource limits prevent a single buggy agent from taking down the entire server: this is production thinking"
   misconceptions:
-    - "Students think 'the agent crashed' when they close the terminal — the agent didn't crash, the terminal that owned the process ended"
-    - "Students confuse Restart=always with 'never stops' — the service manager restarts it, but RestartSec prevents infinite crash loops"
-    - "Students think systemd is optional — on modern Linux, it IS the service manager; there's no alternative on mainstream distributions"
+    - "Students think 'the agent crashed' when they close the terminal: the agent didn't crash, the terminal that owned the process ended"
+    - "Students confuse Restart=always with 'never stops': the service manager restarts it, but RestartSec prevents infinite crash loops"
+    - "Students think systemd is optional: on modern Linux, it IS the service manager; there's no alternative on mainstream distributions"
   discussion_prompts:
     - "What would happen to a business if their customer-facing agent died every time a developer closed their laptop?"
     - "Why does systemd wait 5 seconds before restarting a crashed service instead of restarting immediately?"
   teaching_tips:
-    - "The annotated unit file should be projected/displayed — walk through each line aloud before students try it"
+    - "The annotated unit file should be projected/displayed: walk through each line aloud before students try it"
     - "Have students actually close their terminal and reconnect to feel the triumph of a surviving service"
-    - "The tmux mention should be brief — one paragraph max — this lesson is about systemd, not session persistence"
+    - "The tmux mention should be brief: one paragraph max: this lesson is about systemd, not session persistence"
   assessment_quick_check:
     - "What is the difference between a process and a service?"
     - "What happens to your agent if you set Restart=on-failure and the agent exits normally with code 0?"
@@ -144,9 +144,9 @@ Ali's agent is a phone call. He needs it to be a security guard.
 
 ## The Fix: One File
 
-Linux has a built-in building manager called **systemd**. It manages every service on the server — the database, the web server, the SSH daemon that let Ali connect in the first place. All of them are systemd services. All of them survive reboots.
+Linux has a built-in building manager called **systemd**. It manages every service on the server: the database, the web server, the SSH daemon that let Ali connect in the first place. All of them are systemd services. All of them survive reboots.
 
-To make your agent a systemd service, you write a **unit file** — a plain text file that answers five questions:
+To make your agent a systemd service, you write a **unit file**: a plain text file that answers five questions:
 
 1. What should run?
 2. As which user?
@@ -170,8 +170,8 @@ Description=Competitor Tracker Agent
 After=network.target
 ```
 
-- `Description` — A human-readable name. Shows up in logs and status commands.
-- `After=network.target` — Don't start this service until the network is ready. Your agent needs internet access to scrape pricing data. Starting before the network is up would cause immediate failures.
+- `Description`. A human-readable name. Shows up in logs and status commands.
+- `After=network.target`: Don't start this service until the network is ready. Your agent needs internet access to scrape pricing data. Starting before the network is up would cause immediate failures.
 
 ```ini
 [Service]
@@ -185,21 +185,21 @@ RestartSec=5
 MemoryMax=512M
 ```
 
-- `Type=simple` — The process you start IS the service. No forking, no backgrounding. The simplest and most common type.
-- `User=ali` — Run as Ali, not as root. Never run agents as root. (More on this in Lesson 5.)
-- `WorkingDirectory` — The agent runs as if you `cd`'d into this directory first. Relative paths in your code resolve from here.
-- `EnvironmentFile` — Load environment variables from `.env`. Your database password, API keys, and configuration — all available to the agent without hardcoding.
-- `ExecStart` — The exact command to run. Full absolute path to Python and the script. No ambiguity.
-- `Restart=on-failure` — If the agent crashes (exits with a non-zero code), restart it. If you intentionally stop it with `systemctl stop`, don't restart.
-- `RestartSec=5` — Wait 5 seconds before restarting. This prevents crash loops — if the agent has a bug that makes it crash on startup, it won't restart thousands of times per minute and flood your logs.
-- `MemoryMax=512M` — If the agent uses more than 512 MB of RAM, kill it. This prevents a memory leak from eating all server resources and crashing everything else.
+- `Type=simple`. The process you start IS the service. No forking, no backgrounding. The simplest and most common type.
+- `User=ali`: Run as Ali, not as root. Never run agents as root. (More on this in Lesson 5.)
+- `WorkingDirectory`. The agent runs as if you `cd`'d into this directory first. Relative paths in your code resolve from here.
+- `EnvironmentFile`: Load environment variables from `.env`. Your database password, API keys, and configuration: all available to the agent without hardcoding.
+- `ExecStart`. The exact command to run. Full absolute path to Python and the script. No ambiguity.
+- `Restart=on-failure`. If the agent crashes (exits with a non-zero code), restart it. If you intentionally stop it with `systemctl stop`, don't restart.
+- `RestartSec=5` (Wait 5 seconds before restarting. This prevents crash loops) if the agent has a bug that makes it crash on startup, it won't restart thousands of times per minute and flood your logs.
+- `MemoryMax=512M`. If the agent uses more than 512 MB of RAM, kill it. This prevents a memory leak from eating all server resources and crashing everything else.
 
 ```ini
 [Install]
 WantedBy=multi-user.target
 ```
 
-- `WantedBy=multi-user.target` — Start this service when the server boots into its normal operating mode. This is what makes your agent survive reboots.
+- `WantedBy=multi-user.target`: Start this service when the server boots into its normal operating mode. This is what makes your agent survive reboots.
 
 Pause.
 
@@ -221,9 +221,9 @@ sudo systemctl enable competitor-tracker
 sudo systemctl start competitor-tracker
 ```
 
-- `daemon-reload` — "Hey systemd, I added a new service file. Re-read all your files."
-- `enable` — "Start this service automatically on every boot."
-- `start` — "Start it right now."
+- `daemon-reload`: "Hey systemd, I added a new service file. Re-read all your files."
+- `enable`: "Start this service automatically on every boot."
+- `start`: "Start it right now."
 
 **What you tell Claude Code**: "Check if the competitor-tracker service is running."
 
@@ -304,7 +304,7 @@ The agent crashed at 03:42:17. Systemd waited 5 seconds (`RestartSec=5`). At 03:
 
 ## A Note About tmux
 
-You may have heard of **tmux** — a tool that keeps terminal sessions alive after you disconnect. For interactive sessions you want to keep alive — like a monitoring dashboard or a long-running data migration you're watching — tmux is the right tool.
+You may have heard of **tmux**: a tool that keeps terminal sessions alive after you disconnect. For interactive sessions you want to keep alive: like a monitoring dashboard or a long-running data migration you're watching: tmux is the right tool.
 
 For agents that run 24/7, systemd is the right tool. tmux keeps a session alive. systemd keeps a service alive, restarts it after crashes, starts it on boot, and enforces resource limits. Your agents need systemd.
 
@@ -361,7 +361,7 @@ and modify it for Node.js. What lines change? What stays the
 same? Explain each change.
 ```
 
-**What you're practicing:** Transferring the systemd pattern to different technologies. The unit file structure is universal — only the ExecStart line changes significantly.
+**What you're practicing:** Transferring the systemd pattern to different technologies. The unit file structure is universal, only the ExecStart line changes significantly.
 
 ### Prompt 3: History and Context
 

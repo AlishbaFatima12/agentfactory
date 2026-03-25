@@ -71,33 +71,33 @@ teaching_guide:
   session_title: "First Agent Workflow and Safety"
   key_points:
     - "The 'Help me understand [problem], show me [what I need]' prompt pattern is the foundation for all file-processing workflows in this chapter"
-    - "Division of labor is the core insight: human judgment (what matters) + agent execution (how to get it) — neither can do the other's job"
-    - "Agent self-correction (23 items vs 847 files) demonstrates OODA in action — students saw this principle in Ch 14 and now see it live"
+    - "Division of labor is the core insight: human judgment (what matters) + agent execution (how to get it): neither can do the other's job"
+    - "Agent self-correction (23 items vs 847 files) demonstrates OODA in action: students saw this principle in Ch 14 and now see it live"
     - "The rule of thumb 'describe faster than do = agent, do faster than describe = manual' sets the decision boundary for the entire chapter"
   misconceptions:
-    - "Students think agents are always faster — lesson explicitly shows single-file lookup is faster manually, agents win at scale (847 files)"
-    - "Students confuse 'I don't need to know bash' with 'bash doesn't matter' — the command anatomy section shows why reading agent output matters for verification"
-    - "Students may think the agent's self-correction was a bug — it's actually the desired behavior showing Observe-Orient-Decide-Act working correctly"
+    - "Students think agents are always faster: lesson explicitly shows single-file lookup is faster manually, agents win at scale (847 files)"
+    - "Students confuse 'I don't need to know bash' with 'bash doesn't matter': the command anatomy section shows why reading agent output matters for verification"
+    - "Students may think the agent's self-correction was a bug; it's actually the desired behavior showing Observe-Orient-Decide-Act working correctly"
   discussion_prompts:
     - "When was the last time you avoided organizing files because the task felt too big? What would change if you could describe the problem in one sentence?"
     - "The agent got the file count wrong, then corrected itself. Would you trust it more or less after seeing that mistake? Why?"
     - "What kinds of file decisions should never be delegated to an agent, even with the right prompt?"
   teaching_tips:
-    - "Start with the 847-file Downloads folder scenario — every student has a cluttered folder, so the pain point is universal and immediate"
+    - "Start with the 847-file Downloads folder scenario: every student has a cluttered folder, so the pain point is universal and immediate"
     - "Walk through the self-correction moment (23 vs 847) as a live teaching moment about why OODA matters in practice, not just theory"
-    - "The command anatomy diagram (find | wc -l breakdown) is worth putting on the board — students will see these commands repeatedly in lessons 3-7"
-    - "Have students actually run the checkpoint exercise on their own folders before moving on — lesson 2 builds on having a real FILE-INVENTORY.md"
+    - "The command anatomy diagram (find | wc -l breakdown) is worth putting on the board: students will see these commands repeatedly in lessons 3-7"
+    - "Have students actually run the checkpoint exercise on their own folders before moving on: lesson 2 builds on having a real FILE-INVENTORY.md"
   assessment_quick_check:
     - "Ask students to state the 'Help me understand' prompt pattern from memory and apply it to a non-file problem"
-    - "Ask: 'Why did the agent switch from ls to find?' — tests whether they understood the self-correction, not just watched it"
-    - "Have students explain when they would NOT use an agent for a file task — tests the rule of thumb boundary"
+    - "Ask: 'Why did the agent switch from ls to find?': tests whether they understood the self-correction, not just watched it"
+    - "Have students explain when they would NOT use an agent for a file task: tests the rule of thumb boundary"
 ---
 
 # Your First Agent Workflow
 
 Let's be honest about something before we start.
 
-If you need to check whether a file exists, you're faster than any AI agent. Type `ls budget.csv` — done in two seconds. The agent would need to think, pick a command, ask permission, then respond. Fifteen seconds for a two-second task.
+If you need to check whether a file exists, you're faster than any AI agent. Type `ls budget.csv`: done in two seconds. The agent would need to think, pick a command, ask permission, then respond. Fifteen seconds for a two-second task.
 
 So why are you reading a chapter about directing agents to handle files?
 
@@ -114,11 +114,11 @@ That's it. No commands, no technical details, no specifying _how_ to analyze it.
 
 **The rule of thumb you'll internalize in this chapter:** If you can describe the task faster than you can do it, ask the agent. If you can do it faster than you can describe it, just do it. Three files to move? Drag them. Three hundred files to categorize by type, date, and project? That's agent territory.
 
-The pattern you'll learn today — describe the problem, let the agent figure out the solution — applies to data analysis, project management, research, and any domain where you work with General Agents.
+The pattern you'll learn today (describe the problem, let the agent figure out the solution) applies to data analysis, project management, research, and any domain where you work with General Agents.
 
 ## The Conversation
 
-Open Claude Code. Here's the full exchange — including the parts most tutorials edit out.
+Open Claude Code. Here's the full exchange: including the parts most tutorials edit out.
 
 ```
 You: I have a cluttered Downloads folder. Help me understand what's
@@ -142,7 +142,7 @@ You have 847 files in your Downloads folder — much more than the
 23 items that ls showed, because many are nested in subfolders.
 ```
 
-Pause. Did you catch what just happened? The agent got it wrong the first time — 23 items — and then corrected itself. It didn't hide the mistake or pretend the first answer was right. It noticed that `ls` only shows the top level, switched to `find -type f`, and got the real number. That self-correction is what good agent work looks like.
+Pause. Did you catch what just happened? The agent got it wrong the first time: 23 items, and then corrected itself. It didn't hide the mistake or pretend the first answer was right. It noticed that `ls` only shows the top level, switched to `find -type f`, and got the real number. That self-correction is what good agent work looks like.
 
 ```
 Claude Code: Let me break down what types of files you have.
@@ -193,17 +193,17 @@ You didn't run a single command. You described a problem, and the agent solved i
 
 ## The Division of Labor
 
-Look at what just happened through a different lens. You described the problem in language: "cluttered Downloads folder." The agent chose the solution in code: `ls`, `find`, `wc`, `du`. You couldn't have chosen those commands (you don't know bash). The agent couldn't have chosen what to analyze (it doesn't know what matters to you). Neither of you could have done the other's job. That's the insight — the value isn't automation. It's the combination of your judgment with the agent's technical execution.
+Look at what just happened through a different lens. You described the problem in language: "cluttered Downloads folder." The agent chose the solution in code: `ls`, `find`, `wc`, `du`. You couldn't have chosen those commands (you don't know bash). The agent couldn't have chosen what to analyze (it doesn't know what matters to you). Neither of you could have done the other's job. That's the insight: the value isn't automation. It's the combination of your judgment with the agent's technical execution.
 
 ### And Sometimes the Agent is the Wrong Tool Entirely
 
 Not every file task belongs in a terminal:
 
 - **Browsing photos**: You need to _see_ thumbnails to decide which to keep. The agent sees filenames and metadata. You see memories.
-- **Network drives and NAS**: File operations on mounted network storage can behave differently — latency, permission models, case sensitivity. The agent doesn't know your NAS has a 2-second round trip per operation.
+- **Network drives and NAS**: File operations on mounted network storage can behave differently: latency, permission models, case sensitivity. The agent doesn't know your NAS has a 2-second round trip per operation.
 - **Decisions that need human eyes**: That folder of old photos from college? Don't let an agent bulk-delete based on file size rules. Some decisions aren't computational.
 
-The best collaborators know when to hand off and when to handle it themselves. Acknowledging the agent's limits is part of the skill — not a weakness.
+The best collaborators know when to hand off and when to handle it themselves. Acknowledging the agent's limits is part of the skill, not a weakness.
 
 ---
 
@@ -213,11 +213,11 @@ The agent ran several commands. Let's decode them.
 
 #### The Building Blocks
 
-- **`ls`** — **l**i**s**t files in a folder
-- **`find`** — **find** files matching a pattern
-- **`wc`** — **w**ord **c**ount (counts lines, words, or characters)
-- **`du`** — **d**isk **u**sage (measures sizes)
-- **`sort`** — **sort** results in order
+- **`ls`**: **l**i**s**t files in a folder
+- **`find`**: **find** files matching a pattern
+- **`wc`**: **w**ord **c**ount (counts lines, words, or characters)
+- **`du`**: **d**isk **u**sage (measures sizes)
+- **`sort`**: **sort** results in order
 
 #### Anatomy of a Command
 
@@ -253,7 +253,7 @@ Read it left to right: "**Find** in **Downloads**, only **files**, named `*.pdf`
 
 When the agent ran `du -sh`, that's "**d**isk **u**sage, **s**ummary, **h**uman-readable."
 
-When it ran `sort -rh`, that's "**sort**, **r**everse order, **h**uman-readable" — biggest first.
+When it ran `sort -rh`, that's "**sort**, **r**everse order, **h**uman-readable": biggest first.
 
 #### The Pipe: Chaining Tools Together
 
@@ -267,7 +267,7 @@ find ~/Downloads -name "*.pdf" | wc -l
 
 Small tools, chained together, solving big problems. That's what makes the shell so powerful.
 
-You don't need to memorize these commands. But recognizing them helps you understand what the agent is doing — and verify it's doing the right thing.
+You don't need to memorize these commands. But recognizing them helps you understand what the agent is doing, and verify it's doing the right thing.
 
 ## The Pattern
 
@@ -317,7 +317,7 @@ You should now have: A `file-organizer/FILE-INVENTORY.md` file with your actual 
 
 **Don't move to Lesson 2 until you've created this file.** Everything that follows builds on understanding YOUR files, not the example files in this book.
 
-> **What to do if your Downloads folder is empty or tiny:** Pick a different folder — Documents, Desktop, or any folder with at least 20 files. Adjust the prompt accordingly.
+> **What to do if your Downloads folder is empty or tiny:** Pick a different folder: Documents, Desktop, or any folder with at least 20 files. Adjust the prompt accordingly.
 
 ---
 
@@ -378,4 +378,4 @@ and '-10' mean? Teach me to read this command.
 
 <Flashcards />
 
-Your Downloads folder is visible now. But visibility creates a new problem. You can see exactly what's there — and some of it matters. Tax documents. Financial spreadsheets. Irreplaceable photos buried under random downloads. If the next step goes wrong, those files could disappear. And unlike code, your files don't have `git revert`.
+Your Downloads folder is visible now. But visibility creates a new problem. You can see exactly what's there, and some of it matters. Tax documents. Financial spreadsheets. Irreplaceable photos buried under random downloads. If the next step goes wrong, those files could disappear. And unlike code, your files don't have `git revert`.

@@ -14,13 +14,13 @@ cards:
 
   - id: "ch35-three-way-match-rule-design-002"
     front: "What is the central principle for setting invoice tolerance percentages by category?"
-    back: "Tolerance reflects the pricing model of the category — fixed-price categories warrant tight tolerances; market-linked categories (freight, utilities) warrant wider tolerances to accommodate legitimate variability."
+    back: "Tolerance reflects the pricing model of the category: fixed-price categories warrant tight tolerances; market-linked categories (freight, utilities) warrant wider tolerances to accommodate legitimate variability."
     tags: ["tolerance-design", "pricing-model"]
     difficulty: "basic"
 
   - id: "ch35-three-way-match-rule-design-003"
     front: "What are the default price and quantity tolerances for direct materials?"
-    back: "Price ±2%, quantity ±0% (zero tolerance — pay only for confirmed goods receipt quantities)."
+    back: "Price ±2%, quantity ±0% (zero tolerance: pay only for confirmed goods receipt quantities)."
     tags: ["direct-materials", "tolerance"]
     difficulty: "basic"
 
@@ -32,7 +32,7 @@ cards:
 
   - id: "ch35-three-way-match-rule-design-005"
     front: "Why do services invoices carry ±0% price tolerance?"
-    back: "Services are contracted at a fixed price with no partial delivery concept and no market-rate variability. Any price deviation is either a billing error or an unauthorised scope change — both require human review."
+    back: "Services are contracted at a fixed price with no partial delivery concept and no market-rate variability. Any price deviation is either a billing error or an unauthorised scope change: both require human review."
     tags: ["services", "tolerance"]
     difficulty: "intermediate"
 
@@ -50,13 +50,13 @@ cards:
 
   - id: "ch35-three-way-match-rule-design-008"
     front: "What pattern triggers the systematic issue flag in exception monitoring?"
-    back: "The same exception type from the same vendor more than 3 times in 30 days — indicating a vendor billing system problem, not isolated incidents."
+    back: "The same exception type from the same vendor more than 3 times in 30 days: indicating a vendor billing system problem, not isolated incidents."
     tags: ["pattern-monitoring", "systematic-issue"]
     difficulty: "intermediate"
 
   - id: "ch35-three-way-match-rule-design-009"
     front: "What does a price variance on the same PO line item for more than 2 consecutive invoices indicate?"
-    back: "Contract non-compliance — the vendor is repeatedly billing at a price differing from the agreed contract. The correct response is a commercial review, not continued tolerance-based approval."
+    back: "Contract non-compliance: the vendor is repeatedly billing at a price differing from the agreed contract. The correct response is a commercial review, not continued tolerance-based approval."
     tags: ["pattern-monitoring", "contract-non-compliance"]
     difficulty: "intermediate"
 
@@ -73,8 +73,8 @@ cards:
     difficulty: "intermediate"
 
   - id: "ch35-three-way-match-rule-design-012"
-    front: "A freight carrier consistently invoices at 8-9% above PO price for six consecutive months — within your ±10% tolerance. Should this auto-approve continue?"
-    back: "Auto-approval should stop. The pattern — same vendor, same direction, six months — is contract non-compliance evidence. The tolerance accommodates legitimate variability, not a systematic price increase. A commercial review is required even though each invoice individually auto-approves."
+    front: "A freight carrier consistently invoices at 8-9% above PO price for six consecutive months: within your ±10% tolerance. Should this auto-approve continue?"
+    back: "Auto-approval should stop. The pattern: same vendor, same direction, six months: is contract non-compliance evidence. The tolerance accommodates legitimate variability, not a systematic price increase. A commercial review is required even though each invoice individually auto-approves."
     tags: ["pattern-monitoring", "freight", "tolerance"]
     difficulty: "advanced"
     why: "What is the difference between a tolerance rule working correctly and a vendor exploiting tolerance to hide a pricing change?"

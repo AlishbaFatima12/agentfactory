@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/ifrs9-staging-ecl
 sidebar_position: 3
-title: "IFRS 9 ECL — Staging and the ECL Formula"
-description: "Deep dive into the IFRS 9 three-stage model — performing, underperforming, non-performing — and the fundamental ECL formula (PD x LGD x EAD) that drives provisioning in 140+ countries"
+title: "IFRS 9 ECL: Staging and the ECL Formula"
+description: "Deep dive into the IFRS 9 three-stage model (performing, underperforming, non-performing) and the fundamental ECL formula (PD x LGD x EAD) that drives provisioning in 140+ countries"
 keywords:
   [
     "IFRS 9",
@@ -57,31 +57,31 @@ learning_objectives:
 cognitive_load:
   new_concepts: 7
   concepts_list:
-    - "Stage 1 — 12-month ECL (performing, no SICR since origination)"
-    - "Stage 2 — Lifetime ECL (significant increase in credit risk, not yet defaulted)"
-    - "Stage 3 — Lifetime ECL (credit-impaired, defaulted)"
-    - "Significant Increase in Credit Risk (SICR) — quantitative and qualitative triggers"
+    - "Stage 1: 12-month ECL (performing, no SICR since origination)"
+    - "Stage 2: Lifetime ECL (significant increase in credit risk, not yet defaulted)"
+    - "Stage 3: Lifetime ECL (credit-impaired, defaulted)"
+    - "Significant Increase in Credit Risk (SICR): quantitative and qualitative triggers"
     - "ECL = PD x LGD x EAD (the fundamental formula)"
     - "12-month ECL vs Lifetime ECL (the measurement difference)"
     - "Interest revenue: gross carrying amount (Stages 1-2) vs net carrying amount (Stage 3)"
-  assessment: "7 concepts at B1 level — within the 7-10 cognitive limit for this tier. The lesson progresses from conceptual (what are stages?) to applied (calculate ECL) with concrete examples at each step."
+  assessment: "7 concepts at B1 level: within the 7-10 cognitive limit for this tier. The lesson progresses from conceptual (what are stages?) to applied (calculate ECL) with concrete examples at each step."
 
 differentiation:
-  extension_for_advanced: "Research how IFRS 9 handles purchased or originated credit-impaired (POCI) assets — assets that were already credit-impaired when the bank acquired them. How does the staging model apply? Why does POCI treatment differ from standard originated assets?"
+  extension_for_advanced: "Research how IFRS 9 handles purchased or originated credit-impaired (POCI) assets: assets that were already credit-impaired when the bank acquired them. How does the staging model apply? Why does POCI treatment differ from standard originated assets?"
   remedial_for_struggling: "Focus on two things: the stage classification table (which criteria put a loan in each stage) and the basic ECL formula (PD x LGD x EAD). If you can classify a loan and compute a 12-month ECL, you have the foundation for everything that follows."
 ---
 
-# IFRS 9 ECL — Staging and the ECL Formula
+# IFRS 9 ECL: Staging and the ECL Formula
 
-In Lesson 1, you learned that IFRS 9 is the accounting pillar of modern banking — the framework that requires banks to provision for expected credit losses before those losses actually occur. In Lesson 2, you saw that the banking plugin's `ifrs9-staging` and `ifrs9-ecl` skills handle this calculation. Now you will build the staging model and the ECL formula from first principles, so you understand exactly what the skills are calculating and can verify their output.
+In Lesson 1, you learned that IFRS 9 is the accounting pillar of modern banking: the framework that requires banks to provision for expected credit losses before those losses actually occur. In Lesson 2, you saw that the banking plugin's `ifrs9-staging` and `ifrs9-ecl` skills handle this calculation. Now you will build the staging model and the ECL formula from first principles, so you understand exactly what the skills are calculating and can verify their output.
 
 The IFRS 9 Expected Credit Loss model is the single most important quantitative framework in global banking accounting. It governs how 140+ countries calculate provisions on every loan, bond, trade receivable, and financial guarantee on their balance sheets. Mastering staging and the ECL formula is not optional for any banking professional working outside the United States.
 
 ## The Problem IFRS 9 Solves
 
-Under IAS 39 (the predecessor standard), banks used an "incurred loss" model. A provision was recognised only when there was **objective evidence** that a loss had already occurred — the borrower had missed payments, gone bankrupt, or otherwise demonstrated an inability to repay. This created a fatal timing problem.
+Under IAS 39 (the predecessor standard), banks used an "incurred loss" model. A provision was recognised only when there was **objective evidence** that a loss had already occurred: the borrower had missed payments, gone bankrupt, or otherwise demonstrated an inability to repay. This created a fatal timing problem.
 
-During the 2008 financial crisis, portfolios that would eventually lose billions were still being reported at full value because the losses had not yet been formally incurred. By the time objective evidence appeared, the losses were so large that banks could not absorb them. The incurred loss model was described by regulators as "too little, too late" — it delayed recognition of losses that were already economically inevitable.
+During the 2008 financial crisis, portfolios that would eventually lose billions were still being reported at full value because the losses had not yet been formally incurred. By the time objective evidence appeared, the losses were so large that banks could not absorb them. The incurred loss model was described by regulators as "too little, too late": it delayed recognition of losses that were already economically inevitable.
 
 IFRS 9, effective 1 January 2018, replaced this with a **forward-looking** model. Banks must now estimate expected losses over the future life of the instrument, not wait for evidence that losses have already happened. The mechanism for this forward-looking estimation is the three-stage model.
 
@@ -97,9 +97,9 @@ IFRS 9 classifies every financial asset into one of three stages based on the ch
 
 Three critical distinctions to internalise:
 
-**12-month ECL vs Lifetime ECL.** Stage 1 assets require a provision equal to the expected credit loss over the next 12 months only. Stage 2 and 3 assets require a provision equal to the expected credit loss over the entire remaining life of the instrument. For a 20-year mortgage in Stage 2, the bank must estimate losses over all 20 remaining years — not just the next 12 months.
+**12-month ECL vs Lifetime ECL.** Stage 1 assets require a provision equal to the expected credit loss over the next 12 months only. Stage 2 and 3 assets require a provision equal to the expected credit loss over the entire remaining life of the instrument. For a 20-year mortgage in Stage 2, the bank must estimate losses over all 20 remaining years; not just the next 12 months.
 
-**The staging cliff effect.** When an asset migrates from Stage 1 to Stage 2, the provision typically increases by 5-10x because the measurement window expands from 12 months to the full remaining term. This cliff effect is one of the most significant features of IFRS 9 — a single rating downgrade can multiply a portfolio's provision by an order of magnitude.
+**The staging cliff effect.** When an asset migrates from Stage 1 to Stage 2, the provision typically increases by 5-10x because the measurement window expands from 12 months to the full remaining term. This cliff effect is one of the most significant features of IFRS 9: a single rating downgrade can multiply a portfolio's provision by an order of magnitude.
 
 **Interest revenue in Stage 3.** This is the distinction that catches many practitioners. In Stages 1 and 2, the bank recognises interest revenue based on the **gross** carrying amount (the full loan balance before deducting the ECL provision). In Stage 3, interest revenue is calculated on the **net** carrying amount (the loan balance minus the ECL provision). This reduces recognised income for credit-impaired assets.
 
@@ -113,7 +113,7 @@ SICR assessment drives provision volatility: one portfolio-wide rating downgrade
 
 ## SICR: When Does an Asset Move to Stage 2?
 
-The Significant Increase in Credit Risk (SICR) assessment is the most judgment-intensive part of IFRS 9. An asset moves from Stage 1 to Stage 2 when there has been a significant increase in the probability of default since initial recognition. IFRS 9 does not prescribe a single threshold — it requires banks to consider all reasonable and supportable information.
+The Significant Increase in Credit Risk (SICR) assessment is the most judgment-intensive part of IFRS 9. An asset moves from Stage 1 to Stage 2 when there has been a significant increase in the probability of default since initial recognition. IFRS 9 does not prescribe a single threshold: it requires banks to consider all reasonable and supportable information.
 
 In practice, banks use a combination of quantitative and qualitative triggers:
 
@@ -136,7 +136,7 @@ In practice, banks use a combination of quantitative and qualitative triggers:
 
 ### The 30-Day Rebuttable Presumption
 
-IFRS 9 includes a backstop: there is a **rebuttable presumption** that SICR has occurred when an asset is more than 30 days past due. "Rebuttable" means the bank can override this presumption if it has evidence that the past-due status does not indicate a significant increase in credit risk — for example, an administrative payment delay by a financially healthy borrower. But the default position is that 30+ DPD triggers Stage 2.
+IFRS 9 includes a backstop: there is a **rebuttable presumption** that SICR has occurred when an asset is more than 30 days past due. "Rebuttable" means the bank can override this presumption if it has evidence that the past-due status does not indicate a significant increase in credit risk: for example, an administrative payment delay by a financially healthy borrower. But the default position is that 30+ DPD triggers Stage 2.
 
 ## Stage 3: Credit-Impaired (Default)
 
@@ -187,7 +187,7 @@ The bank books a $42,000 provision against this loan. The loan remains at full v
 
 ### A Concrete Example: Stage 2 (Lifetime ECL)
 
-The same loan experiences a SICR — the borrower's rating drops by 3 notches. The loan moves to Stage 2. Now the bank must calculate lifetime ECL over the remaining 5-year term:
+The same loan experiences a SICR: the borrower's rating drops by 3 notches. The loan moves to Stage 2. Now the bank must calculate lifetime ECL over the remaining 5-year term:
 
 | Year      | Marginal PD | LGD | EAD         | Discount Factor | Period ECL   |
 | --------- | ----------- | --- | ----------- | --------------- | ------------ |
@@ -200,10 +200,10 @@ The same loan experiences a SICR — the borrower's rating drops by 3 notches. T
 
 **Lifetime ECL** = **$397,889**
 
-The provision jumped from $42,000 (Stage 1) to $397,889 (Stage 2) — a **9.5x increase**. This is the staging cliff effect. The loan's credit quality deteriorated, so the measurement window expanded from 12 months to the full remaining life. The economic loss expectation did not change by 9.5x — the measurement window did.
+The provision jumped from $42,000 (Stage 1) to $397,889 (Stage 2) (a **9.5x increase**. This is the staging cliff effect. The loan's credit quality deteriorated, so the measurement window expanded from 12 months to the full remaining life. The economic loss expectation did not change by 9.5x) the measurement window did.
 
 :::info Why Stage 1 Uses 12-Month ECL, Not Lifetime
-A common question: if the goal is forward-looking provisioning, why does Stage 1 use only 12-month ECL instead of lifetime ECL? The answer is practical: lifetime ECL for performing assets with 20-30 year terms would result in enormous Day 1 provisions that do not reflect genuine credit risk. The 12-month ECL is a compromise — forward-looking enough to capture near-term deterioration, but not so aggressive that it distorts the balance sheet for performing assets. The staging cliff from Stage 1 to Stage 2 is the mechanism that triggers full lifetime recognition when genuine deterioration is detected.
+A common question: if the goal is forward-looking provisioning, why does Stage 1 use only 12-month ECL instead of lifetime ECL? The answer is practical: lifetime ECL for performing assets with 20-30 year terms would result in enormous Day 1 provisions that do not reflect genuine credit risk. The 12-month ECL is a compromise: forward-looking enough to capture near-term deterioration, but not so aggressive that it distorts the balance sheet for performing assets. The staging cliff from Stage 1 to Stage 2 is the mechanism that triggers full lifetime recognition when genuine deterioration is detected.
 :::
 
 ## Stage Migration: What Moves a Loan Between Stages
@@ -215,10 +215,10 @@ Stage migration is not a one-way street. Loans can move in both directions:
 | Stage 1 to Stage 2 | SICR detected (rating downgrade, 30+ DPD, covenant breach)    | ECL increases from 12-month to lifetime (5-10x typical) |
 | Stage 2 to Stage 3 | Default (90+ DPD, unlikely to pay, restructuring with loss)   | Interest revenue now on net carrying amount             |
 | Stage 2 to Stage 1 | SICR no longer exists (rating upgrade, sustained performance) | ECL decreases from lifetime to 12-month                 |
-| Stage 3 to Stage 2 | Cure — borrower resumes payment, no longer credit-impaired    | Interest revenue returns to gross carrying amount basis |
-| Stage 3 to Stage 1 | Full cure — credit quality returns to origination level       | Rare but possible for short-duration retail exposures   |
+| Stage 3 to Stage 2 | Cure: borrower resumes payment, no longer credit-impaired    | Interest revenue returns to gross carrying amount basis |
+| Stage 3 to Stage 1 | Full cure: credit quality returns to origination level       | Rare but possible for short-duration retail exposures   |
 
-The `ifrs9-staging` skill tracks these migrations and produces the stage migration table required for IFRS 9 disclosure — showing the opening stage, the closing stage, and the ECL impact of each migration.
+The `ifrs9-staging` skill tracks these migrations and produces the stage migration table required for IFRS 9 disclosure: showing the opening stage, the closing stage, and the ECL impact of each migration.
 
 ## Using the Banking Plugin
 
@@ -249,7 +249,7 @@ The agent routes through `ifrs9-staging` and `ifrs9-ecl` to produce a staging as
 | Provision impact                    | Shows the change from prior staging                             | Magnitude of the staging cliff effect is reasonable for the measurement window change |
 
 :::note Your output will vary
-The specific ECL amounts depend on the PD term structure, LGD, and EAD you provide. The teaching point is the staging classification logic and the cliff effect when measurement changes from 12-month to lifetime — verify the structure and reasoning, not specific numbers.
+The specific ECL amounts depend on the PD term structure, LGD, and EAD you provide. The teaching point is the staging classification logic and the cliff effect when measurement changes from 12-month to lifetime: verify the structure and reasoning, not specific numbers.
 :::
 
 Sarah reviews the staging trigger (the 3-notch downgrade is a clear SICR indicator) and validates that the PD term structure the agent applied is consistent with her bank's internal rating model calibration. The next two lessons build the PD, LGD, and EAD components in depth (Lesson 4) and add macroeconomic scenario weighting (Lesson 5).
@@ -281,7 +281,7 @@ For Facility F, explain whether it can return to Stage 1
 and what evidence would be required.
 ```
 
-**What you are learning:** Staging classification is the first step in every ECL calculation. By classifying facilities yourself, you develop the judgment the `ifrs9-staging` skill encodes — and you can verify whether the skill is staging correctly when you use it on real data.
+**What you are learning:** Staging classification is the first step in every ECL calculation. By classifying facilities yourself, you develop the judgment the `ifrs9-staging` skill encodes: and you can verify whether the skill is staging correctly when you use it on real data.
 
 ### Prompt 2: Adapt
 
@@ -339,4 +339,4 @@ that a non-accountant would not understand.
 
 ---
 
-Continue to [Lesson 4: PD, LGD, and EAD — Building the ECL Components →](./04-ifrs9-pd-lgd-ead.md)
+Continue to [Lesson 4: PD, LGD, and EAD: Building the ECL Components →](./04-ifrs9-pd-lgd-ead.md)

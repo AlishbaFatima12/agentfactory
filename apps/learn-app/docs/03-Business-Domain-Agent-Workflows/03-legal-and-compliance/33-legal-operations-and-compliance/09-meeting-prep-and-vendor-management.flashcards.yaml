@@ -8,19 +8,19 @@ deck:
 cards:
   - id: "ch33-09-meeting-prep-001"
     front: "What seven meeting types does the meeting-briefing skill support?"
-    back: "1. Deal review\n2. Board/committee\n3. Vendor call\n4. Team sync\n5. Client meeting\n6. Regulatory discussion\n7. Litigation/dispute\n\nThe preparation template changes based on meeting type — a vendor renegotiation needs contract terms and negotiation history, while a board meeting needs risk highlights and compliance posture."
+    back: "1. Deal review\n2. Board/committee\n3. Vendor call\n4. Team sync\n5. Client meeting\n6. Regulatory discussion\n7. Litigation/dispute\n\nThe preparation template changes based on meeting type: a vendor renegotiation needs contract terms and negotiation history, while a board meeting needs risk highlights and compliance posture."
     difficulty: "basic"
     tags: ["meeting-types"]
 
   - id: "ch33-09-meeting-prep-002"
     front: "What are the five steps of the meeting-briefing skill's preparation methodology?"
-    back: "1. Identify context — meeting type, participants, agenda, your role.\n2. Assess preparation needs — what information is critical for this type.\n3. Gather context — from connected sources (calendar, email, documents) or from your prompt.\n4. Synthesise — structured briefing with talking points and red lines.\n5. Identify gaps — what the briefing could not find, what you need to verify."
+    back: "1. Identify context: meeting type, participants, agenda, your role.\n2. Assess preparation needs: what information is critical for this type.\n3. Gather context: from connected sources (calendar, email, documents) or from your prompt.\n4. Synthesise: structured briefing with talking points and red lines.\n5. Identify gaps: what the briefing could not find, what you need to verify."
     difficulty: "intermediate"
     tags: ["five-step-methodology"]
 
   - id: "ch33-09-meeting-prep-003"
     front: "What six sections does a vendor renegotiation meeting briefing contain?"
-    back: "1. Background — vendor details, contract value, relationship status.\n2. Open Issues — each issue with current state, target, rationale, and walk-away position.\n3. Talking Points — opening statement, sequencing strategy, and closing.\n4. Red Lines — positions you will not concede.\n5. Preparation Gaps — information the briefing could not find that you need to verify.\n6. Attorney Review note — all positions require GC approval."
+    back: "1. Background: vendor details, contract value, relationship status.\n2. Open Issues: each issue with current state, target, rationale, and walk-away position.\n3. Talking Points: opening statement, sequencing strategy, and closing.\n4. Red Lines: positions you will not concede.\n5. Preparation Gaps: information the briefing could not find that you need to verify.\n6. Attorney Review note: all positions require GC approval."
     difficulty: "intermediate"
     tags: ["briefing-structure"]
 
@@ -32,7 +32,7 @@ cards:
 
   - id: "ch33-09-meeting-prep-005"
     front: "What does the /vendor-check command produce in a vendor obligation dashboard?"
-    back: "1. Obligation summary — active obligations, overdue items count.\n2. 30/60/90-day deadline views — upcoming obligations in three time horizons.\n3. Overdue items — obligations past due with recommendations.\n4. Renewal calendar — contract start/end dates, auto-renewal status, notice deadlines.\n5. SLA monitoring — guaranteed vs actual uptime, credit claims."
+    back: "1. Obligation summary: active obligations, overdue items count.\n2. 30/60/90-day deadline views: upcoming obligations in three time horizons.\n3. Overdue items: obligations past due with recommendations.\n4. Renewal calendar: contract start/end dates, auto-renewal status, notice deadlines.\n5. SLA monitoring: guaranteed vs actual uptime, credit claims."
     difficulty: "basic"
     tags: ["vendor-check", "dashboard"]
 
@@ -50,30 +50,30 @@ cards:
 
   - id: "ch33-09-meeting-prep-008"
     front: "What five fields should each post-meeting action item include?"
-    back: "1. Action — specific task description.\n2. Owner — person responsible for completion.\n3. Priority — HIGH, MEDIUM, or LOW.\n4. Deadline — specific date and time.\n5. Dependencies — which other action items must complete first."
+    back: "1. Action: specific task description.\n2. Owner: person responsible for completion.\n3. Priority; HIGH, MEDIUM, or LOW.\n4. Deadline: specific date and time.\n5. Dependencies: which other action items must complete first."
     difficulty: "basic"
     tags: ["action-items", "tracking"]
 
   - id: "ch33-09-meeting-prep-009"
     front: "How does the meeting-briefing output differ between a vendor renegotiation and a board meeting?"
-    back: "Vendor renegotiation: focuses on talking points, red lines, walk-away positions, and negotiation sequencing — oriented toward a two-party negotiation.\nBoard meeting: focuses on risk status (RAG colour coding), regulatory updates, compliance posture, contract pipeline, and budget variance — oriented toward executive reporting and governance oversight."
+    back: "Vendor renegotiation: focuses on talking points, red lines, walk-away positions, and negotiation sequencing: oriented toward a two-party negotiation.\nBoard meeting: focuses on risk status (RAG colour coding), regulatory updates, compliance posture, contract pipeline, and budget variance: oriented toward executive reporting and governance oversight."
     difficulty: "intermediate"
     tags: ["meeting-types", "output-comparison"]
 
   - id: "ch33-09-meeting-prep-010"
     front: "What is the difference between meeting preparation with and without MCP connectors (Calendar, Gmail)?"
-    back: "With connectors: the meeting-briefing skill automatically pulls the meeting invite, prior email threads, and attached documents. The vendor-check cross-references calendar reminders for upcoming deadlines.\nWithout connectors: you provide the context manually in your prompt, and the output is equally structured — the difference is manual vs automatic context gathering."
+    back: "With connectors: the meeting-briefing skill automatically pulls the meeting invite, prior email threads, and attached documents. The vendor-check cross-references calendar reminders for upcoming deadlines.\nWithout connectors: you provide the context manually in your prompt, and the output is equally structured: the difference is manual vs automatic context gathering."
     difficulty: "intermediate"
     tags: ["connectors", "mcp"]
 
   - id: "ch33-09-meeting-prep-011"
     front: "In the CloudStack renegotiation, why should the DPA be the first agenda item?"
-    back: "The DPA is a regulatory requirement under PDPA 2023, not a commercial preference — making it non-negotiable. Leading with it establishes seriousness and demonstrates that some positions are compliance-driven, not just bargaining tactics. This sets the tone for the remaining commercial negotiations (liability cap, governing law)."
+    back: "The DPA is a regulatory requirement under PDPA 2023, not a commercial preference: making it non-negotiable. Leading with it establishes seriousness and demonstrates that some positions are compliance-driven, not just bargaining tactics. This sets the tone for the remaining commercial negotiations (liability cap, governing law)."
     difficulty: "advanced"
     tags: ["negotiation-strategy", "dpa"]
 
   - id: "ch33-09-meeting-prep-012"
     front: "What are 'preparation gaps' in a meeting briefing, and why are they valuable?"
-    back: "Preparation gaps are pieces of information the briefing could not find or verify — such as the counterparty counsel's name, prior negotiation email history, or the counterparty's standard DPA template. They are valuable because they tell you what to obtain before the meeting, preventing you from discovering information gaps during the meeting itself."
+    back: "Preparation gaps are pieces of information the briefing could not find or verify: such as the counterparty counsel's name, prior negotiation email history, or the counterparty's standard DPA template. They are valuable because they tell you what to obtain before the meeting, preventing you from discovering information gaps during the meeting itself."
     difficulty: "intermediate"
     tags: ["preparation-gaps"]

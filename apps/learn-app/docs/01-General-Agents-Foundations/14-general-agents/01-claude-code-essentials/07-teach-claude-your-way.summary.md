@@ -10,7 +10,7 @@
 > Write a LinkedIn post about learning AI development.
 ```
 
-Run this twice. You'll get different results—different structure, tone, length. Not wrong, just different.
+Run this twice. You'll get different results: different structure, tone, length. Not wrong, just different.
 
 This is fundamental to how AI models work, not a bug.
 
@@ -36,7 +36,7 @@ For casual conversation, this is fine. For consistent professional output? It's 
 
 ### 4. Skills Constrain Non-Determinism
 
-A skill is a folder with a `SKILL.md` file containing your instructions—tone, structure, preferences—so Claude creates output within YOUR boundaries.
+A skill is a folder with a `SKILL.md` file containing your instructions: tone, structure, preferences: so Claude creates output within YOUR boundaries.
 
 Claude's output still varies (non-determinism doesn't disappear), but it stays within your defined constraints. Every LinkedIn post has your tone, your emoji style, your engagement hooks.
 
@@ -53,7 +53,7 @@ Prompts get you *a* result. Skills get you *your* result.
 
 | Method | How It Works | When to Use |
 |--------|--------------|-------------|
-| **Automatic** | Claude recognizes when your style applies | Normal workflow—just ask naturally |
+| **Automatic** | Claude recognizes when your style applies | Normal workflow: just ask naturally |
 | **Explicit** | You say "Use [skill-name]..." | When you want a specific skill for sure |
 
 Both work! Start with explicit invocation to see skills in action clearly.
@@ -94,14 +94,14 @@ Run twice, compare outputs.
 > Use internal-comms and write a LinkedIn post about learning how to build software with AI Agents.
 ```
 
-**Notice**: The skill-enhanced output stays within defined boundaries—personality, strategic emojis, engagement question.
+**Notice**: The skill-enhanced output stays within defined boundaries: personality, strategic emojis, engagement question.
 
 ### Skills Available Now (no Python needed)
-- `internal-comms` — Status reports, newsletters, LinkedIn posts
-- `brand-guidelines` — Apply brand colors and typography
+- `internal-comms`; Status reports, newsletters, LinkedIn posts
+- `brand-guidelines`; Apply brand colors and typography
 
 ### Skills After Python (Chapter 16)
-- `docx`, `pdf`, `pptx`, `xlsx` — Document creation and manipulation
+- `docx`, `pdf`, `pptx`, `xlsx`; Document creation and manipulation
 
 ---
 
@@ -123,10 +123,10 @@ A skill that transforms messy lecture notes into structured study materials:
 
 ## Common Mistakes to Avoid
 
-1. **Thinking non-determinism is a bug** — It's fundamental to AI models; skills constrain it, not eliminate it
-2. **Confusing skills with saved prompts** — Skills encode reasoning patterns, not just text to paste
-3. **Only considering coding tasks** — Skills work for any repeated procedure
-4. **Overcomplicating** — "LinkedIn posts: friendly tone, 2-3 emojis, end with question" is enough
+1. **Thinking non-determinism is a bug**; It's fundamental to AI models; skills constrain it, not eliminate it
+2. **Confusing skills with saved prompts**; Skills encode reasoning patterns, not just text to paste
+3. **Only considering coding tasks**; Skills work for any repeated procedure
+4. **Overcomplicating**; "LinkedIn posts: friendly tone, 2-3 emojis, end with question" is enough
 
 ---
 

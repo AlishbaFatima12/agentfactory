@@ -312,7 +312,7 @@ The agent routes through `aml-typologies` and `aml-sar-drafting` to produce a ty
 | Tipping-off reminder | Warns against customer contact before filing decision                | POCA 2002 s333A referenced; explicit prohibition on disclosing suspicion                                         |
 
 :::note Your output will vary
-The specific typology match and narrative content depend on the transaction pattern you provide. The teaching point is the agent boundary — the agent identifies typologies and drafts narratives, but the MLRO makes the filing decision (personal criminal liability) and the agent must never file a SAR or disclose its existence.
+The specific typology match and narrative content depend on the transaction pattern you provide. The teaching point is the agent boundary: the agent identifies typologies and drafts narratives, but the MLRO makes the filing decision (personal criminal liability) and the agent must never file a SAR or disclose its existence.
 :::
 
 Thomas reviews the typology match and narrative accuracy, then escalates the draft to the MLRO for the filing decision -- a step that carries personal criminal liability and must always be made by a human.

@@ -6,7 +6,7 @@ slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-35/supply-chain-procurement-slides.pdf"
   title: "Supply Chain & Procurement"
   height: 700
-description: "Build AI agents for end-to-end supply chain intelligence — vendor assessment, invoice reconciliation, supplier risk monitoring, logistics optimisation, spend analytics, and five persistent agents that run your procurement operating system continuously"
+description: "Build AI agents for end-to-end supply chain intelligence: vendor assessment, invoice reconciliation, supplier risk monitoring, logistics optimisation, spend analytics, and five persistent agents that run your procurement operating system continuously"
 chapter_number: 35
 part_number: 3
 version: 1.0
@@ -17,9 +17,9 @@ status: draft
 
 ## Teaching Aid
 
-> _"The supply chain is the most data-rich function in most organisations and the worst-managed one. You have purchase orders, invoices, goods receipts, contracts, shipment records, customs documents, quality certificates, and supplier scorecards — all sitting in different systems, in different formats, managed by different teams. The intelligence to run a world-class supply chain is already there. The problem is that no one person can hold it all in their head at once."_
+> _"The supply chain is the most data-rich function in most organisations and the worst-managed one. You have purchase orders, invoices, goods receipts, contracts, shipment records, customs documents, quality certificates, and supplier scorecards: all sitting in different systems, in different formats, managed by different teams. The intelligence to run a world-class supply chain is already there. The problem is that no one person can hold it all in their head at once."_
 
-Every supply chain problem is an information problem before it is an operational problem. The vendor does not become distressed overnight — the signals appear weeks before the crisis. The invoice exception is a pattern, not a one-off. The logistics rate is no longer optimal — detectable when the fuel index moves, not when the annual contract review arrives.
+Every supply chain problem is an information problem before it is an operational problem. The vendor does not become distressed overnight: the signals appear weeks before the crisis. The invoice exception is a pattern, not a one-off. The logistics rate is no longer optimal: detectable when the fuel index moves, not when the annual contract review arrives.
 
 This chapter builds the intelligence layer that bridges the gap between the physical world of goods, warehouses, and trucks and the digital world of purchase orders, invoices, and contracts. You will deploy 8 skills and 5 persistent agents that transform supply chain operations from reactive firefighting into continuous, anticipatory procurement intelligence.
 
@@ -77,7 +77,7 @@ This chapter requires **Cowork** (set up in Chapter 28) and the Supply Chain plu
 
 When you finish this chapter, your perspective shifts:
 
-1. **You see supply chain operations as an information problem.** Every disruption, every overpayment, every missed deadline was a signal that existed in the data before it became a crisis. The question is whether anyone — or any agent — was watching.
+1. **You see supply chain operations as an information problem.** Every disruption, every overpayment, every missed deadline was a signal that existed in the data before it became a crisis. The question is whether anyone: or any agent: was watching.
 2. **You have a working 8-skill plugin.** Vendor assessment, invoice reconciliation, supplier risk, logistics analysis, spend analytics, network design, vendor communications, and executive briefing are all installed, configured, and deployable.
 3. **You understand the boundaries.** The agent classifies vendors, reconciles invoices, monitors risk, analyses spend, and briefs leadership. It does not negotiate contracts, approve payments above authority limits, or make sourcing decisions. These boundaries are encoded in every skill file.
 4. **You can extend.** The vendor assessment framework transfers to any domain with supplier relationships. The invoice reconciliation pattern works for any document-matching workflow. The persistent agent architecture applies wherever continuous monitoring creates value.

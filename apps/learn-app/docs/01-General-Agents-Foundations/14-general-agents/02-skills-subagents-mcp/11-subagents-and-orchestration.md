@@ -56,23 +56,23 @@ teaching_guide:
   session_group: 4
   session_title: "Subagents, MCP, and Compilation"
   key_points:
-    - "Subagents have isolated context windows — this is the key architectural concept, not just a convenience feature, and it directly prevents the context pollution problem"
-    - "The /agents command reveals built-in agents students already have — no setup required, which removes the barrier to first use"
+    - "Subagents have isolated context windows; this is the key architectural concept, not just a convenience feature, and it directly prevents the context pollution problem"
+    - "The /agents command reveals built-in agents students already have; no setup required, which removes the barrier to first use"
     - "Parallel invocation (using Explore AND Plan in one prompt) is the first exposure to orchestration, which scales to agent teams in Chapter 15 Lesson 9"
-    - "Custom subagents live as markdown files in .claude/agents/ — same simplicity principle as skills (SKILL.md), reinforcing that AI customization is just structured text"
+    - "Custom subagents live as markdown files in .claude/agents/; same simplicity principle as skills (SKILL.md), reinforcing that AI customization is just structured text"
   misconceptions:
-    - "Students think subagents are persistent like chatbots — emphasize the one-task-one-completion model where subagents return results and terminate"
-    - "Students confuse subagents with skills — subagents have isolated context and run independently, while skills share the main conversation context"
-    - "Students assume they must explicitly invoke subagents every time — Claude Code auto-delegates based on task complexity and agent descriptions"
-    - "Students think creating custom subagents requires programming — the /agents menu with 'Generate with Claude' creates agents from plain English descriptions"
+    - "Students think subagents are persistent like chatbots; emphasize the one-task-one-completion model where subagents return results and terminate"
+    - "Students confuse subagents with skills; subagents have isolated context and run independently, while skills share the main conversation context"
+    - "Students assume they must explicitly invoke subagents every time; Claude Code auto-delegates based on task complexity and agent descriptions"
+    - "Students think creating custom subagents requires programming; the /agents menu with 'Generate with Claude' creates agents from plain English descriptions"
   discussion_prompts:
-    - "The lesson compares subagents to a team meeting where the researcher presents and leaves — what tasks in your work would benefit from this 'present and leave' pattern?"
+    - "The lesson compares subagents to a team meeting where the researcher presents and leaves; what tasks in your work would benefit from this 'present and leave' pattern?"
     - "When would you choose a skill (shared context, automatic activation) over a subagent (isolated context, explicit invocation) for the same task?"
   teaching_tips:
-    - "Start with the live /agents demo — students seeing their built-in agents listed creates immediate 'I already have this' excitement"
-    - "Run the Explore subagent live on the classroom project folder — the real-time file scanning is visually compelling and makes the concept concrete"
+    - "Start with the live /agents demo; students seeing their built-in agents listed creates immediate 'I already have this' excitement"
+    - "Run the Explore subagent live on the classroom project folder; the real-time file scanning is visually compelling and makes the concept concrete"
     - "Use the 'without subagents vs with subagents' comparison (research cluttering context vs clean handoff) as a whiteboard diagram before the hands-on section"
-    - "Have students create a custom subagent during class using /agents > Create new agent > Generate with Claude — the 5-step process takes under 2 minutes"
+    - "Have students create a custom subagent during class using /agents > Create new agent > Generate with Claude; the 5-step process takes under 2 minutes"
   assessment_quick_check:
     - "What happens to a subagent's context after it completes its task?"
     - "Name two built-in agents and describe when each would auto-activate"
@@ -125,14 +125,14 @@ Run this command in Claude Code right now:
 │                                                                                      │
 │   Built-in agents (always available)                                                 │
 │   Bash · inherit                                                                     │
-│   general-purpose · sonnet                                                           │
-│   statusline-setup · sonnet                                                          │
+│   general-purpose · inherit                                                          │
+│   statusline-setup · inherit                                                         │
 │   Explore · haiku                                                                    │
 │   Plan · inherit                                                                     │
 │   claude-code-guide · haiku                                                          │
 ```
 
-These are **subagents**—specialized AI assistants that Claude Code can delegate work to. Each has its own expertise and isolated context window.
+These are **subagents**:specialized AI assistants that Claude Code can delegate work to. Each has its own expertise and isolated context window.
 
 **You don't need to create anything yet.** You already have a team ready to work.
 
@@ -155,7 +155,7 @@ Use the Explore subagent to tell me what's in this folder and summarize the proj
 3. Explore returns a summary to main Claude Code
 4. You see the results
 
-**Try it!** This is hands-on learning—run it now and see what Explore finds.
+**Try it!** This is hands-on learning: run it now and see what Explore finds.
 
 ---
 
@@ -165,7 +165,7 @@ Use the Explore subagent to tell me what's in this folder and summarize the proj
 | --------------------- | --------------------------------------------------------------- | ---------------- |
 | **Explore**           | Finding files, searching code, understanding codebase structure | Haiku (fast)     |
 | **Plan**              | Complex multi-step tasks, creating implementation strategies    | Sonnet (smart)   |
-| **general-purpose**   | Multi-step tasks requiring various tools                        | Sonnet           |
+| **general-purpose**   | Multi-step tasks requiring various tools                        | Inherits current |
 | **Bash**              | Command execution tasks                                         | Inherits current |
 | **claude-code-guide** | Questions about Claude Code itself                              | Haiku            |
 
@@ -220,7 +220,7 @@ Use Explore to show me what files are in this project, AND use Plan to outline h
 Use Explore to find all test files in this project, AND use Plan to suggest a testing strategy for the gaps you find.
 ```
 
-This is **orchestration**—coordinating multiple specialists toward a goal.
+This is **orchestration**:coordinating multiple specialists toward a goal.
 
 ---
 
@@ -233,7 +233,7 @@ Each subagent has its own **isolated context window**. Why does this matter?
 1. You ask Claude to research competitors
 2. Context fills with research notes
 3. You ask Claude to draft a pitch
-4. Context is cluttered—Claude might confuse research notes with your pitch
+4. Context is cluttered: Claude might confuse research notes with your pitch
 
 **With subagents**:
 
@@ -275,6 +275,8 @@ You → Main Claude Code → Launches Subagent → Subagent works → Returns re
 Use the Plan subagent to analyze this feature request.
 ```
 
+**@-mention invocation**: Type `@` in the chat and pick a subagent from the typeahead menu. This guarantees that specific subagent runs, rather than relying on Claude to match your request automatically.
+
 ---
 
 ## Hands-On: Create Your First Custom Subagent
@@ -297,7 +299,7 @@ Select **"Create new agent"**
 │   2. Personal (~/.claude/agents/)                                             │
 ```
 
-**Choose 1** (Project)—makes the agent available in this project only.
+**Choose 1** (Project): makes the agent available in this project only.
 
 ### Step 3: Choose Creation Method
 
@@ -307,7 +309,7 @@ Select **"Create new agent"**
 │   2. Manual configuration                                                     │
 ```
 
-**Choose 1**—let Claude generate the agent from your description.
+**Choose 1**:let Claude generate the agent from your description.
 
 ### Step 4: Describe Your Agent
 
@@ -359,6 +361,8 @@ When reviewing code:
 4. Recommend cleaner patterns
 ```
 
+The `model` field accepts: `sonnet`, `opus`, `haiku`, a full model ID (e.g., `claude-sonnet-4-6`), or `inherit` to use whatever model the main conversation is using. When omitted, subagents inherit the current model by default.
+
 ---
 
 ## More Subagent Ideas
@@ -375,6 +379,10 @@ Once you understand the pattern, create specialists for any repeated task:
 1. What expertise does this specialist have?
 2. What should it do autonomously?
 3. What format should results be in?
+
+:::tip Persistent Memory for Subagents
+Subagents can retain knowledge across conversations using the `memory` field in their frontmatter (e.g., `memory: project`). This gives the subagent a dedicated memory directory that survives between sessions, so a research subagent can build on previous findings rather than starting from scratch every time.
+:::
 
 ---
 
@@ -412,14 +420,14 @@ Now that you understand both skills (Lesson 08) and subagents, when do you choos
 
 ### What's Next
 
-Subagents are one-shot workers that report back to the caller. But what happens when workers need to talk to _each other_? In Chapter 15, Lesson 9, you'll learn about **Agent Teams**—multiple Claude Code instances that communicate directly, share a task list, and self-coordinate. Same context isolation principles, but with inter-agent collaboration.
+Subagents are one-shot workers that report back to the caller. But what happens when workers need to talk to _each other_? In Chapter 15, Lesson 9, you'll learn about **Agent Teams**:multiple Claude Code instances that communicate directly, share a task list, and self-coordinate. Same context isolation principles, but with inter-agent collaboration.
 
-Lesson 12 introduces **MCP Integration**—connecting Claude to external systems like web browsers, databases, and documentation servers. Where subagents give you coordination between AI specialists, MCP gives you access to the outside world.
+Lesson 12 introduces **MCP Integration**:connecting Claude to external systems like web browsers, databases, and documentation servers. Where subagents give you coordination between AI specialists, MCP gives you access to the outside world.
 
 ---
 
 :::tip Ready to Practice?
-Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises covering skill composition, real-world skill building, and capstone projects — with one-click exercise downloads and step-by-step guidance.
+Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises covering skill composition, real-world skill building, and capstone projects; with one-click exercise downloads and step-by-step guidance.
 :::
 
 ---
@@ -430,30 +438,29 @@ Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises covering
 
 > "Use the Explore subagent to find all configuration files in this project. Then explain what each one does."
 
-**What you're learning:** How the Explore subagent does research autonomously—it reads files, follows imports, and reports findings without manual guidance.
+**What you're learning:** How the Explore subagent does research autonomously: it reads files, follows imports, and reports findings without manual guidance.
 
 **📋 Plan a Feature:**
 
 > "Use the Plan subagent to create an implementation plan for adding dark mode to a React application. Include phases, dependencies, and testing strategy."
 
-**What you're learning:** How Plan Mode creates comprehensive strategies before execution. This pattern—plan first, execute second—produces better outcomes than iterative guessing.
+**What you're learning:** How Plan Mode creates comprehensive strategies before execution. This pattern: plan first, execute second: produces better outcomes than iterative guessing.
 
 **⚡ Parallel Agents:**
 
 > "Use Explore to find all API routes in this project, AND use Plan to suggest how to add authentication to routes that don't have it."
 
-**What you're learning:** Parallel agent execution—running multiple specialists simultaneously. This pattern appears in production workflows where throughput matters.
+**What you're learning:** Parallel agent execution: running multiple specialists simultaneously. This pattern appears in production workflows where throughput matters.
 
 **🛠️ Create a Custom Agent:**
 
 > "Walk me through creating a custom subagent for [your repeated task: code reviews, blog planning, meeting notes, test design]. Help me think through: What should it do? What questions should it ask? What format should output be?"
 
-**What you're learning:** The subagent design process—from identifying a need to defining behavior. Custom subagents are your first step toward building specialized AI teams.
+**What you're learning:** The subagent design process: from identifying a need to defining behavior. Custom subagents are your first step toward building specialized AI teams.
 
 **🎯 Orchestrate Multiple Agents:**
 
 > "I need to understand this unfamiliar codebase. Use Explore to map the project structure, AND use Plan to create a learning path for understanding the architecture. Show me how the results combine."
-
 
 ## Flashcards Study Aid
 

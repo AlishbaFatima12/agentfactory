@@ -46,7 +46,7 @@ differentiation:
 
 # Make Your Employee Proactive
 
-In the Bronze tier, your employee waited for you to send a message before doing anything. Every real employee you have ever worked with eventually learned to anticipate — checking things before you ask, flagging problems before they become urgent, preparing information you will need before you need it.
+In the Bronze tier, your employee waited for you to send a message before doing anything. Every real employee you have ever worked with eventually learned to anticipate: checking things before you ask, flagging problems before they become urgent, preparing information you will need before you need it.
 
 This is the difference between an assistant and an employee. An assistant responds. An employee monitors, anticipates, and acts. The shift from reactive to proactive is what makes your AI employee genuinely useful rather than merely convenient.
 
@@ -59,7 +59,7 @@ Design and deploy at least one scheduled task that runs on a recurring basis (da
 ### Acceptance Criteria
 
 1. At least one scheduled task is running and fires at the configured interval
-2. The task produces output that is genuinely relevant to your professional domain — not placeholder text or generic summaries
+2. The task produces output that is genuinely relevant to your professional domain, not placeholder text or generic summaries
 3. The output uses real data from your work context (files, sources, or domain knowledge from your skill)
 4. You can explain why you chose this specific schedule interval and how it fits your actual work rhythm
 
@@ -87,7 +87,7 @@ The best scheduled task is one you currently do manually on a regular basis. If 
 <details>
 <summary>Level 1: Where to Look</summary>
 
-NanoClaw supports scheduled tasks through its task management system. Check the `/setup` documentation and the NanoClaw repository for how to configure recurring jobs. Look at how existing scheduled tasks are defined — the pattern is: specify WHAT to do, WHEN to do it, and WHERE to send the output.
+NanoClaw supports scheduled tasks through its task management system. Check the `/setup` documentation and the NanoClaw repository for how to configure recurring jobs. Look at how existing scheduled tasks are defined: the pattern is: specify WHAT to do, WHEN to do it, and WHERE to send the output.
 
 </details>
 
@@ -96,7 +96,7 @@ NanoClaw supports scheduled tasks through its task management system. Check the 
 
 Send this to Claude or your AI employee:
 
-"What recurring task would save me the most time if automated? I'm a [your profession]. Consider my work rhythm — when during the day or week do I most need information delivered proactively? What data source would this task need to monitor?"
+"What recurring task would save me the most time if automated? I'm a [your profession]. Consider my work rhythm: when during the day or week do I most need information delivered proactively? What data source would this task need to monitor?"
 
 Use the answer to narrow your choice before building.
 
@@ -109,7 +109,7 @@ Break your scheduled task into four decisions:
 
 1. **WHAT to monitor:** The data source or condition your employee checks (a folder, a calendar, a list, a status)
 2. **WHEN to check:** The interval that matches your work rhythm (daily at 8 AM? Monday mornings? Every Friday evening?)
-3. **WHAT to report:** The output format — what information and how it is structured (bullet list? table? prioritized flags?)
+3. **WHAT to report:** The output format: what information and how it is structured (bullet list? table? prioritized flags?)
 4. **WHERE to deliver:** Which channel receives the output (WhatsApp? Slack? Gmail? The channel from Connect Your Employee to the World?)
 
 Configure the task in NanoClaw using its scheduling capabilities. Start with a short interval for testing (every few minutes), verify the output looks right, then switch to the production schedule.

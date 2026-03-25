@@ -6,7 +6,7 @@ slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-37/hr-operations.pdf"
   title: "HR Operations"
   height: 700
-description: "Build AI agents for HR operations — policy self-service, onboarding automation, job descriptions, performance reviews, talent matching, institutional knowledge capture, and four persistent agents that run your people operations continuously"
+description: "Build AI agents for HR operations: policy self-service, onboarding automation, job descriptions, performance reviews, talent matching, institutional knowledge capture, and four persistent agents that run your people operations continuously"
 chapter_number: 37
 part_number: 3
 version: 1.0
@@ -17,9 +17,9 @@ status: draft
 
 ## Teaching Aid
 
-> _"Every HR team I have ever worked with is simultaneously under-resourced and drowning in repetitive work. They spend 60% of their time answering the same ten questions — 'What is our parental leave policy?' 'How do I request a reference letter?' 'Where do I find the performance review template?' — and the other 40% doing high-judgment work that only humans can do: navigating a difficult termination, mediating a team conflict, assessing a candidate's cultural fit. The tragedy is that the 60% is exhausting and adds no value, and the 40% is chronically under-invested because the 60% has consumed the time and energy that the 40% deserved."_
+> _"Every HR team I have ever worked with is simultaneously under-resourced and drowning in repetitive work. They spend 60% of their time answering the same ten questions, 'What is our parental leave policy?' 'How do I request a reference letter?' 'Where do I find the performance review template?' , and the other 40% doing high-judgment work that only humans can do: navigating a difficult termination, mediating a team conflict, assessing a candidate's cultural fit. The tragedy is that the 60% is exhausting and adds no value, and the 40% is chronically under-invested because the 60% has consumed the time and energy that the 40% deserved."_
 
-HR operations fail in two places. First, explicit knowledge — written policies, handbooks, process documents — is scattered across shared drives, HRIS systems, and the institutional memory of long-tenured employees. Second, tacit knowledge — the unwritten understandings that govern how things actually work — lives in people's heads and evaporates when they leave.
+HR operations fail in two places. First, explicit knowledge, written policies, handbooks, process documents: is scattered across shared drives, HRIS systems, and the institutional memory of long-tenured employees. Second, tacit knowledge: the unwritten understandings that govern how things actually work, lives in people's heads and evaporates when they leave.
 
 This chapter builds the intelligence layer that solves both problems. You will deploy 14 skills across two plugins and 4 persistent agents that transform HR operations from reactive administrative overhead into continuous, anticipatory people intelligence.
 
@@ -45,16 +45,16 @@ By the end of this chapter, you will be able to:
 | [L02](./02-hr-operations-stack.md)                        | Your HR Operations Stack                       | 50 min   | Both plugins installed, `hr.local.md` configured, all 14 commands accessible                           |
 | [L03](./03-policy-lookup-self-service.md)                 | Policy Lookup & Employee Self-Service          | 40 min   | Plain-language policy summaries with citations, escalation paths, and self-service patterns            |
 | [L04](./04-hr-knowledge-base-agent.md)                    | The HR Knowledge Base Agent                    | 45 min   | 20-entry FAQ database, query classification, warm handoff patterns, weekly intelligence report         |
-| [L05](./05-onboarding-first-90-days.md)                   | Onboarding — The First 90 Days                 | 40 min   | Complete onboarding programme with pre-boarding checklist, 30-60-90 plan, and manager briefing         |
+| [L05](./05-onboarding-first-90-days.md)                   | Onboarding. The First 90 Days                 | 40 min   | Complete onboarding programme with pre-boarding checklist, 30-60-90 plan, and manager briefing         |
 | [L06](./06-job-descriptions-interview-prep.md)            | Job Descriptions & Interview Preparation       | 40 min   | Three inclusive job descriptions (junior, mid, senior) and a structured interview rubric               |
-| [L07](./07-offer-letters-employment-docs.md)              | Offer Letters & Employment Documents           | 35 min   | Offer letter, reference letter, and employment verification — each jurisdiction-compliant              |
+| [L07](./07-offer-letters-employment-docs.md)              | Offer Letters & Employment Documents           | 35 min   | Offer letter, reference letter, and employment verification: each jurisdiction-compliant              |
 | [L08](./08-performance-reviews.md)                        | Performance Reviews Without Bureaucracy        | 40 min   | Structured performance review with evidenced strengths, behavioural development areas, and career plan |
 | [L09](./09-compensation-talent-org.md)                    | Compensation, Talent & Org Planning            | 45 min   | Internal talent assessment for two candidates, compensation benchmark, succession plan                 |
 | [L10](./10-institutional-knowledge-capture.md)            | Capturing Institutional Knowledge              | 50 min   | Knowledge capture plan, interview guide, and structured knowledge articles for a departing expert      |
 | [L11](./11-offboarding-knowledge-transfer.md)             | Offboarding & Knowledge Transfer               | 35 min   | Complete offboarding plan with handover, exit interview design, and knowledge transfer automation      |
-| [L12](./12-persistent-agents-orchestrator-maintenance.md) | Persistent Agents — Orchestrator & Maintenance | 40 min   | Onboarding orchestrator and policy maintenance agent configured and running                            |
+| [L12](./12-persistent-agents-orchestrator-maintenance.md) | Persistent Agents: Orchestrator & Maintenance | 40 min   | Onboarding orchestrator and policy maintenance agent configured and running                            |
 | [L13](./13-people-analytics-agent-operations.md)          | People Analytics & Agent Operations            | 40 min   | Quarterly people report, recruiting pipeline analysis, and HR intelligence dashboard design            |
-| [L14](./14-capstone-full-employee-lifecycle.md)           | Capstone — The Full Employee Lifecycle         | 90 min   | Full employee lifecycle executed: hire, onboard, develop, review, promote, offboard                    |
+| [L14](./14-capstone-full-employee-lifecycle.md)           | Capstone. The Full Employee Lifecycle         | 90 min   | Full employee lifecycle executed: hire, onboard, develop, review, promote, offboard                    |
 | [L15](./15-quick-reference-central-insights.md)           | Quick Reference & Central Insights             | 20 min   | All commands, all agents, key tables, and the chapter's central insight                                |
 
 ## Agent Output Taxonomy
@@ -63,9 +63,9 @@ All HR agent outputs carry a sensitivity label:
 
 | Label                       | Content Types                                                                             | Handling                                                        |
 | --------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| **ROUTINE**                 | Policy summaries, job descriptions, onboarding plans, general queries                     | Standard output — no special handling                           |
+| **ROUTINE**                 | Policy summaries, job descriptions, onboarding plans, general queries                     | Standard output; no special handling                           |
 | **CONFIDENTIAL**            | Offer letters, salary details, performance reviews, talent assessments, reference letters | Handle per data protection policy                               |
-| **SENSITIVE PERSONAL DATA** | Medical, disciplinary, grievance, termination documentation                               | Never auto-generated — always escalate to named HR professional |
+| **SENSITIVE PERSONAL DATA** | Medical, disciplinary, grievance, termination documentation                               | Never auto-generated; always escalate to named HR professional |
 
 ## Case Studies
 
@@ -83,7 +83,7 @@ All HR agent outputs carry a sensitivity label:
 By the end of this chapter, you should be able to answer these five questions:
 
 1. What are the three structural failures in HR operations, and how does a two-plugin architecture (9 official + 5 custom skills) address each one?
-2. How does the HR Knowledge Base Agent distinguish between policy queries it should answer directly and individual situations it must escalate — and why is this distinction the most critical design decision in the system?
+2. How does the HR Knowledge Base Agent distinguish between policy queries it should answer directly and individual situations it must escalate , and why is this distinction the most critical design decision in the system?
 3. How does the `/match` skill assess internal candidates across six dimensions, and why does motivation matter as much as capability in succession planning?
 4. What is the difference between proactive and reactive institutional knowledge capture, and why does the offboarding-knowledge-agent's risk scoring determine the depth of capture?
 5. How do the four persistent agents (Knowledge Base, Onboarding Orchestrator, Policy Maintenance, Offboarding Knowledge) work together to provide continuous people operations intelligence?
@@ -100,8 +100,8 @@ This chapter requires **Cowork** (set up in Chapter 28) and two plugins.
 
 When you finish this chapter, your perspective shifts:
 
-1. **You see HR operations as an information problem.** Every repeated policy question, every late onboarding, every knowledge gap was a signal that existed in the data before it became a crisis. The question is whether anyone — or any agent — was watching.
-2. **You have a working two-plugin stack.** 14 skills and 4 persistent agents covering the full employee lifecycle — from job description to offboarding — are installed, configured, and deployable.
+1. **You see HR operations as an information problem.** Every repeated policy question, every late onboarding, every knowledge gap was a signal that existed in the data before it became a crisis. The question is whether anyone , or any agent, was watching.
+2. **You have a working two-plugin stack.** 14 skills and 4 persistent agents covering the full employee lifecycle, from job description to offboarding: are installed, configured, and deployable.
 3. **You understand the boundaries.** The agents answer policy questions, generate documents, classify talent, and capture knowledge. They do not navigate terminations, mediate conflicts, or make promotion decisions. These boundaries are encoded in every skill file.
 4. **You can extend.** The knowledge capture framework applies to any domain where expertise concentrates in individuals. The onboarding orchestrator pattern works for any milestone-driven workflow. The sensitivity labelling system applies wherever AI handles personal data.
 

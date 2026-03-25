@@ -75,10 +75,10 @@ differentiation:
 
 # Legal Ops Agents: Intake and Monitoring
 
-In Lessons 3 through 9, you used Anthropic's Legal Plugin commands and skills to review contracts, triage NDAs, assess compliance, manage IP, handle litigation, and prepare for meetings. Each was a single-task workflow. Now you will work with agents that manage entire processes end-to-end — receiving inputs, making routing decisions, and tracking progress across the contract lifecycle. The Agent Factory Legal Ops extension provides two such agents: the **contract-intake** agent and the **legal-ops-router** agent.
+In Lessons 3 through 9, you used Anthropic's Legal Plugin commands and skills to review contracts, triage NDAs, assess compliance, manage IP, handle litigation, and prepare for meetings. Each was a single-task workflow. Now you will work with agents that manage entire processes end-to-end: receiving inputs, making routing decisions, and tracking progress across the contract lifecycle. The Agent Factory Legal Ops extension provides two such agents: the **contract-intake** agent and the **legal-ops-router** agent.
 
 :::tip Connector Integration
-If you connected Gmail, Slack, and Atlassian MCP servers in Lesson 1, the Intake Agent can receive contracts via email, post routing notifications to Slack channels, and log matters in Jira. If not, the agent works with manually uploaded documents — you provide the trigger, the agent handles everything after.
+If you connected Gmail, Slack, and Atlassian MCP servers in Lesson 1, the Intake Agent can receive contracts via email, post routing notifications to Slack channels, and log matters in Jira. If not, the agent works with manually uploaded documents: you provide the trigger, the agent handles everything after.
 :::
 
 ## What Legal Ops Agents Are
@@ -163,19 +163,19 @@ The Contract Intake Agent processes this automatically. The agent executes a fiv
 | ------------------------------------ | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Step 1: Document reception           | Logs receipt with reference ID, timestamp, source channel, and requestor                          | Check that the reference ID is unique and the source is correctly identified                                                                                   |
 | Step 2: Document type classification | Classifies the document type and selects the appropriate review protocol                          | Should route vendor agreements to `/review-contract` and NDAs to `/triage-nda`                                                                                 |
-| Step 3: Metadata extraction          | Extracts counterparty, contract type, business unit, urgency, deal value, governing law, and date | Verify all seven metadata fields are populated — missing fields should be flagged                                                                              |
+| Step 3: Metadata extraction          | Extracts counterparty, contract type, business unit, urgency, deal value, governing law, and date | Verify all seven metadata fields are populated: missing fields should be flagged                                                                              |
 | Step 4: Triage and routing           | Runs the appropriate review protocol and routes based on tier classification and urgency          | Should apply the correct communication template (acknowledgement to business unit, escalation to GC for RED items) and halve SLA timelines for urgent requests |
 | Step 5: Progress tracking            | Activates deadline monitoring with escalation if no attorney action by the SLA deadline           | Check that the escalation path is specified                                                                                                                    |
 
 :::note Your output will vary
-The specific metadata, triage results, and routing decisions depend on the contract you provide. Focus on whether the five steps execute in sequence and whether the routing matches the triage tier — particularly whether RED items with urgent flags bypass the normal SLA timeline.
+The specific metadata, triage results, and routing decisions depend on the contract you provide. Focus on whether the five steps execute in sequence and whether the routing matches the triage tier: particularly whether RED items with urgent flags bypass the normal SLA timeline.
 :::
 
 The GC receives the escalation within minutes of the email arriving. Without the intake agent, the email would sit in the legal inbox until someone opened it, read it, realised it was urgent, and forwarded it manually. Typical delay without automation: 4-8 hours on a good day.
 
 **The Contract Intake Agent in the Legal Ops Extension:**
 
-The Agent Factory Legal Ops extension includes a pre-built **contract-intake** agent at `agents/contract-intake.md`. This agent auto-activates when you mention incoming contracts, contract routing, contract triage, new NDAs received, or legal intake. You do not need to invoke a command — the agent recognises trigger phrases and activates automatically. Below are the rules it follows:
+The Agent Factory Legal Ops extension includes a pre-built **contract-intake** agent at `agents/contract-intake.md`. This agent auto-activates when you mention incoming contracts, contract routing, contract triage, new NDAs received, or legal intake. You do not need to invoke a command: the agent recognises trigger phrases and activates automatically. Below are the rules it follows:
 
 ```markdown
 ## INTAKE SEQUENCE — EXECUTE IN ORDER
@@ -232,13 +232,13 @@ requires response by [date]. Call recommended: [Y/N]."
 
 :::info PayGulf Comparison
 
-PayGulf Technologies' Contract Intake Agent adds a regulatory classification layer that Gulf Digital's intake workflow does not require. Every incoming contract at PayGulf is classified not only by type (NDA, MSA, vendor agreement) and urgency, but also by regulatory impact — a dimension that non-regulated companies can skip entirely.
+PayGulf Technologies' Contract Intake Agent adds a regulatory classification layer that Gulf Digital's intake workflow does not require. Every incoming contract at PayGulf is classified not only by type (NDA, MSA, vendor agreement) and urgency, but also by regulatory impact: a dimension that non-regulated companies can skip entirely.
 
 The regulatory classification asks three questions before standard triage begins. First: does this contract create a new outsourcing arrangement that must be reported to the DFSA? The DFSA requires notification of material outsourcing, and a new merchant processing agreement or technology vendor contract may qualify. Second: does the counterparty operate under SAMA regulation? If PayGulf is contracting with a Saudi-regulated entity, both regulators' outsourcing frameworks apply, and the contract must satisfy both sets of requirements. Third: does the contract involve access to, processing of, or storage of payment data subject to PCI DSS? If yes, specific data handling provisions are mandatory regardless of the contract's commercial terms.
 
-The routing logic changes accordingly. A contract flagged as regulatory-impact is routed directly to Fatima (GC) regardless of its commercial urgency tier. A Tier 1 vendor agreement that would normally bypass attorney review entirely gets escalated to Tier 2 or Tier 3 if the regulatory classification triggers. The intake agent's acknowledgement to the business unit reflects this: "Your contract request has been received. Classification: Tier 2 — Regulatory Review Required. This contract involves a potential outsourcing arrangement under DFSA rules. Expected response: 3 business days."
+The routing logic changes accordingly. A contract flagged as regulatory-impact is routed directly to Fatima (GC) regardless of its commercial urgency tier. A Tier 1 vendor agreement that would normally bypass attorney review entirely gets escalated to Tier 2 or Tier 3 if the regulatory classification triggers. The intake agent's acknowledgement to the business unit reflects this: "Your contract request has been received. Classification: Tier 2; Regulatory Review Required. This contract involves a potential outsourcing arrangement under DFSA rules. Expected response: 3 business days."
 
-This adds processing time compared to Gulf Digital's workflow, but the alternative — discovering a DFSA notification requirement after the contract is executed — creates regulatory exposure that dwarfs the cost of a two-day review delay.
+This adds processing time compared to Gulf Digital's workflow, but the alternative: discovering a DFSA notification requirement after the contract is executed: creates regulatory exposure that dwarfs the cost of a two-day review delay.
 
 :::
 
@@ -375,4 +375,4 @@ For each item:
 
 ---
 
-Continue to [Lesson 11: Legal Ops Agents — Calendar, Spend, and DSAR ->](./11-legal-ops-agents-calendar-spend-dsar.md)
+Continue to [Lesson 11: Legal Ops Agents; Calendar, Spend, and DSAR ->](./11-legal-ops-agents-calendar-spend-dsar.md)

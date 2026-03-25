@@ -68,20 +68,20 @@ teaching_guide:
   session_group: 1
   session_title: "Understanding Context Engineering"
   key_points:
-    - "Context engineering is THE competitive moat for Digital FTEs — same model access means differentiation comes from context quality, not model choice"
-    - "The 99.9% vs 0.1% split between context and prompts reframes everything students learned about prompt engineering — this is a paradigm shift"
+    - "Context engineering is THE competitive moat for Digital FTEs: same model access means differentiation comes from context quality, not model choice"
+    - "The 99.9% vs 0.1% split between context and prompts reframes everything students learned about prompt engineering: this is a paradigm shift"
     - "Four types of context rot (poisoning, distraction, confusion, clash) are diagnostic categories used throughout the rest of this chapter"
   misconceptions:
-    - "Students think 'context' means 'the prompt I type' — emphasize context is everything the model sees BEFORE and ALONGSIDE the prompt"
-    - "Students assume context rot means the AI is broken or getting dumber — it is the accumulated noise degrading signal quality"
-    - "Students confuse context engineering with prompt engineering — context is 200K tokens of environment, prompts are 50-200 tokens of instruction"
+    - "Students think 'context' means 'the prompt I type': emphasize context is everything the model sees BEFORE and ALONGSIDE the prompt"
+    - "Students assume context rot means the AI is broken or getting dumber: it is the accumulated noise degrading signal quality"
+    - "Students confuse context engineering with prompt engineering: context is 200K tokens of environment, prompts are 50-200 tokens of instruction"
   discussion_prompts:
     - "Have you ever had an AI session that started great but degraded over time? Which of the four rot types was likely at work?"
     - "If two competitors use the same AI model, what specifically makes one product worth $2,000/month and the other worthless?"
   teaching_tips:
-    - "Open with the two-engineers scenario — ask students to guess the differentiator before revealing context quality"
-    - "The prompts vs context table (0.1% vs 99.9%) is a strong whiteboard moment — draw the proportions visually"
-    - "Have students run /context in Claude Code live during the lab — seeing their actual token consumption makes the concept concrete"
+    - "Open with the two-engineers scenario: ask students to guess the differentiator before revealing context quality"
+    - "The prompts vs context table (0.1% vs 99.9%) is a strong whiteboard moment: draw the proportions visually"
+    - "Have students run /context in Claude Code live during the lab: seeing their actual token consumption makes the concept concrete"
     - "Walk through each rot type with a live demo: start a session, change direction mid-conversation, then show how the AI references old information"
   assessment_quick_check:
     - "Define context engineering in one sentence without using the word 'prompt'"
@@ -151,13 +151,13 @@ You renamed something, changed a decision, or updated terminology. But 40 messag
 
 ### 2. Distraction: Irrelevant Content Dilutes Attention
 
-You spent 20 messages on a tangent. Now you're working on something different. That tangent is still consuming attention budget—attention that could be allocated to your current constraints.
+You spent 20 messages on a tangent. Now you're working on something different. That tangent is still consuming attention budget,attention that could be allocated to your current constraints.
 
 **Symptom:** Claude's responses feel less focused, miss details, or include tangential considerations.
 
 ### 3. Confusion: Similar Concepts Conflate
 
-You're working with two similar things—maybe two services, two documents, or two processes. They have similar names or overlapping terminology. Claude starts conflating them—using the wrong one in the wrong context.
+You're working with two similar things,maybe two services, two documents, or two processes. They have similar names or overlapping terminology. Claude starts conflating them,using the wrong one in the wrong context.
 
 **Symptom:** Claude mixes up similar-sounding concepts, uses wrong terminology, or applies patterns from one domain to another.
 
@@ -169,7 +169,7 @@ Early in the session, you said one thing. Later, you said something different. B
 
 ## Automatic Context Management
 
-Claude Code handles context automatically through a feature called autocompact. When your context window fills up, Claude Code summarizes the conversation, keeps key decisions, and forgets noise—without you doing anything.
+Claude Code handles context automatically through a feature called autocompact. When your context window fills up, Claude Code summarizes the conversation, keeps key decisions, and forgets noise,without you doing anything.
 
 Most of the time, this works well. Lesson 6 teaches when you need to manually intervene with `/compact` or `/clear` for situations where automatic management isn't enough.
 
@@ -234,7 +234,7 @@ Be specific about what you find.
 
 **What you're learning:** Diagnosis comes before treatment. This prompt helps you identify which rot type (if any) is affecting your current session, so you can apply the right fix.
 
-**Safety note:** When running context diagnostics, you're examining the session state, not changing it. This is observational—safe to run at any time.
+**Safety note:** When running context diagnostics, you're examining the session state, not changing it. This is observational,safe to run at any time.
 
 
 ## Flashcards Study Aid

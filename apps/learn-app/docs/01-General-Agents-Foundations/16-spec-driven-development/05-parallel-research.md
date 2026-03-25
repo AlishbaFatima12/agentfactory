@@ -68,22 +68,22 @@ teaching_guide:
   session_group: 2
   session_title: "Deep-Dive into SDD Phases"
   key_points:
-    - "The trigger phrase 'Spin up multiple subagents' activates parallel research — students need to remember this exact prompt pattern"
-    - "Context isolation is the real advantage over sequential research — each agent starts fresh without assumptions from other agents' findings"
-    - "Research decomposition quality determines output quality — threads must be independent, focused, bounded, and complementary"
-    - "Conflicts between agents are features, not bugs — they surface genuine design decisions that would otherwise be hidden assumptions"
+    - "The trigger phrase 'Spin up multiple subagents' activates parallel research: students need to remember this exact prompt pattern"
+    - "Context isolation is the real advantage over sequential research: each agent starts fresh without assumptions from other agents' findings"
+    - "Research decomposition quality determines output quality: threads must be independent, focused, bounded, and complementary"
+    - "Conflicts between agents are features, not bugs: they surface genuine design decisions that would otherwise be hidden assumptions"
   misconceptions:
-    - "Students think parallel research is just 'faster reading' — emphasize that context isolation changes research quality, not just speed"
-    - "Students assume agents collaborate during research — each agent works in complete isolation and reports back independently"
-    - "Students create overlapping research threads — demonstrate how overlap causes redundant findings while gaps miss critical information"
+    - "Students think parallel research is just 'faster reading': emphasize that context isolation changes research quality, not just speed"
+    - "Students assume agents collaborate during research: each agent works in complete isolation and reports back independently"
+    - "Students create overlapping research threads: demonstrate how overlap causes redundant findings while gaps miss critical information"
   discussion_prompts:
     - "When you research something manually, do you notice how learning about topic A changes how you interpret topic B? Is that always helpful?"
-    - "What kind of research question would be WRONG for parallel investigation — where sequential dependency is actually needed?"
+    - "What kind of research question would be WRONG for parallel investigation: where sequential dependency is actually needed?"
   teaching_tips:
-    - "Have students run the IndexedDB example prompt live to see agents spawn and return — the experience is more convincing than explanation"
-    - "The sequential vs parallel comparison table is worth drawing out — focus on the 'Conflicts: hidden vs visible' row"
+    - "Have students run the IndexedDB example prompt live to see agents spawn and return: the experience is more convincing than explanation"
+    - "The sequential vs parallel comparison table is worth drawing out: focus on the 'Conflicts: hidden vs visible' row"
     - "Walk through the decomposition template step by step with a student-chosen example before the lab exercise"
-    - "The Agent Teams callout box (for inter-agent debate) is a forward reference to Ch4 L9 — mention it but don't dwell on it"
+    - "The Agent Teams callout box (for inter-agent debate) is a forward reference to Ch4 L9: mention it but don't dwell on it"
   assessment_quick_check:
     - "Write a 3-thread research decomposition for a topic of your choice using the template"
     - "Explain why two agents finding conflicting recommendations is more valuable than one agent picking a winner"
@@ -260,7 +260,7 @@ Look for themes that appear across multiple agents:
 
 - "Agent 1 and Agent 3 both mention the importance of idempotent operations"
 - "All four agents reference the event bus as the integration point"
-- "Agents 2, 3, and 4 assume a specific data model—Agent 1 challenges that assumption"
+- "Agents 2, 3, and 4 assume a specific data model,Agent 1 challenges that assumption"
 
 ### Conflict Identification
 
@@ -407,7 +407,7 @@ Read research.md. Create a synthesis section:
 - What structure does this suggest for our report?
 ```
 
-**What you're learning:** Four agents produce four perspectives. Synthesis reveals what CTOs must know (appears everywhere) versus what's optional depth. Conflicts become explicit: "Agent 2 found ROI data, Agent 3 found skepticism"—both belong in an honest report.
+**What you're learning:** Four agents produce four perspectives. Synthesis reveals what CTOs must know (appears everywhere) versus what's optional depth. Conflicts become explicit: "Agent 2 found ROI data, Agent 3 found skepticism",both belong in an honest report.
 
 **Prompt 3: Gap Analysis**
 
@@ -417,7 +417,7 @@ We have tool capabilities and ROI, but what practical questions
 would a CTO ask that our research doesn't answer?
 ```
 
-**What you're learning:** Research isn't just collecting data—it's identifying gaps. CTOs might ask: "How do we measure success?" "What's the learning curve?" "How do we handle security review?" If research.md doesn't answer these, the spec needs to address how we'll fill them.
+**What you're learning:** Research isn't just collecting data,it's identifying gaps. CTOs might ask: "How do we measure success?" "What's the learning curve?" "How do we handle security review?" If research.md doesn't answer these, the spec needs to address how we'll fill them.
 
 ## Flashcards Study Aid
 

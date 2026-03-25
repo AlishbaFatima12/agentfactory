@@ -76,7 +76,7 @@ differentiation:
 
 # Legal Ops Agents: Calendar, Spend, and DSAR
 
-In Lesson 10, you built the Contract Intake Agent and Regulatory Monitoring Agent — agents that manage intake and external awareness. This lesson adds three more agents that handle the ongoing operational responsibilities of a legal department: compliance deadlines, legal spend, and data subject access requests. Each follows the same agent pattern: persistent workflow, multi-step process, state maintenance, escalation logic, and completion logging.
+In Lesson 10, you built the Contract Intake Agent and Regulatory Monitoring Agent: agents that manage intake and external awareness. This lesson adds three more agents that handle the ongoing operational responsibilities of a legal department: compliance deadlines, legal spend, and data subject access requests. Each follows the same agent pattern: persistent workflow, multi-step process, state maintenance, escalation logic, and completion logging.
 
 :::tip Connector Integration
 If you connected Google Calendar in Lesson 1, the Compliance Calendar Agent can create calendar events with escalation reminders at 60/30/14/7/1 day marks. The DSAR Agent can search real email, CRM, and document systems via MCP connectors for data discovery. Without connectors, you provide obligation lists and data locations manually.
@@ -130,7 +130,7 @@ Gulf Digital Solutions uses the Compliance Calendar Agent to track 127 active co
 | Day-after (missed)    | Incident report to GC with root cause recommendation        | Should quantify the financial impact and recommend remediation options                                              |
 
 :::note Your output will vary
-The specific dates, amounts, and recipients depend on the contract and your organisational structure. Focus on the escalation ladder — the progressive expansion of recipients from obligation owner to manager to GC to CFO. The teaching point is that automated escalation prevents the most common compliance failure: a deadline that everyone knew about but nobody acted on.
+The specific dates, amounts, and recipients depend on the contract and your organisational structure. Focus on the escalation ladder: the progressive expansion of recipients from obligation owner to manager to GC to CFO. The teaching point is that automated escalation prevents the most common compliance failure: a deadline that everyone knew about but nobody acted on.
 :::
 
 **Compliance Calendar Escalation Rules:**
@@ -183,10 +183,10 @@ Noor Technologies retains three law firms for external legal work: a Karachi-bas
 | Section            | Intent                                                                                     | What to Verify                                                                                    |
 | ------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
 | Spend summary      | Total external legal spend vs. prior period and vs. budget                                 | Check that year-over-year and budget variance percentages are calculated                          |
-| Per-firm breakdown | Each panel firm with total spend, effective hourly rate, budget variance, and matter count | Verify that effective rates are compared against agreed rates — deviations are anomaly candidates |
+| Per-firm breakdown | Each panel firm with total spend, effective hourly rate, budget variance, and matter count | Verify that effective rates are compared against agreed rates: deviations are anomaly candidates |
 | RED anomalies      | Rate variances or billing irregularities requiring immediate attention                     | Should identify the specific matter, the variance amount, and a recommended action                |
 | YELLOW anomalies   | Budget overruns or unusual billing patterns requiring investigation                        | Should distinguish between legitimate scope expansion and potential billing issues                |
-| Governance footer  | Reminder that billing disputes require GC authorisation                                    | Should be present — the agent flags anomalies but does not dispute invoices                       |
+| Governance footer  | Reminder that billing disputes require GC authorisation                                    | Should be present: the agent flags anomalies but does not dispute invoices                       |
 
 :::note Your output will vary
 The specific spend figures, firm names, and anomalies depend on your accounts payable data. Focus on whether the agent identifies rate variances and budget overruns that would otherwise be paid without question. The teaching point is that anomaly detection turns legal spend management from quarterly manual review into continuous automated monitoring.
@@ -366,13 +366,13 @@ legal advice of any kind
 
 :::info PayGulf Comparison
 
-PayGulf Technologies faces a dual data protection regime that makes DSAR processing materially more involved than DataBridge's single-jurisdiction workflow. A data subject request to PayGulf can trigger two different legal frameworks simultaneously — and the agent must identify which applies before the response workflow begins.
+PayGulf Technologies faces a dual data protection regime that makes DSAR processing materially more involved than DataBridge's single-jurisdiction workflow. A data subject request to PayGulf can trigger two different legal frameworks simultaneously: and the agent must identify which applies before the response workflow begins.
 
-A data subject request from a Saudi customer triggers the Saudi Personal Data Protection Law (PDPL), which imposes a 30-day response window administered by the Saudi Data and Artificial Intelligence Authority (SDAIA). A request from a DIFC-based merchant triggers the DIFC Data Protection Law 2020 (DIFC Law No. 5 of 2020), which also imposes a 30-day window but is administered by the DIFC Commissioner of Data Protection — a different regulator with different exemption provisions and different enforcement mechanisms.
+A data subject request from a Saudi customer triggers the Saudi Personal Data Protection Law (PDPL), which imposes a 30-day response window administered by the Saudi Data and Artificial Intelligence Authority (SDAIA). A request from a DIFC-based merchant triggers the DIFC Data Protection Law 2020 (DIFC Law No. 5 of 2020), which also imposes a 30-day window but is administered by the DIFC Commissioner of Data Protection: a different regulator with different exemption provisions and different enforcement mechanisms.
 
 The complication that distinguishes PayGulf from simpler DSAR scenarios arises when a single data subject has data in both jurisdictions. A merchant based in Riyadh who processes payments through PayGulf's DIFC-based platform may have customer account data governed by Saudi PDPL and transaction processing data governed by DIFC Data Protection Law. The DSAR must satisfy both frameworks simultaneously: different exemption grounds, different third-party disclosure rules, different regulator notification requirements if the request is refused.
 
-The DSAR Agent identifies which regime applies based on two factors: the data subject's residency (which determines their statutory rights) and the data's processing location (which determines which regulator has jurisdiction over the processing). When both regimes apply, the agent generates parallel redaction assessments — one under Saudi PDPL exemptions and one under DIFC Data Protection Law exemptions — and flags any items where the two frameworks produce different disclosure outcomes. Fatima reviews the dual-regime assessment before the response is sent, because a disclosure decision that satisfies one framework may violate the other. The agent surfaces the conflict; the attorney resolves it.
+The DSAR Agent identifies which regime applies based on two factors: the data subject's residency (which determines their statutory rights) and the data's processing location (which determines which regulator has jurisdiction over the processing). When both regimes apply, the agent generates parallel redaction assessments: one under Saudi PDPL exemptions and one under DIFC Data Protection Law exemptions: and flags any items where the two frameworks produce different disclosure outcomes. Fatima reviews the dual-regime assessment before the response is sent, because a disclosure decision that satisfies one framework may violate the other. The agent surfaces the conflict; the attorney resolves it.
 
 :::
 

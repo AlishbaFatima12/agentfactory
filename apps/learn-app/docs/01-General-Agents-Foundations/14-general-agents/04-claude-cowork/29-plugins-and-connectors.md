@@ -56,33 +56,33 @@ differentiation:
 # Generation metadata
 generated_by: "content-implementer v2.0.0"
 created: "2025-01-22"
-last_modified: "2026-02-26"
+last_modified: "2026-03-24"
 git_author: "Claude Code"
 workflow: "manual"
-version: "2.0.0"
+version: "2.1.0"
 
 teaching_guide:
   lesson_type: "core"
   session_group: 9
   session_title: "External Integration and Responsible Use"
   key_points:
-    - "Plugins are the primary organizational unit — they bundle Connectors, skills, slash commands, and sub-agents into one-click packages"
-    - "Connectors are pre-packaged remote MCP servers maintained by Anthropic and partners — students do NOT write code to use them"
+    - "Plugins are the primary organizational unit; they bundle Connectors, skills, slash commands, and sub-agents into one-click packages"
+    - "Connectors are pre-packaged remote MCP servers maintained by Anthropic and partners; students do NOT write code to use them"
     - "The MCP-vs-Connectors distinction maps to developer-vs-knowledge-worker audiences, not different protocols"
     - "Combination power across multiple data sources (Google Sheets + Notion + Slack) is the real unlock, not single-source access"
     - "Department-specific Plugin templates (HR, Finance, Legal, Design, Engineering, Operations) provide ready-to-use workflow packages"
     - "Principle of Least Privilege applies: start read-only, grant write access only for trusted workflows"
   misconceptions:
-    - "Students think Connectors are a different technology from MCP — they are MCP servers someone else built and maintains"
-    - "Students assume Connectors give real-time streaming data — they fetch current snapshots, not live streams"
-    - "Students believe all Connectors support read-write — many are read-only, and write support varies by service"
-    - "Students think Plugins and Connectors are the same — Plugins are bundles that can contain Connectors plus skills, commands, and sub-agents"
+    - "Students think Connectors are a different technology from MCP; they are MCP servers someone else built and maintains"
+    - "Students assume Connectors give real-time streaming data; they fetch current snapshots, not live streams"
+    - "Students believe all Connectors support read-write; many are read-only, and write support varies by service"
+    - "Students think Plugins and Connectors are the same; Plugins are bundles that can contain Connectors plus skills, commands, and sub-agents"
   discussion_prompts:
-    - "Which three data sources in your current work would save the most time if Claude could access them directly — and what task would you automate first?"
+    - "Which three data sources in your current work would save the most time if Claude could access them directly; and what task would you automate first?"
     - "What are the risks of granting an AI read-write access to your Google Drive or Slack, and how would you mitigate them?"
   teaching_tips:
-    - "Start with the Plugin concept as the container, then zoom into Connectors as one component — this prevents confusion about the hierarchy"
-    - "Walk through the quarterly report scenario in 'The Combination Power' section — have students map it to their own multi-source workflows"
+    - "Start with the Plugin concept as the container, then zoom into Connectors as one component; this prevents confusion about the hierarchy"
+    - "Walk through the quarterly report scenario in 'The Combination Power' section; have students map it to their own multi-source workflows"
     - "Use the MCP vs Connectors comparison table to reinforce that the difference is who builds and maintains the server, not the underlying protocol"
     - "Emphasize the Connector categories (Document, Communication, Development, Business Data, Design, Content) and ask students which category matters most for their role"
     - "Connect back to Lesson 12 (MCP) and Lesson 28 (browser integration) to show the progression: custom MCP → browser automation → pre-built Plugins and Connectors"
@@ -101,15 +101,15 @@ prerequisites:
 
 # Plugins and Connectors: Extending Cowork's Reach
 
-In Lesson 28, you explored browser integration for web-based workflows. Now you will connect Cowork to the services where your real data lives — Google Drive, Slack, Jira, and dozens more — through Plugins and Connectors.
+In Lesson 28, you explored browser integration for web-based workflows. Now you will connect Cowork to the services where your real data lives (Google Drive, Slack, Jira, and dozens more) through Plugins and Connectors.
 
-You learned about MCP (Model Context Protocol) in Lesson 12 — how developers create servers that expose tools to Claude Code. **Plugins and Connectors bring the same capability to Cowork, but without requiring any development work.**
+You learned about MCP (Model Context Protocol) in Lesson 12, where developers create servers that expose tools to Claude Code. **Plugins and Connectors bring the same capability to Cowork, but without requiring any development work.**
 
 ---
 
 ## What Plugins Are
 
-A **Plugin** is a workflow package that bundles multiple capabilities into a single, installable unit. Think of it like an app on your phone — one download gives you everything you need.
+A **Plugin** is a workflow package that bundles multiple capabilities into a single, installable unit. Think of it like an app on your phone: one install gives you everything you need.
 
 A Plugin can contain any combination of:
 
@@ -120,7 +120,7 @@ A Plugin can contain any combination of:
 | **Slash commands** | Create shortcuts for common tasks | `/weekly-report`, `/standup-summary`  |
 | **Sub-agents**     | Enable autonomous workflows       | Research assistant, document reviewer |
 
-You install a Plugin with one click from the Plugin directory, and all its components become available in your Cowork session.
+You install a Plugin from the **+** button > **Plugins** > **Add plugin** menu in the desktop app, or via the CLI. All its components become available in your session.
 
 **Department-specific Plugin templates** provide ready-to-use packages for common roles:
 
@@ -141,9 +141,9 @@ These templates are starting points. You can customize them by adding or removin
 
 Here is how the layers relate:
 
-- **Protocol layer**: MCP (Model Context Protocol) — the open standard
-- **Integration layer**: Connector — a single data source connection built on MCP
-- **Workflow Package layer**: Plugin — bundles Connectors + skills + slash commands + sub-agents
+- **Protocol layer**: MCP (Model Context Protocol); the open standard
+- **Integration layer**: Connector; a single data source connection built on MCP
+- **Workflow Package layer**: Plugin; bundles Connectors + skills + slash commands + sub-agents
 
 The Anthropic Connectors Directory lists 50+ Connectors across categories:
 
@@ -172,7 +172,7 @@ The Anthropic Connectors Directory lists 50+ Connectors across categories:
 
 You don't write code. You don't configure servers. You authenticate, grant permissions, and Claude can access the data.
 
-Connectors use **remote MCP servers** — hosted in the cloud by Anthropic and partners — rather than local servers running on your machine. This means Connectors work across all Claude platforms: web, desktop, mobile apps, and API.
+Connectors use **remote MCP servers**; hosted in the cloud by Anthropic and partners; rather than local servers running on your machine. This means Connectors work across all Claude platforms: web, desktop, mobile apps, and API.
 
 ---
 
@@ -213,7 +213,7 @@ From that point forward, Claude can reference data from the connected service al
 
 > "Look at the project planning document in my Google Drive, compare it to the local project files I showed you, and tell me what's missing from the local version."
 
-Claude reads the Google Doc via Connector, reads your local files, and performs the comparison — all without you manually copying anything.
+Claude reads the Google Doc via Connector, reads your local files, and performs the comparison; all without you manually copying anything.
 
 Some Connectors also render **interactive apps** inline in the chat. For example, a calendar Connector might display an interactive calendar widget where you can select dates directly, rather than typing them out.
 
@@ -223,18 +223,20 @@ Some Connectors also render **interactive apps** inline in the chat. For example
 
 ### Step 1: Open Connector Settings
 
-In Claude Desktop (Cowork mode):
+In Claude Desktop:
 
-1. Click the **Customize** menu (bottom-left of the chat input)
+1. Click the **+** button next to the prompt box
 2. Select **Connectors** from the menu
 3. You'll see available Connectors organized by category
+
+You can add connectors before or during a session. To manage or disconnect connectors later, go to **Settings > Connectors** in the desktop app, or select **Manage connectors** from the Connectors menu in the prompt box.
 
 ### Step 2: Add a Connector
 
 1. Click "Add" next to the service you want to connect
 2. A browser window opens for authentication
 3. Sign in and authorize Claude's access
-4. Return to Claude Desktop — connection confirmed
+4. Return to Claude Desktop; connection confirmed
 
 ### Step 3: Configure Permissions
 
@@ -323,13 +325,13 @@ Claude:
 
 - WordPress
 
-**New Connectors** are added regularly. The Connectors Directory at claude.com/connectors shows all available integrations, with 50+ and growing.
+**New Connectors** are added regularly. You can browse available integrations from the **+** button > **Connectors** menu inside Claude Desktop, with 50+ and growing.
 
 ---
 
 ## Slash Commands and Structured Forms
 
-Plugins can expose **slash commands** — shortcuts you type in the chat input (like `/weekly-report` or `/standup-summary`). When you invoke a slash command, Cowork can present a **structured form** — a fill-in UI with labeled fields — instead of requiring you to type a free-text prompt. You fill in the form fields, click submit, and the Plugin executes the workflow with your inputs.
+Plugins can expose **slash commands**: shortcuts you type in the chat input (like `/weekly-report` or `/standup-summary`). When you invoke a slash command, Cowork can present a **structured form** (a fill-in UI with labeled fields) instead of requiring you to type a free-text prompt. You fill in the form fields, click submit, and the Plugin executes the workflow with your inputs.
 
 This matters because structured forms reduce ambiguity. Instead of hoping Claude interprets your free-text prompt correctly, the form guides you to provide exactly the inputs the workflow needs.
 
@@ -424,21 +426,21 @@ Plugins and Connectors require granting Claude access to your external accounts.
 
 **Map Your Data Sources to Connectors:**
 
-> "List the 5 services where I spend the most time accessing data for my work (e.g., Google Drive, Slack, Jira, Salesforce). For each one, check whether a Connector exists in the Anthropic directory (50+ available). Then identify which 2-3 would save the most time if Claude could query them directly in a single prompt — and describe one specific multi-source task I do today that would benefit."
+> "List the 5 services where I spend the most time accessing data for my work (e.g., Google Drive, Slack, Jira, Salesforce). For each one, check whether a Connector exists in the Anthropic directory (50+ available). Then identify which 2-3 would save the most time if Claude could query them directly in a single prompt; and describe one specific multi-source task I do today that would benefit."
 
-**What you're learning:** Data source mapping — connecting your real workflow to the Connector ecosystem. This is the first step to replacing manual export/import with live multi-source queries.
+**What you're learning:** Data source mapping; connecting your real workflow to the Connector ecosystem. This is the first step to replacing manual export/import with live multi-source queries.
 
 **Design a Plugin for Your Role:**
 
 > "Based on what you know about my work, design a custom Plugin for my role. Include: (1) which Connectors it would bundle, (2) two slash commands with structured form fields for tasks I repeat weekly, (3) one custom skill for domain reasoning I apply often. Explain why this bundle is more valuable than using each component separately."
 
-**What you're learning:** Plugin architecture thinking — understanding how bundling Connectors, skills, and slash commands into a single package creates compound value. This is the mental model that separates using Cowork from designing workflows in Cowork.
+**What you're learning:** Plugin architecture thinking; understanding how bundling Connectors, skills, and slash commands into a single package creates compound value. This is the mental model that separates using Cowork from designing workflows in Cowork.
 
 ---
 
 ## What's Next
 
-Plugins and Connectors extend Cowork's reach to external data sources and bundled capabilities. But Cowork is still evolving. The next lesson covers current limitations, safety considerations, and what's coming in future updates — including Knowledge Bases that will give Claude persistent memory across sessions.
+Plugins and Connectors extend Cowork's reach to external data sources and bundled capabilities. But Cowork is still evolving. The next lesson covers current limitations, safety considerations, and what's coming in future updates, including Knowledge Bases that will give Claude persistent memory across sessions.
 
 ## Flashcards Study Aid
 

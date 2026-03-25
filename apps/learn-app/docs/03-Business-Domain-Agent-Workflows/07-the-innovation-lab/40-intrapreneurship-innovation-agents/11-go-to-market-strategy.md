@@ -30,14 +30,14 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can define an ICP that includes company profile, person profile, specific buying trigger (not demographic description), signals for identifying prospects, and an explicit NOT a fit exclusion list — and can explain why a trigger is necessary for urgency"
+    measurable_at_this_level: "Student can define an ICP that includes company profile, person profile, specific buying trigger (not demographic description), signals for identifying prospects, and an explicit NOT a fit exclusion list , and can explain why a trigger is necessary for urgency"
 
   - name: "Design a Multi-Channel GTM Strategy Ranked by CAC Efficiency"
     proficiency_level: "B2"
     category: "Applied"
     bloom_level: "Create"
     digcomp_area: "Problem-Solving"
-    measurable_at_this_level: "Student can select and rank channels from the six archetypes by CAC efficiency, scalability, and speed — with Week 1 activation steps for each channel, and a rationale for the ordering that references the venture's current stage and team constraints"
+    measurable_at_this_level: "Student can select and rank channels from the six archetypes by CAC efficiency, scalability, and speed, with Week 1 activation steps for each channel, and a rationale for the ordering that references the venture's current stage and team constraints"
 
 learning_objectives:
   - objective: "Define an ICP including company profile, person profile, buying trigger, identification signals, and explicit exclusion criteria"
@@ -58,11 +58,11 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "ICP with buying trigger — why demographic description is not an ICP; what makes a trigger different"
-    - "Positioning statement — For/Who/Our product/That/Unlike/We format"
-    - "Six channel archetypes — and how to rank them by CAC efficiency, scalability, and speed"
-    - "Value-based pricing rules — anchor high, justify, tier; paid trial preference; <10% of value"
-    - "90-day GTM calendar with decision gates — what happens at Day 30 and Day 60"
+    - "ICP with buying trigger: why demographic description is not an ICP; what makes a trigger different"
+    - "Positioning statement, For/Who/Our product/That/Unlike/We format"
+    - "Six channel archetypes , and how to rank them by CAC efficiency, scalability, and speed"
+    - "Value-based pricing rules, anchor high, justify, tier; paid trial preference; <10% of value"
+    - "90-day GTM calendar with decision gates: what happens at Day 30 and Day 60"
   assessment: "5 concepts at B2 level is within the cognitive limit. The lesson builds sequentially: ICP → positioning → channels → pricing → calendar. Each stage uses the output of the prior one, providing scaffolding."
 
 differentiation:
@@ -71,20 +71,20 @@ differentiation:
 
 teaching_guide:
   key_points:
-    - "An ICP without a buying trigger is a description, not a targeting strategy — customers without triggers browse but do not buy"
+    - "An ICP without a buying trigger is a description, not a targeting strategy, customers without triggers browse but do not buy"
     - "Start with one channel; add the second only when the first is producing measurable results"
-    - "Founder-led outreach is the best first channel — not because it is cheapest, but because it teaches you ICP refinement and builds the playbook for future hires"
+    - "Founder-led outreach is the best first channel, not because it is cheapest, but because it teaches you ICP refinement and builds the playbook for future hires"
     - "The 90-day calendar has two functions: it makes the plan concrete and it forces you to name the decision points where you will change course"
     - "L11 connects back to L10 (market context for ICP sizing) and forward to L12 (GTM traction narrative in the pitch)"
   misconceptions:
-    - "GTM strategy means marketing. Correction: for an early-stage B2B SaaS, GTM strategy is primarily sales strategy — how to identify the specific person who is ready to buy, how to reach them, and how to close them. Marketing builds a pipeline; sales closes it. At 3 customers, the problem is almost never brand awareness."
+    - "GTM strategy means marketing. Correction: for an early-stage B2B SaaS, GTM strategy is primarily sales strategy: how to identify the specific person who is ready to buy, how to reach them, and how to close them. Marketing builds a pipeline; sales closes it. At 3 customers, the problem is almost never brand awareness."
     - "Free trials are better than paid trials. Correction: free trials attract people who are interested but not committed. Paid trials (even at 50% of list price) filter for customers who have a problem urgent enough to pay to solve. The AP automation model uses $250/month trial pricing specifically because it filters out browsers."
     - "The channel strategy should cover all possible channels. Correction: starting with more than two channels simultaneously means none of them gets enough attention to produce results. Start with the channel where you have the best insight (founder-led outreach, because you are the founder), and add a second only when the first is generating predictable results."
   discussion_prompts:
     - "The AP automation ICP excludes companies with < $1M revenue. Given that earlier lessons used CFOs at $5M–$50M companies as the target segment, what does the narrowed ICP tell you about how your understanding of the customer sharpens as you move from discovery to GTM?"
     - "The AP automation GTM uses a 30-day trial at $250 (50% of list price). Why not free? A student argues that free trials would generate more pipeline. What is the counter-argument, and when (if ever) is a free trial appropriate?"
   teaching_tips:
-    - "The buying trigger is the hardest concept for students to internalise. Use the auditor finding example: 'A CFO who just had an auditor flag AP controls is under pressure to fix this now. A CFO who has not had an audit issue is still a good prospect but has no urgency. The same product, same ICP demographics, different trigger — completely different closing probability.' Ask students to identify the trigger for their own venture."
+    - "The buying trigger is the hardest concept for students to internalise. Use the auditor finding example: 'A CFO who just had an auditor flag AP controls is under pressure to fix this now. A CFO who has not had an audit issue is still a good prospect but has no urgency. The same product, same ICP demographics, different trigger, completely different closing probability.' Ask students to identify the trigger for their own venture."
     - "Walk through the Day 30 gate explicitly. 'If you send 100 personalised LinkedIn messages in Weeks 1–4 and get a 3% response rate instead of the targeted 10%, what does that tell you? Is the message wrong? Is the ICP wrong? Is the channel wrong? The gate forces you to answer this question before spending four more weeks on an approach that is not working.'"
 ---
 
@@ -92,21 +92,21 @@ teaching_guide:
 
 You have a financial model that shows breakeven at 10 customers. You have a market size model that shows a SAM large enough to support 500 customers in five years. You have a competitive landscape that tells you where to win and where to avoid. Now the question is concrete: how do you get from 3 customers to 50?
 
-GTM strategy is where strategy meets execution. It is the answer to the question that investors and accelerator mentors will ask most persistently: "How do you acquire customers?" Not in theory — specifically. Which person are you calling on Monday morning? What will you say? How will you know whether the conversation was productive?
+GTM strategy is where strategy meets execution. It is the answer to the question that investors and accelerator mentors will ask most persistently: "How do you acquire customers?" Not in theory, specifically. Which person are you calling on Monday morning? What will you say? How will you know whether the conversation was productive?
 
-In Lesson 10, you sized the market and understood the competitive landscape. In this lesson, you design the system for reaching it. Your GTM strategy will become the traction narrative in your investor pitch (Lesson 12 Slide 5) — so it needs to be specific, sequenced, and grounded in what you have already proven works.
+In Lesson 10, you sized the market and understood the competitive landscape. In this lesson, you design the system for reaching it. Your GTM strategy will become the traction narrative in your investor pitch (Lesson 12 Slide 5). So it needs to be specific, sequenced, and grounded in what you have already proven works.
 
 ## ICP Definition: Surgical Precision
 
 The single most common GTM mistake is an ICP that describes demographics but not urgency. "CFOs at manufacturing companies with $5M–$50M revenue" is a description. It tells you who might eventually buy. It does not tell you who is ready to buy right now.
 
-An ICP includes a **buying trigger** — the specific event that makes a prospect ready to buy TODAY. Without a trigger, prospects are interested but not committed. With a trigger, they have a problem they need to solve before their next board meeting, audit visit, or investor call.
+An ICP includes a **buying trigger:** the specific event that makes a prospect ready to buy TODAY. Without a trigger, prospects are interested but not committed. With a trigger, they have a problem they need to solve before their next board meeting, audit visit, or investor call.
 
 ```
 /gtm
 Define my Ideal Customer Profile with surgical precision.
 Problem I solve: AP errors, lack of audit trail, WhatsApp-based approvals
-                 with no record — CFOs fail audit visits because of this
+                 with no record, CFOs fail audit visits because of this
 What I know about early customers from discovery: [From L03 exercise]
 
 Define the ICP with:
@@ -134,7 +134,7 @@ PRIMARY ICP:
     Structure:    CFO is a named individual, not just a "finance department"
 
   Person:
-    Role:         CFO (not VP Finance, not Controller — the person who faces
+    Role:         CFO (not VP Finance, not Controller: the person who faces
                   the auditor directly)
     Seniority:    Direct reports to CEO; independent budget authority up to $50,000
     Cares about:  Audit confidence, cash flow visibility, not being blamed
@@ -143,8 +143,8 @@ PRIMARY ICP:
                   problems get emergency budget; 3-week sales cycle proven
 
   Buying Trigger:
-    Recent audit finding about AP controls (most urgent — 8 of 10 interviews)
-    New CFO onboarding (first 90 days — open to change before locked into legacy)
+    Recent audit finding about AP controls (most urgent, 8 of 10 interviews)
+    New CFO onboarding (first 90 days, open to change before locked into legacy)
     Rapid headcount growth straining manual process (usually 50+ employees)
     Vendor dispute caused by payment error (specific incident within 60 days)
 
@@ -158,9 +158,9 @@ PRIMARY ICP:
     Companies with fully deployed SAP AP module (they chose not to change)
     Companies < $1M revenue (too small for dedicated AP function; different product)
     Financial services companies (different regulatory environment; different risk)
-    Companies in procurement of a new ERP (AP is embedded in that decision — wrong timing)
+    Companies in procurement of a new ERP (AP is embedded in that decision, wrong timing)
 
-ICP CONFIDENCE: MEDIUM — based on 3 paying customers; need 10+ to validate fully
+ICP CONFIDENCE: MEDIUM, based on 3 paying customers; need 10+ to validate fully
 Next validation: At what revenue threshold does the CFO have independent budget authority?
 ════════════════════════════════════════════════════════════
 ```
@@ -168,7 +168,7 @@ Next validation: At what revenue threshold does the CFO have independent budget 
 :::info Why the Buying Trigger Changes Everything
 Two CFOs can match the same company profile and person profile exactly. One had an audit finding last month; the other has not had an audit issue in three years. The first will close in three weeks at full price. The second will have a dozen follow-up calls, request a free trial, and ultimately not convert because there is no urgency to change.
 
-GTM execution means prioritising the prospects with buying triggers. The others stay in the pipeline for a trigger event — you stay top of mind until one arrives.
+GTM execution means prioritising the prospects with buying triggers. The others stay in the pipeline for a trigger event; you stay top of mind until one arrives.
 :::
 
 ## Positioning Statement
@@ -176,12 +176,12 @@ GTM execution means prioritising the prospects with buying triggers. The others 
 A positioning statement is not a tagline. It is a structured argument for why a specific customer should choose your product over a specific alternative. The format:
 
 ```
-For:         [Primary ICP — the specific person]
-Who:         [The problem they have — use discovery language]
+For:         [Primary ICP: the specific person]
+Who:         [The problem they have; use discovery language]
 Our product: [Category name]
-That:        [The primary value delivered — outcome, not feature]
+That:        [The primary value delivered, outcome, not feature]
 Unlike:      [The primary alternative they currently use]
-We:          [The specific differentiating claim — why you win]
+We:          [The specific differentiating claim: why you win]
 ```
 
 For AP automation:
@@ -197,7 +197,7 @@ We:          Deliver 91% AI matching accuracy and WhatsApp-native approvals
              in two weeks, not six months
 ```
 
-Quality test: read it to someone who knows your space. If they say "that sounds like [competitor]" — not differentiated enough. If they say "I've never heard anyone say that" — potentially too different. If they say "that makes sense; I can see why that matters" — good positioning.
+Quality test: read it to someone who knows your space. If they say "that sounds like [competitor]", not differentiated enough. If they say "I've never heard anyone say that", potentially too different. If they say "that makes sense; I can see why that matters", good positioning.
 
 ## Channel Strategy: Six Archetypes, Ranked by CAC Efficiency
 
@@ -256,39 +256,39 @@ CHANNEL 4: Inside sales (Month 9+ post-seed funding)
 A sales process is a repeatable sequence that every deal follows. If there is no process, every deal is improvised and you cannot learn what to improve.
 
 ```
-SALES PROCESS — AP Automation SaaS
+SALES PROCESS, AP Automation SaaS
 
-Step 1 — Identify: LinkedIn search: CFO + [sector] + [target size] + [geography]
+Step 1, Identify: LinkedIn search: CFO + [sector] + [target size] + [geography]
   Output: List of 100 ICP-matching prospects
   Failure mode: Too few prospects → widen geography or add secondary ICP
 
-Step 2 — Qualify: Review LinkedIn profile; any trigger signals?
+Step 2, Qualify: Review LinkedIn profile; any trigger signals?
   (New role, growth announcement, finance-related post)
   Output: 40 prospects with at least one trigger signal
   Failure mode: No signals → add to long-term pipeline; don't pursue yet
 
-Step 3 — Outreach: Personalised LinkedIn message (75 words max)
+Step 3, Outreach: Personalised LinkedIn message (75 words max)
   Reference their company + the AP problem + offer a 10-minute demo
   Output: 4 responses (10% conversion)
   Failure mode: < 5% response rate → revise message; test new angle
 
-Step 4 — Demo: 20-minute screenshare
+Step 4, Demo: 20-minute screenshare
   Show three things: invoice ingestion, WhatsApp approval, dashboard
   End: "Would this make your audit visit less stressful?"
   Output: Verbal interest + LOI request
   Failure mode: No interest → understand why; do not proceed to trial without signal
 
-Step 5 — Trial offer: 30-day paid pilot at $250 (50% of list price)
+Step 5, Trial offer: 30-day paid pilot at $250 (50% of list price)
   LOI signed before access granted
   Why paid: Filters browsers; customers who pay even nominally adopt more
   Failure mode: Refuses to pay for trial → red flag for churn; negotiate carefully
 
-Step 6 — Onboarding: Founder personally onboards Week 1
+Step 6, Onboarding: Founder personally onboards Week 1
   Daily WhatsApp check-in for first 2 weeks
   Adoption metric: >70% invoice processing via platform by Day 14
   Failure mode: <50% adoption at Day 7 → intervention required same day
 
-Step 7 — Conversion: At Week 3 — "Are you comfortable showing this to your auditor?"
+Step 7, Conversion: At Week 3, "Are you comfortable showing this to your auditor?"
   If yes: annual contract at $500/month ($5,000/year, 2 months free)
   If not: investigate specific blocker; fix it; do not convert until resolved
 ```
@@ -297,7 +297,7 @@ Step 7 — Conversion: At Week 3 — "Are you comfortable showing this to your a
 
 Three rules govern pricing for early-stage B2B SaaS:
 
-**Rule 1: Anchor high, justify, then tier.** Start with the highest price you can credibly defend. Add a lower tier for smaller customers. Never start low — it is very hard to raise prices; it is much easier to add tiers.
+**Rule 1: Anchor high, justify, then tier.** Start with the highest price you can credibly defend. Add a lower tier for smaller customers. Never start low; it is very hard to raise prices; it is much easier to add tiers.
 
 **Rule 2: Value-based pricing.** Your price should be less than 10% of the value you deliver. If you save a customer $50,000/year in finance staff time and audit risk, you can charge up to $5,000/year and still have a compelling ROI story. At $6,000/year and $50,000 value delivered, you are at the upper edge.
 
@@ -312,7 +312,7 @@ For AP automation:
 | Enterprise | $1,200/month (M12+)  | 5+ entities; ERP integration required  | Not offered yet; designed for future   |
 | Trial      | $250/month (30 days) | All pilots; LOI required before access | 50% of list; filters for commitment    |
 
-Discounting policy: annual prepay only — two months free for annual commitment. No ad hoc discounting. Discount-seeking customers churn faster than full-price customers, and arbitrary discounts train the market to wait for deals.
+Discounting policy: annual prepay only: two months free for annual commitment. No ad hoc discounting. Discount-seeking customers churn faster than full-price customers, and arbitrary discounts train the market to wait for deals.
 
 ## The 90-Day GTM Calendar
 
@@ -352,7 +352,7 @@ WEEKS 5–8: Demo and conversion
 ─── DAY 60 GATE ───────────────────────────────────────────────────────────
   Metric:    Total customers ≥ 5 (started at 3; need 2 more by Day 60)
   If YES:    Activate Channel 2 (professional associations); prepare first event
-  If NO:     Investigate bottleneck — is it leads (ICP), demos (message), or trials (product)?
+  If NO:     Investigate bottleneck: is it leads (ICP), demos (message), or trials (product)?
              Do NOT proceed to Channel 2 until Channel 1 is producing
 
 WEEKS 9–12: Scale and convert
@@ -364,7 +364,7 @@ WEEKS 9–12: Scale and convert
 ```
 
 :::note For Intrapreneurs
-For intrapreneurs, "go to market" becomes "go to deployment." The ICP is the internal team or stakeholder group who will adopt the solution. The buying trigger is an internal event: a budget cycle, a compliance review, a new executive sponsor. The sales process is stakeholder management: who needs to approve, who needs to see a demo, who will veto? The 90-day calendar is your internal rollout plan. The Day 30 and Day 60 gates still apply — you are still measuring whether the deployment is on track and where the blockers are.
+For intrapreneurs, "go to market" becomes "go to deployment." The ICP is the internal team or stakeholder group who will adopt the solution. The buying trigger is an internal event: a budget cycle, a compliance review, a new executive sponsor. The sales process is stakeholder management: who needs to approve, who needs to see a demo, who will veto? The 90-day calendar is your internal rollout plan. The Day 30 and Day 60 gates still apply; you are still measuring whether the deployment is on track and where the blockers are.
 :::
 
 ## Exercise: GTM Strategy Sprint
@@ -375,7 +375,7 @@ For intrapreneurs, "go to market" becomes "go to deployment." The ICP is the int
 
 From prior exercises you have: customer discovery synthesis (L03), a selected idea and ICP (L04), assumption map and MVP (L05–L06), pilot learnings (L07), business model canvas (L08), and unit economics (L09). This exercise converts everything into an actionable customer acquisition plan.
 
-**Step 1 — ICP definition (15 minutes).**
+**Step 1, ICP definition (15 minutes).**
 
 ```
 /gtm
@@ -387,11 +387,11 @@ Define the ICP with:
 - Company: size, sector, geography, technology environment
 - Person: role, seniority, what they care about, how they buy
 - Trigger: what event makes them ready to buy RIGHT NOW
-- Signals: how to identify them — what they post; what groups they're in
+- Signals: how to identify them: what they post; what groups they're in
 - NOT a fit: who should I not waste time on
 ```
 
-**Step 2 — Channel strategy (15 minutes).**
+**Step 2, Channel strategy (15 minutes).**
 
 ```
 /gtm
@@ -405,7 +405,7 @@ Identify which channel to start with, and which one to activate second
 (only after the first is producing measurable results).
 ```
 
-**Step 3 — Sales process design (15 minutes).**
+**Step 3, Sales process design (15 minutes).**
 
 ```
 /gtm
@@ -414,7 +414,7 @@ For each step: what is the action; what is the output; what failure
 looks like; and what to do if it fails.
 ```
 
-**Step 4 — 90-day GTM calendar (15 minutes).**
+**Step 4, 90-day GTM calendar (15 minutes).**
 
 ```
 /gtm
@@ -426,7 +426,7 @@ Build a 90-day GTM calendar with:
 - Decision gate at Day 60: are we on track for 10 customers at Day 90?
 ```
 
-**Deliverable:** ICP document with buying trigger and exclusion criteria, ranked channel strategy with Week 1 activation steps, seven-step sales process with failure modes, 90-day GTM calendar with Day 30 and Day 60 decision gates. Save this deliverable — Lesson 12 uses your GTM traction as the pitch narrative for Slide 5.
+**Deliverable:** ICP document with buying trigger and exclusion criteria, ranked channel strategy with Week 1 activation steps, seven-step sales process with failure modes, 90-day GTM calendar with Day 30 and Day 60 decision gates. Save this deliverable, Lesson 12 uses your GTM traction as the pitch narrative for Slide 5.
 
 :::note Keep This File
 Your ICP and channel strategy are the inputs for the investor pitch traction slide (Lesson 12). The 90-day calendar demonstrates to investors that you have a concrete customer acquisition plan, not just a theory. Keep everything in your Cowork session.
@@ -437,7 +437,7 @@ Your ICP and channel strategy are the inputs for the investor pitch traction sli
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce** — Run the chapter's worked example:
+**Reproduce:** Run the chapter's worked example:
 
 ```
 /gtm
@@ -453,9 +453,9 @@ Design:
 4. 90-day GTM calendar with Day 30 and Day 60 decision gates
 ```
 
-**What you are learning:** The buying trigger is what separates a good ICP from a great one. Notice that the sample output identifies four specific trigger events (audit finding, new CFO, rapid growth, vendor dispute). These are search terms for your prospect list — you are not looking for all CFOs, you are looking for CFOs who recently experienced one of these triggers.
+**What you are learning:** The buying trigger is what separates a good ICP from a great one. Notice that the sample output identifies four specific trigger events (audit finding, new CFO, rapid growth, vendor dispute). These are search terms for your prospect list; you are not looking for all CFOs, you are looking for CFOs who recently experienced one of these triggers.
 
-**Adapt** — Modify for a different customer type:
+**Adapt:** Modify for a different customer type:
 
 ```
 /gtm
@@ -466,9 +466,9 @@ ICP: Define with buying trigger and NOT a fit exclusion.
 Channel strategy: Rank three channels by CAC efficiency.
 ```
 
-**What you are learning:** Different buyer types have very different buying triggers and channel preferences. An HR director at a growth-stage startup has a very different buying journey than a CFO at a mid-market manufacturer — understanding those differences shapes every GTM decision.
+**What you are learning:** Different buyer types have very different buying triggers and channel preferences. An HR director at a growth-stage startup has a very different buying journey than a CFO at a mid-market manufacturer, understanding those differences shapes every GTM decision.
 
-**Apply** — Use your own venture data:
+**Apply:** Use your own venture data:
 
 ```
 /gtm
@@ -484,7 +484,7 @@ Produce:
 3. A 90-day GTM calendar to reach my first 10 paying customers
 ```
 
-**What you are learning:** The exercise of defining who you are NOT selling to is as valuable as defining who you are. An explicit NOT a fit section saves dozens of hours of pursuit on prospects who will never convert — and it forces you to be honest about the boundaries of your product's initial positioning.
+**What you are learning:** The exercise of defining who you are NOT selling to is as valuable as defining who you are. An explicit NOT a fit section saves dozens of hours of pursuit on prospects who will never convert , and it forces you to be honest about the boundaries of your product's initial positioning.
 :::
 
 ## Flashcards Study Aid

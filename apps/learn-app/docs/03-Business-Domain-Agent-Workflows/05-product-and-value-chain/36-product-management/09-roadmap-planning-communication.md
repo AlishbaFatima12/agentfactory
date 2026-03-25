@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/product-management/roadmap-planning-communication
 sidebar_position: 9
 title: "Roadmap Planning & Communication"
-description: "Build InsightFlow's Q3 roadmap using /roadmap-update from the official product-management plugin, apply the Now/Next/Later framework, and generate three audience-calibrated versions — for engineering, executives, and enterprise customers"
+description: "Build InsightFlow's Q3 roadmap using /roadmap-update from the official product-management plugin, apply the Now/Next/Later framework, and generate three audience-calibrated versions: for engineering, executives, and enterprise customers"
 keywords:
   [
     "product management",
@@ -23,7 +23,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Communication"
-    measurable_at_this_level: "Student invokes /roadmap-update, produces a Now/Next/Later roadmap from L08 stories, and generates three audience versions — each calibrated to the appropriate level of detail and language"
+    measurable_at_this_level: "Student invokes /roadmap-update, produces a Now/Next/Later roadmap from L08 stories, and generates three audience versions: each calibrated to the appropriate level of detail and language"
 
   - name: "Simulate a dependency slip and communicate the resulting roadmap change using the five-step change communication framework"
     proficiency_level: "B2"
@@ -36,7 +36,7 @@ learning_objectives:
   - objective: "Select the appropriate roadmap format for a given communication context using the four-framework decision guide"
     proficiency_level: "B1"
     bloom_level: "Understand"
-    assessment_method: "Student correctly matches Now/Next/Later to external communication and Timeline to engineering planning — and explains the false-precision risk of dates in stakeholder communication"
+    assessment_method: "Student correctly matches Now/Next/Later to external communication and Timeline to engineering planning: and explains the false-precision risk of dates in stakeholder communication"
 
   - objective: "Build a Now/Next/Later roadmap from the L08 story backlog using /roadmap-update, with dependencies mapped and capacity allocation applied"
     proficiency_level: "B2"
@@ -46,38 +46,38 @@ learning_objectives:
   - objective: "Generate three audience-calibrated versions of the same roadmap and evaluate whether each version is appropriately detailed for its audience"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student produces engineering, executive, and customer-facing versions — and evaluates each against the audience calibration criteria (engineering: sprint-level detail; executive: commercial outcomes; customer: benefit language)"
+    assessment_method: "Student produces engineering, executive, and customer-facing versions: and evaluates each against the audience calibration criteria (engineering: sprint-level detail; executive: commercial outcomes; customer: benefit language)"
 
 cognitive_load:
   new_concepts: 5
   concepts_list:
     - "Four roadmap frameworks (Now/Next/Later, Quarterly Themes, OKR-Aligned, Timeline/Gantt)"
-    - "Now/Next/Later format — commitments vs. intentions vs. signals"
+    - "Now/Next/Later format: commitments vs. intentions vs. signals"
     - "Dependency categories (technical, team, external, knowledge, sequential)"
     - "Capacity allocation rule (70% features / 20% tech health / 10% unplanned)"
     - "Five-step roadmap change communication framework"
-  assessment: "5 concepts, all at B2. Students already know the story backlog from L08 — the new work is organising that backlog into a roadmap structure and communicating it. The hardest concept is audience calibration: the same roadmap communicates very different things in three different registers, and the agent's default is to produce one version."
+  assessment: "5 concepts, all at B2. Students already know the story backlog from L08: the new work is organising that backlog into a roadmap structure and communicating it. The hardest concept is audience calibration: the same roadmap communicates very different things in three different registers, and the agent's default is to produce one version."
 
 differentiation:
   extension_for_advanced: "After building the three-version roadmap, simulate a second disruption: the data team confirms they cannot deliver the threshold trigger evaluation service in time for Q3. How does this change the Now items? Which stories move to Next? Run /roadmap-update with the dependency slip and generate a new executive summary communicating the change. Evaluate: does the updated roadmap still have a coherent Q3 story for the exec team, or has the strategic bet collapsed?"
-  remedial_for_struggling: "Focus on one audience version — the engineering view. List the L08 stories, sort them by dependency order (what must be built before what?), and place them in Now/Next/Later based on the sprint order. Once the engineering view is clear, adapt it for the executive view by replacing story titles with commercial outcomes: 'Schedule trigger configuration' becomes 'Analyst Alex's Monday report runs automatically.' The adaptation skill is easier to learn when you start from a solid engineering view."
+  remedial_for_struggling: "Focus on one audience version: the engineering view. List the L08 stories, sort them by dependency order (what must be built before what?), and place them in Now/Next/Later based on the sprint order. Once the engineering view is clear, adapt it for the executive view by replacing story titles with commercial outcomes: 'Schedule trigger configuration' becomes 'Analyst Alex's Monday report runs automatically.' The adaptation skill is easier to learn when you start from a solid engineering view."
 
 teaching_guide:
   key_points:
-    - "A roadmap is a communication tool, not a project plan — it should operate at the level of themes and outcomes, not tasks"
-    - "Now/Next/Later avoids false date precision — the most common cause of roadmap-as-contract expectations from stakeholders"
+    - "A roadmap is a communication tool, not a project plan: it should operate at the level of themes and outcomes, not tasks"
+    - "Now/Next/Later avoids false date precision: the most common cause of roadmap-as-contract expectations from stakeholders"
     - "The same roadmap requires three different registers: engineers need sprint-level detail; executives need commercial outcomes; customers need benefit language"
-    - "Dependencies are the highest-risk items on any roadmap — they must be named, owned, and have a 'need by' date"
-    - "The 70/20/10 capacity rule is a constraint, not a target — if more than 70% of capacity is planned features, the team has no buffer for unplanned work"
+    - "Dependencies are the highest-risk items on any roadmap: they must be named, owned, and have a 'need by' date"
+    - "The 70/20/10 capacity rule is a constraint, not a target: if more than 70% of capacity is planned features, the team has no buffer for unplanned work"
   misconceptions:
-    - "The customer-facing roadmap should include dates. Correction: customer-facing roadmaps that include dates create contract expectations. Customers read 'Q3' as a guarantee. Now/Next/Later is deliberately time-ambiguous — it communicates direction without creating commitments on behalf of the engineering team."
-    - "The roadmap changes when the plan changes. Correction: the roadmap changes when strategy changes. Plan-level changes (sprint adjustments, story reordering) should not trigger roadmap updates. Roadmap updates are reserved for strategic reprioritisations — what the team is no longer building, or what has moved from 'Later' to 'Now.'"
-    - "A roadmap with more items is more complete. Correction: a roadmap with too many items communicates nothing. Stakeholders lose the signal in the noise. The roadmap should communicate the 2-3 things the team is betting on — not a comprehensive list of everything in the backlog."
+    - "The customer-facing roadmap should include dates. Correction: customer-facing roadmaps that include dates create contract expectations. Customers read 'Q3' as a guarantee. Now/Next/Later is deliberately time-ambiguous: it communicates direction without creating commitments on behalf of the engineering team."
+    - "The roadmap changes when the plan changes. Correction: the roadmap changes when strategy changes. Plan-level changes (sprint adjustments, story reordering) should not trigger roadmap updates. Roadmap updates are reserved for strategic reprioritisations: what the team is no longer building, or what has moved from 'Later' to 'Now.'"
+    - "A roadmap with more items is more complete. Correction: a roadmap with too many items communicates nothing. Stakeholders lose the signal in the noise. The roadmap should communicate the 2-3 things the team is betting on: not a comprehensive list of everything in the backlog."
   discussion_prompts:
     - "Your CTO asks to see the full Linear backlog on the customer roadmap 'for transparency.' Why is this a bad idea? What should the customer-facing roadmap contain instead, and how do you explain this to the CTO?"
-    - "You have built an OKR-aligned roadmap for Q3. One of the key results is 'Increase workflow automation activation by 20%.' The platform team slips their delivery date by 3 weeks — the threshold trigger service that enables data-driven automation will not be ready until mid-Q3. How does this change the roadmap? Who needs to know? How do you communicate the change?"
+    - "You have built an OKR-aligned roadmap for Q3. One of the key results is 'Increase workflow automation activation by 20%.' The platform team slips their delivery date by 3 weeks: the threshold trigger service that enables data-driven automation will not be ready until mid-Q3. How does this change the roadmap? Who needs to know? How do you communicate the change?"
   teaching_tips:
-    - "The three-audience exercise is the most valuable part of this lesson. Have students generate all three versions and read them aloud — the difference in language is immediately obvious, and it builds the instinct for audience calibration that distinguishes senior PMs."
+    - "The three-audience exercise is the most valuable part of this lesson. Have students generate all three versions and read them aloud: the difference in language is immediately obvious, and it builds the instinct for audience calibration that distinguishes senior PMs."
     - "The dependency slip simulation (Step 5 of the exercise) is where students often generate a weak response: they update the roadmap without explaining why. The five-step change communication framework turns the update into a narrative. Make students write the communication before running /roadmap-update again."
     - "Capacity allocation: use InsightFlow's real constraints (12 engineers, 2-week sprints, velocity ~40 story points) to make the 70/20/10 rule concrete. If 70% of capacity is features, that is 28 story points per sprint. Ask: is the Workflow Builder backlog from L08 achievable within 28 points per sprint for 8 sprints?"
 ---
@@ -86,11 +86,11 @@ teaching_guide:
 
 The CEO, Sarah Chen, sends a message three days before the quarterly business review: "I need the Q3 roadmap. Three things: what engineering is building and when, what I can tell the board, and something I can send to enterprise customers who keep asking what's coming. Can you send me three versions?"
 
-Three audiences. Three purposes. One roadmap — expressed three different ways.
+Three audiences. Three purposes. One roadmap: expressed three different ways.
 
 This is the real PM skill in roadmap work: not building the roadmap, but translating it. The engineering team needs sprint-level commitments. The CEO needs commercial outcomes tied to strategy. Enterprise customers need benefit language that helps them plan, not dates that become expectations.
 
-You will use `/roadmap-update` from the official `product-management` plugin to build InsightFlow's Q3 roadmap from the L08 story backlog, and then generate the three versions Sarah needs — each calibrated for its audience.
+You will use `/roadmap-update` from the official `product-management` plugin to build InsightFlow's Q3 roadmap from the L08 story backlog, and then generate the three versions Sarah needs: each calibrated for its audience.
 
 ## The Four Roadmap Frameworks
 
@@ -106,7 +106,7 @@ Different audiences and planning contexts require different formats. Choosing th
 For most communication situations, **Now / Next / Later is the right default**. It communicates direction without false precision. "Q3" on a customer roadmap is read as a contract; "Next" is read as a direction.
 
 :::caution The Date Precision Problem
-A roadmap that shows exact delivery dates for software features trains stakeholders to treat it as a contract. When a dependency slips — and it will — the PM is now renegotiating a contract rather than updating a plan. Now/Next/Later avoids this by communicating timeframe buckets, not calendar commitments. Use Timeline/Gantt internally for engineering planning; use Now/Next/Later for everything else.
+A roadmap that shows exact delivery dates for software features trains stakeholders to treat it as a contract. When a dependency slips: and it will: the PM is now renegotiating a contract rather than updating a plan. Now/Next/Later avoids this by communicating timeframe buckets, not calendar commitments. Use Timeline/Gantt internally for engineering planning; use Now/Next/Later for everything else.
 :::
 
 ## The Now / Next / Later Structure
@@ -115,9 +115,9 @@ Each bucket has a specific meaning and level of commitment:
 
 | Bucket | Timeframe | Commitment Level | What It Contains |
 | --- | --- | --- | --- |
-| **Now** | Current sprint or quarter | High — these are commitments | Work actively in progress or starting this sprint. Specs complete, teams assigned. |
-| **Next** | Following quarter | Medium — intentions, not commitments | Work planned and roughly scoped. Problem statements ready. Not yet fully specified. |
-| **Later** | 3-6+ months | Low — signals, not promises | Strategic themes and opportunities. User problems, not solutions. No dates. |
+| **Now** | Current sprint or quarter | High: these are commitments | Work actively in progress or starting this sprint. Specs complete, teams assigned. |
+| **Next** | Following quarter | Medium: intentions, not commitments | Work planned and roughly scoped. Problem statements ready. Not yet fully specified. |
+| **Later** | 3-6+ months | Low: signals, not promises | Strategic themes and opportunities. User problems, not solutions. No dates. |
 
 The critical distinction: Now items have specs. Next items have problem statements. Later items have themes. This structure prevents the backlog-dump roadmap where everything is presented as equally real.
 
@@ -147,7 +147,7 @@ Before populating the roadmap, apply the capacity rule:
 | **Technical health** | 20% | ~8 points | Tech debt, reliability, performance, DX |
 | **Unplanned** | 10% | ~4 points | Urgent issues, quick wins, other-team requests |
 
-If the Workflow Builder backlog from L08 requires more than 28 story points per sprint averaged across 8 sprints, the roadmap is over-committed. Something must come off, or the capacity allocation changes — but never by pretending engineers can simply do more.
+If the Workflow Builder backlog from L08 requires more than 28 story points per sprint averaged across 8 sprints, the roadmap is over-committed. Something must come off, or the capacity allocation changes: but never by pretending engineers can simply do more.
 
 ## Worked Example: InsightFlow Q3 Roadmap
 
@@ -298,23 +298,23 @@ The customer version uses benefit language, avoids dates, and framing around wha
 
 ## Communicating Roadmap Changes
 
-When the roadmap changes — and it will — the communication matters as much as the update. Use the five-step framework:
+When the roadmap changes: and it will: the communication matters as much as the update. Use the five-step framework:
 
-1. **Acknowledge the change** — Be direct. "We are changing the Q3 roadmap."
-2. **Explain the reason** — What new information drove this? "The data team confirmed that the threshold trigger service cannot be ready until Q4."
-3. **Show the tradeoff** — What moves to make room? "Threshold triggers move to Q4 Next. Schedule triggers ship as planned."
-4. **Show the new plan** — Updated roadmap with changes reflected.
-5. **Acknowledge impact** — Who expected the deprioritised item? "Enterprise customers who asked about data threshold alerts will need a direct conversation from Aisha (Head of Sales)."
+1. **Acknowledge the change**; Be direct. "We are changing the Q3 roadmap."
+2. **Explain the reason**; What new information drove this? "The data team confirmed that the threshold trigger service cannot be ready until Q4."
+3. **Show the tradeoff**; What moves to make room? "Threshold triggers move to Q4 Next. Schedule triggers ship as planned."
+4. **Show the new plan**; Updated roadmap with changes reflected.
+5. **Acknowledge impact**; Who expected the deprioritised item? "Enterprise customers who asked about data threshold alerts will need a direct conversation from Aisha (Head of Sales)."
 
 :::note Keep This File
-Lessons 3-14 build one continuous product management cycle for InsightFlow. Keep your Cowork session and working folder between lessons. The Q3 roadmap you build in this exercise is the roadmap whose items L10 will prioritise — the prioritisation order you produce in L10 will determine what enters the first sprint.
+Lessons 3-14 build one continuous product management cycle for InsightFlow. Keep your Cowork session and working folder between lessons. The Q3 roadmap you build in this exercise is the roadmap whose items L10 will prioritise: the prioritisation order you produce in L10 will determine what enters the first sprint.
 :::
 
 ## Try With AI
 
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Prompt 1 — Reproduce** (apply what you just learned):
+**Prompt 1; Reproduce** (apply what you just learned):
 
 ```
 Build a Now/Next/Later roadmap for InsightFlow's Q3 with this context:
@@ -336,9 +336,9 @@ Include a dependencies section — the platform team automation engine
 must deliver by Sprint 1 Week 2 (owner: engineering lead).
 ```
 
-**What you're learning:** Building a roadmap from a story list — the translation from backlog to roadmap structure. Notice how the roadmap collapses individual stories into initiative-level items. The customer does not need to know about "Story 1: Create a new workflow" — they need to know about "Workflow automation arrives in Q3."
+**What you're learning:** Building a roadmap from a story list: the translation from backlog to roadmap structure. Notice how the roadmap collapses individual stories into initiative-level items. The customer does not need to know about "Story 1: Create a new workflow": they need to know about "Workflow automation arrives in Q3."
 
-**Prompt 2 — Adapt** (change the context):
+**Prompt 2; Adapt** (change the context):
 
 ```
 A PM at a legal tech SaaS needs to communicate a roadmap change to
@@ -363,9 +363,9 @@ Write version for: (a) engineering team, (b) CEO, (c) enterprise
 prospects who were told AI Contract Summary was "coming Q3"
 ```
 
-**What you're learning:** The change communication framework in a regulated industry. Legal tech changes are often driven by compliance validation rather than technical slippage — the communication needs to be precise about why the delay happened and what changed in the thinking.
+**What you're learning:** The change communication framework in a regulated industry. Legal tech changes are often driven by compliance validation rather than technical slippage: the communication needs to be precise about why the delay happened and what changed in the thinking.
 
-**Prompt 3 — Apply** (connect to your domain):
+**Prompt 3; Apply** (connect to your domain):
 
 ```
 Take your current product roadmap (or the roadmap you wish you had)
@@ -382,7 +382,7 @@ Report what you find. If you discover the roadmap is over-committed
 (more than 70% to features), what would come off?
 ```
 
-**What you're learning:** The roadmap audit — applying the frameworks from this lesson to your own situation. Most PMs discover that their roadmap is either in a format that doesn't match their current communication need, or that dependencies are implicit rather than named.
+**What you're learning:** The roadmap audit: applying the frameworks from this lesson to your own situation. Most PMs discover that their roadmap is either in a format that doesn't match their current communication need, or that dependencies are implicit rather than named.
 
 ## Exercise: Build InsightFlow's Q3 Roadmap
 
@@ -390,11 +390,11 @@ Report what you find. If you discover the roadmap is over-committed
 **Command:** `/roadmap-update`
 **Time:** 30 minutes
 
-**Step 1 — Load the L08 story backlog**
+**Step 1; Load the L08 story backlog**
 
 Gather the stories from your L08 exercise. Group them by the Workflow Builder feature they belong to (Builder UI, Action Library, Trigger Configuration, Status View).
 
-**Step 2 — Run /roadmap-update for the base roadmap**
+**Step 2; Run /roadmap-update for the base roadmap**
 
 ```
 /roadmap-update
@@ -403,7 +403,7 @@ Create InsightFlow's Q3 roadmap in Now/Next/Later format.
 full story backlog, dependencies, and capacity numbers.]
 ```
 
-**Step 3 — Generate the three audience versions**
+**Step 3; Generate the three audience versions**
 
 Run `/roadmap-update` three more times, once for each audience, using the audience prompts from the worked example. Evaluate each version:
 
@@ -411,11 +411,11 @@ Run `/roadmap-update` three more times, once for each audience, using the audien
 - **Executive version**: Does it translate "threshold trigger" into a commercial outcome? If it still says "data threshold trigger configuration," prompt: "Translate technical items into business outcomes for the CEO audience."
 - **Customer version**: Does it avoid dates and feature-implementation language? If it says "Q3" anywhere, prompt: "Replace specific time references with 'coming soon' or 'planned for later this year.'"
 
-**Step 4 — Evaluate audience calibration**
+**Step 4; Evaluate audience calibration**
 
 For each version, check one thing: "Would someone who does not know how software is built be confused by anything in this version?" If yes for the engineering version, it is too simplified. If yes for the customer version, it is too technical.
 
-**Step 5 — Simulate a dependency slip**
+**Step 5; Simulate a dependency slip**
 
 Run this prompt to test the change communication framework:
 
@@ -436,9 +436,9 @@ communication that:
 
 ## What You Built
 
-You built InsightFlow's Q3 roadmap from the L08 story backlog in Now/Next/Later format, with dependencies mapped and capacity validated against the 70/20/10 rule. You generated three audience-calibrated versions — engineering, executive, and customer — and applied the five-step change communication framework to a dependency slip scenario.
+You built InsightFlow's Q3 roadmap from the L08 story backlog in Now/Next/Later format, with dependencies mapped and capacity validated against the 70/20/10 rule. You generated three audience-calibrated versions: engineering, executive, and customer: and applied the five-step change communication framework to a dependency slip scenario.
 
-This roadmap feeds directly into Lesson 10, where you will use `/prioritise` from the custom `product-strategy` plugin to RICE-score the Workflow Builder story backlog and produce the quarterly priority decision — determining which stories enter Sprint 1 and which move to Next.
+This roadmap feeds directly into Lesson 10, where you will use `/prioritise` from the custom `product-strategy` plugin to RICE-score the Workflow Builder story backlog and produce the quarterly priority decision: determining which stories enter Sprint 1 and which move to Next.
 
 ## Flashcards Study Aid
 

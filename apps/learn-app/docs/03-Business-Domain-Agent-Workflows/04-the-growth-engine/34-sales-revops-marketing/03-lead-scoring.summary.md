@@ -1,8 +1,8 @@
-# Lead Scoring — Summary
+# Lead Scoring; Summary
 
 ## Core Concept
 
-A three-dimension scoring model (Fit 0-40 + Timing 0-40 + Engagement 0-20) replaces single-dimension lead scoring that hides the story behind a composite number. The same total score of 72 can mean three completely different next steps depending on which dimension is strong and which is weak. The dimensions — not the total — are the decision tool.
+A three-dimension scoring model (Fit 0-40 + Timing 0-40 + Engagement 0-20) replaces single-dimension lead scoring that hides the story behind a composite number. The same total score of 72 can mean three completely different next steps depending on which dimension is strong and which is weak. The dimensions: not the total: are the decision tool.
 
 ## Key Mental Models
 
@@ -16,7 +16,7 @@ A three-dimension scoring model (Fit 0-40 + Timing 0-40 + Engagement 0-20) repla
 
 - Always look at the dimension breakdown, not just the composite score, before deciding on action
 - When a score contradicts expert judgment, trace the miscalibration to a specific underweighted dimension, adjust the weight, and re-score
-- Scoring weight adjustment is iterative — every gap between the model and the best rep's instinct is a calibration opportunity
+- Scoring weight adjustment is iterative: every gap between the model and the best rep's instinct is a calibration opportunity
 - Routing without scoring produces inconsistent lead assignment; scoring without routing produces rankings that nobody acts on
 
 ## Common Mistakes
@@ -24,11 +24,11 @@ A three-dimension scoring model (Fit 0-40 + Timing 0-40 + Engagement 0-20) repla
 - Relying on single-dimension scoring that conflates engagement with ability to buy (the "hot lead that was a terrible fit" failure)
 - Ignoring high-Fit, low-Engagement prospects because the old model only measured website visits and email opens (the "perfect fit scored cold" failure)
 - Distributing HOT leads equally across the team instead of routing to the highest-converting rep
-- Investing rep time in NOT YET prospects to "keep the relationship warm" — this is a misallocation that the quarterly re-score catches
+- Investing rep time in NOT YET prospects to "keep the relationship warm": this is a misallocation that the quarterly re-score catches
 
 ## Connections
 
-- Scoring draws directly on the ICP dimensions built in **L02** — Fit scores against firmographics, technographics, and persona
+- Scoring draws directly on the ICP dimensions built in **L02**; Fit scores against firmographics, technographics, and persona
 - The two historical scoring failures (high engagement/terrible fit, perfect fit/no engagement) motivate the three-dimension design
 - Scoring classifications feed into enrichment priorities in **L04** (HOT = weekly enrichment, WARM = bi-weekly, CULTIVATE = monthly)
 - Routing rules connect to the multi-touch sequence structures in **L06** (WARM prospects enter a defined sequence, not ad hoc follow-up)

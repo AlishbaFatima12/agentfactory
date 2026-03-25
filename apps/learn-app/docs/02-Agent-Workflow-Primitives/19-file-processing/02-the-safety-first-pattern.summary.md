@@ -1,11 +1,11 @@
 ### Core Concept
 
-The safety-first pattern establishes constraints before destructive operations. Create a backup, verify it's complete, then proceed with confidence. The paradox: the backup constraint doesn't limit you — it frees you to experiment without fear.
+The safety-first pattern establishes constraints before destructive operations. Create a backup, verify it's complete, then proceed with confidence. The paradox: the backup constraint doesn't limit you: it frees you to experiment without fear.
 
 ### Key Mental Models
 
 - **Safety enables action**: The backup constraint doesn't limit you. It frees you to experiment without fear. The 2 minutes you spend on backup save the 20 minutes of anxiety that would otherwise paralyze every decision.
-- **Verification before trust**: Never assume a backup worked. Always confirm completeness with source-to-destination comparison. A backup that fails silently is worse than no backup — it gives false confidence.
+- **Verification before trust**: Never assume a backup worked. Always confirm completeness with source-to-destination comparison. A backup that fails silently is worse than no backup: it gives false confidence.
 - **Agents should ask, not assume**: A well-designed agent clarifies ambiguous requests ("What counts as important?") before acting. That single question is the difference between a helpful tool and a dangerous one.
 - **Backup failures are real**: Permissions errors, disk space limits, and partial copies happen. Good agents check preconditions and report errors, not just successes.
 

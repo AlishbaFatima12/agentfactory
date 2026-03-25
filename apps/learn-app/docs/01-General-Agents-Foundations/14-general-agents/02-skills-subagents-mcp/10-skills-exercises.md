@@ -1,7 +1,7 @@
 ---
 slug: /General-Agents-Foundations/general-agents/skills-exercises
 title: "Agent Skills Exercises"
-practice_exercise: ch3-skills
+practice_exercise: ch14-skills
 sidebar_position: 10
 chapter: 14
 lesson: 10
@@ -56,7 +56,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (skill architecture patterns, iterative testing, skill composition) — within B1 limit. Exercises reinforce L08-L09 concepts."
+  assessment: "3 concepts (skill architecture patterns, iterative testing, skill composition); within B1 limit. Exercises reinforce L08-L09 concepts."
 
 differentiation:
   extension_for_advanced: "Complete all 3 capstone projects; build skills that compose with MCP servers"
@@ -69,20 +69,20 @@ teaching_guide:
   key_points:
     - "The 6-step framework (Define, Draft, Test, Evaluate, Improve, Repeat) is the core iteration loop students will use for every skill they build going forward"
     - "Module progression mirrors professional skill development: read (Module 1) then write (2) then add examples (3) then add references (4) then test (5) then compose (6) then apply (7-8)"
-    - "The self-assessment rubric with 6 criteria and 4 levels gives students an objective measure — score of 18+ means production-ready"
+    - "The self-assessment rubric with 6 criteria and 4 levels gives students an objective measure; score of 18+ means production-ready"
     - "Exercise 1.3 (Skill vs Raw Prompt comparison) provides the measurable evidence that skills outperform ad-hoc prompting"
   misconceptions:
-    - "Students try to complete all 27 exercises in one sitting — this is a 120-minute lesson designed for selective progression through modules, not exhaustive completion"
-    - "Students skip Module 1 (reading skills) and jump to Module 2 (writing skills) — reading fluency must come before writing, just like natural language"
-    - "Students think capstone projects are optional extras — they are the integration point where isolated skills become coherent systems"
+    - "Students try to complete all 27 exercises in one sitting; this is a 120-minute lesson designed for selective progression through modules, not exhaustive completion"
+    - "Students skip Module 1 (reading skills) and jump to Module 2 (writing skills); reading fluency must come before writing, just like natural language"
+    - "Students think capstone projects are optional extras; they are the integration point where isolated skills become coherent systems"
   discussion_prompts:
-    - "After completing Exercise 1.3 (skill vs raw prompt), how many rubric points did the skill version score higher — and what does that tell you about when skills are worth the investment?"
-    - "In Exercise 5.3 (user testing), what did your partner find confusing that seemed obvious to you — and what does this reveal about the gap between creator intent and user experience?"
+    - "After completing Exercise 1.3 (skill vs raw prompt), how many rubric points did the skill version score higher; and what does that tell you about when skills are worth the investment?"
+    - "In Exercise 5.3 (user testing), what did your partner find confusing that seemed obvious to you; and what does this reveal about the gap between creator intent and user experience?"
   teaching_tips:
-    - "Assign Module 1 as pre-work — students who arrive having analyzed the three sample skills can immediately start building in Module 2"
-    - "Use the self-assessment rubric as a class activity: have students score the same skill independently, then compare scores — disagreements reveal where rubric interpretation needs calibration"
-    - "For the capstones, let students self-select based on interest (Business, Education, Personal) — intrinsic motivation produces higher quality skills"
-    - "Exercise 6.1 (Skill Pipeline) is the conceptual bridge to Lesson 11 (Subagents) — highlight how chaining skills manually prepares them for automated orchestration"
+    - "Assign Module 1 as pre-work; students who arrive having analyzed the three sample skills can immediately start building in Module 2"
+    - "Use the self-assessment rubric as a class activity: have students score the same skill independently, then compare scores; disagreements reveal where rubric interpretation needs calibration"
+    - "For the capstones, let students self-select based on interest (Business, Education, Personal); intrinsic motivation produces higher quality skills"
+    - "Exercise 6.1 (Skill Pipeline) is the conceptual bridge to Lesson 11 (Subagents); highlight how chaining skills manually prepares them for automated orchestration"
   assessment_quick_check:
     - "List the 6 steps of the skill-building framework in order"
     - "What score on the self-assessment rubric indicates a production-ready skill?"
@@ -127,8 +127,8 @@ You can work through exercises at your own pace. Each module builds on the previ
 
 Each exercise is marked with the tools it works best with:
 
-- **Claude Code** — Terminal-based, best for building and testing skills with file system access
-- **Cowork** — Desktop app, best for reviewing skills and working with reference documents side-by-side
+- **Claude Code**; Terminal-based, best for building and testing skills with file system access
+- **Cowork**; Desktop app, best for reviewing skills and working with reference documents side-by-side
 
 Most exercises work with either tool. Where one is clearly better, the exercise notes will say so.
 
@@ -138,37 +138,37 @@ Most exercises work with either tool. Where one is clearly better, the exercise 
 
 Use this framework for **every** skill you build across these exercises:
 
-### 1. DEFINE — What problem does this skill solve?
+### 1. DEFINE; What problem does this skill solve?
 
 - What task is being automated?
 - What does "good" output look like?
 - What's the current pain (without the skill)?
 
-### 2. DRAFT — Write the first version of SKILL.md
+### 2. DRAFT; Write the first version of SKILL.md
 
 - Frontmatter (name + trigger description)
 - Step-by-step process
 - Output format
 - Rules and constraints
 
-### 3. TEST — Run it on real examples
+### 3. TEST; Run it on real examples
 
 - Start with 2-3 "normal" test cases
 - Then try edge cases designed to break it
 
-### 4. EVALUATE — Score the output
+### 4. EVALUATE; Score the output
 
 - Does it match the expected format?
 - Is the content correct?
 - Would you actually USE this output?
 
-### 5. IMPROVE — Fix what's broken
+### 5. IMPROVE; Fix what's broken
 
 - Add examples for areas that were inconsistent
 - Add rules for edge cases that weren't handled
 - Tighten vague instructions
 
-### 6. REPEAT — Until quality is consistent
+### 6. REPEAT; Until quality is consistent
 
 - Test, Evaluate, Improve is an iterative loop
 - 2-3 rounds is typical; production skills may need 5+
@@ -200,7 +200,7 @@ Before you build skills, you need to read them fluently. These three exercises d
 
 <ExerciseCard id="1.1" title="Anatomy of a Skill" />
 
-### Exercise 1.1 — Anatomy of a Skill
+### Exercise 1.1; Anatomy of a Skill
 
 **The Problem:**
 You have three sample skills of increasing complexity: a simple greeting formatter, a medium weekly report generator, and a complex content reviewer with examples and references. Your job is to take them apart and understand how each piece works.
@@ -228,7 +228,7 @@ Open each SKILL.md and identify the five core components: frontmatter, trigger c
 
 <ExerciseCard id="1.2" title="When to Build a Skill" />
 
-### Exercise 1.2 — When to Build a Skill (and When Not To)
+### Exercise 1.2; When to Build a Skill (and When Not To)
 
 **The Problem:**
 Not every task needs a skill. Building unnecessary skills wastes time; skipping useful ones means repeating yourself. You need to develop judgment about which tasks are "skill-worthy."
@@ -256,7 +256,7 @@ Classify 15 provided scenarios as BUILD A SKILL, JUST PROMPT, or MAYBE using the
 
 <ExerciseCard id="1.3" title="Skill vs. Raw Prompt: A Side-by-Side Comparison" />
 
-### Exercise 1.3 — Skill vs. Raw Prompt: A Side-by-Side Comparison
+### Exercise 1.3; Skill vs. Raw Prompt: A Side-by-Side Comparison
 
 **The Problem:**
 You intuitively sense that skills produce better output than raw prompts, but you haven't measured the difference. This exercise makes the difference concrete and measurable.
@@ -288,7 +288,7 @@ Now you build. These three exercises each produce a complete, working skill for 
 
 <ExerciseCard id="2.1" title="Email Style Guide" />
 
-### Exercise 2.1 — Email Style Guide
+### Exercise 2.1; Email Style Guide
 
 **The Problem:**
 Every time you ask Claude to write an email, it sounds like Claude. You want emails that match YOUR voice: your greeting style, your formality level, your sentence patterns, your sign-off.
@@ -315,7 +315,7 @@ Analyze 5 sample emails (provided) to identify your writing patterns. Then creat
 
 <ExerciseCard id="2.2" title="File Organization Skill" />
 
-### Exercise 2.2 — File Organization Skill
+### Exercise 2.2; File Organization Skill
 
 **The Problem:**
 You keep asking Claude to organize files, and every time you re-explain your preferences from scratch: folder structure, naming conventions, handling duplicates, creating changelogs.
@@ -342,7 +342,7 @@ Define your file organization rules, then encode them into a `file-organizer/SKI
 
 <ExerciseCard id="2.3" title="Data Cleaning Skill" />
 
-### Exercise 2.3 — Data Cleaning Skill
+### Exercise 2.3; Data Cleaning Skill
 
 **The Problem:**
 You regularly receive CSV files with inconsistent formatting: mixed date formats, random capitalization, duplicate rows, missing values. You want Claude to clean them the same way every time.
@@ -373,7 +373,7 @@ Rules tell Claude what to do. Examples show Claude what "good" looks like. These
 
 <ExerciseCard id="3.1" title="Report Formatter" />
 
-### Exercise 3.1 — Report Formatter
+### Exercise 3.1; Report Formatter
 
 **The Problem:**
 You write monthly stakeholder reports. The format, tone, and structure should be identical every month, but Claude gives you slightly different formatting, section ordering, and detail levels each time.
@@ -401,7 +401,7 @@ Run the same report data through two versions of a skill: v1 (rules only, no exa
 
 <ExerciseCard id="3.2" title="Meeting Minutes" />
 
-### Exercise 3.2 — Meeting Minutes
+### Exercise 3.2; Meeting Minutes
 
 **The Problem:**
 Raw meeting notes need to become polished minutes. The output should follow an exact template, extract action items consistently, and exclude off-topic chatter. You need a skill with a separate template file that's easy to update.
@@ -429,7 +429,7 @@ Build a complete skill folder: `SKILL.md` (instructions referencing the template
 
 <ExerciseCard id="3.3" title="Feedback Writer" />
 
-### Exercise 3.3 — Feedback Writer
+### Exercise 3.3; Feedback Writer
 
 **The Problem:**
 Writing student or employee feedback is hard because tone matters enormously. "Be warm but honest" means different things to different people. You need a skill that captures YOUR specific version of warm-but-honest.
@@ -461,7 +461,7 @@ Real-world skills often need to consult external documents: brand guides, policy
 
 <ExerciseCard id="4.1" title="Brand Voice Enforcer" />
 
-### Exercise 4.1 — Brand Voice Enforcer
+### Exercise 4.1; Brand Voice Enforcer
 
 **The Problem:**
 A company (fictional "NovaTech") has a detailed brand guide that governs all communications. Instead of re-reading the guide every time you create content, you build a skill that automatically applies the brand voice.
@@ -489,7 +489,7 @@ Study the provided brand guide, then build a `brand-voice-skill/` with a SKILL.m
 
 <ExerciseCard id="4.2" title="Policy Compliance Checker" />
 
-### Exercise 4.2 — Policy Compliance Checker
+### Exercise 4.2; Policy Compliance Checker
 
 **The Problem:**
 Your company has an AI Usage Policy. Before any AI-generated content goes public, it must pass compliance. Checking manually is slow and inconsistent. You build a skill that automates the check.
@@ -517,7 +517,7 @@ Build a `policy-checker-skill/` that reads content, reads the policy document fr
 
 <ExerciseCard id="4.3" title="Curriculum Standards Alignment" />
 
-### Exercise 4.3 — Curriculum Standards Alignment
+### Exercise 4.3; Curriculum Standards Alignment
 
 **The Problem:**
 You're creating course materials that must align with a teaching standards framework (the "Seven Pillars of AI-Driven Development"). Instead of manually checking alignment for every lesson, you build a skill that enforces it automatically.
@@ -549,7 +549,7 @@ Building a skill is half the work. Making it reliable is the other half. These e
 
 <ExerciseCard id="5.1" title="Edge Case Hunt" />
 
-### Exercise 5.1 — Edge Case Hunt
+### Exercise 5.1; Edge Case Hunt
 
 **The Problem:**
 You have an invoice processing skill that works on standard invoices. But invoices in the real world are messy: handwritten notes, multiple currencies, missing fields, unusual formats. Your job is to break the skill, then fix it.
@@ -577,7 +577,7 @@ Test the provided invoice skill against normal invoices (should work) and tricky
 
 <ExerciseCard id="5.2" title="Before/After: Measuring Improvement" />
 
-### Exercise 5.2 — Before/After: Measuring Improvement
+### Exercise 5.2; Before/After: Measuring Improvement
 
 **The Problem:**
 You changed a skill, but did it actually get better? Without measurement, you're guessing. This exercise teaches you to use a fixed rubric and fixed test cases to isolate the effect of skill changes.
@@ -605,7 +605,7 @@ Run five customer emails through v1 of an email response skill and score each re
 
 <ExerciseCard id="5.3" title="User Testing: Does Your Skill Work for Others?" />
 
-### Exercise 5.3 — User Testing: Does Your Skill Work for Others?
+### Exercise 5.3; User Testing: Does Your Skill Work for Others?
 
 **The Problem:**
 A skill that works for you might confuse someone else. The ultimate quality test is handing your skill to another person and seeing if they can use it without help.
@@ -639,7 +639,7 @@ Individual skills are useful. Skills that work together are powerful. These exer
 
 <ExerciseCard id="6.1" title="Skill Pipeline" />
 
-### Exercise 6.1 — Skill Pipeline
+### Exercise 6.1; Skill Pipeline
 
 **The Problem:**
 A single task often involves multiple steps: raw meeting notes become formatted minutes, which become action items, which become team notifications. Instead of running each skill manually, you build a pipeline that chains them together.
@@ -667,7 +667,7 @@ Build (or reuse from earlier exercises) three skills: Meeting Minutes, Action It
 
 <ExerciseCard id="6.2" title="Skill Library" />
 
-### Exercise 6.2 — Skill Library
+### Exercise 6.2; Skill Library
 
 **The Problem:**
 You've built skills across multiple exercises. They're scattered in different folders with different structures. You need to organize them into a reusable personal library.
@@ -695,7 +695,7 @@ Inventory every skill you've built. Standardize each to a consistent structure (
 
 <ExerciseCard id="6.3" title="Team Skills" />
 
-### Exercise 6.3 — Team Skills
+### Exercise 6.3; Team Skills
 
 **The Problem:**
 A design agency has 5 roles that each need AI skills: Creative Director, Senior Designer, Junior Designer, Project Manager, and Admin. The skills must work together, using consistent terminology and cross-referencing where relevant.
@@ -727,7 +727,7 @@ These exercises simulate building skills for actual business needs. The quality 
 
 <ExerciseCard id="7.1" title="Invoice Processor" />
 
-### Exercise 7.1 — Invoice Processor
+### Exercise 7.1; Invoice Processor
 
 **The Problem:**
 You need a production-ready skill for extracting data from invoices in multiple formats (text, structured, informal). It must handle multiple currencies, detect anomalies (negative amounts, missing dates, duplicates), generate both a data file and a summary report, and include clear error messages when extraction fails.
@@ -755,7 +755,7 @@ Build a complete `invoice-processor/` skill. Test against 10 provided invoices o
 
 <ExerciseCard id="7.2" title="Content Creation Pipeline" />
 
-### Exercise 7.2 — Content Creation Pipeline
+### Exercise 7.2; Content Creation Pipeline
 
 **The Problem:**
 A single topic needs to become a complete content package: blog post, LinkedIn posts, Twitter/X thread, and email newsletter blurb. All outputs must convey the same core message but be adapted to each channel's length, tone, and formatting conventions.
@@ -783,7 +783,7 @@ Build a `content-pipeline-skill/` that takes a topic brief (subject, key points,
 
 <ExerciseCard id="7.3" title="Research Analyst" />
 
-### Exercise 7.3 — Research Analyst
+### Exercise 7.3; Research Analyst
 
 **The Problem:**
 You need a skill that conducts structured research on any topic and produces a comprehensive analysis document with citations, key themes, disagreements, and a confidence assessment of the findings.
@@ -815,19 +815,19 @@ These capstones bring everything together. Each asks you to build a complete, in
 
 <ExerciseCard id="A" title="Business Operations Suite" />
 
-### Capstone A — Business Operations Suite
+### Capstone A; Business Operations Suite
 
 **The Mission:**
 Build 6 interconnected skills for Pixel Perfect Design Studio, a 5-person graphic design agency. Skills must share consistent context, cross-reference each other, and include a pipeline orchestrator.
 
 **Skills to Build:**
 
-1. **Client Onboarding** — Welcome email, project questionnaire, timeline template
-2. **Invoice Generator** — Professional invoices from project data with company details and payment terms
-3. **Weekly Status** — Client status updates from task data, different format per client
-4. **Project Retrospective** — End-of-project analysis: what went well, improvements, key metrics
-5. **Portfolio Case Study** — Convert completed projects into case studies: challenge, approach, results
-6. **Pipeline Orchestrator** — Chain: project completes, generate retrospective, generate case study, update portfolio
+1. **Client Onboarding**; Welcome email, project questionnaire, timeline template
+2. **Invoice Generator**; Professional invoices from project data with company details and payment terms
+3. **Weekly Status**; Client status updates from task data, different format per client
+4. **Project Retrospective**; End-of-project analysis: what went well, improvements, key metrics
+5. **Portfolio Case Study**; Convert completed projects into case studies: challenge, approach, results
+6. **Pipeline Orchestrator**; Chain: project completes, generate retrospective, generate case study, update portfolio
 
 **Quality Bar:** All skills share terminology, each has 2+ test cases, the pipeline chains at least 3 skills, and a non-technical person could use any skill from its README alone.
 
@@ -841,19 +841,19 @@ Build 6 interconnected skills for Pixel Perfect Design Studio, a 5-person graphi
 
 <ExerciseCard id="B" title="AI-Native Education Kit" />
 
-### Capstone B — AI-Native Education Kit
+### Capstone B; AI-Native Education Kit
 
 **The Mission:**
 Build 6 skills that power a course delivery system. These help instructors create, deliver, and assess content consistently while maintaining alignment with a teaching standards framework.
 
 **Skills to Build:**
 
-1. **Lesson Plan Generator** — Structured plans aligned with Seven Pillars framework
-2. **Exercise Builder** — Hands-on exercises from learning objectives, with setup, tasks, and criteria
-3. **Quiz Generator** — 5 multiple choice + 3 short answer, with answer keys and explanations
-4. **Student Feedback Writer** — Personalized feedback in the ideal tone, referencing tone examples
-5. **Curriculum Alignment Checker** — Coverage matrix of all Seven Pillars across lessons, with gap analysis
-6. **Course Packager** — Orchestrates: Lesson Plan, Exercise, Quiz for each topic, then runs Alignment Checker
+1. **Lesson Plan Generator**; Structured plans aligned with Seven Pillars framework
+2. **Exercise Builder**; Hands-on exercises from learning objectives, with setup, tasks, and criteria
+3. **Quiz Generator**; 5 multiple choice + 3 short answer, with answer keys and explanations
+4. **Student Feedback Writer**; Personalized feedback in the ideal tone, referencing tone examples
+5. **Curriculum Alignment Checker**; Coverage matrix of all Seven Pillars across lessons, with gap analysis
+6. **Course Packager**; Orchestrates: Lesson Plan, Exercise, Quiz for each topic, then runs Alignment Checker
 
 **Reference Materials:** Seven Pillars standards document, tone guide, and a sample lesson plan are provided.
 
@@ -867,19 +867,19 @@ Build 6 skills that power a course delivery system. These help instructors creat
 
 <ExerciseCard id="C" title="Personal AI Productivity Set" />
 
-### Capstone C — Personal AI Productivity Set
+### Capstone C; Personal AI Productivity Set
 
 **The Mission:**
 This capstone is different. Instead of a provided scenario, you build skills for YOUR real life. Audit your own recurring tasks, select the top 5, build complete skills for each, and measure the actual time saved.
 
 **Your Process:**
 
-1. **Audit** — List 10+ tasks you do repeatedly, noting frequency and time cost
-2. **Prioritize** — Select top 5 based on frequency, time cost, consistency need, and skill potential
-3. **Build** — Create a complete skill for each (SKILL.md, README, examples, tests)
-4. **Test** — Run at least 3 test cases per skill and iterate
-5. **Library** — Create a `LIBRARY.md` indexing all 5 skills
-6. **Measure** — Estimate time before vs. after for each skill and calculate weekly time saved
+1. **Audit**; List 10+ tasks you do repeatedly, noting frequency and time cost
+2. **Prioritize**; Select top 5 based on frequency, time cost, consistency need, and skill potential
+3. **Build**; Create a complete skill for each (SKILL.md, README, examples, tests)
+4. **Test**; Run at least 3 test cases per skill and iterate
+5. **Library**; Create a `LIBRARY.md` indexing all 5 skills
+6. **Measure**; Estimate time before vs. after for each skill and calculate weekly time saved
 
 **What Makes This Special:**
 Unlike Capstones A and B, these skills solve YOUR actual problems. This is where skill-building stops being academic and becomes genuinely useful. The skills you build here are ones you'll keep using after this course.
@@ -896,7 +896,7 @@ Unlike Capstones A and B, these skills solve YOUR actual problems. This is where
 
 You've built skills from scratch, tested them systematically, composed them into pipelines, and created complete skill suites for real scenarios. You've gone from understanding what a SKILL.md is to building production-ready skill libraries.
 
-Next in **Lesson 11: Subagents and Orchestration**, you'll learn how Claude delegates complex tasks to specialized sub-agents — the same skill composition principles you practiced here, but automated. Then in **Lesson 12: MCP Integration**, you'll connect your skills to external tools and services through the Model Context Protocol.
+Next in **Lesson 11: Subagents and Orchestration**, you'll learn how Claude delegates complex tasks to specialized sub-agents; the same skill composition principles you practiced here, but automated. Then in **Lesson 12: MCP Integration**, you'll connect your skills to external tools and services through the Model Context Protocol.
 
 
 ## Flashcards Study Aid

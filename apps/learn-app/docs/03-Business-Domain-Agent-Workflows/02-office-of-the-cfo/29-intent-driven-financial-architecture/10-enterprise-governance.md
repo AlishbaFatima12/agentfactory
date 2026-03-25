@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/intent-driven-financial-architecture/enterprise-governance
 sidebar_position: 10
 title: "Enterprise Governance"
-description: "Design the organisational controls that the IDFA plugin cannot enforce — accountability, tracking, approval workflows, and compliance metrics — using four governance artefacts that turn plugin-enforced technical guardrails into enterprise-wide financial model governance"
+description: "Design the organisational controls that the IDFA plugin cannot enforce (accountability, tracking, approval workflows, and compliance metrics) using four governance artefacts that turn plugin-enforced technical guardrails into enterprise-wide financial model governance"
 keywords:
   [
     "IDFA governance",
@@ -32,7 +32,7 @@ skills:
     category: "Applied"
     bloom_level: "Evaluate"
     digcomp_area: "Problem Solving"
-    measurable_at_this_level: "Student can design and justify a complete set of governance artefacts that complement the IDFA plugin's technical enforcement — covering accountability, tracking, approval workflows, and compliance metrics"
+    measurable_at_this_level: "Student can design and justify a complete set of governance artefacts that complement the IDFA plugin's technical enforcement: covering accountability, tracking, approval workflows, and compliance metrics"
 
   - name: "Model Registry Architecture"
     proficiency_level: "B2"
@@ -46,13 +46,13 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Safety"
-    measurable_at_this_level: "Student can draft a Finance Domain Agent Standards Policy specifying approval workflows, session log retention, production deployment gating, and plugin version management — the controls the plugin cannot enforce on its own"
+    measurable_at_this_level: "Student can draft a Finance Domain Agent Standards Policy specifying approval workflows, session log retention, production deployment gating, and plugin version management: the controls the plugin cannot enforce on its own"
 
 learning_objectives:
   - objective: "Evaluate an IDFA governance framework for completeness, distinguishing what the plugin enforces technically from what requires organisational controls, and identifying gaps in the organisational layer"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student reviews a partial governance framework and identifies gaps — missing approval workflows, untracked models, or unenforced retention rules — then proposes additions with business justification"
+    assessment_method: "Student reviews a partial governance framework and identifies gaps (missing approval workflows, untracked models, or unenforced retention rules) then proposes additions with business justification"
 
   - objective: "Create a Model Registry template with all required fields and design a quarterly review workflow that tracks Intent Note coverage across the organisation"
     proficiency_level: "B2"
@@ -73,18 +73,18 @@ cognitive_load:
     - "Validation Protocol (pre-deployment gate beyond plugin checks)"
     - "Agent Standards Policy (approval workflows, retention, version management)"
     - "Intent Note coverage percentage (compliance metric)"
-  assessment: "6 new concepts at B2 level. Students have mastered all four guardrails individually (L04-L07), retrofitting (L08), and the plugin (L09). This lesson builds the organisational layer around the plugin — the concepts are governance-focused, not technical. Within B2 ceiling."
+  assessment: "6 new concepts at B2 level. Students have mastered all four guardrails individually (L04-L07), retrofitting (L08), and the plugin (L09). This lesson builds the organisational layer around the plugin: the concepts are governance-focused, not technical. Within B2 ceiling."
 
 differentiation:
-  extension_for_advanced: "Design a governance maturity model with three levels — individual practice (analyst installs plugin), team standard (governance artefacts in place), enterprise deployment (automated validation, CI/CD for models, plugin version management across departments). Define the criteria for progressing between levels."
-  remedial_for_struggling: "Focus on the Standards Document addendum only. Write the sector prefix section and the exception process section. These two sections exercise the core concept — what the plugin doesn't cover — in a concrete, bounded context. Add the other three artefacts after mastering these."
+  extension_for_advanced: "Design a governance maturity model with three levels: individual practice (analyst installs plugin), team standard (governance artefacts in place), enterprise deployment (automated validation, CI/CD for models, plugin version management across departments). Define the criteria for progressing between levels."
+  remedial_for_struggling: "Focus on the Standards Document addendum only. Write the sector prefix section and the exception process section. These two sections exercise the core concept (what the plugin doesn't cover) in a concrete, bounded context. Add the other three artefacts after mastering these."
 ---
 
 # Enterprise Governance
 
-In Lesson 9, you installed the IDFA plugin. Every analyst who installs `idfa-financial-architect` gets identical enforcement of the four technical guardrails — Named Range naming, layer isolation, LaTeX verification, Intent Notes, and Delegated Calculation. The plugin solved the consistency problem. Now solve the accountability problem.
+In Lesson 9, you installed the IDFA plugin. Every analyst who installs `idfa-financial-architect` gets identical enforcement of the four technical guardrails: Named Range naming, layer isolation, LaTeX verification, Intent Notes, and Delegated Calculation. The plugin solved the consistency problem. Now solve the accountability problem.
 
-Enforcement is not governance. The plugin ensures every agent-built formula uses `Inp_` prefixes and Named Range notation. But the plugin cannot tell you which models exist in the organisation, who owns them, when they were last validated, or who approved the last structural change. Enterprise governance is what turns plugin-enforced technical compliance into organisational capability. This lesson builds the four artefacts that a CFO signs off on — the organisational layer around the plugin's enforcement layer.
+Enforcement is not governance. The plugin ensures every agent-built formula uses `Inp_` prefixes and Named Range notation. But the plugin cannot tell you which models exist in the organisation, who owns them, when they were last validated, or who approved the last structural change. Enterprise governance is what turns plugin-enforced technical compliance into organisational capability. This lesson builds the four artefacts that a CFO signs off on: the organisational layer around the plugin's enforcement layer.
 
 ## What the Plugin Handles vs What Governance Handles
 
@@ -92,19 +92,19 @@ Enforcement is not governance. The plugin ensures every agent-built formula uses
 | ------------------------------------------ | ----------------------------------------------------------------- |
 | `Inp_` naming convention                   | Who approves exceptions to conventions                            |
 | Layer isolation rules                      | Who validates a model before a board meeting                      |
-| Intent Note format                         | Coverage tracking — what % of models are compliant                |
-| LaTeX verification for complex formulas    | Session log retention — where stored, how long                    |
-| Delegated Calculation for all calculations | Named Range modification approval — who signs off                 |
-| Agent Decision Table workflows             | Model Registry — which models exist, who owns them                |
-|                                            | Sector prefixes — which prefix your team uses                     |
-|                                            | Validation scheduling — quarterly reviews, re-validation triggers |
-|                                            | Plugin version management — when to update, who approves          |
+| Intent Note format                         | Coverage tracking: what % of models are compliant                |
+| LaTeX verification for complex formulas    | Session log retention: where stored, how long                    |
+| Delegated Calculation for all calculations | Named Range modification approval: who signs off                 |
+| Agent Decision Table workflows             | Model Registry: which models exist, who owns them                |
+|                                            | Sector prefixes: which prefix your team uses                     |
+|                                            | Validation scheduling: quarterly reviews, re-validation triggers |
+|                                            | Plugin version management: when to update, who approves          |
 
 The plugin is the enforcement layer. Governance is the accountability layer. Together they produce a finance function where every model is compliant by construction (plugin) and tracked by management (governance).
 
 ## The Four Governance Artefacts
 
-Every IDFA deployment beyond a single analyst requires four written documents. Each one addresses a different failure mode — and each one covers what the plugin cannot.
+Every IDFA deployment beyond a single analyst requires four written documents. Each one addresses a different failure mode: and each one covers what the plugin cannot.
 
 | Artefact               | Failure It Prevents                                        | Owner            | Review Cycle          |
 | ---------------------- | ---------------------------------------------------------- | ---------------- | --------------------- |
@@ -115,17 +115,17 @@ Every IDFA deployment beyond a single analyst requires four written documents. E
 
 ### 1. The IDFA Standards Document
 
-The plugin's SKILL.md already defines the base standard — `Inp_` prefixes, three-layer isolation, LaTeX verification for WACC/NPV/DCF/IRR, Intent Note format, and Delegated Calculation. Your Standards Document specifies everything the plugin does not cover:
+The plugin's SKILL.md already defines the base standard: `Inp_` prefixes, three-layer isolation, LaTeX verification for WACC/NPV/DCF/IRR, Intent Note format, and Delegated Calculation. Your Standards Document specifies everything the plugin does not cover:
 
 **Sector extensions.** Which domain prefix does your team use? If you are in investment banking, your Standards Document specifies `IB_` as the prefix. The plugin enforces `Inp_` for assumptions but does not know which sector prefix to apply. The Standards Document fills this gap.
 
-**Exception and override process.** The plugin enforces Named Range Priority with zero tolerance. But real organisations encounter edge cases — a legacy formula that cannot be converted without breaking a regulatory filing, a temporary override for a time-sensitive analysis. The Standards Document specifies: who can approve an exception, how the exception is documented, and when it expires.
+**Exception and override process.** The plugin enforces Named Range Priority with zero tolerance. But real organisations encounter edge cases: a legacy formula that cannot be converted without breaking a regulatory filing, a temporary override for a time-sensitive analysis. The Standards Document specifies: who can approve an exception, how the exception is documented, and when it expires.
 
-**Organisation-specific additions.** Your team may require LaTeX verification for formulas beyond the four the plugin enforces (WACC, NPV, DCF, IRR). Debt schedules, waterfall distributions, carried interest calculations — the Standards Document extends the plugin's LaTeX list with your team's specific requirements.
+**Organisation-specific additions.** Your team may require LaTeX verification for formulas beyond the four the plugin enforces (WACC, NPV, DCF, IRR). Debt schedules, waterfall distributions, carried interest calculations: the Standards Document extends the plugin's LaTeX list with your team's specific requirements.
 
 **Plugin version policy.** Which version of `idfa-financial-architect` is approved for production use? When a new version is released, who evaluates it, who approves the upgrade, and what is the rollout timeline? The Standards Document governs the governance tool itself.
 
-The Standards Document is not a duplicate of the SKILL.md. It is the addendum — everything your organisation needs that the plugin does not provide out of the box.
+The Standards Document is not a duplicate of the SKILL.md. It is the addendum: everything your organisation needs that the plugin does not provide out of the box.
 
 ### 2. The Model Registry
 
@@ -141,17 +141,17 @@ The Model Registry is a centralised record of every IDFA-compliant model in the 
 | Intent Note Coverage % | AI-generated formulas with Intent Notes / total AI-generated formulas | 94%                              |
 | Model Link             | Path or URL to the model file                                         | /finance/models/q4-2026-rev.xlsx |
 
-**Intent Note Coverage %** is the key compliance metric. It answers: "Of the formulas in this model that were generated by an AI agent, what percentage have documented Intent Notes?" A model at 100% coverage has a complete audit trail for every AI-generated formula. A model at 60% coverage has gaps — formulas whose business intent is undocumented.
+**Intent Note Coverage %** is the key compliance metric. It answers: "Of the formulas in this model that were generated by an AI agent, what percentage have documented Intent Notes?" A model at 100% coverage has a complete audit trail for every AI-generated formula. A model at 60% coverage has gaps: formulas whose business intent is undocumented.
 
 The Controller reviews the registry quarterly. Models with coverage below the team's threshold (commonly 90%) are flagged for remediation. Models not validated within the past six months are flagged for re-validation.
 
 ### 3. The Validation Protocol
 
-The plugin automates guardrail enforcement during model building — every formula the agent writes uses Named Ranges, complex formulas get LaTeX verification, and Intent Notes are attached. The Validation Protocol is the gate BEFORE a model enters production: a formal checklist that goes beyond what the plugin checks in real time.
+The plugin automates guardrail enforcement during model building: every formula the agent writes uses Named Ranges, complex formulas get LaTeX verification, and Intent Notes are attached. The Validation Protocol is the gate BEFORE a model enters production: a formal checklist that goes beyond what the plugin checks in real time.
 
 **The four validation checks:**
 
-1. **Named Range compliance.** Run the plugin's compliance check across the entire model. Confirm every formula in the Calculations layer uses Named Ranges only — zero coordinate references. The plugin enforces this during building; the Protocol confirms it across the complete model.
+1. **Named Range compliance.** Run the plugin's compliance check across the entire model. Confirm every formula in the Calculations layer uses Named Ranges only: zero coordinate references. The plugin enforces this during building; the Protocol confirms it across the complete model.
 
 2. **LaTeX verification.** Every complex formula (WACC, NPV, Terminal Value, IRR, and any others specified in the Standards Document) has LaTeX verification documented. Compare the LaTeX expression to the Excel formula and confirm they match.
 
@@ -165,23 +165,23 @@ Validation results are documented and attached to the model entry in the Registr
 
 The plugin enforces Delegated Calculation, guardrails, and the Agent Decision Table. The Policy governs what the plugin cannot:
 
-**Named Range modification approval workflow.** The plugin allows agents to read Named Range values and write to Named Range inputs — this is normal What-If analysis. But modifying Named Range definitions — renaming a range, deleting a range, or changing which cell a range points to — changes the model's structural skeleton. The Policy specifies: who approves structural modifications (typically the Controller), how the approval is documented, and what happens if an unapproved modification is detected.
+**Named Range modification approval workflow.** The plugin allows agents to read Named Range values and write to Named Range inputs: this is normal What-If analysis. But modifying Named Range definitions: renaming a range, deleting a range, or changing which cell a range points to: changes the model's structural skeleton. The Policy specifies: who approves structural modifications (typically the Controller), how the approval is documented, and what happens if an unapproved modification is detected.
 
 **Session log retention.** Every agent session that interacts with an IDFA model must produce a log retained for at least 90 days. The log must include: which model was accessed, which Named Ranges were read or written, which formulas were generated, and the Intent Notes attached. The plugin produces the session data; the Policy specifies where it is stored, how long it is kept, and who can access it.
 
-**Production deployment gating.** The Policy defines what "production" means — board presentations, regulatory filings, external stakeholder reports — and specifies that no model reaches production without passing the Validation Protocol. The plugin ensures quality during building; the Policy gates the transition from draft to production.
+**Production deployment gating.** The Policy defines what "production" means (board presentations, regulatory filings, external stakeholder reports) and specifies that no model reaches production without passing the Validation Protocol. The plugin ensures quality during building; the Policy gates the transition from draft to production.
 
 **Plugin version management.** When the Panaversity team releases a new version of the IDFA plugin, the Policy specifies: who evaluates the update, who approves the rollout, and what the timeline is for updating all team installations. This prevents version fragmentation where some analysts run v1.0 and others run v1.1 with different guardrail behaviour.
 
 :::tip Refining the Plugin for Your Team
 
-In Cowork, you can customise the installed IDFA plugin for your team's specific needs. Click **Customize** on the plugin to open a refinement session where you can adjust the SKILL.md — adding sector-specific prefixes, extending the LaTeX-required formula list, or tightening naming conventions. Any refinements should be documented in the Standards Document so the organisational layer stays aligned with the technical layer. See the [Cowork plugin refinement guide](https://claude.com/resources/tutorials/how-to-build-a-plugin-from-scratch-in-cowork#refining-your-plugin) for details.
+In Cowork, you can customise the installed IDFA plugin for your team's specific needs. Click **Customize** on the plugin to open a refinement session where you can adjust the SKILL.md: adding sector-specific prefixes, extending the LaTeX-required formula list, or tightening naming conventions. Any refinements should be documented in the Standards Document so the organisational layer stays aligned with the technical layer. See the [Cowork plugin refinement guide](https://claude.com/resources/tutorials/how-to-build-a-plugin-from-scratch-in-cowork#refining-your-plugin) for details.
 
 :::
 
 ## Sector-Specific Naming Extensions
 
-When an organisation operates across multiple financial domains — investment banking, private equity, FP&A, treasury, credit — models from different domains may use the same variable names for different concepts. `Entry_Multiple` in an investment banking context means EV/EBITDA entry multiple; in a private equity context it means the purchase price multiple for an LBO. Without domain prefixes, these collide in multi-domain models and consolidated reports.
+When an organisation operates across multiple financial domains (investment banking, private equity, FP&A, treasury, credit) models from different domains may use the same variable names for different concepts. `Entry_Multiple` in an investment banking context means EV/EBITDA entry multiple; in a private equity context it means the purchase price multiple for an LBO. Without domain prefixes, these collide in multi-domain models and consolidated reports.
 
 The naming extension adds a domain prefix before the standard IDFA name:
 
@@ -208,7 +208,7 @@ You already have the IDFA plugin enforcing the technical guardrails. Now design 
 
 **Step 2.** Create a Model Registry template with all five required fields. Add a column for "Status" (Active / Archived / Under Review) and a column for "Next Validation Due."
 
-**Step 3.** Write the Validation Protocol as a checklist — four checks, each with a Pass/Fail field and a Notes field for documenting findings.
+**Step 3.** Write the Validation Protocol as a checklist: four checks, each with a Pass/Fail field and a Notes field for documenting findings.
 
 **Step 4.** Draft the Agent Standards Policy covering: Named Range modification approval workflow, session log retention (where stored, how long, who accesses), production deployment gating (what counts as "production"), and plugin version management (who evaluates updates, rollout timeline).
 
@@ -216,7 +216,7 @@ You already have the IDFA plugin enforcing the technical guardrails. Now design 
 
 A CFO evaluating IDFA governance sees four measurable returns:
 
-**Audit duration compresses.** When every formula reads as a business rule and every AI-generated formula carries an Intent Note, auditors can verify model logic by reading — not by tracing cell references. Weeks of audit preparation compress to days.
+**Audit duration compresses.** When every formula reads as a business rule and every AI-generated formula carries an Intent Note, auditors can verify model logic by reading; not by tracing cell references. Weeks of audit preparation compress to days.
 
 **Analyst onboarding drops.** A new analyst inheriting an IDFA-compliant model with a Standards Document can understand the model structure immediately. The naming conventions, layer rules, and Intent Notes eliminate the months-long process of reconstructing the original builder's mental model.
 
@@ -234,7 +234,7 @@ Open Cowork or Claude Code. Ensure the IDFA plugin is installed. In Claude Code:
 
 :::
 
-**Prompt 1 — Draft a Standards Document addendum:**
+**Prompt 1: Draft a Standards Document addendum:**
 
 ```
 Your team uses the IDFA plugin (idfa-financial-architect).
@@ -259,9 +259,9 @@ Document that covers what the plugin does NOT enforce:
 Format it as a document a CFO could review and approve.
 ```
 
-**What you are learning:** How to design the organisational layer around a technical enforcement tool. The skill is not writing the naming convention — the plugin handles that. The skill is specifying everything the plugin cannot: sector extensions, exception processes, version governance, and domain-specific additions.
+**What you are learning:** How to design the organisational layer around a technical enforcement tool. The skill is not writing the naming convention: the plugin handles that. The skill is specifying everything the plugin cannot: sector extensions, exception processes, version governance, and domain-specific additions.
 
-**Prompt 2 — Design a Model Registry:**
+**Prompt 2: Design a Model Registry:**
 
 ```
 Design a Model Registry template for tracking IDFA-compliant
@@ -285,9 +285,9 @@ designated owner, and models marked Under Review for more than
 one quarter.
 ```
 
-**What you are learning:** How to design a tracking system that makes compliance measurable. The plugin ensures quality during building; the Registry ensures visibility across the organisation. The Coverage % metric is particularly important — it quantifies the gap between full compliance and current state.
+**What you are learning:** How to design a tracking system that makes compliance measurable. The plugin ensures quality during building; the Registry ensures visibility across the organisation. The Coverage % metric is particularly important: it quantifies the gap between full compliance and current state.
 
-**Prompt 3 — Write an Agent Standards Policy:**
+**Prompt 3: Write an Agent Standards Policy:**
 
 ```
 Draft a Finance Domain Agent Standards Policy for a team that
@@ -321,4 +321,4 @@ can be referenced in compliance reviews.
 
 ---
 
-**Next:** [Lesson 11: The Five Capabilities — Capstone](./11-the-five-capabilities.md) — where you validate all five Finance Domain Agent capabilities on the model you have built throughout this chapter.
+**Next:** [Lesson 11: The Five Capabilities (Capstone](./11-the-five-capabilities.md)) where you validate all five Finance Domain Agent capabilities on the model you have built throughout this chapter.

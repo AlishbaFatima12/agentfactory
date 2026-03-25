@@ -15,11 +15,11 @@ slides:
 
 # Chapter 28: Finance Domain Agents
 
-> _"Excel is not a spreadsheet application. It is the operating system of the financial profession. Everything else — the presentations, the memos, the reports — is built from what lives in a spreadsheet first."_
+> _"Excel is not a spreadsheet application. It is the operating system of the financial profession. Everything else (the presentations, the memos, the reports) is built from what lives in a spreadsheet first."_
 
-Chapter 27 gave you the Knowledge Extraction Method — the structured process for surfacing tacit professional knowledge and translating it into SKILL.md files that produce agents genuinely useful in production contexts. This chapter applies that methodology to the first domain: finance.
+Chapter 27 gave you the Knowledge Extraction Method: the structured process for surfacing tacit professional knowledge and translating it into SKILL.md files that produce agents genuinely useful in production contexts. This chapter applies that methodology to the first domain: finance.
 
-Finance is distinctive because a single application — Excel — sits at the centre of almost everything professionals do. This creates a natural two-layer teaching structure. First, you learn what Claude can do inside the workbook: understanding inherited models, testing scenarios, debugging formula errors, and building model structures from plain-language descriptions. Second, you learn what Claude can do across applications: the Cowork finance plugins that orchestrate multi-step workflows spanning Excel, PowerPoint, and connected enterprise systems — from the corporate finance plugin through the investment professional suite with its 39 commands, 42 skills, and 11 data integrations. Third, you apply the Knowledge Extraction Method to encode your own financial expertise into enterprise extensions that make the generic plugins yours.
+Finance is distinctive because a single application: Excel: sits at the centre of almost everything professionals do. This creates a natural two-layer teaching structure. First, you learn what Claude can do inside the workbook: understanding inherited models, testing scenarios, debugging formula errors, and building model structures from plain-language descriptions. Second, you learn what Claude can do across applications: the Cowork finance plugins that orchestrate multi-step workflows spanning Excel, PowerPoint, and connected enterprise systems: from the corporate finance plugin through the investment professional suite with its 39 commands, 42 skills, and 11 data integrations. Third, you apply the Knowledge Extraction Method to encode your own financial expertise into enterprise extensions that make the generic plugins yours.
 
 ## 📚 Teaching Aid
 
@@ -28,7 +28,7 @@ Finance is distinctive because a single application — Excel — sits at the ce
 By the end of this chapter, you will be able to:
 
 - Use Claude in Excel to comprehend inherited financial models, test scenarios, debug formula errors, and build new model structures from plain-language descriptions
-- Install and operate the Cowork finance plugins — both the corporate finance plugin (`knowledge-work-plugins/finance`) for month-end close and accounting workflows, and the investment professional suite (`financial-services-plugins`) with its core plugin and four domain add-ons
+- Install and operate the Cowork finance plugins: both the corporate finance plugin (`knowledge-work-plugins/finance`) for month-end close and accounting workflows, and the investment professional suite (`financial-services-plugins`) with its core plugin and four domain add-ons
 - Use plugin commands (`/comps`, `/dcf`, `/lbo`, `/earnings`, `/cim`, `/source`, and more) to produce professional financial deliverables with live market data from 11 data providers
 - Understand why the same data connectors serve both Claude in Excel and Cowork, with the difference being scope (single-workbook assistant vs multi-app agent orchestration)
 - Execute cross-application workflows that carry analysis context from Excel to PowerPoint without manual copy-paste
@@ -58,7 +58,7 @@ By the end of this chapter, you should be able to answer these five questions:
 
 1. What is the difference between Claude in Excel (the embedded assistant) and Cowork with Excel (the orchestrating agent), and why does it matter that they share the same data connectors?
 2. What are the key plugin commands in the `financial-services-plugins` core plugin, and for each one, what professional deliverable does it produce?
-3. How do the two finance plugin repositories — `knowledge-work-plugins/finance` and `financial-services-plugins` — differ in their audience, scope, and the kind of financial workflows they support?
+3. How do the two finance plugin repositories: `knowledge-work-plugins/finance` and `financial-services-plugins`: differ in their audience, scope, and the kind of financial workflows they support?
 4. How would you apply the Knowledge Extraction Method (Method A) to extract a CFO's tacit knowledge about monthly close judgment, and what would the resulting SKILL.md look like?
 5. Given the eleven enterprise extension areas, how do you prioritise which one to build first for your organisation?
 
@@ -66,7 +66,7 @@ By the end of this chapter, you should be able to answer these five questions:
 
 When you finish this chapter, your perspective shifts:
 
-1. **You see Excel differently.** It is no longer just a calculation tool — it is the surface through which Claude reads, reasons about, and builds financial models with cell-level transparency.
+1. **You see Excel differently.** It is no longer just a calculation tool: it is the surface through which Claude reads, reasons about, and builds financial models with cell-level transparency.
 2. **You understand the assistant-to-agent progression.** Claude in Excel is where you do deep financial work. Cowork is where you orchestrate that work across applications and enterprise systems.
 3. **You can extract finance domain knowledge.** The Knowledge Extraction Method applied to your domain produces SKILL.md files that encode judgment no generic plugin can replicate.
 4. **You have a roadmap.** The eleven extension areas give you a clear path from generic plugins to enterprise-grade financial agents tuned to your organisation's specific methodologies.

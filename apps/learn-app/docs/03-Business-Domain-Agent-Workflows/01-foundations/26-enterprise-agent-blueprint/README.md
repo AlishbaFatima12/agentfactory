@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/enterprise-agent-blueprint
 sidebar_position: 26
 title: "Chapter 26: The Enterprise Agent Blueprint"
-description: "Understand the anatomy of a Cowork plugin — SKILL.md files, the plugin package structure, MCP connectors, the governance layer, ownership model, and marketplace that make enterprise agent deployment possible"
+description: "Understand the anatomy of a Cowork plugin: SKILL.md files, the plugin package structure, MCP connectors, the governance layer, ownership model, and marketplace that make enterprise agent deployment possible"
 chapter_number: 26
 part_number: 3
 version: 1.0
@@ -19,11 +19,11 @@ slides:
 
 Chapter 25 established why the enterprise agentic era arrived when it did, who the central figures are, and which platforms and models apply to which organisational contexts. It left one question deliberately unanswered: what, precisely, is a Cowork plugin? What does it contain, who builds each part of it, and what keeps it operating reliably once deployed? This chapter answers those questions in full.
 
-A Cowork plugin is a bundled package that contains everything a domain agent needs: SKILL.md files that encode the expertise of the knowledge worker, MCP connector declarations (.mcp.json) that wire the agent to enterprise systems, slash commands, agents, hooks, and a manifest (plugin.json). The knowledge worker's contribution is the SKILL.md — the intelligence layer that carries institutional knowledge. Everything else is infrastructure built by developers, the community, or Anthropic. An administrator governs the deployment through organisational settings. These layers are independent by design, and that independence is what makes the system maintainable, diagnosable, and scalable.
+A Cowork plugin is a bundled package that contains everything a domain agent needs: SKILL.md files that encode the expertise of the knowledge worker, MCP connector declarations (.mcp.json) that wire the agent to enterprise systems, slash commands, agents, hooks, and a manifest (plugin.json). The knowledge worker's contribution is the SKILL.md: the intelligence layer that carries institutional knowledge. Everything else is infrastructure built by developers, the community, or Anthropic. An administrator governs the deployment through organisational settings. These layers are independent by design, and that independence is what makes the system maintainable, diagnosable, and scalable.
 
 ![8 Steps to Set Up Your Entire Claude Cowork](/img/ch26-eight-steps-cowork-setup.png)
 
-This chapter describes the anatomy of a Cowork plugin in terms a knowledge worker can act on. It explains the three-level context system that determines which instructions the agent follows. It walks through a complete, annotated SKILL.md so you can recognise the difference between a production-ready file and an amateur one. It maps the MCP connector ecosystem available for the major professional domains. And it covers the governance mechanisms — permissions, audit trails, shadow mode, and human-in-the-loop gates — that make enterprise deployment of autonomous agents defensible in regulated industries. By the end, you will have the architectural vocabulary that Chapter 27 assumes.
+This chapter describes the anatomy of a Cowork plugin in terms a knowledge worker can act on. It explains the three-level context system that determines which instructions the agent follows. It walks through a complete, annotated SKILL.md so you can recognise the difference between a production-ready file and an amateur one. It maps the MCP connector ecosystem available for the major professional domains. And it covers the governance mechanisms: permissions, audit trails, shadow mode, and human-in-the-loop gates: that make enterprise deployment of autonomous agents defensible in regulated industries. By the end, you will have the architectural vocabulary that Chapter 27 assumes.
 
 ## 📚 Teaching Aid
 
@@ -32,7 +32,7 @@ This chapter describes the anatomy of a Cowork plugin in terms a knowledge worke
 By the end of this chapter, you will be able to:
 
 - Define a Cowork plugin precisely and name the key components of a plugin package and their respective owners
-- Explain the Persona–Questions–Principles Framework — Persona, Questions, and Principles — and describe the function of each section
+- Explain the Persona–Questions–Principles Framework (Persona, Questions, and Principles) and describe the function of each section
 - Understand the plugin infrastructure: the manifest (plugin.json), connector declarations (.mcp.json), commands, agents, and hooks
 - Explain what MCP connectors do conceptually, identify which production connectors exist for your domain, and describe the failure mode when a connector becomes unavailable
 - Trace the three-level context hierarchy (platform → organisation → plugin) and diagnose why a SKILL.md instruction might not be honoured
@@ -46,7 +46,7 @@ By the end of this chapter, you will be able to:
 | Lesson                                              | Title                             | Duration | What You'll Walk Away With                                                                   |
 | --------------------------------------------------- | --------------------------------- | -------- | -------------------------------------------------------------------------------------------- |
 | [L01](./01-what-a-plugin-actually-is.md)            | What a Plugin Actually Is         | 20 min   | A precise definition of a Cowork plugin and its plugin package structure                     |
-| [L02](./02-the-intelligence-layer-skill-md.md)      | The Intelligence Layer — SKILL.md | 30 min   | Understanding of the PQP Framework and why each section matters functionally                 |
+| [L02](./02-the-intelligence-layer-skill-md.md)      | The Intelligence Layer: SKILL.md | 30 min   | Understanding of the PQP Framework and why each section matters functionally                 |
 | [L03](./03-configuration-and-integration-layers.md) | The Plugin Infrastructure         | 25 min   | Understanding of the manifest, connectors, and what happens when infrastructure fails        |
 | [L04](./04-three-level-context-system.md)           | The Three-Level Context System    | 20 min   | The diagnostic sequence for understanding why an agent behaves as it does                    |
 | [L05](./05-agent-skills-pattern-in-practice.md)     | The PQP Framework in Practice     | 30 min   | The quality signals that distinguish a production-ready SKILL.md from an amateur one         |
@@ -72,8 +72,8 @@ By the end of this chapter, you should be able to answer these five questions:
 When you finish this chapter, your perspective shifts:
 
 1. **You see the architecture.** A Cowork plugin package is no longer a black box. You can look at any deployment and identify which component governs which behaviour, who owns it, and where to look when something goes wrong.
-2. **You own your layer.** You understand that the SKILL.md is yours — not a developer's, not a platform's — and that the quality of the agent's expertise is a direct function of how well you have written it.
+2. **You own your layer.** You understand that the SKILL.md is yours (not a developer's, not a platform's) and that the quality of the agent's expertise is a direct function of how well you have written it.
 3. **You diagnose before you escalate.** When an agent behaves unexpectedly, you run the three-level diagnostic before concluding there is a bug. Most unexpected behaviour has a configuration explanation.
-4. **You govern by design.** You understand that shadow mode, audit trails, and human-in-the-loop gates are architectural features, not optional additions — and that deploying without them in a regulated environment is not a shortcut but a liability.
+4. **You govern by design.** You understand that shadow mode, audit trails, and human-in-the-loop gates are architectural features, not optional additions: and that deploying without them in a regulated environment is not a shortcut but a liability.
 
 Start with [Lesson 1: What a Plugin Actually Is](./01-what-a-plugin-actually-is.md).

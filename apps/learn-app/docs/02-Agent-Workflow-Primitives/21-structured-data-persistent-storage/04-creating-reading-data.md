@@ -32,7 +32,7 @@ cognitive_load:
   new_concepts: 4
   assessment: "4 concepts (session lifecycle, commit vs stage, rollback on failure, read-back verification) within A2 limit"
 differentiation:
-  extension_for_advanced: "Direct the agent to build a full CRUD module with update and delete operations. Ask it to demonstrate what happens when you stage data but skip the save step — verify the data disappears."
+  extension_for_advanced: "Direct the agent to build a full CRUD module with update and delete operations. Ask it to demonstrate what happens when you stage data but skip the save step: verify the data disappears."
   remedial_for_struggling: "Focus on the happy path first: direct the agent to store one row and verify the output. Only after that works, try the failure case. The rollback pattern is important but secondary to basic store-and-verify."
 teaching_guide:
   lesson_type: "hands-on"
@@ -40,21 +40,21 @@ teaching_guide:
   session_title: "CRUD and Session Discipline"
   key_points:
     - "The session lifecycle (open, stage, save/undo) is the mental model that prevents most data bugs"
-    - "The 'stage' step puts data in a holding area — the 'save' step makes it permanent. Skipping the save step means the data vanishes"
-    - "Rollback is not error recovery — it is the expected path for failed writes and must be practiced, not just understood"
+    - "The 'stage' step puts data in a holding area: the 'save' step makes it permanent. Skipping the save step means the data vanishes"
+    - "Rollback is not error recovery: it is the expected path for failed writes and must be practiced, not just understood"
     - "Reading back in a new query is the only reliable proof that data was saved, not just held in temporary memory"
   misconceptions:
-    - "Students assume staging data saves it — staging only holds the data temporarily; the save step is required for durability"
-    - "Students think save failures are rare — duplicate emails, invalid references, and rule violations happen routinely in production"
-    - "Students want to read the Python CRUD code — they should only read the terminal output showing what was stored or rejected"
+    - "Students assume staging data saves it: staging only holds the data temporarily; the save step is required for durability"
+    - "Students think save failures are rare: duplicate emails, invalid references, and rule violations happen routinely in production"
+    - "Students want to read the Python CRUD code: they should only read the terminal output showing what was stored or rejected"
     - "Students skip foreign key enforcement testing and wonder why invalid references are accepted locally"
   discussion_prompts:
     - "Why is practicing the failure path (rollback after bad reference) just as important as the happy path? In production, which happens more often?"
     - "What is the difference between staging and saving? When would the agent need to stage without immediately saving?"
   teaching_tips:
-    - "Walk through the session lifecycle diagram step by step — have students identify which stage the agent's code is at before running it"
+    - "Walk through the session lifecycle diagram step by step: have students identify which stage the agent's code is at before running it"
     - "The shopping cart analogy for sessions is powerful: stage = put items in cart, save = place order, rollback = empty cart"
-    - "Have students deliberately ask the agent to skip the save step and observe that the read-back returns nothing — this makes the save requirement visceral"
+    - "Have students deliberately ask the agent to skip the save step and observe that the read-back returns nothing: this makes the save requirement visceral"
   assessment_quick_check:
     - "What command would you tell the agent to run to prove a row was stored?"
     - "What do you say to the agent if the verification shows an empty result?"

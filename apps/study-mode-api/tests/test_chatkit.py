@@ -1,6 +1,6 @@
 """Tests for ChatKit server and Study Mode integration.
 
-Tests the chatkit_server module and agent-native teach mode.
+Tests the chatkit_server module and skill-based teach mode (v4).
 """
 
 from unittest.mock import AsyncMock, MagicMock, patch
@@ -11,72 +11,8 @@ from study_mode_api.chatkit_server import StudyModeChatKitServer
 from study_mode_api.chatkit_store import RequestContext
 from study_mode_api.fte import (
     ASK_PROMPT,
-    TeachContext,
     ask_agent,
-    create_teach_agent,
 )
-
-
-class TestAgentNativeTeachMode:
-    """Test agent-native teach mode architecture."""
-
-    def test_create_teach_agent(self):
-        """Test creating teach agent with function tools."""
-        agent = create_teach_agent()
-
-        assert agent.name == "SocraticTutor"
-        # Agent has dynamic instructions (callable)
-        assert callable(agent.instructions)
-        # Agent has 4 function tools
-        assert len(agent.tools) == 4
-        tool_names = [t.name for t in agent.tools]
-        assert "verify_answer" in tool_names
-        assert "advance_to_next_chunk" in tool_names
-        assert "record_incorrect_attempt" in tool_names
-        assert "store_correct_answer" in tool_names
-
-    def test_teach_agent_has_output_guardrails(self):
-        """Test teach agent has output guardrails."""
-        agent = create_teach_agent()
-
-        assert len(agent.output_guardrails) == 2
-
-    def test_teach_context_creation(self):
-        """Test TeachContext dataclass."""
-        chunks = [
-            {"index": 0, "title": "Intro", "content": "Test content", "chunk_type": "intro"},
-            {"index": 1, "title": "Concept", "content": "More content", "chunk_type": "concept"},
-        ]
-
-        ctx = TeachContext(
-            chunks=chunks,
-            current_chunk_index=0,
-            total_chunks=2,
-            lesson_title="Test Lesson",
-            attempt_count=0,
-            max_attempts=3,
-            is_first_message=True,
-            thread_id="test-123",
-            user_name="Alice",
-        )
-
-        assert ctx.current_chunk == chunks[0]
-        assert ctx.total_chunks == 2
-        assert ctx.lesson_title == "Test Lesson"
-        assert ctx.user_name == "Alice"
-
-    def test_teach_context_current_chunk_none_when_complete(self):
-        """Test current_chunk is None when lesson is complete."""
-        chunks = [{"index": 0, "title": "Only", "content": "Content", "chunk_type": "intro"}]
-
-        ctx = TeachContext(
-            chunks=chunks,
-            current_chunk_index=1,  # Past the end
-            total_chunks=1,
-            lesson_title="Test",
-        )
-
-        assert ctx.current_chunk is None
 
 
 class TestAskAgent:

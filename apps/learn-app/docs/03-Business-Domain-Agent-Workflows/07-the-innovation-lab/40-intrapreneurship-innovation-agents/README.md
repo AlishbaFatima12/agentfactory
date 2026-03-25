@@ -2,10 +2,10 @@
 slug: /Business-Domain-Agent-Workflows/intrapreneurship-innovation-agents
 sidebar_position: 40
 title: "Chapter 40: Intrapreneurship & Innovation Agents"
-description: "Build AI agents for the full innovation lifecycle — customer discovery, ideation, assumption testing, MVP design, business model canvas, financial modelling, competitive intelligence, go-to-market strategy, investor pitch, and innovation sprints powered by the DLA Stack (Design Thinking, Lean Startup, Agile)"
+description: "Build AI agents for the full innovation lifecycle: customer discovery, ideation, assumption testing, MVP design, business model canvas, financial modelling, competitive intelligence, go-to-market strategy, investor pitch, and innovation sprints powered by the DLA Stack (Design Thinking, Lean Startup, Agile)"
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-40/innovation-os.pdf"
-  title: "The Innovation OS — DLA Stack for AI-Accelerated Innovation"
+  title: "The Innovation OS: DLA Stack for AI-Accelerated Innovation"
   height: 700
 chapter_number: 40
 part_number: 3
@@ -17,13 +17,13 @@ status: draft
 
 ## Teaching Aid
 
-> _"The difference between a great idea and a funded company is not the quality of the idea. It is the speed and rigour with which the idea was tested, refined, and communicated. Most ideas die not because they were wrong but because the person with the idea spent six months building something before asking whether anyone wanted it — and then spent another six months writing a business plan nobody read before asking whether anyone would fund it."_
+> _"The difference between a great idea and a funded company is not the quality of the idea. It is the speed and rigour with which the idea was tested, refined, and communicated. Most ideas die not because they were wrong but because the person with the idea spent six months building something before asking whether anyone wanted it , and then spent another six months writing a business plan nobody read before asking whether anyone would fund it."_
 
-Every organisation — whether a two-person startup, a corporate team launching a new product, or an enterprise innovation lab — faces the same fundamental challenge: **converting uncertainty into validated opportunity faster than the competition**.
+Every organisation , whether a two-person startup, a corporate team launching a new product, or an enterprise innovation lab, faces the same fundamental challenge: **converting uncertainty into validated opportunity faster than the competition**.
 
-The tools exist. Design Thinking provides the framework for understanding what customers actually need. Lean Startup provides the methodology for testing assumptions cheaply before building expensively. Agile provides the operating model for delivering iteratively. Together, they form the **DLA Stack** — Design Thinking, Lean Startup, Agile — the closest thing to a universal methodology for innovation.
+The tools exist. Design Thinking provides the framework for understanding what customers actually need. Lean Startup provides the methodology for testing assumptions cheaply before building expensively. Agile provides the operating model for delivering iteratively. Together, they form the **DLA Stack:** Design Thinking, Lean Startup, Agile: the closest thing to a universal methodology for innovation.
 
-The problem is execution speed. A proper Design Thinking sprint takes weeks. Building and testing an MVP takes months. Constructing a financial model and investor-grade pitch deck takes weeks more. AI changes the execution equation — not the thinking, but the research, synthesis, ideation, drafting, modelling, and iteration that surround the thinking. Tasks that took weeks now take days. Tasks that took days now take hours.
+The problem is execution speed. A proper Design Thinking sprint takes weeks. Building and testing an MVP takes months. Constructing a financial model and investor-grade pitch deck takes weeks more. AI changes the execution equation , not the thinking, but the research, synthesis, ideation, drafting, modelling, and iteration that surround the thinking. Tasks that took weeks now take days. Tasks that took days now take hours.
 
 This chapter is the Innovation OS: a structured application of the DLA Stack, powered by Cowork, for both **external entrepreneurs** building new ventures and **internal intrapreneurs** innovating within existing organisations.
 
@@ -54,7 +54,7 @@ By the end of this chapter, you will be able to:
 | [L03](./03-customer-discovery-problem-statement.md)   | Customer Discovery and Problem Statement   | 45 min   | Interview guide, JTBD map from 10 interviews, pain ranking, 5 HMW problem statements                                        |
 | [L04](./04-hundred-ideas-one-hour.md)                 | Hundred Ideas, One Hour                    | 40 min   | 100 ideas across 10 categories, DVF-scored shortlist of 10, one selected idea pressure-tested                               |
 | [L05](./05-the-assumption-stack.md)                   | The Assumption Stack                       | 40 min   | Three-tier assumption map (20+ assumptions) with risk scores and a 4-week validation plan                                   |
-| [L06](./06-mvp-the-minimum-that-validates.md)         | MVP — The Minimum That Validates           | 40 min   | MVP scoping document with features in/out, success/failure criteria, and build plan                                         |
+| [L06](./06-mvp-the-minimum-that-validates.md)         | MVP. The Minimum That Validates           | 40 min   | MVP scoping document with features in/out, success/failure criteria, and build plan                                         |
 | [L07](./07-build-measure-learn.md)                    | Build-Measure-Learn                        | 35 min   | BML analysis of pilot data, assumption outcomes, pivot-or-persevere recommendation                                          |
 | [L08](./08-business-model-canvas.md)                  | Business Model Canvas                      | 45 min   | Complete 9-block BMC with evidence quality, stress-test, and 3 alternative models                                           |
 | [L09](./09-unit-economics-financial-modelling.md)     | Unit Economics and Financial Modelling     | 45 min   | Unit economics table, 18-month model (3 scenarios), sensitivity analysis                                                    |
@@ -62,8 +62,8 @@ By the end of this chapter, you will be able to:
 | [L11](./11-go-to-market-strategy.md)                  | Go-to-Market Strategy                      | 45 min   | ICP with buying trigger, ranked channel strategy, 7-step sales process, 90-day GTM calendar                                 |
 | [L12](./12-investor-pitch-deck.md)                    | Investor Pitch Deck                        | 45 min   | 9-slide pitch narrative, 15 Q&A answers, executive summary, pitch practice feedback                                         |
 | [L13](./13-innovation-sprints.md)                     | Innovation Sprints                         | 35 min   | Innovation sprint plan with learning goals, assumption-linked stories, retrospective format                                 |
-| [L14](./14-four-innovation-agents.md)                 | Four Innovation Agents                     | 40 min   | All 4 persistent agents configured — Idea Generator, Customer Intelligence, Business Model Architect, Fundraising Readiness |
-| [L15](./15-capstone-build-innovation-os.md)           | Capstone — Build Your Innovation OS        | 90 min   | Complete `innov.local.md` for your venture, validated by the 4-question diagnostic test                                     |
+| [L14](./14-four-innovation-agents.md)                 | Four Innovation Agents                     | 40 min   | All 4 persistent agents configured, Idea Generator, Customer Intelligence, Business Model Architect, Fundraising Readiness |
+| [L15](./15-capstone-build-innovation-os.md)           | Capstone: Build Your Innovation OS        | 90 min   | Complete `innov.local.md` for your venture, validated by the 4-question diagnostic test                                     |
 | [L16](./16-chapter-summary-quick-reference.md)        | Chapter Summary and Quick Reference        | 15 min   | All commands, all agents, key frameworks, and the chapter's central insight                                                 |
 
 ## Chapter Contract
@@ -71,9 +71,9 @@ By the end of this chapter, you will be able to:
 By the end of this chapter, you should be able to answer these five questions:
 
 1. What are the three methodologies in the DLA Stack, what level of uncertainty does each address (problem, solution, delivery), and why must they be applied in sequence?
-2. How does the assumption map methodology (three tiers, five categories, MVT hierarchy) prevent the most common innovation failure — building before validating?
+2. How does the assumption map methodology (three tiers, five categories, MVT hierarchy) prevent the most common innovation failure, building before validating?
 3. How does the Business Model Canvas evolve from a first-draft hypothesis to a validated, evidence-backed model through the Build-Measure-Learn loop, and what does "canvas health" tell you about residual business risk?
-4. What makes a pitch deck narrative architecture different from a product demo — and why does emotional engineering per slide matter more than feature completeness?
+4. What makes a pitch deck narrative architecture different from a product demo , and why does emotional engineering per slide matter more than feature completeness?
 5. How do the four persistent agents (Idea Generator, Customer Intelligence, Business Model Architect, Fundraising Readiness) work together with `innov.local.md` to provide continuous innovation intelligence?
 
 ### Prerequisites: Cowork Access
@@ -87,9 +87,9 @@ This chapter requires **Cowork** (set up in Chapter 28) and the Innovation plugi
 
 When you finish this chapter, your perspective shifts:
 
-1. **You see innovation as a methodology, not inspiration.** The DLA Stack provides a repeatable process for converting uncertainty into validated opportunity. The difference between a successful venture and a failed one is rarely the quality of the idea — it is the speed and rigour of testing.
+1. **You see innovation as a methodology, not inspiration.** The DLA Stack provides a repeatable process for converting uncertainty into validated opportunity. The difference between a successful venture and a failed one is rarely the quality of the idea; it is the speed and rigour of testing.
 2. **You have a working 10-skill plugin.** Customer discovery, ideation, assumption mapping, MVP design, validated learning, business model canvas, financial modelling, competitive intelligence, go-to-market strategy, and investor pitch are all installed, configured, and deployable.
-3. **You understand the boundaries.** The agent generates ideas, synthesises research, builds frameworks, and drafts narratives. It does not validate your assumptions — customers do. It does not decide whether to pivot — you do. It does not judge whether your financial model is believable — investors do. The agent accelerates the work that surrounds the decisions.
-4. **You can extend.** The DLA Stack applies to any innovation challenge — a startup, a corporate product launch, an internal process improvement, a side project. The `innov.local.md` configuration makes every tool specific to your context. The methodology is universal; the application is yours.
+3. **You understand the boundaries.** The agent generates ideas, synthesises research, builds frameworks, and drafts narratives. It does not validate your assumptions, customers do. It does not decide whether to pivot; you do. It does not judge whether your financial model is believable, investors do. The agent accelerates the work that surrounds the decisions.
+4. **You can extend.** The DLA Stack applies to any innovation challenge: a startup, a corporate product launch, an internal process improvement, a side project. The `innov.local.md` configuration makes every tool specific to your context. The methodology is universal; the application is yours.
 
 Start with [Lesson 1: The Innovation OS](./01-the-innovation-os.md).

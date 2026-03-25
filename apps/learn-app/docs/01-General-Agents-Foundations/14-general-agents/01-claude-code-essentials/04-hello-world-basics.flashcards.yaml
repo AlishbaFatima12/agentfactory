@@ -1,9 +1,9 @@
 deck:
   id: "ch14-04-hello-world"
   title: "Hello Claude: Your First Conversation"
-  description: "First conversation with Claude Code: natural language interface, the approval pattern, and the Five Extension Tools preview."
+  description: "First conversation with Claude Code: natural language interface, the approval pattern, voice input, output styles, and the Five Extension Tools preview."
   tags: ["hello-world", "approval-pattern", "extension-tools", "claude-code"]
-  version: 1
+  version: 2
 
 cards:
   - id: "ch14-04-hello-world-001"
@@ -22,11 +22,11 @@ cards:
 
   - id: "ch14-04-hello-world-003"
     type: thinking
-    front: "Why does Claude Code ask for approval before reading, writing, or running commands instead of just executing?"
-    back: "BECAUSE Claude Code can delete files, run commands, and modify code, THEREFORE the approval workflow ensures you see exactly what will happen before any action executes — preventing accidental deletions or unintended modifications."
+    front: "Why does Claude Code ask for approval before writing files or running commands, but NOT before reading files?"
+    back: "BECAUSE reading files is a read-only operation with no side effects, THEREFORE it requires no approval. Writing and running commands can modify your system, so approval prevents accidental deletions or unintended changes."
     tags: ["approval-pattern", "security"]
     difficulty: "intermediate"
-    why: "How does this approval model change your trust relationship with AI compared to tools that execute silently?"
+    why: "How does distinguishing read-only from write operations improve workflow speed without sacrificing safety?"
 
   - id: "ch14-04-hello-world-004"
     type: thinking
@@ -80,3 +80,17 @@ cards:
     tags: ["extension-tools", "architecture", "systems-thinking"]
     difficulty: "advanced"
     why: "What breaks when you use only one extension tool instead of composing several?"
+
+  - id: "ch14-04-hello-world-011"
+    type: recall
+    front: "How do you enable voice dictation in Claude Code?"
+    back: "Type `/voice` to enable push-to-talk mode. Hold Space to speak; the transcript inserts at the cursor."
+    tags: ["voice", "accessibility", "input"]
+    difficulty: "basic"
+
+  - id: "ch14-04-hello-world-012"
+    type: recall
+    front: "What does Learning mode do in Claude Code's output styles?"
+    back: "Claude explains its decisions and marks code sections with `TODO(human)` for you to complete yourself, building real understanding instead of just copy-pasting."
+    tags: ["output-styles", "learning-mode", "config"]
+    difficulty: "intermediate"

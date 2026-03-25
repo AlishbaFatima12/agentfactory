@@ -69,23 +69,23 @@ teaching_guide:
   session_group: 1
   session_title: "Why Specifications Matter"
   key_points:
-    - "Three SDD levels form a maturity spectrum: Spec-First (throwaway) → Spec-Anchored (living docs) → Spec-as-Source (experimental) — students choose per-project, not globally"
+    - "Three SDD levels form a maturity spectrum: Spec-First (throwaway) → Spec-Anchored (living docs) → Spec-as-Source (experimental): students choose per-project, not globally"
     - "Spec-Anchored requires discipline (spec changes before code changes) or it produces the worst outcome: outdated specs that mislead"
-    - "Spec-as-Source fails because identical specs don't produce identical code — the determinism problem mirrors 2000s Model-Driven Development"
+    - "Spec-as-Source fails because identical specs don't produce identical code: the determinism problem mirrors 2000s Model-Driven Development"
     - "The decision framework (team size, maintenance horizon, compliance needs) recurs when students choose levels for their own projects"
   misconceptions:
-    - "Students think higher levels are always better — emphasize that Spec-First is the right choice for 80% of tasks"
-    - "Students confuse Spec-Anchored with 'writing documentation after coding' — the spec must change BEFORE the code, not after"
-    - "Students assume Spec-as-Source is the future goal — it's experimental and has unsolved determinism problems"
+    - "Students think higher levels are always better: emphasize that Spec-First is the right choice for 80% of tasks"
+    - "Students confuse Spec-Anchored with 'writing documentation after coding': the spec must change BEFORE the code, not after"
+    - "Students assume Spec-as-Source is the future goal: it's experimental and has unsolved determinism problems"
   discussion_prompts:
-    - "For a project you're currently working on, which SDD level fits — and what would you lose by choosing the level above or below?"
+    - "For a project you're currently working on, which SDD level fits: and what would you lose by choosing the level above or below?"
     - "Why might outdated specs be worse than no specs at all?"
     - "If AI-generated code is 'good enough' functionally, why does non-deterministic output still cause real problems?"
   teaching_tips:
-    - "Use the three-level comparison table early as a whiteboard reference — students need the overview before the details"
-    - "The 'same report' running example (Spec-First then Anchored) makes the levels concrete — walk through both directory structures"
-    - "Spend more time on Spec-Anchored discipline requirements — this is where teams actually fail in practice"
-    - "The MDD parallel resonates with experienced developers — for non-coders, focus on the 'code becomes a build artifact' analogy"
+    - "Use the three-level comparison table early as a whiteboard reference: students need the overview before the details"
+    - "The 'same report' running example (Spec-First then Anchored) makes the levels concrete: walk through both directory structures"
+    - "Spend more time on Spec-Anchored discipline requirements: this is where teams actually fail in practice"
+    - "The MDD parallel resonates with experienced developers: for non-coders, focus on the 'code becomes a build artifact' analogy"
   assessment_quick_check:
     - "Name the three SDD levels and give one sentence on when to use each"
     - "What goes wrong with Spec-Anchored if the team doesn't enforce 'spec changes before code changes'?"
@@ -194,7 +194,7 @@ When teams adopt Spec-Anchored without this discipline, they get the worst outco
 
 ### Example: The Same Report, Anchored
 
-The spec from Level 1 becomes a living document—updated quarterly as the AI landscape evolves:
+The spec from Level 1 becomes a living document,updated quarterly as the AI landscape evolves:
 
 ```
 reports/
@@ -325,7 +325,7 @@ For each, recommend an SDD level and explain what they'd lose by
 choosing a different level.
 ```
 
-**What you're learning:** The same methodology applies differently based on context. Scenario A's "learning exercise" suggests Spec-First (or skip specs entirely). Scenario B's "onboard contractors" changes everything—even under time pressure, Spec-Anchored provides future value.
+**What you're learning:** The same methodology applies differently based on context. Scenario A's "learning exercise" suggests Spec-First (or skip specs entirely). Scenario B's "onboard contractors" changes everything,even under time pressure, Spec-Anchored provides future value.
 
 **Prompt 3: Spec-as-Source Reality Check**
 

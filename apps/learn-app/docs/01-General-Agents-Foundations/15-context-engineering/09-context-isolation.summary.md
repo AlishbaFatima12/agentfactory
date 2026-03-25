@@ -1,5 +1,5 @@
 ### Core Concept
-Multi-agent pipelines fail from the dirty slate problem: each agent inherits accumulated context pollution from predecessors, leaving the final agent with attention budget consumed by irrelevant work-in-progress. The clean context pattern gives each subagent fresh, focused context—they return summaries, not full process.
+Multi-agent pipelines fail from the dirty slate problem: each agent inherits accumulated context pollution from predecessors, leaving the final agent with attention budget consumed by irrelevant work-in-progress. The clean context pattern gives each subagent fresh, focused context,they return summaries, not full process.
 
 ### Key Mental Models
 - **Dirty Slate Problem**: Agent A's 15 dead-end explorations + Agent B's analytical tangents = Agent C drowning in irrelevant tokens. The signal (final decisions) gets lost in noise (exploration scaffolding).
@@ -13,7 +13,7 @@ Multi-agent pipelines fail from the dirty slate problem: each agent inherits acc
 - Tool access control: give reviewers read-only access, writers get edit permissions, full access only for orchestrators
 
 ### Common Mistakes
-- Linear pipeline handoffs: each agent passes full context, accumulating pollution—quality degrades as pipeline lengthens
+- Linear pipeline handoffs: each agent passes full context, accumulating pollution,quality degrades as pipeline lengthens
 - Not using orchestrator pattern: debugging polluted context is archaeology; isolated agents have clear accountability
 - Forgetting context amnesia: subagents don't know your project without explicit knowledge injection
 

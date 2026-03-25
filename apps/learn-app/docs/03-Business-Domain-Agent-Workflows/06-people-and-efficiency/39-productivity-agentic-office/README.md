@@ -1,43 +1,43 @@
 ---
 slug: /Business-Domain-Agent-Workflows/productivity-agentic-office
 sidebar_position: 1
-title: "Chapter 39 — Productivity & The Agentic Office"
-description: "Build the integration layer that turns isolated domain agents into a coordinated AI-native organisation — workplace memory, task intelligence, delegation quality, daily digests, meeting intelligence, executive dashboards, cross-domain context, and four persistent agents that act like a knowledgeable colleague"
+title: "Chapter 39: Productivity & The Agentic Office"
+description: "Build the integration layer that turns isolated domain agents into a coordinated AI-native organisation: workplace memory, task intelligence, delegation quality, daily digests, meeting intelligence, executive dashboards, cross-domain context, and four persistent agents that act like a knowledgeable colleague"
 chapter_number: 39
 part_number: 3
 version: 1.0
 status: draft
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-39/the-agentic-office.pdf"
-  title: "Chapter 39 — Productivity & The Agentic Office"
+  title: "Chapter 39: Productivity & The Agentic Office"
   height: 700
 ---
 
-# Chapter 39 — Productivity & The Agentic Office
+# Chapter 39: Productivity & The Agentic Office
 
 ## Teaching Aid
 
 > _"Every AI assistant I have tried knows everything about the world and nothing about my world. It can write a perfect OKR framework but doesn't know that we call our quarterly targets 'Boulders' not OKRs. It can produce a flawless meeting summary but doesn't know that when Zara says 'let's take this offline' she means it's politically sensitive and should not be minuted. It knows how to draft a project update but doesn't know that Project Nighthawk is what we call the Karachi expansion internally. I spend five minutes of every conversation re-explaining things that a good colleague would already know."_
 >
-> — Chief of Staff, 300-person technology company
+>, Chief of Staff, 300-person technology company
 
 Every domain chapter in Part 3 solved a specific professional problem. Chapter 28 deployed AI for financial analysis. Chapter 34 automated revenue operations. Chapter 35 optimised supply chains. Each is valuable in isolation. Together, they represent an AI-native organisation where every major work function has a layer of intelligent automation.
 
 But there is a gap. Every one of those domain agents starts each conversation from zero. No memory of yesterday. No knowledge of your organisation's specific terminology. No awareness of project priorities.
 
-This chapter closes that gap. It introduces the **Workplace Memory Architecture** — a four-layer context system that gives Claude persistent, structured knowledge of your people, projects, terminology, and priorities. It deploys 9 skills and 4 persistent agents that transform isolated domain tools into a coordinated **Digital Chief of Staff** — an AI that acts like a knowledgeable colleague, not a generic chatbot.
+This chapter closes that gap. It introduces the **Workplace Memory Architecture:** a four-layer context system that gives Claude persistent, structured knowledge of your people, projects, terminology, and priorities. It deploys 9 skills and 4 persistent agents that transform isolated domain tools into a coordinated **Digital Chief of Staff:** an AI that acts like a knowledgeable colleague, not a generic chatbot.
 
 ## What You'll Learn
 
 By the end of this chapter, you will be able to:
 
 - Diagnose the four context failure modes (terminology blindness, people anonymity, project amnesia, priority blindness) and explain why they persist despite AI capability
-- Deploy a two-plugin architecture — Anthropic's official Productivity plugin for task and memory infrastructure, plus the custom Agentic Office plugin for professional intelligence
-- Build the four-layer Workplace Memory (`work.local.md`) — personal, team, projects, and organisational context — and test it with stakeholder-aware outputs
+- Deploy a two-plugin architecture, Anthropic's official Productivity plugin for task and memory infrastructure, plus the custom Agentic Office plugin for professional intelligence
+- Build the four-layer Workplace Memory (`work.local.md`), personal, team, projects, and organisational context , and test it with stakeholder-aware outputs
 - Run task intelligence (brain dump capture with P1/P2/P3 priority sorting) and delegation workflows with handoff communications calibrated to each person's style
 - Generate daily digests, meeting intelligence (before/during/after), and executive dashboards with RAG status
 - Load cross-domain context that bridges Finance, HR, Operations, and Sales agents into integrated intelligence
-- Deploy four persistent agents — Chief of Staff, Memory Keeper, Meeting Intelligence, and Work Tracker — that maintain your workplace intelligence layer continuously
+- Deploy four persistent agents, Chief of Staff, Memory Keeper, Meeting Intelligence, and Work Tracker that maintain your workplace intelligence layer continuously
 
 ## Lesson Flow
 
@@ -65,7 +65,7 @@ By the end of this chapter, you should be able to answer these five questions:
 
 1. What are the four context failure modes, and how does the Workplace Memory Architecture (four layers in work.local.md) address each one?
 2. How do the official Productivity plugin and the custom Agentic Office plugin divide responsibility, and why is zero trigger overlap between them critical?
-3. How does the delegation quality standard — a 7-item checklist with handoff communication calibrated to the delegatee's work.local.md profile — produce better outcomes than ad hoc delegation?
+3. How does the delegation quality standard: a 7-item checklist with handoff communication calibrated to the delegatee's work.local.md profile, produce better outcomes than ad hoc delegation?
 4. What are the three phases of meeting intelligence (before/during/after), and how does the D/A/F/Q/R coding system ensure every meeting produces searchable, numbered decisions and owned actions?
 5. How do the four persistent agents (Chief of Staff, Memory Keeper, Meeting Intelligence, Work Tracker) work together to maintain continuous workplace intelligence rather than session-by-session briefings?
 
@@ -82,7 +82,7 @@ This chapter requires **Cowork** (set up in Chapter 28) and two plugins.
 | Case Study                                   | Role                   | Purpose                                                                                         |
 | -------------------------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------- |
 | **Zia Khan** (CEO, Panaversity / COO, PIAIC) | Perspective character  | Direct, evidence-based leader coordinating book production, campus expansion, and workshops     |
-| **Omar Farooq** (Head of Analytics)          | Key stakeholder        | Data-driven, needs lead time, scope-conscious — delegation and communication calibration target |
+| **Omar Farooq** (Head of Analytics)          | Key stakeholder        | Data-driven, needs lead time, scope-conscious, delegation and communication calibration target |
 | **Ayesha Raza** (Senior Data Analyst)        | New hire in onboarding | First 30 days; fintech-to-edtech transition; timely feedback critical                           |
 | **Dr. Sana Mirza** (Head of Curriculum)      | New senior hire        | Academic precision, PHM framework ownership, relationship mediation needed                      |
 
@@ -102,8 +102,8 @@ Errors are discovered progressively across lessons. By L14, you can diagnose all
 
 When you finish this chapter, your perspective shifts:
 
-1. **You see the Context Problem everywhere.** Every AI interaction that starts with "let me explain my situation" is a symptom of missing workplace memory. The question is no longer whether to build context — it is which layers to build first.
-2. **You have a working two-plugin system.** Task infrastructure (official) plus professional intelligence (custom) — 9 skills and 4 agents installed, configured, and producing outputs calibrated to your organisation.
+1. **You see the Context Problem everywhere.** Every AI interaction that starts with "let me explain my situation" is a symptom of missing workplace memory. The question is no longer whether to build context; it is which layers to build first.
+2. **You have a working two-plugin system.** Task infrastructure (official) plus professional intelligence (custom), 9 skills and 4 agents installed, configured, and producing outputs calibrated to your organisation.
 3. **You understand the boundaries.** The agents maintain memory, prepare meetings, track delegations, and assemble briefings. They do not make decisions, approve budgets, or manage performance. These boundaries are encoded in every skill and agent file.
 4. **You can extend.** The workplace memory architecture transfers to any context where persistent, structured knowledge improves AI output quality. The four-agent pattern applies wherever continuous monitoring creates value.
 

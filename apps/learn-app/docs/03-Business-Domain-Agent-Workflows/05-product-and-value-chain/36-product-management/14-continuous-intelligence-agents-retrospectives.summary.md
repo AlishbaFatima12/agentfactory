@@ -1,7 +1,7 @@
-## Summary: Continuous Intelligence — Agents & Retrospectives
+## Summary: Continuous Intelligence; Agents & Retrospectives
 
-- **Key concept**: This is the capstone lesson — it closes the full PM cycle. Part 1: retrospectives are only valuable if they produce specific, testable process improvements (not vague intentions) and update product.local.md. Part 2: persistent agents automate the ongoing intelligence and communication layer so each future cycle starts with better inputs.
+- **Key concept**: This is the capstone lesson: it closes the full PM cycle. Part 1: retrospectives are only valuable if they produce specific, testable process improvements (not vague intentions) and update product.local.md. Part 2: persistent agents automate the ongoing intelligence and communication layer so each future cycle starts with better inputs.
 - **Commands used**: `/retro` (custom product-strategy plugin) + `/schedule` (for deploying agents)
 - **Artifacts produced**: (1) Four-question Sprint 1 retrospective with PARTIALLY SOLVED verdict, metric quality ratings, two specific process improvement rules, and product.local.md updates. (2) Three deployed PM agents: Research Intelligence (Monday digest), Stakeholder Update (Friday queue + triggered), Roadmap Coherence (Wednesday three-check report).
-- **Quality criteria**: Retro process improvements must pass the STRONG test (specific action, specific step, specific next-feature application). Every retro must close with a product.local.md update. Agents must have configured escalation thresholds. The Stakeholder Update Agent's PM review gate must be enabled — never auto-send.
-- **Next lesson**: Lesson 15 is the chapter reference — all 13 commands across both plugins, the three agents, the PM workflow cycle, and the key quality rules consolidated into quick-reference tables.
+- **Quality criteria**: Retro process improvements must pass the STRONG test (specific action, specific step, specific next-feature application). Every retro must close with a product.local.md update. Agents must have configured escalation thresholds. The Stakeholder Update Agent's PM review gate must be enabled: never auto-send.
+- **Next lesson**: Lesson 15 is the chapter reference: all 13 commands across both plugins, the three agents, the PM workflow cycle, and the key quality rules consolidated into quick-reference tables.

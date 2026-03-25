@@ -39,41 +39,41 @@ teaching_guide:
   session_group: 2
   session_title: "CRUD and Session Discipline"
   key_points:
-    - "Atomicity means all-or-nothing — a failed transfer must leave zero rows, not one debit without a credit"
+    - "Atomicity means all-or-nothing: a failed transfer must leave zero rows, not one debit without a credit"
     - "The multi-session anti-pattern (splitting debit and credit across sessions) causes irreversible partial state that no rollback can fix"
     - "Invariant checks (sum of transfer entries = 0) catch bugs that return-message checking misses entirely"
-    - "Transactions protect write mechanics (all-or-nothing); input validation protects write meaning (is this sensible) — you need both"
+    - "Transactions protect write mechanics (all-or-nothing); input validation protects write meaning (is this sensible): you need both"
   misconceptions:
-    - "Students think single inserts need explicit transaction wrappers — a single write is already atomic by default"
-    - "Students trust return messages over database state — a function can return success:false while still leaving partial rows"
-    - "Students believe directing the agent to catch an exception is enough — without explicit rollback, the session enters a dirty state"
-    - "Students split related writes across sessions — but the first commit is permanent and the second session cannot undo it"
+    - "Students think single inserts need explicit transaction wrappers: a single write is already atomic by default"
+    - "Students trust return messages over database state: a function can return success:false while still leaving partial rows"
+    - "Students believe directing the agent to catch an exception is enough: without explicit rollback, the session enters a dirty state"
+    - "Students split related writes across sessions, but the first commit is permanent and the second session cannot undo it"
   discussion_prompts:
     - "If the debit commits first and the credit fails, where did the money go? How would you detect this in production?"
-    - "Name three operations in your domain that require atomic boundaries and three that do not — what is the distinguishing pattern?"
+    - "Name three operations in your domain that require atomic boundaries and three that do not: what is the distinguishing pattern?"
   teaching_tips:
-    - "Start with the bank transfer scenario — every student understands that $100 disappearing is unacceptable, making atomicity feel urgent"
-    - "The transaction states diagram is whiteboard-worthy — draw BEGIN branching to either COMMIT or ROLLBACK with the transfer example"
-    - "Run the failure drill: direct agent to run valid transfer (+2 rows), then invalid transfer (+0 rows) — the counts tell the story"
-    - "Emphasize the debug posture: always trust the database over return values — read the row count, not the return message"
+    - "Start with the bank transfer scenario: every student understands that $100 disappearing is unacceptable, making atomicity feel urgent"
+    - "The transaction states diagram is whiteboard-worthy: draw BEGIN branching to either COMMIT or ROLLBACK with the transfer example"
+    - "Run the failure drill: direct agent to run valid transfer (+2 rows), then invalid transfer (+0 rows): the counts tell the story"
+    - "Emphasize the debug posture: always trust the database over return values: read the row count, not the return message"
   assessment_quick_check:
     - "What happens if you split a debit and credit across two separate sessions and the second one fails?"
     - "What do you tell the agent to prove rollback worked?"
-    - "How do you prove rollback worked — by checking the return message or by querying the database?"
+    - "How do you prove rollback worked: by checking the return message or by querying the database?"
 ---
 
 # Transactions & Atomicity
 
 In Lesson 4, you defined relationships between models and queried linked data with joins. Now you face a different problem: what happens when a write operation involves *multiple* steps, and one of them fails halfway through?
 
-Imagine you are transferring $100 from your Food budget to Entertainment. The debit goes through — your Food balance drops by $100. Then the credit fails. Crash. Network error. Doesn't matter why. Your $100 just vanished into thin air. Not in Food. Not in Entertainment. Gone.
+Imagine you are transferring $100 from your Food budget to Entertainment. The debit goes through: your Food balance drops by $100. Then the credit fails. Crash. Network error. Doesn't matter why. Your $100 just vanished into thin air. Not in Food. Not in Entertainment. Gone.
 
-You might be thinking: "That can't really happen, right?" It absolutely can. And it does. Every production system that handles money or inventory has battle scars from exactly this scenario. The fix is not hope or retry logic. The fix is a *transaction* — a boundary that guarantees either both writes happen, or neither does.
+You might be thinking: "That can't really happen, right?" It absolutely can. And it does. Every production system that handles money or inventory has battle scars from exactly this scenario. The fix is not hope or retry logic. The fix is a *transaction*: a boundary that guarantees either both writes happen, or neither does.
 
 :::info[Key Terms for This Lesson]
-- **Transaction**: A group of database operations that must ALL succeed or ALL fail — there's no middle ground
-- **Atomicity**: The "all-or-nothing" property — like a light switch, it's either on or off, never halfway
-- **Invariant**: A truth that must always hold — "debits and credits in a transfer always net to zero" is an invariant. If it ever breaks, something went wrong.
+- **Transaction**: A group of database operations that must ALL succeed or ALL fail: there's no middle ground
+- **Atomicity**: The "all-or-nothing" property: like a light switch, it's either on or off, never halfway
+- **Invariant**: A truth that must always hold: "debits and credits in a transfer always net to zero" is an invariant. If it ever breaks, something went wrong.
 :::
 
 ## How Transactions Work
@@ -114,11 +114,11 @@ That last line is the key insight. After a rollback, your data looks exactly as 
 
 ## Directing an Atomic Transfer
 
-Here is how you describe an atomic budget transfer to your agent. The key requirement is in the last line — both writes must succeed together, or neither does.
+Here is how you describe an atomic budget transfer to your agent. The key requirement is in the last line: both writes must succeed together, or neither does.
 
 :::conversation[What you tell the agent]
 I need to transfer $100 from the Food budget to Entertainment.
-This must be atomic — either both the debit and credit go through, or neither does.
+This must be atomic: either both the debit and credit go through, or neither does.
 If anything fails, roll back both. No partial transfers.
 Show me what happens when the transfer succeeds.
 :::
@@ -136,7 +136,7 @@ Output:
   Expense count: 2 new rows (one debit, one credit)
 ```
 
-The net change is $0.00 — the money moved, it did not disappear. One debit row and one credit row were written in a single atomic operation.
+The net change is $0.00: the money moved, it did not disappear. One debit row and one credit row were written in a single atomic operation.
 :::
 
 ## The Failure Drill
@@ -179,11 +179,11 @@ The most dangerous mistake is splitting related operations across separate sessi
 - Session A writes the debit and commits
 - Session B writes the credit and fails
 
-Result: irreversible partial state. The debit is permanent because Session A already committed. Session B's rollback only undoes Session B's work — it cannot reach back into Session A and undo the debit. Your $100 is gone.
+Result: irreversible partial state. The debit is permanent because Session A already committed. Session B's rollback only undoes Session B's work: it cannot reach back into Session A and undo the debit. Your $100 is gone.
 
 (This is why related database writes should *never* live in separate sessions. If they must succeed together, they must live in the same transaction. Period.)
 
-Another frequent mistake is catching an exception and returning without calling rollback. That leaves the failed transaction state unresolved and causes downstream confusion — later queries in the same session may behave unpredictably because the session is in a "dirty" state.
+Another frequent mistake is catching an exception and returning without calling rollback. That leaves the failed transaction state unresolved and causes downstream confusion: later queries in the same session may behave unpredictably because the session is in a "dirty" state.
 
 ## Input Validation: Necessary but Not Sufficient
 
@@ -248,7 +248,7 @@ Then show the post-failure query proving zero rows were committed.
 Use SQLAlchemy 2.0 style and explicit rollback.
 ```
 
-**What you're learning:** Proving rollback works requires more than reading the return value. You need to query the database after the failure and verify the row count is unchanged. This drill builds the habit of verifying database state directly — a practice that catches transaction bugs that return-message checking misses.
+**What you're learning:** Proving rollback works requires more than reading the return value. You need to query the database after the failure and verify the row count is unchanged. This drill builds the habit of verifying database state directly: a practice that catches transaction bugs that return-message checking misses.
 
 ### Prompt 3: Apply to Your Domain
 
@@ -256,7 +256,7 @@ Use SQLAlchemy 2.0 style and explicit rollback.
 Think of a multi-step operation in a project you're building. Maybe it's: creating a user account + sending a welcome email + logging the event. Or: transferring inventory between warehouses. Break it into steps and ask: "If step 2 fails, what happens to step 1?" Design the transaction boundary.
 ```
 
-**What you're learning:** Transaction design isn't just for banks. Any operation where partial completion would corrupt your data needs an atomic boundary. Recognizing these moments — and wrapping them in try/except/rollback — is a skill that separates reliable systems from fragile ones.
+**What you're learning:** Transaction design isn't just for banks. Any operation where partial completion would corrupt your data needs an atomic boundary. Recognizing these moments, and wrapping them in try/except/rollback: is a skill that separates reliable systems from fragile ones.
 
 ## Checkpoint
 

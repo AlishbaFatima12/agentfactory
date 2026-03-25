@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/islamic-finance-domain-agents/global-zakat
 sidebar_position: 13
 title: "Global Zakat Accounting"
-description: "Compare zakat calculation methodologies across four jurisdictions — ZATCA equity-based formula (Saudi Arabia), AAOIFI/Hanafi liquid assets formula, Malaysia voluntary zakat, and Pakistan Zakat and Ushr deduction-at-source — and build a global zakat SKILL.md that routes the correct formula by jurisdiction"
+description: "Compare zakat calculation methodologies across four jurisdictions (ZATCA equity-based formula (Saudi Arabia), AAOIFI/Hanafi liquid assets formula, Malaysia voluntary zakat, and Pakistan Zakat and Ushr deduction-at-source) and build a global zakat SKILL.md that routes the correct formula by jurisdiction"
 keywords:
   [
     "zakat accounting",
@@ -73,7 +73,7 @@ cognitive_load:
   assessment: "6 concepts at B1 level. Students have completed jurisdiction deep-dives in Lessons 8-11 and are now applying multi-jurisdiction comparison to a universal Islamic finance obligation. The zakat topic integrates prior jurisdiction knowledge rather than introducing entirely new frameworks."
 
 differentiation:
-  extension_for_advanced: "Research the scholarly debate between the Hanafi and Shafi'i methodologies for institutional zakat. The Shafi'i methodology includes agricultural produce and livestock — irrelevant for an IFI but critical for zakat on real assets. Draft a comparative note explaining when each methodology produces a materially different result for a diversified Islamic conglomerate with both financial and agricultural holdings."
+  extension_for_advanced: "Research the scholarly debate between the Hanafi and Shafi'i methodologies for institutional zakat. The Shafi'i methodology includes agricultural produce and livestock: irrelevant for an IFI but critical for zakat on real assets. Draft a comparative note explaining when each methodology produces a materially different result for a diversified Islamic conglomerate with both financial and agricultural holdings."
   remedial_for_struggling: "Focus on Step 1 (the comparison table) and Step 2 (Saudi ZATCA calculation) only. The ZATCA formula is the most important single piece of knowledge because Saudi Arabia is the world's largest Islamic finance market. If you can calculate ZATCA zakat and explain why it differs from the Hanafi formula, you have the core concept."
 ---
 
@@ -81,7 +81,7 @@ differentiation:
 
 In Lessons 8-11, you built jurisdiction-specific SKILL.md overlays for Saudi Arabia, Malaysia, Pakistan, and Bahrain. Now you will apply those overlays to the one Islamic finance obligation that is universal across all jurisdictions: zakat.
 
-Zakat is the obligatory Islamic alms payment — 2.5% of qualifying wealth above the nisab threshold, calculated on a lunar year basis. Every Islamic financial institution in every jurisdiction must address it. What surprises even experienced practitioners is that the **same bank** produces a **different zakat obligation** depending on which jurisdiction's formula governs. The ZATCA equity-based formula used in Saudi Arabia starts from shareholders' equity. The AAOIFI/Hanafi formula used in most other jurisdictions starts from liquid trade assets. For a bank with substantial long-term investments and fixed assets, these two formulas can produce materially different numbers from identical balance sheet data.
+Zakat is the obligatory Islamic alms payment: 2.5% of qualifying wealth above the nisab threshold, calculated on a lunar year basis. Every Islamic financial institution in every jurisdiction must address it. What surprises even experienced practitioners is that the **same bank** produces a **different zakat obligation** depending on which jurisdiction's formula governs. The ZATCA equity-based formula used in Saudi Arabia starts from shareholders' equity. The AAOIFI/Hanafi formula used in most other jurisdictions starts from liquid trade assets. For a bank with substantial long-term investments and fixed assets, these two formulas can produce materially different numbers from identical balance sheet data.
 
 This lesson builds a global zakat comparison framework, works through the calculation under each jurisdiction's rules, and then encodes the routing logic into a global zakat SKILL.md that an AI agent can activate before generating any zakat output.
 
@@ -94,17 +94,17 @@ Zakat treatment for Islamic financial institutions varies by jurisdiction across
 | Jurisdiction     | Mandatory?                      | Formula                        | Payer                                 | Accounting Treatment                                     |
 | ---------------- | ------------------------------- | ------------------------------ | ------------------------------------- | -------------------------------------------------------- |
 | **Saudi Arabia** | Mandatory (ZATCA)               | Equity-based                   | IFI pays to ZATCA                     | P&L expense (replaces income tax for Saudi-owned equity) |
-| **Pakistan**     | Mandatory (deduction at source) | Ordinance-specified            | Bank deducts as agent                 | Pass-through — not the IFI's expense                     |
+| **Pakistan**     | Mandatory (deduction at source) | Ordinance-specified            | Bank deducts as agent                 | Pass-through; not the IFI's expense                     |
 | **Bahrain**      | Voluntary (institutional)       | AAOIFI GS9 / Hanafi            | IFI may pay on behalf of shareholders | Disclosure in annual report                              |
 | **Malaysia**     | Voluntary                       | AAOIFI GS9 / Hanafi or Shafi'i | IFI voluntary                         | Disclosure in annual report                              |
 
-The accounting treatment column is where most practitioners encounter their first surprise. In Saudi Arabia, zakat is a **P&L expense** — it replaces income tax for Saudi-owned companies. In Pakistan, the bank is merely an **agent** collecting zakat from depositors and remitting it to the Central Zakat Administration — the deduction never hits the bank's income statement. In Malaysia and Bahrain, institutional zakat is **voluntary**, and many IFIs pay it as a discretionary act endorsed by their Shariah Supervisory Board.
+The accounting treatment column is where most practitioners encounter their first surprise. In Saudi Arabia, zakat is a **P&L expense** (it replaces income tax for Saudi-owned companies. In Pakistan, the bank is merely an **agent** collecting zakat from depositors and remitting it to the Central Zakat Administration) the deduction never hits the bank's income statement. In Malaysia and Bahrain, institutional zakat is **voluntary**, and many IFIs pay it as a discretionary act endorsed by their Shariah Supervisory Board.
 
 ---
 
 ## The Two Competing Formulas
 
-The ZATCA zakat calculation method — base formula, adjustment items, journal entries, and the distinction between equity-based and liquid-assets-based approaches — was covered in detail in [Lesson 10](./10-saudi-arabia.md). This lesson focuses on comparing the ZATCA method with the Hanafi, Malaysian, and Bahraini approaches and building a skill that routes to the correct formula by jurisdiction.
+The ZATCA zakat calculation method (base formula, adjustment items, journal entries, and the distinction between equity-based and liquid-assets-based approaches) was covered in detail in [Lesson 10](./10-saudi-arabia.md). This lesson focuses on comparing the ZATCA method with the Hanafi, Malaysian, and Bahraini approaches and building a skill that routes to the correct formula by jurisdiction.
 
 The critical distinction: the ZATCA formula starts from the **equity side** of the balance sheet (share capital + reserves + retained earnings, minus fixed assets and long-term investments). The AAOIFI/Hanafi formula starts from the **asset side** (liquid trade assets minus current liabilities). For the same bank, these two starting points produce different zakat obligations.
 
@@ -132,7 +132,7 @@ Pakistan's mechanism is structurally different from both Saudi Arabia and the Ha
 - **Rate:** 2.5% of the account balance on that date (if balance exceeds nisab)
 - **Exemptions:** Account holders may submit a declaration form to claim exemption
 
-The bank acts as a **wakeel** (agent) for the Central Zakat Administration. The deduction is **not the IFI's own zakat** — it is a pass-through.
+The bank acts as a **wakeel** (agent) for the Central Zakat Administration. The deduction is **not the IFI's own zakat**: it is a pass-through.
 
 **Journal entry in the bank's books:**
 
@@ -152,7 +152,7 @@ This entry never touches the bank's income statement. It is a liability-to-liabi
 
 ## Non-Shariah Income Purification
 
-Across all jurisdictions, when an IFI receives income from non-Shariah-compliant sources — penalty charges that cannot be retained, inadvertent interest income, or dividends from companies with non-halal revenue — the income **cannot be retained**. It must be donated to charity (sadaqah).
+Across all jurisdictions, when an IFI receives income from non-Shariah-compliant sources (penalty charges that cannot be retained, inadvertent interest income, or dividends from companies with non-halal revenue) the income **cannot be retained**. It must be donated to charity (sadaqah).
 
 **Journal entry (all jurisdictions):**
 
@@ -167,7 +167,7 @@ In AAOIFI disclosures, the amount and recipient charity must be disclosed and co
 
 :::info Exercise Requirements
 
-**Plugin:** Islamic Finance Domain Agents (install once — see Lesson 3)
+**Plugin:** Islamic Finance Domain Agents (install once: see Lesson 3)
 :::
 
 ## Exercise 10: Global Zakat Comparison
@@ -176,7 +176,7 @@ In AAOIFI disclosures, the amount and recipient charity must be disclosed and co
 
 **Requirements:** Cowork or your preferred AI assistant, spreadsheet capability. 40 minutes.
 
-### Step 1 — Build the Global Comparison Framework
+### Step 1: Build the Global Comparison Framework
 
 In Cowork, say:
 
@@ -195,7 +195,7 @@ Save to /outputs/zakat-comparison.xlsx.
 
 Review the output. Confirm each jurisdiction's treatment matches the rules from your jurisdiction SKILL.md overlays built in Lessons 8-11.
 
-### Step 2 — Saudi ZATCA Zakat Computation
+### Step 2: Saudi ZATCA Zakat Computation
 
 Apply the ZATCA formula to Al Rajhi Bank scale:
 
@@ -213,7 +213,7 @@ ownership, how is the zakat/tax split calculated?
 
 Check: the zakat base should be (40 + 28 + 18) − (6 + 45) = SAR 35B. Zakat = SAR 875M. The foreign-owned 20% pays income tax at 20% on its share of profits instead.
 
-### Step 3 — Malaysia Voluntary Zakat (Hanafi Methodology)
+### Step 3: Malaysia Voluntary Zakat (Hanafi Methodology)
 
 ```
 Apply the Hanafi methodology to Maybank Islamic scale:
@@ -232,7 +232,7 @@ balance sheet — which formula gives the higher number here?
 
 Check: Zakatable assets = 12 + 85 + 32 = MYR 129B. Minus current liabilities MYR 45B = MYR 84B. Zakat = MYR 2.1B.
 
-### Step 4 — Pakistan Zakat and Ushr Deduction
+### Step 4: Pakistan Zakat and Ushr Deduction
 
 ```
 Pakistan's Zakat and Ushr Ordinance requires banks to deduct zakat
@@ -249,9 +249,9 @@ accounts; (b) remittance to the Central Zakat Administration
 — calculate the zakat deducted, assuming the balance exceeds nisab
 ```
 
-Check: The bank deducts 2.5% × PKR 5M = PKR 125,000. This is a pass-through — the bank's P&L is not affected. The entry debits the depositor's account and credits Zakat Payable.
+Check: The bank deducts 2.5% × PKR 5M = PKR 125,000. This is a pass-through: the bank's P&L is not affected. The entry debits the depositor's account and credits Zakat Payable.
 
-### Step 5 — Create the Global Zakat Skill in Cowork
+### Step 5: Create the Global Zakat Skill in Cowork
 
 Create a global zakat skill in Cowork using **Write skill instructions** in the Skills panel:
 
@@ -266,7 +266,7 @@ Create a global zakat skill in Cowork using **Write skill instructions** in the 
 
 Click **Create**.
 
-**Check your work:** Test the skill by asking a zakat question about a Saudi IFI — the agent must apply the ZATCA equity-based formula, not the Hanafi liquid-assets formula. Then ask about a Pakistan bank's zakat — the agent must recognise the deduction-at-source mechanism and never book it as the bank's own expense. The skill's routing logic ensures the correct formula is selected before generating any output.
+**Check your work:** Test the skill by asking a zakat question about a Saudi IFI (the agent must apply the ZATCA equity-based formula, not the Hanafi liquid-assets formula. Then ask about a Pakistan bank's zakat) the agent must recognise the deduction-at-source mechanism and never book it as the bank's own expense. The skill's routing logic ensures the correct formula is selected before generating any output.
 
 ---
 
@@ -291,7 +291,7 @@ What is the commercial implication for the group's capital allocation
 between the two jurisdictions?
 ```
 
-**What you are learning:** The two formulas can produce materially different zakat obligations from identical balance sheet data. This is not arbitrage in the Shariah sense — zakat is obligatory regardless — but it has real capital planning implications for multi-jurisdiction Islamic banking groups.
+**What you are learning:** The two formulas can produce materially different zakat obligations from identical balance sheet data. This is not arbitrage in the Shariah sense (zakat is obligatory regardless) but it has real capital planning implications for multi-jurisdiction Islamic banking groups.
 
 ### Prompt 2: Adapt
 
@@ -329,7 +329,7 @@ all PKR 30 trillion of banking deposits become subject to deduction?
 deduction capability into its core banking system?
 ```
 
-**What you are learning:** Pakistan's 2028 full conversion mandate is the most significant structural change in global Islamic finance. The zakat deduction-at-source mechanism — currently applicable only to Islamic banks — will scale to the entire banking system. The operational and systems implications are substantial, and the CA/CPA advising banks on conversion must understand both the Shariah requirement and the systems architecture needed to implement it.
+**What you are learning:** Pakistan's 2028 full conversion mandate is the most significant structural change in global Islamic finance. The zakat deduction-at-source mechanism (currently applicable only to Islamic banks) will scale to the entire banking system. The operational and systems implications are substantial, and the CA/CPA advising banks on conversion must understand both the Shariah requirement and the systems architecture needed to implement it.
 
 ## Flashcards Study Aid
 

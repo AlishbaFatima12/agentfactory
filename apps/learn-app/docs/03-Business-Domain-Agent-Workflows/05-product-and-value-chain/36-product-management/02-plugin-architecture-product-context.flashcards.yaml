@@ -26,7 +26,7 @@ cards:
 
   - id: "ch36-02-plugin-architecture-product-context-004"
     front: "Which section of product.local.md typically has the highest leverage on output quality?"
-    back: "The Personas section — specifically the primary persona's goal, frustration, and '10/10 week' description. A precisely described persona changes AI command output more than any other single configuration section."
+    back: "The Personas section: specifically the primary persona's goal, frustration, and '10/10 week' description. A precisely described persona changes AI command output more than any other single configuration section."
     tags: ["product-local", "highest-leverage", "section"]
     difficulty: "basic"
 
@@ -44,7 +44,7 @@ cards:
 
   - id: "ch36-02-plugin-architecture-product-context-007"
     front: "What is the '10/10 week' field in the Personas section for?"
-    back: "It describes what a perfect week using the product looks like for that persona. It forces specificity about behavioral goals that a generic role description misses — and significantly improves the relevance of command outputs."
+    back: "It describes what a perfect week using the product looks like for that persona. It forces specificity about behavioral goals that a generic role description misses: and significantly improves the relevance of command outputs."
     tags: ["10/10-week", "week-field", "personas"]
     difficulty: "intermediate"
 
@@ -56,13 +56,13 @@ cards:
 
   - id: "ch36-02-plugin-architecture-product-context-009"
     front: "What does the Engineering Team section of product.local.md affect?"
-    back: "Sprint planning commands, story decomposition granularity, and acceptance criteria quality — all calibrated by team size, sprint length, velocity, and working agreements."
+    back: "Sprint planning commands, story decomposition granularity, and acceptance criteria quality: all calibrated by team size, sprint length, velocity, and working agreements."
     tags: ["engineering-team", "team-section", "product"]
     difficulty: "basic"
 
   - id: "ch36-02-plugin-architecture-product-context-010"
     front: "Why does the custom plugin enforce 'never propose solutions in a problem brief' as a structural rule rather than just a suggestion?"
-    back: "Craft principles are easy to ignore under time pressure. Encoding them as structural rules means the AI enforces them even when the PM is working fast. The rule is not stylistic — premature solution anchoring in a brief leads teams to validate the wrong hypothesis."
+    back: "Craft principles are easy to ignore under time pressure. Encoding them as structural rules means the AI enforces them even when the PM is working fast. The rule is not stylistic: premature solution anchoring in a brief leads teams to validate the wrong hypothesis."
     tags: ["custom-plugin", "plugin-enforce", "never"]
     difficulty: "advanced"
 

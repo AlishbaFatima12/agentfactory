@@ -45,7 +45,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (divergence point identification, evidence-vs-assertion distinction, three-draft iterative improvement) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (divergence point identification, evidence-vs-assertion distinction, three-draft iterative improvement) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "After completing Draft 3, ask a third AI tool the same question. Identify any new contradictions between your final analysis and this third perspective. Write a 100-word note on what this reveals."
@@ -56,18 +56,18 @@ teaching_guide:
   session_group: 2
   session_title: "The Contradiction Test"
   key_points:
-    - "When two confident AI responses disagree, the disagreement is a signal to think harder — not a reason to pick one randomly"
+    - "When two confident AI responses disagree, the disagreement is a signal to think harder: not a reason to pick one randomly"
     - "The three-draft structure reveals whether students can integrate feedback and improve, or whether they stop thinking after the first attempt"
     - "The distinction between evidence-supported claims and unsupported assertions is the core analytical skill here"
   misconceptions:
-    - "Students think the goal is to determine which AI is 'right' — often both are partially right and partially wrong in different ways"
-    - "Students treat Draft 2 and Draft 3 as cosmetic edits rather than substantive improvements — the evolution notes must show genuine intellectual progress"
+    - "Students think the goal is to determine which AI is 'right' : often both are partially right and partially wrong in different ways"
+    - "Students treat Draft 2 and Draft 3 as cosmetic edits rather than substantive improvements: the evolution notes must show genuine intellectual progress"
   discussion_prompts:
     - "Was there any point where both AI tools were wrong in the same way? What does that tell you about AI training?"
     - "How different was your Draft 3 from your Draft 1? What drove the biggest changes?"
   teaching_tips:
     - "Show students an example of a weak evolution ('I fixed some typos and added a sentence') vs. a strong evolution ('I reversed my position on X because the AI critique revealed I had no evidence for it')"
-    - "The most common failure is students who accept the AI critique completely without evaluating whether the critique itself is valid — remind them the Feedback Challenge Protocol applies here"
+    - "The most common failure is students who accept the AI critique completely without evaluating whether the critique itself is valid: remind them the Feedback Challenge Protocol applies here"
   assessment_quick_check:
     - "Can the student point to a specific claim where they determined one AI was stronger than the other, and explain their evidence?"
     - "Does Draft 3 contain at least one substantive change (not just wording) from Draft 1?"
@@ -83,17 +83,17 @@ You will use the **Reasoning Receipt** format from [Chapter 1, Exercise 1](../01
 
 ### What You Do
 
-**Step 1 — Ask both AI tools the same question.** Choose a nuanced question where reasonable people disagree — for example: "Is remote work better for productivity than office work?" Prompt both Claude and ChatGPT with the identical question. Save both full responses.
+**Step 1. Ask both AI tools the same question (~5 min).** Choose a nuanced question where reasonable people disagree; for example: "Is remote work better for productivity than office work?" Prompt both Claude and ChatGPT with the identical question. Save both full responses.
 
-**Step 2 — Identify divergence points.** Read both responses side by side. For every point where the two tools disagree, write a divergence annotation (see example below). For each divergence, determine: which side has stronger evidence, and which is asserting without support.
+**Step 2. Identify divergence points (~15 min).** Read both responses side by side. For every point where the two tools disagree, write a divergence annotation (see example below). For each divergence, determine: which side has stronger evidence, and which is asserting without support.
 
-**Step 3 — Write your Draft 1 analysis.** Write your own third analysis (500-800 words) that is more rigorous than either AI output. Use the divergence points as your starting material — you should do better than both tools on the contested points.
+**Step 3. Write your Draft 1 analysis (~20 min).** Write your own third analysis (500-800 words) that is more rigorous than either AI output. Use the divergence points as your starting material; you should do better than both tools on the contested points.
 
-**Step 4 — Get AI critique.** Submit your Draft 1 to the AICheck below. The AI will critique your analysis and identify weaknesses.
+**Step 4. Get AI critique (~5 min).** Submit your Draft 1 to the AICheck below. The AI will critique your analysis and identify weaknesses.
 
-**Step 5 — Revise to Draft 2.** Based on the AI critique, revise your analysis. Write a brief evolution note explaining what you changed and why.
+**Step 5 (Revise to Draft 2 (~15 min).** This is your first multi-draft exercise) each draft should be genuinely better, not just edited for grammar. Based on the AI critique, focus on your weakest claims: strengthen the evidence, remove unsupported assertions, or acknowledge uncertainty. Write an evolution note explaining what you changed and why.
 
-**Step 6 — Final reflection to Draft 3.** Re-read your Draft 2 with fresh eyes. Make final improvements. Write a second evolution note. This is your final submission.
+**Step 6. Final reflection to Draft 3 (~15 min).** Re-read your Draft 2 with fresh eyes. Ask yourself: where am I still asserting without evidence? What would someone who disagrees attack first? Revise those sections. Write a second evolution note. This is your final submission.
 
 ---
 
@@ -219,7 +219,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that when two confident AI responses disagree, the disagreement is a signal to think harder, not a reason to pick one randomly. Building a third analysis that improves on both forces you into genuine thinking. The three-draft evolution reveals whether you can integrate feedback and improve — or whether you stop thinking after the first attempt.
+You learn that when two confident AI responses disagree, the disagreement is a signal to think harder, not a reason to pick one randomly. Building a third analysis that improves on both forces you into genuine thinking. The three-draft evolution reveals whether you can integrate feedback and improve; or whether you stop thinking after the first attempt.
 
 ## Flashcards Study Aid
 

@@ -14,7 +14,7 @@ cards:
 
   - id: "ch34-08-pipeline-002"
     front: "Why does a weak ICP produce inflated lead scores that destroy signal value?"
-    back: "A weak ICP has no filtering criteria, so every prospect matches on every dimension. Scores become meaningless because nothing is filtered out — a 95/100 tells you nothing when everyone scores 95."
+    back: "A weak ICP has no filtering criteria, so every prospect matches on every dimension. Scores become meaningless because nothing is filtered out: a 95/100 tells you nothing when everyone scores 95."
     difficulty: "intermediate"
     why: "How would you detect that your ICP is too broad from scoring output alone?"
     tags: ["config-amplification"]
@@ -39,7 +39,7 @@ cards:
 
   - id: "ch34-08-pipeline-006"
     front: "A rep runs the pipeline in 9 minutes with output quality matching Ahmed's. Why is speed alone not the value proposition?"
-    back: "Ahmed's 9-minute approach skips most stages, producing generic output with no competitive advantage. The pipeline's value is Farah-quality depth in Ahmed's timeframe — speed plus quality, not speed alone."
+    back: "Ahmed's 9-minute approach skips most stages, producing generic output with no competitive advantage. The pipeline's value is Farah-quality depth in Ahmed's timeframe: speed plus quality, not speed alone."
     difficulty: "advanced"
     why: "What determines whether speed gains translate to better sales outcomes?"
     tags: ["time-comparison"]
@@ -52,7 +52,7 @@ cards:
 
   - id: "ch34-08-pipeline-008"
     front: "Why does personalisation decay across a six-touch outreach sequence signal a pipeline problem?"
-    back: "Personalisation decay means later touches become generic templates because upstream research intelligence was not carried forward. This is a form of Context Loss — the data existed but was not used in downstream stages."
+    back: "Personalisation decay means later touches become generic templates because upstream research intelligence was not carried forward. This is a form of Context Loss: the data existed but was not used in downstream stages."
     difficulty: "intermediate"
     why: "What operational step prevents personalisation decay across a sequence?"
     tags: ["context-loss"]
@@ -78,7 +78,7 @@ cards:
 
   - id: "ch34-08-pipeline-012"
     front: "Why does the pre-call brief feel like a document prepared by someone following the prospect for weeks?"
-    back: "The brief assembles accumulated intelligence from all upstream stages — research context, scoring rationale, outreach history, and engagement signals — converging into one preparation document."
+    back: "The brief assembles accumulated intelligence from all upstream stages: research context, scoring rationale, outreach history, and engagement signals: converging into one preparation document."
     difficulty: "intermediate"
     why: "What would the brief look like if Stage 1 research was thin?"
     tags: ["pre-call-brief"]
@@ -104,7 +104,7 @@ cards:
 
   - id: "ch34-08-pipeline-016"
     front: "Why does comparing Meridian Logistics (score 94) to Crescent Freight (score 76) illustrate how Engagement affects pipeline difficulty?"
-    back: "Meridian already had a meeting booked (high Engagement), making the pipeline easier. Crescent had no inbound signal (low Engagement), requiring outreach to create engagement from scratch — a harder pipeline to execute."
+    back: "Meridian already had a meeting booked (high Engagement), making the pipeline easier. Crescent had no inbound signal (low Engagement), requiring outreach to create engagement from scratch: a harder pipeline to execute."
     difficulty: "advanced"
     why: "How would you prioritise pipeline execution between a high-Engagement and low-Engagement prospect?"
     tags: ["engagement-scoring"]

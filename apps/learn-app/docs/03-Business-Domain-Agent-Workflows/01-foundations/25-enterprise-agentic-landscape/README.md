@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/enterprise-agentic-landscape
 sidebar_position: 25
 title: "Chapter 25: The Enterprise Agentic Landscape"
-description: "Understand why enterprise AI stalled, what changed in 2026, and why knowledge workers — not developers — are the central figures in the enterprise agentic era"
+description: "Understand why enterprise AI stalled, what changed in 2026, and why knowledge workers (not developers) are the central figures in the enterprise agentic era"
 chapter_number: 25
 part_number: 3
 version: 1.0
@@ -17,9 +17,9 @@ slides:
 
 > _"The enterprise doesn't have an AI problem. It has a knowledge transfer problem. The technology arrived years ago. The institutions that could use it most are still waiting for someone to tell them where to begin."_
 
-Every major organisation invested in AI between 2023 and 2025. Most of them have nothing to show for it except slides. The agents that were promised — systems that could autonomously research, draft, analyse, and act across enterprise workflows — were not deployed. What was deployed were wrappers: a chatbot in Slack, a summarisation tool bolted onto a document management system. Useful, all of it, in the way that a better keyboard is useful. Not transformative.
+Every major organisation invested in AI between 2023 and 2025. Most of them have nothing to show for it except slides. The agents that were promised, systems that could autonomously research, draft, analyse, and act across enterprise workflows, were not deployed. What was deployed were wrappers: a chatbot in Slack, a summarisation tool bolted onto a document management system. Useful, all of it, in the way that a better keyboard is useful. Not transformative.
 
-This chapter explains why that happened, what changed in 2026 to unlock the next phase, and why the knowledge worker — the architect, the banker, the compliance officer, the HR director — is the central figure in what comes next. By the end, you will have the strategic vocabulary to evaluate any enterprise AI deployment: which platform, which monetisation model, which maturity level, and which domain.
+This chapter explains why that happened, what changed in 2026 to unlock the next phase, and why the knowledge worker: the architect, the banker, the compliance officer, the HR director: is the central figure in what comes next. By the end, you will have the strategic vocabulary to evaluate any enterprise AI deployment: which platform, which monetisation model, which maturity level, and which domain.
 
 ## 📚 Teaching Aid
 
@@ -29,7 +29,7 @@ By the end of this chapter, you will be able to:
 
 - Explain why enterprise AI adoption stalled in 2024–2025 and identify the structural problem behind the "Pilot Trap"
 - Describe the platform shift that Anthropic Cowork and OpenAI Frontier represent and when each is appropriate
-- Articulate why domain experts — not developers — are the most valuable participants in the enterprise AI transition
+- Articulate why domain experts (not developers) are the most valuable participants in the enterprise AI transition
 - Apply a decision framework for choosing between Cowork and Frontier for a given organisational context
 - Map the four monetisation models (Success Fee, Subscription, License, Marketplace) to appropriate domains
 - Assess an organisation's AI maturity level using the five-level Organisational AI Maturity Model
@@ -55,7 +55,7 @@ By the end of this chapter, you will be able to:
 By the end of this chapter, you should be able to answer these five questions:
 
 1. What was the "Pilot Trap," and what structural problem caused enterprise AI adoption to stall in 2024–2025?
-2. How do Anthropic Cowork and OpenAI Frontier differ in architecture, target buyer, and deployment model — and when is each appropriate?
+2. How do Anthropic Cowork and OpenAI Frontier differ in architecture, target buyer, and deployment model: and when is each appropriate?
 3. Why is the knowledge worker, not the developer, the central figure in the enterprise agentic transition?
 4. Which of the four monetisation models applies to your domain, and what does the pricing architecture look like?
 5. At what maturity level does your organisation sit today, and what would need to change to move to the next level?
@@ -64,7 +64,7 @@ By the end of this chapter, you should be able to answer these five questions:
 
 When you finish this chapter, your perspective shifts:
 
-1. **You stop waiting for IT.** You understand that the knowledge transfer problem is yours to solve — and that the platforms now exist to let you solve it.
+1. **You stop waiting for IT.** You understand that the knowledge transfer problem is yours to solve: and that the platforms now exist to let you solve it.
 2. **You qualify before you build.** Every deployment conversation starts with a maturity assessment, not a technology demonstration.
 3. **You frame value correctly.** You match the monetisation model to the domain instead of assuming one-size-fits-all pricing.
 4. **You see the landscape.** You can position any enterprise AI initiative on the Cowork–Frontier spectrum and explain why it belongs there.

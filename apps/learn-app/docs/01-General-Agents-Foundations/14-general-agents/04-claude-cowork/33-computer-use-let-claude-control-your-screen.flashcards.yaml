@@ -1,0 +1,41 @@
+deck:
+  id: "ch14-33-computer-use-let-claude-control-your-screen"
+  title: "Computer Use: Let Claude Control Your Screen"
+  version: 1
+
+cards:
+  - front: "What three requirements must be met before you can use Computer Use in Cowork?"
+    back: "1. Mac with Apple Silicon (M1 or later). 2. Claude Pro or Max subscription. 3. Claude Desktop app installed and running."
+
+  - front: "What two macOS permissions does Computer Use require, and what does each one allow?"
+    back: "Accessibility: lets Claude click, type, and scroll. Screen Recording: lets Claude take screenshots to see what is on your screen."
+
+  - front: "What is the tool priority hierarchy Claude follows before resorting to Computer Use?"
+    back: "1. Connectors (fastest, direct API). 2. Bash (shell commands). 3. Browser / Claude in Chrome (web interaction). 4. Computer Use (screen control, slowest). Claude always tries the most precise tool first."
+
+  - front: "Name the three per-app permission tiers and give one example app category for each."
+    back: "View only (browsers, trading platforms): Claude can only see screenshots. Click only (terminals, IDEs): Claude can click and scroll but not type. Full control (everything else): Claude can click, type, drag, and use keyboard shortcuts."
+
+  - front: "Can you change an app's permission tier from view-only to full control?"
+    back: "No. Permission tiers are fixed by app category and cannot be changed by the user. Browsers are always view-only, terminals are always click-only, and most other apps get full control."
+
+  - front: "Why are browsers restricted to view-only in Computer Use?"
+    back: "Because Claude in Chrome handles web tasks more precisely and reliably. The view-only restriction steers Claude toward the dedicated browser tool instead of using slower screen control."
+
+  - front: "What is the denied-apps list and when should you configure it?"
+    back: "The denied-apps list blocks Claude from accessing specific applications without even prompting. Configure it BEFORE enabling Computer Use, including password managers, banking apps, investment platforms, and health applications."
+
+  - front: "How long do per-app approvals last in Computer Use?"
+    back: "Approvals last for the current session. In Dispatch-spawned sessions, they last 30 minutes."
+
+  - front: "Describe the screenshot-act loop that Claude follows during Computer Use."
+    back: "1. Take screenshot. 2. Analyze UI elements and layout. 3. Decide next action. 4. Execute the action (click, type, scroll). 5. Take another screenshot to verify. 6. Repeat until task is complete."
+
+  - front: "Why is Computer Use slower than connectors or Bash?"
+    back: "Computer Use requires multiple screenshot-analyze-act cycles, each taking several seconds. Connectors and Bash interact directly with APIs and command-line interfaces, bypassing the visual interpretation step entirely."
+
+  - front: "Give three examples of tasks where Computer Use is the right choice over other tools."
+    back: "1. Interacting with native desktop apps that have no API (Keynote, Preview, GarageBand). 2. Testing in the iOS Simulator. 3. Filling out forms in proprietary enterprise tools that only have a GUI."
+
+  - front: "What key safety principle distinguishes Computer Use from Claude's sandboxed Bash tool?"
+    back: "Computer Use runs on your actual desktop with access to whatever you approve. Unlike the sandboxed Bash tool, there is no safety net. Anything visible on your screen is accessible to Claude through screenshots."

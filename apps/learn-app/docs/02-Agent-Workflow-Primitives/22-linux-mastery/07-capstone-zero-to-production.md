@@ -5,7 +5,7 @@ chapter: 22
 lesson: 7
 layer: L2
 duration_minutes: 45
-description: "Deploy a second agent from zero using a deployment spec — turning three days of discovery into thirty minutes of execution"
+description: "Deploy a second agent from zero using a deployment spec: turning three days of discovery into thirty minutes of execution"
 keywords:
   [
     "deployment",
@@ -54,32 +54,32 @@ cognitive_load:
   concepts_list:
     - "Deployment spec as structured checklist (the plan IS the execution guide)"
     - "Integration of all prior skills into a single workflow"
-  assessment: "2 concepts — capstone lesson integrates L1-L6 skills rather than introducing new material"
+  assessment: "2 concepts: capstone lesson integrates L1-L6 skills rather than introducing new material"
 
 differentiation:
   extension_for_advanced: "Add a rollback section to the deployment spec. What happens if the new agent breaks something? Design an automated rollback procedure."
-  remedial_for_struggling: "Focus on the spec structure, not the execution. Being able to WRITE the spec is the key skill — Claude Code handles the execution."
+  remedial_for_struggling: "Focus on the spec structure, not the execution. Being able to WRITE the spec is the key skill: Claude Code handles the execution."
 
 teaching_guide:
   lesson_type: "capstone"
   session_group: 3
   session_title: "Zero to Production Capstone"
   key_points:
-    - "The transformation from 3 days to 30 minutes is the lesson's emotional payoff — students should feel the acceleration"
-    - "The spec is not documentation — it's the execution guide that Claude Code follows section by section"
+    - "The transformation from 3 days to 30 minutes is the lesson's emotional payoff: students should feel the acceleration"
+    - "The spec is not documentation; it's the execution guide that Claude Code follows section by section"
     - "Each spec section maps directly to a lesson: this makes the chapter feel cohesive and purposeful"
-    - "The verification checklist is the quality gate — students must check every box before considering the deployment done"
+    - "The verification checklist is the quality gate: students must check every box before considering the deployment done"
   misconceptions:
-    - "Students think specs are busywork — the speed comparison (3 days vs 30 minutes) proves their value"
-    - "Students think they need to remember all the commands — the spec captures the knowledge so they don't have to"
-    - "Students skip verification — 'it started, so it works' is not production-ready"
+    - "Students think specs are busywork: the speed comparison (3 days vs 30 minutes) proves their value"
+    - "Students think they need to remember all the commands: the spec captures the knowledge so they don't have to"
+    - "Students skip verification: 'it started, so it works' is not production-ready"
   discussion_prompts:
     - "What would happen if Ali tried to deploy a third agent without a spec? What mistakes would he repeat?"
     - "How is a deployment spec different from a README? Why do you need both?"
   teaching_tips:
-    - "Walk through the spec creation collaboratively — let students suggest what each section should contain"
-    - "Time the deployment if possible — the 30-minute mark is powerful when students see it on a clock"
-    - "The verification checklist should feel satisfying to complete — each green check means one less thing to worry about at 2 AM"
+    - "Walk through the spec creation collaboratively: let students suggest what each section should contain"
+    - "Time the deployment if possible: the 30-minute mark is powerful when students see it on a clock"
+    - "The verification checklist should feel satisfying to complete: each green check means one less thing to worry about at 2 AM"
   assessment_quick_check:
     - "Name the six sections of a deployment spec from memory"
     - "Why does the spec include a verification section? What could go wrong if you skip it?"
@@ -117,7 +117,7 @@ Ali learned six things in six lessons:
 | L5 | How to lock down access |
 | L6 | How to diagnose failures |
 
-The first time, he learned these through experience — one crisis at a time. The second time, he can write them down as a plan and execute them in order.
+The first time, he learned these through experience: one crisis at a time. The second time, he can write them down as a plan and execute them in order.
 
 > **"The spec is the checklist, the executor, and the auditor. All in one file."**
 
@@ -127,7 +127,7 @@ The first time, he learned these through experience — one crisis at a time. Th
 
 A deployment spec is not documentation. It's an execution guide. You write it before you start, then feed it to Claude Code section by section. Each section corresponds to a lesson you've already learned.
 
-Here's the spec Ali writes for his second agent — the social media sentiment tracker.
+Here's the spec Ali writes for his second agent: the social media sentiment tracker.
 
 **What you tell Claude Code**: "I'm going to write a deployment spec. Help me create a file called DEPLOYMENT-SPEC.md with the following structure."
 
@@ -206,7 +206,7 @@ Claude transfers files, installs dependencies, runs a test. The agent produces a
 
 ### Section 4: Service Configuration
 
-**What you tell Claude Code**: "Create a systemd service for the sentiment-tracker. Use the same pattern as the competitor-tracker — run as agentuser, restart on failure, 256 MB memory limit. Enable it and start it."
+**What you tell Claude Code**: "Create a systemd service for the sentiment-tracker. Use the same pattern as the competitor-tracker: run as agentuser, restart on failure, 256 MB memory limit. Enable it and start it."
 
 Claude creates the unit file, enables the service, starts it. Two minutes.
 
@@ -232,7 +232,7 @@ The competitor-tracker took three days. Confusion, trial and error, a 2 AM panic
 
 The sentiment-tracker took fifteen minutes. Same server. Same complexity. Different approach.
 
-The difference wasn't skill — Ali has the same skill level for both. The difference was **structure**. The deployment spec captured everything he learned and turned scattered knowledge into sequential execution.
+The difference wasn't skill: Ali has the same skill level for both. The difference was **structure**. The deployment spec captured everything he learned and turned scattered knowledge into sequential execution.
 
 Three days of discovery. Fifteen minutes with a spec.
 
@@ -244,7 +244,7 @@ The real exercise in this capstone is not following Ali's spec. It's writing you
 
 **What you tell Claude Code**: "Help me write a DEPLOYMENT-SPEC.md for deploying [your agent] to a Linux server. Use the six-section structure: Server Access, Directory Structure, Application Setup, Service Configuration, Security Checklist, and Verification."
 
-Replace `[your agent]` with whatever you're building — a web scraper, a data pipeline, a chatbot, a monitoring tool. The structure is the same for any agent.
+Replace `[your agent]` with whatever you're building: a web scraper, a data pipeline, a chatbot, a monitoring tool. The structure is the same for any agent.
 
 ### The Six Sections (Your Template)
 
@@ -265,7 +265,7 @@ Every lesson in this chapter feeds into one section of the deployment spec. This
 
 The most important section is the last one. Verification is not optional.
 
-Deployed services that aren't verified are time bombs. They appear to work until the moment they don't — usually when a client checks the dashboard, a board meeting starts, or you're asleep.
+Deployed services that aren't verified are time bombs. They appear to work until the moment they don't: usually when a client checks the dashboard, a board meeting starts, or you're asleep.
 
 Build the habit now: **no deployment is done until every verification check passes.**
 
@@ -291,7 +291,7 @@ ANY BOX UNCHECKED → NOT DONE YET
 
 Ali has two agents running on Dev's server. The competitor-tracker he deployed over three painful days. The sentiment-tracker he deployed in fifteen minutes. Both run as systemd services under dedicated users with locked-down permissions. Both survive reboots. Both write persistent logs. Both can be diagnosed with the LNPS method.
 
-Ali learned Linux not by memorizing fifty commands. He learned it by solving real problems — one at a time — and capturing the solutions in a spec that makes the next deployment effortless.
+Ali learned Linux not by memorizing fifty commands. He learned it by solving real problems: one at a time, and capturing the solutions in a spec that makes the next deployment effortless.
 
 ---
 
@@ -307,7 +307,7 @@ measures should the spec include? Think about encryption at rest,
 audit logging, and data retention policies.
 ```
 
-**What you're practicing:** Adapting the deployment spec for different risk profiles. A competitor-tracker and a payment processor have different security requirements. The spec structure is the same — the contents change based on what's at stake.
+**What you're practicing:** Adapting the deployment spec for different risk profiles. A competitor-tracker and a payment processor have different security requirements. The spec structure is the same: the contents change based on what's at stake.
 
 ### Prompt 2: Spec for a Different Agent
 
@@ -318,7 +318,7 @@ the results in a PostgreSQL database. Write a complete
 DEPLOYMENT-SPEC.md for this agent. Include all six sections.
 ```
 
-**What you're practicing:** Writing deployment specs from scratch. The first spec you follow. The second spec you write. The third spec you don't even think about — the structure is automatic.
+**What you're practicing:** Writing deployment specs from scratch. The first spec you follow. The second spec you write. The third spec you don't even think about: the structure is automatic.
 
 ### Prompt 3: systemd vs Docker
 
@@ -330,7 +330,7 @@ tradeoffs in complexity, isolation, and portability? Which would
 you recommend for a solo developer deploying 2-3 agents?
 ```
 
-**What you're practicing:** Understanding the landscape of deployment options. systemd is the foundation — it works everywhere Linux runs with zero additional tooling. Docker adds isolation and portability at the cost of complexity. Knowing when each tool is appropriate is an architectural decision.
+**What you're practicing:** Understanding the landscape of deployment options. systemd is the foundation: it works everywhere Linux runs with zero additional tooling. Docker adds isolation and portability at the cost of complexity. Knowing when each tool is appropriate is an architectural decision.
 
 ---
 

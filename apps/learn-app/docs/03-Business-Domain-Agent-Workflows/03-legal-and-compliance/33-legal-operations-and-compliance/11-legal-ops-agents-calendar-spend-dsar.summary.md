@@ -1,4 +1,4 @@
-# Legal Ops Agents: Calendar, Spend, and DSAR — Summary
+# Legal Ops Agents: Calendar, Spend, and DSAR; Summary
 
 ## Core Concept
 

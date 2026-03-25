@@ -110,3 +110,31 @@ cards:
     back: "Invocation, context isolation, complexity level, and invocation guarantee."
     tags: ["subagents", "skills-vs-subagents"]
     difficulty: "intermediate"
+
+  - id: "ch14-11-subagents-orchestration-015"
+    type: recall
+    front: "What model does the general-purpose subagent use?"
+    back: "It inherits the current model from the main conversation (not hardcoded to any specific model)."
+    tags: ["subagents", "model"]
+    difficulty: "basic"
+
+  - id: "ch14-11-subagents-orchestration-016"
+    type: recall
+    front: "What values can the model field accept in a subagent definition?"
+    back: "sonnet, opus, haiku, a full model ID (e.g., claude-sonnet-4-6), or inherit (default)."
+    tags: ["subagents", "model", "custom-agents"]
+    difficulty: "intermediate"
+
+  - id: "ch14-11-subagents-orchestration-017"
+    type: recall
+    front: "How can you guarantee a specific subagent runs instead of relying on auto-delegation?"
+    back: "Type @ in the chat and pick the subagent from the typeahead menu."
+    tags: ["subagents", "invocation"]
+    difficulty: "basic"
+
+  - id: "ch14-11-subagents-orchestration-018"
+    type: recall
+    front: "What does the memory field in a subagent's frontmatter do?"
+    back: "It gives the subagent a persistent memory directory that survives across conversations, so it can build on previous findings."
+    tags: ["subagents", "memory"]
+    difficulty: "intermediate"

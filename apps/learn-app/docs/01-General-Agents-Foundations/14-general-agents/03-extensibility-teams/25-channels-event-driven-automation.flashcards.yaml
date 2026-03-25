@@ -1,0 +1,41 @@
+deck:
+  id: "ch14-25-channels-event-driven-automation"
+  title: "Channels: Event-Driven Automation"
+  version: 1
+
+cards:
+  - front: "What is a channel in Claude Code?"
+    back: "An MCP server that pushes events into a running Claude Code session from external systems (CI, Telegram, Discord, webhooks). Unlike standard MCP servers that wait for Claude to call their tools, channels send unsolicited notifications when something happens."
+
+  - front: "Name the three automation patterns in the automation triptych."
+    back: "1. Time-driven: /loop fires prompts on a schedule (Lesson 24)\n2. Event-driven: Channels push events when something happens (Lesson 25)\n3. Human-driven: Remote Control lets you send messages from another device (Lesson 23)"
+
+  - front: "What CLI flag enables channels when starting Claude Code?"
+    back: "--channels followed by the plugin name, e.g.:\nclaude --channels plugin:telegram@claude-plugins-official\nBeing in .mcp.json alone is not enough to enable channel notifications."
+
+  - front: "What happens to channel events if the Claude Code session is closed?"
+    back: "Events are lost. Channels only deliver events while the session is open. There is no backlog or retry mechanism. For always-on reception, run Claude Code in tmux or a persistent terminal."
+
+  - front: "How does the sender allowlist security model work?"
+    back: "Every approved channel maintains a sender allowlist. Only explicitly paired sender IDs can push messages; everyone else is silently dropped. Gating is on sender identity (not room or channel identity), so in a group chat only your paired account can reach Claude."
+
+  - front: "What is the difference between channels and Remote Control?"
+    back: "Remote Control lets YOU drive the session from another device (human-driven). Channels let EXTERNAL SYSTEMS push events into the session (event-driven). Remote Control is for steering; channels are for reacting."
+
+  - front: "What are the three officially supported channel adapters?"
+    back: "1. Fakechat: localhost demo chat UI on port 8787 (no external accounts)\n2. Telegram: bot via BotFather with token configuration\n3. Discord: bot via Developer Portal with Message Content Intent"
+
+  - front: "When should you use channels instead of /loop?"
+    back: "When events happen unpredictably and Claude should react immediately. /loop is for regular polling (e.g., check every 5 minutes). Channels are for immediate reaction (e.g., CI just failed, respond now). Channels avoid wasting cycles polling when nothing has happened."
+
+  - front: "What runtime is required for the pre-built channel plugins?"
+    back: "Bun (bun.sh). The officially supported channel plugins are Bun scripts. Custom channels can use Node or Deno as well, with the @modelcontextprotocol/sdk package."
+
+  - front: "What are the key steps to set up a Telegram channel?"
+    back: "1. Create a bot via BotFather and copy the token\n2. Install: /plugin install telegram@claude-plugins-official\n3. Configure: /telegram:configure <token>\n4. Restart: claude --channels plugin:telegram@claude-plugins-official\n5. Pair: message the bot, get code, run /telegram:access pair <code>\n6. Lock down: /telegram:access policy allowlist"
+
+  - front: "Can you enable multiple channels simultaneously?"
+    back: "Yes. List multiple plugins after --channels, space-separated:\nclaude --channels plugin:telegram@claude-plugins-official plugin:discord@claude-plugins-official\nClaude receives events from all channels and replies through whichever channel each message arrived on."
+
+  - front: "What capability must a custom channel MCP server declare?"
+    back: "capabilities: { experimental: { 'claude/channel': {} } } in the Server constructor. This registers the notification listener so Claude Code knows the server can push events. For two-way channels, also add tools: {} for the reply tool."

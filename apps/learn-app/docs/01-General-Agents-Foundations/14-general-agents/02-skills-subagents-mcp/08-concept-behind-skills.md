@@ -56,23 +56,23 @@ teaching_guide:
   session_group: 3
   session_title: "Skills Architecture and Hands-On Practice"
   key_points:
-    - "The bottleneck is expertise, not intelligence — this reframes how students think about AI value creation for the rest of the book"
+    - "The bottleneck is expertise, not intelligence; this reframes how students think about AI value creation for the rest of the book"
     - "Three-level loading (metadata/instructions/supporting files) is the same progressive disclosure pattern used in MCP Tool Search (Lesson 12-13)"
-    - "Skills + MCP = expertise + connectivity — students must internalize this as two distinct layers, not one"
+    - "Skills + MCP = expertise + connectivity; students must internalize this as two distinct layers, not one"
     - "The stack analogy (models=processors, runtimes=OS, skills=apps) positions students as the applications layer builders"
   misconceptions:
-    - "Students confuse skills with saved prompts — emphasize that skills have structure (YAML frontmatter, activation triggers, three-level loading) that prompts lack"
-    - "Students think skills require programming — the accessibility section explicitly shows non-technical people (finance, recruiting, legal) creating skills"
-    - "Students conflate MCP and skills as doing the same thing — use the table (expertise vs connectivity) to draw a hard line"
-    - "Students assume more skills means slower performance — the smartphone apps analogy (100 installed, few running) directly addresses this"
+    - "Students confuse skills with saved prompts; emphasize that skills have structure (YAML frontmatter, activation triggers, three-level loading) that prompts lack"
+    - "Students think skills require programming; the accessibility section explicitly shows non-technical people (finance, recruiting, legal) creating skills"
+    - "Students conflate MCP and skills as doing the same thing; use the table (expertise vs connectivity) to draw a hard line"
+    - "Students assume more skills means slower performance; the smartphone apps analogy (100 installed, few running) directly addresses this"
   discussion_prompts:
     - "If skills encode expertise and anyone can create them, what happens to the value of domain knowledge in organizations?"
-    - "The lesson says Fortune 100 companies use skills for onboarding — what expertise would you encode for a new team member in your field?"
+    - "The lesson says Fortune 100 companies use skills for onboarding; what expertise would you encode for a new team member in your field?"
     - "When would you still need a custom agent instead of just adding skills to Claude Code?"
   teaching_tips:
-    - "Start with the tax professional analogy (Section: The Real Bottleneck) — it immediately grounds the abstract concept in something students relate to"
+    - "Start with the tax professional analogy (Section: The Real Bottleneck); it immediately grounds the abstract concept in something students relate to"
     - "Use the three-level loading diagram as a decision exercise: present 5 skill scenarios and have students identify what belongs at each level (metadata, instructions, supporting files)"
-    - "Walk through the three-level loading using the smartphone analogy — have students count their installed apps vs running apps to make it concrete"
+    - "Walk through the three-level loading using the smartphone analogy; have students count their installed apps vs running apps to make it concrete"
     - "The 'Skills as Strategic Assets' table (manual prompting vs agent skills) works well as a before/after comparison on a whiteboard"
   assessment_quick_check:
     - "Name the three levels of skill loading and what each contains"
@@ -104,7 +104,7 @@ That's not advice from a random blog post. It's the conclusion Anthropic reached
 
 **The assumption**: Making AI useful for YOUR domain requires building a specialized agent. Finance needs a finance agent. Legal needs a legal agent. Each domain demands its own infrastructure.
 
-**The discovery**: The agent underneath is far more universal than anyone expected. Code isn't just a use case—it's the universal interface to the digital world. A coding agent can pull data from APIs, organize files, analyze with Python, synthesize reports. The scaffolding can be as thin as Bash and a file system.
+**The discovery**: The agent underneath is far more universal than anyone expected. Code isn't just a use case: it's the universal interface to the digital world. A coding agent can pull data from APIs, organize files, analyze with Python, synthesize reports. The scaffolding can be as thin as Bash and a file system.
 
 The agent already exists. What's missing is your expertise in a format it can access.
 
@@ -114,17 +114,17 @@ The agent already exists. What's missing is your expertise in a format it can ac
 
 Here's how the Anthropic team frames what they built:
 
-**Models provide intelligence.** Claude can reason, analyze, synthesize, and generate. That's the cognitive capability—the "thinking" part.
+**Models provide intelligence.** Claude can reason, analyze, synthesize, and generate. That's the cognitive capability: the "thinking" part.
 
 **Code provides execution.** Through a terminal, Claude can call APIs to pull data, organize information in the file system, analyze with Python, and output results in any format. Code is the universal interface to the digital world.
 
-Put them together: an intelligent agent that can execute. Claude Code isn't just a chatbot—it can actually DO things. Read your files. Run your tests. Commit your code. Generate reports.
+Put them together: an intelligent agent that can execute. Claude Code isn't just a chatbot: it can actually DO things. Read your files. Run your tests. Commit your code. Generate reports.
 
 **But intelligence + execution still isn't expertise.**
 
 Agents today have intelligence and capabilities, but not always the expertise needed for real work. They can do amazing things when you provide detailed guidance. But they're missing the important context up front. They can't absorb your organizational knowledge efficiently. They don't learn from your feedback over time.
 
-That's the gap skills fill. Not more intelligence. Not more execution capability. **Expertise**—the domain-specific knowledge that makes generic capability specifically useful.
+That's the gap skills fill. Not more intelligence. Not more execution capability. **Expertise**: the domain-specific knowledge that makes generic capability specifically useful.
 
 ---
 
@@ -165,9 +165,9 @@ The legal team's contract review workflow? That's a skill.
 
 Who do you want doing your taxes? The 300-IQ mathematical genius who figures out tax code from first principles? Or the experienced tax professional who knows the patterns, the edge cases, the specific procedures that work?
 
-You want the professional. Not because they're smarter—because they have encoded expertise.
+You want the professional. Not because they're smarter: because they have encoded expertise.
 
-This is exactly the gap with AI agents today. Claude is brilliant—it can do amazing things when you invest effort in guidance. But it often lacks the context you've built up over years. It can't absorb your organizational expertise efficiently. And it doesn't learn from your feedback over time.
+This is exactly the gap with AI agents today. Claude is brilliant: it can do amazing things when you invest effort in guidance. But it often lacks the context you've built up over years. It can't absorb your organizational expertise efficiently. And it doesn't learn from your feedback over time.
 
 The solution isn't making the model smarter. The solution is giving it access to expertise it doesn't have.
 
@@ -181,7 +181,7 @@ You might worry: "If I have 50 skills, won't Claude run out of memory loading th
 
 This is exactly the problem skills are designed to solve.
 
-**Skills are organized collections of files**—in simpler terms, they're folders. This simplicity is deliberate. The design principle: anything that anyone—human OR agent—can create and use, as long as they have a computer.
+**Skills are organized collections of files**:in simpler terms, they're folders. This simplicity is deliberate. The design principle: anything that anyone: human OR agent: can create and use, as long as they have a computer.
 
 **The folder structure:**
 
@@ -204,13 +204,13 @@ Skills work with what you already have. Version them in Git. Throw them in Googl
 
 Claude has limited working memory (context window). If it loaded every skill's full instructions at startup, it would run out of space before doing any actual work. Skills solve this with progressive disclosure:
 
-**Level 1 — Brief Metadata (Always Loaded)**: A short description of what the skill does and when it's relevant. Just enough for Claude to know the skill exists.
+**Level 1; Brief Metadata (Always Loaded)**: A short description of what the skill does and when it's relevant. Just enough for Claude to know the skill exists.
 
-**Level 2 — Full Instructions (On-Demand)**: When Claude decides a skill applies, it loads the complete SKILL.md with detailed procedures, workflows, examples.
+**Level 2; Full Instructions (On-Demand)**: When Claude decides a skill applies, it loads the complete SKILL.md with detailed procedures, workflows, examples.
 
-**Level 3 — Supporting Files (If Needed)**: Scripts, reference documentation, tools in the skill's directory. Accessed only when executing the skill.
+**Level 3; Supporting Files (If Needed)**: Scripts, reference documentation, tools in the skill's directory. Accessed only when executing the skill.
 
-Think of your smartphone. You have 100 apps installed. Your phone doesn't run all 100 at once—it would crash. Apps stay closed until you tap them. Skills work the same way: available when needed, dormant otherwise.
+Think of your smartphone. You have 100 apps installed. Your phone doesn't run all 100 at once: it would crash. Apps stay closed until you tap them. Skills work the same way: available when needed, dormant otherwise.
 
 ![skills-standardization](https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/images/part-2/chapter-05/skills-standardization.png)
 
@@ -224,21 +224,33 @@ But if skills are just folders, where do they come from?
 
 Skills emerge from different places, each serving different needs.
 
+**Bundled Skills**: Claude Code ships with built-in skills available in every installation. These handle common developer workflows out of the box:
+
+| Skill                       | Purpose                                                       |
+| --------------------------- | ------------------------------------------------------------- |
+| `/batch <instruction>`      | Orchestrate large-scale changes across a codebase in parallel |
+| `/claude-api`               | Load Claude API reference for your project's language         |
+| `/debug [description]`      | Troubleshoot the current session by reading the debug log     |
+| `/loop [interval] <prompt>` | Run a prompt repeatedly on an interval                        |
+| `/simplify [focus]`         | Review recently changed files for quality issues              |
+
+Think of these as the pre-installed apps on a new phone. You can use them immediately without downloading anything.
+
 **Foundational Skills**: Basic capabilities that extend what Claude can do out of the box.
 
-Examples: Creating Word documents, PowerPoint presentations, Excel spreadsheets, PDFs. These are like basic life skills—everyone needs them.
+Examples: Creating Word documents, PowerPoint presentations, Excel spreadsheets, PDFs. These are like basic life skills: everyone needs them.
 
 **Partner Skills**: Help Claude work effectively with specific software or services.
 
 Examples: Browserbase built a skill for their open-source browser automation tooling (Stagehand). Now Claude equipped with this skill can navigate the web and automate browser tasks far more effectively. Notion launched skills that help Claude understand your entire workspace and do deep research across your documents.
 
-These are like specialized certifications—expertise in specific tools.
+These are like specialized certifications: expertise in specific tools.
 
 **Enterprise and Custom Skills**: Created by organizations for their specific needs.
 
 Examples: Your company's coding style guide. Internal documentation standards. Organization-specific workflows that encode "how we do things here."
 
-**Here's where the real traction is**: Anthropic has been talking to Fortune 100 companies using skills to teach agents about organizational best practices and the unique ways they use bespoke internal software. Developer productivity teams—serving thousands or tens of thousands of engineers—deploy skills to teach Claude Code about internal code style standards and preferred workflows.
+**Here's where the real traction is**: Anthropic has been talking to Fortune 100 companies using skills to teach agents about organizational best practices and the unique ways they use bespoke internal software. Developer productivity teams, serving thousands or tens of thousands of engineers, deploy skills to teach Claude Code about internal code style standards and preferred workflows.
 
 Within five weeks of launch, thousands of skills were created across all three categories. The ecosystem is growing fast because the format is simple enough that anyone can contribute.
 
@@ -248,7 +260,7 @@ What makes skills especially powerful is what they combine with.
 
 ## Skills + MCP = Expertise + Connectivity
 
-MCP servers (covered later in this chapter) connect Claude to external data and tools—APIs, databases, file systems, web browsers.
+MCP servers (covered later in this chapter) connect Claude to external data and tools: APIs, databases, file systems, web browsers.
 
 Skills and MCP serve different functions:
 
@@ -261,7 +273,7 @@ Skills and MCP serve different functions:
 
 An MCP server connects Claude to your company's database. Claude can now query data, retrieve records, run reports.
 
-A skill encodes your company's data analysis procedures—what reports to generate, what format to use, what insights to highlight, what anomalies to flag.
+A skill encodes your company's data analysis procedures: what reports to generate, what format to use, what insights to highlight, what anomalies to flag.
 
 Without the skill: Claude can access data but doesn't know your reporting standards. It produces generic output.
 
@@ -299,7 +311,7 @@ A recruiter's candidate evaluation checklist becomes a skill. An accountant's au
 
 You don't need to be a programmer to write a great email template. You don't need to be a programmer to document your meeting note procedure. Skills extend this principle: document your expertise clearly, and Claude applies it.
 
-The format—markdown files with YAML metadata—is accessible to anyone who can write structured text. The barrier isn't technical skill. It's willingness to articulate your procedures.
+The format: markdown files with YAML metadata: is accessible to anyone who can write structured text. The barrier isn't technical skill. It's willingness to articulate your procedures.
 
 If skills can be created by anyone, what happens when many people create them?
 
@@ -307,7 +319,7 @@ If skills can be created by anyone, what happens when many people create them?
 
 ## Skills as Strategic Assets
 
-Here's what most people miss: **skills aren't just convenient—they're valuable intellectual property.**
+Here's what most people miss: **skills aren't just convenient: they're valuable intellectual property.**
 
 Compare manual prompting (explaining your preferences every time) to encoded skills:
 
@@ -324,8 +336,9 @@ That last row is critical. Skills you create in Claude Code can be:
 - **Versioned** in Git (track improvements over time)
 - **Integrated** into Custom Agents (Part 6 teaches this)
 - **Monetized** as part of vertical AI solutions
+- **Portable** across AI tools: skills follow the [Agent Skills open standard](https://agentskills.io), which works across Claude Code, OpenAI Codex, Goose, and other compatible tools. Your skills are not locked to one vendor.
 
-When you create a skill, you're not just saving keystrokes. You're encoding expertise that compounds in value—for yourself, your team, and potentially your business.
+When you create a skill, you're not just saving keystrokes. You're encoding expertise that compounds in value: for yourself, your team, and potentially your business.
 
 ---
 
@@ -355,7 +368,7 @@ A skill built by someone in the community helps agents everywhere. Contribution 
 
 Skills are designed as a concrete step toward continuous learning. Here's the key insight: anything Claude writes down can be used efficiently by a future version of itself.
 
-This makes learning transferable. As you build context with Claude over time, skills make memory tangible. They don't capture everything—just procedural knowledge Claude can use on specific tasks.
+This makes learning transferable. As you build context with Claude over time, skills make memory tangible. They don't capture everything: just procedural knowledge Claude can use on specific tasks.
 
 Claude can already create skills for you today using a "skill creator" skill. The goal: Claude on Day 30 of working with you is dramatically better than Claude on Day 1.
 
@@ -371,7 +384,7 @@ The Anthropic team draws a parallel to what we've already seen in computing.
 
 **Models are like processors.** Both require massive investment and contain immense potential. But a processor by itself isn't that useful. You need systems built around it.
 
-**Agent runtimes are like operating systems.** The OS made processors far more valuable by orchestrating processes, resources, and data around the processor. In AI, agent runtimes (like Claude Code) play this role—the cleanest, most efficient abstractions to get the right tokens in and out of the model.
+**Agent runtimes are like operating systems.** The OS made processors far more valuable by orchestrating processes, resources, and data around the processor. In AI, agent runtimes (like Claude Code) play this role: the cleanest, most efficient abstractions to get the right tokens in and out of the model.
 
 **Skills are like applications.** A few companies build processors and operating systems. But millions of developers build software that encodes domain expertise and unique points of view.
 
@@ -381,7 +394,7 @@ You don't need to build the model. Anthropic did that. You don't need to build t
 
 The paradigm shift: **Stop building agents. Build skills instead.**
 
-The agent infrastructure is mature. The extensibility mechanisms (MCP for connectivity, skills for expertise) are in place. The value creation happens in what YOU contribute—the domain knowledge that makes the general-purpose agent specifically useful for your work.
+The agent infrastructure is mature. The extensibility mechanisms (MCP for connectivity, skills for expertise) are in place. The value creation happens in what YOU contribute: the domain knowledge that makes the general-purpose agent specifically useful for your work.
 
 ---
 
@@ -389,7 +402,7 @@ The agent infrastructure is mature. The extensibility mechanisms (MCP for connec
 
 You now understand the architecture:
 
-- The bottleneck isn't AI intelligence—it's access to specialized expertise
+- The bottleneck isn't AI intelligence: it's access to specialized expertise
 - Skills are intentionally simple (folders) to enable universal adoption
 - Three-level loading keeps context efficient at scale
 - Skills complement MCP (expertise + connectivity)
@@ -398,7 +411,7 @@ You now understand the architecture:
 - Skills are the "applications layer" of the agent stack
 
 :::tip Ready to Practice?
-Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that take you from dissecting existing skills to building production-ready skill suites — with one-click exercise downloads and step-by-step guidance.
+Head to **Lesson 10: Agent Skills Exercises** for 27 hands-on exercises that take you from dissecting existing skills to building production-ready skill suites; with one-click exercise downloads and step-by-step guidance.
 :::
 
 ---
@@ -419,15 +432,15 @@ This lesson is based on the Anthropic talk "Don't Build Agents, Build Skills Ins
 
 **Key timestamps:**
 
-- **0:21** — Introduction and the expertise gap
-- **1:16** — "Code is all we need" — the universal interface insight
-- **2:14** — The tax professional vs. mathematical genius analogy
-- **2:59** — What are Agent Skills? (folders!)
-- **4:20** — Progressive disclosure architecture
-- **5:00** — The skills ecosystem (foundational, partner, enterprise)
-- **9:06** — The complete architecture diagram
-- **12:02** — Sharing and distribution vision
-- **14:32** — The stack analogy (processors → OS → applications)
+- **0:21**; Introduction and the expertise gap
+- **1:16**; "Code is all we need"; the universal interface insight
+- **2:14**; The tax professional vs. mathematical genius analogy
+- **2:59**; What are Agent Skills? (folders!)
+- **4:20**; Progressive disclosure architecture
+- **5:00**; The skills ecosystem (foundational, partner, enterprise)
+- **9:06**; The complete architecture diagram
+- **12:02**; Sharing and distribution vision
+- **14:32**; The stack analogy (processors → OS → applications)
 
 ---
 
@@ -435,9 +448,9 @@ This lesson is based on the Anthropic talk "Don't Build Agents, Build Skills Ins
 
 **Understand the Architecture:**
 
-> "Anthropic says 'code is all we need' as the universal interface for agents. Help me understand: how does a coding agent (like Claude Code) become useful for non-coding tasks like finance reports or legal research? Walk me through the architecture—what role do skills play in making a coding agent general-purpose?"
+> "Anthropic says 'code is all we need' as the universal interface for agents. Help me understand: how does a coding agent (like Claude Code) become useful for non-coding tasks like finance reports or legal research? Walk me through the architecture: what role do skills play in making a coding agent general-purpose?"
 
-**What you're learning:** Why Claude Code transcends "coding tool"—code is the universal interface to digital work. This insight shapes how you'll think about AI capabilities.
+**What you're learning:** Why Claude Code transcends "coding tool": code is the universal interface to digital work. This insight shapes how you'll think about AI capabilities.
 
 **Identify Skill Opportunities in Your Domain:**
 
@@ -455,10 +468,9 @@ This lesson is based on the Anthropic talk "Don't Build Agents, Build Skills Ins
 
 > "The Anthropic talk claims 'stop building agents, build skills instead.' When WOULD someone still need to build a custom agent? What can't skills do? Help me understand where the boundary is between 'a skill is enough' and 'you need something more.'"
 
-**What you're learning:** The limits of skills—essential for deciding when to use Part 6's SDK-based agents. Not everything should be a skill.
+**What you're learning:** The limits of skills: essential for deciding when to use Part 6's SDK-based agents. Not everything should be a skill.
 
 ---
-
 
 ## Flashcards Study Aid
 

@@ -8,19 +8,19 @@ deck:
 cards:
   - id: "ch33-01-legal-ops-revolution-001"
     front: "What are the two plugin layers required for the Legal Operations chapter in Cowork?"
-    back: "1. The Anthropic Legal Plugin (base) — provides nine commands for contract review, NDA triage, compliance, briefings, and templated responses.\n2. The Agent Factory Legal Ops extension — adds one agent, six skills, and six jurisdiction overlays for cross-border legal work."
+    back: "1. The Anthropic Legal Plugin (base): provides nine commands for contract review, NDA triage, compliance, briefings, and templated responses.\n2. The Agent Factory Legal Ops extension: adds one agent, six skills, and six jurisdiction overlays for cross-border legal work."
     difficulty: "basic"
     tags: ["plugin-installation"]
 
   - id: "ch33-01-legal-ops-revolution-002"
     front: "What does the GREEN/YELLOW/RED classification system mean in the Legal Plugin's contract review output?"
-    back: "GREEN — Acceptable as written, no action needed.\nYELLOW — Negotiate before signing; the clause has issues but is within a negotiable range.\nRED — Escalate to attorney; the clause carries material risk that requires licensed professional review before proceeding."
+    back: "GREEN: Acceptable as written, no action needed.\nYELLOW: Negotiate before signing; the clause has issues but is within a negotiable range.\nRED: Escalate to attorney; the clause carries material risk that requires licensed professional review before proceeding."
     difficulty: "basic"
     tags: ["classification", "contract-review"]
 
   - id: "ch33-01-legal-ops-revolution-003"
     front: "What is the governing principle that appears in the ATTORNEY REVIEW: REQUIRED header on every Legal Plugin output?"
-    back: "The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs. This is not a limitation of current AI capability — it is the correct architecture for legal deployment, built into the plugin itself."
+    back: "The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs. This is not a limitation of current AI capability: it is the correct architecture for legal deployment, built into the plugin itself."
     difficulty: "basic"
     tags: ["governance", "attorney-review"]
 
@@ -32,7 +32,7 @@ cards:
 
   - id: "ch33-01-legal-ops-revolution-005"
     front: "What are the five pre-AI bottlenecks in legal departments, and which plugin commands address them?"
-    back: "1. Contract review queues — /review-contract\n2. NDA backlogs — /triage-nda\n3. Compliance monitoring gaps — /compliance-check\n4. Knowledge management failures — Negotiation playbook (Lesson 2)\n5. Reporting blind spots — /brief"
+    back: "1. Contract review queues; /review-contract\n2. NDA backlogs; /triage-nda\n3. Compliance monitoring gaps; /compliance-check\n4. Knowledge management failures; Negotiation playbook (Lesson 2)\n5. Reporting blind spots; /brief"
     difficulty: "intermediate"
     tags: ["bottlenecks", "legal-ops"]
 
@@ -44,13 +44,13 @@ cards:
 
   - id: "ch33-01-legal-ops-revolution-007"
     front: "In the CloudStack MSA review, why was the 3-month liability cap classified as RED?"
-    back: "A 3-month fee cap is significantly below the market standard of 12 months. On a PKR 4.8M annual contract, it caps Provider's liability at PKR 1.2M — meaning the customer bears the bulk of any loss from vendor failure. The recommendation is to reject and negotiate to at least 12 months' fees."
+    back: "A 3-month fee cap is significantly below the market standard of 12 months. On a PKR 4.8M annual contract, it caps Provider's liability at PKR 1.2M: meaning the customer bears the bulk of any loss from vendor failure. The recommendation is to reject and negotiate to at least 12 months' fees."
     difficulty: "intermediate"
     tags: ["liability-cap", "contract-review"]
 
   - id: "ch33-01-legal-ops-revolution-008"
     front: "Why was the CloudStack MSA's data transfer clause ('any jurisdiction where Provider maintains facilities') classified as RED?"
-    back: "The clause imposes no restrictions on where data can be transferred. This creates a potential conflict with Pakistan's PDPA 2023 for Pakistani data subjects. Cross-border data transfers require an adequacy assessment or Standard Contractual Clauses (SCCs) — neither of which the clause provides."
+    back: "The clause imposes no restrictions on where data can be transferred. This creates a potential conflict with Pakistan's PDPA 2023 for Pakistani data subjects. Cross-border data transfers require an adequacy assessment or Standard Contractual Clauses (SCCs): neither of which the clause provides."
     difficulty: "advanced"
     tags: ["data-protection", "pdpa", "cross-border"]
 
@@ -62,7 +62,7 @@ cards:
 
   - id: "ch33-01-legal-ops-revolution-010"
     front: "What MCP connector categories does the Legal Plugin support, and what is the minimum recommended setup?"
-    back: "Categories: Email, Calendar, Chat, Cloud Storage, E-Signature, Project Tracker, CRM, and Office Suite. Minimum recommended: Gmail and Google Calendar — both are free and unlock meeting prep and email-based intake in later lessons."
+    back: "Categories: Email, Calendar, Chat, Cloud Storage, E-Signature, Project Tracker, CRM, and Office Suite. Minimum recommended: Gmail and Google Calendar: both are free and unlock meeting prep and email-based intake in later lessons."
     difficulty: "basic"
     tags: ["mcp-connectors", "setup"]
 
@@ -74,6 +74,6 @@ cards:
 
   - id: "ch33-01-legal-ops-revolution-012"
     front: "How does the Legal Plugin transform Bilal's role at Noor Technologies?"
-    back: "Without the plugin, Bilal spends 60% of his time on administrative coordination (forwarding contracts, chasing signatures, sending reminders) and only 40% on actual legal work. The plugin automates the administrative routing and triage, allowing Bilal to focus on reviewing clause language and flagging risk — inverting the ratio to what Ayesha needs."
+    back: "Without the plugin, Bilal spends 60% of his time on administrative coordination (forwarding contracts, chasing signatures, sending reminders) and only 40% on actual legal work. The plugin automates the administrative routing and triage, allowing Bilal to focus on reviewing clause language and flagging risk: inverting the ratio to what Ayesha needs."
     difficulty: "basic"
     tags: ["legal-ops", "workflow"]

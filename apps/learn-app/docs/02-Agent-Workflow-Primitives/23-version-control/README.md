@@ -1,7 +1,7 @@
 ---
 sidebar_position: 23
 title: "Chapter 23: Version Control & Safe Experimentation"
-description: "Understand the safety system your AI agent already uses — snapshots, branches, cloud backup, and code review"
+description: "Understand the safety system your AI agent already uses: snapshots, branches, cloud backup, and code review"
 chapter_number: 23
 part_number: 2
 version: 2.0
@@ -17,11 +17,11 @@ slides:
 > In 1998, Pixar accidentally deleted 90% of Toy Story 2. Their backup had silently failed. The film was saved only because one employee had a copy on her home computer.
 > One command. Two years of work. Gone in seconds.
 
-Every Claude Code session runs `git` commands behind the scenes. When you told it to "fix my authentication logic" last chapter, it ran `git add`, `git commit`, and `git diff` — commands you've never seen. It was protecting you without your knowledge.
+Every Claude Code session runs `git` commands behind the scenes. When you told it to "fix my authentication logic" last chapter, it ran `git add`, `git commit`, and `git diff`: commands you've never seen. It was protecting you without your knowledge.
 
-**What happens when it can't protect you?** When you're working outside Claude Code — editing files manually, moving folders, collaborating with someone — there's no safety net. One bad change overwrites an hour of work. One accidental delete loses a week of progress.
+**What happens when it can't protect you?** When you're working outside Claude Code: editing files manually, moving folders, collaborating with someone: there's no safety net. One bad change overwrites an hour of work. One accidental delete loses a week of progress.
 
-This chapter teaches you the system your agent already uses. Not to memorize commands — your agent handles those. To understand the _concepts_ so you can direct your agent's safety features intentionally, not accidentally.
+This chapter teaches you the system your agent already uses. Not to memorize commands: your agent handles those. To understand the _concepts_ so you can direct your agent's safety features intentionally, not accidentally.
 
 ### Meet Sarah
 
@@ -31,14 +31,14 @@ Throughout this chapter, you'll follow Sarah. She's organizing a community fundr
 
 You need three things before starting the lessons: a GitHub account, Git installed, and a one-time Git configuration. If you already have all three, skip to Lesson 1.
 
-**Git** and **GitHub** are not the same thing. Git is a tool that runs on your computer and tracks changes to your files. GitHub is a website that stores copies of your Git projects in the cloud — if your laptop breaks, your work survives on GitHub. Git works without GitHub. GitHub doesn't work without Git. You'll use Git locally in Lessons 1-2, then connect it to GitHub in Lesson 3.
+**Git** and **GitHub** are not the same thing. Git is a tool that runs on your computer and tracks changes to your files. GitHub is a website that stores copies of your Git projects in the cloud: if your laptop breaks, your work survives on GitHub. Git works without GitHub. GitHub doesn't work without Git. You'll use Git locally in Lessons 1-2, then connect it to GitHub in Lesson 3.
 
 ### 1. Create a GitHub Account
 
-You'll use this in [Lesson 3](./03-cloud-backup-portfolio.md), but create it now — you'll need the email address in step 3 below.
+You'll use this in [Lesson 3](./03-cloud-backup-portfolio.md), but create it now: you'll need the email address in step 3 below.
 
 1. Visit **github.com** and click "Sign up"
-2. Choose a username carefully — this becomes your public portfolio URL: `github.com/yourname`
+2. Choose a username carefully: this becomes your public portfolio URL: `github.com/yourname`
 3. Complete email verification
 
 ### 2. Install Git
@@ -49,7 +49,7 @@ Open your terminal and run:
 git --version
 ```
 
-If you see something like `git version 2.39.0` — skip to step 3.
+If you see something like `git version 2.39.0`: skip to step 3.
 
 **macOS:**
 
@@ -72,7 +72,7 @@ After installing, close and reopen your terminal, then verify with `git --versio
 
 ### 3. Tell Git Who You Are
 
-Git labels every commit with your name and email. Use the same email you registered on GitHub — this links your commits to your GitHub profile.
+Git labels every commit with your name and email. Use the same email you registered on GitHub: this links your commits to your GitHub profile.
 
 ```bash
 git config --global user.name "Your Name"
@@ -83,7 +83,7 @@ This isn't creating an account. It's a label that appears in your commit history
 
 ## Principles Applied
 
-In [The Seven Principles of General Agent Problem Solving](/docs/General-Agents-Foundations/seven-principles), you learned the operational patterns that make AI collaboration reliable. This chapter puts four of them into practice — Git is where those principles become muscle memory.
+In [The Seven Principles of General Agent Problem Solving](/docs/General-Agents-Foundations/seven-principles), you learned the operational patterns that make AI collaboration reliable. This chapter puts four of them into practice: Git is where those principles become muscle memory.
 
 | Principle                           | How It Applies in Git                                     |
 | ----------------------------------- | --------------------------------------------------------- |
@@ -99,10 +99,10 @@ In [The Seven Principles of General Agent Problem Solving](/docs/General-Agents-
 By the end of this chapter, you'll be able to:
 
 - Create project folders that track every change automatically
-- Undo mistakes at any level — from a single edit to an entire experiment
+- Undo mistakes at any level, from a single edit to an entire experiment
 - Test two ideas at once without risking your working project
 - Back up your work to the cloud so a dead laptop doesn't mean lost work
-- Review changes before combining them — even your own
+- Review changes before combining them, even your own
 - Follow three reusable patterns that professionals use daily
 
 ## Lesson Flow
@@ -110,7 +110,7 @@ By the end of this chapter, you'll be able to:
 | Lesson                                         | Title                                          | Fast Visible Win                                                                    |
 | ---------------------------------------------- | ---------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [L01](./01-git-foundations.md)                 | Git Foundations                                | Break a file, recover it in one command                                             |
-| [L02](./02-testing-ai-safely-with-branches.md) | Testing AI Safely with Branches                | Watch a file disappear when you switch branches — and reappear when you switch back |
+| [L02](./02-testing-ai-safely-with-branches.md) | Testing AI Safely with Branches                | Watch a file disappear when you switch branches, and reappear when you switch back |
 | [L03](./03-cloud-backup-portfolio.md)          | Cloud Backup & Portfolio                       | Clone your project to a new folder and prove your backup works                      |
 | [L04](./04-code-review-pull-requests.md)       | Code Review, Pull Requests & Reusable Patterns | Create your first PR and name the three patterns professionals follow daily         |
 | [Exercises](./05-version-control-exercises.md) | Exercises (Optional)                           | 15 hands-on challenges across 6 modules                                             |
@@ -120,10 +120,10 @@ By the end of this chapter, you'll be able to:
 
 By chapter end, you should be able to answer these five questions:
 
-1. What is a commit, and why does it snapshot your _entire_ project — not just one file?
+1. What is a commit, and why does it snapshot your _entire_ project, not just one file?
 2. You made a bad edit, staged the wrong file, and committed a mistake. What's the correct undo for each?
 3. Why do branches let you test risky ideas without endangering your working project?
-4. What must you do _before_ your first push to GitHub — and why can't you fix it after?
+4. What must you do _before_ your first push to GitHub, and why can't you fix it after?
 5. What are the three patterns professionals follow daily, and when do you use each one?
 
 ## After Chapter 23

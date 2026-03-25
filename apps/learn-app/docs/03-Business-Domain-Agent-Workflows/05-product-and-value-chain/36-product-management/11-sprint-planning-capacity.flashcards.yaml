@@ -20,19 +20,19 @@ cards:
 
   - id: "ch36-11-sprint-planning-capacity-003"
     front: "What makes a sprint goal good versus bad?"
-    back: "A good sprint goal can be stated in one sentence and describes a single outcome. A bad sprint goal summarises every item in the sprint. The goal's purpose is to tell the team what to protect when the sprint gets difficult — everything else is negotiable."
+    back: "A good sprint goal can be stated in one sentence and describes a single outcome. A bad sprint goal summarises every item in the sprint. The goal's purpose is to tell the team what to protect when the sprint gets difficult: everything else is negotiable."
     tags: ["sprint-goal", "goal-good", "makes"]
     difficulty: "intermediate"
 
   - id: "ch36-11-sprint-planning-capacity-004"
     front: "What is P0 / P1 / P2 priority in a sprint backlog?"
-    back: "P0: Must ship — sprint fails without this. P1: Should ship — important but cuttable if capacity is pressured. P2: Stretch — pull in if sprint runs well; do not commit upfront."
+    back: "P0: Must ship: sprint fails without this. P1: Should ship: important but cuttable if capacity is pressured. P2: Stretch: pull in if sprint runs well; do not commit upfront."
     tags: ["sprint-backlog", "priority"]
     difficulty: "basic"
 
   - id: "ch36-11-sprint-planning-capacity-005"
     front: "What is a carryover story, and what must you do before re-committing to one?"
-    back: "A carryover story is an item from the previous sprint that was not completed. Before re-committing, understand WHY it carried over — was it a scope issue, a dependency, a capacity problem? Re-committing without understanding the root cause risks the same slip."
+    back: "A carryover story is an item from the previous sprint that was not completed. Before re-committing, understand WHY it carried over: was it a scope issue, a dependency, a capacity problem? Re-committing without understanding the root cause risks the same slip."
     tags: ["carryover-story", "re-committing"]
     difficulty: "intermediate"
 
@@ -56,19 +56,19 @@ cards:
 
   - id: "ch36-11-sprint-planning-capacity-009"
     front: "What is 'planning capacity' versus 'raw capacity'?"
-    back: "Raw capacity is the total person-days available after subtracting PTO, on-call, and meetings. Planning capacity is raw capacity × 0.75 (or 0.80) — the amount you actually commit work against."
+    back: "Raw capacity is the total person-days available after subtracting PTO, on-call, and meetings. Planning capacity is raw capacity × 0.75 (or 0.80): the amount you actually commit work against."
     tags: ["planning-capacity", "raw-capacity"]
     difficulty: "basic"
 
   - id: "ch36-11-sprint-planning-capacity-010"
     front: "What is the NEVER DO rule for sprint goals from the /sprint-planning skill?"
-    back: "Never use a sprint goal that is a list. 'Complete the workflow builder stories, fix regressions, handle the auth dependency' is not a goal — it is a task list. A goal describes ONE outcome: 'Ship the trigger config UI so design can start user testing.'"
+    back: "Never use a sprint goal that is a list. 'Complete the workflow builder stories, fix regressions, handle the auth dependency' is not a goal: it is a task list. A goal describes ONE outcome: 'Ship the trigger config UI so design can start user testing.'"
     tags: ["sprint-goals", "/sprint-planning-skill", "never"]
     difficulty: "advanced"
 
   - id: "ch36-11-sprint-planning-capacity-011"
     front: "What does the /sprint-planning command from the product-management plugin produce that differentiates it from a plain backlog list?"
-    back: "It produces a capacity-calibrated plan — the sprint load as a percentage of planning capacity, individual capacity deductions per team member, a risk table, and an explicit Definition of Done — not just a list of tickets."
+    back: "It produces a capacity-calibrated plan: the sprint load as a percentage of planning capacity, individual capacity deductions per team member, a risk table, and an explicit Definition of Done: not just a list of tickets."
     tags: ["/sprint-planning-command", "product-management-plugin", "sprint-planning"]
     difficulty: "advanced"
 

@@ -1,5 +1,5 @@
 ---
-title: "Chapter 34 — Sales, RevOps & Marketing"
+title: "Chapter 34; Sales, RevOps & Marketing"
 sidebar_position: 0
 slides:
   source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-3/chapter-34/the-revenue-engine.pdf"
@@ -7,13 +7,13 @@ slides:
   height: 700
 ---
 
-# Chapter 34 — Sales, RevOps & Marketing
+# Chapter 34; Sales, RevOps & Marketing
 
 ### Scaling the Judgment of Your Top 1% Across the Entire Organisation
 
-Every sales team has a top 1%. They close more, retain more, and generate more pipeline from fewer touches. They are not the most charismatic or the most experienced — they are the most prepared. This chapter teaches you to operate a coordinated set of Claude plugins so that every rep on the team works with the research depth, personalisation quality, and timing precision of your best closer.
+Every sales team has a top 1%. They close more, retain more, and generate more pipeline from fewer touches. They are not the most charismatic or the most experienced: they are the most prepared. This chapter teaches you to operate a coordinated set of Claude plugins so that every rep on the team works with the research depth, personalisation quality, and timing precision of your best closer.
 
-The chapter spans three interconnected domains — sales execution, revenue operations (RevOps), and marketing — because the handoff between marketing-generated leads and sales-worked pipeline is where most revenue is lost. A unified plugin architecture means the prospect intelligence built by marketing enrichment flows directly into the sales rep's research brief, with no re-entry, no data loss, and no context switching.
+The chapter spans three interconnected domains: sales execution, revenue operations (RevOps), and marketing: because the handoff between marketing-generated leads and sales-worked pipeline is where most revenue is lost. A unified plugin architecture means the prospect intelligence built by marketing enrichment flows directly into the sales rep's research brief, with no re-entry, no data loss, and no context switching.
 
 Every lesson delivers a working workflow where you evaluate real agent output with your domain expertise, diagnose errors using the Agent Output Taxonomy, and configure the system for your business.
 

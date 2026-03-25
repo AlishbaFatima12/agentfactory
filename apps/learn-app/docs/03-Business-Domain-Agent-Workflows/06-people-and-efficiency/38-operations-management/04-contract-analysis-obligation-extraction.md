@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/operations-management/contract-analysis-obligation-extraction
 sidebar_position: 4
-title: "Contract Analysis — Obligation Extraction"
+title: "Contract Analysis: Obligation Extraction"
 description: "Use the /contract command to extract every obligation, SLA, and key date from vendor contracts, flag hidden risk clauses, and build negotiation positions before renewal windows close"
 keywords:
   [
@@ -57,48 +57,48 @@ learning_objectives:
   - objective: "Construct a negotiation position for the highest-risk clause in a contract"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student drafts a negotiation position with all five components — issue, position, rationale, accept-if, walk-away-if — that a procurement manager could use directly in a renewal negotiation"
+    assessment_method: "Student drafts a negotiation position with all five components, issue, position, rationale, accept-if, walk-away-if that a procurement manager could use directly in a renewal negotiation"
 
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Obligation extraction — the systematic separation of our commitments from vendor commitments"
-    - "Key date table — the calendar of deadlines that, if missed, commit the organisation to renewed or extended obligations"
-    - "Auto-renewal trap — a clause that converts inaction into a binding commitment for another full contract term"
-    - "Risk flag categories — the six clause types that most frequently cause unintended liability, cost, or lock-in"
-    - "Negotiation position framework — the structured case for changing a clause, from desired outcome to walk-away condition"
+    - "Obligation extraction: the systematic separation of our commitments from vendor commitments"
+    - "Key date table: the calendar of deadlines that, if missed, commit the organisation to renewed or extended obligations"
+    - "Auto-renewal trap: a clause that converts inaction into a binding commitment for another full contract term"
+    - "Risk flag categories: the six clause types that most frequently cause unintended liability, cost, or lock-in"
+    - "Negotiation position framework: the structured case for changing a clause, from desired outcome to walk-away condition"
   assessment: "5 concepts at B2 level is appropriate for this lesson. Each concept builds on the previous: you cannot find risk flags without first extracting obligations; you cannot negotiate without having identified flags. The sequence is natural and the cognitive demand is well-matched to operations professionals dealing with real contracts."
 
 differentiation:
-  extension_for_advanced: "Take your highest-value vendor from the Lesson 3 portfolio audit and run a full /contract analysis on their actual contract or a realistic simulation. Map every obligation to a business process — which team owns each obligation, and what happens to that process if the vendor exercises their termination-for-convenience right? Produce a vendor dependency assessment."
-  remedial_for_struggling: "Focus on two outputs only: the Key Dates table and the Auto-Renewal Flags. If you can extract all key dates and identify every auto-renewal clause from a contract, you have prevented the most common and costly contract failure mode. The rest — risk flags, negotiation positions — build on this foundation."
+  extension_for_advanced: "Take your highest-value vendor from the Lesson 3 portfolio audit and run a full /contract analysis on their actual contract or a realistic simulation. Map every obligation to a business process, which team owns each obligation, and what happens to that process if the vendor exercises their termination-for-convenience right? Produce a vendor dependency assessment."
+  remedial_for_struggling: "Focus on two outputs only: the Key Dates table and the Auto-Renewal Flags. If you can extract all key dates and identify every auto-renewal clause from a contract, you have prevented the most common and costly contract failure mode. The rest, risk flags, negotiation positions, build on this foundation."
 
 teaching_guide:
   key_points:
-    - "The auto-renewal notice window is the single most time-sensitive piece of information in any contract — missing it can commit the organisation to another full term of a contract they intended to exit"
+    - "The auto-renewal notice window is the single most time-sensitive piece of information in any contract, missing it can commit the organisation to another full term of a contract they intended to exit"
     - "Most organisations know their contract start dates; almost none track notice period deadlines. The gap between renewal date and notice deadline is where contracts auto-renew unintentionally."
-    - "SLAs without defined consequences are targets, not commitments — the extraction must capture the remedy clause to know whether an SLA has any practical value"
-    - "Virtually every standard vendor contract term is negotiable — the limiting factor is preparation, leverage, and timing, not the contract itself"
+    - "SLAs without defined consequences are targets, not commitments: the extraction must capture the remedy clause to know whether an SLA has any practical value"
+    - "Virtually every standard vendor contract term is negotiable: the limiting factor is preparation, leverage, and timing, not the contract itself"
   misconceptions:
-    - "Contract analysis requires legal expertise. Correction: obligation extraction is a structured reading task, not legal interpretation. Legal counsel reviews the analysis and makes decisions — the operations team produces the analysis."
+    - "Contract analysis requires legal expertise. Correction: obligation extraction is a structured reading task, not legal interpretation. Legal counsel reviews the analysis and makes decisions: the operations team produces the analysis."
     - "Auto-renewal is fine if we want to keep the vendor. Correction: auto-renewal at unchanged terms eliminates your negotiation leverage. Even if you want to renew, you should choose to renew, not auto-renew passively."
     - "The /contract output is a legal opinion. Correction: it is a structured extraction and risk assessment tool. Always note that material decisions should be reviewed by legal counsel."
   discussion_prompts:
-    - "Think of a contract your organisation (or a hypothetical one) has signed in the last two years. Do you know the notice period required to prevent auto-renewal? When is the notice deadline — not the renewal date, but the deadline to prevent renewal?"
+    - "Think of a contract your organisation (or a hypothetical one) has signed in the last two years. Do you know the notice period required to prevent auto-renewal? When is the notice deadline , not the renewal date, but the deadline to prevent renewal?"
     - "A vendor's liability cap is set at three months of fees. Your organisation pays £240,000 per year. The vendor has a major outage that costs your organisation £400,000 in lost productivity. What is your actual recovery right?"
   teaching_tips:
-    - "Open with the auto-renewal story in the narrative — the £180,000 for a discontinued service is viscerally relatable. Then ask: has anyone here (or at an organisation they know) had something similar happen?"
-    - "Walk through the obligation extraction output format before the exercise. Students should understand each section — Our Obligations, Vendor Obligations, Key Dates, SLA Table, Auto-Renewal Flags — before they try to produce one."
+    - "Open with the auto-renewal story in the narrative: the £180,000 for a discontinued service is viscerally relatable. Then ask: has anyone here (or at an organisation they know) had something similar happen?"
+    - "Walk through the obligation extraction output format before the exercise. Students should understand each section, Our Obligations, Vendor Obligations, Key Dates, SLA Table, Auto-Renewal Flags, before they try to produce one."
     - "Connect back to the Lesson 3 portfolio audit: the renewal calendar students built in L03 identified WHEN renewals happen. This lesson builds the intelligence about what those contracts actually commit both parties to."
 ---
 
-# Contract Analysis — Obligation Extraction
+# Contract Analysis: Obligation Extraction
 
-A vendor contract auto-renewed. The notice deadline was 90 days before renewal. The renewal date was 14 March. Nobody tracked the deadline. The first anyone knew was when the invoice arrived in April — £180,000 for another full year of a service the team had mostly stopped using six months ago. The clause that caused it was on page 17 of a 22-page Master Service Agreement. It read: "Unless either party provides written notice of non-renewal no fewer than 90 days prior to the end of the Term, this Agreement shall automatically renew for successive one-year periods."
+A vendor contract auto-renewed. The notice deadline was 90 days before renewal. The renewal date was 14 March. Nobody tracked the deadline. The first anyone knew was when the invoice arrived in April, £180,000 for another full year of a service the team had mostly stopped using six months ago. The clause that caused it was on page 17 of a 22-page Master Service Agreement. It read: "Unless either party provides written notice of non-renewal no fewer than 90 days prior to the end of the Term, this Agreement shall automatically renew for successive one-year periods."
 
 Standard language. Easily missed. Expensive to ignore.
 
-This is not an edge case. Across an organisation's vendor portfolio, contracts contain obligations, SLA commitments, auto-renewal traps, liability limits, price escalation clauses, and data ownership terms that nobody has systematically read, extracted, and tracked. The vendor portfolio audit from Lesson 3 told you what vendors you have and when they renew. This lesson teaches you what those contracts actually say — and what you have unknowingly agreed to.
+This is not an edge case. Across an organisation's vendor portfolio, contracts contain obligations, SLA commitments, auto-renewal traps, liability limits, price escalation clauses, and data ownership terms that nobody has systematically read, extracted, and tracked. The vendor portfolio audit from Lesson 3 told you what vendors you have and when they renew. This lesson teaches you what those contracts actually say , and what you have unknowingly agreed to.
 
 :::tip Plugin Setup Reminder
 This exercise requires the **Operations** plugin (official) and the
@@ -113,7 +113,7 @@ Most vendor contracts are signed, filed, and forgotten. The person who negotiate
 
 The result is that the organisation has legal obligations it cannot enumerate and contractual rights it cannot exercise. Vendor SLAs are missed without anyone claiming credits. Auto-renewals fire without challenge. Price escalation clauses compound silently.
 
-The gap between "we have a contract with this vendor" and "we know what that contract commits us to" is where operational risk lives. Contract analysis closes this gap — systematically, for every contract in the portfolio.
+The gap between "we have a contract with this vendor" and "we know what that contract commits us to" is where operational risk lives. Contract analysis closes this gap, systematically, for every contract in the portfolio.
 
 ## The Four Contract Analysis Task Types
 
@@ -159,7 +159,7 @@ I want:
 A well-formed extraction looks like this:
 
 ```
-CONTRACT OBLIGATIONS: Apex Cloud Solutions — MSA + Schedule A
+CONTRACT OBLIGATIONS: Apex Cloud Solutions, MSA + Schedule A
 Contract date: 1 March 2024 | Effective: 1 March 2024 | Expires: 28 Feb 2026
 ════════════════════════════════════════════════════════════════
 
@@ -184,9 +184,9 @@ KEY DATES:
 | Date | Event | Notice required | Action needed |
 |---|---|---|---|
 | 1 Dec 2025 | Auto-renewal notice deadline | 90 days written notice to prevent | Decide: renew, renegotiate, or exit |
-| 28 Feb 2026 | Contract expiry / auto-renewal | — | If notice sent, ensure transition plan in place |
+| 28 Feb 2026 | Contract expiry / auto-renewal | - | If notice sent, ensure transition plan in place |
 | 1 Mar 2026 | Annual price review (Schedule A, Clause 8.2) | 60 days to object | Review and respond to any proposed increase |
-| Quarterly | SLA performance review | — | Schedule review meeting; request quarterly reports |
+| Quarterly | SLA performance review | - | Schedule review meeting; request quarterly reports |
 
 SLA TABLE:
 | Metric | Target | Measurement | Reporting | Credit if breached |
@@ -199,12 +199,12 @@ AUTO-RENEWAL FLAGS:
 ⚠️  AUTO-RENEWAL: Contract auto-renews for successive one-year periods
     Notice deadline: 1 December 2025 (90 days before 28 Feb 2026 expiry)
     Notice method: Written notice to legal@apexcloud.com (Clause 18.1)
-    Current calendar entry: [NONE FOUND — ADD IMMEDIATELY]
+    Current calendar entry: [NONE FOUND, ADD IMMEDIATELY]
 ════════════════════════════════════════════════════════════════
 ```
 
 :::note Keep This File
-The obligation extraction you build here feeds directly into Lesson 7 (Compliance), where your contractual obligations become part of your organisation's obligation landscape. Save this work — you will reference it again.
+The obligation extraction you build here feeds directly into Lesson 7 (Compliance), where your contractual obligations become part of your organisation's obligation landscape. Save this work; you will reference it again.
 :::
 
 ## The Six Risk Flag Categories
@@ -220,7 +220,7 @@ After extracting obligations, run risk flagging. The `/contract` command identif
 | **Termination for convenience** | Either party (or only vendor) may terminate with [N] days notice | Vendor can exit; your operational continuity depends on this |
 | **Data ownership / return** | Absence of explicit data portability clause          | Data lock-in; difficulty or expense in switching        |
 
-**Worked example — risk flagging:**
+**Worked example, risk flagging:**
 
 ```
 /contract
@@ -228,7 +228,7 @@ Risk-flag this vendor contract. I want every unfavourable clause identified,
 categorised against the six standard risk flag types, and rated by severity.
 For each flag, provide a suggested negotiation position.
 
-Contract: Apex Cloud Solutions MSA — I have already run obligation
+Contract: Apex Cloud Solutions MSA, I have already run obligation
 extraction; paste the relevant clauses for risk analysis:
 [Paste contract sections or describe specific clauses]
 ```
@@ -295,7 +295,7 @@ For each risk flag, the `/contract` command generates a negotiation position wit
 | ---------------- | ------------------------------------------------------------------------- |
 | **Issue**        | The specific clause and why it creates risk in your context               |
 | **Our position** | What you want the clause to say instead                                   |
-| **Rationale**    | Why your position is reasonable — market standard, business logic, or precedent |
+| **Rationale**    | Why your position is reasonable, market standard, business logic, or precedent |
 | **Accept if**    | The minimum acceptable alternative if your preferred position is declined  |
 | **Walk-away if** | The condition under which this clause becomes a deal-breaker               |
 
@@ -308,13 +308,13 @@ The walk-away threshold is the most important component to define in advance. Wi
 **Plugin command:** Custom `/contract`
 **Goal:** Extract full obligations from three vendor contracts, identify risk flags, and draft a negotiation position for the highest-risk clause
 
-### Step 1 — Select Your Contracts
+### Step 1: Select Your Contracts
 
 Using the vendor portfolio from Lesson 3, identify three contracts for analysis:
 
-1. **High-value vendor** — your largest contract by annual spend (>£100,000/yr)
-2. **Auto-renewal candidate** — a contract renewing in the next 6 months
-3. **SLA-critical vendor** — a vendor whose performance directly affects service delivery
+1. **High-value vendor:** your largest contract by annual spend (>£100,000/yr)
+2. **Auto-renewal candidate:** a contract renewing in the next 6 months
+3. **SLA-critical vendor:** a vendor whose performance directly affects service delivery
 
 If you are working with your own organisation, use actual contracts. For this exercise, you may also use the following scenarios:
 
@@ -322,7 +322,7 @@ If you are working with your own organisation, use actual contracts. For this ex
 - **Contract B (Auto-renewal):** Marketing automation platform, £67,000/yr, auto-renews in 45 days, 90-day notice required
 - **Contract C (SLA-critical):** IT managed services provider, £95,000/yr, P1 SLA 4-hour resolution
 
-### Step 2 — Run Obligation Extraction
+### Step 2: Run Obligation Extraction
 
 For each contract, run:
 
@@ -346,13 +346,13 @@ table, SLA Table, and Auto-Renewal Flags section.
 
 **What to evaluate:**
 
-- Does the output separate our obligations from vendor obligations? The distinction matters — these represent different types of risk.
+- Does the output separate our obligations from vendor obligations? The distinction matters: these represent different types of risk.
 - Are all key dates extracted, including notice periods? The notice deadline is more operationally critical than the renewal date itself.
 - Are auto-renewal clauses explicitly flagged with the exact notice mechanism (not just the deadline)?
 - Does every SLA entry include the consequence for breach? An SLA without a consequence is aspirational, not contractual.
 - Would a procurement manager find this extraction actionable without reading the full contract?
 
-### Step 3 — Run Risk Flagging
+### Step 3: Run Risk Flagging
 
 For your highest-value or auto-renewal contract, run:
 
@@ -378,9 +378,9 @@ Contract: [contract details from Step 2]
 - Are all six flag categories checked, not just the obvious ones? Price escalation and data ownership are frequently missed.
 - Is the severity rating appropriate for the vendor's operational importance? A liability cap on a low-value vendor has different implications than the same cap on a mission-critical one.
 - Is the negotiation position specific? "We want better terms" is not a position. "We want the liability cap increased to 12 months of fees" is.
-- Are the walk-away conditions realistic — not so demanding that no vendor would accept them, but not so weak that they offer no protection?
+- Are the walk-away conditions realistic, not so demanding that no vendor would accept them, but not so weak that they offer no protection?
 
-### Step 4 — Identify Risk Flags Across All Three Contracts
+### Step 4: Identify Risk Flags Across All Three Contracts
 
 Run risk flagging on all three contracts and produce a consolidated risk summary:
 
@@ -390,10 +390,10 @@ Run risk flagging on all three contracts and produce a consolidated risk summary
 | Contract B (MarTech) | [N]       | [H/M/L]          | [Date]          | [High/Medium/Low]    |
 | Contract C (IT MSP) | [N]        | [H/M/L]          | [Date]          | [High/Medium/Low]    |
 
-**Deliverable:** Three obligation extraction tables, one risk flag report with negotiation positions for the highest-risk contract, and a consolidated risk summary. Save this work — you will use the contractual obligations extracted here when mapping your compliance landscape in Lesson 7.
+**Deliverable:** Three obligation extraction tables, one risk flag report with negotiation positions for the highest-risk contract, and a consolidated risk summary. Save this work; you will use the contractual obligations extracted here when mapping your compliance landscape in Lesson 7.
 
 :::note Keep This File
-The contract obligations you have extracted here are not just procurement intelligence — they are compliance obligations. In Lesson 7 (Compliance Tracking), you will map your organisation's full obligation landscape, and contractual obligations are a significant part of it. Keep this extraction work available.
+The contract obligations you have extracted here are not just procurement intelligence; they are compliance obligations. In Lesson 7 (Compliance Tracking), you will map your organisation's full obligation landscape, and contractual obligations are a significant part of it. Keep this extraction work available.
 :::
 
 ## Try With AI
@@ -459,7 +459,7 @@ counter-proposal I should make, and (3) what I should accept as a
 compromise if pushed.
 ```
 
-**What you are learning:** Contract review before signing is where the real leverage lies. After signature, you negotiate from a position of compliance with existing terms. Before signature, you set the terms. This prompt shifts the mode from analysis to pre-signing review — a different and higher-leverage application of the same framework.
+**What you are learning:** Contract review before signing is where the real leverage lies. After signature, you negotiate from a position of compliance with existing terms. Before signature, you set the terms. This prompt shifts the mode from analysis to pre-signing review: a different and higher-leverage application of the same framework.
 :::
 
 ## Flashcards Study Aid
@@ -468,4 +468,4 @@ compromise if pushed.
 
 ---
 
-Continue to [Lesson 5: Process Documentation — SOPs and Runbooks →](./05-process-documentation-sops-runbooks.md)
+Continue to [Lesson 5: Process Documentation: SOPs and Runbooks →](./05-process-documentation-sops-runbooks.md)

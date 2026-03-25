@@ -1,7 +1,7 @@
 ---
 slug: /Business-Domain-Agent-Workflows/product-management/user-research-interviews-synthesis
 sidebar_position: 4
-title: "User Research — Interviews & Synthesis"
+title: "User Research; Interviews & Synthesis"
 description: "Design user interviews with the /interview command, apply five behavioral design principles to evaluate the guide quality, then run /synthesize-research to turn simulated interview notes into prioritised product insights."
 keywords:
   [
@@ -56,39 +56,39 @@ cognitive_load:
     - "Thematic analysis (familiarisation, coding, theme development, review, refinement)"
     - "Behavioral vs stated preference distinction in synthesis"
     - "Custom-to-official plugin handoff"
-  assessment: "5 concepts across a 45-minute lesson at B1-B2 level. The lesson is structured so the first half (interview design) and second half (synthesis) are taught sequentially with a simulated handoff in between. The cognitive load is appropriate because the two halves reinforce each other — the interview principles directly improve what /synthesize-research has to work with."
+  assessment: "5 concepts across a 45-minute lesson at B1-B2 level. The lesson is structured so the first half (interview design) and second half (synthesis) are taught sequentially with a simulated handoff in between. The cognitive load is appropriate because the two halves reinforce each other: the interview principles directly improve what /synthesize-research has to work with."
 
 differentiation:
-  extension_for_advanced: "Design an interview guide for a second research question from the L03 problem brief's discovery questions (pick a different question from the one used in the exercise). Compare the two guides — how does the research question shape the guide structure? Then write a brief analysis of which discovery question would yield the strongest signal if answered: which one would most change your product direction?"
+  extension_for_advanced: "Design an interview guide for a second research question from the L03 problem brief's discovery questions (pick a different question from the one used in the exercise). Compare the two guides: how does the research question shape the guide structure? Then write a brief analysis of which discovery question would yield the strongest signal if answered: which one would most change your product direction?"
   remedial_for_struggling: "Focus on just Principles 1 and 2 (behavior over opinion, past over hypothetical). Take the /interview output and highlight every question that asks what a user would do in the future or what they think about something. Rewrite those questions to ask about the past. This single change improves interview quality more than any other principle."
 
 teaching_guide:
   key_points:
-    - "The most common interview mistake is asking hypothetical future questions ('Would you use this feature?'). Users are poor predictors of their own future behaviour but excellent reporters of their past behaviour. The /interview skill enforces past-tense framing — the PM's job is to verify the skill maintained that discipline."
+    - "The most common interview mistake is asking hypothetical future questions ('Would you use this feature?'). Users are poor predictors of their own future behaviour but excellent reporters of their past behaviour. The /interview skill enforces past-tense framing: the PM's job is to verify the skill maintained that discipline."
     - "The handoff between /interview and /synthesize-research is the lesson's structural core: a well-designed interview guide produces structured notes that /synthesize-research can process efficiently. A poorly designed guide produces notes full of opinions and hypotheticals that are hard to synthesise into behavioral insights."
     - "The 'what NOT to build' section in the synthesis is as valuable as the product recommendations. Research that does not explicitly say what to deprioritise leaves the PM with a list of opportunities and no criteria for choosing between them."
     - "Behavioral vs stated preference is a critical distinction: what users say they want and what their behavior reveals they need are often different. A synthesis that conflates them produces misleading product direction."
   misconceptions:
-    - "More interview questions are better — you can always skip some. Correction: more questions mean less depth. A 45-minute interview that goes deep on one specific recent experience produces better product insight than one that covers 20 questions superficially. The /interview skill's default 45-minute guide is deliberately constrained."
-    - "If multiple users mention the same feature, that is evidence to build it. Correction: stated feature requests are hypothetical future behaviour. The synthesis should ask: what behavior are users exhibiting that makes them ask for this feature? That behavior is the evidence. The feature request is their proposed solution to a problem — which may or may not be the right solution."
-    - "The synthesis command will tell you what to build. Correction: /synthesize-research tells you what users are experiencing, what they are struggling with, and what patterns appear across multiple participants. It does not tell you what to build — it tells you what problems to solve. What to build is a product judgment call that requires combining the research with strategic context."
+    - "More interview questions are better: you can always skip some. Correction: more questions mean less depth. A 45-minute interview that goes deep on one specific recent experience produces better product insight than one that covers 20 questions superficially. The /interview skill's default 45-minute guide is deliberately constrained."
+    - "If multiple users mention the same feature, that is evidence to build it. Correction: stated feature requests are hypothetical future behaviour. The synthesis should ask: what behavior are users exhibiting that makes them ask for this feature? That behavior is the evidence. The feature request is their proposed solution to a problem: which may or may not be the right solution."
+    - "The synthesis command will tell you what to build. Correction: /synthesize-research tells you what users are experiencing, what they are struggling with, and what patterns appear across multiple participants. It does not tell you what to build: it tells you what problems to solve. What to build is a product judgment call that requires combining the research with strategic context."
   discussion_prompts:
     - "You have 12 interview transcripts. Five users mention wanting a Slack integration. Three mention wanting better email notifications. Two mention wanting a mobile app. How do you weigh these findings? What additional information would you need before any of them became a product decision?"
-    - "An interview participant says: 'I would definitely use a bulk export feature — it would save me so much time.' You note this as a finding. Then you review the session recording and notice the participant navigated to the export button twice during the interview and did not complete either export. How do you reconcile what they said with what they did? Which piece of evidence is more valuable?"
+    - "An interview participant says: 'I would definitely use a bulk export feature: it would save me so much time.' You note this as a finding. Then you review the session recording and notice the participant navigated to the export button twice during the interview and did not complete either export. How do you reconcile what they said with what they did? Which piece of evidence is more valuable?"
   teaching_tips:
-    - "The mock interview transcripts provided in the exercise are intentionally mixed — some include behavioral observations ('she navigated to the export button twice'), some include stated preferences ('I would use this'), and some include both. Teach students to flag each observation type before running /synthesize-research."
-    - "When evaluating the synthesis output, focus specifically on the 'WHAT WE HEARD BUT SHOULD NOT BUILD' section. This is the hardest section for AI to produce well — it requires drawing a conclusion about scope that goes against the literal content of what users said. If the section is missing, teach students to prompt for it explicitly."
+    - "The mock interview transcripts provided in the exercise are intentionally mixed: some include behavioral observations ('she navigated to the export button twice'), some include stated preferences ('I would use this'), and some include both. Teach students to flag each observation type before running /synthesize-research."
+    - "When evaluating the synthesis output, focus specifically on the 'WHAT WE HEARD BUT SHOULD NOT BUILD' section. This is the hardest section for AI to produce well: it requires drawing a conclusion about scope that goes against the literal content of what users said. If the section is missing, teach students to prompt for it explicitly."
 ---
 
-# User Research — Interviews & Synthesis
+# User Research; Interviews & Synthesis
 
 You have a problem brief. You know what you are trying to learn. Now comes the part that most product teams skip: actually going out to learn it.
 
-Not because they do not want to talk to users — most PMs do want to. The obstacle is structural. Designing a good interview guide takes two to three hours. Running five interviews takes a full work week when you count scheduling, note-taking, and the synthesis that should follow. And the synthesis itself — turning five sets of interview notes into a coherent, evidence-based product direction — is another four to six hours of structured thinking.
+Not because they do not want to talk to users: most PMs do want to. The obstacle is structural. Designing a good interview guide takes two to three hours. Running five interviews takes a full work week when you count scheduling, note-taking, and the synthesis that should follow. And the synthesis itself: turning five sets of interview notes into a coherent, evidence-based product direction: is another four to six hours of structured thinking.
 
 Total investment to do user research properly: one to two weeks of work. Total investment when one interview falls through and another runs long and you still have three sprint planning meetings to run: zero. Research gets deprioritised until the next quarter, when the same conditions apply.
 
-This lesson changes that equation. The `/interview` command (from the custom `product-strategy` plugin) designs a research-grade interview guide in minutes. The `/synthesize-research` command (from the official `product-management` plugin) turns your interview notes into structured product insights. The PM's job shifts from writing the guide and doing the synthesis to directing the research and evaluating the outputs — which is where judgment matters most.
+This lesson changes that equation. The `/interview` command (from the custom `product-strategy` plugin) designs a research-grade interview guide in minutes. The `/synthesize-research` command (from the official `product-management` plugin) turns your interview notes into structured product insights. The PM's job shifts from writing the guide and doing the synthesis to directing the research and evaluating the outputs: which is where judgment matters most.
 
 ## The Five Interview Design Principles
 
@@ -100,10 +100,10 @@ Good user research is not about asking a lot of questions. It is about asking th
 | **Past over hypothetical** | Ask about actual past experiences | "Tell me about the last time you built a dashboard from scratch" | "Would you use a template library?" |
 | **Problem before solution** | Do not mention features or solutions in the first half of the interview | "What happens when you need data your team does not have?" | "Would a real-time refresh feature solve this problem?" |
 | **Silence is data** | When a participant pauses or struggles, wait at least 5 seconds | [silent pause after "What was difficult about that step?"] | "So I guess the difficult part was the export step?" |
-| **Why five times** | When something interesting comes up, ask why — then why again | "Why does that happen?" → "And why is that the way it works?" | "Got it. And what happens next?" |
+| **Why five times** | When something interesting comes up, ask why: then why again | "Why does that happen?" → "And why is that the way it works?" | "Got it. And what happens next?" |
 
 :::caution The Hypothetical Question Trap
-"Would you use feature X?" is the most common bad question in user research. Users are consistently optimistic about their future behavior — they say yes to features they will never use. The research literature is clear: stated intention is a weak predictor of actual behavior. Ask about the past, not the future.
+"Would you use feature X?" is the most common bad question in user research. Users are consistently optimistic about their future behavior: they say yes to features they will never use. The research literature is clear: stated intention is a weak predictor of actual behavior. Ask about the past, not the future.
 :::
 
 ## The Interview Guide Structure
@@ -117,7 +117,7 @@ The `/interview` command produces a 45-minute guide by default. Each segment ser
 | **Core Discovery** | 20-25 min | Understand the specific problem area in depth | The behavioral observations that become insights |
 | **Wrap-up** | 5 min | Catch anything missed; leave door open | Surprises; referrals to other participants |
 
-The Core Discovery segment is the research. Everything else is scaffolding that makes the Core Discovery segment work. An interview that skips warm-up and jumps to the main questions gets technically correct responses from a participant who does not yet trust the interviewer — which is a different kind of interview than the one you intended to run.
+The Core Discovery segment is the research. Everything else is scaffolding that makes the Core Discovery segment work. An interview that skips warm-up and jumps to the main questions gets technically correct responses from a participant who does not yet trust the interviewer: which is a different kind of interview than the one you intended to run.
 
 ## Worked Example: Interview Guide for InsightFlow
 
@@ -208,17 +208,17 @@ WRAP-UP (5 minutes)
 
 Check the Core Discovery section against the five principles:
 
-**Principle 1 — Behavior over opinion**: The opening question asks participants to walk through a specific recent experience. It does not ask how important reporting is to them. Compliant.
+**Principle 1; Behavior over opinion**: The opening question asks participants to walk through a specific recent experience. It does not ask how important reporting is to them. Compliant.
 
-**Principle 2 — Past over hypothetical**: "Walk me through the last report you built" is a past-tense behavioral anchor. No hypothetical questions appear in the Core Discovery segment. Compliant.
+**Principle 2; Past over hypothetical**: "Walk me through the last report you built" is a past-tense behavioral anchor. No hypothetical questions appear in the Core Discovery segment. Compliant.
 
-**Principle 3 — Problem before solution**: The guide does not mention InsightFlow features, templates, or product capabilities in the discovery questions. Compliant.
+**Principle 3; Problem before solution**: The guide does not mention InsightFlow features, templates, or product capabilities in the discovery questions. Compliant.
 
-**Principle 4 — Silence is data**: The guide does not explicitly instruct on silence — this is a gap. Add a note: "When participants pause, wait at least 5 seconds before asking a follow-up."
+**Principle 4; Silence is data**: The guide does not explicitly instruct on silence: this is a gap. Add a note: "When participants pause, wait at least 5 seconds before asking a follow-up."
 
-**Principle 5 — Why five times**: The depth questions include "What was the hardest step?" and follow-ups but do not explicitly chain "why" sequences. Add: "After any strong observation, ask: 'Why does that happen?' then 'And why is that?'"
+**Principle 5; Why five times**: The depth questions include "What was the hardest step?" and follow-ups but do not explicitly chain "why" sequences. Add: "After any strong observation, ask: 'Why does that happen?' then 'And why is that?'"
 
-This guide passes four of five checks. The two gaps are minor — add notes to the guide and run the interviews.
+This guide passes four of five checks. The two gaps are minor: add notes to the guide and run the interviews.
 
 ## From Guide to Notes to Synthesis
 
@@ -250,7 +250,7 @@ Five sets of structured notes produced from a consistent interview guide give `/
 
 The key quality check for any synthesis output: **does each finding describe observed behavior, or does it summarise stated preferences?**
 
-Behavioral finding: "Participants spent an average of 40-60 minutes reformatting exported data in Excel before sharing reports — a step all five participants described as unavoidable."
+Behavioral finding: "Participants spent an average of 40-60 minutes reformatting exported data in Excel before sharing reports: a step all five participants described as unavoidable."
 
 Stated preference finding: "Users want better export options."
 
@@ -266,7 +266,7 @@ The first is evidence. The second is the users' proposed solution to the problem
 
 ---
 
-**Step 1 — Generate the interview guide for your L03 discovery question**
+**Step 1; Generate the interview guide for your L03 discovery question**
 
 From your L03 problem brief's discovery questions, use the following (or your own):
 
@@ -288,7 +288,7 @@ Audience: Data analysts at 100-500 person companies with limited SQL access.
 Interview length: 45 minutes."
 ```
 
-**Step 2 — Evaluate the guide against the five principles**
+**Step 2; Evaluate the guide against the five principles**
 
 For each of the five principles, find one question in the Core Discovery segment and assess: compliant, partial, or violation. If you find a violation, write the corrected question.
 
@@ -296,7 +296,7 @@ Focus on two things:
 - Does any question in Core Discovery ask about the future? ("Would you...", "Do you think you would...")
 - Does the guide mention InsightFlow features or propose any solution before the wrap-up?
 
-**Step 3 — Run /synthesize-research with mock interview notes**
+**Step 3; Run /synthesize-research with mock interview notes**
 
 Use these simulated interview excerpts (three participants):
 
@@ -377,7 +377,7 @@ observations vs stated preferences, and a section on what we should
 NOT build based on this evidence.
 ```
 
-**Step 4 — Evaluate the synthesis output**
+**Step 4; Evaluate the synthesis output**
 
 Check the synthesis against these quality criteria:
 
@@ -387,9 +387,9 @@ Check the synthesis against these quality criteria:
 
 3. **What NOT to build**: Is there a section that explicitly identifies what the research does NOT support building right now? (If absent, prompt: "Add a section on what this research suggests we should NOT build in the short term and why.")
 
-4. **Insight 1 (InsightFlow-specific)**: Two of the three participants have InsightFlow subscriptions but do not use InsightFlow for the workflow being researched. Does the synthesis flag this as a finding? It should — this is the highest-priority product insight in the notes.
+4. **Insight 1 (InsightFlow-specific)**: Two of the three participants have InsightFlow subscriptions but do not use InsightFlow for the workflow being researched. Does the synthesis flag this as a finding? It should: this is the highest-priority product insight in the notes.
 
-**Step 5 — Extend: prompt for persona development**
+**Step 5; Extend: prompt for persona development**
 
 ```
 Based on this research synthesis, draft a persona profile for the analyst
@@ -413,7 +413,7 @@ The research synthesis you produced in this exercise becomes the evidence layer 
 
 ## What You Built
 
-You ran the full user research cycle — from interview guide design through research synthesis — using both plugins in sequence. The `/interview` output (custom plugin) designed a behaviorally-grounded guide. The `/synthesize-research` output (official plugin) turned structured notes into prioritised, evidence-based insights.
+You ran the full user research cycle: from interview guide design through research synthesis: using both plugins in sequence. The `/interview` output (custom plugin) designed a behaviorally-grounded guide. The `/synthesize-research` output (official plugin) turned structured notes into prioritised, evidence-based insights.
 
 You also practiced the evaluation skill that makes research useful rather than just documented: distinguishing behavioral findings from stated preferences, checking whether the synthesis acknowledges what to NOT build, and verifying that the most counter-intuitive insight (participants have InsightFlow subscriptions but do not use InsightFlow for this workflow) made it into the output.
 
@@ -423,7 +423,7 @@ The synthesis connects forward to Lesson 6: when you write a feature spec for In
 
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Prompt 1 — Reproduce** (apply what you just learned):
+**Prompt 1; Reproduce** (apply what you just learned):
 
 ```
 I am a PM at a project management tool. I want to understand how
@@ -441,7 +441,7 @@ it is designed to apply.
 
 **What you're learning:** Labelling the principle each question applies makes the discipline explicit. Most PMs know the principles in theory; mapping them to specific questions builds the habit of applying them in practice.
 
-**Prompt 2 — Adapt** (change the context):
+**Prompt 2; Adapt** (change the context):
 
 ```
 Here are two interview questions for a fitness app:
@@ -461,7 +461,7 @@ insights that lead to a good product decision? Why?
 
 **What you're learning:** The contrast between a hypothetical and a behavioral question illustrates the principle more vividly than a definition does. Question A produces optimistic self-prediction; Question B produces evidence.
 
-**Prompt 3 — Apply** (connect to your domain):
+**Prompt 3; Apply** (connect to your domain):
 
 ```
 Think of a user research question your team is currently trying to

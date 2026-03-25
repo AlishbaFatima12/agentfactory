@@ -2,7 +2,7 @@
 slug: /Business-Domain-Agent-Workflows/productivity-agentic-office/the-context-problem
 sidebar_position: 1
 title: "The Context Problem"
-description: "Understand the four context failure modes that limit every AI assistant — terminology blindness, people anonymity, project amnesia, and priority blindness — and discover why Chapter 39's Workplace Memory Architecture closes this gap."
+description: "Understand the four context failure modes that limit every AI assistant: terminology blindness, people anonymity, project amnesia, and priority blindness , and discover why Chapter 39's Workplace Memory Architecture closes this gap."
 keywords:
   [
     "context problem",
@@ -46,55 +46,55 @@ learning_objectives:
   - objective: "Explain why the Context Problem is an information architecture problem, not an intelligence problem"
     proficiency_level: "B1"
     bloom_level: "Understand"
-    assessment_method: "Student can articulate that Claude's reasoning capability is not the constraint — the constraint is the absence of structured organisational context — and explain why providing this context in work.local.md is the architectural solution"
+    assessment_method: "Student can articulate that Claude's reasoning capability is not the constraint: the constraint is the absence of structured organisational context , and explain why providing this context in work.local.md is the architectural solution"
 
   - objective: "Map each of the four failure modes to a real situation in their own organisation"
     proficiency_level: "B1"
     bloom_level: "Apply"
-    assessment_method: "Student produces a list of at least four concrete examples from their own work — one per failure mode — where the absence of organisational context caused an AI output to require manual correction or re-briefing"
+    assessment_method: "Student produces a list of at least four concrete examples from their own work: one per failure mode: where the absence of organisational context caused an AI output to require manual correction or re-briefing"
 
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "The Context Problem — the gap between generic AI knowledge and contextual colleague knowledge"
-    - "Failure Mode 1: Terminology Blindness — AI uses generic vocabulary when the organisation has specific terms"
-    - "Failure Mode 2: People Anonymity — AI has no knowledge of who stakeholders are or how to work with them"
-    - "Failure Mode 3: Project Amnesia — AI has no awareness of what is in flight, what has been decided, or what is at risk"
-    - "Failure Mode 4: Priority Blindness — AI treats all requests equally with no awareness of organisational priorities"
-  assessment: "4-5 concepts at A2-B1 level. The Context Problem is immediately recognisable from personal experience — every professional has spent time re-explaining context to an AI. Each failure mode is a named variant of the same underlying problem, making them easy to hold together. No technical concepts are introduced in this lesson. The cognitive load is deliberate: readers should be nodding throughout, building motivation for the solution introduced in Lesson 2."
+    - "The Context Problem: the gap between generic AI knowledge and contextual colleague knowledge"
+    - "Failure Mode 1: Terminology Blindness, AI uses generic vocabulary when the organisation has specific terms"
+    - "Failure Mode 2: People Anonymity, AI has no knowledge of who stakeholders are or how to work with them"
+    - "Failure Mode 3: Project Amnesia, AI has no awareness of what is in flight, what has been decided, or what is at risk"
+    - "Failure Mode 4: Priority Blindness, AI treats all requests equally with no awareness of organisational priorities"
+  assessment: "4-5 concepts at A2-B1 level. The Context Problem is immediately recognisable from personal experience: every professional has spent time re-explaining context to an AI. Each failure mode is a named variant of the same underlying problem, making them easy to hold together. No technical concepts are introduced in this lesson. The cognitive load is deliberate: readers should be nodding throughout, building motivation for the solution introduced in Lesson 2."
 
 differentiation:
   extension_for_advanced: "Before Lesson 2, conduct a one-week audit of your AI interactions. For each session where you had to re-explain context, classify which failure mode was present and estimate the time spent on re-briefing. At the end of the week, calculate the total time cost of the Context Problem in your own work. This figure will motivate the investment in building work.local.md in Lessons 3-5."
-  remedial_for_struggling: "Focus on just one failure mode — Terminology Blindness — and trace it through your own organisation. List three terms your organisation uses that a new employee would not understand. Then ask: how many times per week do you use one of these terms in an AI prompt, only to receive a generic response because Claude does not know what the term means? This single failure mode, once felt, makes the others obvious."
+  remedial_for_struggling: "Focus on just one failure mode, Terminology Blindness , and trace it through your own organisation. List three terms your organisation uses that a new employee would not understand. Then ask: how many times per week do you use one of these terms in an AI prompt, only to receive a generic response because Claude does not know what the term means? This single failure mode, once felt, makes the others obvious."
 
 teaching_guide:
   key_points:
-    - "The Context Problem is universal — every AI user who works in a real organisation encounters all four failure modes daily. The lesson's job is to name what readers already know is happening."
-    - "The key insight is that this is NOT an intelligence problem. Claude is not failing because it is not smart enough — it is failing because it does not have the organisational context it needs. This reframe is important: the solution is architectural (build the context), not aspirational (hope Claude figures it out)."
+    - "The Context Problem is universal: every AI user who works in a real organisation encounters all four failure modes daily. The lesson's job is to name what readers already know is happening."
+    - "The key insight is that this is NOT an intelligence problem. Claude is not failing because it is not smart enough; it is failing because it does not have the organisational context it needs. This reframe is important: the solution is architectural (build the context), not aspirational (hope Claude figures it out)."
     - "The four failure modes are cumulative. Terminology blindness means every output needs translation. People anonymity means every stakeholder interaction starts from scratch. Project amnesia means every status update requires full background. Priority blindness means every request is treated with equal urgency regardless of actual stakes. Together, they represent a significant tax on professional productivity."
-    - "The good colleague analogy is the lesson's emotional core. The contrast — between what a colleague who has worked with you for a year knows by default versus what Claude knows — is where readers feel the gap most acutely."
+    - "The good colleague analogy is the lesson's emotional core. The contrast, between what a colleague who has worked with you for a year knows by default versus what Claude knows: is where readers feel the gap most acutely."
   misconceptions:
     - "The problem is that Claude is not smart enough. Correction: Claude's reasoning capability is not the constraint. The constraint is the absence of structured context. Give Claude the same context a good colleague has, and it will produce colleague-quality outputs."
-    - "The solution is to write better prompts. Correction: better prompts help for one-off requests, but they do not solve the structural problem. Every session still starts from zero. The architectural solution is persistent memory — which is what work.local.md provides."
-    - "This only affects large organisations with complex terminology. Correction: even a solo professional or a two-person team has context that Claude does not have — client names, project codenames, communication preferences, current priorities. The failure modes apply at any scale."
+    - "The solution is to write better prompts. Correction: better prompts help for one-off requests, but they do not solve the structural problem. Every session still starts from zero. The architectural solution is persistent memory, which is what work.local.md provides."
+    - "This only affects large organisations with complex terminology. Correction: even a solo professional or a two-person team has context that Claude does not have, client names, project codenames, communication preferences, current priorities. The failure modes apply at any scale."
   discussion_prompts:
     - "Think about the last time you asked Claude to help with something work-related and had to re-explain who someone was or what a project was about. How long did that re-briefing take? How often does this happen in a typical week?"
-    - "If you had to hire a new assistant today and bring them up to speed in one hour, what would you tell them? That information — the things you would tell a new hire on day one — is exactly what goes into work.local.md."
+    - "If you had to hire a new assistant today and bring them up to speed in one hour, what would you tell them? That information: the things you would tell a new hire on day one: is exactly what goes into work.local.md."
   teaching_tips:
-    - "The Chief of Staff quote at the opening is the lesson's anchor. It crystallises the frustration that every reader has felt. Read it slowly — the specific details (Boulders vs OKRs, 'let's take this offline', Project Nighthawk) are what make it land."
-    - "The four failure modes should be presented with case study examples, not abstract descriptions. Use Zia, Omar, and the Panaversity context throughout — readers will use these same characters in every subsequent lesson."
-    - "End the lesson by connecting to what is coming: Chapter 39 is not a productivity tips chapter — it is a chapter about solving an architectural problem with an architectural solution."
+    - "The Chief of Staff quote at the opening is the lesson's anchor. It crystallises the frustration that every reader has felt. Read it slowly: the specific details (Boulders vs OKRs, 'let's take this offline', Project Nighthawk) are what make it land."
+    - "The four failure modes should be presented with case study examples, not abstract descriptions. Use Zia, Omar, and the Panaversity context throughout, readers will use these same characters in every subsequent lesson."
+    - "End the lesson by connecting to what is coming: Chapter 39 is not a productivity tips chapter; it is a chapter about solving an architectural problem with an architectural solution."
 ---
 
 # The Context Problem
 
 > _"Every AI assistant I have tried knows everything about the world and nothing about my world. It can write a perfect OKR framework but doesn't know that we call our quarterly targets 'Boulders' not OKRs. It can produce a flawless meeting summary but doesn't know that when Zara says 'let's take this offline' she means it's politically sensitive and should not be minuted. It knows how to draft a project update but doesn't know that Project Nighthawk is what we call the Karachi expansion internally. I spend five minutes of every conversation re-explaining things that a good colleague would already know."_
 >
-> — Chief of Staff, 300-person technology company
+>, Chief of Staff, 300-person technology company
 
 ---
 
-This gap — the distance between how a sophisticated AI answers a question in the abstract and how a knowledgeable colleague answers the same question in context — is the **Context Problem**.
+This gap: the distance between how a sophisticated AI answers a question in the abstract and how a knowledgeable colleague answers the same question in context: is the **Context Problem**.
 
 Every domain chapter in Part 3 of this book solved a specific professional problem. Chapter 28 deployed AI for financial analysis. Chapter 34 automated revenue operations. Chapter 35 optimised supply chains. Chapter 37 (planned) transforms HR. Chapter 38 (planned) builds an operations intelligence layer.
 
@@ -104,13 +104,13 @@ But every one of those agents starts each session the same way: from zero.
 
 No memory of the conversation yesterday. No knowledge that "Boulders" means quarterly strategic priorities. No awareness that Project Nighthawk is the Karachi expansion and that it has been stalled for ten days. No understanding that Omar Farooq needs three business days' lead time and dislikes last-minute requests. No knowledge that AgentFactory is the P1 initiative and that anything connected to it carries elevated urgency.
 
-This is not a failure of intelligence. Claude's reasoning capability is not in question — it can analyse as well as expert humans in almost every domain. The constraint is **context**: the accumulated organisational knowledge that a good colleague carries and that Claude, without memory, does not.
+This is not a failure of intelligence. Claude's reasoning capability is not in question ; it can analyse as well as expert humans in almost every domain. The constraint is **context**: the accumulated organisational knowledge that a good colleague carries and that Claude, without memory, does not.
 
 ## What a Colleague Knows
 
 The difference between a brilliant new hire and an experienced colleague is not intelligence. It is context. The brilliant new hire knows the theory. The experienced colleague knows the organisation.
 
-A good colleague — someone who has worked alongside you for a year — knows:
+A good colleague, someone who has worked alongside you for a year, knows:
 
 - Your name, role, and working style
 - What your current priorities are and what is at risk
@@ -122,17 +122,17 @@ A good colleague — someone who has worked alongside you for a year — knows:
 
 A chatbot knows none of this unless you tell it every single time.
 
-The productivity gap between an AI assistant that starts from zero every session and one that carries meaningful context is enormous. Industry surveys suggest that professionals spend between five and fifteen minutes per AI session re-establishing context that a colleague would already have. Across a working week, that amounts to a significant fraction of AI interaction time spent not on work — but on briefing.
+The productivity gap between an AI assistant that starts from zero every session and one that carries meaningful context is enormous. Industry surveys suggest that professionals spend between five and fifteen minutes per AI session re-establishing context that a colleague would already have. Across a working week, that amounts to a significant fraction of AI interaction time spent not on work , but on briefing.
 
-**Chapter 39 closes this gap.** It introduces the Workplace Memory Architecture — a four-layer context system that gives Claude persistent, structured knowledge of your people, projects, terminology, and priorities. It introduces the plugin system that makes this memory actionable. And it shows how the Digital Chief of Staff emerges: an AI that can act like a knowledgeable colleague, not a generic tool.
+**Chapter 39 closes this gap.** It introduces the Workplace Memory Architecture: a four-layer context system that gives Claude persistent, structured knowledge of your people, projects, terminology, and priorities. It introduces the plugin system that makes this memory actionable. And it shows how the Digital Chief of Staff emerges: an AI that can act like a knowledgeable colleague, not a generic tool.
 
-But before the solution, it is worth understanding the problem precisely. There are four distinct failure modes, and naming them makes them recognisable — and fixable.
+But before the solution, it is worth understanding the problem precisely. There are four distinct failure modes, and naming them makes them recognisable , and fixable.
 
 ## Failure Mode 1: Terminology Blindness
 
 An organisation is, among other things, a vocabulary. It has words for things that outsiders do not know, and it uses those words constantly. Some are official. Many are not.
 
-Panaversity runs on a specific vocabulary. "Boulders" are the quarterly strategic priorities — not "OKRs" or "goals" or "priorities." "AgentFactory" is the internal codename for the AI Agent Factory book project. "Project Nighthawk" is the Karachi expansion — a term used internally; the word "Karachi" is never used in internal communications about it. "Digital FTE" means a fully configured AI agent performing a specific professional role — not a chatbot, not an "AI tool." "The Compass" is the annual strategic planning document reviewed quarterly.
+Panaversity runs on a specific vocabulary. "Boulders" are the quarterly strategic priorities, not "OKRs" or "goals" or "priorities." "AgentFactory" is the internal codename for the AI Agent Factory book project. "Project Nighthawk" is the Karachi expansion: a term used internally; the word "Karachi" is never used in internal communications about it. "Digital FTE" means a fully configured AI agent performing a specific professional role , not a chatbot, not an "AI tool." "The Compass" is the annual strategic planning document reviewed quarterly.
 
 When Zia asks Claude to "write an update on AgentFactory for the quarterly Boulders review," what does Claude produce?
 
@@ -142,15 +142,15 @@ If Claude has no organisational context, it produces something like this:
 
 Two clarifying questions. Neither needed. A colleague would have written the update.
 
-Or, worse, Claude attempts the update and fills in the blanks with generic AI industry language — producing an output that sounds professional but requires complete rewriting because it uses "OKRs" instead of Boulders, calls the project "the AI curriculum" instead of AgentFactory, and refers to "digital agents" instead of Digital FTEs.
+Or, worse, Claude attempts the update and fills in the blanks with generic AI industry language, producing an output that sounds professional but requires complete rewriting because it uses "OKRs" instead of Boulders, calls the project "the AI curriculum" instead of AgentFactory, and refers to "digital agents" instead of Digital FTEs.
 
-Terminology blindness does not prevent work from getting done. It adds a translation layer to every output — a continuous tax paid in manual editing and re-briefing.
+Terminology blindness does not prevent work from getting done. It adds a translation layer to every output: a continuous tax paid in manual editing and re-briefing.
 
 ## Failure Mode 2: People Anonymity
 
-Every organisation is built around relationships. The quality of a communication depends not just on what is said but on who is saying it to whom — and what the recipient's preferences, sensitivities, and current state are.
+Every organisation is built around relationships. The quality of a communication depends not just on what is said but on who is saying it to whom , and what the recipient's preferences, sensitivities, and current state are.
 
-Omar Farooq is the Head of Analytics at Panaversity. If you know Omar, you know several things: he is data-driven, he expects specific and well-scoped requests, he dislikes last-minute asks, he needs at least three business days' lead time for data work, and the best channel for routine requests is Slack DM while formal requests should go via email. He will push back on scope creep — being vague with Omar is a mistake.
+Omar Farooq is the Head of Analytics at Panaversity. If you know Omar, you know several things: he is data-driven, he expects specific and well-scoped requests, he dislikes last-minute asks, he needs at least three business days' lead time for data work, and the best channel for routine requests is Slack DM while formal requests should go via email. He will push back on scope creep, being vague with Omar is a mistake.
 
 None of this is unusual knowledge. It is the kind of thing any colleague who has worked with Omar for three months would know without thinking about it.
 
@@ -158,41 +158,41 @@ When Zia asks Claude to "draft a message to Omar asking for the analytics brief 
 
 A generic, politely worded message that treats Omar as an unknown recipient. Probably slightly too informal given the formality of the request, or slightly too formal given the channel. Almost certainly does not acknowledge the lead time he needs. May not specify the format or deadline clearly enough to avoid a follow-up. Might open with preamble that Omar's direct communication style will find irritating.
 
-The draft needs editing. Not much, perhaps — but every time. Every message to every stakeholder. Because Claude does not know who they are.
+The draft needs editing. Not much, perhaps , but every time. Every message to every stakeholder. Because Claude does not know who they are.
 
 People anonymity is the most operationally expensive failure mode for anyone who communicates frequently on behalf of their organisation. A good Chief of Staff knows every key stakeholder well enough to draft a message that sounds like the principal and lands correctly with the recipient. Without people memory, no AI assistant can do this.
 
-Dr. Sana Mirza is joining Panaversity next Monday as Head of Curriculum. She has a PhD from the Aga Khan University in Learning Sciences, brings academic precision and evidence-based rigour, and owns the PHM framework — Panaversity's seven-approach adaptive teaching methodology. She and Omar have not worked together before, and there is a relationship there that will need careful mediation as they define their respective domains.
+Dr. Sana Mirza is joining Panaversity next Monday as Head of Curriculum. She has a PhD from the Aga Khan University in Learning Sciences, brings academic precision and evidence-based rigour, and owns the PHM framework, Panaversity's seven-approach adaptive teaching methodology. She and Omar have not worked together before, and there is a relationship there that will need careful mediation as they define their respective domains.
 
-All of this matters immediately — and none of it is in Claude's context unless it is put there.
+All of this matters immediately , and none of it is in Claude's context unless it is put there.
 
 ## Failure Mode 3: Project Amnesia
 
 At any given moment, Panaversity has three primary initiatives in flight.
 
-AgentFactory is P1 — the AI Agent Factory book, currently in Part 3, with a Q2 2026 curriculum launch target. Chapter 39 (this chapter) is in progress. The sequencing of chapters matters — skills files must accompany each chapter, and each chapter depends on the work done in the previous one.
+AgentFactory is P1: the AI Agent Factory book, currently in Part 3, with a Q2 2026 curriculum launch target. Chapter 39 (this chapter) is in progress. The sequencing of chapters matters, skills files must accompany each chapter, and each chapter depends on the work done in the previous one.
 
-Project Nighthawk is P2 — the Karachi expansion. The facility agreement negotiations have been stalled for over ten days. Every day of delay compresses the Q3 launch timeline downstream. Escalation is overdue.
+Project Nighthawk is P2: the Karachi expansion. The facility agreement negotiations have been stalled for over ten days. Every day of delay compresses the Q3 launch timeline downstream. Escalation is overdue.
 
-BankersAI is P2-recurring — the monthly AI upskilling workshop for banking sector professionals. Workshop #7 is the next one, with the topic focused on Digital FTEs for compliance teams. Content must be reviewed seven days before delivery.
+BankersAI is P2-recurring: the monthly AI upskilling workshop for banking sector professionals. Workshop #7 is the next one, with the topic focused on Digital FTEs for compliance teams. Content must be reviewed seven days before delivery.
 
 Zia knows all of this. Every relevant decision, every current risk, every open action item, every key contact. It is the operating context in which he works every day.
 
 When he asks Claude to "draft a project status update for the board," without that context, Claude asks: "Which project? What is its current status? Who are the key stakeholders? What format does the board prefer?"
 
-Or it drafts something that sounds authoritative but is generic — no mention of the Q3 risk on Nighthawk, no reference to the Q2 launch target for AgentFactory, no indication of what is actually at risk versus what is on track.
+Or it drafts something that sounds authoritative but is generic; no mention of the Q3 risk on Nighthawk, no reference to the Q2 launch target for AgentFactory, no indication of what is actually at risk versus what is on track.
 
-Project amnesia means every project briefing starts from scratch. No history. No decisions. No risks. No context about what was agreed in the last review and what changed since then. The AI is always new to the project — no matter how many times you have discussed it.
+Project amnesia means every project briefing starts from scratch. No history. No decisions. No risks. No context about what was agreed in the last review and what changed since then. The AI is always new to the project; no matter how many times you have discussed it.
 
 ## Failure Mode 4: Priority Blindness
 
 The most subtle failure mode, and often the most costly.
 
-Claude treats all requests as equally important. If you ask it to help draft a message and separately ask it to analyse a strategic document, it will approach both with the same level of care and urgency — because it has no way of knowing that the strategic document is connected to the P1 initiative and has a board deadline tomorrow, while the message is a courtesy communication with a flexible timeline.
+Claude treats all requests as equally important. If you ask it to help draft a message and separately ask it to analyse a strategic document, it will approach both with the same level of care and urgency, because it has no way of knowing that the strategic document is connected to the P1 initiative and has a board deadline tomorrow, while the message is a courtesy communication with a flexible timeline.
 
-In Zia's world, AgentFactory carries elevated urgency by default. Any task connected to it should be treated with more thoroughness, more care, and more urgency than a task connected to a P2 or P3 initiative. A chapter that is "behind schedule" is a different kind of problem from a workshop that is "behind schedule" — the chapter delay has cascading effects on the curriculum launch; the workshop delay is recoverable.
+In Zia's world, AgentFactory carries elevated urgency by default. Any task connected to it should be treated with more thoroughness, more care, and more urgency than a task connected to a P2 or P3 initiative. A chapter that is "behind schedule" is a different kind of problem from a workshop that is "behind schedule": the chapter delay has cascading effects on the curriculum launch; the workshop delay is recoverable.
 
-Claude does not know this without being told. And "being told" — every session, for every request — is exactly the problem.
+Claude does not know this without being told. And "being told": every session, for every request: is exactly the problem.
 
 Priority blindness also manifests in how Claude approaches ambiguous requests. When Zia says "can you take a look at this?" with no further context, a colleague who knows the organisation would ask: "Is this urgent? What is it for? How much time should I spend?" Not because they are slow, but because the answer changes significantly based on what it is connected to.
 
@@ -204,7 +204,7 @@ All four failure modes are the same problem viewed from four angles. They are al
 
 The data exists. Zia knows what "Boulders" means. He knows who Omar is and how to work with him. He knows the status of Project Nighthawk and why it matters. He knows that AgentFactory is P1 and that connected tasks carry elevated urgency.
 
-The failure is not that the information does not exist. The failure is **the gap between data and connected, actionable intelligence** — and that gap exists because there is no structured mechanism to make the information available to Claude at the start of every session.
+The failure is not that the information does not exist. The failure is **the gap between data and connected, actionable intelligence** , and that gap exists because there is no structured mechanism to make the information available to Claude at the start of every session.
 
 This is an architectural problem. And it has an architectural solution.
 
@@ -212,20 +212,20 @@ This is an architectural problem. And it has an architectural solution.
 
 The next thirteen lessons build the system that closes all four failure modes.
 
-**Lessons 2-5** establish the Workplace Memory Architecture — the four-layer context system that gives Claude persistent knowledge of your personal context, your people, your projects, and your organisation. By the end of Lesson 5, every session starts not from zero but from a fully briefed context.
+**Lessons 2-5** establish the Workplace Memory Architecture: the four-layer context system that gives Claude persistent knowledge of your personal context, your people, your projects, and your organisation. By the end of Lesson 5, every session starts not from zero but from a fully briefed context.
 
-**Lessons 6-11** introduce the nine skills that make this memory actionable — task intelligence, delegation quality, the daily digest, meeting support, the executive dashboard, and cross-domain context injection.
+**Lessons 6-11** introduce the nine skills that make this memory actionable, task intelligence, delegation quality, the daily digest, meeting support, the executive dashboard, and cross-domain context injection.
 
-**Lessons 12-13** introduce the four persistent agents — the Digital Chief of Staff, the Memory Keeper, the Meeting Intelligence agent, and the Work Tracker — that automate the maintenance and activation of this system.
+**Lessons 12-13** introduce the four persistent agents: the Digital Chief of Staff, the Memory Keeper, the Meeting Intelligence agent, and the Work Tracker that automate the maintenance and activation of this system.
 
 **Lesson 14** brings it all together: a complete, configured Agentic Office running as a coordinated system.
 
-The goal is not a better chatbot. It is a Digital Chief of Staff: an AI that knows your world well enough to act like a knowledgeable colleague — one who does not need five minutes of re-briefing at the start of every conversation.
+The goal is not a better chatbot. It is a Digital Chief of Staff: an AI that knows your world well enough to act like a knowledgeable colleague: one who does not need five minutes of re-briefing at the start of every conversation.
 
 :::tip Try With AI
 Use these prompts in Cowork or your preferred AI assistant.
 
-**Reproduce**: Ask Claude to draft a project update without any organisational context — then compare with a fully contextual version.
+**Reproduce**: Ask Claude to draft a project update without any organisational context; then compare with a fully contextual version.
 
 ```
 Write a project update for "Project Nighthawk" for our
@@ -233,7 +233,7 @@ Executive Weekly meeting. The update should cover current
 status, what is at risk, and what decisions are needed.
 ```
 
-Read the output. Note what it does not know — what questions it asks, what generic language it uses, what context it fills in with assumptions.
+Read the output. Note what it does not know: what questions it asks, what generic language it uses, what context it fills in with assumptions.
 
 Now try again with context:
 
@@ -241,15 +241,15 @@ Now try again with context:
 Write a project update for Project Nighthawk (our internal
 codename for the Karachi expansion) for the Executive Weekly
 (Monday 09:00 PKT, 30-minute standing meeting, no slides).
-Current status: PLANNING — AT RISK. The facility agreement
+Current status: PLANNING, AT RISK. The facility agreement
 negotiations have been stalled for 10+ days. This is blocking
 the Q3 2026 launch target. Escalation to the government
 liaison is overdue. Attendees are CEO, COO, and Heads of
 Department. Format: brief narrative followed by three
-bullet points — status, risk, decision needed.
+bullet points, status, risk, decision needed.
 ```
 
-**What you are learning:** The second prompt is better — but you wrote forty-five words of context before you could start the actual work. Multiply that across every project, every person, every meeting, every week. The goal of work.local.md is to write that context once and have it available automatically, every session.
+**What you are learning:** The second prompt is better , but you wrote forty-five words of context before you could start the actual work. Multiply that across every project, every person, every meeting, every week. The goal of work.local.md is to write that context once and have it available automatically, every session.
 
 **Adapt**: Audit your own terminology gap.
 
@@ -257,16 +257,16 @@ bullet points — status, risk, decision needed.
 I work in [describe your organisation and your role in
 one sentence]. Here are three terms my organisation uses
 that an outsider would not understand:
-1. [Term 1] — what it actually means: [definition]
-2. [Term 2] — what it actually means: [definition]
-3. [Term 3] — what it actually means: [definition]
+1. [Term 1]: what it actually means: [definition]
+2. [Term 2]: what it actually means: [definition]
+3. [Term 3]: what it actually means: [definition]
 
 For each term: explain what generic language an AI would
 use instead, and describe the impact on output quality when
 the AI uses the generic term rather than our specific one.
 ```
 
-**What you are learning:** Mapping your own terminology gap makes the problem concrete. Most professionals find they have more organisation-specific terms than they initially realise — often twenty to fifty that appear regularly in their work. Each one that Claude does not know is a translation step or a re-briefing cost.
+**What you are learning:** Mapping your own terminology gap makes the problem concrete. Most professionals find they have more organisation-specific terms than they initially realise, often twenty to fifty that appear regularly in their work. Each one that Claude does not know is a translation step or a re-briefing cost.
 
 **Apply**: Map all four failure modes to your own organisation.
 
@@ -275,16 +275,16 @@ I am going to describe four AI context failure modes.
 For each one, I want you to help me identify a concrete
 example from my own work context.
 
-Failure Mode 1 — Terminology Blindness: AI uses generic
+Failure Mode 1, Terminology Blindness: AI uses generic
 vocabulary when my organisation has specific terms.
 
-Failure Mode 2 — People Anonymity: AI has no knowledge
+Failure Mode 2, People Anonymity: AI has no knowledge
 of who key stakeholders are or how to work with them.
 
-Failure Mode 3 — Project Amnesia: AI has no awareness
+Failure Mode 3, Project Amnesia: AI has no awareness
 of what is currently in flight or what has been decided.
 
-Failure Mode 4 — Priority Blindness: AI treats all
+Failure Mode 4, Priority Blindness: AI treats all
 requests as equally urgent regardless of actual stakes.
 
 My role: [describe your role]

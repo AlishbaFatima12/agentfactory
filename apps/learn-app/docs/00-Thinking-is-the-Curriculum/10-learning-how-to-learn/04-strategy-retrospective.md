@@ -2,7 +2,7 @@
 sidebar_position: 4
 aicheck: true
 title: "Strategy Retrospective"
-description: "Compare your original Learning Plan to what actually happened, then create a Personal Learning Framework — your reusable operating system for mastering unfamiliar domains throughout the rest of this book"
+description: "Compare your original Learning Plan to what actually happened, then create a Personal Learning Framework: your reusable operating system for mastering unfamiliar domains throughout the rest of this book"
 keywords:
   [
     "thinking skills",
@@ -37,7 +37,7 @@ learning_objectives:
   - objective: "Compare planned learning strategy to actual execution and honestly analyze where the plan worked, where it failed, and what to do differently"
     proficiency_level: "A1"
     bloom_level: "Evaluate"
-    assessment_method: "AI Check evaluates whether the retrospective is honest and accurate — not too harsh, not too generous"
+    assessment_method: "AI Check evaluates whether the retrospective is honest and accurate: not too harsh, not too generous"
 
   - objective: "Create a Personal Learning Framework that is specific enough to be actionable for the next unfamiliar domain encounter"
     proficiency_level: "A1"
@@ -51,7 +51,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (strategy retrospective analysis, personal framework creation, meta-learning synthesis) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (strategy retrospective analysis, personal framework creation, meta-learning synthesis) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "Test your Personal Learning Framework immediately: apply it to a second unfamiliar domain for 24 hours. Does the framework actually improve your efficiency? Write a 200-word comparison"
@@ -62,23 +62,23 @@ teaching_guide:
   session_group: 10
   session_title: "Strategy Retrospective"
   key_points:
-    - "The Personal Learning Framework is the single most important deliverable of Part 0 — frame it as 'your operating system for Parts 2-10'"
-    - "The retrospective must be honest — students who say 'everything went as planned' are not reflecting, they are performing"
-    - "The framework must be specific enough to use — 'learn the basics first' is not actionable, 'spend the first 20% of available time on foundational terminology before touching applications' is"
+    - "The Personal Learning Framework is the single most important deliverable of Part 0: frame it as 'your operating system for Parts 2-10'"
+    - "The retrospective must be honest: students who say 'everything went as planned' are not reflecting, they are performing"
+    - "The framework must be specific enough to use : 'learn the basics first' is not actionable, 'spend the first 20% of available time on foundational terminology before touching applications' is"
     - "This exercise completes the meta-learning cycle: plan (Ex1) -> execute (Ex2) -> demonstrate (Ex3) -> reflect and systematize (Ex4)"
   misconceptions:
     - "Students write the retrospective as a success narrative instead of an honest analysis of what worked and what did not"
-    - "Students create a framework that is too generic to be useful — it needs to be specific to their learning style and patterns"
+    - "Students create a framework that is too generic to be useful: it needs to be specific to their learning style and patterns"
     - "Students treat the framework as a homework assignment rather than as a tool they will actually use"
   discussion_prompts:
     - "What is the difference between a Learning Plan and a Personal Learning Framework? Why do you need both?"
-    - "If your framework only works for the domain you just learned, it is not a framework — it is a plan. How do you make it transferable?"
+    - "If your framework only works for the domain you just learned, it is not a framework: it is a plan. How do you make it transferable?"
   teaching_tips:
-    - "Have students share their frameworks and compare — the diversity reveals that learning frameworks are personal, not universal"
+    - "Have students share their frameworks and compare: the diversity reveals that learning frameworks are personal, not universal"
     - "Emphasize that this framework will be explicitly referenced in Parts 2-10 when students encounter new technology and domains"
-    - "The Chapter Deliverable is the complete Meta-Learning Portfolio — remind students it includes all four exercises"
+    - "The Chapter Deliverable is the complete Meta-Learning Portfolio: remind students it includes all four exercises"
   assessment_quick_check:
-    - "Ask students: Read me your confusion protocol — what do you do when you are stuck? Is it specific enough to actually follow?"
+    - "Ask students: Read me your confusion protocol: what do you do when you are stuck? Is it specific enough to actually follow?"
     - "Ask students: How is your framework different from generic advice like 'study hard and ask questions'?"
 ---
 
@@ -88,7 +88,7 @@ teaching_guide:
 
 ### What You Do
 
-Compare your original Learning Plan to what actually happened. Write a Strategy Retrospective analyzing your meta-learning process. Then create a **Personal Learning Framework** — a reusable document describing how you approach learning new domains, to be carried through the rest of the book.
+Compare your original Learning Plan to what actually happened. Write a Strategy Retrospective analyzing your meta-learning process. Then create a **Personal Learning Framework**; a reusable document describing how you approach learning new domains, to be carried through the rest of the book.
 
 ---
 
@@ -150,7 +150,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that the most important outcome of this chapter is not the domain knowledge you acquired — it is the Personal Learning Framework you built. This framework is your operating system for encountering everything new in the rest of this book. Parts 2-10 will throw unfamiliar concepts at you constantly. This chapter gave you the method for handling all of them.
+You learn that the most important outcome of this chapter is not the domain knowledge you acquired; it is the Personal Learning Framework you built. This framework is your operating system for encountering everything new in the rest of this book. Parts 2-10 will throw unfamiliar concepts at you constantly. This chapter gave you the method for handling all of them.
 
 :::info Chapter Deliverable
 A **Meta-Learning Portfolio** containing: (1) the original Learning Plan, (2) the domain analysis with complete Learning Log and mid-point reflection, (3) teaching session materials with peer feedback and question log, (4) the Strategy Retrospective, (5) the Personal Learning Framework, and (6) all AI feedback.

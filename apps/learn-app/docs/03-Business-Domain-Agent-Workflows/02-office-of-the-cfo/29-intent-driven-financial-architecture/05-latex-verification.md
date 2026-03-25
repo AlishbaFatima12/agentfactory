@@ -270,9 +270,9 @@ What emerged from this exchange: Claude identified a specific error, explained w
 
 ## Exercise: Add WACC to the GP Waterfall and Verify in LaTeX
 
-The GP Waterfall formulas you built in Lesson 4 — `Revenue_Y2 = Revenue_Y1 * (1 + Inp_Rev_Growth)` — are too straightforward to need LaTeX verification. You can read them as English sentences and confirm they are correct. But WACC is different. It has weights, a tax shield, and nested fractions that hide structural errors in a single line of Excel notation. This is the first formula in your model that genuinely needs Guardrail 2.
+The GP Waterfall formulas you built in Lesson 4: `Revenue_Y2 = Revenue_Y1 * (1 + Inp_Rev_Growth)`: are too straightforward to need LaTeX verification. You can read them as English sentences and confirm they are correct. But WACC is different. It has weights, a tax shield, and nested fractions that hide structural errors in a single line of Excel notation. This is the first formula in your model that genuinely needs Guardrail 2.
 
-### Step 1 — Add WACC Assumptions
+### Step 1: Add WACC Assumptions
 
 Open the GP Waterfall spreadsheet you built in Lessons 3-4. You already have five assumptions (including `Inp_Tax_Rate` from the L03 extension step). Add the remaining WACC inputs:
 
@@ -291,7 +291,7 @@ Keep all existing Named Ranges and calculations intact.
 
 Verify by asking Cowork to list all Named Ranges. You should now have nine assumptions in Layer 1 (five original plus four new) and twelve calculations in Layer 2.
 
-### Step 2 — Build the WACC Formula
+### Step 2: Build the WACC Formula
 
 ```
 Add a WACC calculation to the Calculation layer. The formula must
@@ -299,11 +299,11 @@ use only Named Ranges — zero cell coordinates, zero hardcoded
 constants. Create a Named Range called WACC for the result.
 ```
 
-Ask Cowork to show you the formula it created. Read it. Does it pass the compliance test from Lesson 4 — can you understand what it calculates without clicking any cell?
+Ask Cowork to show you the formula it created. Read it. Does it pass the compliance test from Lesson 4: can you understand what it calculates without clicking any cell?
 
-### Step 3 — Verify in LaTeX
+### Step 3: Verify in LaTeX
 
-The Named Range formula from Step 2 passes Guardrail 1 — you can read it as English. But WACC has three structural properties that are hard to verify in a single flat line: do the weights sum to 1.0? Is the tax shield on the right term? Are the units consistent? Asking Cowork to rewrite the formula in mathematical notation separates the fractions and isolates each component visually — so you can check each one independently.
+The Named Range formula from Step 2 passes Guardrail 1 (you can read it as English. But WACC has three structural properties that are hard to verify in a single flat line: do the weights sum to 1.0? Is the tax shield on the right term? Are the units consistent? Asking Cowork to rewrite the formula in mathematical notation separates the fractions and isolates each component visually) so you can check each one independently.
 
 This is Guardrail 2. Ask Cowork:
 
@@ -315,17 +315,17 @@ with the fractions written out. Then verify three things:
 3. Are Cost_of_Equity and Cost_of_Debt in consistent units?
 ```
 
-Cowork will show the formula in the chat with the weights as visible fractions — something like `(E/(E+D)) × Kₑ + (D/(E+D)) × K_d × (1−T)`. The spreadsheet is unchanged; you are looking at a second representation of the same formula to verify its structure.
+Cowork will show the formula in the chat with the weights as visible fractions: something like `(E/(E+D)) × Kₑ + (D/(E+D)) × K_d × (1−T)`. The spreadsheet is unchanged; you are looking at a second representation of the same formula to verify its structure.
 
 Check each verification point yourself before reading Cowork's analysis. The correct WACC with these inputs is **8.7%**.
 
 **What to look for:**
 
-- **WACC = 9.2% instead of 8.7%?** The tax shield is missing. That 50 basis point difference — on a $100M acquisition, $5M-$8M of valuation swing — is exactly the error this guardrail exists to catch. Ask Cowork: "The WACC formula is missing (1 - Tax_Rate) on the debt component. Add the tax shield and recalculate."
-- **Weights don't sum to 1.0?** The denominators are wrong — both equity and debt weights should divide by `(Equity_Value + Debt_Value)`. Ask Cowork to fix the weight calculation.
+- **WACC = 9.2% instead of 8.7%?** The tax shield is missing. That 50 basis point difference (on a $100M acquisition, $5M-$8M of valuation swing) is exactly the error this guardrail exists to catch. Ask Cowork: "The WACC formula is missing (1 - Tax_Rate) on the debt component. Add the tax shield and recalculate."
+- **Weights don't sum to 1.0?** The denominators are wrong: both equity and debt weights should divide by `(Equity_Value + Debt_Value)`. Ask Cowork to fix the weight calculation.
 - **WACC = 8.7%?** The formula is correct. Confirm by checking the LaTeX yourself: equity weight (0.6) × 12% = 7.2%, plus debt weight (0.4) × 5% × (1 − 0.25) = 1.5%, total = 8.7%.
 
-### Step 4 — Extend: Add NPV
+### Step 4: Extend: Add NPV
 
 Your GP Waterfall now has three years of Gross Profit and a verified WACC. Add a simple NPV to see whether a hypothetical $8M investment in this business is worthwhile:
 
@@ -345,10 +345,10 @@ Create a Named Range called NPV_Result.
 After Cowork builds it, ask for the LaTeX expression and verify the period-0 adjustment. The initial investment should appear as `− Initial_Investment` outside the summation, not inside the `NPV()` function where it would be incorrectly discounted by one period.
 
 :::note Keep This File
-Save this spreadsheet — you will add Intent Notes to these formulas in Lesson 6.
+Save this spreadsheet: you will add Intent Notes to these formulas in Lesson 6.
 :::
 
-**What you have built:** A GP Waterfall with Assumptions, Calculations, WACC, and NPV — all using Named Ranges, all verified in LaTeX. The model now spans both guardrails: every formula passes the compliance test (Guardrail 1), and the complex formulas have been structurally verified in mathematical notation (Guardrail 2).
+**What you have built:** A GP Waterfall with Assumptions, Calculations, WACC, and NPV: all using Named Ranges, all verified in LaTeX. The model now spans both guardrails: every formula passes the compliance test (Guardrail 1), and the complex formulas have been structurally verified in mathematical notation (Guardrail 2).
 
 ## Try With AI
 
@@ -368,7 +368,7 @@ If you find any errors, explain the financial impact before
 correcting them.
 ```
 
-**What you're learning:** How to use an AI agent as a LaTeX verification partner on your own model. The agent reads the actual formula from your spreadsheet, translates it to mathematical notation, and checks each structural component. Your job is to verify the agent's analysis — not to trust it blindly.
+**What you're learning:** How to use an AI agent as a LaTeX verification partner on your own model. The agent reads the actual formula from your spreadsheet, translates it to mathematical notation, and checks each structural component. Your job is to verify the agent's analysis; not to trust it blindly.
 
 ### Prompt 2: Verify NPV Period-0 Adjustment
 
@@ -383,7 +383,7 @@ If it is inside the function, calculate the dollar impact of the
 error and show the corrected formula.
 ```
 
-**What you're learning:** The period-0 trap in Excel's `NPV()` function. The LaTeX summation notation `Σ(t=1 to n)` makes the bounds explicit — you can immediately see whether the initial investment is inside or outside the discounting. This single check has caught millions of dollars in valuation errors across the finance industry.
+**What you're learning:** The period-0 trap in Excel's `NPV()` function. The LaTeX summation notation `Σ(t=1 to n)` makes the bounds explicit: you can immediately see whether the initial investment is inside or outside the discounting. This single check has caught millions of dollars in valuation errors across the finance industry.
 
 ### Prompt 3: Spot the Error in a Terminal Value Formula
 
@@ -403,7 +403,7 @@ Calculate the Terminal Value both ways and show the dollar
 difference.
 ```
 
-**What you're learning:** The growth factor trap in the Gordon Growth Model. The correct numerator is `FCF_n × (1+g)`, not `FCF_n` alone — the perpetuity starts one period after the final projection year. Missing the `(1+g)` factor understates terminal value by approximately the growth rate percentage, which compounds to tens of millions on large deals.
+**What you're learning:** The growth factor trap in the Gordon Growth Model. The correct numerator is `FCF_n × (1+g)`, not `FCF_n` alone: the perpetuity starts one period after the final projection year. Missing the `(1+g)` factor understates terminal value by approximately the growth rate percentage, which compounds to tens of millions on large deals.
 
 ## Flashcards Study Aid
 

@@ -91,7 +91,7 @@ teaching_guide:
 
 ### What You Do
 
-Produce your Draft 3 (final version) after reflecting on all AI feedback, peer discussion, and the originality test. Submit all three drafts together. The grade is the evolution between drafts, not the quality of any single draft.
+Produce your Draft 3 (final version) after reflecting on all AI feedback, peer discussion (or, for solo learners, submit Draft 2 to AI with the prompt: *"Challenge the three weakest points in this analysis. What am I not seeing?"*), and the originality test. Submit all three drafts together. The grade is the evolution between drafts, not the quality of any single draft.
 
 ---
 

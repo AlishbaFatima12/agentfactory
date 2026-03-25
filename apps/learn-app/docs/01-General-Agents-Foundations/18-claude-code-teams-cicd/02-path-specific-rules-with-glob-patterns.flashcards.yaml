@@ -1,0 +1,47 @@
+deck:
+  id: "ch18-02-path-specific-rules-with-glob-patterns"
+  title: "Path-Specific Rules with Glob Patterns"
+  version: 1
+
+cards:
+  - front: "What YAML frontmatter field makes a .claude/rules/ file load conditionally?"
+    back: "The paths field, containing an array of glob patterns. Rules with paths load only when Claude reads files matching those patterns."
+
+  - front: "What happens to a .claude/rules/ file that has no YAML frontmatter or no paths field?"
+    back: "It loads unconditionally at session start, with the same priority as .claude/CLAUDE.md."
+
+  - front: "What is the difference between the glob patterns *.ts and **/*.ts?"
+    back: "*.ts matches TypeScript files in the project root only. **/*.ts matches TypeScript files in any directory at any depth. The ** crosses directory boundaries; * does not."
+
+  - front: "How do you match multiple file extensions in a single glob pattern?"
+    back: "Use brace expansion: **/*.{ts,tsx} matches all .ts and .tsx files in any directory."
+
+  - front: "When does a path-scoped rule enter the context window?"
+    back: "When Claude reads a file matching the rule's glob patterns. Not at session start and not on every tool use."
+
+  - front: "Write a glob pattern that matches all test files (both .test.ts and .spec.ts) in any directory."
+    back: "**/*.{test,spec}.{ts,tsx} or separate patterns: **/*.test.ts, **/*.test.tsx, **/*.spec.ts, **/*.spec.tsx"
+
+  - front: "When should you use path-specific rules instead of directory-level CLAUDE.md?"
+    back: "When the convention follows a file type regardless of location (e.g., test files in 15+ directories). Path rules capture cross-cutting conventions in a single file."
+
+  - front: "When should you use directory-level CLAUDE.md instead of path-specific rules?"
+    back: "When the convention is specific to one location (e.g., package-specific build commands, deployment instructions for one service). Location-specific instructions belong in directory CLAUDE.md."
+
+  - front: "How do multiple patterns in a paths array combine?"
+    back: "With OR logic. A file matching ANY of the listed patterns triggers the rule."
+
+  - front: "What is the token efficiency advantage of path-scoped rules?"
+    back: "They only enter the context window when relevant. A project with 500 lines of rules might load only 50 lines for the current task, keeping context clean and improving instruction adherence."
+
+  - front: "How can you share .claude/rules/ files across multiple projects?"
+    back: "Use symlinks. Create a shared rules directory and symlink individual rule files into each project's .claude/rules/. Symlinks are resolved and loaded normally."
+
+  - front: "What does the glob pattern src/api/**/*.ts match?"
+    back: "All TypeScript files in the src/api/ directory and any subdirectories. For example: src/api/routes/users.ts, src/api/middleware/auth.ts."
+
+  - front: "On the certification exam (Q6), when test conventions apply across all directories, what is the correct configuration approach?"
+    back: "Path-specific rules in .claude/rules/ with glob patterns like **/*.test.ts. Directory-level CLAUDE.md would require copies in every test directory, creating maintenance burden."
+
+  - front: "Can path-specific rules and directory-level CLAUDE.md coexist in the same project?"
+    back: "Yes. Use path rules for cross-cutting conventions (test files, config files) and directory CLAUDE.md for location-specific conventions (package build commands). They complement each other."

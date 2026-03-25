@@ -265,7 +265,7 @@ Compare the two outputs side by side. Look for these differences:
 | Regulatory context      | General data protection observation          | Organisation-specific regulatory requirements (e.g., PDPA 2023 DPA requirement for your jurisdiction)  |
 
 :::note Your output will vary
-The specific classifications and redline language depend on your playbook configuration and the plugin version. The teaching point is the difference in specificity and actionability between generic and playbook-calibrated output — not the exact clause classifications. Look for at least two clauses that change classification or become materially more specific.
+The specific classifications and redline language depend on your playbook configuration and the plugin version. The teaching point is the difference in specificity and actionability between generic and playbook-calibrated output: not the exact clause classifications. Look for at least two clauses that change classification or become materially more specific.
 :::
 
 The playbook turns generic observations into actionable instructions. That is the difference between a tool and an institutional knowledge system.

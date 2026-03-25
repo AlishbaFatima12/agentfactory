@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/people-hr/capstone-full-employee-lifecycle
 sidebar_position: 14
-title: "Capstone — The Full Employee Lifecycle"
-description: "Orchestrate every skill and agent from L01–L13 through a single employee's complete journey: hire, onboard, develop, promote, and offboard — producing a lifecycle folder that demonstrates what an AI-native HR operation looks like end to end"
+title: "Capstone: The Full Employee Lifecycle"
+description: "Orchestrate every skill and agent from L01–L13 through a single employee's complete journey: hire, onboard, develop, promote, and offboard: producing a lifecycle folder that demonstrates what an AI-native HR operation looks like end to end"
 keywords:
   [
     "people and hr",
@@ -49,7 +49,7 @@ learning_objectives:
   - objective: "Execute all six lifecycle stages using the correct plugin skill for each stage and produce a complete lifecycle document folder"
     proficiency_level: "C1"
     bloom_level: "Create"
-    assessment_method: "Student produces six documents — JD, offer letter, onboarding plan, performance review, talent assessment, offboarding plan — each generated using the correct plugin command and each carrying the correct sensitivity label"
+    assessment_method: "Student produces six documents, JD, offer letter, onboarding plan, performance review, talent assessment, offboarding plan: each generated using the correct plugin command and each carrying the correct sensitivity label"
 
   - objective: "Identify, for each lifecycle stage, what the AI contributed and where human judgment was essential"
     proficiency_level: "C1"
@@ -64,42 +64,42 @@ learning_objectives:
   - objective: "Identify configuration improvements to hr.local.md based on what the AI produced during the lifecycle exercise"
     proficiency_level: "B2"
     bloom_level: "Evaluate"
-    assessment_method: "Student proposes at least two specific hr.local.md additions based on gaps or inconsistencies observed in the lifecycle outputs — e.g., jurisdiction-specific notice periods, probation period terms, escalation contacts"
+    assessment_method: "Student proposes at least two specific hr.local.md additions based on gaps or inconsistencies observed in the lifecycle outputs, e.g., jurisdiction-specific notice periods, probation period terms, escalation contacts"
 
 cognitive_load:
   new_concepts: 1
   concepts_list:
-    - "Lifecycle orchestration — selecting, sequencing, and integrating multiple skills across a continuous workflow rather than using them in isolation"
-  assessment: "One new concept is intentional. This is a capstone lesson: every other concept was taught in L01-L13. The cognitive challenge is synthesis and judgment under realistic conditions — orchestrating tools you already know rather than learning new ones. The 90-minute exercise is demanding not because it introduces complexity but because it requires sustained application across six stages."
+    - "Lifecycle orchestration, selecting, sequencing, and integrating multiple skills across a continuous workflow rather than using them in isolation"
+  assessment: "One new concept is intentional. This is a capstone lesson: every other concept was taught in L01-L13. The cognitive challenge is synthesis and judgment under realistic conditions, orchestrating tools you already know rather than learning new ones. The 90-minute exercise is demanding not because it introduces complexity but because it requires sustained application across six stages."
 
 differentiation:
   extension_for_advanced: "After completing the capstone, write a 'lessons for next time' memo as if you were the CHRO reviewing the lifecycle retrospectively. What would you configure differently in hr.local.md? Which skill outputs required the most human editing and why? What is missing from the current plugin stack that a future version should include? This meta-reflection is the thinking that separates HR professionals who use AI tools from those who shape them."
-  remedial_for_struggling: "If the full 90-minute sprint is too ambitious, run three of the six stages rather than all six. Choose Stage 1 (HIRE), Stage 2 (ONBOARD), and Stage 5 (OFFBOARD) — they use the most skills and together tell a complete enough story. Write the reflection for only the stages you complete. The capstone is about integration, not completion — three well-executed stages with genuine reflection are more valuable than six rushed ones."
+  remedial_for_struggling: "If the full 90-minute sprint is too ambitious, run three of the six stages rather than all six. Choose Stage 1 (HIRE), Stage 2 (ONBOARD), and Stage 5 (OFFBOARD); they use the most skills and together tell a complete enough story. Write the reflection for only the stages you complete. The capstone is about integration, not completion: three well-executed stages with genuine reflection are more valuable than six rushed ones."
 
 teaching_guide:
   key_points:
-    - "The capstone is integration, not review. Students are not being tested on definitions — they are being tested on judgment: knowing which skill to reach for, what to feed it, and when to override its output."
+    - "The capstone is integration, not review. Students are not being tested on definitions; they are being tested on judgment: knowing which skill to reach for, what to feed it, and when to override its output."
     - "The sensitivity framework is the most important quality check in the capstone. Every document must be labelled. A student who produces all six documents but labels none of them has not understood a core chapter principle."
     - "The reflection is not optional. 'What did the AI do well?' and 'Where did it need human judgment?' are the most important questions in the lesson. The answers are what a CHRO needs to know before deploying this stack in a real organisation."
     - "hr.local.md is the persistent configuration that makes the stack jurisdiction-aware. A student who observes gaps in outputs and does not connect them to missing hr.local.md configuration has not understood the chapter's configuration layer."
   misconceptions:
-    - "The capstone is about producing the most polished documents. Correction: it is about making the right decisions — which skill to use, when, and with what inputs. A student who produces a mediocre JD but correctly identifies what the skill got wrong and why has demonstrated more learning than one who produces a polished JD without understanding the process."
-    - "Human judgment is needed only when the AI makes an error. Correction: human judgment is needed throughout. The AI produces a competent first draft of everything — but the hiring decision, the performance rating, the promotion call, and the knowledge transfer prioritisation are all human decisions that the AI informs but does not make."
+    - "The capstone is about producing the most polished documents. Correction: it is about making the right decisions, which skill to use, when, and with what inputs. A student who produces a mediocre JD but correctly identifies what the skill got wrong and why has demonstrated more learning than one who produces a polished JD without understanding the process."
+    - "Human judgment is needed only when the AI makes an error. Correction: human judgment is needed throughout. The AI produces a competent first draft of everything , but the hiring decision, the performance rating, the promotion call, and the knowledge transfer prioritisation are all human decisions that the AI informs but does not make."
   discussion_prompts:
     - "At which stage of the lifecycle did you feel most dependent on human judgment even though the AI tool was producing usable output? Why that stage?"
     - "If you configured hr.local.md well before starting this capstone, which outputs improved most? What does that tell you about the importance of configuration versus prompting?"
   teaching_tips:
     - "Run this as a live class sprint if possible. Have students share their lifecycle folders with a peer before the reflection. The peer review often surfaces gaps the author missed."
-    - "The summary table at the end of the lesson — all 14 skills mapped to lifecycle stages — is a valuable class discussion anchor. Ask students to argue about which skills belong where, and why some skills appear in multiple stages."
+    - "The summary table at the end of the lesson, all 14 skills mapped to lifecycle stages: is a valuable class discussion anchor. Ask students to argue about which skills belong where, and why some skills appear in multiple stages."
 ---
 
-# Capstone — The Full Employee Lifecycle
+# Capstone: The Full Employee Lifecycle
 
-Ayesha Raza joined the EdTech company in Karachi eighteen months ago. She was hired as a Senior Data Analyst into Omar Farooq's team. She has been through an onboarding programme, her first performance review, a compensation benchmarking exercise, and now — as the company grows — a succession conversation about a leadership role that has opened up. And if, hypothetically, Ayesha were to leave two years from now, the offboarding and knowledge capture process would make sure the knowledge she accumulated did not leave with her.
+Ayesha Raza joined the EdTech company in Karachi eighteen months ago. She was hired as a Senior Data Analyst into Omar Farooq's team. She has been through an onboarding programme, her first performance review, a compensation benchmarking exercise, and now, as the company grows: a succession conversation about a leadership role that has opened up. And if, hypothetically, Ayesha were to leave two years from now, the offboarding and knowledge capture process would make sure the knowledge she accumulated did not leave with her.
 
-Ayesha's journey is what the tools in this chapter were built for. Not individual isolated use-cases — a JD here, a performance review there — but a coherent, end-to-end workflow that uses the right tool at the right moment in a continuous relationship between an employee and an organisation.
+Ayesha's journey is what the tools in this chapter were built for. Not individual isolated use-cases: a JD here, a performance review there , but a coherent, end-to-end workflow that uses the right tool at the right moment in a continuous relationship between an employee and an organisation.
 
-This capstone lesson asks you to run that lifecycle yourself. You will play the role of the HR team supporting Ayesha's journey — or an employee from your own organisation, anonymised if needed. You will use every skill and agent in the chapter stack. And at the end, you will reflect on what the AI did well, where it needed human judgment, and what you would configure differently in `hr.local.md` if you were doing it again.
+This capstone lesson asks you to run that lifecycle yourself. You will play the role of the HR team supporting Ayesha's journey , or an employee from your own organisation, anonymised if needed. You will use every skill and agent in the chapter stack. And at the end, you will reflect on what the AI did well, where it needed human judgment, and what you would configure differently in `hr.local.md` if you were doing it again.
 
 ## The Skills and Agents in This Chapter
 
@@ -140,7 +140,7 @@ Before starting the lifecycle sprint, here is the complete map of what you have 
 
 ## The Employee Lifecycle: Six Stages
 
-The lifecycle follows Ayesha from before she joined to — hypothetically — the day she might leave. Each stage maps to the skills and agents you have already learned.
+The lifecycle follows Ayesha from before she joined to, hypothetically: the day she might leave. Each stage maps to the skills and agents you have already learned.
 
 ### Stage 1: HIRE
 
@@ -150,7 +150,7 @@ The lifecycle follows Ayesha from before she joined to — hypothetically — th
 Before Ayesha could join, someone had to write a compelling job description for the Senior Data Analyst role. Someone had to prepare structured interview questions. Someone had to benchmark the salary to make sure the offer was competitive. And someone had to draft an offer letter that was accurate for Pakistan jurisdiction and reflected the company's actual benefits.
 
 ```
-/jd Senior Data Analyst — EdTech company, Karachi, Pakistan
+/jd Senior Data Analyst, EdTech company, Karachi, Pakistan
 
 Department: Analytics (reports to Head of Analytics)
 Level: Senior
@@ -164,7 +164,7 @@ Jurisdiction: Pakistan
 Then:
 
 ```
-/interview-prep Senior Data Analyst — EdTech, Karachi
+/interview-prep Senior Data Analyst, EdTech, Karachi
 
 Role: Senior Data Analyst
 Level: Senior
@@ -177,7 +177,7 @@ Jurisdiction: Pakistan
 Then:
 
 ```
-/comp-analysis Senior Data Analyst — Karachi, Pakistan
+/comp-analysis Senior Data Analyst, Karachi, Pakistan
 
 Company: EdTech, ~250 employees. Role is IC, no direct reports.
 Market: Pakistan technology sector.
@@ -188,7 +188,7 @@ existing Data Analysts in team are at 150,000-170,000 PKR/month.
 Finally:
 
 ```
-/draft-offer Ayesha Raza — Senior Data Analyst
+/draft-offer Ayesha Raza, Senior Data Analyst
 
 Company: EdTech company, Karachi, Pakistan
 Jurisdiction: Pakistan (Employment Ordinance 1968, applicable provincial regulations)
@@ -211,7 +211,7 @@ Reporting to: Omar Farooq, Head of Analytics
 **Agents running in background:** `onboarding-orchestrator` (pre-boarding → Day 1 → Day 30 → Day 60 → Day 90), `knowledge-base-agent` (Ayesha's Day 1 questions)
 
 ```
-/onboarding Ayesha Raza — Senior Data Analyst
+/onboarding Ayesha Raza, Senior Data Analyst
 
 Role: Senior Data Analyst
 Manager: Omar Farooq, Head of Analytics
@@ -225,7 +225,7 @@ Tools/systems to access: [list]
 90-day goal: [specific outcome]
 ```
 
-The `/onboarding` skill produces a structured 30-60-90 plan with milestones, check-in points, and success criteria for each phase. The `onboarding-orchestrator` runs the logistics — task checklists, survey sends, manager reminder messages — automatically.
+The `/onboarding` skill produces a structured 30-60-90 plan with milestones, check-in points, and success criteria for each phase. The `onboarding-orchestrator` runs the logistics, task checklists, survey sends, manager reminder messages, automatically.
 
 On Day 1, Ayesha has a question about how to book leave. She asks the `knowledge-base-agent`. It answers immediately with a plain-language summary and a link to the policy source. She does not need to message Sarah in HR.
 
@@ -239,7 +239,7 @@ On Day 1, Ayesha has a question about how to book leave. She asks the `knowledge
 After twelve months, Omar and Ayesha have her first formal performance review. Omar uses `/performance-review` to structure his thinking and draft the review document.
 
 ```
-/performance-review Ayesha Raza — Year 1 Review
+/performance-review Ayesha Raza, Year 1 Review
 
 Role: Senior Data Analyst
 Review period: 12 months
@@ -251,7 +251,7 @@ Performance evidence:
 - Led the customer analytics dashboard project (delivered on time, strong stakeholder feedback)
 - Improved reporting pipeline efficiency (reduced run time from 4 hours to 45 minutes)
 - Mentored two junior analysts on SQL optimisation techniques
-- Identified data quality issue in revenue reporting — raised proactively
+- Identified data quality issue in revenue reporting, raised proactively
 
 Development areas:
 - External stakeholder presentations: capable but needs confidence at leadership level
@@ -261,7 +261,7 @@ Compensation review: salary at 190,000 PKR/month, below 50th percentile after 12
 of inflation. Review appropriate.
 ```
 
-After the review, Omar uses `/comp-analysis` to benchmark Ayesha's salary for the upcoming pay review — checking whether 190,000 PKR/month is still competitive after a year of market movement.
+After the review, Omar uses `/comp-analysis` to benchmark Ayesha's salary for the upcoming pay review, checking whether 190,000 PKR/month is still competitive after a year of market movement.
 
 **Sensitivity:** `/performance-review` output = CONFIDENTIAL. `/comp-analysis` output = CONFIDENTIAL.
 
@@ -270,7 +270,7 @@ After the review, Omar uses `/comp-analysis` to benchmark Ayesha's salary for th
 **Skills:** `/match`, `/org-planning`, `/comp-analysis`
 **Agents running in background:** `knowledge-base-agent`
 
-Eighteen months in, a Team Lead, Analytics opportunity opens. Omar wants to assess Ayesha as an internal candidate — but also has Bilal Ahmed in the picture.
+Eighteen months in, a Team Lead, Analytics opportunity opens. Omar wants to assess Ayesha as an internal candidate , but also has Bilal Ahmed in the picture.
 
 This is the succession planning workflow from L09. Omar runs `/match` for both candidates, reviews the six-dimension output, has the succession conversation with Ayesha using the conditional pathway language ("if your trajectory continues, a leadership role becomes realistic"), and uses `/org-planning` to model what the analytics team looks like if Ayesha moves up.
 
@@ -281,12 +281,12 @@ This is the succession planning workflow from L09. Omar runs `/match` for both c
 **Skills:** `/offboard`, `/knowledge`
 **Agents running in background:** `offboarding-knowledge-agent` (triggered by resignation record)
 
-Three years later — hypothetically — Ayesha decides to pursue an opportunity elsewhere. She gives notice. The `offboarding-knowledge-agent` triggers immediately, generating a risk-calibrated knowledge capture plan based on her role, tenure, and the knowledge assets she holds.
+Three years later, hypothetically, Ayesha decides to pursue an opportunity elsewhere. She gives notice. The `offboarding-knowledge-agent` triggers immediately, generating a risk-calibrated knowledge capture plan based on her role, tenure, and the knowledge assets she holds.
 
 HR uses `/offboard` to structure the process:
 
 ```
-/offboard Ayesha Raza — Senior Data Analyst (now Team Lead Analytics)
+/offboard Ayesha Raza, Senior Data Analyst (now Team Lead Analytics)
 
 Jurisdiction: Pakistan
 Last day: [Date] (4 weeks notice)
@@ -301,7 +301,7 @@ Handover: to [successor name or "TBD"]
 And uses `/knowledge` to structure a knowledge capture interview before Ayesha leaves:
 
 ```
-/knowledge Ayesha Raza — knowledge capture interview guide
+/knowledge Ayesha Raza, knowledge capture interview guide
 
 Role: Team Lead Analytics (formerly Senior Data Analyst)
 Tenure: 3 years
@@ -326,7 +326,7 @@ Output: structured knowledge base articles for each domain
 
 Throughout Ayesha's three years, the four persistent agents have been running:
 
-- `knowledge-base-agent` answered her questions every time she had one — about leave, about benefits, about the promotion process
+- `knowledge-base-agent` answered her questions every time she had one, about leave, about benefits, about the promotion process
 - `onboarding-orchestrator` ran her onboarding and will run for every hire after her
 - `policy-maintenance-agent` ensured that the policies she read on Day 1 remained accurate as statutory rates changed
 - `offboarding-knowledge-agent` is now capturing everything she knows before she leaves
@@ -338,7 +338,7 @@ And the CHRO has been running `/people-report` quarterly, seeing Ayesha's first 
 **Type:** Capstone Practice
 **Time:** 90 minutes
 **Plugin commands:** All
-**Goal:** Produce a complete employee lifecycle folder for one employee — real (anonymised) or fictional — using the correct skill for each stage
+**Goal:** Produce a complete employee lifecycle folder for one employee, real (anonymised) or fictional, using the correct skill for each stage
 
 This exercise is one continuous workflow, not six isolated tasks. Work through the stages in order. The output of each stage informs the next.
 
@@ -362,9 +362,9 @@ Define:
 
 Produce three documents:
 
-1. **Job description** — Use `/jd`
-2. **Interview plan** — Use `/interview-prep`
-3. **Offer letter** — Use `/draft-offer` (benchmark salary first with `/comp-analysis` if you want to set a realistic figure)
+1. **Job description:** Use `/jd`
+2. **Interview plan:** Use `/interview-prep`
+3. **Offer letter:** Use `/draft-offer` (benchmark salary first with `/comp-analysis` if you want to set a realistic figure)
 
 Label each: ROUTINE or CONFIDENTIAL.
 
@@ -372,7 +372,7 @@ Label each: ROUTINE or CONFIDENTIAL.
 
 Produce one document:
 
-4. **30-60-90 onboarding plan** — Use `/onboarding`
+4. **30-60-90 onboarding plan:** Use `/onboarding`
 
 Verify: does it include observable success criteria for each phase? Does it specify who is responsible for each milestone? Label: ROUTINE.
 
@@ -380,7 +380,7 @@ Verify: does it include observable success criteria for each phase? Does it spec
 
 Produce one document:
 
-5. **Performance review** — Use `/performance-review`
+5. **Performance review:** Use `/performance-review`
 
 Include: performance evidence, development areas, at least one specific competency rating with a rationale. Label: CONFIDENTIAL.
 
@@ -388,7 +388,7 @@ Include: performance evidence, development areas, at least one specific competen
 
 Produce one document:
 
-6. **Talent assessment** — Use `/match` to assess your employee against a leadership or next-level role
+6. **Talent assessment:** Use `/match` to assess your employee against a leadership or next-level role
 
 Include: six-dimension assessment, readiness classification, development plan if applicable. Draft the opening line of the succession conversation you would have (what you would say, using the conditional pathway language). Label: CONFIDENTIAL.
 
@@ -396,8 +396,8 @@ Include: six-dimension assessment, readiness classification, development plan if
 
 Produce two documents:
 
-7. **Offboarding plan** — Use `/offboard`
-8. **Knowledge capture interview guide** — Use `/knowledge`
+7. **Offboarding plan:** Use `/offboard`
+8. **Knowledge capture interview guide:** Use `/knowledge`
 
 Identify the top three knowledge risks (what this employee knows that is not documented elsewhere). Label both: CONFIDENTIAL.
 
@@ -410,7 +410,7 @@ A lifecycle folder containing:
 - A one-paragraph reflection per stage: what did the AI do well, and where did it need human judgment?
 
 :::note Keep This File
-The lifecycle folder you build here is a portfolio artefact — it demonstrates that you can operate an AI-native HR function end to end. It is also the reference point for Lesson 15's quick reference tables, which map every skill and agent to the stage where it appears in this lifecycle.
+The lifecycle folder you build here is a portfolio artefact ; it demonstrates that you can operate an AI-native HR function end to end. It is also the reference point for Lesson 15's quick reference tables, which map every skill and agent to the stage where it appears in this lifecycle.
 :::
 
 ## The Human Judgment Reflection
@@ -477,7 +477,7 @@ Every skill and agent in the chapter, mapped to where it appeared in this lifecy
 | `/people-report`              | Official skill | Stage 6: CONTINUOUS             | L13           |
 | `/recruiting-pipeline`        | Official skill | Stage 1: HIRE                   | L13           |
 
-This table is what an AI-native HR operation looks like: 9 official skills + 5 custom skills + 4 persistent agents, each in the right place, each handling the right part of the lifecycle. Not a replacement for HR judgment — a multiplier of it.
+This table is what an AI-native HR operation looks like: 9 official skills + 5 custom skills + 4 persistent agents, each in the right place, each handling the right part of the lifecycle. Not a replacement for HR judgment: a multiplier of it.
 
 ## Try With AI
 
@@ -507,14 +507,14 @@ Label the output with its sensitivity level (ROUTINE or CONFIDENTIAL).
 Then pause and wait for me to confirm before moving to the next step.
 ```
 
-**What you are learning:** Working stage by stage with a pause for review between each step teaches you to treat each skill output as a draft that requires human judgment before proceeding — not a finished document.
+**What you are learning:** Working stage by stage with a pause for review between each step teaches you to treat each skill output as a draft that requires human judgment before proceeding , not a finished document.
 
 **Adapt**: Map the lifecycle to your own organisation's most recent hire.
 
 ```
 I want to map the AI-native HR lifecycle to a recent hire in my organisation.
 
-Employee: [Name or role — anonymise if needed]
+Employee: [Name or role, anonymise if needed]
 Role: [Title and level]
 Manager: [Name or role]
 Company: [Brief description: size, sector, jurisdiction]
@@ -528,7 +528,7 @@ For each lifecycle stage below, tell me:
 Stages: HIRE, ONBOARD, DEVELOP, RETAIN/PROMOTE, OFFBOARD, CONTINUOUS
 ```
 
-**What you are learning:** Mapping the lifecycle framework to a real hire makes abstract tools concrete. The "primary human judgment moment" question is the most valuable part — it reveals where the AI is a tool that supports a decision versus the decision itself.
+**What you are learning:** Mapping the lifecycle framework to a real hire makes abstract tools concrete. The "primary human judgment moment" question is the most valuable part ; it reveals where the AI is a tool that supports a decision versus the decision itself.
 
 **Apply**: Design your organisation's AI-native HR playbook.
 
@@ -552,7 +552,7 @@ Using the hr-operations and human-resources plugin stack, design:
 Be specific about what "AI-native HR" looks like for my organisation's size and context.
 ```
 
-**What you are learning:** Designing a playbook for your own organisation forces you to sequence the implementation — which is harder than running all tools at once. Priority reveals what you actually believe about where the value is.
+**What you are learning:** Designing a playbook for your own organisation forces you to sequence the implementation, which is harder than running all tools at once. Priority reveals what you actually believe about where the value is.
 :::
 
 ## Flashcards Study Aid

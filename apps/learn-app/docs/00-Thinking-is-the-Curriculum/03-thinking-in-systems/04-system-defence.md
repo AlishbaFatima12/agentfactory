@@ -45,7 +45,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (peer cross-examination, gap identification in others' work, live defence without tools) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (peer cross-examination, gap identification in others' work, live defence without tools) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "After the peer exchange, identify a pattern in the types of gaps peers find vs. the types of gaps AI finds. Write a 100-word reflection on what this pattern reveals about the limits of each type of reviewer"
@@ -56,20 +56,20 @@ teaching_guide:
   session_group: 3
   session_title: "Peer Cross-Examination"
   key_points:
-    - "This is the live defence layer (Layer 3) — no AI access during the session, testing whether students genuinely understand their maps"
-    - "Peers reveal different blind spots than AI — a peer who approached the same problem differently can find gaps that AI's convergent analysis misses"
-    - "The preparation notes (written before the live session) prevent students from improvising critique — they must engage deeply with their partner's work"
+    - "This is the live defence layer (Layer 3) : no AI access during the session, testing whether students genuinely understand their maps"
+    - "Peers reveal different blind spots than AI: a peer who approached the same problem differently can find gaps that AI's convergent analysis misses"
+    - "The preparation notes (written before the live session) prevent students from improvising critique: they must engage deeply with their partner's work"
     - "The 200-word post-session reflection connects the peer experience to the full chapter's learning arc"
   misconceptions:
-    - "Students think the goal is to 'win' the defence — the goal is to discover blind spots, which means being genuinely open to critique"
-    - "Students give vague feedback ('your map is good') instead of specific gap identification — require concrete missing connections"
-    - "Students think the live session replaces the AI Check — both are required; they test different things"
+    - "Students think the goal is to 'win' the defence: the goal is to discover blind spots, which means being genuinely open to critique"
+    - "Students give vague feedback ('your map is good') instead of specific gap identification: require concrete missing connections"
+    - "Students think the live session replaces the AI Check: both are required; they test different things"
   discussion_prompts:
     - "What type of gap did your partner find that none of the AI tools found in previous exercises? What does that tell you about the value of human peer review?"
     - "Which challenge was hardest to defend? What does the difficulty of that defence tell you about your understanding of that part of the system?"
   teaching_tips:
-    - "Enforce the 15-minute time limit strictly — 7-8 minutes per student. The time pressure forces efficient communication"
-    - "Have students write preparation notes BEFORE the live session and submit them — this prevents shallow critique"
+    - "Enforce the 15-minute time limit strictly: 7-8 minutes per student. The time pressure forces efficient communication"
+    - "Have students write preparation notes BEFORE the live session and submit them: this prevents shallow critique"
     - "For the Solo Learner Alternative, encourage a multi-turn AI conversation (at least 3-4 exchanges) rather than a single prompt-response"
   assessment_quick_check:
     - "Ask students: What is the most important thing your partner found in your map that you missed?"
@@ -85,7 +85,7 @@ teaching_guide:
 Pair up with another student. Exchange your final cascade maps (Draft 3). In a live 15-minute session, each student must: (a) identify at least 2 missing connections in their partner's map, (b) challenge at least 1 feedback loop as unrealistic, and (c) defend their own map against their partner's challenges. No AI access during the session.
 
 :::tip Solo Learner Alternative
-Submit your final cascade map to AI with this prompt: "You are a critical peer reviewer examining my systems thinking map. Identify 3 gaps — missing connections, implausible causal chains, or feedback loops I missed. Then challenge one of my feedback loops as unrealistic and explain why. I will defend my reasoning in writing." Conduct a multi-turn defence and submit the full transcript.
+Submit your final cascade map to AI with this prompt: "You are a critical peer reviewer examining my systems thinking map. Identify 3 gaps; missing connections, implausible causal chains, or feedback loops I missed. Then challenge one of my feedback loops as unrealistic and explain why. I will defend my reasoning in writing." Conduct a multi-turn defence and submit the full transcript.
 :::
 
 ---
@@ -150,7 +150,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn that systems thinking is tested by other humans, not just by AI. A peer who approaches the same problem differently reveals blind spots that AI — which tends to converge on similar analyses — cannot find. The live format tests whether you understand your map deeply enough to explain and defend the connections you drew.
+You learn that systems thinking is tested by other humans, not just by AI. A peer who approaches the same problem differently reveals blind spots that AI (which tends to converge on similar analyses) cannot find. The live format tests whether you understand your map deeply enough to explain and defend the connections you drew.
 
 ---
 

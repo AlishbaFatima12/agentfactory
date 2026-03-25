@@ -75,23 +75,23 @@ teaching_guide:
   session_group: 1
   session_title: "Getting Started with Claude Code"
   key_points:
-    - "The three-layer architecture (CLI -> Router -> API) is the real lesson — students learn backend abstraction as a side effect of saving money"
-    - "Free tier limits changed significantly in Dec 2025 — students must plan for rate limits and have backup backends ready"
-    - "All Claude Code features (subagents, skills, MCP, hooks) work identically regardless of backend — this is the power of the abstraction"
+    - "The three-layer architecture (CLI -> Router -> API) is the real lesson; students learn backend abstraction as a side effect of saving money"
+    - "Free tier limits changed significantly in Dec 2025; students must plan for rate limits and have backup backends ready"
+    - "All Claude Code features (subagents, skills, MCP, hooks) work identically regardless of backend; this is the power of the abstraction"
     - "The 'ccr start' then 'ccr code' two-terminal workflow is the most common failure point for beginners"
   misconceptions:
-    - "Students think free backends produce inferior Claude Code functionality — the CLI features are identical, only the underlying model intelligence differs"
-    - "Students confuse the router config's $GOOGLE_API_KEY placeholder with their actual key — the warning boxes exist because students repeatedly paste real keys there"
-    - "Students assume they must pick one backend permanently — they can switch by editing config.json anytime"
+    - "Students think free backends produce inferior Claude Code functionality; the CLI features are identical, only the underlying model intelligence differs"
+    - "Students confuse the router config's $GOOGLE_API_KEY placeholder with their actual key; the warning boxes exist because students repeatedly paste real keys there"
+    - "Students assume they must pick one backend permanently; they can switch by editing config.json anytime"
   discussion_prompts:
     - "What does it mean architecturally that you can swap the AI model behind Claude Code without changing how you use it?"
-    - "If free tiers keep shrinking, what is your backup plan — and how does the router architecture make switching painless?"
+    - "If free tiers keep shrinking, what is your backup plan; and how does the router architecture make switching painless?"
     - "Why do you think Anthropic built Claude Code so it could work with competing models through routers?"
   teaching_tips:
-    - "Demo the two-terminal workflow live — start ccr in terminal 1, then ccr code in terminal 2 — students need to see the sequence visually"
-    - "Have the OpenRouter vs Gemini vs DeepSeek comparison table on screen when students choose — rushed choices here cause frustration later"
+    - "Demo the two-terminal workflow live; start ccr in terminal 1, then ccr code in terminal 2; students need to see the sequence visually"
+    - "Have the OpenRouter vs Gemini vs DeepSeek comparison table on screen when students choose; rushed choices here cause frustration later"
     - "The $VARIABLE_NAME placeholder confusion is so common that you should explicitly say 'do NOT replace this text' while pointing at the config"
-    - "Pair students who chose different backends and have them compare responses to the same prompt — makes the abstraction layer tangible"
+    - "Pair students who chose different backends and have them compare responses to the same prompt; makes the abstraction layer tangible"
   assessment_quick_check:
     - "Ask students to draw the request flow: their prompt -> CLI -> router -> API -> model -> response"
     - "Have students run 'ccr version' and 'claude --version' and explain what each tool does"
@@ -107,7 +107,7 @@ teaching_guide:
 **All features work identically**: Subagents, skills, MCP servers, hooks, and all other capabilities covered in Lessons 05-15 function the same way with free backends. The only difference is the backend AI model and API provider.
 
 :::tip Free Ongoing Usage
-By using **Gemini's free tier** or **DeepSeek's competitive API**, you get ongoing free or low-cost consumption—no subscription required. This setup isn't just for learning; many developers use it as their daily driver. The free tiers are generous enough for real development work.
+By using **Gemini's free tier** or **DeepSeek's competitive API**, you get ongoing free or low-cost consumption: no subscription required. This setup isn't just for learning; many developers use it as their daily driver. The free tiers are generous enough for real development work.
 :::
 
 ---
@@ -116,13 +116,13 @@ By using **Gemini's free tier** or **DeepSeek's competitive API**, you get ongoi
 
 Before setup, decide which backend suits you. All three options provide identical Claude Code functionality:
 
-| Factor | OpenRouter | Gemini | DeepSeek |
-| :--- | :--- | :--- | :--- |
-| **Available Models** | 5+ free options | Gemini 2.5 Flash | DeepSeek Chat/Reasoner |
-| **Free Tier** | Daily request limits per model | Daily request limits | Token-based (~$0.028-$0.42/M tokens) |
-| **Speed** | Very Fast | Very Fast | Fast |
-| **Setup Complexity** | Manual, most transparent | Easiest (few steps) | Slightly more involved |
-| **Reasoning Models** | Available (Qwen, Llama) | Native support | Native support |
+| Factor               | OpenRouter                     | Gemini               | DeepSeek                             |
+| :------------------- | :----------------------------- | :------------------- | :----------------------------------- |
+| **Available Models** | 5+ free options                | Gemini 2.5 Flash     | DeepSeek Chat/Reasoner               |
+| **Free Tier**        | Daily request limits per model | Daily request limits | Token-based (~$0.028-$0.42/M tokens) |
+| **Speed**            | Very Fast                      | Very Fast            | Fast                                 |
+| **Setup Complexity** | Manual, most transparent       | Easiest (few steps)  | Slightly more involved               |
+| **Reasoning Models** | Available (Qwen, Llama)        | Native support       | Native support                       |
 
 ---
 
@@ -230,6 +230,7 @@ Leave `"api_key": "$OPENROUTER_API_KEY"` exactly as written. The router reads yo
 ### Set Your API Key
 
 **Run PowerShell as Administrator:**
+
 1. Search "PowerShell" in Windows Start menu
 2. **Right-click** on "Windows PowerShell"
 3. Click **"Run as administrator"**
@@ -241,7 +242,7 @@ Run this command (replace `YOUR_KEY_HERE` with your key from Step 1):
 [System.Environment]::SetEnvironmentVariable('OPENROUTER_API_KEY', 'YOUR_KEY_HERE', 'User')
 ```
 
-5. **Close PowerShell completely** (not just the tab—close the whole window)
+5. **Close PowerShell completely** (not just the tab: close the whole window)
 6. Open a **new regular PowerShell** (not as admin)
 7. Verify it worked:
 
@@ -256,7 +257,7 @@ You should see your API key displayed ✅
 ### Verify Setup
 
 ```powershell
-claude --version     # Should show: Claude Code v2.x.x
+claude --version     # Should show: X.X.XX (Claude Code)
 ccr version          # Should show version number
 echo $env:OPENROUTER_API_KEY  # Should show your key
 ```
@@ -342,7 +343,7 @@ source ~/.zshrc
 ### Verify Setup
 
 ```bash
-claude --version          # Should show: Claude Code v2.x.x
+claude --version          # Should show: X.X.XX (Claude Code)
 ccr version               # Should show version number
 echo $OPENROUTER_API_KEY # Should show your key
 ```
@@ -432,7 +433,7 @@ Run `echo $SHELL` to see which shell you use. If it shows `/bin/zsh`, use `~/.zs
 ### Verify Setup
 
 ```bash
-claude --version          # Should show: Claude Code v2.x.x
+claude --version          # Should show: X.X.XX (Claude Code)
 ccr version               # Should show version number
 echo $OPENROUTER_API_KEY # Should show your key
 ```
@@ -452,13 +453,15 @@ echo $OPENROUTER_API_KEY # Should show your key
 ::windows
 
 **PowerShell 1** - Start router FIRST:
+
 ```powershell
 ccr start
 ```
 
-Leave this window running. You'll see a warning message—that's normal!
+Leave this window running. You'll see a warning message: that's normal!
 
 **PowerShell 2** - Open a NEW PowerShell window and run:
+
 ```powershell
 cd C:\your\project\folder
 ccr code
@@ -473,12 +476,14 @@ ccr code
 ::macos
 
 **Terminal 1** - Start router FIRST:
+
 ```bash
 ccr start
 # Wait for: ✅ Service started successfully
 ```
 
 **Terminal 2** - THEN use Claude:
+
 ```bash
 cd ~/your-project
 ccr code
@@ -489,12 +494,14 @@ ccr code
 ::linux
 
 **Terminal 1** - Start router FIRST:
+
 ```bash
 ccr start
 # Wait for: ✅ Service started successfully
 ```
 
 **Terminal 2** - THEN use Claude:
+
 ```bash
 cd ~/your-project
 ccr code
@@ -598,10 +605,7 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude"
       "name": "gemini",
       "api_base_url": "https://generativelanguage.googleapis.com/v1beta/models/",
       "api_key": "$GOOGLE_API_KEY",
-      "models": [
-        "gemini-2.5-flash-lite",
-        "gemini-2.0-flash"
-      ],
+      "models": ["gemini-2.5-flash-lite", "gemini-2.0-flash"],
       "transformer": {
         "use": ["gemini"]
       }
@@ -618,7 +622,7 @@ New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.claude"
 ```
 
 :::warning Do NOT Change $GOOGLE_API_KEY
-Leave `"api_key": "$GOOGLE_API_KEY"` exactly as written. Do NOT replace it with your actual key here—the router will automatically read your key from the environment variable you set in Step 4.
+Leave `"api_key": "$GOOGLE_API_KEY"` exactly as written. Do NOT replace it with your actual key here: the router will automatically read your key from the environment variable you set in Step 4.
 :::
 
 3. Click **File → Save As**
@@ -630,6 +634,7 @@ Leave `"api_key": "$GOOGLE_API_KEY"` exactly as written. Do NOT replace it with 
 ### Step 4: Set Your API Key
 
 **Run PowerShell as Administrator:**
+
 1. Search "PowerShell" in Windows Start menu
 2. **Right-click** on "Windows PowerShell"
 3. Click **"Run as administrator"**
@@ -641,7 +646,7 @@ Run this command (replace `YOUR_KEY_HERE` with your actual API key from Step 1):
 [System.Environment]::SetEnvironmentVariable('GOOGLE_API_KEY', 'YOUR_KEY_HERE', 'User')
 ```
 
-5. **Close PowerShell completely** (not just the tab—close the whole window)
+5. **Close PowerShell completely** (not just the tab: close the whole window)
 6. Open a **new regular PowerShell** (not as admin this time)
 7. Verify it worked:
 
@@ -656,7 +661,7 @@ You should see your API key displayed ✅
 ### Verify Setup
 
 ```powershell
-claude --version     # Should show: Claude Code v2.x.x
+claude --version     # Should show: X.X.XX (Claude Code)
 ccr version          # Should show version number
 echo $env:GOOGLE_API_KEY  # Should show your key
 ```
@@ -739,7 +744,7 @@ source ~/.zshrc
 ### Verify Setup
 
 ```bash
-claude --version     # Should show: Claude Code v2.x.x
+claude --version     # Should show: X.X.XX (Claude Code)
 ccr version          # Should show version number
 echo $GOOGLE_API_KEY # Should show your key
 ```
@@ -826,7 +831,7 @@ Run `echo $SHELL` to see your shell. If it shows `/bin/zsh`, use `~/.zshrc` inst
 ### Verify Setup
 
 ```bash
-claude --version     # Should show: Claude Code v2.x.x
+claude --version     # Should show: X.X.XX (Claude Code)
 ccr version          # Should show version number
 echo $GOOGLE_API_KEY # Should show your key
 ```
@@ -846,20 +851,22 @@ echo $GOOGLE_API_KEY # Should show your key
 ::windows
 
 **PowerShell 1** - Start router FIRST:
+
 ```powershell
 ccr start
 ```
 
-Leave this window running. You'll see a warning message—that's normal!
+Leave this window running. You'll see a warning message: that's normal!
 
 **PowerShell 2** - Open a NEW PowerShell window and run:
+
 ```powershell
 cd C:\your\project\folder
 ccr code
 ```
 
 :::tip First Startup Takes Time
-**Wait 10-20 seconds** after running `ccr code` on first startup. The router needs time to initialize. If it seems stuck, just wait—it's working!
+**Wait 10-20 seconds** after running `ccr code` on first startup. The router needs time to initialize. If it seems stuck, just wait: it's working!
 :::
 
 **When done:** Press `Ctrl+C` in both windows.
@@ -867,12 +874,14 @@ ccr code
 ::macos
 
 **Terminal 1** - Start router FIRST:
+
 ```bash
 ccr start
 # Wait for: ✅ Service started successfully
 ```
 
 **Terminal 2** - THEN use Claude:
+
 ```bash
 cd ~/your-project
 ccr code
@@ -883,12 +892,14 @@ ccr code
 ::linux
 
 **Terminal 1** - Start router FIRST:
+
 ```bash
 ccr start
 # Wait for: ✅ Service started successfully
 ```
 
 **Terminal 2** - THEN use Claude:
+
 ```bash
 cd ~/your-project
 ccr code
@@ -936,10 +947,7 @@ If you already completed the **Gemini Setup** above, you already have Node.js an
       "name": "deepseek",
       "api_base_url": "https://api.deepseek.com/v1",
       "api_key": "$DEEPSEEK_API_KEY",
-      "models": [
-        "deepseek-chat",
-        "deepseek-reasoner"
-      ],
+      "models": ["deepseek-chat", "deepseek-reasoner"],
       "transformer": {
         "use": ["openai"]
       }
@@ -1170,7 +1178,6 @@ Once your free setup is working, try these prompts to verify everything works:
 ---
 
 That's it. Proceed to **Lesson 05** to learn about teaching Claude your way of working.
-
 
 ## Flashcards Study Aid
 

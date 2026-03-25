@@ -211,24 +211,24 @@ The `outreach` skill auto-activates and enforces the Five Laws:
 | Law check  | Per-law pass/fail against all Five Laws                 | All 5 laws marked; any failure includes the specific violation |
 
 :::note Your output will vary
-The DM content depends on your research brief and enrichment data from earlier lessons. The teaching point is the _audit_ — checking each law against the output — not the specific message text. If all five laws pass, the skill is consuming your research brief effectively. If any fail, iterate before moving on.
+The DM content depends on your research brief and enrichment data from earlier lessons. The teaching point is the _audit_: checking each law against the output: not the specific message text. If all five laws pass, the skill is consuming your research brief effectively. If any fail, iterate before moving on.
 :::
 
-Run the audit yourself — do not trust the agent's self-check alone. If all five laws pass, the skill is consuming your research brief effectively. When the input is rich, the output is sharp.
+Run the audit yourself: do not trust the agent's self-check alone. If all five laws pass, the skill is consuming your research brief effectively. When the input is rich, the output is sharp.
 
-Now generate a follow-up email for the same prospect — different channel, same Five Laws:
+Now generate a follow-up email for the same prospect: different channel, same Five Laws:
 
 **What to expect:** The agent produces a follow-up email with the same Five Laws enforcement. Your output will vary, but look for these sections:
 
 | Section      | Intent                                       | What to Verify                                     |
 | ------------ | -------------------------------------------- | -------------------------------------------------- |
-| Subject line | Specific to the prospect's situation         | Not generic ("Following up") — references the hook |
+| Subject line | Specific to the prospect's situation         | Not generic ("Following up"): references the hook |
 | Email body   | Same research, different framing from the DM | Adds a new angle or evidence point                 |
 | Word count   | Cold email length check                      | Under 150 words                                    |
 | Law check    | Per-law pass/fail                            | All 5 laws satisfied                               |
 
 :::note Your output will vary
-Compare your DM and email side by side. They should reference the same prospect data but frame it differently — the DM asks a diagnostic question, the email typically offers proof or a specific next step. Same Five Laws discipline, different execution per channel.
+Compare your DM and email side by side. They should reference the same prospect data but frame it differently: the DM asks a diagnostic question, the email typically offers proof or a specific next step. Same Five Laws discipline, different execution per channel.
 :::
 
 ## The Compliance Gap
@@ -269,7 +269,7 @@ Law check: 1 ✓ | 2 ✓ | 3 ✓ | 4 ✓ | 5 ✓
 ```
 
 :::note Illustrative example
-This output is shown for teaching purposes. Your agent will produce different content, but the pattern is the same: a message that passes all Five Laws on content quality but may fail on cultural or jurisdictional appropriateness. Read it as Hamza would read it — that is the diagnostic exercise.
+This output is shown for teaching purposes. Your agent will produce different content, but the pattern is the same: a message that passes all Five Laws on content quality but may fail on cultural or jurisdictional appropriateness. Read it as Hamza would read it: that is the diagnostic exercise.
 :::
 
 All five laws pass. The content is clean. But read it again as Hamza would read it.

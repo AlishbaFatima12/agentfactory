@@ -55,20 +55,20 @@ teaching_guide:
   session_group: 1
   session_title: "Markdown as AI Communication"
   key_points:
-    - "Structured vs unstructured text is THE foundational distinction — every lesson in this chapter builds on this comparison"
+    - "Structured vs unstructured text is THE foundational distinction; every lesson in this chapter builds on this comparison"
     - "AIDD three-layer model (Intent → Reasoning → Implementation) positions markdown as the bridge between human ideas and AI-generated code"
-    - "Verification Framework (4 steps) is a meta-skill — students should apply it in every 'Try With AI' exercise across the entire chapter"
+    - "Verification Framework (4 steps) is a meta-skill; students should apply it in every 'Try With AI' exercise across the entire chapter"
   misconceptions:
-    - "Students think markdown is just formatting (making text pretty) — emphasize it's a specification language that communicates intent to AI agents"
-    - "Students assume AI always gives correct feedback — the Verification Framework section directly addresses this; spend real time on it"
-    - "Students conflate 'structured text' with 'code' — structured text is organized prose with headings and lists, not programming syntax"
+    - "Students think markdown is just formatting (making text pretty); emphasize it's a specification language that communicates intent to AI agents"
+    - "Students assume AI always gives correct feedback; the Verification Framework section directly addresses this; spend real time on it"
+    - "Students conflate 'structured text' with 'code'; structured text is organized prose with headings and lists, not programming syntax"
   discussion_prompts:
     - "Think of a time you explained something and were misunderstood. What would have made it clearer? How does that relate to structured vs unstructured text?"
     - "If you were an AI reading a paragraph vs a bulleted list of the same requirements, which would you parse more reliably? Why?"
   teaching_tips:
-    - "Start with the opening 'messy email vs structured spec' example — ask students to spot ambiguities in the paragraph version before revealing the structured one"
+    - "Start with the opening 'messy email vs structured spec' example; ask students to spot ambiguities in the paragraph version before revealing the structured one"
     - "Demo the AIDD layers live: write an unstructured request to an AI, show the result, then restructure it with markdown and show the improved output"
-    - "Spend extra time on the Verification Framework — this is the most transferable skill in the chapter and prevents blind trust in AI responses"
+    - "Spend extra time on the Verification Framework; this is the most transferable skill in the chapter and prevents blind trust in AI responses"
     - "Preview the chapter arc: Lessons 2-5 build a single Task Tracker spec piece by piece, so students see the payoff of learning each element"
   assessment_quick_check:
     - "Ask students to name the three AIDD layers and what happens in each"
@@ -86,7 +86,7 @@ version: "1.0.0"
 ---
 # Why Markdown Matters for AI Communication?
 
-In Chapter 12, you learned about the Agent Factory paradigm — turning domain expertise into AI-powered digital employees. But how do you actually *tell* an AI agent what to build? You need a language that both you and the AI understand. That language is **markdown**.
+In Chapter 12, you learned about the Agent Factory paradigm; turning domain expertise into AI-powered digital employees. But how do you actually *tell* an AI agent what to build? You need a language that both you and the AI understand. That language is **markdown**.
 
 Imagine you want to build a mobile app. You write a long email to an AI agent:
 
@@ -122,7 +122,7 @@ Same information, but now the AI can instantly see:
 - Four menu options in a specific order
 - What the app does and how users interact with it
 
-That structured format is **markdown** — and it's the difference between confused AI and accurate code generation.
+That structured format is **markdown**; and it's the difference between confused AI and accurate code generation.
 
 ---
 
@@ -141,10 +141,10 @@ A person can find things either way, but a robot needs clear labels. Markdown ad
 
 According to GitHub's documentation, almost every software project has a README file explaining what the project does. These README files use markdown because:
 
-1. **Developers can read it** — No special software needed, just plain text
-2. **AI can parse it** — The structure tells AI what each section means
-3. **It renders beautifully** — GitHub, documentation sites, and AI tools display it formatted
-4. **It's stable** — Created in 2004 by John Gruber, with [CommonMark](https://commonmark.org/) providing a formal specification starting in 2014
+1. **Developers can read it**; No special software needed, just plain text
+2. **AI can parse it**; The structure tells AI what each section means
+3. **It renders beautifully**; GitHub, documentation sites, and AI tools display it formatted
+4. **It's stable**; Created in 2004 by John Gruber, with [CommonMark](https://commonmark.org/) providing a formal specification starting in 2014
 
 :::note[Markdown Flavors]
 You'll encounter different "flavors" of markdown. **CommonMark** is the base standard. **GitHub Flavored Markdown (GFM)** extends it with tables, task lists (`- [ ]`), and strikethrough (`~~text~~`). Most tools you'll use support GFM, so these extensions work almost everywhere.
@@ -177,7 +177,7 @@ Make sure to handle errors if the city doesn't exist.
 
 An AI reading this has to **guess**:
 
-- How many features are there? (Temperature, conditions, humidity, wind — is that 4 features or 1?)
+- How many features are there? (Temperature, conditions, humidity, wind; is that 4 features or 1?)
 - What's required vs optional?
 - What order should things appear?
 
@@ -205,7 +205,7 @@ Now the AI **knows**:
 - The sequence of steps (numbered 1-4)
 - Error handling is part of the flow
 
-The structure removes ambiguity. You're not teaching the AI to guess — you're giving it clear labels.
+The structure removes ambiguity. You're not teaching the AI to guess; you're giving it clear labels.
 
 ### What Difference Does This Actually Make?
 
@@ -241,18 +241,18 @@ else:
     show_conditions(data)
 ```
 
-Same request, dramatically different output. The structured version got **all 4 features**, the **user flow**, and the **error handling** — because the AI could see each requirement as a distinct item.
+Same request, dramatically different output. The structured version got **all 4 features**, the **user flow**, and the **error handling**; because the AI could see each requirement as a distinct item.
 
 #### 💬 AI Colearning Prompt
 
-> **Explore with your AI**: "I just learned that structured text helps AI understand requirements better. Can you show me two versions of a simple project description—one unstructured paragraph and one using markdown structure? Use a coffee shop ordering app as the example. Then explain which version would be clearer for you to implement."
+> **Explore with your AI**: "I just learned that structured text helps AI understand requirements better. Can you show me two versions of a simple project description: one unstructured paragraph and one using markdown structure? Use a coffee shop ordering app as the example. Then explain which version would be clearer for you to implement."
 
 :::info[Expert Insight]
-Notice how structure isn't just about making text look nice. When you add markdown headings and lists, you're creating **semantic meaning** that AI can parse. This is why markdown is called "structured text"—the structure itself communicates intent. In professional development, clear structure reduces implementation errors and speeds up development cycles.
+Notice how structure isn't just about making text look nice. When you add markdown headings and lists, you're creating **semantic meaning** that AI can parse. This is why markdown is called "structured text": the structure itself communicates intent. In professional development, clear structure reduces implementation errors and speeds up development cycles.
 :::
 
 :::tip[Pro-Tip: Why Structure Helps AI at the Technical Level]
-Large Language Models (LLMs) process text as "tokens" — small chunks of words or characters. When you write structured markdown, you're giving the AI clearer token boundaries and "attention cues." A heading like `## Features` tells the model: "Everything below this relates to features." Lists create natural separations between items. This structure helps the AI's attention mechanism focus on relevant sections rather than treating your entire document as one continuous stream. Better structure = better AI comprehension.
+Large Language Models (LLMs) process text as "tokens"; small chunks of words or characters. When you write structured markdown, you're giving the AI clearer token boundaries and "attention cues." A heading like `## Features` tells the model: "Everything below this relates to features." Lists create natural separations between items. This structure helps the AI's attention mechanism focus on relevant sections rather than treating your entire document as one continuous stream. Better structure = better AI comprehension.
 :::
 
 ---
@@ -271,7 +271,7 @@ You write **what you want** in a specification using markdown. Your spec describ
 
 **Your responsibility**: Make your intent clear.
 
-**Why markdown stays in Layer 1**: The specification represents **your intent** — the authoritative definition of what should be built. Even when AI helps draft or refine the spec, you have final approval authority. The implementation (Layer 3) must match the specification, not the other way around. This keeps you in control: change the spec, and the AI rebuilds to match.
+**Why markdown stays in Layer 1**: The specification represents **your intent**; the authoritative definition of what should be built. Even when AI helps draft or refine the spec, you have final approval authority. The implementation (Layer 3) must match the specification, not the other way around. This keeps you in control: change the spec, and the AI rebuilds to match.
 
 ### Layer 2: Reasoning Layer (AI works here)
 
@@ -381,14 +381,14 @@ Here's what makes markdown powerful in AI-native development: it's both human-re
 
 ## Where to Write Markdown
 
-You'll need a place to write and preview markdown throughout this chapter. Here are free options — pick whichever feels most comfortable:
+You'll need a place to write and preview markdown throughout this chapter. Here are free options; pick whichever feels most comfortable:
 
-- **[StackEdit](https://stackedit.io/)** — Browser-based, no install needed. Split-pane editor with live preview. Best for beginners.
-- **[VS Code](https://code.visualstudio.com/)** — Free code editor. Open any `.md` file and click the preview icon (top-right of the editor) or press `Ctrl+Shift+V` to see a live preview. On Mac, use `⌘` (Command) instead of `Ctrl`.
-- **GitHub** — Create a new repository and edit `README.md` directly. The "Preview" tab shows rendered output instantly.
+- **[StackEdit](https://stackedit.io/)**; Browser-based, no install needed. Split-pane editor with live preview. Best for beginners.
+- **[VS Code](https://code.visualstudio.com/)**; Free code editor. Open any `.md` file and click the preview icon (top-right of the editor) or press `Ctrl+Shift+V` to see a live preview. On Mac, use `⌘` (Command) instead of `Ctrl`.
+- **GitHub**; Create a new repository and edit `README.md` directly. The "Preview" tab shows rendered output instantly.
 
 :::tip[Quick Start]
-If you're unsure, open [stackedit.io](https://stackedit.io/) right now. You can start writing markdown in seconds — no setup, no downloads.
+If you're unsure, open [stackedit.io](https://stackedit.io/) right now. You can start writing markdown in seconds; no setup, no downloads.
 :::
 
 ---
@@ -401,9 +401,9 @@ This chapter teaches markdown differently than other tutorials. Most tutorials t
 
 **Lessons 2-4 (Core Syntax)**: You'll learn the essential markdown elements for writing specifications:
 
-- **Lesson 2**: Headings — creating document hierarchy
-- **Lesson 3**: Lists — organizing features and steps
-- **Lesson 4**: Code blocks — showing examples and expected output
+- **Lesson 2**: Headings; creating document hierarchy
+- **Lesson 3**: Lists; organizing features and steps
+- **Lesson 4**: Code blocks; showing examples and expected output
 
 **Lesson 5 (Integration)**: You'll combine everything into your **first complete specification**:
 
@@ -411,23 +411,23 @@ This chapter teaches markdown differently than other tutorials. Most tutorials t
 - Write a full spec using headings, lists, and code blocks
 - Validate your spec with AI feedback
 
-By the end, you won't just know markdown syntax — you'll understand how to use markdown as the Intent Layer that makes AI-driven development possible.
+By the end, you won't just know markdown syntax; you'll understand how to use markdown as the Intent Layer that makes AI-driven development possible.
 
 ---
 
 ## How to Verify AI Responses
 
-You'll use AI throughout this chapter to check your work. But remember: **AI is a thinking partner, not an authority.** AI agents make mistakes — your job is to verify their answers.
+You'll use AI throughout this chapter to check your work. But remember: **AI is a thinking partner, not an authority.** AI agents make mistakes; your job is to verify their answers.
 
-:::warning[The Verification Framework — Use This in Every "Try With AI" Exercise]
+:::warning[The Verification Framework; Use This in Every "Try With AI" Exercise]
 When AI reviews your markdown or answers your questions, apply these 4 steps:
 
-1. **Check against what you know** — Compare AI's feedback to the rules from this lesson. If AI says your heading hierarchy is correct, manually check: did you skip any levels?
-2. **Ask AI to explain its reasoning** — Don't accept "Yes, that's correct." Ask: *"Why is this correct? Explain your reasoning."*
-3. **Test specific claims** — If AI says "This will render correctly," try rendering it yourself. Check against the [CommonMark spec](https://commonmark.org/) when unsure.
-4. **Cross-reference** — Ask a different AI tool if you get conflicting answers, or search for examples in real GitHub repositories.
+1. **Check against what you know**; Compare AI's feedback to the rules from this lesson. If AI says your heading hierarchy is correct, manually check: did you skip any levels?
+2. **Ask AI to explain its reasoning**; Don't accept "Yes, that's correct." Ask: *"Why is this correct? Explain your reasoning."*
+3. **Test specific claims**; If AI says "This will render correctly," try rendering it yourself. Check against the [CommonMark spec](https://commonmark.org/) when unsure.
+4. **Cross-reference**; Ask a different AI tool if you get conflicting answers, or search for examples in real GitHub repositories.
 
-**Example**: If AI says your spec is "very clear" — ask it to *implement* the spec. If the generated code doesn't match what you wanted, your spec wasn't actually clear.
+**Example**: If AI says your spec is "very clear"; ask it to *implement* the spec. If the generated code doesn't match what you wanted, your spec wasn't actually clear.
 :::
 
 ---
@@ -438,7 +438,7 @@ Now that you understand WHY markdown matters and HOW to verify AI responses, let
 
 ### Setup
 
-Use any AI assistant you have access to — ChatGPT, Claude, Gemini, or another tool. All prompts in this chapter work with any major AI assistant.
+Use any AI assistant you have access to; ChatGPT, Claude, Gemini, or another tool. All prompts in this chapter work with any major AI assistant.
 
 ### Prompt Set
 

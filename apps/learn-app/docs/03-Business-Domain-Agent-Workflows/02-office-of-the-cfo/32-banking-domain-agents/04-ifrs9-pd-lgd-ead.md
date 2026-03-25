@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/banking-domain-agents/ifrs9-pd-lgd-ead
 sidebar_position: 4
-title: "PD, LGD, and EAD — Building the ECL Components"
-description: "Build each ECL component in depth — point-in-time PD calibration, downturn LGD with collateral haircuts, and EAD with credit conversion factors for undrawn commitments"
+title: "PD, LGD, and EAD: Building the ECL Components"
+description: "Build each ECL component in depth: point-in-time PD calibration, downturn LGD with collateral haircuts, and EAD with credit conversion factors for undrawn commitments"
 keywords:
   [
     "probability of default",
@@ -58,23 +58,23 @@ cognitive_load:
   new_concepts: 8
   concepts_list:
     - "Point-in-time PD vs through-the-cycle PD"
-    - "Credit Cycle Adjustment (CCA) — converting TTC to PIT"
+    - "Credit Cycle Adjustment (CCA): converting TTC to PIT"
     - "PD term structure (marginal and cumulative PD curves)"
     - "Downturn LGD (stressed recovery assumptions, not current market)"
     - "Forced sale value and collateral haircuts"
     - "Cure rates and their impact on LGD"
     - "EAD for drawn and undrawn exposures"
     - "Credit Conversion Factors (CCFs) for off-balance-sheet commitments"
-  assessment: "8 concepts at B1 level — within the 7-10 cognitive limit for this tier. The concepts are taught in three sequential blocks (PD, LGD, EAD) with worked examples after each, distributing the cognitive load across the lesson rather than front-loading all 8 concepts."
+  assessment: "8 concepts at B1 level: within the 7-10 cognitive limit for this tier. The concepts are taught in three sequential blocks (PD, LGD, EAD) with worked examples after each, distributing the cognitive load across the lesson rather than front-loading all 8 concepts."
 
 differentiation:
-  extension_for_advanced: "Investigate how banks handle PD estimation for low-default portfolios — sovereign, bank, and large corporate exposures where historical default data is sparse. What techniques (shadow ratings, Merton models, expert judgment) are used, and why does IFRS 9's requirement for forward-looking PD make this problem harder?"
-  remedial_for_struggling: "Focus on the three worked examples — one for each component. If you can compute PIT PD from a TTC PD and a CCA, compute LGD from a forced sale value, and compute EAD from drawn plus CCF x undrawn, you can build a complete ECL for any facility."
+  extension_for_advanced: "Investigate how banks handle PD estimation for low-default portfolios: sovereign, bank, and large corporate exposures where historical default data is sparse. What techniques (shadow ratings, Merton models, expert judgment) are used, and why does IFRS 9's requirement for forward-looking PD make this problem harder?"
+  remedial_for_struggling: "Focus on the three worked examples: one for each component. If you can compute PIT PD from a TTC PD and a CCA, compute LGD from a forced sale value, and compute EAD from drawn plus CCF x undrawn, you can build a complete ECL for any facility."
 ---
 
-# PD, LGD, and EAD — Building the ECL Components
+# PD, LGD, and EAD: Building the ECL Components
 
-In Lesson 3, you learned the ECL formula: ECL = PD x LGD x EAD. You calculated ECL using given values for each component. Now you will build each component from first principles — understanding where the numbers come from, why they are calibrated the way they are, and what professional judgment each one requires. This lesson transforms you from a formula user to a component builder.
+In Lesson 3, you learned the ECL formula: ECL = PD x LGD x EAD. You calculated ECL using given values for each component. Now you will build each component from first principles: understanding where the numbers come from, why they are calibrated the way they are, and what professional judgment each one requires. This lesson transforms you from a formula user to a component builder.
 
 Credit risk officers spend months calibrating PD models, LGD assumptions, and EAD estimates. The banking plugin's `ifrs9-ecl` skill encodes these calculations, but a professional who cannot verify the inputs cannot trust the outputs. This lesson gives you the verification capability.
 
@@ -123,7 +123,7 @@ Banks maintain two types of PD estimates, and confusing them is one of the most 
 | **TTC** | Through-the-Cycle | Average default rate across full economic cycles    | Basel capital requirements, internal rating |
 | **PIT** | Point-in-Time     | Default rate reflecting current economic conditions | IFRS 9 ECL calculation                      |
 
-A TTC PD of 2% means "over a full economic cycle (expansion and recession), this rating grade defaults 2% of the time on average." A PIT PD might be 1.2% during an expansion (below average) or 3.8% during a recession (above average). IFRS 9 requires PIT PDs because the standard demands forward-looking estimates that reflect current and forecast conditions — not long-run averages.
+A TTC PD of 2% means "over a full economic cycle (expansion and recession), this rating grade defaults 2% of the time on average." A PIT PD might be 1.2% during an expansion (below average) or 3.8% during a recession (above average). IFRS 9 requires PIT PDs because the standard demands forward-looking estimates that reflect current and forecast conditions; not long-run averages.
 
 ### The Credit Cycle Adjustment (CCA)
 
@@ -145,7 +145,7 @@ The PIT PD is 40% higher than the TTC PD because current conditions are worse th
 
 ### PD Term Structures
 
-For lifetime ECL (Stage 2 and 3), the bank needs marginal PDs for each future period — not just a single 12-month PD. A PD term structure provides the probability of default for each year over the remaining life of the facility.
+For lifetime ECL (Stage 2 and 3), the bank needs marginal PDs for each future period; not just a single 12-month PD. A PD term structure provides the probability of default for each year over the remaining life of the facility.
 
 **Constructing a term structure:**
 
@@ -167,7 +167,7 @@ LGD measures the percentage of exposure that the bank loses if a default occurs.
 
 ### Downturn LGD: Stressed, Not Current
 
-IFRS 9 requires LGD estimates that reflect **downturn conditions** — not current market values. This is because defaults cluster in economic downturns when collateral values are simultaneously depressed. Using current-market LGD during good times would understate the loss severity that will materialise during the downturn when defaults actually occur.
+IFRS 9 requires LGD estimates that reflect **downturn conditions**; not current market values. This is because defaults cluster in economic downturns when collateral values are simultaneously depressed. Using current-market LGD during good times would understate the loss severity that will materialise during the downturn when defaults actually occur.
 
 **Mortgage LGD formula:**
 
@@ -175,7 +175,7 @@ LGD = MAX(0, (EAD - Forced Sale Value)) / EAD
 
 Where **Forced Sale Value** = Current Property Value x Forced Sale Discount
 
-The forced sale discount reflects the fact that collateral realised in a downturn is sold under distress — not at market value. Banks typically apply a 20-30% haircut to current property values.
+The forced sale discount reflects the fact that collateral realised in a downturn is sold under distress; not at market value. Banks typically apply a 20-30% haircut to current property values.
 
 **Worked example:** A residential mortgage with EAD of $400,000, current property value of $500,000, and a forced sale discount of 25%:
 
@@ -188,7 +188,7 @@ If property values decline by a further 20% (stress scenario):
 - Forced Sale Value = $400,000 x (1 - 0.25) = $300,000
 - LGD = ($400,000 - $300,000) / $400,000 = **25.0%**
 
-The LGD quadruples from 6.25% to 25.0% — showing how sensitive mortgage ECL is to property value assumptions.
+The LGD quadruples from 6.25% to 25.0%: showing how sensitive mortgage ECL is to property value assumptions.
 
 ### LGD Rules of Thumb by Asset Class
 
@@ -206,7 +206,7 @@ While every bank calibrates its own LGD models, these ranges are widely used in 
 
 ### Cure Rates
 
-Not every defaulted facility results in a loss. Some borrowers **cure** — they resume payments and exit default status. The cure rate is the percentage of defaulted facilities that return to performing status without any loss to the bank.
+Not every defaulted facility results in a loss. Some borrowers **cure**: they resume payments and exit default status. The cure rate is the percentage of defaulted facilities that return to performing status without any loss to the bank.
 
 Cure rates affect LGD because a cured facility has zero loss. The relationship is:
 
@@ -220,7 +220,7 @@ Without cure rate adjustment, the LGD would be overstated at 75%.
 
 ## Exposure at Default (EAD)
 
-EAD measures the total exposure at the moment of default. For a fully drawn term loan, EAD equals the outstanding balance. But many banking products have undrawn components — revolving credit facilities, overdrafts, credit card limits — where the borrower can draw additional funds before defaulting.
+EAD measures the total exposure at the moment of default. For a fully drawn term loan, EAD equals the outstanding balance. But many banking products have undrawn components (revolving credit facilities, overdrafts, credit card limits) where the borrower can draw additional funds before defaulting.
 
 :::info CCF (Credit Conversion Factor)
 **The percentage of an undrawn credit facility that a borrower is expected to draw down before defaulting.**
@@ -254,7 +254,7 @@ The CCF reflects the empirical observation that distressed borrowers tend to dra
 
 EAD = $5,000,000 + (0.60 x $15,000,000) = $5,000,000 + $9,000,000 = **$14,000,000**
 
-The EAD is $14 million — nearly three times the current drawn balance. This is why using only the drawn balance as EAD understates the exposure for revolving facilities.
+The EAD is $14 million: nearly three times the current drawn balance. This is why using only the drawn balance as EAD understates the exposure for revolving facilities.
 
 ## Putting It All Together: Full ECL Build
 
@@ -276,7 +276,7 @@ Combine all three components for a complete facility-level ECL:
 
 **12-month ECL** = 0.0234 x 0.45 x $14,000,000 = **$147,420**
 
-This is the provision the bank would book for this single facility under Stage 1. If the facility migrated to Stage 2, the lifetime ECL would be calculated using the full PD term structure, annual LGD and EAD estimates, and discount factors — as demonstrated in Lesson 3.
+This is the provision the bank would book for this single facility under Stage 1. If the facility migrated to Stage 2, the lifetime ECL would be calculated using the full PD term structure, annual LGD and EAD estimates, and discount factors: as demonstrated in Lesson 3.
 
 ## Generate Your Demo Practice Data
 
@@ -368,7 +368,7 @@ The agent routes through `ifrs9-ecl` to produce a component-level ECL build.
 | ECL result     | Calculates facility-level ECL from the three components    | ECL = PD x LGD x EAD; formula applied correctly for the stage              |
 
 :::note Your output will vary
-The specific amounts depend on your TTC PD, CCA, LGD, and CCF inputs. The teaching point is the component build process — verify that each conversion step (TTC to PIT, undrawn to EAD) is methodologically sound, not that specific numbers match.
+The specific amounts depend on your TTC PD, CCA, LGD, and CCF inputs. The teaching point is the component build process: verify that each conversion step (TTC to PIT, undrawn to EAD) is methodologically sound, not that specific numbers match.
 :::
 
 David reviews the CCA against his bank's latest credit cycle model output and confirms the CCF is appropriate for a committed revolving facility under the bank's EAD policy.
@@ -395,7 +395,7 @@ Show me:
    TTC PDs in this scenario
 ```
 
-**What you are learning:** PD term structures are the input to every lifetime ECL calculation. By constructing one yourself, you understand how the `ifrs9-ecl` skill generates marginal PDs for each future period — and you can verify whether the skill's term structure is reasonable for a given rating grade and economic environment.
+**What you are learning:** PD term structures are the input to every lifetime ECL calculation. By constructing one yourself, you understand how the `ifrs9-ecl` skill generates marginal PDs for each future period: and you can verify whether the skill's term structure is reasonable for a given rating grade and economic environment.
 
 ### Prompt 2: Adapt
 
@@ -418,7 +418,7 @@ Then explain: why does IFRS 9 require downturn LGD
 rather than current-market LGD?
 ```
 
-**What you are learning:** LGD sensitivity to property values is the reason mortgage ECL provisions swing dramatically in property downturns. By calculating LGD across scenarios, you see how a 30% property decline can transform a low-LGD portfolio into a high-LGD portfolio — which is exactly what happened in 2008 and what IFRS 9's downturn requirement is designed to capture.
+**What you are learning:** LGD sensitivity to property values is the reason mortgage ECL provisions swing dramatically in property downturns. By calculating LGD across scenarios, you see how a 30% property decline can transform a low-LGD portfolio into a high-LGD portfolio: which is exactly what happened in 2008 and what IFRS 9's downturn requirement is designed to capture.
 
 ### Prompt 3: Apply
 

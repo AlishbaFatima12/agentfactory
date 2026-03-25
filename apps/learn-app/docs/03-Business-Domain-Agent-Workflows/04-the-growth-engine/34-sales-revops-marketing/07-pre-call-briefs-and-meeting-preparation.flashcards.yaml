@@ -14,7 +14,7 @@ cards:
 
   - id: "ch34-07-meeting-prep-002"
     front: "Why does Ahmed spend the first ten minutes of every discovery call asking questions he could have answered beforehand?"
-    back: "He has no pre-call brief. He reads a one-line CRM note and improvises, wasting half the meeting on information that was publicly available — because preparation is the work he skips."
+    back: "He has no pre-call brief. He reads a one-line CRM note and improvises, wasting half the meeting on information that was publicly available: because preparation is the work he skips."
     difficulty: "intermediate"
     why: "What does the prospect conclude about Ahmed's professionalism when he asks questions a brief would have answered?"
     tags: ["preparation-gap"]
@@ -33,7 +33,7 @@ cards:
 
   - id: "ch34-07-meeting-prep-005"
     front: "How do you fix Context Loss in a pre-call brief?"
-    back: "Feed the prior research brief and scoring data into the current prompt. The agent does not remember across sessions — you manage the memory."
+    back: "Feed the prior research brief and scoring data into the current prompt. The agent does not remember across sessions: you manage the memory."
     difficulty: "basic"
     tags: ["context-loss"]
 
@@ -51,7 +51,7 @@ cards:
 
   - id: "ch34-07-meeting-prep-008"
     front: "NexaFlow has a 3-month minimum commitment versus TrackFlow's 12 months. Why does this matter for the Meridian meeting?"
-    back: "Meridian's VP likely wants quick wins post-acquisition. A shorter commitment reduces adoption risk — because 3 months allows a low-stakes evaluation while 12 months requires a bigger organisational commitment."
+    back: "Meridian's VP likely wants quick wins post-acquisition. A shorter commitment reduces adoption risk: because 3 months allows a low-stakes evaluation while 12 months requires a bigger organisational commitment."
     difficulty: "intermediate"
     why: "How would you frame the 3-month commitment if Sarah raises concern about implementation speed?"
     tags: ["battlecard"]
@@ -64,7 +64,7 @@ cards:
 
   - id: "ch34-07-meeting-prep-010"
     front: "Why does Farah respond to 'We're not ready to buy' by separating the diagnostic from the purchase decision?"
-    back: "The prospect assumes every meeting leads to a pitch. By removing the pitch — no proposal, no SOW — the objection evaporates, because the perceived commitment drops to zero."
+    back: "The prospect assumes every meeting leads to a pitch. By removing the pitch: no proposal, no SOW: the objection evaporates, because the perceived commitment drops to zero."
     difficulty: "intermediate"
     why: "What other objections dissolve when you reduce the perceived commitment of the next step?"
     tags: ["objection-handling"]
@@ -83,7 +83,7 @@ cards:
 
   - id: "ch34-07-meeting-prep-013"
     front: "Why should every claim in a competitive battlecard be verified before using it in a meeting?"
-    back: "Agent-generated competitive intelligence is a starting point, not a script. Pricing, features, and partnerships change — citing outdated competitor information in a meeting undermines credibility."
+    back: "Agent-generated competitive intelligence is a starting point, not a script. Pricing, features, and partnerships change: citing outdated competitor information in a meeting undermines credibility."
     difficulty: "intermediate"
     tags: ["battlecard"]
 
@@ -96,7 +96,7 @@ cards:
 
   - id: "ch34-07-meeting-prep-015"
     front: "A prospect says 'We're too busy with the acquisition.' Is this a rejection or a timing objection?"
-    back: "A timing objection. Farah reframes the diagnostic as saving time rather than consuming it — 2 hours, not 2 weeks."
+    back: "A timing objection. Farah reframes the diagnostic as saving time rather than consuming it; 2 hours, not 2 weeks."
     difficulty: "basic"
     tags: ["objection-handling"]
 

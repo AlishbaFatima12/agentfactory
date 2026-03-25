@@ -11,17 +11,9 @@
         "cwd": "apps/learn-app"
       }
     },
-    "generate-anki": {
-      "executor": "nx:run-commands",
-      "dependsOn": ["validate-flashcards"],
-      "options": {
-        "command": "node scripts/generate-anki-decks.js",
-        "cwd": "apps/learn-app"
-      }
-    },
     "build": {
       "executor": "nx:run-commands",
-      "dependsOn": ["validate-flashcards", "generate-anki"],
+      "dependsOn": ["validate-flashcards"],
       "options": {
         "cwd": "apps/learn-app",
         "command": "pnpm build"

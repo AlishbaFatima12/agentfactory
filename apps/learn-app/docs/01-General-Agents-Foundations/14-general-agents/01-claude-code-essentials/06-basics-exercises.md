@@ -1,7 +1,7 @@
 ---
 slug: /General-Agents-Foundations/general-agents/basics-exercises
 title: "Practical Problem-Solving Exercises"
-practice_exercise: ch3-basics
+practice_exercise: ch14-basics
 sidebar_position: 6
 chapter: 14
 lesson: 6
@@ -52,7 +52,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (problem decomposition, specification writing, quality verification) — within A2 limit. Exercises reinforce existing L01-L05 knowledge."
+  assessment: "3 concepts (problem decomposition, specification writing, quality verification), within A2 limit. Exercises reinforce existing L01-L05 knowledge."
 
 differentiation:
   extension_for_advanced: "Complete all 3 capstone projects; attempt exercises with minimal prompts"
@@ -64,35 +64,35 @@ teaching_guide:
   session_group: 3
   session_title: "Practical Exercises and Problem Solving"
   key_points:
-    - "The three skills (problem decomposition, specification writing, quality verification) are the meta-skills — exercises are vehicles, not the destination"
+    - "The three skills (problem decomposition, specification writing, quality verification) are the meta-skills: exercises are vehicles, not the destination"
     - "The 5-criteria rubric (Problem Clarity, Specification Quality, Output Verification, Iteration, Reflection) should be introduced before students touch any exercise"
-    - "Modules 1-4 require only Lesson 04 knowledge; Modules 5-8 require CLAUDE.md from Lesson 05 — this is a natural split point for pacing"
+    - "Modules 1-4 require only Lesson 04 knowledge; Modules 5-8 require CLAUDE.md from Lesson 05. This is a natural split point for pacing"
     - "The progression from intentionally vague starter prompts to better prompts is where the actual learning happens"
   misconceptions:
-    - "Students think the goal is to complete all 27 exercises — the goal is to internalize the three core skills, even if they only complete 5 exercises deeply"
-    - "Students copy-paste the starter prompts and call it done — the starter prompts are intentionally vague to show why specification quality matters"
-    - "Students skip the reflection questions — these are where metacognition happens and must be treated as mandatory, not optional"
-    - "Students think 'better prompt' means 'longer prompt' — it means more specific success criteria, not more words"
+    - "Students think the goal is to complete all 27 exercises. The goal is to internalize the three core skills, even if they only complete 5 exercises deeply"
+    - "Students copy-paste the starter prompts and call it done. The starter prompts are intentionally vague to show why specification quality matters"
+    - "Students skip the reflection questions. These are where metacognition happens and must be treated as mandatory, not optional"
+    - "Students think 'better prompt' means 'longer prompt'. It means more specific success criteria, not more words"
   discussion_prompts:
     - "After Exercise 1.1, what surprised you about the gap between what you meant and what Claude delivered?"
-    - "In the Prompt Tournament (7.3), which style felt most natural to you — and does that match which produced the best results?"
+    - "In the Prompt Tournament (7.3), which style felt most natural to you, and does that match which produced the best results?"
     - "How would you teach the problem decomposition framework to someone who has never used AI?"
   teaching_tips:
-    - "Assign Module 1 as the mandatory minimum — Exercise 1.1 (Messy Downloads) produces the fastest visible results and builds immediate confidence"
-    - "For the rubric, have students self-score their first exercise, then peer-score a classmate's work — the calibration gap is itself a teaching moment"
-    - "Do NOT let students skip the 'run it twice' step in exercises — the comparison between first and refined prompt is where the insight lives"
-    - "The Capstone projects work best as group assignments where students divide deliverables and must integrate them — this mirrors real agent orchestration"
+    - "Assign Module 1 as the mandatory minimum: Exercise 1.1 (Messy Downloads) produces the fastest visible results and builds immediate confidence"
+    - "For the rubric, have students self-score their first exercise, then peer-score a classmate's work. The calibration gap is itself a teaching moment"
+    - "Do NOT let students skip the 'run it twice' step in exercises. The comparison between first and refined prompt is where the insight lives"
+    - "The Capstone projects work best as group assignments where students divide deliverables and must integrate them. This mirrors real agent orchestration"
   assessment_quick_check:
     - "Ask students to explain the 7-step problem-solving framework from memory"
-    - "Have students show their Module 1 Exercise 1.1 prompt — compare who used outcome-focused vs step-by-step instructions"
+    - "Have students show their Module 1 Exercise 1.1 prompt and compare who used outcome-focused vs step-by-step instructions"
     - "Ask: What is the difference between a vague prompt and a bad prompt?"
 ---
 
 # Practical Problem-Solving Exercises
 
-You understand how AI agents work, how to communicate with them through CLAUDE.md. That's real knowledge — but knowledge without practice is just potential.
+You understand how AI agents work, how to communicate with them through CLAUDE.md. That's real knowledge, but knowledge without practice is just potential.
 
-These exercises close the gap between "I understand AI agents" and "I can use AI agents to solve real problems." Each one gives you a messy, realistic situation and asks you to figure out how to describe it clearly enough for Claude to solve. The learning happens in that gap — between a vague problem and a precise specification.
+These exercises close the gap between "I understand AI agents" and "I can use AI agents to solve real problems." Each one gives you a messy, realistic situation and asks you to figure out how to describe it clearly enough for Claude to solve. The learning happens in that gap, between a vague problem and a precise specification.
 
 Three skills run through every exercise: **problem decomposition** (breaking vague problems into clear steps), **specification writing** (describing outcomes precisely enough for an agent to execute), and **quality verification** (checking whether the output actually solves your problem). These aren't abstract concepts. By the end of these exercises, they'll be reflexes.
 
@@ -111,11 +111,11 @@ If the download link doesn't work, visit the [repository releases page](https://
 The workflow for every exercise is the same:
 
 1. **Open the exercise folder** from the `claude-code-basic-exercises/` directory
-2. **Read the INSTRUCTIONS.md** inside the folder — it has setup steps and starter files
+2. **Read the INSTRUCTIONS.md** inside the folder (it has setup steps and starter files)
 3. **Read the walkthrough below** for context on what you're practicing and why
 4. **Start Claude Code or Cowork** and point it at the exercise folder
-5. **Work through the exercise** — write your own prompts, don't just copy the starter
-6. **Reflect** using the questions provided — this is where the real learning happens
+5. **Work through the exercise**: write your own prompts, don't just copy the starter
+6. **Reflect** using the questions provided (this is where the real learning happens)
 
 You don't need to complete all 27 in one sitting. Work through one module at a time. Each module targets a different real-world skill.
 
@@ -124,7 +124,7 @@ You don't need to complete all 27 in one sitting. Work through one module at a t
 ## Tool Guide
 
 - 🖥️ = **Claude Code** (terminal-based, for students comfortable with the command line)
-- 🗂️ = **Cowork** (desktop app — point it at a folder and describe the task)
+- 🗂️ = **Cowork** (desktop app; point it at a folder and describe the task)
 - Most exercises work with either tool. Start with whichever you're comfortable with.
 
 ---
@@ -133,15 +133,15 @@ You don't need to complete all 27 in one sitting. Work through one module at a t
 
 Use this for every exercise:
 
-1. **Define the Problem** — What exactly am I trying to accomplish? What does "done" look like?
-2. **Gather Context** — What files, data, or information does Claude need?
-3. **Write the Spec** — Describe the desired outcome, constraints, and format
-4. **Execute** — Run it with Claude Code or Cowork
-5. **Verify** — Does the output match what I asked for? Is it correct?
-6. **Iterate** — What would I change? Run it again with improvements
-7. **Reflect** — What did I learn about specifying problems clearly?
+1. **Define the Problem**: What exactly am I trying to accomplish? What does "done" look like?
+2. **Gather Context**: What files, data, or information does Claude need?
+3. **Write the Spec**: Describe the desired outcome, constraints, and format
+4. **Execute**: Run it with Claude Code or Cowork
+5. **Verify**: Does the output match what I asked for? Is it correct?
+6. **Iterate**: What would I change? Run it again with improvements
+7. **Reflect**: What did I learn about specifying problems clearly?
 
-This framework isn't just for exercises — it's how professionals work with AI agents every day.
+This framework isn't just for exercises; it's how professionals work with AI agents every day.
 
 ---
 
@@ -165,19 +165,19 @@ For each exercise, evaluate yourself on:
 
 <ExerciseCard id="1.1" title="The Messy Downloads Folder" />
 
-### Exercise 1.1 — The Messy Downloads Folder 🗂️🖥️
+### Exercise 1.1: The Messy Downloads Folder 🗂️🖥️
 
 **The Problem:**
-Open the `messy-downloads/` folder in the exercise directory. You'll find 35+ files of mixed types: PDFs, images (.jpg, .png), Word docs, spreadsheets, text files, and a few random files (.zip, .csv). The names are deliberately inconsistent — some with dates, some without, some with spaces, some with underscores.
+Open the `messy-downloads/` folder in the exercise directory. You'll find 35+ files of mixed types: PDFs, images (.jpg, .png), Word docs, spreadsheets, text files, and a few random files (.zip, .csv). The names are deliberately inconsistent: some with dates, some without, some with spaces, some with underscores.
 
 **Your Task:**
-Write a single clear instruction that tells Claude to organize these files into a logical folder structure. Don't tell Claude _how_ to organize — describe the _outcome_ you want.
+Write a single clear instruction that tells Claude to organize these files into a logical folder structure. Don't tell Claude _how_ to organize; describe the _outcome_ you want.
 
 **What You'll Learn:**
 
 - Vague instructions produce unpredictable results
 - The more specific your outcome description, the better the result
-- Claude will make reasonable assumptions — but _your_ assumptions may differ from Claude's
+- Claude will make reasonable assumptions, but _your_ assumptions may differ from Claude's
 
 **Starter Prompt (Intentionally Vague):**
 
@@ -196,7 +196,7 @@ Think about: What categories make sense? Should files be sorted by type, by date
 
 <ExerciseCard id="1.2" title="Photo Album Builder" />
 
-### Exercise 1.2 — Photo Album Builder 🗂️🖥️
+### Exercise 1.2: Photo Album Builder 🗂️🖥️
 
 **The Problem:**
 Open the `photos/` folder in the exercise directory. You'll find 24 images with a mix of portrait and landscape orientations, including some duplicates and near-duplicates.
@@ -227,7 +227,7 @@ Compare the results. Which approach produced a better outcome? Which was faster?
 
 <ExerciseCard id="1.3" title="The Inbox Zero Challenge" />
 
-### Exercise 1.3 — The Inbox Zero Challenge 🗂️
+### Exercise 1.3: The Inbox Zero Challenge 🗂️
 
 **The Problem:**
 Open the `inbox/` folder in the exercise directory. You'll find 18 text files, each simulating an email (subject line on line 1, sender on line 2, body below). They include a mix of categories: work requests, personal messages, newsletters, receipts, spam-like content, and urgent items.
@@ -235,11 +235,11 @@ Open the `inbox/` folder in the exercise directory. You'll find 18 text files, e
 **Your Task:**
 Ask Claude to triage these "emails" into action categories:
 
-- **Respond Today** — Urgent or time-sensitive
-- **This Week** — Important but not urgent
-- **Read Later** — Informational, no action needed
-- **Archive** — Receipts, confirmations
-- **Delete** — Spam or irrelevant
+- **Respond Today**: Urgent or time-sensitive
+- **This Week**: Important but not urgent
+- **Read Later**: Informational, no action needed
+- **Archive**: Receipts, confirmations
+- **Delete**: Spam or irrelevant
 
 Claude should move each file into the appropriate folder AND create a summary document listing each email, its category, and a one-line reason for the classification.
 
@@ -263,7 +263,7 @@ Claude should move each file into the appropriate folder AND create a summary do
 
 <ExerciseCard id="2.1" title="The Comparison Matrix" />
 
-### Exercise 2.1 — The Comparison Matrix 🗂️🖥️
+### Exercise 2.1: The Comparison Matrix 🗂️🖥️
 
 **The Problem:**
 You need to choose between 3-4 options for something (examples: laptop brands, programming languages to learn first, cities to relocate to, project management tools for a small team).
@@ -299,7 +299,7 @@ Define your context (team size, experience level, project type) and what factors
 
 <ExerciseCard id="2.2" title="The Literature Review" />
 
-### Exercise 2.2 — The Literature Review 🗂️🖥️
+### Exercise 2.2: The Literature Review 🗂️🖥️
 
 **The Problem:**
 Pick a topic you're genuinely curious about (examples: intermittent fasting, remote work productivity, microplastics in water, the future of nuclear energy).
@@ -331,7 +331,7 @@ Compare the two outputs. The difference illustrates why specification quality ma
 
 <ExerciseCard id="2.3" title="The Decision Document" />
 
-### Exercise 2.3 — The Decision Document 🗂️🖥️
+### Exercise 2.3: The Decision Document 🗂️🖥️
 
 **The Problem:**
 You're facing a real decision in your life or work (or simulate one): Should you learn AI or stick with traditional development? Should your team adopt a new tool? Should you start a side project?
@@ -366,7 +366,7 @@ Ask Claude to create a structured decision document:
 
 <ExerciseCard id="3.1" title="The Messy Spreadsheet" />
 
-### Exercise 3.1 — The Messy Spreadsheet 🗂️🖥️
+### Exercise 3.1: The Messy Spreadsheet 🗂️🖥️
 
 **The Problem:**
 Open `customer_data_messy.csv` in the exercise directory. It contains deliberately messy data:
@@ -408,7 +408,7 @@ Include a critical instruction: "Before making changes, show me what you plan to
 
 <ExerciseCard id="3.2" title="The Survey Analyzer" />
 
-### Exercise 3.2 — The Survey Analyzer 🗂️🖥️
+### Exercise 3.2: The Survey Analyzer 🗂️🖥️
 
 **The Problem:**
 Open `product_survey_results.csv` in the exercise directory. It contains 50+ rows of survey data with:
@@ -442,7 +442,7 @@ Ask Claude to:
 
 <ExerciseCard id="3.3" title="The Budget Tracker" />
 
-### Exercise 3.3 — The Budget Tracker 🗂️🖥️
+### Exercise 3.3: The Budget Tracker 🗂️🖥️
 
 **The Problem:**
 Open the `receipts/` folder in the exercise directory. You'll find 15 receipt text files, each representing a purchase (date, vendor, amount, category). Some have overlapping categories.
@@ -477,17 +477,17 @@ Ask Claude to:
 
 <ExerciseCard id="4.1" title="The Meeting Notes Transformer" />
 
-### Exercise 4.1 — The Meeting Notes Transformer 🗂️🖥️
+### Exercise 4.1: The Meeting Notes Transformer 🗂️🖥️
 
 **The Problem:**
-Open `raw_meeting_notes.txt` in the exercise directory. It contains raw, messy meeting notes — bullet fragments, abbreviations, incomplete sentences, off-topic tangents, action items buried in discussion.
+Open `raw_meeting_notes.txt` in the exercise directory. It contains raw, messy meeting notes: bullet fragments, abbreviations, incomplete sentences, off-topic tangents, action items buried in discussion.
 
 **Your Task:**
 Ask Claude to transform these notes into THREE different outputs:
 
-1. **Clean meeting minutes** — Formal, organized by topic, with clear decisions listed
-2. **Action items list** — Who, what, by when — extracted from the discussion
-3. **Executive summary email** — 3-paragraph summary suitable for someone who missed the meeting
+1. **Clean meeting minutes**: Formal, organized by topic, with clear decisions listed
+2. **Action items list**: Who, what, by when (extracted from the discussion)
+3. **Executive summary email**: 3-paragraph summary suitable for someone who missed the meeting
 
 **What You'll Learn:**
 
@@ -500,7 +500,7 @@ Ask Claude to transform these notes into THREE different outputs:
 > "Clean up these meeting notes."
 
 **Better Prompt (Build Toward This):**
-Include the constraint: "All three outputs must be consistent — the same decisions and action items should appear across all formats." Specify what counts as an "action item" and how you want the executive summary structured.
+Include the constraint: "All three outputs must be consistent: the same decisions and action items should appear across all formats." Specify what counts as an "action item" and how you want the executive summary structured.
 
 **Reflection Questions:**
 
@@ -512,7 +512,7 @@ Include the constraint: "All three outputs must be consistent — the same decis
 
 <ExerciseCard id="4.2" title="The Report Generator" />
 
-### Exercise 4.2 — The Report Generator 🗂️🖥️
+### Exercise 4.2: The Report Generator 🗂️🖥️
 
 **The Problem:**
 Open the `project-data/` folder in the exercise directory. You'll find 5 data files (CSVs and text files with notes) related to a hypothetical product launch project.
@@ -544,7 +544,7 @@ Ask Claude to synthesize all materials into a single professional report with:
 
 <ExerciseCard id="4.3" title="The Presentation Builder" />
 
-### Exercise 4.3 — The Presentation Builder 🗂️🖥️
+### Exercise 4.3: The Presentation Builder 🗂️🖥️
 
 **The Problem:**
 Open `written_report.md` in the exercise directory (or use the output you generated in Exercise 4.2).
@@ -565,7 +565,7 @@ Ask Claude to create a presentation that:
 - That revision is where quality happens
 
 **The Meta-Exercise:**
-After Claude creates the presentation, write a critique of it. What would you change? Then ask Claude to revise based on your feedback. This teaches iterative refinement — the same skill you'll use in every professional AI workflow.
+After Claude creates the presentation, write a critique of it. What would you change? Then ask Claude to revise based on your feedback. This teaches iterative refinement, the same skill you'll use in every professional AI workflow.
 
 ---
 
@@ -575,13 +575,13 @@ After Claude creates the presentation, write a critique of it. What would you ch
 
 <ExerciseCard id="5.1" title="The Batch Renamer" />
 
-### Exercise 5.1 — The Batch Renamer 🗂️🖥️
+### Exercise 5.1: The Batch Renamer 🗂️🖥️
 
 **The Problem:**
 Open the `files-to-rename/` folder in the exercise directory. You'll find 25+ files with inconsistent naming that need standardization. Examples of what you'll see:
 
-- `IMG_20250115_143022.txt` — timestamps embedded in names
-- `Document (1).txt` — generic numbered duplicates
+- `IMG_20250115_143022.txt`: timestamps embedded in names
+- `Document (1).txt`: generic numbered duplicates
 - Mixed naming conventions throughout
 
 **Your Task:**
@@ -602,21 +602,21 @@ Define a naming convention and ask Claude to rename all files according to your 
 **Reflection Questions:**
 
 1. Did your naming rules handle every file, or were there edge cases you didn't anticipate?
-2. What would happen if you ran the same rename again — would it cause problems?
+2. What would happen if you ran the same rename again? Would it cause problems?
 3. How would you modify your specification to make it idempotent (safe to run repeatedly)?
 
 ---
 
 <ExerciseCard id="5.2" title="The Template System" />
 
-### Exercise 5.2 — The Template System 🗂️🖥️
+### Exercise 5.2: The Template System 🗂️🖥️
 
 **The Problem:**
 You need to send personalized versions of the same document to multiple people.
 
 **Your Task:**
 
-1. Open the exercise directory — you'll find `certificate_template.md` (a template with placeholder fields like `{{NAME}}`, `{{DATE}}`, `{{SCORE}}`) and `student_data.csv` (data for each recipient)
+1. Open the exercise directory. You'll find `certificate_template.md` (a template with placeholder fields like `{{NAME}}`, `{{DATE}}`, `{{SCORE}}`) and `student_data.csv` (data for each recipient)
 2. Review both files to understand the template + data pattern
 3. Ask Claude to generate all personalized documents
 
@@ -639,7 +639,7 @@ After generating documents, ask Claude to create a tracking spreadsheet that lis
 
 <ExerciseCard id="5.3" title="The Weekly Report Automator" />
 
-### Exercise 5.3 — The Weekly Report Automator 🗂️🖥️
+### Exercise 5.3: The Weekly Report Automator 🗂️🖥️
 
 **The Problem:**
 Imagine you need to produce a weekly status report every Friday. The report pulls from three input files.
@@ -660,7 +660,7 @@ Open the `week-data/` folder in the exercise directory. You'll find all three in
 - This is the foundation of thinking in systems, not tasks
 
 **The Goal:**
-Your prompt should be reusable — if you updated the three input files next week and ran the same prompt, it should produce a new report without modification. Test this by changing the data and running the same prompt again.
+Your prompt should be reusable: if you updated the three input files next week and ran the same prompt, it should produce a new report without modification. Test this by changing the data and running the same prompt again.
 
 ---
 
@@ -670,10 +670,10 @@ Your prompt should be reusable — if you updated the three input files next wee
 
 <ExerciseCard id="6.1" title="The Business Plan Skeleton" />
 
-### Exercise 6.1 — The Business Plan Skeleton 🗂️🖥️
+### Exercise 6.1: The Business Plan Skeleton 🗂️🖥️
 
 **The Problem:**
-Open the exercise directory — you'll find starter idea briefs (like an AI tutoring service, a local food delivery app, or a coworking space). Pick one that interests you, or use your own idea. The exercise is about structuring your thinking, not the idea itself.
+Open the exercise directory. You'll find starter idea briefs (like an AI tutoring service, a local food delivery app, or a coworking space). Pick one that interests you, or use your own idea. The exercise is about structuring your thinking, not the idea itself.
 
 **Your Task:**
 Ask Claude to help you create:
@@ -706,10 +706,10 @@ Don't just say "write me a business plan." Instead, have a CONVERSATION with Cla
 
 <ExerciseCard id="6.2" title="The Troubleshooter" />
 
-### Exercise 6.2 — The Troubleshooter 🗂️🖥️
+### Exercise 6.2: The Troubleshooter 🗂️🖥️
 
 **The Problem:**
-Open the exercise directory — you'll find starter problem scenarios (like a website traffic drop, declining course engagement, or unproductive team meetings). Pick one that resonates with you, or describe a real problem you're facing.
+Open the exercise directory. You'll find starter problem scenarios (like a website traffic drop, declining course engagement, or unproductive team meetings). Pick one that resonates with you, or describe a real problem you're facing.
 
 **Your Task:**
 Ask Claude to:
@@ -729,14 +729,14 @@ Ask Claude to:
 **Reflection Questions:**
 
 1. Did the root cause analysis surface causes you hadn't thought of?
-2. Is the investigation plan actually actionable — could you follow it tomorrow?
+2. Is the investigation plan actually actionable? Could you follow it tomorrow?
 3. How does "cheapest test first" change your approach to problem-solving?
 
 ---
 
 <ExerciseCard id="6.3" title="The Event Planner" />
 
-### Exercise 6.3 — The Event Planner 🗂️🖥️
+### Exercise 6.3: The Event Planner 🗂️🖥️
 
 **The Problem:**
 Open `event-brief.md` in the exercise directory for a starter event scenario, or plan your own realistic event: a team offsite, a community meetup, a workshop for 30 students, or a small conference.
@@ -744,12 +744,12 @@ Open `event-brief.md` in the exercise directory for a starter event scenario, or
 **Your Task:**
 Ask Claude to produce a complete event planning package:
 
-1. **Timeline** — Backward plan from event date with all preparation milestones
-2. **Budget spreadsheet** — Itemized costs with totals
-3. **Checklist** — All tasks grouped by category (venue, food, tech, communications)
-4. **Communications** — Draft invitation email, reminder email, and follow-up survey
-5. **Day-of schedule** — Minute-by-minute run sheet
-6. **Contingency plan** — "What if" scenarios with backup plans
+1. **Timeline**: Backward plan from event date with all preparation milestones
+2. **Budget spreadsheet**: Itemized costs with totals
+3. **Checklist**: All tasks grouped by category (venue, food, tech, communications)
+4. **Communications**: Draft invitation email, reminder email, and follow-up survey
+5. **Day-of schedule**: Minute-by-minute run sheet
+6. **Contingency plan**: "What if" scenarios with backup plans
 
 **What You'll Learn:**
 
@@ -764,11 +764,11 @@ After Claude generates everything, introduce a constraint change: "The budget ju
 
 ## Module 7: Quality Control & Critical Thinking
 
-> **Core Skill:** Not blindly trusting AI output — learning to verify, critique, and improve.
+> **Core Skill:** Not blindly trusting AI output. Learning to verify, critique, and improve.
 
 <ExerciseCard id="7.1" title="The Fact Checker" />
 
-### Exercise 7.1 — The Fact Checker 🗂️🖥️
+### Exercise 7.1: The Fact Checker 🗂️🖥️
 
 **The Problem:**
 Ask Claude to write a 500-word article about a topic you know well. Then deliberately look for errors.
@@ -796,16 +796,16 @@ Ask Claude to write a 500-word article about a topic you know well. Then deliber
 
 <ExerciseCard id="7.2" title="The Specification Stress Test" />
 
-### Exercise 7.2 — The Specification Stress Test 🖥️
+### Exercise 7.2: The Specification Stress Test 🖥️
 
 **The Problem:**
-Write a set of instructions for Claude to create a specific file (a formatted document, an organized folder structure, a data report — pick one). Make your instructions as clear as you can.
+Write a set of instructions for Claude to create a specific file (a formatted document, an organized folder structure, or a data report). Make your instructions as clear as you can.
 
 **Your Task:**
 
 1. Give your instructions to Claude and get the output
 2. Now, give the SAME instructions to a classmate (or re-read them as a stranger would)
-3. Identify all the ambiguities — places where two people might interpret the instructions differently
+3. Identify all the ambiguities, places where two people might interpret the instructions differently
 4. Rewrite the instructions to eliminate ambiguity
 5. Run the improved instructions through Claude and compare results
 
@@ -825,14 +825,14 @@ Write a set of instructions for Claude to create a specific file (a formatted do
 
 <ExerciseCard id="7.3" title="The Prompt Tournament" />
 
-### Exercise 7.3 — The Prompt Tournament 🖥️🗂️
+### Exercise 7.3: The Prompt Tournament 🖥️🗂️
 
 **The Problem:**
 Pick any task from the previous exercises. Write THREE different prompts to accomplish the same task:
 
-1. **Minimal** — The shortest prompt you think could work
-2. **Detailed** — A comprehensive prompt with all specifications
-3. **Conversational** — Achieve the same result through a multi-turn conversation
+1. **Minimal**: The shortest prompt you think could work
+2. **Detailed**: A comprehensive prompt with all specifications
+3. **Conversational**: Achieve the same result through a multi-turn conversation
 
 **Your Task:**
 Run all three approaches and compare:
@@ -862,18 +862,18 @@ Create a comparison document with examples from each approach.
 
 > **Choose one (or more). Spend real time on it. This is where everything comes together.**
 
-Capstones are different from the exercises above. There are no starter prompts — you design the entire approach yourself. These are open-ended projects that require you to combine problem decomposition, specification writing, and quality verification into a complete workflow.
+Capstones are different from the exercises above. There are no starter prompts; you design the entire approach yourself. These are open-ended projects that require you to combine problem decomposition, specification writing, and quality verification into a complete workflow.
 
 <ExerciseCard id="A" title="The Personal Knowledge Base" />
 
-### Capstone A — The Personal Knowledge Base 🗂️🖥️
+### Capstone A: The Personal Knowledge Base 🗂️🖥️
 
-Open the `sample-documents/` folder in the exercise directory — you'll find 8 starter documents (articles, notes, bookmarks). You can add your own documents to the folder for a richer experience. Ask Claude to:
+Open the `sample-documents/` folder in the exercise directory. You'll find 8 starter documents (articles, notes, bookmarks). You can add your own documents to the folder for a richer experience. Ask Claude to:
 
 - Read and categorize everything
 - Extract key insights from each document
 - Create a searchable index (as a markdown file or spreadsheet)
-- Generate a "connections map" — which documents relate to each other and why
+- Generate a "connections map" showing which documents relate to each other and why
 - Write a personal summary: "Here's what you seem most interested in, and here are gaps in your knowledge"
 
 **What You'll Learn:**
@@ -886,7 +886,7 @@ Open the `sample-documents/` folder in the exercise directory — you'll find 8 
 
 <ExerciseCard id="B" title="The Small Business Operations Kit" />
 
-### Capstone B — The Small Business Operations Kit 🗂️🖥️
+### Capstone B: The Small Business Operations Kit 🗂️🖥️
 
 Create a complete operational toolkit for a hypothetical small business:
 
@@ -909,7 +909,7 @@ All files should be consistent in branding and cross-reference each other.
 
 <ExerciseCard id="C" title="The Course Material Generator" />
 
-### Capstone C — The Course Material Generator 🗂️🖥️
+### Capstone C: The Course Material Generator 🗂️🖥️
 
 Take any topic you understand well. Ask Claude to create:
 
@@ -932,4 +932,4 @@ Everything should be coherent, progressive (each lesson builds on the last), and
 
 ## What's Next
 
-You've practiced the three core skills — problem decomposition, specification writing, and quality verification — across 27 exercises. These skills compound: every exercise makes the next one easier because you're building intuition for how to communicate with AI agents. Next in Lesson 7, you'll learn to teach Claude your personal working style through custom instructions. Then Lessons 8-9 introduce **Agent Skills** — reusable expertise files that automate the patterns you've been practicing by hand.
+You've practiced the three core skills (problem decomposition, specification writing, and quality verification) across 27 exercises. These skills compound: every exercise makes the next one easier because you're building intuition for how to communicate with AI agents. Next in Lesson 7, you'll learn to teach Claude your personal working style through custom instructions. Then Lessons 8-9 introduce **Agent Skills**, reusable expertise files that automate the patterns you've been practicing by hand.

@@ -70,7 +70,7 @@ cognitive_load:
   assessment: "6 concepts at B1-B2 level. The meeting-briefing skill is new but the vendor-check command was introduced briefly in L03. Students already understand structured output from prior lessons. The main cognitive stretch is combining two outputs (briefing + vendor check) into a unified preparation strategy."
 
 differentiation:
-  extension_for_advanced: "Prepare briefings for two different meeting types — a vendor renegotiation and a board committee meeting — and compare how the preparation template changes. Identify which elements are universal across meeting types and which are type-specific."
+  extension_for_advanced: "Prepare briefings for two different meeting types: a vendor renegotiation and a board committee meeting: and compare how the preparation template changes. Identify which elements are universal across meeting types and which are type-specific."
   remedial_for_struggling: "Focus on the CloudStack renegotiation briefing alone. If you can produce a briefing that tells you (1) what the current contract says, (2) what you want changed, and (3) what your walk-away position is, you have the core skill. The vendor dashboard and action tracking build on this foundation."
 ---
 
@@ -126,7 +126,7 @@ red lines, and a preparation checklist.
 | Meeting header and preparation level | Identifies meeting type (vendor negotiation) and urgency                                   | Check that the preparation level reflects the complexity of the renegotiation                  |
 | Background and team                  | Summarises the vendor relationship, contract value, and your team's roles                  | Verify the context matches what you provided                                                   |
 | Open issues with positions           | Lists each negotiation point with current terms, target, rationale, and walk-away position | Should include RED-priority items (liability cap, DPA) and YELLOW items (governing law, SOC 2) |
-| Talking points and sequencing        | Opening statement, discussion sequence, and closing strategy                               | Look for strategic sequencing — regulatory items first to establish seriousness                |
+| Talking points and sequencing        | Opening statement, discussion sequence, and closing strategy                               | Look for strategic sequencing: regulatory items first to establish seriousness                |
 | Red lines                            | Non-negotiable positions requiring GC approval to concede                                  | Should clearly distinguish between regulatory requirements and commercial preferences          |
 | Preparation gaps                     | Information the team needs before the meeting but does not yet have                        | Should flag missing items like counterparty counsel details or unreceived documents            |
 
@@ -159,10 +159,10 @@ The meeting briefing tells you what to discuss. The **vendor obligation dashboar
 | SLA monitoring     | Actual performance vs. contractual guarantees                    | Should flag any SLA shortfalls as negotiation leverage                                                   |
 
 :::note Your output will vary
-The specific obligations, dates, and SLA figures depend on the contract data available. Focus on whether the dashboard surfaces items that feed directly into the meeting briefing — the connection between vendor obligations and negotiation preparation is the teaching point.
+The specific obligations, dates, and SLA figures depend on the contract data available. Focus on whether the dashboard surfaces items that feed directly into the meeting briefing: the connection between vendor obligations and negotiation preparation is the teaching point.
 :::
 
-Cross-reference this dashboard with the meeting briefing. Items from the dashboard should feed directly into the meeting agenda — deliverable deadlines become concrete requests, SLA shortfalls become negotiation leverage, and auto-renewal notice deadlines create urgency.
+Cross-reference this dashboard with the meeting briefing. Items from the dashboard should feed directly into the meeting agenda: deliverable deadlines become concrete requests, SLA shortfalls become negotiation leverage, and auto-renewal notice deadlines create urgency.
 
 **With connectors:** If you connected Google Calendar and Gmail in Lesson 1, the meeting-briefing skill pulls the meeting invite, prior email threads with CloudStack, and any attached documents automatically. The vendor-check cross-references calendar reminders for upcoming deadlines.
 
@@ -200,10 +200,10 @@ for each item.
 | Next steps              | Immediate post-meeting actions                                                | Should include distributing the summary and setting calendar reminders for high-priority items |
 
 :::note Your output will vary
-The specific action items depend on what happened in your meeting. Focus on the structure: priority assignment, ownership, deadline, and dependency mapping. The teaching point is that follow-up cadence should match priority — daily checks for items that block the next meeting, weekly for important-but-not-blocking items.
+The specific action items depend on what happened in your meeting. Focus on the structure: priority assignment, ownership, deadline, and dependency mapping. The teaching point is that follow-up cadence should match priority: daily checks for items that block the next meeting, weekly for important-but-not-blocking items.
 :::
 
-The follow-up cadence is not arbitrary. HIGH priority items have hard deadlines before the next meeting — if checked weekly instead of daily, a late delivery may leave the follow-up meeting without materials. MEDIUM items are important but do not block the next meeting. LOW items are downstream, triggered by completion of higher-priority items.
+The follow-up cadence is not arbitrary. HIGH priority items have hard deadlines before the next meeting: if checked weekly instead of daily, a late delivery may leave the follow-up meeting without materials. MEDIUM items are important but do not block the next meeting. LOW items are downstream, triggered by completion of higher-priority items.
 
 > **The agent reviews, triages, drafts, and flags. The licensed attorney advises, decides, and signs.**
 
@@ -241,7 +241,7 @@ briefing I can use as my presentation outline.
 | Preparation gaps   | Questions the board may ask that you do not yet have answers for           | Should help you prepare for likely follow-up questions                          |
 
 :::note Your output will vary
-The specific risk items, regulatory updates, and budget figures depend on the context you provide. Focus on the structural difference from the vendor negotiation briefing: board briefings use RAG status codes, executive summaries, and budget variance — not talking points and walk-away positions. The teaching point is that the same skill adapts its output structure to the meeting type and audience.
+The specific risk items, regulatory updates, and budget figures depend on the context you provide. Focus on the structural difference from the vendor negotiation briefing: board briefings use RAG status codes, executive summaries, and budget variance: not talking points and walk-away positions. The teaching point is that the same skill adapts its output structure to the meeting type and audience.
 :::
 
 Notice the structural difference. The vendor negotiation briefing focused on talking points, red lines, and walk-away positions. The board briefing focuses on risk status (RAG colour coding), regulatory updates, and budget variance. Same skill, different meeting type, different output structure. The meeting-briefing skill produces what the audience needs, not a generic document.

@@ -44,9 +44,9 @@ learning_objectives:
   - objective: "Learn an unfamiliar domain well enough to produce a competent analysis of a real problem within 72 hours"
     proficiency_level: "A1"
     bloom_level: "Apply"
-    assessment_method: "AI Check rates the domain analysis for competence — would a domain professional consider it beginner, intermediate, or passable work"
+    assessment_method: "AI Check rates the domain analysis for competence: would a domain professional consider it beginner, intermediate, or passable work"
 
-  - objective: "Maintain a structured learning log that reveals the actual learning process — efficiency, waste, breakthroughs, and self-corrections"
+  - objective: "Maintain a structured learning log that reveals the actual learning process: efficiency, waste, breakthroughs, and self-corrections"
     proficiency_level: "A1"
     bloom_level: "Analyze"
     assessment_method: "Learning Log has 20+ entries spanning the full 72 hours, showing evidence of strategic learning and critical AI use"
@@ -58,7 +58,7 @@ learning_objectives:
 
 cognitive_load:
   new_concepts: 3
-  assessment: "3 concepts (learning log as process evidence, mid-point strategic adjustment, domain analysis production) — within Part 0 beginner range of 3-5"
+  assessment: "3 concepts (learning log as process evidence, mid-point strategic adjustment, domain analysis production) : within Part 0 beginner range of 3-5"
 
 differentiation:
   extension_for_advanced: "After completing the sprint, analyze your Learning Log quantitatively: what percentage of entries show productive learning vs. time wasted? What was your most efficient learning hour and your least efficient? What pattern distinguishes the two?"
@@ -69,21 +69,21 @@ teaching_guide:
   session_group: 10
   session_title: "The 72-Hour Sprint"
   key_points:
-    - "The Learning Log format builds on Chapter 6's Collaboration Log — same structure but now tracking learning instead of a business problem"
-    - "The mid-point reflection at hour 36 is mandatory, not optional — it is part of the deliverable and forces strategic adjustment"
-    - "AI is a learning tool here, not a crutch — the Learning Log must show evidence of critical AI use, not blind acceptance"
-    - "The domain analysis is the output, but the Learning Log is the real assessment — it reveals the process"
+    - "The Learning Log format builds on Chapter 6's Collaboration Log: same structure but now tracking learning instead of a business problem"
+    - "The mid-point reflection at hour 36 is mandatory, not optional: it is part of the deliverable and forces strategic adjustment"
+    - "AI is a learning tool here, not a crutch: the Learning Log must show evidence of critical AI use, not blind acceptance"
+    - "The domain analysis is the output, but the Learning Log is the real assessment: it reveals the process"
   misconceptions:
-    - "Students treat the Learning Log as busywork rather than as the primary assessment instrument — the log IS the deliverable, the analysis is secondary"
-    - "Students skip the mid-point reflection because 'everything is going fine' — if everything is fine at hour 36, they are not pushing hard enough"
-    - "Students use AI to write the domain analysis instead of using it as a learning accelerator — the analysis must show their understanding, not AI's"
+    - "Students treat the Learning Log as busywork rather than as the primary assessment instrument: the log IS the deliverable, the analysis is secondary"
+    - "Students skip the mid-point reflection because 'everything is going fine' : if everything is fine at hour 36, they are not pushing hard enough"
+    - "Students use AI to write the domain analysis instead of using it as a learning accelerator: the analysis must show their understanding, not AI's"
   discussion_prompts:
     - "What is the difference between using AI to learn a subject and using AI to write about a subject? How does the Learning Log reveal which one you did?"
     - "Why is the mid-point reflection at hour 36, not at the end? What can you change at hour 36 that you cannot change at hour 72?"
   teaching_tips:
-    - "Provide the specific domain problem at hour 0 so students know what they are learning toward — open-ended learning without a target is inefficient"
-    - "Check in at hour 36 and ask students to share their mid-point reflections — this creates accountability"
-    - "Remind students that 72 hours is calendar time, not continuous study — they should plan study sessions, rest, and review periods"
+    - "Provide the specific domain problem at hour 0 so students know what they are learning toward: open-ended learning without a target is inefficient"
+    - "Check in at hour 36 and ask students to share their mid-point reflections: this creates accountability"
+    - "Remind students that 72 hours is calendar time, not continuous study: they should plan study sessions, rest, and review periods"
   assessment_quick_check:
     - "Ask students: Show me your mid-point reflection. What did you change about your plan after hour 36?"
     - "Ask students: In your Learning Log, point to one entry where you rejected AI output. Why did you reject it?"
@@ -100,6 +100,10 @@ You will use the **Collaboration Log** format from [Chapter 6, Exercise 2](../06
 ### What You Do
 
 You have 72 hours and full access to claude.ai, chatgpt.com, and the open web. Learn enough about your assigned domain to produce a competent analysis of a real problem within that domain (the instructor provides the specific problem at hour 0). Maintain a Learning Log throughout.
+
+:::tip Solo Learner Alternative
+If no problem is provided by an instructor, prompt AI: *"I am learning [your chosen domain] from scratch. Give me one specific, realistic problem that a practitioner in this field would need to solve. Make it concrete enough that I can attempt a solution after 72 hours of self-study. Do not give me the solution."* Use this as your exercise problem.
+:::
 
 ---
 
@@ -168,7 +172,7 @@ For each score, give a one-sentence justification.
 
 ### What This Teaches You
 
-You learn the difference between studying and learning. The Learning Log reveals your actual learning process — its efficiency, its waste, its breakthroughs. AI feedback on your domain analysis tells you honestly where you reached competence and where you are still a beginner pretending to understand.
+You learn the difference between studying and learning. The Learning Log reveals your actual learning process; its efficiency, its waste, its breakthroughs. AI feedback on your domain analysis tells you honestly where you reached competence and where you are still a beginner pretending to understand.
 
 ## Flashcards Study Aid
 

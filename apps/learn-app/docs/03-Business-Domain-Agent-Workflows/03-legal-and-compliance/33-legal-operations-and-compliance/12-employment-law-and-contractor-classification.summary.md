@@ -1,4 +1,4 @@
-# Employment Law and Contractor Classification — Summary
+# Employment Law and Contractor Classification; Summary
 
 ## Core Concept
 

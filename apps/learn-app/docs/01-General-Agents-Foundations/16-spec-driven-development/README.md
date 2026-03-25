@@ -11,22 +11,22 @@ slides:
 
 Spec-Driven Development (SDD) represents a paradigm shift in how software is created with AI assistance. Rather than treating AI coding agents as sophisticated autocomplete tools, SDD establishes specifications as the primary artifact of software development, with code becoming a generated output derived from these human-authored specifications.
 
-This chapter teaches SDD using **native Claude Code capabilities only**—Memory (CLAUDE.md), Subagents, Tasks, and Hooks. You'll learn the complete four-phase workflow that transforms vibe coding chaos into production-ready implementations.
+This chapter teaches SDD using **native Claude Code capabilities only:** Memory (CLAUDE.md), Subagents, Tasks, and Hooks. You'll learn the complete four-phase workflow that transforms vibe coding chaos into production-ready implementations.
 
 ## The Evolution from Vibe Coding
 
-The emergence of AI coding assistants has fundamentally altered how developers approach software creation. In the early days, developers quickly adopted _vibe coding_—an intuitive, conversational approach where developers describe what they want and receive code in return. This method works remarkably well for quick prototypes and exploring possibilities.
+The emergence of AI coding assistants has fundamentally altered how developers approach software creation. In the early days, developers quickly adopted _vibe coding_,an intuitive, conversational approach where developers describe what they want and receive code in return. This method works remarkably well for quick prototypes and exploring possibilities.
 
 However, as practitioners moved from prototyping to building production systems, the limitations of vibe coding became apparent. Each iteration loses context from previous discussions. The agent makes reasonable assumptions that turn out wrong. The resulting code may work but does not align with the project's existing patterns or architecture.
 
-Spec-Driven Development emerged as a response to these challenges. Rather than iterative discovery through conversation, SDD provides comprehensive specifications upfront. The AI agent receives a complete picture of what to build, why it matters, and critically—what NOT to build.
+Spec-Driven Development emerged as a response to these challenges. Rather than iterative discovery through conversation, SDD provides comprehensive specifications upfront. The AI agent receives a complete picture of what to build, why it matters, and critically,what NOT to build.
 
 ## Prerequisites
 
 This chapter builds directly on:
 
-- **Chapter 14** — You learned Claude Code's core capabilities: CLAUDE.md for persistent memory (Lesson 5), Subagent orchestration (Lesson 9), and the foundational tools that enable agentic workflows
-- **Chapter 15** — You learned context engineering: why context quality determines agent reliability, context isolation patterns (Lesson 9), and the Tasks system for persistent state (Lesson 4)
+- **Chapter 14:** You learned Claude Code's core capabilities: CLAUDE.md for persistent memory (Lesson 5), Subagent orchestration (Lesson 9), and the foundational tools that enable agentic workflows
+- **Chapter 15:** You learned context engineering: why context quality determines agent reliability, context isolation patterns (Lesson 9), and the Tasks system for persistent state (Lesson 4)
 
 SDD is the **methodology** that orchestrates these capabilities into production-ready workflows.
 
@@ -41,7 +41,7 @@ Spec-Driven Development is a methodology, not a single tool. Several frameworks 
 | **Tessl**           | Spec-as-Source                        | Radical approach: code regenerated from specs |
 | **CC-SDD**          | Cross-tool                            | Works with Claude Code, Cursor, Gemini CLI    |
 
-**This chapter uses native Claude Code capabilities only**—Memory (CLAUDE.md), Subagents, Tasks, and Hooks. No external frameworks required. The principles transfer to any SDD tool.
+**This chapter uses native Claude Code capabilities only:** Memory (CLAUDE.md), Subagents, Tasks, and Hooks. No external frameworks required. The principles transfer to any SDD tool.
 
 Claude Code has absorbed much of the SDD tooling natively: CLAUDE.md serves as the project constitution, subagents handle parallel research, the interview pattern (via `ask_user_question`) enables refinement, and the native Tasks system handles implementation delegation with dependency ordering and atomic commits.
 

@@ -1,4 +1,4 @@
-# Contract Review and Redlines — Summary
+# Contract Review and Redlines; Summary
 
 ## Core Concept
 

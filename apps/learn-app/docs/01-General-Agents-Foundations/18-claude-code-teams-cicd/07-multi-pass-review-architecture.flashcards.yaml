@@ -1,0 +1,41 @@
+deck:
+  id: "ch18-07-multi-pass-review-architecture"
+  title: "Multi-Pass Review Architecture"
+  version: 1
+
+cards:
+  - front: "Why does self-review fail when a Claude Code session reviews its own generated code?"
+    back: "The session retains its full reasoning context (why it chose each approach, why it skipped certain handling). This makes it less likely to question its own decisions. An independent instance with no prior context reads only the code and evaluates it on its merits."
+
+  - front: "What is the Writer/Reviewer pattern?"
+    back: "Use two separate Claude sessions: Session A (Writer) generates the code with full reasoning history. Session B (Reviewer) reviews the code with no access to the writer's reasoning. Session B reads the code the same way a fresh human reviewer would."
+
+  - front: "What is attention dilution in code review?"
+    back: "When a large multi-file diff is fed into a single prompt, Claude's attention is spread across thousands of lines. Files reviewed later in the sequence receive shallower analysis than files reviewed first. This causes important issues in later files to be missed."
+
+  - front: "What are the two passes in multi-pass review, and what does each catch?"
+    back: "Per-file passes: review one file at a time with full attention, catching local bugs (null dereferences, injection, logic errors). Cross-file integration pass: review all files together but only check inter-file interactions (inconsistent interfaces, broken contracts, missing imports)."
+
+  - front: "Why is 'be conservative and only report high-confidence findings' a bad review instruction?"
+    back: "It fails in two ways: (1) 'be conservative' does not specify what to look for, so Claude defaults to a generic scan. (2) 'only high-confidence' suppresses real findings that happen to be subtle. A SQL injection requiring multi-function data flow tracing might be 'low confidence' but critical if real."
+
+  - front: "How should you write effective review criteria for Claude?"
+    back: "Use specific categorical criteria. Define REPORT categories (null dereferences, SQL injection, auth bypass, resource leaks) and SKIP categories (style, naming, docs). Include severity definitions with concrete examples. This gives Claude categorical targets instead of subjective judgments."
+
+  - front: "What does the confidence field in review findings represent?"
+    back: "How certain Claude is that the issue exists, not whether the issue is actually a real bug. High confidence = likely real, suitable for auto-commenting. Medium = flag for human review. Low = might be false positive, batch for periodic review. Use for prioritization, not as a guarantee."
+
+  - front: "Why doesn't a bigger context window solve the attention dilution problem?"
+    back: "The problem is not that Claude cannot fit 14 files; it is that reviewing files in sequence causes later files to receive less careful analysis. Relevance scoring degrades as context length increases, even when all content fits. Breaking the review into per-file passes is the structural fix."
+
+  - front: "What should the cross-file integration pass check for?"
+    back: "Issues that span module boundaries: inconsistent interfaces (signature changed in one file but callers still use old signature), broken data contracts, missing imports/exports after refactoring, circular dependencies introduced by changes, and cross-module race conditions."
+
+  - front: "How do you prevent the cross-file pass from duplicating per-file findings?"
+    back: "Pass the per-file findings into the cross-file prompt as 'already reported' context, and instruct Claude to only check cross-file criteria (integration issues) and not re-review individual files for local bugs."
+
+  - front: "What happens when review categories have high false positive rates?"
+    back: "Developers stop trusting the entire review. If 8 of 10 style findings are noise, developers ignore all findings including real bugs. Fix: temporarily disable high false-positive categories while improving their prompts. Better to have 4 trustworthy categories than 8 noisy ones."
+
+  - front: "Exam Q12: What is the correct approach for reviewing a large PR with Claude Code?"
+    back: "Per-file local analysis passes (each file reviewed independently with full attention) plus a separate cross-file integration pass (checking how files interact). This is the multi-pass review architecture tested in Task Statement 4.6."

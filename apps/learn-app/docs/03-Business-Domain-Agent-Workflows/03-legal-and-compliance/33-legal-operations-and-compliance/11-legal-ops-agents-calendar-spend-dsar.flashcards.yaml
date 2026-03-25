@@ -14,7 +14,7 @@ cards:
 
   - id: "ch33-11-calendar-spend-dsar-002"
     front: "What four categories of obligations does the Compliance Calendar Agent track?"
-    back: "1. Contract obligations — deliverables, payments, audit rights, renewal notice deadlines\n2. Regulatory filings — annual returns, licence renewals, certification renewals\n3. Internal compliance reviews — policy review schedules, DPIAs, third-party risk reviews\n4. Litigation deadlines — limitation periods (always escalate to counsel immediately)"
+    back: "1. Contract obligations: deliverables, payments, audit rights, renewal notice deadlines\n2. Regulatory filings: annual returns, licence renewals, certification renewals\n3. Internal compliance reviews: policy review schedules, DPIAs, third-party risk reviews\n4. Litigation deadlines: limitation periods (always escalate to counsel immediately)"
     difficulty: "basic"
     tags: ["obligation-categories"]
 
@@ -27,7 +27,7 @@ cards:
 
   - id: "ch33-11-calendar-spend-dsar-004"
     front: "What three types of anomalies does the Legal Spend Analytics Agent detect?"
-    back: "1. Rate variance — effective hourly rate deviating from agreed rate (e.g., billed at partner rate instead of senior associate rate)\n2. Matter budget overrun — invoiced amount exceeding approved budget without authorisation\n3. Billing pattern anomaly — disproportionate billing concentration in a single period (e.g., 72% of matter billing in the final month)"
+    back: "1. Rate variance: effective hourly rate deviating from agreed rate (e.g., billed at partner rate instead of senior associate rate)\n2. Matter budget overrun: invoiced amount exceeding approved budget without authorisation\n3. Billing pattern anomaly: disproportionate billing concentration in a single period (e.g., 72% of matter billing in the final month)"
     difficulty: "intermediate"
     tags: ["spend-anomalies"]
 
@@ -45,7 +45,7 @@ cards:
 
   - id: "ch33-11-calendar-spend-dsar-007"
     front: "What are the three redaction assessment categories in a DSAR?"
-    back: "Must Disclose — personal data about the requester, including opinions about them (e.g., 'difficult customer' in sales notes is personal data under Art. 4(1)).\nRedact — third-party personal data (e.g., support agent names, other customer names).\nAttorney Review Required — borderline items (e.g., commercially sensitive data that might be withheld under Recital 63 exemption)."
+    back: "Must Disclose: personal data about the requester, including opinions about them (e.g., 'difficult customer' in sales notes is personal data under Art. 4(1)).\nRedact: third-party personal data (e.g., support agent names, other customer names).\nAttorney Review Required: borderline items (e.g., commercially sensitive data that might be withheld under Recital 63 exemption)."
     difficulty: "intermediate"
     tags: ["redaction-assessment"]
 
@@ -57,7 +57,7 @@ cards:
 
   - id: "ch33-11-calendar-spend-dsar-009"
     front: "In the Sarah Johnson DSAR worked example, why were sales rep notes calling her a 'difficult customer' classified as Must Disclose?"
-    back: "Under Art. 4(1) of UK GDPR, opinions about data subjects are personal data. The ICO has confirmed that subjective opinions relating to an identified individual must be disclosed in a subject access request. The note 'difficult customer — always pushes for discounts' relates to Sarah and constitutes an opinion about her."
+    back: "Under Art. 4(1) of UK GDPR, opinions about data subjects are personal data. The ICO has confirmed that subjective opinions relating to an identified individual must be disclosed in a subject access request. The note 'difficult customer: always pushes for discounts' relates to Sarah and constitutes an opinion about her."
     difficulty: "intermediate"
     why: "How might this disclosure change a company's culture around internal notes about customers?"
     tags: ["opinions-as-personal-data"]
@@ -70,12 +70,12 @@ cards:
 
   - id: "ch33-11-calendar-spend-dsar-011"
     front: "What five safety rules ('NEVER DO THESE') apply to the DSAR Agent?"
-    back: "1. NEVER confirm data holdings before discovery is complete\n2. NEVER send data to requester without attorney review of full package\n3. NEVER miss the response window — alert Privacy Counsel 7 days before deadline\n4. NEVER reject a request without attorney sign-off on rejection grounds\n5. NEVER apply a fee without attorney confirmation it is lawful (manifestly unfounded/excessive threshold only)"
+    back: "1. NEVER confirm data holdings before discovery is complete\n2. NEVER send data to requester without attorney review of full package\n3. NEVER miss the response window: alert Privacy Counsel 7 days before deadline\n4. NEVER reject a request without attorney sign-off on rejection grounds\n5. NEVER apply a fee without attorney confirmation it is lawful (manifestly unfounded/excessive threshold only)"
     difficulty: "intermediate"
     tags: ["dsar-safety-rules"]
 
   - id: "ch33-11-calendar-spend-dsar-012"
     front: "How much time did the DSAR Agent save in the Sarah Johnson worked example?"
-    back: "The entire DSAR was managed within the 30-day window with 6 hours of coordinated human work (discovery coordination, attorney review, final quality check) instead of the typical 20-30 hours of manual processing — a 70-80% reduction in human effort while maintaining compliance."
+    back: "The entire DSAR was managed within the 30-day window with 6 hours of coordinated human work (discovery coordination, attorney review, final quality check) instead of the typical 20-30 hours of manual processing: a 70-80% reduction in human effort while maintaining compliance."
     difficulty: "basic"
     tags: ["time-savings"]

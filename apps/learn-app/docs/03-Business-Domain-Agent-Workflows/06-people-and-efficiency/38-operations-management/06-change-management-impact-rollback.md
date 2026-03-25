@@ -1,8 +1,8 @@
 ---
 slug: /Business-Domain-Agent-Workflows/operations-management/change-management-impact-rollback
 sidebar_position: 6
-title: "Change Management — Impact and Rollback"
-description: "Use /change-request to build complete change packages — impact assessments that map every affected team and system, communication plans that prevent resistance from surprise, and rollback plans with pre-defined trigger criteria"
+title: "Change Management: Impact and Rollback"
+description: "Use /change-request to build complete change packages: impact assessments that map every affected team and system, communication plans that prevent resistance from surprise, and rollback plans with pre-defined trigger criteria"
 keywords:
   [
     "change management",
@@ -33,7 +33,7 @@ skills:
     category: "Applied"
     bloom_level: "Apply"
     digcomp_area: "Communication"
-    measurable_at_this_level: "Student can produce a communication plan with message by audience, channel, timing, and key messages — including what not to say — for each communication milestone in a change programme"
+    measurable_at_this_level: "Student can produce a communication plan with message by audience, channel, timing, and key messages, including what not to say, for each communication milestone in a change programme"
 
   - name: "Design Rollback Plans with Pre-Defined Trigger Criteria"
     proficiency_level: "B2"
@@ -61,15 +61,15 @@ learning_objectives:
 cognitive_load:
   new_concepts: 5
   concepts_list:
-    - "Change classification — four levels (Standard, Significant, Major, Critical) that determine approval authority and assessment depth"
-    - "Incomplete impact assessment — assessing a change in isolation misses downstream effects on connected processes and systems"
-    - "Integration risk register — the systematic mapping of every system connection that the change might disrupt"
-    - "Pre-defined rollback triggers — defining 'critical failure' before go-live, not improvising it when things go wrong"
-    - "Change readiness assessment — evaluating whether the organisation is ready to absorb the change, not just whether the technology is ready"
-  assessment: "5 concepts at B2 level is appropriate. The integration risk register and pre-defined rollback triggers are the highest-load concepts — they require thinking beyond the primary change to its second-order effects. The others are structural frameworks with clear application rules."
+    - "Change classification, four levels (Standard, Significant, Major, Critical) that determine approval authority and assessment depth"
+    - "Incomplete impact assessment, assessing a change in isolation misses downstream effects on connected processes and systems"
+    - "Integration risk register: the systematic mapping of every system connection that the change might disrupt"
+    - "Pre-defined rollback triggers, defining 'critical failure' before go-live, not improvising it when things go wrong"
+    - "Change readiness assessment, evaluating whether the organisation is ready to absorb the change, not just whether the technology is ready"
+  assessment: "5 concepts at B2 level is appropriate. The integration risk register and pre-defined rollback triggers are the highest-load concepts; they require thinking beyond the primary change to its second-order effects. The others are structural frameworks with clear application rules."
 
 differentiation:
-  extension_for_advanced: "After completing the exercise, run a post-implementation review template for the same change as if it had been executed three months ago. Define: what questions you would ask, what data you would collect, how you would assess whether the change achieved its stated objectives, and what you would do differently. Then connect it back to the SOP library from Lesson 5 — which SOPs would need to be updated as a result of this change?"
+  extension_for_advanced: "After completing the exercise, run a post-implementation review template for the same change as if it had been executed three months ago. Define: what questions you would ask, what data you would collect, how you would assess whether the change achieved its stated objectives, and what you would do differently. Then connect it back to the SOP library from Lesson 5, which SOPs would need to be updated as a result of this change?"
   remedial_for_struggling: "Focus on the stakeholder impact map. For any change, ask: who uses the system being changed? Who is upstream (provides inputs)? Who is downstream (depends on outputs)? Who approves or governs the affected process? If you can answer these four questions, you have the stakeholder map. Everything else in change management builds from knowing who is affected."
 
 teaching_guide:
@@ -77,29 +77,29 @@ teaching_guide:
     - "Changes fail operationally because they are assessed in isolation. The CRM upgrade breaks the finance integration because finance was not consulted. The process redesign doubles workload downstream because nobody mapped the downstream team."
     - "Resistance to change comes primarily from surprise. People who are informed early, in the right format, with honest explanation of what is being lost as well as what is being gained, resist change far less than people who find out at the last minute."
     - "The rollback plan must be written before go-live. After go-live, under pressure, with incomplete information, nobody writes a good rollback plan. The time to define 'critical failure' is when nothing is wrong."
-    - "The change-tracker agent in Lesson 12 monitors the change pipeline built here — flagging stale approvals, missing impact assessments, and overdue post-implementation reviews."
+    - "The change-tracker agent in Lesson 12 monitors the change pipeline built here, flagging stale approvals, missing impact assessments, and overdue post-implementation reviews."
   misconceptions:
     - "Rollback means going back to exactly the previous state. Correction: rollback is often partial, phased, or conditional. Some changes cannot be fully reversed (migrated data, published communications). The rollback plan must reflect what is actually reversible at each phase."
     - "Communication is what you announce, not what you withhold. Correction: what you choose NOT to say during a change is as important as what you say. Overclaiming benefits, underdisclosing risks, and avoiding acknowledgement of what is being lost all create resistance and trust deficits."
     - "Change readiness is about whether people agree with the change. Correction: readiness includes technology readiness (systems and integrations tested), process readiness (SOPs updated for post-change reality), data readiness (data quality sufficient for migration), and organisation readiness (people trained, change fatigue assessed)."
   discussion_prompts:
-    - "Think of a technology or process change you experienced that did not go as planned. Which of the three failure causes — incomplete impact assessment, insufficient communication, or no rollback plan — best describes what happened? Could a structured change request have prevented it?"
+    - "Think of a technology or process change you experienced that did not go as planned. Which of the three failure causes, incomplete impact assessment, insufficient communication, or no rollback plan, best describes what happened? Could a structured change request have prevented it?"
     - "What does it mean to define 'critical failure' before go-live? Why is this harder than it sounds? What would 'critical failure' look like for an ERP migration on day one?"
   teaching_tips:
-    - "The incident narrative in L10 is caused by a poorly managed change — this is a forward reference you can make in this lesson. Students will encounter in L10 an incident whose root cause traces back to a change that lacked a proper impact assessment and rollback plan."
-    - "Walk through the change classification table before the exercise. Students should understand that classification is not about how difficult the change is — it is about how much of the organisation it affects and what governance it requires."
+    - "The incident narrative in L10 is caused by a poorly managed change. This is a forward reference you can make in this lesson. Students will encounter in L10 an incident whose root cause traces back to a change that lacked a proper impact assessment and rollback plan."
+    - "Walk through the change classification table before the exercise. Students should understand that classification is not about how difficult the change is; it is about how much of the organisation it affects and what governance it requires."
     - "The integration risk register is the hardest concept. Help students think in terms of systems that send data TO the changed system, systems that receive data FROM it, and systems that share data WITH it. Missed integrations are the most common source of post-go-live surprises."
 ---
 
-# Change Management — Impact and Rollback
+# Change Management: Impact and Rollback
 
-The change seemed straightforward. A CRM upgrade — same vendor, same data, updated interface and new automation features. The project team assessed the CRM in isolation: user interface testing, data migration checks, feature validation. Everything passed. Go-live was declared a success.
+The change seemed straightforward. A CRM upgrade, same vendor, same data, updated interface and new automation features. The project team assessed the CRM in isolation: user interface testing, data migration checks, feature validation. Everything passed. Go-live was declared a success.
 
 Three days later, the finance team's automated invoice processing stopped working. The CRM upgrade had changed the API endpoint that the finance system used to pull customer account data. The integration had not been in scope for the impact assessment because nobody had mapped the dependency between CRM and finance. The fix took eleven days. During those eleven days, invoice processing was manual. Four hundred invoices. Three finance team members. Eleven days of unplanned extra work.
 
-The change was technically successful. Operationally, it failed. Not because the change was wrong — but because it was assessed in isolation.
+The change was technically successful. Operationally, it failed. Not because the change was wrong , but because it was assessed in isolation.
 
-This is the most common pattern in change failure: the change itself is correct, but its downstream effects were not mapped. Lesson 10 of this chapter examines an incident that was triggered by a change without proper rollback planning. The investigation will trace the root cause back to the moment when the rollback trigger criteria were not defined before go-live. By the time the organisation needed to decide whether to roll back, nobody could agree on what "bad enough to roll back" meant — so the team waited, hoping things would improve, while the impact accumulated.
+This is the most common pattern in change failure: the change itself is correct, but its downstream effects were not mapped. Lesson 10 of this chapter examines an incident that was triggered by a change without proper rollback planning. The investigation will trace the root cause back to the moment when the rollback trigger criteria were not defined before go-live. By the time the organisation needed to decide whether to roll back, nobody could agree on what "bad enough to roll back" meant. So the team waited, hoping things would improve, while the impact accumulated.
 
 This lesson teaches the change management discipline that prevents both failures.
 
@@ -116,7 +116,7 @@ Every significant change failure traces back to at least one of three root cause
 
 | Failure Cause                    | What Happens                                                        | Why It Is Common                                             |
 | -------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------ |
-| **Incomplete impact assessment** | The change is assessed in isolation — its effects on connected processes, systems, and teams are not mapped | The change owner knows their system; they rarely know everyone else's |
+| **Incomplete impact assessment** | The change is assessed in isolation; its effects on connected processes, systems, and teams are not mapped | The change owner knows their system; they rarely know everyone else's |
 | **Insufficient communication**   | Affected people found out too late, in the wrong format, or not at all | Communication is treated as a post-decision announcement, not a pre-decision process |
 | **No rollback plan**             | When things went wrong, nobody had a structured way to revert       | Writing a rollback plan feels pessimistic; nobody wants to plan for failure |
 
@@ -128,20 +128,20 @@ Not all changes require the same depth of assessment. Change classification dete
 
 | Classification | Scope | Risk Level | Approval Required | Examples |
 | -------------- | ----- | ---------- | ----------------- | -------- |
-| **Standard**   | Single team, limited impact | Low — routine, well-understood | Team lead / manager | Software patch, policy clarification, minor process tweak |
-| **Significant** | Multiple teams or systems | Medium — some dependencies | Department head | New software deployment, process redesign, team restructure |
-| **Major**       | Organisation-wide or multiple departments | High — significant dependencies or regulatory implications | Exec sponsor or COO | System migration, regulatory-driven process change, M&A integration |
-| **Critical**    | Core business systems or regulatory compliance | Very high — failure would materially impact operations or compliance | Board or executive committee | ERP replacement, core platform migration, safety-critical process change |
+| **Standard**   | Single team, limited impact | Low, routine, well-understood | Team lead / manager | Software patch, policy clarification, minor process tweak |
+| **Significant** | Multiple teams or systems | Medium, some dependencies | Department head | New software deployment, process redesign, team restructure |
+| **Major**       | Organisation-wide or multiple departments | High, significant dependencies or regulatory implications | Exec sponsor or COO | System migration, regulatory-driven process change, M&A integration |
+| **Critical**    | Core business systems or regulatory compliance | Very high, failure would materially impact operations or compliance | Board or executive committee | ERP replacement, core platform migration, safety-critical process change |
 
 **The under-classification risk.** The most common classification error is under-classifying: a Significant change assessed with the rigour appropriate for a Standard change. Under-classification is motivated by wanting to move faster, but the consequence is an assessment that misses the dependencies the classification would have required to map.
 
 :::caution Classify Before You Assess
-The classification determines the scope of the impact assessment — which teams to consult, which systems to map, which risks to document. Running the assessment before classifying the change means you may have assessed the wrong scope.
+The classification determines the scope of the impact assessment, which teams to consult, which systems to map, which risks to document. Running the assessment before classifying the change means you may have assessed the wrong scope.
 :::
 
 ## Running a Change Impact Assessment with `/change-request`
 
-**Worked example.** You are the Change Manager for an ERP migration — SAP on-premise to SAP S/4HANA Cloud. You type:
+**Worked example.** You are the Change Manager for an ERP migration, SAP on-premise to SAP S/4HANA Cloud. You type:
 
 ```
 /change-request
@@ -158,8 +158,8 @@ Directly affected departments:
 - IT — ~8 people (delivery responsibility)
 
 Known integrations:
-- Salesforce CRM — currently connected via API
-- ADP Payroll — file transfer
+- Salesforce CRM, currently connected via API
+- ADP Payroll, file transfer
 - EDI connections to 12 suppliers
 - Power BI (reporting)
 
@@ -174,46 +174,46 @@ rollback plan with phase-specific strategies.
 | Output Section               | What to Verify                                                              |
 | ---------------------------- | --------------------------------------------------------------------------- |
 | **Change classification**    | Correctly assessed as Major or Critical (organisation-wide, 4 systems, 80 people) |
-| **Stakeholder impact map**   | Every affected team has a risk level and a named concern — not just "affected" |
+| **Stakeholder impact map**   | Every affected team has a risk level and a named concern , not just "affected" |
 | **Integration risk register**| Every integration listed with current state, required action, risk level, and owner |
 | **Timeline risks**           | Go-live timing relative to year-end or other high-risk periods is assessed  |
 | **Change readiness**         | Four dimensions assessed: organisation, technology, process, data           |
-| **Rollback plan**            | Phase-specific — not one generic "revert" instruction for all phases         |
+| **Rollback plan**            | Phase-specific, not one generic "revert" instruction for all phases         |
 
-A well-formed impact assessment for this scenario includes a critical observation many change owners miss: Q3 go-live aligns with the organisation's year-end period. A major ERP migration going live during the period when finance accuracy is most critical is a timeline risk that the change owner — focused on the technical delivery — often does not flag. The `/change-request` output should surface this.
+A well-formed impact assessment for this scenario includes a critical observation many change owners miss: Q3 go-live aligns with the organisation's year-end period. A major ERP migration going live during the period when finance accuracy is most critical is a timeline risk that the change owner, focused on the technical delivery, often does not flag. The `/change-request` output should surface this.
 
 ```
 CHANGE IMPACT ASSESSMENT
-Change: ERP Migration — SAP On-Premise to SAP S/4HANA Cloud (RISE)
+Change: ERP Migration, SAP On-Premise to SAP S/4HANA Cloud (RISE)
 ════════════════════════════════════════════════════════════════
 
 CHANGE CLASSIFICATION:
   Scope:    Organisation-wide (4 departments, ~80 people affected directly)
-  Type:     Technology — core system migration with significant process change
-  Risk:     HIGH — core business system; 4 integrations; 12 external parties
+  Type:     Technology, core system migration with significant process change
+  Risk:     HIGH, core business system; 4 integrations; 12 external parties
   Approvals required: Executive sponsor (CFO) + COO + Board notification
 
 STAKEHOLDER IMPACT MAP:
 
-  Finance (AP, AR, GL, Reporting) — HIGH IMPACT
+  Finance (AP, AR, GL, Reporting), HIGH IMPACT
   All core finance workflows change: new UI, new approval processes,
   month-end close process requires redesign. Reporting currently on
-  Power BI via direct DB connection — will break at go-live.
+  Power BI via direct DB connection, will break at go-live.
   Key concern: Q3 go-live = Finance year-end. HIGH RISK of disruption
   to year-end close. Recommendation: reconsider go-live date.
   Training: recommend 8-10 hours + system sandbox access for 6 weeks pre-go-live.
 
-  Procurement — MEDIUM-HIGH IMPACT
+  Procurement, MEDIUM-HIGH IMPACT
   PO workflow, supplier onboarding, and payment approval matrix all change.
   Approval matrix must be reconfigured in cloud system before go-live.
   Risk: if approval matrix is not correctly configured, payments may fail.
 
-  Operations (Inventory) — MEDIUM IMPACT
+  Operations (Inventory), MEDIUM IMPACT
   Inventory management workflows change. Physical scanning integration
   (warehouse barcode scanners) must be tested against new system.
   Risk: warehouse operations could be disrupted if scanning integration fails.
 
-  IT — HIGH IMPACT (delivery responsibility)
+  IT, HIGH IMPACT (delivery responsibility)
   Infrastructure decommission, 4 integration rebuilds, data migration,
   user identity migration to cloud identity provider.
   Resourcing: this is not a part-time IT project. Dedicated resource required.
@@ -222,8 +222,8 @@ INTEGRATION RISK REGISTER:
 
   | Integration | Current State | Action Required | Risk | Owner | Deadline |
   |---|---|---|---|---|---|
-  | Salesforce CRM | API (inbound/outbound) | Full rebuild — API endpoints change in cloud | HIGH | IT + Salesforce SI | Month 1 |
-  | ADP Payroll | File transfer (weekly) | API migration available — recommend upgrade | MEDIUM | IT + ADP | Month 2 |
+  | Salesforce CRM | API (inbound/outbound) | Full rebuild, API endpoints change in cloud | HIGH | IT + Salesforce SI | Month 1 |
+  | ADP Payroll | File transfer (weekly) | API migration available, recommend upgrade | MEDIUM | IT + ADP | Month 2 |
   | EDI (12 suppliers) | IDOC format | Cloud EDI service available; supplier testing required | MEDIUM | Procurement + IT | Month 3 |
   | Power BI | Direct database connection | Connection type changes; rebuild required in SAC or via connector | HIGH | IT + BI team | Month 2 |
 
@@ -237,10 +237,10 @@ TIMELINE RISKS:
   is 9-12 months. RECOMMENDATION: add 2-month buffer or reduce scope.
 
 CHANGE READINESS ASSESSMENT:
-  Organisation: MODERATE — change fatigue from recent projects; sponsor visible
-  Technology:   MODERATE — SAP experience exists; cloud is new for this team
-  Process:      LOW — current SOPs will all need updating post-go-live; none drafted
-  Data:         MODERATE — data quality audit needed; master data completeness unknown
+  Organisation: MODERATE, change fatigue from recent projects; sponsor visible
+  Technology:   MODERATE, SAP experience exists; cloud is new for this team
+  Process:      LOW, current SOPs will all need updating post-go-live; none drafted
+  Data:         MODERATE, data quality audit needed; master data completeness unknown
 
 RECOMMENDED ROLLBACK PLAN:
   Phase 1 (design): rollback = project cancellation. No operational impact.
@@ -257,7 +257,7 @@ RECOMMENDED ROLLBACK PLAN:
 
 ## Building a Communication Plan
 
-A communication plan maps who receives what message, through which channel, and when. The purpose is not announcement — it is managed transition. People who understand what is changing, why it is changing, and what support is available resist change far less than people who are surprised by it.
+A communication plan maps who receives what message, through which channel, and when. The purpose is not announcement; it is managed transition. People who understand what is changing, why it is changing, and what support is available resist change far less than people who are surprised by it.
 
 ```
 /change-request
@@ -269,11 +269,11 @@ Key milestones to communicate: project launch (Month 1), halfway update
 support (Month 6+)
 
 Audiences:
-- All staff (80 people) — aware, basic understanding
-- Finance team (25 people) — trained, high ownership
-- IT team (8 people) — delivery owners
-- Leadership (5 people) — sponsors, accountable
-- 12 EDI supplier partners — informed of integration timeline
+- All staff (80 people), aware, basic understanding
+- Finance team (25 people), trained, high ownership
+- IT team (8 people), delivery owners
+- Leadership (5 people), sponsors, accountable
+- 12 EDI supplier partners, informed of integration timeline
 
 For each communication milestone, provide: message by audience, channel,
 timing, owner, key messages, and what NOT to say.
@@ -281,16 +281,16 @@ timing, owner, key messages, and what NOT to say.
 
 **What to evaluate:**
 
-- Does the plan cover all audiences at each milestone — not just "all staff"?
+- Does the plan cover all audiences at each milestone , not just "all staff"?
 - Is "what NOT to say" included? The things left unsaid often create more resistance than the things said poorly.
 - Are the channels appropriate for each audience and message type?
-- Does the plan acknowledge what is being lost — not just the benefits — for each audience?
+- Does the plan acknowledge what is being lost , not just the benefits, for each audience?
 
 ## Designing Rollback Plans
 
 A rollback plan that says "we will revert if things go wrong" is not a rollback plan. It is an intention. A real rollback plan answers three questions before go-live:
 
-1. **What is "critical failure"?** Define it as observable conditions — not "if things are bad" but "if month-end close cannot be completed" or "if >30% of users cannot access core functions"
+1. **What is "critical failure"?** Define it as observable conditions, not "if things are bad" but "if month-end close cannot be completed" or "if >30% of users cannot access core functions"
 2. **Who has authority to pull the rollback trigger?** If this decision requires two executives to agree, who are they?
 3. **What specifically is reversible at each phase?** Data migrations, published communications, and trained users cannot simply be reverted
 
@@ -309,15 +309,15 @@ A rollback plan that says "we will revert if things go wrong" is not a rollback 
 **Type:** Change management
 **Time:** 40 minutes
 **Plugin command:** Official `/change-request`
-**Goal:** Produce a complete change request package — impact assessment, communication plan, and rollback plan with pre-defined trigger criteria
+**Goal:** Produce a complete change request package, impact assessment, communication plan, and rollback plan with pre-defined trigger criteria
 
-### Step 1 — Define Your Change
+### Step 1: Define Your Change
 
 Use the following scenario or adapt it to your context:
 
 **Scenario:** Your 200-person UK professional services firm is migrating from a legacy CRM (on-premise, end-of-life) to a cloud CRM platform. Timeline: 4 months. Go-live: planned for Month 4. Key dependencies: legacy CRM is integrated with finance system (bi-directional), marketing automation platform (one-way), and a customer portal (API). Sales team (35 people), Marketing team (12 people), and Finance team (3 people for AR) are directly affected.
 
-### Step 2 — Run the Impact Assessment
+### Step 2: Run the Impact Assessment
 
 ```
 /change-request
@@ -328,9 +328,9 @@ Timeline: 4 months to go-live
 Sponsor: [COO or CCO]
 
 Affected departments and people:
-- Sales team: 35 people (primary users — all workflows change)
+- Sales team: 35 people (primary users, all workflows change)
 - Marketing team: 12 people (campaign management, lead routing)
-- Finance team: 3 people (AR — customer account sync)
+- Finance team: 3 people (AR, customer account sync)
 
 Integrations:
 - Finance system: bi-directional sync (customer accounts, invoice data)
@@ -344,14 +344,14 @@ assessment, and recommended rollback plan with phase-specific strategies.
 
 **What to evaluate:**
 
-- Is the change classified at the correct level — not Standard (it affects 3 departments and 4 systems)?
+- Is the change classified at the correct level, not Standard (it affects 3 departments and 4 systems)?
 - Does the impact assessment cover ALL three integrations, not just the most obvious one (finance)?
-- Are integration risks rated by severity — and is each risk assigned a named owner and deadline?
+- Are integration risks rated by severity , and is each risk assigned a named owner and deadline?
 - Does the assessment identify any risks the change owner had not raised in the brief?
-- Is the change readiness assessment honest about process readiness — the SOPs for all affected processes will need updating post-go-live?
+- Is the change readiness assessment honest about process readiness: the SOPs for all affected processes will need updating post-go-live?
 - Would a COO find this assessment sufficient to make an informed go/no-go decision?
 
-### Step 3 — Build the Communication Plan
+### Step 3: Build the Communication Plan
 
 ```
 /change-request
@@ -370,17 +370,17 @@ key messages, and what NOT to say.
 **What to evaluate:**
 
 - Does the plan include customers as an audience where the portal changes affect them?
-- Is there specific guidance on what NOT to say at each milestone — particularly avoiding overclaiming benefits before the system is tested?
+- Is there specific guidance on what NOT to say at each milestone, particularly avoiding overclaiming benefits before the system is tested?
 - Does the plan acknowledge what the sales team is losing (familiar interface, established workarounds) alongside what they are gaining?
 - Are the communications owned by named roles, not just "the project team"?
 
-### Step 4 — Define the Rollback Plan with Trigger Criteria
+### Step 4: Define the Rollback Plan with Trigger Criteria
 
 Before completing the exercise, write your rollback trigger criteria in plain language. For each phase (design, build, UAT, go-live), answer:
 
 1. **What observable condition would trigger a rollback or delay?**
 2. **Who has authority to make that decision?**
-3. **What is actually reversible at that phase — and what is not?**
+3. **What is actually reversible at that phase , and what is not?**
 
 Then run:
 
@@ -388,13 +388,13 @@ Then run:
 /change-request
 Produce a detailed rollback plan for our CRM migration.
 
-Phases: design (current — Month 1), build (Months 1-3), UAT (Month 3),
+Phases: design (current, Month 1), build (Months 1-3), UAT (Month 3),
 go-live (Month 4), post-go-live (Month 4+).
 
 For each phase, define:
 - What is reversible (and what is not)
 - The rollback action if needed
-- Observable trigger criteria that would justify rollback — written as
+- Observable trigger criteria that would justify rollback, written as
   specific, measurable conditions (not 'if things are bad')
 - Named decision authority for the rollback call
 
@@ -405,12 +405,12 @@ reversed after 2 weeks of production use.
 
 **What to evaluate:**
 
-- Are trigger criteria observable conditions — things you can see or measure — rather than vague judgements?
+- Are trigger criteria observable conditions, things you can see or measure, rather than vague judgements?
 - Is the post-go-live rollback plan realistic? After two weeks in production, a full revert may not be feasible; the plan should reflect this.
-- Does the plan name decision authority — not just "escalate to leadership" but specific titles?
+- Does the plan name decision authority , not just "escalate to leadership" but specific titles?
 - Is "what is not reversible" explicitly stated for each phase?
 
-**Deliverable:** A complete change request package: classified impact assessment, communication plan with milestone-by-audience coverage, and a rollback plan with pre-defined trigger criteria. Keep this change log — the change-tracker agent in Lesson 12 will monitor it for stale approvals, missing impact assessments, and overdue post-implementation reviews.
+**Deliverable:** A complete change request package: classified impact assessment, communication plan with milestone-by-audience coverage, and a rollback plan with pre-defined trigger criteria. Keep this change log: the change-tracker agent in Lesson 12 will monitor it for stale approvals, missing impact assessments, and overdue post-implementation reviews.
 
 :::note Keep This File
 The change log you build in this exercise will be monitored by the change-tracker agent you configure in Lesson 12. That agent will flag stale approvals, missing post-implementation reviews, and changes without impact assessments. Keep this work in your Cowork session.
@@ -435,14 +435,14 @@ identify the critical timeline risk, and produce a rollback plan with trigger
 criteria specific to payroll processing.
 ```
 
-**What you are learning:** Payroll is a high-stakes process where a change failure has immediate, visible consequences. Notice how even a "minor upgrade" (same vendor, same data model) carries significant integration risk and timeline sensitivity. The classification — and the trigger criteria — are shaped by what failure would mean, not by how technically straightforward the change is.
+**What you are learning:** Payroll is a high-stakes process where a change failure has immediate, visible consequences. Notice how even a "minor upgrade" (same vendor, same data model) carries significant integration risk and timeline sensitivity. The classification , and the trigger criteria: are shaped by what failure would mean, not by how technically straightforward the change is.
 
 **Adapt**: Modify the scenario to match your organisation.
 
 ```
 I have a change planned that I need to assess before proceeding.
 
-Change description: [describe what is changing — system, process, or structure]
+Change description: [describe what is changing, system, process, or structure]
 Affected teams: [list departments and approximate headcount]
 Timeline: [target go-live and key milestones]
 Known integrations: [systems that connect to what is being changed]
@@ -475,7 +475,7 @@ Produce a post-implementation review that covers:
 6. Which SOPs need to be updated to reflect the post-change reality?
 ```
 
-**What you are learning:** The post-implementation review closes the change management loop. It converts the experience of one change into improved practice for the next one. The question "what did the impact assessment miss?" is the most valuable question in any PIR — it builds the organisation's capacity to run better impact assessments next time.
+**What you are learning:** The post-implementation review closes the change management loop. It converts the experience of one change into improved practice for the next one. The question "what did the impact assessment miss?" is the most valuable question in any PIR ; it builds the organisation's capacity to run better impact assessments next time.
 :::
 
 ## Flashcards Study Aid
@@ -484,4 +484,4 @@ Produce a post-implementation review that covers:
 
 ---
 
-Continue to [Lesson 7: Compliance Tracking — Obligations and Evidence →](./07-compliance-tracking-obligations-evidence.md)
+Continue to [Lesson 7: Compliance Tracking: Obligations and Evidence →](./07-compliance-tracking-obligations-evidence.md)
