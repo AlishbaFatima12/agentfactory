@@ -1,13 +1,13 @@
 ---
 slug: /General-Agents-Foundations/claude-code-teams-cicd/chapter-quiz
-sidebar_position: 9
+sidebar_position: 10
 title: "Chapter 18: Claude Code for Teams, CI/CD & Advanced Configuration Quiz"
 proficiency_level: B1
 layer: 2
 estimated_time: "30 mins"
 chapter_type: Assessment
 chapter: 18
-lesson: 9
+lesson: 10
 running_example_id: claude-code-teams-quiz
 ---
 

@@ -1,7 +1,7 @@
 ---
 slug: /General-Agents-Foundations/general-agents/basics-exercises
 title: "Practical Problem-Solving Exercises"
-practice_exercise: ch3-basics
+practice_exercise: ch14-basics
 sidebar_position: 6
 chapter: 14
 lesson: 6

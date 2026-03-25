@@ -1,7 +1,7 @@
 ---
 slug: /General-Agents-Foundations/general-agents/agent-teams-exercises
 title: "Agent Teams Exercises: Business Problem-Solving with Multi-Agent Teams"
-practice_exercise: ch3-agent-teams
+practice_exercise: ch14-agent-teams
 sidebar_label: "Agent Teams Exercises"
 sidebar_position: 21
 chapter: 14

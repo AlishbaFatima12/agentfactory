@@ -1,7 +1,7 @@
 ---
 slug: /General-Agents-Foundations/general-agents/plugins-exercises
 title: "Plugins & Extensibility Exercises: Settings, Hooks, Plugins, and Automation"
-practice_exercise: ch3-plugins
+practice_exercise: ch14-plugins
 sidebar_label: "Plugins Exercises"
 sidebar_position: 19
 chapter: 14
@@ -219,7 +219,7 @@ Read all three settings files. Trace through the precedence rules (local > proje
 
 <ExerciseCard id="2.1" title="Build a Hook Suite" />
 
-### Exercise 2.1:Build a Hook Suite (Hands-on)
+### Exercise 2.1: Build a Hook Suite (Hands-on)
 
 **The Problem:**
 Open the `module-2-hooks/exercise-2.1-event-automation/` folder. You'll find a project that needs three automated checks: (1) every time Claude tries to write a file, check that it doesn't contain API keys, (2) every time Claude finishes running a bash command, log the command to an audit file, and (3) when a user submits a prompt, check that it doesn't reference files outside the project directory.
@@ -250,7 +250,7 @@ Create a `.claude/settings.json` with a `hooks` configuration containing three h
 
 <ExerciseCard id="2.2" title="Fix the Broken Hooks" />
 
-### Exercise 2.2:Fix the Broken Hooks (Debug)
+### Exercise 2.2: Fix the Broken Hooks (Debug)
 
 **The Problem:**
 Open the `module-2-hooks/exercise-2.2-hook-failures/` folder. You'll find a `settings.json` with three hooks that are all broken. Bug 1: A PreToolUse hook fires on every tool call instead of just file writes. Bug 2: A PostToolUse hook script exists but has wrong permissions and never executes. Bug 3: A UserPromptSubmit hook references an environment variable that doesn't exist, causing silent failures.
@@ -278,7 +278,7 @@ Diagnose and fix all three bugs. For each bug, document: what the symptom was, w
 
 <ExerciseCard id="3.1" title="Build a Plugin Evaluation Matrix" />
 
-### Exercise 3.1:Build a Plugin Evaluation Matrix (Hands-on)
+### Exercise 3.1: Build a Plugin Evaluation Matrix (Hands-on)
 
 **The Problem:**
 Open the `module-3-plugin-discovery/exercise-3.1-marketplace-explorer/` folder. You'll find `workflow-needs.md`, a document describing 5 workflow needs for a development team: automated commit messages, code review checklists, test coverage reporting, documentation generation, and dependency auditing.
@@ -313,7 +313,7 @@ The plugin marketplace is actively evolving. If you find fewer plugins than expe
 
 <ExerciseCard id="3.2" title="Audit a Messy Plugin Setup" />
 
-### Exercise 3.2:Audit a Messy Plugin Setup (Debug)
+### Exercise 3.2: Audit a Messy Plugin Setup (Debug)
 
 **The Problem:**
 Open the `module-3-plugin-discovery/exercise-3.2-plugin-audit/` folder. You'll find a project with 8 plugins installed, but the setup is a mess. Two plugins do the same thing (redundant), one plugin conflicts with a project hook, one is installed at the wrong scope (user vs. project), and one hasn't been updated in months. The developer doesn't know which plugins are actually useful.
@@ -341,7 +341,7 @@ Audit the entire plugin setup. For each plugin, determine: what it does, whether
 
 <ExerciseCard id="4.1" title="Install and Use Plugins" />
 
-### Exercise 4.1:Install and Use Plugins (Hands-on)
+### Exercise 4.1: Install and Use Plugins (Hands-on)
 
 **The Problem:**
 Open the `module-4-plugin-usage/exercise-4.1-install-and-use/` folder. You'll find a project that needs two plugins: one for automated commit messages (like `commit-commands`) and one for code quality checks (like an LSP integration plugin). The project has a `README.md` explaining the team's commit message conventions and quality standards.
@@ -376,7 +376,7 @@ Some plugins require external tools (Node.js, npm, language servers). If a plugi
 
 <ExerciseCard id="4.2" title="Chain Plugins in a Workflow" />
 
-### Exercise 4.2:Chain Plugins in a Workflow (Hands-on)
+### Exercise 4.2: Chain Plugins in a Workflow (Hands-on)
 
 **The Problem:**
 Open the `module-4-plugin-usage/exercise-4.2-plugin-workflow-chain/` folder. You'll find a development project where a typical workflow involves: write code, lint it, run tests, generate a commit message, and update the changelog. Each step could be handled by a separate plugin or hook.
@@ -411,7 +411,7 @@ Set up a workflow that chains multiple plugins together. When you finish writing
 
 <ExerciseCard id="5.1" title="Package Skills into a Plugin" />
 
-### Exercise 5.1:Package Skills into a Plugin (Hands-on)
+### Exercise 5.1: Package Skills into a Plugin (Hands-on)
 
 **The Problem:**
 Open the `module-5-plugin-packaging/exercise-5.1-package-skills-plugin/` folder. You'll find three standalone skills in `.claude/skills/`: a code review skill, a documentation generator skill, and a test scaffolding skill. Each works independently, but they're not packaged as a plugin, they can't be installed by other projects or shared with teammates.
@@ -442,7 +442,7 @@ Package all three skills into a single plugin. Create a `plugin.json` manifest w
 
 <ExerciseCard id="5.2" title="Package a Complete Bundle" />
 
-### Exercise 5.2:Package a Complete Bundle (Advanced)
+### Exercise 5.2: Package a Complete Bundle (Advanced)
 
 **The Problem:**
 Open the `module-5-plugin-packaging/exercise-5.2-full-plugin-bundle/` folder. You'll find a more complex setup: skills, hooks, an MCP server configuration, and an agent definition. These work together as a system: the hooks enforce standards, the skills automate tasks, the MCP server provides external data, and the agent orchestrates everything.
@@ -477,7 +477,7 @@ Package the entire bundle into a single plugin that, when installed, sets up eve
 
 <ExerciseCard id="7.1" title="Set Up an Autonomous Loop" />
 
-### Exercise 7.1:Set Up an Autonomous Loop (Hands-on)
+### Exercise 7.1: Set Up an Autonomous Loop (Hands-on)
 
 **The Problem:**
 Open the `module-7-ralph-wiggum/exercise-7.1-autonomous-loop/` folder. You'll find a project with 12 test files, all failing. The failures are independent; each test has a small bug in the corresponding source file. Fixing them one at a time with manual prompts would require 12 separate interactions. This is a classic Ralph Wiggum candidate: clear completion criteria (all tests pass), many iterations, and each fix is independent.
@@ -512,7 +512,7 @@ Before starting, run `cd project && npm install && npm test` to confirm you see 
 
 <ExerciseCard id="7.2" title="Debug a Stuck Loop" />
 
-### Exercise 7.2:Debug a Stuck Loop (Debug)
+### Exercise 7.2: Debug a Stuck Loop (Debug)
 
 **The Problem:**
 Open the `module-7-ralph-wiggum/exercise-7.2-stuck-loop-debug/` folder. You'll find a session log from a Ralph Wiggum loop that got stuck. The developer asked Claude to "refactor all functions to use async/await and keep going until the linter is clean." The loop ran 20 iterations, never reached clean linter output, and burned through significant tokens. The log shows the same 3 linter errors appearing repeatedly: Claude fixes one, introduces another, and cycles endlessly.
@@ -542,7 +542,7 @@ Capstones are different from the exercises above. There are no guided prompts; y
 
 <ExerciseCard id="A" title="Full Plugin from Scratch" />
 
-### Capstone A:Full Plugin from Scratch
+### Capstone A: Full Plugin from Scratch
 
 Open the `module-8-capstones/capstone-A-full-plugin/` folder. You'll find a set of requirements for a plugin that doesn't exist yet: it should include 2 skills (one for API documentation generation, one for endpoint testing), 2 hooks (pre-commit validation and post-test reporting), and an MCP server integration for an external API. Build the entire plugin from scratch: skills, hooks, MCP config, and plugin.json manifest. Then create a `marketplace.json` that registers your plugin, making it discoverable and installable by others. Test by installing it on a fresh project from your marketplace.
 
@@ -556,7 +556,7 @@ Open the `module-8-capstones/capstone-A-full-plugin/` folder. You'll find a set 
 
 <ExerciseCard id="B" title="Team Extensibility Kit" />
 
-### Capstone B:Team Extensibility Kit
+### Capstone B: Team Extensibility Kit
 
 Open the `module-8-capstones/capstone-B-team-extensibility-kit/` folder. You'll find profiles for a 3-person development team with different roles (frontend, backend, DevOps). Design a complete extensibility kit: project-level settings that enforce shared standards, user-level settings templates for each role, hooks for code quality and security, plugins for each role's specific workflow, and a CLAUDE.md that documents everything. The kit should be installable on a new project in under 5 minutes.
 
@@ -570,7 +570,7 @@ Open the `module-8-capstones/capstone-B-team-extensibility-kit/` folder. You'll 
 
 <ExerciseCard id="C" title="Your Workflow" />
 
-### Capstone C:Your Workflow
+### Capstone C: Your Workflow
 
 Open the `module-8-capstones/capstone-C-your-workflow/` folder for a self-assessment template. Audit your own Claude Code setup: what settings do you have? What hooks are running? What plugins are installed? What's missing? Then improve your setup by adding at least one item from each category: a setting you should have configured, a hook that would catch a mistake you've made before, and a plugin that would speed up your most common task. Document before and after.
 

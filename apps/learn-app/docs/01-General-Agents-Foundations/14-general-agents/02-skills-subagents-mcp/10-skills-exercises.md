@@ -1,7 +1,7 @@
 ---
 slug: /General-Agents-Foundations/general-agents/skills-exercises
 title: "Agent Skills Exercises"
-practice_exercise: ch3-skills
+practice_exercise: ch14-skills
 sidebar_position: 10
 chapter: 14
 lesson: 10
