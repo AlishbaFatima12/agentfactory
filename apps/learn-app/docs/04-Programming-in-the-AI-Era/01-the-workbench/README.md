@@ -17,4 +17,4 @@ Before you can specify, you must be able to read. Phase 1 begins with the PRIMM-
 | 43 | [Ten Axioms of AI-Driven Development](ten-axioms-of-programming-in-ai-driven-development) | The principles that guide every phase |
 | 44 | [The Development Environment](the-development-environment) | Installing and configuring your tools |
 | 45 | [Reading Python](reading-python) | Reading code fluently with Predict-Run-Investigate |
-| 46 | Your First TDG Cycle | Define, test, generate, verify — the complete loop |
+| 46 | [Your First TDG Cycle](your-first-tdg-cycle) | Define, test, generate, verify — the complete loop |
