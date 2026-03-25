@@ -1,0 +1,175 @@
+gallery:
+  exercise_id: "prediction-lock"
+  conversations:
+    - id: "prediction-lock-strong-1"
+      label: "Strong: Specific diagnosis with ranked diagnostic questions"
+      provider: "claude"
+      student_input: |
+        I am a student learning question formulation. Below is a business scenario,
+        followed by my initial diagnosis and 10 ranked diagnostic questions.
+        Please evaluate:
+
+        (1) Rate each of my 10 questions on a scale of 1-10 for diagnostic power.
+        (2) Identify which questions are too vague, too narrow, or redundant.
+        (3) Suggest 3 questions I missed that would have been more diagnostic than my weakest 3.
+        (4) Evaluate my ranking: did I put the highest-value questions at the top?
+        (5) Rate my overall question formulation skill.
+
+        Scenario: A retail company's online sales dropped 15% despite a 20% increase in marketing spend.
+
+        My diagnosis: The company likely increased spending on channels that do not convert well online, while neglecting the actual customer experience. A spending increase without understanding attribution suggests the marketing team is optimizing for impressions rather than conversions.
+
+        My 10 questions (ranked by diagnostic power):
+        Q1: Which specific marketing channels received the increased spend, and what was the conversion rate for each before and after the increase?
+        Q2: Did the product mix, pricing, or inventory availability change during the same period?
+        Q3: What happened to website traffic volume and traffic sources during this period?
+        Q4: Were there changes to the checkout flow, page load speed, or mobile experience?
+        Q5: How did customer acquisition cost change compared to the previous period?
+        Q6: Did competitor activity or market conditions change during this window?
+        Q7: What does the funnel look like from ad click to purchase? Where is the biggest drop-off?
+        Q8: Were there any changes to return/refund policies or shipping costs that might suppress purchases?
+        Q9: Is the 15% drop uniform across product categories or concentrated in specific segments?
+        Q10: What does the customer feedback or NPS data show from this period?
+      ai_output: |
+        Your question formulation shows strong diagnostic thinking. Here is my evaluation:
+
+        Question Ratings (diagnostic power, 1-10):
+        Q1: 9/10 - Excellent. Directly isolates whether spending went to converting channels.
+        Q2: 8/10 - Strong. Tests whether the problem is marketing or product-side.
+        Q3: 7/10 - Good but partially overlaps with Q1. Traffic alone is insufficient without conversion data.
+        Q4: 8/10 - Strong. Tests the technical hypothesis that UX degraded.
+        Q5: 7/10 - Useful metric but derivative of Q1. It confirms rather than diagnoses.
+        Q6: 6/10 - Broad. "Market conditions" is vague. Better to specify what competitor action matters.
+        Q7: 9/10 - Excellent. Funnel analysis directly pinpoints where revenue leaks.
+        Q8: 7/10 - Good. Tests a specific operational hypothesis.
+        Q9: 8/10 - Strong. Segmentation reveals whether this is systemic or localized.
+        Q10: 5/10 - Weakest. NPS is lagging and indirect. Rarely diagnostic for a 15% sales drop.
+
+        Ranking evaluation: Q1 and Q7 deserve the top two spots (you have Q1 at #1, good). Q7 should be higher than Q3-Q6.
+
+        Three questions you missed:
+        1. "What percentage of the increased marketing spend went to new customer acquisition vs. retargeting existing customers?" (Diagnostic power: 9)
+        2. "Did the company change its attribution model or tracking setup during this period?" (Diagnostic power: 8)
+        3. "What is the trend in average order value over the same period?" (Diagnostic power: 7)
+
+        Overall skill rating: Proficient. Your questions demonstrate systematic thinking and you correctly prioritized channel-level data. Main improvement area: reduce overlap between questions and make broad questions more specific.
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 8
+        reasoning_depth: 9
+        originality: 7
+        self_awareness: 7
+      commentary: >
+        This prompt succeeds because the student wrote a specific diagnosis before asking AI to evaluate.
+        The questions are concrete and measurable (conversion rates, funnel data, segments), not abstract.
+        The ranking shows the student thought about which questions would most efficiently narrow down
+        the root cause. Notice how Q1 and Q7 are the strongest because they directly test the core hypothesis.
+
+    - id: "prediction-lock-weak-1"
+      label: "Weak: Vague diagnosis with generic questions"
+      provider: "chatgpt"
+      student_input: |
+        I am a student learning question formulation. Below is a business scenario,
+        followed by my initial diagnosis and 10 ranked diagnostic questions.
+
+        Scenario: A retail company's online sales dropped 15% despite a 20% increase in marketing spend.
+
+        My diagnosis: Something is wrong with the marketing strategy.
+
+        My 10 questions:
+        Q1: What happened to sales?
+        Q2: Is the marketing working?
+        Q3: Are customers happy?
+        Q4: What are competitors doing?
+        Q5: Is the website working properly?
+        Q6: Are prices too high?
+        Q7: Is the economy affecting sales?
+        Q8: Are there enough products available?
+        Q9: Is social media working?
+        Q10: Should they change their strategy?
+
+        Please evaluate my questions.
+      ai_output: |
+        I appreciate your effort, but your questions need significant refinement to be diagnostically useful. Here is my evaluation:
+
+        Q1: 2/10 - This restates the problem rather than investigating causes.
+        Q2: 2/10 - Too binary. "Is it working" cannot be answered without defining what "working" means.
+        Q3: 3/10 - Too broad. Customer happiness encompasses hundreds of variables.
+        Q4: 4/10 - Reasonable direction but too vague. What specifically about competitors matters?
+        Q5: 4/10 - Right area but needs specificity. Which aspect of the website?
+        Q6: 3/10 - Assumes pricing is the issue without evidence.
+        Q7: 3/10 - External factors are worth considering but this is too broad to be actionable.
+        Q8: 4/10 - Good hypothesis but needs specificity about which products.
+        Q9: 3/10 - "Social media" is not a single channel. Which platforms? What metrics?
+        Q10: 1/10 - This is a decision, not a diagnostic question. It cannot reveal information.
+
+        Your diagnosis ("something is wrong") does not actually commit to a hypothesis. A prediction lock should state what you believe the specific cause is, so you can test it.
+
+        Overall skill rating: Beginner. Focus on making each question specific enough that the answer would change your understanding of the problem.
+      scores:
+        independent_thinking: 3
+        critical_evaluation: 3
+        reasoning_depth: 2
+        originality: 3
+        self_awareness: 4
+      commentary: >
+        This prompt fails at the most fundamental level: the diagnosis is not a diagnosis.
+        "Something is wrong with the marketing strategy" commits to nothing testable.
+        The questions are all yes/no or binary, which means the answers cannot reveal root causes.
+        Compare Q1 here ("What happened to sales?") with the strong example's Q1 (asking about
+        specific channel conversion rates). The gap is specificity and diagnostic power.
+
+    - id: "prediction-lock-medium-1"
+      label: "Strong: Technical scenario with solid diagnostic approach"
+      provider: "claude"
+      student_input: |
+        I am a student learning question formulation. Below is a technical scenario,
+        followed by my initial diagnosis and 10 ranked diagnostic questions.
+
+        Scenario: A software team's deployment frequency dropped from daily to weekly
+        after adopting a new CI/CD pipeline that was supposed to speed things up.
+
+        My diagnosis: The new pipeline likely introduced longer build times or more
+        complex approval gates that create bottlenecks. Teams often over-engineer
+        CI/CD pipelines with too many stages, turning a fast manual process into a
+        slow automated one.
+
+        My 10 questions:
+        Q1: What is the average build+test+deploy duration in the new pipeline vs the old one?
+        Q2: How many approval gates or manual steps exist in the new pipeline?
+        Q3: Did the team's definition of "deployable" change when the new pipeline was adopted?
+        Q4: What is the flaky test rate in the new pipeline, and how often do builds fail for non-code reasons?
+        Q5: How many developers can trigger a deployment, and did access permissions change?
+        Q6: What is the queue time: how long does a commit wait before the pipeline starts?
+        Q7: Did the team change branching strategy at the same time as the pipeline change?
+        Q8: How many rollbacks occurred in the first month, and did rollback difficulty increase?
+        Q9: What do developers say is the main reason they deploy less frequently now?
+        Q10: Were there any reliability incidents shortly after the pipeline launch that made the team cautious?
+      ai_output: |
+        Excellent diagnostic work. Your questions show you understand that CI/CD problems are rarely about the tool itself.
+
+        Q1: 9/10 - Directly tests the throughput hypothesis. Essential first question.
+        Q2: 9/10 - Approval gates are the most common cause of pipeline slowdowns. Smart to rank this high.
+        Q3: 8/10 - Insightful. If "deployable" now means "passed 200 tests" instead of "developer says ready," that changes everything.
+        Q4: 8/10 - Flaky tests are a top pipeline killer. Good instinct.
+        Q5: 7/10 - Permissions matter but are usually either obvious or a non-issue.
+        Q6: 8/10 - Queue time is often the hidden bottleneck. Excellent question.
+        Q7: 7/10 - Good. Branching strategy and pipeline changes often happen together and confound analysis.
+        Q8: 7/10 - Tests whether fear of failure is suppressing deployment frequency.
+        Q9: 6/10 - Useful but subjective. Developer perceptions may not match the data.
+        Q10: 7/10 - Tests the "fear factor" hypothesis. Good complement to Q8.
+
+        Your ranking is solid. I would move Q6 (queue time) above Q5 because hidden wait time is more commonly the bottleneck than access controls.
+
+        Overall skill rating: Proficient, approaching Advanced. Your diagnosis commits to a specific hypothesis, your questions systematically test that hypothesis plus alternatives, and you demonstrate awareness that organizational factors matter as much as technical ones.
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 7
+        reasoning_depth: 8
+        originality: 8
+        self_awareness: 7
+      commentary: >
+        This example shows how domain knowledge strengthens diagnostic questions. The student
+        chose the technical scenario and applied real understanding of CI/CD pain points.
+        Questions like Q4 (flaky tests) and Q6 (queue time) show the student knows where
+        pipelines actually break down in practice, not just in theory.

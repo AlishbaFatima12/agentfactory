@@ -19,6 +19,7 @@ import ExerciseCard from "@/components/ExerciseCard";
 import AICheck from "@/components/AICheck";
 import AICheckField from "@/components/AICheck/AICheckField";
 import LazyFlashcards from "@/components/flashcards/LazyFlashcards";
+import LazyConversationGallery from "@/components/gallery/LazyConversationGallery";
 
 export default {
   ...MDXComponents,
@@ -48,4 +49,6 @@ export default {
   AICheckField,
   // Flashcards with FSRS v6 spaced repetition
   Flashcards: LazyFlashcards,
+  // AI Conversation Gallery for exercise pages
+  ConversationGallery: LazyConversationGallery,
 };

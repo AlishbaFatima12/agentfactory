@@ -1,0 +1,461 @@
+/* ── Gallery Root ── */
+.galleryRoot {
+  margin-top: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .galleryRoot {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Trigger Button ── */
+.galleryTrigger {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: var(--ifm-color-emphasis-100);
+  border: none;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-800);
+  transition: background 0.15s;
+  text-align: left;
+}
+
+.galleryTrigger:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+[data-theme="dark"] .galleryTrigger {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-theme="dark"] .galleryTrigger:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.galleryTriggerIcon {
+  font-size: 0.65rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.galleryTriggerText {
+  flex: 1;
+}
+
+.galleryCount {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-500);
+  background: var(--ifm-color-emphasis-200);
+  padding: 0.15rem 0.55rem;
+  border-radius: 100px;
+}
+
+[data-theme="dark"] .galleryCount {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Content Area ── */
+.galleryContent {
+  overflow: hidden;
+  padding: 0 1.1rem 1.1rem;
+}
+
+/* ── View Tabs ── */
+.viewTabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  width: fit-content;
+}
+
+[data-theme="dark"] .viewTabs {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.viewTab {
+  padding: 0.4rem 0.85rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-600);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.viewTab:hover {
+  color: var(--ifm-color-emphasis-800);
+  background: var(--ifm-color-emphasis-200);
+}
+
+.viewTabActive {
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .viewTabActive {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Card List ── */
+.cardList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: 0.85rem;
+}
+
+/* ── Conversation Card ── */
+.convCard {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+[data-theme="dark"] .convCard {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.convCard_strong {
+  border-left: 3px solid var(--ifm-color-success);
+}
+
+.convCard_weak {
+  border-left: 3px solid var(--ifm-color-danger);
+}
+
+.convCard_neutral {
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+/* ── Card Header ── */
+.convCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.convCardHeader:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+[data-theme="dark"] .convCardHeader:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.convCardBadges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.convCardChevron {
+  font-size: 0.6rem;
+  color: var(--ifm-color-emphasis-400);
+}
+
+/* ── Badges ── */
+.qualityBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+.badge_strong {
+  background: var(--ifm-color-success-contrast-background);
+  color: var(--ifm-color-success-darkest);
+}
+
+[data-theme="dark"] .badge_strong {
+  background: rgba(0, 200, 83, 0.12);
+  color: #6ee7a0;
+}
+
+.badge_weak {
+  background: var(--ifm-color-danger-contrast-background);
+  color: var(--ifm-color-danger-darkest);
+}
+
+[data-theme="dark"] .badge_weak {
+  background: rgba(255, 77, 79, 0.12);
+  color: #ffa0a0;
+}
+
+.badge_neutral {
+  background: var(--ifm-color-primary-contrast-background);
+  color: var(--ifm-color-primary-darkest);
+}
+
+[data-theme="dark"] .badge_neutral {
+  background: rgba(56, 132, 255, 0.12);
+  color: #80b4ff;
+}
+
+.providerBadge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-600);
+}
+
+[data-theme="dark"] .providerBadge {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Card Body ── */
+.convCardBody {
+  padding: 0 0.9rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.convSection {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.convSectionLabel {
+  font-size: 0.72rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ifm-color-emphasis-500);
+  margin-bottom: 0.35rem;
+}
+
+.convSectionContent {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--ifm-color-emphasis-800);
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+[data-theme="dark"] .convSectionContent {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ── Commentary ── */
+.commentary {
+  background: var(--ifm-color-primary-contrast-background);
+  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid var(--ifm-color-primary);
+}
+
+[data-theme="dark"] .commentary {
+  background: rgba(56, 132, 255, 0.06);
+}
+
+.commentaryLabel {
+  font-size: 0.72rem;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.3rem;
+}
+
+.commentaryText {
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--ifm-color-emphasis-800);
+  margin: 0;
+}
+
+/* ── Score Visualization ── */
+.scoreViz {
+  padding: 0.75rem 0.9rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+[data-theme="dark"] .scoreViz {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.scoreVizCompact {
+  padding: 0.55rem 0.7rem;
+}
+
+.scoreVizTitle {
+  font-size: 0.78rem;
+  font-weight: 650;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.5rem;
+}
+
+.scoreVizList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.scoreVizRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scoreVizDim {
+  flex: 0 0 130px;
+  font-size: 0.72rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.scoreVizBar {
+  flex: 1;
+  height: 5px;
+  border-radius: 100px;
+  background: var(--ifm-color-emphasis-200);
+  overflow: hidden;
+}
+
+[data-theme="dark"] .scoreVizBar {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.scoreVizBarFill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.4s ease-out;
+}
+
+.scoreVizVal {
+  flex: 0 0 32px;
+  text-align: right;
+  font-size: 0.72rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.scoreVizAvg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.45rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  font-size: 0.78rem;
+  font-weight: 650;
+  color: var(--ifm-color-emphasis-700);
+}
+
+[data-theme="dark"] .scoreVizAvg {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.scoreVizAvgVal {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+/* ── Comparison View ── */
+.comparison {
+  margin-top: 0.85rem;
+}
+
+.comparisonHeader {
+  font-size: 0.85rem;
+  font-weight: 650;
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0.75rem;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.comparisonCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.comparisonColLabel {
+  font-size: 0.75rem;
+  font-weight: 650;
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+.comparisonPrompt {
+  font-size: 0.83rem;
+  line-height: 1.5;
+  color: var(--ifm-color-emphasis-800);
+  background: var(--ifm-color-emphasis-100);
+  padding: 0.7rem 0.85rem;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+[data-theme="dark"] .comparisonPrompt {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.comparisonNote {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .scoreVizDim {
+    flex: 0 0 100px;
+    font-size: 0.68rem;
+  }
+
+  .convCardBadges {
+    gap: 0.35rem;
+  }
+
+  .qualityBadge {
+    font-size: 0.7rem;
+  }
+
+  .galleryTrigger {
+    font-size: 0.82rem;
+    padding: 0.75rem 0.85rem;
+  }
+}

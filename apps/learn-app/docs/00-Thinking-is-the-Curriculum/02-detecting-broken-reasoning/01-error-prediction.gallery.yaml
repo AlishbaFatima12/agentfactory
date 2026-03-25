@@ -1,0 +1,140 @@
+gallery:
+  exercise_id: "error-prediction"
+  conversations:
+    - id: "error-prediction-strong-1"
+      label: "Strong: Detailed annotation with specific error categories"
+      provider: "claude"
+      student_input: |
+        I am learning to detect errors in AI-generated analysis. I asked both Claude
+        and ChatGPT about a scenario question and then annotated both responses using
+        error categories (factual error, logical gap, false confidence, missing context,
+        correlation-causation confusion, outdated information, fabricated citation,
+        cultural blind spot).
+
+        Scenario: "Why did Nokia fail in the smartphone market?"
+
+        My prediction document (written before seeing AI responses):
+        - I predict both AIs will overemphasize the "they didn't adopt Android" narrative
+        - I predict at least one will get the timeline of Symbian's decline wrong
+        - I predict neither will mention Nokia's internal organizational dysfunction
+        - I predict both will commit correlation-causation confusion by saying "iPhone launched, Nokia died"
+
+        Claude's response (my annotations in brackets):
+        "Nokia dominated the mobile phone market with over 40% market share in 2007.
+        [VERIFIED - approximately correct] When Apple launched the iPhone in 2007,
+        Nokia dismissed it as a niche product. [PARTIALLY TRUE - Nokia's CEO did
+        make dismissive comments, but internal documents show Nokia was deeply concerned]
+        Nokia's failure to adopt Android was the primary cause of their decline.
+        [LOGICAL GAP - this oversimplifies. Nokia had Symbian, MeeGo, and eventually
+        did partner with Microsoft. The "just adopt Android" argument ignores that
+        Samsung was the only Android OEM to become highly profitable]..."
+
+        ChatGPT's response (my annotations in brackets):
+        "Nokia's downfall began when Steve Ballmer's Microsoft acquired them in 2014.
+        [MISSING CONTEXT - Nokia's decline started years before the Microsoft acquisition.
+        Market share was already collapsing by 2010-2011] Nokia failed because they
+        couldn't innovate. [FALSE CONFIDENCE - Nokia had more R&D patents than Apple
+        at the time. Innovation wasn't the problem; commercializing innovation was]..."
+
+        My error prediction accuracy: 3 out of 4 predictions were confirmed. Both AIs
+        did overemphasize the Android narrative. One got Symbian timeline partially wrong.
+        Neither mentioned organizational dysfunction in depth. The correlation-causation
+        confusion appeared in both ("iPhone launched therefore Nokia failed").
+
+        Please evaluate my error detection and prediction skills.
+      ai_output: |
+        Your error detection work is impressive. Here is my evaluation:
+
+        Annotation quality: Your annotations correctly identify several error types and
+        provide specific evidence for each claim. The distinction between "VERIFIED,"
+        "PARTIALLY TRUE," "LOGICAL GAP," "MISSING CONTEXT," and "FALSE CONFIDENCE"
+        shows you are applying the taxonomy precisely rather than just marking things
+        as "wrong."
+
+        Prediction accuracy: 3/4 is strong, especially because your predictions were
+        specific and falsifiable. Your prediction about organizational dysfunction
+        was particularly insightful because this is exactly the kind of context that
+        AI models tend to underweight in favor of cleaner narratives.
+
+        Strengths:
+        - You caught the oversimplification in the "just adopt Android" argument
+        - You provided counter-evidence (Nokia's R&D patents, Samsung's unique profitability)
+        - Your prediction document shows genuine independent analysis before AI exposure
+
+        Areas for improvement:
+        - Your annotation of ChatGPT's response could go deeper on the Microsoft acquisition timeline
+        - Consider tracking which error types each AI is more prone to across multiple exercises
+
+        Thinking Score Card:
+        Independent Thinking: 8/10 - Strong predictions written before AI exposure
+        Critical Evaluation: 9/10 - Accurate error categorization with evidence
+        Reasoning Depth: 8/10 - Good counter-evidence, could go deeper on some points
+        Originality: 7/10 - Organizational dysfunction angle shows independent research
+        Self-Awareness: 8/10 - Honest about prediction accuracy (3/4, not inflated)
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 9
+        reasoning_depth: 8
+        originality: 7
+        self_awareness: 8
+      commentary: >
+        This response earns high marks because the student predicted specific error patterns
+        before seeing AI output, then systematically verified those predictions. The annotations
+        use precise error categories rather than vague "this seems wrong" labels. The counter-evidence
+        (Nokia's R&D patents, Samsung's unique profitability among Android OEMs) shows the student
+        did independent research, not just gut-level disagreement.
+
+    - id: "error-prediction-weak-1"
+      label: "Weak: No predictions, vague annotations"
+      provider: "chatgpt"
+      student_input: |
+        I am learning to detect errors in AI-generated analysis.
+
+        Scenario: "Why did Nokia fail in the smartphone market?"
+
+        I asked Claude and here is the response:
+        "Nokia failed because they didn't adopt Android and the iPhone was better."
+
+        My annotation: This seems mostly right. Nokia did fail because of the iPhone.
+        I think the response is accurate.
+
+        Please evaluate my error detection skills.
+      ai_output: |
+        Your error detection needs significant improvement. Here are the issues:
+
+        1. No prediction document: You skipped the most important step. Without predictions
+        written before seeing the AI response, you cannot measure whether you are thinking
+        independently or just agreeing with the AI.
+
+        2. Vague annotation: "This seems mostly right" is not error detection. Error detection
+        requires identifying specific claims and testing each one against evidence.
+
+        3. Missing error categories: You did not apply any error taxonomy (factual error,
+        logical gap, false confidence, etc.). Without categories, you cannot systematically
+        evaluate AI output.
+
+        4. Accepted a oversimplified response: The AI response you evaluated is itself very
+        brief and contains at least two oversimplifications: (a) "didn't adopt Android" ignores
+        Nokia's actual platform strategy, and (b) "iPhone was better" is a subjective claim
+        presented as fact.
+
+        5. No counter-evidence: You did not provide any independent knowledge to test the AI's claims.
+
+        Thinking Score Card:
+        Independent Thinking: 2/10 - No evidence of thinking before or after AI exposure
+        Critical Evaluation: 2/10 - "Seems mostly right" is not evaluation
+        Reasoning Depth: 2/10 - No analysis of specific claims
+        Originality: 3/10 - Chose an interesting scenario but did nothing with it
+        Self-Awareness: 3/10 - Did not recognize the gaps in their own analysis
+      scores:
+        independent_thinking: 2
+        critical_evaluation: 2
+        reasoning_depth: 2
+        originality: 3
+        self_awareness: 3
+      commentary: >
+        This submission fails at every level the exercise is designed to test. There is no prediction
+        document (the core deliverable), no error taxonomy applied, and the annotation consists of
+        agreeing with the AI without evidence. Compare the strong example's specific annotations
+        ("LOGICAL GAP: this oversimplifies because...") with this example's "seems mostly right."
+        The gap is not knowledge; it is effort and method.
