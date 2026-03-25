@@ -1,0 +1,59 @@
+deck:
+  id: "ch24-01-give-your-employee-an-identity"
+  title: "Give Your Employee an Identity"
+  description: "Configuring a profession-specific AI employee identity: the four sections of CLAUDE.md, behavioral rules, domain vocabulary, and boundary conditions."
+  tags: ['nanoclaw', 'identity', 'claude-md', 'agent-configuration']
+  version: 1
+
+cards:
+  - id: "ch24-01-001"
+    type: recall
+    difficulty: "basic"
+    front: "What are the four required sections of a profession-specific CLAUDE.md identity file?"
+    back: "Identity (who am I, specialty, communication style), Rules (ALWAYS and NEVER lists), Vocabulary (10-20 domain terms with definitions), and Boundaries (request types to refuse or escalate)."
+    tags: ['claude-md', 'identity', 'structure']
+
+  - id: "ch24-01-002"
+    type: recall
+    difficulty: "basic"
+    front: "What is the difference between an Identity section and a Boundaries section in CLAUDE.md?"
+    back: "Identity defines who the employee IS (profession, specialty, tone). Boundaries define what the employee will NOT do (specific request types it refuses, flags, or redirects to a human)."
+    tags: ['identity', 'boundaries', 'distinction']
+
+  - id: "ch24-01-003"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why does CLAUDE.md need a Vocabulary section with domain-specific terms?"
+    back: "BECAUSE without explicit vocabulary, the agent defaults to generic language. THEREFORE listing 10-20 domain terms with definitions helps the agent use professional terminology naturally, making it sound like a colleague rather than a chatbot."
+    why: "How would a client perceive an accounting assistant that says 'money owed' instead of 'accounts receivable'?"
+    tags: ['vocabulary', 'domain-expertise', 'professionalism']
+
+  - id: "ch24-01-004"
+    type: recall
+    difficulty: "intermediate"
+    front: "What is the purpose of the global CLAUDE.md at groups/global/CLAUDE.md versus the main CLAUDE.md at groups/main/CLAUDE.md?"
+    back: "Global CLAUDE.md contains shared rules that apply across ALL groups. Main CLAUDE.md contains profession-specific identity and rules for that particular group. Main-specific rules can override global defaults."
+    tags: ['global', 'main', 'configuration-hierarchy']
+
+  - id: "ch24-01-005"
+    type: recall
+    difficulty: "basic"
+    front: "How should you test that your employee's identity configuration is working correctly?"
+    back: "Send three types of messages: one routine domain question (tests terminology and tone), one using specialized vocabulary (tests domain knowledge), and one that deliberately crosses a boundary (tests refusal or flagging behavior)."
+    tags: ['testing', 'identity', 'verification']
+
+  - id: "ch24-01-006"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why should Rules include both ALWAYS and NEVER lists with at least 3 items each?"
+    back: "BECAUSE professional behavior is defined by both what you consistently do AND what you consistently refuse to do. THEREFORE explicit ALWAYS/NEVER lists prevent the agent from making judgment calls that should be non-negotiable, like an accountant always following GAAP or never filing documents with tax authorities."
+    why: "What goes wrong when an AI employee has ALWAYS rules but no NEVER rules?"
+    tags: ['rules', 'behavioral-constraints', 'professionalism']
+
+  - id: "ch24-01-007"
+    type: recall
+    difficulty: "basic"
+    front: "What does the lesson mean by calling an unconfigured AI employee 'a blank slate with a PhD'?"
+    back: "The agent has broad knowledge (the PhD) but no professional direction (the blank slate). It gives textbook answers instead of domain-expert responses because it lacks identity, rules, vocabulary, and boundaries specific to your profession."
+    tags: ['identity', 'motivation', 'configuration']
+

@@ -1,0 +1,52 @@
+deck:
+  id: "ch24-05-make-your-employee-proactive"
+  title: "Make Your Employee Proactive"
+  description: "Designing scheduled tasks that transform a reactive AI employee into a proactive one through monitoring, analysis, and autonomous delivery."
+  tags: ['nanoclaw', 'scheduled-tasks', 'proactive', 'automation', 'silver-tier']
+  version: 1
+
+cards:
+  - id: "ch24-05-001"
+    type: recall
+    difficulty: "basic"
+    front: "What is the key difference between a reactive assistant and a proactive employee?"
+    back: "A reactive assistant waits for you to send a message before doing anything. A proactive employee monitors, anticipates, and acts: checking things before you ask, flagging problems before they become urgent, and preparing information before you need it."
+    tags: ['reactive-vs-proactive', 'paradigm-shift']
+
+  - id: "ch24-05-002"
+    type: recall
+    difficulty: "basic"
+    front: "What four decisions define a scheduled task design?"
+    back: "1) WHAT to monitor (data source or condition), 2) WHEN to check (interval matching your work rhythm), 3) WHAT to report (output format and structure), 4) WHERE to deliver (which channel receives the output)."
+    tags: ['scheduled-tasks', 'design-framework']
+
+  - id: "ch24-05-003"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why should you choose a schedule interval that matches your actual work rhythm?"
+    back: "BECAUSE a daily report at 8 AM is useless if you start work at noon, and a weekly summary on Friday is too late if decisions happen on Wednesday. THEREFORE the schedule must align with when you actually need the information to make it actionable rather than just informational."
+    why: "What is the cost of receiving proactive information at the wrong time?"
+    tags: ['scheduling', 'work-rhythm', 'timing']
+
+  - id: "ch24-05-004"
+    type: recall
+    difficulty: "basic"
+    front: "What is the best candidate for your first scheduled task?"
+    back: "A task you currently do manually on a regular basis. If you find yourself checking the same thing every morning or preparing the same report every Friday, that recurring manual task is your automation candidate."
+    tags: ['task-selection', 'automation-candidate']
+
+  - id: "ch24-05-005"
+    type: recall
+    difficulty: "basic"
+    front: "What should the scheduler-config.md deliverable document?"
+    back: "What the task monitors or produces, the schedule interval and why you chose it, a sample output from at least one execution, and your assessment of whether the output would actually save you time."
+    tags: ['deliverables', 'documentation', 'scheduler']
+
+  - id: "ch24-05-006"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why should you start testing with a short interval before switching to the production schedule?"
+    back: "BECAUSE a short interval (every few minutes) lets you verify the output format and quality quickly through multiple iterations. THEREFORE you can fix problems in minutes instead of waiting a full day or week to discover the output is wrong."
+    why: "What debugging advantage does a 5-minute test interval give you over a weekly production schedule?"
+    tags: ['testing', 'iteration', 'scheduling']
+

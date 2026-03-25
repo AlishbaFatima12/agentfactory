@@ -1,0 +1,66 @@
+deck:
+  id: "ch24-02-teach-your-employee-a-skill"
+  title: "Teach Your Employee a Skill"
+  description: "Creating domain skills with YAML frontmatter, decision rules, and edge cases that make an AI employee think like a professional."
+  tags: ['nanoclaw', 'skills', 'skill-md', 'domain-expertise', 'decision-rules']
+  version: 1
+
+cards:
+  - id: "ch24-02-001"
+    type: recall
+    difficulty: "basic"
+    front: "What is the correct directory structure for a NanoClaw skill?"
+    back: "A directory at .claude/skills/your-skill-name/ containing a SKILL.md file (directory structure, not a flat file)."
+    tags: ['skill-structure', 'directory']
+
+  - id: "ch24-02-002"
+    type: recall
+    difficulty: "basic"
+    front: "What two fields are required in a SKILL.md YAML frontmatter?"
+    back: "name (the skill name) and description (what the skill does, starting with when to use it)."
+    tags: ['yaml', 'frontmatter', 'skill-md']
+
+  - id: "ch24-02-003"
+    type: recall
+    difficulty: "intermediate"
+    front: "What are the six content sections of a well-structured SKILL.md?"
+    back: "Title and purpose, when to use (trigger conditions), decision rules (at least 5, numbered), input format, output format, and edge cases (at least 3)."
+    tags: ['skill-structure', 'content-sections']
+
+  - id: "ch24-02-004"
+    type: recall
+    difficulty: "intermediate"
+    front: "What is the difference between an identity (CLAUDE.md) and a skill (SKILL.md)?"
+    back: "Identity tells the employee WHO it is (persona, rules, vocabulary, boundaries). A skill tells it HOW to think about specific tasks (decision rules, input/output formats, edge cases). Identity is always active; skills activate for specific task types."
+    tags: ['identity-vs-skill', 'distinction']
+
+  - id: "ch24-02-005"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why must domain decision rules encode DECISIONS an expert makes, not just STEPS they follow?"
+    back: "BECAUSE steps are procedural knowledge any search engine can provide. THEREFORE decision rules capture the professional judgment that separates an expert from a generalist: the IF/THEN logic based on experience that a new graduate would miss."
+    why: "What is an example of a decision rule versus a procedural step in your profession?"
+    tags: ['decision-rules', 'expertise', 'professional-judgment']
+
+  - id: "ch24-02-006"
+    type: recall
+    difficulty: "basic"
+    front: "How should you validate that a skill produces domain-specific output rather than generic AI responses?"
+    back: "Invoke the skill via WhatsApp with a realistic input, then compare the output to what you would produce manually. Where they differ, adjust the decision rules until the agent's reasoning matches your professional judgment."
+    tags: ['testing', 'validation', 'skill-quality']
+
+  - id: "ch24-02-007"
+    type: recall
+    difficulty: "basic"
+    front: "What format should each domain decision rule follow?"
+    back: "IF [condition] THEN [action] BECAUSE [reason]. This format captures the condition that triggers the rule, the action the agent should take, and the professional rationale behind it."
+    tags: ['decision-rules', 'format']
+
+  - id: "ch24-02-008"
+    type: thinking
+    difficulty: "advanced"
+    front: "Why does the skill need at least 3 edge cases in addition to the main decision rules?"
+    back: "BECAUSE real professional work regularly encounters situations where standard rules do not apply. THEREFORE documenting edge cases prevents the agent from applying the wrong rule to unusual inputs, which is exactly the kind of mistake that erodes trust."
+    why: "What happens when a client sends your employee an input that none of your decision rules cover?"
+    tags: ['edge-cases', 'robustness', 'professional-judgment']
+

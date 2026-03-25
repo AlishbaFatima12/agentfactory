@@ -1,0 +1,65 @@
+deck:
+  id: "ch24-07-give-your-employee-a-memory"
+  title: "Give Your Employee a Memory"
+  description: "Persistent memory with SQLite: action logging, knowledge stores using subject-predicate-object triples, and correction-driven learning loops."
+  tags: ['nanoclaw', 'memory', 'sqlite', 'action-log', 'knowledge-store', 'feedback-loop']
+  version: 1
+
+cards:
+  - id: "ch24-07-001"
+    type: recall
+    difficulty: "basic"
+    front: "What are the two categories of persistent memory an AI employee needs?"
+    back: "An action log (things it DID: records every autonomous action with timestamps for auditability) and a knowledge store (things it LEARNED: stores corrections and preferences as structured facts for future behavior)."
+    tags: ['action-log', 'knowledge-store', 'memory-categories']
+
+  - id: "ch24-07-002"
+    type: recall
+    difficulty: "basic"
+    front: "What schema structure does the knowledge store use to store learned facts?"
+    back: "Subject-predicate-object triples (e.g., subject='Client X', predicate='prefers', object='bullet points') plus source and timestamp columns. This structure makes facts queryable with SQL."
+    tags: ['knowledge-store', 'schema', 'triples']
+
+  - id: "ch24-07-003"
+    type: recall
+    difficulty: "intermediate"
+    front: "What three steps must the correction-capture pipeline perform?"
+    back: "1) Detect that a message is a correction (not a new task), 2) Extract the structured fact (subject, predicate, object), 3) Persist it to the knowledge store via SQLite INSERT."
+    tags: ['correction-capture', 'pipeline', 'extraction']
+
+  - id: "ch24-07-004"
+    type: recall
+    difficulty: "intermediate"
+    front: "Which three of the Seven Principles does the memory system apply?"
+    back: "Principle 5 (Structured Persistent State): memory in database tables instead of text files. Principle 7 (Observability): structured audit trail of autonomous actions. Principle 3 (Verification): user corrections become the signal that steers future behavior."
+    tags: ['seven-principles', 'persistent-state', 'observability', 'verification']
+
+  - id: "ch24-07-005"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why does the lesson use SQLite instead of PostgreSQL for the employee's memory?"
+    back: "BECAUSE NanoClaw already uses SQLite internally for message history and task scheduling. THEREFORE the employee's memory tables live alongside NanoClaw's own database in the group's persistent storage, requiring no additional infrastructure."
+    why: "When would you choose PostgreSQL over SQLite for agent memory?"
+    tags: ['sqlite', 'database-choice', 'pragmatism']
+
+  - id: "ch24-07-006"
+    type: recall
+    difficulty: "intermediate"
+    front: "What columns does the action_log table contain?"
+    back: "id (PRIMARY KEY AUTOINCREMENT), action_type (TEXT NOT NULL), target (TEXT NOT NULL), trust_level (TEXT NOT NULL with CHECK constraint for 'auto'/'approved'/'flagged'), result (TEXT), and timestamp (TEXT NOT NULL DEFAULT datetime('now'))."
+    tags: ['action-log', 'schema', 'columns']
+
+  - id: "ch24-07-007"
+    type: recall
+    difficulty: "basic"
+    front: "How does the employee answer 'what did you do today?' with the memory system?"
+    back: "By querying the action_log table: SELECT action_type, target, result, timestamp FROM action_log WHERE date(timestamp) = date('now') ORDER BY timestamp. The response is grounded in actual database rows, not conversation memory."
+    tags: ['observability', 'querying', 'action-log']
+
+  - id: "ch24-07-008"
+    type: recall
+    difficulty: "basic"
+    front: "What is the 'closed feedback loop' that makes the memory system work?"
+    back: "The employee acts, logs what it did (action log), receives your corrections, persists those corrections as structured knowledge (knowledge store), and behaves differently next time. Each correction improves future performance."
+    tags: ['feedback-loop', 'learning', 'correction-capture']
+

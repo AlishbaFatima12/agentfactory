@@ -1,0 +1,59 @@
+deck:
+  id: "ch24-06-teach-your-employee-boundaries"
+  title: "Teach Your Employee Boundaries"
+  description: "Human-in-the-loop workflow design: categorizing professional actions by risk, building permission boundary tables, and implementing approval workflows."
+  tags: ['nanoclaw', 'hitl', 'boundaries', 'trust', 'approval-workflow', 'risk']
+  version: 1
+
+cards:
+  - id: "ch24-06-001"
+    type: recall
+    difficulty: "basic"
+    front: "What are the three permission categories for action boundaries?"
+    back: "Auto-approve (safe to do without asking; reversible, internal, low stakes), needs approval (do it but show me before sending; moderate stakes, external-facing), and never automate (never do without explicit human involvement; irreversible, legal, financial, reputational)."
+    tags: ['permission-categories', 'boundaries']
+
+  - id: "ch24-06-002"
+    type: recall
+    difficulty: "basic"
+    front: "What is the core question for sorting professional actions into permission categories?"
+    back: "Is this action reversible? Reversible actions are generally safe to automate. Irreversible actions (involving money, legal commitments, external communications, or permanent records) need a human gate."
+    tags: ['reversibility', 'risk-assessment', 'decision-criteria']
+
+  - id: "ch24-06-003"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why must boundary justifications reference real professional consequences rather than generic caution?"
+    back: "BECAUSE generic caution like 'this could be risky' does not help the agent make consistent decisions. THEREFORE domain-specific reasoning (e.g., 'wrong invoice amount damages client trust' or 'unfiled tax return triggers penalties') grounds each boundary in actual professional stakes."
+    why: "How would you explain a boundary decision to a new hire in your field?"
+    tags: ['justifications', 'domain-specific', 'consequences']
+
+  - id: "ch24-06-004"
+    type: recall
+    difficulty: "intermediate"
+    front: "What does the lesson mean by 'trust architecture'?"
+    back: "The systematic definition of what an employee can do autonomously versus what requires human approval. Just like a manager sets boundaries for a new hire, you define permission levels for your AI employee based on the real consequences of each action."
+    tags: ['trust-architecture', 'definition']
+
+  - id: "ch24-06-005"
+    type: recall
+    difficulty: "basic"
+    front: "How should you test that the approval workflow actually works?"
+    back: "Trigger a REVIEW-category action, verify the employee stops and asks for permission, approve it and verify it proceeds, then trigger it again and reject it to verify it halts. Document the test results alongside the boundary table."
+    tags: ['testing', 'approval-workflow', 'verification']
+
+  - id: "ch24-06-006"
+    type: recall
+    difficulty: "intermediate"
+    front: "What role does NanoClaw's sender-allowlist.ts play in boundary enforcement?"
+    back: "It controls which contacts can invoke agent execution. For shared deployments, controlling WHO can talk to your employee is as important as controlling WHAT your employee can do."
+    tags: ['sender-allowlist', 'access-control', 'security']
+
+  - id: "ch24-06-007"
+    type: thinking
+    difficulty: "advanced"
+    front: "Why does the lesson say an employee that follows boundaries with 'perfect consistency' is both a strength and a design responsibility?"
+    back: "BECAUSE the AI employee will never 'just this once' skip an approval step (unlike humans). THEREFORE the boundaries you define must be precise: if you set them too tight, the employee becomes useless; too loose, and it takes harmful actions without oversight."
+    why: "Is perfect consistency in boundary-following always an advantage over human judgment?"
+    tags: ['consistency', 'boundary-design', 'tradeoffs']
+

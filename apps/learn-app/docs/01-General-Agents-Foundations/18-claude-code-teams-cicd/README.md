@@ -1,5 +1,9 @@
 ---
 title: "Chapter 18: Claude Code for Teams, CI/CD & Advanced Configuration"
+slides:
+  source: "https://pub-80f166e40b854371ac7b05053b435162.r2.dev/books/ai-native-dev/static/slides/part-1/chapter-18/claude-code-infrastructure.pdf"
+  title: "Claude Code as Engineering Infrastructure"
+  height: 700
 sidebar_position: 18
 description: "Transform Claude Code from a solo productivity tool into shared engineering infrastructure with team configuration, path-specific rules, custom skills, advanced hooks, CI/CD pipelines, and multi-pass review workflows"
 keywords:
@@ -22,6 +26,8 @@ keywords:
 # Chapter 18: Claude Code for Teams, CI/CD & Advanced Configuration
 
 Claude Code becomes exponentially more valuable when it is configured for a team, embedded in automated pipelines, and equipped with path-aware conventions. This chapter transforms Claude Code from a solo developer tool into shared engineering infrastructure.
+
+## 📚 Teaching Aid
 
 ## What You'll Learn
 

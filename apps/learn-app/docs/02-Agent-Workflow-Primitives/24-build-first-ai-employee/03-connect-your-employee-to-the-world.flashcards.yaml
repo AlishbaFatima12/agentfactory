@@ -1,0 +1,51 @@
+deck:
+  id: "ch24-03-connect-your-employee-to-the-world"
+  title: "Connect Your Employee to the World"
+  description: "Adding communication channels and MCP servers to extend an AI employee beyond WhatsApp, with data boundary analysis."
+  tags: ['nanoclaw', 'channels', 'mcp', 'integration', 'data-boundaries']
+  version: 1
+
+cards:
+  - id: "ch24-03-001"
+    type: recall
+    difficulty: "basic"
+    front: "What are the two paths for extending your AI employee's reach beyond WhatsApp?"
+    back: "Add a communication channel (Telegram, Gmail, Slack, Discord) using NanoClaw's built-in /add-* commands, or add an MCP server that gives the employee access to domain-specific tools and data sources."
+    tags: ['channels', 'mcp', 'integration-paths']
+
+  - id: "ch24-03-002"
+    type: recall
+    difficulty: "basic"
+    front: "What three questions define a data boundary analysis for a new connection?"
+    back: "1) What data does my employee send OUT through this connection? 2) What data comes IN from this connection? 3) Is any of this data stored inside the container?"
+    tags: ['data-boundaries', 'security', 'analysis']
+
+  - id: "ch24-03-003"
+    type: thinking
+    difficulty: "intermediate"
+    front: "Why is documenting data boundaries important when adding a new connection?"
+    back: "BECAUSE every connection creates a path for data to enter or leave the container. THEREFORE understanding what crosses the boundary lets you identify potential exposure points, especially for sensitive professional data like client information or financial records."
+    why: "What could go wrong if an accountant's AI employee has an undocumented Gmail integration?"
+    tags: ['data-boundaries', 'security', 'risk']
+
+  - id: "ch24-03-004"
+    type: recall
+    difficulty: "basic"
+    front: "How should you decide which connection to add first?"
+    back: "Choose the single highest-value integration for your specific professional role: the one connection that would create the most value by enabling tasks on the platform where your work actually happens."
+    tags: ['connection-selection', 'strategy']
+
+  - id: "ch24-03-005"
+    type: recall
+    difficulty: "intermediate"
+    front: "What is the difference between a communication channel and an MCP server in NanoClaw?"
+    back: "A channel (Telegram, Gmail, Slack, Discord) enables two-way messaging through an external platform. An MCP server provides tool access to domain-specific data sources and services (like GitHub for code review or Google Calendar for scheduling)."
+    tags: ['channels', 'mcp', 'distinction']
+
+  - id: "ch24-03-006"
+    type: recall
+    difficulty: "basic"
+    front: "What NanoClaw commands are used to add communication channels?"
+    back: "Built-in /add-* commands: /add-telegram, /add-gmail, /add-slack, or /add-discord. Each starts a guided setup flow."
+    tags: ['nanoclaw', 'commands', 'channels']
+
