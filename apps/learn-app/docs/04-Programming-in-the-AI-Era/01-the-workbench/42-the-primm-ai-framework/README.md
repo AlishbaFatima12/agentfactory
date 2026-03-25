@@ -20,12 +20,14 @@ keywords:
 
 # Chapter 42: The PRIMM-AI+ Framework
 
-> _"The PRIMM approach recognises that starting with existing code and being able to explain what it does gives novice programmers the confidence to write their own programs."_
+> _"The PRIMM approach recognises that starting with existing code and being able to explain what it does gives novice programmers the confidence to write their own programs. PRIMM begins from reading and explaining code, not from writing it cold"_
 > — Sentance, Waite, and Kallia (2019)
 
 ## Why This Chapter Exists
 
-James stares at fifty lines of AI-generated Python on his screen. Every line is correct. Every function works. He understands none of it. His mentor Emma points at line twelve. "What does that line do?" James cannot answer. He has working code and zero knowledge.
+James stares at fifty lines of AI-generated Python on his screen. Every line is correct. Every function works. He understands none of it. His mentor Emma points at line twelve. "What does that line do?
+
+" James cannot answer. He has working code and zero knowledge.
 
 You are about to learn Python programming. But you are learning it in 2026, not 2016. That distinction matters more than any syntax rule this book will ever teach you. An AI coding assistant can write a working Python function in seconds. If the goal were simply to _produce code_, you could skip this Part entirely. But producing code was never the real goal. The real goal is **understanding** — the ability to read a program and know what it will do, to look at AI-generated code and judge whether it is correct, to take a working function and adapt it for a new purpose.
 
@@ -53,6 +55,7 @@ Before you dive into the lessons, here is the complete picture. You do not need 
 
 
 **The progression is deliberate:** you understand before you change, and you change before you create. Every programming chapter from Chapter 45 onward follows this same rhythm.
+
 
 ---
 
