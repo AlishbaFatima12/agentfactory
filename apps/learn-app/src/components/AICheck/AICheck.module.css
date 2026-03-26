@@ -8,6 +8,7 @@
 .aicheckCard .submittedCard { border-radius: 12px !important; }
 .aicheckCard .submitBtn { border-radius: 10px !important; }
 .aicheckCard .providerBtn { border-radius: 10px !important; }
+.aicheckCard .copyPromptBtn { border-radius: 6px !important; }
 .aicheckCard .xpEarned { border-radius: 100px !important; }
 .aicheckCard .xpPillBtn { border-radius: 100px !important; }
 .aicheckCard .stepNum { border-radius: 8px !important; }
@@ -272,6 +273,49 @@
   height: 12px;
   opacity: 0.5;
   flex-shrink: 0;
+}
+
+/* ── Copy Prompt Button (inline with provider buttons) ── */
+.copyPromptBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  background: none;
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.copyPromptBtn:hover {
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-700);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.copyPromptBtnCopied {
+  border-color: oklch(0.55 0.2 145);
+  color: oklch(0.55 0.2 145);
+}
+
+[data-theme="dark"] .copyPromptBtn {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme="dark"] .copyPromptBtn:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .copyPromptBtnCopied {
+  border-color: oklch(0.65 0.2 145);
+  color: oklch(0.65 0.2 145);
 }
 
 /* ── Provider confirmation after click ── */

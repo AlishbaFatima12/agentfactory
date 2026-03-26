@@ -1,0 +1,169 @@
+gallery:
+  exercise_id: "blank-page-derivation"
+  conversations:
+    - id: "blank-page-strong-1"
+      label: "Strong: Structured contrarian argument with evidence"
+      provider: "claude"
+      student_fields:
+        - name: "Student's chosen best practice"
+          start_marker: "<<best_practice>>"
+          end_marker: "<</best_practice>>"
+        - name: "Student's argument"
+          start_marker: "<<argument>>"
+          end_marker: "<</argument>>"
+      student_input: |
+        I wrote a contrarian argument against a widely accepted best practice,
+        entirely without AI assistance.
+
+        The best practice I argued against:
+        <<best_practice>>"Startups should build an MVP before investing in scale."<</best_practice>>
+
+        My argument (500 words):
+        <<argument>>The MVP doctrine has become so deeply embedded in startup culture that
+        questioning it feels heretical. But the evidence suggests the MVP approach
+        fails more often than its advocates admit, and in specific categories,
+        skipping straight to a polished product is the superior strategy.
+
+        First, the survivorship bias problem. We celebrate Dropbox's explainer
+        video MVP and Zappos's manual fulfillment MVP, but we never count the
+        thousands of startups that launched MVPs so minimal that users dismissed
+        the entire concept. When your MVP is bad enough, users do not think "this
+        needs improvement." They think "this idea does not work." You get one
+        chance to form a first impression, and an MVP can permanently poison a
+        market's perception of your category.
+
+        Second, the MVP works for software-only products with low switching costs.
+        It fails for hardware, regulated industries, and trust-dependent services.
+        Would you use an MVP bank? An MVP hospital? An MVP autonomous vehicle?
+        When the cost of failure is high, users demand completeness from day one.
+        The MVP framework was invented by software engineers and then incorrectly
+        generalized to all business contexts.
+
+        Third, competitive dynamics have changed. In 2008, you could launch a
+        rough product and iterate because competitors were slow. In 2026, a
+        well-funded competitor can clone your MVP in weeks and ship a better
+        version before you finish iterating. Speed-to-market with an MVP is
+        only an advantage if your competitors are also moving slowly.
+
+        My counter-proposal: in markets with high user expectations, strong
+        competitors, or trust requirements, invest in a Minimum Lovable Product.
+        Spend more time upfront to ship something that delights rather than
+        something that merely validates. The extra upfront cost is insurance
+        against the irreversible damage of a bad first impression.
+
+        I am not arguing MVPs are always wrong. I am arguing the blanket advice
+        to "always start with an MVP" is wrong. The decision should depend on
+        market context, competitive landscape, and the cost of a bad first impression.<</argument>>
+
+        Please evaluate my reasoning structure, identify any logical weaknesses,
+        and rate my ability to argue from first principles.
+      ai_output: |
+        This is a well-structured contrarian argument. Here is my evaluation:
+
+        Argument Structure:
+        You organize around three pillars (survivorship bias, domain limitations, competitive
+        dynamics) and then offer a constructive alternative. This is effective because you are
+        not just tearing down the MVP concept; you are replacing it with a more nuanced framework.
+
+        Logical Strengths:
+        - The survivorship bias point is your strongest argument. It correctly identifies that
+          MVP success stories are filtered through selection bias.
+        - The domain-specificity argument (banking, healthcare) is concrete and falsifiable.
+        - You explicitly scope your claim ("not always wrong, but the blanket advice is wrong"),
+          which protects against the straw-man counter.
+
+        Logical Weaknesses:
+        - The competitor-cloning argument assumes competitors know your idea exists. Many MVPs
+          launch in obscurity, and the learning from early users is the real value.
+        - "Minimum Lovable Product" is more a branding change than a first-principles alternative.
+          What specific decision criteria differentiate when to use MLP vs MVP?
+        - You do not address the cost of being wrong. An MLP that fails costs 5-10x more than
+          an MVP that fails. The MVP approach explicitly minimizes downside risk.
+
+        Overall Rating:
+        Independent Thinking: 8/10
+        Critical Evaluation: 7/10
+        Reasoning Depth: 8/10
+        Originality: 8/10
+        Self-Awareness: 7/10
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 7
+        reasoning_depth: 8
+        originality: 8
+        self_awareness: 7
+      commentary: >
+        This prompt works because the student built a structured argument before asking
+        AI to evaluate it. The three-pillar structure (survivorship bias, domain limits,
+        competitive dynamics) shows systematic thinking. The explicit scope-limiting
+        ("not always wrong, but the blanket advice is wrong") demonstrates awareness
+        of how to make a defensible contrarian claim.
+
+    - id: "blank-page-weak-1"
+      label: "Weak: Opinion without structure or evidence"
+      provider: "chatgpt"
+      student_fields:
+        - name: "Student's chosen best practice"
+          start_marker: "<<best_practice>>"
+          end_marker: "<</best_practice>>"
+        - name: "Student's argument"
+          start_marker: "<<argument>>"
+          end_marker: "<</argument>>"
+      student_input: |
+        I wrote a contrarian argument against a widely accepted best practice,
+        entirely without AI assistance.
+
+        The best practice I argued against:
+        <<best_practice>>"You should always back up your data."<</best_practice>>
+
+        My argument:
+        <<argument>>I think backing up data is overrated. Most of the time nothing bad happens
+        to your files. I have never lost important data and I have been using
+        computers for years. Companies spend too much money on backup systems
+        that they never use. It is like insurance, you pay for it but you
+        never need it. People should just be more careful with their files instead
+        of relying on backups.<</argument>>
+
+        Please evaluate my reasoning.
+      ai_output: |
+        Your argument has fundamental problems in both reasoning structure and evidence:
+
+        1. Anecdotal evidence: "I have never lost data" is a sample size of one. This is
+        the same logic as "I have never been in a car accident, therefore seatbelts are
+        overrated." Personal experience does not generalize.
+
+        2. Survivorship bias: You are here to tell us you never lost data precisely because
+        you have not lost data yet. People who have lost critical data without backups are
+        not writing about how backups are overrated.
+
+        3. Misunderstanding of risk: "Most of the time nothing bad happens" is true for
+        every catastrophic risk. Most of the time your house does not catch fire. That does
+        not make fire insurance overrated.
+
+        4. No first-principles reasoning: A contrarian argument should start from axioms
+        and build up. Your argument starts from a conclusion ("backups are overrated") and
+        then searches for reasons to support it. This is confirmation bias, not first-principles
+        thinking.
+
+        5. Weak best practice choice: "Always back up your data" is a safety practice, not
+        a strategic choice. A stronger exercise would argue against a practice where reasonable
+        people could disagree.
+
+        Independent Thinking: 4/10
+        Critical Evaluation: 3/10
+        Reasoning Depth: 2/10
+        Originality: 3/10
+        Self-Awareness: 2/10
+      scores:
+        independent_thinking: 4
+        critical_evaluation: 3
+        reasoning_depth: 2
+        originality: 3
+        self_awareness: 2
+      commentary: >
+        This submission reveals two problems. First, the argument relies entirely on personal
+        anecdote ("I have never lost data"), which is the weakest form of evidence. Second,
+        the chosen best practice (data backups) is a safety measure where the contrarian
+        position is not meaningfully defensible. Compare this to the strong example's choice
+        (MVP doctrine), where reasonable experts genuinely disagree. Choosing what to argue
+        against is itself a first-principles skill.

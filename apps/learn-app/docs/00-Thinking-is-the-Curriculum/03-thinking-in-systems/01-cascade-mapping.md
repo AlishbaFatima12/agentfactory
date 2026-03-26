@@ -163,6 +163,8 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
+<ConversationGallery />
+
 ---
 
 <details>

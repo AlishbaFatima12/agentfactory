@@ -1,0 +1,268 @@
+gallery:
+  exercise_id: "blank-page-sprint"
+  conversations:
+    - id: "blank-page-sprint-strong-1"
+      label: "Strong: Incisive root-cause diagnosis with three genuinely distinct solutions"
+      provider: "claude"
+      student_fields:
+        - name: "Student's problem"
+          start_marker: "<<problem>>"
+          end_marker: "<</problem>>"
+        - name: "Student's draft"
+          start_marker: "<<draft_1>>"
+          end_marker: "<</draft_1>>"
+      student_input: |
+        I just completed a 60-minute blank page sprint with no AI assistance.
+
+        The problem:
+
+        <<problem>>Design a system that helps open-source maintainers manage contributor overload and prevent burnout, deployable across 1,000 projects.<</problem>>
+
+        Please:
+        (1) Rate my problem diagnosis -- did I identify the real root causes or
+        only symptoms?
+        (2) Rate each of my three solutions for feasibility (1-10), originality
+        (1-10), and likely impact (1-10).
+        (3) Was my recommended approach the strongest of the three? If not, which
+        would you recommend and why?
+        (4) Evaluate my gap list -- is it honest and complete? What critical gaps
+        did I miss?
+        (5) Rate the overall quality of my raw thinking (remember: this was written
+        with zero assistance) from 1-10.
+        (6) Now generate your own solution to the same problem. I will compare my
+        raw human thinking against your AI-generated solution in the next
+        exercise.
+
+        My Draft 1:
+
+        <<draft_1>>DIAGNOSIS
+
+        Open-source maintainer burnout is not primarily a workload problem. It is an incentive and structure problem. Three root causes:
+
+        1. Asymmetric value extraction: Companies worth billions depend on libraries maintained by unpaid volunteers. The maintainer absorbs the cost of reliability while capturing none of the value their work creates. This is not just unfair; it means there is no economic feedback loop that would naturally scale maintenance resources alongside usage.
+
+        2. Invisible emotional labor: Triaging issues, reviewing PRs, and saying "no" to enthusiastic but misaligned contributions is draining work that nobody sees. A maintainer who closes 50 poorly scoped issues in a week looks the same as one who did nothing. There is no visibility into the hardest part of the job.
+
+        3. No succession planning: Most projects have a single point of failure. When the maintainer leaves, the project dies or gets abandoned. There is no standard mechanism for transferring authority, knowledge, or community trust to new maintainers.
+
+        A secondary cause is tooling: most issue trackers are designed for teams inside companies, not for solo maintainers dealing with hundreds of strangers. But tooling is downstream of the structural problems above.
+
+        SOLUTION A: Automated Triage and Contribution Routing Bot
+
+        Build a bot that uses heuristics (issue template compliance, contributor history, label matching) to auto-categorize incoming issues and PRs into tiers. Tier 1 gets maintainer attention. Tier 2 gets community review. Tier 3 gets auto-closed with a polite explanation and links to contributing guidelines.
+
+        Could work because: Reduces the single biggest time drain (sorting through noise). Similar bots exist (Probot, Stale) but none do intelligent tiering based on contribution quality signals.
+
+        Biggest risk: Bot makes wrong calls, closes legitimate contributions, and alienates the community. The maintainer still has to review the bot's decisions, which may not save time.
+
+        SOLUTION B: Governance Framework with Defined Contribution Tiers
+
+        Create a lightweight governance template that projects can adopt. It defines contributor levels (Newcomer, Regular, Reviewer, Maintainer) with explicit privileges at each tier. Reviewers can approve PRs in specific areas. Maintainers can release. This distributes authority without requiring the lead maintainer to review everything.
+
+        Could work because: It solves the succession problem and the bottleneck problem simultaneously. The Linux kernel has something like this informally. Making it a deployable template that any project can adopt in an afternoon is the value proposition.
+
+        Biggest risk: Governance overhead. Many small projects have 1-2 maintainers precisely because they want to avoid process. Adding tiers and roles may feel like corporate bureaucracy to projects that value simplicity.
+
+        SOLUTION C: Paid Maintenance Fund Model
+
+        Create a fund (similar to how Tidelift or GitHub Sponsors work but structured as a cooperative). Companies that depend on a project contribute to a shared maintenance fund. The fund pays maintainers a stipend proportional to project usage metrics (downloads, dependents). This closes the asymmetric value gap.
+
+        Could work because: It aligns economic incentives. If the fund is tied to usage data from package registries, contributions scale automatically with adoption.
+
+        Biggest risk: Getting companies to pay for something they currently get free. Tidelift has struggled with this. The free-rider problem is severe: why pay when your competitor does not?
+
+        I RECOMMEND Solution B (Governance Framework) because:
+
+        Solution A treats symptoms (too many issues) without addressing why there is only one person handling them. Solution C requires solving a collective action problem that larger organizations than mine have failed at. Solution B directly attacks the structural bottleneck by distributing authority. It is also the only solution a single developer could realistically prototype and ship within a few months. You do not need funding or corporate partnerships. You just need a good template, clear documentation, and a few willing pilot projects.
+
+        GAP LIST
+
+        Things I do not know:
+        - How many maintainers would voluntarily adopt governance overhead (I assumed "lightweight" is enough, but I have no evidence)
+        - The failure rate of previous efforts like Tidelift or Open Collective to solve the funding side
+        - Whether contribution tier systems actually reduce burnout or just add different kinds of work
+        - How to measure "maintainer burnout" in a way that lets me evaluate whether the system is working
+        - What legal or licensing implications exist for formalizing contributor roles (does a "Reviewer" have liability?)
+        - Whether the bot in Solution A would need to be trained per-project or could generalize across languages and frameworks
+        - The actual cost structure of maintaining a fund model (operational overhead, disbursement, tax implications)
+        - How projects with very different cultures (a 2-person Rust library vs. a 500-contributor JavaScript framework) would adapt the same governance template
+
+        End time: 58 minutes.<</draft_1>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        This is an impressive piece of raw thinking for a 60-minute sprint. Let me evaluate each dimension.
+
+        (1) Problem Diagnosis: 9/10
+
+        Your diagnosis goes well beyond symptoms. Identifying "asymmetric value extraction" as a root cause shows you understand the economic structure of the problem, not just its surface effects. The distinction between the structural causes (incentives, invisible labor, no succession) and the downstream cause (tooling) is particularly sharp. Most people start with "too many issues" or "not enough contributors," both of which are symptoms. You correctly identified that these symptoms persist because there is no feedback loop connecting usage to maintenance resources.
+
+        (2) Solution Ratings:
+
+        Solution A (Triage Bot):
+        - Feasibility: 7/10. Existing frameworks (Probot, GitHub Actions) make this buildable. The intelligence layer for quality-based tiering is harder.
+        - Originality: 5/10. Triage automation is well-explored. Your quality-signal tiering adds some novelty.
+        - Likely Impact: 5/10. Reduces noise but does not solve the core incentive or succession problems.
+
+        Solution B (Governance Framework):
+        - Feasibility: 8/10. A template with documentation is shippable by one person. The challenge is adoption, not construction.
+        - Originality: 6/10. Governance models exist (Apache Foundation, Linux kernel), but packaging them as a deployable template for small projects is a useful reframe.
+        - Likely Impact: 7/10. Directly addresses the bottleneck and succession problems. Would not solve the funding gap.
+
+        Solution C (Paid Maintenance Fund):
+        - Feasibility: 4/10. Requires solving a collective action problem. You correctly identified this risk.
+        - Originality: 4/10. Tidelift, Open Collective, and GitHub Sponsors already operate in this space.
+        - Likely Impact: 8/10. If it worked, it would address the deepest root cause. But the "if" is enormous.
+
+        (3) Recommended Approach: Your choice of Solution B is well-reasoned. You correctly identified that Solution A treats symptoms and Solution C requires resources you do not have. The reasoning about what a single developer can prototype is practically sound. I agree with your recommendation.
+
+        If I were to push back: a hybrid of A and B (governance framework with a built-in triage bot that enforces the contribution tiers) would be stronger than either alone. The governance structure answers "who reviews what" and the bot enforces it.
+
+        (4) Gap List: 8/10
+
+        Your gap list is notably honest. You admit uncertainty about adoption rates, previous failures, and whether your solution might create new problems. The question about legal liability for formalized contributor roles is particularly thoughtful.
+
+        Gaps you missed:
+        - Cultural and language barriers: open-source is global, and governance templates written in English may not transfer across cultures
+        - Maintainer psychology: some maintainers resist delegation not because of process overhead but because of identity ("this is MY project")
+        - Metrics for success: you mention needing burnout metrics but did not identify what proxy measures might work (response time to issues, maintainer commit frequency, sentiment in communications)
+        - Security implications: formalizing "Reviewer" access means granting commit/merge rights, which introduces supply chain security considerations
+
+        (5) Overall Raw Thinking Quality: 8/10
+
+        For 60 minutes with no assistance, this is well-structured, honest, and incisive. The diagnosis is genuinely analytical. The solutions are distinct. The gap list demonstrates intellectual humility. The main weakness is that your solutions, while distinct, could be more creative. All three are variations on established approaches in the open-source sustainability space.
+
+        (6) My Independent Solution:
+
+        I would design a "Maintainer Health Dashboard" that combines automated workload measurement (issue velocity, PR queue depth, response time trends) with an opt-in burnout risk score. When metrics cross thresholds, the system would: (a) auto-activate a triage mode that raises the bar for new issues, (b) broadcast a "help wanted" signal to a network of trained relief maintainers who can temporarily take over triage and review, and (c) generate a project health report visible to corporate dependents, creating social pressure for them to contribute resources. This combines elements of your three solutions (automation from A, distributed responsibility from B, corporate accountability from C) with a health-monitoring layer that none of your solutions included.
+
+        Thinking Score Card:
+        - Independent Thinking: 8/10. You developed original analysis without relying on standard talking points about open-source sustainability.
+        - Critical Evaluation: 8/10. You evaluated each solution honestly, including identifying why your recommended approach might fail.
+        - Reasoning Depth: 8/10. The three-layer diagnosis (incentives, invisible labor, succession) shows genuine structural thinking.
+        - Originality: 7/10. The diagnosis is more original than the solutions. The governance-as-template idea has a fresh angle but builds on familiar models.
+        - Self-Awareness: 8/10. The gap list is unusually honest. Admitting you do not know whether governance overhead would deter adoption shows real intellectual humility.
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 8
+        reasoning_depth: 8
+        originality: 7
+        self_awareness: 8
+      commentary: >
+        This submission demonstrates what 60 minutes of focused, unaugmented thinking can produce
+        when the student engages with root causes rather than symptoms. The diagnosis identifies three
+        structural layers (incentive asymmetry, invisible labor, succession gaps) instead of
+        restating "maintainers have too much work." The three solutions are genuinely distinct:
+        one is technical automation, one is organizational design, and one is economic restructuring.
+        The gap list is the strongest element; admitting uncertainty about adoption rates and
+        previous failures like Tidelift shows the student knows what they do not know.
+
+    - id: "blank-page-sprint-weak-1"
+      label: "Weak: Symptom-level diagnosis with three variations of one idea"
+      provider: "chatgpt"
+      student_fields:
+        - name: "Student's problem"
+          start_marker: "<<problem>>"
+          end_marker: "<</problem>>"
+        - name: "Student's draft"
+          start_marker: "<<draft_1>>"
+          end_marker: "<</draft_1>>"
+      student_input: |
+        I just completed a 60-minute blank page sprint with no AI assistance.
+
+        The problem:
+
+        <<problem>>Design a system to reduce food waste in your local community by 50% within 12 months.<</problem>>
+
+        Please:
+        (1) Rate my problem diagnosis -- did I identify the real root causes or
+        only symptoms?
+        (2) Rate each of my three solutions for feasibility (1-10), originality
+        (1-10), and likely impact (1-10).
+        (3) Was my recommended approach the strongest of the three? If not, which
+        would you recommend and why?
+        (4) Evaluate my gap list -- is it honest and complete? What critical gaps
+        did I miss?
+        (5) Rate the overall quality of my raw thinking (remember: this was written
+        with zero assistance) from 1-10.
+        (6) Now generate your own solution to the same problem. I will compare my
+        raw human thinking against your AI-generated solution in the next
+        exercise.
+
+        My Draft 1:
+
+        <<draft_1>>Food waste is a big problem. People throw away too much food and it is bad for the environment. Grocery stores also waste a lot of food. We need to fix this.
+
+        Solution 1: Make an app that connects people who have extra food with people who need food. Like Uber but for leftover food.
+
+        Solution 2: Partner with grocery stores to donate food that is about to expire instead of throwing it away.
+
+        Solution 3: Start a social media campaign to raise awareness about food waste and encourage people to waste less.
+
+        I think Solution 1 is the best because apps can reach a lot of people.<</draft_1>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        Thank you for completing the sprint. I want to give you honest feedback because this exercise is about establishing a baseline, and an accurate assessment will help you more than a generous one.
+
+        (1) Problem Diagnosis: 2/10
+
+        "Food waste is a big problem" and "it is bad for the environment" are not a diagnosis. A diagnosis identifies root causes: why does food waste happen? Your statement restates the problem prompt without analyzing what drives it. A stronger diagnosis would identify specific mechanisms: inventory forecasting failures at grocery stores, consumer confusion about "sell by" vs. "use by" dates, lack of redistribution infrastructure connecting surplus to need, or cultural norms that treat food as disposable. You named none of these.
+
+        (2) Solution Ratings:
+
+        Solution 1 (Food-sharing app):
+        - Feasibility: 5/10. Apps are buildable, but food-sharing apps already exist (Too Good To Go, OLIO). You did not address what yours would do differently.
+        - Originality: 2/10. "Like Uber but for X" is one of the most common pitch templates. No new mechanism proposed.
+        - Likely Impact: 3/10. Without addressing why people waste food in the first place, connecting surplus to demand treats only one symptom.
+
+        Solution 2 (Grocery store donation partnerships):
+        - Feasibility: 5/10. Programs like this exist (Feeding America partnerships). Feasible but not novel.
+        - Originality: 2/10. Grocery donation programs have been standard practice for decades.
+        - Likely Impact: 4/10. Could reduce commercial waste but does not address household waste, which is roughly 40% of total food waste.
+
+        Solution 3 (Social media awareness campaign):
+        - Feasibility: 6/10. Easy to launch but difficult to measure impact.
+        - Originality: 2/10. Awareness campaigns are the default suggestion for nearly every social problem.
+        - Likely Impact: 2/10. Awareness rarely changes behavior without structural support. People who know food waste is bad still waste food because of convenience, packaging sizes, and storage knowledge gaps.
+
+        (3) Recommended Approach: Your recommendation of Solution 1 lacks reasoning. "Apps can reach a lot of people" is not a comparison against the other two options. You did not evaluate tradeoffs or explain why reach matters more than, for example, the institutional partnerships in Solution 2. None of your three solutions is strong, but Solution 2 has the highest potential because it targets a concentrated source of waste (commercial) with an existing mechanism (donation infrastructure).
+
+        (4) Gap List: 0/10
+
+        You did not include a gap list. The exercise specifically requires an honest assessment of what you do not know. This is a significant omission. Some gaps you should have identified: what percentage of food waste is household vs. commercial, whether liability laws prevent stores from donating expired food, what existing programs have already tried and failed, what the actual cost of food redistribution infrastructure is, and whether a 50% reduction is achievable in 12 months given current baselines.
+
+        (5) Overall Raw Thinking Quality: 2/10
+
+        The submission is approximately 100 words of content. For a 60-minute sprint with a 400-word minimum, this suggests either the time was not fully used or the thinking was not captured. The diagnosis is a symptom restatement. The three solutions are all variations on "connect supply to demand" without distinct mechanisms. There is no recommended approach with reasoning, and the gap list is entirely missing.
+
+        (6) My Independent Solution:
+
+        I would design a tiered system targeting the three largest sources of community food waste: (a) a municipal composting program with curbside pickup that diverts organic waste from landfills, (b) a "smart shelf" partnership with three local grocery chains that uses dynamic pricing to discount items approaching expiration dates (reducing commercial waste at the source rather than through donation after the fact), and (c) a community kitchen program that converts surplus produce into shelf-stable meals, creating both jobs and food security. The 50% target would be tracked via waste audits at participating businesses and household sampling surveys conducted quarterly.
+
+        Thinking Score Card:
+        - Independent Thinking: 3/10. The ideas presented are common knowledge rather than original analysis.
+        - Critical Evaluation: 2/10. No evaluation of your own solutions, no comparison of tradeoffs, no acknowledgment of existing programs in this space.
+        - Reasoning Depth: 2/10. The diagnosis stays at the surface level and the solutions lack any mechanism or implementation detail.
+        - Originality: 3/10. "Uber for food" and "raise awareness" are among the most frequently proposed ideas for food waste.
+        - Self-Awareness: 2/10. The missing gap list is the clearest signal. Not knowing what you do not know is itself a gap in thinking skill.
+      scores:
+        independent_thinking: 3
+        critical_evaluation: 2
+        reasoning_depth: 2
+        originality: 3
+        self_awareness: 2
+      commentary: >
+        The contrast with the strong example is stark. Where the strong submission diagnoses three
+        structural root causes, this one restates the prompt: "food waste is a big problem." The three
+        solutions (app, store partnerships, awareness campaign) are all variations on connecting supply
+        to demand or raising visibility; none proposes a distinct mechanism for reducing waste at its
+        source. The missing gap list is the most telling omission. The exercise explicitly asks students
+        to list what they do not know, and skipping this step reveals a lack of engagement with the
+        hardest part of the task: honest self-assessment.

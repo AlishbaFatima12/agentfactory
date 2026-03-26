@@ -288,6 +288,8 @@ const config: Config = {
             ],
             // Flashcard YAML injection into <Flashcards /> components
             require("../../libs/docusaurus/remark-flashcards"),
+            // Gallery YAML injection into <ConversationGallery /> components
+            require("../../libs/docusaurus/remark-gallery"),
             // Metadata-driven content enhancements (slides, etc.)
             [
               require("../../libs/docusaurus/remark-content-enhancements"),
