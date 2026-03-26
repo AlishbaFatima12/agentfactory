@@ -1,0 +1,261 @@
+gallery:
+  exercise_id: "sealed-decision"
+  conversations:
+    - id: "sealed-decision-strong-1"
+      label: "Strong: Specific competitive response with calibrated confidence and testable reversal trigger"
+      provider: "claude"
+      student_fields:
+        - name: "Student's scenario"
+          start_marker: "<<scenario>>"
+          end_marker: "<</scenario>>"
+        - name: "Student's decision document"
+          start_marker: "<<decision_document>>"
+          end_marker: "<</decision_document>>"
+      student_input: |
+        I made a business decision under uncertainty before consulting AI.
+
+        The scenario:
+
+        <<scenario>>A competitor has launched a product that may overlap with yours. You have partial market data, a rumor about their pricing, and conflicting customer feedback. Your CEO needs a recommendation by end of day.<</scenario>>
+
+        Please:
+
+        (1) Rate the quality of my recommendation -- is it a reasonable decision
+        given the available information?
+        (2) Evaluate my confidence level -- is it calibrated appropriately to the
+        uncertainty I face, or am I over/underconfident?
+        (3) Rate my missing information list -- did I identify the most
+        decision-relevant gaps, or did I list generic gaps?
+        (4) Rate my Reversal Trigger -- is it specific and testable, or is it
+        vague? ("I'd change my mind if the market shifts" is vague. "I'd change
+        my mind if their pricing is below $50/month" is specific.)
+        (5) What decision would you make with the same incomplete information?
+        I will compare our reasoning.
+
+        My Decision Document:
+
+        <<decision_document>>RECOMMENDATION: Hold pricing steady and accelerate our Q3 feature release by three weeks to establish differentiation before the competitor gains traction in our mid-market segment.
+
+        REASONING: The competitor's product appears to target the same mid-market segment we expanded into last quarter. Our partial market data shows they have signed 4 pilot customers, but all 4 are in verticals where we have weak presence (healthcare and logistics). The pricing rumor ($45/month for their base tier) would undercut us by roughly 25%, but rumors from a single sales rep at a conference are unreliable. Our conflicting customer feedback splits roughly 60/40: 60% of surveyed customers say they would not switch even at a lower price because of our integration ecosystem, while 40% say price is their primary decision factor.
+
+        Given this, a price war would sacrifice margin across all customers (including the 60% who would stay anyway) to compete for the 40% who are price-sensitive. Instead, accelerating Q3 features gives us a concrete differentiation story in 3 weeks, before the competitor can move past their pilot phase. The risk is that we are wrong about the pricing rumor and they are actually pricing at parity or above, in which case we accelerated for no reason, but the downside of accelerating a planned release is low.
+
+        CONFIDENCE LEVEL: 55%
+
+        WHY THIS CONFIDENCE: I am above 50% because our integration ecosystem is a real moat (confirmed by 60% of surveyed customers), and accelerating an already-planned release has limited downside. I am well below 80% because the pricing data is a single unconfirmed rumor, the customer survey had only 47 respondents (not statistically robust), and I do not know whether the competitor is targeting our exact segment or an adjacent one.
+
+        MISSING INFORMATION (ranked by decision impact):
+        #1: Competitor's actual pricing model and tier structure. Impact: If they are pricing at $45/month or below AND offering comparable integrations, our differentiation strategy fails regardless of feature acceleration. This single data point could flip my recommendation to a targeted price match for the price-sensitive 40%.
+        #2: Competitor's target customer segment overlap with ours. Impact: If their 4 pilot customers are in healthcare/logistics because that is their entire focus (not our mid-market segment), this is not a direct threat and we should not accelerate anything.
+        #3: Switching cost data for our existing customers. Impact: If switching costs are high (multi-month migration, retraining), even the price-sensitive 40% may not leave quickly, giving us more time than the "end of day" framing suggests.
+
+        REVERSAL TRIGGER: I would change my recommendation if competitor pricing is confirmed below $50/month AND their feature set covers 80% or more of our core integration ecosystem. Both conditions must be true: cheap pricing alone is not enough if they cannot match our integrations, and matching integrations alone is not enough if their pricing is at parity.<</decision_document>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        This is a well-constructed decision document. Here is my evaluation across all five criteria:
+
+        (1) Recommendation Quality: 8/10
+        Your recommendation is clear, actionable, and time-bound ("accelerate Q3 feature release by three weeks"). You correctly identified that a price war would sacrifice margin across your entire customer base to compete for a minority segment. The logic of using feature differentiation rather than price matching is sound given that 60% of your customers value integrations over price. One concern: you assume the Q3 features will actually differentiate you, but you have not specified which features or why they would matter to the contested 40%.
+
+        (2) Confidence Calibration: 9/10
+        Your 55% confidence is well-calibrated. You explicitly state why you are above 50% (integration moat, low downside of acceleration) and why you are below 80% (unconfirmed pricing, small survey sample, unclear segment overlap). This is exactly the kind of reasoning that separates calibrated confidence from guessing. Most students either round to 90% (overconfident) or 20% (paralyzed). Your willingness to sit at 55% and explain why shows genuine comfort with uncertainty.
+
+        (3) Missing Information Quality: 9/10
+        Your ranking by decision impact is excellent. Each piece of missing information is tied to a specific way it would change your decision, not just "it would be nice to know." The strongest element is your #1 ranking: you correctly identified that competitor pricing AND integration coverage together form the decisive data point. Your #3 (switching costs) is slightly weaker because it addresses timing rather than direction, but that is still decision-relevant.
+
+        (4) Reversal Trigger Quality: 9/10
+        Your reversal trigger is specific, testable, and compound ("below $50/month AND 80%+ integration coverage"). The compound structure shows sophisticated thinking: you understand that a single variable is rarely sufficient to reverse a decision. The thresholds ($50, 80%) are concrete enough that you could check them against real data. This is one of the best reversal triggers I have seen in this exercise.
+
+        (5) My Decision With the Same Information:
+        I would make a similar recommendation with one modification. I would also commission a rapid competitive intelligence sprint (48 hours, not the "more research" trap) to verify the pricing rumor before committing to acceleration. If the pricing is confirmed below $50/month within 48 hours, I would shift to a targeted price match for new customers only, preserving existing margins. My confidence would be 50%, slightly below yours, because I weigh the survey's small sample size (47 respondents) more heavily.
+
+        Thinking Score Card:
+        - Independent Thinking: 8/10. You committed to a specific recommendation with clear reasoning before consulting AI, resisting the temptation to hedge with "we need more data."
+        - Critical Evaluation: 8/10. You evaluated the pricing rumor's reliability, the survey's sample size limitations, and the 60/40 customer split with appropriate skepticism.
+        - Reasoning Depth: 9/10. Your analysis moves through multiple layers: pricing dynamics, customer segmentation, competitive positioning, and risk assessment of your own recommendation.
+        - Originality: 7/10. The "accelerate rather than price match" insight is sound but not unusual. The compound reversal trigger shows more creative thinking.
+        - Self-Awareness: 8/10. You explicitly flagged the survey's sample size, the rumor's single-source weakness, and the segment overlap uncertainty. You know what you do not know.
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 8
+        reasoning_depth: 9
+        originality: 7
+        self_awareness: 8
+      commentary: >
+        This submission succeeds because every component of the decision document serves a specific analytical purpose. The recommendation names a concrete action with a timeline ("accelerate Q3 by three weeks"), not a vague direction. The 55% confidence is justified by explicitly listing what pushes it above and below the midpoint. Most importantly, the missing information is ranked by decision impact, with each gap tied to how it would change the recommendation. The compound reversal trigger ("below $50/month AND 80%+ integration coverage") demonstrates that the student understands decisions rarely hinge on a single variable.
+
+    - id: "sealed-decision-weak-1"
+      label: "Weak: Vague recommendation with no confidence calibration or reversal trigger"
+      provider: "chatgpt"
+      student_fields:
+        - name: "Student's scenario"
+          start_marker: "<<scenario>>"
+          end_marker: "<</scenario>>"
+        - name: "Student's decision document"
+          start_marker: "<<decision_document>>"
+          end_marker: "<</decision_document>>"
+      student_input: |
+        I made a business decision under uncertainty before consulting AI.
+
+        The scenario:
+
+        <<scenario>>Your production system is showing intermittent failures. You have incomplete logs, conflicting monitoring data, and a team split on whether to roll back or push forward. A decision is needed in 2 hours.<</scenario>>
+
+        Please:
+
+        (1) Rate the quality of my recommendation -- is it a reasonable decision
+        given the available information?
+        (2) Evaluate my confidence level -- is it calibrated appropriately to the
+        uncertainty I face, or am I over/underconfident?
+        (3) Rate my missing information list -- did I identify the most
+        decision-relevant gaps, or did I list generic gaps?
+        (4) Rate my Reversal Trigger -- is it specific and testable, or is it
+        vague? ("I'd change my mind if the market shifts" is vague. "I'd change
+        my mind if their pricing is below $50/month" is specific.)
+        (5) What decision would you make with the same incomplete information?
+        I will compare our reasoning.
+
+        My Decision Document:
+
+        <<decision_document>>RECOMMENDATION: We should investigate more before making a decision.
+
+        REASONING: The system is having some issues and we need to figure out what is going on. The logs are incomplete so we can't really tell what the problem is. Some people think we should roll back and others think we should push forward. I think we need more information before we can decide. We should get the team together and look at the data more carefully.
+
+        CONFIDENCE LEVEL: I'm not really sure, maybe 50%?
+
+        MISSING INFORMATION:
+        - More logs
+        - Better monitoring
+        - Team alignment
+
+        REVERSAL TRIGGER: I would change my mind if things get worse.<</decision_document>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        I appreciate you completing the exercise, but your decision document has significant gaps that I want to walk through honestly.
+
+        (1) Recommendation Quality: 2/10
+        "We should investigate more" is not a recommendation. The scenario explicitly states a decision is needed in 2 hours. Investigating is what you do before deciding, not the decision itself. A recommendation must be actionable: "Roll back to the last stable release while we investigate" or "Push forward with enhanced monitoring and a 30-minute checkpoint" are decisions. Yours defers the decision entirely.
+
+        (2) Confidence Calibration: 2/10
+        "I'm not really sure, maybe 50%" is not calibrated confidence. Calibration requires reasoning about WHY you are at a particular level. 50% with no justification is equivalent to saying "I have no idea." Compare this to what calibrated uncertainty looks like: "I am at 45% because the intermittent pattern suggests a resource contention issue (pushing me above 30%) but the conflicting monitoring data means I could be wrong about the root cause (keeping me below 60%)."
+
+        (3) Missing Information Quality: 2/10
+        Your missing information list is generic rather than decision-relevant. "More logs" does not specify which logs or why they matter. "Better monitoring" is a wish, not a gap. "Team alignment" is a process issue, not information. Decision-relevant missing information would look like: "#1: Error rate trend over the last 4 hours (increasing, stable, or intermittent), because if it is increasing, rolling back becomes urgent. #2: Whether the failures correlate with the most recent deployment or predate it, because this determines whether rollback would even help."
+
+        (4) Reversal Trigger Quality: 1/10
+        "If things get worse" is the textbook example of a vague reversal trigger. What specifically gets worse? By how much? Measured how? A testable trigger would be: "I would switch from pushing forward to rolling back if the error rate exceeds 5% of requests in any 15-minute window, measured by our monitoring dashboard."
+
+        (5) My Decision With the Same Information:
+        I would roll back to the last stable release immediately, with a 90-minute investigation window before deciding whether to redeploy. My reasoning: intermittent failures with incomplete logs and conflicting data suggest the system is in an unstable state, and the cost of a brief rollback (temporary feature regression) is lower than the cost of extended instability (potential data loss, customer impact). My confidence would be 60%: I am above 50% because rollback is the lower-risk default, but below 75% because the conflicting monitoring data means the failures might not be related to the latest changes.
+
+        Thinking Score Card:
+        - Independent Thinking: 3/10. You did complete the exercise, but your recommendation avoids committing to a decision, which is the core skill being tested.
+        - Critical Evaluation: 2/10. You restated the scenario's uncertainties without analyzing them or weighing tradeoffs.
+        - Reasoning Depth: 2/10. Your reasoning stays at the surface level ("we need to figure out what is going on") without examining the specific tradeoffs between rolling back and pushing forward.
+        - Originality: 3/10. There is no novel analysis or unexpected connection in your document.
+        - Self-Awareness: 3/10. You acknowledge uncertainty ("I'm not really sure") but do not examine what you do and do not know, or what specific knowledge would change your thinking.
+      scores:
+        independent_thinking: 3
+        critical_evaluation: 2
+        reasoning_depth: 2
+        originality: 3
+        self_awareness: 3
+      commentary: >
+        This submission illustrates the most common failure in decision-making under uncertainty: treating "investigate more" as a decision. The scenario requires a recommendation within 2 hours, and the student's response defers rather than decides. The confidence level ("maybe 50%?") shows no reasoning about what drives uncertainty up or down. The missing information list ("more logs," "better monitoring") names categories rather than specific, decision-relevant gaps. Compare the reversal trigger here ("if things get worse") to the strong example's compound trigger with concrete thresholds; the gap is not just specificity but the depth of thinking behind it.
+
+    - id: "sealed-decision-strong-2"
+      label: "Strong: Education scenario with honest confidence and decision-relevant missing information"
+      provider: "chatgpt"
+      student_fields:
+        - name: "Student's scenario"
+          start_marker: "<<scenario>>"
+          end_marker: "<</scenario>>"
+        - name: "Student's decision document"
+          start_marker: "<<decision_document>>"
+          end_marker: "<</decision_document>>"
+      student_input: |
+        I made a business decision under uncertainty before consulting AI.
+
+        The scenario:
+
+        <<scenario>>Your program's enrollment is down 20%. You have incomplete survey data, rumors about a competing program, and contradictory feedback from current students. The board meeting is tomorrow.<</scenario>>
+
+        Please:
+
+        (1) Rate the quality of my recommendation -- is it a reasonable decision
+        given the available information?
+        (2) Evaluate my confidence level -- is it calibrated appropriately to the
+        uncertainty I face, or am I over/underconfident?
+        (3) Rate my missing information list -- did I identify the most
+        decision-relevant gaps, or did I list generic gaps?
+        (4) Rate my Reversal Trigger -- is it specific and testable, or is it
+        vague? ("I'd change my mind if the market shifts" is vague. "I'd change
+        my mind if their pricing is below $50/month" is specific.)
+        (5) What decision would you make with the same incomplete information?
+        I will compare our reasoning.
+
+        My Decision Document:
+
+        <<decision_document>>RECOMMENDATION: Launch a targeted re-enrollment campaign for lapsed applicants in the top 3 feeder regions, combined with a tuition guarantee (price lock for 2 years) for students who commit within 30 days.
+
+        REASONING: The 20% enrollment drop could stem from multiple causes: the competing program, general market decline, or dissatisfaction with our own program. The incomplete survey data (only 112 of 400 current students responded) gives us a partial signal: 68 respondents cited "career outcomes" as their top concern, 31 cited "curriculum relevance," and 13 cited "cost." This suggests career outcomes perception, not price, is the primary driver. However, the competing program's rumored strengths are in career placement (they reportedly guarantee interviews), which would compound the career outcomes concern.
+
+        The contradictory feedback matters: current students who are satisfied (roughly half of respondents) cite mentorship and community as differentiators. Dissatisfied students cite outdated project work and weak industry connections. This tells me the problem is not uniform; it is concentrated in students who prioritize career outcomes over learning experience.
+
+        My recommendation targets re-enrollment because lapsed applicants are warmer leads than new prospects, and the tuition guarantee addresses the cost concern (13 of 112) while signaling institutional confidence. The 30-day deadline creates urgency without being predatory.
+
+        CONFIDENCE LEVEL: 60%
+
+        WHY THIS CONFIDENCE: I am above 50% because the survey data, while incomplete, points consistently toward career outcomes as the core concern, and re-enrollment campaigns targeting lapsed applicants have a 15-25% conversion rate historically at our institution. I am below 75% because the survey response rate is only 28% (112/400), the competing program's actual offering is unconfirmed, and the contradictory student feedback could mean I am reading the signal wrong.
+
+        MISSING INFORMATION (ranked by decision impact):
+        #1: The competing program's actual curriculum, pricing, and career placement results. Impact: If they offer guaranteed interviews at a lower price point, our "targeted re-enrollment" strategy would need to include a concrete career outcomes commitment, not just a tuition guarantee.
+        #2: Enrollment drop breakdown by student segment (new applicants vs. returning students vs. transfers). Impact: If the drop is concentrated in new applicants, re-enrollment campaigns for lapsed applicants miss the problem entirely. If it is concentrated in returning students, our program satisfaction is the real issue.
+        #3: Historical re-enrollment campaign performance data by region. Impact: If our top 3 feeder regions have already been saturated by previous campaigns, targeting them again will underperform, and I should shift to new regions or channels instead.
+
+        REVERSAL TRIGGER: I would change my recommendation if the competing program is confirmed to offer guaranteed job interviews AND their tuition is within 10% of ours. Under those conditions, a tuition guarantee alone would not address the career outcomes gap, and I would shift to developing a career placement partnership or interview guarantee of our own before any re-enrollment push.<</decision_document>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        This is a strong decision document that demonstrates careful reasoning under genuine uncertainty. Here is my evaluation:
+
+        (1) Recommendation Quality: 8/10
+        Your recommendation is specific and actionable: "targeted re-enrollment campaign for lapsed applicants in the top 3 feeder regions" with a defined mechanism (tuition guarantee with 2-year price lock and 30-day commitment window). You correctly identified that lapsed applicants are warmer leads than new prospects. The one gap: you do not address the career outcomes concern directly in your recommendation, even though your own analysis identifies it as the primary driver. The tuition guarantee addresses cost (cited by only 13 of 112 respondents), not career outcomes (cited by 68).
+
+        (2) Confidence Calibration: 8/10
+        Your 60% confidence is well-reasoned. You anchor above 50% on survey signal consistency and historical campaign data (15-25% conversion), and you anchor below 75% on survey response rate limitations and unconfirmed competitor data. The only concern is that you could have explicitly addressed how the contradictory feedback (satisfied vs. dissatisfied students) affects your confidence interval.
+
+        (3) Missing Information Quality: 9/10
+        Your ranking is excellent. Each gap is tied to a specific way it would redirect your strategy, not just "it would be useful to know." Your #2 (enrollment drop by segment) is particularly strong because it tests whether your entire approach is pointed at the right population. Your #3 (historical campaign performance by region) shows practical awareness that strategies can be correct in theory but fail in execution.
+
+        (4) Reversal Trigger Quality: 8/10
+        Your trigger is compound and testable: "guaranteed interviews AND tuition within 10%." The compound structure is good. I would push for even more specificity on "guaranteed job interviews": does that mean guaranteed first-round interviews, guaranteed a certain number of interviews, or guaranteed placement? The threshold matters because different interpretations would trigger different responses.
+
+        (5) My Decision With the Same Information:
+        I would split the recommendation into two tracks. Track 1 (immediate, next 48 hours): launch the re-enrollment campaign as you describe. Track 2 (parallel, next 2 weeks): conduct a rapid competitive analysis of the rumored program and develop a career outcomes enhancement (even a pilot mentorship-to-interview pipeline) that could be announced at the following board meeting. My confidence would be 55%, slightly below yours, because I think the gap between "career outcomes is the top concern" and "tuition guarantee is the intervention" is a strategic mismatch that lowers the expected impact of the campaign.
+
+        Thinking Score Card:
+        - Independent Thinking: 8/10. You analyzed the survey data independently, broke down the contradictory feedback into segments, and arrived at a specific recommendation before consulting AI.
+        - Critical Evaluation: 8/10. You evaluated the survey's response rate limitations (28%), distinguished between satisfied and dissatisfied student segments, and questioned the reliability of competitor rumors.
+        - Reasoning Depth: 8/10. Your analysis moves from survey data to student segmentation to competitive positioning to historical campaign performance, building a layered argument.
+        - Originality: 7/10. The tuition guarantee with price lock is a reasonable but conventional approach. The segmented analysis of contradictory feedback shows more original thinking.
+        - Self-Awareness: 8/10. You explicitly flagged the survey response rate problem, the unconfirmed competitor data, and the possibility that you are misreading the signal from contradictory feedback.
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 8
+        reasoning_depth: 8
+        originality: 7
+        self_awareness: 8
+      commentary: >
+        This submission demonstrates how honest engagement with contradictory data strengthens a decision document. The student does not smooth over the conflicting feedback; instead, they segment it ("satisfied students cite mentorship, dissatisfied students cite outdated projects") and use the segmentation to inform their strategy. The 60% confidence is grounded in specific evidence (survey consistency, historical conversion rates) and specific limitations (28% response rate, unconfirmed competitor data). The missing information ranking shows genuine decision-relevant thinking: item #2 tests whether the entire recommendation is aimed at the right population. The AI's critique (that the tuition guarantee addresses cost, not the career outcomes concern the student identified as primary) is a useful signal that even a strong submission has room for tighter alignment between analysis and action.

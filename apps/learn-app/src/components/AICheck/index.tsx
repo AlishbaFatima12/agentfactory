@@ -13,7 +13,14 @@ import { useAuth } from "@/contexts/AuthContext";
 import { submitExercise, ExerciseSubmitError } from "@/lib/progress-api";
 import { getAuthHeaders } from "@/lib/api-utils";
 import type { ExerciseSubmitResponse, ScoreCard } from "@/lib/progress-types";
-import { CheckCircle2, ExternalLink, Loader2, AlertCircle } from "lucide-react";
+import {
+  CheckCircle2,
+  ExternalLink,
+  Loader2,
+  AlertCircle,
+  Copy,
+  Check,
+} from "lucide-react";
 import styles from "./AICheck.module.css";
 
 // ── Types ──
@@ -493,6 +500,22 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     ],
   );
 
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyPrompt = useCallback(() => {
+    const prompt = composePrompt(children, fieldValues);
+    navigator.clipboard
+      .writeText(prompt)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch(() => {
+        setToast("Could not copy to clipboard");
+        setTimeout(() => setToast(null), 5000);
+      });
+  }, [children, fieldValues]);
+
   const handleAiOutputChange = useCallback(
     (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       setAiOutput(e.target.value);
@@ -769,6 +792,17 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
                       <ExternalLink className={styles.externalIcon} />
                     </motion.button>
                   ))}
+                  {allFieldsFilled && (
+                    <button
+                      className={`${styles.copyPromptBtn} ${copied ? styles.copyPromptBtnCopied : ""}`}
+                      onClick={handleCopyPrompt}
+                      type="button"
+                      aria-label="Copy assembled prompt to clipboard"
+                    >
+                      {copied ? <Check size={12} /> : <Copy size={12} />}
+                      {copied ? "Copied" : "Copy"}
+                    </button>
+                  )}
                 </div>
               </div>
             )}

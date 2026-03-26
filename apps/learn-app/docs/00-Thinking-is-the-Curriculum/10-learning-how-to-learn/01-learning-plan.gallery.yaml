@@ -1,0 +1,181 @@
+gallery:
+  exercise_id: "learning-plan"
+  conversations:
+    - id: "learning-plan-strong-1"
+      label: "Strong: Phased supply chain plan with explicit skip decisions and testable competence"
+      provider: "claude"
+      student_fields:
+        - name: "Student's learning plan"
+          start_marker: "<<learning_plan>>"
+          end_marker: "<</learning_plan>>"
+      student_input: |
+        I am about to learn a domain I have never studied. Before starting, I
+        wrote a Learning Plan. Please:
+
+        (1) Rate my learning strategy -- is it efficient? Am I starting with the
+        right foundations or jumping to advanced material?
+        (2) Are my chosen resources appropriate for a complete beginner in this
+        domain? Suggest better resources if mine are suboptimal.
+        (3) Is my definition of "enough" appropriate -- am I aiming too high
+        (will run out of time) or too low (will not reach competence)?
+        (4) Is my time allocation realistic?
+        (5) What is the most common mistake people make when learning this
+        domain for the first time?
+        (6) Give me a recommended learning path: the 5 most important concepts
+        I should master in order, with time estimates.
+
+        My Learning Plan:
+
+        <<learning_plan>>Domain: Supply Chain Logistics
+        Current knowledge: None. I am a software developer. I have heard terms like "just-in-time" and "logistics" but I could not explain what a supply chain actually involves beyond "stuff gets made and shipped to stores." I have no mental model for how inventory decisions are made, how demand is forecasted, or what the major tradeoffs are.
+
+        STRATEGY:
+        Phase 1 (hours 0-12): Build vocabulary and mental models. I need to understand the basic flow: raw materials to manufacturer to distributor to retailer to customer. I will focus on the "nodes and links" mental model from the MIT OCW supply chain fundamentals course. Goal: be able to draw a basic supply chain diagram and label each stage with its primary function and cost driver.
+
+        Phase 2 (hours 12-36): Dive into the two core problems: inventory management and demand forecasting. I will work through the APICS CSCP study guide chapters on inventory fundamentals (not the full certification material, just the conceptual chapters). For demand forecasting, I will use the first three modules of the Coursera "Supply Chain Operations" course by Rutgers, which covers qualitative and quantitative forecasting methods at an introductory level. Goal: be able to explain the difference between push and pull inventory systems and describe three forecasting methods with their tradeoffs.
+
+        Phase 3 (hours 36-60): Apply concepts to a case study. I will work through the Harvard Business Review "Barilla SpA" case (widely available for free) which covers the bullwhip effect, a foundational supply chain phenomenon. I will also read two industry articles about recent supply chain disruptions (COVID-era shipping delays, semiconductor shortages) to connect theory to current events. Goal: be able to explain why small demand changes at the retail level cause massive swings at the manufacturing level.
+
+        Phase 4 (hours 60-72, synthesis): Write a one-page summary connecting the three phases. Test my understanding by explaining supply chain concepts to a non-expert friend. Review gaps identified during Phase 3.
+
+        WHAT I WILL SKIP (and why): I will skip mathematical optimization models (linear programming for logistics routing, stochastic inventory models) because they require operations research prerequisites I cannot build in 72 hours. I will also skip procurement and supplier relationship management because, while important, they are a parallel track that does not build on the inventory/demand foundation I am prioritizing.
+
+        DEFINITION OF ENOUGH: I am competent when I can (1) read a news article about a supply chain disruption and explain the mechanism causing it, (2) look at a company's inventory management approach and identify whether it is push or pull and what tradeoffs that implies, and (3) explain the bullwhip effect to a non-expert using a concrete example.
+
+        PREDICTED CHALLENGE: I tend to go deep on interesting tangents instead of maintaining breadth. When I encounter the math behind demand forecasting models, I will be tempted to spend 15 hours learning the statistics instead of understanding the concepts at an intuitive level. My biggest challenge will be staying on the strategic path when I encounter fascinating but non-essential topics.
+
+        AI USAGE PLAN:
+        Will use AI for: Explaining unfamiliar jargon in context, checking my understanding of concepts after reading (not before), generating practice questions to test retention.
+        Will avoid AI for: Initial learning of core concepts (I need to struggle with the material first), writing my synthesis summary (that is where I prove understanding).<</learning_plan>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        This is a well-structured learning plan that demonstrates genuine strategic thinking about how to approach an unfamiliar domain. Let me evaluate each aspect:
+
+        (1) Learning Strategy Efficiency: 9/10
+        Your phased approach is excellent. Starting with vocabulary and mental models (Phase 1) before tackling core problems (Phase 2) is exactly right. Many beginners jump straight to the "interesting" problems like demand forecasting without understanding basic supply chain structure. Your progression from fundamentals to core concepts to case studies to synthesis follows the natural learning hierarchy. One suggestion: allocate 2-3 hours in Phase 1 specifically to understanding the key metrics used in supply chain (fill rate, lead time, inventory turns, order cycle time), because these will be the vocabulary of everything you read in Phases 2 and 3.
+
+        (2) Resource Appropriateness: 8/10
+        Strong choices overall. The MIT OCW supply chain fundamentals course is one of the best free resources for building a mental model. The APICS CSCP study guide is a good reference, though be aware it is written for practitioners pursuing certification, so skim strategically rather than reading cover to cover. The Coursera "Supply Chain Operations" course is well-structured for beginners. One resource you might add: "The Goal" by Eliyahu Goldratt. It is a short novel that teaches the Theory of Constraints through a manufacturing narrative. It would fit well in Phase 1 (you could read it in 4-5 hours) and would give you an intuitive understanding of bottleneck thinking that will make Phase 2 concepts click faster. The Barilla SpA case is an excellent choice for the bullwhip effect.
+
+        (3) Definition of "Enough": 9/10
+        This is one of the strongest parts of your plan. Each of your three competence tests is specific, testable, and realistic for 72 hours. "Read a news article and explain the mechanism" is a great real-world test. "Identify push vs. pull and explain tradeoffs" demonstrates conceptual understanding. "Explain the bullwhip effect to a non-expert" proves genuine comprehension. The only thing I would add: a fourth test around vocabulary fluency, such as "I can follow a 10-minute supply chain podcast without pausing to look up more than 2-3 terms."
+
+        (4) Time Allocation: 8/10
+        Your allocation is realistic with one concern. Phase 2 (hours 12-36, so 24 hours) covers both inventory management and demand forecasting. These are both deep topics. You might run short on demand forecasting if you spend too long on inventory. I would suggest setting a hard cutoff: 14 hours on inventory, 10 hours on demand forecasting, and keeping the Coursera modules as your primary source for forecasting rather than supplementing with APICS material for that topic.
+
+        (5) Most Common Beginner Mistake:
+        The most common mistake is treating supply chain as a linear process (make it, ship it, sell it) rather than a network of interconnected decisions with feedback loops. Beginners focus on optimizing individual nodes (how to manage one warehouse's inventory) without understanding that optimizing one node often creates problems downstream. Your Phase 3 focus on the bullwhip effect will help you avoid this, but keep this systems-level perspective in mind during Phase 2 as well.
+
+        (6) Recommended Learning Path (5 concepts in order):
+        1. Supply Chain Structure and Flow (6 hours): The nodes-and-links model, basic terminology (lead time, throughput, fill rate), and the difference between supply chain management and logistics. This is your foundation for everything else.
+        2. Inventory Fundamentals (10 hours): Push vs. pull systems, safety stock concepts, the economic order quantity tradeoff, and why holding inventory is expensive. This is the most practical knowledge area for a beginner.
+        3. Demand Forecasting Basics (8 hours): Qualitative vs. quantitative methods, moving averages, the concept of forecast error, and why all forecasts are wrong (the question is how wrong). Skip the statistical math; focus on intuition.
+        4. The Bullwhip Effect and Supply Chain Dynamics (6 hours): How small demand signals amplify upstream, why information sharing reduces distortion, and the role of lead times in amplification. This connects concepts 2 and 3 into a systems view.
+        5. Supply Chain Disruption and Resilience (4 hours): How real supply chains fail, the tradeoff between efficiency and resilience, and how companies like Toyota and Amazon approach these tradeoffs differently.
+
+        Thinking Score Card:
+        Independent Thinking: 8/10 - The plan was clearly designed from scratch with genuine reasoning about learning sequencing, not copied from a template or generic advice.
+        Critical Evaluation: 8/10 - Strong resource evaluation with specific justifications for each choice, and the skip list shows critical judgment about what is and is not achievable.
+        Reasoning Depth: 9/10 - The four-phase structure shows multi-level thinking, and the predicted challenge demonstrates genuine self-analysis about learning patterns.
+        Originality: 7/10 - The overall structure follows a logical progression that many good learners would design, but the specific resource choices and the detailed skip reasoning show personal thought.
+        Self-Awareness: 9/10 - The predicted challenge about going deep on tangents is specific, honest, and shows genuine understanding of personal learning tendencies. The AI usage plan is also thoughtfully separated into appropriate and inappropriate uses.
+
+        Overall: This plan is ready to execute. Your biggest risk is the one you already identified: getting pulled into the math. Set a timer when you start Phase 2, and if you are reading about stochastic models after hour 20, redirect yourself.
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 8
+        reasoning_depth: 9
+        originality: 7
+        self_awareness: 9
+      commentary: >
+        This submission succeeds because every component of the plan is specific and justified.
+        The skip list is particularly strong: "I will skip mathematical optimization models because
+        they require operations research prerequisites I cannot build in 72 hours" shows genuine
+        strategic thinking about what is achievable, not just what is interesting. The definition
+        of "enough" contains three testable criteria, each tied to a real-world task rather than
+        an abstract standard. Notice how the predicted challenge names a specific personal tendency
+        ("I tend to go deep on interesting tangents") rather than a generic difficulty ("it will be hard").
+
+    - id: "learning-plan-weak-1"
+      label: "Weak: Vague plan with no strategy, no skip list, and no definition of enough"
+      provider: "chatgpt"
+      student_fields:
+        - name: "Student's learning plan"
+          start_marker: "<<learning_plan>>"
+          end_marker: "<</learning_plan>>"
+      student_input: |
+        I am about to learn a domain I have never studied. Before starting, I
+        wrote a Learning Plan. Please:
+
+        (1) Rate my learning strategy -- is it efficient? Am I starting with the
+        right foundations or jumping to advanced material?
+        (2) Are my chosen resources appropriate for a complete beginner in this
+        domain? Suggest better resources if mine are suboptimal.
+        (3) Is my definition of "enough" appropriate -- am I aiming too high
+        (will run out of time) or too low (will not reach competence)?
+        (4) Is my time allocation realistic?
+        (5) What is the most common mistake people make when learning this
+        domain for the first time?
+        (6) Give me a recommended learning path: the 5 most important concepts
+        I should master in order, with time estimates.
+
+        My Learning Plan:
+
+        <<learning_plan>>I want to learn machine learning. I already know Python pretty well and I've done some data analysis at work, so I think I have a good foundation. My plan is to watch some YouTube tutorials on ML basics, then try some Kaggle competitions to practice. I'll probably also read some Medium articles about neural networks. I think 72 hours should be enough to get pretty good at it.<</learning_plan>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        I need to be honest: this plan has several significant gaps that will make your 72 hours much less productive than they could be. Let me work through each criterion:
+
+        (1) Learning Strategy Efficiency: 3/10
+        Your plan has no structure. "Watch some YouTube tutorials, then try Kaggle" skips the most important part of learning: deciding what to learn first and why. Machine learning has dozens of sub-areas (supervised learning, unsupervised learning, deep learning, reinforcement learning, NLP, computer vision), and you have not specified which area you will focus on. Without a sequenced plan, you will likely bounce between topics without building cumulative understanding. Additionally, jumping from "YouTube tutorials" to "Kaggle competitions" is a large leap; competitions require substantial data preparation and feature engineering skills that tutorials rarely teach.
+
+        (2) Resource Appropriateness: 3/10
+        "YouTube tutorials" and "Medium articles" are not specific resources. Which tutorials? Which authors? YouTube quality varies enormously, and many ML tutorials teach code patterns without explaining the underlying concepts. Medium articles about neural networks are particularly risky for beginners because most assume knowledge of linear algebra, calculus, and statistics that you have not mentioned having. For a complete beginner (even one with Python experience), I would recommend Andrew Ng's "Machine Learning Specialization" on Coursera, which is structured, sequenced, and explains the math at an accessible level. Alternatively, "Hands-On Machine Learning" by Geron is an excellent textbook that balances theory and practice.
+
+        (3) Definition of "Enough": 2/10
+        "Get pretty good at it" is not a definition of competence. Good at what, specifically? Can you train a linear regression model? Can you explain the bias-variance tradeoff? Can you choose between a random forest and a neural network for a given problem? Without a testable definition, you will not know when to stop, and you will either quit too early or spend all 72 hours without a clear goal.
+
+        (4) Time Allocation: 2/10
+        There is no time allocation in your plan. You have not broken the 72 hours into phases, set milestones, or decided how much time to spend on theory vs. practice. Without this structure, you will likely spend the first 20 hours passively watching videos and then realize you have not practiced anything.
+
+        (5) Most Common Beginner Mistake:
+        The most common mistake in learning machine learning is focusing on tools and code (scikit-learn, TensorFlow, PyTorch) before understanding the underlying concepts. Students run model.fit() without understanding what the model is actually optimizing, which means they cannot debug when things go wrong or make informed decisions about model selection. Your plan to "try Kaggle competitions" before building conceptual understanding is exactly this trap.
+
+        (6) Recommended Learning Path:
+        1. Statistical Foundations (10 hours): Mean, variance, distributions, correlation, and basic hypothesis testing. You need this vocabulary before anything else makes sense.
+        2. Linear Regression from Scratch (8 hours): Understand the loss function, gradient descent, and what "training" actually means by building a model without libraries.
+        3. Classification and Evaluation (12 hours): Logistic regression, decision boundaries, accuracy vs. precision vs. recall, confusion matrices. Learn to evaluate before learning more algorithms.
+        4. Tree-Based Models (10 hours): Decision trees, random forests, and gradient boosting. These are the workhorses of applied ML and will give you practical value fastest.
+        5. The ML Pipeline (8 hours): Data cleaning, feature engineering, train/test splits, cross-validation. This is the unglamorous work that determines whether your models actually work on real data.
+
+        Thinking Score Card:
+        Independent Thinking: 3/10 - The plan relies entirely on consuming existing content (YouTube, Medium, Kaggle) with no evidence of thinking about what should be learned or in what order.
+        Critical Evaluation: 2/10 - No evaluation of resource quality, no criteria for choosing between resources, and no consideration of whether the chosen approach is appropriate for a beginner.
+        Reasoning Depth: 2/10 - The plan is a list of activities, not a reasoned strategy. There is no explanation of why these activities, in this order, will produce competence.
+        Originality: 3/10 - "Watch YouTube and try Kaggle" is the default answer that most people give when asked how they would learn ML. No personal analysis of what approach would work best.
+        Self-Awareness: 2/10 - No honest assessment of current knowledge gaps, no predicted challenges, and the claim "I think I have a good foundation" conflates Python/data analysis experience with ML readiness.
+
+        Overall: This plan needs substantial revision before you begin. The biggest issue is not what you plan to do, but what you have not planned: sequencing, resource selection, competence criteria, and time structure.
+      scores:
+        independent_thinking: 3
+        critical_evaluation: 2
+        reasoning_depth: 2
+        originality: 3
+        self_awareness: 2
+      commentary: >
+        This submission illustrates the most common failure pattern: a plan that is really just a
+        list of activities with no strategy behind them. "Watch YouTube tutorials and try Kaggle"
+        describes what the student will do, but not what they will learn, in what order, or how
+        they will know when they have learned it. The domain choice is also telling: machine learning
+        is adjacent to the student's existing expertise (Python, data analysis), which means this
+        exercise will not push them into genuinely unfamiliar territory. Compare the absent "what
+        to skip" and "definition of enough" sections with the strong example's detailed skip
+        reasoning and three testable competence criteria.

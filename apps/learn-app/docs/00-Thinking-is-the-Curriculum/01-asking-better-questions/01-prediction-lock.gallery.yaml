@@ -4,6 +4,13 @@ gallery:
     - id: "prediction-lock-strong-1"
       label: "Strong: Specific diagnosis with ranked diagnostic questions"
       provider: "claude"
+      student_fields:
+        - name: "Student's diagnosis"
+          start_marker: "<<diagnosis>>"
+          end_marker: "<</diagnosis>>"
+        - name: "Student's questions"
+          start_marker: "<<questions>>"
+          end_marker: "<</questions>>"
       student_input: |
         I am a student learning question formulation. Below is a business scenario,
         followed by my initial diagnosis and 10 ranked diagnostic questions.
@@ -17,10 +24,10 @@ gallery:
 
         Scenario: A retail company's online sales dropped 15% despite a 20% increase in marketing spend.
 
-        My diagnosis: The company likely increased spending on channels that do not convert well online, while neglecting the actual customer experience. A spending increase without understanding attribution suggests the marketing team is optimizing for impressions rather than conversions.
+        My diagnosis: <<diagnosis>>The company likely increased spending on channels that do not convert well online, while neglecting the actual customer experience. A spending increase without understanding attribution suggests the marketing team is optimizing for impressions rather than conversions.<</diagnosis>>
 
         My 10 questions (ranked by diagnostic power):
-        Q1: Which specific marketing channels received the increased spend, and what was the conversion rate for each before and after the increase?
+        <<questions>>Q1: Which specific marketing channels received the increased spend, and what was the conversion rate for each before and after the increase?
         Q2: Did the product mix, pricing, or inventory availability change during the same period?
         Q3: What happened to website traffic volume and traffic sources during this period?
         Q4: Were there changes to the checkout flow, page load speed, or mobile experience?
@@ -29,7 +36,7 @@ gallery:
         Q7: What does the funnel look like from ad click to purchase? Where is the biggest drop-off?
         Q8: Were there any changes to return/refund policies or shipping costs that might suppress purchases?
         Q9: Is the 15% drop uniform across product categories or concentrated in specific segments?
-        Q10: What does the customer feedback or NPS data show from this period?
+        Q10: What does the customer feedback or NPS data show from this period?<</questions>>
       ai_output: |
         Your question formulation shows strong diagnostic thinking. Here is my evaluation:
 
@@ -68,16 +75,23 @@ gallery:
     - id: "prediction-lock-weak-1"
       label: "Weak: Vague diagnosis with generic questions"
       provider: "chatgpt"
+      student_fields:
+        - name: "Student's diagnosis"
+          start_marker: "<<diagnosis>>"
+          end_marker: "<</diagnosis>>"
+        - name: "Student's questions"
+          start_marker: "<<questions>>"
+          end_marker: "<</questions>>"
       student_input: |
         I am a student learning question formulation. Below is a business scenario,
         followed by my initial diagnosis and 10 ranked diagnostic questions.
 
         Scenario: A retail company's online sales dropped 15% despite a 20% increase in marketing spend.
 
-        My diagnosis: Something is wrong with the marketing strategy.
+        My diagnosis: <<diagnosis>>Something is wrong with the marketing strategy.<</diagnosis>>
 
         My 10 questions:
-        Q1: What happened to sales?
+        <<questions>>Q1: What happened to sales?
         Q2: Is the marketing working?
         Q3: Are customers happy?
         Q4: What are competitors doing?
@@ -86,7 +100,7 @@ gallery:
         Q7: Is the economy affecting sales?
         Q8: Are there enough products available?
         Q9: Is social media working?
-        Q10: Should they change their strategy?
+        Q10: Should they change their strategy?<</questions>>
 
         Please evaluate my questions.
       ai_output: |
@@ -122,6 +136,13 @@ gallery:
     - id: "prediction-lock-medium-1"
       label: "Strong: Technical scenario with solid diagnostic approach"
       provider: "claude"
+      student_fields:
+        - name: "Student's diagnosis"
+          start_marker: "<<diagnosis>>"
+          end_marker: "<</diagnosis>>"
+        - name: "Student's questions"
+          start_marker: "<<questions>>"
+          end_marker: "<</questions>>"
       student_input: |
         I am a student learning question formulation. Below is a technical scenario,
         followed by my initial diagnosis and 10 ranked diagnostic questions.
@@ -129,13 +150,13 @@ gallery:
         Scenario: A software team's deployment frequency dropped from daily to weekly
         after adopting a new CI/CD pipeline that was supposed to speed things up.
 
-        My diagnosis: The new pipeline likely introduced longer build times or more
+        My diagnosis: <<diagnosis>>The new pipeline likely introduced longer build times or more
         complex approval gates that create bottlenecks. Teams often over-engineer
         CI/CD pipelines with too many stages, turning a fast manual process into a
-        slow automated one.
+        slow automated one.<</diagnosis>>
 
         My 10 questions:
-        Q1: What is the average build+test+deploy duration in the new pipeline vs the old one?
+        <<questions>>Q1: What is the average build+test+deploy duration in the new pipeline vs the old one?
         Q2: How many approval gates or manual steps exist in the new pipeline?
         Q3: Did the team's definition of "deployable" change when the new pipeline was adopted?
         Q4: What is the flaky test rate in the new pipeline, and how often do builds fail for non-code reasons?
@@ -144,7 +165,7 @@ gallery:
         Q7: Did the team change branching strategy at the same time as the pipeline change?
         Q8: How many rollbacks occurred in the first month, and did rollback difficulty increase?
         Q9: What do developers say is the main reason they deploy less frequently now?
-        Q10: Were there any reliability incidents shortly after the pipeline launch that made the team cautious?
+        Q10: Were there any reliability incidents shortly after the pipeline launch that made the team cautious?<</questions>>
       ai_output: |
         Excellent diagnostic work. Your questions show you understand that CI/CD problems are rarely about the tool itself.
 

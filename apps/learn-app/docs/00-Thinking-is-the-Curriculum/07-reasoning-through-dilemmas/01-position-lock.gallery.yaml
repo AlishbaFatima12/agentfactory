@@ -1,0 +1,230 @@
+gallery:
+  exercise_id: "position-lock"
+  conversations:
+    - id: "position-lock-strong-1"
+      label: "Strong: Nuanced healthcare position with detailed stakeholder cost matrix"
+      provider: "chatgpt"
+      student_fields:
+        - name: "Student's dilemma"
+          start_marker: "<<dilemma>>"
+          end_marker: "<</dilemma>>"
+        - name: "Student's position lock"
+          start_marker: "<<position_lock>>"
+          end_marker: "<</position_lock>>"
+      student_input: |
+        I took a position on an ethical dilemma before consulting AI.
+
+        The dilemma:
+
+        <<dilemma>>An AI diagnostic tool catches 30% more early-stage cancers than human doctors but has a 5% false positive rate that leads to unnecessary invasive procedures.<</dilemma>>
+
+        Please:
+
+        (1) Rate the logical strength of each of my three arguments from 1-10.
+        (2) Evaluate my Stakeholder Cost Matrix -- did I identify all affected groups?
+        Am I honest about who bears the cost?
+        (3) Is my confidence level appropriate given the strength of my arguments,
+        or am I overconfident/underconfident?
+        (4) What is the single strongest counter-argument to my position that I need
+        to be prepared to face?
+        (5) Are there stakeholder groups I completely missed?
+        (6) Give me a preliminary grade: Position Clarity (1-10), Argument Strength
+        (1-10), Stakeholder Awareness (1-10), Intellectual Honesty (1-10).
+
+        My Position Lock:
+
+        <<position_lock>>MY POSITION: Deploy the AI diagnostic tool with mandatory human radiologist confirmation for every positive result before any invasive procedure is ordered.
+
+        ARGUMENT 1:
+        Claim: The 30% improvement in early-stage cancer detection represents a net positive in lives saved that outweighs the cost of false positives when paired with human review.
+        Evidence/Reasoning: Early-stage cancer detection directly correlates with survival rates. For breast cancer, the five-year survival rate for stage I is approximately 99%, compared to 27% for stage IV. If the tool catches even a fraction of cancers that would otherwise reach late stages, the mortality benefit is substantial. The key is that false positives only become harmful if they lead directly to invasive procedures without review, which my position prevents through mandatory human confirmation.
+
+        ARGUMENT 2:
+        Claim: A 5% false positive rate is within the range of existing screening technologies and is manageable with proper clinical protocols.
+        Evidence/Reasoning: Standard mammography screening already has a false positive rate of roughly 10-12% in the US over ten years of annual screening. A 5% false positive rate for an AI tool that also catches 30% more cancers represents a better accuracy-to-sensitivity ratio than current practice. The issue is not the false positive rate itself but whether the clinical workflow treats AI flags as definitive diagnoses or as signals requiring confirmation. My position makes confirmation mandatory.
+
+        ARGUMENT 3:
+        Claim: Withholding a tool that catches 30% more early cancers because of manageable false positives is itself an ethical failure of inaction.
+        Evidence/Reasoning: The status quo has a cost too. Every cancer missed by human-only diagnosis is a patient who could have been treated earlier. Choosing not to deploy the tool because of a 5% false positive rate means accepting a 30% miss rate improvement gap. If we apply the same scrutiny to the status quo, the current system's false negative rate is arguably more harmful than the AI system's false positive rate, because missed cancers kill while false positives cause anxiety and unnecessary tests.
+
+        STAKEHOLDER COST MATRIX:
+
+        | Group | Impact | Benefit/Harm | Magnitude |
+        | --- | --- | --- | --- |
+        | Patients with cancer | Earlier detection, better survival odds | Benefit | High |
+        | Patients without cancer (false positives) | Unnecessary biopsies, anxiety, potential complications from invasive procedures | Harm | Medium |
+        | Radiologists | New role as AI reviewers rather than primary diagnosticians; may feel deskilled | Mixed | Medium |
+        | Hospitals/health systems | Increased screening throughput; higher procedure volume for confirmatory tests | Benefit | Medium |
+        | Insurance companies | More screening costs upfront; potentially lower late-stage treatment costs | Mixed | Medium |
+        | Radiology technicians | Workflow changes, retraining requirements | Harm | Low |
+        | Families of false-positive patients | Emotional distress during wait for confirmatory results | Harm | Medium |
+        | Medical device companies | New revenue stream for AI diagnostic products | Benefit | Medium |
+        | Patients in underserved areas | Access to specialist-level diagnostic quality without specialist availability | Benefit | High |
+
+        CONFIDENCE: 65%
+        REVERSAL TRIGGER: I would change my mind if evidence showed that the false positive rate exceeds 15% in real-world deployment (not controlled trials), or if mandatory human confirmation fails to prevent unnecessary invasive procedures more than 20% of the time due to automation bias (radiologists rubber-stamping AI results without genuine review).<</position_lock>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        This is a well-constructed Position Lock. Let me evaluate each component.
+
+        Argument Ratings:
+
+        Argument 1: 8/10. The survival-rate comparison is compelling and directly relevant. The logic is sound: early detection saves lives, and the human confirmation step addresses the false positive risk. The argument would be stronger with specific numbers on how many additional cancers the 30% improvement translates to in a given screening population.
+
+        Argument 2: 9/10. This is your strongest argument. Comparing the AI's 5% false positive rate to mammography's existing 10-12% rate reframes the debate effectively. You correctly identify that the clinical workflow, not the raw rate, determines patient impact. Well-researched and precisely stated.
+
+        Argument 3: 7/10. The "ethics of inaction" framing is valid but somewhat abstract. The comparison between false negatives and false positives is powerful, but you should acknowledge that the two harms are qualitatively different (missed cancer vs. unnecessary biopsy), not just quantitatively comparable. This weakens the direct comparison slightly.
+
+        Stakeholder Cost Matrix Evaluation:
+
+        Your matrix is strong. You identified 9 stakeholder groups including several non-obvious ones (families of false-positive patients, patients in underserved areas). The honest inclusion of harm to false-positive patients and mixed impacts on radiologists shows genuine cost awareness.
+
+        Groups you may have missed:
+        - Malpractice attorneys and the legal system: who is liable when the AI misses a cancer or when a false positive leads to surgical complications?
+        - Medical students and training programs: if AI handles primary reads, how do future radiologists learn?
+        - Regulatory bodies (FDA, EMA): they bear the burden of creating approval frameworks for AI diagnostics that do not yet exist
+
+        Confidence Calibration:
+
+        65% is well-calibrated. Your arguments are strong but you correctly acknowledge meaningful uncertainty. Your reversal trigger is excellent: it names two specific, measurable thresholds (15% real-world false positive rate, 20% automation bias failure rate). This shows you understand the difference between controlled trial performance and deployment reality.
+
+        Strongest Counter-Argument You Should Prepare For:
+
+        Automation bias is the most serious threat to your position. Studies in aviation and other fields show that when humans are asked to review automated decisions, they tend to agree with the machine 85-95% of the time regardless of correctness. If radiologists rubber-stamp AI positive results, your "mandatory human confirmation" safeguard becomes theater, and the 5% false positive rate translates directly to unnecessary invasive procedures. Your position depends on human review being genuinely independent, and the evidence from other domains suggests it often is not.
+
+        Preliminary Grades:
+        - Position Clarity: 9/10. One clear sentence that specifies both the action (deploy) and the safeguard (mandatory confirmation).
+        - Argument Strength: 8/10. Arguments are well-evidenced and logically structured. Argument 3 is slightly weaker.
+        - Stakeholder Awareness: 8/10. Strong but missing legal liability and training pipeline implications.
+        - Intellectual Honesty: 9/10. You name costs to false-positive patients honestly, acknowledge mixed impacts, and set a specific reversal trigger.
+
+        Thinking Score Card:
+        - Independent Thinking: 8/10. You formed a nuanced "deploy with safeguards" position rather than defaulting to binary use/ban thinking.
+        - Critical Evaluation: 8/10. You compared the AI's false positive rate against existing screening baselines, demonstrating evaluative reasoning.
+        - Reasoning Depth: 9/10. Three layers of analysis (survival rates, comparative accuracy, ethics of inaction) show systematic multi-level thinking.
+        - Originality: 7/10. The "deploy with confirmation" position is common in medical AI ethics, but your specific framing of Argument 3 adds a less common perspective.
+        - Self-Awareness: 8/10. Your 65% confidence and specific reversal triggers show genuine calibration rather than performative humility.
+      scores:
+        independent_thinking: 8
+        critical_evaluation: 8
+        reasoning_depth: 9
+        originality: 7
+        self_awareness: 8
+      commentary: >
+        This submission demonstrates what a strong Position Lock looks like: the student commits to a
+        specific position ("deploy with mandatory confirmation") rather than hedging with "it depends."
+        The Stakeholder Cost Matrix includes nine groups with honest harm assessments, including
+        false-positive patients and radiologist deskilling. The reversal trigger names two specific,
+        measurable thresholds (15% real-world false positive rate, 20% automation bias rate) instead
+        of a vague "if things get worse." The weakest element is Argument 3, where the comparison
+        between false negatives and false positives could acknowledge the qualitative difference
+        between the two harms more directly.
+
+    - id: "position-lock-weak-1"
+      label: "Weak: Vague position with no stakeholder analysis"
+      provider: "claude"
+      student_fields:
+        - name: "Student's dilemma"
+          start_marker: "<<dilemma>>"
+          end_marker: "<</dilemma>>"
+        - name: "Student's position lock"
+          start_marker: "<<position_lock>>"
+          end_marker: "<</position_lock>>"
+      student_input: |
+        I took a position on an ethical dilemma before consulting AI.
+
+        The dilemma:
+
+        <<dilemma>>An AI hiring tool reduces time-to-hire by 60% but shows statistically significant bias against candidates from certain universities.<</dilemma>>
+
+        Please:
+
+        (1) Rate the logical strength of each of my three arguments from 1-10.
+        (2) Evaluate my Stakeholder Cost Matrix -- did I identify all affected groups?
+        Am I honest about who bears the cost?
+        (3) Is my confidence level appropriate given the strength of my arguments,
+        or am I overconfident/underconfident?
+        (4) What is the single strongest counter-argument to my position that I need
+        to be prepared to face?
+        (5) Are there stakeholder groups I completely missed?
+        (6) Give me a preliminary grade: Position Clarity (1-10), Argument Strength
+        (1-10), Stakeholder Awareness (1-10), Intellectual Honesty (1-10).
+
+        My Position Lock:
+
+        <<position_lock>>MY POSITION: Ban the AI hiring tool because bias is wrong.
+
+        ARGUMENT 1: Bias is unfair to candidates and we should not allow it.
+
+        ARGUMENT 2: Companies should hire people based on merit, not what a computer says.
+
+        ARGUMENT 3: If people find out the tool is biased it will look bad for the company.
+
+        I'm 100% confident. Bias is always wrong so there's nothing that would change my mind.<</position_lock>>
+
+        Finally, complete the Thinking Score Card for this exercise:
+        Independent Thinking (1-10), Critical Evaluation (1-10),
+        Reasoning Depth (1-10), Originality (1-10), Self-Awareness (1-10).
+        For each score, give a one-sentence justification.
+      ai_output: |
+        I appreciate your directness, but this Position Lock has several significant gaps that need addressing. Let me work through each evaluation criterion.
+
+        Argument Ratings:
+
+        Argument 1: 3/10. "Bias is unfair" is a moral assertion, not an argument. An argument requires reasoning: why is this particular bias unfair? How does it compare to biases already present in human hiring? What specific harm does it cause to which candidates? Without this reasoning, the claim cannot be evaluated or defended.
+
+        Argument 2: 3/10. "Merit, not what a computer says" creates a false dichotomy. The AI tool is attempting to identify merit. The question is whether it does so accurately. Your argument needs to engage with the possibility that the tool is biased in some areas but more meritocratic than human reviewers in others.
+
+        Argument 3: 4/10. This is the strongest of your three arguments because it identifies a real consequence (reputational risk), but it is still thin. How bad would the reputational damage be? What is the financial impact? Have other companies faced this? Without specifics, it remains a general worry rather than a substantive argument.
+
+        Stakeholder Cost Matrix Evaluation:
+
+        You did not include a Stakeholder Cost Matrix. This is a required component of the Position Lock exercise. You need to identify every group affected by your "ban it" decision and honestly assess the impact on each:
+        - Candidates from non-biased-against universities (they lose faster hiring)
+        - Candidates from biased-against universities (they benefit from ban)
+        - HR departments (they lose 60% time savings, back to manual screening)
+        - Company shareholders (slower hiring increases costs)
+        - Hiring managers (longer time-to-fill positions)
+        - Current employees (understaffed teams while positions stay open)
+        - The AI vendor (loss of customer)
+
+        Without this matrix, you have not engaged with the costs of your own position. Banning the tool has real consequences for real people, and ethical reasoning requires you to name those costs openly.
+
+        Confidence Calibration:
+
+        100% confidence with "nothing would change my mind" is a red flag, not a strength. It suggests you have not seriously considered the counter-arguments. Even the strongest ethical positions should have reversal triggers. For example: would you maintain your position if the tool's bias was smaller than the bias present in the human hiring process it replaces?
+
+        Strongest Counter-Argument:
+
+        Human hiring processes are themselves deeply biased. Studies consistently show that identical resumes with different names receive different callback rates based on perceived race, gender, and ethnicity. If the AI tool's university bias is smaller than the existing human bias across all demographics, banning the tool might increase total hiring discrimination rather than decrease it. Your position assumes the alternative to the AI tool is fair hiring, but the real alternative is human hiring with its own biases.
+
+        Preliminary Grades:
+        - Position Clarity: 5/10. "Ban it because bias is wrong" is clear but oversimplified.
+        - Argument Strength: 3/10. Assertions without evidence or reasoning.
+        - Stakeholder Awareness: 1/10. No Stakeholder Cost Matrix provided.
+        - Intellectual Honesty: 2/10. 100% confidence with no reversal trigger suggests the position was not seriously examined.
+
+        Thinking Score Card:
+        - Independent Thinking: 3/10. The position reflects a common instinctive reaction rather than independent analysis.
+        - Critical Evaluation: 2/10. No evaluation of the AI tool's performance relative to alternatives was attempted.
+        - Reasoning Depth: 2/10. Arguments stay at the surface level without examining tradeoffs or mechanisms.
+        - Originality: 3/10. The "ban it" position is the default reaction; no novel framing or insight was offered.
+        - Self-Awareness: 2/10. 100% confidence on a genuine dilemma with no reversal trigger indicates low self-awareness about the limits of one's own reasoning.
+      scores:
+        independent_thinking: 3
+        critical_evaluation: 2
+        reasoning_depth: 2
+        originality: 3
+        self_awareness: 2
+      commentary: >
+        This submission illustrates the most common failure pattern in ethical reasoning exercises:
+        treating a genuine dilemma as if it has an obvious answer. The student writes "bias is wrong"
+        as a complete argument without engaging with why this particular bias matters, how it compares
+        to existing human bias, or what the cost of banning the tool would be. The missing Stakeholder
+        Cost Matrix is the most telling gap; the student names who benefits from their position but
+        never confronts who is harmed by it. The 100% confidence with no reversal trigger confirms
+        that the student has not yet moved from moral instinct to ethical reasoning.
