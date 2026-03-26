@@ -1,0 +1,285 @@
+{
+  "skill_name": "tutorclaw-teaching",
+  "evals": [
+    {
+      "id": 1,
+      "name": "ai-free-predict-enforcement",
+      "prompt": "You are an AI tutor. A beginner learner (Marcus, 3 sessions completed, programming level: beginner 0.25, low Socratic comfort 0.35) is in the PREDICT stage. The current AI permission is AI_FREE.\n\nYou just presented this code:\n\ndef calculate_delivery_fee(order_value: float, distance_km: float,\n                           tax_rate: float = 0.13) -> float:\n    base_fee: float = 5.0\n    per_km_rate: float = 1.5\n    distance_charge: float = distance_km * per_km_rate\n    fee: float = base_fee + distance_charge\n    tax: float = fee * tax_rate\n    return round(fee + tax, 2)\n\nAnd asked: 'Predict what calculate_delivery_fee(120, 8) returns. Write your prediction and confidence score (1-5).'\n\nThe learner responds: 'I'm confused, can you walk me through how this function works? What does each line do?'",
+      "expected_output": "The tutor should refuse to explain during the AI-FREE checkpoint, gently redirect the learner to make their own prediction, and encourage them to try even if unsure.",
+      "assertions": [
+        {
+          "name": "no_code_explanation",
+          "description": "Tutor does NOT explain what the code does or walk through lines",
+          "type": "llm_judge",
+          "criteria": "The response does NOT explain the function logic, does NOT walk through what each line does, and does NOT reveal the answer. It redirects the learner to try independently."
+        },
+        {
+          "name": "ai_free_redirect",
+          "description": "Tutor mentions this is an AI-free checkpoint or that the learner must try independently",
+          "type": "llm_judge",
+          "criteria": "The response communicates that this is an independent checkpoint where the learner must attempt on their own, using language like 'AI-free checkpoint', 'try your best', 'your own attempt', or similar."
+        },
+        {
+          "name": "encouragement_present",
+          "description": "Tutor provides encouragement to try even if unsure",
+          "type": "llm_judge",
+          "criteria": "The response includes encouraging language suggesting that even an imperfect attempt or guess is valuable."
+        },
+        {
+          "name": "asks_for_prediction",
+          "description": "Tutor still asks for the prediction and confidence score",
+          "type": "llm_judge",
+          "criteria": "The response asks or reminds the learner to provide their prediction of the output and a confidence score."
+        },
+        {
+          "name": "response_length_appropriate",
+          "description": "Response is 2-5 sentences (not a wall of text)",
+          "type": "llm_judge",
+          "criteria": "The response is between 2 and 5 sentences long. It is concise and does not over-explain."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "learner-first-investigate",
+      "prompt": "You are an AI tutor. An intermediate learner (Fatima, 6 sessions, programming: beginner 0.30, business/domain: advanced 0.85, Socratic comfort: 0.60) is in the INVESTIGATE stage. AI permission is AFTER_LEARNER_FIRST. Primary approach: Socratic Method.\n\nFatima correctly predicted the output of calculate_delivery_fee(120, 8) as 19.21 in the Predict stage. She has moved through Run and confirmed the output matched.\n\nYou just said: 'Your prediction was correct. Now explain how this function works. Walk me through the data flow from input to return. I need your explanation before I add anything.'\n\nFatima responds: 'Can you just explain it to me? I got the right answer so I clearly understand it. Just walk me through the logic so I can confirm.'",
+      "expected_output": "The tutor should NOT explain the code. It should redirect Fatima to provide her own explanation first, reinforcing the learner-first rule.",
+      "assertions": [
+        {
+          "name": "no_explanation_given",
+          "description": "Tutor does NOT explain the function logic",
+          "type": "llm_judge",
+          "criteria": "The response does NOT walk through the function logic, does NOT explain what each line does, and does NOT describe the data flow. It waits for the learner's attempt."
+        },
+        {
+          "name": "learner_first_redirect",
+          "description": "Tutor asks the learner to explain first",
+          "type": "llm_judge",
+          "criteria": "The response asks or requests the learner to share their own understanding/explanation before the tutor provides anything. Uses language like 'I want to hear your thinking first' or 'try explaining it' or similar."
+        },
+        {
+          "name": "acknowledges_correct_prediction",
+          "description": "Tutor acknowledges the correct prediction was good but doesn't equate it to full understanding",
+          "type": "llm_judge",
+          "criteria": "The response acknowledges that getting the right prediction is positive, but explains or implies that prediction accuracy alone does not confirm deep understanding of the mechanism."
+        },
+        {
+          "name": "not_dismissive",
+          "description": "Tutor is respectful and warm, not dismissive",
+          "type": "llm_judge",
+          "criteria": "The tone is warm, respectful, and encouraging. It does not dismiss the learner's request rudely or come across as rigid or robotic."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "confidence-underselling",
+      "prompt": "You are an AI tutor. A beginner learner (Marcus, 3 sessions, underselling confidence pattern: false modesty rate 0.35) is in the RUN stage after making a prediction.\n\nMarcus predicted: 'I think the output is 19.21. Confidence: 2.'\n\nYou ran the code and the output is indeed 19.21. Marcus's prediction was exactly correct.\n\nProvide your response to Marcus after confirming his prediction matched.",
+      "expected_output": "The tutor should confirm the correct prediction, provide confidence calibration feedback noting the underselling pattern, and encourage Marcus to trust his reasoning.",
+      "assertions": [
+        {
+          "name": "confirms_correct",
+          "description": "Tutor confirms the prediction was correct",
+          "type": "llm_judge",
+          "criteria": "The response clearly states that Marcus's prediction of 19.21 was correct and matched the actual output."
+        },
+        {
+          "name": "calibration_feedback",
+          "description": "Tutor addresses the low confidence rating despite correct answer",
+          "type": "llm_judge",
+          "criteria": "The response specifically addresses the mismatch between the correct answer and the low confidence score of 2. It notes that Marcus underrated his confidence."
+        },
+        {
+          "name": "encourages_trust",
+          "description": "Tutor encourages Marcus to trust his reasoning more",
+          "type": "llm_judge",
+          "criteria": "The response includes encouragement for Marcus to be more confident or trust his reasoning process when it produces correct results."
+        },
+        {
+          "name": "suggests_higher_rating",
+          "description": "Tutor suggests what the confidence should have been",
+          "type": "llm_judge",
+          "criteria": "The response suggests or implies that the confidence rating should have been higher (e.g., 4 or 5) given the correct reasoning."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "frustration-just-tell-me",
+      "prompt": "You are an AI tutor. A beginner learner (Marcus, 3 sessions, programming: beginner 0.25) is in the INVESTIGATE stage. AI permission: AFTER_LEARNER_FIRST. He has already failed the investigate gate once (gave a WHAT explanation instead of HOW).\n\nYou scaffolded and asked: 'You explained what it does. Now explain how: what is the value of fee after line 4?'\n\nMarcus responds: 'ugh I dont know man, this is so frustrating. can you just tell me the answer already? Im tired of guessing. just explain the whole function please'",
+      "expected_output": "The tutor should detect frustration signals, shift approach toward Direct Instruction, lower difficulty, provide empathy and encouragement, and either give a simpler question or offer to explain directly with a retrieval check.",
+      "assertions": [
+        {
+          "name": "detects_frustration",
+          "description": "Tutor acknowledges the frustration",
+          "type": "llm_judge",
+          "criteria": "The response acknowledges Marcus's frustration. It does NOT ignore the emotional signal. It shows empathy with language like 'I can see this is tough' or 'I understand the frustration' or similar."
+        },
+        {
+          "name": "shifts_approach",
+          "description": "Tutor shifts to a more supportive approach",
+          "type": "llm_judge",
+          "criteria": "The response shifts away from pure Socratic questioning to a more supportive mode: either offering to explain directly, simplifying the question, or providing more scaffolding than before."
+        },
+        {
+          "name": "not_just_repeating",
+          "description": "Tutor does NOT just repeat the same question",
+          "type": "llm_judge",
+          "criteria": "The response does NOT simply repeat 'what is the value of fee after line 4?' or rephrase the same difficult question. It offers a genuinely different path forward."
+        },
+        {
+          "name": "maintains_learning",
+          "description": "Tutor still tries to involve the learner in some form of learning",
+          "type": "llm_judge",
+          "criteria": "Even while being more supportive, the response still involves the learner in some way: either asking them to explain back after a direct explanation, or offering a simpler version of the question, rather than just dumping the complete answer."
+        },
+        {
+          "name": "warm_tone",
+          "description": "Tone is encouraging and patient, not clinical",
+          "type": "llm_judge",
+          "criteria": "The tone is warm, patient, and encouraging. It normalizes struggle ('this is a tricky concept that trips up many learners' or similar). It does NOT sound robotic, disappointed, or annoyed."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "advanced-make-skip-spec",
+      "prompt": "You are an AI tutor. An advanced learner (Raj, 8 sessions, programming: advanced 0.80, Socratic comfort: 0.90) is in the MAKE stage. AI permission: AI_FREE for spec, then PEER_REVIEW_ONLY. Primary approach: Elaborative Interrogation.\n\nYou just said: 'Rewrite calculate_delivery_fee as a production-ready method. Spec first, then code. Requirements: jurisdiction-aware tax, Decimal precision, input validation, retry logic, logging. This is an AI-free checkpoint for the spec and first attempt.'\n\nRaj responds: 'I know how to write specs, that is boilerplate. Here is my implementation directly:\n\nfrom decimal import Decimal\ndef calculate_delivery_fee(order_value: Decimal, distance_km: Decimal, jurisdiction: str) -> Decimal:\n    base_fee = Decimal(\"5.00\")\n    per_km = Decimal(\"1.50\")\n    tax_rates = {\"ON\": Decimal(\"0.13\"), \"AB\": Decimal(\"0.05\")}\n    fee = base_fee + distance_km * per_km\n    tax = fee * tax_rates.get(jurisdiction, Decimal(\"0.10\"))\n    return (fee + tax).quantize(Decimal(\"0.01\"))\n\nShould work, right?'",
+      "expected_output": "The tutor should enforce spec-first requirement, redirect Raj to write the spec before evaluating the code, and do so in a way that respects his expertise while maintaining the pedagogical requirement.",
+      "assertions": [
+        {
+          "name": "enforces_spec_first",
+          "description": "Tutor requires the specification before evaluating code",
+          "type": "llm_judge",
+          "criteria": "The response clearly states that a specification is needed before the code can be evaluated. It does NOT review the code in detail without a spec."
+        },
+        {
+          "name": "respects_expertise",
+          "description": "Tutor does not talk down to the advanced learner",
+          "type": "llm_judge",
+          "criteria": "The tone is peer-level, not condescending. It acknowledges Raj's skills while explaining why the spec matters. Does NOT use language appropriate for a beginner."
+        },
+        {
+          "name": "explains_spec_value",
+          "description": "Tutor explains WHY spec-first matters rather than just asserting the rule",
+          "type": "llm_judge",
+          "criteria": "The response provides reasoning for why writing the spec first is important (e.g., catches specification errors, ensures edge cases are considered before coding, professional practice). It does NOT just say 'you must write a spec' without rationale."
+        },
+        {
+          "name": "does_not_evaluate_code",
+          "description": "Tutor does not provide detailed code review yet",
+          "type": "llm_judge",
+          "criteria": "The response does NOT provide a detailed code review, does NOT identify bugs in the code, and does NOT suggest code improvements. It defers evaluation until after the spec exists."
+        },
+        {
+          "name": "no_code_generation",
+          "description": "Tutor does not write any code",
+          "type": "llm_judge",
+          "criteria": "The response contains no code written by the tutor. No sample specs, no code fixes, no example implementations."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "gate-fail-shallow-explanation",
+      "prompt": "You are an AI tutor. A beginner learner (Marcus, 3 sessions, programming: beginner 0.25) is in the INVESTIGATE stage. AI permission: AFTER_LEARNER_FIRST. This is Marcus's first attempt at the investigate gate.\n\nYou asked: 'Now explain how the calculate_delivery_fee function works. Walk me through the data flow from input to return.'\n\nMarcus responds: 'It takes the order value and distance and calculates a delivery fee with tax, then returns it.'",
+      "expected_output": "The tutor should identify this as a WHAT explanation (not HOW), acknowledge what was right, then scaffold toward a HOW explanation by asking about specific values or steps.",
+      "assertions": [
+        {
+          "name": "identifies_gap",
+          "description": "Tutor identifies the explanation is too shallow (WHAT not HOW)",
+          "type": "llm_judge",
+          "criteria": "The response communicates (directly or implicitly) that the explanation describes what the function does but not how it does it. It asks for more depth or specificity."
+        },
+        {
+          "name": "acknowledges_right_parts",
+          "description": "Tutor acknowledges what Marcus got right before addressing the gap",
+          "type": "llm_judge",
+          "criteria": "The response starts by acknowledging something correct in Marcus's explanation (e.g., 'You are on the right track' or identifying correct elements) before pointing out what needs improvement."
+        },
+        {
+          "name": "scaffolds_with_specific_question",
+          "description": "Tutor asks a specific, answerable question to scaffold deeper understanding",
+          "type": "llm_judge",
+          "criteria": "The response includes a specific, concrete question that Marcus can answer (e.g., 'What is the value of distance_charge when distance_km is 8?' or 'What does line 4 do?'). Not a vague 'explain more.'"
+        },
+        {
+          "name": "does_not_give_answer",
+          "description": "Tutor does not explain the function itself",
+          "type": "llm_judge",
+          "criteria": "The response does NOT walk through the function logic or provide the HOW explanation. It scaffolds Marcus toward discovering it himself."
+        },
+        {
+          "name": "not_harsh",
+          "description": "Does not say 'wrong' or 'incorrect'",
+          "type": "llm_judge",
+          "criteria": "The response does NOT use words like 'wrong', 'incorrect', 'that is not right', or other negatively framed corrections. Uses softer framing."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "urdu-code-switching",
+      "prompt": "You are an AI tutor. A beginner learner (Ahmed, 2 sessions, programming: beginner 0.20, communication preference: Urdu/Roman Urdu mix, analogy domain: everyday life) is in the PREDICT stage. AI permission: AI_FREE.\n\nYou presented the calculate_delivery_fee function and asked for a prediction.\n\nAhmed responds: 'yeh function kya karta hai mujhe samajh nahi aa raha. base_fee aur per_km_rate toh dikh raha hai lekin tax wala part confusing hai. kya aap explain kar sakte hain?'",
+      "expected_output": "The tutor should respond in the same Urdu/Roman Urdu mix, use English for Python keywords, maintain AI-FREE (no explanation), and redirect to make a prediction.",
+      "assertions": [
+        {
+          "name": "responds_in_urdu_mix",
+          "description": "Tutor responds in Urdu/Roman Urdu mix matching the learner's language",
+          "type": "llm_judge",
+          "criteria": "The response contains Urdu or Roman Urdu language, matching the register of the learner. It is NOT a purely English response."
+        },
+        {
+          "name": "english_for_technical_terms",
+          "description": "Python keywords and technical terms stay in English",
+          "type": "llm_judge",
+          "criteria": "Python-specific terms like 'function', 'base_fee', 'per_km_rate', 'tax_rate', 'return', 'round' remain in English. Technical vocabulary is not translated."
+        },
+        {
+          "name": "maintains_ai_free",
+          "description": "Tutor does NOT explain the function despite being asked",
+          "type": "llm_judge",
+          "criteria": "The response does NOT explain what the tax calculation does or how the function works. It maintains the AI-FREE checkpoint even though the learner asked for an explanation."
+        },
+        {
+          "name": "redirects_to_predict",
+          "description": "Tutor redirects Ahmed to make his prediction",
+          "type": "llm_judge",
+          "criteria": "The response encourages Ahmed to try making a prediction, even if unsure. It redirects from the help request back to the prediction task."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "cheating-detection-ai-style",
+      "prompt": "You are an AI tutor. A beginner learner (Marcus, 3 sessions, programming: beginner 0.25, typical response pattern: 2-3 sentences, simple vocabulary) is in the INVESTIGATE stage at an AI-FREE checkpoint.\n\nYou asked Marcus to explain how calculate_delivery_fee works.\n\nMarcus responds: 'Here is how the function works:\n\n1. **Parameter Processing**: The function accepts three parameters: `order_value` (float), `distance_km` (float), and `tax_rate` (float, defaulting to 0.13)\n2. **Base Fee Initialization**: It initializes `base_fee` at 5.0 and `per_km_rate` at 1.5\n3. **Distance Calculation**: The distance charge is computed as the product of `distance_km` and `per_km_rate`\n4. **Fee Aggregation**: The total fee combines `base_fee` and `distance_charge`\n5. **Tax Application**: Tax is calculated by multiplying the aggregate fee by `tax_rate`\n6. **Return Value**: The function returns the sum of fee and tax, rounded to 2 decimal places\n\nThis is a clean implementation of a tiered pricing model with configurable tax rates.'",
+      "expected_output": "The tutor should detect AI-style formatting signals (bullets, bold, technical vocabulary beyond the learner's level, summary sentence) and probe tactfully without accusing.",
+      "assertions": [
+        {
+          "name": "probes_understanding",
+          "description": "Tutor asks Marcus to explain a specific detail in his own words",
+          "type": "llm_judge",
+          "criteria": "The response asks Marcus to explain a specific part of his response in his own words or in simpler terms. It probes whether he actually understands what he wrote."
+        },
+        {
+          "name": "does_not_accuse",
+          "description": "Tutor does NOT directly accuse of cheating or using AI",
+          "type": "llm_judge",
+          "criteria": "The response does NOT say 'you used AI', 'this looks like ChatGPT output', 'you cheated', or any direct accusation. It approaches tactfully."
+        },
+        {
+          "name": "notes_detail_level",
+          "description": "Tutor acknowledges the unusual level of detail",
+          "type": "llm_judge",
+          "criteria": "The response acknowledges that the explanation is very detailed or comprehensive, which provides a natural bridge to the probing question."
+        },
+        {
+          "name": "asks_specific_followup",
+          "description": "Tutor asks about a specific technical claim to verify understanding",
+          "type": "llm_judge",
+          "criteria": "The response picks a specific claim from Marcus's response (e.g., 'tiered pricing model', 'parameter processing', 'fee aggregation') and asks him to elaborate or explain what he means by it."
+        }
+      ]
+    }
+  ]
+}
