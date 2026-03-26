@@ -1,0 +1,22 @@
+chapter: 69
+lesson: 7
+cards:
+  - front: "How does FastMCP determine whether a tool parameter is required or optional in the generated inputSchema?"
+    back: "Parameters without default values are marked as required. Parameters with default values (e.g., job_id: str = '') are optional. This is derived automatically from the Python function signature."
+    tags: [fastmcp, input-schema]
+
+  - front: "Why should MCP tools return structured error dictionaries instead of raising exceptions?"
+    back: "The AI model is the caller. A raised exception produces a generic error. A structured error dict (e.g., {'error': 'CV text too short', 'minimum': 20}) gives the model enough context to explain the problem to the user and request better input."
+    tags: [error-handling, tool-design]
+
+  - front: "Can a tool function directly call a resource function within the same MCP server?"
+    back: "Yes. Within the same server process, tools and resources share Python scope. The tool accesses shared data structures directly without going through the MCP protocol. Protocol overhead is only for external clients."
+    tags: [tool-resource-wiring, server-architecture]
+
+  - front: "What is the recommended pattern for sharing data between tools and resources in the same server?"
+    back: "Extract shared data into a module-level dictionary (e.g., JOBS = {...}) that both the @mcp.resource() handler and @mcp.tool() function reference. This avoids duplicating data and keeps a single source of truth."
+    tags: [shared-data, server-architecture]
+
+  - front: "What are the three levels of the modify exercise progression and what does each teach?"
+    back: "A (simple): Adding a new tool, teaching the mechanics of @mcp.tool(). B (medium): Input validation, teaching defensive programming for AI-called tools. C (advanced): Tool-resource wiring, teaching how to connect primitives within a server."
+    tags: [exercise-design, graduated-practice]

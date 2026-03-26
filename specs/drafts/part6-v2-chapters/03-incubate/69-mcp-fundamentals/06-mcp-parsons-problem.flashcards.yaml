@@ -1,0 +1,22 @@
+chapter: 69
+lesson: 6
+cards:
+  - front: "What is the correct 7-step ordering for a minimal FastMCP server?"
+    back: "1. Import FastMCP. 2. Create server instance. 3. @mcp.tool() decorator. 4. def function with type hints. 5. Docstring. 6. return statement. 7. mcp.run(transport='stdio'). Steps 3-6 repeat for each primitive."
+    tags: [server-structure, fastmcp]
+
+  - front: "What happens if mcp.run() is placed before the tool decorator and function definition?"
+    back: "mcp.run() starts the event loop and blocks execution. The decorator and function below it never run. The server starts but with no tools registered. tools/list returns an empty array, which is a silent failure."
+    tags: [server-structure, common-mistakes]
+
+  - front: "Why must a Python decorator appear on the line immediately before the def statement?"
+    back: "Python syntax requires a decorator to be immediately followed by the def (or class) it decorates. Any other code between @decorator and def is a syntax error."
+    tags: [python-decorators, syntax]
+
+  - front: "What happens if you omit the docstring from an @mcp.tool() decorated function?"
+    back: "The code runs without errors, but the tool's description in tools/list will be empty or auto-generated. The AI model will have difficulty understanding when and how to use the tool, reducing its effectiveness."
+    tags: [fastmcp, docstrings, best-practices]
+
+  - front: "Why is an empty tools/list response worse than a server crash?"
+    back: "A crash tells you something is wrong. An empty tools/list response looks like success because the protocol layer works fine, but the server has no useful capabilities. It is a silent failure that is harder to diagnose."
+    tags: [debugging, silent-failures]

@@ -1,0 +1,30 @@
+chapter: 69
+lesson: 5
+cards:
+  - front: "What is the syntax for registering a direct resource vs a templated resource in FastMCP?"
+    back: "Direct: @mcp.resource('candidates://active') with no parameters in the URI. Templated: @mcp.resource('jobs://{job_id}') with {parameter} placeholders that map to function arguments."
+    tags: [fastmcp, resources, decorator]
+
+  - front: "When should you use a direct resource vs a templated resource?"
+    back: "Direct resource: when there is only one instance or you want all items (e.g., 'all active candidates'). Templated resource: when you need to specify which item (e.g., 'resume for candidate X'). If it needs a parameter, it is templated."
+    tags: [resources, uri-design]
+
+  - front: "What are the two return types for MCP prompts in FastMCP?"
+    back: "Simple string (str): single instruction describing what to do. Multi-turn messages (list[base.Message]): a sequence of UserMessage and AssistantMessage objects that set up a conversation with methodology framing."
+    tags: [prompts, fastmcp]
+
+  - front: "What is the purpose of base.AssistantMessage in a multi-turn prompt?"
+    back: "It provides 'stage directions' that frame how the model should approach the task. It establishes the methodology, not the final answer. For example: 'I will review requirements and generate targeted questions for each competency area.'"
+    tags: [prompts, base-message]
+
+  - front: "How does the same data (e.g., salary benchmarks) differ when exposed as a Tool vs Resource vs Prompt?"
+    back: "As a Tool: model decides autonomously when to fetch it. As a Resource: application preloads it when relevant (e.g., opening a job posting). As a Prompt: user explicitly requests a salary analysis from a menu. Same data, different trigger and control model."
+    tags: [control-model, design-patterns]
+
+  - front: "Where do templated resources appear in MCP discovery responses?"
+    back: "Templated resources appear in the resource_templates/list response (not resources/list), because the client needs to know about the template parameters in the URI."
+    tags: [resources, discovery]
+
+  - front: "What import is needed for multi-turn prompts in FastMCP?"
+    back: "from mcp.server.fastmcp.prompts import base. Then use base.UserMessage('...') and base.AssistantMessage('...') in the returned list."
+    tags: [fastmcp, prompts, imports]

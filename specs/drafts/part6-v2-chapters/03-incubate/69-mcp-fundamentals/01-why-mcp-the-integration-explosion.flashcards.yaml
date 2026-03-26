@@ -1,0 +1,30 @@
+chapter: 69
+lesson: 1
+cards:
+  - front: "What is the integration explosion problem in agent systems?"
+    back: "When N agents each need custom connections to M tools, the total integrations grow as N*M. This multiplicative growth makes adding new agents or tools increasingly expensive."
+    tags: [integration-explosion, mcp-motivation]
+
+  - front: "How does a shared protocol reduce integration work from O(N*M) to O(N+M)?"
+    back: "Each agent implements the protocol once (N clients) and each tool implements it once (M servers). The protocol handles translation, so adding a new agent or tool costs exactly one implementation."
+    tags: [protocol-standardization, complexity]
+
+  - front: "Calculate: 6 agents, 5 tools. How many custom integrations without a protocol? How many components with MCP?"
+    back: "Without a protocol: 6 * 5 = 30 custom integrations. With MCP: 6 + 5 = 11 components (6 clients + 5 servers)."
+    tags: [integration-explosion, arithmetic]
+
+  - front: "What is the USB analogy for MCP?"
+    back: "Before USB, every peripheral needed its own connector type. USB standardized the interface so any device works with any computer. MCP does the same for AI agents: any agent connects to any tool through one protocol."
+    tags: [mcp-motivation, analogy]
+
+  - front: "What three questions must every integration protocol answer?"
+    back: "1. Discovery: how does the agent find available capabilities? 2. Invocation: how does the agent request execution? 3. Response: how does the result come back in a format the agent understands?"
+    tags: [protocol-design, mcp-architecture]
+
+  - front: "Is MCP a framework, a library, or a protocol? What is the difference?"
+    back: "MCP is a protocol: a set of rules for how two programs communicate. The Python SDK (FastMCP) is an implementation of the protocol, not the protocol itself. Frameworks and libraries are code; a protocol is a specification."
+    tags: [mcp-definition, protocol]
+
+  - front: "What relationship do MCP and agent skills have? (Recall Chapter 67)"
+    back: "Skills define what an agent can do (its capabilities). MCP defines how the agent connects to the tools that enable those skills. Skills are the 'what'; MCP is the 'how.'"
+    tags: [agent-skills, mcp-purpose]
