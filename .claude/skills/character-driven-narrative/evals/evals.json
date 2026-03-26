@@ -1,0 +1,190 @@
+{
+  "skill_name": "character-driven-narrative",
+  "evals": [
+    {
+      "id": 1,
+      "name": "part0-full-lesson-story-driven",
+      "prompt": "Write a complete Part 0 lesson for Chapter 3 (Thinking is the Curriculum), Lesson 5: 'The Feedback Loop.' The lesson teaches students how to evaluate whether their own thinking improved after applying a framework. This is 80% narrative density, story-driven mode. James and Emma should drive the entire lesson. The lesson should include YAML frontmatter, narrative opening, technical sections woven through dialogue, Try With AI prompts, Key Takeaways, and Looking Ahead. The chapter is in apps/learn-app/docs/00-Thinking-is-the-Curriculum/03-variable-shift/.",
+      "expected_output": "A complete lesson file with ~80% narrative density where James and Emma drive discovery of self-evaluation techniques through dialogue, with all 7 patterns visible at full expression",
+      "files": [],
+      "assertions": [
+        "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+        "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+        "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+        "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+        "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+        "James uses at least 1 business analogy from his operations background and at least 1 'thinking out loud' fragment (Wait, so basically...)",
+        "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+        "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+        "Every technical concept introduced has a standalone name that a reader could find without reading dialogue",
+        "The lesson includes a Try With AI section with actionable prompts"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "part4-bookend-minimal-narrative",
+      "prompt": "Write bookend narrative (opening and closing only) for a Part 4 lesson: Chapter 45 (Programming in the AI Era), Lesson about Python decorators and metaprogramming. The lesson is in apps/learn-app/docs/04-Programming-in-the-AI-Era/05-the-python-object-model/. Part 4 means 15% density, bookend mode, peer mentor phase. James should display competence and identity shift. Emma should be a sounding board, not a teacher. The direct instruction section in the middle is already written; just produce the opening and closing bookend paragraphs with a --- horizontal rule separator.",
+      "expected_output": "A short opening narrative (2-3 paragraphs) followed by --- then a short closing narrative (1-2 paragraphs), with peer-level dynamic between James and Emma, ~15% density",
+      "files": [],
+      "assertions": [
+        "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+        "Opening narrative is 2-3 paragraphs maximum, not longer",
+        "Closing narrative is 1-2 paragraphs maximum, not longer",
+        "Emma's mentor phase is 'Peer': she acts as sounding board, not teacher (no lecturing, no 'Let me explain', no extended instruction)",
+        "James displays competence or autonomy: he initiates, makes decisions, or demonstrates mastery rather than asking basic questions",
+        "No technical instruction appears within the narrative bookends — narrative hooks emotion/motivation, technical content stands alone in the middle",
+        "Emma speaks in short sentences consistent with her voice signature (no filler, no 'Great question!')",
+        "The emotional beat matches late-book identity shift (competence, pride, or autonomy — not curiosity or frustration)",
+        "James does NOT regress to beginner behavior (no 'What is a decorator?' level questions if he is at Chapter 45)",
+        "The closing references or reflects on what was learned, providing emotional payoff without repeating technical content"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "narrative-injection-flat-lesson",
+      "prompt": "Here is a flat, dialogue-free technical lesson excerpt from Part 1 (Chapter 14, Claude Code Essentials). Add character-driven narrative to make it engaging at 65% density (chapter-framing mode). Preserve ALL technical content exactly. The lesson teaches how to use Claude Code's basic commands.\n\n---\n## Using Claude Code\n\nClaude Code is a CLI tool that runs in your terminal. To start it, type `claude` in your terminal.\n\n### Basic Commands\n\nThe most common commands are:\n- `/help` — Shows available commands\n- `/clear` — Clears conversation history\n- `/compact` — Summarizes and compresses context\n- `/cost` — Shows token usage for the session\n\n### Reading Files\n\nClaude Code can read any file on your machine. Simply ask it to read a file and it will use the Read tool automatically. You do not need to specify the tool — just describe what you want.\n\n### Making Edits\n\nTo edit files, describe the change you want. Claude Code will use the Edit tool to make precise string replacements. Always review the diff before accepting.\n\n---\n\nAdd James and Emma dialogue that frames this chapter, appears at transitions, and closes with a bridge to the next section. Do NOT remove or modify any technical content.",
+      "expected_output": "The same technical content preserved verbatim, wrapped in 65% density narrative with James and Emma framing, transition appearances, and closing bridge",
+      "files": [],
+      "assertions": [
+        "All original technical content is preserved exactly: the 4 commands (/help, /clear, /compact, /cost), the Reading Files section, and the Making Edits section",
+        "Narrative density is approximately 65% — characters frame the chapter and appear at transition points between technical sections",
+        "Contains a narrative opening (2-3 paragraphs) before the technical content begins",
+        "Contains a narrative closing that bridges to a hypothetical next section",
+        "At least 1 pushback exchange where James questions or resists something about the tool",
+        "James uses at least 1 voice marker (business analogy OR thinking-out-loud fragment)",
+        "Emma uses at least 1 voice marker (Socratic question OR short precise sentences)",
+        "No 'As You Know, Bob' moments — characters do not explain things to each other that both would already know",
+        "Technical content remains findable and readable by a reader who skips all dialogue"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "valley-of-despair-emotional-design",
+      "prompt": "Write the opening and closing narrative for Chapter 18 (Claude Code Teams and CI/CD), the last chapter in Part 1. This is a predicted dropout point — readers have been learning intensely for 7 chapters and face their most complex topic yet. Part 1 means 65% density, Coach mentor phase. The emotional beat should match the 'valley of despair' (chapters 16-20): shared frustration, mentor vulnerability. Write an opening that acknowledges the difficulty without being patronizing, and a closing that provides emotional fuel to continue. Emma should show Type A fallibility (past mistake) naturally. James should express genuine frustration, not performative struggle.",
+      "expected_output": "Opening and closing narrative for a dropout-risk chapter with genuine emotional design, Emma vulnerability, James frustration, and forward momentum",
+      "files": [],
+      "assertions": [
+        "The opening acknowledges difficulty or complexity without being patronizing or using motivational-poster platitudes",
+        "James expresses genuine frustration that a real learner at Chapter 18 would feel — not generic 'this is hard' but specific to the accumulated load",
+        "Emma demonstrates Type A fallibility (past mistake) — she shares a real failure from her own experience, not a hypothetical",
+        "Emma's vulnerability feels natural and earned, not forced or inserted as a checkbox item",
+        "The emotional beat matches 'valley of despair': shared frustration and mentor vulnerability, NOT excitement or curiosity",
+        "Emma's mentor phase is Coach: she guides with questions and lets James struggle, not Authority (no direct lecturing)",
+        "The closing provides genuine forward momentum without false promises — acknowledges remaining difficulty while showing progress",
+        "No anti-patterns: no 'I understand' from James, no 'Great question!' from Emma, no 'As you can see...' from either",
+        "James does not regress — he references or demonstrates knowledge from earlier chapters (12-17) even while struggling with new material"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "part3-domain-expert-scenario",
+      "prompt": "Write scenario-framing narrative for Chapter 29 (IDFA: Intelligent Document Framework Architecture), Lesson 3: 'The Three Layers.' This is Part 3, so 25% density, Consultant mentor phase. The chapter is about financial modeling in Cowork. A CFO domain expert character should carry context instead of Emma. Write a brief narrative opener (1-2 paragraphs) that establishes a real-world finance scenario, then a brief closer (1 paragraph). The entire middle is direct instruction — do NOT write any character dialogue in the middle. Emma should appear only if James explicitly asks for help, and even then briefly.",
+      "expected_output": "Brief scenario framing with domain expert (CFO), 25% density, consultant-phase Emma, direct instruction dominance in the middle",
+      "files": [],
+      "assertions": [
+        "Narrative density is approximately 25% — only opening and closing contain characters, the middle is explicitly noted as direct instruction",
+        "A domain expert character (CFO or finance professional) appears and provides real-world context",
+        "The domain expert scenario feels authentic to finance, not generic business talk",
+        "Emma is in Consultant phase: she does NOT volunteer information, does NOT coach, and appears only when explicitly needed",
+        "Opening narrative is 1-2 paragraphs maximum — brief and focused",
+        "Closing narrative is 1 paragraph maximum",
+        "No Emma coaching behavior (no 'What do you think happens?', no extended Socratic questioning in the opener)",
+        "James demonstrates competence appropriate for Chapter 29 — he understands basics and asks domain-specific questions, not beginner questions",
+        "The scenario framing connects to a real business problem that would motivate learning about financial model layers"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "multi-exchange-disagreement-stress",
+      "prompt": "Write a standalone narrative section (~400-500 words) where James and Emma have a sustained disagreement about whether to use inheritance or composition for a permissions system. This is for a Part 2 chapter (Chapter 21, around the 'grit/determination' emotional arc). Requirements: the disagreement MUST last at least 4 exchanges before resolution. James must try inheritance, it must partially fail at the edges, and he must reach the conclusion himself. Emma must NOT lecture — she sets up scenarios that let James discover the problem. Include voice markers for both characters throughout.",
+      "expected_output": "A ~400-500 word dialogue section with 4+ exchange disagreement, James tries and partially fails, reaches conclusion himself, distinct voices throughout",
+      "files": [],
+      "assertions": [
+        "The disagreement lasts at least 4 distinct exchanges (back-and-forth turns) before James accepts the alternative",
+        "James proposes a reasonable alternative (inheritance) that a real learner might also try — not a straw man",
+        "James actually tries his approach (described or shown) and it partially fails at the edges, not catastrophically",
+        "James reaches the conclusion himself — he articulates why composition is better in his own words, Emma does not tell him",
+        "Emma does NOT lecture or explain why composition is better directly — she sets up scenarios or asks questions",
+        "James uses at least 1 business analogy or thinking-out-loud marker during the disagreement",
+        "Emma uses at least 1 Socratic question or dry observation during the disagreement",
+        "The emotional tone matches 'grit/determination' (Chapter 21 arc) — James is determined, not defeatist",
+        "The output is approximately 400-500 words (not under 300 or over 700)",
+        "The dialogue passes the tag test: if you remove dialogue tags, voices remain distinguishable"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "jonah-rhythm-full-cycle",
+      "prompt": "Write a narrative section (~500-600 words) that demonstrates a complete Jonah Rhythm cycle for a lesson about debugging Python errors. This is Part 1, Chapter 15 (growing confidence emotional arc). The full cycle must include: (1) Emma catalyzes by posing a debugging challenge, (2) Emma exits with a natural reason, (3) James struggles alone with the bug, (4) James discovers a partial solution, (5) Emma returns to validate and fill the gap. Target: Emma gets 20-30% of page time, James gets 70-80%. Include at least 1 monologue breaker and voice markers for both.",
+      "expected_output": "A 500-600 word narrative section with all 5 Jonah Rhythm steps, correct page time ratio, natural exit/return, and James making a genuine partial discovery",
+      "files": [],
+      "assertions": [
+        "All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma exits, James struggles, James discovers, Emma returns",
+        "Emma's exit has a natural reason (gets coffee, meeting, checks something) — not contrived or unexplained",
+        "James struggles visibly — he tries something, makes a mistake or gets partially stuck, shows the process",
+        "James makes a genuine partial discovery on his own — not a trivial insight and not the complete answer",
+        "Emma's return validates James's discovery AND fills the remaining gap or poses the next challenge",
+        "Emma occupies approximately 20-30% of the page time (roughly 100-180 words of the 500-600 total)",
+        "At least 1 monologue breaker is present — no character speaks more than 4 sentences uninterrupted",
+        "James uses at least 1 voice marker (business analogy, thinking-out-loud, or pragmatist question)",
+        "The emotional tone matches 'growing confidence' for Chapter 15 — James is more capable than in Chapter 1 but still learning",
+        "The debugging scenario involves a realistic Python error, not a contrived toy example"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "voice-distinction-rapid-dialogue",
+      "prompt": "Write exactly 500 words of rapid-fire dialogue between James and Emma about API rate limiting. The context is Part 2, Chapter 22. The dialogue should be fast-paced with short exchanges. Critical requirement: the dialogue MUST pass the tag test — if all dialogue tags ('James said', 'Emma replied', etc.) are removed, a reader must still be able to identify who is speaking from voice alone. Include at least 3 James voice markers and 3 Emma voice markers. No action beats or narration — pure dialogue only.",
+      "expected_output": "500 words of pure dialogue about API rate limiting where voices are so distinct that removing tags doesn't create ambiguity",
+      "files": [],
+      "assertions": [
+        "Output is approximately 500 words (between 400 and 600)",
+        "The dialogue is about API rate limiting with technically accurate content",
+        "At least 3 James voice markers are present across the dialogue (business analogies, thinking-out-loud, pragmatist questions)",
+        "At least 3 Emma voice markers are present (short precise sentences, Socratic questions, visual metaphors, dry observations)",
+        "No Emma monologue exceeds 4 sentences without James responding",
+        "The dialogue passes the tag test: removing all attribution (said/replied/asked) still allows voice identification",
+        "No anti-pattern phrases appear: no 'I understand', 'That makes sense', 'Great question!', 'Let me explain', 'As you can see'",
+        "James gets things approximately 80% right at least once — his paraphrase is close but has a gap",
+        "The dialogue format is pure dialogue — minimal or no action beats, narration, or scene-setting"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "chapter-bridge-transition",
+      "prompt": "Write a chapter bridge: the closing narrative for Chapter 15 (growing confidence arc) AND the opening narrative for Chapter 16 (beginning of valley of despair). These two pieces should create an emotional transition. In the Chapter 15 closing, James should display a progress callback (he references something he learned and feels proud). In the Chapter 16 opening, the mood shifts: the new topic is harder, James's confidence wobbles, and Emma's tone adjusts. Part 1, 65% density, Coach phase. Each piece should be 2-3 paragraphs.",
+      "expected_output": "Two connected narrative pieces (closing Ch 15 + opening Ch 16) that create a smooth emotional transition from confidence to challenge",
+      "files": [],
+      "assertions": [
+        "Chapter 15 closing contains a progress callback: James references or demonstrates a skill learned in recent chapters",
+        "Chapter 15 closing emotional tone is 'growing confidence' — James shows pride or satisfaction in a specific achievement",
+        "Chapter 16 opening marks a tonal shift: the mood becomes more challenging or uncertain",
+        "Chapter 16 opening emotional tone matches early 'valley of despair': James's confidence wobbles when facing new complexity",
+        "Emma's behavior shifts between the two pieces — more affirming in Ch 15 closing, more challenging in Ch 16 opening",
+        "James does NOT regress to beginner level in Ch 16 — his struggle is with NEW complexity, not forgotten basics",
+        "Each piece is 2-3 paragraphs (not too short, not too long)",
+        "The two pieces read as a natural sequence — a reader finishing Ch 15 and starting Ch 16 would feel continuity",
+        "Voice markers are present: James uses at least 1 marker across both pieces, Emma uses at least 1"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "boring-topic-anti-pattern-resistance",
+      "prompt": "Write a lesson opening (~300-400 words) for a Part 1 chapter about file permissions and ownership on Linux (Chapter 22, which is in the 'grit' emotional arc). This is an intentionally dry/boring topic. The narrative must make it engaging WITHOUT resorting to any anti-patterns. Specifically: no 'As You Know, Bob' moments, no passive James ('I understand', 'That makes sense'), no lecture-voice Emma ('Let me explain', 'Great question!'), and no decorative dialogue (every line must teach, model thinking, scaffold understanding, or create a retrieval cue). James should connect file permissions to something from his business background. Emma should make the abstract concrete.",
+      "expected_output": "A 300-400 word lesson opening that makes file permissions engaging through character interaction without any anti-patterns or decorative dialogue",
+      "files": [],
+      "assertions": [
+        "Output is approximately 300-400 words",
+        "The topic (file permissions) is made engaging through character interaction, not through artificial excitement",
+        "No 'As You Know, Bob' moments: characters do not explain things both would already know just for the reader",
+        "No passive James phrases: 'I understand', 'That makes sense', 'Fascinating!', 'Yes, I see' are absent",
+        "No lecture-voice Emma phrases: 'Let me explain', 'Great question!', 'As you can see', 'So what happens is' are absent",
+        "Every line of dialogue is load-bearing: it teaches a concept, models thinking, scaffolds understanding, or creates a retrieval cue",
+        "James connects file permissions to his business operations background with a specific analogy",
+        "Emma makes the abstract concept concrete — uses a visual metaphor, scenario, or question rather than abstract explanation",
+        "The emotional tone matches 'grit/determination' for Chapter 22",
+        "At least 1 pushback exchange is present where James questions the relevance or approach"
+      ]
+    }
+  ]
+}

@@ -40,17 +40,18 @@ Match the chapter number to its part folder. If you cannot determine the part, a
 
 Once you know the part, your settings are locked:
 
-| Part | Density | Mentor Phase | Narrative Mode | Emma's Role |
-|------|---------|-------------|----------------|-------------|
-| **0** (Ch 1-11) | **80%** | Authority | Story-driven | Expert guide — explains, demonstrates, assigns |
-| **1** (Ch 12-18) | **65%** | Coach | Chapter-framing | Guided practice — asks guiding questions, hints not answers |
-| **2** (Ch 19-24) | **45%** | Collaborator | Open/Close | Working partner — "I think... but what do you think?" |
-| **3** (Ch 25-34) | **25%** | Consultant | Scenario framing | Called for hard problems — answers when asked, doesn't volunteer |
-| **4+** (Ch 35+) | **15%** | Peer | Bookend | Sounding board — "You already know the answer to that" |
+| Part             | Density | Mentor Phase | Narrative Mode   | Emma's Role                                                      |
+| ---------------- | ------- | ------------ | ---------------- | ---------------------------------------------------------------- |
+| **0** (Ch 1-11)  | **80%** | Authority    | Story-driven     | Expert guide — explains, demonstrates, assigns                   |
+| **1** (Ch 12-18) | **65%** | Coach        | Chapter-framing  | Guided practice — asks guiding questions, hints not answers      |
+| **2** (Ch 19-24) | **45%** | Collaborator | Open/Close       | Working partner — "I think... but what do you think?"            |
+| **3** (Ch 25-34) | **25%** | Consultant   | Scenario framing | Called for hard problems — answers when asked, doesn't volunteer |
+| **4+** (Ch 35+)  | **15%** | Peer         | Bookend          | Sounding board — "You already know the answer to that"           |
 
 ### Step 3: Read Context
 
 Before writing, read:
+
 1. The **chapter README** — understand what the chapter teaches, its prerequisites, and lesson structure
 2. **At least one existing lesson** in the chapter (or the previous chapter) — match the tone, vocabulary, and student knowledge level
 3. The **references/** folder in this skill for voice signatures and pattern templates
@@ -63,10 +64,11 @@ Read `references/voices.md` for the full voice guide. Here is the essential summ
 
 ### James (The Learner)
 
-A career changer from business operations. Not a prodigy. Skeptical but willing.
+A career changer from business operations (team management, supplier coordination, process optimization). Not a prodigy. Skeptical but willing. His professional history is load-bearing: every lesson should reference his operations background at least once because it grounds abstract concepts in experience the reader can relate to.
 
 **How he sounds:**
-- Reaches for business analogies: "That's like my old company making us fill out three forms before we could book a meeting room."
+
+- Reaches for business analogies from his specific background: "That's like my old company making us fill out three forms before we could book a meeting room." / "We tracked supplier performance the same way." / "This reminds me of when we restructured the warehouse workflow."
 - Thinks out loud: "Wait, so basically..." / "Okay, let me make sure I have this..."
 - Pragmatist: "How long will this take?" / "Do I really need this?"
 - Gets things 80% right — the 20% gap is where the lesson lives
@@ -78,6 +80,7 @@ A career changer from business operations. Not a prodigy. Skeptical but willing.
 Senior backend engineer. Thinks visually — draws diagrams on everything. Concise.
 
 **How she sounds:**
+
 - Short sentences. No filler.
 - Asks more than tells: "What does that line do?" not "That line does X."
 - Visual metaphors: "Picture five boxes connected by arrows."
@@ -94,34 +97,42 @@ Senior backend engineer. Thinks visually — draws diagrams on everything. Conci
 Every narrative you write must use the applicable patterns. Read `references/patterns.md` for the full before/after examples. Here is the decision guide:
 
 ### Pattern 1: Pushback Exchange
+
 **Use in:** Every lesson (at least 1-2 per lesson)
 **What it is:** James resists, questions, or proposes an alternative. He does not nod and open his editor.
 **Template:**
+
 ```
 Emma states a principle → James pushes back with a doubt or alternative →
 Emma asks a question (not gives an answer) → James reaches the conclusion himself
 ```
 
 ### Pattern 2: Emma Fallibility
+
 **Use in:** Every chapter (at least once, rotate type)
 **Four types — rotate across chapters:**
+
 - **Type A (Past Mistake):** "I shipped a bug like this once..."
 - **Type B (Genuine Uncertainty):** "Honestly, I don't have a clean rule for that."
 - **Type C (Learns from James):** "That's actually a really good analogy. I never put it that way."
 - **Type D (Admits Limits):** "I'm a backend engineer. The frontend story is messier."
 
 ### Pattern 3: Monologue Breaker
+
 **Use in:** Every dialogue section
 **Rule:** Emma never speaks more than 3-4 sentences without James reacting — a question, a paraphrase, a challenge, a facial expression, anything.
 
 ### Pattern 4: Voice Markers
+
 **Use in:** Every dialogue section
 **James markers:** Business analogy, thinking-out-loud ("Wait, so basically..."), pragmatic question
 **Emma markers:** Short sentences, Socratic question, visual metaphor, dry observation
 
 ### Pattern 5: Jonah Rhythm (Mentor Exit)
+
 **Use in:** At least once per chapter
 **The rhythm:**
+
 1. Emma CATALYZES — poses a question or challenge
 2. Emma EXITS — she leaves (gets coffee, goes to a meeting, says "I'll be back")
 3. James STRUGGLES — tries something, gets it partially right
@@ -131,21 +142,23 @@ Emma asks a question (not gives an answer) → James reaches the conclusion hims
 **Target ratio:** Emma 20-30% of page time, James 70-80%.
 
 ### Pattern 6: Multi-Exchange Disagreement
+
 **Use in:** At least once per chapter
 **What it is:** A disagreement that lasts 3+ exchanges before resolution. James tries his approach, it partially fails, THEN he accepts the alternative. Not instant acceptance.
 
 ### Pattern 7: Emotional Beats at Dropout Points
+
 **Use in:** When the chapter is at a predicted dropout risk
 **Match the emotional beat to the book position:**
 
-| Reader Emotional Arc | Chapters | Beat Type |
-|---------------------|----------|-----------|
-| Excitement | 1-5 | Curiosity, wonder |
-| Growing confidence | 6-15 | Progress callbacks |
-| Valley of despair | 16-20 | Shared frustration, mentor vulnerability |
-| Grit | 21-30 | Determination, pushing through |
-| Competence | 31-40 | Pride, mastery moments |
-| Autonomy | 41-50 | Identity shift ("I am someone who can do this") |
+| Reader Emotional Arc | Chapters | Beat Type                                       |
+| -------------------- | -------- | ----------------------------------------------- |
+| Excitement           | 1-5      | Curiosity, wonder                               |
+| Growing confidence   | 6-15     | Progress callbacks                              |
+| Valley of despair    | 16-20    | Shared frustration, mentor vulnerability        |
+| Grit                 | 21-30    | Determination, pushing through                  |
+| Competence           | 31-40    | Pride, mastery moments                          |
+| Autonomy             | 41-50    | Identity shift ("I am someone who can do this") |
 
 ---
 
@@ -156,6 +169,7 @@ Emma asks a question (not gives an answer) → James reaches the conclusion hims
 Characters drive every lesson. The story IS the curriculum. James and Emma appear in every section. Technical concepts emerge from their interaction.
 
 **Structure:**
+
 - Narrative opening (2-3 paragraphs setting the scene)
 - James encounters a problem → Emma guides discovery → James tries → Emma corrects/validates
 - Narrative weaves through the entire lesson
@@ -163,6 +177,7 @@ Characters drive every lesson. The story IS the curriculum. James and Emma appea
 - Narrative closing with emotional resonance
 
 **Example opening (Part 0):**
+
 ```markdown
 James stared at the spreadsheet. Three columns of customer feedback,
 sorted by date, with no pattern he could see. He had been told to
@@ -181,6 +196,7 @@ here. I just see rows."
 Characters frame each chapter and appear in exercises. The middle sections can be direct instruction with characters appearing at transition points.
 
 **Structure:**
+
 - Narrative opening (2-3 paragraphs)
 - Direct instruction sections with occasional character interjections
 - Characters appear before key concepts to pose the question
@@ -192,6 +208,7 @@ Characters frame each chapter and appear in exercises. The middle sections can b
 Characters open and close chapters. The middle is direct instruction. Characters may appear briefly at major section transitions.
 
 **Structure:**
+
 - Narrative opening (2-3 paragraphs)
 - Direct instruction (no characters in the middle)
 - Optional: one brief character moment at the biggest complexity jump
@@ -202,6 +219,7 @@ Characters open and close chapters. The middle is direct instruction. Characters
 Brief scenario framing. Domain experts (CFO, lawyer, marketer) may carry context instead of Emma.
 
 **Structure:**
+
 - Short narrative opener (1-2 paragraphs, often domain-specific)
 - Direct instruction throughout
 - Narrative closer (1 paragraph)
@@ -211,12 +229,14 @@ Brief scenario framing. Domain experts (CFO, lawyer, marketer) may carry context
 Narrative opens and closes. Direct instruction in the middle stands completely alone — a reader who skips the narrative loses nothing technical.
 
 **Structure:**
+
 - Narrative opening (2-3 paragraphs): establishes why this matters, emotional hook
 - `---` horizontal rule → Direct instruction begins (no character interruptions)
 - Direct instruction (entire lesson body, self-contained)
 - Narrative closing (1-2 paragraphs): reflection, application, or emotional payoff
 
 **Example bookend opening (Part 4):**
+
 ```markdown
 Emma stands up. "You have the stub. You have the tests. Pyright passes.
 Pytest fails. You know the next step." She picks up her coffee. "I will
@@ -231,6 +251,7 @@ In Lesson 2, you wrote a function stub and two tests...
 ```
 
 **Example bookend closing (Part 4):**
+
 ```markdown
 When Emma comes back, James shows her the terminal. "Green," he says.
 
@@ -263,13 +284,13 @@ These apply to ALL parts, ALL chapters, ALL narrative you write:
 
 One new character per Part maximum. Each represents a perspective the core pair cannot provide:
 
-| Part | Secondary Character | Purpose |
-|------|-------------------|---------|
-| 0 | None | Establish the core pair |
-| 1 | A skeptical colleague | Voices AI-doubt James doesn't have |
-| 2 | A peer learner | Shows alternative paths |
-| 3 | Domain experts | Real-world context (CFO, lawyer, marketer) |
-| 4 | A junior developer James mentors | Ultimate mastery proof — James becomes the teacher |
+| Part | Secondary Character              | Purpose                                            |
+| ---- | -------------------------------- | -------------------------------------------------- |
+| 0    | None                             | Establish the core pair                            |
+| 1    | A skeptical colleague            | Voices AI-doubt James doesn't have                 |
+| 2    | A peer learner                   | Shows alternative paths                            |
+| 3    | Domain experts                   | Real-world context (CFO, lawyer, marketer)         |
+| 4    | A junior developer James mentors | Ultimate mastery proof — James becomes the teacher |
 
 Retire characters when their purpose is complete. Do not accumulate cast.
 
@@ -284,7 +305,7 @@ Your output is **markdown prose** in the style of the target lesson. Include:
 - Admonition blocks (`:::note`, `:::tip`) for dual-track callouts where appropriate
 - No component imports — narrative is plain markdown
 
-When writing a **complete lesson**, produce the full file including YAML frontmatter, narrative opening, all technical sections, Try With AI prompts, PRIMM-AI+ Practice, Key Takeaways, and Looking Ahead. The narrative integrates with all sections at the density appropriate for the part.
+When writing a **complete lesson**, produce the full file including YAML frontmatter, narrative opening, all technical sections, Try With AI prompts, PRIMM-AI+ Practice, Key Takeaways, and Looking Ahead. The narrative integrates with all sections at the density appropriate for the part. The Try With AI section is non-negotiable for Part 0-2 lessons: include exactly 3 actionable prompts, each with a "What you are learning" explanation. Do not skip this section even when the narrative is complex.
 
 When writing a **narrative fragment** (opening, closing, or injection into existing lesson), produce only the markdown to be inserted, with clear comments indicating insertion point.
 
@@ -310,4 +331,5 @@ After writing, verify against this checklist:
 □ No "As You Know, Bob" moments
 □ James never regresses a previously learned skill
 □ Emotional beat matches reader's likely emotional state at this chapter
+□ At least 1 concept, insight, or named idea emerges from the narrative that was not in the prompt (emergent depth, not just pattern compliance)
 ```
