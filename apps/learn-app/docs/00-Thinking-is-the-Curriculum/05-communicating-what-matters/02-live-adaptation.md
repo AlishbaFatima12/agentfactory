@@ -78,11 +78,43 @@ teaching_guide:
 
 # Live Adaptation
 
+## Why This Matters: James and the Rehearsed Pitch
+
+James was rehearsing. He'd spent forty minutes with Claude refining the pitch, and it was good. Tight structure. Clear argument. Three data points that built on each other. He read it through one more time and closed his laptop.
+
+"I'm ready."
+
+"For the pitch you prepared?" Emma asked.
+
+"For the pitch."
+
+"What about the parts you didn't prepare?"
+
+James paused. "I covered every angle. Cost, timeline, technical risk, stakeholder impact. What else is there?"
+
+"That's the question, isn't it?" Emma said. "You prepared for the objections you anticipated. What happens when someone raises one you didn't?"
+
+"I'll handle it. I'm good at thinking on my feet."
+
+"Are you?" It wasn't a challenge. It was a genuine question. "In your old job, when a supplier raised something unexpected in a negotiation, did you improvise well?"
+
+James thought about it honestly. "Sometimes. When it was something close to what I already knew. But there was this one meeting with a packaging vendor who brought up a regulatory change I'd never heard of, and I just... froze. Tried to redirect. Everyone in the room could tell I was stalling."
+
+"That's the 30%," Emma said. "Preparation gets you 70% of the way. The other 30% is what you do when the room stops matching your script. And that 30% is what people remember."
+
+"So what's the point of preparing if it only covers 70%?"
+
+"The preparation isn't wasted. It frees up your brain. When the prepared parts feel automatic, you have bandwidth left over for the unexpected parts. But you don't get that bandwidth by preparing harder. You get it by practicing the adaptation itself."
+
+She handed him an envelope. "Your peer gets this. You don't see it until they say it."
+
+---
+
 ## Exercise 2: The Live Adaptation
 
 **Layers Used:** Layer 3 (Live Defence), Layer 4 (Contradiction Challenge)
 
-### What You Do
+James is holding a polished pitch he spent forty minutes perfecting. So are you.
 
 Prepare a 3-minute pitch for the decision you analyzed in Exercise 1 using any AI tools you want. Deliver it live to a peer playing a stakeholder role. Halfway through, the stakeholder reveals a concern you did not anticipate (the peer receives this concern from the instructor in advance). You must adapt in real-time with no AI access. After the exercise, document what happened.
 
@@ -154,9 +186,21 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn that preparation gets you 70% of the way. The last 30% -- the part that determines success or failure -- is adaptation. AI can help you prepare but it cannot adapt for you in the room. This exercise builds the reflexes that no tool can provide.
+James read his peer's Adaptation Scorecard twice. Composure: 6. Relevance: 5. Felt heard: 7. The relevance score bothered him most.
+
+"I panicked," he admitted. "The concern was about employee retention during the migration, and I started talking about uptime guarantees. Completely different topic. I knew it was wrong even while I was saying it, but I couldn't stop the words."
+
+"That's the gap between knowing something and being able to do it under pressure," Emma said. "You knew retention was the issue. Your mouth was still running on autopilot."
+
+"In my old job, we had quarterly business reviews where the VP would ask something unexpected and you'd watch managers flail. I always thought, 'Just answer the question.' Turns out it's harder than it looks when you're the one in the chair."
+
+"The adaptation is a separate skill from the pitch. You can't prepare your way into it. You can only practice your way into it."
+
+## The Lesson Learned
+
+Preparation gets you 70% of the way. The last 30%, the part that determines success or failure, is adaptation. AI can help you prepare, but it cannot adapt for you in the room. The reflexes that handle unexpected objections come from practice, not from more thorough scripts.
 
 ## Flashcards Study Aid
 

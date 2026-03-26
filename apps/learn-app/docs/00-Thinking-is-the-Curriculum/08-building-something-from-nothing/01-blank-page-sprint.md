@@ -92,9 +92,51 @@ import TabItem from "@theme/TabItem";
 Creation requires every skill taught so far: question formulation to frame the problem ([Chapter 1](../01-asking-better-questions/01-prediction-lock.md)), error detection to catch your own flawed ideas ([Chapter 2](../02-detecting-broken-reasoning/01-error-prediction.md)), systems thinking to anticipate consequences of your design ([Chapter 3](../03-thinking-in-systems/01-cascade-mapping.md)), first principles to derive rather than borrow ([Chapter 4](../04-reasoning-from-first-principles/01-blank-page-derivation.md)), and AI collaboration to amplify without surrendering creative control ([Chapter 6](../06-working-with-ai-not-for-ai/01-three-path-comparison.md)).
 :::
 
-**The Core Skill**
+## Why This Matters: James and the Missing Starting Point
 
-Creation is not summarization, reorganization, or polishing. It is the act of producing something new -- an argument nobody has made, a solution nobody has tried, a connection nobody has seen. This chapter puts you through the process of creating under constraints, with AI available as an assistant but not as the creator.
+James stared at the blank document. The cursor blinked. He scrolled up, scrolled down, scrolled back up. The page stayed empty.
+
+"I need the requirements," he said. "A brief. A template. Something to react to. You can't just say 'create something' and expect me to know where to start."
+
+Emma set her coffee down. "What did you do when you needed to write a new process at your old company?"
+
+"That's different. I had context. I knew the suppliers, the bottlenecks, the team constraints. I wasn't starting from zero."
+
+"You're not starting from zero now, either. You have a problem statement and everything you've learned in the last seven chapters."
+
+"But there's no structure. No prompt, no format, no..." He gestured at the screen. "At my old company, whenever we needed a new workflow, someone would circulate a template from a previous project. We'd adapt it. Nobody started with a blank page."
+
+"And when the template didn't fit the situation?"
+
+James paused. "We'd force it to fit. Change the section headers, maybe. But the skeleton was always borrowed."
+
+"So you were never creating. You were rearranging."
+
+"That worked fine."
+
+"It works until the problem is genuinely new." Emma leaned forward. "Here's what I've noticed: you can analyze brilliantly. Your prediction locks, your question tournaments, your divergence tests. All strong. But every one of those exercises started with something I gave you. A scenario. A prompt. A structure. What happens when nobody gives you the starting point?"
+
+James looked at the blank page again. She was right. Every exercise so far had been a response to something. He'd never been the one to originate.
+
+"Okay, but..." He thought about it. "Wait, so basically you're saying that all the skills I've built so far are reactive? I can evaluate, I can question, I can critique. But I haven't actually built anything from scratch?"
+
+"What do you think?"
+
+He sat with that for a moment. It was uncomfortable. He'd felt productive for seven chapters. Now he was staring at a blinking cursor with nothing to say.
+
+"That's like the difference between reviewing supplier proposals and writing the RFP," he said slowly. "Reviewing is easier because someone else defined the categories. Writing the RFP means deciding what matters before anyone tells you."
+
+Emma almost smiled. "Now you understand the exercise."
+
+She stood up. "You have sixty minutes. No AI, no internet, no notes. Pick a scenario, diagnose the problem, generate three distinct solutions, choose one, and write down everything you don't know. Sixty minutes. Timer starts when I leave."
+
+She paused at the door. "The blank page is not the obstacle. The blank page is the exercise. If you could fill it from a template, there would be nothing to learn."
+
+She left.
+
+James looked at the three scenarios. His instinct was to stall, to read each one three times hoping one would spark an obvious approach. Instead he picked the one that felt most uncomfortable, set a timer on his phone, and started typing. The first sentence was terrible. He kept going.
+
+---
 
 ## Exercise 1: The Blank Page Sprint (No AI)
 
@@ -102,17 +144,15 @@ Creation is not summarization, reorganization, or polishing. It is the act of pr
 
 **Building On:** Chapter 1's Prediction Lock (your blank page sprint is the rawest form of prediction) + Chapter 4's First Principles Worksheet.
 
+James is staring at a blank page with sixty minutes on the clock. So are you.
+
 :::warning Time Constraint
-This exercise has a strict **60-minute time limit**. No AI, no internet, no notes. Set a timer before you begin. The constraint is the point -- it forces raw thinking onto the page.
+This exercise has a strict **60-minute time limit**. No AI, no internet, no notes. Set a timer before you begin. The constraint is the point: it forces raw thinking onto the page.
 :::
 
----
-
-### What You Do
+### Build Your Draft 1
 
 You receive a design problem. 60 minutes. No AI, no internet, no notes. Produce: a problem diagnosis, three possible solutions, a recommended approach, and an honest assessment of what you do not know. This is Draft 1.
-
----
 
 ### Choose Your Scenario
 
@@ -134,8 +174,6 @@ You receive a design problem. 60 minutes. No AI, no internet, no notes. Produce:
 </Tabs>
 
 Choose one. The exercises work identically regardless of which you pick.
-
----
 
 :::info Your Deliverable
 Your Draft 1 containing: problem diagnosis (what causes the problem and why), three distinct solution approaches (not variations of one idea), your recommended approach with reasoning for why you chose it over the other two, and a "gap list" -- everything you do not know that you would need to know to implement this. Minimum 400 words.
@@ -216,9 +254,29 @@ For each score, give a one-sentence justification.
 
 </details>
 
-### What This Teaches You
+---
 
-You learn what your raw thinking produces without any augmentation. This baseline is essential -- you need to know what you can do alone before you can understand what AI adds. The AI evaluation of your unassisted work gives you an honest measure of your independent thinking capacity.
+## What Happened With James
+
+James pushed back from the screen and read what he'd written. The first ten minutes had been painful. Sentence fragments. Crossed-out ideas. A diagnosis that felt too obvious. But somewhere around minute twenty, something shifted. He'd stopped trying to write a polished document and started thinking on paper.
+
+His diagnosis had three root causes. Two of them felt solid. The third was a guess, and he'd been honest enough to label it as one.
+
+"The gap list surprised me the most," he told Emma when she came back. "I thought I'd have two or three items. I wrote eleven. Things I didn't even realize I didn't know until I tried to build a solution around them."
+
+"That's the real deliverable," Emma said. "Not the solution. The gap list. You now have a precise map of what you need to learn, written by the person who knows your blind spots best."
+
+"Which is me."
+
+"Which is you. Before this exercise, you would have asked AI to identify your gaps for you. How would it know what you don't know?"
+
+James looked at item seven on his gap list: "I have no idea how to estimate adoption rates." He'd never thought about that before. He'd never had to. Every previous exercise had supplied the numbers.
+
+"Okay," he said. "I see why you made me do this first."
+
+## The Lesson Learned
+
+The blank page sprint is not a test of brilliance. It is a baseline measurement. You need to know what your raw thinking produces before you can understand what AI adds. The gap list is the real deliverable: a precise map of what you do not know, written by the only person who can write it honestly. That map becomes the foundation for every collaboration exercise that follows.
 
 ## Flashcards Study Aid
 

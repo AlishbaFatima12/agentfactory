@@ -92,15 +92,57 @@ This capstone chapter calls on everything: you will use **question formulation**
 
 This is the capstone chapter because it is the skill underneath all the others. Every tool will change. Every framework will evolve. Every best practice will eventually become obsolete. The student who learns how to learn is the only one who stays relevant indefinitely. This chapter does not teach a subject. It teaches the process of mastering subjects you have never encountered before.
 
+## Why This Matters: James and the Linear Approach
+
+James had the chapter outline open on his screen. Ten chapters down. One to go. He scrolled through the exercises, read the descriptions, and started highlighting key terms.
+
+Emma watched him for a full minute before speaking. "What are you doing?"
+
+"Reading ahead. Getting a feel for the material before I start." He highlighted another sentence. "That's what I always do. Read the chapter, do the exercises, move on to the next one."
+
+"And how is that working?"
+
+James looked up. "Fine? I'm here, aren't I? I've done every exercise. I passed every AI Check."
+
+"You completed every exercise," Emma corrected. "Completing and learning are different things. What's your strategy for this chapter?"
+
+"My strategy is to do the work. Read the material, do the exercises." He gestured at the screen. "That IS the strategy."
+
+"When you started your last job," Emma said, "did you learn the role by reading every page of the operations manual front to back?"
+
+James almost laughed. "No. Nobody does that. I talked to my predecessor, figured out which three things mattered most, and focused on those until I could do them in my sleep. The manual was a reference, not a curriculum."
+
+"So at work you had a learning strategy. You prioritized. You decided what to skip. You defined what 'good enough' looked like before you started." Emma paused. "Why don't you do that here?"
+
+"Because..." James started, then stopped. He stared at the chapter outline. He'd been treating every lesson the same way: start at the top, work down, move on. No prioritization. No skip decisions. No definition of what "enough" looked like. At his old company, that approach would have gotten him fired. There were always more things to learn than hours in the day. The skill wasn't learning everything. The skill was deciding what to learn first.
+
+"Okay, wait," he said. "So you're saying learning how to learn is itself a skill? Not just... doing the reading?"
+
+"What would happen if you planned your learning the way you planned a new hire's first month?"
+
+James sat back. When he'd onboarded new team members, he never handed them a stack of documents and said "read all of this." He gave them three priorities, a timeline, and a definition of success for each week. He'd been doing that for other people for years. He'd never once done it for himself.
+
+"That's the exercise," Emma said. She picked up her bag. "Design a learning plan for a domain you've never encountered. Before you learn a single thing about it, commit to a strategy: what first, what to skip, what 'enough' means, and how you'll know when you've reached it. Like a prediction lock for your own learning process."
+
+She stopped at the door. "I'll be back in an hour. The plan only has value if it exists before you start studying. Once you've seen the material, you can't predict honestly anymore. You'll just be describing what you already did."
+
+James looked at the blank document. Planning how to learn something before learning it felt backwards. But then, writing a diagnosis before seeing the AI's answer had felt backwards too, back in Chapter 1. And that had been the exercise that changed how he used AI entirely.
+
+He started typing.
+
+---
+
 ## Exercise 1: The Learning Plan
 
 **Layers Used:** Layer 1 (Predict Before You Prompt)
 
+James is staring at a blank document, building a strategy for something he has never studied. So are you.
+
 :::note Building On Previous Exercises
-Your learning plan is a **Prediction Lock**; a prediction about your own learning process, committed before you begin. You will use the same format from [Chapter 1, Exercise 1](../01-asking-better-questions/01-prediction-lock.md).
+Your learning plan is a **Prediction Lock**: a prediction about your own learning process, committed before you begin. You will use the same format from [Chapter 1, Exercise 1](../01-asking-better-questions/01-prediction-lock.md).
 :::
 
-### What You Do
+### Design Your Learning Strategy
 
 You are assigned a domain you have never studied: pharmacology for a developer, supply chain logistics for an accountant, constitutional law for a designer. Before learning anything, write a Learning Plan: how will you approach this? What will you learn first? What resources will you prioritize? How will you know when you know enough? What will you explicitly skip?
 
@@ -108,11 +150,11 @@ You are assigned a domain you have never studied: pharmacology for a developer, 
 If no domain is assigned by an instructor, choose a field you have never studied but find genuinely interesting. Good choices: a discipline far from your own (e.g., if you are in tech, try marine biology or urban planning; if you are in business, try astrophysics or linguistics). The less you know, the better this exercise works.
 :::
 
----
-
 :::info Your Deliverable
 A Learning Plan (300-400 words) containing: the domain assigned, your current knowledge level (be honest), your learning strategy (what first, what next, what skip), the resources you will use (and why these over others), your definition of "enough" (what competence looks like for this exercise), a time allocation plan for your 72 hours, and your predicted biggest challenge.
 :::
+
+### Check Your Thinking
 
 <AICheck id="learning-plan" xp={50}>
 
@@ -148,8 +190,6 @@ For each score, give a one-sentence justification.
 
 <ConversationGallery />
 
----
-
 <details>
 <summary>Deliverable Template (click to expand)</summary>
 
@@ -173,9 +213,27 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn that learning itself requires a strategy. Most people dive in randomly. By planning first and checking that plan with AI, you develop the meta-skill of designing your own learning process; which will be essential every time you encounter new technology, new frameworks, or new domains in the rest of this book.
+James scrolled through the AI's feedback on his plan. He'd front-loaded two days of broad reading before touching anything specific. The AI had flagged that immediately: "Your Phase 1 allocates 16 hours to general background reading. For a 72-hour sprint, this is excessive. Practitioners recommend spending no more than 10-15% of available time on orientation before engaging with concrete problems."
+
+"I would have spent a third of my time just reading background material," he said when Emma returned. "The AI caught it in ten seconds."
+
+"What else?"
+
+"My skip list was wrong. I said I'd skip the advanced applications, but the AI pointed out that some of the advanced applications are actually easier to understand than the theory behind them. I was skipping based on difficulty labels, not based on what would actually help me learn."
+
+Emma nodded. "Now look at your prediction about where you'd struggle."
+
+James read it again. He'd predicted the terminology would be the hardest part. The AI disagreed: "Terminology is searchable. Your bigger challenge will be understanding how concepts in this domain connect to each other. You have strong operational thinking but limited experience with systems where cause and effect are non-linear."
+
+"It knew that about me from one learning plan?"
+
+"You told it that. You just didn't realize you were telling it." Emma tapped the screen. "Your plan revealed your learning instincts. The AI didn't read your mind. It read your strategy, and your strategy told it everything about how you think."
+
+## The Lesson Learned
+
+A learning plan is a prediction lock for your own process. It forces you to commit a strategy before the material reshapes your thinking. The gap between what you planned and what AI recommends reveals your learning instincts: where you over-invest, what you skip for the wrong reasons, and what "enough" actually looks like when someone who knows the domain evaluates your definition.
 
 ## Flashcards Study Aid
 

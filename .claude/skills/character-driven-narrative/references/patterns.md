@@ -6,7 +6,7 @@ Every pattern here exists to solve a specific problem in educational narrative. 
 
 ## Pattern 1: Pushback Exchange
 
-**Problem it fixes:** James accepts everything instantly. He nods, opens his editor, and the reader learns nothing about *why* the technique matters.
+**Problem it fixes:** James accepts everything instantly. He nods, opens his editor, and the reader learns nothing about _why_ the technique matters.
 
 **The template:**
 
@@ -49,13 +49,13 @@ written in code instead of English?"
 
 ### Density adaptation
 
-| Part | How the pushback changes |
-|------|------------------------|
-| 0 (80%) | Full exchanges — James pushes back multiple times per lesson. He proposes business alternatives. |
-| 1 (65%) | Moderate — James has learned to try things first, but still questions the *why*. |
-| 2 (45%) | Compressed — pushback happens in opening/closing narrative only. |
-| 3 (25%) | Brief — one-line challenges in scenario framing. "Why not just use a spreadsheet?" |
-| 4+ (15%) | Minimal — one pushback in the opening bookend. Quick resolution. |
+| Part       | How the pushback changes                                                                          |
+| ---------- | ------------------------------------------------------------------------------------------------- |
+| 0 (30-35%) | Pushback in lesson openings only. James resists the exercise rationale before the reader does it. |
+| 1 (65%)    | Moderate — James has learned to try things first, but still questions the _why_.                  |
+| 2 (45%)    | Compressed — pushback happens in opening/closing narrative only.                                  |
+| 3 (25%)    | Brief — one-line challenges in scenario framing. "Why not just use a spreadsheet?"                |
+| 4+ (15%)   | Minimal — one pushback in the opening bookend. Quick resolution.                                  |
 
 ### Writing tips
 
@@ -123,13 +123,13 @@ you advice on that."
 
 ### Density adaptation
 
-| Part | Fallibility style |
-|------|------------------|
-| 0 (80%) | Type A dominant. Emma shares war stories to build trust. |
-| 1 (65%) | Mix A and B. Emma starts showing uncertainty alongside experience. |
-| 2 (45%) | Type C appears. James's growing knowledge surprises her. |
-| 3 (25%) | Type D dominant. Emma acknowledges domain limits as topics diversify. |
-| 4+ (15%) | Type C dominant. James produces insights Emma validates. Peer dynamic. |
+| Part       | Fallibility style                                                        |
+| ---------- | ------------------------------------------------------------------------ |
+| 0 (30-35%) | Type A dominant. Emma shares one thinking war story per chapter closing. |
+| 1 (65%)    | Mix A and B. Emma starts showing uncertainty alongside experience.       |
+| 2 (45%)    | Type C appears. James's growing knowledge surprises her.                 |
+| 3 (25%)    | Type D dominant. Emma acknowledges domain limits as topics diversify.    |
+| 4+ (15%)   | Type C dominant. James produces insights Emma validates. Peer dynamic.   |
 
 ---
 
@@ -182,21 +182,21 @@ When Emma needs to convey a lot of information, use one of these interruption pa
 
 **James's markers (use at least 1-2 per dialogue section):**
 
-| Marker | Example |
-|--------|---------|
-| Business analogy | "That's like my old company making us fill out three forms before we could book a meeting room." |
-| Thinking out loud | "Wait, so basically..." / "Okay, let me make sure I have this..." / "Hang on. If that's true, then..." |
-| Pragmatist question | "How long will this take?" / "What's the minimum viable version?" / "Can I skip this?" |
-| 80% right paraphrase | "So the test is basically my specification written in code?" (close — slightly imprecise) |
+| Marker               | Example                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------ |
+| Business analogy     | "That's like my old company making us fill out three forms before we could book a meeting room."       |
+| Thinking out loud    | "Wait, so basically..." / "Okay, let me make sure I have this..." / "Hang on. If that's true, then..." |
+| Pragmatist question  | "How long will this take?" / "What's the minimum viable version?" / "Can I skip this?"                 |
+| 80% right paraphrase | "So the test is basically my specification written in code?" (close — slightly imprecise)              |
 
 **Emma's markers (use at least 1-2 per dialogue section):**
 
-| Marker | Example |
-|--------|---------|
-| Short, precise sentences | "Run your linter. Tell me what you find." / "Close. But not quite." |
-| Socratic question | "What does that line do?" / "What happens when you delete customer 7?" / "If that's true, what follows?" |
-| Visual/spatial metaphor | "Picture five boxes connected by arrows." / "The pipeline is a funnel." |
-| Dry observation | "If the memory is `wip`, you have amnesia." / "That's one way to do it." (after failure) |
+| Marker                   | Example                                                                                                  |
+| ------------------------ | -------------------------------------------------------------------------------------------------------- |
+| Short, precise sentences | "Run your linter. Tell me what you find." / "Close. But not quite."                                      |
+| Socratic question        | "What does that line do?" / "What happens when you delete customer 7?" / "If that's true, what follows?" |
+| Visual/spatial metaphor  | "Picture five boxes connected by arrows." / "The pipeline is a funnel."                                  |
+| Dry observation          | "If the memory is `wip`, you have amnesia." / "That's one way to do it." (after failure)                 |
 
 ### The dialogue tag test
 
@@ -207,6 +207,7 @@ After writing any dialogue, apply this test:
 3. Can you identify who is speaking from voice alone?
 
 If you cannot, fix by:
+
 - Adding a business analogy to James's line
 - Shortening Emma's line
 - Adding a "Wait, so..." fragment to James
@@ -239,7 +240,7 @@ Emma almost smiled. "Was the meeting room ever double-booked?"
 
 **Problem it fixes:** Emma hovers over every section, resolving every confusion before James can struggle. The reader watches instead of thinking.
 
-**Named after Jonah in Goldratt's *The Goal* — the mentor who appears, asks one devastating question, and disappears.**
+**Named after Jonah in Goldratt's _The Goal_ — the mentor who appears, asks one devastating question, and disappears.**
 
 **The rhythm:**
 
@@ -286,13 +287,13 @@ What's the difference?"
 
 ### Density adaptation
 
-| Part | How the rhythm works |
-|------|---------------------|
-| 0 (80%) | Full cycle within lessons. Emma leaves multiple times. James struggles visibly. |
-| 1 (65%) | One full cycle per lesson. Emma sets up the chapter exercise and steps back. |
-| 2 (45%) | One cycle in the opening narrative. James works independently in the middle. |
-| 3 (25%) | Compressed. Emma poses a question in the opener and isn't present for the middle. |
-| 4+ (15%) | Bookend only. Emma catalyzes in the opening, returns in the closing to validate. |
+| Part       | How the rhythm works                                                                  |
+| ---------- | ------------------------------------------------------------------------------------- |
+| 0 (30-35%) | One cycle per chapter. Emma catalyzes the first exercise and exits. Reader struggles. |
+| 1 (65%)    | One full cycle per lesson. Emma sets up the chapter exercise and steps back.          |
+| 2 (45%)    | One cycle in the opening narrative. James works independently in the middle.          |
+| 3 (25%)    | Compressed. Emma poses a question in the opener and isn't present for the middle.     |
+| 4+ (15%)   | Bookend only. Emma catalyzes in the opening, returns in the closing to validate.      |
 
 ### Writing the exit
 
@@ -368,18 +369,19 @@ Exchange 4: James tries X. It works better. He acknowledges it --
 
 **The reader's emotional arc mirrors James's arc:**
 
-| Chapters | Reader State | James State | Beat Type |
-|----------|-------------|-------------|-----------|
-| 1-5 | Excitement, curiosity | "There's a lot here. Where do I start?" | Wonder, possibility |
-| 6-15 | Growing confidence | "I actually predicted that one right." | Progress callbacks, small wins |
-| 16-20 | Valley of despair | "Why does everything break when I add one line?" | Shared frustration, mentor vulnerability |
-| 21-30 | Grit, determination | "I'm going to figure this out even if it takes all night." | Persistence, earned breakthroughs |
-| 31-40 | Competence, pride | "I caught that bug before pyright did." | Mastery moments, role reversal |
-| 41-50 | Autonomy, identity shift | "I just reviewed a PR and caught three issues. Who am I?" | Identity transformation, peer recognition |
+| Chapters | Reader State             | James State                                                | Beat Type                                 |
+| -------- | ------------------------ | ---------------------------------------------------------- | ----------------------------------------- |
+| 1-5      | Excitement, curiosity    | "There's a lot here. Where do I start?"                    | Wonder, possibility                       |
+| 6-15     | Growing confidence       | "I actually predicted that one right."                     | Progress callbacks, small wins            |
+| 16-20    | Valley of despair        | "Why does everything break when I add one line?"           | Shared frustration, mentor vulnerability  |
+| 21-30    | Grit, determination      | "I'm going to figure this out even if it takes all night." | Persistence, earned breakthroughs         |
+| 31-40    | Competence, pride        | "I caught that bug before pyright did."                    | Mastery moments, role reversal            |
+| 41-50    | Autonomy, identity shift | "I just reviewed a PR and caught three issues. Who am I?"  | Identity transformation, peer recognition |
 
 ### Example beats by position
 
 **Early chapters (excitement):**
+
 ```markdown
 James stared at the terminal output. His function worked. Not because
 he'd memorized something or followed a tutorial step by step — because
@@ -392,6 +394,7 @@ code. His code.
 ```
 
 **Midpoint (valley of despair):**
+
 ```markdown
 "I shipped a bug like this to production once," Emma said quietly.
 "Cost the team two days. That's when I started writing tests first --
@@ -402,6 +405,7 @@ somehow, knowing that she'd been here too.
 ```
 
 **Late chapters (identity shift):**
+
 ```markdown
 James caught himself reviewing a colleague's pull request -- checking
 types, scanning test coverage, questioning the commit messages. He
@@ -441,12 +445,12 @@ Emma's fallibility moment (Pattern 2) placed at a dropout point (Pattern 7) crea
 
 ## Quick Reference: Minimum Pattern Coverage Per Chapter
 
-| Pattern | Minimum per Chapter | Notes |
-|---------|-------------------|-------|
-| 1. Pushback | 1-2 per lesson | More in early parts, compressed in later parts |
-| 2. Fallibility | 1 per chapter | Rotate types A/B/C/D across chapters |
-| 3. Monologue break | Every dialogue section | Emma never speaks 5+ sentences uninterrupted |
-| 4. Voice markers | Every dialogue section | At least 1 James marker + 1 Emma marker per section |
-| 5. Jonah Rhythm | 1 per chapter | Full cycle in early parts, bookend-only in later parts |
-| 6. Multi-exchange | 1 per chapter | 3+ exchanges before resolution |
-| 7. Emotional beat | When at dropout point | Match beat type to reader's emotional arc position |
+| Pattern            | Minimum per Chapter    | Notes                                                  |
+| ------------------ | ---------------------- | ------------------------------------------------------ |
+| 1. Pushback        | 1-2 per lesson         | More in early parts, compressed in later parts         |
+| 2. Fallibility     | 1 per chapter          | Rotate types A/B/C/D across chapters                   |
+| 3. Monologue break | Every dialogue section | Emma never speaks 5+ sentences uninterrupted           |
+| 4. Voice markers   | Every dialogue section | At least 1 James marker + 1 Emma marker per section    |
+| 5. Jonah Rhythm    | 1 per chapter          | Full cycle in early parts, bookend-only in later parts |
+| 6. Multi-exchange  | 1 per chapter          | 3+ exchanges before resolution                         |
+| 7. Emotional beat  | When at dropout point  | Match beat type to reader's emotional arc position     |

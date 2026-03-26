@@ -79,17 +79,45 @@ teaching_guide:
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# The Variable Shift
+## Why This Matters: James and the Single Sentence
+
+James had just finished color-coding his merged map when Emma handed him a single sentence on a piece of paper.
+
+He read it. Read it again. "Wait. This changes everything."
+
+"Does it?"
+
+"The bank is in a country where 60% of customers are unbanked and rely on personal relationships with loan officers. That's not the same scenario anymore. Half my connections don't apply."
+
+"Which half?"
+
+James scanned his map. "Well... the competitor response analysis assumed competitors could replicate the AI model. But if the market runs on personal trust, competitors don't need AI. They just need to keep their human loan officers and absorb the bank's fleeing customers."
+
+"Good. What else changes?"
+
+"The feedback loop about cost savings. I had: cut loan officers, save money, reinvest in technology. But if the customers leave because they only banked there because of their loan officer, the savings don't matter. There's no revenue to reinvest." James traced the arrows with his finger. "Hang on. The whole regulatory branch changes too. If 60% of customers are unbanked, regulators care about financial inclusion, not efficiency metrics."
+
+Emma nodded. "So is the map salvageable, or do you start over?"
+
+James studied it. "Some connections still hold. The internal knowledge loss is actually worse now, because those loan officers understood a market that AI was never trained on. But at least half the map needs to be redrawn." He paused. "It's like when my old company expanded into a new region. We copied our standard playbook and it failed in three months. The playbook assumed customers comparison-shopped online. In that market, they bought from people they knew personally. Same product, completely different system."
+
+"That's exactly the difference between a map you understand and a map you copied. If you built it from mechanisms, you can trace which mechanisms still apply and which ones broke. If you copied it from AI, you have to throw it away and start over, because you never knew why the connections were there in the first place."
+
+---
+
+## Exercise 3: The Variable Shift
 
 **Layers Used:** Layer 4 (Contradiction Challenge), Layer 6 (Iterative Drafts)
+
+James is staring at a map where half the arrows just stopped being true. So are you.
 
 :::note Building On Previous Chapters
 You will use the same skill from [Chapter 2's Contradiction Test](../02-detecting-broken-reasoning/02-contradiction-test.md) (handling changing information) applied to systems rather than arguments.
 :::
 
-### What You Do
+### Revise Your Cascade Map
 
-The instructor changes one variable in your scenario. You must revise your merged cascade map into Draft 3. You cannot start from scratch; you must show which connections changed, which new ones appeared, and which old ones became irrelevant. Then ask AI to re-analyze with the new variable and compare its adaptation to yours.
+The instructor changes one variable in your scenario. You must revise your merged cascade map into Draft 3. You cannot start from scratch. You must show which connections changed, which new ones appeared, and which old ones became irrelevant. Then ask AI to re-analyze with the new variable and compare its adaptation to yours.
 
 #### Your Variable Shift
 
@@ -189,11 +217,25 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
----
+## What Happened With James
 
-### What This Teaches You
+James held his change log next to AI's revised analysis. The contrast was instructive. He'd modified twelve connections and added four new ones, each with a paragraph explaining why the variable shift caused that specific change. AI had regenerated the entire map from scratch, producing a clean new analysis that looked polished but had no memory of the original. It couldn't show what changed because it hadn't revised anything. It had just written a new answer.
 
-You learn the difference between static analysis and dynamic systems thinking. A student who derived their original map from principles can adapt when conditions change because they understand WHY each connection exists. A student who copied AI's output has to start over because they never understood the mechanisms. The variable shift makes this difference undeniable.
+"AI is faster," James admitted. "Its revised map covers more ground than mine. But it doesn't know what broke. It doesn't know which connections survived and why. It just produced a new picture."
+
+"What's the cost of that?"
+
+James considered it. "If you don't know which parts of your analysis are fragile and which parts are robust, you can't predict what will break next time conditions change. You're just reacting. You're not learning anything about the structure of the system."
+
+"And your change log?"
+
+"My change log is slower, messier, and it tells me exactly where my thinking was right, where it was wrong, and why." He looked at both documents side by side. "It's the difference between replacing a tire and understanding why the tire keeps going flat."
+
+Emma almost smiled. "Now you're thinking in systems."
+
+## The Lesson Learned
+
+A system you built from mechanisms is a system you can revise. A system you copied is a system you have to throw away the moment conditions change. The variable shift separates these two kinds of understanding. If your change log explains why each connection broke or held, you learned the structure. If you had to start over, you only learned the surface.
 
 ## Flashcards Study Aid
 

@@ -89,13 +89,47 @@ The **Error Taxonomy** from Chapter 2 helps you catch flawed assumptions. The **
 
 Most advice (from humans and AI alike) is reasoning by analogy: "this worked for Company X, so it will work for you." First principles reasoning strips a problem to its base truths and rebuilds from there. This is the skill that produces original solutions. This chapter trains you to stop asking "what's the best practice?" and start asking "what are the actual constraints, and what do they make possible?"
 
+## Why This Matters: James and the Unexamined Best Practice
+
+James scanned the exercise prompt and set it down. "Argue against a best practice? Why would I do that? If MVPs are the standard approach for startups, there's a reason. Thousands of companies validated this. I'd rather learn the best practice properly than waste time arguing against it."
+
+"What makes it the best practice?" Emma asked.
+
+"Because it works. Lean Startup, Y Combinator, every accelerator on the planet teaches it. Build small, test fast, iterate."
+
+"That's a list of people who recommend it. I asked what makes it work."
+
+James paused. "Well, it reduces risk. You don't invest in something the market doesn't want."
+
+"Good. That's a principle. Now: are there situations where that principle breaks down? Where building small actually increases risk?"
+
+"I don't think so. The whole point is that small means less risk."
+
+"Picture a pharmaceutical company. They have a drug that treats a rare disease. Do they ship a minimum viable version of the drug to see if patients like it?"
+
+James opened his mouth, then closed it. He thought about it. Regulated industries. High-trust markets. Products where "minimum" meant "dangerous." "Okay, I can see that. But that's just one edge case."
+
+"Is it? Or is it a category?" Emma leaned forward. "Your job isn't to prove the best practice wrong everywhere. It's to find the boundary conditions. The places where the reasoning underneath it stops applying. That's first principles thinking: not accepting the conclusion because everyone else did, but tracing the logic and finding where it cracks."
+
+James looked at the exercise prompt again. He'd been ready to skip it entirely. Now he could feel the edges of an argument forming. High-stakes markets. Reputation costs. Contexts where "iterate" meant "damage trust permanently."
+
+"In my old job," he said, "we had a procurement process that everyone followed because it was 'industry standard.' Three rounds of vendor evaluation, reference checks, the whole thing. Nobody questioned it. Then we lost a contract because the process took fourteen weeks and the client went with a competitor who moved in three. The standard existed for a reason, but nobody asked whether the reason still applied."
+
+"That's the muscle this exercise trains. Not rebellion. Precision."
+
+Emma stood up. "Write a 500-word argument against the best practice you choose. No AI. No references. Just you and the constraints. Find at least three conditions where it fails, and make sure each one comes from a principle, not just an anecdote. I'll read it when you're done."
+
+She picked up her coffee and left.
+
+James stared at the blank page. Arguing against something he believed was true felt unnatural. But Emma's pharmaceutical example had cracked something open. The question wasn't whether MVPs worked. The question was: under what conditions does the logic behind them break? That was a different question entirely. He started typing.
+
+---
+
 ## Exercise 1: Defend the Opposite (No AI)
 
 **Layers Used:** Layer 1 (Predict Before You Prompt)
 
-### What You Do
-
-You receive a widely accepted best practice. Without AI access, write a 500-word argument for why this advice is wrong; identifying the specific conditions under which it fails. This is written entirely by you with no tools. Only after submitting your argument do you use AI.
+James is staring at a blank page, building an argument from nothing but constraints. So are you.
 
 ### Choose Your Scenario
 
@@ -116,13 +150,15 @@ You receive a widely accepted best practice. Without AI access, write a 500-word
 
 Choose the best practice closest to your field and argue against it.
 
----
+### Build Your Contrarian Argument (No AI)
+
+Write a 500-word argument for why this advice is wrong, identifying the specific conditions under which it fails. This is written entirely by you with no tools. Only after submitting your argument do you use AI.
 
 :::info Your Deliverable
 A 500-word contrarian argument (written without AI) identifying at least 3 specific conditions under which the best practice fails, with reasoning for each. A clear statement of the first principles you used to derive these conditions (e.g., "In markets where trust is the primary barrier, an unfinished product destroys credibility permanently").
 :::
 
----
+### Check Your Thinking
 
 <AICheck id="blank-page-derivation" xp={50}>
 
@@ -169,9 +205,19 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn the difference between reasoning from principles and reasoning from examples. AI feedback reveals whether your contrarian argument was genuinely derived from constraints or was just a collection of counter-examples; and teaches you why the distinction matters.
+James read through AI's evaluation of his argument. Two of his three failure conditions scored high for logical rigor. The third, the one about customer backlash, got flagged: "This is reasoning from a remembered example, not from a principle. You're describing what happened at a specific company, not deriving a general condition."
+
+He'd been so sure that one was his strongest point. It was concrete, vivid, real. But the AI was right. He'd told a story, not traced a logical chain. The two conditions he'd derived from constraints, the ones about regulatory environments and trust-dependent markets, held up under scrutiny because they followed from something structural, not something anecdotal.
+
+"The good ones felt harder to write," he told Emma afterward. "The example-based one came fast. The principle-based ones took twenty minutes each."
+
+"Principles always take longer. That's how you know they're load-bearing."
+
+## The Lesson Learned
+
+The speed of your reasoning is a signal. Arguments that come easily are often borrowed from memory. Arguments that require slow, deliberate construction tend to be derived from actual constraints. Over time, recognizing the difference between "I remember this" and "I derived this" becomes the foundation of independent thinking.
 
 ## Flashcards Study Aid
 

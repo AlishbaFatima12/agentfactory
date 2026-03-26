@@ -95,7 +95,57 @@ import TabItem from "@theme/TabItem";
 
 > _AI quality is downstream of question quality. The student who asks better questions gets better answers from every tool, every person, and every system for the rest of their career._
 
-Most students type the first thing that comes to mind into an AI tool and accept whatever comes back. This chapter trains you to treat question formulation as a disciplined practice. A vague question produces a vague answer. A precise, layered question produces insight. This is not about prompt engineering; it is about thinking clearly enough to know what you actually need to know.
+A vague question produces a vague answer. A precise, layered question produces insight. This chapter trains you to treat question formulation as a discipline: thinking clearly enough to know what you actually need to know.
+
+## Why This Matters: James and the Inherited Diagnosis
+
+James pulled the scenario brief across the table, scanned it for three seconds, and reached for his laptop. "I'll have Claude break this down. Five minutes, tops."
+
+Emma closed the laptop lid. Not hard. Just enough.
+
+"Hey, I was about to --"
+
+"What do you think happened?"
+
+James leaned back. "That's what the AI is for. It has access to more patterns, more case studies, more data than I ever will. Why would I sit here guessing when the tool can analyze it in seconds? At my old company, we'd pull up the supplier dashboard and let the numbers talk. Nobody sat around writing down what they thought the numbers would say before looking at them."
+
+"When Claude gives you an answer," Emma said, "how will you know if it's right?"
+
+"I'll evaluate it. Read it critically. Check whether it makes sense."
+
+"Against what?"
+
+James opened his mouth, then stopped.
+
+"You haven't formed a position yet," Emma said. "You have nothing to compare it to. You're not evaluating; you're just agreeing with the first convincing voice in the room."
+
+"Okay, counterpoint." James held up a finger. "What if I ask Claude first, read the response, and then form my own view? Best of both worlds. I get the data, and I still think for myself."
+
+"Try it. Right now. Open Claude and ask what caused the sales drop."
+
+James opened the laptop, typed the prompt, and read the response. Targeting mismatch. Diminishing ad returns. Seasonal correction. It was clean, specific, and plausible.
+
+Emma waited until he finished reading. "Do you agree with that analysis?"
+
+"Yeah, actually. It makes sense. The targeting angle especially."
+
+"You just adopted a stranger's diagnosis without examining the patient." Emma let the sentence sit. "You read it, it sounded reasonable, and now it's yours. That's not evaluation. That's inheritance."
+
+James stared at the screen. The analysis did sound reasonable. That was the problem. He couldn't tell whether it sounded reasonable because it was right or because it was well-written.
+
+"Alright," he said slowly. "So what do you want me to do?"
+
+"Write your own diagnosis first. Before you see anyone else's thinking. Then we compare."
+
+"That feels slower."
+
+"It is slower. That's not the same as less efficient."
+
+Emma stood and picked up her coffee. "Write down three things: your diagnosis, your ten best questions about this scenario, and your predicted answer to each question. Seal it. Timestamp it. Do not open Claude until all of that is on paper."
+
+She paused at the door. "The prediction lock only has value if it exists before you see the AI's response. Once you've seen the answer, you can't un-see it."
+
+She left. James looked at the blank document on his screen. His fingers hovered over the keyboard. Writing a diagnosis without data felt like guessing. But that, he was starting to realize, might be the point.
 
 ---
 
@@ -103,15 +153,7 @@ Most students type the first thing that comes to mind into an AI tool and accept
 
 **Layers Used:** Layer 1 (Predict Before You Prompt), Layer 2 (Reasoning Receipt)
 
-### What You Do
-
-You receive a scenario describing an unexpected outcome. Before touching any AI tool, write down in a sealed document:
-
-1. **(a)** Your initial diagnosis of what went wrong
-2. **(b)** The 10 most important questions you would ask to understand this problem, ranked by diagnostic power
-3. **(c)** Your predicted answer to each question
-
-Timestamp and submit this prediction lock. Only then open claude.ai or chatgpt.com. Feed your top 5 questions to both tools. Document every response, noting whether you accept, reject, or modify each AI answer.
+James is facing a blank page right now. So are you.
 
 ### Choose Your Scenario
 
@@ -132,13 +174,25 @@ Timestamp and submit this prediction lock. Only then open claude.ai or chatgpt.c
   </TabItem>
 </Tabs>
 
-Choose one. The exercises work identically regardless of which you pick.
+### Build Your Prediction Lock (before touching AI)
 
----
+Write down in a sealed document:
+
+1. **(a)** Your initial diagnosis of what went wrong (2-3 sentences)
+2. **(b)** The 10 most important questions you would ask to understand this problem, ranked by diagnostic power (which question, if answered, would eliminate the most hypotheses?)
+3. **(c)** Your predicted answer to each question
+
+Timestamp and seal it. The prediction lock has no value if it comes after the AI's response.
+
+### Now Open AI and Compare
+
+Feed your top 5 questions to two different AI tools. For each response, document whether you **accept**, **reject**, or **modify** the answer, with a one-sentence justification. This is your **reasoning receipt**.
 
 :::info Your Deliverable
-A sealed prediction document (timestamped before AI use) containing your diagnosis, 10 ranked questions with predicted answers, followed by a reasoning receipt showing all 5 prompts sent to both Claude and ChatGPT, the responses received, and your accept/reject/modify decision for each with a one-sentence justification.
+A sealed prediction document (timestamped before AI use) containing your diagnosis, 10 ranked questions with predicted answers, followed by a reasoning receipt showing your prompts, the AI responses, and your accept/reject/modify decision for each with a one-sentence justification.
 :::
+
+### Check Your Thinking
 
 <AICheck id="prediction-lock" xp={50}>
 
@@ -180,8 +234,6 @@ For each score, give a one-sentence justification.
 
 <ConversationGallery />
 
----
-
 <details>
 <summary>Deliverable Template (click to expand)</summary>
 
@@ -203,26 +255,42 @@ For each score, give a one-sentence justification.
   - Q10: \_\_\_ | Predicted answer: \_\_\_
 - **Section C - REASONING RECEIPT:**
 
-| Prompt # | Prompt Sent | Tool    | Response Summary | Decision             | Justification |
+| Prompt # | Prompt Sent | AI Tool | Response Summary | Decision             | Justification |
 | -------- | ----------- | ------- | ---------------- | -------------------- | ------------- |
-| 1        |             | Claude  |                  | Accept/Reject/Modify |               |
-| 2        |             | ChatGPT |                  | Accept/Reject/Modify |               |
-| 3        |             | Claude  |                  | Accept/Reject/Modify |               |
-| 4        |             | ChatGPT |                  | Accept/Reject/Modify |               |
-| 5        |             | Claude  |                  | Accept/Reject/Modify |               |
-| 6        |             | ChatGPT |                  | Accept/Reject/Modify |               |
-| 7        |             | Claude  |                  | Accept/Reject/Modify |               |
-| 8        |             | ChatGPT |                  | Accept/Reject/Modify |               |
-| 9        |             | Claude  |                  | Accept/Reject/Modify |               |
-| 10       |             | ChatGPT |                  | Accept/Reject/Modify |               |
+| 1        |             | Tool 1  |                  | Accept/Reject/Modify |               |
+| 2        |             | Tool 2  |                  | Accept/Reject/Modify |               |
+| 3        |             | Tool 1  |                  | Accept/Reject/Modify |               |
+| 4        |             | Tool 2  |                  | Accept/Reject/Modify |               |
+| 5        |             | Tool 1  |                  | Accept/Reject/Modify |               |
+| 6        |             | Tool 2  |                  | Accept/Reject/Modify |               |
+| 7        |             | Tool 1  |                  | Accept/Reject/Modify |               |
+| 8        |             | Tool 2  |                  | Accept/Reject/Modify |               |
+| 9        |             | Tool 1  |                  | Accept/Reject/Modify |               |
+| 10       |             | Tool 2  |                  | Accept/Reject/Modify |               |
 
 </details>
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn that the quality of your questions determines the quality of every answer you will ever get; from AI, from colleagues, from data. By predicting first and then comparing, you see exactly where your thinking was strong and where it was lazy. The AI grading reveals blind spots in your questioning that you cannot see yourself. Over time, you internalize what makes a question diagnostic rather than decorative.
+James sat with his prediction lock on the left side of the screen and Claude's analysis on the right. His diagnosis had nailed the targeting problem. He'd even predicted the seasonal component. But the demographic shift in the customer base, the thing Claude flagged as the second-largest factor, hadn't crossed his mind at all.
+
+"I was so sure I'd covered the main angles," he said when Emma returned.
+
+"You did cover the main angles. Two out of three." Emma sat down. "That's not bad. What matters is that now you can see exactly which part of the problem your instincts missed. You didn't need AI to tell you targeting was off. You needed AI to show you where your own radar has blind spots."
+
+James looked at the gap in his prediction. The demographic data had been in the scenario brief the whole time. He'd read right past it.
+
+"So the prediction lock isn't about getting the right answer before AI."
+
+"No. It's about finding out what you don't notice."
+
+---
+
+## The Lesson Learned
+
+The deliverable isn't the prediction. It's the self-knowledge. The gap between what you diagnosed and what AI found is where your blind spots live. By predicting first and comparing second, you see exactly where your thinking was strong and where it was lazy. Over time, you internalize what makes a question diagnostic rather than decorative.
 
 ## Flashcards Study Aid
 

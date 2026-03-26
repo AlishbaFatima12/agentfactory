@@ -76,17 +76,47 @@ teaching_guide:
     - "Ask students: Were you surprised by anything AI found that you missed? What does that tell you about your own thinking patterns?"
 ---
 
-# Exercise 2: AI vs. Human Systems Analysis
+## Why This Matters: James and the Five-Domain Ceiling
+
+James was proud of his cascade map. Four feedback loops, connections spanning all five domains, mechanisms explained for every arrow. "This is solid," he said. "I don't think AI is going to find much I missed."
+
+Emma set her coffee down. "How many domains did you cover?"
+
+"Five. Employees, customers, competitors, regulators, internal knowledge. Just like you said."
+
+"And within each domain, how deep did you go?"
+
+"Three levels in most of them. First-order, second-order, third-order."
+
+"What about supply chain partners? What about the media narrative? What about the talent pipeline for the next generation of loan officers who will never be trained?"
+
+James opened his mouth, closed it. "Those are... I mean, those aren't in the five domains."
+
+"Your five domains are a starting framework, not a boundary." Emma's voice was matter-of-fact. "You went deep in your chosen categories. AI tends to go wide. It will list fifteen domains where you listed five. Most of its entries will be shallow. Some will be categories you never considered."
+
+"So my map is wrong?"
+
+"Your map is incomplete. So is AI's. Different blind spots. That's why you're about to compare them."
+
+James thought about his old operations team. "We had something like this at my last company. My team would audit supplier contracts looking for cost overruns. Finance would audit the same contracts looking for liability exposure. We'd find completely different problems in the same documents. Neither team was wrong. We were just holding different flashlights."
+
+"Now you're going to hold three flashlights at once. Yours, Claude's, and ChatGPT's. The exercise isn't about who found more. It's about what each source found that the others missed."
+
+---
+
+## Exercise 2: Human vs. AI Systems Analysis
 
 **Layers Used:** Layer 2 (Reasoning Receipt), Layer 5 (Divergence Test)
+
+James is about to hold three flashlights at the same problem. So are you.
 
 :::note Building On Previous Chapters
 You will use the **Error Taxonomy** from [Chapter 2, Exercise 1](../02-detecting-broken-reasoning/01-error-prediction.md) to annotate errors in AI's systems analysis, not just factual claims.
 :::
 
-### What You Do
+### Compare Three Flashlights
 
-Now prompt both Claude and ChatGPT with the same scenario and ask each for a comprehensive analysis of all consequences. Compare both AI outputs against your own cascade map. Typically, AI produces a broader but shallower analysis; more categories, fewer connections between them. Create a merged map (Draft 2) that combines the best of human and AI analysis with clear attribution for each insight.
+Prompt two different AI tools with the same scenario and ask each for a comprehensive analysis of all consequences. Compare both AI outputs against your own cascade map. Typically, AI produces a broader but shallower analysis: more categories, fewer connections between them. Create a merged map (Draft 2) that combines the best of human and AI analysis with clear attribution for each insight.
 
 ---
 
@@ -162,11 +192,21 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
----
+## What Happened With James
 
-### What This Teaches You
+James looked at his attribution table. The pattern was stark. His "Human only" column was dense with feedback loops and cultural consequences: the community trust erosion, the institutional knowledge loss that compounds over years, the political backlash cycle. The AI columns were wide: regulatory precedent in six jurisdictions he hadn't considered, insurance liability restructuring, vendor ecosystem shifts. One tool had flagged labor union response dynamics that neither he nor the other AI had mentioned.
 
-You learn exactly where human systems thinking adds value that AI misses (usually in feedback loops and cultural/political dynamics) and where AI adds value humans miss (usually in breadth of categories). The attribution exercise forces intellectual honesty; you cannot claim AI's insights as your own when the source is documented.
+The Synthesis column was the smallest, but the entries in it felt like the most important ones. Connections that only appeared when he held two flashlights at the same angle. The regulatory precedent AI found, combined with the community trust dynamic he'd mapped, produced a third insight neither source contained: regulators in high-trust communities would face political pressure to intervene faster than regulators in transactional banking markets.
+
+"I thought I'd be measuring who was smarter," James said. "Me or the AI. But that's not what happened. It's more like... the interesting stuff lives in the gaps between what each of us sees."
+
+"Which source had the most valuable additions to your original map?"
+
+"Honestly? The synthesis ones. The things I only saw because I was comparing two perspectives that approached the same problem differently." He paused. "That's the operations audit thing again. Different flashlights, same contract."
+
+## The Lesson Learned
+
+Human analysis tends to go deep: feedback loops, cultural dynamics, political consequences. AI analysis tends to go wide: more categories, broader coverage, standard effects across jurisdictions. Neither source alone produces the most important insights. Those live in the synthesis column, where two different perspectives on the same system reveal connections that no single viewpoint contains.
 
 ## Flashcards Study Aid
 

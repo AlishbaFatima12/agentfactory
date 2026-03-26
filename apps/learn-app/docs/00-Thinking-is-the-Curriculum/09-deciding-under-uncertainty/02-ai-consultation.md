@@ -82,6 +82,30 @@ teaching_guide:
     - "Ask students: Did your confidence go up or down after AI consultation? Should it have?"
 ---
 
+## Why This Matters: James and the Confident Fabrication
+
+James opened Claude and started typing. "Finally. Now I can get the information I was missing."
+
+"What are you going to ask it?"
+
+"Everything I didn't have. Competitor pricing benchmarks, customer retention patterns for this kind of market shift, whether the 20% enrollment drop is typical for programs facing new competition." He paused. "The scenario is fictional, though. So Claude won't have real data on it."
+
+"Keep going with that thought."
+
+James frowned. "Wait. If the scenario is made up, then Claude doesn't actually know the answer. But it's going to respond like it does." He thought about it. "That's like when my old company hired a consultant who'd never been in our industry. The consultant produced a beautiful 40-page report full of confident recommendations, and half of them were based on assumptions about our cost structure that were completely wrong. The report sounded authoritative because the language was polished, not because the data was accurate."
+
+"So what's your plan?"
+
+"Ask Claude, but watch for the difference between analysis it can actually do, like identifying logical patterns in the scenario, and facts it's making up about a situation that doesn't exist."
+
+Emma almost smiled. "That distinction is harder to maintain than it sounds. AI fabrication under uncertainty looks identical to AI insight. The confidence is the same. The phrasing is the same. The only way to tell them apart is to already have your own position to compare against."
+
+James looked at his sealed Decision Document. "Which is why I wrote this first."
+
+"Now you have something to compare against. That's the consultation skill: not asking AI to decide for you, but asking AI to challenge what you've already decided."
+
+---
+
 ## Exercise 2: The AI Consultation
 
 **Layers Used:** Layer 2 (Reasoning Receipt), Layer 4 (Contradiction Challenge)
@@ -90,11 +114,9 @@ teaching_guide:
 You will use the **Collaboration Log** format from [Chapter 6, Exercise 2](../06-working-with-ai-not-for-ai/02-collaboration-log.md), now applied under time pressure with incomplete data.
 :::
 
-### What You Do
+James is about to consult AI on a scenario it knows nothing about. So are you.
 
-Now use Claude and ChatGPT to research and analyze the scenario from Exercise 1. The AI also has incomplete information because the scenario is fictional. Document where you chose to trust AI analysis vs. your own judgment. Update your decision and confidence level.
-
----
+Use two different AI tools to research and analyze the scenario from Exercise 1. The AI also has incomplete information because the scenario is fictional. Document where you chose to trust AI analysis vs. your own judgment. Update your decision and confidence level.
 
 :::info Your Deliverable
 A Consultation Log documenting: every question you asked AI, every response received, and for each; whether you accepted it, what you noticed AI was fabricating or guessing, and how it changed (or did not change) your thinking. An updated Decision Document showing your revised recommendation, revised confidence level, and what specifically caused any changes. Both original and revised versions side by side.
@@ -150,9 +172,25 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn the hardest part of AI consultation under uncertainty: distinguishing between information the AI actually has and information it is confidently fabricating. The side-by-side comparison of your decisions before and after AI shows you whether AI consultation improved or degraded your judgment.
+James placed his original decision next to his updated one. His recommendation hadn't changed, but his confidence had shifted from 55% to 60%. Claude had suggested a market segmentation angle he hadn't considered, and it strengthened his reasoning. But Claude had also provided specific "industry benchmarks" for the fictional scenario that sounded precise and were entirely fabricated.
+
+"I almost adjusted my reversal trigger based on a number Claude made up," he said. "It quoted a 'typical competitor response timeline of 4-6 weeks' as if that was an established fact. There is no established fact. The scenario doesn't exist."
+
+"How did you catch it?"
+
+"I asked Claude where the number came from. It said 'based on typical industry patterns.' Which means it generated a plausible-sounding statistic and presented it as evidence." James shook his head. "The scary part is that if I hadn't sealed my decision first, I would have built my entire analysis on that number. It sounded right."
+
+"What changed in your decision after filtering out the fabrication?"
+
+"My confidence went up slightly because Claude's logical analysis of the scenario was sound, even though the specific numbers were fake. The reasoning framework was useful. The data points were not."
+
+"That's a skill most people never develop. They either trust everything AI says or trust nothing. You just separated the signal from the noise."
+
+## The Lesson Learned
+
+AI fabrication under uncertainty looks identical to AI insight. The confidence level is the same; the phrasing is the same. The only way to tell them apart is to already have your own position sealed before you consult. Your side-by-side comparison reveals whether AI consultation improved your judgment or quietly degraded it by introducing plausible-sounding fabrication.
 
 ## Flashcards Study Aid
 
