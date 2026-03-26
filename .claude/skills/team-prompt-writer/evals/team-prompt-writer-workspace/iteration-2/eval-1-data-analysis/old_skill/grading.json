@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "passed": true,
+      "evidence": "Found: Create an agent team to implement Part 5: Data Analysis Fundamentals. This part teaches non-programmers (business profes"
+    },
+    {
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "passed": false,
+      "evidence": "'teammate' appears 28x, subagent-for-workers: True"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": false,
+      "evidence": "Found: ['do not use the agent tool']"
+    },
+    {
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "passed": true,
+      "evidence": "No setup/enablement instructions"
+    },
+    {
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "passed": false,
+      "evidence": "Subagent warning: True, Agent tool warning: True"
+    },
+    {
+      "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context",
+      "passed": false,
+      "evidence": "No 'WHAT YOU'RE BUILDING AND WHY' section"
+    },
+    {
+      "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific dimensions",
+      "passed": false,
+      "evidence": "No quality framework section"
+    },
+    {
+      "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls",
+      "passed": false,
+      "evidence": "No mediocre/pitfall guidance"
+    },
+    {
+      "text": "Architect deliverables include a domain wisdom brief beyond directory skeleton",
+      "passed": false,
+      "evidence": "No domain wisdom brief in architect deliverables"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "passed": true,
+      "evidence": "Found: 'quality review'"
+    }
+  ],
+  "summary": {
+    "passed": 3,
+    "failed": 7,
+    "total": 10,
+    "pass_rate": 0.3
+  }
+}

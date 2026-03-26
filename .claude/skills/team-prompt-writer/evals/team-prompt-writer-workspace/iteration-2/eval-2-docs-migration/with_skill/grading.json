@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "passed": true,
+      "evidence": "Found: Create an agent team to migrate 142 API documentation files from a flat Markdown wiki (`docs/wiki/api/`) to a structured"
+    },
+    {
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "passed": false,
+      "evidence": "'teammate' appears 20x, subagent-for-workers: True"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": true,
+      "evidence": "No misleading phrases"
+    },
+    {
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "passed": true,
+      "evidence": "No setup/enablement instructions"
+    },
+    {
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "passed": true,
+      "evidence": "Subagent warning: True, Agent tool warning: False"
+    },
+    {
+      "text": "Writer prompts contain migration-specific quality reasoning about API docs",
+      "passed": true,
+      "evidence": "API quality markers: ['findability', 'working examples', 'error documentation', 'error responses', 'copy-paste', 'endpoint']"
+    },
+    {
+      "text": "Writer prompts mention specific pitfalls to avoid for API documentation",
+      "passed": true,
+      "evidence": "Pitfall guidance: ['pitfall', 'mediocre', 'avoid']"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "passed": true,
+      "evidence": "Found: 'quality review'"
+    },
+    {
+      "text": "Writers are scoped to specific API domains with zero overlap",
+      "passed": true,
+      "evidence": "6/6 domains: ['auth', 'users', 'billing', 'analytics', 'webhooks', 'admin']"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "total": 9,
+    "pass_rate": 0.89
+  }
+}

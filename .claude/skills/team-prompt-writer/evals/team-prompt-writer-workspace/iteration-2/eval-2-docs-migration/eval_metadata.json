@@ -1,0 +1,52 @@
+{
+  "eval_id": 2,
+  "eval_name": "api-docs-migration",
+  "prompt": "Write a team prompt for migrating 142 API doc files from a flat Markdown wiki to a structured Docusaurus site. Source spec: evals/team-prompt-writer-workspace/test-inputs/test2-docs-migration.md. There are 6 API domains (Auth, Users, Billing, Analytics, Webhooks, Admin). Output: apps/api-docs/. Content type: migration.",
+  "assertions": [
+    {
+      "id": "nl-agent-team",
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "type": "content_check"
+    },
+    {
+      "id": "nl-teammates",
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "type": "content_check"
+    },
+    {
+      "id": "nl-no-misleading",
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "type": "absence_check"
+    },
+    {
+      "id": "nl-no-setup",
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "type": "absence_check"
+    },
+    {
+      "id": "nl-antipattern",
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-api-quality",
+      "text": "Writer prompts contain migration-specific quality reasoning about API docs",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-pitfalls",
+      "text": "Writer prompts mention specific pitfalls to avoid for API documentation",
+      "type": "content_check"
+    },
+    {
+      "id": "quality-reviewer",
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-scoping",
+      "text": "Writers are scoped to specific API domains with zero overlap",
+      "type": "content_check"
+    }
+  ]
+}

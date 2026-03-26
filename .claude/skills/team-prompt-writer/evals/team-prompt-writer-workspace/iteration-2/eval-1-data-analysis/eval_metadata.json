@@ -1,0 +1,57 @@
+{
+  "eval_id": 1,
+  "eval_name": "data-analysis-book-part",
+  "prompt": "Create a team prompt for Part 5: Data Analysis Fundamentals. The source spec is at evals/team-prompt-writer-workspace/test-inputs/test1-data-analysis.md \u2014 it has 4 chapters (16 lessons total) teaching non-programmers to analyze data with AI. Output directory: apps/learn-app/docs/05-Data-Analysis-Fundamentals/. Content type: book part. No Python/SQL code, all analysis via Cowork.",
+  "assertions": [
+    {
+      "id": "nl-agent-team",
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "type": "content_check"
+    },
+    {
+      "id": "nl-teammates",
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "type": "content_check"
+    },
+    {
+      "id": "nl-no-misleading",
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "type": "absence_check"
+    },
+    {
+      "id": "nl-no-setup",
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "type": "absence_check"
+    },
+    {
+      "id": "nl-antipattern",
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-why",
+      "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-quality",
+      "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific dimensions",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-mediocre",
+      "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls",
+      "type": "content_check"
+    },
+    {
+      "id": "architect-wisdom",
+      "text": "Architect deliverables include a domain wisdom brief beyond directory skeleton",
+      "type": "content_check"
+    },
+    {
+      "id": "quality-reviewer",
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "type": "content_check"
+    }
+  ]
+}

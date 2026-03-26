@@ -1,0 +1,57 @@
+{
+  "eval_id": 3,
+  "eval_name": "agent-security-book-part",
+  "prompt": "Create a team prompt for Part 8: AI Agent Security \u2014 8 chapters (25 lessons) teaching developers to secure AI agent systems. Source: evals/team-prompt-writer-workspace/test-inputs/test3-agent-security.md. Output: apps/learn-app/docs/08-AI-Agent-Security/. This is security-focused educational content where getting the pedagogy wrong could give readers false confidence.",
+  "assertions": [
+    {
+      "id": "nl-agent-team",
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "type": "content_check"
+    },
+    {
+      "id": "nl-teammates",
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "type": "content_check"
+    },
+    {
+      "id": "nl-no-misleading",
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "type": "absence_check"
+    },
+    {
+      "id": "nl-no-setup",
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "type": "absence_check"
+    },
+    {
+      "id": "nl-antipattern",
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-security",
+      "text": "Writer prompts contain security-specific quality reasoning",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-false-confidence",
+      "text": "Writer prompts address the risk of teaching security theater or false confidence",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-decisions",
+      "text": "Writer prompts include decision principles for security content",
+      "type": "content_check"
+    },
+    {
+      "id": "architect-wisdom",
+      "text": "Architect deliverables include domain wisdom brief with security pedagogy",
+      "type": "content_check"
+    },
+    {
+      "id": "quality-reviewer",
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "type": "content_check"
+    }
+  ]
+}

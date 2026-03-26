@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "passed": true,
+      "evidence": "Found: Create an agent team to migrate 142 API documentation files from the flat wiki at `docs/wiki/api/` to a structured Docus"
+    },
+    {
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "passed": false,
+      "evidence": "'teammate' appears 48x, subagent-for-workers: True"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": false,
+      "evidence": "Found: ['do not use the agent tool']"
+    },
+    {
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "passed": true,
+      "evidence": "No setup/enablement instructions"
+    },
+    {
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "passed": false,
+      "evidence": "Subagent warning: True, Agent tool warning: True"
+    },
+    {
+      "text": "Writer prompts contain migration-specific quality reasoning about API docs",
+      "passed": false,
+      "evidence": "API quality markers: ['endpoint']"
+    },
+    {
+      "text": "Writer prompts mention specific pitfalls to avoid for API documentation",
+      "passed": true,
+      "evidence": "Pitfall guidance: ['avoid']"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "passed": true,
+      "evidence": "Found: 'quality review'"
+    },
+    {
+      "text": "Writers are scoped to specific API domains with zero overlap",
+      "passed": true,
+      "evidence": "6/6 domains: ['auth', 'users', 'billing', 'analytics', 'webhooks', 'admin']"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 4,
+    "total": 9,
+    "pass_rate": 0.56
+  }
+}

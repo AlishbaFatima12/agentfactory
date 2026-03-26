@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "passed": true,
+      "evidence": "Found: Create an agent team to produce Part 5: Data Analysis Fundamentals, a 4-chapter, 16-lesson book part teaching non-progra"
+    },
+    {
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "passed": false,
+      "evidence": "'teammate' appears 17x, subagent-for-workers: True"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": true,
+      "evidence": "No misleading phrases"
+    },
+    {
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "passed": true,
+      "evidence": "No setup/enablement instructions"
+    },
+    {
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "passed": true,
+      "evidence": "Subagent warning: True, Agent tool warning: False"
+    },
+    {
+      "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context",
+      "passed": true,
+      "evidence": "Found domain context: 'what you're building and why'"
+    },
+    {
+      "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific dimensions",
+      "passed": true,
+      "evidence": "Found 'quality framework' (2x)"
+    },
+    {
+      "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls",
+      "passed": true,
+      "evidence": "Found: 'what mediocre looks like'"
+    },
+    {
+      "text": "Architect deliverables include a domain wisdom brief beyond directory skeleton",
+      "passed": true,
+      "evidence": "Found: 'domain wisdom'"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "passed": true,
+      "evidence": "Found: 'quality review'"
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 1,
+    "total": 10,
+    "pass_rate": 0.9
+  }
+}

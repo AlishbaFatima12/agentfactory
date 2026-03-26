@@ -1,0 +1,53 @@
+As you know that I am writing a book:
+
+https://agentfactory.panaversity.org/
+
+So far i have written the first drafts of the following parts:
+
+https://agentfactory.panaversity.org/docs/Prelude-Thinking-is-the-Curriculum
+
+https://agentfactory.panaversity.org/docs/General-Agents-Foundations
+
+https://agentfactory.panaversity.org/docs/Agent-Workflow-Primitives
+
+https://agentfactory.panaversity.org/docs/Business-Domain-Agent-Workflows
+
+https://agentfactory.panaversity.org/docs/Programming-in-the-AI-Era
+
+
+
+now i want to write part 5 which will teach how to develop and build a agent factory. attached is the five phase workflow for building an FTE. 
+
+
+
+Initially at start nothing is clear there we start with incubation, therefore we follow the agent maturity model which is also attached.
+
+
+
+Starting from what the agent factory will do and what kind of ai employees will be working in the factory (provided by founder), we generate a detailed paper using the iterative process. The paper writing follows the 10-80-10 rule, the founder define the requirements for the agent factory and types of employees the factory has, ai generates the paper, ai is then asked to review and grade the paper out of 10, the founder reviews the paper, review, and grading and gives direction and suggests improvements. This goes on in multiple cycles. until the paper grade crosses the 9.5+ threshold. This paper is not a research paper but a concept and implementation paper. In the next steps will be the source document for startup founders/human developers and ai which will create and develop the factory. From this paper which you may also call the requirement document we will generate the following derivative work:
+
+1. A detailed MCQ quiz for human developers to check that they have understood the domain after reading our source paper for which we are building the factory. 
+2. Domain System prompts/Agent Skills for various roles in the agent factory
+
+Once we have this first we will test these Domain Agent Skills to run simulations in claude code to test the working on the agent. We can also run System prompts to run simulation on any web based ai.
+
+Then we can build these AI Agents/AI employees/FTEs locally using nanoclaw, fastapi, and claude agents sdk. The good thing is that nanoclaw itself is based on claude agents sdk, and works with claude code. We will use the agents skills developed about with these sdks and libraries. We will also teach all the topics covered in the previous version of the part 5: https://agentfactory.panaversity.org/docs/Building-Custom-Agents but with the new theme described here. 
+
+These AI employees are how work gets done. Identic AI is how humans will increasingly direct, govern, and interface with that AI workforce on their own behalf. The Agent Factory manufactures role-based AI employees to execute tasks, coordinate workflows, and deliver verified outcomes at scale, but the human remains the principal who defines purpose, values, constraints, and accountability. Identic AI adds a new personal layer: a self-sovereign agent—owned by the individual, not the platform—that understands an individual’s context, judgment, and preferences, and can translate human intent into delegated action across the enterprise. Complete details here:
+
+https://agentfactory.panaversity.org/docs/thesis#personal-agents-and-the-enterprise-interface
+
+the slide about the two layered model is also attached.
+
+
+in this part we will teach using the pedagogy which is described in the system prompt for authors. For teaching programming PRIMM-AI+ is nested in the main model, which should be used for teaching. You might also use 10 axioms for teaching ai driven programming. We have also attached PRIMM-AI+ documentation separately. 
+
+As this book main requirement is that even the beginners are able to understand it, we will also use discussion between James and Emma to make it easy to understand, as we are doing here:
+https://agentfactory.panaversity.org/docs/Programming-in-the-AI-Era/the-workbench/the-development-environment
+
+
+
+in this part we will not deploy the agent factory to the cloud, we will do this in the next part.
+
+Please review my plan, grade it out of 10 and suggest improvements. 
+

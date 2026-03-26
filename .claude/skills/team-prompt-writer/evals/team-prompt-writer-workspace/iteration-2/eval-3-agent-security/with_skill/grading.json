@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "passed": true,
+      "evidence": "Found: Create an agent team to produce Part 8: AI Agent Security for the Agent Factory book. This part is 8 chapters and 25 les"
+    },
+    {
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "passed": false,
+      "evidence": "'teammate' appears 18x, subagent-for-workers: True"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": true,
+      "evidence": "No misleading phrases"
+    },
+    {
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "passed": true,
+      "evidence": "No setup/enablement instructions"
+    },
+    {
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "passed": true,
+      "evidence": "Subagent warning: True, Agent tool warning: False"
+    },
+    {
+      "text": "Writer prompts contain security-specific quality reasoning",
+      "passed": true,
+      "evidence": "Security markers: ['prompt injection', 'tool abuse', 'threat', 'attack surface', 'privilege', 'security theater']"
+    },
+    {
+      "text": "Writer prompts address the risk of teaching security theater or false confidence",
+      "passed": true,
+      "evidence": "False-confidence awareness: ['false confidence', 'security theater', 'checkbox compliance', 'appropriately paranoid']"
+    },
+    {
+      "text": "Writer prompts include decision principles for security content",
+      "passed": true,
+      "evidence": "Decision principles: ['when in doubt', 'decision framework']"
+    },
+    {
+      "text": "Architect deliverables include domain wisdom brief with security pedagogy",
+      "passed": true,
+      "evidence": "Found: 'domain wisdom'"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "passed": true,
+      "evidence": "Found: 'quality review'"
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 1,
+    "total": 10,
+    "pass_rate": 0.9
+  }
+}

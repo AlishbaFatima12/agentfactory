@@ -1,0 +1,14 @@
+conversation:
+https://claude.ai/share/a9314862-1e29-4ea1-908e-884680cb473b
+
+readme instruction artifact:
+https://claude.ai/public/artifacts/adcd214e-36ac-4748-9a30-f747f204c189
+
+part 5 outline artifact:
+https://claude.ai/public/artifacts/be3c08bd-20a6-4779-b064-102a26e068cb
+
+chapter authoring artifact:
+https://claude.ai/public/artifacts/4ea1d839-1d17-4b71-8cbe-8b14bac7c8fa
+
+Review and grade:
+https://chatgpt.com/share/69b6d072-1528-8001-b190-b59ae3afcb75

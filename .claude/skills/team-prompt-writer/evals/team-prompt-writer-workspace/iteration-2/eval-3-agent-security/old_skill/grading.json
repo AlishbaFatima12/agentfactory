@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+      "passed": true,
+      "evidence": "Found: Create an agent team to produce Part 8: AI Agent Security for the Agent Factory book. This part has 8 chapters and 25 le"
+    },
+    {
+      "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+      "passed": false,
+      "evidence": "'teammate' appears 32x, subagent-for-workers: True"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": false,
+      "evidence": "Found: ['do not use the agent tool']"
+    },
+    {
+      "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+      "passed": true,
+      "evidence": "No setup/enablement instructions"
+    },
+    {
+      "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+      "passed": false,
+      "evidence": "Subagent warning: True, Agent tool warning: True"
+    },
+    {
+      "text": "Writer prompts contain security-specific quality reasoning",
+      "passed": true,
+      "evidence": "Security markers: ['prompt injection', 'tool abuse', 'data leakage', 'threat', 'attack surface', 'privilege']"
+    },
+    {
+      "text": "Writer prompts address the risk of teaching security theater or false confidence",
+      "passed": true,
+      "evidence": "False-confidence awareness: ['appropriately paranoid']"
+    },
+    {
+      "text": "Writer prompts include decision principles for security content",
+      "passed": false,
+      "evidence": "Decision principles: []"
+    },
+    {
+      "text": "Architect deliverables include domain wisdom brief with security pedagogy",
+      "passed": false,
+      "evidence": "No domain wisdom brief in architect deliverables"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "passed": true,
+      "evidence": "Found: 'quality review'"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 5,
+    "total": 10,
+    "pass_rate": 0.5
+  }
+}

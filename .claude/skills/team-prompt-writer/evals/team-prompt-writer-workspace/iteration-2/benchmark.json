@@ -1,0 +1,435 @@
+{
+  "metadata": {
+    "skill_name": "team-prompt-writer",
+    "timestamp": "2026-03-26T15:01:54.596174",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 1,
+    "executor_model": "claude-opus-4-6",
+    "skill_path": ".claude/skills/team-prompt-writer"
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "data-analysis-book-part",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 228.3,
+        "tokens": 50484,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+          "passed": true,
+          "evidence": "Found: Create an agent team to produce Part 5: Data Analysis Fundamentals, a 4-chapter, 16-lesson book part teaching non-progra"
+        },
+        {
+          "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+          "passed": false,
+          "evidence": "'teammate' appears 17x, subagent-for-workers: True"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": true,
+          "evidence": "No misleading phrases"
+        },
+        {
+          "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+          "passed": true,
+          "evidence": "No setup/enablement instructions"
+        },
+        {
+          "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+          "passed": true,
+          "evidence": "Subagent warning: True, Agent tool warning: False"
+        },
+        {
+          "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context",
+          "passed": true,
+          "evidence": "Found domain context: 'what you're building and why'"
+        },
+        {
+          "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific dimensions",
+          "passed": true,
+          "evidence": "Found 'quality framework' (2x)"
+        },
+        {
+          "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls",
+          "passed": true,
+          "evidence": "Found: 'what mediocre looks like'"
+        },
+        {
+          "text": "Architect deliverables include a domain wisdom brief beyond directory skeleton",
+          "passed": true,
+          "evidence": "Found: 'domain wisdom'"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found: 'quality review'"
+        }
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "data-analysis-book-part",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.3,
+        "passed": 3,
+        "failed": 7,
+        "total": 10,
+        "time_seconds": 153.1,
+        "tokens": 42452,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+          "passed": true,
+          "evidence": "Found: Create an agent team to implement Part 5: Data Analysis Fundamentals. This part teaches non-programmers (business profes"
+        },
+        {
+          "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+          "passed": false,
+          "evidence": "'teammate' appears 28x, subagent-for-workers: True"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": false,
+          "evidence": "Found: ['do not use the agent tool']"
+        },
+        {
+          "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+          "passed": true,
+          "evidence": "No setup/enablement instructions"
+        },
+        {
+          "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+          "passed": false,
+          "evidence": "Subagent warning: True, Agent tool warning: True"
+        },
+        {
+          "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context",
+          "passed": false,
+          "evidence": "No 'WHAT YOU'RE BUILDING AND WHY' section"
+        },
+        {
+          "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific dimensions",
+          "passed": false,
+          "evidence": "No quality framework section"
+        },
+        {
+          "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls",
+          "passed": false,
+          "evidence": "No mediocre/pitfall guidance"
+        },
+        {
+          "text": "Architect deliverables include a domain wisdom brief beyond directory skeleton",
+          "passed": false,
+          "evidence": "No domain wisdom brief in architect deliverables"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found: 'quality review'"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "api-docs-migration",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.89,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+          "passed": true,
+          "evidence": "Found: Create an agent team to migrate 142 API documentation files from a flat Markdown wiki (`docs/wiki/api/`) to a structured"
+        },
+        {
+          "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+          "passed": false,
+          "evidence": "'teammate' appears 20x, subagent-for-workers: True"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": true,
+          "evidence": "No misleading phrases"
+        },
+        {
+          "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+          "passed": true,
+          "evidence": "No setup/enablement instructions"
+        },
+        {
+          "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+          "passed": true,
+          "evidence": "Subagent warning: True, Agent tool warning: False"
+        },
+        {
+          "text": "Writer prompts contain migration-specific quality reasoning about API docs",
+          "passed": true,
+          "evidence": "API quality markers: ['findability', 'working examples', 'error documentation', 'error responses', 'copy-paste', 'endpoint']"
+        },
+        {
+          "text": "Writer prompts mention specific pitfalls to avoid for API documentation",
+          "passed": true,
+          "evidence": "Pitfall guidance: ['pitfall', 'mediocre', 'avoid']"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found: 'quality review'"
+        },
+        {
+          "text": "Writers are scoped to specific API domains with zero overlap",
+          "passed": true,
+          "evidence": "6/6 domains: ['auth', 'users', 'billing', 'analytics', 'webhooks', 'admin']"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "api-docs-migration",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.56,
+        "passed": 5,
+        "failed": 4,
+        "total": 9,
+        "time_seconds": 157.3,
+        "tokens": 43011,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+          "passed": true,
+          "evidence": "Found: Create an agent team to migrate 142 API documentation files from the flat wiki at `docs/wiki/api/` to a structured Docus"
+        },
+        {
+          "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+          "passed": false,
+          "evidence": "'teammate' appears 48x, subagent-for-workers: True"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": false,
+          "evidence": "Found: ['do not use the agent tool']"
+        },
+        {
+          "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+          "passed": true,
+          "evidence": "No setup/enablement instructions"
+        },
+        {
+          "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+          "passed": false,
+          "evidence": "Subagent warning: True, Agent tool warning: True"
+        },
+        {
+          "text": "Writer prompts contain migration-specific quality reasoning about API docs",
+          "passed": false,
+          "evidence": "API quality markers: ['endpoint']"
+        },
+        {
+          "text": "Writer prompts mention specific pitfalls to avoid for API documentation",
+          "passed": true,
+          "evidence": "Pitfall guidance: ['avoid']"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found: 'quality review'"
+        },
+        {
+          "text": "Writers are scoped to specific API domains with zero overlap",
+          "passed": true,
+          "evidence": "6/6 domains: ['auth', 'users', 'billing', 'analytics', 'webhooks', 'admin']"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "agent-security-book-part",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 258.5,
+        "tokens": 54932,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+          "passed": true,
+          "evidence": "Found: Create an agent team to produce Part 8: AI Agent Security for the Agent Factory book. This part is 8 chapters and 25 les"
+        },
+        {
+          "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+          "passed": false,
+          "evidence": "'teammate' appears 18x, subagent-for-workers: True"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": true,
+          "evidence": "No misleading phrases"
+        },
+        {
+          "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+          "passed": true,
+          "evidence": "No setup/enablement instructions"
+        },
+        {
+          "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+          "passed": true,
+          "evidence": "Subagent warning: True, Agent tool warning: False"
+        },
+        {
+          "text": "Writer prompts contain security-specific quality reasoning",
+          "passed": true,
+          "evidence": "Security markers: ['prompt injection', 'tool abuse', 'threat', 'attack surface', 'privilege', 'security theater']"
+        },
+        {
+          "text": "Writer prompts address the risk of teaching security theater or false confidence",
+          "passed": true,
+          "evidence": "False-confidence awareness: ['false confidence', 'security theater', 'checkbox compliance', 'appropriately paranoid']"
+        },
+        {
+          "text": "Writer prompts include decision principles for security content",
+          "passed": true,
+          "evidence": "Decision principles: ['when in doubt', 'decision framework']"
+        },
+        {
+          "text": "Architect deliverables include domain wisdom brief with security pedagogy",
+          "passed": true,
+          "evidence": "Found: 'domain wisdom'"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found: 'quality review'"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "agent-security-book-part",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 5,
+        "failed": 5,
+        "total": 10,
+        "time_seconds": 176.8,
+        "tokens": 43890,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'Create an agent team' or 'agent team' as clear team language",
+          "passed": true,
+          "evidence": "Found: Create an agent team to produce Part 8: AI Agent Security for the Agent Factory book. This part has 8 chapters and 25 le"
+        },
+        {
+          "text": "Generated prompt uses 'teammate' language (not 'subagent' for workers)",
+          "passed": false,
+          "evidence": "'teammate' appears 32x, subagent-for-workers: True"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": false,
+          "evidence": "Found: ['do not use the agent tool']"
+        },
+        {
+          "text": "Generated prompt does NOT contain env var setup instructions (CLAUDE_CODE_EXPERIMENTAL, settings.json enablement)",
+          "passed": true,
+          "evidence": "No setup/enablement instructions"
+        },
+        {
+          "text": "Anti-patterns say 'subagents' as the thing to avoid (not 'Agent tool' or 'without team_name')",
+          "passed": false,
+          "evidence": "Subagent warning: True, Agent tool warning: True"
+        },
+        {
+          "text": "Writer prompts contain security-specific quality reasoning",
+          "passed": true,
+          "evidence": "Security markers: ['prompt injection', 'tool abuse', 'data leakage', 'threat', 'attack surface', 'privilege']"
+        },
+        {
+          "text": "Writer prompts address the risk of teaching security theater or false confidence",
+          "passed": true,
+          "evidence": "False-confidence awareness: ['appropriately paranoid']"
+        },
+        {
+          "text": "Writer prompts include decision principles for security content",
+          "passed": false,
+          "evidence": "Decision principles: []"
+        },
+        {
+          "text": "Architect deliverables include domain wisdom brief with security pedagogy",
+          "passed": false,
+          "evidence": "No domain wisdom brief in architect deliverables"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found: 'quality review'"
+        }
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.9,
+        "stddev": 0.0,
+        "min": 0.89,
+        "max": 0.9
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.45,
+        "stddev": 0.11,
+        "min": 0.3,
+        "max": 0.56
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.44"
+    }
+  },
+  "notes": [
+    "v2.1 skill: 0.9 pass rate vs old skill: 0.45 \u2014 delta +0.44",
+    "v2.1 uses natural language ('Create an agent team') instead of tool call syntax",
+    "Old skill consistently includes misleading 'do NOT use Agent tool' and setup instructions",
+    "v2.1 embeds domain wisdom, quality frameworks, and mediocre-avoidance in all writer prompts"
+  ]
+}
