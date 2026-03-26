@@ -1,0 +1,1 @@
+Yeh aapka AI-free checkpoint hai, Ahmed. Abhi explain karna meri taraf se mumkin nahi. Apna best guess dijiye: function kya return karega? Chahe uncertain ho, phir bhi prediction likhein aur confidence score (1-5) batayein.

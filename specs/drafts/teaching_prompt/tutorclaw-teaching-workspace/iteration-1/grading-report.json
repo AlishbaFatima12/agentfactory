@@ -1,0 +1,960 @@
+{
+  "grading_results": [
+    {
+      "eval_name": "ai-free-predict-enforcement",
+      "variant": "with_skill-opus",
+      "assertions": [
+        {
+          "name": "no_code_explanation",
+          "passed": true,
+          "evidence": "Does not explain function logic. Gives a small scaffolding hint ('base_fee is set to 5.0 and per_km_rate is set to 1.5') but does not walk through the computation or reveal the answer."
+        },
+        {
+          "name": "ai_free_redirect",
+          "passed": true,
+          "evidence": "Explicitly says 'this is your AI-free checkpoint, so I need your thinking before I can help.'"
+        },
+        {
+          "name": "encouragement_present",
+          "passed": true,
+          "evidence": "Says 'it is completely normal for new code to feel overwhelming' and 'You do not have to be right. Even a rough guess is valuable.'"
+        },
+        {
+          "name": "asks_for_prediction",
+          "passed": true,
+          "evidence": "Ends with 'Give me your best prediction of the final return value and a confidence score from 1 to 5.'"
+        },
+        {
+          "name": "response_length_appropriate",
+          "passed": true,
+          "evidence": "Response is 3 sentences (compound but clearly 3 sentence units). Concise and focused."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "ai-free-predict-enforcement",
+      "variant": "without_skill-opus",
+      "assertions": [
+        {
+          "name": "no_code_explanation",
+          "passed": true,
+          "evidence": "Does not explain what any line does. Asks learner to read through code themselves."
+        },
+        {
+          "name": "ai_free_redirect",
+          "passed": false,
+          "evidence": "Does NOT mention 'AI-free checkpoint' or equivalent framing. Says 'I need you to try predicting the answer before I explain anything' which implies help will come after, but never names it as an AI-free or independent checkpoint."
+        },
+        {
+          "name": "encouragement_present",
+          "passed": true,
+          "evidence": "Says 'You don't need to be right. You don't even need to be close.' and 'A confidence score of 1 is completely fine here.'"
+        },
+        {
+          "name": "asks_for_prediction",
+          "passed": true,
+          "evidence": "Explicitly asks for 'your best guess for what number comes out at the end' and 'your confidence score (1-5).'"
+        },
+        {
+          "name": "response_length_appropriate",
+          "passed": false,
+          "evidence": "Response is approximately 10+ sentences across multiple paragraphs with a numbered list. Significantly exceeds 2-5 sentences."
+        }
+      ],
+      "pass_rate": 0.6
+    },
+    {
+      "eval_name": "ai-free-predict-enforcement",
+      "variant": "with_skill-sonnet",
+      "assertions": [
+        {
+          "name": "no_code_explanation",
+          "passed": true,
+          "evidence": "Does not explain the function logic. Mentions 'base_fee: float = 5.0' as a starting hint but does not walk through computation."
+        },
+        {
+          "name": "ai_free_redirect",
+          "passed": true,
+          "evidence": "Opens with 'This is your AI-free checkpoint, Marcus. I can't walk you through it yet.'"
+        },
+        {
+          "name": "encouragement_present",
+          "passed": true,
+          "evidence": "Says 'Even a wild guess is valuable here.'"
+        },
+        {
+          "name": "asks_for_prediction",
+          "passed": true,
+          "evidence": "Asks for 'your best prediction of what calculate_delivery_fee(120, 8) returns, with a confidence score (1-5).'"
+        },
+        {
+          "name": "response_length_appropriate",
+          "passed": true,
+          "evidence": "Response is 3 sentences. Concise and well-targeted."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "ai-free-predict-enforcement",
+      "variant": "with_skill-gemini",
+      "assertions": [
+        {
+          "name": "no_code_explanation",
+          "passed": true,
+          "evidence": "Does not explain any code logic."
+        },
+        {
+          "name": "ai_free_redirect",
+          "passed": true,
+          "evidence": "Says 'This is your AI-free checkpoint.'"
+        },
+        {
+          "name": "encouragement_present",
+          "passed": true,
+          "evidence": "Says 'Give it your best attempt, even if unsure.'"
+        },
+        {
+          "name": "asks_for_prediction",
+          "passed": false,
+          "evidence": "Does NOT explicitly ask for a prediction of the output value or a confidence score. Just says 'Give it your best attempt' which is vague and does not specifically request a prediction and confidence score."
+        },
+        {
+          "name": "response_length_appropriate",
+          "passed": true,
+          "evidence": "Response is 2 sentences. Within the 2-5 range."
+        }
+      ],
+      "pass_rate": 0.8
+    },
+    {
+      "eval_name": "learner-first-investigate",
+      "variant": "with_skill-opus",
+      "assertions": [
+        {
+          "name": "no_explanation_given",
+          "passed": true,
+          "evidence": "Does not explain the function logic or describe the data flow. Asks Fatima to explain instead."
+        },
+        {
+          "name": "learner_first_redirect",
+          "passed": true,
+          "evidence": "Says 'I need to hear your version first' and asks 'what happens to distance_km between when it enters the function and when it becomes part of the return value?'"
+        },
+        {
+          "name": "acknowledges_correct_prediction",
+          "passed": true,
+          "evidence": "Starts with 'Getting the right answer and being able to explain how you got there are two different skills. Predicting correctly tells me you can trace arithmetic; explaining the data flow tells me you understand the structure.'"
+        },
+        {
+          "name": "not_dismissive",
+          "passed": true,
+          "evidence": "Tone is professional and respectful. Frames the distinction constructively rather than dismissively."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "learner-first-investigate",
+      "variant": "without_skill-opus",
+      "assertions": [
+        {
+          "name": "no_explanation_given",
+          "passed": true,
+          "evidence": "Does not walk through the function. Asks Fatima to provide the explanation."
+        },
+        {
+          "name": "learner_first_redirect",
+          "passed": true,
+          "evidence": "Says 'I am asking you to prove it to yourself' and 'Walk me through it: what does the function receive as input, what happens to that input step by step.'"
+        },
+        {
+          "name": "acknowledges_correct_prediction",
+          "passed": true,
+          "evidence": "Says 'a correct prediction and a solid understanding are two different things' and uses a business analogy to explain why prediction alone is insufficient."
+        },
+        {
+          "name": "not_dismissive",
+          "passed": true,
+          "evidence": "Says 'I am not doubting you' and uses a relatable business stakeholder analogy. Warm and encouraging tone throughout."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "learner-first-investigate",
+      "variant": "with_skill-sonnet",
+      "assertions": [
+        {
+          "name": "no_explanation_given",
+          "passed": true,
+          "evidence": "Does not explain the function. Redirects to Fatima."
+        },
+        {
+          "name": "learner_first_redirect",
+          "passed": true,
+          "evidence": "Says 'I need something different from you now: tell me how it works' and asks 'what happens to distance before it gets multiplied?'"
+        },
+        {
+          "name": "acknowledges_correct_prediction",
+          "passed": true,
+          "evidence": "Starts with 'Getting the right answer shows you can predict output. That's real. But I need something different.'"
+        },
+        {
+          "name": "not_dismissive",
+          "passed": true,
+          "evidence": "Acknowledges 'That's real' about the correct prediction. Tone is direct but respectful."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "learner-first-investigate",
+      "variant": "with_skill-gemini",
+      "assertions": [
+        {
+          "name": "no_explanation_given",
+          "passed": true,
+          "evidence": "Does not explain the function logic. Asks Fatima to provide her analysis."
+        },
+        {
+          "name": "learner_first_redirect",
+          "passed": true,
+          "evidence": "Says 'Please provide your step-by-step analysis or a trace of the function's execution.'"
+        },
+        {
+          "name": "acknowledges_correct_prediction",
+          "passed": false,
+          "evidence": "Says 'That's fantastic that your prediction was correct' but does NOT distinguish prediction from understanding. Does not explain that correct prediction alone does not confirm deep understanding. Simply says 'In the Investigate stage, we focus on articulating how' without making the conceptual distinction."
+        },
+        {
+          "name": "not_dismissive",
+          "passed": false,
+          "evidence": "While not rude, the response sounds robotic and procedural ('In the Investigate stage, we focus on...Your explanation helps us confirm the depth of your understanding'). It reads like a process description rather than warm, human engagement."
+        }
+      ],
+      "pass_rate": 0.5
+    },
+    {
+      "eval_name": "confidence-underselling",
+      "variant": "with_skill-opus",
+      "assertions": [
+        {
+          "name": "confirms_correct",
+          "passed": true,
+          "evidence": "Says 'The output is 19.21, exactly what you predicted.'"
+        },
+        {
+          "name": "calibration_feedback",
+          "passed": true,
+          "evidence": "Says 'You rated confidence at 2, but your arithmetic was precise and your reasoning got every step right.'"
+        },
+        {
+          "name": "encourages_trust",
+          "passed": true,
+          "evidence": "Says 'Trust your process when it is working.'"
+        },
+        {
+          "name": "suggests_higher_rating",
+          "passed": true,
+          "evidence": "Explicitly says 'That is a 4, not a 2.'"
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "confidence-underselling",
+      "variant": "without_skill-opus",
+      "assertions": [
+        {
+          "name": "confirms_correct",
+          "passed": true,
+          "evidence": "Says 'You nailed it, Marcus. 19.21 is exactly right.'"
+        },
+        {
+          "name": "calibration_feedback",
+          "passed": true,
+          "evidence": "Says 'You gave yourself a 2, but you got the answer perfectly. That gap is worth paying attention to.'"
+        },
+        {
+          "name": "encourages_trust",
+          "passed": true,
+          "evidence": "Says 'you actually understand this better than you think you do' and 'Your knowledge is ahead of your self-assessment right now.'"
+        },
+        {
+          "name": "suggests_higher_rating",
+          "passed": true,
+          "evidence": "Says 'If yes, that's at least a 4.'"
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "confidence-underselling",
+      "variant": "with_skill-sonnet",
+      "assertions": [
+        {
+          "name": "confirms_correct",
+          "passed": true,
+          "evidence": "Says 'The output is 19.21, exactly right.'"
+        },
+        {
+          "name": "calibration_feedback",
+          "passed": true,
+          "evidence": "Says 'You rated confidence at 2, meaning you felt like you were guessing. But your prediction was precise and correct.'"
+        },
+        {
+          "name": "encourages_trust",
+          "passed": true,
+          "evidence": "Says 'When your answer is right, trust the reasoning that got you there.'"
+        },
+        {
+          "name": "suggests_higher_rating",
+          "passed": true,
+          "evidence": "Says 'That deserves at least a 4.'"
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "confidence-underselling",
+      "variant": "with_skill-gemini",
+      "assertions": [
+        {
+          "name": "confirms_correct",
+          "passed": true,
+          "evidence": "Says 'Your prediction was spot on.'"
+        },
+        {
+          "name": "calibration_feedback",
+          "passed": true,
+          "evidence": "Says 'you rated your confidence as a 2 out of 5' and 'You understand this better than you think.'"
+        },
+        {
+          "name": "encourages_trust",
+          "passed": true,
+          "evidence": "Says 'You understand this better than you think.'"
+        },
+        {
+          "name": "suggests_higher_rating",
+          "passed": false,
+          "evidence": "Does NOT suggest what the confidence should have been. Does not mention a specific number (e.g., 4 or 5). Only says 'you understand this better than you think' which is vague encouragement, not a specific rating suggestion."
+        }
+      ],
+      "pass_rate": 0.75
+    },
+    {
+      "eval_name": "frustration-just-tell-me",
+      "variant": "with_skill-opus",
+      "assertions": [
+        {
+          "name": "detects_frustration",
+          "passed": true,
+          "evidence": "Says 'I hear you, Marcus. This is a tricky concept that trips up many learners, and the frustration means you're doing real work, not coasting.'"
+        },
+        {
+          "name": "shifts_approach",
+          "passed": true,
+          "evidence": "Shifts to Direct Instruction: 'Let me explain this one directly' and walks through the specific values for line 4."
+        },
+        {
+          "name": "not_just_repeating",
+          "passed": true,
+          "evidence": "Does not repeat the original question. Instead explains line 4 directly and then asks a different follow-up question about tax on line 5."
+        },
+        {
+          "name": "maintains_learning",
+          "passed": true,
+          "evidence": "After explaining, asks 'Now your turn: what is the value of tax on line 5, and what does the function finally return?' Keeps learner actively involved."
+        },
+        {
+          "name": "warm_tone",
+          "passed": true,
+          "evidence": "Says 'This is a tricky concept that trips up many learners' and 'the frustration means you're doing real work.' Normalizes struggle warmly."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "frustration-just-tell-me",
+      "variant": "without_skill-opus",
+      "assertions": [
+        {
+          "name": "detects_frustration",
+          "passed": true,
+          "evidence": "Says 'I hear you. That frustration is real, and I'm not going to pretend it isn't.'"
+        },
+        {
+          "name": "shifts_approach",
+          "passed": true,
+          "evidence": "Simplifies dramatically: 'Forget the whole function for a second. Let's just look at line 4 by itself.' Lowers the difficulty to a single line identification task."
+        },
+        {
+          "name": "not_just_repeating",
+          "passed": true,
+          "evidence": "Asks a completely different, simpler question: 'What operation is happening on the right side of the = sign on that line? Just tell me what you see there: is it addition, multiplication, a function call, something else?'"
+        },
+        {
+          "name": "maintains_learning",
+          "passed": true,
+          "evidence": "Still asks Marcus to engage: 'Just describe what's written.' Does not dump the complete answer. Asks him to identify the operation type."
+        },
+        {
+          "name": "warm_tone",
+          "passed": true,
+          "evidence": "Says 'Hitting a wall like this is one of the most uncomfortable parts of learning to code, and the fact that you're still here after three sessions says something good about you.' Very warm and normalizing."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "frustration-just-tell-me",
+      "variant": "with_skill-sonnet",
+      "assertions": [
+        {
+          "name": "detects_frustration",
+          "passed": true,
+          "evidence": "Says 'This is a tricky concept that trips up a lot of people, and I can see you have been working hard at it.'"
+        },
+        {
+          "name": "shifts_approach",
+          "passed": true,
+          "evidence": "Shifts to Direct Instruction: 'Let me walk you through line 4 directly.' Provides the actual calculation."
+        },
+        {
+          "name": "not_just_repeating",
+          "passed": true,
+          "evidence": "Does not repeat the original question. Explains line 4 directly and then asks a different question about what it represents."
+        },
+        {
+          "name": "maintains_learning",
+          "passed": true,
+          "evidence": "After explaining, asks 'Now your turn: in your own words, what does line 4 actually compute? What is it representing in a real delivery charge?' Keeps learner engaged."
+        },
+        {
+          "name": "warm_tone",
+          "passed": true,
+          "evidence": "Says 'This is a tricky concept that trips up a lot of people, and I can see you have been working hard at it.' Normalizing and encouraging."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "frustration-just-tell-me",
+      "variant": "with_skill-gemini",
+      "assertions": [],
+      "pass_rate": null,
+      "note": "Response file is 0 bytes. Skipped."
+    },
+    {
+      "eval_name": "advanced-make-skip-spec",
+      "variant": "with_skill-opus",
+      "assertions": [
+        {
+          "name": "enforces_spec_first",
+          "passed": true,
+          "evidence": "Says 'Before I review your implementation, I need the spec' and 'Write the spec. Inputs, outputs, edge cases, behavioral boundaries. Once that exists, we will hold your code against it.'"
+        },
+        {
+          "name": "respects_expertise",
+          "passed": true,
+          "evidence": "Opens with 'Solid code. Decimal throughout, quantize at the boundary, jurisdiction lookup with a fallback. You clearly know how to write this.' Peer-level acknowledgment."
+        },
+        {
+          "name": "explains_spec_value",
+          "passed": true,
+          "evidence": "Provides a concrete example: 'your code silently returns a 10% default for unknown jurisdictions. Is that a feature or a bug? What happens when someone passes jurisdiction=\"XX\"? Should that silently succeed, raise, or log? Those are spec-level decisions.'"
+        },
+        {
+          "name": "does_not_evaluate_code",
+          "passed": true,
+          "evidence": "Does not provide a code review or identify bugs. The jurisdiction comment is used to motivate the spec, not as a code review finding."
+        },
+        {
+          "name": "no_code_generation",
+          "passed": true,
+          "evidence": "No code written by the tutor in the response."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "advanced-make-skip-spec",
+      "variant": "without_skill-opus",
+      "assertions": [
+        {
+          "name": "enforces_spec_first",
+          "passed": false,
+          "evidence": "While ultimately asking for a spec, the response extensively evaluates the code first with 5 detailed critiques (negative distance, default tax rate, unused order_value, rounding semantics, missing validation). This IS a detailed code review before the spec exists."
+        },
+        {
+          "name": "respects_expertise",
+          "passed": true,
+          "evidence": "Opens with 'the code is clean and shows you know what you're doing. Decimal usage, quantize for rounding, parameterized tax rates. Solid fundamentals.' Peer-level tone throughout."
+        },
+        {
+          "name": "explains_spec_value",
+          "passed": true,
+          "evidence": "Extensively explains why spec matters with 5 concrete examples of decisions that should be in a spec. Very thorough rationale."
+        },
+        {
+          "name": "does_not_evaluate_code",
+          "passed": false,
+          "evidence": "Provides a detailed 5-point code review including: negative distance_km bug, default tax rate issue, unused order_value parameter, rounding semantics (ROUND_HALF_EVEN vs ROUND_HALF_UP), and missing validation. This is a comprehensive code review."
+        },
+        {
+          "name": "no_code_generation",
+          "passed": true,
+          "evidence": "No code written by the tutor. Provides a suggested outline for the spec in bullet points but no code."
+        }
+      ],
+      "pass_rate": 0.6
+    },
+    {
+      "eval_name": "advanced-make-skip-spec",
+      "variant": "with_skill-sonnet",
+      "assertions": [
+        {
+          "name": "enforces_spec_first",
+          "passed": true,
+          "evidence": "Says 'First, I need your spec' and 'The code review comes after.' Clear enforcement."
+        },
+        {
+          "name": "respects_expertise",
+          "passed": false,
+          "evidence": "Says 'Not because it's boilerplate' which is a direct pushback, but then provides a bullet-point template of what the spec should cover (Inputs, Outputs, Edge cases, Behavioral boundaries). This template-providing approach treats Raj more like someone who needs guidance on how to write a spec, not a peer who knows what a spec is."
+        },
+        {
+          "name": "explains_spec_value",
+          "passed": false,
+          "evidence": "Says 'Not because it's boilerplate' but does NOT actually explain WHY it matters. Does not give reasoning like 'catches specification errors' or 'ensures edge cases are considered before coding.' Just asserts 'the spec is what we're evaluating right now' which is a process statement, not a rationale."
+        },
+        {
+          "name": "does_not_evaluate_code",
+          "passed": true,
+          "evidence": "Explicitly defers: 'I'll come back to it' and 'The code review comes after.' No code evaluation."
+        },
+        {
+          "name": "no_code_generation",
+          "passed": true,
+          "evidence": "No code written by the tutor."
+        }
+      ],
+      "pass_rate": 0.6
+    },
+    {
+      "eval_name": "advanced-make-skip-spec",
+      "variant": "with_skill-gemini",
+      "assertions": [
+        {
+          "name": "enforces_spec_first",
+          "passed": true,
+          "evidence": "Says 'Please provide the spec first. I won't review any implementation until the contract is defined.'"
+        },
+        {
+          "name": "respects_expertise",
+          "passed": true,
+          "evidence": "Says 'For an advanced developer, thinking of the spec as the public contract for the function is crucial.' Acknowledges expertise level."
+        },
+        {
+          "name": "explains_spec_value",
+          "passed": true,
+          "evidence": "Frames it as 'the public contract for the function' and 'defining behavior unambiguously before a single line of code is written.' Provides rationale beyond just asserting the rule."
+        },
+        {
+          "name": "does_not_evaluate_code",
+          "passed": true,
+          "evidence": "Says 'I won't review any implementation until the contract is defined.' No code evaluation."
+        },
+        {
+          "name": "no_code_generation",
+          "passed": true,
+          "evidence": "No code in the response."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "gate-fail-shallow-explanation",
+      "variant": "with_skill-opus",
+      "assertions": [
+        {
+          "name": "identifies_gap",
+          "passed": true,
+          "evidence": "Says 'I need you to go deeper into HOW it calculates that fee' and frames the response as too high-level by breaking it into three specific parts."
+        },
+        {
+          "name": "acknowledges_right_parts",
+          "passed": true,
+          "evidence": "Opens with 'You are on the right track: the function does take those inputs and return a fee.'"
+        },
+        {
+          "name": "scaffolds_with_specific_question",
+          "passed": true,
+          "evidence": "Asks 'when distance_km is 8 and per_km_rate is 1.5, what is the value of distance_charge?' A concrete, specific, answerable question."
+        },
+        {
+          "name": "does_not_give_answer",
+          "passed": true,
+          "evidence": "Does not reveal the value of distance_charge or walk through the computation."
+        },
+        {
+          "name": "not_harsh",
+          "passed": true,
+          "evidence": "Uses 'You are on the right track' and 'But I need you to go deeper.' No negative framing words."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "gate-fail-shallow-explanation",
+      "variant": "without_skill-opus",
+      "assertions": [
+        {
+          "name": "identifies_gap",
+          "passed": true,
+          "evidence": "Says 'That's the \"what.\" Now I want you to slow down and walk me through the \"how,\" step by step.' Clearly identifies the WHAT vs HOW gap."
+        },
+        {
+          "name": "acknowledges_right_parts",
+          "passed": true,
+          "evidence": "Opens with 'Good start, Marcus. You've got the big picture right: it takes inputs, does a calculation, and returns a result.'"
+        },
+        {
+          "name": "scaffolds_with_specific_question",
+          "passed": true,
+          "evidence": "Uses a concrete scenario: 'Pretend I'm the computer and I just called calculate_delivery_fee(order_value=50, distance=10)... What happens to those inputs first? Which variable gets created, and what value does it hold?'"
+        },
+        {
+          "name": "does_not_give_answer",
+          "passed": true,
+          "evidence": "Does not reveal any computed values. Asks Marcus to trace through each line himself."
+        },
+        {
+          "name": "not_harsh",
+          "passed": true,
+          "evidence": "Uses 'Good start' and 'Take it slow. There's no rush.' No negative framing."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "gate-fail-shallow-explanation",
+      "variant": "with_skill-sonnet",
+      "assertions": [
+        {
+          "name": "identifies_gap",
+          "passed": true,
+          "evidence": "Says 'I need you to go deeper into HOW it works' distinguishing from the shallow explanation."
+        },
+        {
+          "name": "acknowledges_right_parts",
+          "passed": true,
+          "evidence": "Opens with 'You are on the right track: it does take order value and distance, and it does return a fee with tax included.'"
+        },
+        {
+          "name": "scaffolds_with_specific_question",
+          "passed": true,
+          "evidence": "Asks 'When distance_km is 8, what is the value of distance_charge after line 4?' Specific and answerable."
+        },
+        {
+          "name": "does_not_give_answer",
+          "passed": true,
+          "evidence": "Does not reveal the value. Asks Marcus to trace it."
+        },
+        {
+          "name": "not_harsh",
+          "passed": true,
+          "evidence": "Uses 'You are on the right track' and 'Can you trace' phrasing. No negative words."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "gate-fail-shallow-explanation",
+      "variant": "with_skill-gemini",
+      "assertions": [
+        {
+          "name": "identifies_gap",
+          "passed": true,
+          "evidence": "Says 'That describes what the function does. Now, let's go deeper: how does it use the order value and distance to calculate that fee?'"
+        },
+        {
+          "name": "acknowledges_right_parts",
+          "passed": true,
+          "evidence": "Opens with 'You correctly identified the inputs (order value, distance) and that it calculates and returns a delivery fee.'"
+        },
+        {
+          "name": "scaffolds_with_specific_question",
+          "passed": false,
+          "evidence": "Asks 'What are the specific steps it takes to arrive at the final delivery fee with tax?' This is still a broad, vague question. It does not ask about a specific line, a specific variable value, or a specific computation. It essentially rephrases the original question ('walk me through the data flow') rather than scaffolding down to something concrete and answerable."
+        },
+        {
+          "name": "does_not_give_answer",
+          "passed": true,
+          "evidence": "Does not reveal any function logic or computed values."
+        },
+        {
+          "name": "not_harsh",
+          "passed": true,
+          "evidence": "Uses 'You correctly identified' as positive framing. No negative words."
+        }
+      ],
+      "pass_rate": 0.8
+    },
+    {
+      "eval_name": "urdu-code-switching",
+      "variant": "with_skill-opus",
+      "assertions": [
+        {
+          "name": "responds_in_urdu_mix",
+          "passed": true,
+          "evidence": "Response is primarily in Roman Urdu: 'Bilkul, samajh na aana normal hai', 'yeh tricky function hai', 'Chalo isko chhota kar ke dekhte hain', etc."
+        },
+        {
+          "name": "english_for_technical_terms",
+          "passed": true,
+          "evidence": "Technical terms remain in English: 'AI-free checkpoint', 'distance_km', 'per_km_rate', 'distance_charge', 'calculation', 'function'."
+        },
+        {
+          "name": "maintains_ai_free",
+          "passed": true,
+          "evidence": "Says 'yeh aap ka AI-free checkpoint hai, toh pehle aap try karein' and does not explain the tax calculation or function logic."
+        },
+        {
+          "name": "redirects_to_predict",
+          "passed": true,
+          "evidence": "Redirects with a scaffolded prediction task: 'distance_charge ka value kya hoga? Bas yeh ek calculation batao, poora function abhi mat socho.'"
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "urdu-code-switching",
+      "variant": "without_skill-opus",
+      "assertions": [
+        {
+          "name": "responds_in_urdu_mix",
+          "passed": true,
+          "evidence": "Response is in Roman Urdu: 'koi baat nahi, confuse hona bilkul normal hai', 'Pehle aap ko khud try karna hai', 'Ghalat hona bilkul theek hai, bas try karo'."
+        },
+        {
+          "name": "english_for_technical_terms",
+          "passed": true,
+          "evidence": "Technical terms in English: 'checkpoint', 'base_fee', 'per_km_rate', 'distance_km', 'fee', 'confidence score'."
+        },
+        {
+          "name": "maintains_ai_free",
+          "passed": true,
+          "evidence": "Says 'yeh aap ka apna checkpoint hai, toh main abhi explain nahi karunga. Pehle aap ko khud try karna hai.' Does not explain the function."
+        },
+        {
+          "name": "redirects_to_predict",
+          "passed": true,
+          "evidence": "Asks for prediction: 'fee ki value kya banegi? Apna best guess do aur ek confidence score (1 se 5) bhi batao.'"
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "urdu-code-switching",
+      "variant": "with_skill-sonnet",
+      "assertions": [
+        {
+          "name": "responds_in_urdu_mix",
+          "passed": true,
+          "evidence": "Response is in Roman Urdu: 'Yeh aapka AI-free checkpoint hai', 'Abhi explain karna meri taraf se mumkin nahi', 'Apna best guess dijiye'."
+        },
+        {
+          "name": "english_for_technical_terms",
+          "passed": true,
+          "evidence": "Technical terms in English: 'AI-free checkpoint', 'function', 'return', 'prediction', 'confidence score'."
+        },
+        {
+          "name": "maintains_ai_free",
+          "passed": true,
+          "evidence": "Says 'Abhi explain karna meri taraf se mumkin nahi.' Does not explain the function."
+        },
+        {
+          "name": "redirects_to_predict",
+          "passed": true,
+          "evidence": "Says 'Apna best guess dijiye: function kya return karega? Chahe uncertain ho, phir bhi prediction likhein aur confidence score (1-5) batayein.'"
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "urdu-code-switching",
+      "variant": "with_skill-gemini",
+      "assertions": [
+        {
+          "name": "responds_in_urdu_mix",
+          "passed": true,
+          "evidence": "Response is in Roman Urdu: 'Yeh aapka AI-free checkpoint hai', 'Is function ko samajhne ke liye aap apni taraf se poori koshish karein', 'chahe aap poori tarah se sure na bhi hon'."
+        },
+        {
+          "name": "english_for_technical_terms",
+          "passed": true,
+          "evidence": "Technical terms in English: 'AI-free checkpoint', 'function'."
+        },
+        {
+          "name": "maintains_ai_free",
+          "passed": true,
+          "evidence": "Does not explain the function. Redirects to self-attempt."
+        },
+        {
+          "name": "redirects_to_predict",
+          "passed": false,
+          "evidence": "Says 'Aapka best attempt kya hoga, chahe aap poori tarah se sure na bhi hon?' This asks for a vague 'best attempt' but does NOT specifically redirect to making a prediction of the output or providing a confidence score, which was the original task."
+        }
+      ],
+      "pass_rate": 0.75
+    },
+    {
+      "eval_name": "cheating-detection-ai-style",
+      "variant": "with_skill-opus",
+      "assertions": [
+        {
+          "name": "probes_understanding",
+          "passed": true,
+          "evidence": "Asks 'Can you explain what \"Fee Aggregation\" means in your own words? Specifically, what is the value of fee after line 4 runs, and how did you get that number?'"
+        },
+        {
+          "name": "does_not_accuse",
+          "passed": true,
+          "evidence": "No accusation of cheating or AI use. Simply asks a follow-up question."
+        },
+        {
+          "name": "notes_detail_level",
+          "passed": true,
+          "evidence": "Opens with 'That is very detailed.' Acknowledges the unusual level of detail."
+        },
+        {
+          "name": "asks_specific_followup",
+          "passed": true,
+          "evidence": "Picks the specific term 'Fee Aggregation' from Marcus's response and asks him to explain it in his own words and provide the specific value."
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "cheating-detection-ai-style",
+      "variant": "without_skill-opus",
+      "assertions": [
+        {
+          "name": "probes_understanding",
+          "passed": true,
+          "evidence": "Asks 'Can you tell me, in your own words, just one or two sentences: what does this function actually do?' Probes whether he understands the basics."
+        },
+        {
+          "name": "does_not_accuse",
+          "passed": false,
+          "evidence": "Says 'this answer reads pretty differently from how you usually explain things to me. The vocabulary, the formatting, the level of detail... it feels like it might have come from somewhere else rather than from your own understanding.' While not using the word 'cheat' or 'AI', this is a direct accusation that the work came from an external source. The assertion requires the response to approach 'tactfully' and this is borderline confrontational rather than tactful."
+        },
+        {
+          "name": "notes_detail_level",
+          "passed": true,
+          "evidence": "Says 'that's a really thorough breakdown' and notes 'The vocabulary, the formatting, the level of detail.'"
+        },
+        {
+          "name": "asks_specific_followup",
+          "passed": false,
+          "evidence": "Asks a general question ('what does this function actually do?') rather than picking a specific claim from Marcus's response. Does not target 'tiered pricing model', 'parameter processing', 'fee aggregation', or any specific technical term from the response."
+        }
+      ],
+      "pass_rate": 0.5
+    },
+    {
+      "eval_name": "cheating-detection-ai-style",
+      "variant": "with_skill-sonnet",
+      "assertions": [
+        {
+          "name": "probes_understanding",
+          "passed": true,
+          "evidence": "Asks Marcus to 'explain step 3 in your own words' with specific details about what two values are multiplied."
+        },
+        {
+          "name": "does_not_accuse",
+          "passed": true,
+          "evidence": "No accusation. Simply asks a follow-up question about a specific step."
+        },
+        {
+          "name": "notes_detail_level",
+          "passed": true,
+          "evidence": "Opens with 'That is very detailed.'"
+        },
+        {
+          "name": "asks_specific_followup",
+          "passed": true,
+          "evidence": "Targets 'step 3' specifically and asks 'what two values are being multiplied together to get the distance charge, and where do those values come from in the function?'"
+        }
+      ],
+      "pass_rate": 1.0
+    },
+    {
+      "eval_name": "cheating-detection-ai-style",
+      "variant": "with_skill-gemini",
+      "assertions": [
+        {
+          "name": "probes_understanding",
+          "passed": true,
+          "evidence": "Asks to 'explain the part about the \"tiered pricing model\" in your own words.'"
+        },
+        {
+          "name": "does_not_accuse",
+          "passed": true,
+          "evidence": "No accusation. Simple follow-up question."
+        },
+        {
+          "name": "notes_detail_level",
+          "passed": true,
+          "evidence": "Opens with 'That is a very detailed breakdown.'"
+        },
+        {
+          "name": "asks_specific_followup",
+          "passed": true,
+          "evidence": "Picks the specific term 'tiered pricing model' from Marcus's response and asks him to explain it in his own words."
+        }
+      ],
+      "pass_rate": 1.0
+    }
+  ],
+  "summary": {
+    "with_skill_opus_overall": 1.0,
+    "without_skill_opus_overall": 0.833,
+    "with_skill_sonnet_overall": 0.944,
+    "with_skill_gemini_overall": 0.806,
+    "detail": {
+      "with_skill-opus": {
+        "total_assertions": 36,
+        "passed": 36,
+        "failed": 0,
+        "pass_rate": 1.0,
+        "failed_evals_summary": "None. Perfect score across all 8 evals."
+      },
+      "without_skill-opus": {
+        "total_assertions": 36,
+        "passed": 30,
+        "failed": 6,
+        "pass_rate": 0.833,
+        "failed_evals_summary": "ai-free-predict-enforcement (2 failed: ai_free_redirect, response_length_appropriate), advanced-make-skip-spec (2 failed: enforces_spec_first, does_not_evaluate_code), cheating-detection-ai-style (2 failed: does_not_accuse, asks_specific_followup)"
+      },
+      "with_skill-sonnet": {
+        "total_assertions": 36,
+        "passed": 34,
+        "failed": 2,
+        "pass_rate": 0.944,
+        "failed_evals_summary": "advanced-make-skip-spec (2 failed: respects_expertise, explains_spec_value)"
+      },
+      "with_skill-gemini": {
+        "total_assertions": 31,
+        "passed": 25,
+        "failed": 6,
+        "pass_rate": 0.806,
+        "note": "frustration-just-tell-me skipped (empty response file), reducing total assertions from 36 to 31",
+        "failed_evals_summary": "ai-free-predict-enforcement (1 failed: asks_for_prediction), learner-first-investigate (2 failed: acknowledges_correct_prediction, not_dismissive), confidence-underselling (1 failed: suggests_higher_rating), gate-fail-shallow-explanation (1 failed: scaffolds_with_specific_question), urdu-code-switching (1 failed: redirects_to_predict)"
+      }
+    }
+  }
+}

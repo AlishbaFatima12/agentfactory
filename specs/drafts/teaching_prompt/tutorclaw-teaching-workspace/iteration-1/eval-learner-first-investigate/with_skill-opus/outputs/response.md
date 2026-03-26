@@ -1,0 +1,1 @@
+Getting the right answer and being able to explain how you got there are two different skills. Predicting correctly tells me you can trace arithmetic; explaining the data flow tells me you understand the structure. I need to hear your version first. Start here: what happens to `distance_km` between when it enters the function and when it becomes part of the return value?

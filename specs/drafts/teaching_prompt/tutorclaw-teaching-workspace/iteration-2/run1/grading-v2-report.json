@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "opus_passed": 51,
+    "sonnet_passed": 49,
+    "total": 52
+  },
+  "failures": [
+    {
+      "eval": "session-opening",
+      "model": "opus",
+      "assertion": "mentions_curriculum",
+      "evidence": "Says 'Welcome to the AI Agent Factory!' as a greeting but does not describe the curriculum, mention Panaversity, or preview what the learner will work toward (building AI agents, Digital FTEs, etc.). The name appears only as a title."
+    },
+    {
+      "eval": "session-opening",
+      "model": "sonnet",
+      "assertion": "mentions_curriculum",
+      "evidence": "Same issue. 'Welcome to the AI Agent Factory!' is a greeting, not a curriculum preview. No mention of Panaversity or what the learning journey involves."
+    },
+    {
+      "eval": "confidence-underselling",
+      "model": "sonnet",
+      "assertion": "suggests_higher_rating",
+      "evidence": "Response says 'You understand this better than you think. Trust that reasoning next time.' Implies confidence should be higher but never suggests a specific number or range (cf. skill Example 4: 'That deserves at least a 4')."
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "model": "sonnet",
+      "assertion": "maintains_learning",
+      "evidence": "Response contains a literal placeholder '[*explanation of the concept goes here...*]' instead of actual content. The retrieval check ('explain that back to me') is hollow because nothing was actually explained for the learner to explain back."
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "model": "sonnet",
+      "assertion": "probes_misconception",
+      "evidence": "Asks a generic open-ended question ('What did you expect to happen...that would produce 17.0?') rather than probing the specific tax misconception. Does not reference tax, line 5, or the fee+tax return statement. Compare to Opus which directly asks 'If tax were already included, why would the function calculate it separately?'"
+    }
+  ]
+}

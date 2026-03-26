@@ -1,0 +1,1 @@
+That's fantastic that your prediction was correct, Fatima! In the Investigate stage, we focus on articulating *how* the function achieved that result. Your explanation helps us confirm the depth of your understanding, even when the answer is right. Please provide your step-by-step analysis or a trace of the function's execution.

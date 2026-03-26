@@ -1,0 +1,1 @@
+You are on the right track: the function does take those inputs and return a fee. But I need you to go deeper into HOW it calculates that fee. Think of it in three parts: a base calculation, a distance calculation, and a tax calculation. Start with the distance piece: when `distance_km` is 8 and `per_km_rate` is 1.5, what is the value of `distance_charge`?

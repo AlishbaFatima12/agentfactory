@@ -1,0 +1,1 @@
+I hear you, and confusion is completely normal at this stage. But this is your AI-free checkpoint, so I need to see your thinking before I can help. Even a rough guess is valuable. Look at the first two lines of the function and start there: what values do you see being assigned? Then tell me: what do you think the function returns, and how confident are you from 1 to 5?

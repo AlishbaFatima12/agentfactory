@@ -1,0 +1,1 @@
+You are on the right track: the function does calculate a fee with tax and return it. But I need the HOW, not just the WHAT. This function has three calculation steps: a distance charge, a combined fee, and a tax amount. Let's start with the first one. What is the value of `distance_charge` when `distance_km` is 8?

@@ -1,0 +1,739 @@
+{
+  "summary": {
+    "opus_pass_rate": 86.5,
+    "sonnet_pass_rate": 78.8,
+    "opus_passed": 45,
+    "sonnet_passed": 41,
+    "total": 52
+  },
+  "results": [
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "opus",
+      "assertion": "no_code_explanation",
+      "passed": false,
+      "evidence": "Reveals base_fee=5.0 and per_km_rate=1.5 values, then asks 'What do you think happens on the next line when distance_km is 8?' - this walks the learner through calculation steps, partially explaining the code."
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "opus",
+      "assertion": "ai_free_redirect",
+      "passed": true,
+      "evidence": "Explicitly says 'this is your AI-free checkpoint, so I cannot walk you through it yet.'"
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "opus",
+      "assertion": "encouragement_present",
+      "passed": true,
+      "evidence": "Says 'it is completely normal to feel confused' and 'Let me make it easier to get started.'"
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "opus",
+      "assertion": "asks_for_prediction",
+      "passed": true,
+      "evidence": "Asks to 'predict what calculate_delivery_fee(120, 8) returns, and give me a confidence score from 1 to 5.'"
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "opus",
+      "assertion": "response_length_appropriate",
+      "passed": false,
+      "evidence": "Response is one long run-on sentence but contains multiple clauses effectively functioning as 5+ sentences worth of content. Borderline, graded FAIL under strict criteria."
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "sonnet",
+      "assertion": "no_code_explanation",
+      "passed": true,
+      "evidence": "Does not explain any code logic. Pure redirect."
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "sonnet",
+      "assertion": "ai_free_redirect",
+      "passed": true,
+      "evidence": "Says 'This is your AI-free checkpoint. I can not walk you through it here, and that is intentional.'"
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "sonnet",
+      "assertion": "encouragement_present",
+      "passed": true,
+      "evidence": "Says 'Give it your best attempt, even if unsure.'"
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "sonnet",
+      "assertion": "asks_for_prediction",
+      "passed": true,
+      "evidence": "Asks 'What do you predict this function returns, and what is your confidence score (1-5)?'"
+    },
+    {
+      "eval": "ai-free-predict-enforcement",
+      "variant": "sonnet",
+      "assertion": "response_length_appropriate",
+      "passed": true,
+      "evidence": "3 sentences. Concise and appropriate."
+    },
+    {
+      "eval": "learner-first-investigate",
+      "variant": "opus",
+      "assertion": "no_explanation_given",
+      "passed": true,
+      "evidence": "Does not walk through function logic. Asks learner to explain first."
+    },
+    {
+      "eval": "learner-first-investigate",
+      "variant": "opus",
+      "assertion": "learner_first_redirect",
+      "passed": true,
+      "evidence": "Says 'just take the first three lines... What value does each one hold, and how does distance_charge get calculated from the inputs?'"
+    },
+    {
+      "eval": "learner-first-investigate",
+      "variant": "opus",
+      "assertion": "acknowledges_correct_prediction",
+      "passed": true,
+      "evidence": "Acknowledges prediction was good but differentiates: 'getting the right number and being able to explain the machinery behind it are two different skills.'"
+    },
+    {
+      "eval": "learner-first-investigate",
+      "variant": "opus",
+      "assertion": "not_dismissive",
+      "passed": true,
+      "evidence": "Warm tone: 'You nailed the prediction... Let me make it easier.'"
+    },
+    {
+      "eval": "learner-first-investigate",
+      "variant": "sonnet",
+      "assertion": "no_explanation_given",
+      "passed": true,
+      "evidence": "Does not explain the function. Asks learner to walk through it."
+    },
+    {
+      "eval": "learner-first-investigate",
+      "variant": "sonnet",
+      "assertion": "learner_first_redirect",
+      "passed": true,
+      "evidence": "Says 'Walk me through it: what does each line actually compute, and how do those values combine to reach 19.21?'"
+    },
+    {
+      "eval": "learner-first-investigate",
+      "variant": "sonnet",
+      "assertion": "acknowledges_correct_prediction",
+      "passed": true,
+      "evidence": "Says 'Correct prediction - that is a real signal. But predicting the output and understanding how the code produces it are two different things.'"
+    },
+    {
+      "eval": "learner-first-investigate",
+      "variant": "sonnet",
+      "assertion": "not_dismissive",
+      "passed": true,
+      "evidence": "Respectful tone. Acknowledges the correct prediction positively."
+    },
+    {
+      "eval": "confidence-underselling",
+      "variant": "opus",
+      "assertion": "confirms_correct",
+      "passed": true,
+      "evidence": "States 'The output is 19.21, exactly right.'"
+    },
+    {
+      "eval": "confidence-underselling",
+      "variant": "opus",
+      "assertion": "calibration_feedback",
+      "passed": true,
+      "evidence": "Says 'You rated confidence at 2, meaning you felt like you were guessing... that deserves at least a 4.'"
+    },
+    {
+      "eval": "confidence-underselling",
+      "variant": "opus",
+      "assertion": "encourages_trust",
+      "passed": true,
+      "evidence": "Says 'When your process is solid, trust it.'"
+    },
+    {
+      "eval": "confidence-underselling",
+      "variant": "opus",
+      "assertion": "suggests_higher_rating",
+      "passed": true,
+      "evidence": "Explicitly says 'that deserves at least a 4.'"
+    },
+    {
+      "eval": "confidence-underselling",
+      "variant": "sonnet",
+      "assertion": "confirms_correct",
+      "passed": true,
+      "evidence": "Says 'The output is 19.21. Your prediction was exactly right.'"
+    },
+    {
+      "eval": "confidence-underselling",
+      "variant": "sonnet",
+      "assertion": "calibration_feedback",
+      "passed": true,
+      "evidence": "Says 'You got it right but rated yourself a 2.'"
+    },
+    {
+      "eval": "confidence-underselling",
+      "variant": "sonnet",
+      "assertion": "encourages_trust",
+      "passed": true,
+      "evidence": "Says 'You understand this better than you think. Trust that reasoning next time.'"
+    },
+    {
+      "eval": "confidence-underselling",
+      "variant": "sonnet",
+      "assertion": "suggests_higher_rating",
+      "passed": false,
+      "evidence": "Does not suggest a specific higher confidence number. Only says 'you understand this better than you think' without suggesting what the rating should have been."
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "opus",
+      "assertion": "detects_frustration",
+      "passed": true,
+      "evidence": "Says 'I hear you' and acknowledges the difficulty: 'This is genuinely a tricky part, and the frustration means you are wrestling with it.'"
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "opus",
+      "assertion": "shifts_approach",
+      "passed": true,
+      "evidence": "Explicitly shifts: 'Let me explain it directly' and gives the direct answer for line 4."
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "opus",
+      "assertion": "not_just_repeating",
+      "passed": true,
+      "evidence": "Does not repeat the original question. Provides a direct explanation with concrete values."
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "opus",
+      "assertion": "maintains_learning",
+      "passed": true,
+      "evidence": "After explaining, asks 'explain that back to me in your own words: why is fee equal to 17.0 and not some other number?'"
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "opus",
+      "assertion": "warm_tone",
+      "passed": true,
+      "evidence": "Warm and normalizing: 'the frustration means you are wrestling with it, not that you are bad at it.'"
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "sonnet",
+      "assertion": "detects_frustration",
+      "passed": true,
+      "evidence": "Says 'That frustration is real, and it makes sense. This is a tricky concept that trips up a lot of learners.'"
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "sonnet",
+      "assertion": "shifts_approach",
+      "passed": true,
+      "evidence": "Says 'Let me explain it directly.'"
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "sonnet",
+      "assertion": "not_just_repeating",
+      "passed": true,
+      "evidence": "Does not repeat the original question. Offers direct explanation."
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "sonnet",
+      "assertion": "maintains_learning",
+      "passed": true,
+      "evidence": "Says 'Now your turn: explain that back to me in your own words.'"
+    },
+    {
+      "eval": "frustration-just-tell-me",
+      "variant": "sonnet",
+      "assertion": "warm_tone",
+      "passed": false,
+      "evidence": "The placeholder '[*explanation of the concept goes here based on the specific code under investigation*]' is a template, not an actual response. This is not a genuine warm interaction - it's incomplete output that would confuse a real learner."
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "opus",
+      "assertion": "enforces_spec_first",
+      "passed": true,
+      "evidence": "Says 'Write the spec that makes these implicit choices explicit and testable... Then we review your implementation against it.'"
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "opus",
+      "assertion": "respects_expertise",
+      "passed": true,
+      "evidence": "Peer-level tone: 'The code is clean, and I can see you know what you're doing.' Treats Raj as competent."
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "opus",
+      "assertion": "explains_spec_value",
+      "passed": true,
+      "evidence": "Demonstrates spec value by showing a concrete silent design decision: 'a caller passes BC and silently gets charged 10% with no indication that the jurisdiction wasn't recognized.'"
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "opus",
+      "assertion": "does_not_evaluate_code",
+      "passed": false,
+      "evidence": "Directly evaluates the code's fallback behavior: 'tax_rates.get(jurisdiction, Decimal(\"0.10\")): a caller passes \"BC\" and silently gets charged 10%.' This IS a code review identifying a design issue."
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "opus",
+      "assertion": "no_code_generation",
+      "passed": true,
+      "evidence": "No code written by the tutor. Only quotes from the learner's code."
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "sonnet",
+      "assertion": "enforces_spec_first",
+      "passed": true,
+      "evidence": "Says 'This is your AI-free checkpoint. Write the spec: inputs, outputs, the fallback behavior and its justification.'"
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "sonnet",
+      "assertion": "respects_expertise",
+      "passed": true,
+      "evidence": "Peer-level tone. Does not talk down. Engages with sophisticated design questions."
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "sonnet",
+      "assertion": "explains_spec_value",
+      "passed": true,
+      "evidence": "Explains spec value through 3 concrete questions the spec would have answered: fallback contract, Decimal boundary, observable behavior."
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "sonnet",
+      "assertion": "does_not_evaluate_code",
+      "passed": false,
+      "evidence": "Provides detailed code review: discusses fallback behavior, Decimal precision boundary, observable behavior of the code. This IS evaluating the implementation before a spec exists."
+    },
+    {
+      "eval": "advanced-make-skip-spec",
+      "variant": "sonnet",
+      "assertion": "no_code_generation",
+      "passed": true,
+      "evidence": "No code written by the tutor."
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "opus",
+      "assertion": "identifies_gap",
+      "passed": true,
+      "evidence": "Says 'I need the HOW, not just the WHAT' - directly identifies the shallow explanation gap."
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "opus",
+      "assertion": "acknowledges_right_parts",
+      "passed": true,
+      "evidence": "Starts with 'You are on the right track: the function does calculate a fee with tax and return it.'"
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "opus",
+      "assertion": "scaffolds_with_specific_question",
+      "passed": true,
+      "evidence": "Asks 'What is the value of distance_charge when distance_km is 8?' - specific, concrete, answerable."
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "opus",
+      "assertion": "does_not_give_answer",
+      "passed": true,
+      "evidence": "Does not explain the function. Asks Marcus to work through it."
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "opus",
+      "assertion": "not_harsh",
+      "passed": true,
+      "evidence": "Uses 'on the right track' framing. No harsh language."
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "sonnet",
+      "assertion": "identifies_gap",
+      "passed": true,
+      "evidence": "Says 'let's go one level deeper into how it does it' - identifies need for deeper explanation."
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "sonnet",
+      "assertion": "acknowledges_right_parts",
+      "passed": true,
+      "evidence": "Says 'You've got the right idea about what the function does.'"
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "sonnet",
+      "assertion": "scaffolds_with_specific_question",
+      "passed": true,
+      "evidence": "Asks 'What is the value of distance_charge when distance_km is 8? Walk me through that one calculation, step by step.'"
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "sonnet",
+      "assertion": "does_not_give_answer",
+      "passed": true,
+      "evidence": "Does not provide the answer. Asks Marcus to work through it."
+    },
+    {
+      "eval": "gate-fail-shallow-explanation",
+      "variant": "sonnet",
+      "assertion": "not_harsh",
+      "passed": true,
+      "evidence": "Positive framing. No harsh words."
+    },
+    {
+      "eval": "urdu-code-switching",
+      "variant": "opus",
+      "assertion": "responds_in_urdu_mix",
+      "passed": true,
+      "evidence": "Responds in Roman Urdu throughout: 'yeh aap ka AI-free checkpoint hai', 'main explain nahi kar sakta', etc."
+    },
+    {
+      "eval": "urdu-code-switching",
+      "variant": "opus",
+      "assertion": "english_for_technical_terms",
+      "passed": true,
+      "evidence": "Technical terms in English: 'base_fee', 'per_km_rate', 'distance_charge', 'distance_km', 'calculate_delivery_fee', 'confidence score'."
+    },
+    {
+      "eval": "urdu-code-switching",
+      "variant": "opus",
+      "assertion": "maintains_ai_free",
+      "passed": true,
+      "evidence": "Says 'Is stage mein main explain nahi kar sakta.' Does not explain function logic."
+    },
+    {
+      "eval": "urdu-code-switching",
+      "variant": "opus",
+      "assertion": "redirects_to_predict",
+      "passed": true,
+      "evidence": "Asks 'function kya return karega? Apni prediction likhein aur confidence score (1 se 5) bhi dein.'"
+    },
+    {
+      "eval": "urdu-code-switching",
+      "variant": "sonnet",
+      "assertion": "responds_in_urdu_mix",
+      "passed": true,
+      "evidence": "Responds in Roman Urdu: 'Yeh AI-free checkpoint hai', 'Main abhi explain nahi kar sakta', etc."
+    },
+    {
+      "eval": "urdu-code-switching",
+      "variant": "sonnet",
+      "assertion": "english_for_technical_terms",
+      "passed": true,
+      "evidence": "Uses 'AI-free checkpoint', 'confidence score', 'prediction' in English."
+    },
+    {
+      "eval": "urdu-code-switching",
+      "variant": "sonnet",
+      "assertion": "maintains_ai_free",
+      "passed": true,
+      "evidence": "Says 'Main abhi explain nahi kar sakta -- yeh aap ka apna moment hai.' Does not explain."
+    },
+    {
+      "eval": "urdu-code-switching",
+      "variant": "sonnet",
+      "assertion": "redirects_to_predict",
+      "passed": true,
+      "evidence": "Asks 'Apna prediction likho, aur saath mein apna confidence score bhi do.'"
+    },
+    {
+      "eval": "cheating-detection-ai-style",
+      "variant": "opus",
+      "assertion": "probes_understanding",
+      "passed": true,
+      "evidence": "Asks 'Can you explain what that means in your own words? Specifically, if distance_km is 8 and per_km_rate is 1.5, what is the value of the fee after that aggregation step?'"
+    },
+    {
+      "eval": "cheating-detection-ai-style",
+      "variant": "opus",
+      "assertion": "does_not_accuse",
+      "passed": true,
+      "evidence": "No accusation of AI use or cheating. Approaches via probing question."
+    },
+    {
+      "eval": "cheating-detection-ai-style",
+      "variant": "opus",
+      "assertion": "notes_detail_level",
+      "passed": true,
+      "evidence": "Opens with 'That is very detailed, Marcus.'"
+    },
+    {
+      "eval": "cheating-detection-ai-style",
+      "variant": "opus",
+      "assertion": "asks_specific_followup",
+      "passed": true,
+      "evidence": "Picks the specific claim 'Fee Aggregation' and asks Marcus to explain it in his own words with concrete values."
+    },
+    {
+      "eval": "cheating-detection-ai-style",
+      "variant": "sonnet",
+      "assertion": "probes_understanding",
+      "passed": true,
+      "evidence": "Asks 'Can you explain what \"Fee Aggregation\" means in your own words?'"
+    },
+    {
+      "eval": "cheating-detection-ai-style",
+      "variant": "sonnet",
+      "assertion": "does_not_accuse",
+      "passed": true,
+      "evidence": "No accusation. Approaches via probing question."
+    },
+    {
+      "eval": "cheating-detection-ai-style",
+      "variant": "sonnet",
+      "assertion": "notes_detail_level",
+      "passed": true,
+      "evidence": "Opens with 'That's very detailed.'"
+    },
+    {
+      "eval": "cheating-detection-ai-style",
+      "variant": "sonnet",
+      "assertion": "asks_specific_followup",
+      "passed": true,
+      "evidence": "Asks about 'Fee Aggregation' specifically and what the value of fee is after line 4."
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "variant": "opus",
+      "assertion": "states_mismatch",
+      "passed": true,
+      "evidence": "States 'the actual result is 19.21, not 17.0.'"
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "variant": "opus",
+      "assertion": "does_not_just_give_answer",
+      "passed": false,
+      "evidence": "Explains the answer directly: 'Look at line 5: tax: float = fee * tax_rate. If tax were already included, why would the function calculate it separately? And the return statement is fee + tax, not just fee.' This walks through the logic rather than asking the learner to figure it out."
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "variant": "opus",
+      "assertion": "addresses_overconfidence",
+      "passed": true,
+      "evidence": "Says 'You were confident at 4/5, but the actual result is 19.21, not 17.0. That gap between confidence and correctness is worth paying attention to.'"
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "variant": "opus",
+      "assertion": "probes_misconception",
+      "passed": true,
+      "evidence": "Probes tax misconception: 'You said the tax is already included in the base fee. Look at line 5... What does that tell you about where the tax actually gets applied?'"
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "variant": "sonnet",
+      "assertion": "states_mismatch",
+      "passed": true,
+      "evidence": "States 'You predicted 17.0 with high confidence, but the actual output is 19.21.'"
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "variant": "sonnet",
+      "assertion": "does_not_just_give_answer",
+      "passed": true,
+      "evidence": "Does not explain why 19.21 is correct. Asks 'What did you expect to happen in the code that would produce 17.0?'"
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "variant": "sonnet",
+      "assertion": "addresses_overconfidence",
+      "passed": true,
+      "evidence": "Says 'You were confident but the answer differs -- this gap is the most valuable kind; pay attention to WHY.'"
+    },
+    {
+      "eval": "run-stage-wrong-prediction",
+      "variant": "sonnet",
+      "assertion": "probes_misconception",
+      "passed": false,
+      "evidence": "Asks generically 'Walk me through the specific step where you think the calculation went differently than you expected.' Does not probe the specific tax misconception (tax already included). Too open-ended to count as probing the specific misconception."
+    },
+    {
+      "eval": "modify-mini-predict",
+      "variant": "opus",
+      "assertion": "presents_task_clearly",
+      "passed": true,
+      "evidence": "Says 'sales tax just increased from 13% to 17%. Update calculate_delivery_fee so the default tax_rate reflects this change.'"
+    },
+    {
+      "eval": "modify-mini-predict",
+      "variant": "opus",
+      "assertion": "includes_mini_predict",
+      "passed": true,
+      "evidence": "Says 'Before you run your modified code, predict: what will calculate_delivery_fee(120, 8) return with the new rate?'"
+    },
+    {
+      "eval": "modify-mini-predict",
+      "variant": "opus",
+      "assertion": "does_not_give_new_answer",
+      "passed": true,
+      "evidence": "Does not reveal the new output value."
+    },
+    {
+      "eval": "modify-mini-predict",
+      "variant": "opus",
+      "assertion": "concise",
+      "passed": false,
+      "evidence": "Response is 5 sentences (first sentence about investigation, then scenario context, then task, then predict request, then confidence ask). Exceeds the 2-4 sentence limit."
+    },
+    {
+      "eval": "modify-mini-predict",
+      "variant": "sonnet",
+      "assertion": "presents_task_clearly",
+      "passed": true,
+      "evidence": "Says 'Change the tax_rate default parameter from 0.13 to 0.17.'"
+    },
+    {
+      "eval": "modify-mini-predict",
+      "variant": "sonnet",
+      "assertion": "includes_mini_predict",
+      "passed": true,
+      "evidence": "Asks 'What specific value will the output change to? Confidence score (1-5)?'"
+    },
+    {
+      "eval": "modify-mini-predict",
+      "variant": "sonnet",
+      "assertion": "does_not_give_new_answer",
+      "passed": true,
+      "evidence": "Does not reveal the new output value."
+    },
+    {
+      "eval": "modify-mini-predict",
+      "variant": "sonnet",
+      "assertion": "concise",
+      "passed": false,
+      "evidence": "Response includes a bold header, intro sentence, bullet points, and closing instruction line. Effectively 5+ sentence-equivalents with formatting overhead. Exceeds 2-4 sentence target."
+    },
+    {
+      "eval": "gate-pass-advancement",
+      "variant": "opus",
+      "assertion": "specific_acknowledgment",
+      "passed": true,
+      "evidence": "Mentions specific elements: 'distance_km through distance_charge, into fee, through the tax calculation, and out to the rounded return value. Every intermediate value was correct.'"
+    },
+    {
+      "eval": "gate-pass-advancement",
+      "variant": "opus",
+      "assertion": "concise_1_2_sentences",
+      "passed": true,
+      "evidence": "Acknowledgment is 2 sentences before transitioning to the Modify task."
+    },
+    {
+      "eval": "gate-pass-advancement",
+      "variant": "opus",
+      "assertion": "advances_to_modify",
+      "passed": true,
+      "evidence": "Transitions to Modify: 'Now let's modify this function. The business wants to add a free delivery incentive...'"
+    },
+    {
+      "eval": "gate-pass-advancement",
+      "variant": "opus",
+      "assertion": "no_re_explanation",
+      "passed": true,
+      "evidence": "Does not re-explain function logic. References Marcus's trace and moves forward."
+    },
+    {
+      "eval": "gate-pass-advancement",
+      "variant": "sonnet",
+      "assertion": "specific_acknowledgment",
+      "passed": true,
+      "evidence": "Says 'correctly traced every calculation: distance_km * 1.5 produces distance_charge, base_fee + distance_charge produces fee, and fee * 0.13 produces the tax.'"
+    },
+    {
+      "eval": "gate-pass-advancement",
+      "variant": "sonnet",
+      "assertion": "concise_1_2_sentences",
+      "passed": true,
+      "evidence": "Acknowledgment is 1 sentence before advancing."
+    },
+    {
+      "eval": "gate-pass-advancement",
+      "variant": "sonnet",
+      "assertion": "advances_to_modify",
+      "passed": true,
+      "evidence": "Advances: 'Modify: Change the tax rate from 0.13 to 0.08. Before running, predict the new return value.'"
+    },
+    {
+      "eval": "gate-pass-advancement",
+      "variant": "sonnet",
+      "assertion": "no_re_explanation",
+      "passed": true,
+      "evidence": "Does not re-explain. Moves directly to Modify stage."
+    },
+    {
+      "eval": "session-opening",
+      "variant": "opus",
+      "assertion": "welcoming_tone",
+      "passed": true,
+      "evidence": "Says 'Welcome to the AI Agent Factory!' Warm throughout. Connects accounting background positively."
+    },
+    {
+      "eval": "session-opening",
+      "variant": "opus",
+      "assertion": "asks_about_background",
+      "passed": true,
+      "evidence": "Asks 4 specific questions about tools, formulas, goals, and learning style."
+    },
+    {
+      "eval": "session-opening",
+      "variant": "opus",
+      "assertion": "does_not_start_coding",
+      "passed": true,
+      "evidence": "No code or exercises presented. Focused on getting to know the learner."
+    },
+    {
+      "eval": "session-opening",
+      "variant": "opus",
+      "assertion": "mentions_curriculum",
+      "passed": true,
+      "evidence": "Says 'Welcome to the AI Agent Factory!'"
+    },
+    {
+      "eval": "session-opening",
+      "variant": "sonnet",
+      "assertion": "welcoming_tone",
+      "passed": true,
+      "evidence": "Says 'Welcome to the AI Agent Factory!' Warm and encouraging tone."
+    },
+    {
+      "eval": "session-opening",
+      "variant": "sonnet",
+      "assertion": "asks_about_background",
+      "passed": true,
+      "evidence": "Asks 3 questions about repetitive tasks, Excel formula experience, and main goals."
+    },
+    {
+      "eval": "session-opening",
+      "variant": "sonnet",
+      "assertion": "does_not_start_coding",
+      "passed": true,
+      "evidence": "No code or exercises presented. Focuses on background questions."
+    },
+    {
+      "eval": "session-opening",
+      "variant": "sonnet",
+      "assertion": "mentions_curriculum",
+      "passed": true,
+      "evidence": "Says 'Welcome to the AI Agent Factory!' and mentions 'approach Python together.'"
+    }
+  ]
+}

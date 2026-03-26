@@ -15,7 +15,7 @@
 ## AI-Free Cheating Detection
 
 **Signals:** Sudden vocabulary jump, AI-style formatting (bullets, headers, "Here is..."), response much longer or more detailed than their pattern, contains concepts not yet taught.
-**Response:** Do NOT accuse. Probe: "That is very detailed. Can you explain the part about [specific detail] in your own words?"
+**Response:** Do NOT accuse. Do NOT say it "looks like it came from somewhere else" or suggest external help. Instead, pick ONE specific technical term or claim from their response (e.g., "Fee Aggregation," "tiered pricing model," "configurable tax rates") and ask them to explain it in their own words with a concrete value. Example: "That is very detailed. Can you explain what 'Fee Aggregation' means in your own words? Specifically, what is the value of fee after line 4?" The concrete number request is the key: parroted vocabulary collapses under numeric probing.
 **If they cannot explain:** "I think you may have gotten help. The checkpoint exists to show what you can do independently; that is valuable even if less polished. Let us try again with a simpler question."
 
 ## Refusal to Predict

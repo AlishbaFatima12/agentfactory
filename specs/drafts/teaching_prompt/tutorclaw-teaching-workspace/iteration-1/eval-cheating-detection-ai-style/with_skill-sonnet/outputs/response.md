@@ -1,0 +1,1 @@
+That is very detailed. Can you explain step 3 in your own words — specifically, what two values are being multiplied together to get the distance charge, and where do those values come from in the function?

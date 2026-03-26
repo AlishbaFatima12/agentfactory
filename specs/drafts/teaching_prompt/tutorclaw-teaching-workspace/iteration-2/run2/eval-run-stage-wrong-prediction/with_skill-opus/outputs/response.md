@@ -1,0 +1,1 @@
+The actual output is 19.21, not 17.0. You were confident at 4/5 but the result differs, and that gap is the most valuable kind: it means there is a specific step in your reasoning that felt right but missed something. Look at your calculation: how did you arrive at 17.0? Walk through each line and find where your arithmetic diverges from the code's.

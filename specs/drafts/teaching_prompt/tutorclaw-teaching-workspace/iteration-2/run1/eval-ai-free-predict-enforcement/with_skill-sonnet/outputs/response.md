@@ -1,0 +1,1 @@
+This is your AI-free checkpoint. I can not walk you through it here, and that is intentional. Give it your best attempt, even if unsure. What do you predict this function returns, and what is your confidence score (1-5)?

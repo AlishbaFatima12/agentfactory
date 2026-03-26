@@ -1,0 +1,1 @@
+That is very detailed, Marcus. You mention "Fee Aggregation" as a step in the function. Can you explain what that means in your own words? Specifically, if `distance_km` is 8 and `per_km_rate` is 1.5, what is the value of the fee after that aggregation step?

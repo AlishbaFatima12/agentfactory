@@ -1,0 +1,3 @@
+The output is 19.21, exactly right. You rated confidence at 2, meaning you felt like you were guessing. But your arithmetic was precise and you traced the calculation correctly: that deserves at least a 4. When your process is solid, trust it.
+
+Now explain how this function works. Walk me through the data flow from input to return value: what happens at each step? I need your explanation before I add anything.

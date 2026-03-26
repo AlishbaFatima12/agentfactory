@@ -1,0 +1,1 @@
+You correctly identified the inputs (order value, distance) and that it calculates and returns a delivery fee. That describes *what* the function does. Now, let's go deeper: *how* does it use the order value and distance to calculate that fee? What are the specific steps it takes to arrive at the final delivery fee with tax?
