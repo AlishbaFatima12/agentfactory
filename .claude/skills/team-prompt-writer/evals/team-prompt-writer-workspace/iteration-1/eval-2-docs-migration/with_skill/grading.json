@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+      "passed": true,
+      "evidence": "Found: 1. `TeamCreate(team_name=\"api-docs-migration\")`"
+    },
+    {
+      "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+      "passed": true,
+      "evidence": "Found 25 occurrences of team_name"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": true,
+      "evidence": "No misleading 'do not use Agent tool' phrases found"
+    },
+    {
+      "text": "Writer prompts contain migration-specific quality reasoning about API documentation (findability, working examples, error documentation)",
+      "passed": true,
+      "evidence": "Found API doc quality markers: ['findability', 'error responses', 'copy-paste', 'endpoint']"
+    },
+    {
+      "text": "Writer prompts contain domain context about what makes good API docs (not just 'match the reference')",
+      "passed": true,
+      "evidence": "Found good docs context: ['stripe', 'twilio', 'findability', 'cross-linked']"
+    },
+    {
+      "text": "Writer prompts mention specific pitfalls to avoid for API documentation",
+      "passed": true,
+      "evidence": "Found pitfall guidance: ['pitfall', 'mediocre', 'avoid']"
+    },
+    {
+      "text": "Architect deliverables include old-to-new path mapping AND quality criteria beyond structural mapping",
+      "passed": true,
+      "evidence": "Has path mapping AND quality criteria"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "passed": true,
+      "evidence": "Found quality reviewer: 'quality review'"
+    },
+    {
+      "text": "Writers are scoped to specific API domains with zero overlap",
+      "passed": true,
+      "evidence": "Found 6/6 domains scoped: ['auth', 'users', 'billing', 'analytics', 'webhooks', 'admin']"
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  }
+}

@@ -10,87 +10,80 @@ Every generated prompt follows this skeleton:
 ```
 1. PREAMBLE
    - "Create an agent team to..."
-   - Team enforcement block (TeamCreate, not subagents)
    - Source material path
    - Output directory path
    - What the content IS (identity paragraph)
 
-2. TEAM STRUCTURE HEADER
-   - "You are the team lead. You coordinate. You do NOT write content yourself."
-   - "Use the shared task list to track all work."
-   - "Enforce phase ordering via task dependencies."
+2. TEAM LEAD IDENTITY
+   - "You are the team lead. You coordinate. You do NOT write content."
+   - "Spawn each worker as a TEAMMATE in the agent team (not subagents)."
+   - "Use the shared task list. Enforce phase ordering."
 
 3. PHASE 1: ARCHITECT (1 teammate, blocks everything)
-   - Task name and spawn instruction
-   - Model: Opus
-   - Plan approval: enabled
+   - "Spawn a teammate named 'architect'"
+   - Model: Opus, plan approval: enabled
    - Teammate prompt with:
      * READ order (full source → existing reference → constitution)
-     * DELIVERABLES list:
+     * DELIVERABLES:
        - Master architecture spec (directory skeleton, patterns, conversion rules)
-       - Shared writer's brief (identity, recurring patterns, cross-refs)
-       - Per-writer briefs (line ranges, file paths, exit criteria)
+       - Domain wisdom brief (core concepts, quality dimensions, decision frameworks,
+         common pitfalls — the key to non-generic teammates)
+       - Per-writer briefs (line ranges, file paths, exit criteria,
+         chapter-specific quality notes)
        - Output directory README
      * "Execute autonomously without asking for confirmation"
      * Done signal format
 
 4. PHASE 2: REFERENCE-BUILDER (1 teammate, blocks Phase 3)
-   - Task name and spawn instruction
+   - "Spawn a teammate named 'reference-builder'"
    - Model: Opus
    - Teammate prompt with:
-     * READ order (architect's spec → first content section → existing reference lesson)
+     * READ order (architect's spec → domain wisdom brief →
+       first content section → existing reference)
      * DELIVERABLE: ONE gold-standard file demonstrating ALL patterns
-     * Pattern checklist (every component type that appears in this project)
-     * "NO phantom imports" warning
+     * Pattern checklist
      * Done signal format
 
 5. PHASE 3: WRITERS (N teammates, all parallel)
-   - Header: "spawn ALL N writer teammates SIMULTANEOUSLY"
-   - Preamble: "Each writer teammate gets the SAME preamble (inlined — no placeholders)"
+   - "Spawn ALL N writer teammates SIMULTANEOUSLY"
    - For EACH writer:
-     * Task name and spawn instruction
-     * Model preference
+     * "Spawn a teammate named 'writer-[name]'"
      * SELF-CONTAINED prompt with:
-       - Identity line
-       - Team membership line
-       - 5-step READ order (architecture → shared brief → their brief → reference → source lines)
-       - RULES block (match reference, no phantom imports, autonomous)
-       - SCOPE block (exact files, exact source ranges, special notes)
-       - Done signal: "WRITER [NAME] DONE — [file list]"
+       - Identity & team membership
+       - "WHAT YOU'RE BUILDING AND WHY" (from domain wisdom)
+       - "YOUR CHAPTERS IN CONTEXT" (learning journey positioning)
+       - 5-step READ order
+       - "QUALITY FRAMEWORK" with domain-specific dimensions
+       - "WHAT MEDIOCRE LOOKS LIKE" with specific pitfalls
+       - "WHEN IN DOUBT" with decision principles
+       - SCOPE block (exact files, source ranges, special notes)
+       - Done signal
 
 6. PHASE 4: QUALITY REVIEWER (1 teammate, depends on ALL Phase 3)
-   - Task name and spawn instruction
+   - "Spawn a teammate named 'quality-reviewer'"
    - Model: Opus
    - Teammate prompt with:
-     * READ order: PHPM spec → architecture → reference brief → reference lesson → ALL output files
-     * IMPORTANT note: extract ONLY universal patterns from PHPM that apply to this content type
-     * Universal checks: voice, formatting, terminology, continuity, exercise quality
-     * Content-specific checks: whatever matters for this particular project
-     * DELIVERABLE: Quality report file with overall score, per-writer summary, issues list
+     * READ: domain wisdom brief → architecture → reference → ALL outputs
+     * Evaluate against domain quality dimensions
+     * DELIVERABLE: Quality report with per-writer scores, issues, fixes
      * Done signal format
 
 7. LEAD COORDINATION RULES
-   - Numbered list, 12-14 rules
-   - MUST include:
-     1. Create team with TeamCreate
-     2. Create tasks with dependencies (Phase 1 → 2 → 3 → 4)
-     3. Phase ordering enforcement
-     4. "Do NOT write content yourself"
-     5. Teammate recovery (message stuck teammate or spawn replacement)
-     6. Quality review gate (if Fail → fix → re-review)
-     7. Post-quality structural verification steps
-     8. Cleanup protocol
+   - Create agent team, spawn teammates for each phase
+   - Create tasks with phase dependencies
+   - "Do NOT write content yourself"
+   - Phase ordering enforcement
+   - Quality review gate
+   - Post-review verification
+   - Graceful teammate shutdown when done
 
-8. MODEL PREFERENCES
-   - Table of teammate → model
-
-9. ANTI-PATTERNS
-   - "Do NOT use Agent tool or subagents"
+8. ANTI-PATTERNS
+   - "Do NOT spawn subagents — use agent team teammates"
    - "Do NOT write content yourself"
    - "Do NOT spawn Phase 3 before Phase 2"
    - "Do NOT spawn quality reviewer before ALL writers complete"
    - "Do NOT let writers read full source"
-   - "Do NOT skip quality review or verification"
+   - "Do NOT skip quality review"
 ```
 
 ## Phase Dependency Chain
@@ -105,67 +98,95 @@ Lead verification         ──blocks──▶  Team cleanup
 
 ## Writer Prompt Template (Self-Contained)
 
-Every writer prompt must follow this exact structure. No placeholders.
+Every writer prompt must follow this structure. No placeholders.
 No "include shared instructions." Fully inlined.
 
 ```markdown
-"You are the writer-[name] teammate for [Project Name].
+"You are writer-[name] for [Project Name].
 You are part of an agent team — communicate via messages to the team lead.
+
+WHAT YOU'RE BUILDING AND WHY:
+[2-3 sentences explaining the transformation this content creates. What
+the reader gains. Why this matters beyond completing an assignment.]
+
+YOUR CHAPTERS IN CONTEXT:
+[Where these chapters sit in the learning journey. What the reader
+already knows. What they'll learn next. How your chapters bridge
+prior knowledge to future capability.]
 
 READ IN ORDER:
 
-1. [path to architecture spec] (master spec — file paths, patterns, structure)
-2. [path to shared brief] (shared context — identity, patterns, protocols)
-3. [path to their writer brief] (YOUR specific brief with line ranges)
-4. [path to reference file] (quality benchmark, match it exactly)
-5. [path to source] lines [N-M] (read ONLY those lines, not the full doc)
+1. [path to architecture spec] (structure, patterns, file paths)
+2. [path to domain wisdom brief] (what quality means for this content)
+3. [path to their writer brief] (YOUR scope, line ranges, chapter notes)
+4. [path to reference file] (quality benchmark — match format AND depth)
+5. [path to source] lines [N-M] (your assigned source material ONLY)
 
-RULES:
+QUALITY FRAMEWORK:
+- [Dimension 1]: [What it means concretely for these chapters]
+- [Dimension 2]: [What it means concretely]
+- [Dimension 3]: [What it means concretely]
 
-- Match the reference [lesson/doc]'s quality, format, and patterns exactly
-- [Project-specific rules, e.g., NO phantom imports]
-- Execute autonomously without asking for confirmation
+WHAT MEDIOCRE LOOKS LIKE (avoid this):
+- [Specific pitfall 1 — concrete, not vague]
+- [Specific pitfall 2]
+
+WHEN IN DOUBT:
+- [Decision principle 1 from domain analysis]
+- [Decision principle 2]
 
 YOUR SCOPE:
 
-- [Specific files to create with paths]
-- [Content description]
-- [Special notes for this writer's chapters]
+- [Specific files to create with full paths]
+- Source lines [N-M] from [path]
+- [Chapter-specific quality notes]
+
+RULES:
+
+- Match the reference [lesson/doc] in format, depth, and quality
+- [Project-specific rules]
+- Execute autonomously without asking for confirmation
 
 When finished, message the team lead: 'WRITER [NAME] DONE — [file list]'"
 ```
 
-## Architect Deliverables Template
-
-The architect always produces these categories of artifacts (content varies):
+## Architect Deliverables
 
 ### 1. Master Architecture Spec
 
 - Complete directory skeleton (every file path)
-- Source-to-output mapping (which source lines → which output files)
-- Output format template (YAML frontmatter, markdown structure, etc.)
-- Component/pattern catalog (how to render each recurring element)
+- Source-to-output mapping (source lines → output files)
+- Output format template (YAML frontmatter, markdown structure)
+- Component/pattern catalog
 - Writer-to-scope assignment table
 
-### 2. Shared Writer's Brief
+### 2. Domain Wisdom Brief
 
-- Project identity (what this content IS, who it's for, what tone)
-- Recurring patterns explained concisely (assessment layers, score cards, etc.)
-- Cross-reference map (how sections link to each other)
-- Shared protocols (feedback mechanisms, solo alternatives, etc.)
+This brief captures the understanding that makes content good.
+It's the single most important deliverable because every writer reads it.
+
+- **Core concepts**: The 3-5 ideas that must land in the reader's mind
+- **Quality dimensions**: What matters most for this project, with
+  concrete definitions (not generic "write well")
+- **Common pitfalls**: What mediocre content looks like, with examples
+- **Decision frameworks**: Principles for ambiguous situations
+- **Learning journey context**: What readers know before, what they
+  should know after, how this fits the larger arc
 
 ### 3. Per-Writer Briefs
 
 One file per writer containing:
 
 - Exact file paths to create
-- Source document line ranges they own
-- Content-specific notes (this chapter introduces X, link back to Y)
-- Exit criteria (what "done" means for their scope)
+- Source document line ranges
+- **Chapter-specific quality notes**: What makes THIS chapter's content
+  good (specific to the domain and chapter's role)
+- Content-specific notes (introduces X, links to Y)
+- Exit criteria
 
 ### 4. Output Directory README
 
-- Follows existing project README format
+- Project README format
 - Part/feature overview
 - Navigation structure
 
@@ -173,7 +194,7 @@ One file per writer containing:
 
 ```
 Sections  Writers  Rationale
-2-4       2        One pair each, or 2+2 split
+2-4       2        One pair each
 5-6       3        Pairs of 2
 7-10      4-5      Pairs of 2 + intro/capstone
 11-15     5-6      Groups of 2-3
@@ -181,11 +202,6 @@ Sections  Writers  Rationale
 20+       8 max    Groups of 3-4 (coordination ceiling)
 
 Always separate:
-- Intro/framing writer (if source has substantial preamble)
-- Capstone/conclusion writer (if source has wrap-up content)
+- Intro/framing writer (if substantial preamble)
+- Capstone/conclusion writer (if wrap-up content)
 ```
-
-## Working Example
-
-See `specs/drafts/part0-team-prompt.md` — a complete team prompt for Part 0
-(10 chapters, 40 exercises, 8 teammates) generated using this pattern.

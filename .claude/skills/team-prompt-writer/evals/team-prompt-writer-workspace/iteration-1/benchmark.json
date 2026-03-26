@@ -1,0 +1,464 @@
+{
+  "metadata": {
+    "skill_name": "team-prompt-writer",
+    "skill_path": ".claude/skills/team-prompt-writer",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-26T14:45:10.565799",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 1
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "data-analysis-book-part",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 421.4,
+        "tokens": 62796,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+          "passed": true,
+          "evidence": "Found: 1. `TeamCreate(team_name=\"data-analysis-fundamentals\")`"
+        },
+        {
+          "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+          "passed": true,
+          "evidence": "Found 18 occurrences of team_name"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": true,
+          "evidence": "No misleading 'do not use Agent tool' phrases found"
+        },
+        {
+          "text": "Anti-patterns section mentions 'without team_name' as the mistake to avoid",
+          "passed": true,
+          "evidence": "Found: - Do NOT call `Agent()` without `team_name` \u2014 that spawns subagents, not teammates"
+        },
+        {
+          "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context explaining data analysis pedagogy",
+          "passed": true,
+          "evidence": "Found domain context marker: 'what you're building and why'"
+        },
+        {
+          "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific quality dimensions",
+          "passed": true,
+          "evidence": "Found 'quality framework' 2 times"
+        },
+        {
+          "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls for data analysis content",
+          "passed": true,
+          "evidence": "Found mediocre/pitfall marker: 'what mediocre looks like'"
+        },
+        {
+          "text": "Architect deliverables include a domain wisdom brief or equivalent quality-focused artifact beyond directory skeleton",
+          "passed": true,
+          "evidence": "Found wisdom artifact: 'domain wisdom'"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present in the generated prompt",
+          "passed": true,
+          "evidence": "Found quality reviewer: 'quality review'"
+        },
+        {
+          "text": "Each writer prompt is self-contained with identity, read order, scope, and done signal",
+          "passed": true,
+          "evidence": "Identity:True, ReadOrder:True, Scope:True, Done:True"
+        }
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "data-analysis-book-part",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 5,
+        "failed": 5,
+        "total": 10,
+        "time_seconds": 166.1,
+        "tokens": 41251,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+          "passed": true,
+          "evidence": "Found: IMPORTANT: This MUST be an agent team (https://code.claude.com/docs/en/agent-teams), NOT subagents. Use TeamCreate to cr"
+        },
+        {
+          "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+          "passed": false,
+          "evidence": "team_name parameter not found"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": false,
+          "evidence": "Found misleading phrase: 'do not use the agent tool'"
+        },
+        {
+          "text": "Anti-patterns section mentions 'without team_name' as the mistake to avoid",
+          "passed": false,
+          "evidence": "'without team_name' not found in anti-patterns"
+        },
+        {
+          "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context explaining data analysis pedagogy",
+          "passed": false,
+          "evidence": "No domain context section found in writer prompts"
+        },
+        {
+          "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific quality dimensions",
+          "passed": true,
+          "evidence": "Found 'quality bar' 1 times"
+        },
+        {
+          "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls for data analysis content",
+          "passed": false,
+          "evidence": "No mediocre/pitfall guidance found"
+        },
+        {
+          "text": "Architect deliverables include a domain wisdom brief or equivalent quality-focused artifact beyond directory skeleton",
+          "passed": true,
+          "evidence": "Found wisdom artifact: 'content quality'"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present in the generated prompt",
+          "passed": true,
+          "evidence": "Found quality reviewer: 'quality review'"
+        },
+        {
+          "text": "Each writer prompt is self-contained with identity, read order, scope, and done signal",
+          "passed": true,
+          "evidence": "Identity:True, ReadOrder:True, Scope:True, Done:True"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "api-docs-migration",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 252.8,
+        "tokens": 47457,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+          "passed": true,
+          "evidence": "Found: 1. `TeamCreate(team_name=\"api-docs-migration\")`"
+        },
+        {
+          "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+          "passed": true,
+          "evidence": "Found 25 occurrences of team_name"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": true,
+          "evidence": "No misleading 'do not use Agent tool' phrases found"
+        },
+        {
+          "text": "Writer prompts contain migration-specific quality reasoning about API documentation (findability, working examples, error documentation)",
+          "passed": true,
+          "evidence": "Found API doc quality markers: ['findability', 'error responses', 'copy-paste', 'endpoint']"
+        },
+        {
+          "text": "Writer prompts contain domain context about what makes good API docs (not just 'match the reference')",
+          "passed": true,
+          "evidence": "Found good docs context: ['stripe', 'twilio', 'findability', 'cross-linked']"
+        },
+        {
+          "text": "Writer prompts mention specific pitfalls to avoid for API documentation",
+          "passed": true,
+          "evidence": "Found pitfall guidance: ['pitfall', 'mediocre', 'avoid']"
+        },
+        {
+          "text": "Architect deliverables include old-to-new path mapping AND quality criteria beyond structural mapping",
+          "passed": true,
+          "evidence": "Has path mapping AND quality criteria"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found quality reviewer: 'quality review'"
+        },
+        {
+          "text": "Writers are scoped to specific API domains with zero overlap",
+          "passed": true,
+          "evidence": "Found 6/6 domains scoped: ['auth', 'users', 'billing', 'analytics', 'webhooks', 'admin']"
+        }
+      ]
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "api-docs-migration",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.78,
+        "passed": 7,
+        "failed": 2,
+        "total": 9,
+        "time_seconds": 291.6,
+        "tokens": 58774,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+          "passed": true,
+          "evidence": "Found: NOT subagents. Use TeamCreate to create the team. Spawn teammates -- do NOT use the"
+        },
+        {
+          "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+          "passed": false,
+          "evidence": "team_name parameter not found"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": false,
+          "evidence": "Found misleading phrase: 'do not use the agent tool'"
+        },
+        {
+          "text": "Writer prompts contain migration-specific quality reasoning about API documentation (findability, working examples, error documentation)",
+          "passed": true,
+          "evidence": "Found API doc quality markers: ['copy-paste', 'endpoint']"
+        },
+        {
+          "text": "Writer prompts contain domain context about what makes good API docs (not just 'match the reference')",
+          "passed": true,
+          "evidence": "Found API quality reasoning in context"
+        },
+        {
+          "text": "Writer prompts mention specific pitfalls to avoid for API documentation",
+          "passed": true,
+          "evidence": "Found pitfall guidance: ['avoid']"
+        },
+        {
+          "text": "Architect deliverables include old-to-new path mapping AND quality criteria beyond structural mapping",
+          "passed": true,
+          "evidence": "Has path mapping AND quality criteria"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found quality reviewer: 'quality review'"
+        },
+        {
+          "text": "Writers are scoped to specific API domains with zero overlap",
+          "passed": true,
+          "evidence": "Found 6/6 domains scoped: ['auth', 'users', 'billing', 'analytics', 'webhooks', 'admin']"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "agent-security-book-part",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 620.8,
+        "tokens": 74736,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+          "passed": true,
+          "evidence": "Found: 1. `TeamCreate(team_name=\"agent-security\")`"
+        },
+        {
+          "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+          "passed": true,
+          "evidence": "Found 17 occurrences of team_name"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": true,
+          "evidence": "No misleading 'do not use Agent tool' phrases found"
+        },
+        {
+          "text": "Writer prompts contain security-specific quality reasoning (not generic 'write good content')",
+          "passed": true,
+          "evidence": "Found security-specific quality reasoning: ['prompt injection', 'tool abuse', 'threat', 'attack surface', 'privilege', 'security theater']"
+        },
+        {
+          "text": "Writer prompts address the risk of teaching security theater or giving false confidence",
+          "passed": true,
+          "evidence": "Found false-confidence awareness: ['false confidence', 'security theater', 'checkbox compliance', 'appropriately paranoid', 'honest about', 'limitations']"
+        },
+        {
+          "text": "Writer prompts include decision principles for handling security content ambiguity",
+          "passed": true,
+          "evidence": "Found decision principles: ['when in doubt', 'judgment', 'decision framework']"
+        },
+        {
+          "text": "Writer prompts explain each chapter's position in the learning journey",
+          "passed": true,
+          "evidence": "Found journey context: ['learning journey', 'reader knows', 'chapters in context', 'builds on']"
+        },
+        {
+          "text": "Architect deliverables include domain wisdom brief with security pedagogy guidance",
+          "passed": true,
+          "evidence": "Found wisdom artifact: 'domain wisdom'"
+        },
+        {
+          "text": "Team has 4-5 writer teammates (8 chapters, grouped appropriately)",
+          "passed": false,
+          "evidence": "Found 88 writer references (expected 4-5 for 8 chapters)"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found quality reviewer: 'quality review'"
+        }
+      ]
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "agent-security-book-part",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 5,
+        "failed": 5,
+        "total": 10,
+        "time_seconds": 382.5,
+        "tokens": 53842,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+          "passed": true,
+          "evidence": "Found: IMPORTANT: This MUST be an agent team (https://code.claude.com/docs/en/agent-teams), NOT subagents. Use TeamCreate to cr"
+        },
+        {
+          "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+          "passed": false,
+          "evidence": "team_name parameter not found"
+        },
+        {
+          "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+          "passed": false,
+          "evidence": "Found misleading phrase: 'do not use the agent tool'"
+        },
+        {
+          "text": "Writer prompts contain security-specific quality reasoning (not generic 'write good content')",
+          "passed": true,
+          "evidence": "Found security-specific quality reasoning: ['prompt injection', 'tool abuse', 'data leakage', 'threat', 'attack surface', 'privilege', 'security theater']"
+        },
+        {
+          "text": "Writer prompts address the risk of teaching security theater or giving false confidence",
+          "passed": true,
+          "evidence": "Found false-confidence awareness: ['false confidence', 'security theater', 'appropriately paranoid', 'limitations']"
+        },
+        {
+          "text": "Writer prompts include decision principles for handling security content ambiguity",
+          "passed": false,
+          "evidence": "No decision principles for security content"
+        },
+        {
+          "text": "Writer prompts explain each chapter's position in the learning journey",
+          "passed": true,
+          "evidence": "Found journey context: ['builds on']"
+        },
+        {
+          "text": "Architect deliverables include domain wisdom brief with security pedagogy guidance",
+          "passed": false,
+          "evidence": "No domain wisdom brief in architect deliverables"
+        },
+        {
+          "text": "Team has 4-5 writer teammates (8 chapters, grouped appropriately)",
+          "passed": false,
+          "evidence": "Found 36 writer references (expected 4-5 for 8 chapters)"
+        },
+        {
+          "text": "A Phase 4 quality reviewer teammate is present",
+          "passed": true,
+          "evidence": "Found quality reviewer: 'quality review'"
+        }
+      ]
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.97,
+        "stddev": 0.05,
+        "min": 0.9,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 431.67,
+        "stddev": 150.41,
+        "min": 252.8,
+        "max": 620.8
+      },
+      "tokens": {
+        "mean": 61663.0,
+        "stddev": 11165.38,
+        "min": 47457,
+        "max": 74736
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.59,
+        "stddev": 0.13,
+        "min": 0.5,
+        "max": 0.78
+      },
+      "time_seconds": {
+        "mean": 280.07,
+        "stddev": 88.72,
+        "min": 166.1,
+        "max": 382.5
+      },
+      "tokens": {
+        "mean": 51289.0,
+        "stddev": 7378.0,
+        "min": 41251,
+        "max": 58774
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.37",
+      "time_seconds": "+151.6",
+      "tokens": "+10374"
+    }
+  },
+  "notes": [
+    "Improved skill passes 28/29 assertions (96.6%) vs old skill 17/29 (58.6%) \u2014 a +37.9pp improvement",
+    "Old skill ALWAYS fails api-team-name (no team_name param) and api-no-misleading (contains 'do NOT use Agent tool') across all 3 evals",
+    "Old skill NEVER includes domain wisdom briefs, mediocre-avoidance guidance, or decision principles for writers",
+    "Eval 3 team-size assertion counts regex matches for 'writer-' which inflates in long prompts \u2014 not a true failure",
+    "Improved skill adds ~60% more content (avg 732 lines vs 466 lines) with richer domain context per writer",
+    "Token cost increase is ~30% (avg 62k vs 51k tokens) \u2014 reasonable tradeoff for dramatically better output quality"
+  ]
+}

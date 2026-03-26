@@ -1,0 +1,57 @@
+{
+  "eval_id": 1,
+  "eval_name": "data-analysis-book-part",
+  "prompt": "Create a team prompt for Part 5: Data Analysis Fundamentals. The source spec is at .claude/skills/team-prompt-writer-workspace/test-inputs/test1-data-analysis.md — it has 4 chapters (16 lessons total) teaching non-programmers to analyze data with AI. Output directory: apps/learn-app/docs/05-Data-Analysis-Fundamentals/. Content type: book part. No Python/SQL code, all analysis via Cowork.",
+  "assertions": [
+    {
+      "id": "api-teamcreate",
+      "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+      "type": "content_check"
+    },
+    {
+      "id": "api-team-name",
+      "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+      "type": "content_check"
+    },
+    {
+      "id": "api-no-misleading",
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "type": "absence_check"
+    },
+    {
+      "id": "api-antipattern-correct",
+      "text": "Anti-patterns section mentions 'without team_name' as the mistake to avoid",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-why",
+      "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context explaining data analysis pedagogy",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-quality",
+      "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific quality dimensions",
+      "type": "content_check"
+    },
+    {
+      "id": "domain-mediocre",
+      "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls for data analysis content",
+      "type": "content_check"
+    },
+    {
+      "id": "architect-wisdom",
+      "text": "Architect deliverables include a domain wisdom brief or equivalent quality-focused artifact beyond directory skeleton",
+      "type": "content_check"
+    },
+    {
+      "id": "quality-reviewer",
+      "text": "A Phase 4 quality reviewer teammate is present in the generated prompt",
+      "type": "content_check"
+    },
+    {
+      "id": "self-contained",
+      "text": "Each writer prompt is self-contained with identity, read order, scope, and done signal",
+      "type": "content_check"
+    }
+  ]
+}

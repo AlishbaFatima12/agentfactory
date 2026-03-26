@@ -1,0 +1,58 @@
+{
+  "skill_name": "team-prompt-writer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a team prompt for Part 5: Data Analysis Fundamentals. The source spec is at .claude/skills/team-prompt-writer-workspace/test-inputs/test1-data-analysis.md — it has 4 chapters (16 lessons total) teaching non-programmers to analyze data with AI. Output directory: apps/learn-app/docs/05-Data-Analysis-Fundamentals/. Content type: book part. No Python/SQL code, all analysis via Cowork.",
+      "expected_output": "A team prompt file at specs/drafts/ with correct agent team API (TeamCreate + Agent with team_name), domain-aware writer prompts with quality frameworks about data analysis pedagogy, and quality reviewer phase.",
+      "files": [".claude/skills/team-prompt-writer-workspace/test-inputs/test1-data-analysis.md"],
+      "expectations": [
+        "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+        "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+        "Generated prompt does NOT contain the phrase 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+        "Anti-patterns section mentions 'without team_name' as the mistake to avoid",
+        "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context explaining data analysis pedagogy",
+        "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific quality dimensions",
+        "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls for data analysis content",
+        "Architect deliverables include a domain wisdom brief or equivalent quality-focused artifact beyond directory skeleton",
+        "A Phase 4 quality reviewer teammate is present in the generated prompt",
+        "Each writer prompt is self-contained with identity, read order, scope, and done signal"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write a team prompt for migrating 142 API doc files from a flat Markdown wiki to a structured Docusaurus site. Source spec: .claude/skills/team-prompt-writer-workspace/test-inputs/test2-docs-migration.md. There are 6 API domains (Auth, Users, Billing, Analytics, Webhooks, Admin). Output: apps/api-docs/. Content type: migration.",
+      "expected_output": "A team prompt for documentation migration with correct team API, migration-specific quality dimensions (parity, findability, working examples), and writer prompts that understand API documentation quality.",
+      "files": [".claude/skills/team-prompt-writer-workspace/test-inputs/test2-docs-migration.md"],
+      "expectations": [
+        "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+        "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+        "Generated prompt does NOT contain the phrase 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+        "Writer prompts contain migration-specific quality reasoning about API documentation (findability, working examples, error documentation)",
+        "Writer prompts contain domain context about what makes good API docs (not just 'match the reference')",
+        "Writer prompts mention specific pitfalls to avoid for API documentation",
+        "Architect deliverables include old-to-new path mapping AND quality criteria beyond structural mapping",
+        "A Phase 4 quality reviewer teammate is present",
+        "Writers are scoped to specific API domains with zero overlap"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Create a team prompt for Part 8: AI Agent Security — 8 chapters (25 lessons) teaching developers to secure AI agent systems. Source: .claude/skills/team-prompt-writer-workspace/test-inputs/test3-agent-security.md. Output: apps/learn-app/docs/08-AI-Agent-Security/. This is security-focused educational content where getting the pedagogy wrong could give readers false confidence.",
+      "expected_output": "A team prompt with correct team API, security-domain-aware writer prompts that understand the 'appropriate paranoia' quality bar, incident-based teaching approach, and clear decision frameworks for handling ambiguity in security content.",
+      "files": [".claude/skills/team-prompt-writer-workspace/test-inputs/test3-agent-security.md"],
+      "expectations": [
+        "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+        "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+        "Generated prompt does NOT contain the phrase 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+        "Writer prompts contain security-specific quality reasoning (not generic 'write good content')",
+        "Writer prompts address the risk of teaching security theater or giving false confidence",
+        "Writer prompts include decision principles for handling security content ambiguity",
+        "Writer prompts explain each chapter's position in the learning journey (what reader knows and doesn't know)",
+        "Architect deliverables include domain wisdom brief with security pedagogy guidance",
+        "Team has 4-5 writer teammates (8 chapters, grouped appropriately)",
+        "A Phase 4 quality reviewer teammate is present"
+      ]
+    }
+  ]
+}

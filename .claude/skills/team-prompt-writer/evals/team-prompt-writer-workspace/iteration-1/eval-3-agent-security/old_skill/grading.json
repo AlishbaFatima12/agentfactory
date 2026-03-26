@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+      "passed": true,
+      "evidence": "Found: IMPORTANT: This MUST be an agent team (https://code.claude.com/docs/en/agent-teams), NOT subagents. Use TeamCreate to cr"
+    },
+    {
+      "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+      "passed": false,
+      "evidence": "team_name parameter not found"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": false,
+      "evidence": "Found misleading phrase: 'do not use the agent tool'"
+    },
+    {
+      "text": "Writer prompts contain security-specific quality reasoning (not generic 'write good content')",
+      "passed": true,
+      "evidence": "Found security-specific quality reasoning: ['prompt injection', 'tool abuse', 'data leakage', 'threat', 'attack surface', 'privilege', 'security theater']"
+    },
+    {
+      "text": "Writer prompts address the risk of teaching security theater or giving false confidence",
+      "passed": true,
+      "evidence": "Found false-confidence awareness: ['false confidence', 'security theater', 'appropriately paranoid', 'limitations']"
+    },
+    {
+      "text": "Writer prompts include decision principles for handling security content ambiguity",
+      "passed": false,
+      "evidence": "No decision principles for security content"
+    },
+    {
+      "text": "Writer prompts explain each chapter's position in the learning journey",
+      "passed": true,
+      "evidence": "Found journey context: ['builds on']"
+    },
+    {
+      "text": "Architect deliverables include domain wisdom brief with security pedagogy guidance",
+      "passed": false,
+      "evidence": "No domain wisdom brief in architect deliverables"
+    },
+    {
+      "text": "Team has 4-5 writer teammates (8 chapters, grouped appropriately)",
+      "passed": false,
+      "evidence": "Found 36 writer references (expected 4-5 for 8 chapters)"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present",
+      "passed": true,
+      "evidence": "Found quality reviewer: 'quality review'"
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 5,
+    "total": 10,
+    "pass_rate": 0.5
+  }
+}

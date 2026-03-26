@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Generated prompt contains 'TeamCreate' as an actual tool call instruction",
+      "passed": true,
+      "evidence": "Found: 1. `TeamCreate(team_name=\"data-analysis-fundamentals\")`"
+    },
+    {
+      "text": "Generated prompt contains Agent() calls with team_name parameter for spawning teammates",
+      "passed": true,
+      "evidence": "Found 18 occurrences of team_name"
+    },
+    {
+      "text": "Generated prompt does NOT contain 'do NOT use Agent tool' or 'Do NOT use the Agent tool'",
+      "passed": true,
+      "evidence": "No misleading 'do not use Agent tool' phrases found"
+    },
+    {
+      "text": "Anti-patterns section mentions 'without team_name' as the mistake to avoid",
+      "passed": true,
+      "evidence": "Found: - Do NOT call `Agent()` without `team_name` \u2014 that spawns subagents, not teammates"
+    },
+    {
+      "text": "Writer prompts contain a 'WHAT YOU'RE BUILDING AND WHY' section or equivalent domain context explaining data analysis pedagogy",
+      "passed": true,
+      "evidence": "Found domain context marker: 'what you're building and why'"
+    },
+    {
+      "text": "Writer prompts contain a 'QUALITY FRAMEWORK' section with content-specific quality dimensions",
+      "passed": true,
+      "evidence": "Found 'quality framework' 2 times"
+    },
+    {
+      "text": "Writer prompts contain a 'WHAT MEDIOCRE LOOKS LIKE' section with specific pitfalls for data analysis content",
+      "passed": true,
+      "evidence": "Found mediocre/pitfall marker: 'what mediocre looks like'"
+    },
+    {
+      "text": "Architect deliverables include a domain wisdom brief or equivalent quality-focused artifact beyond directory skeleton",
+      "passed": true,
+      "evidence": "Found wisdom artifact: 'domain wisdom'"
+    },
+    {
+      "text": "A Phase 4 quality reviewer teammate is present in the generated prompt",
+      "passed": true,
+      "evidence": "Found quality reviewer: 'quality review'"
+    },
+    {
+      "text": "Each writer prompt is self-contained with identity, read order, scope, and done signal",
+      "passed": true,
+      "evidence": "Identity:True, ReadOrder:True, Scope:True, Done:True"
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10,
+    "pass_rate": 1.0
+  }
+}
