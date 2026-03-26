@@ -275,38 +275,47 @@
   flex-shrink: 0;
 }
 
-/* ── Copy Prompt Button ── */
+/* ── Copy Prompt Button (inline with provider buttons) ── */
 .copyPromptBtn {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.45rem 0.75rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
+  gap: 0.25rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 6px;
   background: none;
-  color: var(--ifm-color-emphasis-600);
-  font-size: 0.82rem;
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.75rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.15s;
-  margin-bottom: 0.5rem;
 }
 
 .copyPromptBtn:hover {
-  border-color: var(--ifm-color-emphasis-500);
-  color: var(--ifm-color-emphasis-800);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-700);
   background: var(--ifm-color-emphasis-100);
 }
 
+.copyPromptBtnCopied {
+  border-color: oklch(0.55 0.2 145);
+  color: oklch(0.55 0.2 145);
+}
+
 [data-theme="dark"] .copyPromptBtn {
-  border-color: rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.45);
 }
 
 [data-theme="dark"] .copyPromptBtn:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
   background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .copyPromptBtnCopied {
+  border-color: oklch(0.65 0.2 145);
+  color: oklch(0.65 0.2 145);
 }
 
 /* ── Provider confirmation after click ── */

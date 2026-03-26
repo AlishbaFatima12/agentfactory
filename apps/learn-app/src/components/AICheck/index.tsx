@@ -19,6 +19,7 @@ import {
   Loader2,
   AlertCircle,
   Copy,
+  Check,
 } from "lucide-react";
 import styles from "./AICheck.module.css";
 
@@ -499,13 +500,15 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
     ],
   );
 
+  const [copied, setCopied] = useState(false);
+
   const handleCopyPrompt = useCallback(() => {
     const prompt = composePrompt(children, fieldValues);
     navigator.clipboard
       .writeText(prompt)
       .then(() => {
-        setToast("Prompt copied to clipboard");
-        setTimeout(() => setToast(null), 3000);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
       })
       .catch(() => {
         setToast("Could not copy to clipboard");
@@ -762,17 +765,6 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
                   <br />
                   Come back when you have your BEST evaluation.
                 </p>
-                {allFieldsFilled && (
-                  <button
-                    className={styles.copyPromptBtn}
-                    onClick={handleCopyPrompt}
-                    type="button"
-                    aria-label="Copy assembled prompt to clipboard"
-                  >
-                    <Copy size={14} />
-                    Copy prompt
-                  </button>
-                )}
                 <div className={styles.providerButtons}>
                   {PROVIDERS.map((p) => (
                     <motion.button
@@ -800,6 +792,17 @@ export default function AICheck({ id, xp = 50, children }: AICheckProps) {
                       <ExternalLink className={styles.externalIcon} />
                     </motion.button>
                   ))}
+                  {allFieldsFilled && (
+                    <button
+                      className={`${styles.copyPromptBtn} ${copied ? styles.copyPromptBtnCopied : ""}`}
+                      onClick={handleCopyPrompt}
+                      type="button"
+                      aria-label="Copy assembled prompt to clipboard"
+                    >
+                      {copied ? <Check size={12} /> : <Copy size={12} />}
+                      {copied ? "Copied" : "Copy"}
+                    </button>
+                  )}
                 </div>
               </div>
             )}
