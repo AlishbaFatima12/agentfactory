@@ -1,9 +1,9 @@
 ---
-sidebar_position: 15
+sidebar_position: 17
 title: "Make: Multi-Agent Triage System"
 description: "Build a multi-agent candidate triage system for HireFlow with an orchestrator, three specialist subagents, supervision tiers, error handling, and cost tracking"
 chapter: 73
-lesson: 15
+lesson: 17
 duration_minutes: 60
 keywords:
   [

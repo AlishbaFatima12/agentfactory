@@ -1,9 +1,9 @@
 ---
-sidebar_position: 14
+sidebar_position: 16
 title: "Modify Exercises"
 description: "Three graduated exercises that extend a HireFlow screening agent with a third tool, input validation, and a supervision layer using the Claude Agent SDK"
 chapter: 73
-lesson: 14
+lesson: 16
 duration_minutes: 50
 keywords:
   [
@@ -401,14 +401,17 @@ async def screen_candidate_safe(cv_text: str, role: str) -> str:
 ### Check Your Predictions
 
 **Empty string (`cv_text=""`):**
+
 - Without validation: The agent receives an empty prompt, wastes an API call, and returns a confused response.
 - With validation: `validate_cv_text` catches it immediately. No API call made.
 
 **50MB string:**
+
 - Without validation: The agent sends 50MB to the API. The request may timeout or exceed context limits.
 - With validation: `validate_cv_text` catches it. Returns an error in microseconds instead of waiting for a timeout.
 
 **CV with no name field:**
+
 - Without validation: The agent parses the CV, gets `"Unknown"` as the name, and proceeds to score an anonymous candidate.
 - With validation: If you call `validate_parsed_data` on the parse result, it catches the missing name and reports the issue.
 
@@ -449,6 +452,7 @@ Record your confidence (1-5).
 In Lesson 09, you learned the supervision pattern: agents should not make high-stakes decisions autonomously. The scoring agent produces a number. A human should review borderline cases before the candidate is approved or rejected.
 
 The tiers:
+
 - **Score >= 8.0:** Auto-approve. Print "Strong candidate, auto-approved."
 - **5.0 <= Score < 8.0:** Flag for human review. Print "Borderline, needs human review" with the reason.
 - **Score < 5.0:** Auto-reject. Print "Below threshold, auto-rejected."
@@ -551,6 +555,7 @@ async def screen_with_supervision(
 ### Check Your Predictions
 
 **Candidate scores 8.5:**
+
 ```
 Supervision decision:
   Tier: auto_approve
@@ -559,6 +564,7 @@ Supervision decision:
 ```
 
 **Candidate scores 6.5:**
+
 ```
 Supervision decision:
   Tier: human_review
@@ -567,6 +573,7 @@ Supervision decision:
 ```
 
 **Candidate scores 3.0:**
+
 ```
 Supervision decision:
   Tier: auto_reject
@@ -588,11 +595,11 @@ Supervision decision:
 
 ### What Changed Across the Three Modifications
 
-| Modification             | Difficulty | Lines Changed  | What You Practiced                                            |
-| ------------------------ | ---------- | -------------- | ------------------------------------------------------------- |
-| A: Third tool            | Simple     | 3 config lines + tool definition | Adding tools to an agent pipeline in three coordinated places |
-| B: Input validation      | Medium     | 3 functions (15 lines) | Defensive programming before the agent loop                   |
-| C: Supervision layer     | Advanced   | 2 functions + pipeline (30 lines) | Post-agent policy enforcement with tier classification        |
+| Modification         | Difficulty | Lines Changed                     | What You Practiced                                            |
+| -------------------- | ---------- | --------------------------------- | ------------------------------------------------------------- |
+| A: Third tool        | Simple     | 3 config lines + tool definition  | Adding tools to an agent pipeline in three coordinated places |
+| B: Input validation  | Medium     | 3 functions (15 lines)            | Defensive programming before the agent loop                   |
+| C: Supervision layer | Advanced   | 2 functions + pipeline (30 lines) | Post-agent policy enforcement with tier classification        |
 
 Modification A changed the agent's capabilities. Modification B changed what reaches the agent. Modification C changed what happens after the agent finishes. Together, they form the three layers of a production pipeline: validation, execution, and supervision.
 

@@ -55,10 +55,12 @@ By the end of this chapter, you will be able to:
 | 10     | AI-Assisted Investigation         | Section 3: Investigate     |
 | 11     | SDK Client and Cost Tracking      | Section 3: Investigate     |
 | 12     | Permission Modes and Security     | Section 3: Investigate     |
-| 13     | Parsons Bridge                    | Section 4: Parsons         |
-| 14     | Modify Exercises                  | Section 5: Modify          |
-| 15     | Make: Multi-Agent Triage System   | Section 6: Make            |
-| 16     | Self-Assessment and Chapter Quiz  | Section 7: Rubric          |
+| 13     | File Checkpointing and Recovery   | Section 3: Investigate     |
+| 14     | Lifecycle Hooks                   | Section 3: Investigate     |
+| 15     | Parsons Bridge                    | Section 4: Parsons         |
+| 16     | Modify Exercises                  | Section 5: Modify          |
+| 17     | Make: Multi-Agent Triage System   | Section 6: Make            |
+| 18     | Self-Assessment and Chapter Quiz  | Section 7: Rubric          |
 
 ## HireFlow Connection
 

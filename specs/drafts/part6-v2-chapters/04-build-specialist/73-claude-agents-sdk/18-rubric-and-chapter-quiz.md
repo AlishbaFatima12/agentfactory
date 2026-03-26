@@ -1,9 +1,9 @@
 ---
-sidebar_position: 16
+sidebar_position: 18
 title: "Self-Assessment and Chapter Quiz"
 description: "Self-assess your Claude Agent SDK mastery across five dimensions and test your knowledge with a 12-question quiz covering query patterns, MCP integration, multi-agent design, guardrails, supervision, and cost tracking"
 chapter: 73
-lesson: 16
+lesson: 18
 duration_minutes: 25
 keywords:
   [

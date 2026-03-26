@@ -1,9 +1,9 @@
 ---
-sidebar_position: 13
+sidebar_position: 15
 title: "Parsons Bridge"
 description: "Reorder nine scrambled lines of SDK code into a working agent function that connects to HireFlow MCP servers, queries the agent, and extracts the result, with one distractor line to identify and discard"
 chapter: 73
-lesson: 13
+lesson: 15
 duration_minutes: 20
 keywords:
   [
