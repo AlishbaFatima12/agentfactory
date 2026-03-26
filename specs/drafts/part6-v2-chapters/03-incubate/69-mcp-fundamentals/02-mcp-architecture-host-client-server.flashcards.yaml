@@ -1,0 +1,34 @@
+chapter: 69
+lesson: 2
+cards:
+  - front: "What are the three roles in MCP architecture and what does each manage?"
+    back: "Host: the user-facing application that manages server lifecycles and security. Client: lives inside the host, maintains a connection to exactly one server. Server: a separate process that declares and executes capabilities."
+    tags: [mcp-architecture, host-client-server]
+
+  - front: "Why does each MCP client connect to exactly one server?"
+    back: "Fault isolation. If one server crashes, the client connected to a different server is unaffected. Each client-server pair is an independent connection, so failures do not cascade."
+    tags: [mcp-architecture, fault-isolation]
+
+  - front: "What are the four fields of a JSON-RPC 2.0 request?"
+    back: "jsonrpc (always '2.0'), method (the procedure to call, e.g. 'tools/list'), params (arguments, optional), and id (unique identifier so the response can be matched to the request)."
+    tags: [json-rpc, message-format]
+
+  - front: "What is the difference between a JSON-RPC 2.0 request and a notification?"
+    back: "A request has an id field and expects a response. A notification has no id field and expects nothing back. In MCP, the 'initialized' message after the handshake is a notification."
+    tags: [json-rpc, notification]
+
+  - front: "What are the three phases of an MCP connection sequence?"
+    back: "1. Handshake: initialize request/response plus initialized notification. 2. Discovery: tools/list (or resources/list, prompts/list) request/response. 3. Execution: tools/call (or resources/read, prompts/get) request/response."
+    tags: [connection-sequence, mcp-protocol]
+
+  - front: "Name three advantages MCP has over plain REST for agent-tool communication."
+    back: "1. Stateful connections (sessions persist after handshake, enabling server-pushed notifications). 2. Bidirectional messaging (server can send messages unprompted). 3. Built-in capability discovery (tools/list returns machine-readable schemas at runtime)."
+    tags: [mcp-vs-rest, protocol-design]
+
+  - front: "In a JSON-RPC 2.0 response, can the result and error fields both be present?"
+    back: "No. A response has either result (on success) or error (on failure), never both. The id field matches the request's id so the caller can correlate them."
+    tags: [json-rpc, response-format]
+
+  - front: "In the restaurant analogy for MCP, what do the Host, Client, and Server correspond to?"
+    back: "Host is the restaurant manager (decides which kitchens open, sets rules). Client is the waiter (carries orders to one kitchen and brings back plates). Server is the kitchen (has a menu, cooks on request, returns dishes)."
+    tags: [mcp-architecture, analogy]

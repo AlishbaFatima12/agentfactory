@@ -1,0 +1,26 @@
+chapter: 69
+lesson: 9
+cards:
+  - front: "What are the four phases of the spec-first MCP server workflow taught in this capstone?"
+    back: "1. Write the spec (AI-free). 2. Review the spec with AI. 3. Test-Driven Generation: generate failing tests from the spec, then generate implementation to pass them. 4. Verify with the discipline stack (ruff, pyright, pytest) and MCP Inspector."
+    tags: [spec-first, workflow, capstone]
+
+  - front: "What is Test-Driven Generation (TDG) and how does it differ from traditional TDD?"
+    back: "In TDG, you give an AI assistant your spec and ask it to generate failing tests first, then generate implementation to pass those tests. The spec (written by you) drives both. Traditional TDD has the developer writing both tests and code."
+    tags: [test-driven-generation, methodology]
+
+  - front: "What is the correct order for running the discipline stack, and why?"
+    back: "ruff (lint) first, then pyright (type check), then pytest (tests). Lint clears noise. Type checking catches type mismatches that might mean tests are testing wrong types. Tests verify behavior last, after structural correctness is confirmed."
+    tags: [discipline-stack, verification]
+
+  - front: "What five sections should an MCP server specification document contain?"
+    back: "1. Server name and description. 2. Primitive inventory (every tool, resource, prompt with parameters and types). 3. Input validation rules. 4. Sample data (hardcoded test profiles). 5. Success criteria."
+    tags: [spec-first, documentation]
+
+  - front: "Why should the spec be written without AI assistance while implementation can use AI?"
+    back: "The spec is the thinking: deciding parameter types, edge case behavior, data structures. These design decisions are where learning happens. Implementation is execution of those decisions. Outsourcing the thinking skips the part that builds your skill."
+    tags: [spec-first, learning-design]
+
+  - front: "What are the eight success criteria for the candidate profiles MCP server capstone?"
+    back: "1. Server starts without errors. 2. tools/list returns both tools with correct schemas. 3. resources/list returns the candidate resource template. 4. prompts/list returns the screening prompt. 5. parse_cv handles empty input gracefully. 6. Scores stay between 0-100. 7. ruff, pyright, pytest all pass. 8. Inspector shows all primitives registered."
+    tags: [success-criteria, capstone, verification]

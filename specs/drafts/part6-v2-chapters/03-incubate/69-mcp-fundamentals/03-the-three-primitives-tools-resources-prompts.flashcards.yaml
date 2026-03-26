@@ -1,0 +1,34 @@
+chapter: 69
+lesson: 3
+cards:
+  - front: "Name the three MCP primitives and who controls each one."
+    back: "Tools: controlled by the AI model. Resources: controlled by the host application. Prompts: controlled by the human user."
+    tags: [mcp-primitives, control-model]
+
+  - front: "What are the discovery and execution methods for Tools, Resources, and Prompts?"
+    back: "Tools: tools/list and tools/call. Resources: resources/list and resources/read. Prompts: prompts/list and prompts/get."
+    tags: [mcp-primitives, protocol-methods]
+
+  - front: "In a tools/call request, where does the tool name go: in the method field or the params field?"
+    back: "In the params field, under params.name. The method is always 'tools/call'. This is because tools/call is a generic method that can invoke any tool on the server."
+    tags: [tools-call, json-rpc]
+
+  - front: "Why are resources application-controlled rather than model-controlled?"
+    back: "Resources are read-only data, so the risk is lower than tools. The application has the most context about what data is relevant to the current situation, so it decides which resources to load into the conversation."
+    tags: [control-model, resources]
+
+  - front: "What is a resource template in MCP? Give an example URI."
+    back: "A resource template uses {parameter} placeholders in the URI so the client can request a specific item. Example: 'hireflow://candidates/{candidate_id}/resume' where the client fills in the candidate_id."
+    tags: [resources, uri-templates]
+
+  - front: "When should you expose a capability as a Tool vs a Resource vs a Prompt?"
+    back: "If it changes state, make it a Tool. If it provides read-only data, make it a Resource. If it is a reusable interaction pattern the user triggers, make it a Prompt. The deciding question: who should decide when this gets used?"
+    tags: [control-model, design-decisions]
+
+  - front: "Why does the tools/call response wrap results in a content array with type fields?"
+    back: "The content array provides a consistent response format regardless of what the tool returns. Each content block has a type (e.g., 'text', 'image'), allowing tools to return multiple items and mixed media types."
+    tags: [tools-call, response-format]
+
+  - front: "What is the safety rationale behind MCP's three control levels?"
+    back: "The entity with the most context controls each type. The model understands when a function should be called (tools). The application understands what data is relevant (resources). The user understands their own intent (prompts). This aligns control with competence."
+    tags: [control-model, safety-design]

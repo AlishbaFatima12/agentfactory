@@ -1,0 +1,30 @@
+chapter: 69
+lesson: 8
+cards:
+  - front: "What are the three fields in an mcpServers JSON configuration entry?"
+    back: "command: the executable that launches the server (e.g., 'uv', 'npx'). args: arguments passed to the command (e.g., ['run', 'server.py']). env: environment variables injected into the server process."
+    tags: [mcp-configuration, mcpServers]
+
+  - front: "How does environment variable interpolation work in MCP configuration files?"
+    back: "Use ${VAR_NAME} syntax in the env block. The client reads the variable from the host environment at launch time and injects it into the server process. Actual secret values never appear in the config file."
+    tags: [configuration, security, env-vars]
+
+  - front: "What are the 5 steps of the MCP Inspector debugging workflow?"
+    back: "1. Start the server in Inspector (mcp dev). 2. View registered tools, resources, and prompts. 3. Test a tool call manually. 4. Check request/response JSON payloads. 5. Verify error responses with bad input."
+    tags: [mcp-inspector, debugging-workflow]
+
+  - front: "Why must you use print(..., file=sys.stderr) instead of print() when debugging stdio MCP servers?"
+    back: "Standard output IS the stdio transport channel for JSON-RPC messages. A regular print() to stdout corrupts the message stream and causes parse errors (-32700) on the client side. Stderr is separate from the transport."
+    tags: [debugging, stdio, stderr]
+
+  - front: "Match these JSON-RPC error codes: -32601, -32602, -32603, -32700."
+    back: "-32601: Method not found (typo or unregistered method). -32602: Invalid params (wrong types or missing required fields). -32603: Internal error (unhandled exception in server code). -32700: Parse error (malformed JSON in request)."
+    tags: [json-rpc, error-codes]
+
+  - front: "A tool works in the MCP Inspector but fails when called through Claude Code. Where is the problem?"
+    back: "The problem is on the client side, not the server. Check the mcpServers configuration file path, environment variables, and whether the tool name matches what the model expects. The Inspector isolates the server from the client."
+    tags: [debugging, mcp-inspector, troubleshooting]
+
+  - front: "What is the MCP debugging decision tree order?"
+    back: "1. Server won't start: check imports, transport config, Python version. 2. No tools listed: check decorator registration, open Inspector. 3. Call fails: check parameter types/names, test in Inspector. 4. Wrong output: business logic bug, add logging, test edge cases."
+    tags: [debugging, decision-tree]

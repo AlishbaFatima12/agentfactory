@@ -1,0 +1,34 @@
+chapter: 69
+lesson: 4
+cards:
+  - front: "What three things does the @mcp.tool() decorator do automatically?"
+    back: "1. Registers the function name as the tool name. 2. Extracts the docstring as the tool description. 3. Converts Python type annotations into a JSON Schema for the inputSchema."
+    tags: [fastmcp, decorator]
+
+  - front: "Write the minimal code to create and run a FastMCP server with one tool."
+    back: "from mcp.server.fastmcp import FastMCP; mcp = FastMCP('Name'); @mcp.tool() def my_tool(param: str) -> dict: \"\"\"Description\"\"\"; return {}; mcp.run(transport='stdio')"
+    tags: [fastmcp, server-construction]
+
+  - front: "What is the difference between stdio and streamable-http transport in MCP?"
+    back: "stdio: server reads stdin/writes stdout, managed by a parent process. Best for local tools, low overhead. streamable-http: server runs as an HTTP endpoint. Best for remote access and multiple clients. Transport choice does not change tool code."
+    tags: [transport, stdio, streamable-http]
+
+  - front: "What command launches the MCP Inspector for debugging a Python server?"
+    back: "mcp dev server.py. This starts the server, opens a browser-based UI, and lets you see registered tools, send manual tool calls, and inspect JSON-RPC messages."
+    tags: [mcp-inspector, debugging]
+
+  - front: "What four flaws did Emma's analysis find in James's linear scoring tool (score = years * 10, hire if > 70)?"
+    back: "1. No ceiling: scores grow unboundedly. 2. No floor: negative inputs produce negative scores. 3. Single factor: only experience matters. 4. Arbitrary threshold: 70 points equals exactly 7 years with no empirical basis."
+    tags: [logic-errors, scoring-design]
+
+  - front: "In FastMCP, how are required vs optional tool parameters determined?"
+    back: "Parameters without default values become required in the generated JSON Schema. Parameters with defaults (e.g., job_id: str = '') become optional."
+    tags: [fastmcp, input-schema]
+
+  - front: "What happens when a client sends tools/call for a tool name that does not exist on the server?"
+    back: "The server returns a JSON-RPC error response with code -32601 (Method not found). FastMCP handles this automatically at the framework level."
+    tags: [error-handling, json-rpc]
+
+  - front: "What type of error is a scoring algorithm that runs without exceptions but produces meaningless results?"
+    back: "A logic error. The code executes correctly and produces output for every input, but the algorithm does not model the domain it claims to represent. Syntax and data are fine; the logic is flawed."
+    tags: [error-taxonomy, logic-error]
