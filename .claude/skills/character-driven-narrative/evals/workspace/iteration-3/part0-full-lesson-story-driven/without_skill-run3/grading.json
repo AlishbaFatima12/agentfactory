@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains title: 'The Feedback Loop', description, sidebar_position: 5, skills array with 3 skills (Thinking Self-Evaluation, Growth Evidence Construction, Personal Feedback Loop Design), and learning_objectives array with 3 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80%",
+      "passed": true,
+      "evidence": "Very narrative-heavy. Extended James-Emma dialogue drives the Three Traps, Three Sources, Side-by-Side comparison, What Draft 1 Did Better, and Building the Evidence Trail sections. Exercise steps and Try With AI add non-narrative structure. Estimated ~78-82% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'Draft 3 is clearly better' - James resists Emma's questioning. Pushback 2: 'Draft 1 didn't do anything better. It's clearly the weaker analysis.' - James pushes back hard before discovering the human dimension loss. Pushback 3: 'Will I actually do that?' - honest self-doubt about following through."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma shares the junior developer story: 'He reorganized the authentication module. Made it more elegant. In the process, he removed a redirect that looked redundant but was actually handling a specific edge case.' This frames her experience, but more importantly she later says: 'His code review feedback said your refactor is structurally sound but you lost an important edge case. He responded with I'll be more careful next time. No diagnosis of WHY he missed it.' The parallel to her own mentoring experience shows her own learning process."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest speeches are about 3-4 sentences. The Three Sources explanation is broken into labeled sections with James responding between each. Dialogue pacing is strong."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy 1: 'I keep thinking about something from my last operations job. We adopted Lean Six Sigma. The whole department. Eight weeks of training... we were making exactly the same decisions. The reports had new headings. But when a supplier delivery was late, we still did what we'd always done: call the rep, negotiate a partial, absorb the cost.' - directly from supplier coordination/operations. Business analogy 2: 'His old boss used to say that a perfectly formatted spreadsheet full of wrong numbers is worse than a messy spreadsheet full of right ones.' - operations management. Thinking-out-loud: 'The framework gave me structure... And the structure ate the people.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Is it?' (challenging James's claim Draft 3 is better) and 'Would a second pass with no instruction have reminded you that legal exists?' Visual/spatial metaphor: Emma draws 'four points in a circle, connected by arrows' for the feedback loop. Also the house thermostat analogy."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": false,
+      "evidence": "Emma does not physically exit in this run. She remains present throughout the entire dialogue. She occasionally turns to her pull request or checks her phone, but never leaves the room. James does work independently ('James spent the next twenty-five minutes building what Emma called an evidence trail') but Emma is present, not absent. This does not satisfy the Jonah Rhythm exit-struggle-return pattern."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Volume Trap' (bold), 'The Vocabulary Trap' (bold), 'The Format Trap' (bold), 'Three Sources' (heading), 'The Evidence Trail' (heading + table). Key Takeaways section summarizes all named concepts. All findable."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Full 'Try With AI' section with 3 prompts: 'The Source Challenger', 'The Blind Spot Finder', 'The Transfer Test'. Each has code-block prompts and 'What you are learning' explanations. Well-structured."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "The discovery that 'Draft 1 did something better' - the human dimension loss. James realizes 'The framework gave me structure. And the structure ate the people.' This is an emergent insight about framework limitations. Also: the Three Traps (Volume, Vocabulary, Format) as a named taxonomy. The three-source attribution model (Repetition, Framework, External Feedback) is also emergent organizational depth."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.91
+  }
+}

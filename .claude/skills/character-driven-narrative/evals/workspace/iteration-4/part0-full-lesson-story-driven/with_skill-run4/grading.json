@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+      "passed": true,
+      "evidence": "Frontmatter includes title: 'The Feedback Loop', description, sidebar_position: 5, two skills with proficiency_level/bloom_level/digcomp_area, and two learning_objectives with assessment_method."
+    },
+    {
+      "text": "Narrative density approximately 80%",
+      "passed": true,
+      "evidence": "Lesson opens with the Trevor Problem narrative scene and maintains dialogue-driven structure throughout. Expository elements (Snapshot Test note, Vocabulary Trap tip, Growth Evidence Pairs note, Honest Reckoning tip) are interspersed between extended narrative scenes. Estimated ~80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James challenges the Snapshot Test: 'But I already knew what to look for the second time. Maybe I just remembered the cascade map format and filled in the blanks. That's not thinking better. That's following a recipe.' (lines ~138-141). Pushback 2: 'Feelings aren't deliverables' and 'Hang on. At my old company, when we reorganized a warehouse section, we had to document it exactly like this' (lines ~215-228), where James resists the Growth Evidence Pair framing before arriving at his own warehouse analogy."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": true,
+      "evidence": "Emma admits two professional failures: (1) 'I had a version of this early in my career. I had just finished studying design patterns... I wrote a log archival script, forty lines of functionality, and wrapped it in four hundred lines of architectural patterns.' Her team lead told her to delete 360 lines (lines ~287-291). (2) 'When I ran this exercise on my own code review framework two years ago, I expected ninety percent. I scored thirty-one.' (lines ~269-271)."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest unbroken passage is the Vocabulary Trap explanation (lines ~185-189), running about 4 sentences before James reacts with 'And because the words come first, you can't tell whether you're thinking differently or just talking differently.'"
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Ops analogy 1: 'My old company had something similar. When we automated purchase order approvals, we lost the procurement clerk who could look at a supplier invoice and just know something was off.' (lines ~149-151). Supplier coordination. Ops analogy 2: 'At my old company, when we reorganized a warehouse section, we had to document it exactly like this. Photo of the old layout. Description of what we changed and why.' (lines ~227-228). Warehouse logistics. Ops analogy 3: 'At my old company, the operations team ran process improvement projects every quarter.' (line ~325). Thinking-out-loud: 'How do I know I'm not Trevor?' (line ~125)."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic: 'Point to the clinical intuition observation. The one about nurses catching what the AI can't.' (line ~143) forces James to identify his own insight. Visual/spatial: 'She drew two boxes on a fresh napkin, connected by an arrow. Before Box, Arrow (Mechanism), After Box' (lines ~218-224) for Growth Evidence Pairs."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+      "passed": true,
+      "evidence": "Emma exits: 'I need to step out for a few minutes. Phone call.' She pointed at his folder. 'While I'm gone, pull out Draft 1 and Draft 3.' She pushed through the cafe door (lines ~165-167). James struggles alone: discovers the Vocabulary Trap by comparing 'bifurcated customer experience' vs genuine depth, connects to quarterly reviews at old job (lines ~168-201). Emma comes back: 'Emma came back and sat down.' (line ~182)."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'Thinking Snapshot' (note box), 'The Snapshot Test' (note box), 'The Vocabulary Trap' (tip box), 'Growth Evidence Pairs' (note box), 'The Honest Reckoning' (tip box), 'Framework-Induced Overreach' (bold). All findable via search."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with exactly 3 actionable prompts each with a What you are learning explanation",
+      "passed": true,
+      "evidence": "Three prompts: (1) 'The Snapshot Test' with 'What you are learning' about using AI as external mirror for metacognition. (2) 'Vocabulary Trap Detection' with 'What you are learning' about auditing writing for substance vs terminology. (3) 'Growth Evidence Pair Validation' with 'What you are learning' about constructing rigorous evidence of growth."
+    },
+    {
+      "text": "At least 1 emergent concept/insight/named idea NOT requested in the prompt",
+      "passed": true,
+      "evidence": "'Framework-Induced Overreach' and 'The Honest Reckoning' (three categories: genuine improvements, vocabulary swaps, framework overhead) emerge organically. The idea that frameworks can make thinking WORSE (category 3) was not requested in the prompt and emerges from the narrative."
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The Trevor Problem framing creates a compelling narrative stakes structure",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The opening phone call with Trevor, where Trevor cannot cite a single specific mechanism for his improvement, creates the central tension: 'How do I know I'm not Trevor?' This drives the entire lesson's investigation."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Strongest with_skill run. All assertions pass with rich evidence. The Trevor Problem is a particularly effective narrative device."
+  }
+}

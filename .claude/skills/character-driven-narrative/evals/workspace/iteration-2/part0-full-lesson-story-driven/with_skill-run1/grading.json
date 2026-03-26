@@ -1,0 +1,74 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains sidebar_position: 5, title: 'The Feedback Loop', description present, skills array with 2 skills (Metacognitive Self-Assessment, Framework Transfer Verification), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "The lesson is heavily narrative-driven. The opening section through 'The Problem with Feeling Smarter', 'The Transfer Test' narrative, and 'The Honesty Audit' dialogue are all narrative prose. Instructional blocks ('Doing the Before/After Comparison', 'The Transfer Test: How It Works', 'The Honesty Audit: Your Protocol') are interspersed but constitute roughly 20% of the body. The ratio is approximately 80% narrative to 20% instructional."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James says 'That feels like it would just make me feel worse' about the Honesty Audit, resisting the idea before accepting the building inspector analogy. Pushback 2: James challenges 'That's not helpful' when Emma says self-assessment is biased by default. Pushback 3: James says 'I feel like I got better at drawing cascade maps. But I'm not sure I got better at thinking' -- questioning his own progress rather than accepting surface improvement."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma admits surprise and learning from James: 'A little,' she admitted. 'That distinction, the one between transferring a principle and copying a shape, is usually the hardest thing to teach.' This shows Emma being surprised by James's insight, acknowledging he grasped something faster than expected."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Reviewed all Emma dialogue blocks. The longest uninterrupted Emma speech is 3 sentences (e.g., the 'Three questions. Answer them with evidence, not feelings.' block). Every block of Emma speech is followed by James's reaction, question, or dialogue."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": false,
+      "evidence": "James does use thinking-out-loud fragments: 'Okay, this is uncomfortable' and 'Because I can't explain the mechanism without saying it's like the banking one.' However, no clear business analogy from his operations background is present. James references 'banking analogies' but those are from the exercise scenario, not from his prior operations career. No warehouse, logistics, or business operations metaphor appears."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Can you? Or do you just know it's earlier?' (challenging James to question his assumption about improvement). Visual/spatial metaphor: 'Does a building inspector make a building worse by finding cracks?' (building inspector analogy as spatial/structural metaphor)."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Clear Jonah Rhythm at the Transfer Test: 'She picked up her phone and walked toward the hallway.' James then works alone for 12 minutes on the healthcare scenario, struggling with the map, and 'Emma came back. She looked at the map.' This is a textbook exit-struggle-return sequence."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Three named concepts all have standalone headers or bold names: 'The Before/After Comparison' (H3 header + bold in text), 'The Transfer Test' (H2 header + H3 'How It Works'), 'The Honesty Audit' (H2 header + H3 'Your Protocol'). Summary table at the end lists all three with definitions. All findable without reading dialogue."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "H2 'Try With AI' section contains 3 prompts: 'Challenge Your Best Claim', 'Diagnose Your Transfer Gaps', and 'Build Your Personal Growth Protocol'. Each has a code block with a copy-pasteable prompt and a 'What you are learning' explanation."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "The 'Copied Pattern Diagnostic' (presented in a :::note block) is a genuinely novel named concept: 'If you can only explain a connection by referencing your original scenario, you transferred the shape, not the thinking.' This diagnostic test for distinguishing pattern-copying from genuine transfer is a named, reusable idea that goes beyond the standard self-assessment prompt requirements. It provides a specific behavioral test students can apply."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.91
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Narrative density is approximately 80%",
+        "reason": "This assertion is inherently subjective and hard to evaluate precisely. A more discriminating version would count narrative paragraphs vs instructional paragraphs and compute the ratio, but that requires agreeing on what counts as 'narrative'."
+      }
+    ],
+    "overall": "Assertions are generally well-designed. The emergent depth assertion (11) is the most discriminating and valuable addition."
+  }
+}

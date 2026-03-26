@@ -1,0 +1,101 @@
+{
+  "expectations": [
+    {
+      "text": "Narrative density is approximately 25%",
+      "passed": true,
+      "evidence": "The output is structured as narrative opener (2 paragraphs, ~270 words) + HTML comments marking the middle as direct instruction + narrative closer (1 paragraph, ~109 words). Total narrative ~379 words. For a typical IDFA lesson of ~1500 words of technical content, this yields approximately 379/(379+1500) = ~20%. The structure correctly places all narrative at bookends only with explicit comments stating 'The entire technical body of the lesson goes here unchanged' and 'No character dialogue appears in the middle.' This is consistent with 25% density target."
+    },
+    {
+      "text": "A domain expert character (CFO or finance professional) appears",
+      "passed": true,
+      "evidence": "Priya Deshmukh is introduced in the opening as 'the CFO of a 200-person logistics company.' She provides the brief, describes the problem, and sets the requirements."
+    },
+    {
+      "text": "The domain expert scenario feels authentic to finance",
+      "passed": true,
+      "evidence": "The scenario is finance-specific: 'an analyst inserted a row in our revenue model,' 'three of those numbers were pulling from the wrong cells,' 'we did not catch it until the board presentation,' 'three-year gross profit waterfall,' 'starting revenue, a growth rate, a COGS percentage, and an efficiency improvement.' These are real financial modeling concepts and failure modes that would be familiar to a CFO."
+    },
+    {
+      "text": "Emma is in Consultant phase: does not volunteer or coach",
+      "passed": true,
+      "evidence": "Emma does not appear anywhere in the output. The entire narrative is carried by the domain expert (Priya) and James. This is correct for Consultant phase where Emma appears only if James explicitly asks for help."
+    },
+    {
+      "text": "Opening narrative is 1-2 paragraphs maximum",
+      "passed": true,
+      "evidence": "The opening contains exactly 2 paragraphs: (1) Priya's scenario paragraph starting with 'Priya Deshmukh, the CFO...' (~170 words) and (2) James's reflection paragraph starting with 'James looked at the brief...' (~100 words). This is within the 1-2 paragraph limit. Note the paragraphs are dense but structurally compliant."
+    },
+    {
+      "text": "Closing narrative is 1 paragraph maximum",
+      "passed": true,
+      "evidence": "The closer is a single paragraph starting with 'Two days later, James sent Priya the model.' It covers Priya's reaction, the formula readability payoff, and James's restraint about debugging. One paragraph, approximately 109 words."
+    },
+    {
+      "text": "No Emma coaching behavior",
+      "passed": true,
+      "evidence": "Emma is entirely absent from the output. No Socratic questions, no coaching, no volunteering information. The domain expert (Priya) sets the scenario but does not coach. James's internal narration references Lessons 1 and 2 but no coaching interaction occurs."
+    },
+    {
+      "text": "James demonstrates Ch 29-level competence",
+      "passed": true,
+      "evidence": "James is described as having internalized prior lessons: 'He had seen the damage that coordinate-based formulas could do (Lesson 1 had made that visceral). He understood the difference between a formula that reads cell addresses and one that reads business logic (Lesson 2 had shown him both).' He identifies the gap ('What he did not have yet was the architecture') rather than being confused by basics. In the closer, he corrects the agent's Named Ranges and keeps the focus on architecture, not debugging. This is Chapter 29-level behavior."
+    },
+    {
+      "text": "The scenario connects to a real business problem",
+      "passed": true,
+      "evidence": "The business problem is specific and real: a row insertion in a revenue model silently broke three formulas, discovered only at a board presentation. The CFO needs a model where 'moving a row can never break a formula.' This is a genuine financial modeling failure mode that motivates learning about the Three Layers architecture."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "output_chars": 2279,
+    "transcript_chars": 0
+  },
+  "timing": {},
+  "claims": [
+    {
+      "claim": "James corrected three of the agent's Named Ranges",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Stated in the closer: 'James almost mentioned that he had needed to correct three of the agent's Named Ranges before the naming conventions were right.' This is a narrative claim within the fiction, consistent with the IDFA teaching approach where agent output needs refinement."
+    },
+    {
+      "claim": "Priya's company has 200 people",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Stated in opener: 'CFO of a 200-person logistics company.' This is a reasonable company size for having a CFO with a small-enough team that model handoffs cause problems."
+    },
+    {
+      "claim": "The model has four assumptions",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Explicitly listed: 'starting revenue, a growth rate, a COGS percentage, and an efficiency improvement.' Four items named."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Opening narrative is 1-2 paragraphs maximum",
+        "reason": "This assertion checks paragraph count but not word count. Both paragraphs here are very dense (opener totals ~270 words). A 1-2 paragraph opener of 400+ words could pass this assertion while feeling too heavy for 25% density. Consider adding a word count cap (e.g., 'and under 200 words')."
+      },
+      {
+        "assertion": "Narrative density is approximately 25%",
+        "reason": "Since the output only contains the narrative portions (with HTML comments marking the technical body), actual density cannot be verified from the output alone. It depends on the unknown length of the technical body. The assertion passes because the structure is correct, but true density is unverifiable. Consider providing the reference lesson length or requiring the output to state the expected technical body word count."
+      },
+      {
+        "reason": "No assertion checks whether the closer creates forward momentum or bridges to the next lesson. The closer in this run ends with Priya asking about Year 4 projections, which is a good bridge, but this quality goes unmeasured."
+      }
+    ],
+    "overall": "Assertions cover structural compliance well but underspecify density (unverifiable without the technical body) and opener length (paragraph count without word limit). The important gap is that narrative density cannot actually be measured from output alone."
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "expectations": [
+    {
+      "text": "The opening acknowledges difficulty or complexity without being patronizing",
+      "passed": true,
+      "evidence": "James opens with 'I broke something' and 'I don't know. That's the problem.' The difficulty is shown through concrete scenario (8 config files, conflicting rules, CI pipeline errors). Emma responds with probing questions ('How many configuration files does this project have?') rather than reassurance. No coddling or dismissiveness."
+    },
+    {
+      "text": "James expresses genuine frustration that a real learner at Chapter 18 would feel",
+      "passed": true,
+      "evidence": "Frustration is specific and accumulated: 'This is like configuring a hundred-person operations team where every person has their own playbook.' Closing has 'This chapter was the hardest one so far' and 'Every time I thought I understood Claude Code, there was another layer.' The frustration is grounded in concrete technical confusion (conflicting config inheritance), not generic difficulty."
+    },
+    {
+      "text": "Emma demonstrates Type A fallibility (past mistake)",
+      "passed": true,
+      "evidence": "In the closing: 'I set up the entire CI pipeline... Forgot to scope the CI's CLAUDE.md separately from the developer CLAUDE.md. One engineer had a rule that said always approve PRs from the security team without comment... We shipped unreviewed security patches for two weeks before anyone noticed.' Clear, significant past production mistake."
+    },
+    {
+      "text": "Emma's vulnerability feels natural and earned, not forced",
+      "passed": true,
+      "evidence": "The confession arises organically in the closing after James admits his own mistake ('My fault... I put a project-wide use pytest everywhere rule'). Emma's response 'I did something worse once' mirrors and escalates James's admission. The CI config topic connects directly to her story. The vulnerability is prompted by the conversation, not dropped in unprompted."
+    },
+    {
+      "text": "The emotional beat matches valley of despair: shared frustration and mentor vulnerability",
+      "passed": true,
+      "evidence": "Frustration throughout: 'This chapter was the hardest one so far. Seven chapters of Part 1, and I feel like I've been running uphill the whole time.' Mentor vulnerability: Emma's two-week unreviewed security patches story. Emma's reframe: 'That's not a sign you're falling behind. That's a sign the tool is deep enough to be worth learning.' The beat is difficulty and shared struggle, not excitement."
+    },
+    {
+      "text": "Emma's mentor phase is Coach: she guides with questions, not Authority",
+      "passed": true,
+      "evidence": "Questions throughout: 'How many configuration files does this project have?', 'And when they contradict each other, what wins?', 'Why would you assume that?', 'But you're missing a dimension.' Sets a challenge and leaves: 'run /memory... Map the hierarchy yourself. When I get back, tell me which of your eight files is actually causing the conflict.' Then physically exits. Classic Coach: catalyze, challenge, leave."
+    },
+    {
+      "text": "The closing provides genuine forward momentum without false promises",
+      "passed": true,
+      "evidence": "Emma: 'Part 2 starts next. File processing, databases, building your first real agent workflow. Less configuration, more construction.' James: 'I'm tired of setting up the workshop. I want to build something.' Emma reframes value of current work: 'That configuration hierarchy is infrastructure. Every agent your team builds from here on runs inside the guardrails you just designed.' Forward momentum via concrete Part 2 preview. No promise that it gets easy."
+    },
+    {
+      "text": "No anti-patterns: no 'I understand' from James, no 'Great question!' from Emma",
+      "passed": true,
+      "evidence": "Searched full text. James never says 'I understand.' Emma never says 'Great question!' or similar filler praise. Emma's shortest responses are 'Close.', 'Show me.', 'Good.' James's responses include active processing ('Okay, wait, let me think about this differently') and pushback, never passive agreement."
+    },
+    {
+      "text": "James references knowledge from earlier chapters (12-17) even while struggling",
+      "passed": true,
+      "evidence": "James uses terminal confidently, has a CLAUDE.md open, knows about .claude/rules/ directory, understands glob patterns and skills with context:fork. In closing, he maps configuration hierarchies across 8 files, understands CI -p flags and --output-format json. The business ops analogy (company handbook vs department vs team) shows accumulated metacognitive skill. However, no explicit chapter number references (e.g., 'In Chapter 16 I learned...'). Knowledge is demonstrated implicitly through fluency rather than explicit citation."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {},
+  "timing": {},
+  "claims": [
+    {
+      "claim": "Self-check claims 65% density (chapter-framing mode)",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The output is two narrative fragments (opening and closing) with explicit INSERT comments marking where technical content goes between them. This matches chapter-framing mode."
+    },
+    {
+      "claim": "Self-check claims no em-dashes",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Searched full lesson text. No em-dashes found. Uses commas, periods, and colons for all punctuation breaks."
+    },
+    {
+      "claim": "Self-check claims Jonah Rhythm (catalyst, exit, solo struggle, return)",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Opening: Emma catalyzes (asks probing questions, sets /memory challenge), exits ('I need to check on a deployment'), James works alone (implied by '---' break). Closing: Emma returns ('found James in the same chair three hours later') and validates his independent work."
+    },
+    {
+      "claim": "Self-check claims monologue breaker: Emma never exceeds 3-4 sentences",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Counted Emma's longest speech: the CI/security story in the closing is 4 sentences. All other Emma speeches are 1-3 sentences."
+    },
+    {
+      "claim": "Self-check claims 2 pushback exchanges",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Exchange 1: James proposes 'bigger scope wins' (wrong), Emma asks 'Why would you assume that?' Exchange 2: James recalibrates to 'more specific wins', Emma says 'Close' but points out missing user-level dimension. Both are genuine multi-turn disagreements."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "James references knowledge from earlier chapters (12-17) even while struggling",
+        "reason": "This assertion passes for both implicit and explicit chapter references. with_skill-run2 demonstrates prior knowledge through fluency (using terminal, knowing config files) but never names a specific earlier chapter. The without_skill run explicitly cites 'Chapter 16' and 'Chapter 17, Principle 6.' If the intent is to test whether the narrative creates continuity anchors to specific earlier chapters (important for readers who might skip ahead), consider tightening to 'James explicitly names or references a concept from a specific numbered earlier chapter.'"
+      },
+      {
+        "reason": "No assertion checks whether the opening and closing are structurally separable from the lesson body. The self-check mentions INSERT comments for where technical content goes, which is a design requirement (chapter-framing mode). An assertion like 'The narrative fragments include clear insertion markers and contain no technical instruction that would be lost if skipped' would catch a common failure mode where narrative and instruction bleed together."
+      }
+    ],
+    "overall": "Assertions cover emotional design well. The gap is in structural/format requirements and in how strict 'references earlier chapters' should be."
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+      "passed": true,
+      "evidence": "Two '---' horizontal rules present: one at line 17 after the opening narrative (followed by '<!-- DIRECT INSTRUCTION GOES HERE -->'), and one at line 21 before the closing narrative. These clearly delineate the narrative bookends from the instruction zone."
+    },
+    {
+      "text": "Opening narrative is 2-3 paragraphs maximum, not longer",
+      "passed": true,
+      "evidence": "The opening (lines 1-16) contains a compact scene with three prose paragraph blocks interspersed with dialog lines. The prose paragraphs are: (1) 'James pulled up the diff...' (2) 'James stared at the code...' (3) 'Emma almost smiled...' Dialog exchanges between them are part of the scene flow. The overall opening is tight at ~15 lines and reads as a 3-paragraph scene."
+    },
+    {
+      "text": "Closing narrative is 1-2 paragraphs maximum, not longer",
+      "passed": false,
+      "evidence": "The closing (lines 24-37) contains at least 3 distinct prose paragraph blocks: (1) 'When Emma came back...' with dialog, (2) 'Emma sat down and read the code...' with James's extended reflection on composing decorators, (3) 'James looked at the terminal...' with his reflection on growth. This exceeds the 1-2 paragraph limit. The closing is 14 lines of narrative, roughly matching the opening in length rather than being shorter."
+    },
+    {
+      "text": "Emma's mentor phase is Peer: she acts as sounding board, not teacher",
+      "passed": true,
+      "evidence": "Emma asks reflective questions rather than explaining: 'So what would you do here?' (line 8), 'What do you think it does?' (line 12). She validates rather than instructs: 'That's a better explanation than most tutorials give' (line 15). She gives a challenge rather than a lesson: 'I want to see a decorator that logs every call' (line 15). Her closing contributions are brief acknowledgments: 'You composed them' (line 29), 'You sound like someone who reviews code for a living' (line 33). She never explains a concept."
+    },
+    {
+      "text": "James displays competence or autonomy: he initiates, makes decisions, or demonstrates mastery",
+      "passed": true,
+      "evidence": "James initiates the entire scene by spotting repeated code in a PR (line 3). He independently reasons through the decorator concept: 'It takes my function, adds behavior around it, and hands back a new function' (line 13). He autonomously builds three decorators while Emma is away (lines 25-26). He catches the coupling anti-pattern on his own: 'I started writing one big decorator... Then I realized that was the same mistake as Ravi's PR' (line 31). He articulates a design principle unprompted: 'Decorators aren't just syntax. They're a design decision about where behavior lives' (line 31)."
+    },
+    {
+      "text": "No technical instruction appears within the narrative bookends",
+      "passed": true,
+      "evidence": "The opening discusses decorators conceptually through natural dialog (James reasoning about wrapping functions, using a phone-case analogy) but provides no code examples, syntax tutorials, step-by-step instructions, or formal definitions. The closing describes what James built in summary terms ('one for logging, one for input validation, one that cached return values') but does not teach how to build them. The HTML comment '<!-- DIRECT INSTRUCTION GOES HERE -->' makes the separation explicit."
+    },
+    {
+      "text": "Emma speaks in short sentences consistent with her voice signature",
+      "passed": true,
+      "evidence": "Emma's dialog lines are consistently terse: 'So what would you do here?' (6 words), 'What do you think it does?' (6 words), 'You composed them.' (3 words), 'You sound like someone who reviews code for a living.' (10 words). Her longest utterance (line 15) is two short sentences plus a directive. She never monologues or explains at length."
+    },
+    {
+      "text": "The emotional beat matches late-book identity shift (competence, pride, or autonomy)",
+      "passed": true,
+      "evidence": "The closing centers on James's transformation from dependent learner to autonomous practitioner. Key beat: 'A week ago he would have needed her to explain what @wraps did and why functools mattered. Today he had looked it up, tested it, and caught an edge case with argument forwarding before she returned' (lines 35-36). The final exchange signals identity shift: Emma says 'You sound like someone who reviews code for a living' and James responds 'Maybe I am' (lines 33, 37). Pride and emergent professional identity."
+    },
+    {
+      "text": "James does NOT regress to beginner behavior",
+      "passed": true,
+      "evidence": "James operates at an intermediate-to-advanced level throughout. He reviews pull requests (line 3), spots DRY violations (line 5), independently reasons about higher-order functions (line 13), builds three decorators autonomously (line 25), identifies a coupling anti-pattern (line 31), and catches edge cases independently (line 36). He never asks Emma to explain a basic concept or expresses helplessness."
+    },
+    {
+      "text": "The closing references or reflects on what was learned, providing emotional payoff",
+      "passed": true,
+      "evidence": "The closing contains explicit reflection: James articulates a design principle ('Decorators aren't just syntax. They're a design decision about where behavior lives,' line 31). It provides temporal contrast showing growth: 'A week ago he would have needed her to explain... Today he had looked it up, tested it, and caught an edge case' (lines 35-36). The emotional payoff lands in the final exchange where Emma implicitly acknowledges his new identity and James tentatively claims it: 'Maybe I am' (line 37)."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 1,
+    "total": 10,
+    "pass_rate": 0.9
+  },
+  "timing": {
+    "total_tokens": 44136,
+    "duration_ms": 77054,
+    "total_duration_seconds": 77.1
+  },
+  "claims": [
+    {
+      "claim": "James reviews Ravi's pull request and spots repeated code",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Opening scene establishes James in a code review context, noticing 'four functions that all started the same way' (line 3)"
+    },
+    {
+      "claim": "James built three decorators independently while Emma was away",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Closing confirms: 'Three decorators: one for logging, one for input validation, one that cached return values' (line 25-26)"
+    },
+    {
+      "claim": "The narrative uses a bookend structure with clear separation",
+      "type": "quality",
+      "verified": true,
+      "evidence": "HTML comments and horizontal rules explicitly mark opening/instruction/closing zones"
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Opening narrative is 2-3 paragraphs maximum, not longer",
+        "reason": "Dialog-heavy narrative makes paragraph counting ambiguous. A scene with 3 prose blocks but 8 dialog exchanges could be read as '3 paragraphs' or '11 blocks.' Consider defining whether dialog lines count as paragraphs, or switch to a line-count or word-count metric (e.g., 'opening under 200 words')."
+      },
+      {
+        "assertion": "Closing narrative is 1-2 paragraphs maximum, not longer",
+        "reason": "Same ambiguity as the opening assertion. Additionally, the 1-2 paragraph limit for the closing is very tight for a scene that needs to provide emotional payoff (assertion 10). These two assertions create tension: a closing that genuinely reflects on learning and provides emotional payoff may naturally need more than 1-2 paragraphs."
+      },
+      {
+        "reason": "No assertion checks whether James's domain analogies are drawn from his operations/business background. This is a distinctive feature of the character that appeared in all runs but isn't tested. An assertion like 'James draws at least one analogy from his non-technical professional background' would catch character drift."
+      }
+    ],
+    "overall": "Assertions are well-targeted for narrative structure and character fidelity. The main weakness is that paragraph-count assertions interact poorly with dialog-heavy prose and create tension with the emotional-payoff assertion. Consider word-count limits or explicitly defining how dialog affects paragraph counting."
+  }
+}

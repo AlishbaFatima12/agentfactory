@@ -1,0 +1,69 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains sidebar_position: 5, title: 'The Feedback Loop', description present, skills array with 2 skills (Framework Evaluation, Metacognitive Self-Assessment), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "Extensive narrative sections: the opening dialogue, the Improvement Delta discovery scene, the Calibration Gap scene, the Framework Compliance vs Genuine Insight scene, the Measuring Your Own Growth scene, James working alone, and the closing scene. Instructional blocks (the Improvement Delta definition, Calibration Gap explanation, Cargo Cult Analysis definition, Structured Serendipity) are woven into narrative. Approximately 80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'That sounds harder than making the map in the first place.' James resists the difficulty of self-assessment. Pushback 2: 'Okay, but what about the regulator domain? I only added it because the framework said I needed five domains. I didn't have some insight about regulators. I just filled in the box.' James pushes back on whether compliance counts as insight. Pushback 3: 'You're asking me to criticize the framework you taught me?' James resists the idea of finding framework costs."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma admits learning from James: 'I've shipped features like that. You build the testing scaffold because the process says you have to, and halfway through writing the test you realize your design has a flaw you never would have caught otherwise.' This is Emma sharing her own experience as parallel validation, and later she explicitly says of James's competitor poaching insight: the framework 'created the space for it' -- acknowledging James's business experience contributed something the framework alone didn't provide."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Checked all Emma speech blocks. The longest is approximately 3-4 sentences. Every dialogue exchange has James responding within 4 sentences of Emma speaking."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: 'At his old company, when they had laid off the regional sales team, two competitors hired them within a month and revenue in those regions dropped 30% the next quarter.' This is a direct operations experience analogy. Thinking-out-loud: 'I mean... I could have guessed it.' and the extended internal monologue about the employee morale-innovation connection from his old company."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'But what if your first instinct was right and the framework just added decoration?' (forcing James to question assumption that later = better). Visual/spatial metaphor: 'Every lens sharpens some things and blurs others' (frameworks as optical lenses) and 'Structured Serendipity: a framework creating conditions for insight' (frameworks as spatial containers for discovery)."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Emma exits: 'I need coffee... While I'm gone, try something.' James works alone: extended passage where he catalogs genuine insight gains vs cosmetic changes, wrestles with the boundary ('The boundary between cosmetic and genuine was blurrier than he expected'). Emma returns: 'When Emma came back with two coffees, James had his lists but he didn't look satisfied.' Second Jonah Rhythm: Emma leaves for a meeting ('I have a meeting in fifteen minutes'), James works alone on Improvement Delta, Calibration Gap, and Framework cost, discovering the lost innovation connection."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts with standalone headers/bold: 'The Improvement Delta' (H2 header), 'The Calibration Gap' (H2 header), 'Cargo Cult Analysis' (bold in dialogue + definition), 'Structured Serendipity' (bold with definition), 'Framework Compliance vs. Genuine Insight' (H2 header), 'Metacognitive Calibration' (bold in closing). Key Takeaways lists all major concepts. All findable by scanning."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "H2 'Try With AI' section with 3 prompts: 'The Improvement Delta Check', 'The Cargo Cult Test', and 'The Framework Cost Analysis'. Each has a code block with paste-and-go prompt and 'What you're learning' explanation."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "Multiple emergent named concepts: (1) 'Cargo Cult Analysis' -- a named phenomenon where the external form of analysis is correct but internal understanding is missing, directly borrowed from anthropology and applied to thinking frameworks. This is a genuinely novel named idea with a specific diagnostic test. (2) 'Structured Serendipity' -- the concept that frameworks create conditions for insight even when the framework step felt like busywork. (3) 'Metacognitive Calibration' -- 'the ability to accurately assess the quality of your own thinking... the skill underneath every other skill.' All three go beyond what the prompt requested."
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "This run demonstrates the highest quality across all assertions. The emergent depth is particularly strong with three distinct named concepts."
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter present lines 1-79 with title: 'The Feedback Loop', description present, sidebar_position: 5, skills array with 2 entries (Thinking Self-Evaluation, Growth Evidence Construction), and learning_objectives array with 2 entries."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "The lesson is heavily narrative-driven. Nearly all concept introduction happens through James/Emma dialogue. The main non-narrative blocks are: the Growth Delta table (lines 160-166), the deliverable info box (lines 236-238), the Try With AI prompts (lines 244-317), and the AICheck block. The dialogue and narrative prose dominate the body (lines 84-418), with the structured exercise steps (Steps 1-3) woven into dialogue exchanges. Estimated narrative density is approximately 78-82%."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "(1) Lines 138-148: James pushes back with a genuine alternative: 'But some of that improvement is just because I had more time with the problem. If I spent four more hours on Draft 1, maybe it would look the same as Draft 4.' He proposes the time-as-confound hypothesis and defends it before Emma helps him test it. (2) Lines 180-196: During the honest audit, James identifies cross-domain connections as suspicious and defends his skepticism: 'I went from zero to four, but two of those were forced by the variable shift. If you gave me a new scenario right now, I'm honestly not sure I'd draw cross-domain connections without being told to.' He resists the positive interpretation of his own data."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Lines 140-144: Emma explicitly admits she was wrong in the past and learned from someone else: 'That's actually a fair point. I didn't think about it that way when I first learned this.' Then: 'When I was in grad school, I assumed every improvement in my code reviews was because I was getting better. Turns out half of it was just that I was spending more time. It took a professor pointing that out to make me separate the two.' This is a genuine past mistake with a specific mechanism."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest uninterrupted dialogue block is the grad school anecdote (lines 144-146), which is 3 sentences before she asks a question. The 'That's actually a fair point' opening (line 140) is 2 sentences, then James interjects with 'Really?' (line 142). Her longest post-interruption block is 3 sentences. No block exceeds 4 consecutive sentences."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": false,
+      "evidence": "James references 'old job' and process improvement concepts but his operations background is never explicitly established. His 'before and after... Cycle time, error rate, customer complaints' (line 102) references measurement but is stated in response to Emma's prompt, not as a spontaneous analogy. Thinking-out-loud fragments: James says 'I think I got better' (line 98), 'This is embarrassing' (line 132), and 'It doesn't feel good' (line 194), but these are reactions, not the stream-of-consciousness thinking-out-loud fragments the assertion seems to require (e.g., half-formed thoughts, pauses, working through reasoning aloud). The Transfer Test section (lines 213-231) has James drawing a cascade of his freelance decision, which is closer but is described in narration, not dialogue. Borderline fail on both counts."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": false,
+      "evidence": "Socratic question: PRESENT. 'Could you have written a better feedback loop if you had sat with Draft 1 for another hour, without any of the exercises in between?' (line 144) is a strong Socratic question. Also 'In your old job, how did you know whether a process improvement actually worked?' (line 100). Visual/spatial metaphor: NOT FOUND. Emma uses conceptual language ('Growth you can't defend isn't growth. It's decoration.' line 196) but no explicit visual or spatial metaphors (no building analogies, no physical space imagery, no concrete visual comparisons for abstract ideas)."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Lines 174-192: Emma says 'I need to refill my coffee. When I get back, I want to hear the one dimension where you're not sure the growth is real.' She stands up and leaves (line 178). James struggles alone reviewing his data across four dimensions (lines 180-190). Emma returns: 'When Emma came back, James had his answer.' (line 190)."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name that a reader could find without reading dialogue",
+      "passed": true,
+      "evidence": "Key concepts have standalone names and dedicated sections: 'Growth Delta' (section header line 106, definition line 108), 'genuine growth / scaffolded improvement / surface familiarity' taxonomy (lines 198-203 as a structured list), 'Transfer Test' (section header line 209), 'Assisted performance versus independent performance' is used in the Key Takeaways. All are findable without reading dialogue."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Lines 242-317: 'Try With AI' section (as subsection header line 242) with 3 prompts inside tip admonitions: Prompt 1 (Growth Delta Validation, lines 248-270), Prompt 2 (Blind Spot Detection, lines 274-294), Prompt 3 (Transfer Prediction, lines 298-317). Each includes copy-paste prompt blocks and 'What you are learning' explanations."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 2,
+    "total": 10,
+    "pass_rate": 0.8
+  },
+  "claims": [
+    {
+      "claim": "The lesson builds a complete metacognitive evaluation framework",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The Growth Delta (quantitative comparison), honest audit (classification into three types), and Transfer Test (independent application) form a coherent three-part evaluation framework."
+    },
+    {
+      "claim": "James applies systems thinking spontaneously in the Transfer Test",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Lines 222-230: James draws a cascade of his freelance decision, identifies a feedback loop connecting skills investment to future opportunities, and recognizes he 'would not have drawn that loop a month ago.'"
+    },
+    {
+      "claim": "The lesson references four drafts from previous exercises",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Lines 86-87 and 113 explicitly reference Draft 1, Draft 2, Draft 3, and Draft 4 from Exercises 1-4 respectively."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+        "reason": "This assertion bundles two distinct requirements. Failing either fails the whole assertion. Consider splitting into two separate assertions. Also, 'thinking-out-loud fragment' is ambiguous: does narrated internal reasoning count, or must it be spoken dialogue with explicit hesitations?"
+      },
+      {
+        "reason": "No assertion checks whether the lesson correctly references previous exercises in the chapter sequence. Run 2 references four drafts and four exercises with specific cross-links. This structural integrity is important for a capstone lesson but goes unchecked."
+      }
+    ],
+    "overall": "Assertions cover character dynamics well. The two failures (business analogy and visual metaphor) are borderline cases where the spirit is partially met but the letter is not. Consider whether these assertions should have partial-credit semantics or be decomposed into atomic checks."
+  }
+}

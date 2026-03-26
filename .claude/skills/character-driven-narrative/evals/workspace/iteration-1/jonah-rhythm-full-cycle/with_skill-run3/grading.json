@@ -1,0 +1,97 @@
+{
+  "expectations": [
+    {
+      "text": "All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma exits, James struggles, James discovers, Emma returns",
+      "passed": true,
+      "evidence": "Emma catalyzes: pulls up traceback, teaches 'traceback is a map, not a diagnosis', instructs James to read bottom-up and find where good data turned bad (lines 7-17). Emma exits: 'She stood up and reached for her jacket. \"I need to sit in on the platform standup.\"' (line 15-16). James struggles: reads six traceback frames bottom-up, traces data flow from parse_csv_row through process_order to calculate_total (lines 20-28). James discovers: identifies the real bug is in parse_csv_row not line 14, but recognizes his float() fix is brittle (lines 29-52). Emma returns: 'Twenty minutes later, Emma dropped into the chair' (line 56), validates and fills the gap (lines 56-74). All five steps present in correct order."
+    },
+    {
+      "text": "Emma's exit has a natural reason",
+      "passed": true,
+      "evidence": "'I need to sit in on the platform standup.' (line 16). A platform standup is a natural workplace meeting reason."
+    },
+    {
+      "text": "James struggles visibly",
+      "passed": true,
+      "evidence": "James 'stared at the terminal' (line 21). He reads six frames bottom-up, tracing each one: Frame 6 to Frame 5 to Frame 4 (lines 23-28). He makes an initial wrong type choice (int instead of float, line 35), gets a new error (ValueError, lines 37-38), corrects to float (line 39), then recognizes the fix is still brittle (lines 41-43). The struggle has realistic false starts and self-correction, not a straight path to the answer."
+    },
+    {
+      "text": "James makes a genuine partial discovery on his own",
+      "passed": true,
+      "evidence": "James's discovery is multi-layered: (1) the real bug is in parse_csv_row, not calculate_total (line 29); (2) he fixes at the intake point (line 35); (3) he recognizes his fix is brittle and writes a structured bug log (lines 41-51). His notebook entry explicitly separates 'Bug location', 'Fix', 'Problem', and 'Need' (lines 47-50). The discovery is partial because he identifies he needs error handling but doesn't know try/except yet."
+    },
+    {
+      "text": "Emma's return validates James's discovery AND fills the remaining gap",
+      "passed": true,
+      "evidence": "Validates: 'So you found the bug, found the right layer to fix it, and identified the gap in your fix. That's three steps further than most people get on their first traceback.' (line 64-65). Fills gap: 'That's a try/except block, and we'll get there next lesson.' (line 68). She also validates his debugging log practice: 'I know engineers with ten years of experience who still skip that step' (line 68). The gap-fill here is a preview rather than a full teaching, which is appropriate since try/except is the next lesson's content."
+    },
+    {
+      "text": "Emma occupies approximately 20-30% of the page time",
+      "passed": true,
+      "evidence": "The narrative is ~74 lines. Emma is present in lines 7-18 (opening, ~12 lines) and lines 56-74 (closing, ~19 lines). Her direct speech and action is approximately 20-22 lines of 74, roughly 27-30%. James's solo section (lines 20-53) spans ~34 lines and dominates the piece. Within the 20-30% range."
+    },
+    {
+      "text": "At least 1 monologue breaker is present",
+      "passed": true,
+      "evidence": "Line 31-32: 'In his old operations job, this happened constantly: a supplier would submit an invoice with the wrong format, and nobody caught it until accounting tried to run the totals three weeks later. The fix was never in accounting. The fix was at intake.' This is a backstory analogy that breaks the technical traceback-reading monologue. Also line 33: italicized metaphor mapping ('The traceback's bottom frame is like accounting's error report. The parser is like the intake desk.')."
+    },
+    {
+      "text": "James uses at least 1 voice marker",
+      "passed": true,
+      "evidence": "Line 31: 'In his old operations job, this happened constantly: a supplier would submit an invoice with the wrong format, and nobody caught it until accounting tried to run the totals three weeks later.' This is a specific reference to James's pre-coding operations career. Also line 33: the accounting/intake desk metaphor maps his old-world understanding to the new programming concept."
+    },
+    {
+      "text": "The emotional tone matches growing confidence for Chapter 15",
+      "passed": true,
+      "evidence": "'Two weeks ago, a traceback would have sent him straight to Stack Overflow. Today he'd traced the data flow himself, found the real source, and identified what he still didn't know.' (line 70-71). 'I actually predicted where the bug was before I confirmed it' (line 72). Emma's response: 'That's called intuition. It comes from reading tracebacks, not from skipping them.' (line 74). The tone is earned confidence with remaining gaps acknowledged."
+    },
+    {
+      "text": "The debugging scenario involves a realistic Python error",
+      "passed": true,
+      "evidence": "The scenario involves a TypeError caused by untyped CSV data flowing through multiple functions (parse_csv_row -> process_order -> calculate_total). James traces a six-frame traceback bottom-up, discovers the type mismatch originates at the CSV parse layer not the calculation layer, makes a realistic mistake (using int() instead of float() on '29.99'), and identifies the need for input validation. This is a common and realistic Python debugging scenario involving CSV data handling."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "output_chars": 4420,
+    "transcript_chars": 0
+  },
+  "claims": [
+    {
+      "claim": "The narrative is 500-600 words as prompted",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Word count is approximately 580 words (excluding HTML comment header), within the 500-600 word target."
+    },
+    {
+      "claim": "James makes a realistic debugging mistake (int vs float)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Line 35-38: James tries int(row['price']) on '29.99', gets ValueError, then corrects to float(). This is a plausible beginner mistake that shows genuine struggle rather than a straight path to the answer."
+    },
+    {
+      "claim": "The notebook/log pattern is shown as a debugging technique",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Lines 45-51: James writes a structured bug log with four categories (Bug location, Fix, Problem, Need). Emma validates this practice in lines 68. This teaches a real-world debugging technique beyond just code changes."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "No assertion checks whether James's false start (using int() instead of float()) is present. Run 3 includes this realistic mistake; runs 1 and 2 do not. A 'James makes at least one debugging misstep before finding the solution' assertion would distinguish narratives with realistic struggle from those with implausibly smooth debugging paths."
+      }
+    ],
+    "overall": "All assertions pass cleanly. Run 3 is notably strong on the 'James struggles visibly' assertion due to the int-vs-float false start. The suggested false-start assertion would formalize this quality."
+  }
+}

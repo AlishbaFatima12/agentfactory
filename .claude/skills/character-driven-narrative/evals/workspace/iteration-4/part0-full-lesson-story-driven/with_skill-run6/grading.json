@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+      "passed": true,
+      "evidence": "Frontmatter includes title: 'The Feedback Loop', description, sidebar_position: 5, two skills with proficiency_level/bloom_level/digcomp_area, and two learning_objectives with assessment_method."
+    },
+    {
+      "text": "Narrative density approximately 80%",
+      "passed": true,
+      "evidence": "Lesson is dominated by James/Emma dialogue and narrative scenes. Expository elements (Growth Delta types, Absorption Test table, Key Takeaways) are woven into dialogue. Estimated ~78-80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James challenges Emma's question about Draft 3 being best: 'Draft 3, obviously. It has the most connections...' / 'Is it?' / James pauses, then realizes 'some of Draft 3's improvements are just more words' (lines ~91-133). Pushback 2: James resists the absorption distinction: 'That is the same thing' when Emma asks whether frameworks changed his thinking or were just applied (line ~166-174)."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": false,
+      "evidence": "No clear Emma fallibility moment. Emma shares a story about a manager measuring code by lines (lines ~134), but this is critique of someone else. She does not share her own mistake, professional failure, or moment of being wrong. She remains the authoritative guide throughout."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest unbroken passage is the 'Useful vs Absorbed' explanation (lines ~218-219), which runs 3-4 sentences before James reacts."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Ops analogy: 'The slide decks improved. The operation did not' about quarterly vocabulary cycling at his operations firm where 'Lean operations became operational excellence became continuous improvement culture. The language upgraded every quarter. The warehouse throughput numbers stayed flat.' (lines ~177-179). Warehouse/process optimization. Also: 'My old company was deciding whether to switch shipping providers' (line ~171). Logistics. Thinking-out-loud: 'It feels like a cop-out. I should know whether it helped.' (line ~208)."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic: 'Pull out Draft 1. Point to the feedback loop you are most proud of. The one you drew before you talked to any AI, any peer, anyone.' (lines ~100-101). Also 'Now find something in Draft 3 that you could not have drawn on day one.' Visual/spatial: The Absorption Test table (lines ~226-233) and the 'Two Kinds of Growth' concept (visible vs invisible growth) function as spatial frameworks."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+      "passed": true,
+      "evidence": "Emma exits: 'I am going to check on something. Write down both lists. Every framework that is in your head, and every framework that is only in your notes. I will be back in fifteen minutes.' She walked out. (lines ~180-183). James struggles alone: works through framework absorption audit, builds two-column classification (lines ~184-204). Emma returns: 'When Emma came back, she read both lists.' (line ~204)."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Growth Delta' (section header + bold), 'The Framework Absorption Audit' (section header), 'The Absorption Test' (bold + table), 'The Honest Test' (note box), 'Two Kinds of Growth' (tip box). All findable via search."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with exactly 3 actionable prompts each with a What you are learning explanation",
+      "passed": true,
+      "evidence": "Three prompts in :::tip blocks: (1) 'The Growth Interview' with 'What you are learning' about AI as Socratic interviewer. (2) 'The Blind Spot Finder' with 'What you are learning' about AI as critical reviewer of self-assessment. (3) 'The Transfer Test' with 'What you are learning' about testing framework transfer."
+    },
+    {
+      "text": "At least 1 emergent concept/insight/named idea NOT requested in the prompt",
+      "passed": true,
+      "evidence": "'The Absorption Test' with its three-question framework (Would I use this again without being told to? Can I point to a specific moment where it changed a decision? Could I teach this to someone?) emerges organically from the dialogue. The three-state classification (Absorbed/Applied/Developing) was not requested."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.909
+  },
+  "claims": [
+    {
+      "claim": "The Framework Absorption Audit introduces a novel metacognitive tool",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The Absorbed/Applied/Developing classification provides a concrete vocabulary for evaluating framework internalization, demonstrated through James's honest audit of cascade mapping (absorbed) vs comparison framework (applied)."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "One failure: missing Emma fallibility moment. Otherwise strong run with the Absorption Test as a standout emergent concept."
+  }
+}

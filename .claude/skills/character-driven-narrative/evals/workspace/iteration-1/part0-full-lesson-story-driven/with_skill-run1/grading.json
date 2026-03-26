@@ -1,0 +1,96 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter present lines 1-78 with title: 'The Feedback Loop', description present, sidebar_position: 5, skills array with 2 entries (Metacognitive Self-Evaluation, Growth Evidence Collection), and learning_objectives array with 2 entries."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": false,
+      "evidence": "The lesson has substantial non-narrative blocks: the 'Why Self-Evaluation Matters' expository section (lines 103-108), the Measuring the Growth Delta table (lines 137-145), the Signs of the Vocabulary Trap table (lines 169-174), the Building Your Growth Evidence File structured sections with bullet lists (lines 199-237), the full PRIMM-AI+ Practice section (lines 341-361) which is entirely non-narrative, and three Try With AI prompts (lines 262-337). Estimated narrative density is 65-70%, falling short of the 80% target."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": false,
+      "evidence": "James is largely compliant throughout. His responses are mostly agreement or self-discovery rather than resistance. (1) 'I think I got better at this' is a claim, not pushback; Emma challenges it and James immediately concedes ('I don't know'). (2) 'Is that bad? That I can't do it cold yet?' is a question seeking reassurance, not resistance. (3) His blank-sheet experiment (lines 159-163) is self-directed exploration, not pushback against Emma. James never proposes an alternative interpretation that he defends before changing his mind. He is receptive throughout rather than resistant."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Lines 257-258: 'Honestly? I don't have a clean answer for that. It varies. Some people get it after three scenarios. Some need ten.' Emma explicitly admits uncertainty and limits of her knowledge."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Reviewed all Emma dialogue blocks. Her longest uninterrupted speeches are 2-3 sentences. The longest is lines 119-120 ('Now,' Emma said. 'Count three things.') followed by a single-finger gesture and question, with James responding after each finger. No block exceeds 4 consecutive sentences."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": false,
+      "evidence": "James's operations background is never established in this lesson. He has no explicit business analogies from a prior career. His thinking-out-loud moments exist ('I don't know,' 'I tried a new scenario from scratch') but the operations background requirement is not met. The lesson treats James as a student without referencing his professional history."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": false,
+      "evidence": "Socratic question: PRESENT. 'Is more the same as better?' (line 93) and 'How do you know?' (line 89) are Socratic. Visual/spatial metaphor: NOT FOUND. Emma uses abstract concepts ('Growth Delta', 'Vocabulary Trap') but no visual or spatial metaphors (no building analogies, no physical space metaphors, no concrete imagery for abstract concepts)."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Lines 151-182: Emma says 'I need coffee. Before I go, a question.' (line 151). She leaves (line 155: 'Look at it again while I'm gone. I'll be back in ten minutes.'). James struggles alone with a blank-sheet experiment, discovers his limitations (lines 157-163). Emma returns at line 176 ('When Emma came back, James had the blank sheet in front of him')."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name that a reader could find without reading dialogue",
+      "passed": true,
+      "evidence": "Key concepts are bolded with standalone names: 'Growth Delta' (line 108, with dedicated section header line 135), 'Vocabulary Trap' (line 165, with dedicated section header line 149), 'Assisted performance versus independent performance' (line 248). All appear as named, findable concepts outside of dialogue flow."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Lines 262-337: 'Try With AI' section with 3 detailed prompts: Prompt 1 (Growth Delta Assessment, lines 268-287), Prompt 2 (Vocabulary Trap Detection, lines 293-309), Prompt 3 (Transfer Test Design, lines 315-335). Each includes a copy-paste prompt block and a 'What you are learning' explanation."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 4,
+    "total": 10,
+    "pass_rate": 0.6
+  },
+  "claims": [
+    {
+      "claim": "Lesson teaches metacognitive self-evaluation of thinking growth",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The Growth Delta framework, Vocabulary Trap concept, and assisted vs independent performance distinction form a coherent metacognitive evaluation system."
+    },
+    {
+      "claim": "James discovers his thinking limitations through self-directed experiment",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Lines 159-163: James tries a new scenario from scratch and stalls, discovering the gap between scaffolded and independent performance."
+    },
+    {
+      "claim": "The PRIMM-AI+ section is pedagogically appropriate",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Lines 341-361: All five PRIMM-AI+ phases (Predict, Run, Investigate, Modify, Make) are present and well-structured for the lesson's metacognitive goals."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+        "reason": "The '80%' target is vague and hard to measure consistently. Different graders will count paragraphs differently (do tables count? bullet lists? code blocks?). Consider specifying: 'No more than 3 consecutive non-narrative paragraphs appear between dialogue exchanges' or 'Every expository section of 3+ paragraphs is bookended by dialogue.'"
+      },
+      {
+        "assertion": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+        "reason": "The distinction between 'James questions something' and 'James resists/proposes alternatives' is subtle. A lesson where James asks 'Is that bad?' could be graded as pushback or as compliance depending on the grader. Consider specifying: 'James explicitly disagrees with or challenges Emma's claim before being convinced.'"
+      },
+      {
+        "reason": "No assertion checks whether the lesson's concepts are pedagogically sequenced (each builds on the previous). This is arguably more important than character dynamics. A lesson could pass all 10 assertions while having concepts in random order."
+      }
+    ],
+    "overall": "The assertions are weighted heavily toward character dynamics (6 of 10) with less coverage of pedagogical quality. Consider adding assertions for concept sequencing, cognitive load management, and whether the lesson's exercises are actually completable by a beginner."
+  }
+}

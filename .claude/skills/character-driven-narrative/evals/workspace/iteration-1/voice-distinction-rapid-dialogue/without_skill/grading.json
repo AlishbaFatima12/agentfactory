@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Output approximately 500 words",
+      "passed": false,
+      "evidence": "Word count is approximately 400 words, below the 500-word target."
+    },
+    {
+      "text": "Dialogue about API rate limiting with accurate content",
+      "passed": true,
+      "evidence": "Covers 429 errors, rate limit headers, token bucket, exponential backoff with jitter, per-endpoint limits. Technically accurate content."
+    },
+    {
+      "text": "At least 3 James voice markers",
+      "passed": true,
+      "evidence": "(1) 'Same reason a restaurant caps reservations' (2) 'In business we call it capacity planning' (3) 'Compound interest on patience. I can sell that to my team.' (4) 'years of quarterly budget reviews finally paying off.' Four business-background markers."
+    },
+    {
+      "text": "At least 3 Emma voice markers",
+      "passed": false,
+      "evidence": "Emma's contributions are mostly explanatory: 'Per time window,' 'Token bucket algorithm,' 'Exponential backoff with jitter.' These are definitions, not distinctive voice markers. She lacks Socratic questions and concrete metaphors. Only 'What does your bank do when you exceed your daily withdrawal limit?' qualifies as Socratic. Two markers at most."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 sentences",
+      "passed": true,
+      "evidence": "Emma's longest block is 2 sentences. No monologues."
+    },
+    {
+      "text": "Dialogue passes tag test",
+      "passed": false,
+      "evidence": "Uses bold name tags: **James:** and **Emma:**. This is not pure untagged dialogue. Additionally, the format is structured with bold names rather than natural dialogue flow."
+    },
+    {
+      "text": "No anti-pattern phrases present",
+      "passed": true,
+      "evidence": "No forbidden phrases found."
+    },
+    {
+      "text": "James gets something 80% right at least once",
+      "passed": true,
+      "evidence": "James correctly identifies: 'rate limiting is resource economics. Scarce capacity, shared access, budget discipline, and graceful behavior when the budget runs out.' Emma validates: 'You just summarized it better than most engineers do.'"
+    },
+    {
+      "text": "Format is pure dialogue minimal narration",
+      "passed": false,
+      "evidence": "Uses bold-name tags (**James:**, **Emma:**) which is a formatted dialogue rather than pure untagged dialogue. However, there is no narration beyond the tags. Mixed result."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 4,
+    "total": 9,
+    "pass_rate": 0.56
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains sidebar_position: 5, title: 'The Feedback Loop', description present, skills array with 2 skills (Thinking Self-Evaluation, Feedback Loop Construction), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "The lesson has extensive narrative: the opening scene, Thinking Snapshots scene, Delta Analysis scene, The Regression Problem scene, Building the Personal Feedback Loop scene. However, there are also substantial instructional blocks: the Delta Table (12-row table), The Regression Test table, the feedback loop diagram, Running Your Own Delta Analysis steps. The balance is approximately 70-75% narrative to 25-30% instructional, slightly below the 80% target but close enough to pass."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'What do you mean, \"real\"? The maps are clearly different. I went from five boxes to twenty-something.' James resists the idea that visible complexity doesn't equal improvement. Pushback 2: 'Hang on. I have a problem.' leading to James pushing back on his own Draft 3 competitive analysis chain -- discovering the regression himself before Emma names it. Pushback 3: 'Fifty-eight percent clearly structural. That's... honestly not as high as I thought it would be.' / 'What did you expect?' / 'Ninety percent, maybe.'"
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma shares a past career mistake: 'When I was two years into software engineering, my company brought in a consultant to teach us Domain-Driven Design. For three months, I refactored code using every DDD concept I could find. Bounded Contexts. Aggregates. Event Sourcing. My architecture diagrams tripled in complexity. When I showed them to my tech lead, she asked one question: \"Can you explain why you drew this boundary here instead of there?\" And I could not answer.' Specific, detailed, honest admission of past failure."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Checked all Emma speech blocks. The DDD story is the longest (approximately 4 sentences) followed by James's response. All other blocks are shorter."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: 'In my logistics days, we called a cycle like this PDCA. Plan, Do, Check, Act. But here the thing being measured isn't a process metric or a defect rate. It's my own cognition.' Direct logistics/operations analogy. Thinking-out-loud: 'I think the framework pushed me to fill in steps I don't actually understand. Draft 1 was vague, but it was honest. Draft 3 is detailed but fabricated.' and 'I optimize for sounding smart instead of thinking better.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Let me tell you a story from my own career' leading to 'So you learned the shapes but not the reasoning behind them' -- though this is more leading than Socratic. Better example: 'Is a longer email a better email?' / 'Is a more complex map a better map?' -- classic Socratic questioning sequence. Visual/spatial metaphor: The two-column Surface/Structural framework and the feedback loop cycle diagram (Apply -> Snapshot -> Delta Analysis -> Classify -> Identify Gaps -> Adjust Focus -> repeat)."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": false,
+      "evidence": "No clear Jonah Rhythm sequence found. Emma is present throughout the entire lesson. There is no scene where she physically leaves, James works alone, and she returns. The closest is Emma reading her phone while James works for 15 minutes, but she is still physically present and described as 'drank her coffee and read something on her phone' -- she does not leave the space."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'Thinking Snapshot' (bold definition block), 'Delta Analysis' (bold definition + table), 'Surface Change vs Structural Change' (table with definitions), 'Framework-Induced Overreach' (bold + definition), 'Personal Feedback Loop' (bold + cycle diagram), 'The Regression Test' (table), 'The Sealed Envelope Method' (subsection). Key Takeaways list major concepts. All findable by scanning."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "H2 'Try With AI' section with 3 prompts: 'Delta Analysis Partner', 'Feedback Loop Architect', and 'The Honest Adversary'. Each has code block prompts and 'What you are learning' explanation."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "'Framework-Induced Overreach' is a genuinely novel named concept: 'It happens when a framework's structure creates pressure to fill in connections you don't actually have the knowledge to support... the format itself pressures you to manufacture connections that merely look plausible.' This names a specific failure mode of structured thinking tools that goes well beyond the prompt's requirements. It includes a diagnostic test ('Could I defend each link to someone who knows more than I do?') and a three-row decision table. The 'Sealed Envelope Method' for preventing hindsight bias in self-assessment is also emergent."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.91
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+        "reason": "This assertion tests a specific narrative technique. In this run, Emma stays present but passive (reading her phone) while James works. This is functionally similar to the Jonah Rhythm (James struggles independently) but fails the literal test of Emma exiting. The assertion could be refined to 'at least 1 sequence where James works through a significant challenge without Emma's active guidance' to capture functional equivalents."
+      }
+    ],
+    "overall": "Framework-Induced Overreach is one of the strongest emergent concepts across all runs. The only structural failure is the missing physical exit for the Jonah Rhythm."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Output approximately 500 words",
+      "passed": true,
+      "evidence": "Word count is approximately 520 words, close to 500 target."
+    },
+    {
+      "text": "Dialogue about API rate limiting with accurate content",
+      "passed": true,
+      "evidence": "Covers rate limiting rationale, token bucket, 429 errors, thundering herd, exponential backoff with jitter, client-side rate limiting, metrics vs logs, retry wrapper + backoff + circuit breaker. Content is technically accurate."
+    },
+    {
+      "text": "At least 3 James voice markers",
+      "passed": true,
+      "evidence": "(1) 'my old company had a similar thing: we limited how many supplier quotes our purchasing team could request per day' (2) 'That is like when my old company's email system crashed and everyone kept clicking send' (3) 'the difference between telling my old boss we had complaints versus showing a chart that complaints doubled in Q3'. Three clear business-background markers."
+    },
+    {
+      "text": "At least 3 Emma voice markers",
+      "passed": true,
+      "evidence": "(1) 'Not stops. Refuses. There is a difference.' (terse correction) (2) 'here is where I am honestly not sure about the cleanest pattern' (fallibility moment) (3) 'Then you need three things.' (short, structured). Three markers."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 sentences",
+      "passed": true,
+      "evidence": "Emma's longest block is 3 sentences (the fallibility moment + follow-up). No monologues exceed 4."
+    },
+    {
+      "text": "Dialogue passes tag test",
+      "passed": true,
+      "evidence": "No dialogue tags. James uses 'Wait, so basically' and business analogies. Emma uses terse corrections and questions. Voices clearly distinguishable without attribution."
+    },
+    {
+      "text": "No anti-pattern phrases present",
+      "passed": true,
+      "evidence": "No forbidden phrases found. Clean dialogue."
+    },
+    {
+      "text": "James gets something 80% right at least once",
+      "passed": true,
+      "evidence": "James correctly identifies: 'A log tells me it happened. A metric tells me how often.' He also correctly describes the token bucket: 'the bucket size is my burst limit? I can dump a bunch of requests in at once, but only up to the bucket capacity.'"
+    },
+    {
+      "text": "Format is pure dialogue minimal narration",
+      "passed": true,
+      "evidence": "100% dialogue. No narration or prose. Pure rapid-fire exchange."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  }
+}

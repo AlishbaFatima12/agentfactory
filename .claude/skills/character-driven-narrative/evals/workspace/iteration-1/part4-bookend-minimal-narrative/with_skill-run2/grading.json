@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+      "passed": true,
+      "evidence": "Two '---' horizontal rules present: one at line 13 after the opening narrative (preceded by HTML comment '<!-- Direct instruction section goes here -->'), and one at line 17 before the closing narrative. Clear structural separation."
+    },
+    {
+      "text": "Opening narrative is 2-3 paragraphs maximum, not longer",
+      "passed": true,
+      "evidence": "The opening (lines 1-12) contains two main prose paragraphs with dialog: (1) 'James scrolled through the pull request...' through his dialog about copy-pasting, (2) Emma's response and James's analogy about onboarding checklists, (3) Emma's brief closing directive. Three compact blocks. The opening is 12 lines, tight and focused."
+    },
+    {
+      "text": "Closing narrative is 1-2 paragraphs maximum, not longer",
+      "passed": false,
+      "evidence": "The closing (lines 19-31) contains at least 3 distinct paragraph blocks: (1) 'Emma came back to find James's terminal open...' with his realization about decorators, (2) Emma's confirmation and James's contract-amendment analogy (lines 27-29), (3) James's reflection on refactoring and growth: 'I spent two hours today refactoring code I wrote last week...' (lines 31). This is 13 lines of narrative across 3+ blocks, exceeding the 1-2 paragraph limit."
+    },
+    {
+      "text": "Emma's mentor phase is Peer: she acts as sounding board, not teacher",
+      "passed": true,
+      "evidence": "Emma's role is purely reactive and minimal. She asks: 'So what do you want?' (line 8) -- prompting James to articulate his own need. She names the concept briefly: 'Python has a name for that: a decorator' (line 11) but does not explain it. She directs him to work independently: 'You've already described what it should do. Write the spec.' (line 11). In the closing, her contributions are two-word validations: 'That's it.' (line 25) and 'Neither have I. That's a good one.' (line 29). She never teaches."
+    },
+    {
+      "text": "James displays competence or autonomy: he initiates, makes decisions, or demonstrates mastery",
+      "passed": true,
+      "evidence": "James identifies the DRY problem himself (lines 3-6). He articulates what he wants before Emma names the solution (line 9). He independently builds and tests stacked decorators with order-verification tests (lines 20-21). He generates a novel analogy (contract amendments, line 27) that Emma hadn't heard before. He reflects on his own growth trajectory: 'Six months ago I didn't know what a function was' (line 31)."
+    },
+    {
+      "text": "No technical instruction appears within the narrative bookends",
+      "passed": true,
+      "evidence": "The opening discusses the problem conceptually (repeated wrapper logic) without showing code, syntax, or technical steps. The closing summarizes what James built ('stacked two decorators,' 'a function that takes a function and returns a function') but does not teach how. No code blocks, no syntax explanations, no step-by-step guidance in either bookend."
+    },
+    {
+      "text": "Emma speaks in short sentences consistent with her voice signature",
+      "passed": true,
+      "evidence": "Emma's dialog lines: 'So what do you want?' (5 words), 'That's it.' (2 words), 'Neither have I. That's a good one.' (7 words). Her longest line (line 11) is two short sentences: 'You've already described what it should do. Write the spec.' Each sentence stays under 10 words. Consistently terse throughout."
+    },
+    {
+      "text": "The emotional beat matches late-book identity shift (competence, pride, or autonomy)",
+      "passed": true,
+      "evidence": "The closing builds toward identity: James's contract-amendment analogy is explicitly novel ('I don't think I've seen that analogy in any tutorial,' line 27), showing original thinking, not borrowed knowledge. The final line, 'Six months ago I didn't know what a function was' (line 31), is a quiet moment of pride and self-awareness about transformation. He refactors his own code proactively, not because it was broken but because he 'saw a pattern he could compress' -- autonomy-driven behavior."
+    },
+    {
+      "text": "James does NOT regress to beginner behavior",
+      "passed": true,
+      "evidence": "James operates at an intermediate level throughout. He writes and reviews pull requests (line 3), identifies DRY violations independently (line 6), articulates desired abstractions before being told (line 9), stacks decorators and writes order-verification tests (line 21), generates novel analogies (line 27), and proactively refactors working code (line 31). No confusion, no requests for basic explanations."
+    },
+    {
+      "text": "The closing references or reflects on what was learned, providing emotional payoff",
+      "passed": true,
+      "evidence": "The closing contains multiple reflection layers: (1) Conceptual insight: 'it's just a function that takes a function and returns a function. That's it.' (line 23). (2) Novel analogy showing deep understanding: contract amendments that modify terms without touching the original (line 27). (3) Growth arc: 'I spent two hours today refactoring code I wrote last week. Not because it was broken.' (line 31). (4) Temporal payoff: 'Six months ago I didn't know what a function was' (line 31). The payoff is understated but clear."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 1,
+    "total": 10,
+    "pass_rate": 0.9
+  },
+  "timing": {
+    "total_tokens": 44470,
+    "duration_ms": 82621,
+    "total_duration_seconds": 82.6
+  },
+  "claims": [
+    {
+      "claim": "James stacked two decorators and wrote three tests proving execution order",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Closing line 20-21: 'He had stacked two decorators on a single function and written three tests proving they executed in the right order.'"
+    },
+    {
+      "claim": "James's contract-amendment analogy is original to the character",
+      "type": "quality",
+      "verified": true,
+      "evidence": "James says 'I don't think I've seen that analogy in any tutorial' (line 27) and Emma confirms 'Neither have I' (line 29). The analogy draws from his operations/business background, consistent with character."
+    },
+    {
+      "claim": "The bookend structure uses HTML comments to mark sections",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Lines 1, 14, 15, 19 contain HTML comments: '<!-- Opening bookend -->', '<!-- Direct instruction section goes here -->', '<!-- Closing bookend -->'."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Closing narrative is 1-2 paragraphs maximum, not longer",
+        "reason": "Same tension as run 1: the closing needs enough space to deliver emotional payoff (assertion 10) and show James's reflection, but 1-2 paragraphs is very tight for dialog-heavy scenes. All with_skill runs produce closings of 3+ blocks because the payoff requires space. Consider raising to 2-3 paragraphs or using a word limit."
+      }
+    ],
+    "overall": "Strong run. The only structural failure is closing length, which appears to be a systemic tension between assertions 3 and 10."
+  }
+}

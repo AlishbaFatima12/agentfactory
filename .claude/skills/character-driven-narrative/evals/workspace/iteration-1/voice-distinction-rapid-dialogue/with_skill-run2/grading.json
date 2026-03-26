@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Output approximately 500 words",
+      "passed": true,
+      "evidence": "Word count is approximately 530 words, close to 500 target."
+    },
+    {
+      "text": "Dialogue about API rate limiting with accurate content",
+      "passed": true,
+      "evidence": "Covers 429 errors, thundering herd, exponential backoff with jitter, rate limit headers (X-RateLimit-Limit, Remaining, Reset), adaptive rate limiting, token bucket, per-endpoint limits. All technically accurate."
+    },
+    {
+      "text": "At least 3 James voice markers",
+      "passed": true,
+      "evidence": "(1) 'like Diane at my old company's reception desk' (2) 'We did something like that for warehouse delivery scheduling' (3) 'Diane definitely did.' (callback to earlier analogy). Three markers, all referencing his old company."
+    },
+    {
+      "text": "At least 3 Emma voice markers",
+      "passed": true,
+      "evidence": "(1) 'Not stops. Refuses. There is a difference.' (terse distinction) (2) 'Thundering herd. Picture a hundred people rushing Diane's desk.' (adopts James's metaphor, concrete imagery) (3) 'Servers remember rude clients.' (short, punchy). Three clear markers."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 sentences",
+      "passed": true,
+      "evidence": "Emma's longest response is 3 sentences. Most are 1-2 sentences or fragments. No monologues."
+    },
+    {
+      "text": "Dialogue passes tag test",
+      "passed": true,
+      "evidence": "No dialogue tags. James uses 'Hang on. If that is true, then...' and business analogies. Emma uses terse corrections and questions. Clearly two different voices."
+    },
+    {
+      "text": "No anti-pattern phrases present",
+      "passed": true,
+      "evidence": "No forbidden phrases found. Clean dialogue."
+    },
+    {
+      "text": "James gets something 80% right at least once",
+      "passed": true,
+      "evidence": "James identifies: 'Track remaining. When it gets low, slow down before you hit the wall.' He correctly describes proactive rate limiting. Emma validates: 'the difference between a client that works and a client that is polite.'"
+    },
+    {
+      "text": "Format is pure dialogue minimal narration",
+      "passed": true,
+      "evidence": "100% dialogue. No narration, no action beats. Pure rapid-fire exchange throughout."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  }
+}

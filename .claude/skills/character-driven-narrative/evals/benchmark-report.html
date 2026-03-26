@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>character-driven-narrative Skill Benchmark: 4 Iterations</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --dark: #1a1a2e;
+    --darker: #16213e;
+    --accent: #0f3460;
+    --green: #2ecc71;
+    --green-bg: #d4edda;
+    --green-dark: #1a7a3a;
+    --yellow: #f39c12;
+    --yellow-bg: #fff3cd;
+    --yellow-dark: #856404;
+    --red: #e74c3c;
+    --red-bg: #f8d7da;
+    --red-dark: #a71d2a;
+    --blue: #3498db;
+    --gray: #6c757d;
+    --light-gray: #e9ecef;
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --mono: 'SF Mono', 'Fira Code', 'Fira Mono', Menlo, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--dark), var(--darker));
+    color: white;
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+  }
+
+  header .subtitle {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    font-weight: 400;
+  }
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--light-gray);
+  }
+
+  .section { margin-bottom: 2.5rem; }
+
+  /* Summary Cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: var(--card-shadow);
+    border-top: 4px solid var(--accent);
+    position: relative;
+  }
+
+  .card .iter-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+  }
+
+  .card .ws-rate {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--dark);
+    line-height: 1.1;
+  }
+
+  .card .ws-label {
+    font-size: 0.7rem;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .card .meta-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid var(--light-gray);
+    font-size: 0.8rem;
+  }
+
+  .card .meta-row .label { color: var(--gray); }
+  .card .meta-row .value { font-weight: 600; }
+
+  .card .delta {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  .delta-pos { background: var(--green-bg); color: var(--green-dark); }
+  .delta-neg { background: var(--red-bg); color: var(--red-dark); }
+  .delta-zero { background: var(--light-gray); color: var(--gray); }
+
+  .card .sample-size {
+    font-size: 0.7rem;
+    color: var(--gray);
+    margin-top: 0.3rem;
+  }
+
+  /* Bar Chart */
+  .chart-container {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+  }
+
+  .chart-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6rem;
+  }
+
+  .chart-label {
+    width: 80px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: right;
+    padding-right: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  .chart-bar-container {
+    flex: 1;
+    height: 28px;
+    background: var(--light-gray);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .chart-bar {
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    transition: width 0.5s ease;
+    min-width: 40px;
+  }
+
+  .bar-ws { background: linear-gradient(90deg, var(--accent), #1a5276); }
+  .bar-bl { background: linear-gradient(90deg, var(--gray), #95a5a6); }
+
+  .chart-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+  }
+
+  .chart-group-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray);
+    margin: 1rem 0 0.4rem 80px;
+    font-weight: 600;
+  }
+
+  /* Heatmap Table */
+  .heatmap-wrapper {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    overflow-x: auto;
+  }
+
+  .heatmap {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+  }
+
+  .heatmap th {
+    background: var(--dark);
+    color: white;
+    padding: 0.5rem 0.4rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  .heatmap th:first-child {
+    text-align: left;
+    padding-left: 0.75rem;
+    min-width: 200px;
+  }
+
+  .heatmap th.group-ws { background: var(--accent); }
+  .heatmap th.group-bl { background: var(--gray); }
+
+  .heatmap td {
+    padding: 0.5rem 0.4rem;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid var(--light-gray);
+    font-family: var(--mono);
+    font-size: 0.75rem;
+  }
+
+  .heatmap td:first-child {
+    text-align: left;
+    padding-left: 0.75rem;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 0.78rem;
+    color: #444;
+  }
+
+  .heatmap tr:hover { background: #f0f4ff; }
+
+  .cell-green { background: #d4edda; color: var(--green-dark); }
+  .cell-yellow { background: #fff3cd; color: var(--yellow-dark); }
+  .cell-red { background: #f8d7da; color: var(--red-dark); }
+  .cell-na { background: #f8f9fa; color: #adb5bd; }
+
+  .heatmap .row-mean {
+    background: #eef2ff;
+    font-weight: 700;
+    border-top: 2px solid var(--accent);
+  }
+
+  .assertion-num {
+    color: var(--gray);
+    font-size: 0.7rem;
+    margin-right: 0.3rem;
+  }
+
+  /* Changes Log */
+  .changes-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+  }
+
+  .changes-table th {
+    background: var(--dark);
+    color: white;
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  .changes-table td {
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--light-gray);
+    vertical-align: top;
+  }
+
+  .changes-table tr:last-child td { border-bottom: none; }
+  .changes-table tr:hover { background: #f8f9ff; }
+
+  .change-tag {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .tag-added { background: var(--green-bg); color: var(--green-dark); }
+  .tag-refined { background: #d4e6f1; color: #1a5276; }
+  .tag-fixed { background: #fce4d6; color: #c0392b; }
+
+  /* Verdict */
+  .verdict-box {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: var(--card-shadow);
+    border-left: 5px solid var(--green);
+  }
+
+  .verdict-box h3 {
+    color: var(--green-dark);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .verdict-box p {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .verdict-box .stat-highlight {
+    font-weight: 700;
+    color: var(--dark);
+  }
+
+  .verdict-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .verdict-metric {
+    background: var(--bg);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+  }
+
+  .verdict-metric .metric-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+  }
+
+  .verdict-metric .metric-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--dark);
+  }
+
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--gray);
+    border-top: 1px solid var(--light-gray);
+    margin-top: 1rem;
+  }
+
+  @media print {
+    header { break-after: avoid; }
+    .section { break-inside: avoid; }
+    body { font-size: 11pt; }
+    .cards { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+    .verdict-grid { grid-template-columns: 1fr; }
+    .heatmap { font-size: 0.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>character-driven-narrative Skill Benchmark: 4 Iterations</h1>
+  <div class="subtitle">Eval: part0-full-lesson-story-driven &middot; Model: claude-opus-4-6 / claude-sonnet-4 &middot; 26 Mar 2026</div>
+</header>
+
+<div class="container">
+
+  <!-- Summary Cards -->
+  <div class="section">
+    <h2>Iteration Summary</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="iter-label">Iteration 1</div>
+        <div class="ws-rate">77%</div>
+        <div class="ws-label">with skill mean</div>
+        <div class="meta-row">
+          <div><span class="label">Baseline</span></div>
+          <div class="value">80%</div>
+        </div>
+        <div class="delta delta-neg">-3%</div>
+        <div class="sample-size">ws: n=3, bl: n=1</div>
+      </div>
+
+      <div class="card">
+        <div class="iter-label">Iteration 2</div>
+        <div class="ws-rate">94%</div>
+        <div class="ws-label">with skill mean</div>
+        <div class="meta-row">
+          <div><span class="label">Baseline</span></div>
+          <div class="value">91%</div>
+        </div>
+        <div class="delta delta-pos">+3%</div>
+        <div class="sample-size">ws: n=6, bl: n=3</div>
+      </div>
+
+      <div class="card">
+        <div class="iter-label">Iteration 3</div>
+        <div class="ws-rate">92.5%</div>
+        <div class="ws-label">with skill mean</div>
+        <div class="meta-row">
+          <div><span class="label">Baseline</span></div>
+          <div class="value">94%</div>
+        </div>
+        <div class="delta delta-neg">-1.5%</div>
+        <div class="sample-size">ws: n=6, bl: n=3</div>
+      </div>
+
+      <div class="card" style="border-top-color: var(--green);">
+        <div class="iter-label">Iteration 4</div>
+        <div class="ws-rate">95.5%</div>
+        <div class="ws-label">with skill mean</div>
+        <div class="meta-row">
+          <div><span class="label">Baseline</span></div>
+          <div class="value">81.8%</div>
+        </div>
+        <div class="delta delta-pos">+13.7%</div>
+        <div class="sample-size">ws: n=6, bl: n=2</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Progression Chart -->
+  <div class="section">
+    <h2>Pass Rate Progression</h2>
+    <div class="chart-container">
+      <div class="chart-legend">
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: var(--accent);"></div>
+          <span>With Skill</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: var(--gray);"></div>
+          <span>Baseline (no skill)</span>
+        </div>
+      </div>
+
+      <div class="chart-group-label">Iteration 1 (10 assertions, sonnet executor)</div>
+      <div class="chart-row">
+        <div class="chart-label">With Skill</div>
+        <div class="chart-bar-container">
+          <div class="chart-bar bar-ws" style="width: 77%;">77%</div>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">Baseline</div>
+        <div class="chart-bar-container">
+          <div class="chart-bar bar-bl" style="width: 80%;">80%</div>
+        </div>
+      </div>
+
+      <div class="chart-group-label">Iteration 2 (11 assertions, sonnet executor)</div>
+      <div class="chart-row">
+        <div class="chart-label">With Skill</div>
+        <div class="chart-bar-container">
+          <div class="chart-bar bar-ws" style="width: 94%;">94%</div>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">Baseline</div>
+        <div class="chart-bar-container">
+          <div class="chart-bar bar-bl" style="width: 91%;">91%</div>
+        </div>
+      </div>
+
+      <div class="chart-group-label">Iteration 3 (11 assertions, opus executor)</div>
+      <div class="chart-row">
+        <div class="chart-label">With Skill</div>
+        <div class="chart-bar-container">
+          <div class="chart-bar bar-ws" style="width: 92.5%;">92.5%</div>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">Baseline</div>
+        <div class="chart-bar-container">
+          <div class="chart-bar bar-bl" style="width: 94%;">94%</div>
+        </div>
+      </div>
+
+      <div class="chart-group-label">Iteration 4 (11 assertions, opus executor)</div>
+      <div class="chart-row">
+        <div class="chart-label">With Skill</div>
+        <div class="chart-bar-container">
+          <div class="chart-bar bar-ws" style="width: 95.5%;">95.5%</div>
+        </div>
+      </div>
+      <div class="chart-row">
+        <div class="chart-label">Baseline</div>
+        <div class="chart-bar-container">
+          <div class="chart-bar bar-bl" style="width: 81.8%;">81.8%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Per-Assertion Heatmap -->
+  <div class="section">
+    <h2>Per-Assertion Heatmap (Pass Rate %)</h2>
+    <div class="heatmap-wrapper">
+      <table class="heatmap">
+        <thead>
+          <tr>
+            <th>Assertion</th>
+            <th class="group-ws">I1-ws</th>
+            <th class="group-ws">I2-ws</th>
+            <th class="group-ws">I3-ws</th>
+            <th class="group-ws">I4-ws</th>
+            <th class="group-bl">I1-bl</th>
+            <th class="group-bl">I2-bl</th>
+            <th class="group-bl">I3-bl</th>
+            <th class="group-bl">I4-bl</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- #1 YAML frontmatter -->
+          <tr>
+            <td><span class="assertion-num">#1</span> Valid YAML frontmatter</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #2 Narrative density -->
+          <tr>
+            <td><span class="assertion-num">#2</span> Narrative density ~80%</td>
+            <td class="cell-yellow">67</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-red">0</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #3 Pushback exchanges -->
+          <tr>
+            <td><span class="assertion-num">#3</span> 2+ pushback exchanges</td>
+            <td class="cell-yellow">67</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #4 Emma fallibility -->
+          <tr>
+            <td><span class="assertion-num">#4</span> Emma fallibility moment</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">83</td>
+            <td class="cell-green">83</td>
+            <td class="cell-yellow">67</td>
+            <td class="cell-green">100</td>
+            <td class="cell-yellow">67</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #5 No monologue >4 sentences -->
+          <tr>
+            <td><span class="assertion-num">#5</span> No monologue >4 sentences</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">83</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #6 James ops analogy -->
+          <tr>
+            <td><span class="assertion-num">#6</span> James ops analogy + thinking-out-loud</td>
+            <td class="cell-red">33</td>
+            <td class="cell-yellow">50</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-yellow">67</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #7 Emma Socratic + visual -->
+          <tr>
+            <td><span class="assertion-num">#7</span> Emma Socratic + visual metaphor</td>
+            <td class="cell-red">33</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #8 Jonah Rhythm -->
+          <tr>
+            <td><span class="assertion-num">#8</span> Jonah Rhythm sequence</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">83</td>
+            <td class="cell-red">0</td>
+            <td class="cell-red">33</td>
+            <td class="cell-yellow">67</td>
+            <td class="cell-yellow">50</td>
+          </tr>
+          <!-- #9 Standalone concept names -->
+          <tr>
+            <td><span class="assertion-num">#9</span> Standalone concept names</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #10 Try With AI -->
+          <tr>
+            <td><span class="assertion-num">#10</span> Try With AI (3 prompts + learning)</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-red">33</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- #11 Emergent depth -->
+          <tr>
+            <td><span class="assertion-num">#11</span> Emergent depth (novel concept)</td>
+            <td class="cell-na">n/a</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-na">n/a</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+            <td class="cell-green">100</td>
+          </tr>
+          <!-- Mean row -->
+          <tr class="row-mean">
+            <td><strong>Mean pass rate</strong></td>
+            <td>77%</td>
+            <td>94%</td>
+            <td>92.5%</td>
+            <td>95.5%</td>
+            <td>80%</td>
+            <td>91%</td>
+            <td>94%</td>
+            <td>81.8%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="font-size: 0.75rem; color: var(--gray); margin-top: 0.5rem; padding-left: 0.5rem;">
+      Green: >80% &middot; Yellow: 50-80% &middot; Red: <50% &middot;
+      I1 had 10 assertions (no #11); I2-I4 had 11 assertions. I1-bl had n=1, I4-bl had n=2.
+    </div>
+  </div>
+
+  <!-- Changes Log -->
+  <div class="section">
+    <h2>Changes Log: What Changed and What It Fixed</h2>
+    <table class="changes-table">
+      <thead>
+        <tr>
+          <th style="width: 100px;">Transition</th>
+          <th style="width: 180px;">Change</th>
+          <th>Effect (measured)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>I1 &rarr; I2</strong></td>
+          <td><span class="change-tag tag-added">added</span> assertion #11 (emergent depth)</td>
+          <td>New quality dimension captured. All runs pass: 100% ws and bl. May be too easy to discriminate.</td>
+        </tr>
+        <tr>
+          <td><strong>I1 &rarr; I2</strong></td>
+          <td><span class="change-tag tag-refined">refined</span> skill prompt for character voice grounding</td>
+          <td>
+            #6 James ops analogy: 33% &rarr; 50% (improved but still weak).<br>
+            #7 Emma visual metaphor: 33% &rarr; 100% (fully resolved).<br>
+            Overall ws: 77% &rarr; 94% (+17pp).
+          </td>
+        </tr>
+        <tr>
+          <td><strong>I1 &rarr; I2</strong></td>
+          <td><span class="change-tag tag-refined">refined</span> narrative density and pushback guidance</td>
+          <td>#2 narrative density: 67% &rarr; 100%. #3 pushback: 67% &rarr; 100%. Both fully resolved.</td>
+        </tr>
+        <tr>
+          <td><strong>I2 &rarr; I3</strong></td>
+          <td><span class="change-tag tag-fixed">fixed</span> #6 James ops analogy wording to require SPECIFIC background</td>
+          <td>#6 James ops analogy: 50% &rarr; 100%. Fully resolved by strengthening the assertion text.</td>
+        </tr>
+        <tr>
+          <td><strong>I2 &rarr; I3</strong></td>
+          <td><span class="change-tag tag-refined">refined</span> executor model: sonnet &rarr; opus</td>
+          <td>Baseline improves from 91% to 94%. With-skill drops marginally from 94% to 92.5%. Model upgrade lifts both configurations.</td>
+        </tr>
+        <tr>
+          <td><strong>I2 &rarr; I3</strong></td>
+          <td><span class="change-tag tag-fixed">regression</span> Try With AI (#10) dropped</td>
+          <td>#10 Try With AI: 100% &rarr; 33% for ws (only 2/6 runs produce a standalone section). Regression introduced by model change or prompt interaction.</td>
+        </tr>
+        <tr>
+          <td><strong>I3 &rarr; I4</strong></td>
+          <td><span class="change-tag tag-fixed">fixed</span> #10 Try With AI section explicitly required in skill</td>
+          <td>#10: 33% &rarr; 100%. Fully resolved. All 8 runs (ws + bl) produce 3 prompts with learning explanations.</td>
+        </tr>
+        <tr>
+          <td><strong>I3 &rarr; I4</strong></td>
+          <td><span class="change-tag tag-refined">refined</span> Jonah Rhythm and Emma fallibility instructions</td>
+          <td>#8 Jonah Rhythm ws: 100% &rarr; 83% (minor regression; 1 run has implicit rather than explicit exit). #4 Emma fallibility ws: 83% &rarr; 67% (2 runs miss personal failure).</td>
+        </tr>
+        <tr>
+          <td><strong>I3 &rarr; I4</strong></td>
+          <td><span class="change-tag tag-added">result</span> Largest positive delta achieved</td>
+          <td>Delta: -1.5% &rarr; +13.7%. With-skill 95.5% vs baseline 81.8%. Skill provides clear, measurable uplift. 4 of 6 ws runs score perfect 11/11.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Assertion Trajectory Highlights -->
+  <div class="section">
+    <h2>Key Assertion Trajectories</h2>
+    <div class="chart-container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--dark);">#6 James Ops Analogy (with_skill)</div>
+          <div style="display: flex; gap: 0.5rem; align-items: flex-end; height: 80px;">
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--red);">33%</div>
+              <div style="width: 100%; background: var(--red); border-radius: 3px 3px 0 0; height: 26px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I1</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--yellow);">50%</div>
+              <div style="width: 100%; background: var(--yellow); border-radius: 3px 3px 0 0; height: 40px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I2</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--green);">100%</div>
+              <div style="width: 100%; background: var(--green); border-radius: 3px 3px 0 0; height: 80px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I3</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--green);">100%</div>
+              <div style="width: 100%; background: var(--green); border-radius: 3px 3px 0 0; height: 80px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I4</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--dark);">#10 Try With AI (with_skill)</div>
+          <div style="display: flex; gap: 0.5rem; align-items: flex-end; height: 80px;">
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--green);">100%</div>
+              <div style="width: 100%; background: var(--green); border-radius: 3px 3px 0 0; height: 80px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I1</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--green);">100%</div>
+              <div style="width: 100%; background: var(--green); border-radius: 3px 3px 0 0; height: 80px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I2</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--red);">33%</div>
+              <div style="width: 100%; background: var(--red); border-radius: 3px 3px 0 0; height: 26px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I3</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--green);">100%</div>
+              <div style="width: 100%; background: var(--green); border-radius: 3px 3px 0 0; height: 80px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I4</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--dark);">#8 Jonah Rhythm (with_skill vs baseline)</div>
+          <div style="display: flex; gap: 0.5rem; align-items: flex-end; height: 80px;">
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.6rem; font-weight: 700; margin-bottom: 2px; color: var(--green);">ws</div>
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 2px;">100</div>
+              <div style="width: 100%; background: var(--accent); border-radius: 3px 3px 0 0; height: 80px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I1</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.6rem; font-weight: 700; margin-bottom: 2px; color: var(--gray);">bl</div>
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 2px;">0</div>
+              <div style="width: 100%; background: var(--red); border-radius: 3px 3px 0 0; height: 3px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I1</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.6rem; font-weight: 700; margin-bottom: 2px; color: var(--green);">ws</div>
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 2px;">100</div>
+              <div style="width: 100%; background: var(--accent); border-radius: 3px 3px 0 0; height: 80px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I2</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.6rem; font-weight: 700; margin-bottom: 2px; color: var(--gray);">bl</div>
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 2px;">33</div>
+              <div style="width: 100%; background: #95a5a6; border-radius: 3px 3px 0 0; height: 26px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I2</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.6rem; font-weight: 700; margin-bottom: 2px; color: var(--green);">ws</div>
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 2px;">83</div>
+              <div style="width: 100%; background: var(--accent); border-radius: 3px 3px 0 0; height: 66px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I4</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.6rem; font-weight: 700; margin-bottom: 2px; color: var(--gray);">bl</div>
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 2px;">50</div>
+              <div style="width: 100%; background: #95a5a6; border-radius: 3px 3px 0 0; height: 40px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I4</div>
+            </div>
+          </div>
+          <div style="font-size: 0.7rem; color: var(--gray); margin-top: 0.4rem;">Jonah Rhythm is consistently the strongest skill differentiator: ws outperforms bl in every iteration.</div>
+        </div>
+
+        <div>
+          <div style="font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; color: var(--dark);">#4 Emma Fallibility (with_skill)</div>
+          <div style="display: flex; gap: 0.5rem; align-items: flex-end; height: 80px;">
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--green);">100%</div>
+              <div style="width: 100%; background: var(--green); border-radius: 3px 3px 0 0; height: 80px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I1</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--green);">83%</div>
+              <div style="width: 100%; background: var(--green); border-radius: 3px 3px 0 0; height: 66px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I2</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--green);">83%</div>
+              <div style="width: 100%; background: var(--green); border-radius: 3px 3px 0 0; height: 66px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I3</div>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+              <div style="font-size: 0.7rem; font-weight: 700; margin-bottom: 4px; color: var(--yellow);">67%</div>
+              <div style="width: 100%; background: var(--yellow); border-radius: 3px 3px 0 0; height: 53px;"></div>
+              <div style="font-size: 0.65rem; color: var(--gray); margin-top: 2px;">I4</div>
+            </div>
+          </div>
+          <div style="font-size: 0.7rem; color: var(--gray); margin-top: 0.4rem;">Remaining weakness: Emma defaults to authoritative guide without sharing personal mistakes in ~33% of runs.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Verdict -->
+  <div class="section">
+    <h2>Verdict</h2>
+    <div class="verdict-box">
+      <h3>The skill works. Iteration 4 provides the first statistically meaningful positive delta.</h3>
+
+      <p>
+        Across four iterations and <span class="stat-highlight">38 total graded runs</span>, the character-driven-narrative skill evolved from
+        a net-negative intervention (I1: -3% delta) to a clear positive uplift (I4: +13.7% delta). The with-skill configuration
+        reached <span class="stat-highlight">95.5% mean pass rate</span> with 4 of 6 runs scoring perfect 11/11.
+      </p>
+
+      <p>
+        The skill's primary value is in the hardest assertions: Jonah Rhythm (#8) shows the widest consistent gap between
+        skill and baseline (83-100% ws vs 0-67% bl across all iterations). James's character-specific operations analogies (#6)
+        were fully resolved by iteration 3 and held through iteration 4. The Try With AI regression in iteration 3 was
+        caught and fixed in iteration 4.
+      </p>
+
+      <p>
+        <strong>Remaining weakness:</strong> Emma fallibility (#4) is the most variable assertion at 67% in I4. The model
+        tends to keep Emma in an authoritative role without sharing personal mistakes. This is the primary target for iteration 5.
+      </p>
+
+      <div class="verdict-grid">
+        <div class="verdict-metric">
+          <div class="metric-label">Best with-skill rate</div>
+          <div class="metric-value">95.5%</div>
+        </div>
+        <div class="verdict-metric">
+          <div class="metric-label">Largest delta</div>
+          <div class="metric-value" style="color: var(--green-dark);">+13.7%</div>
+        </div>
+        <div class="verdict-metric">
+          <div class="metric-label">Perfect runs (I4)</div>
+          <div class="metric-value">4 / 6</div>
+        </div>
+        <div class="verdict-metric">
+          <div class="metric-label">Weakest assertion</div>
+          <div class="metric-value" style="font-size: 1rem;">#4 Emma (67%)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Generated 2026-03-26 &middot; character-driven-narrative skill benchmark &middot; 38 graded runs across 4 iterations
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Output approximately 500 words",
+      "passed": true,
+      "evidence": "Word count is approximately 510 words, within range of 500."
+    },
+    {
+      "text": "Dialogue about API rate limiting with accurate content",
+      "passed": true,
+      "evidence": "Covers rate limits, batching vs individual calls, token bucket algorithm, 429 errors, exponential backoff with jitter, sleep as brute force, belt-and-suspenders approach. All technically accurate."
+    },
+    {
+      "text": "At least 3 James voice markers",
+      "passed": true,
+      "evidence": "(1) 'like when my old company capped expense reports at five per quarter' (2) 'That is like paying rent on an office you use one hour a day' (3) 'Wait, so basically... I can either slow down my requests or batch them together?' (thinking-out-loud fragment). Three clear markers."
+    },
+    {
+      "text": "At least 3 Emma voice markers",
+      "passed": true,
+      "evidence": "(1) 'Now picture a highway on-ramp. One car at a time, metered by a traffic light.' (visual metaphor) (2) 'Do you hope you stay under the speed limit when you drive?' (Socratic) (3) 'Belt and suspenders.' (terse) (4) 'Token bucket. Picture a jar with ten marbles.' (concrete imagery). Four markers."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 sentences",
+      "passed": true,
+      "evidence": "Emma's longest contribution is 2-3 sentences. Most are 1-2 sentences. No monologue exceeds 4."
+    },
+    {
+      "text": "Dialogue passes tag test",
+      "passed": true,
+      "evidence": "No dialogue tags at all. The voices are clearly distinguishable: James uses business analogies and 'Wait, so basically' fragments; Emma uses short questions and concrete metaphors. Would pass a blind attribution test."
+    },
+    {
+      "text": "No anti-pattern phrases present",
+      "passed": true,
+      "evidence": "No 'I understand,' 'Great question,' 'That makes sense,' 'Let me explain,' or 'As you can see.' Clean of anti-patterns."
+    },
+    {
+      "text": "James gets something 80% right at least once",
+      "passed": true,
+      "evidence": "James describes batching: 'Fewer round trips. But hang on. If I batch ten requests into one, and that one fails, I lose all ten.' He is 80% right (batching is valid) but identifies the tradeoff himself."
+    },
+    {
+      "text": "Format is pure dialogue minimal narration",
+      "passed": true,
+      "evidence": "The entire output is dialogue. No narration, no action beats, no prose paragraphs. Pure back-and-forth exchange."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  }
+}

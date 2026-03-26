@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains title: 'The Feedback Loop', description, sidebar_position: 5, skills array with 2 skills (Metacognitive Self-Evaluation, Framework Effectiveness Assessment), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80%",
+      "passed": true,
+      "evidence": "Extremely narrative-dense. The lesson is driven almost entirely through James's internal monologue and Emma-James dialogue. The Polish Trap, Improvement Audit, and Confidence Calibration Gap are all introduced through conversation. Tabbed exercise section and Try With AI section add instructional structure. Estimated ~80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'Harder than building the cascade map in the first place?' - James challenges Emma's claim about difficulty. Pushback 2: James independently discovers a fake feedback loop in his own work and reports it: 'I found a fake feedback loop.' 'In whose work?' 'Mine.' - He identifies the problem before Emma does. Pushback 3: 'I think the improvement audit might be more important than the cascade map' - James proposes a strong alternative view."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma shares: 'I still fall for this. Last year I spent two months learning a new architecture pattern. Event sourcing. I was convinced I understood it... Then a colleague asked me to help debug an event replay that was producing stale state, and I froze. I had memorized the pattern without understanding the failure modes. I had polish. Not depth.' - A genuine past professional failure, not a hypothetical."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest speeches are about 3-4 sentences. The dialogue is well-paced with frequent exchanges. Even the event sourcing confession is broken by James asking 'What did you do?' mid-way."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy 1: 'We had the same thing. Every year, the operations team would say we streamlined the supplier onboarding process. And every year, the evidence was that the onboarding form was shorter. Nobody checked whether the suppliers we onboarded were actually better.' - directly from supplier coordination. Business analogy 2: 'At my old company, we adopted new processes every quarter. Agile. Six Sigma.' - operations process adoption. Thinking-out-loud: 'That's... your strongest piece of evidence' (processing) and 'I couldn't have caught it before because I didn't know what made a feedback loop real versus just circular-sounding.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Audit? Like a financial audit?' prompts Emma's 'Exactly like that' response, and Emma's whiteboard questions: 'What specific thinking move can I make now that I could not make before?' Visual/spatial metaphor: Emma writes on the whiteboard - the Cosmetic vs. Genuine Improvement columns as a visual sorting mechanism. Also 'turned the lens on himself.'"
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Emma says 'I need to answer some messages. I will be back in fifteen minutes.' and leaves. James works alone with the three audit questions and his four drafts, discovering the fake feedback loop independently. 'No Emma to validate his thinking. No AI to suggest patterns. Just his work and his honesty.' Emma returns to find his discovery. Clear Jonah Rhythm."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Polish Trap' (heading + bold), 'The Improvement Audit' (heading + numbered questions), 'The Confidence Calibration Gap' (heading), 'Cosmetic vs. Genuine Improvement' (table with header). All discoverable via headings or formatting."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Full 'Try With AI' section with three prompts: 'The Blind Spot Finder', 'The Framework Extraction', and 'The Honest Score'. Each has a code block with a detailed prompt and a 'What you are learning' explanation. Actionable and well-structured."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "James's emergent insight: 'The most dangerous form of stagnation is stagnation that looks like progress.' This is his own synthesis, not prompted. Also, his third-order thinking observation: 'You evaluated whether your evaluation tool improved your ability to evaluate.' Emma confirms: 'That is third-order thinking. It was not in your Draft 1. And it was not something I taught you.'"
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  }
+}

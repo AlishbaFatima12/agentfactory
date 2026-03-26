@@ -1,0 +1,69 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains sidebar_position: 5, title: 'The Feedback Loop', description present, skills array with 2 skills (Metacognitive Self-Evaluation, Framework Effectiveness Assessment), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "Heavy narrative sections: the opening scene, The Polish Trap discovery, Running Your Own Improvement Audit dialogue, The Confidence Calibration Gap scene with score table, Emma's fallibility moment, and the closing scene. Instructional blocks (Polish Trap table, Improvement Audit three questions, exercise steps, Tabs component) are shorter. Approximately 75-80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'I'm trying to figure out if I actually learned anything.' / 'Harder than drawing a cascade map across five domains?' James challenges the difficulty hierarchy. Pushback 2: 'Is it? ... It has to be. More connections means I'm seeing more of the system.' James resists the idea that more connections isn't automatically improvement. Pushback 3: 'What if I'm way off?' James pushes back on the calibration exercise methodology."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Clear fallibility moment: 'I still do this, by the way. Last year I spent two months learning a new architecture pattern. I was convinced I had mastered it. Then I tried to teach it to a colleague and realized I had memorized the structure without understanding the trade-offs. I had polished output and shallow thinking.' This is a genuine past mistake admission with specific details."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Checked all Emma speech blocks. The longest continuous Emma block is the fallibility confession (4 sentences), which is immediately followed by 'James looked at her. She did not share moments like that often.' All other blocks are 3 sentences or fewer before James responds."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: 'That's like performance reviews at my old job. The people who rated themselves highest were almost never the strongest performers. But the people who rated themselves lowest weren't the weakest either.' Direct operations experience analogy. Thinking-out-loud: 'Maybe three were mine. The other three, I knew to look for them because Claude had flagged similar patterns in Exercise 2.' and 'I think some of it is real.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic questions: 'Is it?' (challenging James's assumption that more connections = improvement) and 'How many of those six did you find independently versus remember from Claude's analysis?' Visual/spatial metaphor: Emma draws 'two columns on the whiteboard' with Cosmetic Improvement and Genuine Improvement -- creating a visual spatial framework."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Emma exits: 'Emma stood up. \"I need coffee. While I'm gone, look at your four drafts again. Find one improvement that is purely vocabulary and one that is structural. I'll be back in five minutes.\"' James struggles alone: reviews drafts, identifies the trust-adoption feedback loop independently, discovers the Vocabulary Trap in his own work. Emma returns: 'Emma came back with two cups. She set one in front of James.'"
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts with standalone identifiers: 'The Polish Trap' (H3 header with table and definition), 'The Improvement Audit' (H3 with three numbered questions), 'The Confidence Calibration Gap' (H3 with dialogue and table), 'Cosmetic vs. Genuine Improvement' (in table format). Key Takeaways lists all. All findable by scanning headers and bold text."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "H2 'Try With AI' section with 3 prompts: 'The Blind Spot Finder', 'The Framework Extraction', and 'The Honest Score'. Each has a code block prompt and 'What you are learning' explanation."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "'The Polish Trap' is a genuinely emergent named concept: 'the tendency to mistake better-looking output for better thinking.' This is a novel, memorable name for a specific cognitive failure mode with a diagnostic table (Cosmetic vs Genuine Improvement) and a specific test. It goes beyond what the self-assessment prompt requested and provides a reusable concept students would carry forward. The closing insight 'The most dangerous form of stagnation is stagnation that looks like progress' is also emergent depth."
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Strong run with all assertions passing. The Emma fallibility moment is particularly well-executed with specific career details."
+  }
+}

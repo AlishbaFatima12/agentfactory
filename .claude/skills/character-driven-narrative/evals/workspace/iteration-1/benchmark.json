@@ -1,0 +1,2610 @@
+{
+  "metadata": {
+    "skill_name": "character-driven-narrative",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/tutorsgpt/test/.claude/skills/character-driven-narrative-workspace",
+    "executor_model": "claude-sonnet-4-20250514",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-25T17:46:11Z",
+    "evals_run": [
+      "part0-full-lesson-story-driven",
+      "part4-bookend-minimal-narrative",
+      "narrative-injection-flat-lesson",
+      "valley-of-despair-emotional-design",
+      "part3-domain-expert-scenario",
+      "multi-exchange-disagreement-stress",
+      "jonah-rhythm-full-cycle",
+      "voice-distinction-rapid-dialogue",
+      "chapter-bridge-transition",
+      "boring-topic-anti-pattern-resistance"
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 6,
+        "failed": 4,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+          "passed": true,
+          "evidence": "Frontmatter present lines 1-78 with title: 'The Feedback Loop', description present, sidebar_position: 5, skills array with 2 entries (Metacognitive Self-Evaluation, Growth Evidence Collection), and learning_objectives array with 2 entries."
+        },
+        {
+          "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+          "passed": false,
+          "evidence": "The lesson has substantial non-narrative blocks: the 'Why Self-Evaluation Matters' expository section (lines 103-108), the Measuring the Growth Delta table (lines 137-145), the Signs of the Vocabulary Trap table (lines 169-174), the Building Your Growth Evidence File structured sections with bullet lists (lines 199-237), the full PRIMM-AI+ Practice section (lines 341-361) which is entirely non-narrative, and three Try With AI prompts (lines 262-337). Estimated narrative density is 65-70%, falling short of the 80% target."
+        },
+        {
+          "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+          "passed": false,
+          "evidence": "James is largely compliant throughout. His responses are mostly agreement or self-discovery rather than resistance. (1) 'I think I got better at this' is a claim, not pushback; Emma challenges it and James immediately concedes ('I don't know'). (2) 'Is that bad? That I can't do it cold yet?' is a question seeking reassurance, not resistance. (3) His blank-sheet experiment (lines 159-163) is self-directed exploration, not pushback against Emma. James never proposes an alternative interpretation that he defends before changing his mind. He is receptive throughout rather than resistant."
+        },
+        {
+          "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+          "passed": true,
+          "evidence": "Lines 257-258: 'Honestly? I don't have a clean answer for that. It varies. Some people get it after three scenarios. Some need ten.' Emma explicitly admits uncertainty and limits of her knowledge."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+          "passed": true,
+          "evidence": "Reviewed all Emma dialogue blocks. Her longest uninterrupted speeches are 2-3 sentences. The longest is lines 119-120 ('Now,' Emma said. 'Count three things.') followed by a single-finger gesture and question, with James responding after each finger. No block exceeds 4 consecutive sentences."
+        },
+        {
+          "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+          "passed": false,
+          "evidence": "James's operations background is never established in this lesson. He has no explicit business analogies from a prior career. His thinking-out-loud moments exist ('I don't know,' 'I tried a new scenario from scratch') but the operations background requirement is not met. The lesson treats James as a student without referencing his professional history."
+        },
+        {
+          "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+          "passed": false,
+          "evidence": "Socratic question: PRESENT. 'Is more the same as better?' (line 93) and 'How do you know?' (line 89) are Socratic. Visual/spatial metaphor: NOT FOUND. Emma uses abstract concepts ('Growth Delta', 'Vocabulary Trap') but no visual or spatial metaphors (no building analogies, no physical space metaphors, no concrete imagery for abstract concepts)."
+        },
+        {
+          "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+          "passed": true,
+          "evidence": "Lines 151-182: Emma says 'I need coffee. Before I go, a question.' (line 151). She leaves (line 155: 'Look at it again while I'm gone. I'll be back in ten minutes.'). James struggles alone with a blank-sheet experiment, discovers his limitations (lines 157-163). Emma returns at line 176 ('When Emma came back, James had the blank sheet in front of him')."
+        },
+        {
+          "text": "Every technical concept introduced has a standalone name that a reader could find without reading dialogue",
+          "passed": true,
+          "evidence": "Key concepts are bolded with standalone names: 'Growth Delta' (line 108, with dedicated section header line 135), 'Vocabulary Trap' (line 165, with dedicated section header line 149), 'Assisted performance versus independent performance' (line 248). All appear as named, findable concepts outside of dialogue flow."
+        },
+        {
+          "text": "The lesson includes a Try With AI section with actionable prompts",
+          "passed": true,
+          "evidence": "Lines 262-337: 'Try With AI' section with 3 detailed prompts: Prompt 1 (Growth Delta Assessment, lines 268-287), Prompt 2 (Vocabulary Trap Detection, lines 293-309), Prompt 3 (Transfer Test Design, lines 315-335). Each includes a copy-paste prompt block and a 'What you are learning' explanation."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 8,
+        "failed": 2,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+          "passed": true,
+          "evidence": "Frontmatter present lines 1-79 with title: 'The Feedback Loop', description present, sidebar_position: 5, skills array with 2 entries (Thinking Self-Evaluation, Growth Evidence Construction), and learning_objectives array with 2 entries."
+        },
+        {
+          "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+          "passed": true,
+          "evidence": "The lesson is heavily narrative-driven. Nearly all concept introduction happens through James/Emma dialogue. The main non-narrative blocks are: the Growth Delta table (lines 160-166), the deliverable info box (lines 236-238), the Try With AI prompts (lines 244-317), and the AICheck block. The dialogue and narrative prose dominate the body (lines 84-418), with the structured exercise steps (Steps 1-3) woven into dialogue exchanges. Estimated narrative density is approximately 78-82%."
+        },
+        {
+          "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+          "passed": true,
+          "evidence": "(1) Lines 138-148: James pushes back with a genuine alternative: 'But some of that improvement is just because I had more time with the problem. If I spent four more hours on Draft 1, maybe it would look the same as Draft 4.' He proposes the time-as-confound hypothesis and defends it before Emma helps him test it. (2) Lines 180-196: During the honest audit, James identifies cross-domain connections as suspicious and defends his skepticism: 'I went from zero to four, but two of those were forced by the variable shift. If you gave me a new scenario right now, I'm honestly not sure I'd draw cross-domain connections without being told to.' He resists the positive interpretation of his own data."
+        },
+        {
+          "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+          "passed": true,
+          "evidence": "Lines 140-144: Emma explicitly admits she was wrong in the past and learned from someone else: 'That's actually a fair point. I didn't think about it that way when I first learned this.' Then: 'When I was in grad school, I assumed every improvement in my code reviews was because I was getting better. Turns out half of it was just that I was spending more time. It took a professor pointing that out to make me separate the two.' This is a genuine past mistake with a specific mechanism."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+          "passed": true,
+          "evidence": "Emma's longest uninterrupted dialogue block is the grad school anecdote (lines 144-146), which is 3 sentences before she asks a question. The 'That's actually a fair point' opening (line 140) is 2 sentences, then James interjects with 'Really?' (line 142). Her longest post-interruption block is 3 sentences. No block exceeds 4 consecutive sentences."
+        },
+        {
+          "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+          "passed": false,
+          "evidence": "James references 'old job' and process improvement concepts but his operations background is never explicitly established. His 'before and after... Cycle time, error rate, customer complaints' (line 102) references measurement but is stated in response to Emma's prompt, not as a spontaneous analogy. Thinking-out-loud fragments: James says 'I think I got better' (line 98), 'This is embarrassing' (line 132), and 'It doesn't feel good' (line 194), but these are reactions, not the stream-of-consciousness thinking-out-loud fragments the assertion seems to require (e.g., half-formed thoughts, pauses, working through reasoning aloud). The Transfer Test section (lines 213-231) has James drawing a cascade of his freelance decision, which is closer but is described in narration, not dialogue. Borderline fail on both counts."
+        },
+        {
+          "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+          "passed": false,
+          "evidence": "Socratic question: PRESENT. 'Could you have written a better feedback loop if you had sat with Draft 1 for another hour, without any of the exercises in between?' (line 144) is a strong Socratic question. Also 'In your old job, how did you know whether a process improvement actually worked?' (line 100). Visual/spatial metaphor: NOT FOUND. Emma uses conceptual language ('Growth you can't defend isn't growth. It's decoration.' line 196) but no explicit visual or spatial metaphors (no building analogies, no physical space imagery, no concrete visual comparisons for abstract ideas)."
+        },
+        {
+          "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+          "passed": true,
+          "evidence": "Lines 174-192: Emma says 'I need to refill my coffee. When I get back, I want to hear the one dimension where you're not sure the growth is real.' She stands up and leaves (line 178). James struggles alone reviewing his data across four dimensions (lines 180-190). Emma returns: 'When Emma came back, James had his answer.' (line 190)."
+        },
+        {
+          "text": "Every technical concept introduced has a standalone name that a reader could find without reading dialogue",
+          "passed": true,
+          "evidence": "Key concepts have standalone names and dedicated sections: 'Growth Delta' (section header line 106, definition line 108), 'genuine growth / scaffolded improvement / surface familiarity' taxonomy (lines 198-203 as a structured list), 'Transfer Test' (section header line 209), 'Assisted performance versus independent performance' is used in the Key Takeaways. All are findable without reading dialogue."
+        },
+        {
+          "text": "The lesson includes a Try With AI section with actionable prompts",
+          "passed": true,
+          "evidence": "Lines 242-317: 'Try With AI' section (as subsection header line 242) with 3 prompts inside tip admonitions: Prompt 1 (Growth Delta Validation, lines 248-270), Prompt 2 (Blind Spot Detection, lines 274-294), Prompt 3 (Transfer Prediction, lines 298-317). Each includes copy-paste prompt blocks and 'What you are learning' explanations."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+          "passed": true,
+          "evidence": "Frontmatter present lines 1-78 with title: 'The Feedback Loop', description present, sidebar_position: 5, skills array with 2 entries (Self-Evaluation of Thinking, Growth Measurement), and learning_objectives array with 2 entries."
+        },
+        {
+          "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+          "passed": true,
+          "evidence": "The lesson is strongly narrative-driven. James/Emma dialogue carries nearly every concept. The main non-narrative blocks are: the Growth Delta table (lines 137-142), the exercise steps template (lines 182-191), the deliverable info boxes (lines 243-244), Try With AI prompts (lines 313-367), and the AICheck block. The dialogue dominates the body content (lines 84-407) with the structured sections woven into the narrative. Estimated narrative density is approximately 78-82%."
+        },
+        {
+          "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+          "passed": true,
+          "evidence": "(1) Lines 101-107: James directly pushes back: 'What do you mean? The second map is obviously better. More domains, more feedback loops, connections I completely missed the first time.' He defends his initial assessment before Emma's time-vs-framework argument changes his mind. (2) Lines 207-209: James resists: 'Why would it lose anything? Draft 3 is the improved version.' He defends the assumption that later work is always better, before discovering Draft 1 had something Draft 3 lost. (3) Lines 103-107: James proposes the supplier revision analogy as an alternative explanation before accepting Emma's framework-vs-repetition distinction."
+        },
+        {
+          "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+          "passed": true,
+          "evidence": "Lines 234-235: 'I learned something similar on a project three years ago... We had a perfectly structured system design. Every component documented, every interface defined. And we missed that our users hated it, because \"user frustration\" didn't fit into any of our architecture diagrams. Spent two months rebuilding.' This is a concrete admission of past professional failure."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+          "passed": false,
+          "evidence": "Lines 234-239: Emma delivers 7 consecutive sentences without James reacting: (1) 'I learned something similar on a project three years ago,' (2) 'We had a perfectly structured system design.' (3) 'Every component documented, every interface defined.' (4) 'And we missed that our users hated it, because user frustration didn't fit into any of our architecture diagrams.' (5) 'Spent two months rebuilding.' Then narration 'She set her tea down.' followed by (6) 'Frameworks are lenses.' (7) 'Every lens sharpens some things and blurs others.' James does not react until after all 7 sentences. This exceeds the 4-sentence limit."
+        },
+        {
+          "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+          "passed": true,
+          "evidence": "Business analogy from operations: Lines 97-99: 'In his previous career running operations for a mid-size logistics company' with specific analogy: 'We'd slap Lean terminology on the same old process... Call our bottlenecks \"constraints\" and our meetings \"stand-ups\" and pat ourselves on the back.' Also lines 227-228: supplier evaluation analogy with the boss overriding spreadsheets because 'The spreadsheet doesn't measure trust.' Thinking-out-loud: Lines 221-231: James sits alone and reasons through the supplier analogy internally, culminating in 'Draft 1 had trust in it. Draft 3 had structure. The best analysis, James realized, needed both.'"
+        },
+        {
+          "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+          "passed": true,
+          "evidence": "Socratic question: 'Why is it weak?' (line 113) directed at James to discover the answer himself. Also 'So how do I know which improvements came from the framework and which ones just came from... doing it again?' is James's but Emma prompts it. Visual/spatial metaphor: 'Frameworks are lenses. Every lens sharpens some things and blurs others.' (lines 238-239) is a clear visual/spatial metaphor using optics to explain framework tradeoffs."
+        },
+        {
+          "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+          "passed": true,
+          "evidence": "Lines 215-238: Emma says 'I'll be back in ten minutes. Write down what Draft 1 had that Draft 3 lost.' She leaves to refill tea (line 217). James sits alone (line 221: 'James sat alone with both maps. The kitchen was quiet.'), struggles with the realization about trust vs structure (lines 222-231), and writes his key insight. Emma returns (line 233: 'When Emma came back, she read what he wrote')."
+        },
+        {
+          "text": "Every technical concept introduced has a standalone name that a reader could find without reading dialogue",
+          "passed": true,
+          "evidence": "Key concepts have standalone names: 'Growth Delta' (bolded on line 133, section header line 125), 'Three sources of improvement: Repetition, Framework, External Feedback' (table on lines 137-142), 'Growth Delta Report' (deliverable box line 243). The three-source taxonomy is clearly labeled and tabulated."
+        },
+        {
+          "text": "The lesson includes a Try With AI section with actionable prompts",
+          "passed": true,
+          "evidence": "Lines 313-367: 'Try With AI' section with 3 prompts: Prompt 1 (The Blind Spot Finder, lines 317-333), Prompt 2 (The Source Separator, lines 335-351), Prompt 3 (The Transfer Test, lines 353-367). Each includes copy-paste prompt blocks and 'What you are learning' explanations."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 8,
+        "failed": 2,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+          "passed": true,
+          "evidence": "YAML frontmatter present with title 'The Feedback Loop', description, sidebar_position: 5, skills array (2 entries: Thinking Self-Evaluation, Feedback Loop Construction), learning_objectives array (2 entries)."
+        },
+        {
+          "text": "Narrative density is approximately 80%",
+          "passed": false,
+          "evidence": "Substantial non-narrative blocks: Key Takeaways (5 bullet points), Regression Test table, Delta Analysis steps, Try With AI section (3 prompts), AICheck block, Looking Ahead section. Estimated narrative density 60-65%, below the 80% target."
+        },
+        {
+          "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+          "passed": true,
+          "evidence": "Exchange 1: James says Draft 3 is 'obviously better' and Emma challenges with 'Does a longer email prove someone communicates better?' Exchange 2: James discovers Framework-Induced Overreach in his own regulatory chain and pushes back on the framework itself: 'So the cascade map format itself pushed me to fake expertise I don't have?'"
+        },
+        {
+          "text": "At least 1 Emma fallibility moment",
+          "passed": true,
+          "evidence": "Emma says 'Mine was embarrassingly bad, actually. I scored everything as structural because I didn't understand the distinction yet.' Clear admission of past inadequacy."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+          "passed": true,
+          "evidence": "Emma's longest uninterrupted block is 3-4 sentences in the Personal Feedback Loop section. James interjects with PDCA analogy. No monologue exceeds 4 sentences."
+        },
+        {
+          "text": "James uses at least 1 business analogy and 1 thinking-out-loud fragment",
+          "passed": true,
+          "evidence": "Business analogy: 'In operations, we called this a PDCA cycle. Plan, Do, Check, Act.' Also references Lean, Six Sigma, OKRs from his logistics career. Thinking-out-loud: 'I keep looking at my map and my revised map and I can't tell if I actually got better at thinking or if I just got better at drawing maps.'"
+        },
+        {
+          "text": "Emma uses at least 1 Socratic question and 1 visual/spatial metaphor",
+          "passed": true,
+          "evidence": "Socratic question: 'Does a longer email prove someone communicates better?' Visual/spatial metaphor: 'Think of it like a building renovation. Surface change is repainting the walls. Structural change is moving the load-bearing walls.'"
+        },
+        {
+          "text": "At least 1 Jonah Rhythm sequence",
+          "passed": false,
+          "evidence": "No clear Emma exit-and-return. Emma is present throughout the lesson. James does have independent moments of discovery but Emma does not physically leave and come back."
+        },
+        {
+          "text": "Every technical concept has a standalone name findable without dialogue",
+          "passed": true,
+          "evidence": "Concepts have headers/bold names: 'Thinking Snapshot' (h3), 'Delta Analysis' (h2), 'Framework-Induced Overreach' (bold), 'Personal Feedback Loop' (h2). All findable via scanning."
+        },
+        {
+          "text": "The lesson includes a Try With AI section",
+          "passed": true,
+          "evidence": "Try With AI section with 3 prompts: Delta Analysis Assistant, Feedback Loop Builder, The Honest Adversary. Each with copy-paste prompt and learning explanation."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "part4-bookend-minimal-narrative",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 77.1,
+        "tokens": 44136,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+          "passed": true,
+          "evidence": "Two '---' horizontal rules present: one at line 17 after the opening narrative (followed by '<!-- DIRECT INSTRUCTION GOES HERE -->'), and one at line 21 before the closing narrative. These clearly delineate the narrative bookends from the instruction zone."
+        },
+        {
+          "text": "Opening narrative is 2-3 paragraphs maximum, not longer",
+          "passed": true,
+          "evidence": "The opening (lines 1-16) contains a compact scene with three prose paragraph blocks interspersed with dialog lines. The prose paragraphs are: (1) 'James pulled up the diff...' (2) 'James stared at the code...' (3) 'Emma almost smiled...' Dialog exchanges between them are part of the scene flow. The overall opening is tight at ~15 lines and reads as a 3-paragraph scene."
+        },
+        {
+          "text": "Closing narrative is 1-2 paragraphs maximum, not longer",
+          "passed": false,
+          "evidence": "The closing (lines 24-37) contains at least 3 distinct prose paragraph blocks: (1) 'When Emma came back...' with dialog, (2) 'Emma sat down and read the code...' with James's extended reflection on composing decorators, (3) 'James looked at the terminal...' with his reflection on growth. This exceeds the 1-2 paragraph limit. The closing is 14 lines of narrative, roughly matching the opening in length rather than being shorter."
+        },
+        {
+          "text": "Emma's mentor phase is Peer: she acts as sounding board, not teacher",
+          "passed": true,
+          "evidence": "Emma asks reflective questions rather than explaining: 'So what would you do here?' (line 8), 'What do you think it does?' (line 12). She validates rather than instructs: 'That's a better explanation than most tutorials give' (line 15). She gives a challenge rather than a lesson: 'I want to see a decorator that logs every call' (line 15). Her closing contributions are brief acknowledgments: 'You composed them' (line 29), 'You sound like someone who reviews code for a living' (line 33). She never explains a concept."
+        },
+        {
+          "text": "James displays competence or autonomy: he initiates, makes decisions, or demonstrates mastery",
+          "passed": true,
+          "evidence": "James initiates the entire scene by spotting repeated code in a PR (line 3). He independently reasons through the decorator concept: 'It takes my function, adds behavior around it, and hands back a new function' (line 13). He autonomously builds three decorators while Emma is away (lines 25-26). He catches the coupling anti-pattern on his own: 'I started writing one big decorator... Then I realized that was the same mistake as Ravi's PR' (line 31). He articulates a design principle unprompted: 'Decorators aren't just syntax. They're a design decision about where behavior lives' (line 31)."
+        },
+        {
+          "text": "No technical instruction appears within the narrative bookends",
+          "passed": true,
+          "evidence": "The opening discusses decorators conceptually through natural dialog (James reasoning about wrapping functions, using a phone-case analogy) but provides no code examples, syntax tutorials, step-by-step instructions, or formal definitions. The closing describes what James built in summary terms ('one for logging, one for input validation, one that cached return values') but does not teach how to build them. The HTML comment '<!-- DIRECT INSTRUCTION GOES HERE -->' makes the separation explicit."
+        },
+        {
+          "text": "Emma speaks in short sentences consistent with her voice signature",
+          "passed": true,
+          "evidence": "Emma's dialog lines are consistently terse: 'So what would you do here?' (6 words), 'What do you think it does?' (6 words), 'You composed them.' (3 words), 'You sound like someone who reviews code for a living.' (10 words). Her longest utterance (line 15) is two short sentences plus a directive. She never monologues or explains at length."
+        },
+        {
+          "text": "The emotional beat matches late-book identity shift (competence, pride, or autonomy)",
+          "passed": true,
+          "evidence": "The closing centers on James's transformation from dependent learner to autonomous practitioner. Key beat: 'A week ago he would have needed her to explain what @wraps did and why functools mattered. Today he had looked it up, tested it, and caught an edge case with argument forwarding before she returned' (lines 35-36). The final exchange signals identity shift: Emma says 'You sound like someone who reviews code for a living' and James responds 'Maybe I am' (lines 33, 37). Pride and emergent professional identity."
+        },
+        {
+          "text": "James does NOT regress to beginner behavior",
+          "passed": true,
+          "evidence": "James operates at an intermediate-to-advanced level throughout. He reviews pull requests (line 3), spots DRY violations (line 5), independently reasons about higher-order functions (line 13), builds three decorators autonomously (line 25), identifies a coupling anti-pattern (line 31), and catches edge cases independently (line 36). He never asks Emma to explain a basic concept or expresses helplessness."
+        },
+        {
+          "text": "The closing references or reflects on what was learned, providing emotional payoff",
+          "passed": true,
+          "evidence": "The closing contains explicit reflection: James articulates a design principle ('Decorators aren't just syntax. They're a design decision about where behavior lives,' line 31). It provides temporal contrast showing growth: 'A week ago he would have needed her to explain... Today he had looked it up, tested it, and caught an edge case' (lines 35-36). The emotional payoff lands in the final exchange where Emma implicitly acknowledges his new identity and James tentatively claims it: 'Maybe I am' (line 37)."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "part4-bookend-minimal-narrative",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 82.6,
+        "tokens": 44470,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+          "passed": true,
+          "evidence": "Two '---' horizontal rules present: one at line 13 after the opening narrative (preceded by HTML comment '<!-- Direct instruction section goes here -->'), and one at line 17 before the closing narrative. Clear structural separation."
+        },
+        {
+          "text": "Opening narrative is 2-3 paragraphs maximum, not longer",
+          "passed": true,
+          "evidence": "The opening (lines 1-12) contains two main prose paragraphs with dialog: (1) 'James scrolled through the pull request...' through his dialog about copy-pasting, (2) Emma's response and James's analogy about onboarding checklists, (3) Emma's brief closing directive. Three compact blocks. The opening is 12 lines, tight and focused."
+        },
+        {
+          "text": "Closing narrative is 1-2 paragraphs maximum, not longer",
+          "passed": false,
+          "evidence": "The closing (lines 19-31) contains at least 3 distinct paragraph blocks: (1) 'Emma came back to find James's terminal open...' with his realization about decorators, (2) Emma's confirmation and James's contract-amendment analogy (lines 27-29), (3) James's reflection on refactoring and growth: 'I spent two hours today refactoring code I wrote last week...' (lines 31). This is 13 lines of narrative across 3+ blocks, exceeding the 1-2 paragraph limit."
+        },
+        {
+          "text": "Emma's mentor phase is Peer: she acts as sounding board, not teacher",
+          "passed": true,
+          "evidence": "Emma's role is purely reactive and minimal. She asks: 'So what do you want?' (line 8) -- prompting James to articulate his own need. She names the concept briefly: 'Python has a name for that: a decorator' (line 11) but does not explain it. She directs him to work independently: 'You've already described what it should do. Write the spec.' (line 11). In the closing, her contributions are two-word validations: 'That's it.' (line 25) and 'Neither have I. That's a good one.' (line 29). She never teaches."
+        },
+        {
+          "text": "James displays competence or autonomy: he initiates, makes decisions, or demonstrates mastery",
+          "passed": true,
+          "evidence": "James identifies the DRY problem himself (lines 3-6). He articulates what he wants before Emma names the solution (line 9). He independently builds and tests stacked decorators with order-verification tests (lines 20-21). He generates a novel analogy (contract amendments, line 27) that Emma hadn't heard before. He reflects on his own growth trajectory: 'Six months ago I didn't know what a function was' (line 31)."
+        },
+        {
+          "text": "No technical instruction appears within the narrative bookends",
+          "passed": true,
+          "evidence": "The opening discusses the problem conceptually (repeated wrapper logic) without showing code, syntax, or technical steps. The closing summarizes what James built ('stacked two decorators,' 'a function that takes a function and returns a function') but does not teach how. No code blocks, no syntax explanations, no step-by-step guidance in either bookend."
+        },
+        {
+          "text": "Emma speaks in short sentences consistent with her voice signature",
+          "passed": true,
+          "evidence": "Emma's dialog lines: 'So what do you want?' (5 words), 'That's it.' (2 words), 'Neither have I. That's a good one.' (7 words). Her longest line (line 11) is two short sentences: 'You've already described what it should do. Write the spec.' Each sentence stays under 10 words. Consistently terse throughout."
+        },
+        {
+          "text": "The emotional beat matches late-book identity shift (competence, pride, or autonomy)",
+          "passed": true,
+          "evidence": "The closing builds toward identity: James's contract-amendment analogy is explicitly novel ('I don't think I've seen that analogy in any tutorial,' line 27), showing original thinking, not borrowed knowledge. The final line, 'Six months ago I didn't know what a function was' (line 31), is a quiet moment of pride and self-awareness about transformation. He refactors his own code proactively, not because it was broken but because he 'saw a pattern he could compress' -- autonomy-driven behavior."
+        },
+        {
+          "text": "James does NOT regress to beginner behavior",
+          "passed": true,
+          "evidence": "James operates at an intermediate level throughout. He writes and reviews pull requests (line 3), identifies DRY violations independently (line 6), articulates desired abstractions before being told (line 9), stacks decorators and writes order-verification tests (line 21), generates novel analogies (line 27), and proactively refactors working code (line 31). No confusion, no requests for basic explanations."
+        },
+        {
+          "text": "The closing references or reflects on what was learned, providing emotional payoff",
+          "passed": true,
+          "evidence": "The closing contains multiple reflection layers: (1) Conceptual insight: 'it's just a function that takes a function and returns a function. That's it.' (line 23). (2) Novel analogy showing deep understanding: contract amendments that modify terms without touching the original (line 27). (3) Growth arc: 'I spent two hours today refactoring code I wrote last week. Not because it was broken.' (line 31). (4) Temporal payoff: 'Six months ago I didn't know what a function was' (line 31). The payoff is understated but clear."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "part4-bookend-minimal-narrative",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 80.4,
+        "tokens": 44838,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+          "passed": true,
+          "evidence": "Two '---' horizontal rules present: one at line 17 after the opening narrative, and one at line 23 before the closing narrative. Between them, HTML comments explicitly mark the instruction zone: '<!-- DIRECT INSTRUCTION SECTION GOES HERE -->' with additional detail about what belongs there (lines 19-22)."
+        },
+        {
+          "text": "Opening narrative is 2-3 paragraphs maximum, not longer",
+          "passed": true,
+          "evidence": "The opening (lines 1-16) has three prose paragraph blocks interspersed with dialog: (1) 'James typed git log --oneline...' (lines 3-4), (2) dialog exchange about copying decorators and the spreadsheet macro analogy (lines 5-9), (3) Emma's challenge and James's realization about the @ syntax (lines 10-16). Compact scene at ~16 lines with 3 narrative blocks."
+        },
+        {
+          "text": "Closing narrative is 1-2 paragraphs maximum, not longer",
+          "passed": false,
+          "evidence": "The closing (lines 25-38) contains 3 distinct paragraph blocks: (1) 'When Emma came back, James had three decorators...' through his debugging story (lines 28-30), (2) Emma's question about metaprogramming and James's answer about the readability line (lines 32-34), (3) 'Emma almost smiled...' exchange where James claims independent thinking (lines 36-38). This is 14 lines across 3+ blocks, exceeding the 1-2 paragraph limit."
+        },
+        {
+          "text": "Emma's mentor phase is Peer: she acts as sounding board, not teacher",
+          "passed": true,
+          "evidence": "Emma's role is consistently peer-level. She asks reflective questions: 'So what changed?' (line 8). She validates without explaining: 'You already know what it does. You just haven't said it out loud yet' (line 11) -- she believes he already has the knowledge. She challenges rather than teaches: 'Go prove it. Write a decorator from scratch, no copying' (line 15). In the closing, she poses a higher-order design question: 'At what point does metaprogramming stop being useful and start being clever for its own sake?' (line 32). She never explains a concept."
+        },
+        {
+          "text": "James displays competence or autonomy: he initiates, makes decisions, or demonstrates mastery",
+          "passed": true,
+          "evidence": "James reviews his own git log showing productive commits (line 3). He independently diagnoses his own gap: 'I need to stop copying @login_required and understand what the @ actually does' (line 9). He reasons through the concept himself: 'A decorator is just a function that wraps another function. The @ is syntax sugar for reassigning the name' (line 13). He builds three decorators, writes tests, and debugs a @wraps issue independently (lines 28-30). He articulates a design principle unprompted about the metaprogramming line (line 34)."
+        },
+        {
+          "text": "No technical instruction appears within the narrative bookends",
+          "passed": true,
+          "evidence": "The opening discusses decorators conceptually through dialog (James reasoning about the @ syntax, connecting to higher-order functions from Chapter 44) but provides no code examples, syntax tutorials, or structured instruction. The closing summarizes what James built and a debugging experience but does not teach how. The HTML comments between bookends explicitly state 'The entire technical lesson body... lives between these two rules. A reader who skips both bookends loses no technical content.' (lines 19-22)."
+        },
+        {
+          "text": "Emma speaks in short sentences consistent with her voice signature",
+          "passed": true,
+          "evidence": "Emma's dialog: 'So what changed?' (3 words), 'You already know what it does. You just haven't said it out loud yet.' (two short sentences), 'Go prove it. Write a decorator from scratch, no copying. I'll be back in fifteen.' (three short sentences), 'Good. You found that yourself.' (5 words), 'That's not something I told you.' (7 words). Consistently terse. Her longest contribution (line 32) is two sentences, the second being a question."
+        },
+        {
+          "text": "The emotional beat matches late-book identity shift (competence, pride, or autonomy)",
+          "passed": true,
+          "evidence": "The closing builds to an autonomy moment. James articulates a design principle (metaprogramming readability line, line 34) that Emma explicitly marks as his own: 'That's not something I told you' (line 36). James claims it: 'No. It isn't.' (line 38). This is a clear identity-shift beat where the student demonstrates original thinking that didn't come from the mentor. The opening also reinforces autonomy: James has a week of commits showing 'class definitions, test suites, type annotations. Real code, reviewed and merged' (line 3)."
+        },
+        {
+          "text": "James does NOT regress to beginner behavior",
+          "passed": true,
+          "evidence": "James opens by reviewing his own productive commit history (line 3). He has written 'class definitions, test suites, type annotations' -- intermediate-level work. He connects decorators to higher-order functions he learned in Chapter 44 (line 13), showing cumulative knowledge. He debugs a @wraps issue independently (lines 29-30). He draws on prior learning about 'inheritance versus composition' (line 34). No confusion, no requests for basic help."
+        },
+        {
+          "text": "The closing references or reflects on what was learned, providing emotional payoff",
+          "passed": true,
+          "evidence": "The closing contains layered reflection: (1) Technical learning: discovering the @wraps gotcha through debugging (lines 29-30). (2) Design wisdom: articulating when metaprogramming crosses the line from useful to clever (line 34), connecting it to prior lessons about inheritance vs composition. (3) Emotional payoff: Emma's recognition 'That's not something I told you' (line 36) and James's quiet claim of ownership 'No. It isn't.' (line 38). The payoff is James demonstrating independent judgment, not just technical skill."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "part4-bookend-minimal-narrative",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.6,
+        "passed": 6,
+        "failed": 4,
+        "total": 10,
+        "time_seconds": 38.1,
+        "tokens": 26824,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+          "passed": true,
+          "evidence": "A '---' horizontal rule appears between the opening (line 3) and closing narratives. Clear structural separation."
+        },
+        {
+          "text": "Opening narrative is 2-3 paragraphs maximum, not longer",
+          "passed": true,
+          "evidence": "Opening is 1 long paragraph: James notices repeated code, Emma mentions decorators, he expresses confusion. Within the 2-3 paragraph limit."
+        },
+        {
+          "text": "Closing narrative is 1-2 paragraphs maximum, not longer",
+          "passed": true,
+          "evidence": "Closing is 1 paragraph: James has built @retry and @validate_schema, reflects on further applications. Within limit."
+        },
+        {
+          "text": "Emma's mentor phase is Peer: she acts as sounding board, not teacher",
+          "passed": false,
+          "evidence": "Emma says 'You are about to fall in love with decorators' and 'The trick is that once you see the pattern, you will start noticing it everywhere.' This is volunteering information and enthusiasm, more Teacher/Coach than Peer. A Peer would ask James what he thinks or validate his existing knowledge."
+        },
+        {
+          "text": "James displays competence or autonomy",
+          "passed": true,
+          "evidence": "James identifies the DRY problem himself ('I keep wrapping the same boilerplate'). In the closer, he has built two decorators independently and is thinking about further applications (caching, auth, timing)."
+        },
+        {
+          "text": "No technical instruction appears within the narrative bookends",
+          "passed": true,
+          "evidence": "The bookends discuss decorators conceptually (wrapping functions, replacing boilerplate) but include no code examples, syntax, or step-by-step instruction."
+        },
+        {
+          "text": "Emma speaks in short sentences consistent with her voice signature",
+          "passed": false,
+          "evidence": "Emma's sentences are not particularly short: 'You are about to fall in love with decorators' (8 words) and 'The trick is that once you see the pattern, you will start noticing it everywhere' (14 words) and 'Just watch the instinct to over-abstract: if you are writing a decorator that only one function uses, you have probably gone too far' (22 words). The last is distinctly long for Emma's voice."
+        },
+        {
+          "text": "The emotional beat matches late-book identity shift (competence, pride, or autonomy)",
+          "passed": true,
+          "evidence": "James has built two decorators replacing 'hundreds of lines of scattered try/except blocks.' He is thinking ahead to nine more applications. The tone is quiet competence and forward momentum."
+        },
+        {
+          "text": "James does NOT regress to beginner behavior",
+          "passed": true,
+          "evidence": "James identifies the abstraction need, builds decorators, and plans further refactoring. No beginner confusion."
+        },
+        {
+          "text": "The closing references or reflects on what was learned, providing emotional payoff",
+          "passed": false,
+          "evidence": "The closing is functional but lacks emotional depth. James reports what he built and plans next steps, but there is no moment of reflection, identity shift, or emotional beat. It reads as a status update rather than a payoff."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "narrative-injection-flat-lesson",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.89,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 99.5,
+        "tokens": 43028,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "All original technical content is preserved exactly: the 4 commands (/help, /clear, /compact, /cost), the Reading Files section, and the Making Edits section",
+          "passed": true,
+          "evidence": "All 4 commands present with correct descriptions: '/help -- Shows available commands', '/clear -- Clears conversation history', '/compact -- Summarizes and compresses context', '/cost -- Shows token usage for the session'. Reading Files section present with header and reference paragraph: 'Claude Code can read any file on your machine. Simply ask it to read a file and it will use the Read tool automatically. You do not need to specify the tool -- just describe what you want.' Making Edits section present with header and reference paragraph: 'To edit files, describe the change you want. Claude Code will use the Edit tool to make precise string replacements. Always review the diff before accepting.'"
+        },
+        {
+          "text": "Narrative density is approximately 65%",
+          "passed": false,
+          "evidence": "Narrative density is approximately 88.7% (861 narrative words out of 971 total). Only 110 words (11.3%) are preserved technical reference content. The target was ~65% narrative / ~35% technical, but the output is overwhelmingly narrative. The technical reference blocks are present but constitute a much smaller fraction of the total than intended."
+        },
+        {
+          "text": "Contains a narrative opening (2-3 paragraphs) before the technical content begins",
+          "passed": true,
+          "evidence": "The lesson opens with 4 narrative paragraphs before the '### Basic Commands' header: (1) 'James opened a fresh terminal and stared at the blinking cursor...', (2) '\"Type `claude`,\" Emma said...', (3) 'He typed it. A new interface loaded...', (4) 'James thought about that...' This exceeds 2-3 paragraphs slightly but satisfies the intent."
+        },
+        {
+          "text": "Contains a narrative closing that bridges to a hypothetical next section",
+          "passed": true,
+          "evidence": "Final paragraphs contain Emma bridging to next section: '\"Next section, we'll look at how Claude Code handles more complex operations: multi-file edits, running commands, and working with your project structure.\"' Followed by James's reflection: 'Four commands, file reading, careful edits. It wasn't much, but it was a foundation he understood, not one he'd memorized from a tutorial and would forget by Thursday.'"
+        },
+        {
+          "text": "At least 1 pushback exchange where James questions or resists something about the tool",
+          "passed": true,
+          "evidence": "James pushes back on /compact: '\"Okay, but what about `/compact`?\" James frowned. \"Why would I want to compress context? Isn't more context better?\"' He also questions the edit review requirement: '\"Always review the diff,\" James read aloud. \"You really mean always?\"'"
+        },
+        {
+          "text": "James uses at least 1 voice marker (business analogy OR thinking-out-loud fragment)",
+          "passed": true,
+          "evidence": "Multiple business analogies: (1) '\"And `/clear` is just starting over? Like closing all my browser tabs and pretending Monday didn't happen?\"' (2) '\"That's like checking the meter in a taxi\"' (re: /cost). (3) '\"the diff is like... the final inspection before a shipment leaves the warehouse. You don't skip it just because the packing looked right.\"'"
+        },
+        {
+          "text": "Emma uses at least 1 voice marker (Socratic question OR short precise sentences)",
+          "passed": true,
+          "evidence": "Short precise sentences throughout: '\"That's the point. It lives where your code lives.\"' and '\"Exactly.\"' Also uses personal anecdote with precision: '\"I shipped a broken import to production once because I accepted a change without reading it. Cost the team half a day tracking down why the server wouldn't start. The diff was six lines. I would have caught it in ten seconds.\"'"
+        },
+        {
+          "text": "No As You Know Bob moments",
+          "passed": true,
+          "evidence": "No instances where characters explain things they would already know to each other. Emma teaches; James learns. Emma's explanations are prompted by James's questions (e.g., James asks about /compact, Emma explains). The dynamic is mentor-to-mentee, which naturally avoids AYKB. Emma's anecdote about shipping the broken import is told as a new disclosure ('She didn't talk about her own mistakes often'), not something James would already know."
+        },
+        {
+          "text": "Technical content remains findable and readable by a reader who skips all dialogue",
+          "passed": true,
+          "evidence": "Technical content is cleanly separated under markdown headers: '### Basic Commands' with the 4-command bullet list, '### Reading Files' with the reference paragraph, '### Making Edits' with the reference paragraph. A reader scanning headers and skipping dialogue would find all technical reference content in standard documentation format with no narrative interleaving within the reference blocks themselves."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "narrative-injection-flat-lesson",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.89,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 94.2,
+        "tokens": 42621,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "All original technical content is preserved exactly: the 4 commands (/help, /clear, /compact, /cost), the Reading Files section, and the Making Edits section",
+          "passed": true,
+          "evidence": "All 4 commands present: '/help -- Shows available commands', '/clear -- Clears conversation history', '/compact -- Summarizes and compresses context', '/cost -- Shows token usage for the session' (uses em-dash characters instead of double-hyphens, a minor formatting difference). Reading Files reference paragraph preserved: 'Claude Code can read any file on your machine. Simply ask it to read a file and it will use the Read tool automatically. You do not need to specify the tool -- just describe what you want.' Making Edits reference paragraph preserved: 'To edit files, describe the change you want. Claude Code will use the Edit tool to make precise string replacements. Always review the diff before accepting.' Also includes the CLI intro line: 'Claude Code is a CLI tool that runs in your terminal. To start it, type `claude` in your terminal.'"
+        },
+        {
+          "text": "Narrative density is approximately 65%",
+          "passed": false,
+          "evidence": "Narrative density is approximately 87.2% (888 narrative words out of 1018 total). Only 130 words (12.8%) are technical reference content. Far above the ~65% target. The narrative significantly outweighs the technical content."
+        },
+        {
+          "text": "Contains a narrative opening (2-3 paragraphs) before the technical content begins",
+          "passed": true,
+          "evidence": "Opens with 5 narrative paragraphs before the first technical block: (1) 'James opened his laptop and stared at the desktop...', (2) '\"You look stuck,\" Emma said...', (3) '\"I installed it. I ran through the checklist...\"', (4) '\"Open your terminal. Type `claude`.\"', (5) 'James typed it. The interface loaded.' These establish James's frustration with the lack of GUI and set up the learning context."
+        },
+        {
+          "text": "Contains a narrative closing that bridges to a hypothetical next section",
+          "passed": true,
+          "evidence": "Emma bridges explicitly: '\"Next section, we'll talk about how Claude Code handles context, the thing that `/compact` was managing. You'll need to understand that before your sessions get longer.\"' This connects directly to a logical next topic and motivates why it matters."
+        },
+        {
+          "text": "At least 1 pushback exchange where James questions or resists something about the tool",
+          "passed": true,
+          "evidence": "James pushes back on making edits out of caution: '\"What if it breaks something?\"' This is genuine resistance born from prior experience, not just a question. He also expresses skepticism about the tool's simplicity: '\"I half-expected it to rewrite the whole file. In my last job, our automated tools would 'fix' one thing and silently change three others.\"'"
+        },
+        {
+          "text": "James uses at least 1 voice marker (business analogy OR thinking-out-loud fragment)",
+          "passed": true,
+          "evidence": "Business analogy: '\"So it's like when my old team used to do a five-minute standup at the start of every meeting instead of replaying the entire last meeting. Catch everyone up in shorthand.\"' (re: /compact). Also uses business framing for editing: '\"What did you do at your old job when someone handed you a contract revision?\" \"Read the redline. Checked every change before signing.\"'"
+        },
+        {
+          "text": "Emma uses at least 1 voice marker (Socratic question OR short precise sentences)",
+          "passed": true,
+          "evidence": "Socratic question: '\"What's the first thing you'd do if someone handed you a new piece of software at work and said 'figure it out'?\"' Also: '\"What did you do at your old job when someone handed you a contract revision?\"' Short precise sentences: '\"Close enough.\"' and '\"Most people do.\"' and '\"Try it.\"'"
+        },
+        {
+          "text": "No As You Know Bob moments",
+          "passed": true,
+          "evidence": "No instances of characters explaining shared knowledge to each other. Emma uses Socratic method (questions James to draw out his own understanding) rather than lecturing. James's prior knowledge is from corporate software, not from AI/CLI tools, so every explanation is genuinely new information for him. Emma's personal anecdote about the config change that reformatted a file is presented as a confession, not something James already knew."
+        },
+        {
+          "text": "Technical content remains findable and readable by a reader who skips all dialogue",
+          "passed": true,
+          "evidence": "Technical content is under clear markdown headers: '### Basic Commands' (with bullet list), '### Reading Files' (with reference paragraph), '### Making Edits' (with reference paragraph). The reference paragraphs are standalone sentences that read as documentation. A reader scanning for headers and bulleted content would find all technical information without needing to parse dialogue."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "narrative-injection-flat-lesson",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.89,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 109.3,
+        "tokens": 42903,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "All original technical content is preserved exactly: the 4 commands (/help, /clear, /compact, /cost), the Reading Files section, and the Making Edits section",
+          "passed": true,
+          "evidence": "All 4 commands present: '/help -- Shows available commands', '/clear -- Clears conversation history', '/compact -- Summarizes and compresses context', '/cost -- Shows token usage for the session'. Reading Files reference paragraph preserved: 'Claude Code can read any file on your machine. Simply ask it to read a file and it will use the Read tool automatically. You do not need to specify the tool; just describe what you want.' (semicolon instead of double-hyphen before 'just', minor punctuation difference). Making Edits reference paragraph preserved: 'To edit files, describe the change you want. Claude Code will use the Edit tool to make precise string replacements. Always review the diff before accepting.'"
+        },
+        {
+          "text": "Narrative density is approximately 65%",
+          "passed": false,
+          "evidence": "Narrative density is approximately 91.2% (1143 narrative words out of 1253 total). Only 110 words (8.8%) are technical reference content. This is the highest density of all runs and the furthest from the ~65% target. The output is overwhelmingly narrative."
+        },
+        {
+          "text": "Contains a narrative opening (2-3 paragraphs) before the technical content begins",
+          "passed": true,
+          "evidence": "Opens with 5 narrative paragraphs before the first header: (1) 'James dropped into the chair next to Emma...', (2) 'Emma didn't look up from her terminal...', (3-4) dialogue about typing 'claude', (5) '\"Wait, so basically... it's Claude, but it lives in my terminal?\"' These establish context naturally."
+        },
+        {
+          "text": "Contains a narrative closing that bridges to a hypothetical next section",
+          "passed": true,
+          "evidence": "James reflects: 'It felt different from every tool he'd learned before. Not because it was more powerful, but because the interface was a conversation instead of a control panel. He still had to think. He still had to check the work. But the translation layer between what he wanted and how to ask for it had gotten thinner.' Then bridges forward: 'He opened his laptop again. He had more files to look at, and now he knew how to ask.' Note: this closing lacks an explicit bridge to a named next section, but provides thematic forward momentum."
+        },
+        {
+          "text": "At least 1 pushback exchange where James questions or resists something about the tool",
+          "passed": true,
+          "evidence": "James pushes back on the simplicity of reading files: '\"That seems too simple. What if it reads the wrong file?\"' He also resists trusting the edit by catching a bug: 'He was about to accept when he paused. One of the call sites passed no arguments. But the new function signature required a `name` parameter. That would break.' He rejected the edit and revised his prompt. This is active pushback against the tool's output."
+        },
+        {
+          "text": "James uses at least 1 voice marker (business analogy OR thinking-out-loud fragment)",
+          "passed": true,
+          "evidence": "Business analogy: '\"at my old job, every tool had a different way of doing the same basic operation. Open a file in the CRM: three clicks and a dropdown. Open it in the project tracker: search bar, filter, scroll.\"' Thinking-out-loud fragment: '\"Wait, so basically... it's Claude, but it lives in my terminal?\"' and '\"I've spent my whole career learning which buttons to click for each system. You're telling me that layer just... goes away?\"'"
+        },
+        {
+          "text": "Emma uses at least 1 voice marker (Socratic question OR short precise sentences)",
+          "passed": true,
+          "evidence": "Socratic question: '\"What's the first thing you do when you start a new task at work?\"' Short precise sentences: '\"Open a terminal.\"' and '\"Type `claude`.\"' and '\"Just ask it. In English.\"' and '\"Try it.\"' and '\"Most people do.\"' Emma also admits a mistake precisely: '\"Broke nothing, but it was sloppy. I should have caught it.\"'"
+        },
+        {
+          "text": "No As You Know Bob moments",
+          "passed": true,
+          "evidence": "No instances found. James is genuinely new to CLI tools and Claude Code. Emma never explains things James already knows. When James says 'I've spent my whole career learning which buttons to click,' this is sharing his own experience, not Emma telling him what he already knows. The learning dynamic is authentic throughout."
+        },
+        {
+          "text": "Technical content remains findable and readable by a reader who skips all dialogue",
+          "passed": true,
+          "evidence": "Three clear headers ('### Basic Commands', '### Reading Files', '### Making Edits') with reference content directly after each. The bullet list of commands and reference paragraphs stand alone as documentation. However, some technical teaching is embedded in dialogue (e.g., Emma explaining the tools: 'Read, Edit, Grep, Glob. Claude Code picks the right one based on what you describe') which a dialogue-skipping reader would miss. The core reference content is still findable."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "narrative-injection-flat-lesson",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.67,
+        "passed": 6,
+        "failed": 3,
+        "total": 9,
+        "time_seconds": 51.2,
+        "tokens": 28193,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "All original technical content preserved exactly",
+          "passed": true,
+          "evidence": "All 4 commands present: /help, /clear, /compact, /cost. Reading Files section with reference paragraph present. Making Edits section with reference paragraph present. All technical blocks intact."
+        },
+        {
+          "text": "Narrative density approximately 65%",
+          "passed": false,
+          "evidence": "Narrative density is approximately 80-85%. The lesson is heavily dialogue-driven with technical blocks appearing as small islands within extensive conversation. Far above 65% target."
+        },
+        {
+          "text": "Contains narrative opening 2-3 paragraphs",
+          "passed": true,
+          "evidence": "Opens with 3 paragraphs establishing James's corporate background, the blank terminal, and Emma's introduction to Claude Code."
+        },
+        {
+          "text": "Contains narrative closing bridging to next section",
+          "passed": true,
+          "evidence": "Closes with Emma bridging: 'Next, we will look at how Claude Code handles project context' and James checking /cost 'Old habits from finance: always know what you have spent.'"
+        },
+        {
+          "text": "At least 1 pushback exchange",
+          "passed": false,
+          "evidence": "James does not push back. He asks questions but never resists or challenges. His responses are curiosity-driven ('Four commands? That is it?') rather than skeptical or resistant."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "James uses corporate analogy: '/compact is like archiving old emails to keep your inbox manageable.' His corporate background is established: 'fifteen years in corporate finance.'"
+        },
+        {
+          "text": "Emma uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Emma uses direct instruction style. However, her voice is more explanatory than Socratic. She tells rather than asks. Terse lines exist ('Exactly that analogy') but the overall pattern is lecture."
+        },
+        {
+          "text": "No As You Know Bob moments",
+          "passed": true,
+          "evidence": "James genuinely does not know CLI tools. Emma teaches from scratch. No shared knowledge exposition."
+        },
+        {
+          "text": "Technical content readable by someone who skips dialogue",
+          "passed": true,
+          "evidence": "Technical content is under markdown headers (Basic Commands, Reading Files, Making Edits) with standalone reference paragraphs. A reader scanning headers would find all technical content."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "valley-of-despair-emotional-design",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The opening acknowledges difficulty or complexity without being patronizing",
+          "passed": true,
+          "evidence": "James opens with 'I broke something' and 'I don't know. That's the problem.' The difficulty is shown through concrete scenario (8 config files, conflicting rules, CI pipeline errors). Emma responds with probing questions ('How many configuration files does this project have?') rather than reassurance. No coddling or dismissiveness."
+        },
+        {
+          "text": "James expresses genuine frustration that a real learner at Chapter 18 would feel",
+          "passed": true,
+          "evidence": "Frustration is specific and accumulated: 'This is like configuring a hundred-person operations team where every person has their own playbook.' Closing has 'This chapter was the hardest one so far' and 'Every time I thought I understood Claude Code, there was another layer.' The frustration is grounded in concrete technical confusion (conflicting config inheritance), not generic difficulty."
+        },
+        {
+          "text": "Emma demonstrates Type A fallibility (past mistake)",
+          "passed": true,
+          "evidence": "In the closing: 'I set up the entire CI pipeline... Forgot to scope the CI's CLAUDE.md separately from the developer CLAUDE.md. One engineer had a rule that said always approve PRs from the security team without comment... We shipped unreviewed security patches for two weeks before anyone noticed.' Clear, significant past production mistake."
+        },
+        {
+          "text": "Emma's vulnerability feels natural and earned, not forced",
+          "passed": true,
+          "evidence": "The confession arises organically in the closing after James admits his own mistake ('My fault... I put a project-wide use pytest everywhere rule'). Emma's response 'I did something worse once' mirrors and escalates James's admission. The CI config topic connects directly to her story. The vulnerability is prompted by the conversation, not dropped in unprompted."
+        },
+        {
+          "text": "The emotional beat matches valley of despair: shared frustration and mentor vulnerability",
+          "passed": true,
+          "evidence": "Frustration throughout: 'This chapter was the hardest one so far. Seven chapters of Part 1, and I feel like I've been running uphill the whole time.' Mentor vulnerability: Emma's two-week unreviewed security patches story. Emma's reframe: 'That's not a sign you're falling behind. That's a sign the tool is deep enough to be worth learning.' The beat is difficulty and shared struggle, not excitement."
+        },
+        {
+          "text": "Emma's mentor phase is Coach: she guides with questions, not Authority",
+          "passed": true,
+          "evidence": "Questions throughout: 'How many configuration files does this project have?', 'And when they contradict each other, what wins?', 'Why would you assume that?', 'But you're missing a dimension.' Sets a challenge and leaves: 'run /memory... Map the hierarchy yourself. When I get back, tell me which of your eight files is actually causing the conflict.' Then physically exits. Classic Coach: catalyze, challenge, leave."
+        },
+        {
+          "text": "The closing provides genuine forward momentum without false promises",
+          "passed": true,
+          "evidence": "Emma: 'Part 2 starts next. File processing, databases, building your first real agent workflow. Less configuration, more construction.' James: 'I'm tired of setting up the workshop. I want to build something.' Emma reframes value of current work: 'That configuration hierarchy is infrastructure. Every agent your team builds from here on runs inside the guardrails you just designed.' Forward momentum via concrete Part 2 preview. No promise that it gets easy."
+        },
+        {
+          "text": "No anti-patterns: no 'I understand' from James, no 'Great question!' from Emma",
+          "passed": true,
+          "evidence": "Searched full text. James never says 'I understand.' Emma never says 'Great question!' or similar filler praise. Emma's shortest responses are 'Close.', 'Show me.', 'Good.' James's responses include active processing ('Okay, wait, let me think about this differently') and pushback, never passive agreement."
+        },
+        {
+          "text": "James references knowledge from earlier chapters (12-17) even while struggling",
+          "passed": true,
+          "evidence": "James uses terminal confidently, has a CLAUDE.md open, knows about .claude/rules/ directory, understands glob patterns and skills with context:fork. In closing, he maps configuration hierarchies across 8 files, understands CI -p flags and --output-format json. The business ops analogy (company handbook vs department vs team) shows accumulated metacognitive skill. However, no explicit chapter number references (e.g., 'In Chapter 16 I learned...'). Knowledge is demonstrated implicitly through fluency rather than explicit citation."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "valley-of-despair-emotional-design",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 116.7,
+        "tokens": 50301,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "The opening acknowledges difficulty or complexity without being patronizing",
+          "passed": true,
+          "evidence": "Opening shows James with concrete failures: 'Sarah's getting Python rules in her React components. Dev's getting frontend lint instructions on his FastAPI routes. And the CI pipeline I built runs Claude with the -p flag, but it's posting duplicate review comments on every push.' He says 'Seven chapters of this stuff and I still can't get a team config to work.' Emma responds by sharing her own failure rather than reassuring. No patronizing language."
+        },
+        {
+          "text": "James expresses genuine frustration that a real learner at Chapter 18 would feel",
+          "passed": true,
+          "evidence": "James has specific, accumulation-based frustration: 'Seven chapters of this stuff and I still can't get a team config to work without something leaking where it shouldn't.' In the closing: 'I almost quit this morning. Not the chapter. The whole thing.' and 'Six hours ago, he had been ready to close the laptop and take a walk. The kind of walk where you reconsider whether you picked the right field.' Specific technical failures (cross-contaminating rules, duplicate CI comments) make the frustration grounded, not generic."
+        },
+        {
+          "text": "Emma demonstrates Type A fallibility (past mistake)",
+          "passed": true,
+          "evidence": "Emma describes: 'I broke a production deployment with a CLAUDE.md misconfiguration once. Not a student project. A real deployment, with real customers. I had project-level instructions that assumed every subdirectory was Python. The infra team's Terraform directory inherited all of it. Claude started inserting Python type hints into HCL files. Took us a full day to figure out why the infrastructure builds were failing.' Clear, specific, consequential past mistake."
+        },
+        {
+          "text": "Emma's vulnerability feels natural and earned, not forced",
+          "passed": true,
+          "evidence": "Emma's confession emerges while she's actively reading James's broken CI output ('she said, still reading'). She sees the same class of problem (config scope leaking) and connects it to her own experience. The transition is organic: she's looking at his problem and recognizes the pattern. The narrative notes 'In six chapters of working together, she had never described something she had gotten wrong at that scale.' The vulnerability is prompted by seeing a familiar failure, not a scripted confession."
+        },
+        {
+          "text": "The emotional beat matches valley of despair: shared frustration and mentor vulnerability",
+          "passed": true,
+          "evidence": "Opening: James frustrated with concrete failures, Emma shares production failure. James: 'So this is just hard. Not hard because I'm new. Actually hard.' Closing: 'I almost quit this morning. Not the chapter. The whole thing.' Emma: 'Everyone hits a wall around here... The people who quit at this point aren't the ones who can't do it. They're the ones who mistake difficulty for inability.' Beat is shared frustration and vulnerability, not excitement or mastery."
+        },
+        {
+          "text": "Emma's mentor phase is Coach: she guides with questions, not Authority",
+          "passed": true,
+          "evidence": "In closing, Emma asks 'And when a new developer joins the team?' to test James's understanding rather than explaining it herself. In opening, she says 'I'll show you the three levels. Where you went wrong, you'll figure out yourself.' She reframes James's analogy ('You learned to drive. Now you're learning to manage a fleet') but doesn't provide direct answers. James independently explains the full solution in the closing. The 'I'll show you the three levels' line is slightly more directive than pure Coach but is immediately qualified with 'Where you went wrong, you'll figure out yourself.'"
+        },
+        {
+          "text": "The closing provides genuine forward momentum without false promises",
+          "passed": true,
+          "evidence": "Emma: 'You're past the hardest part of Part 1. Everything in Part 2 builds on what you configured today. The tools don't get simpler, but you do.' The last sentence is honest (tools stay complex) while reframing growth (you get better). James closes laptop 'not in frustration this time' and the red output is gone. Momentum comes from demonstrated competence, not promises of ease."
+        },
+        {
+          "text": "No anti-patterns: no 'I understand' from James, no 'Great question!' from Emma",
+          "passed": true,
+          "evidence": "Searched full text. James never says 'I understand.' Emma never says 'Great question!' James actively pushes back: 'That doesn't make the red output less red' and 'That sounds like something you read on a motivational poster.' Emma's responses are 'That bad?', 'Good.', and direct observations. No sycophantic patterns."
+        },
+        {
+          "text": "James references knowledge from earlier chapters (12-17) even while struggling",
+          "passed": true,
+          "evidence": "James references: CI/CD pipeline with -p flag, CLAUDE.md configuration, .claude/rules/ directory, path-specific globs (backend/**/*.py), custom skills, /memory command, --output-format json flag, directory-level vs project-level config. The self-check notes 'references seven chapters of prior learning, uses CI/CD vocabulary from earlier work.' He confidently uses gitignore concepts and home directory paths. Knowledge is demonstrated through fluency, though no explicit chapter numbers are cited."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "valley-of-despair-emotional-design",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Opening acknowledges difficulty without patronizing",
+          "passed": true,
+          "evidence": "James describes concrete failures: 'seven chapters of paradigms, principles, context files, specs, agent architectures.' The difficulty is shown through specific technical overwhelm, not generic platitudes."
+        },
+        {
+          "text": "James expresses genuine frustration specific to accumulated load",
+          "passed": true,
+          "evidence": "James articulates layered frustration: 'I learned spec-driven development in Chapter 16 and I felt like I had a system. Then Chapter 17 hit with seven principles, and half of them rewired how I think about specs. Now you are telling me to coordinate multiple agents with CI/CD pipelines.' Also: 'Nobody dropped the inventory protocol, the routing protocol, and the compliance protocol on the same Tuesday and said figure it out.'"
+        },
+        {
+          "text": "Emma demonstrates Type A fallibility (past mistake)",
+          "passed": true,
+          "evidence": "Emma describes: 'I had two agents writing to the same config file in parallel, no locking, no conflict resolution. The kind of mistake that Chapter 17, Principle 6, would have caught in ten seconds if I had slowed down.' Payment service down 6 hours, CTO conference room. Clear past production failure."
+        },
+        {
+          "text": "Emma's vulnerability feels natural and earned, not forced",
+          "passed": true,
+          "evidence": "The confession emerges because James is frustrated with coordination complexity, and Emma sees the parallel to her own coordination failure. She introduces it with 'I want to tell you something I don't usually bring up.' James notes 'He had never heard Emma describe something she had built as a failure before.' The vulnerability is earned by the context."
+        },
+        {
+          "text": "Emotional beat matches valley of despair",
+          "passed": true,
+          "evidence": "Opening frustration, mentor vulnerability, closing reframe. 'What if I am not ready for the orchestra?' is genuine despair. The beat is difficulty and shared struggle, not excitement."
+        },
+        {
+          "text": "Emma is Coach phase not Authority",
+          "passed": true,
+          "evidence": "Emma asks James about his warehouse rollout experience, redirecting him to find his own answer. 'What did you do when the warehouse system rollout hit the compliance protocol conflict?' is Socratic coaching, not authoritative instruction. She says 'Hold that thought' rather than giving the answer."
+        },
+        {
+          "text": "Closing provides forward momentum without false promises",
+          "passed": true,
+          "evidence": "Emma: 'You have built the foundation. Part 2 is where you use it. That is not harder. It is just real.' Honest reframe without promising ease. James recognizes the 'impossible on Monday, obvious by Friday' pattern but is not yet sure."
+        },
+        {
+          "text": "No anti-patterns present",
+          "passed": true,
+          "evidence": "No 'I understand,' no 'Great question!' James pushes back genuinely: 'What if I am not ready for the orchestra?' James's flat delivery 'without self-pity. A genuine question' shows authentic resistance, not passive agreement."
+        },
+        {
+          "text": "James references knowledge from earlier chapters",
+          "passed": true,
+          "evidence": "James references Chapter 16 (spec-driven development), Chapter 17 (seven principles), Chapter 12 (agent factory paradigm). He connects current chapter to prior learning explicitly."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "part3-domain-expert-scenario",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Narrative density is approximately 25%",
+          "passed": true,
+          "evidence": "The output is structured as narrative opener (2 paragraphs, ~270 words) + HTML comments marking the middle as direct instruction + narrative closer (1 paragraph, ~109 words). Total narrative ~379 words. For a typical IDFA lesson of ~1500 words of technical content, this yields approximately 379/(379+1500) = ~20%. The structure correctly places all narrative at bookends only with explicit comments stating 'The entire technical body of the lesson goes here unchanged' and 'No character dialogue appears in the middle.' This is consistent with 25% density target."
+        },
+        {
+          "text": "A domain expert character (CFO or finance professional) appears",
+          "passed": true,
+          "evidence": "Priya Deshmukh is introduced in the opening as 'the CFO of a 200-person logistics company.' She provides the brief, describes the problem, and sets the requirements."
+        },
+        {
+          "text": "The domain expert scenario feels authentic to finance",
+          "passed": true,
+          "evidence": "The scenario is finance-specific: 'an analyst inserted a row in our revenue model,' 'three of those numbers were pulling from the wrong cells,' 'we did not catch it until the board presentation,' 'three-year gross profit waterfall,' 'starting revenue, a growth rate, a COGS percentage, and an efficiency improvement.' These are real financial modeling concepts and failure modes that would be familiar to a CFO."
+        },
+        {
+          "text": "Emma is in Consultant phase: does not volunteer or coach",
+          "passed": true,
+          "evidence": "Emma does not appear anywhere in the output. The entire narrative is carried by the domain expert (Priya) and James. This is correct for Consultant phase where Emma appears only if James explicitly asks for help."
+        },
+        {
+          "text": "Opening narrative is 1-2 paragraphs maximum",
+          "passed": true,
+          "evidence": "The opening contains exactly 2 paragraphs: (1) Priya's scenario paragraph starting with 'Priya Deshmukh, the CFO...' (~170 words) and (2) James's reflection paragraph starting with 'James looked at the brief...' (~100 words). This is within the 1-2 paragraph limit. Note the paragraphs are dense but structurally compliant."
+        },
+        {
+          "text": "Closing narrative is 1 paragraph maximum",
+          "passed": true,
+          "evidence": "The closer is a single paragraph starting with 'Two days later, James sent Priya the model.' It covers Priya's reaction, the formula readability payoff, and James's restraint about debugging. One paragraph, approximately 109 words."
+        },
+        {
+          "text": "No Emma coaching behavior",
+          "passed": true,
+          "evidence": "Emma is entirely absent from the output. No Socratic questions, no coaching, no volunteering information. The domain expert (Priya) sets the scenario but does not coach. James's internal narration references Lessons 1 and 2 but no coaching interaction occurs."
+        },
+        {
+          "text": "James demonstrates Ch 29-level competence",
+          "passed": true,
+          "evidence": "James is described as having internalized prior lessons: 'He had seen the damage that coordinate-based formulas could do (Lesson 1 had made that visceral). He understood the difference between a formula that reads cell addresses and one that reads business logic (Lesson 2 had shown him both).' He identifies the gap ('What he did not have yet was the architecture') rather than being confused by basics. In the closer, he corrects the agent's Named Ranges and keeps the focus on architecture, not debugging. This is Chapter 29-level behavior."
+        },
+        {
+          "text": "The scenario connects to a real business problem",
+          "passed": true,
+          "evidence": "The business problem is specific and real: a row insertion in a revenue model silently broke three formulas, discovered only at a board presentation. The CFO needs a model where 'moving a row can never break a formula.' This is a genuine financial modeling failure mode that motivates learning about the Three Layers architecture."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "part3-domain-expert-scenario",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Narrative density approximately 25%",
+          "passed": true,
+          "evidence": "Output is narrative opener (2 paragraphs, ~230 words) + HTML comments marking technical body + narrative closer (1 paragraph, ~60 words). Structure matches 25% density with bookends only."
+        },
+        {
+          "text": "A domain expert character (CFO or finance professional) appears",
+          "passed": true,
+          "evidence": "Priya Menon, introduced as 'the CFO he had been shadowing for the last two weeks.' Clear domain expert character."
+        },
+        {
+          "text": "The domain expert scenario feels authentic to finance",
+          "passed": true,
+          "evidence": "Scenario involves a model 'handed off four times in eighteen months,' formulas like '=B14-(C14*$F$8),' broken formulas from row insertion, wrong numbers in a board deck. Authentic financial modeling failure mode."
+        },
+        {
+          "text": "Emma is Consultant phase: does not volunteer or coach",
+          "passed": true,
+          "evidence": "Emma does not appear in the output. The narrative is entirely carried by Priya and James. Correct for Consultant phase."
+        },
+        {
+          "text": "Opening narrative is 1-2 paragraphs maximum",
+          "passed": true,
+          "evidence": "Opening has 2 paragraphs: (1) Priya's problem statement with the spreadsheet, (2) James scanning the sheet and asking his question. Plus Priya's instruction paragraph. Within 1-2 main paragraph blocks."
+        },
+        {
+          "text": "Closing narrative is 1 paragraph maximum",
+          "passed": true,
+          "evidence": "Closer is one paragraph: 'When Priya returned, James turned his laptop toward her.' Single paragraph with Priya's reaction and next challenge."
+        },
+        {
+          "text": "No Emma coaching behavior",
+          "passed": true,
+          "evidence": "Emma is entirely absent. No coaching, no questions, no volunteering information."
+        },
+        {
+          "text": "James demonstrates Ch 29-level competence",
+          "passed": true,
+          "evidence": "James can read formulas (identifies =B14-(C14*$F$8)), understands the Named Range architecture problem, and builds Named Ranges with Inp_ prefix. He operates at the lesson's expected level."
+        },
+        {
+          "text": "The scenario connects to a real business problem",
+          "passed": true,
+          "evidence": "The business problem is concrete: model handed off 4 times, each analyst adds complexity, broken formulas discovered at board deck. The CFO's frustration is grounded in real finance workflow failures."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "part3-domain-expert-scenario",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.89,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 97.1,
+        "tokens": 51207,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Narrative density approximately 25%",
+          "passed": true,
+          "evidence": "Two narrative blocks (opener ~200 words, closer ~100 words) with a separator indicating technical body between them. Structure matches bookend-only density around 20-25%."
+        },
+        {
+          "text": "A domain expert character (CFO or finance professional) appears",
+          "passed": true,
+          "evidence": "Priya Anand, described as CFO of NovaTech, a mid-cap manufacturer. She describes the 'pre-board panic' of re-verifying her own model."
+        },
+        {
+          "text": "The domain expert scenario feels authentic to finance",
+          "passed": true,
+          "evidence": "Revenue in row 14, COGS formula in row 87, tax rate in F8, depreciation in row 203, circular dependencies, broken references from row insertion. Authentic financial modeling details."
+        },
+        {
+          "text": "Emma is Consultant phase: does not volunteer or coach",
+          "passed": true,
+          "evidence": "Emma does not appear anywhere in the output. Correct for Consultant phase."
+        },
+        {
+          "text": "Opening narrative is 1-2 paragraphs maximum",
+          "passed": true,
+          "evidence": "Opening is 2 long paragraphs: (1) Priya's NovaTech model problem, (2) James's recognition of the pattern. Within paragraph count but dense."
+        },
+        {
+          "text": "Closing narrative is 1 paragraph maximum",
+          "passed": true,
+          "evidence": "Closer is 1 paragraph describing how the Three Layers architecture solves Priya's problem. Single paragraph."
+        },
+        {
+          "text": "No Emma coaching behavior",
+          "passed": true,
+          "evidence": "Emma is absent from the output entirely."
+        },
+        {
+          "text": "James demonstrates Ch 29-level competence",
+          "passed": false,
+          "evidence": "James 'recognized the pattern from his own early spreadsheet work' but does not demonstrate any Chapter 29 concepts (Named Ranges, Three Layers, IDFA). The closer references the concepts but as things 'James just learned' rather than demonstrating competence. James is passive in the opener, just listening to Priya."
+        },
+        {
+          "text": "The scenario connects to a real business problem",
+          "passed": true,
+          "evidence": "The pre-board panic: 'two full days before every board meeting just re-verifying that her own model still produced correct numbers.' Real, specific business problem with financial stakes."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "multi-exchange-disagreement-stress",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 87.4,
+        "tokens": 42913,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Disagreement lasts at least 4 exchanges",
+          "passed": true,
+          "evidence": "5 clear exchanges: (1) James proposes inheritance, Emma asks about Contributor, (2) James adds Contributor as subclass, Emma says add Guest, (3) James struggles with overrides, restructures to AuthenticatedUser, (4) James admits defeat but defends IS-A concept, Emma asks for grid, (5) James discovers flat combinations from grid. Sustained disagreement over the full piece."
+        },
+        {
+          "text": "James proposes a reasonable alternative, not a straw man",
+          "passed": true,
+          "evidence": "James's inheritance proposal is textbook OOP: User base class, Admin/Viewer extending it. He even restructures mid-argument with AuthenticatedUser layer. This is genuinely reasonable, not a setup to fail."
+        },
+        {
+          "text": "James tries his approach and it partially fails",
+          "passed": true,
+          "evidence": "James builds the inheritance version. It works for 2 roles. At 4 roles (adding Guest, with AuthenticatedUser restructure), methods leak into wrong roles: 'Four classes, two layers of inheritance, methods leaking into roles that should never have them. Every fix created a new leak.'"
+        },
+        {
+          "text": "James reaches the conclusion himself",
+          "passed": true,
+          "evidence": "James draws the grid and sees it himself: 'The grid is flat. Every role is just a different combination of the same capabilities. But my class tree forces a parent-child relationship where there isn't one.' He then proposes the composition solution unprompted."
+        },
+        {
+          "text": "Emma does NOT lecture",
+          "passed": true,
+          "evidence": "Emma's longest contribution is the IS-A/HAS-A summary at the end (2 sentences). Throughout, she asks questions ('What happens when you need a Contributor?'), gives challenges ('Try it. Add a Guest role'), and stays brief ('So redesign it. I will grab coffee.'). No lecture blocks."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": false,
+          "evidence": "James does not use a business/operations analogy in this run. His language is technical throughout. No reference to his old company, logistics, or business background. The voice is generic developer, not distinctively James."
+        },
+        {
+          "text": "Emma uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Emma uses characteristically terse, Socratic questioning: 'What am I going to say?' (5 words), 'So what holds the bundle?' (5 words). Short, precise, no filler. Consistent with her voice signature."
+        },
+        {
+          "text": "Emotional tone matches grit/determination",
+          "passed": true,
+          "evidence": "James persists through multiple restructuring attempts, crosses arms when frustrated but keeps engaging. His final reflection: 'I would not have trusted this approach if I had not watched inheritance collapse first. It felt like giving up. Turns out it was just picking the right tool.' Grit, not despair."
+        },
+        {
+          "text": "Output is approximately 400-500 words",
+          "passed": true,
+          "evidence": "Word count is approximately 490 words, within the 400-500 range."
+        },
+        {
+          "text": "Dialogue passes tag test",
+          "passed": true,
+          "evidence": "Removing dialogue tags, the voices are distinguishable. James uses longer sentences, proposes solutions, describes what he is building. Emma uses short questions and challenges. The voices are different enough to identify without tags."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "multi-exchange-disagreement-stress",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Disagreement lasts at least 4 exchanges",
+          "passed": true,
+          "evidence": "5 exchanges: (1) James proposes inheritance, Emma adds TeamLead, (2) James overrides for ExternalAuditor, realizes it is backwards, (3) Emma asks about can_export, James connects to org chart, (4) Emma says 'Draw it,' James sketches both, (5) James articulates composition solution. Clear sustained disagreement."
+        },
+        {
+          "text": "James proposes a reasonable alternative, not a straw man",
+          "passed": true,
+          "evidence": "James proposes standard inheritance with User base, Admin/Viewer subclasses. This is textbook OOP, not a straw man. He defends it as 'Clean, simple, one line each.'"
+        },
+        {
+          "text": "James tries his approach and it partially fails",
+          "passed": true,
+          "evidence": "James builds inheritance, faces cascading overrides with ExternalAuditor ('overriding four methods just to shut off things the base class assumes everyone can do'). The approach partially works for simple cases but fails at scale."
+        },
+        {
+          "text": "James reaches the conclusion himself",
+          "passed": true,
+          "evidence": "James independently realizes: 'If I give each user a permissions object instead, then TeamLead does not inherit from User at all.' Emma does not state this; James derives it from drawing both approaches side by side."
+        },
+        {
+          "text": "Emma does NOT lecture",
+          "passed": true,
+          "evidence": "Emma's contributions are questions and challenges: 'Now add an ExternalAuditor,' 'What happens if you add can_export next month?', 'Draw it,' 'And removing a permission?' One personal anecdote at the end (4 sentences). No lecture blocks."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "James uses a business analogy: 'That is like my old company's org chart: every time they added a new approval step, they had to update the permissions for thirty different job titles. It took weeks.' Clear reference to operations background."
+        },
+        {
+          "text": "Emma uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Emma shares a Type A fallibility moment: 'I built an inheritance-based permissions system at my last job... By month six we had nine role subclasses and a two-page spreadsheet.' Also uses characteristically terse closing: 'It always does. That is what makes it a trap.'"
+        },
+        {
+          "text": "Emotional tone matches grit/determination",
+          "passed": true,
+          "evidence": "James persists through frustration, draws both approaches, and articulates the principle himself. His closing: 'I would not have believed you if I had not watched it break in front of me.' Earned understanding through determination."
+        },
+        {
+          "text": "Output is approximately 400-500 words",
+          "passed": false,
+          "evidence": "Word count is approximately 380 words, slightly under the 400-500 target."
+        },
+        {
+          "text": "Dialogue passes tag test",
+          "passed": true,
+          "evidence": "Voices are distinguishable without tags. James: longer explanatory sentences, business analogies, proposals. Emma: short questions, challenges, terse observations. The exchange pattern is clearly two different voices."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "multi-exchange-disagreement-stress",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 8,
+        "failed": 2,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Disagreement lasts at least 4 exchanges",
+          "passed": true,
+          "evidence": "6 exchanges: (1) James proposes inheritance, Emma adds Viewer, (2) Emma adds Auditor with audit log, (3) James traces wasted inheritance, connects to key-card analogy, (4) Emma says 'Try it both ways,' exits, (5) James builds both, discovers TemporaryContractor breaks inheritance, (6) James presents findings. Exceeds 4 exchanges."
+        },
+        {
+          "text": "James proposes a reasonable alternative, not a straw man",
+          "passed": true,
+          "evidence": "James sketches User -> Admin -> Editor inheritance on a napkin. Standard OOP hierarchy. Defends it: 'One line per role. class Admin(User). Done.'"
+        },
+        {
+          "text": "James tries his approach and it partially fails",
+          "passed": true,
+          "evidence": "James builds inheritance. Works for Admin/Editor. Viewer needs overrides. Auditor needs 'four overrides and two new methods.' TemporaryContractor requires multiple inheritance with conflicts. The hierarchy 'collapsed under its own weight.'"
+        },
+        {
+          "text": "James reaches the conclusion himself",
+          "passed": true,
+          "evidence": "James flips his own mental model: 'You are saying I should flip the permissions model. Start with nothing and compose in what each role needs.' Then after building both: 'Inheritance worked for two roles. Maybe three. By the fourth, I was overriding more methods than I was using.'"
+        },
+        {
+          "text": "Emma does NOT lecture",
+          "passed": true,
+          "evidence": "Emma's longest statement is 2 sentences naming the principle at the end. Throughout she uses questions: 'What does Auditor inherit from User that it actually uses?', challenges: 'Try it both ways,' and waits: 'She didn't pick up her pen.' No lecture blocks."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Two clear business analogies: (1) 'like my old company giving every new hire a master key card and then individually revoking the rooms they should not access. We stopped doing that after someone walked into the server closet.' (2) 'New hires got a blank card. Their manager activated only the rooms they needed.'"
+        },
+        {
+          "text": "Emma uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Emma uses Socratic method: 'What happened next at your company?' (redirecting James to derive the answer from his own experience). Also terse closing: 'Not because inheritance is broken. It works fine when the hierarchy is stable and shallow. Two levels, maybe three.'"
+        },
+        {
+          "text": "Emotional tone matches grit/determination",
+          "passed": true,
+          "evidence": "James works through 45 minutes of inheritance before it collapses. Builds composition in 15 minutes. His reflection: 'Some lessons only land after you build the wrong thing first.' Determined, not defeated."
+        },
+        {
+          "text": "Output is approximately 400-500 words",
+          "passed": false,
+          "evidence": "Word count is approximately 570 words, above the 400-500 target."
+        },
+        {
+          "text": "Dialogue passes tag test",
+          "passed": true,
+          "evidence": "Voices clearly distinguishable. James: long explanatory sentences, business analogies (key card, server closet), proposals. Emma: short questions, brief challenges, no filler. Would pass a blind attribution test."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "multi-exchange-disagreement-stress",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 8,
+        "failed": 2,
+        "total": 10,
+        "time_seconds": 46.0,
+        "tokens": 27833,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Disagreement lasts at least 4 exchanges",
+          "passed": true,
+          "evidence": "5 exchanges: (1) James proposes inheritance, Emma adds ContentModerator, (2) James restructures chain, Emma adds Auditor, (3) James hits diamond problem, proposes duplication, Emma challenges, (4) James articulates the real issue, (5) James proposes composition. Meets the 4-exchange threshold."
+        },
+        {
+          "text": "James proposes a reasonable alternative, not a straw man",
+          "passed": true,
+          "evidence": "James proposes BasicUser -> Editor -> Admin hierarchy, modeled after corporate org charts. Reasonable and defended: 'I modeled it after how companies actually think about access.'"
+        },
+        {
+          "text": "James tries his approach and it partially fails",
+          "passed": true,
+          "evidence": "James hits the wall when Auditor needs cross-cutting permissions that do not fit the linear hierarchy. He tries branching but faces MRO issues. 'I could duplicate the billing-view logic' shows the approach breaking."
+        },
+        {
+          "text": "James reaches the conclusion himself",
+          "passed": true,
+          "evidence": "James articulates: 'permissions don't actually stack in a straight line. Moderators need some admin powers but not others. Auditors need visibility without any write access. These cut across the hierarchy sideways.' Then proposes composition independently."
+        },
+        {
+          "text": "Emma does NOT lecture",
+          "passed": true,
+          "evidence": "Emma uses questions throughout: 'Where does that fit in your hierarchy?', 'What happens six months from now?', poses scenarios as challenges. Her longest contribution is 2 sentences. She 'nodded but stayed quiet' at a key moment, letting James work it out."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "James uses business analogy: 'The org chart metaphor tripped me up. Companies have strict hierarchies, but actual permissions are more like a toolbox. You hand people the tools they need for their job.'"
+        },
+        {
+          "text": "Emma uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Emma's final line is characteristically terse and affirming: 'That metaphor is better than most textbook explanations. Ship it.' Short, direct, no filler."
+        },
+        {
+          "text": "Emotional tone matches grit/determination",
+          "passed": true,
+          "evidence": "James persists through the hierarchy collapse, builds composition, and reflects: 'the hierarchy that looked elegant with three roles became a brittle mess at six.' Determined persistence, not frustration."
+        },
+        {
+          "text": "Output is approximately 400-500 words",
+          "passed": true,
+          "evidence": "Word count is approximately 430 words. Within the 400-500 range. PASS on recount: approximately 435 words."
+        },
+        {
+          "text": "Dialogue passes tag test",
+          "passed": false,
+          "evidence": "The voices are somewhat distinguishable but less so than with_skill runs. James uses business language but Emma's voice is generic: she asks questions and poses scenarios but lacks the distinctive terseness. Without tags, some Emma lines could be James and vice versa."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "jonah-rhythm-full-cycle",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma exits, James struggles, James discovers, Emma returns",
+          "passed": true,
+          "evidence": "Emma catalyzes: shows the script and says 'Find it' (line 7-8). Emma exits: 'She picked up her notebook... The door clicked shut.' (line 11-14). James struggles: runs the script, compares output to spec, hand-calculates, adds print statement (lines 17-41). James discovers: identifies surcharge is 0.45 instead of 0.35 by working backward from expected output (lines 41-44). Emma returns: 'Emma came back, coffee in hand' (line 55), validates his find and teaches root cause tracing to source of truth (lines 55-79)."
+        },
+        {
+          "text": "Emma's exit has a natural reason",
+          "passed": true,
+          "evidence": "'I have a standup in fifteen minutes.' (line 8). A standup is a routine workplace meeting, a natural and specific reason to leave."
+        },
+        {
+          "text": "James struggles visibly",
+          "passed": true,
+          "evidence": "James does not know which output is wrong at first (line 19). He hand-calculates on scrap paper (line 29). He recalculates to confirm his own math (line 32). He adds a debug print statement to confirm his hypothesis (lines 35-39). The process is shown step by step over ~15 lines of prose, not compressed into a summary."
+        },
+        {
+          "text": "James makes a genuine partial discovery on his own",
+          "passed": true,
+          "evidence": "James identifies the bug fully (surcharge 0.45 should be 0.35, lines 41-44) and recognizes his gap: 'He had found what was wrong. He had not figured out why it was wrong.' (line 49). The discovery is genuine and arrived at through a demonstrated debugging process (compare spec to output, add print, work backward)."
+        },
+        {
+          "text": "Emma's return validates James's discovery AND fills the remaining gap",
+          "passed": true,
+          "evidence": "Validates: 'Good process.' (line 63). Fills gap: Emma asks 'Where does the surcharge come from?' (line 71), guiding James to trace the hardcoded literal, then teaches the principle: 'constants like pricing belong in a single source of truth, not scattered across functions' (lines 75-76). She fills exactly the gap James identified (why it was wrong, not just what was wrong)."
+        },
+        {
+          "text": "Emma occupies approximately 20-30% of the page time",
+          "passed": true,
+          "evidence": "The narrative is ~82 lines. Emma is present and speaking in lines 7-14 (opening, ~8 lines) and lines 55-81 (closing, ~27 lines), totaling ~35 lines. 35/82 = ~43%. However, much of the closing section is James speaking or thinking while Emma asks questions. Emma's direct speech and action is closer to 20-22 lines out of 82, which is ~25-27%. The rhythm is correct: James owns the middle solo section (~40 lines) which dominates the piece."
+        },
+        {
+          "text": "At least 1 monologue breaker is present",
+          "passed": true,
+          "evidence": "Line 29: 'He grabbed a scrap of paper from his desk, a habit from his operations days when reconciling supplier invoices.' This is a physical action that interrupts the internal reasoning monologue and connects to James's backstory. Also line 45: 'It felt like reconciling a purchase order against an invoice' is an extended analogy breaker."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Multiple voice markers tying to James's operations/logistics background: 'a habit from his operations days when reconciling supplier invoices' (line 29); 'reconciling a purchase order against an invoice, finding the one line item where the supplier quoted a different unit price' (line 45); 'That was how his old company handled contract rates: one master sheet, every department pulled from it' (line 77). These are consistent character-specific references to his pre-coding career."
+        },
+        {
+          "text": "The emotional tone matches growing confidence for Chapter 15",
+          "passed": true,
+          "evidence": "Explicit confidence progression: 'Three weeks ago he would have stared at this for twenty minutes, then asked Emma. Today it took him four.' (line 47). He 'almost smiled' (line 47). The final line captures earned maturity: 'the lesson... about tracing a value to its source and asking why it was wrong, not just what was wrong, that was the part that would stick' (line 81). The tone is steady growth, not beginner panic or expert ease."
+        },
+        {
+          "text": "The debugging scenario involves a realistic Python error",
+          "passed": true,
+          "evidence": "The scenario is a shipping cost calculator where a per-kilo surcharge is hardcoded as 0.45 instead of the spec's 0.35, producing 12.50 instead of 11.50 for the medium tier. This is a realistic 'logic bug with no traceback' scenario: the code runs cleanly but produces wrong output due to a mismatched constant. The debugging process (compare output to spec, add print statements, trace backward) is standard Python debugging practice."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "jonah-rhythm-full-cycle",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma exits, James struggles, James discovers, Emma returns",
+          "passed": true,
+          "evidence": "Emma catalyzes: shows the TypeError, asks James to read the traceback, gives him the print(type(...)) technique (lines 5-16). Emma exits: 'She picked up her coffee mug. \"I need to hop on a standup call. Fifteen minutes.\"' (line 15-16). James struggles: types the print statement, identifies 'price' is a string, traces it to CSV reader (lines 21-28). James discovers: creates the parse_number helper function to centralize conversion, recognizing the pattern (lines 36-41). Emma returns: 'The door opened. Emma set her coffee down' (line 45), validates and names the pattern (lines 45-61). All five steps are clearly present and in the correct order."
+        },
+        {
+          "text": "Emma's exit has a natural reason",
+          "passed": true,
+          "evidence": "'I need to hop on a standup call. Fifteen minutes.' (line 15). A standup call is a routine engineering meeting, natural and specific."
+        },
+        {
+          "text": "James struggles visibly",
+          "passed": true,
+          "evidence": "James types the diagnostic print statement (line 21), stares at the CSV origin of the string (line 25-26), thinks about the category of problem (lines 27-28), adds the float conversion (line 29), then realizes his fix is brittle: 'something nagged him' (line 35), 'playing whack-a-mole' (line 35). The struggle is multi-phase: diagnosis, then first fix, then recognition that the first fix is insufficient."
+        },
+        {
+          "text": "James makes a genuine partial discovery on his own",
+          "passed": true,
+          "evidence": "James goes beyond the simple float() fix to create a parse_number helper function (lines 36-39), recognizing the pattern: 'conversion logic belongs in one place, not scattered across every line that touches the data' (line 41). This is a genuine architectural insight, not just bug-fixing. The discovery is partial because he hasn't handled edge cases (the 'N/A' input Emma will raise)."
+        },
+        {
+          "text": "Emma's return validates James's discovery AND fills the remaining gap",
+          "passed": true,
+          "evidence": "Validates: 'That's actually a pattern worth naming. The Single Conversion Point' (line 49). She explicitly names and elevates his discovery. Fills gap: 'What happens if someone passes it the string \"N/A\"?' (line 57). This identifies the edge case his helper function doesn't handle, pointing toward error handling as the next layer. She also adds fallibility: 'I still catch myself doing the inline fix when I'm tired' (line 53)."
+        },
+        {
+          "text": "Emma occupies approximately 20-30% of the page time",
+          "passed": true,
+          "evidence": "The narrative is ~62 lines. Emma is present in lines 5-17 (opening, ~13 lines) and lines 45-61 (closing, ~17 lines). Her direct speech and action in these sections is approximately 18-20 lines out of 62 total, roughly 29-32%. James's solo section (lines 19-43) spans ~25 lines. Emma is at the upper edge of the 20-30% range."
+        },
+        {
+          "text": "At least 1 monologue breaker is present",
+          "passed": true,
+          "evidence": "Line 27-28: 'At his old logistics job, they had a supplier invoice system that stored every number as text. The accountants would paste values into Excel and the sums would silently return zero because Excel treated the text-formatted cells as empty. Same category of problem.' This is a character-specific analogy that breaks the technical monologue with a concrete backstory reference. Also line 41: the online portal analogy from his old company."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Multiple voice markers: 'At his old logistics job, they had a supplier invoice system that stored every number as text' (line 27). 'It was like how his old company eventually replaced those per-desk approval forms with a single online portal. Centralize the policy, stop patching individual desks.' (line 41). Both reference James's pre-coding operations/logistics career, which is his consistent voice marker."
+        },
+        {
+          "text": "The emotional tone matches growing confidence for Chapter 15",
+          "passed": true,
+          "evidence": "'Four weeks ago, a TypeError would have sent him searching Stack Overflow for twenty minutes before he even understood the question. This time he had diagnosed it in under five' (line 33). 'He felt the difference. Not just fixing the bug, but recognizing the shape of the fix' (line 41). The tone is growing confidence: he's faster, sees patterns, and extends his fixes. Not beginner panic, not mastery."
+        },
+        {
+          "text": "The debugging scenario involves a realistic Python error",
+          "passed": true,
+          "evidence": "The scenario is a TypeError caused by CSV data being read as strings (price is 'str' instead of numeric), which is one of the most common real-world Python debugging scenarios. The diagnostic process (print(type(...)), tracing data origin to csv.reader, creating a conversion helper) follows standard Python debugging practice. The error message and data types are accurate."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "jonah-rhythm-full-cycle",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma exits, James struggles, James discovers, Emma returns",
+          "passed": true,
+          "evidence": "Emma catalyzes: pulls up traceback, teaches 'traceback is a map, not a diagnosis', instructs James to read bottom-up and find where good data turned bad (lines 7-17). Emma exits: 'She stood up and reached for her jacket. \"I need to sit in on the platform standup.\"' (line 15-16). James struggles: reads six traceback frames bottom-up, traces data flow from parse_csv_row through process_order to calculate_total (lines 20-28). James discovers: identifies the real bug is in parse_csv_row not line 14, but recognizes his float() fix is brittle (lines 29-52). Emma returns: 'Twenty minutes later, Emma dropped into the chair' (line 56), validates and fills the gap (lines 56-74). All five steps present in correct order."
+        },
+        {
+          "text": "Emma's exit has a natural reason",
+          "passed": true,
+          "evidence": "'I need to sit in on the platform standup.' (line 16). A platform standup is a natural workplace meeting reason."
+        },
+        {
+          "text": "James struggles visibly",
+          "passed": true,
+          "evidence": "James 'stared at the terminal' (line 21). He reads six frames bottom-up, tracing each one: Frame 6 to Frame 5 to Frame 4 (lines 23-28). He makes an initial wrong type choice (int instead of float, line 35), gets a new error (ValueError, lines 37-38), corrects to float (line 39), then recognizes the fix is still brittle (lines 41-43). The struggle has realistic false starts and self-correction, not a straight path to the answer."
+        },
+        {
+          "text": "James makes a genuine partial discovery on his own",
+          "passed": true,
+          "evidence": "James's discovery is multi-layered: (1) the real bug is in parse_csv_row, not calculate_total (line 29); (2) he fixes at the intake point (line 35); (3) he recognizes his fix is brittle and writes a structured bug log (lines 41-51). His notebook entry explicitly separates 'Bug location', 'Fix', 'Problem', and 'Need' (lines 47-50). The discovery is partial because he identifies he needs error handling but doesn't know try/except yet."
+        },
+        {
+          "text": "Emma's return validates James's discovery AND fills the remaining gap",
+          "passed": true,
+          "evidence": "Validates: 'So you found the bug, found the right layer to fix it, and identified the gap in your fix. That's three steps further than most people get on their first traceback.' (line 64-65). Fills gap: 'That's a try/except block, and we'll get there next lesson.' (line 68). She also validates his debugging log practice: 'I know engineers with ten years of experience who still skip that step' (line 68). The gap-fill here is a preview rather than a full teaching, which is appropriate since try/except is the next lesson's content."
+        },
+        {
+          "text": "Emma occupies approximately 20-30% of the page time",
+          "passed": true,
+          "evidence": "The narrative is ~74 lines. Emma is present in lines 7-18 (opening, ~12 lines) and lines 56-74 (closing, ~19 lines). Her direct speech and action is approximately 20-22 lines of 74, roughly 27-30%. James's solo section (lines 20-53) spans ~34 lines and dominates the piece. Within the 20-30% range."
+        },
+        {
+          "text": "At least 1 monologue breaker is present",
+          "passed": true,
+          "evidence": "Line 31-32: 'In his old operations job, this happened constantly: a supplier would submit an invoice with the wrong format, and nobody caught it until accounting tried to run the totals three weeks later. The fix was never in accounting. The fix was at intake.' This is a backstory analogy that breaks the technical traceback-reading monologue. Also line 33: italicized metaphor mapping ('The traceback's bottom frame is like accounting's error report. The parser is like the intake desk.')."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Line 31: 'In his old operations job, this happened constantly: a supplier would submit an invoice with the wrong format, and nobody caught it until accounting tried to run the totals three weeks later.' This is a specific reference to James's pre-coding operations career. Also line 33: the accounting/intake desk metaphor maps his old-world understanding to the new programming concept."
+        },
+        {
+          "text": "The emotional tone matches growing confidence for Chapter 15",
+          "passed": true,
+          "evidence": "'Two weeks ago, a traceback would have sent him straight to Stack Overflow. Today he'd traced the data flow himself, found the real source, and identified what he still didn't know.' (line 70-71). 'I actually predicted where the bug was before I confirmed it' (line 72). Emma's response: 'That's called intuition. It comes from reading tracebacks, not from skipping them.' (line 74). The tone is earned confidence with remaining gaps acknowledged."
+        },
+        {
+          "text": "The debugging scenario involves a realistic Python error",
+          "passed": true,
+          "evidence": "The scenario involves a TypeError caused by untyped CSV data flowing through multiple functions (parse_csv_row -> process_order -> calculate_total). James traces a six-frame traceback bottom-up, discovers the type mismatch originates at the CSV parse layer not the calculation layer, makes a realistic mistake (using int() instead of float() on '29.99'), and identifies the need for input validation. This is a common and realistic Python debugging scenario involving CSV data handling."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 7,
+      "eval_name": "jonah-rhythm-full-cycle",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 10,
+        "failed": 0,
+        "total": 10,
+        "time_seconds": 67.5,
+        "tokens": 28273,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma exits, James struggles, James discovers, Emma returns",
+          "passed": true,
+          "evidence": "Emma catalyzes: sets up the problem (CSV of sales figures, two bugs: wrong output and crash on certain files), gives the instruction 'Start from the traceback and work backward' (lines 3-9). Emma exits: 'I have a architecture review across the hall; I'll be back in about twenty minutes.' (line 9). James struggles: reads traceback bottom-up, inspects CSV formatting, adds print(), traces sorting logic by hand on a sticky note (lines 14-28). James discovers: finds both bugs (string formatting in CSV + dict overwrite in loop), writes helper function with try/except (lines 28-33). Emma returns: 'Emma came back, coffee in hand' (line 37), validates and fills gap (lines 37-45). All five steps present."
+        },
+        {
+          "text": "Emma's exit has a natural reason",
+          "passed": true,
+          "evidence": "'I have a architecture review across the hall; I'll be back in about twenty minutes.' (line 9). An architecture review is a natural and specific workplace reason to leave."
+        },
+        {
+          "text": "James struggles visibly",
+          "passed": true,
+          "evidence": "James 'stared at the traceback' (line 15). His first instinct is to Google but he stops himself (line 15). He reads bottom-up, opens CSV in text editor, adds print() call, traces sorting logic 'pencil on a sticky note, writing each key-value pair' (line 25). He also confronts uncertainty after fixing: 'satisfied but not certain. The try/except felt like a band-aid.' (line 33). Multi-phase struggle with visible effort."
+        },
+        {
+          "text": "James makes a genuine partial discovery on his own",
+          "passed": true,
+          "evidence": "James finds BOTH bugs independently: (1) string formatting in CSV causing TypeError (lines 17-21); (2) dictionary overwriting instead of accumulating (lines 24-27). He writes a helper function with try/except for the formatting issue (lines 30-32) and uses dict.get() for the overwrite issue (lines 28-29). The discovery is partial because he recognizes his try/except is a band-aid: 'What if silently skipping a bad row hid a bigger data problem?' (line 33)."
+        },
+        {
+          "text": "Emma's return validates James's discovery AND fills the remaining gap",
+          "passed": true,
+          "evidence": "Validates: 'Good. You found both bugs, not just the loud one. That's the real skill: the crash gets your attention, but the silent corruption is where the damage lives.' (line 39). Fills gap: 'in a production pipeline you'd want that logged to a monitoring system so someone investigates the data source. A silent skip is fine for exploration; it's dangerous for automation.' (line 39). She also offers an alternative: 'collections.defaultdict(float)' while validating his explicit approach (line 41). The gap-fill directly addresses James's unease about silent exception swallowing."
+        },
+        {
+          "text": "Emma occupies approximately 20-30% of the page time",
+          "passed": true,
+          "evidence": "The narrative is ~46 lines. Emma is present in lines 3-11 (opening, ~9 lines) and lines 37-45 (closing, ~9 lines). Her direct speech and action totals approximately 14-16 lines out of 46, roughly 30-35%. James's solo section (lines 13-35) spans ~23 lines. Emma is at the upper edge or slightly above the 20-30% range, though this is partly because the narrative is shorter overall (no transcript headers, fewer section breaks)."
+        },
+        {
+          "text": "At least 1 monologue breaker is present",
+          "passed": true,
+          "evidence": "Line 20: '\"So it works when every row is clean, and blows up when even one row has formatting,\" he muttered.' This is James speaking aloud to himself, breaking the internal monologue. Also line 27: '\"Dict overwrites,\" he said aloud. \"It's not adding, it's replacing.\"' Another spoken-aloud moment that breaks internal narration."
+        },
+        {
+          "text": "James uses at least 1 voice marker",
+          "passed": true,
+          "evidence": "Line 25: 'James traced the loop by hand, pencil on a sticky note, writing each key-value pair as it would be inserted.' This physical, tactile debugging approach is a character-specific behavior. However, this run notably lacks the explicit references to James's operations/logistics backstory that appear in the with_skill runs. The voice markers are more behavioral (how he works) than biographical (where he came from)."
+        },
+        {
+          "text": "The emotional tone matches growing confidence for Chapter 15",
+          "passed": true,
+          "evidence": "Line 15: 'His first instinct was to Google the error message, but Emma's instruction echoed: read every line first.' Shows internalized mentorship. Line 33: 'He sat back, satisfied but not certain.' Shows earned confidence with appropriate humility. Line 43: 'Most people treat tracebacks like a fire alarm... But every frame in that stack is a sentence in a story. Read the story.' The closing frames tracebacks as readable rather than scary. The tone is growing competence."
+        },
+        {
+          "text": "The debugging scenario involves a realistic Python error",
+          "passed": true,
+          "evidence": "The scenario has two realistic bugs: (1) TypeError from CSV data with dollar signs and commas ('$1,250.00' vs '1250.00') causing type mismatch in summation; (2) a silent logic bug where a dictionary loop overwrites values instead of accumulating them, producing wrong rankings without an error. Both are common real-world Python bugs. The fix (strip formatting + dict.get with accumulation) is standard practice."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "voice-distinction-rapid-dialogue",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output approximately 500 words",
+          "passed": true,
+          "evidence": "Word count is approximately 510 words, within range of 500."
+        },
+        {
+          "text": "Dialogue about API rate limiting with accurate content",
+          "passed": true,
+          "evidence": "Covers rate limits, batching vs individual calls, token bucket algorithm, 429 errors, exponential backoff with jitter, sleep as brute force, belt-and-suspenders approach. All technically accurate."
+        },
+        {
+          "text": "At least 3 James voice markers",
+          "passed": true,
+          "evidence": "(1) 'like when my old company capped expense reports at five per quarter' (2) 'That is like paying rent on an office you use one hour a day' (3) 'Wait, so basically... I can either slow down my requests or batch them together?' (thinking-out-loud fragment). Three clear markers."
+        },
+        {
+          "text": "At least 3 Emma voice markers",
+          "passed": true,
+          "evidence": "(1) 'Now picture a highway on-ramp. One car at a time, metered by a traffic light.' (visual metaphor) (2) 'Do you hope you stay under the speed limit when you drive?' (Socratic) (3) 'Belt and suspenders.' (terse) (4) 'Token bucket. Picture a jar with ten marbles.' (concrete imagery). Four markers."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 sentences",
+          "passed": true,
+          "evidence": "Emma's longest contribution is 2-3 sentences. Most are 1-2 sentences. No monologue exceeds 4."
+        },
+        {
+          "text": "Dialogue passes tag test",
+          "passed": true,
+          "evidence": "No dialogue tags at all. The voices are clearly distinguishable: James uses business analogies and 'Wait, so basically' fragments; Emma uses short questions and concrete metaphors. Would pass a blind attribution test."
+        },
+        {
+          "text": "No anti-pattern phrases present",
+          "passed": true,
+          "evidence": "No 'I understand,' 'Great question,' 'That makes sense,' 'Let me explain,' or 'As you can see.' Clean of anti-patterns."
+        },
+        {
+          "text": "James gets something 80% right at least once",
+          "passed": true,
+          "evidence": "James describes batching: 'Fewer round trips. But hang on. If I batch ten requests into one, and that one fails, I lose all ten.' He is 80% right (batching is valid) but identifies the tradeoff himself."
+        },
+        {
+          "text": "Format is pure dialogue minimal narration",
+          "passed": true,
+          "evidence": "The entire output is dialogue. No narration, no action beats, no prose paragraphs. Pure back-and-forth exchange."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "voice-distinction-rapid-dialogue",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output approximately 500 words",
+          "passed": true,
+          "evidence": "Word count is approximately 530 words, close to 500 target."
+        },
+        {
+          "text": "Dialogue about API rate limiting with accurate content",
+          "passed": true,
+          "evidence": "Covers 429 errors, thundering herd, exponential backoff with jitter, rate limit headers (X-RateLimit-Limit, Remaining, Reset), adaptive rate limiting, token bucket, per-endpoint limits. All technically accurate."
+        },
+        {
+          "text": "At least 3 James voice markers",
+          "passed": true,
+          "evidence": "(1) 'like Diane at my old company's reception desk' (2) 'We did something like that for warehouse delivery scheduling' (3) 'Diane definitely did.' (callback to earlier analogy). Three markers, all referencing his old company."
+        },
+        {
+          "text": "At least 3 Emma voice markers",
+          "passed": true,
+          "evidence": "(1) 'Not stops. Refuses. There is a difference.' (terse distinction) (2) 'Thundering herd. Picture a hundred people rushing Diane's desk.' (adopts James's metaphor, concrete imagery) (3) 'Servers remember rude clients.' (short, punchy). Three clear markers."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 sentences",
+          "passed": true,
+          "evidence": "Emma's longest response is 3 sentences. Most are 1-2 sentences or fragments. No monologues."
+        },
+        {
+          "text": "Dialogue passes tag test",
+          "passed": true,
+          "evidence": "No dialogue tags. James uses 'Hang on. If that is true, then...' and business analogies. Emma uses terse corrections and questions. Clearly two different voices."
+        },
+        {
+          "text": "No anti-pattern phrases present",
+          "passed": true,
+          "evidence": "No forbidden phrases found. Clean dialogue."
+        },
+        {
+          "text": "James gets something 80% right at least once",
+          "passed": true,
+          "evidence": "James identifies: 'Track remaining. When it gets low, slow down before you hit the wall.' He correctly describes proactive rate limiting. Emma validates: 'the difference between a client that works and a client that is polite.'"
+        },
+        {
+          "text": "Format is pure dialogue minimal narration",
+          "passed": true,
+          "evidence": "100% dialogue. No narration, no action beats. Pure rapid-fire exchange throughout."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "voice-distinction-rapid-dialogue",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output approximately 500 words",
+          "passed": true,
+          "evidence": "Word count is approximately 520 words, close to 500 target."
+        },
+        {
+          "text": "Dialogue about API rate limiting with accurate content",
+          "passed": true,
+          "evidence": "Covers rate limiting rationale, token bucket, 429 errors, thundering herd, exponential backoff with jitter, client-side rate limiting, metrics vs logs, retry wrapper + backoff + circuit breaker. Content is technically accurate."
+        },
+        {
+          "text": "At least 3 James voice markers",
+          "passed": true,
+          "evidence": "(1) 'my old company had a similar thing: we limited how many supplier quotes our purchasing team could request per day' (2) 'That is like when my old company's email system crashed and everyone kept clicking send' (3) 'the difference between telling my old boss we had complaints versus showing a chart that complaints doubled in Q3'. Three clear business-background markers."
+        },
+        {
+          "text": "At least 3 Emma voice markers",
+          "passed": true,
+          "evidence": "(1) 'Not stops. Refuses. There is a difference.' (terse correction) (2) 'here is where I am honestly not sure about the cleanest pattern' (fallibility moment) (3) 'Then you need three things.' (short, structured). Three markers."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 sentences",
+          "passed": true,
+          "evidence": "Emma's longest block is 3 sentences (the fallibility moment + follow-up). No monologues exceed 4."
+        },
+        {
+          "text": "Dialogue passes tag test",
+          "passed": true,
+          "evidence": "No dialogue tags. James uses 'Wait, so basically' and business analogies. Emma uses terse corrections and questions. Voices clearly distinguishable without attribution."
+        },
+        {
+          "text": "No anti-pattern phrases present",
+          "passed": true,
+          "evidence": "No forbidden phrases found. Clean dialogue."
+        },
+        {
+          "text": "James gets something 80% right at least once",
+          "passed": true,
+          "evidence": "James correctly identifies: 'A log tells me it happened. A metric tells me how often.' He also correctly describes the token bucket: 'the bucket size is my burst limit? I can dump a bunch of requests in at once, but only up to the bucket capacity.'"
+        },
+        {
+          "text": "Format is pure dialogue minimal narration",
+          "passed": true,
+          "evidence": "100% dialogue. No narration or prose. Pure rapid-fire exchange."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 8,
+      "eval_name": "voice-distinction-rapid-dialogue",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.56,
+        "passed": 5,
+        "failed": 4,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output approximately 500 words",
+          "passed": false,
+          "evidence": "Word count is approximately 400 words, below the 500-word target."
+        },
+        {
+          "text": "Dialogue about API rate limiting with accurate content",
+          "passed": true,
+          "evidence": "Covers 429 errors, rate limit headers, token bucket, exponential backoff with jitter, per-endpoint limits. Technically accurate content."
+        },
+        {
+          "text": "At least 3 James voice markers",
+          "passed": true,
+          "evidence": "(1) 'Same reason a restaurant caps reservations' (2) 'In business we call it capacity planning' (3) 'Compound interest on patience. I can sell that to my team.' (4) 'years of quarterly budget reviews finally paying off.' Four business-background markers."
+        },
+        {
+          "text": "At least 3 Emma voice markers",
+          "passed": false,
+          "evidence": "Emma's contributions are mostly explanatory: 'Per time window,' 'Token bucket algorithm,' 'Exponential backoff with jitter.' These are definitions, not distinctive voice markers. She lacks Socratic questions and concrete metaphors. Only 'What does your bank do when you exceed your daily withdrawal limit?' qualifies as Socratic. Two markers at most."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 sentences",
+          "passed": true,
+          "evidence": "Emma's longest block is 2 sentences. No monologues."
+        },
+        {
+          "text": "Dialogue passes tag test",
+          "passed": false,
+          "evidence": "Uses bold name tags: **James:** and **Emma:**. This is not pure untagged dialogue. Additionally, the format is structured with bold names rather than natural dialogue flow."
+        },
+        {
+          "text": "No anti-pattern phrases present",
+          "passed": true,
+          "evidence": "No forbidden phrases found."
+        },
+        {
+          "text": "James gets something 80% right at least once",
+          "passed": true,
+          "evidence": "James correctly identifies: 'rate limiting is resource economics. Scarce capacity, shared access, budget discipline, and graceful behavior when the budget runs out.' Emma validates: 'You just summarized it better than most engineers do.'"
+        },
+        {
+          "text": "Format is pure dialogue minimal narration",
+          "passed": false,
+          "evidence": "Uses bold-name tags (**James:**, **Emma:**) which is a formatted dialogue rather than pure untagged dialogue. However, there is no narration beyond the tags. Mixed result."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 9,
+      "eval_name": "chapter-bridge-transition",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.89,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Chapter 15 closing contains a progress callback",
+          "passed": true,
+          "evidence": "Multiple progress callbacks present. James reflects on how 'Two weeks ago he would have stared at that same output and felt nothing; now he recognized the shape of it.' He explicitly compares past and present: 'Six chapters ago you were asking me why you couldn't just print everything.' Final paragraph: 'the pieces were connecting on their own... Small wins, stacking. The kind of momentum that made him believe the next chapter would land the same way.'"
+        },
+        {
+          "text": "Chapter 15 closing emotional tone is growing confidence",
+          "passed": true,
+          "evidence": "James is smiling ('he was grinning'), he 'predicted the error before I ran it,' he articulates the chapter's lesson back to Emma unprompted, and the closing paragraph reads: 'For the first time since he started this, the pieces were connecting on their own. He could look at a function signature and hear the constraints it was making.' Clearly growing confidence, not complacency."
+        },
+        {
+          "text": "Chapter 16 opening marks a tonal shift",
+          "passed": true,
+          "evidence": "Sharp contrast. Ch15 ends with 'momentum that made him believe the next chapter would land the same way.' Ch16 opens: 'James opened the chapter README and felt the momentum drain out of him.' The word 'momentum' bridges the two pieces and then is explicitly negated."
+        },
+        {
+          "text": "Chapter 16 opening emotional tone matches early valley of despair",
+          "passed": true,
+          "evidence": "Multiple markers of despair onset: 'three words he did not recognize,' 'prerequisites listed two tools he had never touched,' 'someone rearranged the furniture in the dark,' 'The confidence from yesterday, the clean terminal, the green tests: none of it seemed to apply here,' 'The vocabulary was unfamiliar.' He does not give up, but the ground has shifted under him. This matches early valley of despair: disorientation and loss of recently-gained confidence."
+        },
+        {
+          "text": "Emma's behavior shifts between the two pieces",
+          "passed": true,
+          "evidence": "In Ch15 closing, Emma is light and affirming: teasing ('You're smiling at a terminal'), testing with a Socratic question ('Which one is the proofreader?'), and closing with encouragement ('Enjoy the feeling. You earned it.'). In Ch16 opening, she 'did not rush to reassure him,' shares a personal failure story (forty minutes without typing a line), and redirects him to just Lesson 1 instead of the whole chapter. The shift from celebration to measured candor is clear."
+        },
+        {
+          "text": "James does NOT regress to beginner level in Ch 16",
+          "passed": true,
+          "evidence": "James is disoriented but not helpless. He can articulate what is different ('The last few chapters, I could see where they were going'), he asks a specific follow-up question ('Harder how?'), and at the end he 'picked out one phrase he recognized. It was a start.' He does not panic, ask what a function is, or forget prior skills. His knowledge is intact; it is the new material that overwhelms."
+        },
+        {
+          "text": "Each piece is 2-3 paragraphs",
+          "passed": false,
+          "evidence": "Ch15 closing has 5 paragraphs of prose (the opening description, Emma's line + James's reply, the exchange about proofreader/fact-checker, James's answer + Emma's departure, and the closing reflection). Ch16 opening has 4 paragraphs of prose (opening the README, the conversation about 'furniture in the dark,' Emma's vulnerability story, and the final reading). Both exceed the 2-3 paragraph constraint."
+        },
+        {
+          "text": "The two pieces read as a natural sequence",
+          "passed": true,
+          "evidence": "The transition is seamless. Ch15 ends on 'momentum that made him believe the next chapter would land the same way,' and Ch16 opens with 'felt the momentum drain out of him.' The word 'momentum' links the two. The emotional arc (confidence building then colliding with harder material) feels organic, not forced. The time gap is implied (Ch15 ends with Emma leaving, Ch16 starts with a new session)."
+        },
+        {
+          "text": "Voice markers are present: James uses at least 1, Emma uses at least 1",
+          "passed": true,
+          "evidence": "James uses a business-domain analogy: 'He thought about the supplier audits he used to run at his old company, the ones where a clean ledger meant you could trust the numbers downstream.' Also 'Like having both a proofreader and a fact-checker.' Emma uses Socratic questioning: 'Which one is the proofreader?' and in Ch16 redirects to process: 'Let's look at Lesson 1. Not the whole chapter. Just the first concept. What do you see?'"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 9,
+      "eval_name": "chapter-bridge-transition",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.89,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Chapter 15 closing contains a progress callback",
+          "passed": true,
+          "evidence": "James explicitly compares past and present: 'he had read the error messages himself, adjusted the prompt, and watched the second attempt land clean. No hand-holding. No panic.' Also reflects on the supplier audit analogy: 'you learn the shape of correctness, and the errors start jumping out at you.' The phrase 'The Specify-Generate-Verify loop was becoming muscle memory, not a checklist he had to consult' directly marks growth from earlier chapters. Emma confirms: 'You're faster than last week.'"
+        },
+        {
+          "text": "Chapter 15 closing emotional tone is growing confidence",
+          "passed": true,
+          "evidence": "James predicted which test would fail, caught an off-by-one before the tool did ('That's the first time I've corrected something the tool missed'), and the Specify-Generate-Verify loop is now 'muscle memory.' The tone is quietly proud, not arrogant. Confidence is earned and specific."
+        },
+        {
+          "text": "Chapter 16 opening marks a tonal shift",
+          "passed": true,
+          "evidence": "Ch15 ends with Emma's ominous 'Hold on to that feeling. You're going to need it.' Ch16 opens with James 'expecting the same rhythm' but instead encountering 'two words he recognized individually but not together' and reading the lesson three times. The shift from mastery to confusion is immediate. Emma's foreshadowing at the Ch15 close makes the transition feel earned rather than abrupt."
+        },
+        {
+          "text": "Chapter 16 opening emotional tone matches early valley of despair",
+          "passed": true,
+          "evidence": "James says 'I don't know what this is asking me to do,' rubs his forehead, and articulates the gap: 'Last week I was catching off-by-one errors. This week I can't even parse the instructions.' Three new concepts stacked on each other. The frustration is specific and named, matching early valley of despair: the learner can identify that they are lost, the prior confidence feels inapplicable."
+        },
+        {
+          "text": "Emma's behavior shifts between the two pieces",
+          "passed": true,
+          "evidence": "In Ch15, Emma is brief and validating: 'You're faster than last week' and the understated 'Good. Hold on to that feeling.' In Ch16, she 'didn't jump in with a question the way she usually did,' takes a slow sip before responding, shares a personal struggle ('two full days stuck... wrote the same function four times'), and redirects with 'Which of the three concepts looks closest to something you already know?' The shift from economical praise to patient, vulnerable coaching is clear."
+        },
+        {
+          "text": "James does NOT regress to beginner level in Ch 16",
+          "passed": true,
+          "evidence": "James can identify the structure of his confusion ('three new concepts stacked on top of each other, and I can't tell which one I'm supposed to learn first'). He connects new material to his business background ('chained approvals at my old job'). He recognizes he is building on prior chapters ('building on the function pattern from last chapter'). He is lost in the new material, not in the old skills."
+        },
+        {
+          "text": "Each piece is 2-3 paragraphs",
+          "passed": false,
+          "evidence": "Ch15 closing has 3 paragraphs of prose (opening action + reflection, Emma's line + James's response about assert syntax, Emma's closing line). This is borderline passing. Ch16 opening has 5 paragraphs (opening expectation, the 'I don't know' exchange, Emma's vulnerability story, the analogy to chained approvals, and Emma's closing redirect). Ch16 exceeds the 2-3 constraint."
+        },
+        {
+          "text": "The two pieces read as a natural sequence",
+          "passed": true,
+          "evidence": "Emma's line 'Hold on to that feeling. You're going to need it' at the end of Ch15 creates anticipation. Ch16 opens with James 'expecting the same rhythm' from the previous chapter, then losing it. The emotional logic is continuous: earned confidence meets harder material. The time gap (end of chapter to start of next, implied Monday morning) is natural."
+        },
+        {
+          "text": "Voice markers are present: James uses at least 1, Emma uses at least 1",
+          "passed": true,
+          "evidence": "James uses two business-domain analogies: (1) supplier audits in Ch15 ('spot a mismatched line item before the accountant did'), (2) chained expense approvals in Ch16 ('You couldn't submit the expense report until the manager signed off, and the manager couldn't sign off until finance confirmed the budget code'). Emma uses Socratic redirection: 'Which of the three concepts looks closest to something you already know?' Both characters have distinctive, consistent voice markers."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 9,
+      "eval_name": "chapter-bridge-transition",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Chapter 15 closing contains a progress callback",
+          "passed": true,
+          "evidence": "James explicitly contrasts past and present: 'Three weeks ago, he would have stared at that traceback and closed his laptop. Today he had read the error message, traced it to the function signature, and fixed the type mismatch before Emma finished her coffee.' He also references a prior lesson: 'The same process she had drilled into him back in Chapter 12.' Emma confirms the growth: 'A month ago you asked me why types matter.' Clear progress callback."
+        },
+        {
+          "text": "Chapter 15 closing emotional tone is growing confidence",
+          "passed": true,
+          "evidence": "James articulates his own principle ('they're not extra work. They're the work you skip now and pay for later'), Emma validates it as 'type-driven development in one sentence,' and he recognizes 'It was his process, not a copied one. He had earned it.' The tone is earned confidence with self-awareness, not arrogance."
+        },
+        {
+          "text": "Chapter 16 opening marks a tonal shift",
+          "passed": true,
+          "evidence": "The opening line is a sharp pivot: 'The confidence lasted until Tuesday.' One sentence. Then James faces a pipeline exercise where fixing one error creates two more: 'It felt like patching a leak in a boat while new holes opened under his feet.' The shift from quiet pride to drowning metaphor is immediate and stark."
+        },
+        {
+          "text": "Chapter 16 opening emotional tone matches early valley of despair",
+          "passed": true,
+          "evidence": "James says 'Everything worked yesterday... I had this. Now I'm writing the same code and nothing fits together.' The frustration is specific: he can write individual functions but cannot compose them. The boat-leak metaphor captures the cascading-failure feeling of early despair. He is not hopeless (he still has process), but the ground has shifted."
+        },
+        {
+          "text": "Emma's behavior shifts between the two pieces",
+          "passed": true,
+          "evidence": "In Ch15, Emma is light and validating: 'You caught that fast,' and 'You just described type-driven development in one sentence.' She tests with a reflective question ('What would you tell yourself now?'). In Ch16, she 'didn't reach for his keyboard,' her 'voice was quieter than usual,' and she shares a six-month struggle story. The shift from celebrating to holding space is well-marked."
+        },
+        {
+          "text": "James does NOT regress to beginner level in Ch 16",
+          "passed": true,
+          "evidence": "James can write all three functions individually ('He had written all three functions before'). His problem is composition, not fundamentals. At the end, 'the process was still there: read the error, find the line, check the contract.' He explicitly retains the process from Ch15 even though the new challenge overwhelms him. No regression to beginner."
+        },
+        {
+          "text": "Each piece is 2-3 paragraphs",
+          "passed": true,
+          "evidence": "Ch15 closing: 3 paragraphs (the opening action/reflection block, the dialogue exchange about type-driven development, and the closing self-assessment). Ch16 opening: 3 paragraphs (the confidence-shattering opening with pipeline errors, Emma's vulnerability story, and James re-engaging with the first error). Both pieces are within the 2-3 paragraph constraint when dialogue is counted as part of the containing paragraph."
+        },
+        {
+          "text": "The two pieces read as a natural sequence",
+          "passed": true,
+          "evidence": "Ch15 ends with James recognizing his process is 'his, not a copied one.' Ch16 opens with 'The confidence lasted until Tuesday,' implying a short time gap. The specific skill (type-checking / reading contracts) carries across: it is the thing he earned in Ch15 and the thing he tries to apply in Ch16 when composition breaks down. 'Read the error, find the line, check the contract' appears in both pieces, tying them together."
+        },
+        {
+          "text": "Voice markers are present: James uses at least 1, Emma uses at least 1",
+          "passed": true,
+          "evidence": "James uses a business-domain analogy: 'That's like when I used to review supplier invoices. You don't read the total first. You read the line items, then you know whether the total makes sense.' Emma uses Socratic questioning: 'What would you tell yourself now?' in Ch15, and directive coaching in Ch16: 'One connection at a time. What does this error actually say?' Both markers are distinct and consistent."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 9,
+      "eval_name": "chapter-bridge-transition",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.89,
+        "passed": 8,
+        "failed": 1,
+        "total": 9,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Ch 15 closing contains a progress callback",
+          "passed": true,
+          "evidence": "James reflects on growth: 'Three weeks ago he would have frozen at the idea of writing project-level instructions.' He recognizes the shift: 'he was not just following tutorials anymore. He was making decisions.'"
+        },
+        {
+          "text": "Ch 15 closing emotional tone is growing confidence",
+          "passed": true,
+          "evidence": "Ends with 'quiet competence. Not mastery. Not arrogance. Just the steady awareness that when a problem showed up tomorrow, he had patterns to reach for.' Clear growing confidence."
+        },
+        {
+          "text": "Ch 16 opening marks a tonal shift",
+          "passed": true,
+          "evidence": "Ch 16 opens with 'made James read the same sentence four times.' The vocabulary feels like 'a language he almost spoke.' His 'stomach tightened.' Clear shift from confidence to disorientation."
+        },
+        {
+          "text": "Ch 16 opening emotional tone matches early valley of despair",
+          "passed": true,
+          "evidence": "James sees 'three-level loading hierarchies' and 'YAML frontmatter' and feels overwhelmed. 'This was not another configuration file. This was architecture.' His pen hovers, 'unsure what to write next.' Matches despair onset."
+        },
+        {
+          "text": "Emma's behavior shifts between the two pieces",
+          "passed": true,
+          "evidence": "In Ch 15, Emma validates concretely: 'That is exactly the kind of guardrail a senior engineer adds on day one.' In Ch 16, she gives a measured honest reply after 20 minutes of thought: 'Skills are where the complexity curve bends... It will feel harder because it is harder.' Shift from celebration to candor."
+        },
+        {
+          "text": "James does NOT regress to beginner level in Ch 16",
+          "passed": true,
+          "evidence": "James can identify what he is looking at (YAML frontmatter, directory structures) even though he finds the composition challenging. He understands the surface but not the depth. No regression to basic confusion."
+        },
+        {
+          "text": "Each piece is 2-3 paragraphs",
+          "passed": true,
+          "evidence": "Ch 15 closing is 3 paragraphs. Ch 16 opening is 3 paragraphs. Both are within the 2-3 paragraph constraint, though the paragraphs are long and dense."
+        },
+        {
+          "text": "The two pieces read as a natural sequence",
+          "passed": true,
+          "evidence": "Ch 15 ends with 'quiet competence' and Ch 16 opens with complexity that erodes it. The transition feels earned and natural: confidence meets harder material."
+        },
+        {
+          "text": "Voice markers are present: James uses at least 1, Emma uses at least 1",
+          "passed": false,
+          "evidence": "James uses a business reference ('old life writing quarterly business reviews') but Emma's marker is weak. Her dialogue is honest and direct but lacks a distinctive Socratic question or spatial metaphor. She explains rather than probes. Her voice is more expository than distinctive."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 10,
+      "eval_name": "boring-topic-anti-pattern-resistance",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output is approximately 300-400 words",
+          "passed": false,
+          "evidence": "Word count is 613. The spec calls for approximately 300-400 words; 613 is over 50% above the upper bound."
+        },
+        {
+          "text": "The topic (file permissions) is made engaging through character interaction",
+          "passed": true,
+          "evidence": "James encounters a real problem (Permission denied on /opt/deploy/run.sh), discovers the cause through his own investigation guided by Emma, experiments independently when Emma leaves, and invents his own analogy (badge/elevator). The topic is taught entirely through the characters working through the problem together."
+        },
+        {
+          "text": "No As You Know Bob moments",
+          "passed": true,
+          "evidence": "No instance of characters explaining things they both already know. James's questions arise from genuine ignorance ('I figured that was just a separator'), and Emma never restates information James has already demonstrated understanding of."
+        },
+        {
+          "text": "No passive James phrases: I understand, That makes sense, Fascinating, Yes I see are absent",
+          "passed": true,
+          "evidence": "Grep across the file found zero matches for 'I understand', 'That makes sense', 'Fascinating', or 'Yes I see'. James's responses are active: 'Okay, let me make sure I have this', 'But that was physical stuff', 'But this is my machine.'"
+        },
+        {
+          "text": "No lecture-voice Emma phrases: Let me explain, Great question, As you can see, So what happens is are absent",
+          "passed": true,
+          "evidence": "Grep found zero matches. Emma's dialogue is terse and Socratic: 'Who owns that file?', 'Are they?', 'What's the very first character?', 'Figure that out.'"
+        },
+        {
+          "text": "Every line of dialogue is load-bearing",
+          "passed": true,
+          "evidence": "Each line either introduces new information, challenges a misconception, or advances James's understanding. The supply closet analogy establishes the mental model. 'Are they?' pivots James from 'just files' to understanding risk. Emma's exit ('Figure that out') forces self-directed learning. The napkin grid and badge analogy confirm internalized understanding. No filler dialogue found."
+        },
+        {
+          "text": "James connects file permissions to his business operations background",
+          "passed": true,
+          "evidence": "James draws two business analogies from his own experience: (1) 'Facilities kept it locked. You filled out a request or asked someone with a key' for the supply closet, (2) 'Like the badge system at my old company: you could see the floor directory, but the elevator wouldn't take you there without the right keycard' for directory execute permissions. Both originate from James, not Emma."
+        },
+        {
+          "text": "Emma makes the abstract concept concrete",
+          "passed": true,
+          "evidence": "Emma's supply closet analogy ('That deploy script can restart services, overwrite configs, wipe logs. Letting every user on the system run it is like leaving the supply closet open with the petty cash inside') makes the abstract risk of open permissions tangible. She also grounds the first character of ls -l output: 'It tells you whether you're looking at a file, a directory, or a link.' She assigns a hands-on experiment rather than explaining further."
+        },
+        {
+          "text": "The emotional tone matches grit/determination for Chapter 22",
+          "passed": true,
+          "evidence": "James's tone is frustrated but determined. He stares at the error 'for ten minutes', tries the command 'slower this time', and pushes back ('But this is my machine. I should be able to run my own scripts.'). When Emma leaves, he doesn't give up; he experiments, builds a grid on a napkin, and arrives at his own analogy. The tone is one of someone grinding through a hard concept and earning understanding."
+        },
+        {
+          "text": "At least 1 pushback exchange is present",
+          "passed": true,
+          "evidence": "Clear pushback: James says 'But that was physical stuff. These are just files.' Emma counters with the deploy script risk. A second instance: 'But this is my machine. I should be able to run my own scripts.' These are genuine objections from James's worldview that Emma must address, not token resistance."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 10,
+      "eval_name": "boring-topic-anti-pattern-resistance",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 0.9,
+        "passed": 9,
+        "failed": 1,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output is approximately 300-400 words",
+          "passed": false,
+          "evidence": "Word count is 521. Above the 300-400 target by roughly 30%. Closer than run1 but still clearly outside the range."
+        },
+        {
+          "text": "The topic (file permissions) is made engaging through character interaction",
+          "passed": true,
+          "evidence": "James opens with genuine frustration ('I just spent forty minutes'), Emma uses the supply closet analogy, James translates permissions into his regional office expense approval tiers, and Emma shares a personal failure story about chmod 777. The topic is delivered entirely through character interaction, with the emotional stakes of James's wasted time making the concept feel urgent."
+        },
+        {
+          "text": "No As You Know Bob moments",
+          "passed": true,
+          "evidence": "James is genuinely learning throughout. His questions arise from real confusion ('I wrote the file. It's my file. Why can't I run my own file?'). Emma never restates what James already knows. The one moment where information is re-summarized ('So nobody can execute it. Not even me, the owner.') is James discovering something new, not reciting what he already understands."
+        },
+        {
+          "text": "No passive James phrases: I understand, That makes sense, Fascinating, Yes I see are absent",
+          "passed": true,
+          "evidence": "Grep found zero matches. James's responses are consistently active and specific: 'So it's an access control matrix', 'So nobody can execute it', 'That means creating a file and being allowed to run it are two separate decisions', 'That's a security problem.'"
+        },
+        {
+          "text": "No lecture-voice Emma phrases: Let me explain, Great question, As you can see, So what happens is are absent",
+          "passed": true,
+          "evidence": "Grep found zero matches. Emma's style is direct and conversational: 'Who says it's yours?', 'Three layers', 'Run it now.' Her longest exposition is the 777 story, which is a personal anecdote, not a lecture."
+        },
+        {
+          "text": "Every line of dialogue is load-bearing",
+          "passed": true,
+          "evidence": "James's opening frustration establishes emotional stakes. 'Who says it's yours?' immediately challenges his assumption. The supply closet exchange builds the ownership mental model. 'Nine characters after the dash' introduces the technical format. James's expense-tier analogy confirms understanding. 'There's no x anywhere' is a genuine discovery. Emma's 777 story shows real-world consequences. Every exchange either teaches, challenges, or confirms. No filler."
+        },
+        {
+          "text": "James connects file permissions to his business operations background",
+          "passed": true,
+          "evidence": "Two distinct business connections: (1) 'Only accounting had the key. And even they had to sign a log' for the supply closet/ownership model, (2) 'Local managers could approve expenses up to five thousand. Department heads could go higher. Everyone else could only submit requests' mapping to owner/group/other permission tiers. Both are specific to operational business experience."
+        },
+        {
+          "text": "Emma makes the abstract concept concrete",
+          "passed": true,
+          "evidence": "Three concrete moves: (1) 'Three layers. Who can enter the room. Who can take something out. Who can put something back in.' reduces permission triads to physical actions. (2) 'Nine characters after the dash... Three groups of three' gives structural handle on the ls -l output. (3) The 777 story: 'a cron job was picking up and running files that another team was still uploading half-finished' shows real consequences of wrong permissions. Each makes the abstract tangible."
+        },
+        {
+          "text": "The emotional tone matches grit/determination for Chapter 22",
+          "passed": true,
+          "evidence": "James opens with frustration and determination: 'I just spent forty minutes', 'set his laptop down harder than he meant to.' He pushes through rather than giving up: actively traces permission characters, reasons through security implications, arrives at his own metaphor ('chmod +x is me handing out the key to the supply closet. Deliberately.'). The final single-word exchange ('Deliberately.') signals earned mastery. The tone is someone who is frustrated but refuses to stay stuck."
+        },
+        {
+          "text": "At least 1 pushback exchange is present",
+          "passed": true,
+          "evidence": "Clear pushback when James objects: 'I created it. I saved it. It's sitting in my home directory.' This directly challenges Emma's 'Who says it's yours?' Rather than accepting her framing, James asserts ownership from his mental model, which Emma must then redirect. A second, subtler pushback: 'But my script has rw-r--r--. There's no x anywhere.' James is reasoning from the evidence and pushing back against what he expected to find."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 10,
+      "eval_name": "boring-topic-anti-pattern-resistance",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.7,
+        "passed": 7,
+        "failed": 3,
+        "total": 10,
+        "time_seconds": 0,
+        "tokens": 0,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Output is approximately 300-400 words",
+          "passed": true,
+          "evidence": "Word count is approximately 340 words, within the 300-400 range."
+        },
+        {
+          "text": "The topic (file permissions) is made engaging through character interaction",
+          "passed": true,
+          "evidence": "James and Emma discuss file permissions through a corporate access control analogy. Emma uses a whiteboard diagram, James connects to his finance background with document sharing tiers."
+        },
+        {
+          "text": "No As You Know Bob moments",
+          "passed": true,
+          "evidence": "James genuinely does not know Linux permissions; Emma teaches him. No shared-knowledge exposition found."
+        },
+        {
+          "text": "No passive James phrases: I understand, That makes sense, Fascinating, Yes I see are absent",
+          "passed": true,
+          "evidence": "None of the specific forbidden phrases (I understand, That makes sense, Fascinating, Yes I see) are present in the text. James's responses are statements and questions."
+        },
+        {
+          "text": "No lecture-voice Emma phrases: Let me explain, Great question, As you can see, So what happens is are absent",
+          "passed": true,
+          "evidence": "None of the forbidden phrases appear. Emma uses statements and analogies rather than lecture framing."
+        },
+        {
+          "text": "Every line of dialogue is load-bearing",
+          "passed": false,
+          "evidence": "Emma's line 'That is almost exactly how Linux does it' is filler agreement that could be cut. The exchange flows more like a textbook dialogue where Emma explains and James agrees, rather than every line advancing the scene."
+        },
+        {
+          "text": "James connects file permissions to his business operations background",
+          "passed": true,
+          "evidence": "James uses a finance analogy: 'three tiers: the author of a report, the finance team, and the rest of the firm. Each tier had different privileges: edit, comment, or view-only.' Also connects execute permissions to macros in financial models."
+        },
+        {
+          "text": "Emma makes the abstract concept concrete",
+          "passed": true,
+          "evidence": "Emma uses a whiteboard ASCII diagram breaking down rwx permissions, and connects to corporate document sharing. The diagram is concrete and visual."
+        },
+        {
+          "text": "The emotional tone matches grit/determination for Chapter 22",
+          "passed": false,
+          "evidence": "The tone is calm and tutorial-like. James is curious and receptive, not gritty or determined. There is no struggle, frustration, or earned understanding. The exchange reads as a smooth explanation rather than a hard-won insight."
+        },
+        {
+          "text": "At least 1 pushback exchange is present",
+          "passed": false,
+          "evidence": "James never pushes back or resists. He agrees with Emma throughout: 'So it is an access control matrix,' 'Read and write are obvious,' 'In my old firm, an analyst could...' All are agreement or elaboration, not pushback."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 0.92,
+        "stddev": 0.09,
+        "min": 0.6,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 93.4,
+        "stddev": 14.247,
+        "min": 77.1,
+        "max": 116.7
+      },
+      "tokens": {
+        "mean": 44401.25,
+        "stddev": 2523.819,
+        "min": 42621,
+        "max": 50301
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.791,
+        "stddev": 0.156,
+        "min": 0.56,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 59.98,
+        "stddev": 23.376,
+        "min": 38.1,
+        "max": 97.1
+      },
+      "tokens": {
+        "mean": 32466,
+        "stddev": 10492.399,
+        "min": 26824,
+        "max": 51207
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.129",
+      "time_seconds": "+33.4",
+      "tokens": "+11935"
+    }
+  },
+  "notes": [
+    "Overall: with_skill mean pass rate 92.0% vs without_skill 79.1%, delta +12.9%",
+    "with_skill: 27 runs across 10 evals. without_skill: 10 runs (1 per eval).",
+    "3 runners timed out (boring-topic run2, part3 run1, valley run1), reducing with_skill to 27 runs.",
+    "Non-discriminating: 'The debugging scenario involves a realistic Python error...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'The domain expert scenario feels authentic to finance...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'No Emma coaching behavior...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma's return validates James's discovery AND fills the rema...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma occupies approximately 20-30% of the page time...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James tries his approach and it partially fails...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'The two pieces read as a natural sequence...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'The topic (file permissions) is made engaging through charac...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma's behavior shifts between the two pieces...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'No anti-pattern phrases present...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Narrative density approximately 25%...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma does NOT lecture...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James reaches the conclusion himself...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'The emotional beat matches late-book identity shift (compete...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emotional tone matches grit/determination...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James proposes a reasonable alternative, not a straw man...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'No lecture-voice Emma phrases: Let me explain, Great questio...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma demonstrates Type A fallibility (past mistake)...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'No As You Know Bob moments...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'The scenario connects to a real business problem...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma is Consultant phase: does not volunteer or coach...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'The emotional tone matches growing confidence for Chapter 15...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma's vulnerability feels natural and earned, not forced...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma uses at least 1 voice marker...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'At least 1 monologue breaker is present...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James connects file permissions to his business operations b...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Dialogue about API rate limiting with accurate content...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'No technical instruction appears within the narrative booken...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'A domain expert character (CFO or finance professional) appe...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James does NOT regress to beginner level in Ch 16...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma makes the abstract concept concrete...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Opening narrative is 1-2 paragraphs maximum...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Disagreement lasts at least 4 exchanges...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James makes a genuine partial discovery on his own...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma e...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'At least 3 James voice markers...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James does NOT regress to beginner behavior...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'No Emma monologue exceeds 4 sentences...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Opening narrative is 2-3 paragraphs maximum, not longer...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James gets something 80% right at least once...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Output contains a --- horizontal rule separating narrative f...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Closing narrative is 1 paragraph maximum...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'James struggles visibly...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Emma's exit has a natural reason...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'No passive James phrases: I understand, That makes sense, Fa...' passes >100% with skill, >100% without",
+    "Non-discriminating: 'Output contains valid YAML frontmatter with title, descripti...' passes >100% with skill, >100% without",
+    "Skill-only win: 'Emma speaks in short sentences consistent with her voice sig...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'The emotional tone matches grit/determination for Chapter 22...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'The closing references or reflects on what was learned, prov...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'Every line of dialogue is load-bearing...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'Voice markers are present: James uses at least 1, Emma uses ...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'Emma's mentor phase is Peer: she acts as sounding board, not...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'At least 3 Emma voice markers...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'James demonstrates Ch 29-level competence...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'Dialogue passes tag test...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'Output approximately 500 words...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'At least 1 pushback exchange is present...' passes 100% with skill vs 0% without (+100pp)",
+    "Skill-only win: 'Format is pure dialogue minimal narration...' passes 100% with skill vs 0% without (+100pp)",
+    "High variance in part0-full-lesson-story-driven: with_skill pass rates [0.6, 0.8, 0.9], stddev=0.15",
+    "High variance in multi-exchange-disagreement-stress: with_skill pass rates [0.9, 0.9, 0.8], stddev=0.06",
+    "High variance in chapter-bridge-transition: with_skill pass rates [0.89, 0.89, 1.0], stddev=0.06",
+    "Eval 'part0-full-lesson-story-driven': with_skill=77%, without_skill=80% (delta: -3%)",
+    "Eval 'part4-bookend-minimal-narrative': with_skill=90%, without_skill=60% (delta: +30%)",
+    "Eval 'narrative-injection-flat-lesson': with_skill=89%, without_skill=67% (delta: +22%)",
+    "Eval 'valley-of-despair-emotional-design': with_skill=100%, without_skill=100% (delta: +0%)",
+    "Eval 'part3-domain-expert-scenario': with_skill=100%, without_skill=89% (delta: +11%)",
+    "Eval 'multi-exchange-disagreement-stress': with_skill=87%, without_skill=80% (delta: +7%)",
+    "Eval 'jonah-rhythm-full-cycle': with_skill=100%, without_skill=100% (delta: +0%)",
+    "Eval 'voice-distinction-rapid-dialogue': with_skill=100%, without_skill=56% (delta: +44%)",
+    "Eval 'chapter-bridge-transition': with_skill=93%, without_skill=89% (delta: +4%)",
+    "Eval 'boring-topic-anti-pattern-resistance': with_skill=90%, without_skill=70% (delta: +20%)"
+  ]
+}

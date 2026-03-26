@@ -1,0 +1,94 @@
+{
+  "expectations": [
+    {
+      "text": "Chapter 15 closing contains a progress callback",
+      "passed": true,
+      "evidence": "Multiple progress callbacks present. James reflects on how 'Two weeks ago he would have stared at that same output and felt nothing; now he recognized the shape of it.' He explicitly compares past and present: 'Six chapters ago you were asking me why you couldn't just print everything.' Final paragraph: 'the pieces were connecting on their own... Small wins, stacking. The kind of momentum that made him believe the next chapter would land the same way.'"
+    },
+    {
+      "text": "Chapter 15 closing emotional tone is growing confidence",
+      "passed": true,
+      "evidence": "James is smiling ('he was grinning'), he 'predicted the error before I ran it,' he articulates the chapter's lesson back to Emma unprompted, and the closing paragraph reads: 'For the first time since he started this, the pieces were connecting on their own. He could look at a function signature and hear the constraints it was making.' Clearly growing confidence, not complacency."
+    },
+    {
+      "text": "Chapter 16 opening marks a tonal shift",
+      "passed": true,
+      "evidence": "Sharp contrast. Ch15 ends with 'momentum that made him believe the next chapter would land the same way.' Ch16 opens: 'James opened the chapter README and felt the momentum drain out of him.' The word 'momentum' bridges the two pieces and then is explicitly negated."
+    },
+    {
+      "text": "Chapter 16 opening emotional tone matches early valley of despair",
+      "passed": true,
+      "evidence": "Multiple markers of despair onset: 'three words he did not recognize,' 'prerequisites listed two tools he had never touched,' 'someone rearranged the furniture in the dark,' 'The confidence from yesterday, the clean terminal, the green tests: none of it seemed to apply here,' 'The vocabulary was unfamiliar.' He does not give up, but the ground has shifted under him. This matches early valley of despair: disorientation and loss of recently-gained confidence."
+    },
+    {
+      "text": "Emma's behavior shifts between the two pieces",
+      "passed": true,
+      "evidence": "In Ch15 closing, Emma is light and affirming: teasing ('You're smiling at a terminal'), testing with a Socratic question ('Which one is the proofreader?'), and closing with encouragement ('Enjoy the feeling. You earned it.'). In Ch16 opening, she 'did not rush to reassure him,' shares a personal failure story (forty minutes without typing a line), and redirects him to just Lesson 1 instead of the whole chapter. The shift from celebration to measured candor is clear."
+    },
+    {
+      "text": "James does NOT regress to beginner level in Ch 16",
+      "passed": true,
+      "evidence": "James is disoriented but not helpless. He can articulate what is different ('The last few chapters, I could see where they were going'), he asks a specific follow-up question ('Harder how?'), and at the end he 'picked out one phrase he recognized. It was a start.' He does not panic, ask what a function is, or forget prior skills. His knowledge is intact; it is the new material that overwhelms."
+    },
+    {
+      "text": "Each piece is 2-3 paragraphs",
+      "passed": false,
+      "evidence": "Ch15 closing has 5 paragraphs of prose (the opening description, Emma's line + James's reply, the exchange about proofreader/fact-checker, James's answer + Emma's departure, and the closing reflection). Ch16 opening has 4 paragraphs of prose (opening the README, the conversation about 'furniture in the dark,' Emma's vulnerability story, and the final reading). Both exceed the 2-3 paragraph constraint."
+    },
+    {
+      "text": "The two pieces read as a natural sequence",
+      "passed": true,
+      "evidence": "The transition is seamless. Ch15 ends on 'momentum that made him believe the next chapter would land the same way,' and Ch16 opens with 'felt the momentum drain out of him.' The word 'momentum' links the two. The emotional arc (confidence building then colliding with harder material) feels organic, not forced. The time gap is implied (Ch15 ends with Emma leaving, Ch16 starts with a new session)."
+    },
+    {
+      "text": "Voice markers are present: James uses at least 1, Emma uses at least 1",
+      "passed": true,
+      "evidence": "James uses a business-domain analogy: 'He thought about the supplier audits he used to run at his old company, the ones where a clean ledger meant you could trust the numbers downstream.' Also 'Like having both a proofreader and a fact-checker.' Emma uses Socratic questioning: 'Which one is the proofreader?' and in Ch16 redirects to process: 'Let's look at Lesson 1. Not the whole chapter. Just the first concept. What do you see?'"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "total": 9,
+    "pass_rate": 0.89
+  },
+  "execution_metrics": {},
+  "timing": {},
+  "claims": [
+    {
+      "claim": "The narrative operates at 65% density as indicated by the metadata comment",
+      "type": "quality",
+      "verified": false,
+      "evidence": "The metadata comment states '65% density' but there is no way to objectively measure narrative density from the output alone. The prose is reasonably detailed but the claim is unverifiable."
+    },
+    {
+      "claim": "James has a business background (supplier audits, old company)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Consistent character detail. James references 'supplier audits he used to run at his old company' in Ch15 closing. This is used as an analogy device and feels integrated into the character."
+    },
+    {
+      "claim": "Emma rarely shares personal failures",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The text explicitly marks this: 'She didn't talk about her own failures often' in Ch16. When she does share (the forty-minute story), it functions as a mentor vulnerability moment, making the rarity meaningful."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Each piece is 2-3 paragraphs",
+        "reason": "This assertion is mechanically clear but conflicts with the other assertions. Achieving a progress callback, voice markers, Socratic exchange, vulnerability moment, and tonal shift within 2-3 paragraphs per piece is extremely tight. The constraint should either be loosened (3-5 paragraphs) or clarified to mean 'narrative paragraphs excluding dialogue exchanges.' As written, nearly any output with genuine dialogue will fail this."
+      },
+      {
+        "reason": "No assertion checks whether James's business-domain analogies are consistent across runs (he always draws from the same professional background). Character consistency across the bridge is an important quality signal that could be tested."
+      }
+    ],
+    "overall": "The paragraph-count assertion creates tension with the quality assertions. Otherwise the eval set is well-targeted: it checks both emotional arc and character-level behavior, not just surface features."
+  }
+}

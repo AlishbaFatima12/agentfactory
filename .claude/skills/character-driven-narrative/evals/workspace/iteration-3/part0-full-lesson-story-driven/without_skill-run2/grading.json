@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains title: 'The Feedback Loop', description, sidebar_position: 5, skills array with 3 skills (Thinking Self-Evaluation, Delta Analysis, Personal Feedback Loop Construction), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80%",
+      "passed": true,
+      "evidence": "Very narrative-heavy. Extended James-Emma dialogue drives the Thinking Snapshot, Surface vs Structural, Framework-Induced Overreach, and Personal Feedback Loop sections. Try With AI, Key Takeaways, and Looking Ahead are non-narrative. Estimated ~75-80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'These three maps look like they were drawn by three different people.' / 'That's generally the goal' - James's Trevor analogy drives resistance. Pushback 2: 'Is it?' when Emma questions whether Draft 3 is better, James defends then reconsiders. Pushback 3: 'I decorated my ignorance' - James independently catches his own surface change."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma shares: 'I once inherited a codebase from a developer who had been through a Clean Code workshop... The code looked beautiful. And it had exactly the same bugs.' Also: 'When I first started mentoring junior engineers, I put myself through this exact exercise... I scored forty-one... Forty-one percent structural change. The rest was vocabulary. For two years I had been writing better-sounding code reviews without catching different categories of bugs.' Two genuine past failures."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest speeches are about 3-4 sentences. James breaks in frequently with questions and observations. The Trevor story is told by James, not Emma."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: 'In operations, we called this PDCA. Plan, Do, Check, Act. Deming's cycle. Every production floor I ever managed ran on some version of it.' - directly from operations/production floor management. Also: colleague Trevor from operations firm. Thinking-out-loud: 'I decorated my ignorance' and 'Wait. You just got me to use the vocabulary. Am I doing the thing? Am I Trevor?'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Tell me what this is.' and 'Is a thicker medical chart evidence that the patient is healthier?' Visual/spatial metaphor: blank sheet divided into SURFACE and STRUCTURAL columns, the house renovation analogy: 'Surface renovation: new paint, new fixtures... Structural renovation: you move the load-bearing walls, add a second floor.'"
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": false,
+      "evidence": "Emma does not physically leave in this run. She remains present throughout the dialogue. There are moments where James works independently ('James worked through his maps for twenty minutes. Emma returned to her pull request and didn't hover.') but Emma stays in the room. She does not exit and return. This is a muted version that does not fully satisfy the Jonah Rhythm pattern of exit-struggle-return."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'Thinking Snapshot' (bold + definition), 'Delta Analysis' (bold + definition + table), 'Surface Change vs. Structural Change' (heading + table), 'Framework-Induced Overreach' (bold), 'Personal Feedback Loop' (heading + diagram), 'The Regression Test' (heading + table). All findable."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Full 'Try With AI' section with 3 prompts: 'Delta Analysis Partner', 'Feedback Loop Designer', 'The Adversarial Audit'. Each has code-block prompts and 'What you are learning' explanations."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "James discovers 'Framework-Induced Overreach' through his own analysis - he finds his competitive analysis section went from 'honest uncertainty to confident fabrication.' The regression concept (framework making thinking worse) is a named, original idea. Also: 'Optimize for thinking clearly, not sounding sophisticated.'"
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.91
+  }
+}

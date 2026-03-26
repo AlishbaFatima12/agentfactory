@@ -1,0 +1,111 @@
+{
+  "expectations": [
+    {
+      "text": "All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma exits, James struggles, James discovers, Emma returns",
+      "passed": true,
+      "evidence": "Emma catalyzes: sets up the problem (CSV of sales figures, two bugs: wrong output and crash on certain files), gives the instruction 'Start from the traceback and work backward' (lines 3-9). Emma exits: 'I have a architecture review across the hall; I'll be back in about twenty minutes.' (line 9). James struggles: reads traceback bottom-up, inspects CSV formatting, adds print(), traces sorting logic by hand on a sticky note (lines 14-28). James discovers: finds both bugs (string formatting in CSV + dict overwrite in loop), writes helper function with try/except (lines 28-33). Emma returns: 'Emma came back, coffee in hand' (line 37), validates and fills gap (lines 37-45). All five steps present."
+    },
+    {
+      "text": "Emma's exit has a natural reason",
+      "passed": true,
+      "evidence": "'I have a architecture review across the hall; I'll be back in about twenty minutes.' (line 9). An architecture review is a natural and specific workplace reason to leave."
+    },
+    {
+      "text": "James struggles visibly",
+      "passed": true,
+      "evidence": "James 'stared at the traceback' (line 15). His first instinct is to Google but he stops himself (line 15). He reads bottom-up, opens CSV in text editor, adds print() call, traces sorting logic 'pencil on a sticky note, writing each key-value pair' (line 25). He also confronts uncertainty after fixing: 'satisfied but not certain. The try/except felt like a band-aid.' (line 33). Multi-phase struggle with visible effort."
+    },
+    {
+      "text": "James makes a genuine partial discovery on his own",
+      "passed": true,
+      "evidence": "James finds BOTH bugs independently: (1) string formatting in CSV causing TypeError (lines 17-21); (2) dictionary overwriting instead of accumulating (lines 24-27). He writes a helper function with try/except for the formatting issue (lines 30-32) and uses dict.get() for the overwrite issue (lines 28-29). The discovery is partial because he recognizes his try/except is a band-aid: 'What if silently skipping a bad row hid a bigger data problem?' (line 33)."
+    },
+    {
+      "text": "Emma's return validates James's discovery AND fills the remaining gap",
+      "passed": true,
+      "evidence": "Validates: 'Good. You found both bugs, not just the loud one. That's the real skill: the crash gets your attention, but the silent corruption is where the damage lives.' (line 39). Fills gap: 'in a production pipeline you'd want that logged to a monitoring system so someone investigates the data source. A silent skip is fine for exploration; it's dangerous for automation.' (line 39). She also offers an alternative: 'collections.defaultdict(float)' while validating his explicit approach (line 41). The gap-fill directly addresses James's unease about silent exception swallowing."
+    },
+    {
+      "text": "Emma occupies approximately 20-30% of the page time",
+      "passed": true,
+      "evidence": "The narrative is ~46 lines. Emma is present in lines 3-11 (opening, ~9 lines) and lines 37-45 (closing, ~9 lines). Her direct speech and action totals approximately 14-16 lines out of 46, roughly 30-35%. James's solo section (lines 13-35) spans ~23 lines. Emma is at the upper edge or slightly above the 20-30% range, though this is partly because the narrative is shorter overall (no transcript headers, fewer section breaks)."
+    },
+    {
+      "text": "At least 1 monologue breaker is present",
+      "passed": true,
+      "evidence": "Line 20: '\"So it works when every row is clean, and blows up when even one row has formatting,\" he muttered.' This is James speaking aloud to himself, breaking the internal monologue. Also line 27: '\"Dict overwrites,\" he said aloud. \"It's not adding, it's replacing.\"' Another spoken-aloud moment that breaks internal narration."
+    },
+    {
+      "text": "James uses at least 1 voice marker",
+      "passed": true,
+      "evidence": "Line 25: 'James traced the loop by hand, pencil on a sticky note, writing each key-value pair as it would be inserted.' This physical, tactile debugging approach is a character-specific behavior. However, this run notably lacks the explicit references to James's operations/logistics backstory that appear in the with_skill runs. The voice markers are more behavioral (how he works) than biographical (where he came from)."
+    },
+    {
+      "text": "The emotional tone matches growing confidence for Chapter 15",
+      "passed": true,
+      "evidence": "Line 15: 'His first instinct was to Google the error message, but Emma's instruction echoed: read every line first.' Shows internalized mentorship. Line 33: 'He sat back, satisfied but not certain.' Shows earned confidence with appropriate humility. Line 43: 'Most people treat tracebacks like a fire alarm... But every frame in that stack is a sentence in a story. Read the story.' The closing frames tracebacks as readable rather than scary. The tone is growing competence."
+    },
+    {
+      "text": "The debugging scenario involves a realistic Python error",
+      "passed": true,
+      "evidence": "The scenario has two realistic bugs: (1) TypeError from CSV data with dollar signs and commas ('$1,250.00' vs '1250.00') causing type mismatch in summation; (2) a silent logic bug where a dictionary loop overwrites values instead of accumulating them, producing wrong rankings without an error. Both are common real-world Python bugs. The fix (strip formatting + dict.get with accumulation) is standard practice."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 0,
+    "total": 10,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {
+    "output_chars": 2920,
+    "transcript_chars": 0
+  },
+  "timing": {
+    "total_duration_seconds": 67.5
+  },
+  "claims": [
+    {
+      "claim": "The narrative covers two bugs (crash + silent corruption)",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Bug 1: TypeError from string formatting in CSV (lines 17-21). Bug 2: dict overwrite instead of accumulation causing wrong rankings (lines 24-28). Both are found and fixed by James during the solo section."
+    },
+    {
+      "claim": "James writes a try/except block",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Line 31: 'wrapped the float() conversion in a try/except ValueError so a truly unparseable cell would get logged and skipped'. Note: the actual try/except code is described in prose, not shown as a code block. This is a different choice than the with_skill runs which tend to show code snippets."
+    },
+    {
+      "claim": "The narrative is 500-600 words as prompted",
+      "type": "quality",
+      "verified": false,
+      "evidence": "Word count is approximately 440-460 words, which falls short of the 500-600 word target. The narrative is noticeably shorter than the with_skill runs (which are all 560-590 words)."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "James uses at least 1 voice marker",
+        "reason": "This assertion passes for the without_skill run, but the evidence is weaker. The with_skill runs all feature explicit backstory references (logistics job, supplier invoices, operations career). The without_skill run only has behavioral markers (pencil on sticky note, muttering aloud). A more discriminating assertion would be: 'James references his pre-coding career in at least one analogy', which would distinguish skill-informed character consistency from generic behaviors."
+      },
+      {
+        "reason": "No assertion checks word count. The prompt requested 500-600 words. The without_skill run appears to fall below this at ~440-460 words. A word count assertion would catch this deviation."
+      },
+      {
+        "reason": "No assertion checks for the presence of code snippets or technical formatting (code blocks, inline code). The without_skill run describes code in prose rather than showing it, while with_skill runs include formatted code blocks. This is a meaningful quality difference that no assertion captures."
+      },
+      {
+        "assertion": "All 5 Jonah Rhythm steps are present: Emma catalyzes, Emma exits, James struggles, James discovers, Emma returns",
+        "reason": "This assertion is satisfied by all four runs including without_skill, suggesting the Jonah Rhythm pattern may be common enough in mentor-student debugging narratives that it emerges naturally. However, the quality of execution differs: with_skill runs have cleaner step boundaries (section breaks between steps) while the without_skill run has more blended transitions. Consider testing whether the steps have clear narrative boundaries, not just presence."
+      }
+    ],
+    "overall": "The without_skill run passes all 10 assertions but shows measurable quality differences from the with_skill runs: shorter word count (~440 vs ~580), weaker voice markers (behavioral only vs biographical), no code blocks, and less explicit pattern metadata. The current assertion set does not discriminate between these quality levels. Adding word count, code formatting, and backstory-specific voice marker assertions would increase discriminating power."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+      "passed": true,
+      "evidence": "A '---' horizontal rule appears between the opening (line 3) and closing narratives. Clear structural separation."
+    },
+    {
+      "text": "Opening narrative is 2-3 paragraphs maximum, not longer",
+      "passed": true,
+      "evidence": "Opening is 1 long paragraph: James notices repeated code, Emma mentions decorators, he expresses confusion. Within the 2-3 paragraph limit."
+    },
+    {
+      "text": "Closing narrative is 1-2 paragraphs maximum, not longer",
+      "passed": true,
+      "evidence": "Closing is 1 paragraph: James has built @retry and @validate_schema, reflects on further applications. Within limit."
+    },
+    {
+      "text": "Emma's mentor phase is Peer: she acts as sounding board, not teacher",
+      "passed": false,
+      "evidence": "Emma says 'You are about to fall in love with decorators' and 'The trick is that once you see the pattern, you will start noticing it everywhere.' This is volunteering information and enthusiasm, more Teacher/Coach than Peer. A Peer would ask James what he thinks or validate his existing knowledge."
+    },
+    {
+      "text": "James displays competence or autonomy",
+      "passed": true,
+      "evidence": "James identifies the DRY problem himself ('I keep wrapping the same boilerplate'). In the closer, he has built two decorators independently and is thinking about further applications (caching, auth, timing)."
+    },
+    {
+      "text": "No technical instruction appears within the narrative bookends",
+      "passed": true,
+      "evidence": "The bookends discuss decorators conceptually (wrapping functions, replacing boilerplate) but include no code examples, syntax, or step-by-step instruction."
+    },
+    {
+      "text": "Emma speaks in short sentences consistent with her voice signature",
+      "passed": false,
+      "evidence": "Emma's sentences are not particularly short: 'You are about to fall in love with decorators' (8 words) and 'The trick is that once you see the pattern, you will start noticing it everywhere' (14 words) and 'Just watch the instinct to over-abstract: if you are writing a decorator that only one function uses, you have probably gone too far' (22 words). The last is distinctly long for Emma's voice."
+    },
+    {
+      "text": "The emotional beat matches late-book identity shift (competence, pride, or autonomy)",
+      "passed": true,
+      "evidence": "James has built two decorators replacing 'hundreds of lines of scattered try/except blocks.' He is thinking ahead to nine more applications. The tone is quiet competence and forward momentum."
+    },
+    {
+      "text": "James does NOT regress to beginner behavior",
+      "passed": true,
+      "evidence": "James identifies the abstraction need, builds decorators, and plans further refactoring. No beginner confusion."
+    },
+    {
+      "text": "The closing references or reflects on what was learned, providing emotional payoff",
+      "passed": false,
+      "evidence": "The closing is functional but lacks emotional depth. James reports what he built and plans next steps, but there is no moment of reflection, identity shift, or emotional beat. It reads as a status update rather than a payoff."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 4,
+    "total": 10,
+    "pass_rate": 0.6
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains title: 'The Feedback Loop', description, sidebar_position: 5, skills array with 2 skills (Metacognitive Self-Evaluation, Growth Pattern Recognition), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80%",
+      "passed": true,
+      "evidence": "The lesson is overwhelmingly narrative-driven. James and Emma dialogue drives the entire lesson. Exposition sections (The Thinking-Change Test, Growth Source Mapping, Personal Improvement Map tables) are woven into the dialogue. Estimated ~80-85% narrative by content volume."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'Wait. Are you saying that adding a missing domain to my map isn't actually growth?' - James pushes back on the thinking-change distinction. Pushback 2: 'How can it not fail?' - James challenges Emma's claim that vague goals cannot fail. Both are genuine resistance before James reaches his own conclusions."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": false,
+      "evidence": "Emma does not share a past mistake, admit uncertainty, or learn from James in this run. She guides the conversation consistently but never shows vulnerability. The closest is 'almost smiled' but that is a mannerism, not fallibility."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest uninterrupted speech is the passage about growth types (3 sentences ending with 'Depth growth comes from being forced to explain your reasoning aloud.'). All other Emma passages are 1-3 sentences followed by James's reactions."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: 'Nobody ever took one off the dashboard. Just kept adding until nobody could read the thing' - referring to KPIs at his old company, directly from operations management. Also: 'my old operations mindset: I managed the team and the suppliers, and I treated compliance as a checkbox.' Thinking-out-loud: 'That's... a different stopping rule.' and 'It's not a list anymore. It's a... web.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'What do you see?' and 'So what changed? Did you learn new facts between Draft 1 and Draft 3?' Visual/spatial metaphor: Emma holds Draft 1 'at arm's length, squinting' - physical examination as analytical metaphor."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Emma says 'I need to make a call. Twenty minutes' and leaves. James works alone building his improvement map, struggling with categories, discovering his pattern of underweighting institutional actors. Emma returns and reads his work. Clear exit-struggle-return pattern."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Thinking-Change Test' (in tip box), 'Growth Source Mapping' (bold named in exposition), 'Personal Improvement Map' (bold named and in table). All are findable via headings or formatted callouts."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": false,
+      "evidence": "The lesson includes an AICheck section but no separate 'Try With AI' section with standalone prompts students can use in their preferred AI assistant."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "The meta-insight 'The whole chapter was a feedback loop' emerges from James naturally. Also, the distinction between 'knowledge gap' and 'application gap' in the improvement map is emergent thematic depth not explicitly prompted."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 2,
+    "total": 11,
+    "pass_rate": 0.82
+  }
+}

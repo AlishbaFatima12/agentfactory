@@ -1,0 +1,69 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains sidebar_position: 5, title: 'The Feedback Loop', description present, skills array with 2 skills (Metacognitive Self-Assessment, Evidence-Based Reflection), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "Extensive narrative sections: opening scene, The Measurement Problem dialogue, the Artifact Comparison scene, Transfer Test with James alone, The Honest Assessment scene with attribution discussion. Instructional blocks (Artifact Comparison table, Transfer Test rules, Honest Assessment questions, Tabs with scenarios) are present but subordinate to narrative. Approximately 70-75% narrative. Slightly lower than 80% due to the detailed exercise structure with Tabs component and multiple instructional blocks."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'I'm better at this. I can feel it.' / Then later: 'Draft 1 has five feedback loops and half of them don't even connect properly. Draft 3 has eight, and every single one has a mechanism explanation.' James resists Emma's 'Prove it' by citing evidence. Pushback 2: 'Does it matter? I improved.' James resists investigating the mechanism of his improvement. Pushback 3: 'There's always one more trap.' James pushes back humorously on the difficulty cascade."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma learning from James: 'That's a better way to put it than I would have,' she said. 'The mechanism of your own improvement. I'll steal that framing.' This shows Emma acknowledging James produced a better formulation than she would have, a genuine moment of learning from the student."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Checked all Emma speech blocks. The longest is 3-4 sentences in the Measurement Problem explanation. All are followed by James reacting within the limit."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": false,
+      "evidence": "Thinking-out-loud fragments present: 'Two things... First, I learned what a feedback loop actually is.' and internal reflection passages. However, no explicit business analogy from James's operations background is present. He discusses the banking/healthcare scenarios but these are exercise content, not analogies drawn from his prior career in operations or logistics."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'You also spent four exercises on the same scenario... The question isn't whether your map got better. The question is whether your thinking got better.' Visual/spatial metaphor: Emma draws 'two circles' on a napkin representing James on Day 1 and James now, with an arrow creating a visual feedback loop diagram."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Clear Jonah Rhythm in the Transfer Test: Emma says 'I need to check on something. Before I go, I want you to try something.' and 'She grabbed her coffee... She walked out.' James works alone: 'James stared at the blank page. A new scenario. No safety net. He picked up his pen.' He produces a map in 10 minutes with a genuine feedback loop. 'James was still writing when Emma came back.' She evaluates his work."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Measurement Problem' (H3 header), 'The Artifact Comparison' (Part 1 header), 'The Transfer Test' (Part 2 header with rules), 'The Honest Assessment' (Part 3 header with questions), 'Metacognitive Calibration' (bold in closing). The closing section names the real skill explicitly. All findable by scanning."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Try With AI section with 3 prompts in :::tip blocks: 'The Blind Spot Finder', 'The Mechanism Challenger', and 'The Transfer Predictor'. Each has code block prompts and 'What you're learning' explanation."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "'The Measurement Problem' is a genuinely emergent named concept: 'the act of learning a framework changes how you perceive your own thinking, making honest self-assessment harder, not easier.' This names a specific metacognitive paradox (knowing more makes you a worse judge of your past performance) that goes beyond what the prompt requested. It's a reusable concept for any self-assessment context. Additionally, 'Metacognitive Calibration' in the closing is a named emergent concept."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.91
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Strong run. The Measurement Problem concept is a particularly insightful emergent idea. The only failure is the missing business analogy from James's operations background."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Narrative density approximately 25%",
+      "passed": true,
+      "evidence": "Output is narrative opener (2 paragraphs, ~230 words) + HTML comments marking technical body + narrative closer (1 paragraph, ~60 words). Structure matches 25% density with bookends only."
+    },
+    {
+      "text": "A domain expert character (CFO or finance professional) appears",
+      "passed": true,
+      "evidence": "Priya Menon, introduced as 'the CFO he had been shadowing for the last two weeks.' Clear domain expert character."
+    },
+    {
+      "text": "The domain expert scenario feels authentic to finance",
+      "passed": true,
+      "evidence": "Scenario involves a model 'handed off four times in eighteen months,' formulas like '=B14-(C14*$F$8),' broken formulas from row insertion, wrong numbers in a board deck. Authentic financial modeling failure mode."
+    },
+    {
+      "text": "Emma is Consultant phase: does not volunteer or coach",
+      "passed": true,
+      "evidence": "Emma does not appear in the output. The narrative is entirely carried by Priya and James. Correct for Consultant phase."
+    },
+    {
+      "text": "Opening narrative is 1-2 paragraphs maximum",
+      "passed": true,
+      "evidence": "Opening has 2 paragraphs: (1) Priya's problem statement with the spreadsheet, (2) James scanning the sheet and asking his question. Plus Priya's instruction paragraph. Within 1-2 main paragraph blocks."
+    },
+    {
+      "text": "Closing narrative is 1 paragraph maximum",
+      "passed": true,
+      "evidence": "Closer is one paragraph: 'When Priya returned, James turned his laptop toward her.' Single paragraph with Priya's reaction and next challenge."
+    },
+    {
+      "text": "No Emma coaching behavior",
+      "passed": true,
+      "evidence": "Emma is entirely absent. No coaching, no questions, no volunteering information."
+    },
+    {
+      "text": "James demonstrates Ch 29-level competence",
+      "passed": true,
+      "evidence": "James can read formulas (identifies =B14-(C14*$F$8)), understands the Named Range architecture problem, and builds Named Ranges with Inp_ prefix. He operates at the lesson's expected level."
+    },
+    {
+      "text": "The scenario connects to a real business problem",
+      "passed": true,
+      "evidence": "The business problem is concrete: model handed off 4 times, each analyst adds complexity, broken formulas discovered at board deck. The CFO's frustration is grounded in real finance workflow failures."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  }
+}

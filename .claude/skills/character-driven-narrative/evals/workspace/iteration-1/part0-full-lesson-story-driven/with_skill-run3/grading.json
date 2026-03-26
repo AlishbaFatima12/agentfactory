@@ -1,0 +1,92 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter present lines 1-78 with title: 'The Feedback Loop', description present, sidebar_position: 5, skills array with 2 entries (Self-Evaluation of Thinking, Growth Measurement), and learning_objectives array with 2 entries."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "The lesson is strongly narrative-driven. James/Emma dialogue carries nearly every concept. The main non-narrative blocks are: the Growth Delta table (lines 137-142), the exercise steps template (lines 182-191), the deliverable info boxes (lines 243-244), Try With AI prompts (lines 313-367), and the AICheck block. The dialogue dominates the body content (lines 84-407) with the structured sections woven into the narrative. Estimated narrative density is approximately 78-82%."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "(1) Lines 101-107: James directly pushes back: 'What do you mean? The second map is obviously better. More domains, more feedback loops, connections I completely missed the first time.' He defends his initial assessment before Emma's time-vs-framework argument changes his mind. (2) Lines 207-209: James resists: 'Why would it lose anything? Draft 3 is the improved version.' He defends the assumption that later work is always better, before discovering Draft 1 had something Draft 3 lost. (3) Lines 103-107: James proposes the supplier revision analogy as an alternative explanation before accepting Emma's framework-vs-repetition distinction."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Lines 234-235: 'I learned something similar on a project three years ago... We had a perfectly structured system design. Every component documented, every interface defined. And we missed that our users hated it, because \"user frustration\" didn't fit into any of our architecture diagrams. Spent two months rebuilding.' This is a concrete admission of past professional failure."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": false,
+      "evidence": "Lines 234-239: Emma delivers 7 consecutive sentences without James reacting: (1) 'I learned something similar on a project three years ago,' (2) 'We had a perfectly structured system design.' (3) 'Every component documented, every interface defined.' (4) 'And we missed that our users hated it, because user frustration didn't fit into any of our architecture diagrams.' (5) 'Spent two months rebuilding.' Then narration 'She set her tea down.' followed by (6) 'Frameworks are lenses.' (7) 'Every lens sharpens some things and blurs others.' James does not react until after all 7 sentences. This exceeds the 4-sentence limit."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy from operations: Lines 97-99: 'In his previous career running operations for a mid-size logistics company' with specific analogy: 'We'd slap Lean terminology on the same old process... Call our bottlenecks \"constraints\" and our meetings \"stand-ups\" and pat ourselves on the back.' Also lines 227-228: supplier evaluation analogy with the boss overriding spreadsheets because 'The spreadsheet doesn't measure trust.' Thinking-out-loud: Lines 221-231: James sits alone and reasons through the supplier analogy internally, culminating in 'Draft 1 had trust in it. Draft 3 had structure. The best analysis, James realized, needed both.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Why is it weak?' (line 113) directed at James to discover the answer himself. Also 'So how do I know which improvements came from the framework and which ones just came from... doing it again?' is James's but Emma prompts it. Visual/spatial metaphor: 'Frameworks are lenses. Every lens sharpens some things and blurs others.' (lines 238-239) is a clear visual/spatial metaphor using optics to explain framework tradeoffs."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Lines 215-238: Emma says 'I'll be back in ten minutes. Write down what Draft 1 had that Draft 3 lost.' She leaves to refill tea (line 217). James sits alone (line 221: 'James sat alone with both maps. The kitchen was quiet.'), struggles with the realization about trust vs structure (lines 222-231), and writes his key insight. Emma returns (line 233: 'When Emma came back, she read what he wrote')."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name that a reader could find without reading dialogue",
+      "passed": true,
+      "evidence": "Key concepts have standalone names: 'Growth Delta' (bolded on line 133, section header line 125), 'Three sources of improvement: Repetition, Framework, External Feedback' (table on lines 137-142), 'Growth Delta Report' (deliverable box line 243). The three-source taxonomy is clearly labeled and tabulated."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Lines 313-367: 'Try With AI' section with 3 prompts: Prompt 1 (The Blind Spot Finder, lines 317-333), Prompt 2 (The Source Separator, lines 335-351), Prompt 3 (The Transfer Test, lines 353-367). Each includes copy-paste prompt blocks and 'What you are learning' explanations."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 1,
+    "total": 10,
+    "pass_rate": 0.9
+  },
+  "claims": [
+    {
+      "claim": "The lesson teaches that frameworks can remove valuable pre-framework instincts",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Lines 211-231: James discovers Draft 1 had a community impact note that Draft 3 lost. The lesson explicitly teaches that frameworks both sharpen and narrow thinking, culminating in James's insight: 'Frameworks improve thinking. They do not replace it.'"
+    },
+    {
+      "claim": "The three-source taxonomy (Repetition, Framework, External Feedback) is original to this lesson",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The taxonomy is introduced, defined with examples, and applied through James's classification exercise. It provides a genuinely useful analytical tool for self-evaluation."
+    },
+    {
+      "claim": "James's operations background informs his analysis throughout",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The Lean/Six Sigma analogy (lines 97-99), supplier evaluation analogy (lines 227-228), and the boss overriding spreadsheets story (line 228) all connect James's professional history to the lesson's concepts."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+        "reason": "The boundary between 'Emma speaks' and 'narration describes Emma's action' is ambiguous. In the failing passage, 'She set her tea down' is narration, not dialogue, but it does not constitute James reacting. Consider clarifying: does narrator description of Emma's physical actions count as a break, or must James speak/act?"
+      },
+      {
+        "reason": "No assertion checks whether the lesson successfully teaches the concept of 'what frameworks take away' (framework blind spots). Run 3 is the only run that deeply explores this idea (Draft 1 had trust, Draft 3 lost it), and it is arguably the lesson's most valuable pedagogical contribution. An assertion like 'The lesson identifies at least one way frameworks can worsen thinking' would catch this."
+      }
+    ],
+    "overall": "Run 3 is the strongest output across all runs. The single failure (Emma monologue length) is a close call. The lesson's pedagogical depth, especially the framework-as-lens insight and the trust-vs-structure discovery, exceeds what the current assertions measure."
+  }
+}

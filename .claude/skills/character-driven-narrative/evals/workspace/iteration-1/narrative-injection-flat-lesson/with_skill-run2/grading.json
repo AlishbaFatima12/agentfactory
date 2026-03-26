@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "All original technical content is preserved exactly: the 4 commands (/help, /clear, /compact, /cost), the Reading Files section, and the Making Edits section",
+      "passed": true,
+      "evidence": "All 4 commands present: '/help -- Shows available commands', '/clear -- Clears conversation history', '/compact -- Summarizes and compresses context', '/cost -- Shows token usage for the session' (uses em-dash characters instead of double-hyphens, a minor formatting difference). Reading Files reference paragraph preserved: 'Claude Code can read any file on your machine. Simply ask it to read a file and it will use the Read tool automatically. You do not need to specify the tool -- just describe what you want.' Making Edits reference paragraph preserved: 'To edit files, describe the change you want. Claude Code will use the Edit tool to make precise string replacements. Always review the diff before accepting.' Also includes the CLI intro line: 'Claude Code is a CLI tool that runs in your terminal. To start it, type `claude` in your terminal.'"
+    },
+    {
+      "text": "Narrative density is approximately 65%",
+      "passed": false,
+      "evidence": "Narrative density is approximately 87.2% (888 narrative words out of 1018 total). Only 130 words (12.8%) are technical reference content. Far above the ~65% target. The narrative significantly outweighs the technical content."
+    },
+    {
+      "text": "Contains a narrative opening (2-3 paragraphs) before the technical content begins",
+      "passed": true,
+      "evidence": "Opens with 5 narrative paragraphs before the first technical block: (1) 'James opened his laptop and stared at the desktop...', (2) '\"You look stuck,\" Emma said...', (3) '\"I installed it. I ran through the checklist...\"', (4) '\"Open your terminal. Type `claude`.\"', (5) 'James typed it. The interface loaded.' These establish James's frustration with the lack of GUI and set up the learning context."
+    },
+    {
+      "text": "Contains a narrative closing that bridges to a hypothetical next section",
+      "passed": true,
+      "evidence": "Emma bridges explicitly: '\"Next section, we'll talk about how Claude Code handles context, the thing that `/compact` was managing. You'll need to understand that before your sessions get longer.\"' This connects directly to a logical next topic and motivates why it matters."
+    },
+    {
+      "text": "At least 1 pushback exchange where James questions or resists something about the tool",
+      "passed": true,
+      "evidence": "James pushes back on making edits out of caution: '\"What if it breaks something?\"' This is genuine resistance born from prior experience, not just a question. He also expresses skepticism about the tool's simplicity: '\"I half-expected it to rewrite the whole file. In my last job, our automated tools would 'fix' one thing and silently change three others.\"'"
+    },
+    {
+      "text": "James uses at least 1 voice marker (business analogy OR thinking-out-loud fragment)",
+      "passed": true,
+      "evidence": "Business analogy: '\"So it's like when my old team used to do a five-minute standup at the start of every meeting instead of replaying the entire last meeting. Catch everyone up in shorthand.\"' (re: /compact). Also uses business framing for editing: '\"What did you do at your old job when someone handed you a contract revision?\" \"Read the redline. Checked every change before signing.\"'"
+    },
+    {
+      "text": "Emma uses at least 1 voice marker (Socratic question OR short precise sentences)",
+      "passed": true,
+      "evidence": "Socratic question: '\"What's the first thing you'd do if someone handed you a new piece of software at work and said 'figure it out'?\"' Also: '\"What did you do at your old job when someone handed you a contract revision?\"' Short precise sentences: '\"Close enough.\"' and '\"Most people do.\"' and '\"Try it.\"'"
+    },
+    {
+      "text": "No As You Know Bob moments",
+      "passed": true,
+      "evidence": "No instances of characters explaining shared knowledge to each other. Emma uses Socratic method (questions James to draw out his own understanding) rather than lecturing. James's prior knowledge is from corporate software, not from AI/CLI tools, so every explanation is genuinely new information for him. Emma's personal anecdote about the config change that reformatted a file is presented as a confession, not something James already knew."
+    },
+    {
+      "text": "Technical content remains findable and readable by a reader who skips all dialogue",
+      "passed": true,
+      "evidence": "Technical content is under clear markdown headers: '### Basic Commands' (with bullet list), '### Reading Files' (with reference paragraph), '### Making Edits' (with reference paragraph). The reference paragraphs are standalone sentences that read as documentation. A reader scanning for headers and bulleted content would find all technical information without needing to parse dialogue."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "total": 9,
+    "pass_rate": 0.89
+  },
+  "timing": {
+    "total_duration_seconds": 94.2
+  },
+  "claims": [
+    {
+      "claim": "James has prior experience with dashboards and GUIs from corporate work",
+      "type": "quality",
+      "verified": true,
+      "evidence": "'At my old company, every tool had a dashboard. A sidebar. Something to click.' Consistent characterization throughout."
+    },
+    {
+      "claim": "Emma uses Socratic method to teach",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Multiple instances: 'What's the first thing you'd do...?', 'What did you do at your old job when someone handed you a contract revision?', 'How big is your terminal's memory?' She asks before explaining."
+    },
+    {
+      "claim": "James independently catches a problem in his work",
+      "type": "quality",
+      "verified": true,
+      "evidence": "'Two were correct. The third had changed a heading he hadn't intended to touch. \"Caught it before I accepted,\" he said.' Shows James applying the review habit independently."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Narrative density is approximately 65%",
+        "reason": "Same issue as all runs: density is ~87%, far above 65%. The eval prompt says '65% density' but provides no mechanism to enforce it. All runs overshoot substantially."
+      },
+      {
+        "reason": "Run 2 uses em-dash characters in the command list ('--') while other runs use double-hyphens ('--'). The 'preserved exactly' assertion passes both, but if there was a specific original format, one of these is a modification. Worth specifying the exact source text in the eval."
+      }
+    ],
+    "overall": "Strong output. The Socratic questioning and James's independent mistake-catching are particularly effective. Density is the only failure, and it is systemic across all runs."
+  }
+}

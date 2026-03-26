@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Ch 15 closing contains a progress callback",
+      "passed": true,
+      "evidence": "James reflects on growth: 'Three weeks ago he would have frozen at the idea of writing project-level instructions.' He recognizes the shift: 'he was not just following tutorials anymore. He was making decisions.'"
+    },
+    {
+      "text": "Ch 15 closing emotional tone is growing confidence",
+      "passed": true,
+      "evidence": "Ends with 'quiet competence. Not mastery. Not arrogance. Just the steady awareness that when a problem showed up tomorrow, he had patterns to reach for.' Clear growing confidence."
+    },
+    {
+      "text": "Ch 16 opening marks a tonal shift",
+      "passed": true,
+      "evidence": "Ch 16 opens with 'made James read the same sentence four times.' The vocabulary feels like 'a language he almost spoke.' His 'stomach tightened.' Clear shift from confidence to disorientation."
+    },
+    {
+      "text": "Ch 16 opening emotional tone matches early valley of despair",
+      "passed": true,
+      "evidence": "James sees 'three-level loading hierarchies' and 'YAML frontmatter' and feels overwhelmed. 'This was not another configuration file. This was architecture.' His pen hovers, 'unsure what to write next.' Matches despair onset."
+    },
+    {
+      "text": "Emma's behavior shifts between the two pieces",
+      "passed": true,
+      "evidence": "In Ch 15, Emma validates concretely: 'That is exactly the kind of guardrail a senior engineer adds on day one.' In Ch 16, she gives a measured honest reply after 20 minutes of thought: 'Skills are where the complexity curve bends... It will feel harder because it is harder.' Shift from celebration to candor."
+    },
+    {
+      "text": "James does NOT regress to beginner level in Ch 16",
+      "passed": true,
+      "evidence": "James can identify what he is looking at (YAML frontmatter, directory structures) even though he finds the composition challenging. He understands the surface but not the depth. No regression to basic confusion."
+    },
+    {
+      "text": "Each piece is 2-3 paragraphs",
+      "passed": true,
+      "evidence": "Ch 15 closing is 3 paragraphs. Ch 16 opening is 3 paragraphs. Both are within the 2-3 paragraph constraint, though the paragraphs are long and dense."
+    },
+    {
+      "text": "The two pieces read as a natural sequence",
+      "passed": true,
+      "evidence": "Ch 15 ends with 'quiet competence' and Ch 16 opens with complexity that erodes it. The transition feels earned and natural: confidence meets harder material."
+    },
+    {
+      "text": "Voice markers are present: James uses at least 1, Emma uses at least 1",
+      "passed": false,
+      "evidence": "James uses a business reference ('old life writing quarterly business reviews') but Emma's marker is weak. Her dialogue is honest and direct but lacks a distinctive Socratic question or spatial metaphor. She explains rather than probes. Her voice is more expository than distinctive."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "total": 9,
+    "pass_rate": 0.89
+  }
+}

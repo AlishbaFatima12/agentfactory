@@ -1,0 +1,91 @@
+{
+  "expectations": [
+    {
+      "text": "Chapter 15 closing contains a progress callback",
+      "passed": true,
+      "evidence": "James explicitly compares past and present: 'he had read the error messages himself, adjusted the prompt, and watched the second attempt land clean. No hand-holding. No panic.' Also reflects on the supplier audit analogy: 'you learn the shape of correctness, and the errors start jumping out at you.' The phrase 'The Specify-Generate-Verify loop was becoming muscle memory, not a checklist he had to consult' directly marks growth from earlier chapters. Emma confirms: 'You're faster than last week.'"
+    },
+    {
+      "text": "Chapter 15 closing emotional tone is growing confidence",
+      "passed": true,
+      "evidence": "James predicted which test would fail, caught an off-by-one before the tool did ('That's the first time I've corrected something the tool missed'), and the Specify-Generate-Verify loop is now 'muscle memory.' The tone is quietly proud, not arrogant. Confidence is earned and specific."
+    },
+    {
+      "text": "Chapter 16 opening marks a tonal shift",
+      "passed": true,
+      "evidence": "Ch15 ends with Emma's ominous 'Hold on to that feeling. You're going to need it.' Ch16 opens with James 'expecting the same rhythm' but instead encountering 'two words he recognized individually but not together' and reading the lesson three times. The shift from mastery to confusion is immediate. Emma's foreshadowing at the Ch15 close makes the transition feel earned rather than abrupt."
+    },
+    {
+      "text": "Chapter 16 opening emotional tone matches early valley of despair",
+      "passed": true,
+      "evidence": "James says 'I don't know what this is asking me to do,' rubs his forehead, and articulates the gap: 'Last week I was catching off-by-one errors. This week I can't even parse the instructions.' Three new concepts stacked on each other. The frustration is specific and named, matching early valley of despair: the learner can identify that they are lost, the prior confidence feels inapplicable."
+    },
+    {
+      "text": "Emma's behavior shifts between the two pieces",
+      "passed": true,
+      "evidence": "In Ch15, Emma is brief and validating: 'You're faster than last week' and the understated 'Good. Hold on to that feeling.' In Ch16, she 'didn't jump in with a question the way she usually did,' takes a slow sip before responding, shares a personal struggle ('two full days stuck... wrote the same function four times'), and redirects with 'Which of the three concepts looks closest to something you already know?' The shift from economical praise to patient, vulnerable coaching is clear."
+    },
+    {
+      "text": "James does NOT regress to beginner level in Ch 16",
+      "passed": true,
+      "evidence": "James can identify the structure of his confusion ('three new concepts stacked on top of each other, and I can't tell which one I'm supposed to learn first'). He connects new material to his business background ('chained approvals at my old job'). He recognizes he is building on prior chapters ('building on the function pattern from last chapter'). He is lost in the new material, not in the old skills."
+    },
+    {
+      "text": "Each piece is 2-3 paragraphs",
+      "passed": false,
+      "evidence": "Ch15 closing has 3 paragraphs of prose (opening action + reflection, Emma's line + James's response about assert syntax, Emma's closing line). This is borderline passing. Ch16 opening has 5 paragraphs (opening expectation, the 'I don't know' exchange, Emma's vulnerability story, the analogy to chained approvals, and Emma's closing redirect). Ch16 exceeds the 2-3 constraint."
+    },
+    {
+      "text": "The two pieces read as a natural sequence",
+      "passed": true,
+      "evidence": "Emma's line 'Hold on to that feeling. You're going to need it' at the end of Ch15 creates anticipation. Ch16 opens with James 'expecting the same rhythm' from the previous chapter, then losing it. The emotional logic is continuous: earned confidence meets harder material. The time gap (end of chapter to start of next, implied Monday morning) is natural."
+    },
+    {
+      "text": "Voice markers are present: James uses at least 1, Emma uses at least 1",
+      "passed": true,
+      "evidence": "James uses two business-domain analogies: (1) supplier audits in Ch15 ('spot a mismatched line item before the accountant did'), (2) chained expense approvals in Ch16 ('You couldn't submit the expense report until the manager signed off, and the manager couldn't sign off until finance confirmed the budget code'). Emma uses Socratic redirection: 'Which of the three concepts looks closest to something you already know?' Both characters have distinctive, consistent voice markers."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "total": 9,
+    "pass_rate": 0.89
+  },
+  "execution_metrics": {},
+  "timing": {},
+  "claims": [
+    {
+      "claim": "Emma foreshadows difficulty at the end of Ch15 with 'You're going to need it'",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The line appears at Ch15 closing and directly sets up the Ch16 emotional shift. It functions as a narrative bridge device, connecting the two pieces thematically."
+    },
+    {
+      "claim": "James uses the Specify-Generate-Verify loop",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Explicitly mentioned: 'The Specify-Generate-Verify loop was becoming muscle memory, not a checklist he had to consult.' This references a pedagogical concept from the curriculum."
+    },
+    {
+      "claim": "Emma rarely shares personal struggle stories",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Marked explicitly: 'She didn't volunteer stories like that often.' When she does share (writing the same function four times), it is treated as notable by James ('Four times?'), reinforcing its rarity."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Each piece is 2-3 paragraphs",
+        "reason": "Same structural issue as run1. The Ch16 opening consistently runs longer because it must establish disorientation, include Emma's vulnerability moment, and show James beginning to re-engage. 2-3 paragraphs is too tight for the emotional work the other assertions demand. Consider either increasing to 3-5 or specifying 'prose blocks' vs 'dialogue exchanges' separately."
+      }
+    ],
+    "overall": "Run2 adds a subtle narrative device (Emma's foreshadowing line bridging the two pieces) that no assertion specifically tests for. An assertion about 'thematic or narrative linkage between the two pieces beyond emotional tone' could distinguish outputs that merely juxtapose two moods from outputs that connect them."
+  }
+}

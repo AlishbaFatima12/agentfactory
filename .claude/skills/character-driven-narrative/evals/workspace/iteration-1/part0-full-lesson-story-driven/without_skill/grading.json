@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "YAML frontmatter present with title 'The Feedback Loop', description, sidebar_position: 5, skills array (2 entries: Thinking Self-Evaluation, Feedback Loop Construction), learning_objectives array (2 entries)."
+    },
+    {
+      "text": "Narrative density is approximately 80%",
+      "passed": false,
+      "evidence": "Substantial non-narrative blocks: Key Takeaways (5 bullet points), Regression Test table, Delta Analysis steps, Try With AI section (3 prompts), AICheck block, Looking Ahead section. Estimated narrative density 60-65%, below the 80% target."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Exchange 1: James says Draft 3 is 'obviously better' and Emma challenges with 'Does a longer email prove someone communicates better?' Exchange 2: James discovers Framework-Induced Overreach in his own regulatory chain and pushes back on the framework itself: 'So the cascade map format itself pushed me to fake expertise I don't have?'"
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": true,
+      "evidence": "Emma says 'Mine was embarrassingly bad, actually. I scored everything as structural because I didn't understand the distinction yet.' Clear admission of past inadequacy."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest uninterrupted block is 3-4 sentences in the Personal Feedback Loop section. James interjects with PDCA analogy. No monologue exceeds 4 sentences."
+    },
+    {
+      "text": "James uses at least 1 business analogy and 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: 'In operations, we called this a PDCA cycle. Plan, Do, Check, Act.' Also references Lean, Six Sigma, OKRs from his logistics career. Thinking-out-loud: 'I keep looking at my map and my revised map and I can't tell if I actually got better at thinking or if I just got better at drawing maps.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Does a longer email prove someone communicates better?' Visual/spatial metaphor: 'Think of it like a building renovation. Surface change is repainting the walls. Structural change is moving the load-bearing walls.'"
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence",
+      "passed": false,
+      "evidence": "No clear Emma exit-and-return. Emma is present throughout the lesson. James does have independent moments of discovery but Emma does not physically leave and come back."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without dialogue",
+      "passed": true,
+      "evidence": "Concepts have headers/bold names: 'Thinking Snapshot' (h3), 'Delta Analysis' (h2), 'Framework-Induced Overreach' (bold), 'Personal Feedback Loop' (h2). All findable via scanning."
+    },
+    {
+      "text": "The lesson includes a Try With AI section",
+      "passed": true,
+      "evidence": "Try With AI section with 3 prompts: Delta Analysis Assistant, Feedback Loop Builder, The Honest Adversary. Each with copy-paste prompt and learning explanation."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 2,
+    "total": 10,
+    "pass_rate": 0.8
+  }
+}
