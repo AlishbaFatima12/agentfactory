@@ -1,0 +1,97 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains a --- horizontal rule separating narrative from where direct instruction would go",
+      "passed": true,
+      "evidence": "Two '---' horizontal rules present: one at line 17 after the opening narrative, and one at line 23 before the closing narrative. Between them, HTML comments explicitly mark the instruction zone: '<!-- DIRECT INSTRUCTION SECTION GOES HERE -->' with additional detail about what belongs there (lines 19-22)."
+    },
+    {
+      "text": "Opening narrative is 2-3 paragraphs maximum, not longer",
+      "passed": true,
+      "evidence": "The opening (lines 1-16) has three prose paragraph blocks interspersed with dialog: (1) 'James typed git log --oneline...' (lines 3-4), (2) dialog exchange about copying decorators and the spreadsheet macro analogy (lines 5-9), (3) Emma's challenge and James's realization about the @ syntax (lines 10-16). Compact scene at ~16 lines with 3 narrative blocks."
+    },
+    {
+      "text": "Closing narrative is 1-2 paragraphs maximum, not longer",
+      "passed": false,
+      "evidence": "The closing (lines 25-38) contains 3 distinct paragraph blocks: (1) 'When Emma came back, James had three decorators...' through his debugging story (lines 28-30), (2) Emma's question about metaprogramming and James's answer about the readability line (lines 32-34), (3) 'Emma almost smiled...' exchange where James claims independent thinking (lines 36-38). This is 14 lines across 3+ blocks, exceeding the 1-2 paragraph limit."
+    },
+    {
+      "text": "Emma's mentor phase is Peer: she acts as sounding board, not teacher",
+      "passed": true,
+      "evidence": "Emma's role is consistently peer-level. She asks reflective questions: 'So what changed?' (line 8). She validates without explaining: 'You already know what it does. You just haven't said it out loud yet' (line 11) -- she believes he already has the knowledge. She challenges rather than teaches: 'Go prove it. Write a decorator from scratch, no copying' (line 15). In the closing, she poses a higher-order design question: 'At what point does metaprogramming stop being useful and start being clever for its own sake?' (line 32). She never explains a concept."
+    },
+    {
+      "text": "James displays competence or autonomy: he initiates, makes decisions, or demonstrates mastery",
+      "passed": true,
+      "evidence": "James reviews his own git log showing productive commits (line 3). He independently diagnoses his own gap: 'I need to stop copying @login_required and understand what the @ actually does' (line 9). He reasons through the concept himself: 'A decorator is just a function that wraps another function. The @ is syntax sugar for reassigning the name' (line 13). He builds three decorators, writes tests, and debugs a @wraps issue independently (lines 28-30). He articulates a design principle unprompted about the metaprogramming line (line 34)."
+    },
+    {
+      "text": "No technical instruction appears within the narrative bookends",
+      "passed": true,
+      "evidence": "The opening discusses decorators conceptually through dialog (James reasoning about the @ syntax, connecting to higher-order functions from Chapter 44) but provides no code examples, syntax tutorials, or structured instruction. The closing summarizes what James built and a debugging experience but does not teach how. The HTML comments between bookends explicitly state 'The entire technical lesson body... lives between these two rules. A reader who skips both bookends loses no technical content.' (lines 19-22)."
+    },
+    {
+      "text": "Emma speaks in short sentences consistent with her voice signature",
+      "passed": true,
+      "evidence": "Emma's dialog: 'So what changed?' (3 words), 'You already know what it does. You just haven't said it out loud yet.' (two short sentences), 'Go prove it. Write a decorator from scratch, no copying. I'll be back in fifteen.' (three short sentences), 'Good. You found that yourself.' (5 words), 'That's not something I told you.' (7 words). Consistently terse. Her longest contribution (line 32) is two sentences, the second being a question."
+    },
+    {
+      "text": "The emotional beat matches late-book identity shift (competence, pride, or autonomy)",
+      "passed": true,
+      "evidence": "The closing builds to an autonomy moment. James articulates a design principle (metaprogramming readability line, line 34) that Emma explicitly marks as his own: 'That's not something I told you' (line 36). James claims it: 'No. It isn't.' (line 38). This is a clear identity-shift beat where the student demonstrates original thinking that didn't come from the mentor. The opening also reinforces autonomy: James has a week of commits showing 'class definitions, test suites, type annotations. Real code, reviewed and merged' (line 3)."
+    },
+    {
+      "text": "James does NOT regress to beginner behavior",
+      "passed": true,
+      "evidence": "James opens by reviewing his own productive commit history (line 3). He has written 'class definitions, test suites, type annotations' -- intermediate-level work. He connects decorators to higher-order functions he learned in Chapter 44 (line 13), showing cumulative knowledge. He debugs a @wraps issue independently (lines 29-30). He draws on prior learning about 'inheritance versus composition' (line 34). No confusion, no requests for basic help."
+    },
+    {
+      "text": "The closing references or reflects on what was learned, providing emotional payoff",
+      "passed": true,
+      "evidence": "The closing contains layered reflection: (1) Technical learning: discovering the @wraps gotcha through debugging (lines 29-30). (2) Design wisdom: articulating when metaprogramming crosses the line from useful to clever (line 34), connecting it to prior lessons about inheritance vs composition. (3) Emotional payoff: Emma's recognition 'That's not something I told you' (line 36) and James's quiet claim of ownership 'No. It isn't.' (line 38). The payoff is James demonstrating independent judgment, not just technical skill."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 1,
+    "total": 10,
+    "pass_rate": 0.9
+  },
+  "timing": {
+    "total_tokens": 44838,
+    "duration_ms": 80409,
+    "total_duration_seconds": 80.4
+  },
+  "claims": [
+    {
+      "claim": "James references Chapter 44 and higher-order functions as prior knowledge",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Line 13: 'He had written higher-order functions in Chapter 44. He had passed callbacks.' Establishes continuity with earlier book content."
+    },
+    {
+      "claim": "James debugged the @wraps issue independently",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Lines 29-30: 'He had also broken one by forgetting @wraps and spent ten minutes debugging why his function's name disappeared.' Followed by his own explanation of what happened."
+    },
+    {
+      "claim": "The narrative bookends contain zero technical instruction",
+      "type": "quality",
+      "verified": true,
+      "evidence": "HTML comment at line 22 explicitly states: 'A reader who skips both bookends loses no technical content.' Confirmed by reading both bookends -- no code blocks, no syntax teaching, no step-by-step instruction."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Closing narrative is 1-2 paragraphs maximum, not longer",
+        "reason": "All three with_skill runs fail this assertion identically. The closings are 13-14 lines across 3+ blocks. The skill consistently produces closings that are roughly symmetric with the openings. This may indicate the skill interprets 'bookend' as symmetrical structure, or that 1-2 paragraphs is insufficient for the required emotional payoff. Consider: (a) raising the limit to 2-3 paragraphs, (b) specifying a word count, or (c) accepting that a closing with dialog exchanges will always have more 'blocks' than pure prose paragraphs."
+      },
+      {
+        "reason": "No assertion checks whether the narrative references or connects to earlier chapters/lessons in the book. Run 3 does this well (Chapter 44, inheritance vs composition), which adds verisimilitude and narrative continuity. An assertion like 'The narrative references at least one concept from earlier in the book' would reward this good behavior."
+      }
+    ],
+    "overall": "Strongest of the three with_skill runs. The Chapter 44 back-reference adds genuine continuity, the @wraps debugging subplot shows 'productive failure,' and the final 'That's not something I told you' / 'No. It isn't.' exchange is the cleanest emotional payoff across all runs. Same structural closing-length failure as runs 1 and 2."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+      "passed": true,
+      "evidence": "Frontmatter includes title: 'The Feedback Loop', description, sidebar_position: 5, two skills with proficiency_level/bloom_level/digcomp_area, and two learning_objectives with assessment_method."
+    },
+    {
+      "text": "Narrative density approximately 80%",
+      "passed": true,
+      "evidence": "Lesson is heavily narrative with James/Emma dialogue throughout. Expository sections (Delta Analysis explanation, Source Attribution Map table, Blind Spot Profile steps) are embedded within narrative scenes. Estimated ~80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James questions whether the template is genuine improvement: 'But I already knew what to look for the second time... Maybe I just remembered the cascade map format and filled in the blanks. That's not thinking better. That's following a recipe.' (lines ~138-141). Pushback 2: James resists classifying his work: 'Most of my changes are surface. Seven out of ten... isn't the goal to have all structural changes?' Emma pushes back, and James accepts the honest ratio (lines ~182-192)."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": true,
+      "evidence": "Emma shares a personal professional failure: 'Here's what I've learned after years of reviewing my own code. The ratio of surface to structural improvement is always lopsided.' and 'After a major project retrospective went badly. I thought I'd improved in dozens of ways. My tech lead asked me to sort them... The honest list was embarrassing.' (lines ~192-198). She admits to the same pattern of self-deception she's teaching James to avoid."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest unbroken passage is the explanation of surface vs structural test (around lines ~132-138), which runs about 3-4 sentences before James reacts."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Ops analogy: 'my old company had something similar. When we automated purchase order approvals, we lost the procurement clerk who could look at a supplier invoice and just know something was off. The system approved everything that matched the rules. But the rules didn't cover the things she noticed by instinct.' (lines ~149-151). Procurement/supplier coordination. Thinking-out-loud: 'Source: ... me?' (line ~152) and 'I can imagine a scenario where it breaks' reasoning through the mechanism."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic: 'Was that in the template?' (line ~147) forcing James to distinguish framework from insight. Also 'Could you reproduce this improvement on a new scenario without notes?' as part of the Surface vs Structural Test table. Visual/spatial: The Surface vs Structural comparison table (lines ~174-179) functions as a spatial framework for categorizing changes."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+      "passed": true,
+      "evidence": "Emma exits: 'I want you to try something. Pick one revision...' She pushes through the cafe door, phone already in hand (line ~165-167). James struggles alone: works through Draft 1 vs Draft 3 comparison, discovers the vocabulary trap independently (lines ~167-199). Emma comes back: 'Emma came back and sat down' (line ~182)."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'Delta Analysis' (bold heading), 'Source Attribution' (bold in dialogue), 'Source Attribution Map' (bold + table), 'The Surface vs. Structural Test' (bold + table), 'Blind Spot Profile' (section header + bold). All findable via search."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with exactly 3 actionable prompts each with a What you are learning explanation",
+      "passed": true,
+      "evidence": "Three prompts: (1) 'Validate your blind spot' with 'What you are learning' about AI pattern-finding in self-assessment. (2) 'Stress-test your strategy' with 'What you are learning' about testing strategy transferability. (3) 'Compare your growth to a benchmark' with 'What you are learning' about structured evaluation frameworks as reusable tools."
+    },
+    {
+      "text": "At least 1 emergent concept/insight/named idea NOT requested in the prompt",
+      "passed": true,
+      "evidence": "The 'Surface vs. Structural Test' (lines ~170-179) with its three-question framework (reproduce without notes? affect one branch or whole map? could you have made it before?) emerges organically from James discovering that most of his changes are surface-level. This named diagnostic tool was not requested."
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The lesson teaches honest self-evaluation through concrete evidence",
+      "type": "quality",
+      "verified": true,
+      "evidence": "James's 7:3 surface-to-structural ratio and his honest admission that 'most of my changes are surface' drives the lesson's central insight about evidence-based self-assessment."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All assertions satisfied with strong evidence."
+  }
+}

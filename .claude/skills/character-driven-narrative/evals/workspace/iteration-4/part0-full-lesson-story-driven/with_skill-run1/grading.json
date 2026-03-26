@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+      "passed": true,
+      "evidence": "Frontmatter includes title: 'The Feedback Loop', description, sidebar_position: 5, two skills with proficiency_level/bloom_level/digcomp_area, and two learning_objectives with assessment_method."
+    },
+    {
+      "text": "Narrative density approximately 80%",
+      "passed": true,
+      "evidence": "The lesson is dominated by James/Emma dialogue and narrative scenes. Expository sections (The Thinking-Change Test tip, Growth Source Mapping, Personal Improvement Map table) are woven between dialogue scenes. Estimated ~80-85% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James resists the thinking-change distinction: 'Aren't content changes worth something? I caught a real gap. The regulatory loop was important.' (line ~157). Pushback 2: James resists the improvement map framing: 'What's an improvement map?' followed by his internal resistance comparing it to useless end-of-project reviews he wrote at work (lines ~226-231), before building something genuinely different."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": true,
+      "evidence": "Emma admits: 'I've been explaining this concept to people for years and nobody has put it that way.' and 'The supplier analogy is better than what I was using.' (lines ~167-170). She concedes James's formulation surpasses her own long-standing explanation."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest unbroken stretch is the 'content change pays once / thinking change pays every time' passage (lines ~159-163), which is 4 sentences. James reacts immediately after with the supplier analogy."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Ops analogy: 'At my old job, we had a supplier who kept delivering late. My boss wanted me to call them every Thursday to remind them. That fixed the problem for that supplier. But when I restructured the PO system so that every supplier got automatic reminders three days before delivery, the problem disappeared across the whole vendor base.' (lines ~164-166). Supplier coordination + process optimization. Thinking-out-loud: 'That's like...' (line ~164) and 'They felt different, too' (line ~188)."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic: 'If I gave you a completely different scenario tomorrow, say a hospital replacing experienced nurses with AI triage systems, would catching a regulatory loop help you?' (line ~127). Visual/spatial: 'Four different mirrors. Each one showed you a different thing about your thinking.' (line ~187)."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+      "passed": true,
+      "evidence": "Emma exits: 'I need to call someone. Twenty minutes.' She picked up her jacket (line ~223-224). James struggles alone: builds the improvement map over 12 minutes, working through evidence, identifying blind spots, writing practice plan (lines ~226-261). Emma returns: 'The front door opened. Emma came back' (line ~262)."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts with standalone headers or bold formatting: 'Thinking-Change Test' (tip box + bold), 'Growth Source Mapping' (bold inline with explanation), 'Personal Improvement Map' (bold + How to Build table). All are findable via search without reading surrounding dialogue."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with exactly 3 actionable prompts each with a What you are learning explanation",
+      "passed": true,
+      "evidence": "Three prompts: (1) 'The Blind Spot Detector' with 'What you are learning' paragraph about distinguishing improved output from improved process. (2) 'The Hidden Assumption Finder' with 'What you are learning' about corrective self-evaluation. (3) 'The Improvement Map Stress Test' with 'What you are learning' about using AI as quality check."
+    },
+    {
+      "text": "At least 1 emergent concept/insight/named idea NOT requested in the prompt",
+      "passed": true,
+      "evidence": "'Growth Source Mapping' with its taxonomy of Additive/Corrective/Depth growth (line ~214) emerges organically from James's table and Emma's framing. This three-category taxonomy of feedback sources was not requested in the prompt."
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The lesson teaches metacognitive self-evaluation through narrative",
+      "type": "quality",
+      "verified": true,
+      "evidence": "James applies the Thinking-Change Test, builds a Growth Source Map, and constructs a Personal Improvement Map, all within dialogue scenes."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All 11 assertions are well-targeted and discriminating for this run."
+  }
+}

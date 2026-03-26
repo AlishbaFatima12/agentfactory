@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+      "passed": true,
+      "evidence": "Frontmatter includes title: 'The Feedback Loop', description, sidebar_position: 5, three skills with proficiency_level/bloom_level/digcomp_area, and two learning_objectives with assessment_method."
+    },
+    {
+      "text": "Narrative density approximately 80%",
+      "passed": true,
+      "evidence": "Lesson is heavily narrative with color-coded maps opening, extended dialogue, and the blank-page test scene. Expository sections (Growth Delta table, Vocabulary Trap detection table, Growth Evidence File structure) are embedded in narrative. Estimated ~80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James resists the assisted vs independent distinction: 'That's not a failure.' / 'It doesn't feel like a success either.' (lines ~293-296). He pushes back on Emma's reframe before accepting the metacognition argument. Pushback 2: James challenges his own improvement narrative: 'What if Draft 3 is better because the process carried me there, not because I actually learned to think differently?' (lines ~125-126). He reaches this concern independently."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": false,
+      "evidence": "No clear Emma fallibility moment. Emma shows vulnerability ('She looked like she was deciding between a reassuring answer and an honest one' line ~305) but does not share a personal mistake or professional failure. She remains the authoritative guide throughout."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest unbroken passage is the assisted vs independent performance explanation (lines ~129-132), running about 3 sentences before James asks 'So how do I figure out which one I have?'"
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": false,
+      "evidence": "James does not use a specific operations analogy from his background in this run. His references are to the exercise work itself ('Five domains because the exercise said five') and general self-assessment. There is no mention of warehouse, supplier coordination, team management, logistics, or process optimization in his own analogies. His ops background is mentioned only in the frontmatter/context, not deployed as an analogy in the dialogue. Thinking-out-loud is present ('I keep wondering whether that means I'm thinking differently or just drawing more lines' line ~105) but the ops analogy requirement is unmet."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic: 'What specifically worries you?' (line ~122) and 'Count three things for me' (line ~148) forcing James to measure his own growth. Visual/spatial: The Growth Delta comparison table (lines ~167-176) with its three-dimension spatial framework for measuring change."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+      "passed": true,
+      "evidence": "Emma exits: 'I'm going to get a refill. While I'm gone, try something for me.' She paused. 'Pick a scenario you have never analyzed before... Just you and a blank page.' (lines ~181-182). James struggles alone: attempts blank-page cascade map on parking scenario, stalls at three domains, discovers his mechanisms are thin (lines ~183-201). Emma returns: 'Emma came back. How'd it go?' (lines ~194-195)."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'Growth Delta' (bold + section header + table), 'Vocabulary Trap' (bold + detection table), 'Growth Evidence File' (bold + three-section structure), 'Assisted performance vs. independent performance' (bold + explained). All findable via search."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with exactly 3 actionable prompts each with a What you are learning explanation",
+      "passed": true,
+      "evidence": "Three prompts: (1) 'Growth Delta Assessment' with 'What you are learning' about external evaluation matching self-assessment. (2) 'Vocabulary Trap Detection' with 'What you are learning' about AI as mirror for metacognition. (3) 'Transfer Test Design' with 'What you are learning' about building transfer tests for novel contexts."
+    },
+    {
+      "text": "At least 1 emergent concept/insight/named idea NOT requested in the prompt",
+      "passed": true,
+      "evidence": "The 'assisted performance vs. independent performance' distinction emerges as the lesson's central insight from James's blank-page test. The idea that your best guided work is NOT your skill level, and that the gap between guided and independent performance is where practice should focus, was not requested in the prompt."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 3,
+    "total": 11,
+    "pass_rate": 0.727
+  },
+  "claims": [
+    {
+      "claim": "The blank-page test is a novel pedagogical device",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The scene where James attempts a cascade map from scratch on a new scenario and discovers the gap between assisted and independent performance is an effective narrative device for teaching metacognition."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Three failures: no Emma fallibility, no ops analogy from James, and the missing ops analogy is particularly notable since James's operations background is central to his character. The blank-page test scene partially compensates with strong narrative quality."
+  }
+}

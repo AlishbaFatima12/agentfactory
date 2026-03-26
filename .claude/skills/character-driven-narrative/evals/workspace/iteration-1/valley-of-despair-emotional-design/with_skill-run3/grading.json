@@ -1,0 +1,104 @@
+{
+  "expectations": [
+    {
+      "text": "The opening acknowledges difficulty or complexity without being patronizing",
+      "passed": true,
+      "evidence": "Opening shows James with concrete failures: 'Sarah's getting Python rules in her React components. Dev's getting frontend lint instructions on his FastAPI routes. And the CI pipeline I built runs Claude with the -p flag, but it's posting duplicate review comments on every push.' He says 'Seven chapters of this stuff and I still can't get a team config to work.' Emma responds by sharing her own failure rather than reassuring. No patronizing language."
+    },
+    {
+      "text": "James expresses genuine frustration that a real learner at Chapter 18 would feel",
+      "passed": true,
+      "evidence": "James has specific, accumulation-based frustration: 'Seven chapters of this stuff and I still can't get a team config to work without something leaking where it shouldn't.' In the closing: 'I almost quit this morning. Not the chapter. The whole thing.' and 'Six hours ago, he had been ready to close the laptop and take a walk. The kind of walk where you reconsider whether you picked the right field.' Specific technical failures (cross-contaminating rules, duplicate CI comments) make the frustration grounded, not generic."
+    },
+    {
+      "text": "Emma demonstrates Type A fallibility (past mistake)",
+      "passed": true,
+      "evidence": "Emma describes: 'I broke a production deployment with a CLAUDE.md misconfiguration once. Not a student project. A real deployment, with real customers. I had project-level instructions that assumed every subdirectory was Python. The infra team's Terraform directory inherited all of it. Claude started inserting Python type hints into HCL files. Took us a full day to figure out why the infrastructure builds were failing.' Clear, specific, consequential past mistake."
+    },
+    {
+      "text": "Emma's vulnerability feels natural and earned, not forced",
+      "passed": true,
+      "evidence": "Emma's confession emerges while she's actively reading James's broken CI output ('she said, still reading'). She sees the same class of problem (config scope leaking) and connects it to her own experience. The transition is organic: she's looking at his problem and recognizes the pattern. The narrative notes 'In six chapters of working together, she had never described something she had gotten wrong at that scale.' The vulnerability is prompted by seeing a familiar failure, not a scripted confession."
+    },
+    {
+      "text": "The emotional beat matches valley of despair: shared frustration and mentor vulnerability",
+      "passed": true,
+      "evidence": "Opening: James frustrated with concrete failures, Emma shares production failure. James: 'So this is just hard. Not hard because I'm new. Actually hard.' Closing: 'I almost quit this morning. Not the chapter. The whole thing.' Emma: 'Everyone hits a wall around here... The people who quit at this point aren't the ones who can't do it. They're the ones who mistake difficulty for inability.' Beat is shared frustration and vulnerability, not excitement or mastery."
+    },
+    {
+      "text": "Emma's mentor phase is Coach: she guides with questions, not Authority",
+      "passed": true,
+      "evidence": "In closing, Emma asks 'And when a new developer joins the team?' to test James's understanding rather than explaining it herself. In opening, she says 'I'll show you the three levels. Where you went wrong, you'll figure out yourself.' She reframes James's analogy ('You learned to drive. Now you're learning to manage a fleet') but doesn't provide direct answers. James independently explains the full solution in the closing. The 'I'll show you the three levels' line is slightly more directive than pure Coach but is immediately qualified with 'Where you went wrong, you'll figure out yourself.'"
+    },
+    {
+      "text": "The closing provides genuine forward momentum without false promises",
+      "passed": true,
+      "evidence": "Emma: 'You're past the hardest part of Part 1. Everything in Part 2 builds on what you configured today. The tools don't get simpler, but you do.' The last sentence is honest (tools stay complex) while reframing growth (you get better). James closes laptop 'not in frustration this time' and the red output is gone. Momentum comes from demonstrated competence, not promises of ease."
+    },
+    {
+      "text": "No anti-patterns: no 'I understand' from James, no 'Great question!' from Emma",
+      "passed": true,
+      "evidence": "Searched full text. James never says 'I understand.' Emma never says 'Great question!' James actively pushes back: 'That doesn't make the red output less red' and 'That sounds like something you read on a motivational poster.' Emma's responses are 'That bad?', 'Good.', and direct observations. No sycophantic patterns."
+    },
+    {
+      "text": "James references knowledge from earlier chapters (12-17) even while struggling",
+      "passed": true,
+      "evidence": "James references: CI/CD pipeline with -p flag, CLAUDE.md configuration, .claude/rules/ directory, path-specific globs (backend/**/*.py), custom skills, /memory command, --output-format json flag, directory-level vs project-level config. The self-check notes 'references seven chapters of prior learning, uses CI/CD vocabulary from earlier work.' He confidently uses gitignore concepts and home directory paths. Knowledge is demonstrated through fluency, though no explicit chapter numbers are cited."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {},
+  "timing": {
+    "total_duration_seconds": 116.7
+  },
+  "claims": [
+    {
+      "claim": "Self-check claims 65% density (chapter-framing)",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Output is two narrative fragments (Opening and Closing) separated by a '---' break. The lesson body would go between them. Matches chapter-framing mode where narrative bookends the technical content."
+    },
+    {
+      "claim": "Self-check claims Emma's fallibility is natural (emerges from reading James's broken output)",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Text says 'she said, still reading' during Emma's confession. She's actively looking at his CI output and connects it to her own Terraform/CLAUDE.md mistake. The vulnerability is prompted by recognizing a familiar problem pattern."
+    },
+    {
+      "claim": "Self-check claims James's frustration is genuine (specific technical failures, not generic)",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Three specific failures named: Sarah getting Python rules in React, Dev getting frontend lint on FastAPI, CI posting duplicate review comments. Plus the emotional escalation: 'I almost quit this morning. Not the chapter. The whole thing.' and 'The kind of walk where you reconsider whether you picked the right field.'"
+    },
+    {
+      "claim": "Self-check claims no 'As You Know, Bob' moments",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Emma doesn't explain things both characters know. She asks questions ('And when a new developer joins the team?') to probe understanding. James demonstrates knowledge by explaining solutions, not by having them explained to him."
+    },
+    {
+      "claim": "Self-check claims voices are distinguishable via cover tags",
+      "type": "quality",
+      "verified": true,
+      "evidence": "James: longer sentences, business/ops metaphors, pragmatist frustration ('That doesn't make the red output less red'). Emma: short sentences ('That bad?', 'Good.'), dry observations, questions. Removing dialogue tags, the voices remain distinguishable."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "James references knowledge from earlier chapters (12-17) even while struggling",
+        "reason": "Same issue as run2: James demonstrates prior knowledge through confident use of terminology and tools but never explicitly names a chapter number. The without_skill run cites 'Chapter 16' and 'Chapter 17, Principle 6' by name. If the intent is narrative continuity anchoring, consider requiring at least one explicit chapter reference."
+      },
+      {
+        "reason": "No assertion tests the quality of James's pushback. with_skill-run3 has notably strong pushback ('That doesn't make the red output less red' and 'That sounds like something you read on a motivational poster'), which is a marker of character authenticity. An assertion like 'James pushes back against Emma at least once with a specific objection, not generic resistance' would catch flat dialogue where James just accepts everything."
+      }
+    ],
+    "overall": "Strong coverage of emotional design. The pushback quality and explicit chapter-reference specificity are the main uncovered areas."
+  }
+}

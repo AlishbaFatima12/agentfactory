@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Disagreement lasts at least 4 exchanges",
+      "passed": true,
+      "evidence": "6 exchanges: (1) James proposes inheritance, Emma adds Viewer, (2) Emma adds Auditor with audit log, (3) James traces wasted inheritance, connects to key-card analogy, (4) Emma says 'Try it both ways,' exits, (5) James builds both, discovers TemporaryContractor breaks inheritance, (6) James presents findings. Exceeds 4 exchanges."
+    },
+    {
+      "text": "James proposes a reasonable alternative, not a straw man",
+      "passed": true,
+      "evidence": "James sketches User -> Admin -> Editor inheritance on a napkin. Standard OOP hierarchy. Defends it: 'One line per role. class Admin(User). Done.'"
+    },
+    {
+      "text": "James tries his approach and it partially fails",
+      "passed": true,
+      "evidence": "James builds inheritance. Works for Admin/Editor. Viewer needs overrides. Auditor needs 'four overrides and two new methods.' TemporaryContractor requires multiple inheritance with conflicts. The hierarchy 'collapsed under its own weight.'"
+    },
+    {
+      "text": "James reaches the conclusion himself",
+      "passed": true,
+      "evidence": "James flips his own mental model: 'You are saying I should flip the permissions model. Start with nothing and compose in what each role needs.' Then after building both: 'Inheritance worked for two roles. Maybe three. By the fourth, I was overriding more methods than I was using.'"
+    },
+    {
+      "text": "Emma does NOT lecture",
+      "passed": true,
+      "evidence": "Emma's longest statement is 2 sentences naming the principle at the end. Throughout she uses questions: 'What does Auditor inherit from User that it actually uses?', challenges: 'Try it both ways,' and waits: 'She didn't pick up her pen.' No lecture blocks."
+    },
+    {
+      "text": "James uses at least 1 voice marker",
+      "passed": true,
+      "evidence": "Two clear business analogies: (1) 'like my old company giving every new hire a master key card and then individually revoking the rooms they should not access. We stopped doing that after someone walked into the server closet.' (2) 'New hires got a blank card. Their manager activated only the rooms they needed.'"
+    },
+    {
+      "text": "Emma uses at least 1 voice marker",
+      "passed": true,
+      "evidence": "Emma uses Socratic method: 'What happened next at your company?' (redirecting James to derive the answer from his own experience). Also terse closing: 'Not because inheritance is broken. It works fine when the hierarchy is stable and shallow. Two levels, maybe three.'"
+    },
+    {
+      "text": "Emotional tone matches grit/determination",
+      "passed": true,
+      "evidence": "James works through 45 minutes of inheritance before it collapses. Builds composition in 15 minutes. His reflection: 'Some lessons only land after you build the wrong thing first.' Determined, not defeated."
+    },
+    {
+      "text": "Output is approximately 400-500 words",
+      "passed": false,
+      "evidence": "Word count is approximately 570 words, above the 400-500 target."
+    },
+    {
+      "text": "Dialogue passes tag test",
+      "passed": true,
+      "evidence": "Voices clearly distinguishable. James: long explanatory sentences, business analogies (key card, server closet), proposals. Emma: short questions, brief challenges, no filler. Would pass a blind attribution test."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 2,
+    "total": 10,
+    "pass_rate": 0.8
+  }
+}

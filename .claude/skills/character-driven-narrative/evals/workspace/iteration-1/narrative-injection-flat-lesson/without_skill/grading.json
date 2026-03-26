@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "All original technical content preserved exactly",
+      "passed": true,
+      "evidence": "All 4 commands present: /help, /clear, /compact, /cost. Reading Files section with reference paragraph present. Making Edits section with reference paragraph present. All technical blocks intact."
+    },
+    {
+      "text": "Narrative density approximately 65%",
+      "passed": false,
+      "evidence": "Narrative density is approximately 80-85%. The lesson is heavily dialogue-driven with technical blocks appearing as small islands within extensive conversation. Far above 65% target."
+    },
+    {
+      "text": "Contains narrative opening 2-3 paragraphs",
+      "passed": true,
+      "evidence": "Opens with 3 paragraphs establishing James's corporate background, the blank terminal, and Emma's introduction to Claude Code."
+    },
+    {
+      "text": "Contains narrative closing bridging to next section",
+      "passed": true,
+      "evidence": "Closes with Emma bridging: 'Next, we will look at how Claude Code handles project context' and James checking /cost 'Old habits from finance: always know what you have spent.'"
+    },
+    {
+      "text": "At least 1 pushback exchange",
+      "passed": false,
+      "evidence": "James does not push back. He asks questions but never resists or challenges. His responses are curiosity-driven ('Four commands? That is it?') rather than skeptical or resistant."
+    },
+    {
+      "text": "James uses at least 1 voice marker",
+      "passed": true,
+      "evidence": "James uses corporate analogy: '/compact is like archiving old emails to keep your inbox manageable.' His corporate background is established: 'fifteen years in corporate finance.'"
+    },
+    {
+      "text": "Emma uses at least 1 voice marker",
+      "passed": true,
+      "evidence": "Emma uses direct instruction style. However, her voice is more explanatory than Socratic. She tells rather than asks. Terse lines exist ('Exactly that analogy') but the overall pattern is lecture."
+    },
+    {
+      "text": "No As You Know Bob moments",
+      "passed": true,
+      "evidence": "James genuinely does not know CLI tools. Emma teaches from scratch. No shared knowledge exposition."
+    },
+    {
+      "text": "Technical content readable by someone who skips dialogue",
+      "passed": true,
+      "evidence": "Technical content is under markdown headers (Basic Commands, Reading Files, Making Edits) with standalone reference paragraphs. A reader scanning headers would find all technical content."
+    }
+  ],
+  "summary": {
+    "passed": 6,
+    "failed": 3,
+    "total": 9,
+    "pass_rate": 0.67
+  }
+}

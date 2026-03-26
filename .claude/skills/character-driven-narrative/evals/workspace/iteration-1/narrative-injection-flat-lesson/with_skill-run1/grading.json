@@ -1,0 +1,95 @@
+{
+  "expectations": [
+    {
+      "text": "All original technical content is preserved exactly: the 4 commands (/help, /clear, /compact, /cost), the Reading Files section, and the Making Edits section",
+      "passed": true,
+      "evidence": "All 4 commands present with correct descriptions: '/help -- Shows available commands', '/clear -- Clears conversation history', '/compact -- Summarizes and compresses context', '/cost -- Shows token usage for the session'. Reading Files section present with header and reference paragraph: 'Claude Code can read any file on your machine. Simply ask it to read a file and it will use the Read tool automatically. You do not need to specify the tool -- just describe what you want.' Making Edits section present with header and reference paragraph: 'To edit files, describe the change you want. Claude Code will use the Edit tool to make precise string replacements. Always review the diff before accepting.'"
+    },
+    {
+      "text": "Narrative density is approximately 65%",
+      "passed": false,
+      "evidence": "Narrative density is approximately 88.7% (861 narrative words out of 971 total). Only 110 words (11.3%) are preserved technical reference content. The target was ~65% narrative / ~35% technical, but the output is overwhelmingly narrative. The technical reference blocks are present but constitute a much smaller fraction of the total than intended."
+    },
+    {
+      "text": "Contains a narrative opening (2-3 paragraphs) before the technical content begins",
+      "passed": true,
+      "evidence": "The lesson opens with 4 narrative paragraphs before the '### Basic Commands' header: (1) 'James opened a fresh terminal and stared at the blinking cursor...', (2) '\"Type `claude`,\" Emma said...', (3) 'He typed it. A new interface loaded...', (4) 'James thought about that...' This exceeds 2-3 paragraphs slightly but satisfies the intent."
+    },
+    {
+      "text": "Contains a narrative closing that bridges to a hypothetical next section",
+      "passed": true,
+      "evidence": "Final paragraphs contain Emma bridging to next section: '\"Next section, we'll look at how Claude Code handles more complex operations: multi-file edits, running commands, and working with your project structure.\"' Followed by James's reflection: 'Four commands, file reading, careful edits. It wasn't much, but it was a foundation he understood, not one he'd memorized from a tutorial and would forget by Thursday.'"
+    },
+    {
+      "text": "At least 1 pushback exchange where James questions or resists something about the tool",
+      "passed": true,
+      "evidence": "James pushes back on /compact: '\"Okay, but what about `/compact`?\" James frowned. \"Why would I want to compress context? Isn't more context better?\"' He also questions the edit review requirement: '\"Always review the diff,\" James read aloud. \"You really mean always?\"'"
+    },
+    {
+      "text": "James uses at least 1 voice marker (business analogy OR thinking-out-loud fragment)",
+      "passed": true,
+      "evidence": "Multiple business analogies: (1) '\"And `/clear` is just starting over? Like closing all my browser tabs and pretending Monday didn't happen?\"' (2) '\"That's like checking the meter in a taxi\"' (re: /cost). (3) '\"the diff is like... the final inspection before a shipment leaves the warehouse. You don't skip it just because the packing looked right.\"'"
+    },
+    {
+      "text": "Emma uses at least 1 voice marker (Socratic question OR short precise sentences)",
+      "passed": true,
+      "evidence": "Short precise sentences throughout: '\"That's the point. It lives where your code lives.\"' and '\"Exactly.\"' Also uses personal anecdote with precision: '\"I shipped a broken import to production once because I accepted a change without reading it. Cost the team half a day tracking down why the server wouldn't start. The diff was six lines. I would have caught it in ten seconds.\"'"
+    },
+    {
+      "text": "No As You Know Bob moments",
+      "passed": true,
+      "evidence": "No instances where characters explain things they would already know to each other. Emma teaches; James learns. Emma's explanations are prompted by James's questions (e.g., James asks about /compact, Emma explains). The dynamic is mentor-to-mentee, which naturally avoids AYKB. Emma's anecdote about shipping the broken import is told as a new disclosure ('She didn't talk about her own mistakes often'), not something James would already know."
+    },
+    {
+      "text": "Technical content remains findable and readable by a reader who skips all dialogue",
+      "passed": true,
+      "evidence": "Technical content is cleanly separated under markdown headers: '### Basic Commands' with the 4-command bullet list, '### Reading Files' with the reference paragraph, '### Making Edits' with the reference paragraph. A reader scanning headers and skipping dialogue would find all technical reference content in standard documentation format with no narrative interleaving within the reference blocks themselves."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "total": 9,
+    "pass_rate": 0.89
+  },
+  "timing": {
+    "total_duration_seconds": 99.5
+  },
+  "claims": [
+    {
+      "claim": "James is new to CLI tools, coming from a corporate background with GUI-heavy tools",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Consistent characterization: 'At my old job we had a whole procurement process for new software. Installations, IT tickets, license keys.' and 'Every other tool he'd learned so far had its own window, its own interface to memorize.'"
+    },
+    {
+      "claim": "Emma rarely shares personal mistakes",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The narration notes 'She didn't talk about her own mistakes often' after Emma shares her broken-import story, making the anecdote feel earned rather than forced."
+    },
+    {
+      "claim": "The closing shows James applying what he learned independently",
+      "type": "quality",
+      "verified": true,
+      "evidence": "James works alone: 'He opened a Python file he'd been working on, described a change to Claude Code, and watched the diff appear. Six lines, just like Emma's story. He read each one before accepting.' Shows independent application."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Narrative density is approximately 65%",
+        "reason": "All four runs scored 85-91% narrative density, suggesting the prompt does not effectively constrain density. The assertion tests for '~65%' but there is no mechanism enforcing it. Consider either: (a) providing a word-count budget in the eval prompt (e.g., 'the final output should be ~400 words of narrative and ~200 words of technical content'), or (b) redefining '65% density' more precisely so it can be measured consistently. As written, 'approximately 65%' is ambiguous about tolerance."
+      },
+      {
+        "assertion": "All original technical content is preserved exactly",
+        "reason": "This assertion checks presence but not exact preservation. Run 1 uses '--' dashes in the command list while run 2 uses em-dashes. If the original source used one format, the other is not 'exactly' preserved. The assertion would be stronger if it specified the exact original text to match against."
+      },
+      {
+        "reason": "No assertion checks whether the narrative actually teaches the technical concepts vs. merely wrapping them in dialogue. Run 1's dialogue genuinely unpacks what /compact does (desk-cleaning analogy), while a weaker output could surround the tech blocks with generic banter. An assertion like 'each technical concept is explored through dialogue, not just adjacent to it' would discriminate quality."
+      }
+    ],
+    "overall": "The density assertion fails universally across all runs, indicating a prompt-level issue rather than a skill-level one. The remaining assertions are solid discriminators. Consider adding an assertion that checks for the presence of the original source text verbatim."
+  }
+}

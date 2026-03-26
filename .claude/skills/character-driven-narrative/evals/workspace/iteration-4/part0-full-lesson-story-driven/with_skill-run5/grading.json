@@ -1,0 +1,82 @@
+{
+  "expectations": [
+    {
+      "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+      "passed": true,
+      "evidence": "Frontmatter includes title: 'The Feedback Loop', description, sidebar_position: 5, two skills with proficiency_level/bloom_level/digcomp_area, and two learning_objectives with assessment_method."
+    },
+    {
+      "text": "Narrative density approximately 80%",
+      "passed": true,
+      "evidence": "Lesson is driven by James/Emma dialogue and narrative scenes. Expository sections (Growth Evidence Taxonomy table, deliverable box, step-by-step instructions) are embedded within narrative. Estimated ~78-80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James resists Emma's request to find weaknesses: 'You want me to find what I'm still bad at.' (line ~166). Pushback 2: When Emma says the blind spot is worth more than every improvement, James pushes back: 'How?' (line ~190), then resists the implication before reaching his own conclusion about practice targets."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": false,
+      "evidence": "No clear Emma fallibility moment found. Emma is consistently the authoritative guide throughout. She does not share a personal mistake, admit to being wrong, or reveal a professional failure. Her 'Napkins are cheaper than whiteboards' is personality, not fallibility."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest unbroken passage is the Growth Evidence Taxonomy explanation context, running 2-3 sentences before James reacts each time."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Ops analogy: 'At his old company, the warehouse team had the same supplier delivery problem every quarter. They'd fix it, it would recur... His operations director eventually stopped asking \"what went wrong this time\" and started asking \"what keeps going wrong?\" That question changed everything. They found the real bottleneck: the approval workflow, not the suppliers.' (lines ~168-170). Warehouse + supplier coordination + process optimization. Also: 'my old performance reviews always said things like \"improved stakeholder management\"' (lines ~108-109). Team management. Thinking-out-loud: 'That's actually what feedback loops do' (line ~170)."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic: 'Where did you stay the same?' (line ~158) and 'What does that suggest about your blind spot?' (line ~319). Visual/spatial: Emma draws four boxes on a napkin for the Growth Evidence Taxonomy (lines ~118-134), a clear spatial/visual metaphor for categorizing growth."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+      "passed": false,
+      "evidence": "The run mentions 'Emma came back twenty minutes later' (line ~308) implying she left, but the departure is not shown on-page. There is no explicit scene of Emma exiting, no description of James struggling alone during her absence. The Jonah Rhythm requires an explicit exit-struggle-return sequence, and the exit is missing."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'Growth Evidence Taxonomy' (note box + table), 'The Persistent Blind Spot' (section header), 'Growth Map' (in deliverable box). All findable via search."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with exactly 3 actionable prompts each with a What you are learning explanation",
+      "passed": true,
+      "evidence": "Three prompts: (1) 'Validate Your Self-Assessment' with 'What you are learning' about AI as calibration tool. (2) 'Compare Your Blind Spot to Common Patterns' with 'What you are learning' about turning weakness into deliberate practice. (3) 'Predict Your Next Blind Spot' with 'What you are learning' about anticipating future weaknesses."
+    },
+    {
+      "text": "At least 1 emergent concept/insight/named idea NOT requested in the prompt",
+      "passed": true,
+      "evidence": "The 'Growth Evidence Taxonomy' with its four dimensions (Depth, Breadth, Mechanism Quality, Feedback Loop Sophistication) emerges as a named framework from Emma's napkin drawing. This structured taxonomy was not requested in the prompt."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 2,
+    "total": 11,
+    "pass_rate": 0.818
+  },
+  "claims": [
+    {
+      "claim": "The lesson teaches systematic self-evaluation through the Growth Evidence Taxonomy",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The four-dimension taxonomy (Depth, Breadth, Mechanism Quality, Feedback Loop Sophistication) provides a concrete framework for evaluating thinking improvement."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+        "reason": "The implicit departure (only shown via 'came back twenty minutes later') makes this assertion borderline. Consider whether the assertion should require explicit departure narration or whether implied departures count."
+      }
+    ],
+    "overall": "Two failures: missing Emma fallibility moment and weak Jonah Rhythm execution. Otherwise strong."
+  }
+}

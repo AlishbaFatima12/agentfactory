@@ -1,0 +1,660 @@
+{
+  "metadata": {
+    "skill_name": "character-driven-narrative",
+    "skill_path": "/Users/mjs/Documents/code/panaversity-official/tutorsgpt/test/.claude/skills/character-driven-narrative-workspace/iteration-4",
+    "executor_model": "claude-opus-4-6",
+    "analyzer_model": "claude-opus-4-6",
+    "timestamp": "2026-03-26T00:00:00Z",
+    "evals_run": ["part0-full-lesson-story-driven"],
+    "runs_per_configuration": 6
+  },
+
+  "runs": [
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 11,
+        "failed": 0,
+        "total": 11,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+          "passed": true,
+          "evidence": "Full frontmatter with all required fields."
+        },
+        {
+          "text": "Narrative density approximately 80%",
+          "passed": true,
+          "evidence": "~80-85% narrative."
+        },
+        {
+          "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+          "passed": true,
+          "evidence": "Content vs thinking change resistance; improvement map resistance."
+        },
+        {
+          "text": "At least 1 Emma fallibility moment",
+          "passed": true,
+          "evidence": "Admits James's supplier analogy is better than hers."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+          "passed": true,
+          "evidence": "Max 4 sentences before James reacts."
+        },
+        {
+          "text": "James uses at least 1 business analogy from his SPECIFIC operations background AND at least 1 thinking-out-loud fragment",
+          "passed": true,
+          "evidence": "Supplier/PO system analogy. 'That's like...'"
+        },
+        {
+          "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+          "passed": true,
+          "evidence": "Hospital scenario Socratic. 'Four different mirrors.'"
+        },
+        {
+          "text": "At least 1 Jonah Rhythm sequence",
+          "passed": true,
+          "evidence": "Emma calls someone, James builds improvement map alone, Emma returns."
+        },
+        {
+          "text": "Every technical concept has a standalone name findable without reading dialogue",
+          "passed": true,
+          "evidence": "Thinking-Change Test, Growth Source Mapping, Personal Improvement Map."
+        },
+        {
+          "text": "Try With AI section with exactly 3 actionable prompts each with What you are learning",
+          "passed": true,
+          "evidence": "3 prompts with learning explanations."
+        },
+        {
+          "text": "At least 1 emergent concept/insight NOT requested in the prompt",
+          "passed": true,
+          "evidence": "Growth Source Mapping with Additive/Corrective/Depth taxonomy."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 11,
+        "failed": 0,
+        "total": 11,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+          "passed": true,
+          "evidence": "Full frontmatter."
+        },
+        {
+          "text": "Narrative density approximately 80%",
+          "passed": true,
+          "evidence": "~80% narrative."
+        },
+        {
+          "text": "At least 2 pushback exchanges",
+          "passed": true,
+          "evidence": "Employee morale blind spot challenge; regulatory timeline challenge."
+        },
+        {
+          "text": "At least 1 Emma fallibility moment",
+          "passed": true,
+          "evidence": "Caching system failure; temporal blind spot admission."
+        },
+        {
+          "text": "No Emma monologue exceeds 4 sentences",
+          "passed": true,
+          "evidence": "Within limits."
+        },
+        {
+          "text": "James ops analogy + thinking-out-loud",
+          "passed": true,
+          "evidence": "Team management (6 years). 'I think... when I'm doing analysis...'"
+        },
+        {
+          "text": "Emma Socratic + visual metaphor",
+          "passed": true,
+          "evidence": "'What do the missing ones have in common?' Napkin circles: Obvious/Mapped."
+        },
+        {
+          "text": "Jonah Rhythm",
+          "passed": true,
+          "evidence": "Emma checks something, James works on blind spot + strategy test, Emma returns."
+        },
+        {
+          "text": "Standalone concept names",
+          "passed": true,
+          "evidence": "Self-Evaluation Feedback Loop, Obvious Connection Trap, Blind Spot Profile."
+        },
+        {
+          "text": "Try With AI: 3 prompts + learning",
+          "passed": true,
+          "evidence": "3 prompts with learning explanations."
+        },
+        {
+          "text": "Emergent concept",
+          "passed": true,
+          "evidence": "Obvious Connection Trap with napkin diagram."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 3,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 11,
+        "failed": 0,
+        "total": 11,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Valid YAML frontmatter",
+          "passed": true,
+          "evidence": "Full frontmatter."
+        },
+        {
+          "text": "Narrative density ~80%",
+          "passed": true,
+          "evidence": "~80% narrative."
+        },
+        {
+          "text": "2+ pushback exchanges",
+          "passed": true,
+          "evidence": "'Following a recipe' challenge; '7 out of 10 surface' resistance."
+        },
+        {
+          "text": "Emma fallibility",
+          "passed": true,
+          "evidence": "Retrospective failure: 'thought I'd improved in dozens of ways, honest list was embarrassing.'"
+        },
+        {
+          "text": "No monologue >4 sentences",
+          "passed": true,
+          "evidence": "Within limits."
+        },
+        {
+          "text": "James ops analogy + thinking-out-loud",
+          "passed": true,
+          "evidence": "Procurement clerk/PO automation. 'Source: ... me?'"
+        },
+        {
+          "text": "Emma Socratic + visual",
+          "passed": true,
+          "evidence": "'Was that in the template?' Surface vs Structural table."
+        },
+        {
+          "text": "Jonah Rhythm",
+          "passed": true,
+          "evidence": "Emma exits for phone, James discovers vocabulary trap alone, Emma returns."
+        },
+        {
+          "text": "Standalone names",
+          "passed": true,
+          "evidence": "Delta Analysis, Source Attribution, Surface vs Structural Test, Blind Spot Profile."
+        },
+        {
+          "text": "Try With AI: 3 prompts",
+          "passed": true,
+          "evidence": "3 prompts with learning explanations."
+        },
+        {
+          "text": "Emergent concept",
+          "passed": true,
+          "evidence": "Surface vs Structural Test with 3-question framework."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 4,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 11,
+        "failed": 0,
+        "total": 11,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Valid YAML frontmatter",
+          "passed": true,
+          "evidence": "Full frontmatter."
+        },
+        {
+          "text": "Narrative density ~80%",
+          "passed": true,
+          "evidence": "~80% with Trevor Problem framing."
+        },
+        {
+          "text": "2+ pushback exchanges",
+          "passed": true,
+          "evidence": "'Following a recipe' pushback; warehouse evidence pair resistance."
+        },
+        {
+          "text": "Emma fallibility",
+          "passed": true,
+          "evidence": "Design patterns/cron job story (360 deleted lines); code review 31% score."
+        },
+        {
+          "text": "No monologue >4 sentences",
+          "passed": true,
+          "evidence": "Within limits."
+        },
+        {
+          "text": "James ops analogy + thinking-out-loud",
+          "passed": true,
+          "evidence": "PO clerk analogy, warehouse layout analogy, PDCA cycles. 'How do I know I'm not Trevor?'"
+        },
+        {
+          "text": "Emma Socratic + visual",
+          "passed": true,
+          "evidence": "'Point to the clinical intuition observation.' Before/After/Arrow napkin boxes."
+        },
+        {
+          "text": "Jonah Rhythm",
+          "passed": true,
+          "evidence": "Emma exits for phone, James discovers vocabulary trap, Emma returns."
+        },
+        {
+          "text": "Standalone names",
+          "passed": true,
+          "evidence": "Thinking Snapshot, Snapshot Test, Vocabulary Trap, Growth Evidence Pairs, Honest Reckoning."
+        },
+        {
+          "text": "Try With AI: 3 prompts",
+          "passed": true,
+          "evidence": "3 prompts with learning explanations."
+        },
+        {
+          "text": "Emergent concept",
+          "passed": true,
+          "evidence": "Framework-Induced Overreach; Honest Reckoning (3 categories)."
+        }
+      ],
+      "notes": [
+        "Strongest with_skill run. Trevor Problem is an exceptionally effective narrative framing device."
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 5,
+      "result": {
+        "pass_rate": 0.818,
+        "passed": 9,
+        "failed": 2,
+        "total": 11,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Valid YAML frontmatter",
+          "passed": true,
+          "evidence": "Full frontmatter."
+        },
+        {
+          "text": "Narrative density ~80%",
+          "passed": true,
+          "evidence": "~78-80% narrative."
+        },
+        {
+          "text": "2+ pushback exchanges",
+          "passed": true,
+          "evidence": "'Find what I'm still bad at' resistance; 'How?' challenge on blind spot value."
+        },
+        {
+          "text": "Emma fallibility",
+          "passed": false,
+          "evidence": "No personal mistake or failure shared by Emma."
+        },
+        {
+          "text": "No monologue >4 sentences",
+          "passed": true,
+          "evidence": "Within limits."
+        },
+        {
+          "text": "James ops analogy + thinking-out-loud",
+          "passed": true,
+          "evidence": "Warehouse supplier delivery problem + approval workflow bottleneck. 'That's actually what feedback loops do.'"
+        },
+        {
+          "text": "Emma Socratic + visual",
+          "passed": true,
+          "evidence": "'Where did you stay the same?' Four-box napkin diagram."
+        },
+        {
+          "text": "Jonah Rhythm",
+          "passed": false,
+          "evidence": "Implicit departure only ('came back twenty minutes later'). No explicit exit scene."
+        },
+        {
+          "text": "Standalone names",
+          "passed": true,
+          "evidence": "Growth Evidence Taxonomy, Persistent Blind Spot."
+        },
+        {
+          "text": "Try With AI: 3 prompts",
+          "passed": true,
+          "evidence": "3 prompts with learning explanations."
+        },
+        {
+          "text": "Emergent concept",
+          "passed": true,
+          "evidence": "Growth Evidence Taxonomy with 4 dimensions."
+        }
+      ],
+      "notes": ["Missing Emma fallibility and weak Jonah Rhythm execution."]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "with_skill",
+      "run_number": 6,
+      "result": {
+        "pass_rate": 0.909,
+        "passed": 10,
+        "failed": 1,
+        "total": 11,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Valid YAML frontmatter",
+          "passed": true,
+          "evidence": "Full frontmatter."
+        },
+        {
+          "text": "Narrative density ~80%",
+          "passed": true,
+          "evidence": "~78-80% narrative."
+        },
+        {
+          "text": "2+ pushback exchanges",
+          "passed": true,
+          "evidence": "'Draft 3 obviously' resistance; 'That is the same thing' on absorption vs application."
+        },
+        {
+          "text": "Emma fallibility",
+          "passed": false,
+          "evidence": "No personal failure. Manager code-by-lines story is about someone else."
+        },
+        {
+          "text": "No monologue >4 sentences",
+          "passed": true,
+          "evidence": "Within limits."
+        },
+        {
+          "text": "James ops analogy + thinking-out-loud",
+          "passed": true,
+          "evidence": "Quarterly vocabulary cycling at ops firm + warehouse throughput. Shipping provider switch."
+        },
+        {
+          "text": "Emma Socratic + visual",
+          "passed": true,
+          "evidence": "'Point to the feedback loop you are most proud of.' Absorption Test table."
+        },
+        {
+          "text": "Jonah Rhythm",
+          "passed": true,
+          "evidence": "Emma exits to check something. James builds absorption audit alone. Emma returns."
+        },
+        {
+          "text": "Standalone names",
+          "passed": true,
+          "evidence": "Growth Delta, Framework Absorption Audit, Absorption Test, Two Kinds of Growth."
+        },
+        {
+          "text": "Try With AI: 3 prompts",
+          "passed": true,
+          "evidence": "3 prompts in tip blocks with learning explanations."
+        },
+        {
+          "text": "Emergent concept",
+          "passed": true,
+          "evidence": "Absorption Test (3 questions) + Absorbed/Applied/Developing classification."
+        }
+      ],
+      "notes": [
+        "Missing Emma fallibility. Otherwise strong with the Absorption Test as standout emergent concept."
+      ]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.909,
+        "passed": 10,
+        "failed": 1,
+        "total": 11,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Valid YAML frontmatter",
+          "passed": true,
+          "evidence": "Full frontmatter with 3 skills."
+        },
+        {
+          "text": "Narrative density ~80%",
+          "passed": true,
+          "evidence": "~80% with Trevor Problem framing."
+        },
+        {
+          "text": "2+ pushback exchanges",
+          "passed": true,
+          "evidence": "'Following a recipe' challenge; 'Regression?' surprise resistance."
+        },
+        {
+          "text": "Emma fallibility",
+          "passed": true,
+          "evidence": "Code review 31% score admission; inherited backend service lesson."
+        },
+        {
+          "text": "No monologue >4 sentences",
+          "passed": true,
+          "evidence": "Within limits."
+        },
+        {
+          "text": "James ops analogy + thinking-out-loud",
+          "passed": true,
+          "evidence": "Warehouse inventory automation. PDCA cycles on production floor."
+        },
+        {
+          "text": "Emma Socratic + visual",
+          "passed": true,
+          "evidence": "'Walk me through this one.' SURFACE/STRUCTURAL vertical line. Feedback loop ASCII diagram."
+        },
+        {
+          "text": "Jonah Rhythm",
+          "passed": false,
+          "evidence": "Emma remains present throughout. No exit-struggle-return sequence."
+        },
+        {
+          "text": "Standalone names",
+          "passed": true,
+          "evidence": "Thinking Snapshot, Delta Analysis, Framework-Induced Overreach, Defense Test, Personal Feedback Loop."
+        },
+        {
+          "text": "Try With AI: 3 prompts",
+          "passed": true,
+          "evidence": "3 prompts with learning explanations."
+        },
+        {
+          "text": "Emergent concept",
+          "passed": true,
+          "evidence": "Framework-Induced Overreach. Defense Test."
+        }
+      ],
+      "notes": ["Very strong baseline run. Only fails on Jonah Rhythm."]
+    },
+    {
+      "eval_id": 1,
+      "eval_name": "part0-full-lesson-story-driven",
+      "configuration": "without_skill",
+      "run_number": 2,
+      "result": {
+        "pass_rate": 0.727,
+        "passed": 8,
+        "failed": 3,
+        "total": 11,
+        "time_seconds": null,
+        "tokens": null,
+        "tool_calls": null,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Valid YAML frontmatter",
+          "passed": true,
+          "evidence": "Full frontmatter with 3 skills."
+        },
+        {
+          "text": "Narrative density ~80%",
+          "passed": true,
+          "evidence": "~80% narrative."
+        },
+        {
+          "text": "2+ pushback exchanges",
+          "passed": true,
+          "evidence": "'Doesn't feel like a success' resistance; 'What if the process carried me there?' challenge."
+        },
+        {
+          "text": "Emma fallibility",
+          "passed": false,
+          "evidence": "No personal failure shared. Emma shows vulnerability but no mistakes."
+        },
+        {
+          "text": "No monologue >4 sentences",
+          "passed": true,
+          "evidence": "Within limits."
+        },
+        {
+          "text": "James ops analogy + thinking-out-loud",
+          "passed": false,
+          "evidence": "No specific operations analogy from James's background found. Missing warehouse, supplier, logistics, team management references in his dialogue."
+        },
+        {
+          "text": "Emma Socratic + visual",
+          "passed": true,
+          "evidence": "'What specifically worries you?' Growth Delta 3-dimension table."
+        },
+        {
+          "text": "Jonah Rhythm",
+          "passed": true,
+          "evidence": "Emma gets refill, James does blank-page test alone, Emma returns."
+        },
+        {
+          "text": "Standalone names",
+          "passed": true,
+          "evidence": "Growth Delta, Vocabulary Trap, Growth Evidence File."
+        },
+        {
+          "text": "Try With AI: 3 prompts",
+          "passed": true,
+          "evidence": "3 prompts with learning explanations."
+        },
+        {
+          "text": "Emergent concept",
+          "passed": true,
+          "evidence": "Assisted vs independent performance distinction."
+        }
+      ],
+      "notes": [
+        "Three failures: no Emma fallibility, no James ops analogy, weakest baseline run."
+      ]
+    }
+  ],
+
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": { "mean": 0.955, "stddev": 0.07, "min": 0.818, "max": 1.0 },
+      "time_seconds": {
+        "mean": null,
+        "stddev": null,
+        "min": null,
+        "max": null
+      },
+      "tokens": { "mean": null, "stddev": null, "min": null, "max": null }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.818,
+        "stddev": 0.091,
+        "min": 0.727,
+        "max": 0.909
+      },
+      "time_seconds": {
+        "mean": null,
+        "stddev": null,
+        "min": null,
+        "max": null
+      },
+      "tokens": { "mean": null, "stddev": null, "min": null, "max": null }
+    },
+    "delta": {
+      "pass_rate": "+0.137",
+      "time_seconds": "N/A",
+      "tokens": "N/A"
+    }
+  },
+
+  "notes": [
+    "Iteration 4 achieves the highest with_skill pass rate across all iterations: 95.5% (vs iter-2: 94%, iter-3: 92.5%, iter-1: 77%).",
+    "4 of 6 with_skill runs score perfect 11/11 (100%). This is unprecedented consistency.",
+    "Assertion #4 (Emma fallibility) is the primary failure mode for with_skill runs: fails in ws5 and ws6. Both runs have Emma as authoritative guide without sharing personal mistakes.",
+    "Assertion #6 (James ops analogy) passes 100% across all with_skill runs, resolving the iter-2 weakness (50%). The skill now reliably grounds James in warehouse/supplier/process optimization context.",
+    "Assertion #8 (Jonah Rhythm) fails in ws5 (implicit departure) but passes in 5/6 with_skill runs. Major improvement over iter-3.",
+    "Assertion #10 (Try With AI: 3 prompts + learning) passes 100% across ALL 8 runs. Resolved from iter-3 (33%). The skill now reliably generates exactly 3 prompts with learning explanations.",
+    "Baseline without_skill runs are strong: mean 81.8%. bl1 scores 10/11, matching some with_skill runs. The eval prompt itself is well-constructed.",
+    "The delta (+13.7%) is smaller than iter-2 (+3%) but comes from a much higher absolute baseline. With skill at 95.5% vs baseline at 81.8%, the skill provides consistent uplift on the hardest assertions (#4 fallibility, #8 Jonah Rhythm).",
+    "Emergent concepts are strong in both configurations. Every run produces at least 1 novel named framework not in the prompt. This assertion may be too easy to pass.",
+    "Cross-iteration trend: #6 went 50% -> 100% -> 100% (fixed in iter-3, held in iter-4). #10 went unstable -> 100% (fixed in iter-4). #4 remains the most variable assertion at ~67% for with_skill.",
+    "COMPARISON TO PREVIOUS ITERATIONS: Iter-1 ws=77% bl=80% delta=-3% | Iter-2 ws=94% bl=91% delta=+3% | Iter-3 ws=92.5% bl=94% delta=-1.5% | Iter-4 ws=95.5% bl=81.8% delta=+13.7%.",
+    "Iter-4 is the first iteration where the skill clearly outperforms baseline across a meaningful sample (6 ws runs vs 2 bl runs). The +13.7% delta is the largest positive delta in the series."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains title: 'The Feedback Loop', description, sidebar_position: 5, skills array with 4 concepts (Thinking Snapshot, Delta Analysis, Surface vs Structural, Personal Feedback Loop), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80%",
+      "passed": true,
+      "evidence": "The lesson is very narrative-heavy. Extended James-Emma dialogues drive the entire lesson through Thinking Snapshot, Surface vs Structural Change, The Honest Scorecard, Framework-Induced Overreach, and the Personal Feedback Loop. Try With AI and Key Takeaways add non-narrative structure. Estimated ~78-82% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'Of course I got better' - James initially resists Emma's skepticism. Pushback 2: 'There are no connections... No second-order anything. No loops.' - James self-discovers his own failure in the Snapshot Test. Pushback 3: 'Okay, but I already knew what to look for the second time' - James challenges the validity of his own snapshot results."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma shares: 'I once inherited a codebase from a developer who had been through a Clean Code workshop. Every function had a descriptive name... The code looked beautiful. And it had exactly the same bugs.' Also later: 'My first year as a senior engineer, I had just finished studying design patterns... A script that ran once a day to archive log files had an abstract base class and three levels of inheritance... Please never do this again. I was mortified.' Two genuine past professional failures."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest speeches are about 3-4 sentences. The design patterns story is broken by James's question 'Did it work?' Dialogue pacing is excellent throughout."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy 1: 'Every quarter, the operations team adopted whatever management terminology was trending. Lean processes became operational excellence became continuous improvement culture. The slide decks got more impressive. The actual warehouse throughput stayed flat.' - warehouse/operations. Business analogy 2: 'like how we documented warehouse optimizations... Before photo of the layout. Description of what we changed.' - warehouse process documentation. Thinking-out-loud: 'There's no connections... No second-order anything. No loops.' and 'That gap is the most honest thing he had produced all chapter.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Which one would you use if someone stopped you in the hallway and asked Quick, what happens if we cut the weekend shift?' Visual/spatial metaphor: napkin comparison (two physical artifacts side by side), boxes connected by arrows for Growth Evidence Pairs."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Emma says 'I need to make a call. Takes about five minutes' and walks out. James works alone comparing Draft 1 and Draft 3, discovering one genuine structural improvement and one vocabulary swap. Emma returns asking 'Find them?' Clear Jonah Rhythm."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Snapshot Test' (heading + note box), 'The Vocabulary Trap' (heading + tip box), 'Growth Evidence Pairs' (heading + note box), 'The Honest Inventory' (heading + tip box). All clearly named with standalone definitions."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Full 'Try With AI' section with 3 prompts: 'The Snapshot Test', 'Vocabulary Trap Detection', 'Growth Evidence Pair Validation'. Each has code-block prompts and 'What you are learning' explanations."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "'Framework overhead' as a third category emerges: James discovers the framework slowed him down for quick problems. 'For a hallway question, five bullet points in forty seconds is better than a cascade map in four minutes.' This produces the named concept 'The Honest Inventory' with three categories (genuine, vocabulary swaps, framework overhead). Also the self-correcting loop metaphor applied to James himself."
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  }
+}

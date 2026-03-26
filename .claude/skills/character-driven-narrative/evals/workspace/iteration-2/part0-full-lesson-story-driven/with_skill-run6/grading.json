@@ -1,0 +1,69 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains sidebar_position: 5, title: 'The Feedback Loop', description present, skills array with 2 skills (Metacognitive Self-Evaluation, Growth Evidence Construction), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "Heavy narrative sections: opening scene, Snapshot Test scene with napkin exercise, Vocabulary Trap discovery, Growth Evidence Pairs construction with warehouse analogy, The Honest Inventory scene with Emma's career story. Instructional blocks (:::note boxes, exercise steps, Try With AI) are present but shorter than narrative. Approximately 75-80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'Obviously. Look at these.' James resists the idea that his maps might not represent real improvement, holding up Draft 1 and Draft 3 as self-evident proof. Pushback 2: 'That's... kind of depressing.' James resists the finding that 60% of his improvement is real. Pushback 3: 'Why would anything get worse?' James resists the idea that frameworks can create regressions."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Clear fallibility moment: 'I spent two years early in my career over-engineering everything because I had just learned design patterns. Every function needed a factory, every data flow needed an observer, every class needed an abstract base. My code was architecturally beautiful and took three times longer to write than it should have.' and 'A senior engineer reviewed my code and said: \"This is very impressive, and also completely unnecessary for a script that runs once a day.\" I was so embarrassed I didn't use a design pattern for six months.' Detailed past mistake with emotional honesty."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Checked all Emma speech blocks. The longest is the design patterns story (4 sentences), followed immediately by James's reaction: 'James grinned. \"What broke you out of it?\"' All other blocks are 3 or fewer sentences."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: 'Wait, so basically this is like how we used to do before-and-after photos for our warehouse optimization projects. We'd take a photo of the layout before, document exactly what we changed and why, then take a photo after. Management didn't care about our feelings about the new layout. They wanted the photos.' Direct warehouse/logistics operations analogy. Thinking-out-loud: 'Seven out of eleven... About sixty percent real improvement.' and 'the quarterly business reviews at his old company' internal monologue."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'Is it?' (when James says 'Night and day' about his maps) and 'Prove it.' (Socratic challenge to demonstrate improvement). Visual/spatial metaphor: 'The Snapshot Test' uses a literal before/after visual comparison metaphor, and Emma draws 'two boxes on a napkin, connected by an arrow' as a spatial diagram for Growth Evidence Pairs."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Jonah Rhythm 1: Emma exits ('I need coffee. While I'm gone, look at your four drafts again.'). James struggles alone finding vocabulary vs structural improvements, makes the quarterly business reviews connection. Emma returns ('Emma came back with two cups.'). Jonah Rhythm 2: Emma takes a call ('I need to take a call in fifteen minutes.'). James writes the honest inventory alone, discovering that the framework sometimes slows him down. Emma returns from call ('Emma came back from her call.')."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Snapshot Test' (H2 + :::note with definition), 'The Vocabulary Trap' (H2 + :::tip with definition and test), 'Growth Evidence Pairs' (H2 + :::note with three-component definition), 'The Honest Inventory' (:::tip with three categories). Key Takeaways table lists all four with definitions. All findable by scanning."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "H2 'Try With AI' section with 3 prompts: 'The Snapshot Test', 'Vocabulary Trap Detection', and 'Growth Evidence Pair Validation'. Each has code block prompts and 'What you are learning' explanation."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "'The Vocabulary Trap' is a genuinely emergent named concept with a specific diagnostic test: 'Take any sentence from your revised map. Strip away every technical term. Rewrite it in plain language. If the plain-language version says the same thing as your original draft, the improvement is cosmetic, not structural.' This provides a novel, actionable test that goes beyond the prompt's requirements. Additionally, 'The Honest Inventory' with its three-category framework (genuine improvements, vocabulary swaps, areas of rigidity) and the specific insight about 'Framework rigidity' as a third category is emergent depth."
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Excellent run. All assertions pass. The warehouse optimization analogy is one of the best business-background integrations across all runs. Emma's design patterns story is a detailed, authentic fallibility moment."
+  }
+}

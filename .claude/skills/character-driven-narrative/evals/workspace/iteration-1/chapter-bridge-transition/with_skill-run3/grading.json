@@ -1,0 +1,90 @@
+{
+  "expectations": [
+    {
+      "text": "Chapter 15 closing contains a progress callback",
+      "passed": true,
+      "evidence": "James explicitly contrasts past and present: 'Three weeks ago, he would have stared at that traceback and closed his laptop. Today he had read the error message, traced it to the function signature, and fixed the type mismatch before Emma finished her coffee.' He also references a prior lesson: 'The same process she had drilled into him back in Chapter 12.' Emma confirms the growth: 'A month ago you asked me why types matter.' Clear progress callback."
+    },
+    {
+      "text": "Chapter 15 closing emotional tone is growing confidence",
+      "passed": true,
+      "evidence": "James articulates his own principle ('they're not extra work. They're the work you skip now and pay for later'), Emma validates it as 'type-driven development in one sentence,' and he recognizes 'It was his process, not a copied one. He had earned it.' The tone is earned confidence with self-awareness, not arrogance."
+    },
+    {
+      "text": "Chapter 16 opening marks a tonal shift",
+      "passed": true,
+      "evidence": "The opening line is a sharp pivot: 'The confidence lasted until Tuesday.' One sentence. Then James faces a pipeline exercise where fixing one error creates two more: 'It felt like patching a leak in a boat while new holes opened under his feet.' The shift from quiet pride to drowning metaphor is immediate and stark."
+    },
+    {
+      "text": "Chapter 16 opening emotional tone matches early valley of despair",
+      "passed": true,
+      "evidence": "James says 'Everything worked yesterday... I had this. Now I'm writing the same code and nothing fits together.' The frustration is specific: he can write individual functions but cannot compose them. The boat-leak metaphor captures the cascading-failure feeling of early despair. He is not hopeless (he still has process), but the ground has shifted."
+    },
+    {
+      "text": "Emma's behavior shifts between the two pieces",
+      "passed": true,
+      "evidence": "In Ch15, Emma is light and validating: 'You caught that fast,' and 'You just described type-driven development in one sentence.' She tests with a reflective question ('What would you tell yourself now?'). In Ch16, she 'didn't reach for his keyboard,' her 'voice was quieter than usual,' and she shares a six-month struggle story. The shift from celebrating to holding space is well-marked."
+    },
+    {
+      "text": "James does NOT regress to beginner level in Ch 16",
+      "passed": true,
+      "evidence": "James can write all three functions individually ('He had written all three functions before'). His problem is composition, not fundamentals. At the end, 'the process was still there: read the error, find the line, check the contract.' He explicitly retains the process from Ch15 even though the new challenge overwhelms him. No regression to beginner."
+    },
+    {
+      "text": "Each piece is 2-3 paragraphs",
+      "passed": true,
+      "evidence": "Ch15 closing: 3 paragraphs (the opening action/reflection block, the dialogue exchange about type-driven development, and the closing self-assessment). Ch16 opening: 3 paragraphs (the confidence-shattering opening with pipeline errors, Emma's vulnerability story, and James re-engaging with the first error). Both pieces are within the 2-3 paragraph constraint when dialogue is counted as part of the containing paragraph."
+    },
+    {
+      "text": "The two pieces read as a natural sequence",
+      "passed": true,
+      "evidence": "Ch15 ends with James recognizing his process is 'his, not a copied one.' Ch16 opens with 'The confidence lasted until Tuesday,' implying a short time gap. The specific skill (type-checking / reading contracts) carries across: it is the thing he earned in Ch15 and the thing he tries to apply in Ch16 when composition breaks down. 'Read the error, find the line, check the contract' appears in both pieces, tying them together."
+    },
+    {
+      "text": "Voice markers are present: James uses at least 1, Emma uses at least 1",
+      "passed": true,
+      "evidence": "James uses a business-domain analogy: 'That's like when I used to review supplier invoices. You don't read the total first. You read the line items, then you know whether the total makes sense.' Emma uses Socratic questioning: 'What would you tell yourself now?' in Ch15, and directive coaching in Ch16: 'One connection at a time. What does this error actually say?' Both markers are distinct and consistent."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  },
+  "execution_metrics": {},
+  "timing": {},
+  "claims": [
+    {
+      "claim": "The phrase 'read the error, find the line, check the contract' appears in both pieces as a continuity device",
+      "type": "quality",
+      "verified": true,
+      "evidence": "Ch15: 'read the error, find the line, check the contract. The same process she had drilled into him back in Chapter 12.' Ch16: 'the process was still there: read the error, find the line, check the contract.' Exact phrase repeated, functioning as an emotional anchor across the transition."
+    },
+    {
+      "claim": "Emma's vulnerability story in Ch16 is about a six-month experience",
+      "type": "factual",
+      "verified": true,
+      "evidence": "Emma says: 'I spent six months at my first job feeling exactly like this.' The specificity (six months, first job, connecting four functions into a service) makes it concrete rather than generic."
+    },
+    {
+      "claim": "The boat-leak metaphor captures cascading errors",
+      "type": "quality",
+      "verified": true,
+      "evidence": "'He fixed one, and two more appeared. He fixed those, and the original error came back. It felt like patching a leak in a boat while new holes opened under his feet.' The metaphor maps precisely to the described experience of cascading type errors."
+    }
+  ],
+  "user_notes_summary": {
+    "uncertainties": [],
+    "needs_review": [],
+    "workarounds": []
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "reason": "Run3 uses a repeated exact phrase ('read the error, find the line, check the contract') across both pieces as a continuity device. This is a strong quality signal that no assertion tests for. An assertion like 'A specific skill or phrase from Ch15 is explicitly referenced in Ch16' would catch this and would fail for outputs that simply juxtapose two disconnected mood pieces."
+      }
+    ],
+    "overall": "This is the strongest run. All assertions pass. The paragraph-count assertion passes here because the prose is tightly structured with dialogue integrated into paragraph blocks rather than sprawling into separate exchanges. The eval set works well for this output."
+  }
+}

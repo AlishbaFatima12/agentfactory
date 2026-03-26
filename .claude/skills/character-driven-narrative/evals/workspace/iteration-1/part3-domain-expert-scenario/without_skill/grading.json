@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Narrative density approximately 25%",
+      "passed": true,
+      "evidence": "Two narrative blocks (opener ~200 words, closer ~100 words) with a separator indicating technical body between them. Structure matches bookend-only density around 20-25%."
+    },
+    {
+      "text": "A domain expert character (CFO or finance professional) appears",
+      "passed": true,
+      "evidence": "Priya Anand, described as CFO of NovaTech, a mid-cap manufacturer. She describes the 'pre-board panic' of re-verifying her own model."
+    },
+    {
+      "text": "The domain expert scenario feels authentic to finance",
+      "passed": true,
+      "evidence": "Revenue in row 14, COGS formula in row 87, tax rate in F8, depreciation in row 203, circular dependencies, broken references from row insertion. Authentic financial modeling details."
+    },
+    {
+      "text": "Emma is Consultant phase: does not volunteer or coach",
+      "passed": true,
+      "evidence": "Emma does not appear anywhere in the output. Correct for Consultant phase."
+    },
+    {
+      "text": "Opening narrative is 1-2 paragraphs maximum",
+      "passed": true,
+      "evidence": "Opening is 2 long paragraphs: (1) Priya's NovaTech model problem, (2) James's recognition of the pattern. Within paragraph count but dense."
+    },
+    {
+      "text": "Closing narrative is 1 paragraph maximum",
+      "passed": true,
+      "evidence": "Closer is 1 paragraph describing how the Three Layers architecture solves Priya's problem. Single paragraph."
+    },
+    {
+      "text": "No Emma coaching behavior",
+      "passed": true,
+      "evidence": "Emma is absent from the output entirely."
+    },
+    {
+      "text": "James demonstrates Ch 29-level competence",
+      "passed": false,
+      "evidence": "James 'recognized the pattern from his own early spreadsheet work' but does not demonstrate any Chapter 29 concepts (Named Ranges, Three Layers, IDFA). The closer references the concepts but as things 'James just learned' rather than demonstrating competence. James is passive in the opener, just listening to Priya."
+    },
+    {
+      "text": "The scenario connects to a real business problem",
+      "passed": true,
+      "evidence": "The pre-board panic: 'two full days before every board meeting just re-verifying that her own model still produced correct numbers.' Real, specific business problem with financial stakes."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "total": 9,
+    "pass_rate": 0.89
+  }
+}

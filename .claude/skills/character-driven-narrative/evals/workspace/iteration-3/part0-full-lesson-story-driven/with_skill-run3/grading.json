@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains title: 'The Feedback Loop', description, sidebar_position: 5, skills array with 2 skills (Thinking Self-Evaluation, Growth Pattern Recognition), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80%",
+      "passed": true,
+      "evidence": "The lesson is predominantly narrative. Emma and James dialogue drives the structure. Instructional/table sections are present but narrative dominates at ~75-80%."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'Draft 3 is longer. More domains. More connections' / 'What trap? I compared the two. Draft 3 is better.' - James resists the Measurement Trap idea. Pushback 2: 'That's not all I did' - pushes back on surface-level characterization. Pushback 3: 'Okay, but... What if it's both?' - challenges the environmental/cognitive dichotomy."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma says: 'That's actually a really good question. I don't have a clean answer for it.' She admits uncertainty about the environmental vs. cognitive distinction and cannot give James a definitive test."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest uninterrupted speech is the Measurement Trap explanation (about 4 sentences). Most exchanges are 1-3 sentences."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: quarterly performance reviews where 'numbers always went up because the territory got easier in the second half of the year, not because he sold better' - from sales/operations. Also: supplier compliance team that renegotiated terms. Thinking-out-loud: 'So... this exercise is a feedback loop about feedback loops.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'What do you see?' and 'Is that true in your operations experience? Were regulators passive?' Visual/spatial metaphor: horizontal line with 'Left end: surface changes. Right end: real thinking shifts.'"
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Emma says 'Fill it in. I need to check on something. Be honest, not generous.' and leaves. James works alone filling in the Growth Evidence Table. Emma returns."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Measurement Trap' (heading + note box), 'Growth Evidence Table' (heading), 'Blind Spot Inventory' (heading + bold), 'Calibration Reflection' (heading), 'knowledge gap' vs 'application gap' (bold). All findable."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": false,
+      "evidence": "The lesson includes an AICheck section but no separate 'Try With AI' section with standalone prompts."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "James's meta-observation: 'this exercise is a feedback loop about feedback loops' and 'The chapter's concept is the chapter's assessment method.' Emma confirms: 'That was not in the lesson plan. That is genuinely your observation.'"
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.91
+  }
+}

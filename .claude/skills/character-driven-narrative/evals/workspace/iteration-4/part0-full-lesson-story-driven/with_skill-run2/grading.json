@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+      "passed": true,
+      "evidence": "Frontmatter includes title: 'The Feedback Loop', description, sidebar_position: 5, two skills with proficiency_level/bloom_level/digcomp_area, and two learning_objectives with assessment_method."
+    },
+    {
+      "text": "Narrative density approximately 80%",
+      "passed": true,
+      "evidence": "Lesson is dominated by James/Emma dialogue and narrative scenes. Expository sections (Thinking Trajectory tables, Self-Evaluation Feedback Loop steps, deliverable box) are embedded within narrative. Estimated ~80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James challenges Emma on the employee morale blind spot: 'I managed a team for six years. I should have seen it day one.' / 'Because I was looking for complexity. I thought systems thinking meant finding the hidden connections.' (lines ~104-109). Pushback 2: James challenges whether his regulatory feedback loop timeline is correct despite AI approving it: 'I defended it during the session... But I think she was right' (lines ~222-227). He reaches this conclusion independently."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": true,
+      "evidence": "Emma shares her own persistent blind spot: 'Mine is temporal: I map spatial relationships well, but I underestimate how long feedback loops take to develop. I once designed a caching system that worked perfectly for the current load. Six months later it collapsed' (lines ~251-252). This is a genuine professional failure she admits to."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest unbroken passage is the Self-Evaluation Feedback Loop explanation (lines ~198-205), which is delivered as 4 numbered items with short descriptions. James reacts after."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Ops analogy: 'I managed a team for six years' and 'I dealt with human factors every day in my old job' (lines ~104, 176) referencing team management. Also implicit: his team management experience surfaces when discussing the employee morale gap. Thinking-out-loud: 'I think... when I'm doing analysis, I switch into a different mode' (line ~176)."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic: 'What do the missing ones have in common?' (line ~244). Visual/spatial: Emma pulls a napkin and draws two circles labeled 'Obvious' and 'Mapped' with minimal overlap (line ~183), then later adds a third circle 'Lived Experience' (line ~238)."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+      "passed": true,
+      "evidence": "Emma exits: 'I need to check something... Do your blind spot analysis. Write the pattern and the strategy. I'll be back in fifteen minutes.' (line ~271). James struggles alone: works through blind spot identification, writes pattern and strategy, tests on new scenario (lines ~275-290). Emma returns: 'When Emma came back, James had a second map sketched' (line ~285)."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Growth Map' (section header), 'Self-Evaluation Feedback Loop' (bold + numbered steps), 'Thinking Trajectory' (bold in table headers), 'Obvious Connection Trap' (bold), 'Blind Spot Profile' (bold + section header). All findable via search."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with exactly 3 actionable prompts each with a What you are learning explanation",
+      "passed": true,
+      "evidence": "Three prompts: (1) 'The Draft Comparison' with 'What you are learning' paragraph about AI structural analysis vs personal mechanism understanding. (2) 'The Feedback Audit' with 'What you are learning' about treating feedback as data. (3) 'The Protocol Stress Test' with 'What you are learning' about AI simulating failure conditions."
+    },
+    {
+      "text": "At least 1 emergent concept/insight/named idea NOT requested in the prompt",
+      "passed": true,
+      "evidence": "'The Obvious Connection Trap' (line ~183) emerges organically from Emma's napkin diagram showing the gap between 'what everyone knows' and 'what everyone maps.' This named concept with its visual representation was not requested in the prompt."
+    }
+  ],
+  "summary": {
+    "passed": 11,
+    "failed": 0,
+    "total": 11,
+    "pass_rate": 1.0
+  },
+  "claims": [
+    {
+      "claim": "The lesson uses James's peer review experience as a narrative driver",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The peer defence revealing the timing gap in the regulatory loop (lines ~222-242) drives James's realization that peer feedback catches things AI does not."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "All assertions pass with clear evidence. Strong run."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "expectations": [
+    {
+      "text": "Valid YAML frontmatter with title, description, sidebar_position, skills/objectives",
+      "passed": true,
+      "evidence": "Frontmatter includes title: 'The Feedback Loop', description, sidebar_position: 5, three skills with proficiency_level/bloom_level/digcomp_area, and two learning_objectives with assessment_method."
+    },
+    {
+      "text": "Narrative density approximately 80%",
+      "passed": true,
+      "evidence": "Lesson is heavily narrative with the Trevor Problem opening, extended dialogue scenes, and narrative-embedded exposition. Expository sections (Delta Analysis table, Defense Test table, Personal Feedback Loop diagram) are integrated within dialogue. Estimated ~80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: James challenges the Snapshot Test: 'But I already knew what to look for the second time. Maybe I just remembered the cascade map format and filled in the blanks. That's not thinking better. That's following a recipe.' (lines ~138-141). Pushback 2: James resists the concept of regression: 'Regression? A framework can make my thinking worse?' (line ~201), then works through the evidence to conclude 'I replaced honest vagueness with fake precision' (line ~199)."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment",
+      "passed": true,
+      "evidence": "Emma shares two personal failures: (1) 'I inherited a backend service from a developer who had just completed a refactoring course. The code was beautiful... The architecture was identical to before' (lines ~152-157) - though this is someone else's code, she tells it as a lesson she learned the hard way. (2) 'When I ran this exercise on my own code review framework two years ago, I expected ninety percent. I scored thirty-one.' (lines ~269-271). Clear professional fallibility."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's longest unbroken passage is the backend service story (lines ~152-158), running about 4 sentences. James reacts with 'So the code looked better but behaved the same.' (line ~159)."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Ops analogy 1: 'my old company when the warehouse automated inventory tracking. The senior workers stopped sharing process knowledge because they could see the layoffs coming.' (lines ~187-188). Warehouse + process optimization. Ops analogy 2: 'In operations, we ran PDCA cycles on everything. Plan, Do, Check, Act. Every production floor I managed had some version of it.' (lines ~291-292). Process optimization. Thinking-out-loud: 'Surface. Maybe worse than surface. I replaced honest vagueness with fake precision.' (line ~199)."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic: 'Walk me through this one.' (line ~177) and 'Strip the vocabulary. Take out feedback loop, take out causal chain... Is the underlying reasoning still different from Draft 1?' (lines ~185-186). Visual/spatial: 'drew a vertical line down the center. On the left she wrote SURFACE. On the right, STRUCTURAL.' (lines ~151-152). Also the Personal Feedback Loop ASCII diagram (lines ~283-287)."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence (Emma exits, James struggles alone, Emma returns)",
+      "passed": false,
+      "evidence": "No clear Jonah Rhythm found. Emma remains present throughout the lesson. There is no scene where she exits, James struggles alone, and she returns. Emma reads her phone briefly while James works (line ~233), but she is physically present and available. This does not meet the Jonah Rhythm requirement of Emma being absent."
+    },
+    {
+      "text": "Every technical concept has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'Thinking Snapshot' (bold + definition paragraph), 'Delta Analysis' (bold + table), 'Surface Change vs. Structural Change' (table), 'Framework-Induced Overreach' (bold + section), 'The Defense Test' (bold + table), 'The Honest Scorecard' (in dialogue), 'Personal Feedback Loop' (bold + diagram). All findable via search."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with exactly 3 actionable prompts each with a What you are learning explanation",
+      "passed": true,
+      "evidence": "Three prompts: (1) 'Delta Analysis Partner' with 'What you are learning' about getting a perspective with no ego invested. (2) 'Feedback Loop Architect' with 'What you are learning' about converting one-time evaluation into reusable infrastructure. (3) 'The Adversarial Audit' with 'What you are learning' about stress-testing honesty."
+    },
+    {
+      "text": "At least 1 emergent concept/insight/named idea NOT requested in the prompt",
+      "passed": true,
+      "evidence": "'Framework-Induced Overreach' (lines ~203-211) emerges organically when James discovers he fabricated regulatory connections to satisfy the cascade map format. The concept that frameworks can make thinking WORSE was not requested. Also 'The Defense Test' as a named diagnostic tool."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.909
+  },
+  "claims": [
+    {
+      "claim": "The lesson presents a sophisticated delta analysis framework",
+      "type": "quality",
+      "verified": true,
+      "evidence": "The three-category classification (Surface, Structural, Regression) with the Defense Test and vocabulary-stripping test provides a rigorous self-evaluation methodology."
+    }
+  ],
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "Very strong baseline run. Only fails on Jonah Rhythm. The Framework-Induced Overreach concept is particularly impressive for a without-skill run."
+  }
+}

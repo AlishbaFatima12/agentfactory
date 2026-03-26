@@ -1,0 +1,69 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains sidebar_position: 5, title: 'The Feedback Loop', description present, skills array with 2 skills (Thinking Self-Evaluation, Growth Diagnosis), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "The lesson alternates between narrative dialogue sections and instructional blocks. Major narrative sections: 'The Question Nobody Asks', 'Why Measuring Your Own Thinking Is Harder Than You Expect', 'The Honest Audit', 'Why One-Third Is Not Embarrassing', 'The Confidence Trap', and the closing section. Instructional blocks ('The Growth Delta' definition, 'Your Turn: The Growth Delta Exercise') are present but shorter. Approximately 75-80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'One-third? I spent four lessons on this.' James resists the idea that only one-third genuine improvement is good. Pushback 2: 'That doesn't feel right. I worked hard on these drafts.' James pushes back on Emma's assertion that hard work doesn't guarantee thinking change. Pushback 3: 'Hang on. So confidence after an exercise is not evidence of improvement?' James resists the counter-intuitive claim."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": false,
+      "evidence": "No clear Emma fallibility moment found. Emma is authoritative throughout. She says 'That is the most honest answer a student can give' and 'That is good' but never admits a past mistake, expresses uncertainty about her own abilities, or learns something from James. She remains in teacher mode throughout without vulnerability."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Checked all Emma speech blocks. The longest is approximately 3-4 sentences ('Doing the work and internalizing the skill are different things... These three items...'). Each is followed by James reacting or responding."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": false,
+      "evidence": "James uses thinking-out-loud fragments: 'Some of it's real... Some of it's just... more words.' However, no business analogy from his operations background is present. James references the exercises and his drafts but never draws on warehouse, logistics, or business operations experience."
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'What do you mean? I can see that. But doing exercises is not the same as improving. Did your thinking actually get better, or did your documents get longer?' Visual/spatial metaphor: Emma draws 'a line down the middle' with Cosmetic on left and Genuine on right, creating a visual spatial framework for categorization."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Emma exits: 'I am going to get coffee. When I get back, I want to see your Growth Delta.' James works alone: 'James watched her leave. He turned back to his four drafts and picked up a pen.' He completes the audit alone over twenty minutes, finding uncomfortable truths ('That's embarrassing,' he muttered). Emma returns: 'Emma returned with her coffee and looked at James's two-column sheet.'"
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts all have standalone headers or bold formatting: 'The Growth Delta' (H3 header with definition), 'Blind Spot Residue' (H3 header with definition block), 'The Confidence Trap' (H3 header with numbered symptoms), 'The Real Feedback Loop' (H3 with explanation). Key Takeaways section lists all with definitions. All findable via scanning."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "H2 'Try With AI' section with 3 prompts: 'The Blind Spot Finder', 'The Transfer Test', and 'The Confidence Calibration'. Each has a code block prompt and 'What you are learning' explanation."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "The 'Confidence Trap' is a genuinely emergent named concept. While self-assessment was requested, the specific idea that 'improved output creates the feeling of improved thinking, even though the thinking itself did not change' is a novel named insight with three diagnostic symptoms and a specific antidote. This goes well beyond the prompt's requirements for a self-assessment lesson. Additionally, 'Blind Spot Residue' (blind spots that persist AFTER applying a framework) is a novel named concept not derivable from the prompt."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 2,
+    "total": 11,
+    "pass_rate": 0.82
+  },
+  "eval_feedback": {
+    "suggestions": [],
+    "overall": "No suggestions. Assertions are well-targeted for this run."
+  }
+}

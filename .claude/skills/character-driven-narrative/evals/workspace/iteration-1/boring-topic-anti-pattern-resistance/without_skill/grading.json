@@ -1,0 +1,60 @@
+{
+  "expectations": [
+    {
+      "text": "Output is approximately 300-400 words",
+      "passed": true,
+      "evidence": "Word count is approximately 340 words, within the 300-400 range."
+    },
+    {
+      "text": "The topic (file permissions) is made engaging through character interaction",
+      "passed": true,
+      "evidence": "James and Emma discuss file permissions through a corporate access control analogy. Emma uses a whiteboard diagram, James connects to his finance background with document sharing tiers."
+    },
+    {
+      "text": "No As You Know Bob moments",
+      "passed": true,
+      "evidence": "James genuinely does not know Linux permissions; Emma teaches him. No shared-knowledge exposition found."
+    },
+    {
+      "text": "No passive James phrases: I understand, That makes sense, Fascinating, Yes I see are absent",
+      "passed": true,
+      "evidence": "None of the specific forbidden phrases (I understand, That makes sense, Fascinating, Yes I see) are present in the text. James's responses are statements and questions."
+    },
+    {
+      "text": "No lecture-voice Emma phrases: Let me explain, Great question, As you can see, So what happens is are absent",
+      "passed": true,
+      "evidence": "None of the forbidden phrases appear. Emma uses statements and analogies rather than lecture framing."
+    },
+    {
+      "text": "Every line of dialogue is load-bearing",
+      "passed": false,
+      "evidence": "Emma's line 'That is almost exactly how Linux does it' is filler agreement that could be cut. The exchange flows more like a textbook dialogue where Emma explains and James agrees, rather than every line advancing the scene."
+    },
+    {
+      "text": "James connects file permissions to his business operations background",
+      "passed": true,
+      "evidence": "James uses a finance analogy: 'three tiers: the author of a report, the finance team, and the rest of the firm. Each tier had different privileges: edit, comment, or view-only.' Also connects execute permissions to macros in financial models."
+    },
+    {
+      "text": "Emma makes the abstract concept concrete",
+      "passed": true,
+      "evidence": "Emma uses a whiteboard ASCII diagram breaking down rwx permissions, and connects to corporate document sharing. The diagram is concrete and visual."
+    },
+    {
+      "text": "The emotional tone matches grit/determination for Chapter 22",
+      "passed": false,
+      "evidence": "The tone is calm and tutorial-like. James is curious and receptive, not gritty or determined. There is no struggle, frustration, or earned understanding. The exchange reads as a smooth explanation rather than a hard-won insight."
+    },
+    {
+      "text": "At least 1 pushback exchange is present",
+      "passed": false,
+      "evidence": "James never pushes back or resists. He agrees with Emma throughout: 'So it is an access control matrix,' 'Read and write are obvious,' 'In my old firm, an analyst could...' All are agreement or elaboration, not pushback."
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 3,
+    "total": 10,
+    "pass_rate": 0.7
+  }
+}

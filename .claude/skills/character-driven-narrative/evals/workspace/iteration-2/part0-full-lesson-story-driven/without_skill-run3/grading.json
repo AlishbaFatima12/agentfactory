@@ -1,0 +1,74 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains sidebar_position: 5, title: 'The Feedback Loop', description present, skills array with 3 skills (Thinking Self-Evaluation, Growth Evidence Construction, Feedback Loop Identification), and learning_objectives array with 2 objectives. All required fields present. Note: this run has 3 skills instead of the typical 2."
+    },
+    {
+      "text": "Narrative density is approximately 80% (dialogue/narrative prose constitutes roughly 4 out of every 5 paragraphs)",
+      "passed": true,
+      "evidence": "The lesson has extensive narrative sections: The Wednesday scene, The Illusion of Progress, The Before-and-After Protocol with five dimensions walked through in dialogue, Where the Loop Breaks scene, and The Feedback Loop in Your Learning. Instructional sections (evidence trail table, Step 1-4 exercise structure, Try With AI) are present but the narrative dominates. Approximately 75-80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'I've done everything... Four exercises. Four drafts. A peer review. Multiple AI evaluations. I'm done.' James resists the idea that there's more work after completing deliverables. Pushback 2: James pushes back on the five-dimension assessment: 'Can I be honest about something?' leading to 'The thing that changed the most isn't in the five dimensions. It's that three weeks ago, I wouldn't have even thought to ask whether I'd actually improved.' James proposes an alternative dimension of growth."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma learning from James: 'That's the meta-feedback loop. Recognizing that you need to evaluate your own growth IS the growth. Write that down. It belongs in your evidence trail.' While this is Emma validating James rather than admitting a mistake, there is also Emma's earlier physical notebook habit attribution: 'a habit she said she picked up from a principal engineer' -- showing she learned from a mentor. However, a stronger moment is absent. Giving a borderline PASS because Emma explicitly validates James's insight as belonging in the evidence trail, treating his observation as substantively adding to the lesson rather than merely confirming what she already knew."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Checked all Emma speech blocks. The longest continuous Emma speech is approximately 3-4 sentences in the 'There are three ways people fool themselves' section, but it's broken by the three named traps being listed as formatted text (The Length Trap, The Vocabulary Trap, The Format Trap) with James recognizing each one. All dialogue blocks are within the 4-sentence limit."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his operations background and at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy: 'He had spent fifteen years in business operations before deciding to transition into AI-assisted work, and one thing operations taught him was that activity is not the same as results. A warehouse can process twice as many orders and still lose money if the orders are going to the wrong addresses.' Direct warehouse/operations analogy. Thinking-out-loud: 'I don't think I did... I just kept moving to the next exercise.' and 'Can I be honest about something?'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'What changed?' (opening challenge) and 'is that depth or just volume?' (challenging the length assumption). Visual/spatial metaphor: Emma draws 'a simple diagram in her notebook. A circle with four points on it, connected by arrows going clockwise' -- a literal visual/spatial feedback loop diagram. Also the physical notebook as spatial practice tool."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": false,
+      "evidence": "No Jonah Rhythm found. Emma is present throughout the entire lesson. There is no scene where she physically exits, James works independently, and she returns. James does independent work (building the evidence trail for thirty minutes) but Emma remains present. The narrative lacks the specific exit-struggle-return beat."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Length Trap', 'The Vocabulary Trap', 'The Format Trap' (all bold in text), 'The Before-and-After Protocol' (H2 + detailed five dimensions), 'The Five Dimensions' (H3 with table), evidence trail table format. Key Takeaways lists major concepts. All findable by scanning. Note: the three traps are well-named but introduced somewhat quickly in list format rather than full standalone sections."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": true,
+      "evidence": "Try With AI section with 3 prompts: 'Blind Spot Detection', 'Feedback Loop Audit', and 'Growth Projection'. Each has code block prompts and 'What you're learning' explanation."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "The 'meta-feedback loop' concept is genuinely emergent: 'Recognizing that you need to evaluate your own growth IS the growth.' Additionally, the three named traps (The Length Trap, The Vocabulary Trap, The Format Trap) as a taxonomy of self-deception modes go beyond the prompt requirements. The Before-and-After Protocol's five specific dimensions (Connections Seen, Questions Asked, Assumptions Surfaced, Feedback Loops Identified, Language Precision) constitute a reusable named framework. However, these are less deeply developed than the emergent concepts in other runs. The traps are named but not deeply explored as standalone concepts with diagnostic tests. Passing because the five-dimension framework is a genuine structural contribution."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.91
+  },
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+        "reason": "This assertion was borderline for this run. Emma validates James's insight but doesn't clearly admit a past mistake or uncertainty of her own. The notebook attribution to a mentor is weak evidence. A stricter reading might fail this. The assertion could benefit from specifying that 'learning from James' requires Emma to explicitly acknowledge James taught her something she didn't already know."
+      }
+    ],
+    "overall": "Solid run with good narrative structure. The five-dimension Before-and-After Protocol is a useful teaching framework. The main weakness is the missing Jonah Rhythm and relatively shallow Emma fallibility."
+  }
+}

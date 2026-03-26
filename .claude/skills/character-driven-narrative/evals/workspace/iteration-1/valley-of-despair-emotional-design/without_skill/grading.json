@@ -1,0 +1,55 @@
+{
+  "expectations": [
+    {
+      "text": "Opening acknowledges difficulty without patronizing",
+      "passed": true,
+      "evidence": "James describes concrete failures: 'seven chapters of paradigms, principles, context files, specs, agent architectures.' The difficulty is shown through specific technical overwhelm, not generic platitudes."
+    },
+    {
+      "text": "James expresses genuine frustration specific to accumulated load",
+      "passed": true,
+      "evidence": "James articulates layered frustration: 'I learned spec-driven development in Chapter 16 and I felt like I had a system. Then Chapter 17 hit with seven principles, and half of them rewired how I think about specs. Now you are telling me to coordinate multiple agents with CI/CD pipelines.' Also: 'Nobody dropped the inventory protocol, the routing protocol, and the compliance protocol on the same Tuesday and said figure it out.'"
+    },
+    {
+      "text": "Emma demonstrates Type A fallibility (past mistake)",
+      "passed": true,
+      "evidence": "Emma describes: 'I had two agents writing to the same config file in parallel, no locking, no conflict resolution. The kind of mistake that Chapter 17, Principle 6, would have caught in ten seconds if I had slowed down.' Payment service down 6 hours, CTO conference room. Clear past production failure."
+    },
+    {
+      "text": "Emma's vulnerability feels natural and earned, not forced",
+      "passed": true,
+      "evidence": "The confession emerges because James is frustrated with coordination complexity, and Emma sees the parallel to her own coordination failure. She introduces it with 'I want to tell you something I don't usually bring up.' James notes 'He had never heard Emma describe something she had built as a failure before.' The vulnerability is earned by the context."
+    },
+    {
+      "text": "Emotional beat matches valley of despair",
+      "passed": true,
+      "evidence": "Opening frustration, mentor vulnerability, closing reframe. 'What if I am not ready for the orchestra?' is genuine despair. The beat is difficulty and shared struggle, not excitement."
+    },
+    {
+      "text": "Emma is Coach phase not Authority",
+      "passed": true,
+      "evidence": "Emma asks James about his warehouse rollout experience, redirecting him to find his own answer. 'What did you do when the warehouse system rollout hit the compliance protocol conflict?' is Socratic coaching, not authoritative instruction. She says 'Hold that thought' rather than giving the answer."
+    },
+    {
+      "text": "Closing provides forward momentum without false promises",
+      "passed": true,
+      "evidence": "Emma: 'You have built the foundation. Part 2 is where you use it. That is not harder. It is just real.' Honest reframe without promising ease. James recognizes the 'impossible on Monday, obvious by Friday' pattern but is not yet sure."
+    },
+    {
+      "text": "No anti-patterns present",
+      "passed": true,
+      "evidence": "No 'I understand,' no 'Great question!' James pushes back genuinely: 'What if I am not ready for the orchestra?' James's flat delivery 'without self-pity. A genuine question' shows authentic resistance, not passive agreement."
+    },
+    {
+      "text": "James references knowledge from earlier chapters",
+      "passed": true,
+      "evidence": "James references Chapter 16 (spec-driven development), Chapter 17 (seven principles), Chapter 12 (agent factory paradigm). He connects current chapter to prior learning explicitly."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "total": 9,
+    "pass_rate": 1.0
+  }
+}

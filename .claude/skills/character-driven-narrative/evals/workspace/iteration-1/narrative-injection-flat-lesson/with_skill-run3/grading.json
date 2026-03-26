@@ -1,0 +1,95 @@
+{
+  "expectations": [
+    {
+      "text": "All original technical content is preserved exactly: the 4 commands (/help, /clear, /compact, /cost), the Reading Files section, and the Making Edits section",
+      "passed": true,
+      "evidence": "All 4 commands present: '/help -- Shows available commands', '/clear -- Clears conversation history', '/compact -- Summarizes and compresses context', '/cost -- Shows token usage for the session'. Reading Files reference paragraph preserved: 'Claude Code can read any file on your machine. Simply ask it to read a file and it will use the Read tool automatically. You do not need to specify the tool; just describe what you want.' (semicolon instead of double-hyphen before 'just', minor punctuation difference). Making Edits reference paragraph preserved: 'To edit files, describe the change you want. Claude Code will use the Edit tool to make precise string replacements. Always review the diff before accepting.'"
+    },
+    {
+      "text": "Narrative density is approximately 65%",
+      "passed": false,
+      "evidence": "Narrative density is approximately 91.2% (1143 narrative words out of 1253 total). Only 110 words (8.8%) are technical reference content. This is the highest density of all runs and the furthest from the ~65% target. The output is overwhelmingly narrative."
+    },
+    {
+      "text": "Contains a narrative opening (2-3 paragraphs) before the technical content begins",
+      "passed": true,
+      "evidence": "Opens with 5 narrative paragraphs before the first header: (1) 'James dropped into the chair next to Emma...', (2) 'Emma didn't look up from her terminal...', (3-4) dialogue about typing 'claude', (5) '\"Wait, so basically... it's Claude, but it lives in my terminal?\"' These establish context naturally."
+    },
+    {
+      "text": "Contains a narrative closing that bridges to a hypothetical next section",
+      "passed": true,
+      "evidence": "James reflects: 'It felt different from every tool he'd learned before. Not because it was more powerful, but because the interface was a conversation instead of a control panel. He still had to think. He still had to check the work. But the translation layer between what he wanted and how to ask for it had gotten thinner.' Then bridges forward: 'He opened his laptop again. He had more files to look at, and now he knew how to ask.' Note: this closing lacks an explicit bridge to a named next section, but provides thematic forward momentum."
+    },
+    {
+      "text": "At least 1 pushback exchange where James questions or resists something about the tool",
+      "passed": true,
+      "evidence": "James pushes back on the simplicity of reading files: '\"That seems too simple. What if it reads the wrong file?\"' He also resists trusting the edit by catching a bug: 'He was about to accept when he paused. One of the call sites passed no arguments. But the new function signature required a `name` parameter. That would break.' He rejected the edit and revised his prompt. This is active pushback against the tool's output."
+    },
+    {
+      "text": "James uses at least 1 voice marker (business analogy OR thinking-out-loud fragment)",
+      "passed": true,
+      "evidence": "Business analogy: '\"at my old job, every tool had a different way of doing the same basic operation. Open a file in the CRM: three clicks and a dropdown. Open it in the project tracker: search bar, filter, scroll.\"' Thinking-out-loud fragment: '\"Wait, so basically... it's Claude, but it lives in my terminal?\"' and '\"I've spent my whole career learning which buttons to click for each system. You're telling me that layer just... goes away?\"'"
+    },
+    {
+      "text": "Emma uses at least 1 voice marker (Socratic question OR short precise sentences)",
+      "passed": true,
+      "evidence": "Socratic question: '\"What's the first thing you do when you start a new task at work?\"' Short precise sentences: '\"Open a terminal.\"' and '\"Type `claude`.\"' and '\"Just ask it. In English.\"' and '\"Try it.\"' and '\"Most people do.\"' Emma also admits a mistake precisely: '\"Broke nothing, but it was sloppy. I should have caught it.\"'"
+    },
+    {
+      "text": "No As You Know Bob moments",
+      "passed": true,
+      "evidence": "No instances found. James is genuinely new to CLI tools and Claude Code. Emma never explains things James already knows. When James says 'I've spent my whole career learning which buttons to click,' this is sharing his own experience, not Emma telling him what he already knows. The learning dynamic is authentic throughout."
+    },
+    {
+      "text": "Technical content remains findable and readable by a reader who skips all dialogue",
+      "passed": true,
+      "evidence": "Three clear headers ('### Basic Commands', '### Reading Files', '### Making Edits') with reference content directly after each. The bullet list of commands and reference paragraphs stand alone as documentation. However, some technical teaching is embedded in dialogue (e.g., Emma explaining the tools: 'Read, Edit, Grep, Glob. Claude Code picks the right one based on what you describe') which a dialogue-skipping reader would miss. The core reference content is still findable."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "total": 9,
+    "pass_rate": 0.89
+  },
+  "timing": {
+    "total_duration_seconds": 109.3
+  },
+  "claims": [
+    {
+      "claim": "James catches a real bug in Claude Code's suggestion",
+      "type": "quality",
+      "verified": true,
+      "evidence": "James notices a call site that would break after a rename: 'One of the call sites passed no arguments. But the new function signature required a `name` parameter. That would break.' He rejects and re-prompts with the fix. This demonstrates the review-diff principle through action, not just discussion."
+    },
+    {
+      "claim": "Emma names the underlying tools explicitly",
+      "type": "factual",
+      "verified": true,
+      "evidence": "'The tools exist underneath. Read, Edit, Grep, Glob. Claude Code picks the right one based on what you describe.' This adds technical depth beyond the reference paragraphs."
+    },
+    {
+      "claim": "The closing bridges to a next section",
+      "type": "quality",
+      "verified": false,
+      "evidence": "The closing provides thematic forward momentum ('He had more files to look at, and now he knew how to ask') but does NOT explicitly name or describe a next section. Other runs (1, 2) explicitly mention 'Next section, we'll look at...' This run lacks that explicit bridge."
+    }
+  ],
+  "user_notes_summary": null,
+  "eval_feedback": {
+    "suggestions": [
+      {
+        "assertion": "Narrative density is approximately 65%",
+        "reason": "At 91.2%, this is the most extreme overshoot. The run is 1253 words total with only 110 technical reference words. The skill clearly prioritizes narrative expansion over density control."
+      },
+      {
+        "assertion": "Contains a narrative closing that bridges to a hypothetical next section",
+        "reason": "This assertion is loose enough that a thematic ending passes even without an explicit next-section reference. Run 3's closing is good prose but lacks the explicit bridge that runs 1 and 2 have. If the intent is to require an explicit forward reference, the assertion should say 'explicitly names or describes the next section's topic.' I passed this because 'bridges to a hypothetical next section' can be read as thematic rather than explicit."
+      },
+      {
+        "reason": "Run 3 has James catching and fixing a real bug in a tool suggestion, which is the strongest demonstration of the 'review the diff' principle across all runs. No assertion rewards this quality difference. Consider an assertion like 'the narrative demonstrates a technical concept through character action, not just dialogue about it.'"
+      }
+    ],
+    "overall": "Strongest narrative quality of the three with_skill runs. James's bug catch is a genuine narrative achievement. The weak closing bridge and highest density overshoot are the notable issues."
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "text": "Output contains valid YAML frontmatter with title, description, sidebar_position, and skills/objectives fields",
+      "passed": true,
+      "evidence": "Frontmatter contains title: 'The Feedback Loop', description, sidebar_position: 5, skills array with 2 skills (Self-Evaluation of Thinking, Growth Pattern Recognition), and learning_objectives array with 2 objectives. All required fields present."
+    },
+    {
+      "text": "Narrative density is approximately 80%",
+      "passed": true,
+      "evidence": "The lesson is heavily narrative-driven. The Growth Delta, Ownership Test, surface vs. structural improvement, and thinking pattern concepts are all introduced through James-Emma dialogue. Exercise steps are presented but narrative dominates. Estimated ~80% narrative."
+    },
+    {
+      "text": "At least 2 pushback exchanges where James resists or proposes alternatives before reaching conclusions himself",
+      "passed": true,
+      "evidence": "Pushback 1: 'Everything. The first one has maybe twelve connections. The third one has thirty.' / 'So your thinking improved because your map got bigger?' - James resists, then reconsiders. Pushback 2: 'Half the improvements in Draft 2 came from AI... So how much of the Growth Delta is actually mine?' - James challenges the validity of his own improvement. Pushback 3: 'But some of my surface improvements led to structural ones' - James proposes an alternative to Emma's surface/structural dichotomy."
+    },
+    {
+      "text": "At least 1 Emma fallibility moment (past mistake, uncertainty, learning from James, or admitting limits)",
+      "passed": true,
+      "evidence": "Emma responds to James's observation that surface changes can enable structural ones: 'That's actually a really good observation. I usually describe surface and structural as separate categories. But you are right that surface changes sometimes create the conditions for structural ones. I have been simplifying that.' She pauses. 'I will have to think about whether the categories still hold when one leads to the other.' - Emma genuinely learning from James and revising her framework."
+    },
+    {
+      "text": "No Emma monologue exceeds 4 consecutive sentences without James reacting",
+      "passed": true,
+      "evidence": "Emma's speeches are consistently short, 1-3 sentences with James responding. The longest passage is the surface/structural explanation (~3 sentences). Dialogue pacing is excellent."
+    },
+    {
+      "text": "James uses at least 1 business analogy from his SPECIFIC operations background (team management, supplier coordination, process optimization, warehouse, logistics) AND at least 1 thinking-out-loud fragment",
+      "passed": true,
+      "evidence": "Business analogy 1: 'At my old company, we never said the warehouse got better. We said we reduced pick-to-ship time by forty minutes because we reorganized the staging area.' - specific warehouse/logistics operations. Business analogy 2: 'That's like onboarding a new vendor. Someone else recommends them, but if I cannot explain to my boss why we chose them...' - supplier coordination. Thinking-out-loud: 'That's... a different kind of thinking' and 'It's a different kind of thinking. Draft 1 was listing things. Draft 3 was explaining things.'"
+    },
+    {
+      "text": "Emma uses at least 1 Socratic question and at least 1 visual/spatial metaphor",
+      "passed": true,
+      "evidence": "Socratic question: 'What changed?' and 'So your thinking improved because your map got bigger?' and 'If that change has no name, you will lose it by next week.' Visual/spatial metaphor: Emma draws two columns (surface vs. structural) on a blank sheet. Also 'Name it' as a conceptual anchoring metaphor."
+    },
+    {
+      "text": "At least 1 Jonah Rhythm sequence where Emma exits, James struggles alone, and Emma returns",
+      "passed": true,
+      "evidence": "Emma says 'I am going to check on something. When I get back, I want you to have three things written down.' She walks out. James works alone comparing drafts arrow by arrow, discovering one connection he cannot explain from memory (the Ownership Test in action). Emma returns and reads his answers. Clear Jonah Rhythm."
+    },
+    {
+      "text": "Every technical concept introduced has a standalone name findable without reading dialogue",
+      "passed": true,
+      "evidence": "Named concepts: 'The Growth Delta' (heading + bold), 'The Ownership Test' (bold + definition), 'Surface Improvement vs. Structural Improvement' (heading), 'Thinking Pattern' (bold in heading section). Growth Delta examples in collapsible detail. All findable via headings."
+    },
+    {
+      "text": "The lesson includes a Try With AI section with actionable prompts",
+      "passed": false,
+      "evidence": "No separate 'Try With AI' section exists. The lesson has an AICheck section for assessment but no standalone prompts for students to use in their preferred AI assistant."
+    },
+    {
+      "text": "At least 1 concept, insight, or named idea emerges that was NOT explicitly requested in the prompt (emergent depth)",
+      "passed": true,
+      "evidence": "James's insight that surface improvements can enable structural ones ('But some of my surface improvements led to structural ones. Adding the competitors domain was surface. But once it was there, I found the feedback loop with poached employees. That was structural.') - This challenges Emma's framework and she admits he is right. Also: 'The reflection loop. Every chapter's last exercise turns the skill back on itself' - James identifies a meta-pattern across chapters."
+    }
+  ],
+  "summary": {
+    "passed": 10,
+    "failed": 1,
+    "total": 11,
+    "pass_rate": 0.91
+  }
+}
