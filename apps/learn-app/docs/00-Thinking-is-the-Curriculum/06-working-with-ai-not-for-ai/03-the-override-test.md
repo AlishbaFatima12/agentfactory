@@ -78,20 +78,58 @@ teaching_guide:
 
 # The Override Test
 
+## Why This Matters: James and the Invisible Defect
+
+James read the AI-generated competitive analysis on his screen and shrugged. "Looks fine to me."
+
+"Read it again."
+
+"I did read it. The market sizing is solid. The competitor list is comprehensive. The positioning recommendation makes sense." He scrolled through it. "What am I supposed to be looking for? You haven't told me what's wrong with it."
+
+"Correct. I haven't."
+
+James sat back. "Okay, wait. So you're telling me something is wrong but not what it is, and I'm supposed to find it? That's like when my old company hired a quality auditor who wouldn't tell us what he was auditing. Everyone just got paranoid and started double-checking everything."
+
+"Did the audit find problems?"
+
+"Three. Two of them we'd been walking past for months."
+
+"Walking past them because they looked normal. That's the same problem here. The analysis looks right. It reads well. The numbers feel plausible. But something in it doesn't hold up, and the fact that it looks convincing is exactly why it's dangerous."
+
+James looked at the screen again with different eyes. "So I can't just read it. I have to interrogate it."
+
+"What would you check first?"
+
+He thought about it. "Hang on. The market growth projection. It cites 2023 data but the analysis is for a market entry next year. If the growth rate shifted in the last eighteen months..." He trailed off, scrolling back to the source.
+
+"Keep going."
+
+James pulled up a second tab and started cross-referencing. "This is different from the collaboration log. There, I was deciding whether to accept or reject. Here, I'm looking for something I was never supposed to find unless I went looking."
+
+"What's the difference between those two skills?"
+
+"The log is about decisions I know I'm making. This is about catching problems I don't know exist." He looked at the analysis again. "In my old company, we had a quality inspector who said the hardest defects to find are the ones that look like features. This analysis reads like a feature. Every paragraph reinforces the last one. Nothing sticks out. That's why it's hard."
+
+"That's exactly why it matters. The obvious errors catch themselves. The subtle ones survive because nobody questions them."
+
+---
+
 ## Exercise 3: The Override Challenge
 
 **Layers Used:** Layer 4 (Contradiction Challenge)
 
 :::note Building On Previous Chapters
-Chapter 2's error detection applied to AI's business analysis. Your Error Taxonomy from [Chapter 2](../02-detecting-broken-reasoning/01-error-prediction.md) is now your override trigger. The same diagnostic rigor applies -- but the errors are in AI output rather than in a scenario.
+Chapter 2's error detection applied to AI's business analysis. Your Error Taxonomy from [Chapter 2](../02-detecting-broken-reasoning/01-error-prediction.md) is now your override trigger. The same diagnostic rigor applies, but the errors are in AI output rather than in a scenario.
 :::
 
-### What You Do
+James is staring at an analysis that looks perfect. So are you.
+
+### Find the Error Nobody Told You About
 
 Use AI to produce a competitive analysis for a product. The instructor has designed the prompt to produce an analysis with a specific subtle error (a logical flaw, a market assumption that does not hold, or an outdated data point). Without being told what the error is, you must: (a) identify it, (b) explain why AI made it, (c) produce a corrected version, and (d) design a prompt that would prevent this error in future.
 
 :::tip Solo Learner Alternative
-If working without an instructor, generate your own test material: prompt AI with a topic you know well (e.g., *"Write a competitive analysis of [a product/industry you understand]"*), then ask a second AI tool to *"Identify one subtle analytical error in this response that a non-expert would miss."* Use the first response as your exercise material and the second as your answer key.
+If working without an instructor, generate your own test material: prompt AI with a topic you know well (e.g., _"Write a competitive analysis of [a product/industry you understand]"_), then ask a second AI tool to _"Identify one subtle analytical error in this response that a non-expert would miss."_ Use the first response as your exercise material and the second as your answer key.
 :::
 
 ---
@@ -157,9 +195,25 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn the override instinct -- the willingness and ability to say "the AI is wrong here" and back it up. Most students either trust AI too much (never override) or override randomly (reject good output). This exercise trains the specific skill of knowing WHEN and WHY to override.
+James set down his corrected analysis next to the original. The error had been subtle: the competitive analysis used market share data from a period before a major regulatory change, making the positioning recommendation look safe when the competitive landscape had actually shifted underneath it. The numbers were real. The source was legitimate. The conclusion was wrong because the context had changed.
+
+"The scary part," James said, "is that I almost missed it. The first time through, I was reading for logic. The argument was logical. It was the premise that was stale."
+
+"What made you catch it?"
+
+"I kept thinking about what you said. That it looked convincing and that was why it was dangerous. So I stopped reading the argument and started checking the foundations. When was this data collected? What happened in the market since then? That's when it fell apart."
+
+Emma nodded. "Now think about the redesigned prompt. Why does it work better than the original?"
+
+"Because I told AI to flag the date of every data source and note any market events that happened after that date. The original prompt just said 'competitive analysis.' It never asked AI to check its own foundations."
+
+"That's the difference between finding an error and preventing it. Anyone can catch a mistake after the fact. Designing a prompt that makes the mistake less likely: that's the override instinct becoming a system."
+
+## The Lesson Learned
+
+The override instinct is not skepticism. Skeptics reject everything; that is just as lazy as accepting everything. The real skill is knowing when to interrogate, and the answer is: when the output looks too smooth. Convincing prose hides errors better than clumsy prose does. The redesigned prompt is where the exercise pays off, because it turns a one-time catch into a repeatable prevention.
 
 ## Flashcards Study Aid
 

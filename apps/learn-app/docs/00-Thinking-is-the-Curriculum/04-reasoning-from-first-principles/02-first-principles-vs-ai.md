@@ -81,11 +81,35 @@ import TabItem from "@theme/TabItem";
 
 # First Principles vs. AI
 
+## Why This Matters: James and the Empty Toolbox
+
+James looked at the exercise description and pushed back from the table. "Forty-five minutes. No AI. No internet. Solve a resource allocation problem from scratch." He looked at Emma. "There are entire textbooks on fair allocation. Operations research. Game theory. Why would I rederive something people already figured out?"
+
+"What's the standard approach?"
+
+"I don't know the exact algorithm, but there are frameworks. Weighted scoring, needs-based tiers, lottery systems. I'd look them up, pick the best fit, and adapt it."
+
+"And if none of them fit?"
+
+"One of them always fits. That's the point of having frameworks."
+
+Emma pulled out a blank sheet of paper and set it in front of him. "The scenarios in this exercise are designed so that no standard framework fits cleanly. The constraints conflict with each other. Equal access conflicts with limited supply. Need-based allocation conflicts with practical logistics. You can't search your way to a clean answer because the answer depends on which constraints you prioritize, and that's a judgment call, not a lookup."
+
+James stared at the blank sheet. "So you're telling me to spend forty-five minutes reinventing the wheel."
+
+"I'm telling you to find out whether you can build a wheel. Or whether you've only ever installed one someone else designed." She paused. "In my first year as an engineer, I could configure any framework. Kubernetes, Terraform, whatever the team was using. But when a client had requirements that didn't match any existing architecture, I froze. I'd never designed from constraints before. I'd only ever selected from a menu."
+
+"That's like our vendor evaluation process," James said slowly. "We had a scoring matrix. Worked great when the vendors were similar. But when a vendor came in with a completely different model, something that didn't fit any of our categories, we didn't know how to evaluate them. We just scored them low on every dimension because the framework couldn't see what they were offering."
+
+"Exactly. The framework becomes a filter that blocks what it can't categorize." Emma tapped the blank sheet. "Forty-five minutes. Start with what's undeniably true about the problem. Those are your constraints. Then list every assumption you're making. Then build from there."
+
+---
+
+## Exercise 2: First Principles vs. AI
+
 **Layers Used:** Layer 1 (Predict Before You Prompt), Layer 5 (Divergence Test)
 
-### What You Do
-
-You receive a problem with no established solution. No AI, no internet. 45 minutes. Identify the base constraints, list your assumptions, and derive a solution from those constraints alone. After submitting, prompt AI with the same problem and compare.
+James is sitting with a blank sheet of paper and a problem that has no clean answer. So are you.
 
 ### Choose Your Scenario
 
@@ -109,13 +133,15 @@ You receive a problem with no established solution. No AI, no internet. 45 minut
 
 Choose one.
 
----
+### Derive Your Solution (No AI, 45 Minutes)
+
+You receive a problem with no established solution. No AI, no internet. 45 minutes. Identify the base constraints, list your assumptions, and derive a solution from those constraints alone. After submitting, prompt AI with the same problem and compare.
 
 :::info Your Deliverable
-A First Principles Worksheet containing: (1) the base constraints you identified (e.g., limited supply, unequal need, multiple definitions of fairness), (2) every assumption you made -- explicitly listed, (3) your derived solution with a clear logical chain from constraints to design, (4) a comparison document showing your solution alongside AI's solution, with annotations on where they converge and diverge.
+A First Principles Worksheet containing: (1) the base constraints you identified (e.g., limited supply, unequal need, multiple definitions of fairness), (2) every assumption you made, explicitly listed, (3) your derived solution with a clear logical chain from constraints to design, (4) a comparison document showing your solution alongside AI's solution, with annotations on where they converge and diverge.
 :::
 
----
+### Check Your Thinking
 
 <AICheck id="first-principles-vs-ai" xp={50}>
 
@@ -159,8 +185,6 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
----
-
 <details>
 <summary>Deliverable Template (click to expand)</summary>
 
@@ -185,9 +209,23 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn what it feels like to reason from nothing; no patterns to borrow, no AI to lean on. Comparing your solution to AI's reveals whether you produced genuine first-principles thinking or unconsciously borrowed familiar patterns. The constraint identification skill becomes foundational for every design and architecture decision in the rest of the book.
+James set his First Principles Worksheet next to Claude's solution and read them side by side. His solution prioritized equity: the students with the fewest resources should get the most access. Claude's solution prioritized efficiency: allocate based on predicted learning gains per hour of tutoring time. Both were logical. Both followed from their stated constraints. But they optimized for completely different things.
+
+"Wait, so basically... we started from the same problem and ended up in different places because we prioritized different constraints?" James said.
+
+"What does that tell you about the standard frameworks you wanted to look up?"
+
+James thought about it. "They'd all bake in a prioritization. I just wouldn't know which one. I'd adopt their judgment without realizing it was a judgment."
+
+"Now you know what you actually think fairness means in this context. Not what a textbook says it means. Not what Claude says it means. What you derived when nobody else was in the room."
+
+James looked at his worksheet. It was rough. Some of the derivation steps had question marks in the margins. But the core argument was his, and he could trace every piece of it back to a specific constraint. That had never happened when he used someone else's framework.
+
+## The Lesson Learned
+
+Frameworks encode someone else's priorities without labeling them as priorities. When you derive from constraints yourself, you discover what you actually value, not what you inherited. The roughness of a first-principles solution is a feature: every seam is visible, every tradeoff is traceable, and you can defend every choice because you made it deliberately.
 
 ## Flashcards Study Aid
 

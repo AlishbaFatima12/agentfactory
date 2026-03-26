@@ -75,27 +75,67 @@ teaching_guide:
 
 # The Question Tournament
 
+## Why This Matters: James and the Fishing Net
+
+James dropped his question list on the table with visible satisfaction. "Fifteen questions. Every angle covered."
+
+Emma picked up the sheet and read in silence. She set it down and pointed to question eight. "This one is your best."
+
+James frowned. "That's the most boring question on the list. 'Did the 15% sales drop occur uniformly across all product categories, or was it concentrated in specific segments?' It's just... sorting data."
+
+"Read me question one."
+
+"'What are the key factors contributing to the sales decline?'"
+
+"Now tell me: when you feed question one to an AI tool, what kind of answer do you get?"
+
+James thought about it. "A list. Probably five or six factors. General stuff."
+
+"And question eight?"
+
+"A specific breakdown. Either it's spread evenly, which means one thing, or it's concentrated, which means something completely different." He paused. "Wait, so question eight actually eliminates hypotheses. Question one just collects them."
+
+"Your question one is a fishing net," Emma said. "It catches everything but tells you nothing about what's in the net. Question eight is a scalpel. It separates one explanation from another."
+
+James looked down at his list. His top-ranked questions were all nets. The questions he'd almost cut were the scalpels.
+
+"In my old job, we had something similar," he said. "My manager used to send these all-hands surveys asking 'How can we improve?' and getting useless answers. Then one quarter she asked 'What is the single biggest thing that slowed you down last week?' and got actual information."
+
+"Same principle. Diagnostic, not decorative." Emma tapped the list. "Your partner is about to rank these. Be ready to discover which of your questions actually cut."
+
+---
+
+## Exercise 2: The Question Tournament
+
 **Layers Used:** Layer 3 (Live Defence), Layer 5 (Divergence Test)
+
+James is staring at his own list, wondering which questions will survive someone else's ranking. So are you.
 
 Use the same scenario you chose in [Exercise 1 (The Prediction Lock)](./01-prediction-lock.md).
 
-### What You Do
+### Generate Your Questions (No AI)
 
-**Step 1. Generate your questions (no AI).** Write 15 diagnostic questions about your scenario. Work independently, without any AI tool.
+Write 15 diagnostic questions about your scenario. Work independently, without any AI tool.
 
-**Step 2. Swap and rank.** Exchange question lists with your partner. Rank their 15 questions from most to least diagnostic. Write a one-sentence justification for each ranking explaining why you placed it where you did.
+### Swap and Rank
 
-**Step 3. Select the top 10.** Take the top 5 questions from your list and the top 5 from your partner's list: 10 questions total.
+Exchange question lists with your partner. Rank their 15 questions from most to least diagnostic. Write a one-sentence justification for each ranking explaining why you placed it where you did.
 
-**Step 4. Test against AI.** Feed each of the 10 questions to both Claude and ChatGPT separately. Note a brief summary of each response.
+### Select the Top 10
 
-**Step 5. Build the comparison table.** For each question, record the responses and judge whether they were genuinely useful or generic filler (see template below).
+Take the top 5 questions from your list and the top 5 from your partner's list: 10 questions total.
+
+### Test Against AI
+
+Feed each of the 10 questions to two different AI tools separately. Note a brief summary of each response.
+
+### Build the Comparison Table
+
+For each question, record the responses and judge whether they were genuinely useful or generic filler (see template below).
 
 :::tip Solo Learner Alternative
 Generate your 15 questions, then prompt AI: "You are my study partner. Generate 15 diagnostic questions for this scenario that are different from mine. Do not see my questions first." Once AI generates its 15, rank AI's questions and have AI rank yours. Then proceed with Steps 3-5 using the combined lists.
 :::
-
----
 
 :::info Your Deliverable
 
@@ -103,6 +143,8 @@ Generate your 15 questions, then prompt AI: "You are my study partner. Generate 
 2. Your partner's 15 questions with your ranking and one-sentence justification for each
 3. A comparison table (see template below) showing the top 10 questions, AI responses from both tools, and your verdict on each
    :::
+
+### Check Your Thinking
 
 <AICheck id="question-tournament" xp={50}>
 
@@ -160,25 +202,25 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
----
+<ConversationGallery />
 
 <details>
 <summary>Comparison Table Template (click to expand)</summary>
 
 **COMPARISON TABLE**
 
-| #   | Question | Whose List? | Claude Response (summary) | ChatGPT Response (summary) | Verdict: Useful or Filler? | Why? |
-| --- | -------- | ----------- | ------------------------- | -------------------------- | -------------------------- | ---- |
-| 1   |          | Mine        |                           |                            |                            |      |
-| 2   |          | Mine        |                           |                            |                            |      |
-| 3   |          | Mine        |                           |                            |                            |      |
-| 4   |          | Mine        |                           |                            |                            |      |
-| 5   |          | Mine        |                           |                            |                            |      |
-| 6   |          | Partner's   |                           |                            |                            |      |
-| 7   |          | Partner's   |                           |                            |                            |      |
-| 8   |          | Partner's   |                           |                            |                            |      |
-| 9   |          | Partner's   |                           |                            |                            |      |
-| 10  |          | Partner's   |                           |                            |                            |      |
+| #   | Question | Whose List? | AI Tool 1 Response (summary) | AI Tool 2 Response (summary) | Verdict: Useful or Filler? | Why? |
+| --- | -------- | ----------- | ---------------------------- | ---------------------------- | -------------------------- | ---- |
+| 1   |          | Mine        |                              |                              |                            |      |
+| 2   |          | Mine        |                              |                              |                            |      |
+| 3   |          | Mine        |                              |                              |                            |      |
+| 4   |          | Mine        |                              |                              |                            |      |
+| 5   |          | Mine        |                              |                              |                            |      |
+| 6   |          | Partner's   |                              |                              |                            |      |
+| 7   |          | Partner's   |                              |                              |                            |      |
+| 8   |          | Partner's   |                              |                              |                            |      |
+| 9   |          | Partner's   |                              |                              |                            |      |
+| 10  |          | Partner's   |                              |                              |                            |      |
 
 **Useful/Actionable** = the AI gave a specific, non-obvious answer that narrows down the problem.
 **Generic/Filler** = the AI gave a broad, surface-level answer that any question would produce.
@@ -187,9 +229,19 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn that question quality is a skill you can evaluate and improve, not an innate talent. By seeing your partner's questions and having AI compare both sets, you discover questioning patterns you would never notice in your own work. The tournament format makes the difference between a good question and a great question viscerally clear.
+James stared at his partner's top-ranked question: "What was the customer acquisition cost per channel before versus after the marketing spend increase?" He never would have thought to ask it. His partner came from a finance background and thought in unit economics. James thought in operations and processes. The same scenario, viewed through different lenses, produced completely different questions.
+
+His own question one, the broad "key factors" question he'd ranked highest, landed near the bottom of his partner's ranking. That stung. But the tournament hadn't just shown him which questions were better. It had shown him that his questioning instincts had a shape, and that shape had edges he couldn't see alone.
+
+"Quantity felt like thoroughness," he said to Emma afterward. "Fifteen questions felt like more work than five. But her five cut deeper than my fifteen."
+
+"The number of questions is a vanity metric. What matters is whether each one can separate one explanation from another."
+
+## The Lesson Learned
+
+Your questioning instincts have a shape you cannot see from the inside. Someone from a different background will ask questions that never occur to you, not because they are smarter, but because they see the problem through a different lens. The tournament makes that invisible shape visible. Once you see where your questions cluster and where they leave gaps, you can start building range into your question formulation deliberately.
 
 ## Flashcards Study Aid
 

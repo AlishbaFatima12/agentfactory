@@ -81,9 +81,39 @@ import TabItem from "@theme/TabItem";
 
 # Rebuild Under New Constraints
 
+## Why This Matters: James and the Shifting Ground
+
+James read the new constraint and felt his stomach drop. The problem he'd spent forty-five minutes solving in Exercise 2 had just shifted underneath him. The supply constraint was gone, replaced by an access constraint. Everything he'd built assumed scarcity of the resource itself. Now the resource was unlimited but the pathway to it was bottlenecked.
+
+"Okay, so I just... start over?" he said.
+
+"Do you?"
+
+"The whole solution was built around fair allocation of a limited supply. The supply isn't limited anymore. So yes, I start from scratch."
+
+"Which of your principles was 'supply is limited'?"
+
+James pulled up his worksheet. "It wasn't a principle. It was a constraint." He stopped. "Wait, so basically... my principles might still be valid even though the constraint changed. The principle about prioritizing the most underserved groups doesn't depend on whether supply is limited. It depends on whether access is unequal."
+
+"So which principles survive?"
+
+James went through his list. Equity-first allocation: still valid, because access is still unequal. Measurement through standardized assessments: still valid, but now measuring something different. Phased rollout to manage capacity: collapsed, because capacity isn't the bottleneck anymore. "Two survive. One collapses. And I think a new one emerges. Something about routing efficiency through bottleneck points."
+
+"That's a principle audit." Emma leaned back. "If you'd copied a framework from a textbook, you'd have nothing to audit. You'd just have a pattern that no longer fits. But because you derived from principles, you can trace exactly what changed and what didn't."
+
+"It's like when our company restructured the sales territories," James said. "Everyone who'd built their strategy around geographic boundaries had to start from zero. But one rep had built his strategy around customer industry verticals instead. When the map changed, his approach survived because the principle underneath it wasn't tied to geography."
+
+"Same mechanism. Principles are portable. Patterns are fragile."
+
+---
+
+## Exercise 4: Rebuild Under New Constraints
+
 **Layers Used:** Layer 4 (Contradiction Challenge), Layer 6 (Iterative Drafts)
 
-### What You Do
+James just discovered that two of his principles survived while one collapsed. Now he has to rebuild. So do you.
+
+### Apply the Constraint Change
 
 The instructor removes or changes one foundational constraint from the scenario you chose in Lesson 2. Use the matching constraint change below:
 
@@ -99,20 +129,20 @@ The instructor removes or changes one foundational constraint from the scenario 
   </TabItem>
   <TabItem value="community" label="Community">
     **Scenario C (Community):** "Now assume disaster relief supplies are
-    unlimited but only 3 of the 50 neighborhoods have functioning roads :
+    unlimited but only 3 of the 50 neighborhoods have functioning roads;
     all other deliveries must go through those 3 access points."
   </TabItem>
 </Tabs>
 
-Rebuild your solution. You cannot start from scratch; trace which of your first principles still hold and which collapsed. Then ask AI to rebuild under the same new constraints and compare adaptation strategies.
+### Rebuild from Your Principles
 
----
+Rebuild your solution. You cannot start from scratch; trace which of your first principles still hold and which collapsed. Then ask AI to rebuild under the same new constraints and compare adaptation strategies.
 
 :::info Your Deliverable
 Your rebuilt solution with a clear "principle audit" showing: which first principles survived the constraint change (and why), which collapsed (and why), and which new principles emerged. A comparison of your rebuild approach vs. AI's rebuild approach. A reflection (200 words) answering: What did this exercise teach me about the difference between principles and patterns?
 :::
 
----
+### Check Your Thinking
 
 <AICheck id="rebuild-under-new-constraints" xp={50}>
 
@@ -158,11 +188,49 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn the ultimate test of first principles reasoning: can you adapt when the ground shifts? A student who derived their solution from principles can rebuild because they know which principles were affected. A student who borrowed a pattern has to start from zero. This exercise makes that difference visible and teaches you to build adaptable solutions.
+James compared his rebuilt solution against AI's. Claude had regenerated from scratch, producing a clean, comprehensive design that bore almost no resemblance to the original. James's rebuild was messier, but the surviving principles ran through it like a spine. He could trace every design choice back to a specific constraint, old or new.
 
----
+"Claude rebuilt faster," he said. "But it didn't preserve anything from the original. It just generated a new answer."
+
+"Could Claude explain why it made different choices the second time?"
+
+James checked. The AI's explanation was generic: "The changed constraints require a different approach." No specifics about which parts of the old design survived and which failed.
+
+"I can explain it," James said. "The equity principle survived because access inequality didn't change, only the bottleneck moved. The phased rollout collapsed because capacity is no longer the constraint. And the new routing principle emerged because three access points create a logistics problem that didn't exist before. Claude didn't trace any of that. It just started fresh."
+
+"That's the difference between reasoning from principles and generating from patterns. A pattern matcher produces a new output. A principled thinker adapts with traceability."
+
+Emma was quiet for a moment. Then she said something he didn't expect.
+
+"I spent three months building a microservices architecture at my last company. Three months. Distributed services, message queues, separate deployments, the entire modern stack. Everyone was building microservices. Every conference talk, every blog post, every senior engineer I respected said it was the right approach for any serious application."
+
+James watched her. She didn't usually talk about getting things wrong.
+
+"The application had four users. Four internal users who needed a dashboard that pulled data from two sources. A monolith would have taken two weeks. I spent three months because I never asked whether the pattern fit the problem. I looked at what everyone else was doing and assumed the popular answer was the correct one."
+
+"What happened?"
+
+"My tech lead pulled me aside after a sprint review. She asked me one question: 'What problem does the microservices architecture solve that a monolith doesn't, for this specific application?' And I didn't have an answer. Not because microservices are bad. Because I'd never traced the reasoning. I'd adopted the conclusion without doing the derivation."
+
+She let the silence sit for a beat.
+
+"That's what this chapter is building in you. Not skepticism of best practices. Not contrarianism for its own sake. The habit of asking: what are the actual constraints here, and does this solution follow from them? Or am I just inheriting someone else's answer because it sounds professional?"
+
+James thought about the four exercises. In the first, he'd argued against a best practice and discovered the difference between principles and anecdotes. In the second, he'd derived a solution from nothing and discovered what he actually believed versus what he'd borrowed. In the third, he'd found twenty-three assumptions hiding in a solution he thought was clean. In the fourth, he'd rebuilt when the ground shifted and discovered which parts of his thinking were portable and which were fragile.
+
+"I came into this chapter thinking first principles was about being contrarian," he said. "Arguing against the mainstream for the sake of it. But it's the opposite. It's about understanding why the mainstream answer works, so you know when it doesn't."
+
+"Ready for Chapter 5?"
+
+James looked at his principle audit. Two survived. One collapsed. One emerged. He could trace every line. "Yeah. But I'm going to check my assumptions before I start."
+
+"That's the idea."
+
+## The Lesson Learned
+
+The real test of understanding is adaptation. If you can trace which principles survived a constraint change and which collapsed, you understood the problem. If you have to start over from zero, you were following a pattern, not reasoning from principles. First principles thinking is not about being contrarian. It is about knowing why the mainstream answer works well enough to recognize when it doesn't.
 
 :::info Chapter Deliverable
 A **First Principles Portfolio** containing: (1) the contrarian argument (written without AI), (2) the novel problem First Principles Worksheet with AI comparison, (3) the merged assumption map, (4) the rebuilt solution with principle audit, and (5) all AI feedback with reflections.

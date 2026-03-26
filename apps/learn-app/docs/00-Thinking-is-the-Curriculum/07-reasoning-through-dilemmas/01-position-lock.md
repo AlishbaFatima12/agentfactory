@@ -89,12 +89,56 @@ import TabItem from "@theme/TabItem";
 > _AI gives balanced, diplomatic, non-committal answers to hard ethical questions. The real world requires you to take a position, defend it, and live with the tradeoffs._
 
 :::note Building On Previous Chapters
-The Stakeholder Cost Matrix extends your systems thinking from [Chapter 3](../03-thinking-in-systems/01-cascade-mapping.md) to ethical terrain. The adversarial defence uses the same first-principles structure from [Chapter 4](../04-reasoning-from-first-principles/04-rebuild-under-new-constraints.md) -- strip the dilemma to base values and rebuild. Your Confidence Calibration from [Chapter 2](../02-detecting-broken-reasoning/04-confidence-calibration.md) tells you how much to trust your own ethical instincts.
+The Stakeholder Cost Matrix extends your systems thinking from [Chapter 3](../03-thinking-in-systems/01-cascade-mapping.md) to ethical terrain. The adversarial defence uses the same first-principles structure from [Chapter 4](../04-reasoning-from-first-principles/04-rebuild-under-new-constraints.md): strip the dilemma to base values and rebuild. Your Confidence Calibration from [Chapter 2](../02-detecting-broken-reasoning/04-confidence-calibration.md) tells you how much to trust your own ethical instincts.
 :::
 
-**The Core Skill**
+## Why This Matters: James and the Obvious Answer
 
-Ethical reasoning is not about memorizing rules. It is about navigating situations where values conflict, stakeholders disagree, and every option has a cost. AI tools tend to present "both sides" without committing. This chapter trains you to go further: take a position, defend it under attack, and identify exactly who bears the cost of your decision.
+James read the dilemma scenario twice and set it down. "This is straightforward. Ban the tool. It's biased, so you pull it. End of discussion."
+
+"That was fast," Emma said.
+
+"Some things are just right or wrong. You don't need a framework for that." He leaned back. "At my old company, when we found out a supplier was faking safety certifications, we dropped them the same day. Didn't need a committee meeting."
+
+"And did dropping them have any cost?"
+
+"Sure. We paid more for the replacement supplier. Delivery times went up for a quarter. But it was the right call."
+
+"So even your 'obvious' decision had stakeholders who paid a price. The warehouse team. The customers who waited longer. You just decided those costs were worth it."
+
+James paused. "That's different. The supplier was lying."
+
+"Is it different? You made a judgment that the ethical benefit outweighed the operational cost. That's not 'obvious.' That's a tradeoff you evaluated, whether you realized it or not."
+
+"Okay, but this dilemma," James tapped the scenario, "it's not that complicated. The tool is biased. You don't use biased tools."
+
+"Who benefits from the tool right now?"
+
+"The company. Faster hiring."
+
+"Who else?"
+
+James looked at the scenario again. "The candidates who do get hired faster, I guess. The hiring managers who aren't buried in applications."
+
+"And if you ban the tool tomorrow?"
+
+"Hiring slows down. Open positions stay open longer. Some qualified candidates wait weeks instead of days." He stopped. "Okay, wait. So banning the tool also hurts people."
+
+"You said this was straightforward."
+
+"It is. Or... it was." James stared at the scenario brief. He'd been so certain thirty seconds ago. The position hadn't changed, but the ground underneath it felt less solid. "So what do I actually do with this?"
+
+"You do what you did with your supplier decision, except on purpose. Map every stakeholder. Name the costs. Decide which ones you're willing to impose, and be honest about who pays."
+
+Emma picked up her coffee. "Write your position. One sentence, no hedging. Then your three strongest arguments. Then build your Stakeholder Cost Matrix: every group affected, how they're affected, and the magnitude. Include the groups you're tempted to ignore."
+
+She paused at the door. "The position lock only works if you commit before you see AI's diplomatic non-answer. Once you've read a balanced 'on one hand, on the other hand' response, you can't un-read it. Your opinion will drift toward the center whether you want it to or not."
+
+She left.
+
+James opened a blank document. Writing "ban the tool" felt different now. Not because he'd changed his mind. Because he could see, for the first time, that his certainty had been doing the work that his reasoning should have been doing.
+
+---
 
 ## Exercise 1: The Position Lock
 
@@ -102,13 +146,11 @@ Ethical reasoning is not about memorizing rules. It is about navigating situatio
 
 **Building On:** Chapter 3's Stakeholder Cost Matrix (now applied to ethical terrain) + Chapter 4's first principles (strip the dilemma to base values).
 
----
+James is staring at a blank document with thirty seconds of certainty crumbling underneath him. So are you.
 
-### What You Do
+### Build Your Position Lock (before touching AI)
 
 You receive an ethical dilemma where values conflict and every option has a cost. Before AI: write your position (use it, ban it, modify it, or something else), your three strongest arguments, and explicitly identify who bears the cost of your decision. Seal and submit.
-
----
 
 ### Choose Your Scenario
 
@@ -131,8 +173,6 @@ You receive an ethical dilemma where values conflict and every option has a cost
 </Tabs>
 
 Choose one. The exercises work identically regardless of which you pick.
-
----
 
 :::info Your Deliverable
 A Position Lock document containing: your clear position statement (one sentence), your three strongest arguments with evidence or reasoning for each, a Stakeholder Cost Matrix listing every stakeholder group and how your decision affects them (who benefits, who is harmed, who is ignored), and a Confidence Statement rating how certain you are (0-100%) with an explanation of what would change your mind.
@@ -207,9 +247,27 @@ For each score, give a one-sentence justification.
 
 </details>
 
-### What This Teaches You
+---
 
-You learn to take an ethical position with full awareness of its costs. AI feedback reveals whether your arguments are as strong as you think and whether your stakeholder analysis is complete -- preparing you for the defence to come.
+## What Happened With James
+
+James sat back from his completed Position Lock. His one-sentence position had taken ten minutes to write. Not because he didn't know what he believed, but because stating it precisely forced him to choose words that couldn't hide behind vagueness.
+
+The Stakeholder Cost Matrix had been the real surprise. He'd started with three rows and ended with seven. The candidates who benefited from faster processing. The HR team freed from repetitive screening. The university career offices whose students were disadvantaged. The legal department facing discrimination liability. Groups he hadn't considered when the answer was "obvious."
+
+"I still hold the same position," he told Emma when she returned. "But my confidence dropped from 90% to 65%."
+
+"That's not weakness. That's calibration."
+
+"It's like those quarterly reviews at my old job," James said. "My manager used to ask 'How's the project going?' and everyone said 'Great.' Then she started asking 'What are the three biggest risks to delivery?' Same project, but the second question forced us to see what we were ignoring."
+
+"And which question produced better decisions?"
+
+"The uncomfortable one."
+
+## The Lesson Learned
+
+Taking a position is easy. Taking a position with full awareness of its costs is the work. The Stakeholder Cost Matrix forces you to name every group affected by your decision, including the ones you are tempted to ignore. Your confidence should calibrate downward as your understanding expands, and that calibration is a sign of growth, not weakness.
 
 ## Flashcards Study Aid
 

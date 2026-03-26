@@ -87,33 +87,53 @@ teaching_guide:
 
 # Live Defence
 
-**Layers Used:** Layer 3 (Live Defence), Layer 4 (Contradiction Challenge)
+## Why This Matters: James and the Green Highlights
 
 This exercise uses the analysis you wrote in [Exercise 3 (The Divergence Test)](./03-divergence-test.md). You will defend it under questioning, then stress-test it against AI counter-arguments.
 
-### What You Do
+James was reviewing his analysis one last time. He'd printed it out and marked it up: green highlights on the sections he'd genuinely thought through, no highlighting on the sections he'd accepted from AI without much pushback. The green patches were islands in a sea of white.
 
-#### Phase 1 . Live Defence (no AI access)
+"Nervous?" Emma asked.
 
-**Step 1. Present to your peer panel.** Form a panel of 3-4 students. Present your analysis from Exercise 3. The panel has 10 minutes to question you: Why did you ask this question and not that one? What would change your diagnosis? Where did AI help and where did it mislead you? You may not use any AI tools during this phase.
+"A little. The defence panel is going to ask me to explain my reasoning. The green sections, I can talk about those all day. But these white sections..." He tapped the unmarked paragraphs. "When I try to explain them out loud, I sound like I'm reading someone else's notes."
 
-**Step 2. Collect peer feedback.** Each panelist fills out a feedback form noting 2 strengths and 2 weaknesses they observed in your defence.
+"That's exactly the distinction."
+
+"So what do I do about the white sections?"
+
+Emma shook her head. "You don't do anything about them. They're data. If you actually thought through your analysis, the defence is just talking about what you already know. If you freeze on a question, that tells you something important about how you worked."
+
+James folded the printout. The green sections felt solid, like ground he could stand on. The white sections felt like ice over deep water.
+
+"One more thing," Emma said. "Your panel is going to ask questions you didn't prepare for. That's the test. The sections you truly understand, you can explain from any angle. The sections you borrowed, you can only explain from the angle the AI gave you."
+
+---
+
+## Exercise 4: Live Defence
+
+**Layers Used:** Layer 3 (Live Defence), Layer 4 (Contradiction Challenge)
+
+James is folding his printout, green islands and white gaps staring back at him. So are you.
+
+### Phase 1: Live Defence (No AI Access)
+
+**Present to Your Peer Panel.** Form a panel of 3-4 students. Present your analysis from Exercise 3. The panel has 10 minutes to question you: Why did you ask this question and not that one? What would change your diagnosis? Where did AI help and where did it mislead you? You may not use any AI tools during this phase.
+
+**Collect Peer Feedback.** Each panelist fills out a feedback form noting 2 strengths and 2 weaknesses they observed in your defence.
 
 :::tip Solo Learner Alternative
 Submit your analysis to AI with this prompt: "You are a tough but fair examiner. Ask me 5 challenging questions about my analysis, one at a time. Wait for my response before asking the next question. Challenge weak answers. Do not let me off easy." Conduct the full Q&A exchange in a single conversation. Submit the complete transcript as your defence record in place of the peer feedback form. Then proceed with Phase 2.
 :::
 
-#### Phase 2 . AI Counter-Arguments
+### Phase 2: AI Counter-Arguments
 
-**Step 3. Generate counter-arguments.** Paste your analysis into the AICheck below. The AI will generate the 3 strongest counter-arguments to your work and identify your biggest blind spot.
+**Generate Counter-Arguments.** Paste your analysis into the AICheck below. The AI will generate the 3 strongest counter-arguments to your work and identify your biggest blind spot.
 
-**Step 4. Respond to the strongest attack (200 words).** Read all 3 counter-arguments. Pick the strongest one (the one that genuinely threatens your analysis) and write a 200-word response defending your position with specific evidence and reasoning. Do not deflect to a different point; address the attack directly.
+**Respond to the Strongest Attack (200 Words).** Read all 3 counter-arguments. Pick the strongest one, the one that genuinely threatens your analysis, and write a 200-word response defending your position with specific evidence and reasoning. Do not deflect to a different point; address the attack directly.
 
-#### Phase 3 . Chapter Reflection
+### Phase 3: Chapter Reflection
 
-**Step 5. Write your final reflection (150 words).** Looking back across all four exercises in this chapter, answer: What would you change about your question formulation process? What did you learn about your own thinking habits?
-
----
+**Write Your Final Reflection (150 Words).** Looking back across all four exercises in this chapter, answer: What would you change about your question formulation process? What did you learn about your own thinking habits?
 
 :::info Your Deliverable
 
@@ -121,6 +141,8 @@ Submit your analysis to AI with this prompt: "You are a tough but fair examiner.
 2. Your 200-word response to the strongest AI counter-argument
 3. Your 150-word chapter reflection on question formulation growth
    :::
+
+### Check Your Thinking
 
 <AICheck id="live-defence" xp={50}>
 
@@ -162,7 +184,7 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
----
+<ConversationGallery />
 
 <details>
 <summary>Peer Feedback Form Template (click to expand)</summary>
@@ -185,11 +207,45 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn that understanding your own work is completely different from producing it. The live defence exposes whether you truly thought through your analysis or outsourced it to AI. The AI counter-arguments then push you further; can you defend your position against systematic attack? The combination of human questioning (unpredictable) and AI counter-arguments (systematic) tests your thinking from every angle.
+James set down the peer feedback forms and exhaled. The defence had gone exactly as his markup predicted. The green-highlighted sections: fluid, confident, detailed. One panelist had asked him to explain the demographic-channel gap from three different angles, and he'd handled each one without glancing at his notes. The white sections: hesitation, vague gestures toward "the data suggests," a moment where he'd started a sentence and couldn't finish it because the reasoning behind it had never been his.
 
----
+"The things I could defend," James said, "were the things I actually figured out. Not the things I spent the most time formatting or the most tokens generating." It reminded him of the quarterly reviews at his old company. The directors who'd run their own analysis could take any question from the VP. The ones who'd copied the consultant's framework folded under the first follow-up.
+
+"How did the AI counter-arguments go?"
+
+"The strongest one attacked my channel mismatch argument. Except it attacked the part of the channel mismatch argument I'd built myself, not the part AI gave me. And I could defend it. I had the reasoning. The AI's counter-argument made me sharpen my position instead of abandon it."
+
+Emma was quiet for a moment. Then she said something he didn't expect.
+
+"I made the same mistake you made, early in my engineering career. Not with AI. With a colleague's performance analysis. I was two years in, presenting quarterly results to the leadership team. Twelve people in the room."
+
+She paused. "I'd built the entire presentation on numbers from a senior engineer's report. His methodology, his conclusions, his framework. I just made the slides look better."
+
+James winced. He knew exactly what was coming.
+
+"The CTO asked me one question about the sampling methodology. One question. And I had nothing. I stood in front of twelve people with my mouth open because I had never interrogated the numbers I was presenting. I'd read them, thought they sounded right, and built a deck around them."
+
+"What did you do after that?"
+
+"I never presented anything I couldn't defend. That became my rule. Not because someone told me to. Because I remembered what it felt like to freeze in front of a room full of people who trusted me to know my own work."
+
+She let the silence hold for a beat.
+
+"That's the rule this chapter is building in you. Not 'don't use AI.' Use AI as much as you want. But never put your name on thinking you can't explain."
+
+James looked at his marked-up analysis. The green islands and the white gaps. Four exercises ago, he would have said question formulation was a warm-up skill, something you do quickly before the real work starts. Now he understood it differently. The quality of every answer he would ever receive, from AI, from colleagues, from data, from his own research, started with the quality of what he asked. Not the quantity. Not the sophistication of the prompt. The precision of the question.
+
+"Ready for Chapter 2?" Emma asked.
+
+James almost laughed. "I think so. But I'm less sure of things than I was an hour ago."
+
+"Good. That's called calibration."
+
+## The Lesson Learned
+
+You can defend what you understand. You cannot defend what you borrowed. The live defence collapses the distance between "I submitted this" and "I believe this," and that distance is exactly the space where outsourced thinking hides. The rule is not to avoid AI. The rule is to never attach your name to reasoning you cannot walk someone through from scratch.
 
 :::info Chapter Deliverable
 A Question Quality Portfolio containing: (1) the sealed prediction lock document, (2) the question tournament comparison table with rankings, (3) the final analysis with complete reasoning receipt and uniqueness statement, (4) peer defence feedback forms, (5) your written response to AI counter-arguments, and (6) your final reflection on your question formulation growth.

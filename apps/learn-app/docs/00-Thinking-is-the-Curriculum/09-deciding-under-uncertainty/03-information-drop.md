@@ -77,29 +77,49 @@ teaching_guide:
     - "Ask students: Is your post-drop confidence higher or lower than your post-consultation confidence? Is that change justified?"
 ---
 
+## Why This Matters: James and the Breaking News
+
+James was reviewing his updated Decision Document when Emma walked in with a single sheet of paper. She set it face-down on the table.
+
+"New information just arrived. It directly contradicts the most popular recommendation in the class."
+
+"Okay. Let me read it and think it through."
+
+"You have twenty minutes."
+
+James looked up. "Twenty minutes? For information that contradicts my entire position?"
+
+"Your CEO doesn't give you twenty hours when the market shifts. She gives you the meeting where you're presenting and asks you to adjust in real time."
+
+"That's not fair."
+
+"No, it's not. That's the exercise." Emma nodded at the paper. "Three common reactions. Anchoring: you ignore the new information and defend your original position because you've invested in it. Overreaction: you throw everything out and start over because the new information feels urgent. Proportional updating: you change exactly as much as the evidence warrants. Nothing more, nothing less."
+
+James thought about it. "At my old company, we had a supplier who sent us a revised quote halfway through a negotiation. Completely different numbers. Half the team wanted to walk away immediately. The other half wanted to pretend we never received it. My manager asked one question: 'Does this change our walk-away number?' That was proportional."
+
+"Good. Apply that thinking." Emma flipped the paper over. "Twenty minutes. Timer starts now."
+
+---
+
 ## Exercise 3: The Information Drop
 
 **Layers Used:** Layer 4 (Contradiction Challenge), Layer 6 (Iterative Drafts)
 
-{/* Editorial addition: Building On not in source draft, but these cross-references from the writer brief add pedagogical value */}
 :::note Building On Previous Exercises
 This exercise tests your ability to handle contradictory input under pressure, building on the **Adversarial Defence** from [Chapter 7, Exercise 2](../07-reasoning-through-dilemmas/02-adversarial-defence.md) and **Rebuild Under New Constraints** from [Chapter 4, Exercise 4](../04-reasoning-from-first-principles/04-rebuild-under-new-constraints.md).
 :::
 
-### What You Do
+James just had twenty minutes dropped on him and a sheet of contradictory data. So do you.
 
-The instructor releases new information that directly contradicts the most popular recommendation in the class. This arrives as a simulated "breaking news" alert; unexpected and disruptive, just like real-world information disruptions.
+The instructor releases new information that directly contradicts the most popular recommendation in the class. This arrives as a simulated "breaking news" alert: unexpected and disruptive, just like real-world information disruptions.
 
 :::warning Time Limit: 20 Minutes
-You have exactly 20 minutes (timed, enforced) to revise your decision. The exercise is designed to test your reaction under realistic pressure: do you anchor to your first answer, overreact and abandon everything, or adapt proportionally?
+You have exactly 20 minutes (timed, enforced) to revise your decision. The exercise tests your reaction under realistic pressure: do you anchor to your first answer, overreact and abandon everything, or adapt proportionally?
 :::
 
-{/* Editorial addition: Solo alternative not in source draft, but necessary for self-study students who have no instructor to release information */}
 :::tip Solo Learner Alternative
 If you are working alone, generate your own contradictory information by prompting AI: "Given this scenario [paste], generate one piece of new information that would directly contradict the most common recommendation. Make it specific and credible." Then start your 20-minute timer.
 :::
-
----
 
 :::info Your Deliverable
 Your revised Decision Document (Draft 3) showing your response to the new information. A Process Document answering: Did the new information trigger your Reversal Trigger? Did you update proportionally (not overreact)? Did you integrate the new information with your existing analysis or start from scratch? A Calibration Check comparing your original confidence level, your post-consultation confidence level, and your post-drop confidence level.
@@ -172,9 +192,21 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn how you respond to information that contradicts your position. Most people either anchor (refuse to change) or overreact (abandon everything). The AI analysis reveals your specific pattern and teaches you to update proportionally; changing exactly as much as the evidence warrants.
+James set his pen down with three minutes to spare. His recommendation had shifted, but not reversed. The new information had triggered part of his reversal trigger: the competitive pricing data was close to his threshold but not past it. He'd adjusted his confidence from 60% to 45% and added a second reversal trigger for the new variable.
+
+"I almost panicked," he admitted. "My first instinct was to throw out everything and start fresh. Then I remembered your three categories. I was about to overreact."
+
+"What stopped you?"
+
+"I went back to my reversal trigger. The new information was relevant, but it didn't cross the line I'd drawn. So I adjusted instead of reversing." He looked at his three decision documents side by side. "Okay, I think I see the pattern now. My initial decision was 55%. After AI consultation, 60%. After the information drop, 45%. Each change had a reason. None of them was 'I panicked.'"
+
+"That's calibration under pressure. The numbers aren't the point. The trajectory is. You can explain every shift."
+
+## The Lesson Learned
+
+Most people either anchor to their original position or abandon it entirely when contradictory information arrives. The reversal trigger you built in Exercise 1 gave you a pre-committed standard to measure against, turning panic into a question: "Did this cross my line?" Being able to explain every confidence shift, from 55% to 60% to 45%, is the difference between reacting and deciding.
 
 ## Flashcards Study Aid
 

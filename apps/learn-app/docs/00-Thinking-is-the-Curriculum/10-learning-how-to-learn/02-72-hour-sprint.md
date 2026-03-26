@@ -89,26 +89,52 @@ teaching_guide:
     - "Ask students: In your Learning Log, point to one entry where you rejected AI output. Why did you reject it?"
 ---
 
+## Why This Matters: James and the Invisible Process
+
+James had his revised learning plan open next to a fresh document. "Okay. Seventy-two hours. I know what to learn first, I know what to skip, I know what 'enough' looks like. I just need to start working through the material."
+
+"How will you track what's happening?" Emma asked.
+
+"I'll take notes. I always take notes."
+
+"Notes on what you studied, or notes on how you're studying?"
+
+James frowned. "What's the difference?"
+
+"One records content. The other records process." Emma pulled up a chair. "At my first engineering job, I kept a notebook of everything I learned. Filled three of them in six months. Very thorough. Very organized. Completely useless."
+
+"Why?"
+
+"Because I never wrote down where I got stuck, what I had to re-learn, or which resources actually worked versus which ones wasted my time. I had notes about Python. I had zero notes about how I learn." She let that sit. "When I started a new language six months later, I made all the same mistakes again. Different content, identical process failures."
+
+James looked at his learning plan. He'd spent an hour designing it. He'd predicted his challenges, chosen his resources, defined his goals. But he hadn't planned how to observe his own learning while it was happening.
+
+"That's like my old company's project management," he said slowly. "We tracked deliverables religiously. Shipped on time, every time. But we never tracked how the team actually worked. So when we started a new project, we repeated every inefficiency from the last one. Same arguments about scope, same miscommunication between departments, same two-week delay at handoff."
+
+"Same pattern," Emma said. "A Learning Log isn't a diary of what you studied. It's a process record. Every few hours, you write down what you learned, what confused you, what you self-corrected, and how you used AI. At hour 36, you stop and look at the whole log. If your process isn't working, that's when you still have time to fix it."
+
+"Why hour 36 specifically?"
+
+"Because at hour 72, all you can do is write a retrospective. At hour 36, you can change course."
+
+---
+
 ## Exercise 2: The 72-Hour Sprint
 
 **Layers Used:** Layer 2 (Reasoning Receipt), Layer 6 (Iterative Drafts)
+
+James is about to start a 72-hour sprint with a plan and a blank log. So are you.
 
 :::note Building On Previous Exercises
 You will use the **Collaboration Log** format from [Chapter 6, Exercise 2](../06-working-with-ai-not-for-ai/02-collaboration-log.md), now tracking a learning process instead of a business problem.
 :::
 
-### What You Do
+### Execute Your Learning Plan
 
-You have 72 hours and full access to claude.ai, chatgpt.com, and the open web. Learn enough about your assigned domain to produce a competent analysis of a real problem within that domain (the instructor provides the specific problem at hour 0). Maintain a Learning Log throughout.
+You have 72 hours and full access to two different AI tools and the open web. Learn enough about your assigned domain to produce a competent analysis of a real problem within that domain (the instructor provides the specific problem at hour 0). Maintain a Learning Log throughout.
 
 :::tip Solo Learner Alternative
-If no problem is provided by an instructor, prompt AI: *"I am learning [your chosen domain] from scratch. Give me one specific, realistic problem that a practitioner in this field would need to solve. Make it concrete enough that I can attempt a solution after 72 hours of self-study. Do not give me the solution."* Use this as your exercise problem.
-:::
-
----
-
-:::info Your Deliverable
-A competent analysis of the assigned problem in your new domain (500-800 words). A complete Learning Log in table format with at least 20 entries spanning the 72 hours. A mid-point reflection (written at hour 36) assessing: Am I on track? What needs to change?
+If no problem is provided by an instructor, prompt AI: _"I am learning [your chosen domain] from scratch. Give me one specific, realistic problem that a practitioner in this field would need to solve. Make it concrete enough that I can attempt a solution after 72 hours of self-study. Do not give me the solution."_ Use this as your exercise problem.
 :::
 
 **Learning Log format:**
@@ -118,6 +144,12 @@ A competent analysis of the assigned problem in your new domain (500-800 words).
 | Hour 1 |                |               |             |                    |                 |                                                   |
 | Hour 3 |                |               |             |                    |                 |                                                   |
 | ...    |                |               |             |                    |                 |                                                   |
+
+:::info Your Deliverable
+A competent analysis of the assigned problem in your new domain (500-800 words). A complete Learning Log in table format with at least 20 entries spanning the 72 hours. A mid-point reflection (written at hour 36) assessing: Am I on track? What needs to change?
+:::
+
+### Check Your Thinking
 
 <AICheck id="72-hour-sprint" xp={50}>
 
@@ -170,9 +202,25 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn the difference between studying and learning. The Learning Log reveals your actual learning process; its efficiency, its waste, its breakthroughs. AI feedback on your domain analysis tells you honestly where you reached competence and where you are still a beginner pretending to understand.
+James stared at his Learning Log. Twenty-six entries. At hour 12, he'd written: "Spent 3 hours reading introductory material. Comfortable with terminology. Ready to move to applications." At hour 18, a different story: "Realized I don't actually understand the foundational model, just the vocabulary. Went back to basics. Lost 3 hours."
+
+His mid-point reflection at hour 36 had been the turning point. He'd written it reluctantly, expecting to confirm he was on track. Instead, the log showed a clear pattern: he'd used AI to explain every concept he found confusing, accepted every explanation, and moved on. Twelve entries in a row with "Asked Claude to explain, accepted response" in the AI Usage column. No rejections. No pushback. No self-corrections.
+
+"I was using AI like a textbook I could talk to," James told Emma afterward. "I asked, it answered, I highlighted, I moved on. Exactly what I do with books. Exactly what I told you was 'working fine' at the start of this chapter."
+
+"What did you change after hour 36?"
+
+"I started asking AI to quiz me instead of explain to me. And I started marking entries where I caught AI giving me an oversimplified answer." He pointed at the second half of his log. "Look at the difference. The first half is passive. The second half has arguments with the AI, wrong answers I corrected, and three entries where I realized the AI's explanation was missing a critical nuance."
+
+"Same person. Same domain. Same tools. Different process."
+
+James nodded slowly. "The log is embarrassing, honestly. It's a before-and-after picture of someone who thought they were learning and someone who actually was."
+
+## The Lesson Learned
+
+The Learning Log is the real deliverable, not the domain analysis. It turns your learning process from something invisible into something you can examine, diagnose, and fix. The mid-point reflection at hour 36 exists because it is the last moment where you can change course. At hour 72, all you can write is a postmortem. At hour 36, you can still save the sprint.
 
 ## Flashcards Study Aid
 

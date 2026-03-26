@@ -40,13 +40,13 @@ Match the chapter number to its part folder. If you cannot determine the part, a
 
 Once you know the part, your settings are locked:
 
-| Part             | Density | Mentor Phase | Narrative Mode   | Emma's Role                                                      |
-| ---------------- | ------- | ------------ | ---------------- | ---------------------------------------------------------------- |
-| **0** (Ch 1-11)  | **80%** | Authority    | Story-driven     | Expert guide — explains, demonstrates, assigns                   |
-| **1** (Ch 12-18) | **65%** | Coach        | Chapter-framing  | Guided practice — asks guiding questions, hints not answers      |
-| **2** (Ch 19-24) | **45%** | Collaborator | Open/Close       | Working partner — "I think... but what do you think?"            |
-| **3** (Ch 25-34) | **25%** | Consultant   | Scenario framing | Called for hard problems — answers when asked, doesn't volunteer |
-| **4+** (Ch 35+)  | **15%** | Peer         | Bookend          | Sounding board — "You already know the answer to that"           |
+| Part             | Density    | Mentor Phase | Narrative Mode   | Emma's Role                                                      |
+| ---------------- | ---------- | ------------ | ---------------- | ---------------------------------------------------------------- |
+| **0** (Ch 1-11)  | **30-35%** | Authority    | Exercise-framing | Expert guide: frames exercises, never models them                |
+| **1** (Ch 12-18) | **65%**    | Coach        | Chapter-framing  | Guided practice — asks guiding questions, hints not answers      |
+| **2** (Ch 19-24) | **45%**    | Collaborator | Open/Close       | Working partner — "I think... but what do you think?"            |
+| **3** (Ch 25-34) | **25%**    | Consultant   | Scenario framing | Called for hard problems — answers when asked, doesn't volunteer |
+| **4+** (Ch 35+)  | **15%**    | Peer         | Bookend          | Sounding board — "You already know the answer to that"           |
 
 ### Step 3: Read Context
 
@@ -164,32 +164,54 @@ Emma asks a question (not gives an answer) → James reaches the conclusion hims
 
 ## Writing by Narrative Mode
 
-### Story-Driven (Part 0: 80% density)
+### Exercise-Framing (Part 0: 30-35% density)
 
-Characters drive every lesson. The story IS the curriculum. James and Emma appear in every section. Technical concepts emerge from their interaction.
+Narrative frames each exercise with a Socratic scene that surfaces the thinking gap, then steps back so the reader does the exercise independently. **James models RESISTANCE to good thinking, not the exercise itself.** The reader never watches James perform a prediction lock, reasoning receipt, or other exercise. Instead, James questions WHY the exercise matters, gets convinced through dialogue with Emma, and then the exercise instructions address the reader directly.
 
 **Structure:**
 
-- Narrative opening (2-3 paragraphs setting the scene)
-- James encounters a problem → Emma guides discovery → James tries → Emma corrects/validates
-- Narrative weaves through the entire lesson
-- Technical terms get standalone names but are introduced through dialogue
-- Narrative closing with emotional resonance
+- Narrative opening (25-40 lines): Socratic dialogue surfacing the thinking gap this exercise addresses. James pushes back, Emma asks questions, James reaches a partial conclusion.
+- Jonah exit (5-10 lines): Emma sets the challenge and leaves. "Write down your diagnosis. I'll be back in an hour."
+- `---` horizontal rule (BOUNDARY: narrative ends, exercise begins)
+- Exercise instructions in second-person direct address (UNTOUCHED)
+- Post-exercise bridge (10-20 lines): James reflects on what the exercise revealed. Transitions to next lesson.
+- Chapter closing (20-30 lines, in final lesson only): Emotional payoff, Emma fallibility Type A, growth visible.
+
+**Key rules:**
+
+- James NEVER does the exercise on-page
+- Exercise instructions remain second-person ("You receive a scenario", "Write down your diagnosis")
+- Narrative and exercise separated by `---` horizontal rules
+- A reader who skips all narrative loses zero instructional content
+
+**James's Part 0 mistakes are THINKING mistakes, not code mistakes:**
+
+- Jumps to AI before committing a position
+- Asks vague questions instead of diagnostic ones
+- Confuses quantity of work with quality of thinking
+- Accepts AI output without evaluating it
+- Cannot defend borrowed reasoning
 
 **Example opening (Part 0):**
 
 ```markdown
-James stared at the spreadsheet. Three columns of customer feedback,
-sorted by date, with no pattern he could see. He had been told to
-"find insights" and report back by Friday.
+James opened his laptop. A retail company's online sales had dropped
+15% despite a 20% increase in marketing spend. His first instinct
+was to open Claude.
 
-"What are you looking for?" Emma asked, pulling up a chair.
+"Before you type anything," Emma said, "what do YOU think happened?"
 
-"I don't know," James admitted. "My boss said the answers are in
-here. I just see rows."
+"Why? The AI has access to more data patterns than I do."
 
-"That's because you're reading data. You're not asking it questions yet."
+"When it gives you an answer, how will you know if it's right?"
+
+James paused. "I'll evaluate it."
+
+"Against what? You haven't formed a position yet. You have nothing
+to compare it to."
 ```
+
+---
 
 ### Chapter-Framing (Part 1: 65% density)
 

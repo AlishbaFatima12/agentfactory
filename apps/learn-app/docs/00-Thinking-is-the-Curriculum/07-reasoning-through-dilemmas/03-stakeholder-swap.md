@@ -78,6 +78,40 @@ teaching_guide:
 
 # The Stakeholder Swap
 
+## Why This Matters: James and the One-Sided Understanding
+
+James read the exercise instructions and set the paper down. "You want me to argue for the position I just spent two exercises attacking?"
+
+"The opposite of your position," Emma said. "Convincingly enough that your peers believe you hold it."
+
+"Why? I've already proven my position is strong. It survived three rounds."
+
+"You proved you can defend your position. Can you defend theirs?"
+
+"Why would I want to?"
+
+"Because understanding a dilemma means understanding all sides of it, not just the side you picked. If you can only argue one direction, you don't understand the issue. You just happen to agree with one answer."
+
+James crossed his arms. "Some things are just wrong, though. You don't need to understand the other side of every argument."
+
+"Name one."
+
+"Fraud. You don't need to argue in favor of fraud."
+
+"Nobody's asking you to argue for fraud. The dilemma you chose has two defensible sides. That's why it's a dilemma and not a crime." Emma paused. "At my last company, we had a product manager who could only pitch her own ideas. Brilliant proposals, but she couldn't anticipate objections because she'd never seriously inhabited the opposing view. Every board meeting, the CFO would ask one skeptical question and she'd freeze."
+
+"What happened?"
+
+"She started preparing every pitch by writing the strongest case against her own proposal first. Her close rate went from 40% to 80%."
+
+James looked at the exercise again. Arguing the opposite position felt dishonest. But he was starting to see the difference between agreeing with a position and understanding why someone else would hold it.
+
+"Five minutes in front of peers? Without AI?"
+
+"Without AI. You can use AI to prepare. But the delivery is all you."
+
+---
+
 ## Exercise 3: The Stakeholder Swap
 
 **Layers Used:** Layer 3 (Live Defence)
@@ -86,17 +120,15 @@ teaching_guide:
 You will use the **Cascade Map** technique from [Chapter 3](../03-thinking-in-systems/01-cascade-mapping.md) to trace the consequences of the opposing position. Your **Audience Analysis** skill from [Chapter 5](../05-communicating-what-matters/01-audience-prediction.md) and **Live Adaptation** skill from [Chapter 5](../05-communicating-what-matters/02-live-adaptation.md) will help you present persuasively to a skeptical audience.
 :::
 
----
+James just realized that defending his own position and understanding the other side are two different skills. So should you.
 
-### What You Do
+### Build and Deliver the Opposite Case
 
 You are randomly assigned to argue the opposite position from the one you chose in Exercise 1. In a live 5-minute presentation to peers, build the best possible case for a view you personally disagree with. No AI access during the presentation.
 
 :::tip Solo Learner Alternative
 Write a 400-word persuasive essay arguing the opposite position. Then prompt AI: "You are an audience member hearing someone argue [opposite position]. Rate this argument on: strength (1-10), apparent conviction (1-10), empathy for this perspective (1-10). Then ask me 3 tough follow-up questions that test whether I genuinely understand this side or am just going through the motions." Answer each question in writing.
 :::
-
----
 
 :::info Your Deliverable
 Your preparation notes for the opposite position (you may use AI to help prepare, but document what you used). Peer feedback scores: Argument strength (1-10), Apparent conviction (1-10), Empathy for the other side (1-10). A reflection (200 words) answering: Did arguing the other side change your view at all? What did you understand about the dilemma that you did not understand before?
@@ -148,9 +180,29 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
-### What This Teaches You
+---
 
-You learn that arguing a position you disagree with is the highest test of ethical reasoning. If you can build the best case for the other side, you understand the dilemma deeply enough to hold any position responsibly. AI helps you prepare, but the live delivery without AI tests whether you truly internalized the perspective.
+## What Happened With James
+
+James sat down after his presentation. His peer scores were higher than he expected: 7 on argument strength, 8 on apparent conviction, 7 on empathy.
+
+The empathy score surprised him. During preparation, he'd forced himself to ask: what kind of person would genuinely hold this position? Not a villain. Not someone who ignores bias. Someone who looked at the same evidence and weighed the tradeoffs differently. A hiring manager with forty open positions and candidates waiting. A startup founder watching competitors hire three times faster.
+
+"The weird part," he told Emma, "is that I started to see why reasonable people disagree on this. Not because one side is wrong. Because they're looking at different stakeholder groups and weighting the costs differently."
+
+"That's what the swap is designed to reveal."
+
+"It's like negotiations in procurement," James said. "My first year, I thought our suppliers were being unreasonable. Then my manager made me spend a day working from the supplier's P&L statement. Same numbers, completely different picture depending on which side of the table you sat on."
+
+"Did understanding their position make you agree with them?"
+
+"No. But I stopped thinking they were idiots. And my deals got better because I could anticipate their objections before they raised them."
+
+"Same principle. Different domain."
+
+## The Lesson Learned
+
+Understanding a position and agreeing with it are different skills. If you can only argue one side of a dilemma, you do not understand the dilemma well enough to hold any position responsibly. The stakeholder swap reveals that reasonable people disagree not because one side is wrong, but because they weight different costs differently.
 
 ## Flashcards Study Aid
 

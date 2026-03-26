@@ -75,28 +75,64 @@ teaching_guide:
 
 # The Divergence Test
 
+## Why This Matters: James and the Invisible Overlap
+
+James had spent extra time on his analysis this round. Cross-referenced three AI tools. Checked his reasoning receipt twice. When Emma sat down, he slid it across the table.
+
+"This one is different," he said. "I didn't just accept the first response. I pushed back on the AI's assumptions, pulled in a data point from a second tool that the first one missed, and built my own framework connecting them."
+
+"How much of your analysis came from your own thinking versus what AI told you?"
+
+"I told you, I didn't just copy it. I synthesized. I read the responses and built on them."
+
+"Write me a uniqueness statement. One hundred words on what you contributed that AI would not have produced on its own."
+
+James opened a new document and started typing. After two sentences, he stopped. He re-read his analysis. The structure was his. The opening paragraph was his. But the core argument about channel mismatch, the specific data framework, the three-part explanation: he couldn't trace any of it back to a thought he'd had before opening AI.
+
+"This is harder than I expected."
+
+"Good. That means you're looking honestly."
+
+James went back to his analysis with a pen. He underlined the sentences that came from his own insight. Three paragraphs had nothing underlined.
+
+"It's like those group projects at my old company," he said. "Everyone contributed 'something,' but when the VP asked who wrote the executive summary, four people raised their hands and none of them could explain the methodology."
+
+Emma nodded. "The divergence test is the same question at scale. Thirty students, same scenario, same tools. The only variable is thinking. The parts of your analysis that match everyone else's came from the tool, not from you."
+
+---
+
+## Exercise 3: The Divergence Test
+
 **Layers Used:** Layer 5 (Divergence Test), Layer 2 (Reasoning Receipt)
+
+James is staring at three unmarked paragraphs, trying to find his own thinking in them. So are you.
 
 Use the same scenario you chose in [Exercise 1 (The Prediction Lock)](./01-prediction-lock.md). Every student in the class works from the same scenario with the same AI tools. The only variable is your thinking.
 
-### What You Do
+### Develop Your Analysis Using AI as a Thinking Partner
 
-**Step 1. Develop your analysis using AI as a thinking partner.** Prompt AI with your own questions about the scenario. Do not just ask "analyze this scenario"; build your analysis piece by piece through focused questions. You decide what to ask, what to accept, and what to push back on.
+Prompt AI with your own questions about the scenario. Do not ask "analyze this scenario." Build your analysis piece by piece through focused questions. You decide what to ask, what to accept, and what to push back on.
 
-**Step 2. Write your analysis (500-800 words).** Your analysis should include: your diagnosis of what happened, the evidence and reasoning behind it, and at least one insight or connection that you believe AI would not produce on its own.
+### Write Your Analysis (500-800 Words)
 
-**Step 3. Write your uniqueness statement (100 words).** Answer this question: "What specific idea, connection, or insight in my analysis would AI not have produced on its own?" If you cannot point to anything, you need to go deeper before submitting.
+Your analysis should include: your diagnosis of what happened, the evidence and reasoning behind it, and at least one insight or connection that you believe AI would not produce on its own.
 
-**Step 4. Complete your reasoning receipt.** Document every prompt you sent, every AI response you received, and your accept/reject/modify decision for each (use the same format from [Exercise 1](./01-prediction-lock.md)).
+### Write Your Uniqueness Statement (100 Words)
 
----
+Answer this question: "What specific idea, connection, or insight in my analysis would AI not have produced on its own?" If you cannot point to anything, you need to go deeper before submitting.
+
+### Complete Your Reasoning Receipt
+
+Document every prompt you sent, every AI response you received, and your accept/reject/modify decision for each (use the same format from [Exercise 1](./01-prediction-lock.md)).
 
 :::info Your Deliverable
 
 1. Your analysis of the scenario (500-800 words)
-2. Your uniqueness statement (100 words); what you contributed beyond AI
+2. Your uniqueness statement (100 words): what you contributed beyond AI
 3. Your complete reasoning receipt showing every prompt, response, and decision
    :::
+
+### Check Your Thinking
 
 <AICheck id="divergence-test" xp={50}>
 
@@ -146,7 +182,7 @@ For each score, give a one-sentence justification.
 
 </AICheck>
 
----
+<ConversationGallery />
 
 <details>
 <summary>Uniqueness Statement Example (click to expand)</summary>
@@ -163,9 +199,21 @@ The strong version points to a _specific_ insight. The weak version says nothing
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn that when everyone has the same AI tools, the only differentiator is your thinking. The divergence test reveals whether you used AI as a thinking partner or as an answer machine. The AI grading of your own originality is a mirror; it shows you honestly where your work added value and where it was just AI pass-through.
+James read his originality score twice. Several sections flagged as "generic AI output, likely accepted without modification." The phrasing was diplomatic, but the message was blunt: those paragraphs could have been written by anyone in the class with the same prompt.
+
+The sections he'd flagged in his uniqueness statement, the ones where he'd connected the marketing channel data to the customer age distribution, scored highest. The AI grader called them "evidence of independent analytical reasoning."
+
+The mirror was precise. It didn't care how long he'd spent or how many tools he'd consulted. It measured one thing: where thinking happened and where it didn't.
+
+"The parts I was proudest of," James said, "were the parts I actually thought through myself. Not the parts where I used the most sophisticated prompts."
+
+Emma let him sit with that for a moment. "Now you know what to protect. The next exercise is going to test whether you can defend what you wrote. The sections you underlined will hold up. What about the rest?"
+
+## The Lesson Learned
+
+When everyone has the same tools, the work converges. The only parts of your analysis that belong to you are the parts where you thought past what AI offered. The uniqueness statement is not a formality; it is the honest answer to whether you used AI as a thinking partner or let it think for you. Knowing the difference is the first step toward protecting the parts that matter.
 
 ## Flashcards Study Aid
 

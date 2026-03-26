@@ -81,23 +81,63 @@ import TabItem from "@theme/TabItem";
 
 # Communicating What Matters
 
-> _AI can write anything for any audience. It cannot read the room, sense resistance, or adjust in real-time. The student who communicates well does not just produce messages -- they produce the right message for the right person at the right moment._
+> _AI can write anything for any audience. It cannot read the room, sense resistance, or adjust in real-time. The student who communicates well does not just produce messages; they produce the right message for the right person at the right moment._
 
 :::note Building On Previous Chapters
-The audience analysis uses the same prediction-then-compare structure from Chapters 1-4. The Error Taxonomy from [Chapter 2](../02-detecting-broken-reasoning/01-error-prediction.md) applies when diagnosing communication -- you are detecting communication errors, not factual errors. The Reasoning Receipt format from [Chapter 1, Exercise 1](../01-asking-better-questions/01-prediction-lock.md) carries forward.
+The audience analysis uses the same prediction-then-compare structure from Chapters 1-4. The Error Taxonomy from [Chapter 2](../02-detecting-broken-reasoning/01-error-prediction.md) applies when diagnosing communication: you are detecting communication errors, not factual errors. The Reasoning Receipt format from [Chapter 1, Exercise 1](../01-asking-better-questions/01-prediction-lock.md) carries forward.
 :::
 
 Communication is not writing. Writing is what AI does. Communication is understanding an audience, anticipating their objections, choosing what to emphasize and what to leave out, and adapting when the response you expected is not the response you get. This chapter trains the human layer that sits on top of any AI-generated draft.
+
+## Why This Matters: James and the One-Size-Fits-All Brief
+
+James slid a two-page summary across the table. "Done. The microservices migration brief. Clear, concise, all the technical details."
+
+Emma picked it up and read for thirty seconds. She set it down. "Who is this for?"
+
+"The leadership team. CTO, CFO, CEO."
+
+"All three of them? With the same document?"
+
+"It covers everything. Architecture benefits, cost projections, timeline. If they read it, they'll get it."
+
+Emma pointed to the second paragraph. "You open with latency benchmarks and horizontal scaling. Tell me, what does the CFO care about when she hears 'horizontal scaling'?"
+
+"She should care. It affects infrastructure costs."
+
+"Should care." Emma let the phrase hang. "You wrote this for someone who already thinks like an engineer. The CFO thinks in budget cycles and payback periods. She'll read 'horizontal scaling' and wonder why you're not speaking her language."
+
+James frowned. "Okay, but I said exactly what I meant. If they don't understand the technical rationale, that's on them to ask questions."
+
+"Is it?" Emma leaned forward. "At my last company, we had a sales director who sent the same quarterly report to every department. Finance, operations, marketing. Word for word. Identical. Beautiful charts. Thorough data. Nobody acted on it. Ever. Do you know why?"
+
+"Because different departments care about different things."
+
+"So why did you just write the same brief for three people who care about three different things?"
+
+James looked at his document. He'd spent an hour on it. It was tight, logical, well-structured. And it was written entirely for someone who already agreed with the technical premise.
+
+"Wait, so basically... the problem isn't that it's wrong. It's that it's only right for one audience."
+
+"Now you're seeing it. Communication isn't measured at the sender. It's measured at the receiver."
+
+"That's like presenting quarterly numbers," James said slowly. "My old manager used to say, 'If the board didn't understand, you didn't present well enough. You don't get credit for being technically correct if nobody acts on it.'"
+
+Emma nodded. "Before you write a single word for any audience, you need to know what they already believe, what they'll resist, and what argument would actually move them. That's the exercise."
+
+She stood. "Build three audience profiles. One for each stakeholder. Predict their priorities, their objections, and the argument most likely to change their mind. Write all of it before you open AI. I want to see how well you can read a room you've never been in."
+
+She picked up her coffee. "I'll be back in an hour. The profiles are the deliverable, not the brief."
+
+James stared at his polished two-page summary. An hour ago it had felt finished. Now it felt like a first draft written for himself.
+
+---
 
 ## Exercise 1: Three Audiences, One Decision
 
 **Layers Used:** Layer 1 (Predict Before You Prompt), Layer 2 (Reasoning Receipt)
 
-### What You Do
-
-You receive a technical decision that affects multiple stakeholders. Before AI, write audience profiles for three stakeholders who each have different priorities. For each, predict: what they care about most, their likely objection, and the one argument most likely to persuade them. Then ask AI to write a persuasive brief for each audience and compare against your predictions.
-
----
+James is staring at a brief that works for one audience and fails for two. So are you.
 
 ### Choose Your Scenario
 
@@ -177,9 +217,19 @@ For each score, give a one-sentence justification.
 
 ---
 
-### What This Teaches You
+## What Happened With James
 
-You learn that effective communication starts with audience modeling, not with writing. AI writes competent briefs but often misses the political, emotional, and cultural dimensions that determine whether a message actually lands. Your audience predictions, even when imperfect, train the skill that makes every future communication more effective.
+James laid his three profiles next to the AI-generated briefs. The CTO profile was close to AI's version; they'd both focused on technical risk and migration complexity. But the CFO profile told a different story. James had predicted she'd push back on the upfront migration cost. AI had predicted she'd worry about ongoing operational expense. Both were plausible. But James had added something AI hadn't: "She just approved a $2M ERP renewal last quarter. She'll compare this to that." That organizational context, the kind of knowledge that lives in hallway conversations and budget meeting body language, was not in any prompt.
+
+The CEO profile was where the gap was widest. AI had written a strategic vision pitch. James had predicted the CEO would ask one question: "Why now? We're about to acquire a competitor. Is this the right quarter to rebuild the foundation?" AI didn't know about the acquisition. James did, because he'd thought about the actual person in the actual chair.
+
+"The AI briefs are polished," James said when Emma returned. "Better sentences than mine, honestly. But they're writing for a persona. I was writing for a person."
+
+"That's the difference between writing and communication," Emma said. "AI can generate for a role. You can read for the individual. Both matter. But only one of them requires being in the room."
+
+## The Lesson Learned
+
+Effective communication starts with audience modeling, not with writing. AI writes competent briefs but misses the political, emotional, and cultural dimensions that determine whether a message lands. The gap between AI's audience model and yours is where human judgment lives: organizational context, relationship history, and the knowledge that comes from reading a real person rather than a role description.
 
 ## Flashcards Study Aid
 
