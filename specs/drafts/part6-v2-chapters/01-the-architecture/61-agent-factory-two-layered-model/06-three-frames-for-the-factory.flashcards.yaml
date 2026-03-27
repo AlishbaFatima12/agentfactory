@@ -1,0 +1,46 @@
+deck:
+  id: "ch61-three-frames-for-the-factory"
+  title: "Three Frames for the Factory"
+  description: "The three conceptual lenses for Part 6: Two-Layered Model (governance), Agent Maturity Model (journey), and Agents as Economic Actors (future)."
+  tags: ["three-frames", "two-layered-model", "agent-maturity-model", "economic-actors", "part6-roadmap"]
+  version: 1
+
+cards:
+  - id: "ch61-three-frames-for-the-factory-001"
+    front: "What question does each of the three frames answer?"
+    back: "Two-Layered Model: 'Who governs?' | Agent Maturity Model: 'How does it grow?' | Economic Actors: 'What is it becoming?'"
+    tags: ["three-frames", "questions"]
+    difficulty: "basic"
+
+  - id: "ch61-three-frames-for-the-factory-002"
+    front: "A hiring manager asks whether to build one general-purpose recruitment agent or four specialists. Which frame helps answer this?"
+    back: "The Agent Maturity Model. It is a question about readiness and phase, not about governance structure or economic design. The maturity model maps when general exploration should crystallize into specialist roles."
+    tags: ["agent-maturity-model", "application"]
+    difficulty: "intermediate"
+    why: "Why would answering this question with the Two-Layered Model frame produce an incomplete or misleading recommendation?"
+
+  - id: "ch61-three-frames-for-the-factory-003"
+    front: "What is crystallization in the Agent Maturity Model?"
+    back: "The moment when general experimentation produces enough clarity to justify building a specialist agent. Attempting to build specialists before crystallization is the James chatbot-army error: skipping the journey."
+    tags: ["agent-maturity-model", "crystallization"]
+    difficulty: "basic"
+
+  - id: "ch61-three-frames-for-the-factory-004"
+    front: "HireFlow does not yet have agents that buy things. Why does the Economic Actors frame still matter for building it now?"
+    back: "Budget tracking, audit trails, and spending envelopes need to be designed in from the start. Retrofitting this infrastructure later requires a rewrite. A few extra tables now is the cost of avoiding an architectural rebuild later."
+    tags: ["economic-actors", "design-for-future"]
+    difficulty: "intermediate"
+    why: "What specific table or data structure would you need to add now to support economic actors later?"
+
+  - id: "ch61-three-frames-for-the-factory-005"
+    front: "Are the three frames alternatives or complements? Why?"
+    back: "Complements. Each is a lens on the same factory from a different angle. You need all three: governance tells you structure, maturity tells you sequence, economic actors tells you what to design for that you do not need today."
+    tags: ["three-frames", "complementary"]
+    difficulty: "basic"
+
+  - id: "ch61-three-frames-for-the-factory-006"
+    front: "Why does James say 'I didn't build anything today, but I understand what I'm about to build'? What does this reveal about the lesson's purpose?"
+    back: "The lesson's purpose is foundational framing, not implementation. Understanding why chatbot armies fail, why governance is non-optional, and what the three frames are is the prerequisite that makes Chapters 62-90 build on solid ground rather than guesswork."
+    tags: ["three-frames", "learning-design"]
+    difficulty: "intermediate"
+    why: "What would go wrong in Chapter 67 if a reader skipped Chapter 61's foundational framing?"

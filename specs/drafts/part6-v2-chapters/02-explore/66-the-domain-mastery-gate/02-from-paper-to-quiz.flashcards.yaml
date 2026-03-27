@@ -1,0 +1,60 @@
+deck:
+  id: "ch66-from-paper-to-quiz"
+  title: "From Paper to Quiz"
+  description: "Three quiz dimensions for testing domain mastery and the five-step process for generating mastery-level questions from a concept paper."
+  tags: ["quiz-design", "domain-mastery", "three-dimensions", "mastery-questions"]
+  version: 1
+
+cards:
+  - id: "ch66-from-paper-to-quiz-001"
+    front: "What are the three dimensions of domain knowledge that a mastery quiz must test?"
+    back: "1. Fact questions: verifiable claims with one correct answer\n2. Edge-case questions: unusual scenarios requiring domain judgment\n3. Judgment-call questions: genuine dilemmas where reasoning quality matters more than the specific conclusion"
+    tags: ["three-dimensions", "definition"]
+    difficulty: "basic"
+
+  - id: "ch66-from-paper-to-quiz-002"
+    front: "Why does asking Claude for 'five hard questions about recruitment' produce a poor mastery quiz?"
+    back: "Claude generates textbook recall questions that test surface familiarity, not operational depth. A person who read one article could answer them. The quiz measures the wrong thing and produces false confidence."
+    tags: ["quiz-design", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "What specific failure would a builder experience after scoring 90% on such a quiz and then deploying agents?"
+
+  - id: "ch66-from-paper-to-quiz-003"
+    front: "Which quiz dimension does a well-written concept paper cover most thoroughly? Which is it typically silent on?"
+    back: "Most thorough: facts (pipeline stages, FTE specs, input/output formats). Silent on: judgment calls. Thin on: edge cases. The paper describes what should happen, not what to do when it doesn't."
+    tags: ["concept-paper", "three-dimensions"]
+    difficulty: "intermediate"
+    why: "What does this gap between paper coverage and quiz dimensions tell you about where your blind spots most likely live?"
+
+  - id: "ch66-from-paper-to-quiz-004"
+    front: "What makes a question a 'seam question' and why are these harder than component questions?"
+    back: "A seam question spans two FTEs and tests whether you understand how one agent's output constrains the next agent's input. Pipeline contradictions at handoff points are harder to anticipate than failures inside a single component."
+    tags: ["seam-questions", "pipeline-design"]
+    difficulty: "intermediate"
+    why: "Why might a builder who tests each FTE in isolation declare themselves ready when the integrated pipeline still fails?"
+
+  - id: "ch66-from-paper-to-quiz-005"
+    front: "What are the five steps for generating a mastery quiz from a concept paper?"
+    back: "1. Extract key claims\n2. Generate fact/edge-case question pairs for each claim\n3. Identify decision points and write judgment-call questions\n4. Evaluate question quality (could a blog post reader answer this?)\n5. Refine weak questions"
+    tags: ["quiz-generation", "five-steps"]
+    difficulty: "basic"
+
+  - id: "ch66-from-paper-to-quiz-006"
+    front: "How do you distinguish a weak fact question from a strong one?"
+    back: "Weak: can be answered by scanning the concept paper for keywords. Strong: requires applying domain understanding to a scenario the paper does not explicitly address."
+    tags: ["quiz-design", "question-quality"]
+    difficulty: "basic"
+
+  - id: "ch66-from-paper-to-quiz-007"
+    front: "A quiz is 80% fact questions and the student scores 85%. Why is this result misleading as a readiness signal?"
+    back: "Fact questions test recall, not mastery. The student may know the domain's structure while having no capacity to handle edge cases or make sound judgment calls. Agents encounter mostly non-happy-path situations in production."
+    tags: ["three-dimensions", "quiz-design"]
+    difficulty: "intermediate"
+    why: "What would the student's gap look like in production agent behavior if they had strong fact knowledge but weak judgment-call understanding?"
+
+  - id: "ch66-from-paper-to-quiz-008"
+    front: "Why does the edge/judgment distinction matter for agent skill design?"
+    back: "Edge cases have best-practice answers the principal can encode as rules. Judgment calls require the principal to articulate explicit criteria because there is no single formula. Confusing the two leads to skill definitions that omit the reasoning chain an agent needs."
+    tags: ["three-dimensions", "skill-design"]
+    difficulty: "intermediate"
+    why: "What would a skill that handles a judgment call as if it were a fact question look like in practice?"

@@ -1,0 +1,53 @@
+deck:
+  id: "ch66-take-the-hireflow-domain-quiz"
+  title: "Take the HireFlow Domain Quiz"
+  description: "Applying the five-step Domain Mastery Gate to the HireFlow domain: quiz generation, AI-free testing, scoring, remediation planning, and re-testing."
+  tags: ["domain-mastery-gate", "self-assessment", "remediation", "hireflow"]
+  version: 1
+
+cards:
+  - id: "ch66-take-the-hireflow-domain-quiz-001"
+    front: "James scores 90% on facts, 65% on edge cases, and 70% on judgment calls. Does he pass the gate?"
+    back: "No. Despite 78% overall, the edge-case dimension falls below the 70% floor. Both conditions must be met: 85% overall and no dimension below 70%."
+    tags: ["mastery-threshold", "scoring"]
+    difficulty: "basic"
+
+  - id: "ch66-take-the-hireflow-domain-quiz-002"
+    front: "A student finishes Step 4 (remediation) but skips Step 5 (re-test). What risk does this create?"
+    back: "The remediation may have produced shallow recall rather than deep understanding. Without a re-test using new questions, the student cannot verify that the gap actually closed. The blind spot may persist into skill writing."
+    tags: ["remediation", "re-test"]
+    difficulty: "intermediate"
+    why: "How is skipping the re-test structurally similar to James skipping the gate entirely?"
+
+  - id: "ch66-take-the-hireflow-domain-quiz-003"
+    front: "Why is writing 'I do not know' on the quiz more valuable than guessing?"
+    back: "Honest blank answers locate blind spots precisely. A plausible-sounding wrong answer looks like partial knowledge and may not be flagged for remediation, leaving the gap unaddressed."
+    tags: ["self-assessment", "blind-spots"]
+    difficulty: "intermediate"
+    why: "How does this connect to why agents fail silently: what is the agent equivalent of a plausible-sounding wrong answer?"
+
+  - id: "ch66-take-the-hireflow-domain-quiz-004"
+    front: "The quiz prompt asks for 30 questions from the concept paper. Before accepting them, what quality check must you run?"
+    back: "Read each question and ask: could someone answer this by scanning the concept paper for keywords? If more than five feel like recall questions, regenerate the weak ones asking for mastery-level scenarios."
+    tags: ["quiz-generation", "question-quality"]
+    difficulty: "basic"
+
+  - id: "ch66-take-the-hireflow-domain-quiz-005"
+    front: "James's remediation plan lists 'anti-discrimination compliance' as a gap. Why must he use the EEOC Compliance Manual rather than asking Claude to explain discrimination law?"
+    back: "An AI explanation may summarize accurately but miss the specific protected characteristics, enforcement precedents, or jurisdiction-specific rules that James needs to catch Resume Screener errors. The regulation itself provides the precise knowledge he must have to supervise the agent."
+    tags: ["remediation", "primary-sources"]
+    difficulty: "intermediate"
+    why: "What is the structural irony of using an AI to fill a gap that will later affect how you supervise an AI?"
+
+  - id: "ch66-take-the-hireflow-domain-quiz-006"
+    front: "A student re-takes their original 30-question quiz after remediation and scores 95%. Is the gap closed?"
+    back: "Not proven. Re-taking the original quiz after studying the answers primarily tests memory of those specific answers. New questions on the gap areas are required to verify that genuine understanding improved."
+    tags: ["re-test", "anti-pattern"]
+    difficulty: "basic"
+
+  - id: "ch66-take-the-hireflow-domain-quiz-007"
+    front: "James wrote a 20-page concept paper about recruitment yet scored 65% on edge cases. What does this pattern indicate about the typical relationship between concept paper length and edge-case mastery?"
+    back: "Length correlates with happy-path coverage, not edge-case depth. Papers expand to describe what the builder already understands. The scenarios they do not know about never appear in the paper."
+    tags: ["concept-paper", "edge-cases"]
+    difficulty: "intermediate"
+    why: "What does this imply about using concept paper length as a proxy for readiness to build?"

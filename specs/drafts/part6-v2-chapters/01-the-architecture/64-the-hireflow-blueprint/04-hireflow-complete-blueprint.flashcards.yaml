@@ -1,0 +1,71 @@
+deck:
+  id: "ch64-hireflow-complete-blueprint"
+  title: "HireFlow's Complete Blueprint"
+  description: "The reference Factory Blueprint for HireFlow: role specs, data contracts, human gates, success criteria, and economic participation."
+  tags: ["hireflow", "factory-blueprint", "reference-document", "data-contracts"]
+  version: 1
+
+cards:
+  - id: "ch64-hireflow-complete-blueprint-001"
+    front: "What does the Job Spec Writer do when requirements are ambiguous or contradictory, according to the blueprint's Failure Mode field?"
+    back: "Ambiguous: generate clarifying questions and pause the pipeline. Contradictory: flag contradictions and escalate to the hiring manager. Never guess."
+    tags: ["fte-1", "job-spec-writer", "failure-mode"]
+    difficulty: "basic"
+
+  - id: "ch64-hireflow-complete-blueprint-002"
+    front: "The Resume Screener's output contract lists five fields. What are they?"
+    back: "candidate_id (str), score (int, 0-100), strengths (list[str]), concerns (list[str]), recommendation (one of: strong_yes, yes, maybe, no, strong_no)."
+    tags: ["fte-2", "resume-screener", "data-contracts"]
+    difficulty: "basic"
+
+  - id: "ch64-hireflow-complete-blueprint-003"
+    front: "What does the Resume Screener do when it encounters an image-only PDF or a corrupted CV file?"
+    back: "Log the error, skip the candidate, and include the skip in the pipeline report. Never silently drop a candidate."
+    tags: ["fte-2", "resume-screener", "failure-mode"]
+    difficulty: "basic"
+
+  - id: "ch64-hireflow-complete-blueprint-004"
+    front: "Why does the Interview Question Generator's input contract include the JobSpec in addition to the ScreeningResult?"
+    back: "Questions must target identified concerns against job requirements, not just the screening score. The rubric is needed to assess difficulty and coverage against the role's actual criteria."
+    tags: ["fte-3", "interview-question-generator", "data-contracts"]
+    difficulty: "intermediate"
+    why: "What questions would the Interview Question Generator produce without access to the JobSpec, and why would they be less useful?"
+
+  - id: "ch64-hireflow-complete-blueprint-005"
+    front: "What does the Candidate Summarizer do when its summary contradicts the Resume Screener's score?"
+    back: "Flag the contradiction explicitly in the brief. Never silently resolve contradictions. The hiring committee makes the call, not the summarizer."
+    tags: ["fte-4", "candidate-summarizer", "failure-mode"]
+    difficulty: "intermediate"
+    why: "Why is it safer for the summarizer to surface contradictions than to resolve them silently?"
+
+  - id: "ch64-hireflow-complete-blueprint-006"
+    front: "HireFlow has two human review gates. Where are they placed and why?"
+    back: "Gate 1: after Job Spec Writer (a bad spec poisons all evaluations). Gate 2: after Candidate Summarizer (briefs feed irreversible hiring decisions). Both are at the highest-leverage points."
+    tags: ["human-gates", "gate-placement", "hireflow"]
+    difficulty: "intermediate"
+    why: "Adding a third gate after the Resume Screener would catch individual scoring errors. Is this worth the throughput cost for a 200-candidate run?"
+
+  - id: "ch64-hireflow-complete-blueprint-007"
+    front: "HireFlow has three economic participation points. What are they and what is each one's status?"
+    back: "Resume Screener: background check API ($5/candidate) — Designed. Job Spec Writer: salary benchmark API ($2/query) — Designed. Interview Q Gen: assessment platform integration ($10/candidate) — Future."
+    tags: ["economic-participation", "hireflow"]
+    difficulty: "intermediate"
+
+  - id: "ch64-hireflow-complete-blueprint-008"
+    front: "The blueprint lists five success criteria for HireFlow. What property must each one have that 'be fast' and 'be accurate' lack?"
+    back: "Each must be measurable (a computable number), specific (a defined target like < 4 hours), and verifiable (checkable without subjective judgment)."
+    tags: ["success-criteria", "measurability"]
+    difficulty: "basic"
+
+  - id: "ch64-hireflow-complete-blueprint-009"
+    front: "The Candidate Summarizer receives input from four sources. What are they?"
+    back: "JobSpec (from FTE 1), ScreeningResult (from FTE 2), InterviewPack (from FTE 3), and optional notes from SmartNotes' NoteStore."
+    tags: ["fte-4", "candidate-summarizer", "data-contracts"]
+    difficulty: "basic"
+
+  - id: "ch64-hireflow-complete-blueprint-010"
+    front: "Why does the blueprint's role for FTE 2 specify exactly five recommendation values ('strong_yes', 'yes', 'maybe', 'no', 'strong_no') instead of a free-text field?"
+    back: "A free-text recommendation cannot be validated or used consistently downstream. Enumerated values let the pipeline route candidates by recommendation without parsing natural language."
+    tags: ["fte-2", "data-contracts", "enumeration"]
+    difficulty: "intermediate"
+    why: "What downstream failures occur if the Resume Screener sometimes outputs 'strong yes' and sometimes 'highly recommended' for the same recommendation level?"

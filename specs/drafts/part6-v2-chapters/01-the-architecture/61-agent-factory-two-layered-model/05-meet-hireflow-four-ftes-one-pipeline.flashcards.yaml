@@ -1,0 +1,58 @@
+deck:
+  id: "ch61-meet-hireflow-four-ftes-one-pipeline"
+  title: "Meet HireFlow: Four FTEs, One Pipeline"
+  description: "Digital FTE definition, the four HireFlow FTE roles and their data contracts, and the SmartNotes component-reuse pattern."
+  tags: ["hireflow", "digital-fte", "pipeline", "data-contracts", "smartnotes"]
+  version: 1
+
+cards:
+  - id: "ch61-meet-hireflow-four-ftes-one-pipeline-001"
+    front: "What distinguishes a Digital FTE from a chatbot?"
+    back: "A Digital FTE owns a complete job role: runs when the pipeline triggers, produces contracted output in a defined schema, maintains state, and is verified at every handoff. A chatbot answers questions when asked and produces freeform text."
+    tags: ["digital-fte", "chatbot", "distinction"]
+    difficulty: "basic"
+
+  - id: "ch61-meet-hireflow-four-ftes-one-pipeline-002"
+    front: "Name the four HireFlow Digital FTEs in pipeline order."
+    back: "1. Job Spec Writer\n2. Resume Screener\n3. Interview Question Generator\n4. Candidate Summarizer"
+    tags: ["hireflow", "digital-fte", "pipeline"]
+    difficulty: "basic"
+
+  - id: "ch61-meet-hireflow-four-ftes-one-pipeline-003"
+    front: "What does the Resume Screener produce, and what verification rule is most critical for its output?"
+    back: "Produces: `{ candidate_id, score (0-100), strengths, concerns, recommendation }`. Critical verification: every strength and concern must trace to actual CV content; no hallucinated qualifications."
+    tags: ["resume-screener", "data-contracts", "verification"]
+    difficulty: "intermediate"
+
+  - id: "ch61-meet-hireflow-four-ftes-one-pipeline-004"
+    front: "Why does the Interview Question Generator not produce generic questions?"
+    back: "It reads the Resume Screener's output and targets specific candidate gaps. A candidate with weak SQL gets SQL scenarios. A candidate with strong Python but no testing background gets testing-focused questions."
+    tags: ["interview-question-generator", "personalization"]
+    difficulty: "intermediate"
+    why: "What would a generic-question Interview Generator tell you about the quality of data contracts upstream?"
+
+  - id: "ch61-meet-hireflow-four-ftes-one-pipeline-005"
+    front: "The Candidate Summarizer receives all prior pipeline outputs. What constraint governs its output?"
+    back: "No new information. Every item in the summary must trace back to outputs from FTE 1, 2, or 3. This prevents hallucinated qualifications from appearing in the final brief."
+    tags: ["candidate-summarizer", "verification", "no-hallucination"]
+    difficulty: "intermediate"
+    why: "What architectural property makes this traceability constraint enforceable?"
+
+  - id: "ch61-meet-hireflow-four-ftes-one-pipeline-006"
+    front: "What role does SmartNotes' NoteStore play in HireFlow?"
+    back: "NoteStore becomes HireFlow's note-taking system. `create()` records observations at each pipeline stage; `search()` retrieves context when an FTE or human needs it. Supplementary information that does not fit structured contracts lives here."
+    tags: ["smartnotes", "notestore", "component-reuse"]
+    difficulty: "basic"
+
+  - id: "ch61-meet-hireflow-four-ftes-one-pipeline-007"
+    front: "What does every arrow in the HireFlow pipeline diagram represent?"
+    back: "A handoff with a data contract plus a verification gate that checks output before passing it to the next stage."
+    tags: ["pipeline", "data-contracts", "verification"]
+    difficulty: "basic"
+
+  - id: "ch61-meet-hireflow-four-ftes-one-pipeline-008"
+    front: "Why is it correct to say a Digital FTE 'owns a responsibility' rather than 'performs a task'?"
+    back: "Task-level work ends when the task completes. Owning a responsibility means the FTE manages the full process: receiving work, handling edge cases, producing verified output, and being accountable for quality across every instance, not just the happy path."
+    tags: ["digital-fte", "ownership", "accountability"]
+    difficulty: "intermediate"
+    why: "How does FTE-level ownership change what verification gates need to check versus task-level verification?"

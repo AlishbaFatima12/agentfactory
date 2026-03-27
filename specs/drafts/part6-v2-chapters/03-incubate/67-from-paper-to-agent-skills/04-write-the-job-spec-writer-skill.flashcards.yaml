@@ -1,0 +1,53 @@
+deck:
+  id: "ch67-write-the-job-spec-writer-skill"
+  title: "Write the Job Spec Writer Skill"
+  description: "Applying Predict-Run-Investigate-Modify to write and refine the first HireFlow FTE skill, including specification error diagnosis."
+  tags: ["job-spec-writer", "predict-run-investigate-modify", "specification-error", "skill-writing"]
+  version: 1
+
+cards:
+  - id: "ch67-write-the-job-spec-writer-skill-001"
+    front: "What is the Predict step in the Predict-Run-Investigate-Modify cycle for skill development?"
+    back: "Before testing a skill, record exactly what output you expect for a specific input. Forces mental trace of decision logic; makes specification gaps visible when output diverges."
+    tags: ["predict", "skill-testing"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-job-spec-writer-skill-002"
+    front: "What is a Specification Error in skill development?"
+    back: "The skill correctly follows its instructions, but the instructions are incomplete. The agent behaves as specified; the specification does not cover the case."
+    tags: ["specification-error", "skill-quality"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-job-spec-writer-skill-003"
+    front: "James's Job Spec Writer produces a senior engineer rubric with only three dimensions: Python, PostgreSQL, and payment processing. Why is this a specification error rather than a skill bug?"
+    back: "The skill followed its rules correctly. The brief mentioned only technical requirements. The missing dimensions (system design, technical leadership) are implicit for senior roles but were never encoded as a Principle."
+    tags: ["specification-error", "seniority-dimensions", "job-spec-writer"]
+    difficulty: "intermediate"
+    why: "Which component of the skill (Persona, Questions, or Principles) should be changed to fix this, and why that one?"
+
+  - id: "ch67-write-the-job-spec-writer-skill-004"
+    front: "What required and preferred classification rule does the Job Spec Writer encode for briefs that use no explicit markers?"
+    back: "When no marker is present, classify the requirement as required by default and note the assumption in the output."
+    tags: ["job-spec-writer", "classification", "required-preferred"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-job-spec-writer-skill-005"
+    front: "Why is predicting skill output before testing more valuable than reviewing output after the fact?"
+    back: "Prediction forces you to trace the decision logic before execution. Without a prediction, you have no baseline to compare against, so gaps are invisible even when output is wrong."
+    tags: ["predict", "specification-gaps"]
+    difficulty: "intermediate"
+    why: "What would a team lose if they skipped the Predict step and only reviewed outputs after running the skill?"
+
+  - id: "ch67-write-the-job-spec-writer-skill-006"
+    front: "The Job Spec Writer's Persona produces a scoring rubric with explicit dimension names and numeric weights. Why is this format critical for the next FTE in the pipeline?"
+    back: "The Resume Screener receives this rubric as input and scores candidates against its dimensions. Without named dimensions and weights, the Screener has no scoring framework."
+    tags: ["job-spec-writer", "data-contract", "resume-screener"]
+    difficulty: "intermediate"
+    why: "If the Job Spec Writer omits weights and the Resume Screener invents its own, what downstream effect does this have on the Interview Question Generator?"
+
+  - id: "ch67-write-the-job-spec-writer-skill-007"
+    front: "When should the Job Spec Writer produce two separate job descriptions instead of one?"
+    back: "When the brief describes two distinct job functions (e.g., developer plus QA manager). A single role combining two functions attracts no one excellent at either."
+    tags: ["job-spec-writer", "mixed-function-roles", "edge-cases"]
+    difficulty: "advanced"
+    why: "Where in the SKILL.md structure (Questions or Principles) does this mixed-function rule belong, and why?"

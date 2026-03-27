@@ -1,0 +1,38 @@
+deck:
+  id: "ch65-chapter-quiz"
+  title: "Chapter 65 Quiz"
+  description: "Chapter-level recall check covering the 10-80-10 Rule, Advisory Board Pattern, crystallization signal, and concept paper fundamentals."
+  tags: ["chapter-quiz", "10-80-10", "advisory-board", "crystallization", "review"]
+  version: 1
+
+cards:
+  - id: "ch65-chapter-quiz-001"
+    front: "A concept paper that needed 30% research time suggests what about the builder's readiness?"
+    back: "The builder does not know the domain well enough for a concept paper. They should return to Phase 1 domain exploration before proceeding."
+    tags: ["10-80-10", "diagnostic", "readiness"]
+    difficulty: "basic"
+
+  - id: "ch65-chapter-quiz-002"
+    front: "Why does the 10-80-10 Rule require AI validation to come last?"
+    back: "The builder must first develop domain understanding through research (10%) and blueprint work (80%) to evaluate AI feedback. Without it, they cannot tell if AI critique is correct or applicable to their specific factory."
+    tags: ["ai-validation", "sequencing", "evaluation-capacity"]
+    difficulty: "basic"
+
+  - id: "ch65-chapter-quiz-003"
+    front: "A concept paper scores 9.6, 9.7, and 9.5 across three advisory models. The feedback includes 'consider mentioning seasonal volumes' and 'the argument is coherent.' Should the builder continue iterating?"
+    back: "No. Scores exceed 9.5 and all feedback is stylistic. Both crystallization conditions are met. Further iteration is procrastination."
+    tags: ["crystallization", "9.5-threshold", "completion"]
+    difficulty: "basic"
+
+  - id: "ch65-chapter-quiz-004"
+    front: "The Interview Question Generator receives from both the Resume Screener and Job Spec Writer. Does it pass the Distinct Input FTE justification criterion?"
+    back: "Yes. Synthesizing two input streams is itself the distinct expertise. No adjacent FTE combines those specific streams. Distinct Input requires a different source from adjacent FTEs, not a single source."
+    tags: ["fte-justification", "distinct-input", "synthesis"]
+    difficulty: "intermediate"
+    why: "Why does the synthesis argument justify the FTE rather than simply noting it has two sources?"
+
+  - id: "ch65-chapter-quiz-005"
+    front: "At which phase boundary does the concept paper sit in the Agent Maturity Model?"
+    back: "Phase 1 (Explore) and Phase 2 (Incubate). The concept paper is the last thinking artifact of Phase 1. The Domain Mastery Gate (Ch 66) is the actual transition point to Phase 2."
+    tags: ["phase-boundary", "maturity-model", "explore-incubate"]
+    difficulty: "basic"

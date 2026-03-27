@@ -1,0 +1,46 @@
+deck:
+  id: "ch64-from-blueprint-to-concept-paper"
+  title: "From Blueprint to Concept Paper"
+  description: "How the Factory Blueprint connects to the Concept Paper, the Agent Maturity Model, and the rest of Part 6."
+  tags: ["blueprint", "concept-paper", "maturity-model", "part-6-chain"]
+  version: 1
+
+cards:
+  - id: "ch64-from-blueprint-to-concept-paper-001"
+    front: "What is the difference between a Factory Blueprint and a 10-80-10 Concept Paper?"
+    back: "The blueprint is an architecture document: what the factory does. The concept paper is a persuasion document: why the factory should exist. The blueprint provides the domain knowledge that becomes the 80%."
+    tags: ["blueprint", "concept-paper", "distinction"]
+    difficulty: "basic"
+
+  - id: "ch64-from-blueprint-to-concept-paper-002"
+    front: "Where does the Factory Blueprint sit in the Agent Maturity Model's five phases?"
+    back: "End of Phase 1 (Explore). The concept paper closes Phase 1. Phase 2 (Incubate) begins with skill extraction in Chapter 67."
+    tags: ["maturity-model", "phase-1", "blueprint"]
+    difficulty: "basic"
+
+  - id: "ch64-from-blueprint-to-concept-paper-003"
+    front: "James finds three gaps in his blueprint while reading it independently. What structural type does each gap represent?"
+    back: "Missing specification field (Job Spec Writer ambiguity handling), incomplete data contract (Screener not passing raw resume to Summarizer), and undefined term in a gate trigger (confidence not defined)."
+    tags: ["blueprint-gaps", "systems-thinking"]
+    difficulty: "intermediate"
+    why: "Why do these gaps not appear during initial blueprint writing but surface on re-reading?"
+
+  - id: "ch64-from-blueprint-to-concept-paper-004"
+    front: "Which four downstream chapters consume which sections of the HireFlow blueprint?"
+    back: "Ch 67: role specifications (agent skills). Ch 76: data contracts (database schemas). Ch 82: human gates (API endpoints). Ch 84: economic participation (budget tracking)."
+    tags: ["part-6-chain", "blueprint-consumption"]
+    difficulty: "intermediate"
+
+  - id: "ch64-from-blueprint-to-concept-paper-005"
+    front: "A student finishes their blueprint and says 'done.' Emma asks them to re-read it and find gaps. Why is this step non-optional?"
+    back: "Gaps that are invisible during creation surface on re-reading: missing fields, incomplete contracts, undefined terms. Emma found James's three gaps this way; the cost to fix them now is one line each."
+    tags: ["blueprint-review", "gap-analysis"]
+    difficulty: "intermediate"
+    why: "Why is finding gaps in the blueprint cheaper than finding them in the code that was built from the blueprint?"
+
+  - id: "ch64-from-blueprint-to-concept-paper-006"
+    front: "The chapter describes the blueprint as 'the seed from which the entire factory grows.' What does this mean for how the blueprint is used after Chapter 64?"
+    back: "It is a living reference document. Each subsequent chapter extracts a different section. The blueprint is never discarded; it is consumed and extended across Chapters 65 through 90."
+    tags: ["blueprint", "reference-document", "part-6-chain"]
+    difficulty: "intermediate"
+    why: "What happens to chapters 67-90 if the blueprint is incomplete or vague?"

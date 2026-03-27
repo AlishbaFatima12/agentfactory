@@ -1,0 +1,73 @@
+deck:
+  id: "ch71-trace-the-tool-call-sequence"
+  title: "Trace the Tool Call Sequence"
+  description: "Trace tables for async MCP client execution, the skill-tool contract, and three categories of contract violation."
+  tags: ["trace-table", "skill-tool-contract", "edge-cases", "connection-failure"]
+  version: 1
+
+cards:
+  - id: "ch71-trace-the-tool-call-sequence-001"
+    front: "What does a trace table record for MCP client code?"
+    back: "The executing line, the action performed, which variables change, and the values they hold at each step."
+    tags: ["trace-table"]
+    difficulty: "basic"
+
+  - id: "ch71-trace-the-tool-call-sequence-002"
+    front: "At which trace table step does a connection failure occur when the MCP server is not running?"
+    back: "Step 2: opening stdio_client. The subprocess fails to start, raising an OSError. No session is created and no tool calls are attempted."
+    tags: ["trace-table", "connection-failure"]
+    difficulty: "basic"
+
+  - id: "ch71-trace-the-tool-call-sequence-003"
+    front: "What three things does a skill-tool contract specify?"
+    back: "1. Input expectations: what the tool accepts.\n2. Output format: the structure and type of the result.\n3. Failure modes: how the tool signals errors."
+    tags: ["skill-tool-contract"]
+    difficulty: "basic"
+
+  - id: "ch71-trace-the-tool-call-sequence-004"
+    front: "James's code has an implicit skill-tool contract. Why is an implicit contract more dangerous than an explicit one?"
+    back: "Every unverified assumption is a silent failure point. Implicit contracts are not checked in code, so violations produce confusing failures with no explanation. Explicit contracts surface violations as clear error messages."
+    tags: ["skill-tool-contract", "silent-assumption"]
+    difficulty: "intermediate"
+    why: "What is the concrete debugging cost of an implicit contract violation versus an explicit one?"
+
+  - id: "ch71-trace-the-tool-call-sequence-005"
+    front: "What are the three categories of skill-tool contract violation?"
+    back: "1. Registration failure: the tool is not registered on the server.\n2. Format change: the tool's output structure changed.\n3. Partial data: valid but incomplete results (such as a null email field)."
+    tags: ["skill-tool-contract", "contract-violations"]
+    difficulty: "intermediate"
+
+  - id: "ch71-trace-the-tool-call-sequence-006"
+    front: "parse_cv changes its return format to include a metadata wrapper. The skill continues to work but produces incorrect scores. Why?"
+    back: "A format change is a contract violation, not a crash. The JSON string is still valid. score_candidate receives data in an unexpected shape and may silently produce wrong results rather than failing loudly."
+    tags: ["contract-violations", "format-change"]
+    difficulty: "intermediate"
+    why: "Why is a silent wrong result more dangerous than a crash in a hiring pipeline?"
+
+  - id: "ch71-trace-the-tool-call-sequence-007"
+    front: "A CV has no EXPERIENCE section. parse_cv returns experience as an empty list. Should the skill check for this before calling score_candidate?"
+    back: "This is a design decision, not a bug. Either the skill validates experience completeness before scoring (skill-level responsibility) or score_candidate handles empty experience internally (tool-level responsibility). Both are valid; the contract must document which approach is chosen."
+    tags: ["skill-tool-contract", "edge-cases", "design-decision"]
+    difficulty: "advanced"
+    why: "How does deciding where responsibility lives affect how you write the skill-tool contract?"
+
+  - id: "ch71-trace-the-tool-call-sequence-008"
+    front: "The trace table shows cv_data at step 6 is a JSON string. Why does this detail matter for the next tool call?"
+    back: "score_candidate receives cv_data as a raw JSON string argument. If the skill assumes it is already a dict and calls .get() on it, it gets an AttributeError. The trace table makes the type explicit and prevents this assumption."
+    tags: ["trace-table", "data-types"]
+    difficulty: "intermediate"
+    why: "How would you modify the integration if score_candidate required a dict instead of a JSON string?"
+
+  - id: "ch71-trace-the-tool-call-sequence-009"
+    front: "Why does session.initialize() exchange capability information rather than just opening a connection?"
+    back: "The MCP protocol requires a capability handshake: client and server agree on supported features and protocol version. If the server does not support a tool the client plans to call, this handshake is where that mismatch is discoverable before any tool call is attempted."
+    tags: ["mcp-client", "initialization"]
+    difficulty: "intermediate"
+    why: "What would the debugging experience look like if capability mismatches surfaced at call_tool time instead of during initialize?"
+
+  - id: "ch71-trace-the-tool-call-sequence-010"
+    front: "Violation 1 (tool not registered) returns isError=True. Violation 2 (format change) returns a valid response. Why are these two violations handled differently in code?"
+    back: "Violation 1 is caught by the isError guard. Violation 2 passes the guard because the response looks successful; it requires content-level validation (checking the actual shape of the data) rather than error-flag checking."
+    tags: ["contract-violations", "guard-pattern"]
+    difficulty: "advanced"
+    why: "What type of test would detect a format change before it reaches production?"

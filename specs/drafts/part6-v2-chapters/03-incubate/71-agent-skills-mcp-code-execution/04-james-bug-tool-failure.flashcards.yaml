@@ -1,0 +1,74 @@
+deck:
+  id: "ch71-james-bug-tool-failure"
+  title: "James's Bug: Tool Failure Handling"
+  description: "Orchestration errors in skill-tool pipelines, the tool call guard pattern, and pipeline failure cascades."
+  tags: ["orchestration-error", "tool-call-guard", "isError", "pipeline-failure", "error-taxonomy"]
+  version: 1
+
+cards:
+  - id: "ch71-james-bug-tool-failure-001"
+    front: "What is the tool call guard pattern?"
+    back: "Two checks after every call_tool: if result.isError or not result.content. The first catches server-reported errors; the second catches empty responses from timeouts and connection drops."
+    tags: ["tool-call-guard"]
+    difficulty: "basic"
+
+  - id: "ch71-james-bug-tool-failure-002"
+    front: "Why are both isError and not result.content checks necessary?"
+    back: "A tool can report isError=False with an empty content list (timeout, partial response). A tool can also report isError=True with useful error details in content. The two conditions are independent; either alone misses a failure mode."
+    tags: ["tool-call-guard", "isError"]
+    difficulty: "intermediate"
+    why: "What would happen in James's code if you only checked isError and the server returned an empty content list?"
+
+  - id: "ch71-james-bug-tool-failure-003"
+    front: "What is an orchestration error?"
+    back: "A failure in the control flow between components, even though each component works correctly in isolation."
+    tags: ["orchestration-error", "error-taxonomy"]
+    difficulty: "basic"
+
+  - id: "ch71-james-bug-tool-failure-004"
+    front: "Why is the missing guard in screen_candidate an orchestration error rather than a data error?"
+    back: "The MCP server's timeout behavior is correct. Python's IndexError on an empty list is correct. The bug is that the skill does not connect those two facts: it treats a failed response the same as a successful one."
+    tags: ["orchestration-error", "error-taxonomy"]
+    difficulty: "intermediate"
+    why: "How does the debugging approach differ for an orchestration error versus the data error in Chapter 70 Lesson 4?"
+
+  - id: "ch71-james-bug-tool-failure-005"
+    front: "What is a pipeline failure cascade?"
+    back: "One missing guard in a batch processor allows a single tool call failure to propagate upward and kill every subsequent operation. Candidates after the failure never get processed."
+    tags: ["pipeline-failure", "cascade"]
+    difficulty: "intermediate"
+    why: "Why does one slow CV (candidate 47) stop processing candidates 48 through 200 in James's original code?"
+
+  - id: "ch71-james-bug-tool-failure-006"
+    front: "James says: 'The server was working fine when I tested it!' Why is this not a defense against the missing guard?"
+    back: "Testing with three candidates does not expose load-induced timeouts. Under production load, candidate 47 submits a 200-page CV and parse_cv takes 30 seconds. The server times out correctly; the skill crashes because it assumed success."
+    tags: ["tool-call-guard", "testing"]
+    difficulty: "intermediate"
+    why: "What kind of test would have caught this failure before production?"
+
+  - id: "ch71-james-bug-tool-failure-007"
+    front: "What happens at Rung 4 (pipeline verification) that is missed at lower verification rungs?"
+    back: "Pipeline verification tests the full skill-to-tool chain, including injected failures. Lower rungs test individual tools in isolation. An orchestration error only surfaces when the calling code runs against a failing tool."
+    tags: ["verification-ladder", "orchestration-error"]
+    difficulty: "intermediate"
+    why: "Why would a Rung 1 test (individual tool test) give you false confidence about the pipeline's reliability?"
+
+  - id: "ch71-james-bug-tool-failure-008"
+    front: "Emma's fix returns partial results on tool failure rather than crashing. Why does the return structure include error, cv, and score keys even when cv and score are None?"
+    back: "The caller can distinguish between 'CV parsing failed' (cv is None, score is None), 'scoring failed' (cv has data, score is None), and 'success' (both populated). Structured partial results let downstream code handle each case explicitly."
+    tags: ["tool-call-guard", "graceful-degradation"]
+    difficulty: "advanced"
+    why: "What would the caller receive if the function returned {'error': 'failed'} with no other context?"
+
+  - id: "ch71-james-bug-tool-failure-009"
+    front: "When does the tool call guard pattern become insufficient for detecting failures?"
+    back: "When the tool reports success (isError=False, content non-empty) but the content carries wrong data. The guard checks the protocol layer; it does not validate the semantic meaning of a successful response."
+    tags: ["tool-call-guard", "semantic-contract"]
+    difficulty: "advanced"
+    why: "What is the next layer of defense after the guard pattern for content-level failures?"
+
+  - id: "ch71-james-bug-tool-failure-010"
+    front: "Why must every tool call in a skill have a guard, with no exceptions?"
+    back: "Networks drop. Servers crash under load. Cold starts fail. The guard is not for the cases where everything works; it is for the one case in a batch of 200 where something does not. That one case determines whether your pipeline is reliable."
+    tags: ["tool-call-guard", "reliability"]
+    difficulty: "basic"

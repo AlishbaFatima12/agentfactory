@@ -1,0 +1,33 @@
+deck:
+  id: "ch64-chapter-quiz"
+  title: "Chapter 64 Quiz"
+  description: "Recall and application questions covering the six-step method, seven-section template, and key Chapter 64 distinctions."
+  tags: ["quiz", "domain-decomposition", "factory-blueprint", "recall"]
+  version: 1
+
+cards:
+  - id: "ch64-chapter-quiz-001"
+    front: "Which component is NOT part of a Role Specification?"
+    back: "Deployment Region. The five components are: Name, Responsibility, Input Contract, Output Contract, Verification."
+    tags: ["role-specification", "recall"]
+    difficulty: "basic"
+
+  - id: "ch64-chapter-quiz-002"
+    front: "A candidate score of 150 passes through a pipeline without error. Which step of Domain Decomposition was skipped?"
+    back: "Step 4: Map Data Contracts. A data contract for the score field would specify 'range 0-100' and reject 150 before it reaches the next stage."
+    tags: ["data-contracts", "step-4", "failure-analysis"]
+    difficulty: "intermediate"
+    why: "At which stage in the pipeline would a score of 150 most likely cause a visible failure, and why is that stage three steps removed from the source?"
+
+  - id: "ch64-chapter-quiz-003"
+    front: "What is the correct order of all six Domain Decomposition steps?"
+    back: "1. Name the Domain Workflow\n2. Identify the Stages\n3. Define Role Specifications\n4. Map Data Contracts\n5. Place Human Review Gates\n6. Add Economic Participation Points"
+    tags: ["six-steps", "order", "recall"]
+    difficulty: "basic"
+
+  - id: "ch64-chapter-quiz-004"
+    front: "A blueprint's success criterion reads: 'Candidates should be evaluated accurately.' What is wrong with it?"
+    back: "It is not specific or measurable. It passes the reasonableness test but fails the verifiability test: no one can compute whether it was achieved. A better version: 'Every strength references specific CV content.'"
+    tags: ["success-criteria", "measurability"]
+    difficulty: "intermediate"
+    why: "When a stakeholder asks 'is the factory working?' after three months, how would you answer with this criterion versus a measurable one?"

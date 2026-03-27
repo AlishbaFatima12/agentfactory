@@ -1,0 +1,46 @@
+deck:
+  id: "ch65-from-concept-paper-to-domain-mastery"
+  title: "From Concept Paper to Domain Mastery"
+  description: "How the concept paper connects to the Domain Mastery Gate (Ch 66), skill extraction (Ch 67), and its role as the persistent reference for all of Part 6."
+  tags: ["concept-paper", "domain-mastery", "phase-transition", "explore-phase"]
+  version: 1
+
+cards:
+  - id: "ch65-from-concept-paper-to-domain-mastery-001"
+    front: "What is the four-chapter build chain that connects blueprint to agent skills?"
+    back: "Ch 64 Blueprint feeds Ch 65 Concept Paper, which feeds Ch 66 Domain Mastery Gate, which feeds Ch 67 Agent Skills."
+    tags: ["build-chain", "chapter-sequence", "definition"]
+    difficulty: "basic"
+
+  - id: "ch65-from-concept-paper-to-domain-mastery-002"
+    front: "What is the difference between having a concept paper and having domain mastery?"
+    back: "The concept paper is a validated document. Domain mastery is the same knowledge held in the builder's head without needing to consult the paper. A surgeon reads the manual; a surgeon with mastery performs the procedure from internalized knowledge."
+    tags: ["domain-mastery", "concept-paper", "internalization"]
+    difficulty: "basic"
+
+  - id: "ch65-from-concept-paper-to-domain-mastery-003"
+    front: "Why must domain mastery precede agent skill extraction in Ch 67?"
+    back: "Agent skills encode domain judgment. A builder who references the concept paper for every decision will write vague skills ('evaluate candidates fairly'). Vague skills produce vague agent behavior. Mastery is what makes skills specific."
+    tags: ["domain-mastery", "skill-extraction", "specificity"]
+    difficulty: "intermediate"
+    why: "What specific failure in the Resume Screener skill would result from a builder who understood the structure of the concept paper but not its substance?"
+
+  - id: "ch65-from-concept-paper-to-domain-mastery-004"
+    front: "The concept paper closes Phase 1 (Explore). What marks the actual phase boundary between Phase 1 and Phase 2?"
+    back: "The Domain Mastery Gate (Ch 66). The concept paper produces the document; the gate tests whether the builder has internalized the domain. Passing the gate is the signal that Phase 2 (Incubate) can begin."
+    tags: ["phase-transition", "domain-mastery-gate", "explore-phase"]
+    difficulty: "intermediate"
+    why: "Why is a gate (tested internalization) a stronger phase boundary than a deliverable (completed document)?"
+
+  - id: "ch65-from-concept-paper-to-domain-mastery-005"
+    front: "Beyond Ch 66 and Ch 67, which downstream chapters in Part 6 reference the concept paper?"
+    back: "Ch 76 (database schemas derived from data contracts), Ch 78-81 (each FTE built against concept paper claims), Ch 90 (capstone verification against success criteria)."
+    tags: ["concept-paper", "downstream-reference", "part-6"]
+    difficulty: "basic"
+
+  - id: "ch65-from-concept-paper-to-domain-mastery-006"
+    front: "Phase 2 (Incubate) begins with intelligence, not code. What does 'intelligence before code' mean in practice?"
+    back: "Intelligence means the skills and protocols that define how each FTE reasons. These come from Ch 67 (agent skills) and Ch 68 (simulation validation). Code (MCP servers, database schemas, orchestration) comes in Phase 3, after the intelligence layer is established and tested."
+    tags: ["incubate-phase", "intelligence-first", "phase-ordering"]
+    difficulty: "intermediate"
+    why: "What happens to Phase 3 code quality if the Phase 2 intelligence layer was rushed or skipped?"

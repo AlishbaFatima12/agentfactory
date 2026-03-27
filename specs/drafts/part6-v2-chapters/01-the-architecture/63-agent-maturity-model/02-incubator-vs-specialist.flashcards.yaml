@@ -1,0 +1,60 @@
+deck:
+  id: "ch63-incubator-vs-specialist"
+  title: "Incubator vs. Specialist"
+  description: "The two roles general agents play in factory construction, and why crystallization is the transition point between them."
+  tags: ["incubator", "specialist", "crystallization", "agent-roles"]
+  version: 1
+
+cards:
+  - id: "ch63-incubator-vs-specialist-001"
+    front: "What is the Incubator role in agent factory development?"
+    back: "The general agent acting as Director: exploring the domain, writing concept papers, challenging assumptions, and generating test scenarios before any specialist is built."
+    tags: ["incubator", "director-role"]
+    difficulty: "basic"
+
+  - id: "ch63-incubator-vs-specialist-002"
+    front: "What distinguishes a specialist agent from a domain-ignorant agent?"
+    back: "A specialist has validated domain knowledge encoded as skills, tested edge case handling, and domain-specific rubrics. A domain-ignorant agent is a general agent's guess at the same job."
+    tags: ["specialist", "comparison"]
+    difficulty: "intermediate"
+    why: "Why does this distinction matter for the trust a hiring manager places in screening output?"
+
+  - id: "ch63-incubator-vs-specialist-003"
+    front: "What is crystallization in agent factory development?"
+    back: "The phase transition when domain exploration produces enough clarity to build from; triggered by the 9.5+ quality threshold on the concept paper."
+    tags: ["crystallization", "definition"]
+    difficulty: "basic"
+
+  - id: "ch63-incubator-vs-specialist-004"
+    front: "What is the key insight about general agents and production factories?"
+    back: "General agents BUILD custom agents. They do not become them. The construction crew (general agent) and the workforce (specialists) are different entities."
+    tags: ["general-agent", "specialist", "key-insight"]
+    difficulty: "intermediate"
+    why: "Why would deploying a general agent on the production floor instead of a specialist be a problem for cost and reliability?"
+
+  - id: "ch63-incubator-vs-specialist-005"
+    front: "In the Incubator phase, the general agent acts as Director. After crystallization, what role does it take on?"
+    back: "Builder: it constructs specialist agents from the validated knowledge the Incubator phase produced."
+    tags: ["agent-roles", "phase-transition"]
+    difficulty: "basic"
+
+  - id: "ch63-incubator-vs-specialist-006"
+    front: "Why is the 9.5+ crystallization threshold described as 'not negotiable'?"
+    back: "Everything after Phase 1 builds on the concept paper's quality. An undercooked paper has gaps that propagate into Phase 2 skills and Phase 3 specialists as defects."
+    tags: ["crystallization", "quality-threshold"]
+    difficulty: "intermediate"
+    why: "What does this make the 9.5 threshold analogous to in the spending envelopes from Chapter 62?"
+
+  - id: "ch63-incubator-vs-specialist-007"
+    front: "Why can a specialist agent do its job better than the general agent that built it?"
+    back: "The specialist is narrower, cheaper, and more reliable for one specific task. Breadth and generality are liabilities on the production floor, not strengths."
+    tags: ["specialist", "design-tradeoff"]
+    difficulty: "intermediate"
+    why: "What factory design principle does this illustrate about the right tool for each layer of the system?"
+
+  - id: "ch63-incubator-vs-specialist-008"
+    front: "James discovers six domain questions his resume screener cannot answer. What phase was he supposed to answer those questions in?"
+    back: "Phase 1 (Explore), through the Incubator's concept paper work. Each unanswered question is a domain gap that would become a defect in the specialist."
+    tags: ["incubator", "domain-gaps", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "Why does finding six gaps instead of the expected five matter as a learning moment for James?"

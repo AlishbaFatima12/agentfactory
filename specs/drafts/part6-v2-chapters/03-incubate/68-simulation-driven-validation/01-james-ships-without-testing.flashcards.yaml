@@ -1,0 +1,52 @@
+deck:
+  id: "ch68-james-ships-without-testing"
+  title: "James Ships Without Testing"
+  description: "Why untested skills are hypotheses, not intelligence, and why isolation is the prerequisite for infrastructure."
+  tags: ["simulation", "validation", "isolation", "incubate-phase"]
+  version: 1
+
+cards:
+  - id: "ch68-james-ships-without-testing-001"
+    front: "What is simulation-driven validation?"
+    back: "Running agent skills in conversation to verify correct outputs before building MCP servers, databases, or orchestrators."
+    tags: ["simulation", "definition"]
+    difficulty: "basic"
+
+  - id: "ch68-james-ships-without-testing-002"
+    front: "James wires his untested Resume Screener to an MCP server and gets garbled output. Why can he not debug it?"
+    back: "Three failure sources are tangled: skill logic, MCP configuration, and transport layer. Without isolating the skill first, there is no way to know which layer broke."
+    tags: ["isolation", "debugging", "mcp"]
+    difficulty: "intermediate"
+    why: "What would James know for certain if the skill had passed simulation before the MCP connection was added?"
+
+  - id: "ch68-james-ships-without-testing-003"
+    front: "Why does reading a skill carefully not tell you whether it works?"
+    back: "Reading tests whether the instructions look correct. Execution tests whether they produce correct behavior when given real inputs. Different questions, different methods."
+    tags: ["validation", "reading-vs-execution"]
+    difficulty: "basic"
+
+  - id: "ch68-james-ships-without-testing-004"
+    front: "Emma's core principle for validation order is one sentence. What is it?"
+    back: "Test the intelligence before you build the infrastructure."
+    tags: ["validation", "principle"]
+    difficulty: "basic"
+
+  - id: "ch68-james-ships-without-testing-005"
+    front: "Why does a skill that handles the 'happy path' candidate well still need simulation?"
+    back: "Happy path inputs are the ones you least need an agent for. The agent earns its value on messy, edge-case inputs where instructions must handle partial matches, career gaps, and ambiguous signals."
+    tags: ["edge-cases", "confidence-gap"]
+    difficulty: "intermediate"
+    why: "What type of candidate would expose whether a Resume Screener's instructions are genuinely robust?"
+
+  - id: "ch68-james-ships-without-testing-006"
+    front: "Simulation sits at which boundary in the Agent Maturity Model?"
+    back: "Between Incubate and Build Specialist. Skills must be validated before the phase transition to Build Specialist is justified."
+    tags: ["maturity-model", "incubate", "phase-transition"]
+    difficulty: "intermediate"
+    why: "What would happen if you moved to Build Specialist with skills that had only been read, not simulated?"
+
+  - id: "ch68-james-ships-without-testing-007"
+    front: "The Incubate phase stacks four validation layers in order. What are they?"
+    back: "1. Concept paper (domain knowledge)\n2. Domain Mastery Gate (understanding)\n3. Skill writing (knowledge extraction)\n4. Simulation (execution correctness)"
+    tags: ["incubate-phase", "validation-layers"]
+    difficulty: "intermediate"

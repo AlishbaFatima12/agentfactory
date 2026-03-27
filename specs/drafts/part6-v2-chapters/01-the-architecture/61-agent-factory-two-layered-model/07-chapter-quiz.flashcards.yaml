@@ -1,0 +1,41 @@
+deck:
+  id: "ch61-chapter-quiz"
+  title: "Chapter Quiz"
+  description: "Consolidation cards for Chapter 61: diagnosing common wrong answers and the reasoning behind the correct ones."
+  tags: ["chapter-quiz", "consolidation", "agent-factory", "two-layered-model", "governance"]
+  version: 1
+
+cards:
+  - id: "ch61-chapter-quiz-001"
+    front: "A student answers 'An Agent Factory uses more powerful language models' to distinguish it from a chatbot collection. What is wrong with this answer?"
+    back: "The difference is not AI capability; it is coordination architecture: data contracts, verification, orchestration, and governance. The same language model can power a chatbot or a factory FTE depending on the surrounding architecture."
+    tags: ["agent-factory", "misconception"]
+    difficulty: "intermediate"
+    why: "Why is the 'better models' misconception understandable but architecturally consequential?"
+
+  - id: "ch61-chapter-quiz-002"
+    front: "Why is 'Find me good candidates' ungovernable as factory intent?"
+    back: "There is no measurable definition of 'good.' The factory cannot verify whether it followed the instruction because the instruction has no criteria. Good intent must be specific enough that you can check whether the factory did what was asked."
+    tags: ["governance", "intent", "verifiability"]
+    difficulty: "basic"
+
+  - id: "ch61-chapter-quiz-003"
+    front: "What does a reader who misses Question 5 (chatbot silent failure) likely misunderstand about data contracts?"
+    back: "They understood the narrative but missed the structural lesson: contracts are not just documentation, they are the enforcement mechanism that makes pipeline failures visible rather than silent. Without contracts, bad output looks like normal output."
+    tags: ["data-contracts", "silent-failure", "diagnostic"]
+    difficulty: "intermediate"
+    why: "What is the difference between a failure that crashes and a failure that silently degrades output quality?"
+
+  - id: "ch61-chapter-quiz-004"
+    front: "A fully governed Factory Layer produces reliable hiring briefs. Why is this still insufficient for a real organization?"
+    back: "Hiring managers need to ask follow-up questions, explore edge cases, and make judgments about specific candidates. The Factory Layer produces static contracted output; it cannot converse. The Edge Layer provides the conversational interface between humans and factory output."
+    tags: ["two-layered-model", "factory-layer", "edge-layer"]
+    difficulty: "intermediate"
+    why: "What category of hiring manager need does the Factory Layer structurally cannot fulfill?"
+
+  - id: "ch61-chapter-quiz-005"
+    front: "Can you explain the Two-Layered Model in two sentences?"
+    back: "The Factory Layer is where organizations deploy AI workers under governance: defined contracts, verification, and audit trails ensure reliability at scale. The Edge Layer is where individuals run personal agents that interpret factory output, adapt to individual preferences, and provide the conversational interface that factory pipelines cannot."
+    tags: ["two-layered-model", "explanation"]
+    difficulty: "intermediate"
+    why: "If your two-sentence explanation requires three qualifications, what does that indicate about your understanding?"

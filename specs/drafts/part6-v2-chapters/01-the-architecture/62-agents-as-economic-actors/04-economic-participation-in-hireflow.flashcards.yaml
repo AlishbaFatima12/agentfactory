@@ -1,0 +1,61 @@
+deck:
+  id: "ch62-economic-participation-in-hireflow"
+  title: "Economic Participation in HireFlow"
+  description: "Applying the economic actor framework to map participation points in HireFlow's four-FTE pipeline."
+  tags: ["economic-participation-point", "hireflow", "applied-exercise", "spending-envelope"]
+  version: 1
+
+cards:
+  - id: "ch62-economic-participation-in-hireflow-001"
+    front: "What is an economic participation point?"
+    back: "A pipeline location where an agent could autonomously acquire a resource, triggered by data conditions, within bounded cost, with clear benefit to output quality."
+    tags: ["economic-participation-point", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-economic-participation-in-hireflow-002"
+    front: "What three characteristics must be present for a resource need to qualify as an economic participation point?"
+    back: "1. Data-triggered (not a design flaw)\n2. Bounded (known cost, known provider, approved options)\n3. Outcome-improving (skipping it degrades output more than the acquisition costs)"
+    tags: ["economic-participation-point", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-economic-participation-in-hireflow-003"
+    front: "Why is a Resume Screener's normal token consumption not an economic participation point, but its need for a translation service when encountering a Mandarin CV is?"
+    back: "Token consumption is baseline: predictable from design and always needed. The translation need is data-triggered: it arises only because of a specific input the design did not anticipate. Participation points occur at the boundary between planning and reality."
+    tags: ["economic-participation-point", "hireflow"]
+    difficulty: "intermediate"
+    why: "If you excluded foreign-language CVs from the pipeline entirely, would translation be a participation point?"
+
+  - id: "ch62-economic-participation-in-hireflow-004"
+    front: "James decides the Resume Screener should queue foreign-language CVs for human review rather than pausing the whole pipeline when the translation budget is exceeded. What kind of decision is this?"
+    back: "A policy decision embedded in the spending envelope. The ceiling is not just a number; it specifies what behavior occurs at the ceiling. Queuing vs. pausing are materially different failure modes with different impacts on the hiring manager."
+    tags: ["spending-envelope", "policy"]
+    difficulty: "intermediate"
+    why: "What would the hiring manager experience differently under a whole-pipeline pause versus a per-item queue approach?"
+
+  - id: "ch62-economic-participation-in-hireflow-005"
+    front: "Why does the Interview Question Generator's compliance standard lookup involve two budget categories simultaneously?"
+    back: "It requires an API call to access the regulatory knowledge base, plus tokens to process the retrieved content into usable context. The acquisition has both an API cost and a token cost that must be tracked separately."
+    tags: ["resource-budget", "hireflow"]
+    difficulty: "intermediate"
+    why: "How would failing to track both categories separately obscure the true cost of compliance-related candidate processing?"
+
+  - id: "ch62-economic-participation-in-hireflow-006"
+    front: "The Candidate Summarizer's reference check participation point is the most expensive across the three examples. Why does this make the spending envelope design more critical, not less?"
+    back: "Higher cost per acquisition means overruns are more damaging. A realistic ceiling ($5 per check, max 2 per candidate) prevents runaway cost while still enabling the feature. The more expensive the participation point, the more precisely the envelope must be specified."
+    tags: ["spending-envelope", "hireflow"]
+    difficulty: "intermediate"
+    why: "What is the worst-case cost if the reference check spending envelope is absent and the Summarizer checks references for 100 candidates?"
+
+  - id: "ch62-economic-participation-in-hireflow-007"
+    front: "After completing the HireFlow mapping exercise, James notices all three participation points are triggered by data variation, not design flaws. Why does this observation matter?"
+    back: "It confirms the definition: economic participation occurs at the boundary between what you planned for and what the real world sends. It also means participation points cannot be eliminated by fixing the pipeline; they are an inherent feature of processing varied real-world inputs."
+    tags: ["economic-participation-point", "insight"]
+    difficulty: "advanced"
+    why: "If you could perfectly predict all input formats in advance, what would happen to economic participation points?"
+
+  - id: "ch62-economic-participation-in-hireflow-008"
+    front: "How does the participation point table from Lesson 4 become an implementation artifact in Chapter 84?"
+    back: "Each participation point becomes a specific location in the orchestrator where the budget tracker increments counters and the spending envelope checks limits. The table maps concept to code location."
+    tags: ["architecture", "orchestrator"]
+    difficulty: "intermediate"
+    why: "Why is it useful to identify participation points before building the orchestrator, rather than discovering them during implementation?"

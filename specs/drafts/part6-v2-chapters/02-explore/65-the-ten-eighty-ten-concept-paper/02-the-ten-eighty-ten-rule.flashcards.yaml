@@ -1,0 +1,54 @@
+deck:
+  id: "ch65-the-ten-eighty-ten-rule"
+  title: "The 10-80-10 Rule"
+  description: "The three-segment method for writing a concept paper: targeted research, domain knowledge, and AI validation."
+  tags: ["10-80-10", "concept-paper", "ai-validation", "domain-knowledge"]
+  version: 1
+
+cards:
+  - id: "ch65-the-ten-eighty-ten-rule-001"
+    front: "What are the three segments of the 10-80-10 Rule and what does each contain?"
+    back: "10% Targeted Research: investigate 3-5 specific assumption gaps. 80% Domain Knowledge: reframe the Factory Blueprint as an argument. 10% AI Validation: use frontier LLM to find weaknesses in the finished draft."
+    tags: ["10-80-10", "definition", "segments"]
+    difficulty: "basic"
+
+  - id: "ch65-the-ten-eighty-ten-rule-002"
+    front: "Why does the 10-80-10 Rule place the Factory Blueprint in the 80% segment, not in the research segment?"
+    back: "The Blueprint is already the builder's formalized domain knowledge from Ch 64. The 80% is not research; it is structured argumentation. The Blueprint states what the factory does; the concept paper reframes it to argue why it should exist."
+    tags: ["blueprint", "domain-knowledge", "80-percent"]
+    difficulty: "intermediate"
+    why: "What would be missing from the concept paper if a builder started writing it without a completed Factory Blueprint?"
+
+  - id: "ch65-the-ten-eighty-ten-rule-003"
+    front: "Why must human research come before AI validation in the 10-80-10 sequence?"
+    back: "The research phase builds enough domain understanding for the builder to evaluate AI feedback. Without it, they cannot tell if the AI's critique is correct, outdated, or irrelevant to their specific factory context."
+    tags: ["research-first", "ai-validation", "evaluation"]
+    difficulty: "intermediate"
+    why: "What happens to a concept paper written by someone who used AI for both the research and validation steps?"
+
+  - id: "ch65-the-ten-eighty-ten-rule-004"
+    front: "James needs 30% of his concept paper time on research because the blueprint has many unverified assumptions. What does the 10-80-10 Rule say this means?"
+    back: "The 30% research need signals insufficient domain knowledge. The blueprint was premature. The builder should return to Phase 1 exploration before writing the concept paper."
+    tags: ["10-80-10", "diagnostic", "phase-1"]
+    difficulty: "intermediate"
+    why: "Why does needing 30% research indicate a problem with the 80% rather than just a harder domain?"
+
+  - id: "ch65-the-ten-eighty-ten-rule-005"
+    front: "What is the correct role of AI in the last 10% of the 10-80-10 Rule?"
+    back: "AI attacks the paper: finds weaknesses, challenges assumptions, identifies gaps. AI does not write the paper. The 80% must be the builder's own understanding or the paper cannot be defended."
+    tags: ["ai-validation", "10-percent", "concept-paper"]
+    difficulty: "basic"
+
+  - id: "ch65-the-ten-eighty-ten-rule-006"
+    front: "What signal tells you the 10-80-10 validation loop is complete?"
+    back: "AI feedback shifts from substantive (gaps, contradictions, missing sections) to stylistic (reorder, rephrase, add a mention). This shift means no structural weaknesses remain."
+    tags: ["crystallization", "validation-loop", "completion-signal"]
+    difficulty: "intermediate"
+    why: "Why is 'stylistic feedback only' a more reliable completion signal than hitting a specific score threshold?"
+
+  - id: "ch65-the-ten-eighty-ten-rule-007"
+    front: "Why is starting a concept paper with AI to 'get research done faster' a mistake?"
+    back: "AI produces polished, generic answers. Without prior research, the builder cannot evaluate which claims apply to their factory, which are outdated, or which parts require domain judgment. The result is a document they cannot defend."
+    tags: ["ai-first-anti-pattern", "research", "domain-judgment"]
+    difficulty: "intermediate"
+    why: "What specific question from a reviewer would expose that the concept paper was AI-generated without builder judgment?"

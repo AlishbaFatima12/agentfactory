@@ -1,0 +1,53 @@
+deck:
+  id: "ch66-james-skips-ahead"
+  title: "James Skips Ahead"
+  description: "Why a finished concept paper is not enough to start building agents, and how blind spots travel from principal to agent."
+  tags: ["domain-mastery", "blind-spots", "principal-agent", "concept-paper"]
+  version: 1
+
+cards:
+  - id: "ch66-james-skips-ahead-001"
+    front: "James's HireFlow concept paper scored 9.6 yet four of Emma's five questions exposed gaps. What does this reveal about concept paper quality scores?"
+    back: "The score measures document quality, not the author's depth. A well-structured paper can describe a happy-path system without capturing edge-case handling or compliance requirements."
+    tags: ["concept-paper", "domain-mastery"]
+    difficulty: "intermediate"
+    why: "What specifically would a student misunderstand if they treated a high paper score as proof they are ready to build?"
+
+  - id: "ch66-james-skips-ahead-002"
+    front: "What is blind spot inheritance?"
+    back: "When an agent reproduces the principal's unrecognized domain gaps because those gaps were never encoded as constraints or exceptions in the agent's skill definitions."
+    tags: ["blind-spot-inheritance", "definition"]
+    difficulty: "basic"
+
+  - id: "ch66-james-skips-ahead-003"
+    front: "Why is an unrecognized gap more dangerous than a known limitation when writing agent skills?"
+    back: "A known limitation can be handled with an escalation rule. An unrecognized gap never appears in the skill at all, so the agent produces confident, wrong output with no flag for human review."
+    tags: ["blind-spot-inheritance", "principal-agent"]
+    difficulty: "intermediate"
+    why: "How would the Resume Screener behave differently if James knew about employment gaps but had no rule versus if he never thought about them?"
+
+  - id: "ch66-james-skips-ahead-004"
+    front: "James reviews agent output to catch errors. What breaks in that plan if he has the same blind spots as the agent?"
+    back: "He cannot catch what he cannot recognize. Reviewing output requires knowing what correct output looks like. A principal without that knowledge approves silent failures."
+    tags: ["principal-agent", "verification"]
+    difficulty: "intermediate"
+    why: "What does this imply about the relationship between the gate and ongoing agent supervision?"
+
+  - id: "ch66-james-skips-ahead-005"
+    front: "What is the difference between domain structure and domain depth?"
+    back: "Structure: the shape of the system, FTE roles, pipeline flow, inputs and outputs. Depth: knowing what to do when the happy path breaks, including edge cases, compliance requirements, and judgment calls."
+    tags: ["domain-mastery", "definition"]
+    difficulty: "basic"
+
+  - id: "ch66-james-skips-ahead-006"
+    front: "James argues he can learn edge cases while building. Why does Emma reject this approach?"
+    back: "By the time you learn the edge case, the agent has already been built without it. The agent will fail in ways you cannot diagnose because you lack the knowledge to spot the error in its output."
+    tags: ["domain-mastery", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "At what point in the build cycle does discovering a blind spot become most expensive to fix?"
+
+  - id: "ch66-james-skips-ahead-007"
+    front: "Chapter 61 asked how to govern an agent. What question does Chapter 66 ask first?"
+    back: "Are you competent enough to govern one? The principal must have sufficient domain knowledge to set correct intent and verify agent output."
+    tags: ["principal-agent", "domain-mastery"]
+    difficulty: "basic"

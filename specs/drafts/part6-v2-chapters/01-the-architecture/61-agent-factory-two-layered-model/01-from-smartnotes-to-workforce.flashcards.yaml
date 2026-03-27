@@ -1,0 +1,59 @@
+deck:
+  id: "ch61-from-smartnotes-to-workforce"
+  title: "From SmartNotes to Workforce"
+  description: "Why one successful AI app is not enough, and what changes when you need a coordinated team of AI workers."
+  tags: ["agent-factory", "coordination", "hireflow", "workforce"]
+  version: 1
+
+cards:
+  - id: "ch61-from-smartnotes-to-workforce-001"
+    front: "What is an Agent Factory?"
+    back: "A system that manufactures, deploys, and governs collaborating AI workers."
+    tags: ["agent-factory", "definition"]
+    difficulty: "basic"
+
+  - id: "ch61-from-smartnotes-to-workforce-002"
+    front: "James proposes building ten independent apps for ten hiring tasks. Why does this fail to produce a workforce?"
+    back: "Independent apps cannot manage handoffs between each other. When one app's output format changes, no other app knows, because they share no contracts or coordination layer."
+    tags: ["coordination", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "What specific failure would a hiring manager see when the Resume Screener's output format changes?"
+
+  - id: "ch61-from-smartnotes-to-workforce-003"
+    front: "In HireFlow, what new role does SmartNotes' NoteStore class serve?"
+    back: "It becomes HireFlow's note-taking system for interview observations, candidate summaries, and hiring manager annotations."
+    tags: ["smartnotes", "hireflow", "component-reuse"]
+    difficulty: "basic"
+
+  - id: "ch61-from-smartnotes-to-workforce-004"
+    front: "Why is a factory more than a collection of machines in a room?"
+    back: "A factory includes production lines, quality control, and defined handoffs between stations. The coordination layer is what turns machines into a factory, not the machines themselves."
+    tags: ["agent-factory", "coordination"]
+    difficulty: "intermediate"
+    why: "What breaks first when you remove the coordination layer from an agent factory?"
+
+  - id: "ch61-from-smartnotes-to-workforce-005"
+    front: "In the lesson's whiteboard exercise, what breaks when Emma updates the Resume Screener's output format?"
+    back: "Every downstream app. None of them share contracts with the screener."
+    tags: ["coordination", "handoffs"]
+    difficulty: "intermediate"
+
+  - id: "ch61-from-smartnotes-to-workforce-006"
+    front: "How does the transition from SmartNotes to HireFlow illustrate component-to-system thinking?"
+    back: "SmartNotes is a well-built component (single app, single user). HireFlow assembles it alongside other components into a coordinated system. Good engineering reuses proven components rather than rebuilding from scratch."
+    tags: ["component-reuse", "systems-thinking"]
+    difficulty: "intermediate"
+    why: "What would you lose if you rebuilt the note-taking system from scratch inside HireFlow?"
+
+  - id: "ch61-from-smartnotes-to-workforce-007"
+    front: "What are the four Digital FTE roles in HireFlow?"
+    back: "1. Job Spec Writer\n2. Resume Screener\n3. Interview Question Generator\n4. Candidate Summarizer"
+    tags: ["hireflow", "digital-ftes"]
+    difficulty: "basic"
+
+  - id: "ch61-from-smartnotes-to-workforce-008"
+    front: "A team deploys five AI apps that each work perfectly in isolation, but the pipeline produces inconsistent results. Why?"
+    back: "Isolated apps have no shared contracts or governance. Each app's output is whatever it happens to produce, so downstream apps receive unpredictable formats. The missing ingredient is coordination, not better individual apps."
+    tags: ["coordination", "anti-pattern", "systems-thinking"]
+    difficulty: "advanced"
+    why: "How would you detect this failure before it reaches a human decision-maker?"

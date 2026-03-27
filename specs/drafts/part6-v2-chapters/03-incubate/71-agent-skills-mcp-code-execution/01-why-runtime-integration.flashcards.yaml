@@ -1,0 +1,74 @@
+deck:
+  id: "ch71-why-runtime-integration"
+  title: "Why Runtime Integration"
+  description: "Why validated skills and working MCP servers are useless in isolation, and how runtime integration connects intelligence to execution."
+  tags: ["runtime-integration", "skill-tool-contract", "tool-call-sequence", "checkpoint-inventory"]
+  version: 1
+
+cards:
+  - id: "ch71-why-runtime-integration-001"
+    front: "What is runtime integration in an agent skill context?"
+    back: "Code that connects a skill's decision-making to its MCP tool calls during execution."
+    tags: ["runtime-integration", "definition"]
+    difficulty: "basic"
+
+  - id: "ch71-why-runtime-integration-002"
+    front: "James runs his Resume Screener skill and the HireFlow MCP server in separate terminals. Why does this not produce a working pipeline?"
+    back: "Neither references the other. The skill has no client code to call the server, and the server has no caller. Running both processes in isolation leaves them permanently disconnected."
+    tags: ["runtime-integration", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "What specific code is missing that would make the skill actually invoke the server?"
+
+  - id: "ch71-why-runtime-integration-003"
+    front: "What are the five steps of the tool call sequence?"
+    back: "1. Read context\n2. Decide action\n3. Call tool\n4. Process result\n5. Decide next action"
+    tags: ["tool-call-sequence"]
+    difficulty: "basic"
+
+  - id: "ch71-why-runtime-integration-004"
+    front: "Why is step 4 (process result) not optional even when tools pass their unit tests?"
+    back: "A tool can return before timing out with a partial response: valid structure, missing data. No timeout fires, no exception is raised. Step 4 is where the skill verifies completeness before passing data to the next tool."
+    tags: ["tool-call-sequence", "edge-cases"]
+    difficulty: "intermediate"
+    why: "What happens when a ParsedCV with an empty skills list reaches score_candidate without being checked?"
+
+  - id: "ch71-why-runtime-integration-005"
+    front: "What is a checkpoint inventory and when should you create one?"
+    back: "A complete table mapping every skill to the MCP tools it needs, created before writing integration code."
+    tags: ["checkpoint-inventory"]
+    difficulty: "basic"
+
+  - id: "ch71-why-runtime-integration-006"
+    front: "What phase of the Agent Factory lifecycle does Chapter 71 close, and why?"
+    back: "Phase 2: Incubate. It proves that validated intelligence (skills) can actually control validated infrastructure (MCP tools). Without this proof, Phase 3 builds on unverified wiring."
+    tags: ["agent-maturity", "incubate-phase"]
+    difficulty: "intermediate"
+    why: "What would break if you moved to Agent SDKs before confirming skills could call their tools?"
+
+  - id: "ch71-why-runtime-integration-007"
+    front: "Emma says: 'Intelligence without action is analysis. Action without intelligence is automation. The combination is agency.' What does this mean for skills and MCP tools?"
+    back: "A skill without tool access can reason but never act. A tool with no skill calling it executes nothing. Runtime integration is what makes the combined system an agent rather than two isolated components."
+    tags: ["runtime-integration", "architecture"]
+    difficulty: "intermediate"
+    why: "Why is this distinction critical before investing in Agent SDK orchestration frameworks?"
+
+  - id: "ch71-why-runtime-integration-008"
+    front: "In the Chapter 71 checkpoint inventory, which skill needs the score_candidate tool and why does that tool not yet exist?"
+    back: "The Resume Screener needs score_candidate. It is the first integration-specific tool: it combines CV parsing output with job requirements to produce a match score. It is created as part of the integration work in this chapter, not in Chapters 69-70."
+    tags: ["checkpoint-inventory", "hireflow"]
+    difficulty: "intermediate"
+    why: "Why does score_candidate belong in the integration chapter rather than in the MCP server chapter?"
+
+  - id: "ch71-why-runtime-integration-009"
+    front: "Why does the tool call sequence loop rather than run once?"
+    back: "One tool call often determines what the next call should be. After parse_cv returns, the skill re-enters step 2 to decide whether to call score_candidate, extract_skills, or stop. The loop continues until the skill has enough data to return its final output."
+    tags: ["tool-call-sequence", "orchestration"]
+    difficulty: "intermediate"
+    why: "What would go wrong in a multi-tool skill if you hardcoded a fixed sequence without re-evaluating after each result?"
+
+  - id: "ch71-why-runtime-integration-010"
+    front: "What does it mean that a 'silent assumption' is the most common source of runtime integration failures?"
+    back: "Code that relies on a condition being true without checking it. James's screen_candidate assumes the server is running, returns valid JSON, and has score_candidate registered. None of these are verified; each is an unguarded failure point."
+    tags: ["skill-tool-contract", "silent-assumption"]
+    difficulty: "advanced"
+    why: "How do you convert a silent assumption into an explicit contract check without over-engineering the skill?"

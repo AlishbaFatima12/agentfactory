@@ -1,0 +1,65 @@
+deck:
+  id: "ch71-rubric-and-chapter-quiz"
+  title: "Rubric and Chapter Quiz"
+  description: "Assessment criteria for skill-to-tool integration mastery and key quiz concepts covering contracts, error taxonomy, and verification."
+  tags: ["self-assessment", "rubric", "skill-tool-contract", "error-taxonomy", "verification"]
+  version: 1
+
+cards:
+  - id: "ch71-rubric-and-chapter-quiz-001"
+    front: "A student can predict tool call sequences correctly but cannot write a multi-tool function without AI help. Which rubric dimensions reveal this gap?"
+    back: "Strong on Prediction Accuracy; Developing on Independent Make (or Modification Quality). Reading code and writing code are different skills. The gap between them is normal and closes with writing practice, not more reading."
+    tags: ["rubric", "reading-vs-writing"]
+    difficulty: "intermediate"
+    why: "Why does high prediction accuracy not guarantee strong implementation ability?"
+
+  - id: "ch71-rubric-and-chapter-quiz-002"
+    front: "Quiz Q4: A skill receives isError=False with content containing 'error: unsupported format' and passes it to the next tool. What error category is this?"
+    back: "Orchestration Error. The skill is responsible for validating that a successful response actually contains valid data before passing it downstream. The tool reported success; the skill failed to check the content."
+    tags: ["error-taxonomy", "orchestration-error"]
+    difficulty: "intermediate"
+    why: "Why is this classified as Orchestration Error rather than Semantic Contract Violation?"
+
+  - id: "ch71-rubric-and-chapter-quiz-003"
+    front: "What is the correct client initialization sequence for the MCP Python SDK?"
+    back: "stdio_client (open transport), then ClientSession (create session), then initialize() (protocol handshake), then call_tool (invoke tools)."
+    tags: ["mcp-client", "initialization-sequence"]
+    difficulty: "basic"
+
+  - id: "ch71-rubric-and-chapter-quiz-004"
+    front: "Quiz Q14: extract_skills returns ['python', 'sql'] and get_template requires ['Python', 'SQL', 'Docker']. Direct comparison finds how many matches?"
+    back: "Zero. Python string comparison is case-sensitive. 'python' != 'Python'. The skill must normalize both lists to the same case before comparing."
+    tags: ["semantic-contract", "case-sensitivity"]
+    difficulty: "basic"
+
+  - id: "ch71-rubric-and-chapter-quiz-005"
+    front: "For Explanation Quality to reach Fluent, what must a student be able to do?"
+    back: "Explain the skill-tool contract to another person and justify why each error handling choice matters, including the reasoning behind the two-check guard pattern and the three contract violation categories."
+    tags: ["rubric", "explanation-quality"]
+    difficulty: "intermediate"
+    why: "Why is 'can explain with effort' (Competent) different from 'can justify to another person' (Fluent)?"
+
+  - id: "ch71-rubric-and-chapter-quiz-006"
+    front: "Quiz Q9: What does Axiom I mean for skill design?"
+    back: "The skill decides which tools to call and in what order; it does not perform domain computations. Tools execute. The skill orchestrates. Domain logic belongs in the tool, not in the calling skill."
+    tags: ["axiom-I", "skill-design"]
+    difficulty: "basic"
+
+  - id: "ch71-rubric-and-chapter-quiz-007"
+    front: "A student scores 8 out of 15 on the quiz. Which lessons should they review first?"
+    back: "Identify which topics they missed. If they missed Q2, Q6, Q13 (isError and guard pattern), review Lesson 4. If they missed Q4, Q8, Q9 (Axiom I and semantic contracts), review Lesson 5. Match wrong answers to the question-to-lesson mapping."
+    tags: ["rubric", "quiz-review"]
+    difficulty: "intermediate"
+
+  - id: "ch71-rubric-and-chapter-quiz-008"
+    front: "Quiz Q15: What does Phase 3: Build Specialist add on top of the skill-to-tool integration built in Chapter 71?"
+    back: "Agent SDKs with memory, planning, and multi-agent coordination. The skills and MCP tools remain. The SDK sits above them as a production runtime that orchestrates the skills, not replaces them."
+    tags: ["phase-3", "agent-sdks"]
+    difficulty: "basic"
+
+  - id: "ch71-rubric-and-chapter-quiz-009"
+    front: "The rubric says 'the gap between reading and writing is normal; it closes with practice, not reading more lessons.' What practice does it recommend for a student rated Developing in Independent Make?"
+    back: "Redo the capstone with a different skill (wire the Job Spec Writer instead of the Candidate Summarizer). Repetition with a new context builds the writing muscle that reading cannot provide."
+    tags: ["rubric", "remediation"]
+    difficulty: "intermediate"
+    why: "Why does varying the context (different skill) produce better learning than repeating the same capstone again?"

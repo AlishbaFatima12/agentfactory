@@ -1,0 +1,61 @@
+deck:
+  id: "ch65-multi-llm-exploration"
+  title: "Multi-LLM Exploration"
+  description: "The Advisory Board Pattern, three reviewer roles, crystallization signal, and the 9.5+ quality threshold for concept paper validation."
+  tags: ["multi-llm", "advisory-board", "crystallization", "quality-threshold"]
+  version: 1
+
+cards:
+  - id: "ch65-multi-llm-exploration-001"
+    front: "What are the three roles in the Advisory Board Pattern and the core mandate of each?"
+    back: "Domain Challenger: find where domain assumptions contradict practice. Logic Auditor: find internal contradictions and unsupported claims. Gap Finder: find missing topics, unstated dependencies, and unconsidered stakeholders."
+    tags: ["advisory-board", "three-roles", "definition"]
+    difficulty: "basic"
+
+  - id: "ch65-multi-llm-exploration-002"
+    front: "Why use three different LLMs for the advisory board rather than asking one model three times with different prompts?"
+    back: "Different frontier models have different training data and reasoning patterns. One model has one set of blind spots. Three separate models cover three distinct sets, producing independent perspectives rather than three variations of the same perspective."
+    tags: ["multi-llm", "blind-spots", "independence"]
+    difficulty: "intermediate"
+    why: "What class of concept paper weakness is most likely to survive three passes of the same model but get caught by a second model with different training?"
+
+  - id: "ch65-multi-llm-exploration-003"
+    front: "What is the crystallization signal?"
+    back: "The shift in AI advisory feedback from substantive critique (gaps, contradictions, missing knowledge) to stylistic suggestion (reorder sections, add a mention, improve phrasing). Score 9.5+ is a proxy; the nature of the feedback is the actual signal."
+    tags: ["crystallization", "completion-signal", "quality-threshold"]
+    difficulty: "basic"
+
+  - id: "ch65-multi-llm-exploration-004"
+    front: "James receives this advisory feedback: 'Consider mentioning seasonal hiring volume spikes.' Should he revise the paper?"
+    back: "No. This is a stylistic suggestion (nice-to-have, not a structural gap). If the overall score is above 9.5 and other feedback is also stylistic, the paper has crystallized. Acting on this feedback is procrastination."
+    tags: ["feedback-classification", "crystallization", "stylistic-vs-substantive"]
+    difficulty: "intermediate"
+    why: "How would you distinguish 'seasonal hiring volume' as a genuine structural gap versus a polish suggestion, given the same wording?"
+
+  - id: "ch65-multi-llm-exploration-005"
+    front: "The Logic Auditor flags a contradiction: Section 2 says human review gates preserve judgment, but Section 4 argues FTEs should fail independently. How should the builder classify and respond to this feedback?"
+    back: "Substantive critique: revise the paper. Clarify that FTEs are independently deployable, while pipeline-level gates coordinate their interaction. These are compatible claims; the paper failed to distinguish them."
+    tags: ["feedback-classification", "substantive", "logic-auditor"]
+    difficulty: "intermediate"
+    why: "Why is a logical contradiction between two sections more dangerous to leave unresolved than a missing section?"
+
+  - id: "ch65-multi-llm-exploration-006"
+    front: "The Advisory Board Pattern applies the Two-Layered Model from Ch 61 to document validation. How does it map?"
+    back: "The builder is the governance layer (holds intent, makes final decisions). The advisory LLMs are the execution layer (verify, surface issues, report up). Intent flows down via prompts; verification flows up via feedback."
+    tags: ["two-layered-model", "governance", "advisory-board"]
+    difficulty: "intermediate"
+    why: "Why is it important that the builder, not the advisory LLMs, decides which feedback to act on?"
+
+  - id: "ch65-multi-llm-exploration-007"
+    front: "An advisory model contradicts one of the builder's research findings. What is the correct response?"
+    back: "Investigate further. Neither automatically accept the model's claim nor dismiss it. The model may be outdated, wrong about the specific context, or drawing from a different sub-domain. Research resolves the conflict; the model flags it."
+    tags: ["feedback-classification", "contradicts-research", "investigation"]
+    difficulty: "intermediate"
+    why: "What distinguishes a model error from a genuine gap in the builder's research, and how would you tell them apart?"
+
+  - id: "ch65-multi-llm-exploration-008"
+    front: "After four advisory board loops, the paper still receives substantive critique. What does this indicate?"
+    back: "The 80% (domain knowledge) was thin. The builder's understanding of the domain has gaps that the concept paper cannot close on its own. Return to targeted research or domain exploration before continuing."
+    tags: ["iteration-limit", "domain-knowledge", "diagnostic"]
+    difficulty: "intermediate"
+    why: "Why does persistent substantive critique point to a problem with domain knowledge rather than a problem with the paper's structure?"

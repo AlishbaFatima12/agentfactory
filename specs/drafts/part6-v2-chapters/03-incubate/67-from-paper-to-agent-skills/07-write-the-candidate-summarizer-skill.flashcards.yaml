@@ -1,0 +1,53 @@
+deck:
+  id: "ch67-write-the-candidate-summarizer-skill"
+  title: "Write the Candidate Summarizer Skill"
+  description: "Writing the Candidate Summarizer independently: aggregation logic, recommendation thresholds, conflicting signal handling, and full pipeline validation."
+  tags: ["candidate-summarizer", "aggregation", "recommendation-logic", "pipeline-validation", "conflicting-signals"]
+  version: 1
+
+cards:
+  - id: "ch67-write-the-candidate-summarizer-skill-001"
+    front: "What makes the Candidate Summarizer qualitatively different from the other three HireFlow FTE skills?"
+    back: "It does not execute a single task. It aggregates outputs from all three upstream FTEs and synthesizes a recommendation. The challenge is encoding judgment (when to proceed vs. hold vs. reject), not encoding a workflow."
+    tags: ["candidate-summarizer", "aggregation"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-candidate-summarizer-skill-002"
+    front: "Why must the Candidate Summarizer surface conflicting signals rather than resolving them?"
+    back: "Conflicting signals (high overall score but a critical dimension below 3.0) require human judgment about which signal matters more for this specific team. Autonomous resolution removes information the committee needs to decide."
+    tags: ["conflicting-signals", "recommendation-logic"]
+    difficulty: "intermediate"
+    why: "What type of hire mistake results from a summarizer that resolves conflicts by favoring the higher signal rather than surfacing both?"
+
+  - id: "ch67-write-the-candidate-summarizer-skill-003"
+    front: "What is the three-minute readability constraint, and which elements does it eliminate from a committee brief?"
+    back: "The brief must be readable in three minutes. Background narrative, verbose scoring justifications, and context-setting prose are eliminated. Every element must be decision-relevant."
+    tags: ["candidate-summarizer", "committee-brief", "readability"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-candidate-summarizer-skill-004"
+    front: "Candidate B has an overall score of 5.6 with strong technical but low qualifications. What recommendation threshold logic should apply?"
+    back: "Overall 5.0-7.0 maps to 'hold.' No single dimension below 3.0 triggers an override. The conflicting signals (strong technical vs. credential gap) should be surfaced explicitly with a suggested next step around non-traditional background policy."
+    tags: ["candidate-summarizer", "recommendation-thresholds", "conflicting-signals"]
+    difficulty: "intermediate"
+    why: "Why is 'hold' the right recommendation rather than 'proceed' or 'reject,' even though the technical score is strong?"
+
+  - id: "ch67-write-the-candidate-summarizer-skill-005"
+    front: "What three upstream data sources must the Candidate Summarizer receive to produce a complete committee brief?"
+    back: "Job description with scoring rubric (from Job Spec Writer), per-dimension scores and gap analysis (from Resume Screener), and question set with scoring criteria (from Interview Question Generator)."
+    tags: ["candidate-summarizer", "data-contracts", "upstream-inputs"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-candidate-summarizer-skill-006"
+    front: "Why is pipeline validation (data contract check across all four skills) the final step of Incubate rather than an optional cleanup?"
+    back: "Mismatched contracts found during Incubate cost minutes of SKILL.md editing. The same mismatches found after building MCP servers, databases, and APIs around the skills require rewriting multiple production components."
+    tags: ["pipeline-validation", "incubate-phase", "data-contracts"]
+    difficulty: "intermediate"
+    why: "Name a specific contract mismatch that would cause a silent failure rather than an explicit error when the pipeline runs."
+
+  - id: "ch67-write-the-candidate-summarizer-skill-007"
+    front: "The Candidate Summarizer Persona is written as 'summarize the candidate.' Why is this insufficient as an execution skill specification?"
+    back: "It does not describe a workflow, does not specify what data to aggregate, does not encode recommendation thresholds, and does not define the output format. Two agents reading this would produce completely different outputs."
+    tags: ["candidate-summarizer", "execution-skills", "specification-error"]
+    difficulty: "advanced"
+    why: "Write the first two steps of an execution-quality Persona for the Candidate Summarizer that would pass the 'two agents, identical output' test."

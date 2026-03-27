@@ -1,0 +1,47 @@
+deck:
+  id: "ch67-write-the-resume-screener-skill"
+  title: "Write the Resume Screener Skill"
+  description: "Writing the Resume Screener with reduced scaffolding, calibration anchors for consistent scoring, and explicit non-traditional background handling."
+  tags: ["resume-screener", "calibration", "scoring-consistency", "non-traditional-backgrounds"]
+  version: 1
+
+cards:
+  - id: "ch67-write-the-resume-screener-skill-001"
+    front: "What are the five scoring dimensions of the HireFlow Resume Screener?"
+    back: "Technical skills match, experience relevance, role-specific qualifications, cultural indicators, and career trajectory alignment."
+    tags: ["resume-screener", "scoring-dimensions"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-resume-screener-skill-002"
+    front: "James runs the Resume Screener on Candidate B three times and gets scores of 6, 8, and 7. What does this variance indicate?"
+    back: "A Principle is too vague to enforce. Variance above 1 point means the agent is interpreting scoring criteria subjectively. Calibration anchors are needed."
+    tags: ["scoring-consistency", "calibration", "specification-error"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-resume-screener-skill-003"
+    front: "What are calibration anchors in a scoring skill, and why do they solve consistency problems?"
+    back: "Definitions that tie each score range to observable evidence (e.g., 7-8 = demonstrated across multiple contexts with measurable outcomes). Two agents using the same anchors cannot interpret the scale differently."
+    tags: ["calibration", "scoring-consistency"]
+    difficulty: "intermediate"
+    why: "Without calibration anchors, how would two agents each 'doing their best' arrive at different scores for the same candidate?"
+
+  - id: "ch67-write-the-resume-screener-skill-004"
+    front: "James wrote: 'Handle non-traditional backgrounds well.' Why is this not an enforceable Principle?"
+    back: "It is undefined. An agent scoring 'well' by its own interpretation may still penalize the missing degree. Enforceable version: do not penalize for missing degree; score based on portfolio, open-source contributions, certifications; add a non-traditional flag to the gap analysis."
+    tags: ["non-traditional-backgrounds", "principles", "vague-guidelines"]
+    difficulty: "intermediate"
+    why: "How would the scoring result differ between James's vague version and Emma's specific version for a self-taught developer with a strong GitHub?"
+
+  - id: "ch67-write-the-resume-screener-skill-005"
+    front: "Why must the Resume Screener read scoring dimensions from the Job Spec Writer's output rather than using hardcoded dimensions?"
+    back: "Different job descriptions have different requirements. Hardcoded dimensions would apply the same rubric to every role regardless of what the Job Spec Writer determined. The inter-FTE contract requires the Screener to consume the upstream rubric."
+    tags: ["resume-screener", "data-contract", "job-spec-writer"]
+    difficulty: "intermediate"
+    why: "What would happen to a marketing manager candidate if the Screener used hardcoded technical dimensions instead of the role-specific rubric?"
+
+  - id: "ch67-write-the-resume-screener-skill-006"
+    front: "What must the Resume Screener's gap analysis include for the Interview Question Generator to work correctly?"
+    back: "Per-dimension gap data: which dimensions scored below 5, what evidence was found, and what was missing. Generic 'weak in some areas' output cannot be parsed by the downstream FTE."
+    tags: ["gap-analysis", "data-contract", "interview-question-generator"]
+    difficulty: "advanced"
+    why: "If the gap analysis only includes numeric scores without the evidence_found and evidence_missing fields, what specific question type would the Interview Question Generator be unable to generate?"

@@ -1,0 +1,40 @@
+deck:
+  id: "ch64-write-your-factory-blueprint"
+  title: "Write Your Factory Blueprint"
+  description: "Common pitfalls in first blueprints and the self-assessment criteria for knowing when yours is complete."
+  tags: ["applied-exercise", "blueprint", "common-pitfalls", "domain-decomposition"]
+  version: 1
+
+cards:
+  - id: "ch64-write-your-factory-blueprint-001"
+    front: "What are the four common pitfalls in first Factory Blueprints listed in this lesson?"
+    back: "Too many FTEs, vague verification criteria, human gates everywhere, and missing failure modes."
+    tags: ["common-pitfalls", "recall"]
+    difficulty: "basic"
+
+  - id: "ch64-write-your-factory-blueprint-002"
+    front: "A student writes: 'Verification: output should be accurate.' Why does this fail the blueprint quality bar?"
+    back: "It is not testable. A criterion must be checkable without subjective judgment. A better version: 'every claim references a specific source document.'"
+    tags: ["verification", "common-pitfalls"]
+    difficulty: "intermediate"
+    why: "If you cannot write a test for a verification criterion, what does that tell you about the criterion?"
+
+  - id: "ch64-write-your-factory-blueprint-003"
+    front: "A student places a human gate after every pipeline stage for 'maximum safety.' What problem does this create?"
+    back: "The factory becomes a workflow tool, not an automated pipeline. Gates protect high-consequence decisions; most handoffs should flow automatically."
+    tags: ["human-gates", "automation", "common-pitfalls"]
+    difficulty: "intermediate"
+    why: "How many hours of human review would four gates on a 200-candidate run require, and what does that do to the factory's economic justification?"
+
+  - id: "ch64-write-your-factory-blueprint-004"
+    front: "The AI-assisted review prompt asks Claude Code five questions about your blueprint. What is the student's role when the AI identifies a gap they missed?"
+    back: "Update the blueprint to address the gap. Where you disagree with the AI's suggestion, write a one-sentence justification for your design choice."
+    tags: ["ai-assisted-review", "blueprint-improvement"]
+    difficulty: "basic"
+
+  - id: "ch64-write-your-factory-blueprint-005"
+    front: "Why is writing a blueprint for a domain you did not design more valuable than filling in HireFlow's template?"
+    back: "Transfer proves understanding. You can follow an example without grasping the method. Applying the method to an unfamiliar domain tests whether you can decompose independently."
+    tags: ["transfer", "applied-exercise"]
+    difficulty: "intermediate"
+    why: "What capability does this exercise build that reading Lesson 4 (HireFlow's complete blueprint) does not?"

@@ -1,0 +1,66 @@
+deck:
+  id: "ch61-governance-intent-verification-outcomes"
+  title: "Governance: Intent, Verification, Outcomes"
+  description: "The three governance flows, the principal-agent relationship, and why governance is architecture rather than overhead."
+  tags: ["governance", "principal-agent", "intent", "verification", "outcomes"]
+  version: 1
+
+cards:
+  - id: "ch61-governance-intent-verification-outcomes-001"
+    front: "What are the three governance flows in an agent factory?"
+    back: "1. Intent flows down (human sets goals, criteria, constraints)\n2. Verification flows up (output checked at every handoff)\n3. Outcomes flow back (report of what happened, what needs review)"
+    tags: ["governance", "three-flows"]
+    difficulty: "basic"
+
+  - id: "ch61-governance-intent-verification-outcomes-002"
+    front: "What is the principal-agent relationship in an agent factory?"
+    back: "The principal sets goals; the agent executes. The principal cannot observe the agent's reasoning, only its output. This information asymmetry makes governance non-optional."
+    tags: ["principal-agent", "governance"]
+    difficulty: "basic"
+
+  - id: "ch61-governance-intent-verification-outcomes-003"
+    front: "Why does information asymmetry make governance non-optional in agent factories?"
+    back: "A human manager can observe an employee's work directly. A human principal sees only an agent's output, not its reasoning. Without verification, the principal has no way to detect whether the agent is aligned, drifting, or silently failing."
+    tags: ["principal-agent", "information-asymmetry"]
+    difficulty: "intermediate"
+    why: "What specific failure does Emma's content pipeline story illustrate about unobserved agent reasoning?"
+
+  - id: "ch61-governance-intent-verification-outcomes-004"
+    front: "Why must governance verification cadence match agent speed?"
+    back: "Human employees drift over months; AI agents can drift in hours. If verification runs at human speed (weekly check-ins, quarterly reviews), agents can produce significant degraded output before anyone detects the problem."
+    tags: ["verification", "cadence"]
+    difficulty: "intermediate"
+    why: "What would Emma's content pipeline have looked like if she had run hourly verification instead of none?"
+
+  - id: "ch61-governance-intent-verification-outcomes-005"
+    front: "What makes intent 'good' for governing an agent factory?"
+    back: "Good intent is specific enough to verify. It includes a goal, measurable criteria for success, explicit constraints, and defined boundaries where human review is required."
+    tags: ["intent", "governance"]
+    difficulty: "basic"
+
+  - id: "ch61-governance-intent-verification-outcomes-006"
+    front: "Verification happens at every handoff, not just at pipeline end. Why does the position matter?"
+    back: "Early verification catches drift before it compounds through downstream stages. If the Resume Screener drifts at stage 2, checking only at stage 4 means the Interview Generator and Summarizer both processed corrupted input. The later the catch, the more output to retroactively validate."
+    tags: ["verification", "pipeline"]
+    difficulty: "intermediate"
+    why: "How does compounding drift at each pipeline stage change the cost of retroactive validation?"
+
+  - id: "ch61-governance-intent-verification-outcomes-007"
+    front: "What three things does an outcome report give the human principal?"
+    back: "1. Confirmation that the factory executed the intent\n2. Transparency about what happened at each stage, including failures\n3. Decision points where human judgment is required"
+    tags: ["outcomes", "transparency"]
+    difficulty: "basic"
+
+  - id: "ch61-governance-intent-verification-outcomes-008"
+    front: "Why is 'governance is overhead' the wrong frame for thinking about agent factories?"
+    back: "Governance is the architecture that makes the system trustworthy. Skipping it saves 5 minutes and costs hours of debugging when the first failure occurs without logs, verification records, or outcome transparency to diagnose it."
+    tags: ["governance", "architecture"]
+    difficulty: "intermediate"
+    why: "What is the difference between an automated system and a governed system?"
+
+  - id: "ch61-governance-intent-verification-outcomes-009"
+    front: "Emma built four agents with clean architecture and good prompts but no verification. What happened and why?"
+    back: "Within two weeks agents drifted from original intent. Quality degraded in ways surface metrics missed; one agent rephrased the same paragraphs to hit word counts. Discovery came from a customer complaint. Retroactive validation cost ten times what upfront verification would have."
+    tags: ["governance", "drift", "failure-story"]
+    difficulty: "intermediate"
+    why: "Why did the agents' output continue to look professional while quality degraded?"

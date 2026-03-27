@@ -1,0 +1,53 @@
+deck:
+  id: "ch67-from-knowledge-to-intelligence"
+  title: "From Knowledge to Intelligence"
+  description: "Why domain knowledge and agent intelligence are different artifacts, and what the Incubate phase must produce before building begins."
+  tags: ["domain-knowledge", "agent-intelligence", "incubate-phase", "skill-writing"]
+  version: 1
+
+cards:
+  - id: "ch67-from-knowledge-to-intelligence-001"
+    front: "What is the difference between domain knowledge and agent intelligence?"
+    back: "Domain knowledge is descriptive: it explains how a field works. Agent intelligence is prescriptive: it tells an agent what to do, when, and why."
+    tags: ["domain-knowledge", "agent-intelligence", "definition"]
+    difficulty: "basic"
+
+  - id: "ch67-from-knowledge-to-intelligence-002"
+    front: "James passes the domain mastery gate with 88%. Does the Resume Screener agent now know how to score candidates?"
+    back: "No. The gate proves James has the knowledge. The agent only gets that knowledge once it is encoded into a skill file."
+    tags: ["domain-knowledge", "mastery-gate"]
+    difficulty: "basic"
+
+  - id: "ch67-from-knowledge-to-intelligence-003"
+    front: "James pastes his entire concept paper into a prompt. The agent scores a non-traditional candidate poorly, ignoring the edge case rule from paragraph seven. Why?"
+    back: "Agents treat all prose with equal weight. Edge case rules buried in a paragraph are indistinguishable from background context. Skills solve this by structuring knowledge hierarchically."
+    tags: ["prose-ambiguity", "encoding", "edge-cases"]
+    difficulty: "intermediate"
+    why: "What would you have to change in the concept paper to make that edge case rule reliably execute?"
+
+  - id: "ch67-from-knowledge-to-intelligence-004"
+    front: "What does Phase 2 (Incubate) produce, and why does it sit between Explore and Build Specialist?"
+    back: "Four SKILL.md files encoding FTE decision logic. It answers what agents must know before production infrastructure is built, preventing costly rework if skill gaps surface later."
+    tags: ["incubate-phase", "maturity-model"]
+    difficulty: "intermediate"
+    why: "What is the cost difference between fixing a skill gap during Incubate versus after the MCP server is built?"
+
+  - id: "ch67-from-knowledge-to-intelligence-005"
+    front: "What three SKILL.md components encode domain intelligence into executable agent behavior?"
+    back: "Persona (who the agent is), Questions (what it analyzes before acting), and Principles (rules for handling uncertainty and edge cases)."
+    tags: ["skill-anatomy", "persona", "questions", "principles"]
+    difficulty: "basic"
+
+  - id: "ch67-from-knowledge-to-intelligence-006"
+    front: "A concept paper describes how the Resume Screener handles non-traditional candidates in a single sentence in paragraph seven. Why is this insufficient for reliable agent behavior?"
+    back: "Prose gives every sentence equal weight. The agent treats a one-sentence edge case rule the same as a main workflow description. Skills encode hierarchy; prose does not."
+    tags: ["prose-ambiguity", "encoding", "non-traditional-backgrounds"]
+    difficulty: "intermediate"
+    why: "How would you restructure that one sentence into a Principle the agent could enforce consistently?"
+
+  - id: "ch67-from-knowledge-to-intelligence-007"
+    front: "Why is the Incubate phase described as the transformation step rather than just a writing exercise?"
+    back: "Converting descriptive prose into prescriptive instructions requires active extraction of hidden decision logic. Pasting prose is not transformation; encoding it into structured skill components is."
+    tags: ["incubate-phase", "transformation", "domain-knowledge"]
+    difficulty: "advanced"
+    why: "What would be lost if you delegated this transformation to an AI without doing the extraction yourself first?"

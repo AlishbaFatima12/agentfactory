@@ -1,0 +1,59 @@
+deck:
+  id: "ch68-building-a-scenario-bank"
+  title: "Building a Scenario Bank"
+  description: "Designing structured test coverage for agent skills: happy path, edge case, and adversarial categories."
+  tags: ["scenario-bank", "happy-path", "edge-case", "adversarial", "validation-criteria"]
+  version: 1
+
+cards:
+  - id: "ch68-building-a-scenario-bank-001"
+    front: "What are the three categories in a scenario bank?"
+    back: "1. Happy path: normal inputs confirming basic correctness\n2. Edge case: boundary inputs exposing robustness\n3. Adversarial: hostile inputs designed to produce wrong or dangerous output"
+    tags: ["scenario-bank", "categories"]
+    difficulty: "basic"
+
+  - id: "ch68-building-a-scenario-bank-002"
+    front: "Why are there more edge case scenarios than happy path scenarios in the Resume Screener bank?"
+    back: "Real candidates are rarely textbook. Edge cases are where skills fail. Happy paths confirm the basics work; edge cases reveal where the instructions are incomplete."
+    tags: ["edge-case", "scenario-design"]
+    difficulty: "basic"
+
+  - id: "ch68-building-a-scenario-bank-003"
+    front: "What specific assumption does the 'International Format' edge case test in the Resume Screener?"
+    back: "Whether the skill assumes every candidate has a US-style resume with familiar institutions and GPA scores."
+    tags: ["edge-case", "hidden-assumptions", "resume-screener"]
+    difficulty: "intermediate"
+    why: "What other nationality-based assumptions might be embedded in a skill written by a developer in one country?"
+
+  - id: "ch68-building-a-scenario-bank-004"
+    front: "What is a prompt injection adversarial scenario for the Resume Screener?"
+    back: "A CV containing hidden text instructing the model to override scoring rules and produce a perfect score, regardless of actual qualifications."
+    tags: ["adversarial", "prompt-injection", "security"]
+    difficulty: "intermediate"
+    why: "Why does discovering this vulnerability in simulation matter more than discovering it in production?"
+
+  - id: "ch68-building-a-scenario-bank-005"
+    front: "Where do the validation criteria for simulation come from?"
+    back: "The HireFlow Blueprint from Chapter 64. The success criteria that defined what each FTE should produce become the measurement standard for evaluating simulation output."
+    tags: ["validation-criteria", "blueprint", "ch64"]
+    difficulty: "basic"
+
+  - id: "ch68-building-a-scenario-bank-006"
+    front: "Why does a vague blueprint produce inconclusive simulation results?"
+    back: "Validation criteria come from the blueprint's success criteria. If the blueprint did not define what correct output looks like, the evaluation table has no expected column to compare against."
+    tags: ["validation-criteria", "blueprint-quality"]
+    difficulty: "intermediate"
+    why: "A team skipped writing formal success criteria in their blueprint and ran simulations anyway. What would their evaluation tables look like?"
+
+  - id: "ch68-building-a-scenario-bank-007"
+    front: "Emma's stopping criterion for scenario count is: keep adding until what happens?"
+    back: "Until three consecutive new scenarios all pass. That signal indicates the skill handles the category's patterns reliably."
+    tags: ["stopping-criterion", "validation"]
+    difficulty: "basic"
+
+  - id: "ch68-building-a-scenario-bank-008"
+    front: "Why should happy path tests be included even though they seem easy?"
+    back: "A skill can handle the correct candidate but still produce wrong format, missing fields, or irrelevant commentary. Happy paths verify the basics before edge cases reveal deeper problems."
+    tags: ["happy-path", "format-correctness"]
+    difficulty: "intermediate"
+    why: "What category of failure would you miss entirely if you skipped happy path testing and went straight to edge cases?"

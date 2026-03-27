@@ -1,0 +1,60 @@
+deck:
+  id: "ch62-self-provisioning-factories"
+  title: "Self-Provisioning Factories"
+  description: "Why factories designed for dynamic resource sourcing outcompete human-allocated ones, and the three trust infrastructure gaps still being closed."
+  tags: ["self-provisioning", "outcome-contract", "trust-infrastructure", "competitive-advantage"]
+  version: 1
+
+cards:
+  - id: "ch62-self-provisioning-factories-001"
+    front: "What is self-provisioning in an agent factory?"
+    back: "The capability to dynamically source its own resources rather than consuming only what humans allocate in advance, operating within policy-based governance."
+    tags: ["self-provisioning", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-self-provisioning-factories-002"
+    front: "What is an outcome contract?"
+    back: "An agreement that specifies what the factory must deliver, not which resources it must use to get there."
+    tags: ["outcome-contract", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-self-provisioning-factories-003"
+    front: "What are the three components of trust infrastructure?"
+    back: "1. Payment rails (agent-native transaction channels)\n2. Liability frameworks (responsibility chains for autonomous decisions)\n3. Verification systems (audit logs, receipt validation, anomaly detection)"
+    tags: ["trust-infrastructure", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-self-provisioning-factories-004"
+    front: "How does adding a Resource Manager in pass-through mode from day one reduce future cost?"
+    back: "It starts functionally identical to a human-allocated factory but makes self-provisioning a one-configuration-change upgrade. Without it, enabling self-provisioning later requires rewiring every FTE's resource access from scratch."
+    tags: ["resource-manager", "architecture"]
+    difficulty: "intermediate"
+    why: "What specific operations would a retrofit require that the upfront design avoids?"
+
+  - id: "ch62-self-provisioning-factories-005"
+    front: "Why does 'policy scales but per-transaction approval does not' give self-provisioning factories a competitive advantage?"
+    back: "One approved policy handles every instance of a condition forever, without human intervention. Per-transaction approval requires a human for each new edge case, scaling headcount linearly with factory complexity."
+    tags: ["competitive-advantage", "self-provisioning"]
+    difficulty: "intermediate"
+    why: "In HireFlow's translation example, how many human approvals would per-transaction approval require for 1,000 foreign-language CVs?"
+
+  - id: "ch62-self-provisioning-factories-006"
+    front: "None of the three trust infrastructure components exist as complete standardized systems yet. Why does this matter for architecture decisions today?"
+    back: "Factories built now need to be structurally ready for when they do. Including Resource Manager infrastructure as a pass-through today is the low-cost way to ensure compatibility when trust infrastructure matures."
+    tags: ["trust-infrastructure", "future-ready"]
+    difficulty: "intermediate"
+    why: "What is the cost of retrofitting trust infrastructure compatibility into a factory built without a Resource Manager?"
+
+  - id: "ch62-self-provisioning-factories-007"
+    front: "How does self-provisioning connect to the Two-Layered Model from Chapter 61?"
+    back: "Self-provisioning extends the Factory Layer's governance boundaries to include resource acquisition, not just resource consumption. The governance layer still controls what the factory can acquire."
+    tags: ["two-layered-model", "self-provisioning"]
+    difficulty: "intermediate"
+    why: "What would happen to the Two-Layered Model's governance guarantees if self-provisioning bypassed the governance layer?"
+
+  - id: "ch62-self-provisioning-factories-008"
+    front: "James argues that requiring per-transaction human approval is safer than self-provisioning. What is the counter-argument?"
+    back: "A factory that goes silent every time it encounters something unexpected is not safer; it is less reliable. Self-provisioning within a spending envelope contains the risk while maintaining throughput. Silent failure is its own risk."
+    tags: ["anti-pattern", "governance"]
+    difficulty: "advanced"
+    why: "What specific HireFlow scenario illustrates the hidden cost of silent failure under per-transaction approval?"

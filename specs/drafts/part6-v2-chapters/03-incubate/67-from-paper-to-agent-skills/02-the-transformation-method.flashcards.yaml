@@ -1,0 +1,59 @@
+deck:
+  id: "ch67-the-transformation-method"
+  title: "The Transformation Method"
+  description: "The three-step Extract-Structure-Encode method for converting concept paper prose into executable agent skill specifications."
+  tags: ["transformation-method", "extract", "structure", "encode", "when-do-because"]
+  version: 1
+
+cards:
+  - id: "ch67-the-transformation-method-001"
+    front: "What are the three steps of the transformation method?"
+    back: "Extract (pull out requirements, decision points, edge cases), Structure (write When-Do-Because statements), Encode (map statements to Persona, Questions, Principles)."
+    tags: ["transformation-method", "definition"]
+    difficulty: "basic"
+
+  - id: "ch67-the-transformation-method-002"
+    front: "What three categories does the Extract step produce from a concept paper paragraph?"
+    back: "Domain requirements (what the agent must produce), decision points (where the agent must choose), and edge cases (where normal rules break)."
+    tags: ["extract", "categorization"]
+    difficulty: "basic"
+
+  - id: "ch67-the-transformation-method-003"
+    front: "What does the When-Do-Because format look like, and why are all three parts required?"
+    back: "When [condition], Do [action], Because [justification]. All three are required: When specifies the trigger, Do gives an actionable instruction, Because lets the agent prioritize between competing rules."
+    tags: ["when-do-because", "structure"]
+    difficulty: "basic"
+
+  - id: "ch67-the-transformation-method-004"
+    front: "Emma points out that James wrote 'WHEN brief is vague, DO handle it appropriately.' What is wrong, and how should it be rewritten?"
+    back: "The Do is not actionable. Rewrite: 'WHEN brief contains fewer than three requirements, DO flag as needs clarification with specific questions, BECAUSE fewer than three is unusually vague and guessing attracts wrong candidates.'"
+    tags: ["vague-actions", "specificity", "when-do-because"]
+    difficulty: "intermediate"
+    why: "What would an agent actually do when it receives the vague version? What decision would it make?"
+
+  - id: "ch67-the-transformation-method-005"
+    front: "Why does the Because clause matter more than it appears in a When-Do-Because statement?"
+    back: "When two rules apply to the same situation, the agent uses the justification to determine priority. Without Because, conflicting rules produce unpredictable behavior."
+    tags: ["because-clause", "rule-priority"]
+    difficulty: "intermediate"
+    why: "Give an example where two reasonable rules conflict and the Because clause is the only way to resolve which one wins."
+
+  - id: "ch67-the-transformation-method-006"
+    front: "In the transformation method, where do edge cases map in the SKILL.md structure?"
+    back: "Principles. Edge cases and rules map to Principles because they tell the agent how to handle situations its main workflow was not designed for."
+    tags: ["encode", "principles", "edge-cases"]
+    difficulty: "basic"
+
+  - id: "ch67-the-transformation-method-007"
+    front: "James finds zero decision points in a concept paper paragraph. What does this signal?"
+    back: "Either the paragraph is background context (not operational content), or he is reading too quickly. Every operational paragraph about what an FTE does hides 2-4 decision points."
+    tags: ["extract", "decision-points"]
+    difficulty: "intermediate"
+    why: "What type of paragraph in a concept paper would genuinely have zero decision points?"
+
+  - id: "ch67-the-transformation-method-008"
+    front: "Why does the transformation method forbid compound When-Do-Because statements with multiple conditions?"
+    back: "Compound statements cannot be prioritized or tested in isolation. If multiple conditions trigger simultaneously, the agent cannot determine which takes precedence. One trigger per statement."
+    tags: ["structure", "when-do-because", "compound-statements"]
+    difficulty: "advanced"
+    why: "Write a compound statement, then break it into three separate statements. What ambiguity does the split resolve?"

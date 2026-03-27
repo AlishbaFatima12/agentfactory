@@ -1,0 +1,71 @@
+deck:
+  id: "ch63-the-five-phase-map"
+  title: "The Five-Phase Map"
+  description: "The complete Agent Maturity Model: five phases, their deliverables, gates, and the general agent's role at each stage."
+  tags: ["five-phase-map", "agent-maturity", "explore", "incubate", "build-specialist"]
+  version: 1
+
+cards:
+  - id: "ch63-the-five-phase-map-001"
+    front: "What are the five phases of the Agent Maturity Model, in order?"
+    back: "1. Explore\n2. Incubate\n3. Build Specialist\n4. Cloud Deploy\n5. Scale"
+    tags: ["five-phase-map", "enumeration"]
+    difficulty: "basic"
+
+  - id: "ch63-the-five-phase-map-002"
+    front: "What is the deliverable of Phase 1 (Explore), and what gate must it clear?"
+    back: "A validated concept paper; it must score 9.5 or above when evaluated by multiple frontier LLMs."
+    tags: ["phase-1-explore", "deliverable", "gate"]
+    difficulty: "basic"
+
+  - id: "ch63-the-five-phase-map-003"
+    front: "What are the three stages of Phase 2 (Incubate)?"
+    back: "1. Skill extraction: extract agent skills from the concept paper\n2. Simulation: role-play each skill with a general agent to test consistency\n3. MCP servers: build the tools the specialist agents will use"
+    tags: ["phase-2-incubate", "stages"]
+    difficulty: "intermediate"
+
+  - id: "ch63-the-five-phase-map-004"
+    front: "What does the 10-80-10 rule specify for writing a concept paper?"
+    back: "Write the first 10% yourself (framing and scope), let AI draft the middle 80% (detailed analysis, edge cases), write the final 10% yourself (conclusions and decisions)."
+    tags: ["10-80-10", "concept-paper"]
+    difficulty: "basic"
+
+  - id: "ch63-the-five-phase-map-005"
+    front: "Why does the 10-80-10 rule require human bookends rather than letting AI write 100%?"
+    back: "Writing 0% means accepting the AI's framing without questioning it. The first and last 10% force you to own the direction and make the final decisions rather than drifting with the AI's output."
+    tags: ["10-80-10", "human-ownership"]
+    difficulty: "intermediate"
+    why: "How does this connect to the domain-ignorant agent failure from Lesson 1, where James had no framing at all?"
+
+  - id: "ch63-the-five-phase-map-006"
+    front: "What does the general agent's role shift to after the concept paper crystallizes?"
+    back: "From Director (exploring the domain) to Builder (constructing skills, MCP servers, and eventually specialist agents)."
+    tags: ["agent-roles", "phase-transition"]
+    difficulty: "basic"
+
+  - id: "ch63-the-five-phase-map-007"
+    front: "In Phase 3, James tries to skip Phases 1 and 2. Why is the resulting agent still a keyword matcher even though Claude Code could theoretically do better?"
+    back: "Phase 3 requires Phase 1 and 2 inputs: a validated concept paper and agent skills. Without them, the general agent has no domain knowledge to build from. It defaults to a generic approximation."
+    tags: ["dependency-chain", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "What does calling this failure 'a keyword matcher that runs' tell you about why domain gaps are harder to catch than syntax errors?"
+
+  - id: "ch63-the-five-phase-map-008"
+    front: "Which parts of the book cover Phases 4 and 5 (Cloud Deploy and Scale)?"
+    back: "Part 7. Part 6 covers the Architecture preparation plus Phases 1-3."
+    tags: ["book-structure", "five-phase-map"]
+    difficulty: "basic"
+
+  - id: "ch63-the-five-phase-map-009"
+    front: "What is the gate for Phase 2 (Incubate) and why is it different from the Phase 1 gate?"
+    back: "Simulation consistency: the skill must produce consistent, domain-correct results across test cases. Unlike the 9.5 concept paper threshold, this gate tests behavior under realistic inputs rather than knowledge completeness."
+    tags: ["phase-2-incubate", "gate", "comparison"]
+    difficulty: "advanced"
+    why: "Why would a 30% inconsistency rate in Phase 2 be more dangerous if discovered in Phase 3 instead?"
+
+  - id: "ch63-the-five-phase-map-010"
+    front: "What does James mean when he says crystallization is driven by 'validation pressure' rather than temperature?"
+    back: "Temperature drives crystallization in chemistry. In agent development, it is the accumulation of multi-LLM evaluation scores that forces the concept paper to solidify into specific, actionable knowledge."
+    tags: ["crystallization", "analogy"]
+    difficulty: "intermediate"
+    why: "Why does making crystallization a measured outcome (validation pressure) rather than a timed process protect teams from their own impatience?"

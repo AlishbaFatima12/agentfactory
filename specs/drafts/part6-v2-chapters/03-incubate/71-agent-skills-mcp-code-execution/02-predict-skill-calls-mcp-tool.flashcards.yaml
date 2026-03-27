@@ -1,0 +1,66 @@
+deck:
+  id: "ch71-predict-skill-calls-mcp-tool"
+  title: "Predict: Skill Calls MCP Tool"
+  description: "Reading MCP client integration code, predicting the tool call sequence, and understanding the three-component connection pattern."
+  tags: ["mcp-client", "ClientSession", "stdio-client", "predict-and-run", "data-bridge"]
+  version: 1
+
+cards:
+  - id: "ch71-predict-skill-calls-mcp-tool-001"
+    front: "What is the role of StdioServerParameters in an MCP client integration?"
+    back: "It specifies how to locate and launch the MCP server process (command and args). No connection is made yet; it is configuration only."
+    tags: ["mcp-client", "StdioServerParameters"]
+    difficulty: "basic"
+
+  - id: "ch71-predict-skill-calls-mcp-tool-002"
+    front: "What are the three components of the MCP client connection pattern and what does each do?"
+    back: "StdioServerParameters: where is the server (configuration). stdio_client: open the transport connection. ClientSession: send and receive messages over the transport."
+    tags: ["mcp-client", "connection-pattern"]
+    difficulty: "basic"
+
+  - id: "ch71-predict-skill-calls-mcp-tool-003"
+    front: "In screen_candidate, what type does parsed.content[0].text return after a successful parse_cv call?"
+    back: "A JSON string, not a Python dict. json.loads is required to convert it for use as a Python object."
+    tags: ["mcp-client", "data-types"]
+    difficulty: "basic"
+
+  - id: "ch71-predict-skill-calls-mcp-tool-004"
+    front: "Why do the two tool calls in screen_candidate execute sequentially rather than in parallel?"
+    back: "The second call (score_candidate) receives cv_data as an argument, which is only available after the first call (parse_cv) completes. Data dependency forces sequential execution."
+    tags: ["data-bridge", "sequential-execution"]
+    difficulty: "intermediate"
+    why: "What would happen to score_candidate's output if you attempted to run both calls in parallel?"
+
+  - id: "ch71-predict-skill-calls-mcp-tool-005"
+    front: "What is the data bridge in a two-step MCP skill integration?"
+    back: "The variable that carries the first tool's output into the second tool's input. In screen_candidate, cv_data is the bridge: extracted from parse_cv's result and passed directly to score_candidate."
+    tags: ["data-bridge"]
+    difficulty: "intermediate"
+    why: "What breaks in the pipeline if the bridge variable holds a string when the next tool expects a dict?"
+
+  - id: "ch71-predict-skill-calls-mcp-tool-006"
+    front: "If parse_cv receives a CV with no SKILLS section, what does cv_data contain for the skills field?"
+    back: "An empty list: skills: []. Chapter 70's parse_cv handles missing sections by returning empty lists rather than null or an error."
+    tags: ["edge-cases", "parse_cv"]
+    difficulty: "intermediate"
+
+  - id: "ch71-predict-skill-calls-mcp-tool-007"
+    front: "Why does session.initialize() matter before any call_tool is attempted?"
+    back: "It exchanges capability information between client and server. If the server does not support a requested tool, the session handshake is where that mismatch surfaces, before any tool call is made."
+    tags: ["mcp-client", "initialization"]
+    difficulty: "intermediate"
+    why: "What failure mode would occur if you called a tool before session.initialize() completed?"
+
+  - id: "ch71-predict-skill-calls-mcp-tool-008"
+    front: "A student predicts tool calls correctly but with low confidence. What mental model should they build to improve calibration?"
+    back: "The inner session code is sequential: call a tool, get the result, call the next tool. The unfamiliar async with pattern is the transport layer; the tool call logic inside is straightforward sequential code."
+    tags: ["predict-and-run", "calibration"]
+    difficulty: "intermediate"
+    why: "Why does the async context manager wrapper not change the sequential nature of the tool calls inside it?"
+
+  - id: "ch71-predict-skill-calls-mcp-tool-009"
+    front: "What does screen_candidate return, and how is the cv field different from what score_candidate received?"
+    back: "It returns a dict with cv (the parsed CV as a Python dict via json.loads) and score (the scoring text string). score_candidate received cv_data as a raw JSON string; the return value converts it for the caller."
+    tags: ["data-bridge", "return-value"]
+    difficulty: "advanced"
+    why: "Why is it important to distinguish between what the tool received and what the caller receives?"

@@ -1,0 +1,59 @@
+deck:
+  id: "ch61-why-chatbot-armies-fail"
+  title: "Why Chatbot Armies Fail"
+  description: "The three structural failure modes of independent chatbot collections, and the four concepts that turn a collection into a factory."
+  tags: ["chatbot-failure", "data-contracts", "handoff-protocols", "governance", "agent-factory"]
+  version: 1
+
+cards:
+  - id: "ch61-why-chatbot-armies-fail-001"
+    front: "What are the three structural failure modes of a chatbot army?"
+    back: "1. No shared data contracts\n2. No handoff protocols\n3. No governance"
+    tags: ["chatbot-failure", "failure-modes"]
+    difficulty: "basic"
+
+  - id: "ch61-why-chatbot-armies-fail-002"
+    front: "What is a data contract in an agent factory?"
+    back: "An explicit definition of the structure, types, and constraints of data passed between workers."
+    tags: ["data-contracts", "definition"]
+    difficulty: "basic"
+
+  - id: "ch61-why-chatbot-armies-fail-003"
+    front: "The Resume Screener changes its output from a numeric score to a letter grade. No contract exists. What happens downstream?"
+    back: "The Interview Question Generator reads the letter grade, cannot compare it to its numeric threshold, and silently generates generic questions for every candidate. No error is raised; the failure reaches the hiring manager undetected."
+    tags: ["data-contracts", "silent-failure"]
+    difficulty: "intermediate"
+    why: "Why is silent failure more dangerous than a crash in a production pipeline?"
+
+  - id: "ch61-why-chatbot-armies-fail-004"
+    front: "What is a handoff protocol?"
+    back: "A defined agreement specifying who sends data, who receives it, what format it takes, and what happens on failure."
+    tags: ["handoff-protocols", "definition"]
+    difficulty: "basic"
+
+  - id: "ch61-why-chatbot-armies-fail-005"
+    front: "Four independent chatbots share a database. Each one works correctly in isolation. Why is the pipeline unreliable?"
+    back: "Without data contracts, each chatbot produces whatever its prompt generates. When one changes its output format, no other chatbot is notified. The shared database is not a coordination mechanism; it is just shared storage."
+    tags: ["chatbot-failure", "coordination"]
+    difficulty: "intermediate"
+    why: "What would you need to add to the shared database to make it a coordination mechanism?"
+
+  - id: "ch61-why-chatbot-armies-fail-006"
+    front: "What four concepts does James independently derive as the minimum ingredients to turn chatbots into a factory?"
+    back: "1. Contracts (declared output shapes)\n2. Verification (automated output checks)\n3. Orchestration (pipeline sequencing and failure handling)\n4. Governance (human intent, execution, outcome review)"
+    tags: ["agent-factory", "factory-concepts"]
+    difficulty: "basic"
+
+  - id: "ch61-why-chatbot-armies-fail-007"
+    front: "In the SaaS-era model, how does integration work? In the Agent Factory era, what replaces it?"
+    back: "SaaS era: apps with APIs; integration is an afterthought added by developers. Agent Factory era: workers with contracts; integration is the architecture, not an afterthought."
+    tags: ["paradigm-shift", "saas-vs-factory"]
+    difficulty: "intermediate"
+    why: "What breaks first when a SaaS-era developer tries to build an agent factory using API-call patterns?"
+
+  - id: "ch61-why-chatbot-armies-fail-008"
+    front: "Why is 'they will figure it out from context' an unsafe assumption when agents share a database?"
+    back: "Agents interpret context probabilistically. A changed format may produce plausible-looking but wrong output rather than an error. The pipeline succeeds structurally while delivering degraded results that are hard to detect."
+    tags: ["chatbot-failure", "silent-failure"]
+    difficulty: "intermediate"
+    why: "When is a wrong answer more dangerous than a visible error?"

@@ -1,0 +1,73 @@
+deck:
+  id: "ch62-budgets-not-permissions"
+  title: "Budgets, Not Permissions"
+  description: "The three components of the 'budgets, not permissions' principle: resource budgets, spending envelopes, and audit trails."
+  tags: ["resource-budget", "spending-envelope", "audit-trail", "budgets-not-permissions"]
+  version: 1
+
+cards:
+  - id: "ch62-budgets-not-permissions-001"
+    front: "What is the core limitation of permissions as an access control mechanism for agents?"
+    back: "Permissions answer 'can the agent access this?' but not 'how much can it consume?' An agent with an API key has no consumption boundary."
+    tags: ["permissions", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-budgets-not-permissions-002"
+    front: "What are the four categories tracked in a resource budget?"
+    back: "1. Tokens (LLM input/output)\n2. Compute (processing time and infrastructure cost)\n3. API calls (calls to external services)\n4. Storage (data written to persistent stores)"
+    tags: ["resource-budget", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-budgets-not-permissions-003"
+    front: "What is a spending envelope, and how does it differ from a resource budget?"
+    back: "A resource budget tracks consumption. A spending envelope enforces it by pausing the pipeline when any category hits its ceiling. Budget = meter; envelope = enforcement."
+    tags: ["spending-envelope", "resource-budget"]
+    difficulty: "basic"
+
+  - id: "ch62-budgets-not-permissions-004"
+    front: "What are the five required fields in an audit trail entry?"
+    back: "1. Timestamp\n2. Actor\n3. Resource\n4. Cost\n5. Justification (why the acquisition was needed)"
+    tags: ["audit-trail", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-budgets-not-permissions-005"
+    front: "Why is per-FTE resource tracking and per-run tracking both necessary? What does each reveal?"
+    back: "Per-FTE tracking reveals which specific worker is the cost driver. Per-run tracking reveals whether the aggregate pipeline stays within budget. Same data answers two different management questions."
+    tags: ["resource-budget", "granularity"]
+    difficulty: "intermediate"
+    why: "What operational decision would you make based on per-FTE data that you cannot make from per-run data alone?"
+
+  - id: "ch62-budgets-not-permissions-006"
+    front: "Why does a spending envelope that pauses the pipeline provide better governance than one that logs a warning?"
+    back: "A warning allows overruns to compound silently: fifty candidates processed at 50,000 tokens each instead of 500. A pause contains the damage at the first overrun and forces investigation before it compounds."
+    tags: ["spending-envelope", "governance"]
+    difficulty: "intermediate"
+    why: "What is the worst-case outcome if a 40% token overrun warning goes unread for a week in HireFlow?"
+
+  - id: "ch62-budgets-not-permissions-007"
+    front: "Why is the 'justification' field in an audit trail the most architecturally important one?"
+    back: "The other four fields tell you what happened and how much it cost. Justification tells you whether the cost was warranted. Without it, you can find expensive acquisitions but cannot determine if they were correct or a bug."
+    tags: ["audit-trail", "observability"]
+    difficulty: "intermediate"
+    why: "What diagnostic question becomes impossible to answer if justification fields are missing from a month of audit logs?"
+
+  - id: "ch62-budgets-not-permissions-008"
+    front: "Why are the four resource categories tracked separately rather than as a single cost number?"
+    back: "Each category has a different failure mode. Token overruns increase LLM costs. API call overruns trigger third-party rate limits. Storage overruns create database pressure. A single number hides which category is causing the problem."
+    tags: ["resource-budget", "failure-modes"]
+    difficulty: "intermediate"
+    why: "What would you misdiagnose if you only tracked total cost and the Resume Screener hit an external API rate limit?"
+
+  - id: "ch62-budgets-not-permissions-009"
+    front: "Emma expresses uncertainty about whether all five audit trail fields are needed from day one, then recommends including all five anyway. What is her reasoning?"
+    back: "Adding a field to a log entry is trivial. Reconstructing justification data after the fact is impossible. The cost asymmetry favors completeness, even for fields you cannot fill in immediately."
+    tags: ["audit-trail", "architecture"]
+    difficulty: "intermediate"
+    why: "How does this reasoning parallel the Resource Manager pass-through argument from Lesson 2?"
+
+  - id: "ch62-budgets-not-permissions-010"
+    front: "How do spending envelopes connect to the Two-Layered Model from Chapter 61?"
+    back: "Spending envelopes are one of the governance boundaries the Factory Layer operates within. They ensure the factory cannot consume more than its principal authorized, even when no human is watching."
+    tags: ["two-layered-model", "spending-envelope"]
+    difficulty: "intermediate"
+    why: "What governance guarantee would break if spending envelopes only logged warnings instead of pausing the pipeline?"

@@ -1,0 +1,67 @@
+deck:
+  id: "ch71-make-candidate-summarizer-config"
+  title: "Make: Candidate Summarizer + Checkpoint Inventory"
+  description: "Spec-first development, graceful degradation design, and the checkpoint inventory that closes Phase 2."
+  tags: ["candidate-summarizer", "graceful-degradation", "checkpoint-inventory", "spec-first", "multi-tool"]
+  version: 1
+
+cards:
+  - id: "ch71-make-candidate-summarizer-config-001"
+    front: "What four MCP tools does the Candidate Summarizer call, in dependency order?"
+    back: "1. parse_cv (produces cv_data needed by step 2). 2. score_candidate (requires cv_data from step 1). 3. extract_skills (independent). 4. get_template (independent)."
+    tags: ["candidate-summarizer", "tool-sequence"]
+    difficulty: "basic"
+
+  - id: "ch71-make-candidate-summarizer-config-002"
+    front: "Why does Emma say 'the graceful degradation matrix is the most important part of the spec'?"
+    back: "Each failure branch in the matrix becomes a conditional branch in the implementation. If you cannot describe what happens when each tool fails in English, you cannot implement it correctly. The spec IS the branching logic."
+    tags: ["graceful-degradation", "spec-first"]
+    difficulty: "intermediate"
+    why: "What implementation problem arises when graceful degradation is designed after the code is written rather than before?"
+
+  - id: "ch71-make-candidate-summarizer-config-003"
+    front: "If parse_cv fails in summarize_candidate, which summary sections can still be populated?"
+    back: "None of the structured sections. parse_cv failure means no cv_data, so score_candidate cannot run either. Only a generic message and the errors list are returned. The summary has the lowest possible completeness."
+    tags: ["graceful-degradation", "candidate-summarizer"]
+    difficulty: "intermediate"
+    why: "Why does parse_cv failure cascade to score_candidate when extract_skills and get_template failures do not?"
+
+  - id: "ch71-make-candidate-summarizer-config-004"
+    front: "If extract_skills fails but the other three tools succeed, what does the summary contain?"
+    back: "Candidate profile (from parse_cv), match score (from score_candidate), job template context (from get_template). Skill alignment is marked unavailable; interview focus areas may use template areas without candidate skill comparison."
+    tags: ["graceful-degradation", "partial-results"]
+    difficulty: "intermediate"
+
+  - id: "ch71-make-candidate-summarizer-config-005"
+    front: "What does the checkpoint inventory verify at the end of Chapter 71?"
+    back: "That each of the four HireFlow FTE skills executes without unhandled exceptions, receives responses from every listed tool, and returns structured output matching its documented return type."
+    tags: ["checkpoint-inventory", "phase-2"]
+    difficulty: "basic"
+
+  - id: "ch71-make-candidate-summarizer-config-006"
+    front: "Why does the capstone use test-driven generation (spec then tests then implementation) rather than implementation first?"
+    back: "Failing tests generated from the spec define the exact behavior expected before any code is written. When the implementation is generated, it has a concrete target. Without tests, the implementation defines its own behavior, which may not match the spec."
+    tags: ["spec-first", "tdd"]
+    difficulty: "intermediate"
+    why: "What is the risk of generating an implementation and then writing tests to pass it?"
+
+  - id: "ch71-make-candidate-summarizer-config-007"
+    front: "score_candidate currently returns a float string. If it changes to return a JSON object, how many HireFlow skills need updating?"
+    back: "At least three: Resume Screener (uses score directly), Candidate Summarizer (normalizes score to 0-100). Interview Question Generator does not use score_candidate. The change propagates to every skill with score_candidate in its tool call sequence."
+    tags: ["skill-tool-contract", "ripple-effect"]
+    difficulty: "advanced"
+    why: "How does the checkpoint inventory help identify all the skills affected by a tool interface change?"
+
+  - id: "ch71-make-candidate-summarizer-config-008"
+    front: "What is the recommendation logic in the Candidate Summarizer based on?"
+    back: "Derived from score and alignment data, not from a separate tool call. The summarizer calculates proceed/hold/reject from the outputs of score_candidate and the skills comparison, using thresholds defined in the spec."
+    tags: ["candidate-summarizer", "recommendation-logic"]
+    difficulty: "intermediate"
+    why: "Why is the recommendation derived inside the skill rather than delegated to another MCP tool?"
+
+  - id: "ch71-make-candidate-summarizer-config-009"
+    front: "What does closing Phase 2: Incubate mean for the transition to Phase 3: Build Specialist?"
+    back: "Phase 3 does not start on faith. It starts on evidence: running code that has been traced, debugged, and verified. The checkpoint inventory is that evidence; every skill-to-tool wire has been proven to work before Agent SDKs are layered on top."
+    tags: ["phase-2", "checkpoint-inventory", "phase-3"]
+    difficulty: "intermediate"
+    why: "What would happen to Phase 3 SDK orchestration if the underlying skill-to-tool wiring had silent integration failures?"

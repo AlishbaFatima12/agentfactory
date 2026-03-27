@@ -1,0 +1,47 @@
+deck:
+  id: "ch63-reflection-and-chapter-quiz"
+  title: "Reflection and Chapter Quiz"
+  description: "Synthesizing the Three Frames (Chapters 61-63) and applying the Maturity Model to HireFlow's development sequence."
+  tags: ["three-frames", "synthesis", "maturity-model", "hireflow"]
+  version: 1
+
+cards:
+  - id: "ch63-reflection-and-chapter-quiz-001"
+    front: "What question does each of the three conceptual frames answer?"
+    back: "Two-Layered Model: Who governs? | Agents as Economic Actors: What is it becoming? | Agent Maturity Model: How does it grow?"
+    tags: ["three-frames", "enumeration"]
+    difficulty: "basic"
+
+  - id: "ch63-reflection-and-chapter-quiz-002"
+    front: "Why are the Three Frames described as complementary rather than alternatives?"
+    back: "Each lens addresses a different dimension of the same factory: structure (who governs), future readiness (what to design for), and sequence (the development path). All three are active simultaneously."
+    tags: ["three-frames", "synthesis"]
+    difficulty: "intermediate"
+    why: "What would a factory design miss if it had only the Two-Layered Model and Maturity Model but not the Economic Actors frame?"
+
+  - id: "ch63-reflection-and-chapter-quiz-003"
+    front: "Why is the Architecture section (Chapters 61-64) described as 'preparation' rather than Phase 1 of the Maturity Model?"
+    back: "The Architecture section provides the three frames and the factory blueprint, which focus Phase 1 exploration. Phase 1 itself begins in Chapter 65 (Explore). Without preparation, Phase 1 would be aimless."
+    tags: ["architecture-preparation", "phase-1-explore"]
+    difficulty: "intermediate"
+    why: "What specific problem does knowing the Three Frames before starting Phase 1 solve for a team writing a concept paper?"
+
+  - id: "ch63-reflection-and-chapter-quiz-004"
+    front: "James says the Maturity Model is 'like a supply chain.' What does this metaphor capture about why skipping phases fails?"
+    back: "Bad raw materials (missing Phase 1 and 2 deliverables) produce bad finished goods (defective specialists) regardless of how well the assembly line (Phase 3) runs. Downstream quality is bounded by upstream quality."
+    tags: ["dependency-chain", "supply-chain-analogy"]
+    difficulty: "intermediate"
+    why: "What makes this analogy more precise than simply saying 'each phase builds on the previous one'?"
+
+  - id: "ch63-reflection-and-chapter-quiz-005"
+    front: "James revisits his Lesson 1 mistake in this reflection. In one sentence, what did he actually do wrong?"
+    back: "He had no concept paper, no validated domain knowledge, and no agent skills, so he asked Claude Code to build a specialist from nothing and got a domain-ignorant keyword matcher."
+    tags: ["james-mistake", "dependency-chain", "anti-pattern"]
+    difficulty: "basic"
+
+  - id: "ch63-reflection-and-chapter-quiz-006"
+    front: "Chapter 64 uses all Three Frames simultaneously. How does each frame contribute to the HireFlow blueprint?"
+    back: "Two-Layered Model: provides the governance structure for the blueprint. Economic Actors: identifies participation points for budget tracking. Maturity Model: specifies the development sequence the blueprint will follow."
+    tags: ["three-frames", "hireflow", "blueprint"]
+    difficulty: "advanced"
+    why: "Why would a blueprint that used only one frame (e.g., only governance) be incomplete as a factory specification?"

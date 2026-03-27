@@ -1,0 +1,47 @@
+deck:
+  id: "ch67-write-the-interview-question-generator-skill"
+  title: "Write the Interview Question Generator Skill"
+  description: "Writing the Interview Question Generator with minimal scaffolding, gap-targeted question generation, and inter-FTE thinking that drives upstream changes."
+  tags: ["interview-question-generator", "gap-targeting", "inter-fte-thinking", "pipeline-design"]
+  version: 1
+
+cards:
+  - id: "ch67-write-the-interview-question-generator-skill-001"
+    front: "What makes an interview question 'gap-targeted' rather than generic?"
+    back: "It names the specific dimension that scored low, references the CV evidence (or absence of it), and probes whether the gap is real or an artifact of how the candidate documented their experience."
+    tags: ["gap-targeting", "question-quality"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-interview-question-generator-skill-002"
+    front: "James realizes the Question Generator cannot produce targeted questions from the Resume Screener's current output. What does he do, and why does this matter?"
+    back: "He goes back and adds gap_analysis fields (dimension, score, evidence_found, evidence_missing) to the Resume Screener's output format. This is inter-FTE pipeline thinking: designing each skill's output to serve the next skill's input."
+    tags: ["inter-fte-thinking", "pipeline-design", "data-contract"]
+    difficulty: "intermediate"
+    why: "What would the Question Generator have to do if it could not get evidence_found and evidence_missing from the gap analysis?"
+
+  - id: "ch67-write-the-interview-question-generator-skill-003"
+    front: "What is the recommended question balance ratio between gap-probing, strength-confirming, and open-ended questions?"
+    back: "60% gap-probing (dimensions below 5), 30% strength-confirming (dimensions above 7), 10% open-ended (to surface information not in the CV)."
+    tags: ["question-balance", "skill-design"]
+    difficulty: "basic"
+
+  - id: "ch67-write-the-interview-question-generator-skill-004"
+    front: "Why does every generated question need a scoring guide with three levels?"
+    back: "Without observable criteria for strong, adequate, and weak answers, two interviewers using the same question set cannot compare their evaluations. The scoring guide is the interview equivalent of calibration anchors."
+    tags: ["scoring-guide", "calibration", "interview-consistency"]
+    difficulty: "intermediate"
+    why: "How does a missing scoring guide affect the Candidate Summarizer's ability to aggregate interview results?"
+
+  - id: "ch67-write-the-interview-question-generator-skill-005"
+    front: "Candidate B has no gaps (all dimensions above 6). What should the Question Generator produce, and why?"
+    back: "Questions that confirm the stated strengths are genuine and explore information the CV did not cover. An all-gap-probing set is only useful when there are gaps; a no-gap candidate still needs a useful question set."
+    tags: ["no-gap-candidate", "question-balance", "edge-cases"]
+    difficulty: "advanced"
+    why: "What would the Candidate Summarizer lack if the interview produced no signal because all questions were skipped for a high-scoring candidate?"
+
+  - id: "ch67-write-the-interview-question-generator-skill-006"
+    front: "What is the distinction between a CV gap and a real gap for the Interview Question Generator's purpose?"
+    back: "A CV gap is a dimension where the CV shows no evidence. A real gap is a dimension where the candidate genuinely lacks the skill. The interview's job is to determine which type the gap is before the Candidate Summarizer makes a recommendation."
+    tags: ["cv-gap", "real-gap", "gap-analysis"]
+    difficulty: "intermediate"
+    why: "How should the Candidate Summarizer handle a candidate where the interview reveals that a low-scoring CV dimension was actually a CV artifact, not a real gap?"

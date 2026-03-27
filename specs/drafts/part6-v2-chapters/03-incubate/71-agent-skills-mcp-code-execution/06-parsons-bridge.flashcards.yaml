@@ -1,0 +1,46 @@
+deck:
+  id: "ch71-parsons-bridge"
+  title: "Parsons Bridge"
+  description: "Structural constraints in MCP client code: nesting order, initialization sequence, and guard placement."
+  tags: ["parsons", "mcp-client", "code-structure", "tool-call-guard"]
+  version: 1
+
+cards:
+  - id: "ch71-parsons-bridge-001"
+    front: "Why must stdio_client open before ClientSession is created?"
+    back: "ClientSession(read, write) requires the read and write stream variables that stdio_client provides. Without the outer context manager, those variables do not exist."
+    tags: ["mcp-client", "nesting-order"]
+    difficulty: "basic"
+
+  - id: "ch71-parsons-bridge-002"
+    front: "Why must session.initialize() run before any call_tool?"
+    back: "Initialize completes the MCP protocol handshake: client and server agree on protocol version and capabilities. A tool call before initialization would fail because the server has not confirmed it is ready."
+    tags: ["mcp-client", "initialization"]
+    difficulty: "basic"
+
+  - id: "ch71-parsons-bridge-003"
+    front: "Why is tools = await session.list_tools() the distractor in the Parsons problem?"
+    back: "list_tools is valid MCP code for discovery, but unnecessary when the skill already knows which tool to call. Every unnecessary network round trip adds latency; in a batch of 200, that is 200 wasted requests."
+    tags: ["parsons", "efficiency"]
+    difficulty: "intermediate"
+    why: "When would list_tools be the right call to include in a skill function?"
+
+  - id: "ch71-parsons-bridge-004"
+    front: "What is the consequence of placing the content access (cv_data = parsed.content[0].text) before the guard check?"
+    back: "This reproduces James's Lesson 4 bug. If parse_cv fails and content is empty, accessing content[0] raises IndexError before the guard can handle the failure."
+    tags: ["tool-call-guard", "parsons"]
+    difficulty: "intermediate"
+    why: "How does the guard's position in the code determine whether failures produce crashes or structured error responses?"
+
+  - id: "ch71-parsons-bridge-005"
+    front: "What four dependency constraints determine the correct ordering of MCP client code?"
+    back: "1. Parameters before transport (D before G). 2. Transport before session (G before B). 3. Initialize before call_tool (F before E). 4. Guard before content access (I before A)."
+    tags: ["parsons", "code-structure"]
+    difficulty: "intermediate"
+    why: "What would break first if you violated constraint 3 by calling a tool before initialization?"
+
+  - id: "ch71-parsons-bridge-006"
+    front: "StdioServerParameters creates a connection to the server. True or false?"
+    back: "False. StdioServerParameters is configuration only: it defines the command and args to launch the server. The actual connection is opened by stdio_client using those parameters."
+    tags: ["mcp-client", "StdioServerParameters"]
+    difficulty: "basic"

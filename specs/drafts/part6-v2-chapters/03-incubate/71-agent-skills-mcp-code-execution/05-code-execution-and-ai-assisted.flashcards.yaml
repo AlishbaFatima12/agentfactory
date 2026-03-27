@@ -1,0 +1,72 @@
+deck:
+  id: "ch71-code-execution-and-ai-assisted"
+  title: "Code Execution and AI-Assisted Investigation"
+  description: "Batch processing isolation, Axiom I, write-execute-analyze cycle, and semantic contract violations."
+  tags: ["batch-processing", "axiom-I", "semantic-contract", "write-execute-analyze"]
+  version: 1
+
+cards:
+  - id: "ch71-code-execution-and-ai-assisted-001"
+    front: "What does continue accomplish in a batch skill loop when a tool call fails?"
+    back: "It records the failure status for the current candidate and advances to the next iteration, isolating the failure. The pipeline does not stop; subsequent candidates are processed normally."
+    tags: ["batch-processing", "isolation"]
+    difficulty: "basic"
+
+  - id: "ch71-code-execution-and-ai-assisted-002"
+    front: "What is Axiom I: Shell as Orchestrator?"
+    back: "The skill is the shell: it decides which tools to call and in what order, handles failures, and aggregates results. Tools execute computations. Domain logic belongs in the tool, not in the skill."
+    tags: ["axiom-I", "orchestration"]
+    difficulty: "basic"
+
+  - id: "ch71-code-execution-and-ai-assisted-003"
+    front: "James writes CV parsing logic inside screen_batch because it 'just needs a quick fix here.' Why is this an Axiom I violation?"
+    back: "Parsing logic belongs in the MCP server (parse_cv tool). Duplicating it in the skill creates two sources of truth. When the parsing logic changes, it must be updated in both places, and they will drift."
+    tags: ["axiom-I", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "What maintenance cost accumulates when domain logic lives in the skill instead of the tool?"
+
+  - id: "ch71-code-execution-and-ai-assisted-004"
+    front: "What are the three steps of the write-execute-analyze cycle for each tool call?"
+    back: "Write: construct the tool call parameters. Execute: invoke the MCP tool. Analyze: check the result and decide the next action."
+    tags: ["write-execute-analyze"]
+    difficulty: "basic"
+
+  - id: "ch71-code-execution-and-ai-assisted-005"
+    front: "What is a semantic contract violation?"
+    back: "When data flows correctly between tools but the meaning is mismatched. No exception is raised, no guard fires. The results are silently wrong."
+    tags: ["semantic-contract"]
+    difficulty: "basic"
+
+  - id: "ch71-code-execution-and-ai-assisted-006"
+    front: "extract_skills returns skills in lowercase. get_template returns competencies in title case. A skill compares them directly. What happens?"
+    back: "Zero matches. Python string comparison is case-sensitive. 'python' != 'Python'. A candidate with 5 years of Python experience scores as having no matching skills."
+    tags: ["semantic-contract", "case-sensitivity"]
+    difficulty: "intermediate"
+    why: "What is the correct place to add normalization, and why does it belong in the skill rather than one of the tools?"
+
+  - id: "ch71-code-execution-and-ai-assisted-007"
+    front: "Emma's scoring pipeline rejected 200 applicants before the error was found. Why did no guard catch this?"
+    back: "Guards check for crashes and error flags. Scores on a 1-10 scale are valid numbers; scores on a 0-100 scale are valid numbers. The mismatch is invisible to any check that only tests for errors or empty content."
+    tags: ["semantic-contract", "guard-pattern"]
+    difficulty: "intermediate"
+    why: "What type of test would have caught a scale mismatch before the pipeline ran in production?"
+
+  - id: "ch71-code-execution-and-ai-assisted-008"
+    front: "Bob submits an empty CV. In screen_batch, which tool calls execute for Bob and what status is recorded?"
+    back: "Only parse_cv executes. It returns isError=True or empty content. The guard fires, status 'parse_failed' is recorded, and continue skips to the next candidate. score_candidate never runs for Bob."
+    tags: ["batch-processing", "isolation"]
+    difficulty: "intermediate"
+
+  - id: "ch71-code-execution-and-ai-assisted-009"
+    front: "How do semantic contract violations require different defenses than tool call failures?"
+    back: "Tool call failures require guards (isError and empty content checks). Semantic violations require explicit format specifications in the skill-tool contract and integration tests that verify output values match expectations, not just that output exists."
+    tags: ["semantic-contract", "testing"]
+    difficulty: "advanced"
+    why: "Why can't you add a guard check to catch a score-scale mismatch the way you add a guard for isError?"
+
+  - id: "ch71-code-execution-and-ai-assisted-010"
+    front: "When is it appropriate to use screen_batch's return structure with status: 'parse_failed' vs. return structure with status: 'scored'?"
+    back: "'parse_failed' when the parse_cv tool call fails (isError or empty content). 'score_failed' when parse_cv succeeds but score_candidate fails. 'scored' when both tool calls succeed and return valid content."
+    tags: ["batch-processing", "status-codes"]
+    difficulty: "intermediate"
+    why: "Why does distinguishing parse_failed from score_failed matter for downstream error recovery?"

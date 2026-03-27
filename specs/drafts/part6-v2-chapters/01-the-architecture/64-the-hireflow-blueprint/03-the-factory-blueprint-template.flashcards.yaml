@@ -1,0 +1,58 @@
+deck:
+  id: "ch64-the-factory-blueprint-template"
+  title: "The Factory Blueprint Template"
+  description: "The seven-section reusable template for specifying any agent factory, and the reasoning behind each section."
+  tags: ["blueprint-template", "seven-sections", "factory-blueprint", "specification"]
+  version: 1
+
+cards:
+  - id: "ch64-the-factory-blueprint-template-001"
+    front: "What are the seven sections of the Factory Blueprint Template in order?"
+    back: "1. Domain Summary\n2. Workflow Map\n3. Role Specifications\n4. Data Contracts\n5. Human Review Gates\n6. Success Criteria\n7. Economic Participation Points"
+    tags: ["seven-sections", "recall"]
+    difficulty: "basic"
+
+  - id: "ch64-the-factory-blueprint-template-002"
+    front: "Section 1 (Domain Summary) has three lines. What are they?"
+    back: "Workflow: From [input] to [output] through [stages]. Business value: [what problem this solves]. Users: [who consumes the outputs]."
+    tags: ["section-1", "domain-summary"]
+    difficulty: "basic"
+
+  - id: "ch64-the-factory-blueprint-template-003"
+    front: "The Failure Mode field appears in Section 3 (Role Specifications) but was not in Step 3 of the decomposition method. Why does the template add it?"
+    back: "Every FTE will encounter bad input. Without a specified failure mode, the agent decides what to do. Emma's real incident: an FTE silently dropped 200 records for three weeks because no failure mode was specified."
+    tags: ["section-3", "failure-modes", "specification"]
+    difficulty: "intermediate"
+    why: "What distinguishes a factory that fails visibly from one that fails silently with green dashboards?"
+
+  - id: "ch64-the-factory-blueprint-template-004"
+    front: "Why does a good data contract (Section 4) include a concrete example in addition to the schema?"
+    back: "A schema defines structure; an example shows a real instance. When the two disagree, you have found a specification bug before writing any code."
+    tags: ["section-4", "data-contracts", "examples"]
+    difficulty: "intermediate"
+
+  - id: "ch64-the-factory-blueprint-template-005"
+    front: "What is the difference between a Gate Trigger that fires on 'every run' versus one that fires 'when confidence is below a threshold'?"
+    back: "Every-run is a bottleneck; it forces human review regardless of pipeline confidence. Threshold-based is a safety net; it intercepts only genuinely risky outputs."
+    tags: ["section-5", "human-gates", "triggers"]
+    difficulty: "intermediate"
+    why: "For a factory processing 200 candidates per run, which trigger design is consistent with automation as the primary goal?"
+
+  - id: "ch64-the-factory-blueprint-template-006"
+    front: "What three properties must a success criterion have to be well-formed?"
+    back: "Measurable (a number can be computed), specific (not 'fast' but '< 4 hours'), and verifiable (checkable without subjective judgment)."
+    tags: ["section-6", "success-criteria"]
+    difficulty: "basic"
+
+  - id: "ch64-the-factory-blueprint-template-007"
+    front: "What are the three status values for an Economic Participation Point in Section 7?"
+    back: "Designed (recorded, tracking planned), Active (acquiring resources now), Future (possibility noted, no timeline)."
+    tags: ["section-7", "economic-participation", "status"]
+    difficulty: "basic"
+
+  - id: "ch64-the-factory-blueprint-template-008"
+    front: "Section 6 (Success Criteria) does not map to any of the six decomposition steps. Why does the template add it?"
+    back: "The decomposition method specifies what the factory does. Success criteria specify how you know it works. Without measurable outcomes, a factory can be 'complete' and still fail its purpose."
+    tags: ["section-6", "success-criteria", "template-design"]
+    difficulty: "intermediate"
+    why: "What happens to a factory that ships without success criteria when a stakeholder asks 'is it working?'"

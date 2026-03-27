@@ -1,0 +1,58 @@
+deck:
+  id: "ch68-the-simulation-protocol"
+  title: "The Simulation Protocol"
+  description: "The three-step method for testing agent skills in conversation: design, run, evaluate, and the fix-and-retest loop."
+  tags: ["simulation-protocol", "scenario-design", "evaluation", "fix-retest"]
+  version: 1
+
+cards:
+  - id: "ch68-the-simulation-protocol-001"
+    front: "What are the three steps of the simulation protocol?"
+    back: "1. Design scenarios\n2. Run simulation\n3. Evaluate output\nThen loop: fix the skill and retest if output fails criteria."
+    tags: ["simulation-protocol", "steps"]
+    difficulty: "basic"
+
+  - id: "ch68-the-simulation-protocol-002"
+    front: "What makes a scenario good rather than vague?"
+    back: "Enough concrete detail that the skill's handling of specifics becomes visible. A vague input produces a vague output that reveals no failure modes."
+    tags: ["scenario-design", "specificity"]
+    difficulty: "basic"
+
+  - id: "ch68-the-simulation-protocol-003"
+    front: "When running a simulation, why must you paste the full skill text rather than a summary?"
+    back: "The skill text is what the agent reads in production. Testing a summary tests different instructions than the agent will actually use."
+    tags: ["simulation-run", "skill-text"]
+    difficulty: "basic"
+
+  - id: "ch68-the-simulation-protocol-004"
+    front: "James's Resume Screener scored the career changer 34 out of 100. What hidden assumption in the skill caused this?"
+    back: "The instructions defined 'technical experience' narrowly as engineering roles. Consulting experience scored zero on technical and experience dimensions, even though it includes transferable analytical skills."
+    tags: ["hidden-assumptions", "career-changer", "resume-screener"]
+    difficulty: "intermediate"
+    why: "Why would a hiring manager reach the opposite conclusion from the skill's score for the same candidate?"
+
+  - id: "ch68-the-simulation-protocol-005"
+    front: "What does the evaluation table in Step 3 contain for each criterion?"
+    back: "Expected output, actual output, and pass/fail status. The comparison makes the gap between intended and actual behavior visible and actionable."
+    tags: ["evaluation", "criteria-table"]
+    difficulty: "basic"
+
+  - id: "ch68-the-simulation-protocol-006"
+    front: "Why did the overqualified candidate (15 years, VP title) receive a score of 91 with no flags?"
+    back: "The skill had no instructions for anomaly detection. Fifteen years of experience scored high across every dimension without any logic to flag that the candidate's level mismatches the role."
+    tags: ["anomaly-detection", "overqualified", "skill-gap"]
+    difficulty: "intermediate"
+    why: "What decision would a hiring manager make differently if the skill had flagged this as an unusual situation?"
+
+  - id: "ch68-the-simulation-protocol-007"
+    front: "Where does the real learning in the simulation protocol happen?"
+    back: "In the evaluation step, when you compare expected against actual output. The gap reveals what the skill cannot handle yet."
+    tags: ["evaluation", "learning"]
+    difficulty: "basic"
+
+  - id: "ch68-the-simulation-protocol-008"
+    front: "After James ran the career changer scenario 60 seconds of simulation revealed more about the skill's weaknesses than what method revealed less in an hour?"
+    back: "Reading the skill text. Simulation tests execution; reading tests your understanding of the instructions. They answer different questions."
+    tags: ["simulation-vs-reading", "validation"]
+    difficulty: "intermediate"
+    why: "If reading and simulation answered the same question, when would you ever need to run a skill before shipping it?"

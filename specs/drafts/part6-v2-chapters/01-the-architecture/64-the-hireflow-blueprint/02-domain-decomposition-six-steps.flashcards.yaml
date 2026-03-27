@@ -1,0 +1,72 @@
+deck:
+  id: "ch64-domain-decomposition-six-steps"
+  title: "The Six-Step Domain Decomposition"
+  description: "A systematic method for converting a business wish into a factory specification with defined roles, contracts, gates, and economic points."
+  tags: ["domain-decomposition", "six-steps", "factory-blueprint", "hireflow"]
+  version: 1
+
+cards:
+  - id: "ch64-domain-decomposition-six-steps-001"
+    front: "What are the six steps of Domain Decomposition in order?"
+    back: "1. Name the Domain Workflow\n2. Identify the Stages\n3. Define Role Specifications\n4. Map Data Contracts\n5. Place Human Review Gates\n6. Add Economic Participation Points"
+    tags: ["six-steps", "recall"]
+    difficulty: "basic"
+
+  - id: "ch64-domain-decomposition-six-steps-002"
+    front: "What is the required sentence structure for Step 1: Name the Domain Workflow?"
+    back: "From [input] to [output] through [stages]."
+    tags: ["step-1", "workflow-statement"]
+    difficulty: "basic"
+
+  - id: "ch64-domain-decomposition-six-steps-003"
+    front: "Step 2 says to 'identify the stages.' Emma's actual instruction is harder than it sounds. What is the real challenge of Step 2?"
+    back: "Drawing precise boundaries: defining what each stage does NOT do. Naming stages is easy; specifying their limits prevents the three boundary failures: duplication, omission, and inconsistency."
+    tags: ["step-2", "boundaries"]
+    difficulty: "intermediate"
+    why: "What breaks when two adjacent FTEs both believe they are responsible for validating incomplete CVs?"
+
+  - id: "ch64-domain-decomposition-six-steps-004"
+    front: "What are the five components of a Role Specification (Step 3)?"
+    back: "Name, Responsibility, Input Contract, Output Contract, Verification."
+    tags: ["step-3", "role-specification"]
+    difficulty: "basic"
+
+  - id: "ch64-domain-decomposition-six-steps-005"
+    front: "What does a data contract include that a type annotation alone does not?"
+    back: "Range constraints, required-field rules, and validation criteria. A type says what shape data has; a contract says what the next pipeline stage can rely on and what it must reject."
+    tags: ["step-4", "data-contracts", "type-annotations"]
+    difficulty: "intermediate"
+
+  - id: "ch64-domain-decomposition-six-steps-006"
+    front: "James wants a human gate after every pipeline stage for maximum safety. Why is this the wrong design?"
+    back: "A gate at every stage makes throughput collapse for high volume. Human gates should protect high-leverage decisions, not every data handoff. Most handoffs should flow automatically."
+    tags: ["step-5", "human-gates", "design-tradeoffs"]
+    difficulty: "intermediate"
+    why: "A factory processes 200 candidates per run. How many hours of human review would 'gate after every stage' require, and what does that do to the factory's value proposition?"
+
+  - id: "ch64-domain-decomposition-six-steps-007"
+    front: "In HireFlow, why is the human gate placed after the Job Spec Writer, not after the Resume Screener?"
+    back: "A bad spec poisons all downstream evaluations; all 200 candidate scores become wrong. A bad screening score affects one candidate. Gates protect high-leverage decisions."
+    tags: ["step-5", "human-gates", "hireflow"]
+    difficulty: "intermediate"
+    why: "If you could only place one human gate in the entire HireFlow pipeline, where would you put it and why?"
+
+  - id: "ch64-domain-decomposition-six-steps-008"
+    front: "Why record economic participation points (Step 6) when the factory acquires no resources today?"
+    back: "Adding a participation point later requires restructuring data contracts at that location. Recording it now costs one blueprint line; retrofitting costs an architectural rewrite."
+    tags: ["step-6", "economic-participation"]
+    difficulty: "intermediate"
+    why: "What is the analogy James offers for running conduit before knowing where every outlet goes, and why does it apply here?"
+
+  - id: "ch64-domain-decomposition-six-steps-009"
+    front: "Which three steps define WHAT the factory does, and which three define HOW it stays correct and future-ready?"
+    back: "Steps 1-3 define what: workflow, stages, role specs. Steps 4-6 define how: data contracts, human gates, economic points."
+    tags: ["six-steps", "structure"]
+    difficulty: "basic"
+
+  - id: "ch64-domain-decomposition-six-steps-010"
+    front: "A data contract for the Resume Screener specifies `score: int`. Emma says this will cause a production bug. What is the failure mode?"
+    back: "Without a range constraint, a score of 150 is technically valid. The downstream FTE accepts it, generates questions for a candidate with an impossible score, and the bug surfaces three stages later."
+    tags: ["step-4", "data-contracts", "failure-modes"]
+    difficulty: "advanced"
+    why: "Why is it harder to debug a data contract failure three stages downstream than at the point of origin?"

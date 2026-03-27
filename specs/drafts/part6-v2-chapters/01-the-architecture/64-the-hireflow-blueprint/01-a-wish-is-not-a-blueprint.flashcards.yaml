@@ -1,0 +1,59 @@
+deck:
+  id: "ch64-a-wish-is-not-a-blueprint"
+  title: "A Wish Is Not a Blueprint"
+  description: "Why a vague description is not enough to build an agent factory, and what a real blueprint requires."
+  tags: ["blueprint", "specification", "agent-factory", "hireflow"]
+  version: 1
+
+cards:
+  - id: "ch64-a-wish-is-not-a-blueprint-001"
+    front: "What is the core difference between a wish and a Factory Blueprint?"
+    back: "A blueprint specifies contracts, verification, failure modes, and success criteria. A wish names the goal without defining how it works."
+    tags: ["blueprint", "wish", "definition"]
+    difficulty: "basic"
+
+  - id: "ch64-a-wish-is-not-a-blueprint-002"
+    front: "Why do agents need blueprints more than human teams do?"
+    back: "Humans fill specification gaps with judgment. Agents fill them with nothing. There is only the specification: if something is not written, the agent does not do it."
+    tags: ["specification", "agents", "judgment"]
+    difficulty: "intermediate"
+    why: "What specific failure would a hiring manager see if the Resume Screener's rubric changed but nobody updated the specification?"
+
+  - id: "ch64-a-wish-is-not-a-blueprint-003"
+    front: "Emma asks James three questions about HireFlow. What problem does each question expose?"
+    back: "Input format (what format does the Spec Writer receive?), score meaning (what does a 72 mean across different rubrics?), conflicting outputs (who resolves screener vs. summarizer disagreements?)."
+    tags: ["blueprint", "gap-analysis"]
+    difficulty: "intermediate"
+
+  - id: "ch64-a-wish-is-not-a-blueprint-004"
+    front: "A factory's specification says 'handle errors gracefully.' Why is this not a blueprint field?"
+    back: "It is still a wish. A specification must state the exact behavior: 'log error, skip candidate, include in pipeline report.' Without that, the agent interprets 'gracefully' differently on every run."
+    tags: ["specification", "failure-modes"]
+    difficulty: "intermediate"
+    why: "If two agents interpret 'gracefully' differently across runs, what does this look like in production output?"
+
+  - id: "ch64-a-wish-is-not-a-blueprint-005"
+    front: "What makes a factory testable?"
+    back: "A blueprint with defined contracts. You can test: does output match the contract? Does the verification gate catch expected failures? Does the pipeline recover from a stage timeout?"
+    tags: ["testability", "blueprint", "verification"]
+    difficulty: "intermediate"
+    why: "Why is 'same pattern, new domain' not a sufficient blueprint for a new factory?"
+
+  - id: "ch64-a-wish-is-not-a-blueprint-006"
+    front: "James's supplier scoring used a fixed 100-point rubric. Emma explains why HireFlow's scoring is different. What is the key distinction?"
+    back: "HireFlow's rubric changes with every job posting. A 72 on a sales role rubric (communication 30%) means something different from a 72 on an engineering role rubric (communication 5%)."
+    tags: ["scoring", "rubric", "data-contracts"]
+    difficulty: "intermediate"
+
+  - id: "ch64-a-wish-is-not-a-blueprint-007"
+    front: "Where in the Agent Maturity Model does writing the Factory Blueprint fit?"
+    back: "End of Phase 1 (Explore). The blueprint proves you understand the domain well enough to specify it formally before Phase 2 begins."
+    tags: ["maturity-model", "blueprint", "phase-1"]
+    difficulty: "basic"
+
+  - id: "ch64-a-wish-is-not-a-blueprint-008"
+    front: "A team says: 'We ran this hiring process informally for years without a written blueprint. Why write one now that agents are doing it?' What is the correct response?"
+    back: "Informal processes depend on human judgment to fill gaps. Agents have no judgment. Every gap in the blueprint is a decision the agent makes on its own, producing unpredictable behavior at scale."
+    tags: ["specification", "agents", "systems-thinking"]
+    difficulty: "advanced"
+    why: "What category of failure becomes invisible when agents fill gaps silently instead of raising errors?"

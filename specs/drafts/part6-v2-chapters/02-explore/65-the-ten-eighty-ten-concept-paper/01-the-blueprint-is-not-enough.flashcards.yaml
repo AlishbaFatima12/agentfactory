@@ -1,0 +1,47 @@
+deck:
+  id: "ch65-the-blueprint-is-not-enough"
+  title: "The Blueprint Is Not Enough"
+  description: "Why a Factory Blueprint is not a validation artifact, and what the Concept Paper adds before implementation begins."
+  tags: ["concept-paper", "factory-blueprint", "validation", "explore-phase"]
+  version: 1
+
+cards:
+  - id: "ch65-the-blueprint-is-not-enough-001"
+    front: "What question does a Factory Blueprint answer, and what question does a Concept Paper answer?"
+    back: "Blueprint: what does the factory do and how do the parts connect? Concept Paper: should this factory exist in this form for this domain?"
+    tags: ["blueprint", "concept-paper", "definition"]
+    difficulty: "basic"
+
+  - id: "ch65-the-blueprint-is-not-enough-002"
+    front: "James's Resume Screener used binary qualification matching. Why is this a dangerous assumption for technical hiring?"
+    back: "Technical roles require spectrum matching (experienced vs. expert vs. exceptional). A binary model scores all partially-qualified candidates identically, making the shortlist unreliable for nuanced roles."
+    tags: ["assumptions", "scoring-model", "domain-mismatch"]
+    difficulty: "intermediate"
+    why: "What hiring decision would go wrong first if the scoring model produces a ranked list that collapses distinctions between candidates?"
+
+  - id: "ch65-the-blueprint-is-not-enough-003"
+    front: "Why does a scoring model error in the Resume Screener force rebuilding ALL downstream components?"
+    back: "The Resume Screener's output is the Candidate Summarizer's input contract. Changing the output format breaks the contract, which invalidates the Summarizer's logic and the orchestrator's pipeline. Contracts cascade."
+    tags: ["cascade-risk", "data-contracts", "architecture"]
+    difficulty: "intermediate"
+    why: "At what point in the build would this cascade first become visible, and how many chapters of work would be at risk?"
+
+  - id: "ch65-the-blueprint-is-not-enough-004"
+    front: "Why is a blueprint valid for the builder's experience but not necessarily valid for the target domain?"
+    back: "A blueprint encodes the builder's mental model of the domain. If that model was formed in a different context (operations hiring vs. technical hiring), it carries implicit assumptions that may not hold in the actual deployment domain."
+    tags: ["assumptions", "domain-knowledge", "validation"]
+    difficulty: "intermediate"
+    why: "How would you detect which blueprint assumptions are domain-specific versus genuinely universal before writing code?"
+
+  - id: "ch65-the-blueprint-is-not-enough-005"
+    front: "What does Emma's logistics routing story demonstrate about the cost of skipping concept paper validation?"
+    back: "A correct architecture for the tested corridors collapsed on first contact with a different client context. Twenty minutes of concept paper research would have caught the edge case that cost six weeks of rework."
+    tags: ["validation", "cost-of-skipping", "edge-cases"]
+    difficulty: "basic"
+
+  - id: "ch65-the-blueprint-is-not-enough-006"
+    front: "James plans to fix invalid assumptions post-build: 'I'll refactor when I see the results.' What is wrong with this plan?"
+    back: "Refactoring one assumption changes an output contract. Changed output contracts invalidate all downstream input contracts. The refactor is not local; it cascades through every component built on that contract."
+    tags: ["cascade-risk", "refactoring", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "What is the minimum number of components that must be rebuilt when a data contract changes in a four-FTE pipeline?"

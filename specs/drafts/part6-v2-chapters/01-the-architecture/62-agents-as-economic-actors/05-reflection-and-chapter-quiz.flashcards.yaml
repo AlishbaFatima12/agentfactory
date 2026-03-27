@@ -1,0 +1,48 @@
+deck:
+  id: "ch62-reflection-and-chapter-quiz"
+  title: "Reflection and Chapter Quiz"
+  description: "Synthesizing the economic actors framework and the three-frame architecture across Chapters 61-63."
+  tags: ["three-frames", "synthesis", "economic-actors", "resource-manager"]
+  version: 1
+
+cards:
+  - id: "ch62-reflection-and-chapter-quiz-001"
+    front: "What question does each of the three frames answer about an agent factory?"
+    back: "Two-Layered Model (Ch 61): Who governs? Economic Actors (Ch 62): What infrastructure to build? Agent Maturity Model (Ch 63): What sequence to follow?"
+    tags: ["three-frames", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-reflection-and-chapter-quiz-002"
+    front: "Why does Chapter 62 appear before Chapter 63 in the book's sequence?"
+    back: "The decision to include resource tracking infrastructure must be made at the foundation, before the maturity model determines the development sequence. Economic infrastructure is architectural, not developmental."
+    tags: ["three-frames", "architecture"]
+    difficulty: "intermediate"
+    why: "What would happen if a reader implemented the five maturity phases from Ch 63 first, then tried to add economic infrastructure afterward?"
+
+  - id: "ch62-reflection-and-chapter-quiz-003"
+    front: "James notes he made architectural decisions affecting Chapters 62-90 without writing a single line of code. Why is this the expected outcome for foundational design work?"
+    back: "Foundational decisions define the constraints all later implementation must work within. Code is the expression of architectural decisions already made; changing foundations after the code exists requires changing all the code too."
+    tags: ["architecture", "foundational-decisions"]
+    difficulty: "intermediate"
+    why: "Which specific chapters depend on the budget tracking infrastructure decided in Ch 62?"
+
+  - id: "ch62-reflection-and-chapter-quiz-004"
+    front: "How does the three-frame architecture appear concretely in Chapter 64's Factory Blueprint?"
+    back: "The Factory Blueprint template includes economic participation points as an explicit design field, making budget infrastructure decisions visible architectural entries rather than implementation afterthoughts."
+    tags: ["three-frames", "factory-blueprint"]
+    difficulty: "intermediate"
+    why: "What would be missing from the Ch 64 blueprint if economic participation had been treated as an implementation detail rather than a design decision?"
+
+  - id: "ch62-reflection-and-chapter-quiz-005"
+    front: "The Resource Manager starts in pass-through mode. What does this mean functionally, and why does it matter strategically?"
+    back: "Pass-through mode means it behaves identically to direct human allocation: no autonomous sourcing, no policy evaluation. Strategically, it means self-provisioning can be enabled with a configuration change rather than a system rewrite when the factory is ready."
+    tags: ["resource-manager", "self-provisioning"]
+    difficulty: "intermediate"
+    why: "How does pass-through mode reduce the risk of adding the Resource Manager before it is actively needed?"
+
+  - id: "ch62-reflection-and-chapter-quiz-006"
+    front: "A team argues the three frames are ranked by importance and the Two-Layered Model matters most. Why is this framing incorrect?"
+    back: "The three frames are complementary lenses that answer different questions. No frame is sufficient alone: governance structure without economic infrastructure leaves the factory unable to handle real-world variation; both without a development sequence produce a factory built in the wrong order."
+    tags: ["three-frames", "architecture"]
+    difficulty: "advanced"
+    why: "What specific failure would occur in a factory that implemented the Two-Layered Model perfectly but skipped economic infrastructure design?"

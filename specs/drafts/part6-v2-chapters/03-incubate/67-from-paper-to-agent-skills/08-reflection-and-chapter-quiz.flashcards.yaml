@@ -1,0 +1,47 @@
+deck:
+  id: "ch67-reflection-and-chapter-quiz"
+  title: "Reflection and Chapter Quiz"
+  description: "Consolidation of Chapter 67: the transformation method, specificity as reliability, and pipeline thinking as a design discipline."
+  tags: ["transformation-method", "specificity", "pipeline-thinking", "chapter-review"]
+  version: 1
+
+cards:
+  - id: "ch67-reflection-and-chapter-quiz-001"
+    front: "What are the four HireFlow FTE skills produced in Chapter 67, and what does each output?"
+    back: "Job Spec Writer (structured job description + scoring rubric), Resume Screener (per-dimension scores + gap analysis), Interview Q Generator (targeted questions + scoring criteria), Candidate Summarizer (committee brief + recommendation)."
+    tags: ["hireflow-ftes", "pipeline", "incubate-phase"]
+    difficulty: "basic"
+
+  - id: "ch67-reflection-and-chapter-quiz-002"
+    front: "Why does the chapter call specificity 'the difference between a skill that works sometimes and a skill that works every time'?"
+    back: "Vague instructions (score fairly, handle edge cases well) produce variable output because agents interpret them differently each run. Specific thresholds and calibration anchors produce consistent output because agents have no room for interpretation."
+    tags: ["specificity", "reliability", "skill-quality"]
+    difficulty: "basic"
+
+  - id: "ch67-reflection-and-chapter-quiz-003"
+    front: "James is writing the Interview Question Generator and realizes the Resume Screener's output is missing a field he needs. Should he accept the limitation or modify the Resume Screener?"
+    back: "Modify the Resume Screener. Pipeline thinking means designing each skill's output to serve the next skill's input. Accepting a missing field means building a workaround that compounds with every downstream FTE."
+    tags: ["pipeline-thinking", "data-contracts", "inter-fte"]
+    difficulty: "intermediate"
+    why: "At what point in the project does modifying an upstream skill become expensive? Before or after MCP integration?"
+
+  - id: "ch67-reflection-and-chapter-quiz-004"
+    front: "Why does simulation (Chapter 68) precede MCP integration (Chapter 69) in the Incubate phase sequence?"
+    back: "Simulation validates intelligence before production infrastructure is built. A skill gap found during simulation costs minutes of SKILL.md editing. The same gap found after MCP server, database, and API construction costs hours of rework."
+    tags: ["incubate-phase", "simulation", "mcp-integration", "build-sequence"]
+    difficulty: "intermediate"
+    why: "Name a specific type of skill gap that would be invisible during per-skill testing but visible only during full simulation across diverse inputs."
+
+  - id: "ch67-reflection-and-chapter-quiz-005"
+    front: "Across Lessons 4-7, guidance decreases: full walkthrough, extract provided, hints available, no scaffolding. What does this progression demonstrate about skill acquisition?"
+    back: "The transformation method becomes internalized through application with decreasing support. By Lesson 7, the student applies it without instructions. The method transfers to new domains, not just HireFlow."
+    tags: ["graduated-independence", "transformation-method", "skill-acquisition"]
+    difficulty: "intermediate"
+    why: "What would be lost if the chapter provided full scaffolding for all four FTE lessons rather than decreasing it progressively?"
+
+  - id: "ch67-reflection-and-chapter-quiz-006"
+    front: "The transformation method is described as mechanical rather than creative. What does this mean for how it should be applied?"
+    back: "It requires discipline (careful reading, systematic extraction, explicit encoding), not creativity. The value is thoroughness: finding all decision points, writing specific thresholds, mapping everything to the right component."
+    tags: ["transformation-method", "discipline"]
+    difficulty: "advanced"
+    why: "What specific failure mode results from treating the method as creative (adding interesting rules) rather than mechanical (extracting all rules that exist in the concept paper)?"

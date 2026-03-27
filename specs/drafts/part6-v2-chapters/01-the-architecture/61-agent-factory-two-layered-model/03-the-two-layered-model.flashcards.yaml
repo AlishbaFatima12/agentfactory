@@ -1,0 +1,60 @@
+deck:
+  id: "ch61-the-two-layered-model"
+  title: "The Two-Layered Model"
+  description: "Factory Layer and Edge Layer: their characteristics, failure modes when used alone, and why both are necessary for complete agent architecture."
+  tags: ["two-layered-model", "factory-layer", "edge-layer", "identic-ai", "governance"]
+  version: 1
+
+cards:
+  - id: "ch61-the-two-layered-model-001"
+    front: "What are the two layers in the Two-Layered Model?"
+    back: "Factory Layer (organizational AI workers under governance) and Edge Layer (personal AI agents under individual governance)."
+    tags: ["two-layered-model", "definition"]
+    difficulty: "basic"
+
+  - id: "ch61-the-two-layered-model-002"
+    front: "Name the five characteristics of a Factory Layer agent."
+    back: "1. Organizational ownership\n2. Defined contracts\n3. Verification gates\n4. Audit trails\n5. Governed access"
+    tags: ["factory-layer", "characteristics"]
+    difficulty: "basic"
+
+  - id: "ch61-the-two-layered-model-003"
+    front: "A hiring factory has only the Factory Layer. A hiring manager asks a follow-up about a candidate's distributed systems depth. What fails and why?"
+    back: "The Candidate Summarizer produced a static contracted brief and stopped. It cannot converse. The hiring manager has no personal agent to interpret factory output and respond to ad-hoc questions. The Factory Layer produced data; humans still need a conversational interface."
+    tags: ["factory-layer", "edge-layer", "failure-mode"]
+    difficulty: "intermediate"
+    why: "What is the functional difference between a dashboard and an Edge Layer agent?"
+
+  - id: "ch61-the-two-layered-model-004"
+    front: "Three hiring managers each use their own personal agent to screen candidates, with no Factory Layer. What goes wrong?"
+    back: "Each manager's agent screens differently, uses different criteria, and stores results in incompatible formats. The organization cannot compare or consolidate results. It is the spreadsheet reconciliation problem at AI speed."
+    tags: ["edge-layer", "failure-mode", "coordination"]
+    difficulty: "intermediate"
+    why: "Why does individual optimization undermine organizational consistency in hiring pipelines?"
+
+  - id: "ch61-the-two-layered-model-005"
+    front: "What is Identic AI?"
+    back: "AI that represents individual interests, amplifies individual capabilities, and operates under personal governance. It is where the Edge Layer lives."
+    tags: ["identic-ai", "edge-layer"]
+    difficulty: "basic"
+
+  - id: "ch61-the-two-layered-model-006"
+    front: "How does the Two-Layered Model apply to building HireFlow in Part 6?"
+    back: "Claude Code (your personal agent) is the Edge Layer tool used to construct HireFlow (the Factory Layer system). The builder is an Edge Layer agent; the product is a Factory Layer system. The recursion is intentional."
+    tags: ["two-layered-model", "hireflow", "recursion"]
+    difficulty: "intermediate"
+    why: "What does it tell you about the Edge Layer that it is capable of building Factory Layer infrastructure?"
+
+  - id: "ch61-the-two-layered-model-007"
+    front: "How do the Factory Layer and Edge Layer differ in their optimization targets?"
+    back: "Factory Layer optimizes for consistency, reliability, and scale across the organization. Edge Layer optimizes for flexibility, personalization, and speed for the individual."
+    tags: ["two-layered-model", "optimization"]
+    difficulty: "intermediate"
+    why: "When does Factory Layer rigidity create a problem that only the Edge Layer can solve?"
+
+  - id: "ch61-the-two-layered-model-008"
+    front: "Why is a dashboard not a substitute for an Edge Layer agent?"
+    back: "A dashboard shows data. An Edge Layer agent interprets data, adapts to the individual's follow-up questions, and presents information in the way that specific human finds useful."
+    tags: ["edge-layer", "interface"]
+    difficulty: "intermediate"
+    why: "What category of user questions does a dashboard fail to handle that an Edge Layer agent handles naturally?"

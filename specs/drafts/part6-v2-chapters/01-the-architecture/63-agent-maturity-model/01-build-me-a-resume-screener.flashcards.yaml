@@ -1,0 +1,53 @@
+deck:
+  id: "ch63-build-me-a-resume-screener"
+  title: "Build Me a Resume Screener"
+  description: "Why domain-ignorant agents fail and what the dependency chain from understanding to construction requires."
+  tags: ["domain-ignorant-agent", "premature-specialist", "agent-maturity"]
+  version: 1
+
+cards:
+  - id: "ch63-build-me-a-resume-screener-001"
+    front: "What is a domain-ignorant agent?"
+    back: "An agent that produces syntactically valid output while lacking the domain knowledge to make that output meaningful."
+    tags: ["domain-ignorant-agent", "definition"]
+    difficulty: "basic"
+
+  - id: "ch63-build-me-a-resume-screener-002"
+    front: "James's resume screener passes a type checker and produces scores. Why is it still broken?"
+    back: "It has no career gap handling, no distinction between hard and soft requirements, and no structured job spec schema. Syntax is correct; domain logic is absent."
+    tags: ["domain-ignorant-agent", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "What would a senior recruiter notice within thirty seconds of reviewing this agent's output?"
+
+  - id: "ch63-build-me-a-resume-screener-003"
+    front: "What is a premature specialist?"
+    back: "An agent built before the domain is understood, reflecting the builder's knowledge at prompting time rather than validated domain expertise."
+    tags: ["premature-specialist", "definition"]
+    difficulty: "basic"
+
+  - id: "ch63-build-me-a-resume-screener-004"
+    front: "What is the dependency chain that must precede building any specialist agent?"
+    back: "1. Understand the domain\n2. Encode understanding into specifications\n3. Validate specifications against real constraints\n4. Only then build the specialist"
+    tags: ["dependency-chain", "process"]
+    difficulty: "basic"
+
+  - id: "ch63-build-me-a-resume-screener-005"
+    front: "Why is 'the code runs' the most dangerous form of failure in agent factory development?"
+    back: "It looks like success while hiding domain gaps. A hiring manager would receive scores that feel authoritative but reflect only keyword matching, not recruitment expertise."
+    tags: ["domain-ignorant-agent", "failure-mode"]
+    difficulty: "intermediate"
+    why: "What organizational harm could a trusted-but-wrong scoring agent cause over 6 months of use?"
+
+  - id: "ch63-build-me-a-resume-screener-006"
+    front: "How does a resume screener's quality ceiling relate to its job description input?"
+    back: "A screener can only score against what a job description provides. A vague or missing job spec constrains the agent before its logic even runs."
+    tags: ["input-quality", "domain-knowledge"]
+    difficulty: "intermediate"
+    why: "Why does this make the Incubator phase responsible for validating inputs, not just agent behavior?"
+
+  - id: "ch63-build-me-a-resume-screener-007"
+    front: "How does James's resume screener failure differ from the chatbot army failure in Chapter 61?"
+    back: "Ch 61's failure was coordination: apps could not hand off to each other. This failure is different: a single agent coordinates fine but does not know what it should be computing."
+    tags: ["failure-modes", "comparison"]
+    difficulty: "advanced"
+    why: "What does having two distinct failure modes (coordination and domain knowledge) imply about what a factory needs to get right?"

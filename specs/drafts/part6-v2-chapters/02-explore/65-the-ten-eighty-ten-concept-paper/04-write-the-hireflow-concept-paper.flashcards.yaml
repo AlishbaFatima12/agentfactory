@@ -1,0 +1,53 @@
+deck:
+  id: "ch65-write-the-hireflow-concept-paper"
+  title: "Write the HireFlow Concept Paper"
+  description: "Applied exercise: the six-section template, FTE justification criteria in practice, and what three advisory board loops look like."
+  tags: ["concept-paper", "hireflow", "template", "advisory-board", "applied"]
+  version: 1
+
+cards:
+  - id: "ch65-write-the-hireflow-concept-paper-001"
+    front: "What are the six sections of the concept paper template?"
+    back: "1. Problem Statement 2. Proposed Solution 3. Domain Evidence 4. FTE Justification 5. Risk Assessment 6. Success Criteria"
+    tags: ["template", "six-sections", "definition"]
+    difficulty: "basic"
+
+  - id: "ch65-write-the-hireflow-concept-paper-002"
+    front: "Where does the content for Section 3 (Domain Evidence) come from?"
+    back: "The targeted research from the first 10%: findings that confirm blueprint assumptions, findings that revised them, and any unresolved gaps acknowledged honestly."
+    tags: ["domain-evidence", "section-3", "research"]
+    difficulty: "basic"
+
+  - id: "ch65-write-the-hireflow-concept-paper-003"
+    front: "The Interview Question Generator receives input from both the Resume Screener and the Job Spec Writer. Does it pass the FTE Justification criteria?"
+    back: "Yes. The synthesis of two input streams is the distinct expertise. No other FTE performs this specific combination. Distinct Input does not require a single source; it requires a source no adjacent FTE uses."
+    tags: ["fte-justification", "distinct-input", "interview-question-generator"]
+    difficulty: "intermediate"
+    why: "Why is 'combining two streams' a stronger justification for an FTE than receiving input from a single unique source?"
+
+  - id: "ch65-write-the-hireflow-concept-paper-004"
+    front: "What three criteria must each FTE pass in the FTE Justification section?"
+    back: "Distinct Input: receives data from a different source than adjacent FTEs. Distinct Expertise: requires a meaningfully different skill. Independent Failure: can fail without breaking an adjacent FTE."
+    tags: ["fte-justification", "three-criteria", "definition"]
+    difficulty: "basic"
+
+  - id: "ch65-write-the-hireflow-concept-paper-005"
+    front: "Loop 1 of the advisory board returned three issues: scoring weights unspecified, independence vs. gates contradiction, missing privacy section. What type is each, and what action does each require?"
+    back: "Scoring weights: substantive critique, revise Section 4. Independence vs. gates: substantive critique, clarify the distinction in the paper. Missing privacy section: missing section, add Section 5a."
+    tags: ["feedback-classification", "loop-1", "advisory-board"]
+    difficulty: "intermediate"
+    why: "Why does the independence-versus-gates issue require clarification rather than choosing one claim over the other?"
+
+  - id: "ch65-write-the-hireflow-concept-paper-006"
+    front: "After Loop 3, the Domain Challenger scores 9.6 and says 'Consider mentioning seasonal hiring volume spikes.' What should James do?"
+    back: "Stop iterating. The score exceeds 9.5 and the feedback is stylistic (nice-to-have, not a structural gap). The crystallization signal has been reached. Further revision would be procrastination."
+    tags: ["crystallization", "loop-3", "completion"]
+    difficulty: "intermediate"
+    why: "How would the answer change if the Gap Finder's Loop 3 feedback included 'No discussion of legal liability for discriminatory scoring outcomes'?"
+
+  - id: "ch65-write-the-hireflow-concept-paper-007"
+    front: "Why did the Logic Auditor catch the independence-versus-gates contradiction when James did not?"
+    back: "James held both claims in his head but never compared them directly. The Logic Auditor's specific mandate was to find contradictions between sections, so it compared claims across the whole paper. The builder's familiarity with the content creates a blind spot that structured review eliminates."
+    tags: ["logic-auditor", "blind-spots", "contradiction"]
+    difficulty: "intermediate"
+    why: "What process change would help a builder catch their own cross-section contradictions before submitting to the advisory board?"

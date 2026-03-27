@@ -1,0 +1,66 @@
+deck:
+  id: "ch66-the-mastery-gate-pattern"
+  title: "The Mastery Gate Pattern"
+  description: "The five-step formal pattern for verifying domain mastery before writing agent skills, including the threshold, scoring rubric, and why the gate sits between Explore and Incubate."
+  tags: ["domain-mastery-gate", "five-steps", "mastery-threshold", "blind-spot-inheritance"]
+  version: 1
+
+cards:
+  - id: "ch66-the-mastery-gate-pattern-001"
+    front: "What are the five steps of the Domain Mastery Gate pattern?"
+    back: "Generate. Take. Score. Remediate. Re-test."
+    tags: ["domain-mastery-gate", "five-steps"]
+    difficulty: "basic"
+
+  - id: "ch66-the-mastery-gate-pattern-002"
+    front: "Where does the Domain Mastery Gate sit in the Agent Maturity Model?"
+    back: "Between Explore (concept paper) and Incubate (skill writing). It verifies the principal's domain depth before domain knowledge gets encoded into agent skills."
+    tags: ["domain-mastery-gate", "agent-maturity-model"]
+    difficulty: "basic"
+
+  - id: "ch66-the-mastery-gate-pattern-003"
+    front: "What is the mastery threshold and why does it have both an overall and per-dimension floor?"
+    back: "85% overall, no single dimension below 70%. The per-dimension floor catches uneven preparation: a strong overall score could mask a critical gap in edge cases or judgment calls that would still produce blind spots."
+    tags: ["mastery-threshold", "scoring"]
+    difficulty: "intermediate"
+    why: "What specific agent failure would a 90% overall / 55% edge-case score predict?"
+
+  - id: "ch66-the-mastery-gate-pattern-004"
+    front: "Why must the Take step be completed without AI assistance?"
+    back: "The gate measures the principal's knowledge. AI assistance shifts the measurement to AI capabilities. The principal's blind spots stay hidden and get encoded into agent skills unchanged."
+    tags: ["domain-mastery-gate", "take-step"]
+    difficulty: "basic"
+
+  - id: "ch66-the-mastery-gate-pattern-005"
+    front: "Why does the Re-test step use new questions instead of repeating the original quiz?"
+    back: "Re-taking the original quiz after studying the answers measures memorization of those specific answers, not genuine domain understanding. New questions on the same gap areas verify that the underlying knowledge improved."
+    tags: ["domain-mastery-gate", "re-test"]
+    difficulty: "intermediate"
+    why: "How would you design a re-test that actually distinguishes memorized answers from genuine gap closure?"
+
+  - id: "ch66-the-mastery-gate-pattern-006"
+    front: "Why must remediation use primary sources rather than AI summaries?"
+    back: "AI summaries may gloss over the same nuances the student is trying to acquire. A summary gives you the shape of the law; the regulation itself gives you the teeth. Primary sources provide independent authority that does not depend on any AI model's training data."
+    tags: ["remediation", "primary-sources"]
+    difficulty: "intermediate"
+    why: "In what specific scenario would using an AI summary for remediation reproduce the exact gap you were trying to fix?"
+
+  - id: "ch66-the-mastery-gate-pattern-007"
+    front: "A builder's concept paper scores 9.6 but their mastery quiz scores 62%. Is this a contradiction?"
+    back: "No. The concept paper score measures document quality: structure, coherence, completeness of system design. The quiz score measures the author's depth. They test different things. A builder can design a clean system without being able to handle that system's hard cases."
+    tags: ["concept-paper", "mastery-threshold"]
+    difficulty: "intermediate"
+    why: "What would you expect to find in the agent skills if the builder proceeded to Chapter 67 without fixing the 62% quiz result?"
+
+  - id: "ch66-the-mastery-gate-pattern-008"
+    front: "What happens if a builder skips the gate and goes straight from concept paper to skill writing?"
+    back: "They write skills based on happy-path knowledge. Simulations look clean because test cases carry the same blind spots as the skills. Agent failures only surface with real data, when the builder lacks the knowledge to diagnose what went wrong."
+    tags: ["domain-mastery-gate", "anti-pattern"]
+    difficulty: "intermediate"
+    why: "Why is skipping the gate harder to detect than other quality shortcuts in the build process?"
+
+  - id: "ch66-the-mastery-gate-pattern-009"
+    front: "The gate is described as a habit, not a milestone. What triggers a new pass through the five steps after you have already passed it once?"
+    back: "Any domain extension, new industry vertical, regulatory change, or new FTE added to the factory. The original pass only certifies domain knowledge at the time it was taken."
+    tags: ["domain-mastery-gate", "recurring-check"]
+    difficulty: "basic"

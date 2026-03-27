@@ -1,0 +1,53 @@
+deck:
+  id: "ch67-skill-anatomy-for-agent-ftes"
+  title: "Skill Anatomy for Agent FTEs"
+  description: "The SKILL.md structure, execution vs. advisory distinction, and how inter-FTE data contracts make a pipeline work."
+  tags: ["skill-anatomy", "execution-skills", "advisory-skills", "data-contracts", "axiom-ii"]
+  version: 1
+
+cards:
+  - id: "ch67-skill-anatomy-for-agent-ftes-001"
+    front: "What two structural layers does a SKILL.md file contain?"
+    back: "YAML frontmatter (name and description fields) and a Markdown body with Persona, Questions, and Principles sections."
+    tags: ["skill-anatomy", "structure"]
+    difficulty: "basic"
+
+  - id: "ch67-skill-anatomy-for-agent-ftes-002"
+    front: "Why does the description field in a skill's YAML frontmatter act as the skill's contract with the orchestrator?"
+    back: "Claude reads the description to decide when to invoke the skill. A vague description causes missed use cases or wrong-context invocations."
+    tags: ["description-field", "orchestrator"]
+    difficulty: "basic"
+
+  - id: "ch67-skill-anatomy-for-agent-ftes-003"
+    front: "What is the functional difference between an advisory skill and an execution skill for HireFlow FTEs?"
+    back: "Advisory skills recommend outputs for human readers. Execution skills follow a numbered workflow, produce structured machine-readable output, and validate their results for downstream agent consumption."
+    tags: ["execution-skills", "advisory-skills"]
+    difficulty: "basic"
+
+  - id: "ch67-skill-anatomy-for-agent-ftes-004"
+    front: "James argues: 'We could use advisory skills and just tell them to always format output as JSON.' Emma says this has already made them execution skills. Why is Emma right?"
+    back: "Specifying exact JSON fields, scoring ranges, and validation rules IS an execution skill definition. Calling it advisory is just a label. The test is whether two agents produce identical output for identical input."
+    tags: ["execution-skills", "advisory-skills"]
+    difficulty: "intermediate"
+    why: "What specific failure would occur if the Resume Screener returned advisory prose instead of structured scores to the Interview Question Generator?"
+
+  - id: "ch67-skill-anatomy-for-agent-ftes-005"
+    front: "James calls Questions the 'pre-flight checklist' and Principles the 'emergency procedures.' What does each role mean for execution flow?"
+    back: "Questions analyze the input before the Persona workflow starts. Principles intervene when the workflow hits an edge case it was not designed for. Persona runs the main path; Questions and Principles bracket it."
+    tags: ["questions", "principles", "persona", "execution-flow"]
+    difficulty: "intermediate"
+    why: "What happens if the agent skips the Questions phase and goes directly to the Persona workflow?"
+
+  - id: "ch67-skill-anatomy-for-agent-ftes-006"
+    front: "What is an inter-FTE data contract, and what does a missing contract cause?"
+    back: "An agreement specifying what one skill outputs and what the next skill expects. A missing or mismatched contract causes silent pipeline failures: data flows through but downstream agents cannot process it."
+    tags: ["data-contracts", "pipeline", "inter-fte"]
+    difficulty: "intermediate"
+    why: "If the Job Spec Writer stops including the scoring rubric in its output, what is the first visible failure downstream?"
+
+  - id: "ch67-skill-anatomy-for-agent-ftes-007"
+    front: "Why are SKILL.md files written in Markdown rather than compiled code, and what does this enable?"
+    back: "Markdown files are human-readable and require no build step. Anyone can edit a skill, test it, observe the change, and iterate. Domain expertise becomes a living document, not a deployment artifact."
+    tags: ["axiom-ii", "markdown", "knowledge"]
+    difficulty: "intermediate"
+    why: "What type of change to a skill would be much harder if skills were compiled Python instead of Markdown?"

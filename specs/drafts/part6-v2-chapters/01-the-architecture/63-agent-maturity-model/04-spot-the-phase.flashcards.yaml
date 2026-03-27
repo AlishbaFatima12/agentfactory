@@ -1,0 +1,47 @@
+deck:
+  id: "ch63-spot-the-phase"
+  title: "Spot the Phase"
+  description: "Applying the Five-Phase Map to real scenarios: identifying phase, agent role, and whether phases were skipped."
+  tags: ["phase-identification", "applied-exercise", "agent-maturity"]
+  version: 1
+
+cards:
+  - id: "ch63-spot-the-phase-001"
+    front: "A legal contract review team has a concept paper scored 9.2, 9.4, and 9.1 by three evaluators. What phase are they in and what must happen next?"
+    back: "Phase 1 (Explore). They have not crossed the 9.5 threshold (average 9.23). They must iterate on the concept paper, close specific gaps, and resubmit for evaluation."
+    tags: ["phase-1-explore", "threshold"]
+    difficulty: "intermediate"
+    why: "Why is 9.23 insufficient even though it feels close, given that Phase 2 builds on whatever gaps Phase 1 leaves?"
+
+  - id: "ch63-spot-the-phase-002"
+    front: "A startup has a concept paper at 9.7, four extracted skills, and is building MCP servers while testing the Ticket Classifier at 92% simulation accuracy. What phase are they in?"
+    back: "Phase 2 (Incubate). The concept paper crystallized (9.7), skills are extracted and being validated through simulation, and MCP server construction is underway."
+    tags: ["phase-2-incubate", "on-track"]
+    difficulty: "basic"
+
+  - id: "ch63-spot-the-phase-003"
+    front: "A logistics team builds an inventory forecasting agent over one weekend and deploys it to staging. The purchasing department finds it ignores seasonal patterns and lead times. What went wrong?"
+    back: "The team jumped to Phase 3 without completing Phases 1 or 2. No concept paper means no validated domain knowledge about seasonal adjustment, promotions, or supplier constraints."
+    tags: ["skipped-phases", "anti-pattern", "domain-ignorant-agent"]
+    difficulty: "intermediate"
+    why: "Why is the fix 'go back to Phase 1' rather than 'patch the agent's code to handle seasonal patterns'?"
+
+  - id: "ch63-spot-the-phase-004"
+    front: "A team has four API calls with system prompts and calls it a 'content factory.' Using the Maturity Model, what phase are they actually in?"
+    back: "Phase 0: they have not started the maturity journey. No concept paper, no agent skills, no simulation, no factory governance. This is a chatbot army with API calls."
+    tags: ["chatbot-army", "skipped-phases", "phase-0"]
+    difficulty: "intermediate"
+    why: "What specific outputs from Phases 1 and 2 would each of the four 'agents' require to stop being system prompts and become specialists?"
+
+  - id: "ch63-spot-the-phase-005"
+    front: "An accounting team's Statement Analyzer skill produces different risk assessments for the same document 30% of the time. Should they advance to Phase 3?"
+    back: "No. A 30% inconsistency rate means the skill is underspecified; it lacks explicit criteria for ambiguous cases. Refine the skill in Phase 2 before building a specialist."
+    tags: ["phase-2-incubate", "simulation", "decision-point"]
+    difficulty: "intermediate"
+    why: "What kind of audit harm could a 30% inconsistent risk-scoring specialist cause in a real accounting firm?"
+
+  - id: "ch63-spot-the-phase-006"
+    front: "A healthcare team has a 9.6 concept paper, three validated skills with 200 test cases each, MCP servers for appointments and patient records, and is now implementing the Triage Classifier with Claude Agents SDK. What phase are they in?"
+    back: "Phase 3 (Build Specialist). They completed Phase 1 and Phase 2 thoroughly and are now constructing production-grade Digital FTEs."
+    tags: ["phase-3-build-specialist", "on-track"]
+    difficulty: "basic"

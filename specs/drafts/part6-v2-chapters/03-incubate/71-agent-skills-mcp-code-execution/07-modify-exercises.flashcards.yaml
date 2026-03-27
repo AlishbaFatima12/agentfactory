@@ -1,0 +1,68 @@
+deck:
+  id: "ch71-modify-exercises"
+  title: "Modify Exercises: Extend the Integration"
+  description: "Score normalization, retry with backoff, and multi-tool orchestration for the Interview Question Generator."
+  tags: ["score-normalization", "retry-backoff", "multi-tool", "graceful-degradation", "interview-question-generator"]
+  version: 1
+
+cards:
+  - id: "ch71-modify-exercises-001"
+    front: "Why does the isError guard not protect against a score_candidate tool that returns 'error: model not loaded' instead of a valid float?"
+    back: "The guard checks the MCP protocol layer: did the call succeed or fail? If the tool returns isError=False with content, the guard passes. Content validation (checking that the content is a parseable float) is a separate step not covered by the guard."
+    tags: ["score-normalization", "guard-pattern"]
+    difficulty: "intermediate"
+    why: "What would float() do when called on the string 'error: model not loaded'?"
+
+  - id: "ch71-modify-exercises-002"
+    front: "What is the correct formula for normalizing a score_candidate float result (0.0 to 1.0) to an integer on a 0-100 scale?"
+    back: "round(float(score_result.content[0].text) * 100)"
+    tags: ["score-normalization"]
+    difficulty: "basic"
+
+  - id: "ch71-modify-exercises-003"
+    front: "In the retry helper, why does asyncio.sleep only run between attempts and not after the final failure?"
+    back: "The sleep prevents overwhelming a struggling server between retries. After the final failure, the function returns immediately; there is no next attempt to space out."
+    tags: ["retry-backoff"]
+    difficulty: "intermediate"
+    why: "What would happen to the caller's perceived latency if you added a sleep after the final failure?"
+
+  - id: "ch71-modify-exercises-004"
+    front: "What is exponential backoff and why is it preferred over a fixed retry delay in production?"
+    back: "Exponential backoff multiplies the delay between retries (1s, 2s, 4s, 8s). A fixed delay may still overwhelm a struggling server if retries come in rapidly. Exponential backoff gives the server progressively more recovery time."
+    tags: ["retry-backoff", "production-patterns"]
+    difficulty: "intermediate"
+    why: "How would a server under heavy load respond to 50 simultaneous clients each retrying on a fixed 1-second interval?"
+
+  - id: "ch71-modify-exercises-005"
+    front: "James writes generate_interview_questions without guards on get_template and parse_cv. Emma identifies it as 'the same bug from Lesson 4.' What makes it the same?"
+    back: "Any tool call without an isError guard has the same failure mode: if the tool fails and content is empty, accessing content[0].text raises IndexError. The pattern is identical regardless of which tool is called."
+    tags: ["tool-call-guard", "multi-tool"]
+    difficulty: "intermediate"
+    why: "What habit prevents this bug from recurring every time a new tool call is added to a skill?"
+
+  - id: "ch71-modify-exercises-006"
+    front: "The Interview Question Generator focuses questions on competency gaps rather than confirmed strengths. Why?"
+    back: "A candidate who lists 'Python expert' on their CV does not need a Python fundamentals question. Questions should probe the areas where the candidate has no demonstrated skill, because those gaps carry the most information for a hiring decision."
+    tags: ["interview-question-generator", "gap-analysis"]
+    difficulty: "basic"
+
+  - id: "ch71-modify-exercises-007"
+    front: "Why does Emma's generate_interview_questions return template_data even when parse_cv fails?"
+    back: "Graceful degradation: return everything collected before the failure. The hiring manager can use the template to prepare generic questions. Discarding all data when one step fails forces the caller to start over from scratch."
+    tags: ["graceful-degradation", "partial-results"]
+    difficulty: "intermediate"
+    why: "What is the operational cost to the hiring team when a multi-step skill returns nothing on partial failure?"
+
+  - id: "ch71-modify-exercises-008"
+    front: "If the retry helper is extracted as a separate function, what advantage does that create for future skill development?"
+    back: "Any tool call in any skill can use it without duplicating the retry logic. The retry behavior is defined once and tested once; skills use it as a building block."
+    tags: ["retry-backoff", "code-reuse"]
+    difficulty: "basic"
+    why: "What maintenance problem would occur if retry logic were inlined in each tool call instead of extracted?"
+
+  - id: "ch71-modify-exercises-009"
+    front: "Modification C wires get_template and parse_cv in sequence. Could these two calls run in parallel? Should they?"
+    back: "They could run in parallel because neither depends on the other's result. But the gap analysis (step 3) requires both results to be complete before comparing template areas against candidate skills. Parallelizing the calls would save latency; the chapter uses sequential calls for clarity."
+    tags: ["multi-tool", "parallelism"]
+    difficulty: "advanced"
+    why: "At what skill complexity level does parallelizing independent tool calls become worth the added code complexity?"

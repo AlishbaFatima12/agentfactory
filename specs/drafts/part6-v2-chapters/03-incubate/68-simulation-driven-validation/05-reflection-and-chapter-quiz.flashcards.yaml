@@ -1,0 +1,45 @@
+deck:
+  id: "ch68-reflection-and-chapter-quiz"
+  title: "Reflection and Chapter Quiz"
+  description: "How simulation-driven validation connects to crystallization and the Incubate-to-Build Specialist phase transition."
+  tags: ["crystallization", "phase-transition", "maturity-model", "validated-skills"]
+  version: 1
+
+cards:
+  - id: "ch68-reflection-and-chapter-quiz-001"
+    front: "Before simulation, a skill is a hypothesis. After passing simulation, what has it become?"
+    back: "A validated specification with documented evidence of correct behavior across a range of inputs."
+    tags: ["simulation", "validated-specification"]
+    difficulty: "basic"
+
+  - id: "ch68-reflection-and-chapter-quiz-002"
+    front: "How does simulation-driven validation provide evidence that crystallization has occurred?"
+    back: "When skills consistently pass across all three scenario categories, domain knowledge has solidified from fluid exploration into structured, testable behavior."
+    tags: ["crystallization", "maturity-model", "evidence"]
+    difficulty: "intermediate"
+    why: "Why is 'I read the skill and it looks right' insufficient evidence of crystallization, even for an expert?"
+
+  - id: "ch68-reflection-and-chapter-quiz-003"
+    front: "What is the quality signal that justifies moving from Incubate to Build Specialist?"
+    back: "The simulation log shows all four FTE skills passing 90%+ of scenarios with correct format, completeness, accuracy, and edge case handling."
+    tags: ["phase-transition", "quality-threshold", "incubate"]
+    difficulty: "intermediate"
+    why: "What would happen in Chapter 69 if you moved to MCP integration with skills that only passed happy path scenarios?"
+
+  - id: "ch68-reflection-and-chapter-quiz-004"
+    front: "Why do failures during simulation indicate a successful session, not a failed one?"
+    back: "Each failure triggers a revision that makes the skill handle a real-world input it could not handle before. Skills improved by simulation failures are more robust than skills that never failed."
+    tags: ["failure-as-learning", "revision"]
+    difficulty: "basic"
+
+  - id: "ch68-reflection-and-chapter-quiz-005"
+    front: "The scenario bank built in Chapter 68 carries forward to Chapter 69 in what role?"
+    back: "The scenario bank becomes the test suite for MCP tool calls. The validation criteria become acceptance criteria for tool output."
+    tags: ["carry-forward", "mcp", "scenario-bank"]
+    difficulty: "basic"
+
+  - id: "ch68-reflection-and-chapter-quiz-006"
+    front: "Four artifacts leave Chapter 68 for the rest of Part 6. Name them."
+    back: "1. Four validated agent skills (revised by simulation)\n2. Scenario bank (test inputs for all FTEs)\n3. Simulation log (results, failures, revisions)\n4. Validation criteria (correct output definitions per FTE)"
+    tags: ["artifacts", "carry-forward"]
+    difficulty: "intermediate"

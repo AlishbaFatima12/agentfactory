@@ -1,0 +1,59 @@
+deck:
+  id: "ch62-agents-that-buy-things"
+  title: "Agents That Buy Things"
+  description: "Why AI agents are becoming economic participants, and why your factory architecture must be built to support it from day one."
+  tags: ["economic-actors", "spending-envelope", "agent-factory", "hireflow"]
+  version: 1
+
+cards:
+  - id: "ch62-agents-that-buy-things-001"
+    front: "What distinguishes an agent-as-economic-actor from an agent-as-tool?"
+    back: "An economic actor can evaluate costs and acquire resources autonomously within governed boundaries. A tool can only use what it is given."
+    tags: ["economic-actors", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-agents-that-buy-things-002"
+    front: "What is a spending envelope?"
+    back: "A ceiling that limits what an agent can autonomously acquire, enforced by the system rather than by a human watching in real time."
+    tags: ["spending-envelope", "definition"]
+    difficulty: "basic"
+
+  - id: "ch62-agents-that-buy-things-003"
+    front: "The logistics AI provisioned extra compute without waiting for human approval. Why was this still governed behavior, not rogue behavior?"
+    back: "It operated within a pre-approved budget, logged every decision, and a human reviewed and approved the pattern afterward. The spending envelope was set in advance by a human."
+    tags: ["economic-actors", "governance"]
+    difficulty: "intermediate"
+    why: "What would have made this same action ungoverned?"
+
+  - id: "ch62-agents-that-buy-things-004"
+    front: "James says 'I provision it, they consume it.' What failure mode does this create in production?"
+    back: "When an agent encounters an unexpected input it cannot handle, it queues or silently fails. Edge cases accumulate until a human intervenes, degrading pipeline reliability."
+    tags: ["anti-pattern", "hireflow"]
+    difficulty: "intermediate"
+    why: "Why does this failure mode compound rather than resolve on its own?"
+
+  - id: "ch62-agents-that-buy-things-005"
+    front: "What analogy does the lesson use to explain the spending envelope?"
+    back: "A department manager with a purchase order limit and an expense report. They spend within the limit without CEO approval, then report what they spent."
+    tags: ["spending-envelope", "analogy"]
+    difficulty: "basic"
+
+  - id: "ch62-agents-that-buy-things-006"
+    front: "Why does Emma say that designing budget tracking infrastructure now is a 'one-time decision' while adding it later is a 'rewrite'?"
+    back: "Designing it at the foundation threads it through every component from the start. Retrofitting it requires modifying every component already built, as James's old employer discovered with logging."
+    tags: ["architecture", "technical-debt"]
+    difficulty: "intermediate"
+    why: "What specifically makes a retrofit more expensive than an upfront design decision?"
+
+  - id: "ch62-agents-that-buy-things-007"
+    front: "In Part 6, you will not build an agent that purchases resources. What will you build instead?"
+    back: "Budget tracking infrastructure, audit logs, and spending envelopes — the plumbing that economic participation rides on."
+    tags: ["hireflow", "architecture"]
+    difficulty: "basic"
+
+  - id: "ch62-agents-that-buy-things-008"
+    front: "A team argues 'adding economic participation infrastructure is over-engineering for a factory that may never need it.' What is the counter-argument?"
+    back: "The cost of including a Resource Manager at design time is near zero. If you exclude it and later need it, you must retrofit it through every component in a running system — a multi-month rewrite. The asymmetry favors inclusion."
+    tags: ["architecture", "anti-pattern"]
+    difficulty: "advanced"
+    why: "What specific evidence from the lesson supports this asymmetry claim?"

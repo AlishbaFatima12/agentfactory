@@ -1,0 +1,53 @@
+deck:
+  id: "ch66-reflection-and-chapter-quiz"
+  title: "Reflection and Chapter Quiz"
+  description: "Synthesizing the Dunning-Kruger defense, the link between domain depth and skill precision, and the gate's transferability across domains."
+  tags: ["dunning-kruger", "skill-quality", "domain-mastery-gate", "synthesis"]
+  version: 1
+
+cards:
+  - id: "ch66-reflection-and-chapter-quiz-001"
+    front: "What is the Dunning-Kruger defense in the context of the Domain Mastery Gate?"
+    back: "The gate surfaces blind spots in a controlled environment before they get encoded into agent skills. People with shallow domain knowledge tend to overestimate readiness; the quiz breaks that false confidence before it costs anything."
+    tags: ["dunning-kruger", "domain-mastery-gate"]
+    difficulty: "basic"
+
+  - id: "ch66-reflection-and-chapter-quiz-002"
+    front: "A concept paper says 'screen candidates for relevant experience.' How does this vague phrasing affect the agent skill extracted from it?"
+    back: "The skill inherits the vagueness. The agent interprets 'relevant' from its training data, missing industry certifications, adjacent-field equivalencies, and recency thresholds that a domain expert would apply. Vague knowledge produces vague skills."
+    tags: ["skill-quality", "vague-knowledge"]
+    difficulty: "intermediate"
+    why: "What would a builder need to know about the domain to replace 'relevant experience' with a precise, actionable rule?"
+
+  - id: "ch66-reflection-and-chapter-quiz-003"
+    front: "How does the Domain Mastery Gate connect to the principal competence requirement from Chapter 61?"
+    back: "Chapter 61 established the principal must verify agent outputs. The gate builds the domain competence that makes verification possible. Without passing the gate, the principal cannot distinguish good agent output from bad in the same domain."
+    tags: ["principal-agent", "verification"]
+    difficulty: "intermediate"
+    why: "Why is it not enough to simply require human review of agent output if the reviewer lacks domain mastery?"
+
+  - id: "ch66-reflection-and-chapter-quiz-004"
+    front: "A builder passes the Domain Mastery Gate for recruitment. They now want to build finance agents. What must they do before writing finance agent skills?"
+    back: "Apply all five gate steps to the finance domain: generate a quiz from the finance concept paper, take it AI-free, score it, remediate gaps with finance primary sources, re-test. The method transfers; the domain knowledge does not."
+    tags: ["domain-mastery-gate", "transferability"]
+    difficulty: "basic"
+
+  - id: "ch66-reflection-and-chapter-quiz-005"
+    front: "Why does the gate need a per-dimension floor (no dimension below 70%) rather than only an overall threshold?"
+    back: "A strong overall score can mask a critical dimension gap. A builder who scores 95% on facts but 55% on judgment calls appears ready by the overall number but will write skills with no handling for ambiguous decisions, exactly where agents fail most visibly."
+    tags: ["mastery-threshold", "scoring"]
+    difficulty: "intermediate"
+    why: "Which dimension gap would cause the most severe production failures for a hiring-domain agent factory?"
+
+  - id: "ch66-reflection-and-chapter-quiz-006"
+    front: "How does the warehouse floor-time analogy illuminate why the gate must be passed before skill writing?"
+    back: "A new shift supervisor had to work every station before managing any. You cannot supervise work you have never done. The gate is the test at the end of floor time; failing it means going back to the floor, not managing the station."
+    tags: ["domain-mastery-gate", "principal-agent"]
+    difficulty: "basic"
+
+  - id: "ch66-reflection-and-chapter-quiz-007"
+    front: "A builder argues: 'I scored well on the concept paper rubric and passed the gate once six months ago. Do I really need to repeat the gate for a new recruiting subdomain?' What is the correct response?"
+    back: "Yes. The original pass certified knowledge at a specific moment in a specific subdomain. New subdomains bring new regulations, norms, and edge cases. The gate is a recurring check, not a permanent diploma. Domain extensions always trigger a new pass."
+    tags: ["domain-mastery-gate", "recurring-check"]
+    difficulty: "intermediate"
+    why: "What signal would tell you that a builder incorrectly treated a past gate pass as applying to a new subdomain?"
