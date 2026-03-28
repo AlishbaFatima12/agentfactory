@@ -13,6 +13,7 @@ Cache invalidation:
 """
 
 import logging
+import re
 
 import httpx
 
@@ -22,18 +23,63 @@ from ..config import settings
 
 logger = logging.getLogger(__name__)
 
+
+def extract_folder_name(path_segment: str) -> str:
+    """Extract folder name without numeric prefix.
+
+    Examples:
+        "14-enterprise-agentic-landscape" -> "enterprise-agentic-landscape"
+        "03-Business-Domain" -> "Business-Domain"
+        "README" -> "README"
+    """
+    return re.sub(r"^\d+-", "", path_segment)
+
 # Cache TTL: 30 days (invalidated via GitHub Action on push)
 CONTENT_CACHE_TTL = settings.content_cache_ttl
 
 
 def extract_title(content: str, fallback: str) -> str:
-    """Extract title from markdown content."""
-    for line in content.split("\n"):
-        if line.startswith("title:"):
-            return line.replace("title:", "").strip().strip('"').strip("'")
-        if line.startswith("# "):
-            return line[2:].strip()
-    return fallback.split("/")[-1].replace("-", " ").title()
+    """Extract title from markdown content.
+
+    Priority:
+    1. YAML frontmatter 'title:' field
+    2. First markdown heading (# ...)
+    3. Path-based fallback (excluding README)
+    """
+    lines = content.split("\n")
+    in_frontmatter = False
+    found_heading = None
+
+    for line in lines:
+        # Track frontmatter boundaries
+        if line.strip() == "---":
+            in_frontmatter = not in_frontmatter
+            continue
+
+        # Check for title in frontmatter (highest priority)
+        if in_frontmatter and line.strip().startswith("title:"):
+            title = line.split("title:", 1)[1].strip().strip('"').strip("'")
+            if title:
+                return title
+
+        # Store first heading as backup (skip README headings)
+        if not found_heading and line.startswith("# "):
+            heading = line[2:].strip()
+            if heading.lower() != "readme":
+                found_heading = heading
+
+    # Return heading if found
+    if found_heading:
+        return found_heading
+
+    # Fallback to path-based title, excluding README
+    path_title = fallback.split("/")[-1].replace("-", " ").title()
+    if path_title.lower() == "readme":
+        # Use parent folder name instead
+        parts = fallback.split("/")
+        if len(parts) >= 2:
+            path_title = parts[-2].replace("-", " ").title()
+    return path_title
 
 
 async def fetch_from_github(lesson_path: str) -> tuple[str, bool]:
@@ -41,6 +87,7 @@ async def fetch_from_github(lesson_path: str) -> tuple[str, bool]:
     Fetch lesson content from GitHub with authenticated requests.
 
     GitHub API allows 5,000 requests/hour with token (60 without).
+    Includes fallback path resolution for renamed chapters.
 
     Args:
         lesson_path: Path to the lesson (e.g., "01-intro/01-welcome.md")
@@ -58,6 +105,34 @@ async def fetch_from_github(lesson_path: str) -> tuple[str, bool]:
     elif not clean_path.startswith("apps/"):
         clean_path = f"apps/learn-app/docs/{clean_path}"
 
+    # Try the original path first
+    result = await _try_fetch_path(clean_path)
+    if result[1]:
+        return result
+
+    # If original path failed and contains a numeric prefix, try alternate prefixes
+    # This handles chapter renumbering (e.g., 14-enterprise -> 25-enterprise)
+    path_parts = clean_path.split("/")
+    for i, part in enumerate(path_parts):
+        folder_name = extract_folder_name(part)
+        if folder_name != part:  # Part had a numeric prefix
+            # Try common chapter numbers as fallback
+            for prefix in range(1, 100):
+                alt_parts = path_parts.copy()
+                alt_parts[i] = f"{prefix:02d}-{folder_name}"
+                alt_path = "/".join(alt_parts)
+                result = await _try_fetch_path(alt_path)
+                if result[1]:
+                    logger.info(
+                        f"Found content at alternate path: {alt_path} (original: {clean_path})"
+                    )
+                    return result
+
+    return "", False
+
+
+async def _try_fetch_path(clean_path: str) -> tuple[str, bool]:
+    """Try to fetch content from a specific path with extension variations."""
     # Try both .md and .mdx extensions
     extensions = [""]
     if not clean_path.endswith((".md", ".mdx")):
@@ -119,10 +194,29 @@ async def load_lesson_content(lesson_path: str) -> dict:
         }
 
     # Create a readable title from the lesson path
-    # e.g., "thesis" -> "Thesis", "ai-agents-intro" -> "AI Agents Intro"
-    readable_title = lesson_path.split("/")[-1]  # Get last part of path
-    readable_title = readable_title.replace("-", " ").replace("_", " ")
-    readable_title = readable_title.title()  # Capitalize each word
+    # e.g., "14-enterprise-agentic-landscape" -> "Enterprise Agentic Landscape"
+    # Skip README/index and use parent folder name instead
+    path_parts = [p for p in lesson_path.split("/") if p]
+
+    # Find the best folder name for title (skip README, index, etc.)
+    title_source = None
+    for part in reversed(path_parts):
+        clean_part = extract_folder_name(part).lower()
+        if clean_part not in ("readme", "index", ""):
+            title_source = part
+            break
+
+    if not title_source and len(path_parts) >= 2:
+        # Use parent folder if last part is readme/index
+        title_source = path_parts[-2]
+
+    if title_source:
+        # Strip numeric prefix and convert to title case
+        readable_title = extract_folder_name(title_source)
+        readable_title = readable_title.replace("-", " ").replace("_", " ")
+        readable_title = readable_title.title()
+    else:
+        readable_title = "This Lesson"
 
     return {
         "content": "",
