@@ -289,7 +289,8 @@ async def invalidate_cache(
                 )
                 if keys:
                     await redis_client.delete(*keys)
-                    invalidated.extend([k.decode() for k in keys])
+                    # Keys are already strings when decode_responses=True
+                    invalidated.extend([k if isinstance(k, str) else k.decode() for k in keys])
                 if cursor == 0:
                     break
             logger.info(f"[Cache] Invalidated {len(invalidated)} keys")
