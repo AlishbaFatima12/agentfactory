@@ -18,10 +18,17 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+import time
+import uuid
+from datetime import datetime
+from typing import Any
+
 from chatkit.server import StreamingResult  # noqa: E402
+from chatkit.types import ThreadMetadata  # noqa: E402
 from fastapi import FastAPI, HTTPException, Request  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
 from fastapi.responses import Response, StreamingResponse  # noqa: E402
+from pydantic import BaseModel  # noqa: E402
 
 from api_infra.auth import CurrentUser, verify_jwt  # noqa: E402
 from api_infra.core.rate_limit import RateLimitConfig, RateLimiter  # noqa: E402
@@ -67,6 +74,166 @@ app.add_middleware(
     allow_headers=["*"],
     max_age=86400,
 )
+
+
+# =============================================================================
+# Simple REST API endpoint for frontend compatibility
+# =============================================================================
+
+
+class SimpleChatMessage(BaseModel):
+    """Message in conversation history."""
+
+    role: str  # "user" or "assistant"
+    content: str
+    timestamp: str | None = None
+
+
+class SimpleChatRequest(BaseModel):
+    """Simple chat request matching frontend expectations."""
+
+    lessonPath: str
+    userMessage: str
+    conversationHistory: list[SimpleChatMessage] = []
+    mode: str = "teach"  # "teach" or "ask"
+    learnerProfile: dict[str, Any] | None = None
+
+
+class SimpleChatResponse(BaseModel):
+    """Simple chat response matching frontend expectations."""
+
+    assistantMessage: str
+    metadata: dict[str, Any]
+
+
+@app.post("/api/chat")
+async def simple_chat_endpoint(request: Request, body: SimpleChatRequest):
+    """
+    Simple REST chat endpoint for frontend compatibility.
+
+    This endpoint wraps the ChatKit protocol to provide a simple
+    request/response pattern that the frontend expects.
+
+    Input:
+        - lessonPath: Path to the lesson
+        - userMessage: User's message
+        - conversationHistory: Previous messages
+        - mode: "teach" or "ask"
+        - learnerProfile: Optional learner profile
+
+    Output:
+        - assistantMessage: AI response
+        - metadata: Response metadata
+    """
+    start_time = time.time()
+    logger.info(f"[SimpleChatAPI] Request: lesson={body.lessonPath}, mode={body.mode}")
+
+    # Get server from app state
+    chatkit_server = getattr(request.app.state, "chatkit_server", None)
+    if not chatkit_server:
+        raise HTTPException(
+            status_code=503,
+            detail="ChatKit server not initialized. Check DATABASE_URL.",
+        )
+
+    # Use dev mode authentication
+    user_id = request.headers.get("X-User-ID") or settings.dev_user_id
+    user_name = request.headers.get("X-User-Name") or "Learner"
+
+    # Create a virtual thread for this conversation
+    thread_id = f"simple-{uuid.uuid4().hex[:16]}"
+    thread = ThreadMetadata(
+        id=thread_id,
+        created_at=datetime.now(),
+        metadata={},
+    )
+
+    # Build request context
+    context = RequestContext(
+        user_id=user_id,
+        organization_id=DEFAULT_ORGANIZATION_ID,
+        request_id=request.headers.get("X-Request-ID"),
+        metadata={
+            "lesson_path": body.lessonPath,
+            "user_name": user_name,
+        },
+    )
+
+    # Determine if this is the first message
+    is_first = len(body.conversationHistory) == 0
+
+    try:
+        # Import here to avoid circular imports
+        from .services.content_loader import load_lesson_content
+
+        # Load lesson content
+        content_data = await load_lesson_content(body.lessonPath)
+        content = content_data.get("content", "")
+        title = content_data.get("title", "Unknown")
+
+        logger.info(f"[SimpleChatAPI] Content loaded: title='{title}', len={len(content)}")
+        if not content:
+            logger.warning(f"[SimpleChatAPI] No content for: {body.lessonPath}")
+
+        # Collect streamed response
+        full_response = ""
+
+        if body.mode == "teach":
+            # Use teach skill handler
+            async for event in chatkit_server.handle_teach_skill(
+                thread=thread,
+                user_text=body.userMessage,
+                lesson_path=body.lessonPath,
+                user_name=user_name,
+                context=context,
+                content=content,
+                title=title,
+                items=None,  # No ChatKit items, using simple format
+                is_first_message=is_first,
+            ):
+                # Extract text from stream events
+                if hasattr(event, "item") and hasattr(event.item, "content"):
+                    for part in event.item.content:
+                        if hasattr(part, "text"):
+                            full_response = part.text
+                elif hasattr(event, "update") and hasattr(event.update, "delta"):
+                    full_response += event.update.delta
+        else:
+            # For ask mode, use a simpler approach
+            # Import and use ask_agent directly
+            from agents import Runner
+
+            from .fte.ask_agent import ask_agent
+
+            context.metadata["lesson_title"] = title
+            context.metadata["lesson_content"] = content
+            context.metadata["is_first_message"] = is_first
+            context.metadata["user_name"] = user_name
+
+            result = await Runner.run(ask_agent, body.userMessage)
+            full_response = result.final_output or "I'm sorry, I couldn't generate a response."
+
+        processing_time = int((time.time() - start_time) * 1000)
+
+        logger.info(
+            f"[SimpleChatAPI] Response: {len(full_response)} chars, {processing_time}ms"
+        )
+
+        return SimpleChatResponse(
+            assistantMessage=full_response,
+            metadata={
+                "model": "gemini-2.0-flash-thinking-exp" if body.mode == "teach" else "deepseek-chat",
+                "tokensUsed": 0,  # Not tracked in simple mode
+                "processingTimeMs": processing_time,
+            },
+        )
+
+    except Exception as e:
+        logger.exception(f"[SimpleChatAPI] Error: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error processing request: {str(e)}",
+        )
 
 
 @app.post("/chatkit")

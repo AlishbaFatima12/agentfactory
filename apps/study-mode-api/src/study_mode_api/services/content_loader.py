@@ -38,6 +38,45 @@ def extract_folder_name(path_segment: str) -> str:
 CONTENT_CACHE_TTL = settings.content_cache_ttl
 
 
+def strip_frontmatter(content: str) -> str:
+    """Remove YAML frontmatter from markdown content.
+
+    Frontmatter is the YAML block at the start of the file between --- markers.
+    This metadata is useful for the platform but confusing for the LLM.
+
+    Also removes MDX import statements that the LLM doesn't need.
+
+    Args:
+        content: Raw markdown content with possible frontmatter
+
+    Returns:
+        Content with frontmatter and imports removed
+    """
+    if not content:
+        return content
+
+    result = content
+
+    # Strip YAML frontmatter (--- ... ---)
+    if result.startswith("---"):
+        # Find the closing ---
+        second_dash = result.find("---", 3)
+        if second_dash > 0:
+            result = result[second_dash + 3:].strip()
+
+    # Strip MDX import statements (import ... from "...")
+    lines = result.split("\n")
+    filtered_lines = []
+    for line in lines:
+        stripped = line.strip()
+        # Skip import statements
+        if stripped.startswith("import ") and "from" in stripped:
+            continue
+        filtered_lines.append(line)
+
+    return "\n".join(filtered_lines).strip()
+
+
 def extract_title(content: str, fallback: str) -> str:
     """Extract title from markdown content.
 
@@ -82,6 +121,60 @@ def extract_title(content: str, fallback: str) -> str:
     return path_title
 
 
+async def fetch_from_local(lesson_path: str) -> tuple[str, bool]:
+    """
+    Fetch lesson content from local filesystem (for development).
+
+    Args:
+        lesson_path: Path to the lesson (e.g., "01-intro/01-welcome.md")
+
+    Returns:
+        Tuple of (content, success)
+    """
+    import os
+    from pathlib import Path
+
+    if not lesson_path:
+        return "", False
+
+    # Clean the path
+    clean_path = lesson_path.strip("/")
+
+    # Build possible local paths
+    # The repo root is typically 3 levels up from this file
+    # apps/study-mode-api/src/study_mode_api/services/content_loader.py
+    current_file = Path(__file__).resolve()
+    repo_root = current_file.parent.parent.parent.parent.parent.parent
+
+    # Try different path formats
+    if clean_path.startswith("docs/"):
+        local_path = repo_root / "apps" / "learn-app" / clean_path
+    elif clean_path.startswith("apps/"):
+        local_path = repo_root / clean_path
+    else:
+        local_path = repo_root / "apps" / "learn-app" / "docs" / clean_path
+
+    # Try different extensions
+    extensions = [""]
+    if not str(local_path).endswith((".md", ".mdx")):
+        extensions = [".md", ".mdx", "/index.md", "/README.md"]
+
+    for ext in extensions:
+        try_path = Path(str(local_path) + ext)
+        logger.debug(f"[ContentLoader] Trying local path: {try_path}")
+
+        if try_path.exists() and try_path.is_file():
+            try:
+                content = try_path.read_text(encoding="utf-8")
+                logger.info(f"[ContentLoader] LOCAL SUCCESS: {len(content)} chars from {try_path}")
+                return content, True
+            except Exception as e:
+                logger.warning(f"[ContentLoader] Failed to read local file {try_path}: {e}")
+
+    logger.debug(f"[ContentLoader] No local file found for: {lesson_path}")
+    return "", False
+
+
 async def fetch_from_github(lesson_path: str) -> tuple[str, bool]:
     """
     Fetch lesson content from GitHub with authenticated requests.
@@ -98,37 +191,28 @@ async def fetch_from_github(lesson_path: str) -> tuple[str, bool]:
     if not lesson_path:
         return "", False
 
+    # Try local filesystem first (for development)
+    content, success = await fetch_from_local(lesson_path)
+    if success:
+        return content, True
+
+    # Fall back to GitHub
     # Clean the path
     clean_path = lesson_path.strip("/")
+    logger.info(f"[ContentLoader] Input path: '{lesson_path}' -> clean: '{clean_path}'")
     if clean_path.startswith("docs/"):
         clean_path = f"apps/learn-app/{clean_path}"
     elif not clean_path.startswith("apps/"):
         clean_path = f"apps/learn-app/docs/{clean_path}"
+    logger.info(f"[ContentLoader] Final path: '{clean_path}'")
 
-    # Try the original path first
-    result = await _try_fetch_path(clean_path)
-    if result[1]:
-        return result
-
-    # If original path failed and contains a numeric prefix, try alternate prefixes
-    # This handles chapter renumbering (e.g., 14-enterprise -> 25-enterprise)
-    path_parts = clean_path.split("/")
-    for i, part in enumerate(path_parts):
-        folder_name = extract_folder_name(part)
-        if folder_name != part:  # Part had a numeric prefix
-            # Try common chapter numbers as fallback
-            for prefix in range(1, 100):
-                alt_parts = path_parts.copy()
-                alt_parts[i] = f"{prefix:02d}-{folder_name}"
-                alt_path = "/".join(alt_parts)
-                result = await _try_fetch_path(alt_path)
-                if result[1]:
-                    logger.info(
-                        f"Found content at alternate path: {alt_path} (original: {clean_path})"
-                    )
-                    return result
-
-    return "", False
+    # Fetch from the specified path
+    # Note: Brute-force fallback for renamed chapters was removed because:
+    # 1. It could make up to 297 sequential HTTP requests (99 prefixes x 3 segments)
+    # 2. It doesn't handle multi-segment renames (part AND chapter renumbered)
+    # 3. Stale paths degrade gracefully (empty content + readable title from path)
+    # If specific redirects are needed, add them to CHAPTER_REDIRECTS below.
+    return await _try_fetch_path(clean_path)
 
 
 async def _try_fetch_path(clean_path: str) -> tuple[str, bool]:
@@ -150,8 +234,10 @@ async def _try_fetch_path(clean_path: str) -> tuple[str, bool]:
                 response = await client.get(url, headers=headers, timeout=10.0)
 
                 if response.status_code == 200:
-                    logger.debug(f"Fetched content from GitHub: {url}")
+                    logger.info(f"[ContentLoader] SUCCESS: Fetched {len(response.text)} chars from {url}")
                     return response.text, True
+                else:
+                    logger.warning(f"[ContentLoader] FAILED: {response.status_code} for {url}")
 
         except Exception as e:
             logger.warning(f"Failed to fetch from GitHub {url}: {e}")
@@ -187,8 +273,11 @@ async def load_lesson_content(lesson_path: str) -> dict:
 
     if success:
         title = extract_title(content, lesson_path)
+        # Strip frontmatter and MDX imports - LLM only needs the teaching content
+        clean_content = strip_frontmatter(content)
+        logger.info(f"[ContentLoader] Stripped frontmatter: {len(content)} -> {len(clean_content)} chars")
         return {
-            "content": content,
+            "content": clean_content,
             "title": title,
             "cached": False,  # Will be True on subsequent cached requests
         }
