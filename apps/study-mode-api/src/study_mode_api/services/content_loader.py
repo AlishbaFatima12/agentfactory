@@ -131,7 +131,6 @@ async def fetch_from_local(lesson_path: str) -> tuple[str, bool]:
     Returns:
         Tuple of (content, success)
     """
-    import os
     from pathlib import Path
 
     if not lesson_path:
@@ -234,7 +233,7 @@ async def _try_fetch_path(clean_path: str) -> tuple[str, bool]:
                 response = await client.get(url, headers=headers, timeout=10.0)
 
                 if response.status_code == 200:
-                    logger.info(f"[ContentLoader] SUCCESS: Fetched {len(response.text)} chars from {url}")
+                    logger.info(f"[ContentLoader] SUCCESS: {len(response.text)} chars")
                     return response.text, True
                 else:
                     logger.warning(f"[ContentLoader] FAILED: {response.status_code} for {url}")
@@ -275,7 +274,7 @@ async def load_lesson_content(lesson_path: str) -> dict:
         title = extract_title(content, lesson_path)
         # Strip frontmatter and MDX imports - LLM only needs the teaching content
         clean_content = strip_frontmatter(content)
-        logger.info(f"[ContentLoader] Stripped frontmatter: {len(content)} -> {len(clean_content)} chars")
+        logger.info(f"[ContentLoader] Stripped: {len(content)} -> {len(clean_content)} chars")
         return {
             "content": clean_content,
             "title": title,
