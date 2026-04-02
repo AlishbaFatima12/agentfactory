@@ -307,13 +307,13 @@ async def chatkit_endpoint(request: Request):
 
     try:
         # Get request body
-        payload = await request.body()
+        body_bytes: bytes = await request.body()
 
         # Extract metadata from ChatKit request payload
         metadata = {}
         operation = None
         try:
-            payload_dict = json.loads(payload)
+            payload_dict = json.loads(body_bytes)
             operation = payload_dict.get("type", "")  # ChatKit uses "type", not "method"
             logger.info(f"[ChatKit] Operation: {operation}")
             if "params" in payload_dict and "input" in payload_dict["params"]:
@@ -331,7 +331,7 @@ async def chatkit_endpoint(request: Request):
                 f"[RateLimit] user={user_id}, current={rate_info.get('current')}, "
                 f"limit={rate_info.get('limit')}, remaining={rate_info.get('remaining')}"
             )
-            if rate_info["remaining"] < 0:
+            if int(rate_info["remaining"]) < 0:
                 raise HTTPException(
                     status_code=429,
                     detail={
@@ -371,7 +371,7 @@ async def chatkit_endpoint(request: Request):
         )
 
         # Process through ChatKit server
-        result = await chatkit_server.process(payload, context)
+        result = await chatkit_server.process(body_bytes, context)
 
         # Return appropriate response type
         if isinstance(result, StreamingResult):
