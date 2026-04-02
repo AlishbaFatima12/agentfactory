@@ -18,10 +18,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-import time
-import uuid
-from datetime import datetime
-from typing import Any
+import time  # noqa: E402
+import uuid  # noqa: E402
+from datetime import datetime  # noqa: E402
+from typing import Any  # noqa: E402
 
 from chatkit.server import StreamingResult  # noqa: E402
 from chatkit.types import ThreadMetadata  # noqa: E402
@@ -222,7 +222,7 @@ async def simple_chat_endpoint(request: Request, body: SimpleChatRequest):
         return SimpleChatResponse(
             assistantMessage=full_response,
             metadata={
-                "model": "gemini-2.0-flash-thinking-exp" if body.mode == "teach" else "deepseek-chat",
+                "model": "gemini-2.5-flash" if body.mode == "teach" else "deepseek",
                 "tokensUsed": 0,  # Not tracked in simple mode
                 "processingTimeMs": processing_time,
             },

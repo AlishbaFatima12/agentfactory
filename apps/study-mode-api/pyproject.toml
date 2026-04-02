@@ -53,6 +53,10 @@ line-length = 100
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
 
+[tool.ruff.lint.per-file-ignores]
+# Prompt text has long lines for readability - LLM instructions shouldn't be broken
+"src/study_mode_api/fte/teach_skill.py" = ["E501"]
+
 [tool.mypy]
 python_version = "3.12"
 strict = false
