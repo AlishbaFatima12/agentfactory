@@ -15,6 +15,7 @@ import hashlib
 import json
 import logging
 import os
+import re
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any
 
@@ -293,8 +294,6 @@ def extract_key_concepts(content: str, max_concepts: int = 6) -> list[str]:
     - Terms after "Key concepts:" or similar headers
     - Capitalized terms that appear multiple times
     """
-    import re
-
     concepts = []
 
     # Extract **bold** terms (these are usually key concepts)

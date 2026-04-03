@@ -114,12 +114,15 @@ async def simple_chat_endpoint(request: Request, body: SimpleChatRequest):
     This endpoint wraps the ChatKit protocol to provide a simple
     request/response pattern that the frontend expects.
 
+    Requires JWT authentication (same as /chatkit endpoint).
+    Rate limited to 20 messages per day per user.
+
     Input:
         - lessonPath: Path to the lesson
         - userMessage: User's message
         - conversationHistory: Previous messages
         - mode: "teach" or "ask"
-        - learnerProfile: Optional learner profile
+        - learnerProfile: Optional learner profile for personalization
 
     Output:
         - assistantMessage: AI response
@@ -136,9 +139,60 @@ async def simple_chat_endpoint(request: Request, body: SimpleChatRequest):
             detail="ChatKit server not initialized. Check DATABASE_URL.",
         )
 
-    # Use dev mode authentication
-    user_id = request.headers.get("X-User-ID") or settings.dev_user_id
-    user_name = request.headers.get("X-User-Name") or "Learner"
+    # Authentication: Same as /chatkit endpoint
+    user_name: str | None = None
+    auth_token: str | None = None
+
+    if settings.dev_mode:
+        # Dev mode: use X-User-ID header or fallback to dev user
+        user_id = request.headers.get("X-User-ID") or settings.dev_user_id
+        user_name = request.headers.get("X-User-Name") or "Learner"
+        logger.debug(f"[SimpleChatAPI][DEV] Using dev mode: user_id={user_id}")
+    else:
+        # Production: Require and verify JWT token (no fallbacks)
+        auth_header = request.headers.get("Authorization")
+        if not auth_header or not auth_header.startswith("Bearer "):
+            raise HTTPException(
+                status_code=401,
+                detail="Missing Authorization header with Bearer token",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        token = auth_header[7:]  # Remove "Bearer " prefix
+
+        # Validate JWT format (must have 3 parts: header.payload.signature)
+        if token.count(".") != 2:
+            raise HTTPException(
+                status_code=401,
+                detail="Invalid token format - JWT required",
+                headers={"WWW-Authenticate": "Bearer"},
+            )
+
+        # Verify JWT signature using JWKS
+        payload = await verify_jwt(token)
+        user = CurrentUser(payload)
+        user_id = user.id
+        user_name = user.name or user.email or "Learner"
+        auth_token = auth_header
+        logger.info(f"[SimpleChatAPI][AUTH] JWT verified: user_id={user_id}")
+
+    # Rate limit check (20 messages per day)
+    logger.info(f"[SimpleChatAPI][RateLimit] Checking: user={user_id}")
+    rate_info = await _chat_rate_limiter._check_rate_limit(request)
+    logger.info(
+        f"[SimpleChatAPI][RateLimit] user={user_id}, current={rate_info.get('current')}, "
+        f"limit={rate_info.get('limit')}, remaining={rate_info.get('remaining')}"
+    )
+    if int(rate_info["remaining"]) < 0:
+        raise HTTPException(
+            status_code=429,
+            detail={
+                "error": "Daily message limit reached",
+                "limit": rate_info["limit"],
+                "reset_after_ms": rate_info["reset_after"],
+                "message": "You've reached your daily limit of 20 messages. Try again tomorrow!",
+            },
+        )
 
     # Create a virtual thread for this conversation
     thread_id = f"simple-{uuid.uuid4().hex[:16]}"
@@ -148,7 +202,7 @@ async def simple_chat_endpoint(request: Request, body: SimpleChatRequest):
         metadata={},
     )
 
-    # Build request context
+    # Build request context with auth token for downstream services (metering, profile API)
     context = RequestContext(
         user_id=user_id,
         organization_id=DEFAULT_ORGANIZATION_ID,
@@ -156,6 +210,8 @@ async def simple_chat_endpoint(request: Request, body: SimpleChatRequest):
         metadata={
             "lesson_path": body.lessonPath,
             "user_name": user_name,
+            "auth_token": auth_token,  # For metering API and learner profile fetch
+            "learner_profile": body.learnerProfile,  # Optional profile for personalization
         },
     )
 
@@ -195,7 +251,7 @@ async def simple_chat_endpoint(request: Request, body: SimpleChatRequest):
                 if hasattr(event, "item") and hasattr(event.item, "content"):
                     for part in event.item.content:
                         if hasattr(part, "text"):
-                            full_response = part.text
+                            full_response += part.text  # Append, don't overwrite
                 elif hasattr(event, "update") and hasattr(event.update, "delta"):
                     full_response += event.update.delta
         else:

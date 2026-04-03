@@ -53,7 +53,7 @@ This is the introduction.
 
     def test_extract_title_strips_quotes(self):
         """Test title strips surrounding quotes."""
-        content = "title: 'Single Quoted Title'"
+        content = "---\ntitle: 'Single Quoted Title'\n---\n\nContent here"
 
         title = extract_title(content, "fallback")
 

@@ -130,6 +130,10 @@ async def fetch_from_local(lesson_path: str) -> tuple[str, bool]:
 
     Returns:
         Tuple of (content, success)
+
+    Security:
+        Validates resolved paths stay within allowed directories to prevent
+        path traversal attacks (e.g., "../../etc/passwd").
     """
     from pathlib import Path
 
@@ -144,6 +148,12 @@ async def fetch_from_local(lesson_path: str) -> tuple[str, bool]:
     # apps/study-mode-api/src/study_mode_api/services/content_loader.py
     current_file = Path(__file__).resolve()
     repo_root = current_file.parent.parent.parent.parent.parent.parent
+
+    # Define allowed base directories for content
+    allowed_bases = [
+        repo_root / "apps" / "learn-app" / "docs",
+        repo_root / "apps" / "learn-app",
+    ]
 
     # Try different path formats
     if clean_path.startswith("docs/"):
@@ -163,6 +173,18 @@ async def fetch_from_local(lesson_path: str) -> tuple[str, bool]:
         logger.debug(f"[ContentLoader] Trying local path: {try_path}")
 
         if try_path.exists() and try_path.is_file():
+            # SECURITY: Validate resolved path stays within allowed directories
+            resolved_path = try_path.resolve()
+            is_safe = any(
+                resolved_path.is_relative_to(base) for base in allowed_bases
+            )
+            if not is_safe:
+                logger.warning(
+                    f"[ContentLoader] SECURITY: Path traversal blocked: "
+                    f"{lesson_path} -> {resolved_path}"
+                )
+                return "", False
+
             try:
                 content = try_path.read_text(encoding="utf-8")
                 logger.info(f"[ContentLoader] LOCAL SUCCESS: {len(content)} chars from {try_path}")

@@ -207,7 +207,7 @@ class TestBuildTeachingSkillPrompt:
 
         assert "THIS IS THE FIRST MESSAGE" in prompt
         assert 'Greeting: "Hi Bob!"' in prompt
-        assert "Topic:" in prompt
+        assert "Topic intro:" in prompt
 
     def test_follow_up_message_no_greeting(self):
         """Should NOT include greeting for follow-up messages."""
