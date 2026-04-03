@@ -9,13 +9,33 @@
 
 ## Executive Summary
 
-The teach-me feature has been evaluated using two evaluation suites after implementing all security fixes and reviewer concerns.
+The teach-me feature has been evaluated using three evaluation suites after implementing all security fixes and reviewer concerns.
 
 | Metric | Score | Grade |
 |--------|-------|-------|
+| **OpenAI Judge Evaluation** | 80/100 | B |
 | **Weighted Evaluation** | 70.7/100 | C |
 | **PRIMM Scenario Pass Rate** | 17% (2/12) | - |
 | **PRIMM Average Score** | 0.57 | - |
+
+---
+
+## OpenAI Judge Evaluation Results (NEW)
+
+Using GPT-4.1 as judge to evaluate Gemini 2.5 Flash teaching responses:
+
+| Criterion | Pass Rate | Description |
+|-----------|-----------|-------------|
+| A. Content Grounding & Faithfulness | 90% (18/20) | Response grounded in lesson content |
+| B. Teaching Intent Alignment | 100% (20/20) | Behaves like teacher, not chatbot |
+| C. Pedagogical Structure | 95% (19/20) | Clear flow: acknowledge → teach → check |
+| D. Cognitive Scaffolding | 90% (18/20) | Meets learner where they are |
+| E. Instructional Question Quality | 95% (19/20) | One focused question after teaching |
+| F. Study Mode Integrity | 100% (20/20) | No leaked labels, proper format |
+
+**Overall: 80% (16/20 passed)**
+
+Dashboard: [OpenAI Evals Report](https://platform.openai.com/evaluations/eval_69cf9ca20c5481918e2c10a68287a3b3)
 
 ---
 

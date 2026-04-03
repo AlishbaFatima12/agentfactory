@@ -19,17 +19,22 @@ Environment:
 """
 
 import argparse
+import os
 import sys
 import time
 from pathlib import Path
 
+from dotenv import load_dotenv
 from openai import OpenAI
+
+# Load environment variables from .env file
+load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-MODEL = "gpt-5-nano-2025-08-07"
+MODEL = "gpt-4o-mini"
 EVAL_NAME = "Teach Me Tutor - Prompt Quality"
 TEST_DATA_FILE = Path(__file__).parent / "tutor_test_data.jsonl"
 
