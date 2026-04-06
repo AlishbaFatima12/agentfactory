@@ -212,12 +212,15 @@ async def fetch_from_github(lesson_path: str) -> tuple[str, bool]:
     if not lesson_path:
         return "", False
 
-    # Try local filesystem first (for development)
-    content, success = await fetch_from_local(lesson_path)
-    if success:
-        return content, True
+    # Try local filesystem first (only in dev mode)
+    # In production, the repo directory doesn't exist, so this would always fail
+    # but still do unnecessary work (Path resolution, file system checks)
+    if settings.dev_mode:
+        content, success = await fetch_from_local(lesson_path)
+        if success:
+            return content, True
 
-    # Fall back to GitHub
+    # Fall back to GitHub (production path)
     # Clean the path
     clean_path = lesson_path.strip("/")
     logger.info(f"[ContentLoader] Input path: '{lesson_path}' -> clean: '{clean_path}'")

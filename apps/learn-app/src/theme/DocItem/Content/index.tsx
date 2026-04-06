@@ -739,10 +739,11 @@ export default function ContentWrapper(props: Props): React.ReactElement {
   // Get lesson path for TeachMePanel
   // Use metadata.source for the actual file path with numeric prefixes
   // Format: @site/docs/01-Part/02-Chapter/03-lesson.md -> 01-Part/02-Chapter/03-lesson
+  // Fallback to docId if source is not available
   const rawSource = (metadata as { source?: string }).source || "";
   const lessonPath = rawSource
-    .replace(/^@site\/docs\//, "")
-    .replace(/\.(md|mdx)$/, "");
+    ? rawSource.replace(/^@site\/docs\//, "").replace(/\.(md|mdx)$/, "")
+    : docId; // Use docId as fallback (contains full path without extension)
 
   // Study mode controls
   const { isOpen: isStudyModeOpen, openPanel, setMode } = useStudyMode();
